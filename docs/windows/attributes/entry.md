@@ -1,21 +1,21 @@
 ---
-title: запись (атрибут COM C++)
+title: запись (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.entry
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 703a55ee7c56b64a5b168016770508508bab09e0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346133"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490901"
 ---
 # <a name="entry"></a>entry
 
-Указывает экспортированной функции или константы в модуле, определяя точки входа в библиотеку DLL.
+Указывает экспортированную функцию или константу в модуле, определяя точку входа в библиотеке DLL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,11 +30,11 @@ ms.locfileid: "64346133"
 
 ## <a name="remarks"></a>Примечания
 
-**Запись** атрибут C++ имеет ту же функциональность, что [запись](/windows/desktop/Midl/entry) описании атрибута MIDL.
+Атрибут **entry** C++ имеет те же функциональные возможности, что и атрибут MIDL [элемента](/windows/win32/Midl/entry) .
 
 ## <a name="example"></a>Пример
 
-См. в примере [idl_module](idl-module.md) для пример использования **запись**.
+Пример использования **записи**см. в примере для [idl_module](idl-module.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "64346133"
 
 |||
 |-|-|
-|**Применение**|`idl_module` Атрибут|
+|**Относится к**|`idl_module`версию|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

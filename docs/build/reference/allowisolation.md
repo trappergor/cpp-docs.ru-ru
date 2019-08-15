@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 02012e7561fe8462f5f25ae13d961c35561666ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 359a68d5ec0a8c7390b5f0343530864e880a057c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273148"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493119"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -28,16 +28,16 @@ ms.locfileid: "62273148"
 
 ## <a name="remarks"></a>Примечания
 
-**/ ALLOWISOLATION** вынуждает операционную систему на поиск и загрузку манифеста.
+**/ALLOWISOLATION** заставляет операционную систему выполнять поиск и загрузку манифеста.
 
-**/ ALLOWISOLATION** используется по умолчанию.
+По умолчанию используется **/ALLOWISOLATION** .
 
-**/ALLOWISOLATION:no** указывает, что исполняемые файлы загружены, как если бы без манифеста, а также причины [Справочник ЕDITBIN](editbin-reference.md) присвоить `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` бит в необязательном заголовке `DllCharacteristics` поля.
+**/ALLOWISOLATION: нет** означает, что исполняемые файлы загружаются, как если бы манифеста не было, и заставляет `IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` `DllCharacteristics` [ссылку EDITBIN](editbin-reference.md) задать бит в поле необязательного заголовка.
 
-Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже в том случае, если отсутствует манифест в исполняемом файле сам или при наличии манифеста с именем *имя исполняемого файла*. exe.manifest.
+Если изоляция для исполняемого файла отключена, загрузчик Windows не пытается найти манифест приложения для нового процесса. Новый процесс не имеет контекста активации по умолчанию, даже если существует манифест в самом исполняемом файле или если имеется манифест с именем *Executable*. exe. manifest.
 
 ## <a name="see-also"></a>См. также
 
 [Параметры EDITBIN](editbin-options.md)<br/>
 [/ALLOWISOLATION (поиск манифеста)](allowisolation-manifest-lookup.md)<br/>
-[Ссылки на файлы манифеста](/windows/desktop/SbsCs/manifest-files-reference)
+[Справочник по файлам манифеста](/windows/win32/SbsCs/manifest-files-reference)

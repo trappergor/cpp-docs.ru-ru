@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-ms.openlocfilehash: d02d00e3c56fc253e8f89eec9815e01d60c6e2aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9388ca1751ee27fb25d6751c961d23e5243f2918
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196988"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495131"
 ---
-# <a name="umenuorid-class"></a>Класс _U_MENUorID
+# <a name="_u_menuorid-class"></a>Класс _U_MENUorID
 
-Этот класс предоставляет оболочки для `CreateWindow` и `CreateWindowEx`.
+Этот класс предоставляет оболочки для `CreateWindow` и. `CreateWindowEx`
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,31 +41,31 @@ class _U_MENUorID
 
 |name|Описание|
 |----------|-----------------|
-|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Дескриптор для меню.|
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|Маркер меню.|
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс адаптера аргумент позволяет идентификаторы (единицы) или дескрипторы меню (HMENUs) для передачи в функцию без необходимости явного приведения, со стороны вызывающего объекта.
+Этот класс адаптера Argument позволяет передавать в функцию идентификаторы (UINT) или дескрипторы меню (Хменус) без необходимости явного приведения в части вызывающего объекта.
 
-Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) и [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).
+Этот класс предназначен для реализации оболочек для API Windows, в частности функций [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) и [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) , которые принимают аргумент HMENU, который может быть идентификатором дочернего окна (UINT), а не маркером меню. Например, можно увидеть, что этот класс используется в качестве параметра для [квиндовимпл:: Create](cwindowimpl-class.md#create).
 
-Этот класс определяет две перегрузки конструктора: один принимает аргумент целое число без знака, а другой принимает аргумент дескриптора HMENU. Целое число без знака аргумент просто привести к HMENU конструктора и результата, хранимого в единый данные-член класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент для конструктора HMENU хранится непосредственно без преобразования.
+Класс определяет две перегрузки конструктора: одна принимает аргумент UINT, а другая принимает аргумент HMENU. Аргумент UINT просто приведен к HMENU в конструкторе и результату, хранящемуся в одном элементе данных класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент для конструктора HMENU хранится непосредственно без преобразования.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin.h
+**Заголовок:** atlwin. h
 
-##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu
+##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu
 
-Класс содержит значение, передаваемое в любой из его конструкторов как открытый элемент данных дескриптора HMENU.
+Класс содержит значение, передаваемое в любой из его конструкторов как открытый элемент данных HMENU.
 
 ```
 HMENU m_hMenu;
 ```
 
-##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID
+##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID
 
-Целое число без знака аргумент просто привести к HMENU конструктора и результата, хранимого в единый данные-член класса, [m_hMenu](#_u_menuorid__m_hmenu).
+Аргумент UINT просто приведен к HMENU в конструкторе и результату, хранящемуся в одном элементе данных класса, [m_hMenu](#_u_menuorid__m_hmenu).
 
 ```
 _U_MENUorID(UINT nID);
@@ -78,7 +78,7 @@ _U_MENUorID(HMENU hMenu);
 Идентификатор дочернего окна.
 
 *hMenu*<br/>
-Дескриптор меню.
+Маркер меню.
 
 ### <a name="remarks"></a>Примечания
 
@@ -86,4 +86,4 @@ _U_MENUorID(HMENU hMenu);
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

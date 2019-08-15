@@ -1,5 +1,5 @@
 ---
-title: Класс CComEnum
+title: Класс Ккоменум
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnum
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7252eb2fa5d34618a1c38484a2506bae27a1106a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246399"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497213"
 ---
-# <a name="ccomenum-class"></a>Класс CComEnum
+# <a name="ccomenum-class"></a>Класс Ккоменум
 
-Этот класс определяет перечислитель COM-объекта на основе массива.
+Этот класс определяет объект перечислителя COM, основанный на массиве.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,36 +31,36 @@ public CComObjectRootEx<ThreadModel>
 
 #### <a name="parameters"></a>Параметры
 
-*Base*<br/>
-COM-интерфейса перечислителя. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
+*Из*<br/>
+Интерфейс перечислителя COM. Пример см. в разделе [иенумстринг](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
-*piid*<br/>
+*пиид*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
 *T*<br/>
-Тип элемента, доступные в интерфейсе перечислителя.
+Тип элемента, предоставляемого интерфейсом перечислителя.
 
-*Копировать*<br/>
-Однородную [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).
+*Copy*.<br/>
+Однородный [класс политики копирования](../../atl/atl-copy-policy-classes.md).
 
-*ThreadModel*<br/>
-Потоковая модель класса. Значение по умолчанию потоковую модель глобальный объект, используемый в проекте.
+*среадмодел*<br/>
+Потоковая модель класса. По умолчанию для этого параметра используется модель потоков глобальных объектов, используемая в проекте.
 
 ## <a name="remarks"></a>Примечания
 
-`CComEnum` Определяет объект перечислителя COM на основе массива. Этот класс является аналогом [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) реализующий перечислитель, основанное на контейнере стандартной библиотеки C++. Стандартная последовательность действий при помощи этого класса приводятся ниже. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).
+`CComEnum`Определяет объект перечислителя COM на основе массива. Этот класс аналогичен [ккоменумонстл](../../atl/reference/ccomenumonstl-class.md) , который реализует перечислитель на основе контейнера C++ стандартной библиотеки. Ниже приведены типичные действия по использованию этого класса. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).
 
-## <a name="to-use-this-class"></a>Чтобы использовать этот класс:
+## <a name="to-use-this-class"></a>Чтобы использовать этот класс, сделайте следующее:
 
-- **TypeDef** специализации этого класса.
+- **Определение** специализации этого класса.
 
 - Используйте **typedef** в качестве аргумента шаблона в специализации `CComObject`.
 
 - Создайте экземпляр `CComObject` специализации.
 
-- Инициализируйте объект перечислителя, вызвав [CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init).
+- Инициализируйте объект перечислителя путем вызова [ккоменумимпл:: init](../../atl/reference/ccomenumimpl-class.md#init).
 
-- Возвращает интерфейс перечислителя для клиента.
+- Возврат интерфейса перечислителя клиенту.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -70,29 +70,29 @@ COM-интерфейса перечислителя. См. в разделе [IE
 
 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
-[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)
+[ккоменумимпл](../../atl/reference/ccomenumimpl-class.md)
 
 `CComEnum`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже код предоставляет функцию многократно используемых для создания и инициализации объект перечислителя.
+Приведенный ниже код предоставляет многократно используемую функцию для создания и инициализации объекта перечислителя.
 
 [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]
 
-Эта функция шаблона можно использовать для реализации `_NewEnum` свойство интерфейса коллекции, как показано ниже:
+Эта функция шаблона может использоваться для реализации `_NewEnum` свойства интерфейса коллекции, как показано ниже:
 
 [!code-cpp[NVC_ATL_COM#33](../../atl/codesnippet/cpp/ccomenum-class_2.h)]
 
-Этот код создает **typedef** для `CComEnum` , предоставляющий вектор вариантов через `IEnumVariant` интерфейс. `CVariantArrayCollection` Класс уточняет `CreateEnumerator` для работы с объектами перечислитель данного типа и передает необходимые аргументы.
+Этот код создает **typedef** для `CComEnum` , предоставляющий вектор вариантов через `IEnumVariant` интерфейс. `CVariantArrayCollection` Класс просто `CreateEnumerator` специализируется на работе с объектами перечислителя этого типа и передает необходимые аргументы.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
+[ккомобжектсреадмодел](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Класс CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)

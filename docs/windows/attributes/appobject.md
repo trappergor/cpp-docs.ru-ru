@@ -1,21 +1,21 @@
 ---
-title: appobject (атрибут COM C++)
+title: аппобжект (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409711"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490932"
 ---
 # <a name="appobject"></a>appobject
 
-Идентифицирует сокласс как объект приложения, который связан с приложением полный .exe и указывает, что функциях и свойствах компонентного класса доступны глобально в этом [библиотеки типов](../../mfc/automation-clients-using-type-libraries.md).
+Определяет компонент в качестве объекта приложения, связанного с полным exe-приложением, и указывает, что функции и свойства компонентного класса глобально доступны в этой [библиотеке типов](../../mfc/automation-clients-using-type-libraries.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409711"
 
 ## <a name="remarks"></a>Примечания
 
-**Appobject** атрибут C++ имеет ту же функциональность, что [appobject](/windows/desktop/Midl/appobject) описании атрибута MIDL.
+Атрибут **аппобжект** C++ имеет те же функциональные возможности, что и атрибут [аппобжект](/windows/win32/Midl/appobject) MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано определение простого класса предшествует блок атрибута, который включает в себя **appobject**:
+В следующем коде показано определение простого класса, начинающееся с блока атрибутов, который включает **аппобжект**:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|`coclass`|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
