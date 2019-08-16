@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182942"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500523"
 ---
 # <a name="platformwriteonlyarray-class"></a>Класс Platform::WriteOnlyArray
 
@@ -39,11 +39,11 @@ private ref class WriteOnlyArray<T, 1>
 
 |name|Описание|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|Итератор, который указывает на первый элемент массива.|
-|[WriteOnlyArray::Data](#data)|Указатель на буфер данных.|
-|[WriteOnlyArray::end](#end)|Итератор, указывающий на элемент, следующий за последним элементом в массиве.|
-|[WriteOnlyArray::FastPass](#fastpass)|Указывает, сможет ли массив использовать механизм FastPass, то есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде|
-|[WriteOnlyArray::Length](#length)|Возвращает число элементов в массиве.|
+|[WriteOnlyArray:: Begin](#begin)|Итератор, который указывает на первый элемент массива.|
+|[WriteOnlyArray::D ATA](#data)|Указатель на буфер данных.|
+|[WriteOnlyArray:: end](#end)|Итератор, указывающий на элемент, следующий за последним элементом в массиве.|
+|[WriteOnlyArray:: FastPass](#fastpass)|Указывает, сможет ли массив использовать механизм FastPass, то есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде|
+|[WriteOnlyArray:: Length](#length)|Возвращает число элементов в массиве.|
 |[WriteOnlyArray::set](#set)|Присваивает заданному элементу заданное значение.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -54,9 +54,9 @@ private ref class WriteOnlyArray<T, 1>
 
 Параметр компилятора: **/ZW**
 
-**Метаданные:** Platform.winmd
+**Метаданных** Platform. winmd
 
-**Пространство имен:** Platform
+**Пространство имен:** Платформа
 
 ## <a name="begin"></a>  Метод WriteOnlyArray::begin
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 Логическое значение, указывающее, является ли массив FastPass.
 
-## <a name="get"></a>  WriteOnlyArray::get Method
+## <a name="get"></a>Метод WriteOnlyArray:: Get
 
 Возвращает элемент по указанному индексу.
 
@@ -138,8 +138,8 @@ T& get(unsigned int indexArg) const;
 
 ### <a name="parameters"></a>Параметры
 
-*indexArg*<br/>
-Индекс для использования.
+*индексарг*<br/>
+Используемый индекс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -173,10 +173,10 @@ T& set(
 
 ### <a name="parameters"></a>Параметры
 
-*indexArg*<br/>
+*индексарг*<br/>
 Задаваемый индекс элемента.
 
-*valueArg*<br/>
+*валуеарг*<br/>
 Задаваемое в `indexArg` значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -185,9 +185,9 @@ T& set(
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes).
+Дополнительные сведения о том, как интерпретировать значение HRESULT, см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes).
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Пространство имен платформы](platform-namespace-c-cx.md)<br/>
 [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

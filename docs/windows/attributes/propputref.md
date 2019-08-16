@@ -1,17 +1,17 @@
 ---
-title: propputref (атрибут COM C++)
+title: propputref (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407475"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514180"
 ---
 # <a name="propputref"></a>propputref
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407475"
 
 ## <a name="remarks"></a>Примечания
 
-**Propputref** атрибут C++ имеет ту же функциональность, что [propputref](/windows/desktop/Midl/propputref) описании атрибута MIDL.
+Атрибут **propputref** C++ имеет те же функциональные возможности, что и атрибут [propputref](/windows/win32/Midl/propputref) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) использовать образец **propputref**.
+Пример использования **propputref**см. в примере для [привязки](bindable.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -37,9 +37,9 @@ ms.locfileid: "62407475"
 
 |||
 |-|-|
-|**Применение**|Метод|
+|**Относится к**|Метод|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|`propget`, `propput`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

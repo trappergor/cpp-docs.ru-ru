@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957500"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502557"
 ---
 # <a name="exception-processing"></a>Обработка исключений
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Примечания
 
-Вызывайте эту функцию, если вызовы к базовым распределителям памяти системы (например, **malloc** и функция Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) ) завершаются ошибкой. Вам не нужно вызывать его для **создания новых** , так как **New** вызывает исключение памяти автоматически при сбое выделения памяти.
+Вызывайте эту функцию, если вызовы к базовым распределителям памяти системы (например, **malloc** и функция Windows [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) ) завершаются ошибкой. Вам не нужно вызывать его для **создания новых** , так как **New** вызывает исключение памяти автоматически при сбое выделения памяти.
 
 ### <a name="requirements"></a>Требования
 
@@ -491,7 +491,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="remarks"></a>Примечания
 
-Версия, принимающая HRESULT в качестве аргумента, преобразует этот код результата в соответствующий SCODE. Дополнительные сведения о HRESULT и SCODE см. в разделе [структура кодов ошибок COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.
+Версия, принимающая HRESULT в качестве аргумента, преобразует этот код результата в соответствующий SCODE. Дополнительные сведения о HRESULT и SCODE см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes) в Windows SDK.
 
 ### <a name="requirements"></a>Требования
 

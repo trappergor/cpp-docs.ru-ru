@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493146"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (запретить привязку DLL)
 
@@ -29,15 +29,15 @@ ms.locfileid: "62295155"
 
 Параметр /ALLOWBIND:NO устанавливает в заголовке библиотеки DLL бит, который указывает программе Bind.exe на то, что привязка образа не допускается. Если DLL имеет цифровую подпись, привязывать ее не следует (при привязке цифровая подпись становится недействительной).
 
-Можно изменить существующую библиотеку DLL для функциональности параметра/ALLOWBIND с [параметра/ALLOWBIND](allowbind.md) параметр программы EDITBIN.
+Существующую библиотеку DLL для функции/ALLOWBIND можно изменить с помощью параметра [/ALLOWBIND](allowbind.md) служебной программы EDITBIN.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Разверните **свойства конфигурации**, **компоновщика**и выберите **командной строки**.
+1. Разверните узел **Свойства конфигурации**, **Компоновщик**и выберите пункт **Командная строка**.
 
-1. Введите `/ALLOWBIND:NO` в **Дополнительные параметры**.
+1. Введите `/ALLOWBIND:NO` **Дополнительные параметры**.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
@@ -47,5 +47,5 @@ ms.locfileid: "62295155"
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)<br/>
-[Функция BindImage](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
-[Функция BindImageEx](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)
+[Функция BindImage](/windows/win32/api/imagehlp/nf-imagehlp-bindimage)<br/>
+[Функция Биндимажеекс](/windows/win32/api/imagehlp/nf-imagehlp-bindimageex)

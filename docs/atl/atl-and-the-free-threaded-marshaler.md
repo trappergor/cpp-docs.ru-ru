@@ -8,27 +8,27 @@ helpviewer_keywords:
 - threading [ATL], free threaded marshaler
 - FTM in ATL
 ms.assetid: 2db88a13-2217-4ebc-aa7e-432d5da902eb
-ms.openlocfilehash: ddea5a74dbd40d097398d04c0b2bc274df5ec972
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94e4961c69e9441d160d72d9b72afcee3677e25f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252511"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491913"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL и упаковщик в режиме свободного потока
 
-Мастер простых объектов ATL атрибуты страница содержит параметр, разрешающий класса для статистической обработки свободного упаковщик (FTM).
+Страница атрибутов мастера простых объектов ATL предоставляет параметр, позволяющий классу объединять бесплатный потоковый маршалеру (FTM).
 
-Мастер формирует код для создания экземпляра бесплатной упаковщик `FinalConstruct` и выпуска этого экземпляра в `FinalRelease`. Макрос COM_INTERFACE_ENTRY_AGGREGATE автоматически добавляется в сопоставление COM, чтобы убедиться, что `QueryInterface` запрашивает для [IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal) обрабатываются свободного упаковщик.
+Мастер создает код для создания экземпляра свободного потокового маршалером в `FinalConstruct` и выпуска этого экземпляра в. `FinalRelease` Макрос COM_INTERFACE_ENTRY_AGGREGATE автоматически добавляется в карту com, чтобы обеспечить `QueryInterface` обработку запросов для [IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal) с помощью свободного потокового модуля.
 
-Бесплатный упаковщик обеспечивает прямой доступ, к интерфейсам в объекте, из любого потока, в том же процессе, ускоряя вызовов между подразделениями. Этот параметр предназначен для классов, использующих обе модели потоков.
+Свободный потоковый маршалинг обеспечивает прямой доступ к интерфейсам объекта из любого потока в том же процессе, ускоряя вызовы между апартаментами. Этот параметр предназначен для классов, использующих модель потоков.
 
-При использовании этого параметра, классы должен нести ответственность за безопасность потоков данных. Кроме того объекты, которые статистическая обработка свободного упаковщик и должны использовать указатели интерфейса получен из других объектов должны предпринять дополнительные действия, чтобы убедиться, что интерфейсы маршалируются правильно. Как правило, это подразумевает хранение указателе на интерфейс в глобальной таблицы интерфейсов (GIT) и получение указателя из GIT каждый раз, когда он используется. Библиотека ATL предоставляет класс [CComGITPtr](../atl/reference/ccomgitptr-class.md) по использованию указателя на интерфейс, хранящиеся в GIT.
+При использовании этого параметра классы должны принимать ответственность за потокобезопасность данных. Кроме того, объекты, которые выполняют статистическую обработку свободного потокового маршалером и должны использовать указатели интерфейса, полученные из других объектов, должны предпринимать дополнительные действия, чтобы обеспечить правильную упаковку интерфейсов. Обычно это подразумевает хранение указателей интерфейса в глобальной таблице интерфейса (GIT) и получение указателя из GIT при каждом использовании. ATL предоставляет класс [ккомгитптр](../atl/reference/ccomgitptr-class.md) , помогающий использовать указатели интерфейса, хранящиеся в Git.
 
 ## <a name="see-also"></a>См. также
 
 [Основные понятия](../atl/active-template-library-atl-concepts.md)<br/>
-[CoCreateFreeThreadedMarshaler](/windows/desktop/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
-[IMarshal](/windows/desktop/api/objidlbase/nn-objidlbase-imarshal)<br/>
-[Когда следует использовать глобальной таблицы интерфейсов](/windows/desktop/com/when-to-use-the-global-interface-table)<br/>
-[Внутрипроцессный сервер потоками](/windows/desktop/com/in-process-server-threading-issues)
+[кокреатефрисреадедмаршалер](/windows/win32/api/combaseapi/nf-combaseapi-cocreatefreethreadedmarshaler)<br/>
+[IMarshal](/windows/win32/api/objidlbase/nn-objidlbase-imarshal)<br/>
+[Когда следует использовать глобальную таблицу интерфейса](/windows/win32/com/when-to-use-the-global-interface-table)<br/>
+[Проблемы потоковой обработки в процессе сервера](/windows/win32/com/in-process-server-threading-issues)

@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94666c0d15898e05ae78663a15d86b7d00d5c9c6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225206"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505676"
 ---
 # <a name="clongbinary-class"></a>Класс CLongBinary
 
@@ -33,27 +33,27 @@ class CLongBinary : public CObject
 
 |name|Описание|
 |----------|-----------------|
-|[CLongBinary::CLongBinary](#clongbinary)|Создает объект `CLongBinary`.|
+|[CLongBinary:: CLongBinary](#clongbinary)|Создает объект `CLongBinary`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CLongBinary::m_dwDataLength](#m_dwdatalength)|Содержит фактический размер в байтах для объекта данных, дескриптор которого хранится в `m_hData`.|
-|[CLongBinary::m_hData](#m_hdata)|Содержит дескриптор Windows HGLOBAL объекту фактическое изображение.|
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|Содержит фактический размер объекта данных в байтах, в `m_hData`котором хранится его обработчик.|
+|[CLongBinary:: m_hData](#m_hdata)|Содержит обработчик ХГЛОБАЛ Windows для фактического объекта Image.|
 
 ## <a name="remarks"></a>Примечания
 
-Например поле записи в таблице SQL может содержать точечный рисунок, представляющий изображение. Объект `CLongBinary` объект сохраняет объект и отслеживает его размер.
+Например, поле записи в таблице SQL может содержать точечный рисунок, представляющий изображение. `CLongBinary` Объект хранит такой объект и отслеживает его размер.
 
 > [!NOTE]
->  Как правило, это лучше все-таки теперь использовать [CByteArray](../../mfc/reference/cbytearray-class.md) в сочетании с [DFX_Binary](record-field-exchange-functions.md#dfx_binary) функции. Вы можете продолжать использовать `CLongBinary`, но в целом `CByteArray` предоставляет дополнительные функциональные возможности в Win32, так как она не обнаружил 16-разрядное ограничение на размер `CByteArray`. Эта рекомендация относится к программированию с помощью объектов доступа к данным (DAO), а также Open Database Connectivity (ODBC).
+>  Как правило, рекомендуется использовать [CByteArray](../../mfc/reference/cbytearray-class.md) в сочетании с функцией [DFX_Binary](record-field-exchange-functions.md#dfx_binary) . Вы по-прежнему `CLongBinary`можете использовать, но `CByteArray` в целом предоставляет больше функциональных возможностей в Win32, так как отсутствует ограничение размера, обнаруженное 16- `CByteArray`разрядным. Это рекомендации применимы к программированию с помощью объектов доступа к данным (DAO) и ODBC.
 
-Чтобы использовать `CLongBinary` объекта, объявить элемент данных поля типа `CLongBinary` в классе набора записей. Этот член будет внедренного члена класса записей и будут созданы при создании набора записей. После `CLongBinary` объект создан, механизм полями записей (RFX) exchange загружает объект данных из поля в текущей записи в источнике данных и сохраняет его обратно к записи, при обновлении записи. RFX запрашивает источник данных для размер большой двоичный объект выделяет память для него (через `CLongBinary` объекта `m_hData` элемент данных) и сохраняет `HGLOBAL` обработки данных в `m_hData`. RFX также хранит фактический размер объекта данных в `m_dwDataLength` элемент данных. Работа с данными в объекте через `m_hData`, используя те же способы, которые обычно используются для работы с данными, хранящихся в Windows `HGLOBAL` обработки.
+Чтобы использовать `CLongBinary` объект, объявите элемент данных поля типа `CLongBinary` в классе набора записей. Этот член будет внедренным элементом класса Recordset и будет создан при создании набора записей. После создания `CLongBinary` объекта механизм обмена полями записей (RFX) загружает объект данных из поля текущей записи в источнике данных и сохраняет его обратно в запись при обновлении записи. RFX запрашивает у источника данных размер большого двоичного объекта `CLongBinary` , выделяет для него хранилище (через элемент `m_hData` данных объекта `HGLOBAL` ) и сохраняет в нем `m_hData`обработчик. RFX также хранит фактический размер объекта данных в `m_dwDataLength` элементе данных. Работа с данными в объекте `m_hData`с помощью тех же методов, которые обычно используются для работы с данными, хранящимися в обработчике Windows. `HGLOBAL`
 
-Когда уничтожить набора записей, встроенный `CLongBinary` уничтожении объекта, и его деструктор освобождает `HGLOBAL` дескриптора данных.
+При уничтожении набора записей внедренный `CLongBinary` объект также уничтожается, и его деструктор освобождает `HGLOBAL` маркер данных.
 
-Дополнительные сведения о больших объектов и использование `CLongBinary`, см. в статьях [записей (ODBC)](../../data/odbc/recordset-odbc.md) и [набор записей: Работа с большими элементами данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Дополнительные сведения о больших объектах и использовании `CLongBinary`см. в статье [набор записей (ODBC)](../../data/odbc/recordset-odbc.md) и [набор записей. Работа с большими элементами данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -63,9 +63,9 @@ class CLongBinary : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxdb_.h
+**Заголовок:** afxdb_. h
 
-##  <a name="clongbinary"></a>  CLongBinary::CLongBinary
+##  <a name="clongbinary"></a>CLongBinary:: CLongBinary
 
 Создает объект `CLongBinary`.
 
@@ -73,9 +73,9 @@ class CLongBinary : public CObject
 CLongBinary();
 ```
 
-##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength
+##  <a name="m_dwdatalength"></a>CLongBinary:: m_dwDataLength
 
-Хранит фактический размер в байтах данных, хранящихся в маркера HGLOBAL `m_hData`.
+Сохраняет фактический размер в байтах данных, хранящихся в ХГЛОБАЛном маркере в `m_hData`.
 
 ```
 SQLULEN m_dwDataLength;
@@ -83,11 +83,11 @@ SQLULEN m_dwDataLength;
 
 ### <a name="remarks"></a>Примечания
 
-Этот размер может быть меньше, чем размер блока памяти, выделенного для данных. Вызов Win32 [GLobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize) функцию, чтобы получить выделенный размер.
+Этот размер может быть меньше, чем размер блока памяти, выделенного для данных. Вызовите функцию Win32 [глобалсизе](/windows/win32/api/winbase/nf-winbase-globalsize) , чтобы получить выделенный размер.
 
-##  <a name="m_hdata"></a>  CLongBinary::m_hData
+##  <a name="m_hdata"></a>CLongBinary:: m_hData
 
-Сохраняет дескриптор Windows HGLOBAL фактический большой двоичный объект данных.
+Сохраняет обработчик ХГЛОБАЛ Windows для фактических данных больших двоичных объектов.
 
 ```
 HGLOBAL m_hData;

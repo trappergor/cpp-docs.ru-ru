@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 1efa9806267958b4221ee112e56f242c7e25a8f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c958a092478f4b9ec4e94f9e5e973a74c334c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392509"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505715"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Класс CLinearTransitionFromSpeed
 
@@ -37,24 +37,24 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 |name|Описание|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Создает объект переход с линейной скоростью и инициализирует его с скоростью и конечное значение.|
+|[Клинеартранситионфромспид:: Клинеартранситионфромспид](#clineartransitionfromspeed)|Создает объект перехода линейной скорости и инициализирует его с помощью скорости и конечного значения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[Клинеартранситионфромспид:: Create](#create)|Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода. (Переопределяет [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
-|[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Абсолютное значение переменной скоростью.|
+|[Клинеартранситионфромспид:: m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
+|[Клинеартранситионфромспид:: m_dblSpeed](#m_dblspeed)|Абсолютное значение скорости переменной.|
 
 ## <a name="remarks"></a>Примечания
 
-Во время перехода линейной скоростью на указанной скорости изменении значения переменной анимации. Продолжительность перехода определяется разницу между начальным значением и указанным конечное значение. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+При переходе на линейную скорость значение переменной анимации изменяется с заданной скоростью. Длительность перехода определяется разницей между начальным значением и указанным окончательным значением. Так как все переходы очищаются автоматически, рекомендуется выделять их с помощью оператора New. Инкапсулированный COM-объект Иуианиматионтранситион создается методом Каниматионконтроллер:: Аниматеграуп, пока он не будет равен NULL. Изменение переменных-членов после создания этого объекта COM не имеет силы.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -62,15 +62,15 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CLinearTransitionFromSpeed](../../mfc/reference/clineartransitionfromspeed-class.md)
+[клинеартранситионфромспид](../../mfc/reference/clineartransitionfromspeed-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+##  <a name="clineartransitionfromspeed"></a>Клинеартранситионфромспид:: Клинеартранситионфромспид
 
-Создает объект переход с линейной скоростью и инициализирует его с скоростью и конечное значение.
+Создает объект перехода линейной скорости и инициализирует его с помощью скорости и конечного значения.
 
 ```
 CLinearTransitionFromSpeed(
@@ -80,15 +80,15 @@ CLinearTransitionFromSpeed(
 
 ### <a name="parameters"></a>Параметры
 
-*dblSpeed*<br/>
-Абсолютное значение переменной скоростью.
+*дблспид*<br/>
+Абсолютное значение скорости переменной.
 
-*dblFinalValue*<br/>
+*дблфиналвалуе*<br/>
 Значение переменной анимации в конце перехода.
 
-##  <a name="create"></a>  CLinearTransitionFromSpeed::Create
+##  <a name="create"></a>Клинеартранситионфромспид:: Create
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода.
 
 ```
 virtual BOOL Create(
@@ -98,14 +98,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*pLibrary*<br/>
-Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+*плибрари*<br/>
+Указатель на [интерфейс иуианиматионтранситионлибрари](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+Значение TRUE, если переход успешно создан; в противном случае — FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>Клинеартранситионфромспид:: m_dblFinalValue
 
 Значение переменной анимации в конце перехода.
 
@@ -113,9 +113,9 @@ virtual BOOL Create(
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed
+##  <a name="m_dblspeed"></a>Клинеартранситионфромспид:: m_dblSpeed
 
-Абсолютное значение переменной скоростью.
+Абсолютное значение скорости переменной.
 
 ```
 DOUBLE m_dblSpeed;

@@ -1,28 +1,78 @@
 ---
-title: Язык C/C++ и стандартные библиотеки
-ms.date: 11/04/2016
+title: Справочник поC++ библиотекам языка C/Standard
+ms.date: 08/13/2019
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-ms.openlocfilehash: d425d142b52b7d7a86e84a1dbbd648673223165a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: c8a954702f8624537b110aa7e303fcb610387f57
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708008"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498773"
 ---
-# <a name="cc-language-and-standard-libraries"></a>Язык C/C++ и стандартные библиотеки
+# <a name="cc-language-and-standard-libraries-reference"></a>Справочник поC++ библиотекам языка C/Standard
 
-Этот раздел документации содержит рекомендации и справочные материалы по реализации компанией Майкрософт стандартов ISO для C и C++.
+Этот раздел документации содержит справочные материалы по реализации стандартов языка C и C++ языков стандарта ISO в корпорации Майкрософт. Справочник по языку включает документацию по препроцессору, встроенным функциям компилятора и поддерживаемым языкам сборки.
+
+Кроме того, здесь вы найдете документацию по библиотеке времени выполнения C++ C, стандартной библиотеке и нескольким другим библиотекам, доступным в MicrosoftC++ C/Compiler (компилятором MSVC).
+
+## <a name="language-reference"></a>Справочник по языку
+
+[Язык C](../c-language/c-language-reference.md)\
+Справочные материалы по реализации Майкрософт стандартной библиотеки C.
+
+[C++языке](../cpp/cpp-language-reference.md)\
+Справочное содержимое для реализации C++ языка Майкрософт.
+
+[C/C++ препроцессор](../preprocessor/c-cpp-preprocessor-reference.md)\
+Справочное содержимое для препроцессора, используемого C и C++.
+
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+Описание встроенных функций, доступных в Microsoft C и C++ для архитектур x86, ARM, ARM64 и x64.
+
+[Встроенный ассемблер](../assembler/inline/inline-assembler.md)\
+Объясняет, как использовать встроенный код на ассемблере в программах Visual C/C++ для процессоров x86.
+
+[Справочник по ассемблеру ARM](../assembler/arm/arm-assembler-reference.md)\
+Справочные материалы по ассемблеру Microsoft ARM (АРМАСМ) и связанным средствам.
+
+[Справочник по ассемблеру макросов (Майкрософт)](../assembler/masm/microsoft-macro-assembler-reference.md)\
+Содержит справочные материалы по ассемблеру Microsoft Macro Assembler (MASM).
+
+## <a name="libraries-reference"></a>Справочные материалы по библиотекам
+
+### <a name="standard-libraries"></a>Стандартные библиотеки
+
+[Библиотека времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)\
+Ссылка на реализацию Майкрософт библиотеки времени выполнения C (CRT), которая иногда называется универсальной библиотекой CRT.
+
+[C++Стандартная библиотека](../standard-library/cpp-standard-library-reference.md)\
+Ссылка на реализацию Microsoft C++ стандартной библиотеки.
+
+### <a name="libraries-for-windows-applications"></a>Библиотеки для приложений Windows
+
+[MFC/ATL](../mfc/mfc-and-atl.md)\
+Документация по библиотекам классов для Microsoft Foundation Classes (MFC) и библиотеки ATL.
+
+### <a name="additional-libraries"></a>Дополнительные библиотеки
+
+[C++AMP (C++ ускоренный большой параллелизм)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)\
+Классы, позволяющие использовать современные графические процессоры для программирования общего назначения.
+
+[Среда выполнения с параллелизмом](../parallel/concrt/concurrency-runtime.md)\
+Классы, упрощающие написание программ, использующих параллелизм данных или параллелизм задач.
+
+[Модели](../parallel/openmp/openmp-in-visual-cpp.md)\
+Справочник по реализации API OpenMP в Майкрософт.
+
+[Библиотека SafeInt](../safeint/safeint-library.md)\
+Переносимая библиотека, которая может использоваться с КОМПИЛЯТОРОМ MSVC, GCC или Clang для предотвращения целочисленных перепотоков.
+
+[Библиотеки доступа к данным](../data/data-access-in-cpp.md) Библиотеки для поддержки доступа к данным с помощью ATL или MFC, а также устаревших служб, таких как OLE DB и ODBC.
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание|
-|-----------|-----------------|
-|[Возвращение к C++](../cpp/welcome-back-to-cpp-modern-cpp.md)|Описание современных идиом программирования C++ и лучших методик.|
-|[Справочник по языку C++](../cpp/cpp-language-reference.md)|Справочные материалы для языков C++.|
-|[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)|Справочные материалы по реализации Майкрософт стандартной библиотеки C++.|
-|[Справочник по языку C#](../c-language/c-language-reference.md)|Справочные материалы по реализации Майкрософт стандартной библиотеки C.|
-|[Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)|Справочные материалы по реализации Майкрософт стандартной библиотеки среды выполнения C (CRT).|
-|[Библиотека SafeInt](../safeint/safeint-library.md)|Справочные материалы по переносимой библиотеке функций, которые обрабатывают целые числа без риска переполнения.|
-|[C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Описание ключевых возможностей C++ в Visual Studio и ссылки на прочую документацию по Visual Studio C++.|
-|[Разработка приложений C++ в Visual Studio](../overview/overview-of-cpp-development.md)|Ссылки на другие статьи, содержащие сведения о том, как использовать Visual Studio и связанные с ней средства для создания, сборки и развертывания приложений C++.|
-|[Новые возможности Visual C++](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Описание новых функций и усовершенствований в этом выпуске.|
+[Среда выполнения Windows (WinRT) сC++](/windows/uwp/cpp-and-winrt-apis/index)\
+C++/WinRT — это совершенно стандартная современная проекция языка C++ 17 для среда выполнения Windows (WinRT) API, реализованная в виде библиотеки на основе заголовочных файлов.
+
+[Библиотека C++ шаблонов среда выполнения Windows (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)\
+Устаревшая библиотека шаблонов для среда выполнения Windows, замененная на C++/винрт.

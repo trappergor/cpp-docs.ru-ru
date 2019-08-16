@@ -1,5 +1,5 @@
 ---
-title: Класс COleUpdateDialog
+title: Класс Колеупдатедиалог
 ms.date: 11/04/2016
 f1_keywords:
 - COleUpdateDialog
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373600"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503173"
 ---
-# <a name="coleupdatedialog-class"></a>Класс COleUpdateDialog
+# <a name="coleupdatedialog-class"></a>Класс Колеупдатедиалог
 
 Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.
 
@@ -33,17 +33,17 @@ class COleUpdateDialog : public COleLinksDialog
 
 |name|Описание|
 |----------|-----------------|
-|[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Создает объект `COleUpdateDialog`.|
+|[Колеупдатедиалог:: Колеупдатедиалог](#coleupdatedialog)|Создает объект `COleUpdateDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|Отображает **изменить ссылки** диалоговое окно в режиме обновления.|
+|[Колеупдатедиалог::D Омодал](#domodal)|Отображает диалоговое окно **изменение ссылок** в режиме обновления.|
 
 ## <a name="remarks"></a>Примечания
 
-Дополнительные сведения о конкретных OLE диалоговым окнам см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).
+Дополнительные сведения о диалоговых окнах, связанных с OLE, см. в разделе [диалоговые окна статьи в OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -55,19 +55,19 @@ class COleUpdateDialog : public COleLinksDialog
 
 [CDialog](../../mfc/reference/cdialog-class.md)
 
-[CCommonDialog](../../mfc/reference/ccommondialog-class.md)
+[ккоммондиалог](../../mfc/reference/ccommondialog-class.md)
 
-[COleDialog](../../mfc/reference/coledialog-class.md)
+[коледиалог](../../mfc/reference/coledialog-class.md)
 
-[COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)
+[колелинксдиалог](../../mfc/reference/colelinksdialog-class.md)
 
 `COleUpdateDialog`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxodlgs.h
+**Заголовок:** афксодлгс. h
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+##  <a name="coleupdatedialog"></a>Колеупдатедиалог:: Колеупдатедиалог
 
 Создает объект `COleUpdateDialog`.
 
@@ -82,24 +82,24 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>Параметры
 
 *pDoc*<br/>
-Указывает на документ, содержащий ссылки, может потребоваться обновление.
+Указывает документ, содержащий ссылки, которые могут потребоваться для обновления.
 
-*bUpdateLinks*<br/>
-Флаг, который определяет, является ли связанные объекты должны быть обновлены.
+*бупдателинкс*<br/>
+Флаг, который определяет, следует ли обновлять связанные объекты.
 
-*bUpdateEmbeddings*<br/>
-Флаг, который определяет, является ли внедренные объекты должны быть обновлены.
+*бупдатимбеддингс*<br/>
+Флаг, определяющий, следует ли обновлять внедренные объекты.
 
-*pParentWnd*<br/>
-Указывает на объект окна родительский объект или владельца (типа `CWnd`), которому принадлежит объект диалогового окна. Если это значение NULL, родительского окна окно будет присвоено главного окна приложения.
+*ппарентвнд*<br/>
+Указывает на родительский элемент или объект окна-владельца ( `CWnd`типа), которому принадлежит объект диалогового окна. Если значение равно NULL, то родительское окно диалогового окна будет установлено в главное окно приложения.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция создает только `COleUpdateDialog` объекта. Чтобы отобразить диалоговое окно, вызовите [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Этот класс следует использовать вместо `COleLinksDialog` при необходимости обновления только существующих связанных или внедренных элементов.
+Эта функция конструирует только `COleUpdateDialog` объект. Чтобы открыть диалоговое окно, вызовите [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal). Этот класс следует использовать вместо `COleLinksDialog` , если требуется обновить только существующие связанные или внедренные элементы.
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+##  <a name="domodal"></a>Колеупдатедиалог::D Омодал
 
-Появляется диалоговое окно Изменение связей в режим обновления.
+Отображает диалоговое окно изменение ссылок в режиме обновления.
 
 ```
 virtual INT_PTR DoModal();
@@ -109,19 +109,19 @@ virtual INT_PTR DoModal();
 
 Состояние завершения для диалогового окна. Одно из следующих значений:
 
-- IDOK, если диалоговое окно успешно возвращен.
+- ИДОК, если диалоговое окно успешно возвращено.
 
-- IDCANCEL, если ни один из связанных или внедренных элементов в текущем документе необходимо обновить.
+- ИДКАНЦЕЛ, если ни один из связанных или внедренных элементов в текущем документе не нуждается в обновлении.
 
-- IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функция-член для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок, см. в разделе [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) функции в пакете Windows SDK.
+- ИДАБОРТ, если произошла ошибка. Если возвращается ИДАБОРТ, вызовите функцию-член [коледиалог:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) , чтобы получить дополнительные сведения о типе произошедшей ошибки. Список возможных ошибок см. в описании функции [олеуиедитлинкс](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Все ссылки и (или) векторные представления обновляются, если пользователь выбирает кнопки "Отмена".
+Все ссылки и (или) внедрения обновляются, пока пользователь не нажмет кнопку Отмена.
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[Пример OCLIENT MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)

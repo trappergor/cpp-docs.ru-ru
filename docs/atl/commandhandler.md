@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-ms.openlocfilehash: 743be3e0bc9cc96fc6b22d0806d399ab5e160a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99a95228f6036e5f391395be367cdef39ca3dc3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235068"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492453"
 ---
 # <a name="commandhandler"></a>CommandHandler
 
-`CommandHandler` функция, определяемая параметром третий параметр макроса COMMAND_HANDLER в схему сообщения.
+`CommandHandler`функция, определяемая третьим параметром макроса COMMAND_HANDLER в схеме сообщений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ LRESULT CommandHandler(
 Код уведомления.
 
 *wID*<br/>
-Идентификатор пункта меню, элемент управления или сочетаний клавиш.
+Идентификатор элемента меню, элемента управления или ускорителя.
 
-*hWndCtl*<br/>
-Дескриптор окна элемента управления.
+*хвндктл*<br/>
+Маркер для элемента управления "окно".
 
-*bHandled*<br/>
-Карта наборов сообщений *bHandled* значение TRUE перед `CommandHandler` вызывается. Если `CommandHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.
+*бхандлед*<br/>
+Схема сообщений устанавливает для *бхандлед* значение true перед `CommandHandler` вызовом метода. Если `CommandHandler` не полностью обрабатывает сообщение, необходимо установить *бхандлед* в значение false, чтобы указать, что сообщение требует дальнейшей обработки.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -46,10 +46,10 @@ LRESULT CommandHandler(
 
 ## <a name="remarks"></a>Примечания
 
-Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
+Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler).
 
 ## <a name="see-also"></a>См. также
 
 [Реализация окна](../atl/implementing-a-window.md)<br/>
 [Схемы сообщений](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

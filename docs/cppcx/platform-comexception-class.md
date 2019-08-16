@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383351"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500550"
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 
@@ -48,8 +48,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 |Член|Описание|
 |------------|-----------------|
-|[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|
-|[Exception::Message](#message)|Сообщение с описанием исключения.|
+|[Exception:: HResult](#hresult)|Значение HRESULT, соответствующее исключению.|
+|[Исключение:: Message](#message)|Сообщение с описанием исключения.|
 
 ## <a name="derived-exceptions"></a>Производные исключения
 
@@ -77,11 +77,11 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 **Минимальный поддерживаемый сервер:** Windows Server 2012
 
-**Пространство имен:** Platform
+**Пространство имен:** Платформа
 
 **Метаданные:** platform.winmd
 
-## <a name="ctor"></a> Конструктор COMException::COMException
+## <a name="ctor"></a>Конструктор COMException:: COMException
 
 Инициализирует новый экземпляр класса COMException.
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 HRESULT ошибки, представляемый этим исключением.
 
-## <a name="hresult"></a> COMException::HRESULT-свойство
+## <a name="hresult"></a>Свойство COMException:: HResult
 
 Значение HRESULT, соответствующее исключению.
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения об интерпретации значения HRESULT см. в разделе [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes).
+Дополнительные сведения о том, как интерпретировать значение HRESULT, см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes).
 
-## <a name="message"></a> COMException::Message-свойство
+## <a name="message"></a>Свойство COMException:: Message
 
 Сообщение с описанием исключения.
 

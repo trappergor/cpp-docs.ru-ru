@@ -1,21 +1,21 @@
 ---
-title: строка (атрибут COM C++)
+title: String (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514005"
 ---
 # <a name="string-c"></a>string (C++)
 
-Указывает, что одномерный массив **char**, **wchar_t**, `byte` (или эквивалентную) массив или указатель на такой массив должен обрабатываться как строка.
+Указывает, что одномерный массив **char**, **wchar_t**, `byte` (или эквивалентный) или указатель на такой массив должен рассматриваться как строка.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407280"
 
 ## <a name="remarks"></a>Примечания
 
-**Строка** атрибут C++ имеет ту же функциональность, что [строка](/windows/desktop/Midl/string) описании атрибута MIDL.
+Атрибут **String** C++ имеет те же функциональные возможности, что и атрибут [String](/windows/win32/Midl/string) MIDL.
 
 ## <a name="example"></a>Пример
 
-Ниже показано, как использовать **строка** в интерфейсе, а также на определение типа:
+В следующем коде показано, как использовать **строку** в интерфейсе и в определении типа:
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,10 +50,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Применение**|Массив или указатель на массив, параметр интерфейса, метод интерфейса|
+|**Относится к**|Массив или указатель на массив, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

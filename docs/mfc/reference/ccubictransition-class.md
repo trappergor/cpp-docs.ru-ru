@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: f4d5898172c0544064fad82856e404f4fb12b561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6bb626f944ce87748809a5eb03a6f06f92c3de5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164011"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507144"
 ---
 # <a name="ccubictransition-class"></a>Класс CCubicTransition
 
@@ -39,25 +39,25 @@ class CCubicTransition : public CBaseTransition;
 
 |name|Описание|
 |----------|-----------------|
-|[CCubicTransition::CCubicTransition](#ccubictransition)|Создает объект перехода и инициализирует его параметры.|
+|[Ккубиктранситион:: Ккубиктранситион](#ccubictransition)|Создает объект перехода и инициализирует его параметры.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CCubicTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[Ккубиктранситион:: Create](#create)|Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода. (Переопределяет [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Скорость, переменной в конце перехода.|
-|[CCubicTransition::m_duration](#m_duration)|Длительность перехода.|
+|[Ккубиктранситион:: m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
+|[Ккубиктранситион:: m_dblFinalVelocity](#m_dblfinalvelocity)|Скорость переменной в конце перехода.|
+|[Ккубиктранситион:: m_duration](#m_duration)|Длительность перехода.|
 
 ## <a name="remarks"></a>Примечания
 
-Во время третьего перехода значение переменной анимации изменяется от его начального значения на указанного конечное значение за период времени перехода, заканчивая с указанной скоростью. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+Во время перехода в кубический куб значение переменной анимации меняется с начального на заданное конечное значение на время перехода, заканчивая на указанную скорость. Так как все переходы очищаются автоматически, рекомендуется выделять их с помощью оператора New. Инкапсулированный COM-объект Иуианиматионтранситион создается методом Каниматионконтроллер:: Аниматеграуп, пока он не будет равен NULL. Изменение переменных-членов после создания этого объекта COM не имеет силы.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -71,7 +71,7 @@ class CCubicTransition : public CBaseTransition;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition
+##  <a name="ccubictransition"></a>Ккубиктранситион:: Ккубиктранситион
 
 Создает объект перехода и инициализирует его параметры.
 
@@ -84,18 +84,18 @@ CCubicTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*длитель*<br/>
 Длительность перехода.
 
-*finalValue*<br/>
+*финалвалуе*<br/>
 Значение переменной анимации в конце перехода.
 
-*finalVelocity*<br/>
-Скорость, переменной в конце перехода.
+*финалвелоЦити*<br/>
+Скорость переменной в конце перехода.
 
-##  <a name="create"></a>  CCubicTransition::Create
+##  <a name="create"></a>Ккубиктранситион:: Create
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода.
 
 ```
 virtual BOOL Create(
@@ -105,14 +105,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*pLibrary*<br/>
-Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+*плибрари*<br/>
+Указатель на [интерфейс иуианиматионтранситионлибрари](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+Значение TRUE, если переход успешно создан; в противном случае — FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>Ккубиктранситион:: m_dblFinalValue
 
 Значение переменной анимации в конце перехода.
 
@@ -120,15 +120,15 @@ virtual BOOL Create(
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity
+##  <a name="m_dblfinalvelocity"></a>Ккубиктранситион:: m_dblFinalVelocity
 
-Скорость, переменной в конце перехода.
+Скорость переменной в конце перехода.
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCubicTransition::m_duration
+##  <a name="m_duration"></a>Ккубиктранситион:: m_duration
 
 Длительность перехода.
 

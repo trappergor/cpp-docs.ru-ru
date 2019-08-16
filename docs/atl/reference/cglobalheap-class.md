@@ -1,5 +1,5 @@
 ---
-title: Класс CGlobalHeap
+title: Класс CCRTHeap
 ms.date: 11/04/2016
 f1_keywords:
 - CGlobalHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b5aa09357ddcc77b6b10de58545bea86eff2488
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258823"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496766"
 ---
-# <a name="cglobalheap-class"></a>Класс CGlobalHeap
+# <a name="cglobalheap-class"></a>Класс CCRTHeap
 
-Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции глобального кучи Win32.
+Этот класс реализует [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md) с помощью глобальных функций кучи Win32.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,21 +37,21 @@ class CGlobalHeap : public IAtlMemMgr
 
 |name|Описание|
 |----------|-----------------|
-|[CGlobalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
-|[CGlobalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|
-|[CGlobalHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|
-|[CGlobalHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
+|[CCRTHeap:: allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[CCRTHeap:: Free](#free)|Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.|
+|[CCRTHeap:: DataSize](#getsize)|Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.|
+|[CCRTHeap:: перераспределение](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
 
 ## <a name="remarks"></a>Примечания
 
-`CGlobalHeap` реализует функции выделения памяти, с помощью функции глобального кучи Win32.
+`CGlobalHeap`реализует функции выделения памяти с помощью глобальных функций кучи Win32.
 
 > [!NOTE]
->  Функции глобального кучи выполняются медленнее, чем другими функциями управления памятью и не предоставляют меньше возможностей. Таким образом, новые приложения должны использовать [функции кучи](/windows/desktop/Memory/heap-functions). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса. Глобальные функции по-прежнему используются DDE и функций, буфер обмена.
+>  Глобальные функции кучи выполняются медленнее, чем другие функции управления памятью, и не предоставляют столько функций. Поэтому новые приложения должны использовать [функции кучи](/windows/win32/Memory/heap-functions). Они доступны в классе [CWin32Heap](../../atl/reference/cwin32heap-class.md) . Глобальные функции по-прежнему используются в DDE и функциях буфера обмена.
 
 ## <a name="example"></a>Пример
 
-См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+См. пример для [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -61,9 +61,9 @@ class CGlobalHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlmem.h
+**Заголовок:** атлмем. h
 
-##  <a name="allocate"></a>  CGlobalHeap::Allocate
+##  <a name="allocate"></a>CCRTHeap:: allocate
 
 Вызовите этот метод, чтобы выделить блок памяти.
 
@@ -82,13 +82,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [CGlobalHeap::Free](#free) или [CGlobalHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [CCRTHeap:: Free](#free) или [CCRTHeap:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
-Реализовано с помощью [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) с параметром флага GMEM_FIXED.
+Реализуется с помощью [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) с параметром Flag параметра GMEM_FIXED.
 
-##  <a name="free"></a>  CGlobalHeap::Free
+##  <a name="free"></a>CCRTHeap:: Free
 
-Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.
+Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.
 
 ```
 virtual void Free(void* p) throw();
@@ -97,15 +97,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>Параметры
 
 *p*<br/>
-Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
+Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым и не выполняет никаких действий.
 
 ### <a name="remarks"></a>Примечания
 
-Реализовано с помощью [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree).
+Реализуется с помощью [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree).
 
-##  <a name="getsize"></a>  CGlobalHeap::GetSize
+##  <a name="getsize"></a>CCRTHeap:: DataSize
 
-Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.
+Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -122,9 +122,9 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Реализовано с помощью [GlobalSize](/windows/desktop/api/winbase/nf-winbase-globalsize).
+Реализуется с помощью [глобалсизе](/windows/win32/api/winbase/nf-winbase-globalsize).
 
-##  <a name="reallocate"></a>  CGlobalHeap::Reallocate
+##  <a name="reallocate"></a>CCRTHeap:: перераспределение
 
 Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
 
@@ -146,13 +146,13 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [CGlobalHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [CCRTHeap:: Free](#free) , чтобы освободить память, выделенную этим методом.
 
-Реализовано с помощью [GlobalReAlloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc).
+Реализуется с помощью [LocalLock](/windows/win32/api/winbase/nf-winbase-globalrealloc).
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CComHeap](../../atl/reference/ccomheap-class.md)<br/>
 [Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>

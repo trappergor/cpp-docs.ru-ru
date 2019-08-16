@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915872"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497740"
 ---
 # <a name="catlservicemodulet-class"></a>Класс функция CAtlServiceModuleT
 
@@ -244,7 +244,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод записывает сведения в журнал событий с помощью функции [репортевент](/windows/desktop/api/winbase/nf-winbase-reporteventa). Если служба не запущена, строка отправляется в консоль.
+Этот метод записывает сведения в журнал событий с помощью функции [репортевент](/windows/win32/api/winbase/nf-winbase-reporteventw). Если служба не запущена, строка отправляется в консоль.
 
 ##  <a name="m_bservice"></a>Функция CAtlServiceModuleT:: m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Примечания
 
-Структура [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) содержит сведения о службе.
+Структура [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) содержит сведения о службе.
 
 ##  <a name="m_status"></a>Функция CAtlServiceModuleT:: M_STATUS
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Примечания
 
-Структура [SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status) содержит сведения о службе.
+Структура [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status) содержит сведения о службе.
 
 ##  <a name="m_szservicename"></a>Функция CAtlServiceModuleT:: m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Параметры
 
 *ншовкмд*<br/>
-Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) . Значение по умолчанию — SW_HIDE.
+Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Значение по умолчанию — SW_HIDE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>Параметры
 
 *двстате*<br/>
-Новое состояние. Возможные значения см. в разделе [сбой SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) .
+Новое состояние. Возможные значения см. в разделе [сбой SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) .
 
 ### <a name="remarks"></a>Примечания
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Параметры
 
 *ншовкмд*<br/>
-Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Параметры
 
 *ншовкмд*<br/>
-Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) .
+Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 

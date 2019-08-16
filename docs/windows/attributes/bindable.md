@@ -1,17 +1,17 @@
 ---
-title: Привязываемые (атрибут COM C++)
+title: с возможностью привязкиC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148397"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501826"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ ms.locfileid: "62148397"
 
 ## <a name="remarks"></a>Примечания
 
-**Bindable** атрибут C++ имеет ту же функциональность, что [bindable](/windows/desktop/Midl/bindable) описании атрибута MIDL. Его можно использовать на свойства, определенные с [propget](propget.md), [propput](propput.md), или [propputref](propputref.md) атрибуты, или можно вручную определить метод привязки.
+C++ Атрибут **BIND** имеет те же функциональные возможности, что и [связываемый](/windows/win32/Midl/bindable) атрибут MIDL. Его можно использовать для свойств, определенных с помощью атрибутов [propget](propget.md), [propput](propput.md)или [propputref](propputref.md) , или можно вручную определить метод, допускающий привязку.
 
-В следующих примерах MFC показано использование **bindable**:
+В следующих примерах MFC показано использование **BIND**.
 
 - [Примеры элементов управления: Элементы управления ActiveX на основе MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Пример Кр. Элемент управления ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Образец CIRC: Элемент управления ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Образец TESTHELP: Элемент управления ActiveX с помощью подсказки и помощь](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Пример ТЕССЕЛП: Элемент управления ActiveX с подсказками и справкой](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано, как можно использовать **bindable** свойства:
+В следующем коде показано, как можно использовать возможность **привязки** к свойству.
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -64,10 +64,10 @@ __interface IPropDemo : IDispatch {
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297272"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508794"
 ---
 # <a name="controls-mfc"></a>Элементы управления (MFC)
 
@@ -49,7 +49,7 @@ ms.locfileid: "62297272"
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Стандартные элементы управления Windows и классы MFC
 
-|Элемент управления|Класс MFC|Описание|Новое в Windows 95|
+|Элемент управления|Класс MFC|Описание|Новые в Windows 95|
 |-------------|---------------|-----------------|------------------------|
 |[анимация](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Отображение последовательных кадров видеоролика AVI.|Да|
 |button|[CButton](../mfc/reference/cbutton-class.md)|Кнопки, вызывающие действия; также используется для флажков, переключателей и полей групп.|Нет|
@@ -76,7 +76,7 @@ ms.locfileid: "62297272"
 |[подсказка](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Небольшое всплывающее окно с описанием назначения кнопки панели инструментов или другого инструмента.|Да|
 |[дерево](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Окно, в котором отображается иерархический список элементов.|Да|
 
-### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+### <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - Отдельный элемент управления: см. таблицу [Стандартные элементы управления Windows и классы MFC](#_core_windows_common_controls_and_mfc_classes) в этом разделе, содержащую ссылки на все элементы управления.
 
@@ -102,7 +102,7 @@ ms.locfileid: "62297272"
 
 - [Примеры](../mfc/common-control-sample-list.md)
 
-Сведения о стандартных элементах управления Windows в пакете SDK для Windows, см. в разделе [стандартные элементы управления](/windows/desktop/Controls/common-controls-intro).
+Сведения о стандартных элементах управления Windows в Windows SDK см. в разделе [Общие элементы управления](/windows/win32/Controls/common-controls-intro).
 
 ## <a name="see-also"></a>См. также
 

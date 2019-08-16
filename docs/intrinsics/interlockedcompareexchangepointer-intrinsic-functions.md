@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348735"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509437"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchangePointer
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchangePointer
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -79,14 +79,14 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>Параметры
 
-*Назначение*<br/>
-[in, out] Указатель на указатель на значение назначения. Знак игнорируется
+*Местоназначение*<br/>
+[вход, выход] Указатель на указатель на конечное значение. Знак игнорируется
 
 *Exchange*<br/>
-[in] Указатель обмена. Знак игнорируется
+окне Указатель Exchange. Знак игнорируется
 
 *Сравниваемый операнд*<br/>
-[in] Указатель для сравнения с местом назначения. Знак игнорируется
+окне Указатель на сравнение с назначением. Знак игнорируется
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -96,17 +96,17 @@ long _InterlockedCompareExchangePointer_rel (
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86, ARM, x64|\<> Intrin. h|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<> ииинтрин. h|
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, x64|\<> использованием immintrin. h|
 
 ## <a name="remarks"></a>Примечания
 
-`_InterlockedCompareExchangePointer` выполняет атомарное сравнение значения `Destination` адрес с `Comparand` адрес. Если адрес `Destination` равен адресу `Comparand`, адрес `Exchange` сохраняется в адресе, указанном в `Destination`. В противном случае операция не выполняется.
+`_InterlockedCompareExchangePointer`выполняет атомарное сравнение `Destination` адреса `Comparand` с адресом. Если адрес `Destination` равен адресу `Comparand`, адрес `Exchange` сохраняется в адресе, указанном в `Destination`. В противном случае операция не выполняется.
 
-`_InterlockedCompareExchangePointer` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx) функции.
+`_InterlockedCompareExchangePointer`предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккедкомпариксчанжепоинтер](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) .
 
-Пример использования `_InterlockedCompareExchangePointer`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Пример использования `_InterlockedCompareExchangePointer`см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции ARM с суффиксом `_nf` («без границ») не действуют как барьер памяти.
 

@@ -1,21 +1,21 @@
 ---
-title: элемент управления (атрибут COM C++)
+title: элемент управленияC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148280"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501778"
 ---
 # <a name="control"></a>элемент управления
 
-Указывает, что определяемый пользователем тип элемента управления.
+Указывает, что определяемый пользователем тип является элементом управления.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62148280"
 
 ## <a name="remarks"></a>Примечания
 
-**Управления** подразумевает атрибут [coclass](coclass.md) атрибута. **Управления** атрибут C++ имеет ту же функциональность, что [управления](/windows/desktop/Midl/control) описании атрибута MIDL.
+Атрибут **Control** подразумевает атрибут [coclass](coclass.md) . Атрибут **Control** C++ имеет те же функциональные возможности, что и атрибут MIDL [элемента управления](/windows/win32/Midl/control) .
 
 ## <a name="example"></a>Пример
 
@@ -50,10 +50,10 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

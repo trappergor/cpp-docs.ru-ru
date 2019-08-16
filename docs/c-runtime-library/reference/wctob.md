@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188536"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498952"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ int wctob(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctob** успешно преобразует строку расширенных символов, он возвращает соответствующее представление многобайтового символа, только в том случае, если Многобайтовый символ имеет длину ровно один байт. Если **wctob** встречает расширенный символ, не может преобразовать Многобайтовый или Многобайтовый символ отлично от один байт, он возвращает значение -1.
+Если **вктоб** успешно преобразует расширенный символ, он возвращает его представление многобайтового символа, только если многобайтовый символ имеет длину ровно один байт. Если **вктоб** встречает широкий символ, который не может быть преобразован в многобайтовый символ или многобайтовый символ, не должен быть длиннее одного байта, возвращается значение-1.
 
 ## <a name="remarks"></a>Примечания
 
-**Wctob** функция преобразует строку расширенных символов, содержащихся в *wchar* соответствующий Многобайтовый символ, передаваемый возвращаемым **int** значение, если многобайтовой символ имеет длину ровно один байт.
+Функция **вктоб** преобразует широкий символ, содержащийся в параметре *WCHAR* , в соответствующий многобайтовый символ, передаваемый возвращаемым значением **int** , если многобайтовый символ имеет ровно один байт.
 
-Если **wctob** завершилась неудачно и соответствующий Многобайтовый символ найден, функция задает **errno** для **EILSEQ** и возвращает – 1.
+Если **вктоб** завершился неудачей и не найден соответствующий многобайтовый символ, функция устанавливает значение "от" до **еилсек** и возвращает-1.
 
 ## <a name="requirements"></a>Требования
 
@@ -67,7 +67,7 @@ int wctob(
 
 ## <a name="example"></a>Пример
 
-Эта программа иллюстрирует поведение **wcstombs** функции.
+Эта программа иллюстрирует поведение функции **wcstombs** .
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb, _wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

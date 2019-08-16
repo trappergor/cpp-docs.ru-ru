@@ -1,21 +1,21 @@
 ---
-title: retval (атрибут COM C++)
+title: retval (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a2865c1eda229f1a2fcd457c22119b2908c1caa
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407410"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514046"
 ---
 # <a name="retval"></a>retval
 
-Назначает параметр, который получает возвращаемое значение члена.
+Определяет параметр, который получает возвращаемое значение элемента.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407410"
 
 ## <a name="remarks"></a>Примечания
 
-**Retval** атрибут C++ имеет ту же функциональность, что [retval](/windows/desktop/Midl/retval) описании атрибута MIDL.
+Атрибут **retval** C++ имеет те же функциональные возможности, что и атрибут [retval](/windows/win32/Midl/retval) в формате MIDL.
 
-**retval** должны располагаться на последний аргумент в объявлении функции.
+значение **retval** должно присутствовать в последнем аргументе в объявлении функции.
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) использовать образец **retval**.
+См. пример для [привязки](bindable.md) к примеру использования параметра **retval**.
 
 ## <a name="requirements"></a>Требования
 
@@ -39,7 +39,7 @@ ms.locfileid: "62407410"
 
 |||
 |-|-|
-|**Применение**|Параметр интерфейса, метод интерфейса|
+|**Относится к**|Параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**out**|
 |**Недопустимые атрибуты**|**in**|

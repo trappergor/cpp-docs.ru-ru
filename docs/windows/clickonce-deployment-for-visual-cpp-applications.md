@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504782"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513766"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Развертывание с помощью технологии ClickOnce для приложений Visual C++
 
-Visual Studio предоставляет две различные технологии развертывания приложений Windows: развертывание ClickOnce и развертывание [установщика Windows](/windows/desktop/Msi/windows-installer-portal).
+Visual Studio предоставляет две различные технологии развертывания приложений Windows: развертывание ClickOnce и развертывание [установщика Windows](/windows/win32/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Развертывание с помощью технологии ClickOnce в C++
 
-Визуальный элемент C++ среды разработки не поддерживает непосредственно развертывание Visual Studio C++ проектов с помощью ClickOnce, но средства доступны для его использования.
+Среда визуальной C++ разработки не поддерживает развертывание проектов Visual Studio C++ напрямую с помощью ClickOnce, но для его использования доступны средства.
 
 > [!NOTE]
->  Visual Studio поддерживает ClickOnce в средах развертывания Visual C# и Visual Basic. Если Visual Studio C++ проекта является зависимостью визуального элемента C# проекта, можно опубликовать приложение (включая все зависимости) с помощью развертывания ClickOnce из визуального C# среды разработки.
+>  Visual Studio поддерживает ClickOnce в средах развертывания Visual C# и Visual Basic. Если проект Visual Studio C++ является зависимостью визуального C# проекта, можно опубликовать приложение (включая его зависимости) с помощью развертывания ClickOnce из среды визуальной C# разработки.
 
 Для развертывания приложения Visual C++ с помощью ClickOnce сначала нужно создать [Манифест приложения ClickOnce](/visualstudio/deployment/clickonce-application-manifest) и [Манифест развертывания ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) с помощью [Mage.exe](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) (Инструмент создания и изменения манифестов) или его версий для графического пользовательского интерфейса (сведения см. в разделе [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)).
 
@@ -42,7 +42,7 @@ Visual Studio предоставляет две различные технол�
 
 [Mage.exe (средство создания и редактирования манифеста)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (средство создания сертификатов)](/windows/desktop/SecCrypto/makecert)<br>
+[Makecert.exe (средство создания сертификатов)](/windows/win32/SecCrypto/makecert)<br>
 [Развертывание классических приложений](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>

@@ -8,44 +8,44 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63154f3da539676f31709899568b6486dc6017e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240393"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508522"
 ---
-# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Обработка уведомления TTN_NEEDTEXT для всплывающих подсказок
+# <a name="handling-ttn_needtext-notification-for-tool-tips"></a>Обработка уведомления TTN_NEEDTEXT для всплывающих подсказок
 
-Как часть [Включение всплывающих подсказок](../mfc/enabling-tool-tips.md), вы обрабатываете **TTN_NEEDTEXT** сообщения, добавив следующую запись в схеме сообщений для окна-владельца:
+В рамках [включения подсказок](../mfc/enabling-tool-tips.md)вы обрабатываете сообщение **TTN_NEEDTEXT** , добавив следующую запись в схему сообщений окна владельца:
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]
 
-*memberFxn*<br/>
-Функция-член вызывается в том случае, когда требуется текст для данной кнопки.
+*мемберфксн*<br/>
+Функция-член, вызываемая, когда для этой кнопки требуется текст.
 
-Обратите внимание, что идентификатор подсказки всегда равно 0.
+Обратите внимание, что идентификатор подсказки всегда равен 0.
 
-Объявите обработчик функции в определении класса следующим образом:
+Объявите функцию обработчика в определении класса следующим образом:
 
 [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]
 
-выделенный курсивом используются следующие параметры:
+Ниже перечислены параметры с курсивом.
 
 *id*<br/>
-Идентификатор элемента управления, которому было отправлено уведомление. Не используется. Идентификатор элемента управления берется из **NMHDR** структуры.
+Идентификатор элемента управления, отправившего уведомление. Не используется. Идентификатор элемента управления берется из структуры **NMHDR** .
 
-*pNMHDR*<br/>
-Указатель на [NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa) структуры. Эта структура также рассматривается далее в [структура TOOLTIPTEXT](../mfc/tooltiptext-structure.md).
+*пнмхдр*<br/>
+Указатель на структуру [нмттдиспинфо](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfow) . Эта структура также обсуждается далее в [структуре ToolTipText](../mfc/tooltiptext-structure.md).
 
-*pResult*<br/>
-Указатель на код результата можно задать перед возвратом. **TTN_NEEDTEXT** обработчики можно игнорировать *pResult* параметра.
+*пресулт*<br/>
+Указатель на код результата, который можно задать перед возвратом. Обработчики **TTN_NEEDTEXT** могут игнорировать параметр *пресулт* .
 
-Пример обработчика уведомлений представление формы:
+В качестве примера обработчика уведомлений представления формы:
 
 [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]
 
-Вызовите `EnableToolTips` (этот фрагмент взят из `OnInitDialog`):
+Вызов `EnableToolTips` (этот фрагмент взят из `OnInitDialog`):
 
 [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]
 

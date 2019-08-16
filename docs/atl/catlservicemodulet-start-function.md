@@ -1,26 +1,26 @@
 ---
-title: Функция CAtlServiceModuleT::Start
+title: 'Функция функция CAtlServiceModuleT:: Start'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Start method
 ms.assetid: b5193a23-41bc-42d2-8d55-3eb43dc62238
-ms.openlocfilehash: 204d02a1122ee78b38850bedae5f98b1f338ab1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6de15f40e89bfffba504db04ee7a16b2a68cac9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250749"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491668"
 ---
-# <a name="catlservicemoduletstart-function"></a>Функция CAtlServiceModuleT::Start
+# <a name="catlservicemoduletstart-function"></a>Функция функция CAtlServiceModuleT:: Start
 
-При запуске службы `_tWinMain` вызовы `CAtlServiceModuleT::WinMain`, который в свою очередь вызывает `CAtlServiceModuleT::Start`.
+При запуске `_tWinMain` службы вызывает метод `CAtlServiceModuleT::WinMain`, который, в свою очередь, `CAtlServiceModuleT::Start`вызывает.
 
-`CAtlServiceModuleT::Start` Задает массив `SERVICE_TABLE_ENTRY` структур, которые сопоставляются его функция запуска каждой службы. Этот массив передается в функцию Win32 API, [StartServiceCtrlDispatcher](/windows/desktop/api/winsvc/nf-winsvc-startservicectrldispatchera). В теории, один исполняемый ФАЙЛ может обрабатывать несколько служб, и массив может иметь несколько `SERVICE_TABLE_ENTRY` структуры. Тем не менее, в настоящее время это служба, созданный ATL поддерживает только одну службу в EXE-файла. Таким образом, массив содержит единственную запись, которая содержит имя службы и `_ServiceMain` как функцию запуска. `_ServiceMain` — Это статическая функция-член из `CAtlServiceModuleT` , вызывает функцию-член, `ServiceMain`.
+`CAtlServiceModuleT::Start`настраивает массив `SERVICE_TABLE_ENTRY` структур, которые сопоставляют каждую службу с ее функцией запуска. Затем этот массив передается в функцию API Win32 [сбой StartServiceCtrlDispatcher](/windows/win32/api/winsvc/nf-winsvc-startservicectrldispatcherw). Теоретически один исполняемый файл может работать с несколькими службами, и массив может иметь `SERVICE_TABLE_ENTRY` несколько структур. Однако в настоящее время служба, созданная библиотекой ATL, поддерживает только одну службу на каждый исполняемый файл. Таким образом, массив содержит одну запись, которая содержит имя службы и `_ServiceMain` функцию Startup. `_ServiceMain`— Это статическая функция `CAtlServiceModuleT` -член, которая вызывает нестатичную функцию-член,. `ServiceMain`
 
 > [!NOTE]
->  Сбой `StartServiceCtrlDispatcher` для подключения к службе управления manager (SCM), скорее всего, означает, что программа не выполняется как служба. В этом случае программа вызывает `CAtlServiceModuleT::Run` напрямую, чтобы программа может запускаться как локальный сервер. Дополнительные сведения о запуске программы как локального сервера, см. в разделе [упрощению](../atl/debugging-tips.md).
+>  `StartServiceCtrlDispatcher` Сбой подключения к диспетчеру управления службами (SCM), вероятно, означает, что программа не запущена как служба. В этом случае программа вызывает `CAtlServiceModuleT::Run` напрямую, чтобы программа могла работать как локальный сервер. Дополнительные сведения о запуске программы в качестве локального сервера см. в разделе [Советы по отладке](../atl/debugging-tips.md).
 
 ## <a name="see-also"></a>См. также
 
 [Службы](../atl/atl-services.md)<br/>
-[CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
+[Функция CAtlServiceModuleT:: Start](../atl/reference/catlservicemodulet-class.md#start)

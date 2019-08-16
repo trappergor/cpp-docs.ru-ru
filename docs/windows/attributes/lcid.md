@@ -1,21 +1,21 @@
 ---
-title: код языка (атрибут COM C++)
+title: LCID (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.lcid
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514529"
 ---
 # <a name="lcid"></a>lcid
 
-Позволяет передать код языка функции.
+Позволяет передать в функцию идентификатор локали.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409269"
 
 ## <a name="remarks"></a>Примечания
 
-**Lcid** атрибут C++ реализует функции [lcid](/windows/desktop/Midl/lcid) описании атрибута MIDL. Если вы хотите реализовать языкового стандарта для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](module-cpp.md) атрибута.
+Атрибут **LCID** C++ реализует функциональные возможности атрибута [LCID](/windows/win32/Midl/lcid) MIDL. Если требуется реализовать языковой стандарт для библиотечного блока, используйте параметр **LCID =** `lcid` в атрибуте [module](module-cpp.md) .
 
 ## <a name="example"></a>Пример
 
@@ -48,10 +48,10 @@ __interface IStatic {
 
 |||
 |-|-|
-|**Применение**|Параметр интерфейса|
+|**Относится к**|Параметр интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

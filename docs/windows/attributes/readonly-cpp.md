@@ -1,17 +1,17 @@
 ---
-title: только для чтения (атрибут COM C++)
+title: ReadOnly (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 7eea071b62130c65fbb46ebc8827fc2b428c4c0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7393f76596766e841dfc25f6d12e20e3db618
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407345"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514137"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407345"
 
 ## <a name="remarks"></a>Примечания
 
-Атрибут **readonly** языка C++ имеет ту же функциональность, что и атрибут [readonly](/windows/desktop/Midl/readonly) языка MIDL.
+Атрибут **readonly** языка C++ имеет ту же функциональность, что и атрибут [readonly](/windows/win32/Midl/readonly) языка MIDL.
 
 Если вы хотите запретить изменение параметра метода, используйте атрибут [in](in-cpp.md) .
 
@@ -53,10 +53,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

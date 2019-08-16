@@ -1,21 +1,21 @@
 ---
-title: switch_type (C++ атрибут COM)
+title: switch_type (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407124"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513952"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-Определяет тип переменной, которая используется в качестве объединения дискриминантный.
+Определяет тип переменной, используемой в качестве discriminant объединения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>Параметры
 
 *type*<br/>
-Тип коммутатора, может быть целое число, символ, логическое значение или перечисления типа.
+Тип переключателя может быть целым числом, символом, логическим значением или типом перечисления.
 
 ## <a name="remarks"></a>Примечания
 
-**Switch_type** C++ атрибут имеет ту же функциональность, что [switch_type](/windows/desktop/Midl/switch-type) описании атрибута MIDL.
+Атрибут **switch_type** C++ имеет те же функциональные возможности, что и атрибут [switch_type](/windows/win32/Midl/switch-type) MIDL.
 
-Атрибуты C++ не поддерживают [инкапсулированные объединения](/windows/desktop/Midl/encapsulated-unions). [Nonencapsulated объединения](/windows/desktop/Midl/nonencapsulated-unions) поддерживаются только в следующей форме:
+C++атрибуты не поддерживают [инкапсулированные объединения](/windows/win32/Midl/encapsulated-unions). [Неинкапсулированные объединения](/windows/win32/Midl/nonencapsulated-unions) поддерживаются только в следующей форме:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>Пример
 
-См. в разделе [случай](case-cpp.md) пример для использовать **switch_type**.
+Пример использования **switch_type**см. в примере [варианта](case-cpp.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -63,10 +63,10 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**Применение**|**typedef**|
+|**Относится к**|**typedef**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

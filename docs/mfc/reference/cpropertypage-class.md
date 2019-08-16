@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916878"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502809"
 ---
 # <a name="cpropertypage-class"></a>Класс CPropertyPage
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage:: Канцелтоклосе](#canceltoclose)|Изменяет кнопку "ОК" на "чтение закрыта" и отключает кнопку "Отмена" после неустранимого изменения на странице модальной страницы свойств.|
 |[CPropertyPage:: конструкция](#construct)|Создает объект `CPropertyPage`. Используйте `Construct` , если необходимо указать параметры во время выполнения или если используются массивы.|
-|[CPropertyPage:: Жетпсп](#getpsp)|Извлекает структуру [пропшитпаже](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) Windows, связанную с `CPropertyPage` объектом.|
+|[CPropertyPage:: Жетпсп](#getpsp)|Извлекает структуру [пропшитпаже](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) Windows, связанную с `CPropertyPage` объектом.|
 |[CPropertyPage:: OnApply](#onapply)|Вызывается структурой при нажатии кнопки "Применить".|
 |[CPropertyPage:: OnCancel](#oncancel)|Вызывается структурой при нажатии кнопки "Отмена".|
 |[CPropertyPage::OnKillActive](#onkillactive)|Вызывается структурой, когда текущая страница больше не является активной страницей. Проведите проверку данных здесь.|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |name|Описание|
 |----------|-----------------|
-|[CPropertyPage:: m_psp](#m_psp)|Структура [Пропшитпаже](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) Windows. Предоставляет доступ к базовым параметрам страницы свойств.|
+|[CPropertyPage:: m_psp](#m_psp)|Структура [Пропшитпаже](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) Windows. Предоставляет доступ к базовым параметрам страницы свойств.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -261,7 +261,7 @@ CPropertyPage(
 
 ##  <a name="getpsp"></a>CPropertyPage:: Жетпсп
 
-Извлекает структуру [пропшитпаже](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2) Windows, связанную с `CPropertyPage` объектом.
+Извлекает структуру [пропшитпаже](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2) Windows, связанную с `CPropertyPage` объектом.
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
 
 ##  <a name="m_psp"></a>CPropertyPage:: m_psp
 
-`m_psp`— Это структура, члены которой хранят характеристики [пропшитпаже](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2).
+`m_psp`— Это структура, члены которой хранят характеристики [пропшитпаже](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2).
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ virtual BOOL OnApply();
 
 Реализация `OnApply` вызовов`OnOK`по умолчанию.
 
-Дополнительные сведения о сообщениях с уведомлениями, отправленных при нажатии пользователем кнопки Применить сейчас или ОК на странице свойств, см. в разделе [PSN_APPLY](/windows/desktop/Controls/psn-apply) в Windows SDK.
+Дополнительные сведения о сообщениях с уведомлениями, отправленных при нажатии пользователем кнопки Применить сейчас или ОК на странице свойств, см. в разделе [PSN_APPLY](/windows/win32/Controls/psn-apply) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Примечания
 
-Когда пользователь нажимает кнопку ОК или применить сейчас, платформа получает уведомление [PSN_APPLY](/windows/desktop/Controls/psn-apply) со страницы свойств. Вызов `OnOK` не будет выполняться при вызове [CPropertySheet::P рессбуттон](../../mfc/reference/cpropertysheet-class.md#pressbutton) , так как страница свойств не отправляет уведомление в этом случае.
+Когда пользователь нажимает кнопку ОК или применить сейчас, платформа получает уведомление [PSN_APPLY](/windows/win32/Controls/psn-apply) со страницы свойств. Вызов `OnOK` не будет выполняться при вызове [CPropertySheet::P рессбуттон](../../mfc/reference/cpropertysheet-class.md#pressbutton) , так как страница свойств не отправляет уведомление в этом случае.
 
 Переопределите эту функцию-член, чтобы реализовать дополнительное поведение, относящееся к текущей активной странице, когда пользователь закрывает всю страницу свойств.
 
@@ -481,7 +481,7 @@ virtual BOOL OnWizardFinish();
 
 Эту функцию-член можно переопределить, чтобы указать какое-либо действие, которое пользователь должен выполнить при нажатии кнопки Готово. При переопределении этой функции следует возвращать значение FALSE, чтобы предотвратить уничтожение страницы свойств.
 
-Дополнительные сведения о сообщениях с уведомлениями, отправленных при нажатии пользователем кнопки Готово на странице свойств мастера, см. в разделе [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) в Windows SDK.
+Дополнительные сведения о сообщениях с уведомлениями, отправленных при нажатии пользователем кнопки Готово на странице свойств мастера, см. в разделе [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) в Windows SDK.
 
 Дополнительные сведения о том, как создать страницу свойств типа мастера, см. в разделе [CPropertySheet:: сетвизардмоде](../../mfc/reference/cpropertysheet-class.md#setwizardmode).
 

@@ -1,21 +1,21 @@
 ---
-title: Включить (атрибут COM C++)
+title: включить (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409451"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514552"
 ---
 # <a name="include-c"></a>include (C++)
 
-Указывает один или несколько файлов заголовка для включения в созданного IDL-файла.
+Указывает один или несколько файлов заголовков для включения в созданный IDL-файл.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,17 +26,17 @@ ms.locfileid: "62409451"
 ### <a name="parameters"></a>Параметры
 
 *header_file*<br/>
-Имя файла, который будет включен в созданного IDL-файла.
+Имя файла, который необходимо добавить в созданный IDL-файл.
 
 ## <a name="remarks"></a>Примечания
 
-**Включают** C++ атрибут приводит к `#include` инструкцию, чтобы помещаться под `import "docobj.idl"` инструкции в созданного IDL-файла.
+Атрибут **include** C++ приводит к тому, что `import "docobj.idl"` инструкциябудетпомещенаподинструкциейвсозданномIDL-файле.`#include`
 
-**Включают** атрибут C++ имеет ту же функциональность, что [включают](/windows/desktop/Midl/include) описании атрибута MIDL.
+Атрибут **include** C++ имеет те же функциональные возможности, что и атрибут [include](/windows/win32/Midl/include) в формате MIDL.
 
 ## <a name="example"></a>Пример
 
-Ниже показан пример использования **включают**. В этом примере include.h файл содержит только `#include` инструкции.
+В следующем коде показан пример использования **include**. В этом примере файл include. h содержит только `#include` инструкцию.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -51,10 +51,10 @@ ms.locfileid: "62409451"
 
 |||
 |-|-|
-|**Применение**|В любом месте|
+|**Относится к**|В любом месте|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

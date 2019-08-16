@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915797"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496584"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс Кприватеобжектсекуритидеск
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 Этот класс, производный от [ксекуритидеск](../../atl/reference/csecuritydesc-class.md), предоставляет методы для создания дескриптора безопасности закрытого объекта и управления им.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -93,7 +93,7 @@ bool ConvertToAutoInherit(
 Указывает, может ли новый объект содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
 *женерикмаппинг*<br/>
-Указатель на структуру [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
+Указатель на структуру [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод пытается определить, унаследованы ли элементы ACE в списке управления доступом на уровне пользователей (DACL) и списке управления доступом к системе (SACL) текущего дескриптора безопасности от родительского дескриптора безопасности. Он вызывает функцию [конверттоаутоинхеритприватеобжектсекурити](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
+Этот метод пытается определить, унаследованы ли элементы ACE в списке управления доступом на уровне пользователей (DACL) и списке управления доступом к системе (SACL) текущего дескриптора безопасности от родительского дескриптора безопасности. Он вызывает функцию [конверттоаутоинхеритприватеобжектсекурити](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) .
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ bool Create(
 Ссылка на объект [CAccessToken](../../atl/reference/caccesstoken-class.md) для клиентского процесса, от лица которого создается объект.
 
 *женерикмаппинг*<br/>
-Указатель на структуру [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
+Указатель на структуру [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
 
 *ObjectType*<br/>
 Указатель на `GUID` структуру, которая определяет тип объекта, связанного с текущим объектом. Если у объекта нет идентификатора GUID, задайте для *ObjectType* значение null.
@@ -173,7 +173,7 @@ bool Create(
 Указывает, может ли новый объект содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
 *аутоинхеритфлагс*<br/>
-Набор битовых флагов, управляющих наследованием записей управления доступом (ACE) из *ппарент*. Дополнительные сведения см. в разделе [креатеприватеобжектсекуритекс](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Набор битовых флагов, управляющих наследованием записей управления доступом (ACE) из *ппарент*. Дополнительные сведения см. в разделе [креатеприватеобжектсекуритекс](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает [креатеприватеобжектсеркурити](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) или [креатеприватеобжектсекуритекс](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
+Этот метод вызывает [креатеприватеобжектсеркурити](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) или [креатеприватеобжектсекуритекс](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 Второй метод позволяет указать идентификатор GUID типа объекта для нового объекта или управлять наследованием ACE.
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>Параметры
 
 *Си*<br/>
-Набор битовых флагов, указывающих на извлекаемые части дескриптора безопасности. Это значение может быть сочетанием битовых флагов [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Набор битовых флагов, указывающих на извлекаемые части дескриптора безопасности. Это значение может быть сочетанием битовых флагов [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *пресулт*<br/>
 Указатель на объект [ксекуритидеск](../../atl/reference/csecuritydesc-class.md) , который получает копию запрашиваемой информации из указанного дескриптора безопасности.
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>Параметры
 
 *Си*<br/>
-Набор битовых флагов, указывающих на устанавливаемые части дескриптора безопасности. Это значение может быть сочетанием битовых флагов [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) .
+Набор битовых флагов, указывающих на устанавливаемые части дескриптора безопасности. Это значение может быть сочетанием битовых флагов [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) .
 
 *Модификация*<br/>
 Указатель на объект [ксекуритидеск](../../atl/reference/csecuritydesc-class.md) . Части этого дескриптора безопасности, определяемые параметром *Si* , применяются к дескриптору безопасности объекта.
 
 *женерикмаппинг*<br/>
-Указатель на структуру [GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
+Указатель на структуру [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) , указывающую сопоставление каждого универсального права с конкретными правами для объекта.
 
 *Лекс*<br/>
 Ссылка на объект [CAccessToken](../../atl/reference/caccesstoken-class.md) для клиентского процесса, от лица которого создается объект.
 
 *аутоинхеритфлагс*<br/>
-Набор битовых флагов, управляющих наследованием записей управления доступом (ACE) из *ппарент*. Дополнительные сведения см. в разделе [креатеприватеобжектсекуритекс](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
+Набор битовых флагов, управляющих наследованием записей управления доступом (ACE) из *ппарент*. Дополнительные сведения см. в разделе [креатеприватеобжектсекуритекс](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -277,7 +277,7 @@ bool Set(
 
 ## <a name="see-also"></a>См. также
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)<br/>
 [Класс CSecurityDesc](../../atl/reference/csecuritydesc-class.md)

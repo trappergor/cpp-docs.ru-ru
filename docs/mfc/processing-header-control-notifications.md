@@ -8,18 +8,18 @@ helpviewer_keywords:
 - header controls [MFC], processing notifications
 - header control notifications
 ms.assetid: e6c6af7c-d458-4d33-85aa-48014ccde5f6
-ms.openlocfilehash: 3c5d147741123f97a53b18a854db9204738d0a2f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f60a0c918476702881984f976b220130727cf4b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339616"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507947"
 ---
 # <a name="processing-header-control-notifications"></a>Обработка уведомлений элемента управления "Заголовок"
 
-В классе представления или диалогового окна, используйте окно свойств для создания [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) функцию обработчика с оператором switch для любого заголовка элемента управления ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) для уведомляющих сообщений обрабатывать (см. в разделе [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)). Уведомления отправляются в родительское окно, когда пользователь нажимает кнопку или дважды щелкает элемент заголовка, перетаскивания a разделитель между элементами и т. д.
+В классе представления или диалогового окна используйте окно свойств, чтобы создать функцию обработчика [ончилднотифи](../mfc/reference/cwnd-class.md#onchildnotify) с оператором Switch для любых сообщений уведомления элемента управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)), которые необходимо обменять (см. раздел [сопоставление сообщений с функциями). ](../mfc/reference/mapping-messages-to-functions.md)). Уведомления отправляются в родительское окно, когда пользователь щелкает или дважды щелкает элемент заголовка, перетаскивает разделитель между элементами и т. д.
 
-Сообщения уведомлений, связанных с элементом управления заголовка перечислены в [ссылки на элемент управления заголовка](/windows/desktop/controls/header-control-reference) в пакете Windows SDK.
+Сообщения уведомления, связанные с элементом управления "заголовок", перечислены в справочнике по [элементу управления](/windows/win32/controls/header-control-reference) заголовком в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

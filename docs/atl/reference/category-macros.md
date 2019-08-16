@@ -7,31 +7,31 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497858"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
-Эти макросы определяют категории карт.
+Эти макросы определяют карты категорий.
 
 |||
 |-|-|
-|[BEGIN_CATEGORY_MAP](#begin_category_map)|Отмечает начало карты категории.|
-|[END_CATEGORY_MAP](#end_category_map)|Помечает конец карты категории.|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|Указывает категории, которые реализуются посредством COM-объекта.|
-|[REQUIRED_CATEGORY](#required_category)|Указывает категории, которые требуются контейнера с COM-объекта.|
+|[BEGIN_CATEGORY_MAP](#begin_category_map)|Помечает начало таблицы категорий.|
+|[END_CATEGORY_MAP](#end_category_map)|Отмечает конец таблицы категорий.|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|Указывает категории, реализуемые COM-объектом.|
+|[REQUIRED_CATEGORY](#required_category)|Указывает категории, необходимые для контейнера объектом COM.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
+##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
 
-Отмечает начало карты категории.
+Помечает начало таблицы категорий.
 
 ```
 BEGIN_CATEGORY_MAP(theClass)
@@ -39,29 +39,29 @@ BEGIN_CATEGORY_MAP(theClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*<br/>
-[in] Имя класса, содержащего карту категории.
+*секласс*<br/>
+окне Имя класса, содержащего карту категорий.
 
 ### <a name="remarks"></a>Примечания
 
-Карта категория используется для указания категорий компонентов COM-класс будет реализовывать и категорий, к которым он требует от его контейнера.
+Таблица категорий используется для указания категорий компонентов, которые будут реализованы классом COM, и категорий, которые требуются для его контейнера.
 
-Добавить [IMPLEMENTED_CATEGORY](#implemented_category) запись на карту для каждой категории, реализованного в классе COM. Добавить [REQUIRED_CATEGORY](#required_category) запись на карту для каждой категории, классу для реализации своих клиентов. Отметить конец карты с [END_CATEGORY_MAP](#end_category_map) макрос.
+Добавьте запись [IMPLEMENTED_CATEGORY](#implemented_category) на карту для каждой категории, реализованной классом com. Добавьте запись [REQUIRED_CATEGORY](#required_category) на карту для каждой категории, которую класс требует реализовать на своих клиентах. Отметьте конец схемы с помощью макроса [END_CATEGORY_MAP](#end_category_map) .
 
-Категории компонента в схеме будут автоматически регистрироваться при модуль регистрируется в том случае, если класс имеет связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если у класса есть связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
->  ATL использует диспетчер категорий стандартных компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе, при регистрации модуля, регистрация выполняется успешно, но категорий компонентов не будут регистрироваться для этого класса.
+>  ATL использует стандартный диспетчер категорий компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе при регистрации модуля, регистрация будет выполнена, но категории компонентов не будут зарегистрированы для этого класса.
 
-Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.
+Дополнительные сведения о категориях компонентов см. в разделе [что такое категории компонентов и как они работают](/windows/win32/com/component-categories-and-how-they-work) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
-Помечает конец карты категории.
+Отмечает конец таблицы категорий.
 
 ```
 END_CATEGORY_MAP()
@@ -69,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>Пример
 
-См. в примере [BEGIN_CATEGORY_MAP](#begin_category_map).
+См. пример для [BEGIN_CATEGORY_MAP](#begin_category_map).
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Добавление макроса IMPLEMENTED_CATEGORY к компоненту [карты категории](#begin_category_map) для указания, что он должен быть зарегистрирован как реализация категории, идентифицируемый *catID* параметра.
+Добавьте макрос IMPLEMENTED_CATEGORY в [карту категории](#begin_category_map) компонента, чтобы указать, что он должен быть зарегистрирован в качестве реализации категории, определяемой параметром *CATID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,35 +82,35 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>Параметры
 
 *catID*<br/>
-[in] CATID константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для реализованного категории. Адрес *catID* будут выполнены и добавлены на карту. В приведенной ниже таблице для выделения из стандартных категорий.
+окне Константа или переменная CATID, содержащая глобальный уникальный идентификатор (GUID) для реализованной категории. Адрес *CATID* будет создан и добавлен на карту. Для выбора категорий запасов см. таблицу ниже.
 
 ### <a name="remarks"></a>Примечания
 
-Категории компонента в схеме будут автоматически регистрироваться при модуль регистрируется в том случае, если класс имеет связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.
+Категории компонентов, перечисленные в карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный макрос [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
 
-Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования без необходимости создавать его экземпляр.
+Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования, не создавая его экземпляр.
 
-Дополнительные сведения о категории компонентов, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.
+Дополнительные сведения о категориях компонентов см. в разделе [что такое категории компонентов и как они работают](/windows/win32/com/component-categories-and-how-they-work) в Windows SDK.
 
-### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий
+### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Описание|Символ|Реестр GUID|
+|Описание|Символ|GUID реестра|
 |-----------------|------------|-------------------|
-|Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Простая рамка сайта вложения|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|Включение веб-узла простого фрейма|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|Сложные методы связывания данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Расширенная привязка данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](/windows/desktop/com/internet-aware-objects) в пакете Windows SDK для простого списка.||
+|Объекты, поддерживающие Интернет|Пример списка см. в разделе [объекты, поддерживающие Интернет](/windows/win32/com/internet-aware-objects) , в Windows SDK.||
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  REQUIRED_CATEGORY
+##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Добавление макроса REQUIRED_CATEGORY компонента [карты категории](#begin_category_map) для указания, что он должен быть зарегистрирован как требующий категории, идентифицируемый *catID* параметра.
+Добавьте макрос REQUIRED_CATEGORY в [карту категории](#begin_category_map) компонента, чтобы указать, что его следует зарегистрировать, как требуется категория, определяемая параметром *CATID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>Параметры
 
 *catID*<br/>
-[in] CATID константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для необходимые категории. Адрес *catID* будут выполнены и добавлены на карту. В приведенной ниже таблице для выделения из стандартных категорий.
+окне Константа или переменная CATID, содержащая глобальный уникальный идентификатор (GUID) для требуемой категории. Адрес *CATID* будет создан и добавлен на карту. Для выбора категорий запасов см. таблицу ниже.
 
 ### <a name="remarks"></a>Примечания
 
-Категории компонента в схеме будут автоматически регистрироваться при модуль регистрируется в том случае, если класс имеет связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.
+Категории компонентов, перечисленные в карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный макрос [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
 
-Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования без необходимости создавать его экземпляр. Например элемент управления может потребоваться, что контейнер поддерживают привязку данных. Контейнер можно выяснить наличие возможности, необходимые для размещения элемента управления, запрашивая диспетчер категорий для категорий, необходимые для этого элемента управления. Если контейнер не поддерживает функцию, необходимую, она может отклонить для размещения COM-объекта.
+Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования, не создавая его экземпляр. Например, элементу управления может потребоваться, чтобы контейнер поддерживал привязку данных. Контейнер может определить, есть ли у него возможности, необходимые для размещения элемента управления, выполнив запрос к диспетчеру категорий для категорий, необходимых для этого элемента управления. Если контейнер не поддерживает требуемую функцию, он может отказаться размещать COM-объект.
 
-Дополнительные сведения о категории компонентов, включая список примеров, см. в разделе [Каковы категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work) в пакете Windows SDK.
+Дополнительные сведения о категориях компонентов, включая пример списка, см. в разделе [что такое категории компонентов и как они работают](/windows/win32/com/component-categories-and-how-they-work) в Windows SDK.
 
-### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий
+### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Описание|Символ|Реестр GUID|
+|Описание|Символ|GUID реестра|
 |-----------------|------------|-------------------|
-|Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|Простая рамка сайта вложения|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|Включение веб-узла простого фрейма|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|Сложные методы связывания данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Расширенная привязка данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|Объекты с поддержкой Интернета|См. в разделе [виду объектов Internet](/windows/desktop/com/internet-aware-objects) в пакете Windows SDK для простого списка.||
+|Объекты, поддерживающие Интернет|Пример списка см. в разделе [объекты, поддерживающие Интернет](/windows/win32/com/internet-aware-objects) , в Windows SDK.||
 
 ### <a name="example"></a>Пример
 

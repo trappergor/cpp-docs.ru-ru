@@ -1,17 +1,17 @@
 ---
-title: disp-интерфейс (атрибут COM C++)
+title: ДиспетчерскийC++ интерфейс (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346305"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501617"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ ms.locfileid: "64346305"
 
 Если не указать базовый класс, интерфейс диспетчеризации будет производным от `IDispatch`. Необходимо указать [идентификатор](id.md) для членов интерфейса диспетчеризации.
 
-Пример использования [dispinterface](/windows/desktop/Midl/dispinterface) в документации MIDL:
+Пример использования [dispinterface](/windows/win32/Midl/dispinterface) в документации MIDL:
 
 ```cpp
 dispinterface helloPro
@@ -48,9 +48,9 @@ dispinterface helloPro
 
 |||
 |-|-|
-|**Применение**|**interface**|
+|**Относится к**|**interface**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

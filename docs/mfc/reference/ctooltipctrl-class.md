@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916743"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502258"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -261,7 +261,7 @@ BOOL AdjustRect(
 
 Эта функция-член вычисляет текстовый прямоугольник элемента управления "всплывающая подсказка" на основе прямоугольника окна или прямоугольника окна подсказки, необходимого для вывода указанного текстового прямоугольника.
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect), как описано в Windows SDK.
 
 ##  <a name="create"></a>CToolTipCtrl:: Create
 
@@ -322,7 +322,7 @@ virtual BOOL CreateEx(
 Задает стиль элемента управления "Подсказка". Дополнительные сведения см. в разделе **"Примечания" раздела "** [Создание](#create) ".
 
 *двстиликс*<br/>
-Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в Windows SDK.
+Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Параметры
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) всплывающей подсказки.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) всплывающей подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -385,7 +385,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize), как описано в Windows SDK.
 
 ##  <a name="getcurrenttool"></a>CToolTipCtrl:: Жеткурренттул
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*лптулинфо*|заполняет Указатель на структуру [тулинфо](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , которая получает сведения о текущем окне всплывающей подсказки.|
+|*лптулинфо*|заполняет Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , которая получает сведения о текущем окне всплывающей подсказки.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -407,7 +407,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет сообщение [TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool) , описанное в Windows SDK.
+Этот метод отправляет сообщение [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , описанное в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -440,7 +440,7 @@ int GetDelayTime(DWORD dwDuration) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime), как описано в Windows SDK.
 
 ##  <a name="getmargin"></a>CToolTipCtrl:: Margin
 
@@ -464,7 +464,7 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin), как описано в Windows SDK.
 
 ##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: Жетмакстипвидс
 
@@ -480,7 +480,7 @@ int GetMaxTipWidth() const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth), как описано в Windows SDK.
 
 ##  <a name="gettext"></a>CToolTipCtrl:: GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [COLORREF](/windows/desktop/gdi/colorref) , представляющее цвет фона.
+Значение [COLORREF](/windows/win32/gdi/colorref) , представляющее цвет фона.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor), как описано в Windows SDK.
 
 ##  <a name="gettiptextcolor"></a>CToolTipCtrl:: Жеттиптекстколор
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [COLORREF](/windows/desktop/gdi/colorref) , представляющее цвет текста.
+Значение [COLORREF](/windows/win32/gdi/colorref) , представляющее цвет текста.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor), как описано в Windows SDK.
 
 ##  <a name="gettitle"></a>CToolTipCtrl:: наименование
 
@@ -552,11 +552,11 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*пттгт*|заполняет Указатель на структуру [ттжеттитле](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) , содержащую сведения о элементе управления ToolTip. При возврате из этого метода элемент *псзтитле* структуры [ттжеттитле](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle) указывает на текст заголовка.|
+|*пттгт*|заполняет Указатель на структуру [ттжеттитле](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) , содержащую сведения о элементе управления ToolTip. При возврате из этого метода элемент *псзтитле* структуры [ттжеттитле](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) указывает на текст заголовка.|
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет сообщение [TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle) , описанное в Windows SDK.
+Этот метод отправляет сообщение [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , описанное в Windows SDK.
 
 ##  <a name="gettoolcount"></a>CToolTipCtrl:: Жеттулкаунт
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>Примечания
 
-Элементы `hwnd` и `uId` структуры [тулинфо](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , на которые ссылается *ктулинфо* , определяют средство. Если это средство зарегистрировано с помощью всплывающей подсказки `AddTool` `TOOLINFO` , то при предыдущем вызове структура заполняется сведениями о средстве.
+Элементы `hwnd` и `uId` структуры [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , на которые ссылается *ктулинфо* , определяют средство. Если это средство зарегистрировано с помощью всплывающей подсказки `AddTool` `TOOLINFO` , то при предыдущем вызове структура заполняется сведениями о средстве.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 Указатель на объект `CPoint` , содержащий координаты проверяемой точки.
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , содержащую сведения об инструменте.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , содержащую сведения об инструменте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_POP](/windows/desktop/Controls/ttm-pop), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_POP](/windows/win32/Controls/ttm-pop), как описано в Windows SDK.
 
 ##  <a name="popup"></a>CToolTipCtrl::P опуп
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет сообщение [TTM_POPUP](/windows/desktop/Controls/ttm-popup) , описанное в Windows SDK.
+Этот метод отправляет сообщение [TTM_POPUP](/windows/win32/Controls/ttm-popup) , описанное в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Параметры
 
 *лпмсг*<br/>
-Указатель на структуру [MSG](/windows/desktop/api/winuser/ns-winuser-msg) , содержащую сообщение для ретрансляции.
+Указатель на структуру [MSG](/windows/win32/api/winuser/ns-winuser-msg) , содержащую сообщение для ретрансляции.
 
 ### <a name="remarks"></a>Примечания
 
@@ -751,7 +751,7 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin), как описано в Windows SDK.
 
 ##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: Сетмакстипвидс
 
@@ -772,7 +772,7 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth), как описано в Windows SDK.
 
 ##  <a name="settipbkcolor"></a>CToolTipCtrl:: Сеттипбкколор
 
@@ -789,7 +789,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor), как описано в Windows SDK.
 
 ##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
 
@@ -806,7 +806,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor), как описано в Windows SDK.
 
 ##  <a name="settitle"></a>CToolTipCtrl:: Сеттитле
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>Параметры
 
 *уикон*<br/>
-См. *значок* в [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) в Windows SDK.
+См. *значок* в [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) в Windows SDK.
 
 *лпстртитле*<br/>
 Указатель на строку заголовка.
@@ -832,7 +832,7 @@ BOOL SetTitle(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена реализует поведение сообщения Win32 [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle), как описано в Windows SDK.
+Эта функция члена реализует поведение сообщения Win32 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle), как описано в Windows SDK.
 
 ##  <a name="settoolinfo"></a>CToolTipCtrl:: Сеттулинфо
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Параметры
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) , указывающую сведения, которые необходимо задать.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , указывающую сведения, которые необходимо задать.
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: Сеттулрект
 
@@ -888,7 +888,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена эмулирует функциональность сообщения [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme) , как описано в Windows SDK.
+Эта функция члена эмулирует функциональность сообщения [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , как описано в Windows SDK.
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

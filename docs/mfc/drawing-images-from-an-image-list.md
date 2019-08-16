@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916407"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508609"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Рисование изображений из списка изображений
 
@@ -28,7 +28,7 @@ ms.locfileid: "68916407"
 
 Немаскированное изображение копируется в контекст целевого устройства с помощью `SRCCOPY` операции растрового изображения. Цвета изображения отображаются одинаково независимо от цвета фона контекста устройства. Стили рисования, заданные `Draw` в, также не влияют на внешний вид немаскированного изображения.
 
-Помимо функции рисования, другая функция, [дравиндирект](../mfc/reference/cimagelist-class.md#drawindirect), расширяет возможность отрисовки изображения. `DrawIndirect`принимает в качестве параметра структуру [имажелистдравпарамс](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams) . Эта структура может использоваться для настройки отрисовки текущего изображения, включая использование кодов растровой операции (верхнем). Дополнительные сведения о кодах верхнем см. в разделе [растровые коды операций](/windows/desktop/gdi/raster-operation-codes) и [растровые изображения в качестве кистей](/windows/desktop/gdi/bitmaps-as-brushes) в Windows SDK.
+Помимо функции рисования, другая функция, [дравиндирект](../mfc/reference/cimagelist-class.md#drawindirect), расширяет возможность отрисовки изображения. `DrawIndirect`принимает в качестве параметра структуру [имажелистдравпарамс](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams) . Эта структура может использоваться для настройки отрисовки текущего изображения, включая использование кодов растровой операции (верхнем). Дополнительные сведения о кодах верхнем см. в разделе [растровые коды операций](/windows/win32/gdi/raster-operation-codes) и [растровые изображения в качестве кистей](/windows/win32/gdi/bitmaps-as-brushes) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

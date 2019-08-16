@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd45c2ff9b43148e0fe27ebd410a2390a4d12ce2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246567"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497559"
 ---
 # <a name="ccombstr-class"></a>Класс CComBSTR
 
@@ -52,73 +52,73 @@ class CComBSTR
 
 |name|Описание|
 |----------|-----------------|
-|[CComBSTR::CComBSTR](#ccombstr)|Конструктор.|
+|[CComBSTR:: CComBSTR](#ccombstr)|Конструктор.|
 |[CComBSTR:: ~ CComBSTR](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CComBSTR::Append](#append)|Добавляет строку в `m_str`.|
-|[CComBSTR::AppendBSTR](#appendbstr)|Добавляет строку BSTR, чтобы `m_str`.|
-|[CComBSTR::AppendBytes](#appendbytes)|Добавляет указанное число байтов для `m_str`.|
-|[CComBSTR::ArrayToBSTR](#arraytobstr)|Создает строку BSTR с первого символа каждого элемента в массив safearray и присоединяет его к `CComBSTR` объекта.|
-|[CComBSTR::AssignBSTR](#assignbstr)|Назначает BSTR в `m_str`.|
-|[CComBSTR::Attach](#attach)|Присоединяет BSTR в `CComBSTR` объекта.|
-|[CComBSTR::BSTRToArray](#bstrtoarray)|Создает отсчитываемый от нуля одномерный массив типа safearray, где каждый элемент массива является символ из `CComBSTR` объекта.|
-|[CComBSTR::ByteLength](#bytelength)|Возвращает длину `m_str` в байтах.|
-|[CComBSTR::Copy](#copy)|Возвращает копию объекта `m_str`.|
-|[CComBSTR::CopyTo](#copyto)|Возвращает копию объекта `m_str` через **[out]** параметр|
-|[CComBSTR::Detach](#detach)|Отсоединяет `m_str` из `CComBSTR` объекта.|
-|[CComBSTR::Empty](#empty)|Освобождает `m_str`.|
-|[CComBSTR::Length](#length)|Возвращает длину `m_str`.|
-|[CComBSTR::LoadString](#loadstring)|Загружает строку ресурса.|
-|[CComBSTR::ReadFromStream](#readfromstream)|Загружает объект BSTR из потока.|
-|[CComBSTR::ToLower](#tolower)|Преобразует строку в нижний регистр.|
-|[CComBSTR::ToUpper](#toupper)|Преобразует строку в верхний регистр.|
-|[CComBSTR::WriteToStream](#writetostream)|Сохраняет `m_str` в поток.|
+|[CComBSTR:: Append](#append)|Добавляет строку в `m_str`.|
+|[CComBSTR:: Аппендбстр](#appendbstr)|Добавляет строку BSTR в `m_str`.|
+|[CComBSTR:: Аппендбитес](#appendbytes)|Добавляет указанное число байтов в `m_str`.|
+|[CComBSTR:: Аррайтобстр](#arraytobstr)|Создает строку BSTR из первого символа каждого элемента массива SafeArray и присоединяет его к `CComBSTR` объекту.|
+|[CComBSTR:: Ассигнбстр](#assignbstr)|Присваивает значение BSTR для `m_str`.|
+|[CComBSTR:: Attach](#attach)|Присоединяет BSTR к `CComBSTR` объекту.|
+|[CComBSTR:: Бстртоаррай](#bstrtoarray)|Создает одномерный массив SafeArray, начинающийся с нуля, где каждый элемент массива является символом из `CComBSTR` объекта.|
+|[CComBSTR:: ByteLength](#bytelength)|Возвращает длину `m_str` в байтах.|
+|[CComBSTR:: Copy](#copy)|Возвращает копию `m_str`.|
+|[CComBSTR:: CopyTo](#copyto)|Возвращает копию `m_str` с помощью параметра **[out]** .|
+|[CComBSTR::D етач](#detach)|Отсоединяется `CComBSTR`отобъекта `m_str` .|
+|[CComBSTR:: Empty](#empty)|`m_str`Бесплатно.|
+|[CComBSTR:: Length](#length)|Возвращает длину `m_str`.|
+|[CComBSTR:: Лоадстринг](#loadstring)|Загружает строковый ресурс.|
+|[CComBSTR:: Реадфромстреам](#readfromstream)|Загружает объект BSTR из потока.|
+|[CComBSTR:: ToLower](#tolower)|Преобразует строку в нижний регистр.|
+|[CComBSTR:: ToUpper](#toupper)|Преобразует строку в верхний регистр.|
+|[CComBSTR:: Вритетостреам](#writetostream)|Сохраняет `m_str` в поток.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |name|Описание|
 |----------|-----------------|
-|[CComBSTR::operator BSTR](#operator_bstr)|Приведения `CComBSTR` объекта на строку BSTR.|
-|[CComBSTR::operator!](#operator_not)|Возвращает значение TRUE или FALSE, в зависимости от того, следует ли `m_str`имеет значение NULL.|
-|[CComBSTR::operator! =](#operator_neq)|Сравнивает `CComBSTR` со строкой.|
-|[CComBSTR::operator &](#operator_amp)|Возвращает адрес `m_str`.|
-|[CComBSTR::operator +=](#operator_add_eq)|Добавляет `CComBSTR` к объекту.|
-|[CComBSTR::operator <](#operator_lt)|Сравнивает `CComBSTR` со строкой.|
-|[CComBSTR::operator =](#operator_eq)|Присваивает значение свойству `m_str`.|
-|[CComBSTR::operator ==](#operator_eq_eq)|Сравнивает `CComBSTR` со строкой.|
-|[CComBSTR::operator >](#operator_gt)|Сравнивает `CComBSTR` со строкой.|
+|[CComBSTR:: operator BSTR](#operator_bstr)|`CComBSTR` Приводит объект к типу BSTR.|
+|[CComBSTR:: operator!](#operator_not)|Возвращает значение true или false в зависимости от того `m_str`, имеет ли значение null.|
+|[CComBSTR:: operator! =](#operator_neq)|`CComBSTR` Сравнивает со строкой.|
+|[CComBSTR:: operator &](#operator_amp)|Возвращает адрес `m_str`.|
+|[CComBSTR:: operator + =](#operator_add_eq)|Добавляет объект `CComBSTR` к объекту.|
+|[CComBSTR:: operator <](#operator_lt)|`CComBSTR` Сравнивает со строкой.|
+|[CComBSTR:: operator =](#operator_eq)|Присваивает значение `m_str`.|
+|[CComBSTR:: operator = =](#operator_eq_eq)|`CComBSTR` Сравнивает со строкой.|
+|[CComBSTR:: operator >](#operator_gt)|`CComBSTR` Сравнивает со строкой.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CComBSTR::m_str](#m_str)|Содержит строку BSTR, связанные с `CComBSTR` объекта.|
+|[CComBSTR:: m_str](#m_str)|Содержит строку BSTR, связанную `CComBSTR` с объектом.|
 
 ## <a name="remarks"></a>Примечания
 
-`CComBSTR` Класс является оболочкой для строк BSTR, которые представляют собой строки с префиксом. Длина сохраняется как целое число в области памяти выше данные в строке.
+`CComBSTR` Класс является оболочкой для bstrs, которые являются строками с префиксом длины. Длина хранится в виде целого числа в области памяти, предшествующей данным в строке.
 
-Объект [BSTR](/previous-versions/windows/desktop/automat/bstr) завершается нуль символом после последней инвентаризации символ, но также может содержать символы null, встроенные в строке. Длина строки определяется количество символов, не первый символ null.
-
-> [!NOTE]
->  `CComBSTR` Класс предоставляет ряд членов (конструкторы, операторы присваивания и операторы сравнения), которые принимают строки ANSI или Юникод в качестве аргументов. ANSI версии этих функций менее эффективны, чем их аналоги Юникода, так как временные строки в Юникоде часто создаются внутренним образом. Для повышения эффективности используете версии Юникода, где это возможно.
+Символ [BSTR](/previous-versions/windows/desktop/automat/bstr) завершается нулем после последнего подсчета, но также может содержать символы NULL, внедренные в строку. Длина строки определяется числом символов, а не первым символом NULL.
 
 > [!NOTE]
->  Например, из-за поведение улучшенные подстановки, реализованные в Visual Studio .NET, код `bstr = L"String2" + bstr;`, которой может скомпилирован в предыдущих выпусках необходимо реализовывать как `bstr = CStringW(L"String2") + bstr`.
+>  `CComBSTR` Класс предоставляет ряд элементов (конструкторы, операторы присваивания и операторы сравнения), которые принимают в качестве аргументов строки в кодировке ANSI или Юникод. Версии этих функций в кодировке ANSI менее эффективны, чем их аналоги в Юникоде, так как временные строки Юникода часто создаются внутренним образом. Для повышения эффективности используйте версии Юникода, где это возможно.
 
-Список предупреждения при использовании `CComBSTR`, см. в разделе [программирование с использованием CComBSTR](../../atl/programming-with-ccombstr-atl.md).
+> [!NOTE]
+>  Из-за улучшенного поведения поиска, реализованного в Visual Studio .NET, `bstr = L"String2" + bstr;`код, такой как, который мог быть скомпилирован в предыдущих выпусках `bstr = CStringW(L"String2") + bstr`, вместо этого должен быть реализован как.
+
+Список предостережений при использовании `CComBSTR`см. в разделе [программирование с помощью CComBSTR](../../atl/programming-with-ccombstr-atl.md).
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="append"></a>  CComBSTR::Append
+##  <a name="append"></a>CComBSTR:: Append
 
-Добавляет либо *lpsz* или BSTR членом *bstrSrc* для [m_str](#m_str).
+Добавляет либо *лпсз* , либо элемент BSTR в *бстрсрк* в [m_str](#m_str).
 
 ```
 HRESULT Append(const CComBSTR& bstrSrc) throw();
@@ -131,33 +131,33 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*<br/>
-[in] Объект `CComBSTR` добавляемый объект.
+*бстрсрк*<br/>
+окне Добавляемый `CComBSTR` объект.
 
 *ch*<br/>
-[in] Добавляемый символ.
+окне Добавляемый символ.
 
-*lpsz*<br/>
-[in] Строка символов с завершающим нулевым символом, для добавления. Вы можете передать строку Юникода через перегрузку LPCOLESTR или строка ANSI через LPCSTR версии.
+*лпсз*<br/>
+окне Строка символов, заканчивающаяся нулем, для добавления. Строку Юникода можно передать с помощью перегрузки ЛПКОЛЕСТР или строки ANSI с помощью версии LPCSTR.
 
-*nLen*<br/>
-[in] Число символов из *lpsz* для добавления.
+*нлен*<br/>
+окне Число символов из *лпсз* для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
 ### <a name="remarks"></a>Примечания
 
-В строку ANSI преобразуются в Юникод до, добавляемый.
+Строка ANSI будет преобразована в Юникод перед добавлением.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]
 
-##  <a name="appendbstr"></a>  CComBSTR::AppendBSTR
+##  <a name="appendbstr"></a>CComBSTR:: Аппендбстр
 
-Добавляет указанный строки BSTR [m_str](#m_str).
+Добавляет указанный BSTR в [m_str](#m_str).
 
 ```
 HRESULT AppendBSTR(BSTR p) throw();
@@ -166,23 +166,23 @@ HRESULT AppendBSTR(BSTR p) throw();
 ### <a name="parameters"></a>Параметры
 
 *p*<br/>
-[in] BSTR, для добавления.
+окне Добавляемая BSTR.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
 ### <a name="remarks"></a>Примечания
 
-В этот метод не следует передавать обычной строки расширенных символов. Компилятор не может возникнут ошибки времени выполнения и обнаружения ошибок.
+Не передавайте в этот метод обычную строку расширенных символов. Компилятор не может перехватывать ошибки, возникающие во время выполнения.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]
 
-##  <a name="appendbytes"></a>  CComBSTR::AppendBytes
+##  <a name="appendbytes"></a>CComBSTR:: Аппендбитес
 
-Добавляет указанное число байтов для [m_str](#m_str) без преобразования.
+Добавляет указанное число байтов в [m_str](#m_str) без преобразования.
 
 ```
 HRESULT AppendBytes(const char* lpsz, int nLen) throw();
@@ -190,23 +190,23 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpsz*<br/>
-[in] Указатель на массив байтов для добавления.
+*лпсз*<br/>
+окне Указатель на массив байтов для добавления.
 
 *p*<br/>
-[in] Число байтов для добавления.
+окне Число байтов для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]
 
-##  <a name="arraytobstr"></a>  CComBSTR::ArrayToBSTR
+##  <a name="arraytobstr"></a>CComBSTR:: Аррайтобстр
 
-Освобождает любую существующую строку в `CComBSTR` объекта, затем создает BSTR с первого символа каждого элемента в массив safearray и присоединяет его к `CComBSTR` объекта.
+Освобождает любую существующую строку, удерживаемую в `CComBSTR` объекте, а затем создает BSTR из первого символа каждого элемента в массиве SafeArray и присоединяет его `CComBSTR` к объекту.
 
 ```
 HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
@@ -215,15 +215,15 @@ HRESULT ArrayToBSTR(const SAFEARRAY* pSrc) throw();
 ### <a name="parameters"></a>Параметры
 
 *pSrc*<br/>
-[in] Массив safearray, содержащий элементы, используемые для создания строки.
+окне Массив SafeArray, содержащий элементы, используемые для создания строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
-##  <a name="assignbstr"></a>  CComBSTR::AssignBSTR
+##  <a name="assignbstr"></a>CComBSTR:: Ассигнбстр
 
-Назначает BSTR в [m_str](#m_str).
+Присваивает [M_STR](#m_str)BSTR.
 
 ```
 HRESULT AssignBSTR(const BSTR bstrSrc) throw();
@@ -231,16 +231,16 @@ HRESULT AssignBSTR(const BSTR bstrSrc) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*<br/>
-[in] BSTR, чтобы назначить текущего `CComBSTR` объекта.
+*бстрсрк*<br/>
+окне Значение BSTR, присваиваемое текущему `CComBSTR` объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
-##  <a name="attach"></a>  CComBSTR::Attach
+##  <a name="attach"></a>CComBSTR:: Attach
 
-Присоединяет BSTR в `CComBSTR` объекта, задав [m_str](#m_str) члена *src*.
+Присоединяет BSTR к `CComBSTR` объекту, устанавливая для элемента [m_str](#m_str) значение *src*.
 
 ```
 void Attach(BSTR src) throw();
@@ -249,22 +249,22 @@ void Attach(BSTR src) throw();
 ### <a name="parameters"></a>Параметры
 
 *src*<br/>
-[in] BSTR, для прикрепления к объекту.
+окне Объект BSTR, который необходимо присоединить к объекту.
 
 ### <a name="remarks"></a>Примечания
 
-В этот метод не следует передавать обычной строки расширенных символов. Компилятор не может возникнут ошибки времени выполнения и обнаружения ошибок.
+Не передавайте в этот метод обычную строку расширенных символов. Компилятор не может перехватывать ошибки, возникающие во время выполнения.
 
 > [!NOTE]
->  Этот метод будет утверждать, если `m_str` отлично от NULL.
+>  Этот метод будет утверждать, `m_str` если не имеет значение null.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="bstrtoarray"></a>  CComBSTR::BSTRToArray
+##  <a name="bstrtoarray"></a>CComBSTR:: Бстртоаррай
 
-Создает отсчитываемый от нуля одномерный массив типа safearray, где каждый элемент массива является символ из `CComBSTR` объекта.
+Создает одномерный массив SafeArray, начинающийся с нуля, где каждый элемент массива является символом из `CComBSTR` объекта.
 
 ```
 HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
@@ -272,16 +272,16 @@ HRESULT BSTRToArray(LPSAFEARRAY* ppArray) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ppArray*<br/>
-[out] Указатель на safearray, используемый для хранения результатов функции.
+*ппаррай*<br/>
+заполняет Указатель на массив SafeArray, используемый для хранения результатов функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK в случае успеха или любой стандартный значение HRESULT ошибки.
+S_OK при успешном выполнении или любое стандартное значение ошибки HRESULT.
 
-##  <a name="bytelength"></a>  CComBSTR::ByteLength
+##  <a name="bytelength"></a>CComBSTR:: ByteLength
 
-Возвращает число байтов в `m_str`, за исключением завершающего нуль-символа.
+Возвращает число байтов в `m_str`, за исключением завершающего нуль символа.
 
 ```
 unsigned int ByteLength() const throw();
@@ -289,19 +289,19 @@ unsigned int ByteLength() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Длина [m_str](#m_str) элемента в байтах.
+Длина элемента [m_str](#m_str) в байтах.
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает 0, если `m_str` имеет значение NULL.
+Возвращает 0, `m_str` если имеет значение null.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]
 
-##  <a name="ccombstr"></a>  CComBSTR::CComBSTR
+##  <a name="ccombstr"></a>CComBSTR:: CComBSTR
 
-Конструктор. Конструктор по умолчанию присваивает [m_str](#m_str) элемент NULL.
+Конструктор. Конструктор по умолчанию присваивает элементу [m_str](#m_str) значение null.
 
 ```
 CComBSTR() throw();
@@ -317,26 +317,26 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Параметры
 
-*nSize*<br/>
-[in] Число символов для копирования из *sz* или начальный размер в символах для `CComBSTR`.
+*нсизе*<br/>
+окне Число символов для копирования из *SZ* или начальный размер в символах для `CComBSTR`.
 
-*sz*<br/>
-[входные данные] Строка для копирования. Версия Юникода указывает LPCOLESTR; версия ANSI указывает LPCSTR.
+*SZ*<br/>
+[входные данные] Строка для копирования. Версия Юникода определяет ЛПКОЛЕСТР. версия ANSI указывает LPCSTR.
 
 *pSrc*<br/>
-[входные данные] Строка для копирования. Версия Юникода указывает LPCOLESTR; версия ANSI указывает LPCSTR.
+[входные данные] Строка для копирования. Версия Юникода определяет ЛПКОЛЕСТР. версия ANSI указывает LPCSTR.
 
 *src*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*Идентификатор GUID*<br/>
-[in] Ссылку на `GUID` структуры.
+*устройства*<br/>
+окне Ссылка на `GUID` структуру.
 
 ### <a name="remarks"></a>Примечания
 
-Конструктор копирования присваивает `m_str` на копию BSTR членом *src*. `REFGUID` Конструктор преобразует GUID в строку с помощью `StringFromGUID2` и сохраняет результат.
+Конструктор копий задает `m_str` копию элемента BSTR в *src*. Конструктор преобразует идентификатор GUID в строку с помощью `StringFromGUID2` и сохраняет результат. `REFGUID`
 
-Другие конструкторы присваивают `m_str` копию указанной строки. Если передать значение *nSize*, тогда только *nSize* будут скопированы символы, а затем завершающий нуль-символ.
+Другие конструкторы присваивают `m_str` копию указанной строки. Если передать значение для *нсизе*, будут скопированы только *нсизе* символы, за которыми следует завершающий нуль-символ.
 
 `CComBSTR` поддерживает семантику перемещения. Конструктор перемещения (принимающий ссылку rvalue (`&&`)) можно использовать, чтобы создать объект, который использует те же базовые данные, что и старый объект, передаваемый как аргумент, без необходимости копировать объект.
 
@@ -346,7 +346,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR
 
 Деструктор
 
@@ -358,9 +358,9 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 Деструктор освобождает строку, на которую указывает `m_str`.
 
-##  <a name="copy"></a>  CComBSTR::Copy
+##  <a name="copy"></a>CComBSTR:: Copy
 
-Выделяет и возвращает копию объекта `m_str`.
+Выделяет и возвращает копию `m_str`.
 
 ```
 BSTR Copy() const throw();
@@ -368,15 +368,15 @@ BSTR Copy() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Копия [m_str](#m_str) член. Если `m_str` равен NULL, возвращается значение NULL.
+Копия элемента [m_str](#m_str) . Если `m_str` имеет значение null, возвращает значение null.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]
 
-##  <a name="copyto"></a>  CComBSTR::CopyTo
+##  <a name="copyto"></a>CComBSTR:: CopyTo
 
-Выделяет и возвращает копию объекта [m_str](#m_str) через параметр.
+Выделяет и возвращает копию [m_str](#m_str) через параметр.
 
 ```
 HRESULT CopyTo(BSTR* pbstr) throw();
@@ -386,27 +386,27 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pbstr*<br/>
-[out] Адрес строку BSTR, в котором для возврата строки, выделенной с помощью этого метода.
+*пбстр*<br/>
+заполняет Адрес строки BSTR, в которой возвращается строка, выделенная этим методом.
 
-*pvarDest*<br/>
-[out] Адрес объекта типа VARIANT, в котором для возврата строки, выделенной с помощью этого метода.
+*пвардест*<br/>
+заполняет Адрес варианта, в котором возвращается строка, выделенная этим методом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный значение HRESULT, указывающее, успешно ли выполнен копии.
+Стандартное значение HRESULT, указывающее на успешное или неуспешное завершение копирования.
 
 ### <a name="remarks"></a>Примечания
 
-После вызова этого метода, тип VARIANT, на которые указывают *pvarDest* будет иметь тип VT_BSTR.
+После вызова этого метода вариант, на который указывает *пвардест* , будет иметь тип VT_BSTR.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]
 
-##  <a name="detach"></a>  CComBSTR::Detach
+##  <a name="detach"></a>CComBSTR::D етач
 
-Отсоединяет [m_str](#m_str) из `CComBSTR` и устанавливает `m_str` значение NULL.
+Отсоединяет [m_str](#m_str) от `CComBSTR` объекта и устанавливает `m_str` в значение null.
 
 ```
 BSTR Detach() throw();
@@ -414,15 +414,15 @@ BSTR Detach() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-BSTR, связанные с `CComBSTR` объекта.
+BSTR, связанный с `CComBSTR` объектом.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]
 
-##  <a name="empty"></a>  CComBSTR::Empty
+##  <a name="empty"></a>CComBSTR:: Empty
 
-Освобождает [m_str](#m_str) член.
+Освобождает элемент [m_str](#m_str) .
 
 ```
 void Empty() throw();
@@ -432,9 +432,9 @@ void Empty() throw();
 
 [!code-cpp[NVC_ATL_Utilities#41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]
 
-##  <a name="length"></a>  CComBSTR::Length
+##  <a name="length"></a>CComBSTR:: Length
 
-Возвращает количество символов в `m_str`, за исключением завершающего нуль-символа.
+Возвращает количество символов в `m_str`, за исключением завершающего нуль символа.
 
 ```
 unsigned int Length() const throw();
@@ -442,15 +442,15 @@ unsigned int Length() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Длина [m_str](#m_str) член.
+Длина элемента [m_str](#m_str) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]
 
-##  <a name="loadstring"></a>  CComBSTR::LoadString
+##  <a name="loadstring"></a>CComBSTR:: Лоадстринг
 
-Загружает строку ресурса, задаваемого *nID* и сохраняет его в этом объекте.
+Загружает строковый ресурс, заданный параметром *NID* , и сохраняет его в этом объекте.
 
 ```
 bool LoadString(HINSTANCE hInst, UINT nID) throw();
@@ -459,23 +459,23 @@ bool LoadString(UINT nID) throw();
 
 ### <a name="parameters"></a>Параметры
 
-См. в разделе [LoadString](/windows/desktop/api/winuser/nf-winuser-loadstringa) в Windows SDK.
+См. раздел [лоадстринг](/windows/win32/api/winuser/nf-winuser-loadstringw) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если строка успешно загружены; в противном случае возвращает значение FALSE.
+Возвращает значение TRUE, если строка успешно загружена; в противном случае возвращает значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция загружает ресурс из модуля, идентифицируемого по вы через *hInst* параметра. Вторая функция загружает ресурс из модуля ресурсов, связанных с [CComModule](../../atl/reference/ccommodule-class.md)-производный объект, используемый в этом проекте.
+Первая функция загружает ресурс из модуля, указанного с помощью параметра *хинст* . Вторая функция загружает ресурс из модуля ресурсов, связанного с объектом, производным от [CComModule](../../atl/reference/ccommodule-class.md), который используется в этом проекте.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]
 
-##  <a name="m_str"></a>  CComBSTR::m_str
+##  <a name="m_str"></a>CComBSTR:: m_str
 
-Содержит строку BSTR, связанные с `CComBSTR` объекта.
+Содержит строку BSTR, связанную `CComBSTR` с объектом.
 
 ```
 BSTR m_str;
@@ -485,9 +485,9 @@ BSTR m_str;
 
 [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]
 
-##  <a name="operator_bstr"></a>  CComBSTR::operator BSTR
+##  <a name="operator_bstr"></a>CComBSTR:: operator BSTR
 
-Приведения `CComBSTR` объекта на строку BSTR.
+`CComBSTR` Приводит объект к типу BSTR.
 
 ```
 operator BSTR() const throw();
@@ -495,15 +495,15 @@ operator BSTR() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вы можете передавать `CComBSTR` объектов функциям, которые имеют **[in] BSTR** параметров.
+Позволяет передавать `CComBSTR` объекты в функции, имеющие параметры **BSTR [in]** .
 
 ### <a name="example"></a>Пример
 
-См. в примере [CComBSTR::m_str](#m_str).
+См. пример для [CComBSTR:: m_str](#m_str).
 
-##  <a name="operator_not"></a>  CComBSTR::operator!
+##  <a name="operator_not"></a>CComBSTR:: operator!
 
-Проверяет, является ли строка BSTR значение NULL.
+Проверяет, имеет ли строка BSTR значение NULL.
 
 ```
 bool operator!() const throw();
@@ -511,19 +511,19 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если [m_str](#m_str) элемент является пустой; в противном случае — значение FALSE.
+Возвращает значение TRUE, если элемент [m_str](#m_str) имеет значение null; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот оператор проверяет только значения NULL, не для пустой строки.
+Этот оператор проверяет только значение NULL, а не пустую строку.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]
 
-##  <a name="operator_neq"></a>  CComBSTR::operator! =
+##  <a name="operator_neq"></a>CComBSTR:: operator! =
 
-Возвращает логическое отрицание [оператор ==](#operator_eq_eq).
+Возвращает логическое противоположное [оператору = =](#operator_eq_eq).
 
 ```
 bool operator!= (const CComBSTR& bstrSrc) const throw();
@@ -534,26 +534,26 @@ bool operator!= (int nNull) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*<br/>
+*бстрсрк*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*pszSrc*<br/>
-[in] Строка с завершающим нулевым символом.
+*псзсрк*<br/>
+окне Строка, завершающаяся нулем.
 
-*nNull*<br/>
-[in] Должен иметь значение NULL.
+*Недопустимо*<br/>
+окне Должен иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если элемент с которым производится сравнение не равно `CComBSTR` ; в противном случае возвращает FALSE.
+Возвращает значение true, если сравниваемый элемент не равен `CComBSTR` объекту; в противном случае возвращает значение false.
 
 ### <a name="remarks"></a>Примечания
 
-`CComBSTR`s сравниваются в текстовой форме в контексте языка пользователя по умолчанию. Оператор сравнения окончательный просто сравнивает содержащуюся строку наличие значения NULL.
+`CComBSTR`сравниваются в текстовом виде в контексте пользовательского языкового стандарта по умолчанию. Окончательный оператор сравнения просто сравнивает автономную строку со значением NULL.
 
-##  <a name="operator_amp"></a>  CComBSTR::operator &amp;
+##  <a name="operator_amp"></a>CComBSTR:: operator&amp;
 
-Возвращает адрес BSTR, хранящиеся в [m_str](#m_str) член.
+Возвращает адрес BSTR, хранящегося в элементе [m_str](#m_str) .
 
 ```
 BSTR* operator&() throw();
@@ -561,9 +561,9 @@ BSTR* operator&() throw();
 
 ### <a name="remarks"></a>Примечания
 
-`CComBstr operator &` есть специальное утверждение, связанная с ним для выявления утечек памяти. Программа установит `m_str` член инициализируется. Это утверждение был создан для выявления ситуаций, когда программист использует `& operator` присвоить новое значение `m_str` член, не освобождая первый выделение `m_str`. Если `m_str` имеет значение NULL, то программа предполагает, что m_str не был выделен еще. В этом случае программа не будет утверждать.
+`CComBstr operator &`имеет специальное утверждение, связанное с ним, чтобы помочь определить утечки памяти. Программа будет утверждать при `m_str` инициализации элемента. Это утверждение было создано для того, чтобы выявлять ситуации, `& operator` когда программист использует для назначения нового `m_str` значения члену без высвобождения первого выделения `m_str`. Если `m_str` имеет значение null, программа предполагает, что m_str еще не выделена. В этом случае программа не будет утверждать.
 
-Это утверждение не включена по умолчанию. Определите ATL_CCOMBSTR_ADDRESS_OF_ASSERT, чтобы включить это утверждение.
+Это утверждение не включено по умолчанию. Определите ATL_CCOMBSTR_ADDRESS_OF_ASSERT, чтобы включить это утверждение.
 
 ### <a name="example"></a>Пример
 
@@ -571,9 +571,9 @@ BSTR* operator&() throw();
 
 [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComBSTR::operator +=
+##  <a name="operator_add_eq"></a>CComBSTR:: operator + =
 
-Добавляет строку в `CComBSTR` объекта.
+Добавляет строку в `CComBSTR` объект.
 
 ```
 CComBSTR& operator+= (const CComBSTR& bstrSrc);
@@ -582,23 +582,23 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*<br/>
-[in] Объект `CComBSTR` добавляемый объект.
+*бстрсрк*<br/>
+окне Добавляемый `CComBSTR` объект.
 
-*pszSrc*<br/>
-[in] Добавляемая строка с завершающим нулевым символом.
+*псзсрк*<br/>
+окне Строка для добавления, заканчивающаяся нулем.
 
 ### <a name="remarks"></a>Примечания
 
-`CComBSTR`s сравниваются в текстовой форме в контексте языка пользователя по умолчанию. LPCOLESTR сравнение выполняется с помощью `memcmp` на основе необработанных данных в каждой строке. Сравнение LPCSTR выполняется так же после временных Юникода копия *pszSrc* будет создана. Оператор сравнения окончательный просто сравнивает содержащуюся строку наличие значения NULL.
+`CComBSTR`сравниваются в текстовом виде в контексте пользовательского языкового стандарта по умолчанию. Сравнение лпколестр выполняется с использованием `memcmp` необработанных данных в каждой строке. Сравнение LPCSTR выполняется так же, как и после создания временной копии *псзсрк* в Юникоде. Окончательный оператор сравнения просто сравнивает автономную строку со значением NULL.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]
 
-##  <a name="operator_lt"></a>  CComBSTR::operator &lt;
+##  <a name="operator_lt"></a>CComBSTR:: operator&lt;
 
-Сравнивает `CComBSTR` со строкой.
+`CComBSTR` Сравнивает со строкой.
 
 ```
 bool operator<(const CComBSTR& bstrSrc) const throw();
@@ -608,15 +608,15 @@ bool operator<(LPCSTR pszSrc) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если элемент сравниваемых меньше, чем `CComBSTR` ; в противном случае возвращает FALSE.
+Возвращает значение true, если сравниваемый элемент меньше `CComBSTR` объекта; в противном случае возвращает значение false.
 
 ### <a name="remarks"></a>Примечания
 
-Сравнение выполняется с помощью языка пользователя по умолчанию.
+Сравнение выполняется с использованием национальной настройки пользователя по умолчанию.
 
-##  <a name="operator_eq"></a>  CComBSTR::operator =
+##  <a name="operator_eq"></a>CComBSTR:: operator =
 
-Наборы [m_str](#m_str) члена на копию *pSrc* или копию BSTR членом *src*. Оператор присваивания перемещения перемещает `src` не копируя его.
+Задает члену [m_str](#m_str) копию *pSrc* или копию элемента BSTR в *src*. Оператор присваивания перемещения перемещается `src` без копирования.
 
 ```
 CComBSTR& operator= (const CComBSTR& src);
@@ -627,15 +627,15 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Примечания
 
-*PSrc* параметр задает LPCOLESTR для версии Юникода или LPCSTR для версии ANSI.
+Параметр *pSrc* указывает либо лпколестр для версий Юникода, либо LPCSTR для версий ANSI.
 
 ### <a name="example"></a>Пример
 
-См. в примере [CComBSTR::Copy](#copy).
+См. пример для [CComBSTR:: Copy](#copy).
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
+##  <a name="operator_eq_eq"></a>CComBSTR:: operator = =
 
-Сравнивает `CComBSTR` со строкой. `CComBSTR`s сравниваются в текстовой форме в контексте языка пользователя по умолчанию.
+`CComBSTR` Сравнивает со строкой. `CComBSTR`сравниваются в текстовом виде в контексте пользовательского языкового стандарта по умолчанию.
 
 ```
 bool operator== (const CComBSTR& bstrSrc) const throw();
@@ -646,26 +646,26 @@ bool operator== (int nNull) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*bstrSrc*<br/>
+*бстрсрк*<br/>
 [входные данные] Объект `CComBSTR`.
 
-*pszSrc*<br/>
-[in] Строка с завершающим нулевым символом.
+*псзсрк*<br/>
+окне Строка, завершающаяся нулем.
 
-*nNull*<br/>
-[in] Должен иметь значение NULL.
+*Недопустимо*<br/>
+окне Должен иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если элемент сравниваемых равен `CComBSTR` ; в противном случае возвращает FALSE.
+Возвращает значение true, если сравниваемый элемент равен `CComBSTR` объекту; в противном случае возвращает значение false.
 
 ### <a name="remarks"></a>Примечания
 
-Оператор сравнения окончательный просто сравнивает содержащуюся строку наличие значения NULL.
+Окончательный оператор сравнения просто сравнивает автономную строку со значением NULL.
 
-##  <a name="operator_gt"></a>  CComBSTR::operator &gt;
+##  <a name="operator_gt"></a>CComBSTR:: operator&gt;
 
-Сравнивает `CComBSTR` со строкой.
+`CComBSTR` Сравнивает со строкой.
 
 ```
 bool operator>(const CComBSTR& bstrSrc) const throw();
@@ -673,15 +673,15 @@ bool operator>(const CComBSTR& bstrSrc) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если элемент сравниваемых больше, чем `CComBSTR` ; в противном случае возвращает FALSE.
+Возвращает значение true, если сравниваемый элемент больше, `CComBSTR` чем объект; в противном случае возвращает значение false.
 
 ### <a name="remarks"></a>Примечания
 
-Сравнение выполняется с помощью языка пользователя по умолчанию.
+Сравнение выполняется с использованием национальной настройки пользователя по умолчанию.
 
-##  <a name="readfromstream"></a>  CComBSTR::ReadFromStream
+##  <a name="readfromstream"></a>CComBSTR:: Реадфромстреам
 
-Наборы [m_str](#m_str) элемент строку BSTR, содержащихся в заданном потоке.
+Задает для элемента [m_str](#m_str) значение BSTR, содержащееся в указанном потоке.
 
 ```
 HRESULT ReadFromStream(IStream* pStream) throw();
@@ -689,8 +689,8 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*<br/>
-[in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса на поток, содержащий данные.
+*пстреам*<br/>
+окне Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) в потоке, содержащем данные.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -698,15 +698,15 @@ HRESULT ReadFromStream(IStream* pStream) throw();
 
 ### <a name="remarks"></a>Примечания
 
-`ReadToStream` требуется содержимое потока в текущей позиции для обеспечения совместимости с форматом записывается с помощью вызова [WriteToStream](#writetostream).
+`ReadToStream`требует, чтобы содержимое потока в текущей позиции было совместимо с форматом данных, записанным при помощи вызова [вритетостреам](#writetostream).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Utilities#44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]
 
-##  <a name="tolower"></a>  CComBSTR::ToLower
+##  <a name="tolower"></a>CComBSTR:: ToLower
 
-Преобразует содержащуюся строку в нижний регистр.
+Преобразует вложенную строку в нижний регистр.
 
 ```
 HRESULT ToLower() throw();
@@ -718,11 +718,11 @@ HRESULT ToLower() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе `CharLowerBuff` Дополнительные сведения о том, как выполняется преобразование.
+Дополнительные `CharLowerBuff` сведения о выполнении преобразования см. в разделе.
 
-##  <a name="toupper"></a>  CComBSTR::ToUpper
+##  <a name="toupper"></a>CComBSTR:: ToUpper
 
-Преобразует содержащуюся строку в верхний регистр.
+Преобразует вложенную строку в верхний регистр.
 
 ```
 HRESULT ToUpper() throw();
@@ -734,11 +734,11 @@ HRESULT ToUpper() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе `CharUpperBuff` Дополнительные сведения о том, как выполняется преобразование.
+Дополнительные `CharUpperBuff` сведения о выполнении преобразования см. в разделе.
 
-##  <a name="writetostream"></a>  CComBSTR::WriteToStream
+##  <a name="writetostream"></a>CComBSTR:: Вритетостреам
 
-Сохраняет [m_str](#m_str) член в поток.
+Сохраняет элемент [m_str](#m_str) в поток.
 
 ```
 HRESULT WriteToStream(IStream* pStream) throw();
@@ -746,8 +746,8 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pStream*<br/>
-[in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) интерфейса в потоке.
+*пстреам*<br/>
+окне Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) в потоке.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -755,7 +755,7 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Можно повторно создать BSTR из содержимого потока с помощью [ReadFromStream](#readfromstream) функции.
+Можно повторно создать строку BSTR из содержимого потока с помощью функции [реадфромстреам](#readfromstream) .
 
 ### <a name="example"></a>Пример
 
@@ -763,5 +763,5 @@ HRESULT WriteToStream(IStream* pStream) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
-[ATL и макросов преобразования MFC из строки](string-conversion-macros.md)
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
+[Макросы преобразования строк ATL и MFC](string-conversion-macros.md)

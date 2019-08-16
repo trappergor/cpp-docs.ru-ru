@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916711"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502677"
 ---
 # <a name="cricheditdoc-class"></a>Класс CRichEditDoc
 
@@ -88,7 +88,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>Параметры
 
 *прео*<br/>
-Указатель на структуру [объекта](/windows/desktop/api/richole/ns-richole-reobject) , описывающую элемент OLE. Новый `CRichEditCntrItem` объект создается вокруг этого объекта OLE. Если *прео* имеет значение null, новый элемент клиента пуст.
+Указатель на структуру [объекта](/windows/win32/api/richole/ns-richole-reobject) , описывающую элемент OLE. Новый `CRichEditCntrItem` объект создается вокруг этого объекта OLE. Если *прео* имеет значение null, новый элемент клиента пуст.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -98,7 +98,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 
 Эта функция не выполняет инициализацию OLE.
 
-Дополнительные сведения см. в описании структуры реобъектного [объекта](/windows/desktop/api/richole/ns-richole-reobject) в Windows SDK.
+Дополнительные сведения см. в описании структуры реобъектного [объекта](/windows/win32/api/richole/ns-richole-reobject) в Windows SDK.
 
 ##  <a name="getstreamformat"></a>CRichEditDoc:: Жетстреамформат
 

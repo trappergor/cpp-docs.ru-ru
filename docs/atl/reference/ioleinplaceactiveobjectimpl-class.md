@@ -1,5 +1,5 @@
 ---
-title: Класс IOleInPlaceActiveObjectImpl
+title: Класс Иолеинплацеактивеобжектимпл
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-ms.openlocfilehash: fd0bcb7bb20967128ef3b3cc62722c3b68e728d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52638c8a28652cc958ebb3d774319ab37a3c46d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276683"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495756"
 ---
-# <a name="ioleinplaceactiveobjectimpl-class"></a>Класс IOleInPlaceActiveObjectImpl
+# <a name="ioleinplaceactiveobjectimpl-class"></a>Класс Иолеинплацеактивеобжектимпл
 
-Этот класс предоставляет методы, за помощь при написании связи между элементом управления на месте и его контейнером.
+Этот класс предоставляет методы для облегчения взаимодействия между элементом управления на месте и его контейнером.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,7 +40,7 @@ class IOleInPlaceActiveObjectImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IOleInPlaceActiveObjectImpl`.
+Класс, производный от `IOleInPlaceActiveObjectImpl`.
 
 ## <a name="members"></a>Участники
 
@@ -48,19 +48,19 @@ class IOleInPlaceActiveObjectImpl
 
 |name|Описание|
 |----------|-----------------|
-|[IOleInPlaceActiveObjectImpl::ContextSensitiveHelp](#contextsensitivehelp)|Обеспечивает контекстную справку. Реализация ATL возвращает E_NOTIMPL.|
-|[IOleInPlaceActiveObjectImpl::EnableModeless](#enablemodeless)|Позволяет немодальных диалоговых окон. Реализация ATL, возвращается значение s_ок.|
-|[IOleInPlaceActiveObjectImpl::GetWindow](#getwindow)|Получает дескриптор окна.|
-|[IOleInPlaceActiveObjectImpl::OnDocWindowActivate](#ondocwindowactivate)|Уведомляет элемент управления, при активации или отключении окна документа контейнера. Реализация ATL, возвращается значение s_ок.|
-|[IOleInPlaceActiveObjectImpl::OnFrameWindowActivate](#onframewindowactivate)|Уведомляет элемент управления, при активации или отключении окна фрейма верхнего уровня контейнера. Возвращает реализацию ATL|
-|[IOleInPlaceActiveObjectImpl::ResizeBorder](#resizeborder)|Информирует элемент управления, необходимые для изменения размера его границы. Реализация ATL, возвращается значение s_ок.|
-|[IOleInPlaceActiveObjectImpl::TranslateAccelerator](#translateaccelerator)|Обрабатывает сообщения сочетания клавиш меню из контейнера. Реализация ATL возвращает E_NOTIMPL.|
+|[Иолеинплацеактивеобжектимпл:: Контекстсенситивехелп](#contextsensitivehelp)|Включает контекстную справку. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Иолеинплацеактивеобжектимпл:: Енаблемоделесс](#enablemodeless)|Включение немодальных диалоговых окон. Реализация ATL возвращает значение S_OK.|
+|[Иолеинплацеактивеобжектимпл::/Window](#getwindow)|Возвращает маркер окна.|
+|[Иолеинплацеактивеобжектимпл:: OnDocWindowActivate](#ondocwindowactivate)|Уведомляет элемент управления о том, что окно документа контейнера активировано или отключено. Реализация ATL возвращает значение S_OK.|
+|[Иолеинплацеактивеобжектимпл:: OnFrameWindowActivate](#onframewindowactivate)|Уведомляет элемент управления о том, что окно фрейма верхнего уровня контейнера активировано или отключено. Реализация ATL возвращает|
+|[Иолеинплацеактивеобжектимпл:: ResizeBorder](#resizeborder)|Информирует элемент управления, что ему нужно изменить размер границ. Реализация ATL возвращает значение S_OK.|
+|[Иолеинплацеактивеобжектимпл:: TranslateAccelerator](#translateaccelerator)|В меню "процессы" — сообщения ключа ускорителя из контейнера. Реализация ATL возвращает значение E_NOTIMPL.|
 
 ## <a name="remarks"></a>Примечания
 
-[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject) интерфейс помогает связи между элементом управления на месте и его контейнером; например, взаимодействие активное состояние элемента управления и контейнер и о том, элемент управления необходимости изменить размер сам. Класс `IOleInPlaceActiveObjectImpl` предоставляет реализацию по умолчанию `IOleInPlaceActiveObject` и поддерживает `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+Интерфейс [метода IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject) помогает взаимодействовать между элементами управления на месте и его контейнером. Например, связь активного состояния элемента управления и контейнера и уведомление элемента управления о необходимости изменения размера. Класс `IOleInPlaceActiveObjectImpl` `IUnknown` предоставляет`IOleInPlaceActiveObject` реализацию по умолчанию и поддерживает, отправляя сведения на устройство дампа в отладочных сборках.
 
-**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -70,11 +70,11 @@ class IOleInPlaceActiveObjectImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlctl.h
+**Заголовок:** атлктл. h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+##  <a name="contextsensitivehelp"></a>Иолеинплацеактивеобжектимпл:: Контекстсенситивехелп
 
-Обеспечивает контекстную справку.
+Включает контекстную справку.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
@@ -82,15 +82,15 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает E_NOTIMPL.
+Возвращает значение E_NOTIMPL.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleWindow::ContextSensitiveHelp](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) в Windows SDK.
+См. раздел [иолевиндов:: контекстсенситивехелп](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) в Windows SDK.
 
-##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless
+##  <a name="enablemodeless"></a>Иолеинплацеактивеобжектимпл:: Енаблемоделесс
 
-Позволяет немодальных диалоговых окон.
+Включение немодальных диалоговых окон.
 
 ```
 HRESULT EnableModeless(BOOL fEnable);
@@ -102,11 +102,11 @@ HRESULT EnableModeless(BOOL fEnable);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) в Windows SDK.
+См. раздел [метода IOleInPlaceActiveObject:: енаблемоделесс](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless) в Windows SDK.
 
-##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow
+##  <a name="getwindow"></a>Иолеинплацеактивеобжектимпл::/Window
 
-Контейнер вызывает эту функцию, чтобы получить дескриптор окна элемента управления.
+Контейнер вызывает эту функцию для получения маркера окна элемента управления.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
@@ -114,13 +114,13 @@ HRESULT GetWindow(HWND* phwnd);
 
 ### <a name="remarks"></a>Примечания
 
-Некоторые контейнеры не будет работать с элементом управления, без окон, даже если он является в настоящее время оконные. В реализации библиотеки ATL Если `CComControl::m_bWasOnceWindowless` элемент данных имеет значение TRUE, функция возвращает E_FAIL. В противном случае, если \* *phwnd* не равно NULL, `GetWindow` назначает *phwnd* на данные-член класса элемента управления `m_hWnd` и возвращает значение S_OK.
+Некоторые контейнеры не будут работать с элементом управления, не имеющим окон, даже если он в настоящий момент находится в окне. В реализации ATL, если `CComControl::m_bWasOnceWindowless` элемент данных имеет значение true, функция возвращает E_FAIL. В противном \* случае, если *ФВНД* не `GetWindow` равно null, присваивает *ФВНД* элементу `m_hWnd` данных класса элемента управления и возвращает значение S_OK.
 
-См. в разделе [IOleWindow::GetWindow](/windows/desktop/api/oleidl/nf-oleidl-iolewindow-getwindow) в Windows SDK.
+См. раздел [иолевиндов:: onwindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) в Windows SDK.
 
-##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+##  <a name="ondocwindowactivate"></a>Иолеинплацеактивеобжектимпл:: OnDocWindowActivate
 
-Уведомляет элемент управления, при активации или отключении окна документа контейнера.
+Уведомляет элемент управления о том, что окно документа контейнера активировано или отключено.
 
 ```
 HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -132,11 +132,11 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) в Windows SDK.
+См. раздел [метода IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate) в Windows SDK.
 
-##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+##  <a name="onframewindowactivate"></a>Иолеинплацеактивеобжектимпл:: OnFrameWindowActivate
 
-Уведомляет элемент управления, при активации или отключении окна фрейма верхнего уровня контейнера.
+Уведомляет элемент управления о том, что окно фрейма верхнего уровня контейнера активировано или отключено.
 
 ```
 HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -148,11 +148,11 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) в Windows SDK.
+См. раздел [метода IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) в Windows SDK.
 
-##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder
+##  <a name="resizeborder"></a>Иолеинплацеактивеобжектимпл:: ResizeBorder
 
-Информирует элемент управления, необходимые для изменения размера его границы.
+Информирует элемент управления, что ему нужно изменить размер границ.
 
 ```
 HRESULT ResizeBorder(
@@ -167,11 +167,11 @@ HRESULT ResizeBorder(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) в Windows SDK.
+См. раздел [метода IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder) в Windows SDK.
 
-##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator
+##  <a name="translateaccelerator"></a>Иолеинплацеактивеобжектимпл:: TranslateAccelerator
 
-Обрабатывает сообщения сочетания клавиш меню из контейнера.
+В меню "процессы" — сообщения ключа ускорителя из контейнера.
 
 ```
 HRESULT TranslateAccelerator(LPMSG lpmsg);
@@ -181,16 +181,16 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 
 Этот метод поддерживает следующие возвращаемые значения.
 
-Значение S_OK, если сообщение было успешно преобразовано.
+Значение S_OK, если сообщение было успешно переведено.
 
-S_FALSE, если сообщение не было преобразовано.
+S_FALSE, если сообщение не было переведено.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) в Windows SDK.
+См. раздел [метода IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
 [Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Интерфейсы элементов управления ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)

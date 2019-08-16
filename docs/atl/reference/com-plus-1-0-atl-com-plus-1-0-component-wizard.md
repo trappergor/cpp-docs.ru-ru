@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707458"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496694"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, мастер компонентов ATL COM+ 1.0
 
@@ -45,8 +45,8 @@ ms.locfileid: "65707458"
    |Параметр|Описание|
    |------------|-----------------|
    |**ISupportErrorInfo**|Создает поддержку для интерфейса [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md), который позволяет объекту возвращать в клиент сведения об ошибке.|
-   |**IObjectControl**|Предоставляет объекту доступ к трем методам интерфейса [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol): [Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) и [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
-   |**IObjectConstruct**|Создает поддержку интерфейса [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct), который управляет передачей параметров из других методов и объектов.|
+   |**IObjectControl**|Предоставляет объекту доступ к трем методам интерфейса [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol): [Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) и [Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
+   |**IObjectConstruct**|Создает поддержку интерфейса [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct), который управляет передачей параметров из других методов и объектов.|
 
 - **Транзакция**
 

@@ -11,39 +11,39 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321076"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492721"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Указание параметров командной строки MIDL)
 
-Задает файл ответов для параметров командной строки MIDL
+Указывает файл ответов для параметров командной строки MIDL
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ MIDL:\@**<em>файла</em>
+> **/MIDL:\@** <em>файл</em>
 
 ## <a name="arguments"></a>Аргументы
 
 *file*<br/>
-Имя файла, содержащего [параметров командной строки MIDL](/windows/desktop/Midl/general-midl-command-line-syntax).
+Имя файла, содержащего [Параметры командной строки MIDL](/windows/win32/Midl/general-midl-command-line-syntax).
 
 ## <a name="remarks"></a>Примечания
 
-Все параметры для преобразования IDL-файла TLB-файл, которые должны быть заданы в *файл*; В командной строке компоновщика нельзя использовать параметры командной строки MIDL. Если/MIDL не указан, компилятор MIDL будет вызываться только имя файла IDL и нет других вариантов.
+Все параметры для преобразования IDL-файла в файл TLB должны быть заданы в *файле*. Параметры командной строки MIDL нельзя указывать в командной строке компоновщика. Если/MIDL не указан, компилятор MIDL будет вызываться только с именем IDL-файла и без других параметров.
 
-Этот файл должен содержать один параметр командной строки MIDL каждой строки.
+Файл должен содержать один параметр командной строки MIDL для каждой строки.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **свойства конфигурации** > **компоновщика** > **внедренные IDL** страницу свойств.
+1. Выберите страницу свойств**встроенного IDL** -свойства**компоновщика** >  **Свойства** > конфигурации.
 
-1. Изменить **MIDL-команды** свойство.
+1. Измените свойство **команды MIDL** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

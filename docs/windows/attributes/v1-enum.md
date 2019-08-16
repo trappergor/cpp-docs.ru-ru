@@ -1,21 +1,21 @@
 ---
-title: v1_enum (C++ атрибут COM)
+title: v1_enum (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.v1_enum
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407150"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513868"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-Указывает, что заданного перечислимого типа, передаваться в объект 32-разрядной, а не по умолчанию 16-разрядное.
+Указывает, что указанный перечисляемый тип передается как 32-разрядная сущность, а не как 16-разрядное значение по умолчанию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407150"
 
 ## <a name="remarks"></a>Примечания
 
-**V1_enum** C++ атрибут имеет ту же функциональность, что [v1_enum](/windows/desktop/Midl/v1-enum) описании атрибута MIDL.
+Атрибут **v1_enum** C++ имеет те же функциональные возможности, что и атрибут [v1_enum](/windows/win32/Midl/v1-enum) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -48,10 +48,10 @@ enum eList {
 
 |||
 |-|-|
-|**Применение**|Перечислимый тип|
+|**Относится к**|Перечисляемый тип|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

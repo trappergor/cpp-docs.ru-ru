@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274780"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495599"
 ---
 # <a name="ipropertypage2impl-class"></a>Класс IPropertyPage2Impl
 
-Этот класс реализует `IUnknown` и наследует реализация по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md).
+Этот класс реализует `IUnknown` и наследует реализацию [ипропертипажеимпл](../../atl/reference/ipropertypageimpl-class.md)по умолчанию.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IPropertyPage2Impl`.
+Класс, производный от `IPropertyPage2Impl`.
 
 ## <a name="members"></a>Участники
 
@@ -42,33 +42,33 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 
 |name|Описание|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|Указывает, какой элемент управления свойство получит фокус при активации страницы свойств. Реализация ATL возвращает E_NOTIMPL.|
+|[IPropertyPage2Impl:: Едитпроперти](#editproperty)|Указывает, какой элемент управления будет получать фокус при активации страницы свойств. Реализация ATL возвращает значение E_NOTIMPL.|
 
 ## <a name="remarks"></a>Примечания
 
-[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2) интерфейс расширяет [IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage) , добавив `EditProperty` метод. Этот метод позволяет клиенту, для выбора конкретного свойства в объект страницы свойств.
+Интерфейс [IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2) расширяет [ипропертипаже](/windows/win32/api/ocidl/nn-ocidl-ipropertypage) `EditProperty` , добавляя метод. Этот метод позволяет клиенту выбрать определенное свойство в объекте страницы свойств.
 
-Класс `IPropertyPage2Impl` просто возвращает E_NOTIMPL для `IPropertyPage2::EditProperty`. Тем не менее, он наследует реализация по умолчанию [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+Класс `IPropertyPage2Impl` просто возвращает значение E_NOTIMPL `IPropertyPage2::EditProperty`для. Однако он наследует реализацию по умолчанию [ипропертипажеимпл](../../atl/reference/ipropertypageimpl-class.md) и реализуется `IUnknown` путем отправки информации в устройство дампа в отладочных сборках.
 
-При создании страницы свойств класса обычно является производным от `IPropertyPageImpl`. Для дополнительной поддержки `IPropertyPage2`, измените определение класса и переопределить `EditProperty` метод.
+При создании страницы свойств класс обычно является производным от `IPropertyPageImpl`. Чтобы обеспечить лишнюю поддержку `IPropertyPage2`, измените определение класса и `EditProperty` Переопределите метод.
 
-**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 `IPropertyPage`
 
-[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)
+[ипропертипажеимпл](../../atl/reference/ipropertypageimpl-class.md)
 
 `IPropertyPage2Impl`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlctl.h
+**Заголовок:** атлктл. h
 
-##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
+##  <a name="editproperty"></a>IPropertyPage2Impl:: Едитпроперти
 
-Указывает, какой элемент управления свойство получит фокус при активации страницы свойств.
+Указывает, какой элемент управления будет получать фокус при активации страницы свойств.
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -76,14 +76,14 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает E_NOTIMPL.
+Возвращает значение E_NOTIMPL.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) в Windows SDK.
+См. раздел [IPropertyPage2:: едитпроперти](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
 [Класс IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [Класс ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)
