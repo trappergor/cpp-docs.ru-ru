@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261700"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492311"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` — имя функции, заданных в качестве второго параметра макроса MESSAGE_HANDLER в схему сообщения.
+`MessageHandler`имя функции, определяемой вторым параметром макроса MESSAGE_HANDLER в схеме сообщений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,17 +28,17 @@ LRESULT MessageHandler(
 
 ### <a name="parameters"></a>Параметры
 
-*uMsg*<br/>
-Задает сообщение.
+*Uiacp*<br/>
+Указывает сообщение.
 
 *wParam*<br/>
-Дополнительные сведения, относящиеся к сообщению.
+Дополнительные сведения, относящиеся к конкретному сообщению.
 
 *lParam*<br/>
-Дополнительные сведения, относящиеся к сообщению.
+Дополнительные сведения, относящиеся к конкретному сообщению.
 
-*bHandled*<br/>
-Карта наборов сообщений *bHandled* значение TRUE перед `MessageHandler` вызывается. Если `MessageHandler` не полностью обрабатывает сообщение, она должна задать *bHandled* значение false, чтобы указать, должна дальнейшей обработки сообщения.
+*бхандлед*<br/>
+Схема сообщений устанавливает для *бхандлед* значение true перед `MessageHandler` вызовом метода. Если `MessageHandler` не полностью обрабатывает сообщение, необходимо установить *бхандлед* в значение false, чтобы указать, что сообщение требует дальнейшей обработки.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -46,10 +46,10 @@ LRESULT MessageHandler(
 
 ## <a name="remarks"></a>Примечания
 
-Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
+Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler).
 
 ## <a name="see-also"></a>См. также
 
 [Реализация окна](../atl/implementing-a-window.md)<br/>
 [Схемы сообщений](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

@@ -1,5 +1,5 @@
 ---
-title: Класс IRunnableObjectImpl
+title: Класс Ируннаблеобжектимпл
 ms.date: 11/04/2016
 f1_keywords:
 - IRunnableObjectImpl
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - controls [ATL], running
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
-ms.openlocfilehash: 44b1e0ae1b72a40b45abe0650eb69a279b5a84d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1af7c21c6f5028ad6d3a228cb22650fa3cef42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495671"
 ---
-# <a name="irunnableobjectimpl-class"></a>Класс IRunnableObjectImpl
+# <a name="irunnableobjectimpl-class"></a>Класс Ируннаблеобжектимпл
 
-Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) интерфейс.
+Этот класс реализует `IUnknown` интерфейс [ируннаблеобжект](/windows/win32/api/objidl/nn-objidl-irunnableobject) и предоставляет реализацию по умолчанию.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,7 +40,7 @@ class IRunnableObjectImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IRunnableObjectImpl`.
+Класс, производный от `IRunnableObjectImpl`.
 
 ## <a name="members"></a>Участники
 
@@ -48,17 +48,17 @@ class IRunnableObjectImpl
 
 |name|Описание|
 |----------|-----------------|
-|[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Возвращает идентификатор CLSID элемента управления выполнения. Реализация ATL задает CLSID значение GUID_NULL и возвращает E_UNEXPECTED.|
-|[IRunnableObjectImpl::IsRunning](#isrunning)|Определяет, работает ли элемент управления. Реализация ATL возвращает значение TRUE.|
-|[IRunnableObjectImpl::LockRunning](#lockrunning)|Блокирует элемент управления в рабочем состоянии. Реализация ATL, возвращается значение s_ок.|
-|[IRunnableObjectImpl::Run](#run)|Заставляет элемент управления для выполнения. Реализация ATL, возвращается значение s_ок.|
-|[IRunnableObjectImpl::SetContainedObject](#setcontainedobject)|Указывает, что внедряется элемент управления. Реализация ATL, возвращается значение s_ок.|
+|[Ируннаблеобжектимпл:: Жетруннингкласс](#getrunningclass)|Возвращает идентификатор CLSID выполняемого элемента управления. Реализация ATL задает для идентификатора CLSID значение GUID_NULL и возвращает E_UNEXPECTED.|
+|[Ируннаблеобжектимпл:: выполнение](#isrunning)|Определяет, работает ли элемент управления. Реализация ATL возвращает значение TRUE.|
+|[Ируннаблеобжектимпл:: Локкруннинг](#lockrunning)|Блокирует элемент управления в состоянии выполнения. Реализация ATL возвращает значение S_OK.|
+|[Ируннаблеобжектимпл:: Run](#run)|Принудительное выполнение элемента управления. Реализация ATL возвращает значение S_OK.|
+|[Ируннаблеобжектимпл:: Сетконтаинедобжект](#setcontainedobject)|Указывает, что элемент управления внедрен. Реализация ATL возвращает значение S_OK.|
 
 ## <a name="remarks"></a>Примечания
 
-[IRunnableObject](/windows/desktop/api/objidl/nn-objidl-irunnableobject) интерфейс позволяет контейнера определить, работает ли элемент управления, для принудительного задания для запуска или закрепить в рабочем состоянии. Класс `IRunnableObjectImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+Интерфейс [ируннаблеобжект](/windows/win32/api/objidl/nn-objidl-irunnableobject) позволяет контейнеру определить, выполняется ли элемент управления, принудительно запускать его или блокировать в состояние выполнения. Класс `IRunnableObjectImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown` , отправляя сведения в устройство дампа в отладочных сборках.
 
-**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -68,11 +68,11 @@ class IRunnableObjectImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlctl.h
+**Заголовок:** атлктл. h
 
-##  <a name="getrunningclass"></a>  IRunnableObjectImpl::GetRunningClass
+##  <a name="getrunningclass"></a>Ируннаблеобжектимпл:: Жетруннингкласс
 
-Возвращает идентификатор CLSID элемента управления выполнения.
+Возвращает идентификатор CLSID выполняемого элемента управления.
 
 ```
 HRESULT GetRunningClass(LPCLSID lpClsid);
@@ -80,13 +80,13 @@ HRESULT GetRunningClass(LPCLSID lpClsid);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Наборы реализации ATL \* *lpClsid* GUID_NULL и возвращает E_UNEXPECTED.
+Реализация ATL устанавливает \* *лпклсид* в GUID_NULL и возвращает E_UNEXPECTED.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IRunnableObject::GetRunningClass](/windows/desktop/api/objidl/nf-objidl-irunnableobject-getrunningclass) в Windows SDK.
+См. раздел [ируннаблеобжект:: жетруннингкласс](/windows/win32/api/objidl/nf-objidl-irunnableobject-getrunningclass) в Windows SDK.
 
-##  <a name="isrunning"></a>  IRunnableObjectImpl::IsRunning
+##  <a name="isrunning"></a>Ируннаблеобжектимпл:: выполнение
 
 Определяет, работает ли элемент управления.
 
@@ -100,11 +100,11 @@ virtual BOOL IsRunning();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IRunnableObject::IsRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-isrunning) в Windows SDK.
+См. раздел [ируннаблеобжект::](/windows/win32/api/objidl/nf-objidl-irunnableobject-isrunning) Windows SDK.
 
-##  <a name="lockrunning"></a>  IRunnableObjectImpl::LockRunning
+##  <a name="lockrunning"></a>Ируннаблеобжектимпл:: Локкруннинг
 
-Блокирует элемент управления в рабочем состоянии.
+Блокирует элемент управления в состоянии выполнения.
 
 ```
 HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
@@ -112,15 +112,15 @@ HRESULT LockRunning(BOOL fLock, BOOL fLastUnlockCloses);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация ATL, возвращается значение s_ок.
+Реализация ATL возвращает значение S_OK.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IRunnableObject::LockRunning](/windows/desktop/api/objidl/nf-objidl-irunnableobject-lockrunning) в Windows SDK.
+См. раздел [ируннаблеобжект:: локкруннинг](/windows/win32/api/objidl/nf-objidl-irunnableobject-lockrunning) в Windows SDK.
 
-##  <a name="run"></a>  IRunnableObjectImpl::Run
+##  <a name="run"></a>Ируннаблеобжектимпл:: Run
 
-Заставляет элемент управления для выполнения.
+Принудительное выполнение элемента управления.
 
 ```
 HRESULT Run(LPBINDCTX lpbc);
@@ -128,15 +128,15 @@ HRESULT Run(LPBINDCTX lpbc);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация ATL, возвращается значение s_ок.
+Реализация ATL возвращает значение S_OK.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IRunnableObject::Run](/windows/desktop/api/objidl/nf-objidl-irunnableobject-run) в Windows SDK.
+См. раздел [ируннаблеобжект:: Run](/windows/win32/api/objidl/nf-objidl-irunnableobject-run) в Windows SDK.
 
-##  <a name="setcontainedobject"></a>  IRunnableObjectImpl::SetContainedObject
+##  <a name="setcontainedobject"></a>Ируннаблеобжектимпл:: Сетконтаинедобжект
 
-Указывает, что внедряется элемент управления.
+Указывает, что элемент управления внедрен.
 
 ```
 HRESULT SetContainedObject(BOOL fContained);
@@ -144,13 +144,13 @@ HRESULT SetContainedObject(BOOL fContained);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация ATL, возвращается значение s_ок.
+Реализация ATL возвращает значение S_OK.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IRunnableObject::SetContainedObject](/windows/desktop/api/objidl/nf-objidl-irunnableobject-setcontainedobject) в Windows SDK.
+См. раздел [ируннаблеобжект:: сетконтаинедобжект](/windows/win32/api/objidl/nf-objidl-irunnableobject-setcontainedobject) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
 [Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

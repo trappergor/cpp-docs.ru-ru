@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915460"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492922"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68915460"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Вызываемые коды исключений — это стандартные значения Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на структуру **делайлоадинфо** в значении лпдворд, которое может быть извлечено **жетексцептионинформатион** в поле структура [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) , матрице ExceptionInformation [0].
+Вызываемые коды исключений — это стандартные значения Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на структуру **делайлоадинфо** в значении лпдворд, которое может быть извлечено **жетексцептионинформатион** в поле структура [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) , матрице ExceptionInformation [0].
 
 Кроме того, если в поле Граттрс заданы неверные биты, выдается исключение ERROR_INVALID_PARAMETER. Это исключение для всех целей и назначений, неустранимое.
 

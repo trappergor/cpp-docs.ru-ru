@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5f3c0464b239f4500d416b80ae4fdf06c2dc386f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915514"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495173"
 ---
 # <a name="security-global-functions"></a>Глобальные функции безопасности
 
@@ -66,7 +66,7 @@ inline bool AtlGetDacl(
 Обработчик объекта, для которого необходимо получить сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *пдакл*<br/>
 Указатель на объект DACL, который будет содержать полученные сведения о безопасности.
@@ -100,7 +100,7 @@ inline bool AtlSetDacl(
 Обработчик объекта, для которого задаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *рдакл*<br/>
 Список DACL, содержащий новые сведения о безопасности.
@@ -139,7 +139,7 @@ inline bool AtlGetGroupSid(
 Обработчик объекта, из которого извлекаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *Пустой pSid*<br/>
 Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.
@@ -172,7 +172,7 @@ inline bool AtlSetGroupSid(
 Обработчик объекта, для которого задаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *рсид*<br/>
 Объект `CSid` , содержащий новые сведения о безопасности.
@@ -205,7 +205,7 @@ inline bool AtlGetOwnerSid(
 Обработчик объекта, из которого извлекаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *Пустой pSid*<br/>
 Указатель на `CSid` объект, который будет содержать новые сведения о безопасности.
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
 Обработчик объекта, для которого задаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *рсид*<br/>
 Объект `CSid` , содержащий новые сведения о безопасности.
@@ -272,7 +272,7 @@ inline bool AtlGetSacl(
 Обработчик объекта, из которого извлекаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *псакл*<br/>
 Указатель на объект SACL, который будет содержать полученные сведения о безопасности.
@@ -314,7 +314,7 @@ inline bool AtlSetSacl(
 Обработчик объекта, для которого задаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *хобжект* .
 
 *рсакл*<br/>
 Список SACL, содержащий новые сведения о безопасности.
@@ -363,13 +363,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 Указатель на строку, завершающуюся нулем, которая указывает имя объекта, из которого извлекаются сведения о безопасности.
 
 *ObjectType*<br/>
-Задает значение из перечисления [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *псзобжектнаме* .
+Задает значение из перечисления [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) , которое указывает тип объекта, определяемого параметром *псзобжектнаме* .
 
 *псекуритидескриптор*<br/>
 Объект, который получает запрошенный дескриптор безопасности.
 
 *рекуестединфо*<br/>
-Набор битовых флагов [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information) , указывающих тип получаемых сведений о безопасности. Этот параметр может быть сочетанием следующих значений.
+Набор битовых флагов [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) , указывающих тип получаемых сведений о безопасности. Этот параметр может быть сочетанием следующих значений.
 
 *брекуестнидедпривилежес*<br/>
 Если значение — true, функция попытается включить привилегию SE_SECURITY_NAME и восстановить ее по завершении.

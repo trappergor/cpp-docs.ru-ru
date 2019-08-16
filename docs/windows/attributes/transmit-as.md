@@ -1,21 +1,21 @@
 ---
-title: transmit_as (C++ атрибут COM)
+title: transmit_as (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407176"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513911"
 ---
-# <a name="transmitas"></a>transmit_as
+# <a name="transmit_as"></a>transmit_as
 
-Указывает, что компилятор должен быть сопоставлен представленных тип, управлять клиентских и серверных приложений, передаваемых типа.
+Предписывает компилятору связать представленный тип, управляемый клиентскими и серверными приложениями, с переданным типом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,15 +26,15 @@ ms.locfileid: "62407176"
 ### <a name="parameters"></a>Параметры
 
 *type*<br/>
-Указывает тип данных, которые передаются между клиентом и сервером.
+Указывает тип данных, передаваемый между клиентом и сервером.
 
 ## <a name="remarks"></a>Примечания
 
-**Transmit_as** C++ атрибут имеет ту же функциональность, что [transmit_as](/windows/desktop/Midl/transmit-as) описании атрибута MIDL.
+Атрибут **transmit_as** C++ имеет те же функциональные возможности, что и атрибут [transmit_as](/windows/win32/Midl/transmit-as) MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано использование **transmit_as** атрибут:
+В следующем коде показано использование атрибута **transmit_as** :
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -70,10 +70,10 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**Применение**|**typedef**|
+|**Относится к**|**typedef**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

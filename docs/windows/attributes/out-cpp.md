@@ -1,17 +1,17 @@
 ---
-title: out (атрибут COM C++)
+title: out (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.out
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 7020bd6cfcf8bcdbfb773908e693c6364a29e343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407605"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514286"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407605"
 
 ## <a name="remarks"></a>Примечания
 
-Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](/windows/desktop/Midl/out-idl) языка MIDL.
+Атрибут **out** языка C++ имеет ту же функциональность, как и атрибут [out](/windows/win32/Midl/out-idl) языка MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407605"
 
 |||
 |-|-|
-|**Применение**|Параметр интерфейса|
+|**Относится к**|Параметр интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

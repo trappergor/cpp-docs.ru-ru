@@ -1,5 +1,5 @@
 ---
-title: Класс CInternetException
+title: Класс Цинтернетексцептион
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetException
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f4c7a5b7594270aff9dfbc224e9a66ba09be3f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345712"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505911"
 ---
-# <a name="cinternetexception-class"></a>Класс CInternetException
+# <a name="cinternetexception-class"></a>Класс Цинтернетексцептион
 
 Представляет условие исключения, касающееся интернет-операции.
 
@@ -35,20 +35,20 @@ class CInternetException : public CException
 
 |name|Описание|
 |----------|-----------------|
-|[CInternetException::CInternetException](#cinternetexception)|Создает объект `CInternetException`.|
+|[Цинтернетексцептион:: Цинтернетексцептион](#cinternetexception)|Создает объект `CInternetException`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CInternetException::m_dwContext](#m_dwcontext)|Значение контекста, связанные с операцией, которая вызвала исключение.|
-|[CInternetException::m_dwError](#m_dwerror)|Ошибки, вызвавшей исключение.|
+|[Цинтернетексцептион:: m_dwContext](#m_dwcontext)|Значение контекста, связанное с операцией, вызвавшей исключение.|
+|[Цинтернетексцептион:: m_dwError](#m_dwerror)|Ошибка, вызвавшая исключение.|
 
 ## <a name="remarks"></a>Примечания
 
-`CInternetException` Класс включает две открытые члены данных: один содержит код ошибки, связанное с исключением, а другое содержит идентификатор контекста для Интернет-приложения, с которым связана ошибка.
+`CInternetException` Класс включает два открытых члена данных: один содержит код ошибки, связанный с исключением, а другой — идентификатор контекста Интернет приложения, связанного с ошибкой.
 
-Дополнительные сведения об идентификаторах контекста для веб-приложений см. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Дополнительные сведения об идентификаторах контекста для Интернет приложений см. в статье [Интернет – программирование с помощью WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,11 +60,11 @@ class CInternetException : public CException
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxinet.h
+**Заголовок:** афксинет. h
 
-##  <a name="cinternetexception"></a>  CInternetException::CInternetException
+##  <a name="cinternetexception"></a>Цинтернетексцептион:: Цинтернетексцептион
 
-Эта функция-член вызывается, когда `CInternetException` создается объект.
+Эта функция-член вызывается при `CInternetException` создании объекта.
 
 ```
 CInternetException(DWORD dwError);
@@ -72,16 +72,16 @@ CInternetException(DWORD dwError);
 
 ### <a name="parameters"></a>Параметры
 
-*dwError*<br/>
-Ошибки, вызвавшей исключение.
+*дверрор*<br/>
+Ошибка, вызвавшая исключение.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы создать CInternetException, вызовите глобальную функцию MFC [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).
+Чтобы создать исключение Цинтернетексцептион, вызовите глобальную функцию MFC [афкссровинтернетексцептион](internet-url-parsing-globals.md#afxthrowinternetexception).
 
-##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext
+##  <a name="m_dwcontext"></a>Цинтернетексцептион:: m_dwContext
 
-Контекст значение, связанное с соответствующим Интернет-операции.
+Значение контекста, связанное с операцией, связанной с Интернетом.
 
 ```
 DWORD_PTR m_dwContext;
@@ -89,11 +89,11 @@ DWORD_PTR m_dwContext;
 
 ### <a name="remarks"></a>Примечания
 
-Идентификатор контекста изначально указывается в [CInternetSession](../../mfc/reference/cinternetsession-class.md) и передаются по MFC для [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- и [CInternetFile](../../mfc/reference/cinternetfile-class.md)-производные классы. Можно переопределить поведение по умолчанию и назначить любой *dwContext* параметр значение по своему выбору. *dwContext* связан с любой операции данного объекта. *dwContext* определяет сведения о состоянии операции, возвращаемые [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
+Идентификатор контекста изначально указывается в [Цинтернетсессион](../../mfc/reference/cinternetsession-class.md) и передается из MFC в классы, производные от [Цинтернетконнектион](../../mfc/reference/cinternetconnection-class.md)и [Цинтернетфиле](../../mfc/reference/cinternetfile-class.md). Вы можете переопределить это значение по умолчанию и назначить любой параметр *двконтекст* со значением по своему усмотрению. *двконтекст* связан с любой операцией данного объекта. *двконтекст* определяет сведения о состоянии операции, возвращаемые [Цинтернетсессион:: онстатускаллбакк](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-##  <a name="m_dwerror"></a>  CInternetException::m_dwError
+##  <a name="m_dwerror"></a>Цинтернетексцептион:: m_dwError
 
-Ошибки, вызвавшей исключение.
+Ошибка, вызвавшая исключение.
 
 ```
 DWORD m_dwError;
@@ -101,9 +101,9 @@ DWORD m_dwError;
 
 ### <a name="remarks"></a>Примечания
 
-Значение этой ошибки может стать системой код ошибки, в WINERROR. H, или значение ошибки из WININET. З.
+Это значение ошибки может быть кодом системной ошибки, который находится в файле WINERROR. H или значение ошибки из WININET. Высоты.
 
-Список кодов ошибок Win32, см. в разделе [коды ошибок](/windows/desktop/Debug/system-error-codes). Список сообщений об ошибках конкретного Интернет см. в разделе. Оба раздела, в пакете Windows SDK.
+Список кодов ошибок Win32 см. в разделе [коды ошибок](/windows/win32/Debug/system-error-codes). Список сообщений об ошибках, связанных с Интернетом, см. в разделе. Оба раздела находятся в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

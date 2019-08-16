@@ -1,21 +1,21 @@
 ---
-title: Public (атрибуты C++) (атрибут COM C++)
+title: Public (C++ атрибуты) (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407553"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514173"
 ---
 # <a name="public-c-attributes"></a>public (атрибуты C++)
 
-Гарантирует, что typedef перейдет в библиотеке типов, даже если нет ссылок из в IDL-файла.
+Гарантирует, что typedef перейдет в библиотеку типов, даже если на него нет ссылок из IDL-файла.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407553"
 
 ## <a name="remarks"></a>Примечания
 
-**Открытый** атрибут C++ имеет ту же функциональность, что [открытый](/windows/desktop/Midl/public) описании атрибута MIDL.
+Атрибут **Public** C++ имеет те же функциональные возможности, что и [открытый](/windows/win32/Midl/public) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
-Ниже показано, как использовать **открытый** атрибут:
+В следующем коде показано, как использовать атрибут **Public** :
 
 ```cpp
 // cpp_attr_ref_public.cpp
@@ -51,10 +51,10 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Применение**|**typedef**|
+|**Относится к**|**typedef**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

@@ -1,21 +1,21 @@
 ---
-title: usesgetlasterror (атрибут COM C++)
+title: усесжетластеррор (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.usesgetlasterror
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407072"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513891"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Вызывающий объект о том, есть ли ошибки при вызове этой функции, затем вызывающий объект затем можно вызвать `GetLastError` для получения кода ошибки.
+Сообщает вызывающему, что при возникновении ошибки при вызове этой функции вызывающий объект может вызвать метод `GetLastError` , чтобы получить код ошибки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407072"
 
 ## <a name="remarks"></a>Примечания
 
-**Usesgetlasterror** атрибут C++ имеет ту же функциональность, что [usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) описании атрибута MIDL.
+Атрибут **усесжетластеррор** C++ имеет те же функциональные возможности, что и атрибут [усесжетластеррор](/windows/win32/Midl/usesgetlasterror) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [idl_module](idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.
+Пример использования **усесжетластеррор**см. в примере [idl_module](idl-module.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407072"
 
 |||
 |-|-|
-|**Применение**|**модуль** атрибут|
+|**Относится к**|атрибут **module**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

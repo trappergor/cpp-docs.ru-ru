@@ -55,14 +55,14 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212926"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507759"
 ---
-# <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
+# <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA - структура
 
 Структура `AFX_GLOBAL_DATA` содержит поля и методы, используемые для управления платформой или настройки внешнего вида и поведения приложения.
 
@@ -85,52 +85,52 @@ struct AFX_GLOBAL_DATA
 
 |name|Описание|
 |----------|-----------------|
-|[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|
-|[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|
-|[AFX_GLOBAL_DATA::DrawParentBackground](#drawparentbackground)|Рисует фон родительского объекта элемента управления в заданной области.|
-|[AFX_GLOBAL_DATA::DrawTextOnGlass](#drawtextonglass)|Рисует заданный текст в визуальном стиле указанной темы.|
-|[AFX_GLOBAL_DATA::ExcludeTag](#excludetag)|Удаляет заданную пару тегов XML из указанного буфера.|
-|[AFX_GLOBAL_DATA::GetColor](#getcolor)|Получает текущий цвет из указанного элемента пользовательского интерфейса.|
+|[AFX_GLOBAL_DATA:: CleanUp](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|
+|[AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|
+|[AFX_GLOBAL_DATA::D Равпарентбаккграунд](#drawparentbackground)|Рисует фон родительского объекта элемента управления в заданной области.|
+|[AFX_GLOBAL_DATA::D Равтекстонгласс](#drawtextonglass)|Рисует заданный текст в визуальном стиле указанной темы.|
+|[AFX_GLOBAL_DATA:: Ексклудетаг](#excludetag)|Удаляет заданную пару тегов XML из указанного буфера.|
+|[AFX_GLOBAL_DATA:: "Color"](#getcolor)|Получает текущий цвет из указанного элемента пользовательского интерфейса.|
 |[AFX_GLOBAL_DATA::GetDirect2dFactory](#getdirect2dfactory)|Получает указатель на интерфейс `ID2D1Factory` , хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.|
-|[AFX_GLOBAL_DATA::GetHandCursor](#gethandcursor)|Извлекает стандартный курсор в виде руки, идентификатор которого равен `IDC_HAND`.|
-|[AFX_GLOBAL_DATA::GetITaskbarList](#getitaskbarlist)|Создает и сохраняет в глобальных данных указатель на интерфейс ITaskBarList.|
+|[AFX_GLOBAL_DATA:: Жесандкурсор](#gethandcursor)|Извлекает стандартный курсор в виде руки, идентификатор которого равен `IDC_HAND`.|
+|[AFX_GLOBAL_DATA:: Жетитаскбарлист](#getitaskbarlist)|Создает и сохраняет в глобальных данных указатель на интерфейс ITaskBarList.|
 |[AFX_GLOBAL_DATA::GetITaskbarList3](#getitaskbarlist3)|Создает и сохраняет в глобальных данных указатель на интерфейс ITaskBarList3.|
-|[AFX_GLOBAL_DATA::GetNonClientMetrics](#getnonclientmetrics)|Получает метрики, связанные с неклиентской областью несвернутого окна.|
-|[AFX_GLOBAL_DATA::GetShellAutohideBars](#getshellautohidebars)|Определяет положения автоматически скрываемых панелей оболочки.|
-|[AFX_GLOBAL_DATA::GetTextHeight](#gettextheight)|Получает высоту символов текста в текущем шрифте.|
-|[AFX_GLOBAL_DATA::GetWICFactory](#getwicfactory)|Получает указатель на интерфейс `IWICImagingFactory` , хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.|
-|[AFX_GLOBAL_DATA::GetWriteFactory](#getwritefactory)|Получает указатель на интерфейс `IDWriteFactory` , хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.|
-|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Инициализирует фабрики `D2D`, `DirectWrite`и `WIC` . Данный метод следует вызывать до инициализации основного окна.|
+|[AFX_GLOBAL_DATA:: Жетнонклиентметрикс](#getnonclientmetrics)|Получает метрики, связанные с неклиентской областью несвернутого окна.|
+|[AFX_GLOBAL_DATA:: Жетшеллаутохидебарс](#getshellautohidebars)|Определяет положения автоматически скрываемых панелей оболочки.|
+|[AFX_GLOBAL_DATA:: Жеттекссеигхт](#gettextheight)|Получает высоту символов текста в текущем шрифте.|
+|[AFX_GLOBAL_DATA:: Жетвикфактори](#getwicfactory)|Получает указатель на интерфейс `IWICImagingFactory` , хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.|
+|[AFX_GLOBAL_DATA:: Жетвритефактори](#getwritefactory)|Получает указатель на интерфейс `IDWriteFactory` , хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.|
+|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Инициализирует фабрики `D2D`, `DirectWrite`и `WIC` . Данный метод следует вызывать до инициализации основного окна.|
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|Указывает, поддерживаются ли стандартные 32-разрядные значки.|
-|[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|Определяет, был ли инициализирован `D2D` .|
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Предоставляет простой способ для вызова метода [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Windows.|
-|[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|Указывает, отображаются ли сейчас изображения с высокой контрастностью.|
-|[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|Определяет текущее состояние для анимации меню рабочего стола и функций автоматического скрытия панели задач.|
-|[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|Регистрирует указанный класс окна MFC.|
-|[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|Освобождает интерфейсы, полученные через методы GetITaskbarList и GetITaskbarList3.|
-|[AFX_GLOBAL_DATA::Resume](#resume)|Повторно инициализирует внутренние указатели функции, которые обращаются к методам, поддерживающим [темы и стили оформления](/windows/desktop/Controls/visual-styles-overview)Windows.|
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Предоставляет простой способ для вызова метода [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) Windows.|
-|[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|Создает указанный логический шрифт.|
-|[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|Создает и инициализирует объект элемента оболочки из имени синтаксического анализа.|
-|[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|Повторно инициализирует логические шрифты, используемые платформой.|
-|[AFX_GLOBAL_DATA::UpdateSysColors](#updatesyscolors)|Инициализирует цвета, глубину цвета, кисти, перья и изображения, используемые платформой.|
+|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|Определяет, был ли инициализирован `D2D` .|
+|[AFX_GLOBAL_DATA:: Исдвмкомпоситионенаблед](#isdwmcompositionenabled)|Предоставляет простой способ для вызова метода [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Windows.|
+|[AFX_GLOBAL_DATA:: Ишигхконтрастмоде](#ishighcontrastmode)|Указывает, отображаются ли сейчас изображения с высокой контрастностью.|
+|[AFX_GLOBAL_DATA:: Онсеттингчанже](#onsettingchange)|Определяет текущее состояние для анимации меню рабочего стола и функций автоматического скрытия панели задач.|
+|[AFX_GLOBAL_DATA:: Регистервиндовкласс](#registerwindowclass)|Регистрирует указанный класс окна MFC.|
+|[AFX_GLOBAL_DATA:: Релеасетаскбаррефс](#releasetaskbarrefs)|Освобождает интерфейсы, полученные через методы GetITaskbarList и GetITaskbarList3.|
+|[AFX_GLOBAL_DATA:: Resume](#resume)|Повторно инициализирует внутренние указатели функции, которые обращаются к методам, поддерживающим [темы и стили оформления](/windows/win32/Controls/visual-styles-overview)Windows.|
+|[AFX_GLOBAL_DATA:: Сетлайередаттриб](#setlayeredattrib)|Предоставляет простой способ для вызова метода [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) Windows.|
+|[AFX_GLOBAL_DATA:: Сетменуфонт](#setmenufont)|Создает указанный логический шрифт.|
+|[AFX_GLOBAL_DATA:: Шеллкреатеитемфромпарсингнаме](#shellcreateitemfromparsingname)|Создает и инициализирует объект элемента оболочки из имени синтаксического анализа.|
+|[AFX_GLOBAL_DATA:: Упдатефонтс](#updatefonts)|Повторно инициализирует логические шрифты, используемые платформой.|
+|[AFX_GLOBAL_DATA:: Упдатесисколорс](#updatesyscolors)|Инициализирует цвета, глубину цвета, кисти, перья и изображения, используемые платформой.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|
-|[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|
-|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|Указывает, поддерживает ли операционная система многослойные окна.|
+|[AFX_GLOBAL_DATA:: Енаблеакцессибилитисуппорт](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|
+|[AFX_GLOBAL_DATA:: Исакцессибилитисуппорт](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|
+|[AFX_GLOBAL_DATA:: Исвиндовслайерсуппортаваилабле](#iswindowslayersupportavailable)|Указывает, поддерживает ли операционная система многослойные окна.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |name|Описание|
 |----------|-----------------|
-|[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Указывает, поддерживает ли текущая операционная система альфа-смешение.|
+|[AFX_GLOBAL_DATA:: Бисосалфаблендингсуппорт](#bisosalphablendingsupport)|Указывает, поддерживает ли текущая операционная система альфа-смешение.|
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Указывает, выполняется ли приложение в ОС Windows 7 или более поздней версии.|
-|[AFX_GLOBAL_DATA::clrActiveCaptionGradient](#clractivecaptiongradient)|Задает цвет градиента для активного заголовка. Обычно используется для закрепляемых панелей.|
-|[AFX_GLOBAL_DATA::clrInactiveCaptionGradient](#clrinactivecaptiongradient)|Задает цвет градиента для неактивного заголовка. Обычно используется для закрепляемых панелей.|
+|[AFX_GLOBAL_DATA:: Клрактивекаптионградиент](#clractivecaptiongradient)|Задает цвет градиента для активного заголовка. Обычно используется для закрепляемых панелей.|
+|[AFX_GLOBAL_DATA:: Клринактивекаптионградиент](#clrinactivecaptiongradient)|Задает цвет градиента для неактивного заголовка. Обычно используется для закрепляемых панелей.|
 |[AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons](#m_busebuiltin32biticons)|Указывает, использует ли платформа стандартные 32-разрядные цветные значки или значки более низкого разрешения.|
 |[AFX_GLOBAL_DATA::m_bUseSystemFont](#m_busesystemfont)|Указывает, используется ли системный шрифт для меню, панелей инструментов и лент.|
 |[AFX_GLOBAL_DATA::m_hcurHand](#m_hcurhand)|Сохраняет дескриптор курсора в виде ладони.|
@@ -154,7 +154,7 @@ struct AFX_GLOBAL_DATA
 
 **Заголовок:** afxglobals.h
 
-## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
+## <a name="bisosalphablendingsupport"></a>AFX_GLOBAL_DATA:: Бисосалфаблендингсуппорт
 
 Указывает, поддерживает ли операционная система альфа-смешение.
 
@@ -164,9 +164,9 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 ### <a name="remarks"></a>Примечания
 
-Значение TRUE указывает, что поддерживается альфа-смешением; в противном случае — значение FALSE.
+Значение TRUE указывает, что альфа-смешение поддерживается; в противном случае — значение FALSE.
 
-## <a name="cleanup"></a> AFX_GLOBAL_DATA::Cleanup
+## <a name="cleanup"></a>AFX_GLOBAL_DATA:: CleanUp
 
 Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.
 
@@ -174,7 +174,7 @@ BOOL  bIsOSAlphaBlendingSupport;
 void CleanUp();
 ```
 
-## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
+## <a name="d2d1makerotatematrix"></a>AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix
 
 Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.
 
@@ -187,20 +187,20 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>Параметры
 
-*угол*<br/>
-Угол поворота по часовой стрелке в градусах.
+*под*<br/>
+Угол поворота по часовой стрелке (в градусах).
 
 *Center*<br/>
-Точка, вокруг которой выполняется поворот.
+Точка, о которой нужно повернуть.
 
-*Матрица*<br/>
-При возвращении данного метода содержит новый преобразование поворота. Для этого параметра необходимо выделить хранилище.
+*таблицу*<br/>
+При возврате из этого метода содержит новое преобразование поворота. Для этого параметра необходимо выделить хранилище.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В противном случае возвращает значение S_OK, если успешно, или значение ошибки.
+Возвращает значение S_OK при успешном выполнении или в противном случае.
 
-## <a name="drawparentbackground"></a> AFX_GLOBAL_DATA::DrawParentBackground
+## <a name="drawparentbackground"></a>AFX_GLOBAL_DATA::D Равпарентбаккграунд
 
 Рисует фон родительского объекта элемента управления в заданной области.
 
@@ -213,20 +213,20 @@ BOOL DrawParentBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-[in] Указатель на окно элемента управления.
+*Приводится*<br/>
+окне Указатель на окно элемента управления.
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
-*lpRect*<br/>
-[in] Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию имеет значение NULL.
+*лпрект*<br/>
+окне Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию — NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
 
-## <a name="drawtextonglass"></a> AFX_GLOBAL_DATA::DrawTextOnGlass
+## <a name="drawtextonglass"></a>AFX_GLOBAL_DATA::D Равтекстонгласс
 
 Рисует заданный текст в визуальном стиле указанной темы.
 
@@ -245,46 +245,46 @@ BOOL DrawTextOnGlass(
 
 ### <a name="parameters"></a>Параметры
 
-*hTheme*<br/>
-[in] Дескриптор данных темы окна или значение NULL. Платформа использует указанную тему для рисования текста, если этот параметр не является NULL, и поддерживаются темы. В противном случае платформа не использует тему для рисования текста.
+*хсеме*<br/>
+окне Указатель на данные темы окна или значение NULL. Платформа использует указанную тему для отрисовки текста, если этот параметр не имеет значение NULL и темы поддерживаются. В противном случае платформа не использует тему для рисования текста.
 
-Используйте [OpenThemeData](/windows/desktop/api/uxtheme/nf-uxtheme-openthemedata) метод для создания HTHEME.
+Используйте метод [опенсемедата](/windows/win32/api/uxtheme/nf-uxtheme-openthemedata) для создания хсеме.
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
-*iPartId*<br/>
-[in] Часть элемента управления, которая имеет нужный вид текста. Дополнительные сведения см. в столбце "Части" в таблице [Части и состояния](/windows/desktop/controls/parts-and-states). Если это значение равно 0, текст рисуется с помощью шрифта по умолчанию или шрифта, выбранного в контексте устройства.
+*ипартид*<br/>
+окне Элемент управления, имеющий нужный внешний вид текста. Дополнительные сведения см. в столбце "Части" в таблице [Части и состояния](/windows/win32/controls/parts-and-states). Если это значение равно 0, текст рисуется с помощью шрифта по умолчанию или шрифта, выбранного в контексте устройства.
 
-*iStateId*<br/>
-[in] Состояние элемента управления, который содержит нужный вид текста. Дополнительные сведения см. в столбце "Состояния" в таблице [Части и состояния](/windows/desktop/controls/parts-and-states).
+*истатеид*<br/>
+окне Состояние элемента управления с требуемым внешним видом текста. Дополнительные сведения см. в столбце "Состояния" в таблице [Части и состояния](/windows/win32/controls/parts-and-states).
 
-*strText*<br/>
-[in] Текст для рисования.
+*стртекст*<br/>
+окне Текст для рисования.
 
 *rect*<br/>
-[in] Границы области, в которой рисуется заданный текст.
+окне Граница области, в которой рисуется указанный текст.
 
 *dwFlags*<br/>
-[in] Побитовое сочетание (OR) флагов, определяющих способ рисования указанного текста.
+окне Побитовое сочетание (или) флагов, определяющих внешний вид указанного текста.
 
-Если *hTheme* параметр `NULL` или если темы не поддерживается и не включены, *nFormat* параметр [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) метод описывает допустимые флаги. Если темы поддерживаются, *dwFlags* параметр [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) Допустимые флаги описываются метод.
+Если параметр *хсеме* имеет значение `NULL` или если темы не поддерживаются и не включены, параметр *нформат* метода [CDC::D равтекст](../../mfc/reference/cdc-class.md#drawtext) описывает допустимые флаги. Если темы поддерживаются, параметр *dwFlags* метода [DrawThemeTextEx](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) описывает допустимые флаги.
 
-*nGlowSize*<br/>
-[in] Размер эффекта свечения, рисуемого на фоне перед рисованием заданного текста. Значение по умолчанию — 0.
+*нгловсизе*<br/>
+окне Размер эффект свечения, который рисуется на фоне перед рисованием указанного текста. Значение по умолчанию — 0.
 
-*clrText*<br/>
-[in] Цвет, в которой рисуется заданный текст. Значением по умолчанию является цвет по умолчанию.
+*клртекст*<br/>
+окне Цвет, в котором рисуется указанный текст. Значением по умолчанию является цвет по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если тема используется для рисования заданного текста; в противном случае — значение FALSE.
+Значение TRUE, если тема используется для рисования указанного текста; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Тема определяет визуальный стиль приложения. Тема не используется для рисования текста, если *hTheme* параметра равно NULL, или если [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) метод не поддерживается, или если [диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview) композиции (DWM) отключен.
+Тема определяет визуальный стиль приложения. Тема не используется для отрисовки текста, если параметр *хсеме* имеет значение null или если метод [DrawThemeTextEx](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex) не поддерживается, или если [Диспетчер окон рабочего стола](/windows/win32/dwm/dwm-overview) (DWM) отключена.
 
-## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
+## <a name="enableaccessibilitysupport"></a>AFX_GLOBAL_DATA:: Енаблеакцессибилитисуппорт
 
 Включает или отключает поддержку Microsoft Active Accessibility.
 
@@ -295,15 +295,15 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить поддержку специальных возможностей; Значение FALSE, чтобы отключить поддержку специальных возможностей. Значение по умолчанию — TRUE.
+окне Значение TRUE, чтобы включить поддержку специальных возможностей; Значение FALSE, чтобы отключить поддержку специальных возможностей. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-Active Accessibility — это технология, основанная на модели COM, которая улучшает программами и совместно продуктов поддержки специальных возможностей операционной системы Windows. Он предоставляет надежные методы для предоставления информации об элементах пользовательского интерфейса. Тем не менее доступна новая модель специальных возможностей, называется Microsoft UI Automation. Сравнение этих двух технологий, см. в разделе [модели автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
+Active Accessibility — это технология на основе COM, которая улучшает работу программ и операционной системы Windows вместе с продуктами вспомогательных технологий. Он предоставляет надежные методы для предоставления сведений об элементах пользовательского интерфейса. Однако теперь доступна более новая модель доступности, называемая Microsoft UI Automation. Сравнение двух технологий см. в разделе [Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
-Используйте [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) метод, чтобы определить, включена ли поддержка Microsoft Active Accessibility.
+Используйте метод [AFX_GLOBAL_DATA:: исакцессибилитисуппорт](#isaccessibilitysupport) , чтобы определить, включена ли поддержка Microsoft Active Accessibility.
 
-## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
+## <a name="excludetag"></a>AFX_GLOBAL_DATA:: Ексклудетаг
 
 Удаляет заданную пару тегов XML из указанного буфера.
 
@@ -317,39 +317,39 @@ BOOL ExcludeTag(
 
 ### <a name="parameters"></a>Параметры
 
-*strBuffer*<br/>
-[in] Буфер текста.
+*стрбуффер*<br/>
+окне Буфер текста.
 
-*lpszTag*<br/>
-[in] Имя пары открывающих и закрывающих тегов XML.
+*лпсзтаг*<br/>
+окне Имя пары открывающих и закрывающих XML-тегов.
 
-*strTag*<br/>
-[out] При возвращении данного метода *strTag* параметр содержит текст, который находится между открывающим и закрывающим XML теги, которые имеют имена, *lpszTag* параметра. Любые начальные или конечные пробел удаляется из результата.
+*стртаг*<br/>
+заполняет При возврате из этого метода параметр *стртаг* содержит текст между открывающим и ЗАКРЫВАЮЩИМ XML-тегами, которые именуются с помощью параметра *лпсзтаг* . Все начальные и конечные пробелы удаляются из результата.
 
-*bIsCharsList*<br/>
-[in] Значение true, чтобы преобразовать символы для escape-символов в *strTag* параметр в фактических escape-символов; Значение FALSE, не для выполнения преобразования. Значение по умолчанию — FALSE. Дополнительные сведения см. в разделе "Замечания".
+*бисчарслист*<br/>
+окне Значение TRUE, чтобы преобразовать символы для escape-символов в параметре *стртаг* в фактические escape-символы; Значение FALSE, чтобы не выполнять преобразование. Значение по умолчанию — FALSE. Дополнительные сведения см. в разделе "Замечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Пару тегов XML состоит из именованных открывающих и закрывающих тегов, которые указывают начало и конец цепочки текста в указанном буфере. *StrBuffer* параметр задает буфер и *lpszTag* параметр указывает имя XML-тегов.
+Пара XML-тегов состоит из именованных открывающих и закрывающих тегов, которые указывают начало и конец выполнения текста в указанном буфере. Параметр *стрбуффер* задает буфер, а параметр *лпсзтаг* указывает имя XML-тегов.
 
-Эти символы в следующей таблице можно используйте для кодирования набор escape-символы в указанном буфере. Укажите значение TRUE для *bIsCharsList* параметра для преобразования символов в *strTag* параметр в фактических escape-символы. В следующей таблице использует [_T()](../../c-runtime-library/data-type-mappings.md) макрос, указание файлов символов и escape-символ строки.
+Используйте символы в следующей таблице для кодирования набора escape-символов в указанном буфере. Укажите значение TRUE для параметра *бисчарслист* , чтобы преобразовать символы в параметре *стртаг* в фактические escape-символы. В следующей таблице для указания строк символов и escape-символов используется макрос [_T ()](../../c-runtime-library/data-type-mappings.md) .
 
 |Символ|Escape-символ|
 |------------|----------------------|
-|_T("\\\t")|_T("\t")|
-|_T("\\\n")|_T("\n")|
-|_T("\\\r")|_T("\r")|
-|_T("\\\b")|_T("\b")|
-|_T("LT")|_T("\<")|
-|_T("GT")|_T(">")|
-|_T("AMP")|_T("&")|
+|_T ("\\\t")|_T ("\t")|
+|_T ("\\\n")|_T ("\n")|
+|_T("\\\r")|_T ("\r")|
+|_T("\\\b")|_T ("\b")|
+|_T ("LT")|_T ("\<")|
+|_T ("GT")|_T (">")|
+|_T ("AMP")|_T ("&")|
 
-## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
+## <a name="getcolor"></a>AFX_GLOBAL_DATA:: "Color"
 
 Получает текущий цвет из указанного элемента пользовательского интерфейса.
 
@@ -359,8 +359,8 @@ COLORREF GetColor(int nColor);
 
 ### <a name="parameters"></a>Параметры
 
-*nColor*<br/>
-[in] Значение, указывающее элемент пользовательского интерфейса, цвет которого извлекается. Список допустимых значений см. в разделе *nIndex* параметр [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) метод.
+*нколор*<br/>
+окне Значение типа, указывающее элемент пользовательского интерфейса, цвет которого извлекается. Список допустимых значений см. в описании параметра *ниндекс* метода [жетсисколор](/windows/win32/api/winuser/nf-winuser-getsyscolor) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -368,9 +368,9 @@ COLORREF GetColor(int nColor);
 
 ### <a name="remarks"></a>Примечания
 
-Если *nColor* параметра выходит за пределы диапазона, возвращаемое значение равно нулю. Поскольку нуль также является допустимое значение RGB, нельзя использовать этот метод, чтобы определить, поддерживается ли текущая операционная система системного цвета. Вместо этого используйте [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) метод, который возвращает значение NULL, если цвет не поддерживается.
+Если параметр *нколор* выходит за пределы диапазона, возвращаемое значение равно нулю. Поскольку ноль также является допустимым значением RGB, нельзя использовать этот метод, чтобы определить, поддерживается ли системный цвет текущей операционной системой. Вместо этого используйте метод [жетсисколорбруш](/windows/win32/api/winuser/nf-winuser-getsyscolorbrush) , который возвращает значение null, если цвет не поддерживается.
 
-## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
+## <a name="getdirect2dfactory"></a>AFX_GLOBAL_DATA::GetDirect2dFactory
 
 Возвращает указатель на интерфейс ID2D1Factory, хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.
 
@@ -380,11 +380,11 @@ ID2D1Factory* GetDirect2dFactory();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1Factory при успешном создании фабрики, или значение NULL, если происходит сбой при создании или текущая операционная система отсутствует поддержка D2D.
+Указатель на интерфейс ID2D1Factory в случае, если создание фабрики завершается успешно, или значение NULL, если создание завершается ошибкой, или текущая система операций не поддерживает D2D.
 
-## <a name="gethandcursor"></a>  AFX_GLOBAL_DATA::GetHandCursor
+## <a name="gethandcursor"></a>AFX_GLOBAL_DATA:: Жесандкурсор
 
-Извлекает стандартный курсор, в виде руки, идентификатор которого равен IDC_HAND.
+Извлекает стандартный курсор, напоминающий руки, чей идентификатор — IDC_HAND.
 
 ```
 HCURSOR GetHandCursor();
@@ -392,9 +392,9 @@ HCURSOR GetHandCursor();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор курсор в виде руки.
+Указатель курсора в виде руки.
 
-## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
+## <a name="getnonclientmetrics"></a>AFX_GLOBAL_DATA:: Жетнонклиентметрикс
 
 Получает метрики, связанные с неклиентской областью несвернутого окна.
 
@@ -404,14 +404,14 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Параметры
 
-*Сведения о*<br/>
-[in, out] Объект [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) структуру, содержащую масштабируемой метрики, связанные с неклиентской области несвернутого окна.
+*контактные*<br/>
+[вход, выход] Структура [нонклиентметрикс](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) , содержащая масштабируемые метрики, связанные с неклиентской областью неуменьшенного окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод завершился с ошибкой; в противном случае — значение FALSE.
 
-## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
+## <a name="gettextheight"></a>AFX_GLOBAL_DATA:: Жеттекссеигхт
 
 Получает высоту символов текста в текущем шрифте.
 
@@ -421,14 +421,14 @@ int GetTextHeight(BOOL bHorz = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bHorz*<br/>
-[in] Значение TRUE, чтобы получить высоту символов при текста по горизонтали; Значение FALSE, чтобы получить высоту символов, когда текст вертикально. Значение по умолчанию — TRUE.
+*бхорз*<br/>
+окне Значение TRUE, чтобы получить высоту символов, когда текст выполняется горизонтально; Значение FALSE, чтобы получить высоту символов, если текст выполняется вертикально. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота элемента текущего шрифта, измеряется от его ascender до его подстрочный элемент символа.
+Высота текущего шрифта, измеряемая от его Ascend до его нижнего края.
 
-## <a name="getwicfactory"></a> AFX_GLOBAL_DATA::GetWICFactory
+## <a name="getwicfactory"></a>AFX_GLOBAL_DATA:: Жетвикфактори
 
 Возвращает указатель на интерфейс IWICImagingFactory, хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.
 
@@ -438,11 +438,11 @@ IWICImagingFactory* GetWICFactory();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IWICImagingFactory при успешном создании фабрики, или значение NULL, если происходит сбой при создании или текущая операционная система отсутствует поддержка WIC.
+Указатель на интерфейс IWICImagingFactory в случае, если создание фабрики завершается успешно, или значение NULL, если создание завершается ошибкой или текущая система операций не поддерживает WIC.
 
-## <a name="getwritefactory"></a> AFX_GLOBAL_DATA::GetWriteFactory
+## <a name="getwritefactory"></a>AFX_GLOBAL_DATA:: Жетвритефактори
 
-Возвращает указатель на интерфейс IDWriteFactory, хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.
+Возвращает указатель на интерфейс Идвритефактори, хранящийся в глобальных данных. Если интерфейс не инициализирован, он создается с параметрами по умолчанию.
 
 ```
 IDWriteFactory* GetWriteFactory();
@@ -450,9 +450,9 @@ IDWriteFactory* GetWriteFactory();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IDWriteFactory при успешном создании фабрики, или значение NULL, если происходит сбой при создании или текущая операционная система отсутствует поддержка DirectWrite.
+Указатель на интерфейс Идвритефактори в случае, если создание фабрики завершается успешно, или значение NULL, если создание завершается ошибкой или текущая система операций не поддерживает DirectWrite.
 
-## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
+## <a name="initd2d"></a>AFX_GLOBAL_DATA::InitD2D
 
 Инициализирует фабрики D2D, DirectWrite и WIC. Данный метод следует вызывать до инициализации основного окна.
 
@@ -465,16 +465,16 @@ BOOL InitD2D(
 ### <a name="parameters"></a>Параметры
 
 *d2dFactoryType*<br/>
-Потоковая модель фабрики D2D и ресурсы, которые он создает.
+Потоковая модель фабрики D2D и ресурсов, которые она создает.
 
-*writeFactoryType*<br/>
-Значение, указывающее, будет ли объект фабрики записи совместно или изолированной
+*вритефакторитипе*<br/>
+Значение типа, указывающее, будет ли объект фабрики записи общим или изолированным.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если фабрик были intilalizrd, FALSE — в противном случае
+Возвращает значение TRUE, если фабрики были интилализрд, и FALSE — в противном случае
 
-## <a name="is32biticons"></a> AFX_GLOBAL_DATA::Is32BitIcons
+## <a name="is32biticons"></a>AFX_GLOBAL_DATA::Is32BitIcons
 
 Указывает, поддерживаются ли стандартные 32-разрядные значки.
 
@@ -488,9 +488,9 @@ BOOL Is32BitIcons() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод возвращает значение TRUE, если платформа поддерживает 32-разрядные значки встроенные и операционная система поддерживает 16 бит на пиксель, или более, если образы не отображаются в высокой контрастности.
+Этот метод возвращает значение TRUE, если платформа поддерживает 32-разрядные встроенные значки, и, если операционная система поддерживает 16 бит на пиксель или более, и если изображения не отображаются в высокой контрастности.
 
-## <a name="isaccessibilitysupport"></a> AFX_GLOBAL_DATA::IsAccessibilitySupport
+## <a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA:: Исакцессибилитисуппорт
 
 Указывает, включена ли поддержка Microsoft Active Accessibility.
 
@@ -504,13 +504,13 @@ BOOL IsAccessibilitySupport() const;
 
 ### <a name="remarks"></a>Примечания
 
-Microsoft Active Accessibility был предыдущее решение по обеспечению доступности приложений. Microsoft UI Automation — это новая модель специальных возможностей для Microsoft Windows и предназначен для удовлетворения потребностей продуктов поддержки специальных возможностей и средств автоматизированного тестирования.
+Microsoft Active Accessibility было предыдущим решением для обеспечения доступности приложений. Автоматизация пользовательского интерфейса Майкрософт — это новая модель специальных возможностей для Microsoft Windows, которая предназначена для удовлетворения потребностей программных продуктов и средств автоматизированного тестирования.
 
-Используйте [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) метод, чтобы включить или отключить поддержку Active Accessibility.
+Используйте метод [AFX_GLOBAL_DATA:: енаблеакцессибилитисуппорт](#enableaccessibilitysupport) , чтобы включить или отключить поддержку Active Accessibility.
 
-## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
+## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA:: IsD2DInitialized
 
-Определяет, был ли инициализирован D2D
+Определяет, инициализирован ли D2D
 
 ```
 BOOL IsD2DInitialized() const;
@@ -518,11 +518,11 @@ BOOL IsD2DInitialized() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если D2D был инициализирован; в противном случае — значение FALSE.
+Значение TRUE, если был инициализирован D2D; в противном случае — FALSE.
 
-## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
+## <a name="isdwmcompositionenabled"></a>AFX_GLOBAL_DATA:: Исдвмкомпоситионенаблед
 
-Предоставляет простой способ для вызова метода [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Windows.
+Предоставляет простой способ для вызова метода [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) Windows.
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -530,9 +530,9 @@ BOOL IsDwmCompositionEnabled();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если [диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview) составное включена; в противном случае — значение FALSE.
+Значение TRUE, если композиция [Диспетчер окон рабочего стола](/windows/win32/dwm/dwm-overview) (DWM) включена; в противном случае — значение FALSE.
 
-## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
+## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: Ишигхконтрастмоде
 
 Указывает, отображаются ли сейчас изображения с высокой контрастностью.
 ```
@@ -541,13 +541,13 @@ BOOL IsHighContrastMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если изображения отображаются в данный момент в режиме высокой контрастности черным и белым. в противном случае — значение FALSE.
+Значение TRUE, если изображения в данный момент отображаются в режиме высокой контрастности (черный или белый); в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-В режиме высокой контрастности, черный границ, окружающих света — белый и черный фон. В режиме высокой контрастности, белый границ, окружающих света являются черной и фон будет белым.
+В режиме «черновая контрастность» края, направленные на свет, являются белыми, а фон — черным. В режиме высокой контрастности края, направленные на свет, являются черными, а фон — белым.
 
-## <a name="iswindowslayersupportavailable"></a> AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+## <a name="iswindowslayersupportavailable"></a>AFX_GLOBAL_DATA:: Исвиндовслайерсуппортаваилабле
 
 Указывает, поддерживает ли операционная система многослойные окна.
 
@@ -557,13 +557,13 @@ BOOL IsWindowsLayerSupportAvailable() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если поддерживается многослойные окна; в противном случае — значение FALSE.
+Значение TRUE, если многослойные окна поддерживаются; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Если поддерживаются многослойные окна, *смарт-закрепления* маркеры использовать многослойные окна.
+Если многоуровневые окна поддерживаются, то в маркерах *смарт-закрепления* используются многоуровневые окна.
 
-## <a name="m_busebuiltin32biticons"></a> AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
+## <a name="m_busebuiltin32biticons"></a>AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
 
 Указывает, использует ли платформа стандартные 32-разрядные цветные значки или значки более низкого разрешения.
 
@@ -573,11 +573,11 @@ BOOL  m_bUseBuiltIn32BitIcons;
 
 ### <a name="remarks"></a>Примечания
 
-Значение TRUE указывает, что платформа использовать 32-разрядные цветные значки; Значение FALSE указывает, значки ниже разрешения. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот член значение true.
+Значение TRUE указывает, что платформа использует 32-разрядные цветные значки; Значение FALSE задает значки с низким разрешением. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент значением true.
 
 Этот элемент должен быть задан при запуске приложения.
 
-## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
+## <a name="m_busesystemfont"></a>AFX_GLOBAL_DATA::m_bUseSystemFont
 
 Указывает, используется ли системный шрифт для меню, панелей инструментов и лент.
 
@@ -587,11 +587,11 @@ BOOL m_bUseSystemFont;
 
 ### <a name="remarks"></a>Примечания
 
-Значение TRUE указывает, использовать системный шрифт; в противном случае — значение FALSE. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент, значение false.
+Значение TRUE указывает, что используется системный шрифт; в противном случае — значение FALSE. `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент значением false.
 
-Тестирование этот член не является единственным способом для платформы определить шрифта для использования. `AFX_GLOBAL_DATA::UpdateFonts` Метод также проверяет по умолчанию и альтернативное шрифты, чтобы определить, какие стили оформления будут доступны для применения к меню, панелей инструментов и лент.
+Тестирование этого элемента не является единственным способом определить используемый шрифт для платформы. `AFX_GLOBAL_DATA::UpdateFonts` Метод также проверяет значения по умолчанию и альтернативные шрифты, чтобы определить, какие визуальные стили доступны для применения к меню, панелям инструментов и лентам.
 
-## <a name="m_hcurhand"></a> AFX_GLOBAL_DATA::m_hcurHand
+## <a name="m_hcurhand"></a>AFX_GLOBAL_DATA::m_hcurHand
 
 Сохраняет дескриптор курсора в виде ладони.
 
@@ -599,7 +599,7 @@ BOOL m_bUseSystemFont;
 HCURSOR m_hcurHand;
 ```
 
-## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
+## <a name="m_hcurstretch"></a>AFX_GLOBAL_DATA::m_hcurStretch
 
 Сохраняет дескриптор для курсора растяжения по горизонтали.
 
@@ -607,7 +607,7 @@ HCURSOR m_hcurHand;
 HCURSOR m_hcurStretch;
 ```
 
-## <a name="m_hcurstretchvert"></a> AFX_GLOBAL_DATA::m_hcurStretchVert
+## <a name="m_hcurstretchvert"></a>AFX_GLOBAL_DATA::m_hcurStretchVert
 
 Сохраняет дескриптор для курсора растяжения по вертикали.
 
@@ -615,7 +615,7 @@ HCURSOR m_hcurStretch;
 HCURSOR m_hcurStretchVert;
 ```
 
-## <a name="m_hicontool"></a> AFX_GLOBAL_DATA::m_hiconTool
+## <a name="m_hicontool"></a>AFX_GLOBAL_DATA::m_hiconTool
 
 Сохраняет дескриптор для значка средства.
 
@@ -623,9 +623,9 @@ HCURSOR m_hcurStretchVert;
 HICON m_hiconTool;
 ```
 
-## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
+## <a name="m_nautohidetoolbarmargin"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
-Указывает смещение от левой автоматически скрываемой панели инструментов до левой части панели закрепления.
+Задает смещение от самой левой панели инструментов автоскрытия к левой стороне панели закрепления.
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -633,9 +633,9 @@ int  m_nAutoHideToolBarMargin;
 
 ### <a name="remarks"></a>Примечания
 
-`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот член до 4 пикселей.
+`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент до 4 пикселей.
 
-## <a name="m_nautohidetoolbarspacing"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
+## <a name="m_nautohidetoolbarspacing"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
 
 Указывает интервал между автоматически скрываемыми панелями инструментов.
 
@@ -645,11 +645,11 @@ int   m_nAutoHideToolBarSpacing;
 
 ### <a name="remarks"></a>Примечания
 
-`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот член до 14 пикселей.
+`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент до 14 пикселей.
 
-## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
+## <a name="m_ndragframethicknessdock"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
-Указывает толщину кадра перетаскивания, который используется для указания в закрепленном состоянии.
+Задает толщину рамки перетаскивания, используемой для указания закрепленного состояния.
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -657,11 +657,11 @@ int  m_nDragFrameThicknessDock;
 
 ### <a name="remarks"></a>Примечания
 
-`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот член для 3 пикселя.
+`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент до 3 пикселей.
 
-## <a name="m_ndragframethicknessfloat"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
+## <a name="m_ndragframethicknessfloat"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
 
-Указывает толщину кадра перетаскивания, который используется для указания состояния с плавающей запятой.
+Задает толщину рамки перетаскивания, используемой для обозначения плавающего состояния.
 
 ```
 int  m_nDragFrameThicknessFloat;
@@ -669,9 +669,9 @@ int  m_nDragFrameThicknessFloat;
 
 ### <a name="remarks"></a>Примечания
 
-`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот член до 4 пикселей.
+`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` Конструктор инициализирует этот элемент до 4 пикселей.
 
-## <a name="onsettingchange"></a> AFX_GLOBAL_DATA::OnSettingChange
+## <a name="onsettingchange"></a>AFX_GLOBAL_DATA:: Онсеттингчанже
 
 Определяет текущее состояние для анимации меню рабочего стола и функций автоматического скрытия панели задач.
 
@@ -681,9 +681,9 @@ void OnSettingChange();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод задает framework переменные в состояние определенных атрибутов рабочий стол пользователя. Этот метод определяет текущее состояние анимация меню, исчезания меню и панели функций автоматического скрытия задач.
+Этот метод задает для переменных платформы состояние определенных атрибутов рабочего стола пользователя. Этот метод определяет текущее состояние анимации меню, затухания меню и функции автоскрытия панели задач.
 
-## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
+## <a name="registerwindowclass"></a>AFX_GLOBAL_DATA:: Регистервиндовкласс
 
 Регистрирует указанный класс окна MFC.
 
@@ -693,20 +693,20 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszClassNamePrefix*<br/>
-[in] Имя класса окна для регистрации.
+*лпсзкласснамепрефикс*<br/>
+окне Имя регистрируемого класса окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Полное имя зарегистрированного класса, если этот метод выполнен успешно; в противном случае [исключение ресурсов](exception-processing.md#afxthrowresourceexception).
+Полное имя зарегистрированного класса, если этот метод завершился с ошибкой; в противном случае — [исключение ресурса](exception-processing.md#afxthrowresourceexception).
 
 ### <a name="remarks"></a>Примечания
 
-Возвращаемое значение — это список разделенных запятой *lpszClassNamePrefix* строки параметра, а также шестнадцатеричное текстовое представления дескрипторов текущего экземпляра приложения; курсор приложения, который представляет стрелку курсор, идентификатор которого равен IDC_ARROW; и кисть фона. Дополнительные сведения о регистрации классов окна MFC см. в разделе [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).
+Возвращаемое значение представляет собой список с разделителями-двоеточиями строки параметра *лпсзкласснамепрефикс* , а также шестнадцатеричное текстовое представление дескрипторов текущего экземпляра приложения. курсор приложения, который является курсором со стрелкой, идентификатором которого является IDC_ARROW; и кисть фона. Дополнительные сведения о регистрации классов окон MFC см. в разделе [афксрегистеркласс](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
+## <a name="resume"></a>AFX_GLOBAL_DATA:: Resume
 
-Повторно инициализирует Внутренние указатели функции, которые обращаются к методам, которые поддерживают Windows темы и стили оформления.
+Повторно инициализирует указатели внутренних функций, которые обращаются к методам, поддерживающим темы и стили оформления Windows.
 
 ```
 BOOL Resume();
@@ -714,15 +714,15 @@ BOOL Resume();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE. В режиме отладки этот метод утверждает, если этот метод завершается неудачно.
+Значение TRUE, если этот метод завершился с ошибкой; в противном случае — значение FALSE. В режиме отладки этот метод утверждает, если этот метод завершился неудачно.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, когда платформа получает [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast) сообщения.
+Этот метод вызывается, когда платформа получает сообщение [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast) .
 
-## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
+## <a name="setlayeredattrib"></a>AFX_GLOBAL_DATA:: Сетлайередаттриб
 
-Предоставляет простой способ для вызова метода [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) Windows.
+Предоставляет простой способ для вызова метода [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) Windows.
 
 ```
 BOOL SetLayeredAttrib(
@@ -735,22 +735,22 @@ BOOL SetLayeredAttrib(
 ### <a name="parameters"></a>Параметры
 
 *hwnd*<br/>
-[in] Дескриптор многослойные окна.
+окне Обработчик для многоуровневого окна.
 
-*crKey*<br/>
-[in] Ключ цвета прозрачности, [диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview) использует для создания слоистого окна.
+*кркэй*<br/>
+окне Ключ цвета прозрачности, используемый [Диспетчер окон рабочего стола](/windows/win32/dwm/dwm-overview) для создания многоуровневого окна.
 
-*bAlpha*<br/>
-[in] Альфа-значение, которое используется для описания непрозрачности слоистых окон.
+*балфа*<br/>
+окне Альфа-значение, которое используется для описания прозрачности многоуровневого окна.
 
 *dwFlags*<br/>
-[in] Побитовое сочетание (OR) флагов, которые определяют, какие параметры метода для использования. Укажите LWA_COLORKEY использовать *crKey* параметр тот цвет прозрачности. Укажите LWA_ALPHA использовать *bAlpha* параметр, чтобы определить прозрачность слоистых окон.
+окне Побитовое сочетание (или) флагов, которые указывают, какие параметры метода следует использовать. Укажите LWA_COLORKEY, чтобы использовать параметр *кркэй* в качестве цвета прозрачности. Укажите LWA_ALPHA, чтобы использовать параметр *балфа* для определения прозрачности многоуровневого окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод завершился с ошибкой; в противном случае — значение FALSE.
 
-## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
+## <a name="setmenufont"></a>AFX_GLOBAL_DATA:: Сетменуфонт
 
 Создает указанный логический шрифт.
 
@@ -762,21 +762,21 @@ BOOL SetMenuFont(
 
 ### <a name="parameters"></a>Параметры
 
-*lpLogFont*<br/>
-[in] Указатель на структуру, содержащую атрибуты шрифта.
+*лплогфонт*<br/>
+окне Указатель на структуру, содержащую атрибуты шрифта.
 
-*bHorz*<br/>
-[in] Значение TRUE, чтобы указать, что текст выполняется по горизонтали; Значение FALSE, чтобы указать, что текст вертикально.
+*бхорз*<br/>
+окне Значение TRUE, чтобы указать, что текст выполняется горизонтально; Значение FALSE, чтобы указать, что текст выполняется по вертикали.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE. В режиме отладки этот метод утверждает, если этот метод завершается неудачно.
+Значение TRUE, если этот метод завершился с ошибкой; в противном случае — значение FALSE. В режиме отладки этот метод утверждает, если этот метод завершился неудачно.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод создает горизонтальной шрифта regular подчеркнутый шрифт, а полужирный шрифт, используемый по умолчанию пунктов меню. При необходимости этот метод создает регулярное вертикального шрифта. Дополнительные сведения о логических шрифты, см. в разделе [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).
+Этот метод создает горизонтальный обычный шрифт, подчеркнутый шрифт и полужирный шрифт, используемый в пунктах меню по умолчанию. При необходимости этот метод создает обычный вертикальный шрифт. Дополнительные сведения о логических шрифтах см. в разделе [кфонт:: CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect).
 
-## <a name="updatefonts"></a> AFX_GLOBAL_DATA::UpdateFonts
+## <a name="updatefonts"></a>AFX_GLOBAL_DATA:: Упдатефонтс
 
 Повторно инициализирует логические шрифты, используемые платформой.
 
@@ -786,9 +786,9 @@ void UpdateFonts();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о логических шрифты, см. в разделе `CFont::CreateFontIndirect`.
+Дополнительные сведения о логических шрифтах см. `CFont::CreateFontIndirect`в разделе.
 
-## <a name="updatesyscolors"></a> AFX_GLOBAL_DATA::UpdateSysColors
+## <a name="updatesyscolors"></a>AFX_GLOBAL_DATA:: Упдатесисколорс
 
 Инициализирует цвета, глубину цвета, кисти, перья и изображения, используемые платформой.
 
@@ -796,31 +796,31 @@ void UpdateFonts();
 void UpdateSysColors();
 ```
 
-## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
+## <a name="biswindows7"></a>AFX_GLOBAL_DATA::bIsWindows7
 
-Указывает, выполняется ли приложение под управлением Windows 7 или более поздней версии.
+Указывает, выполняется ли приложение в Windows 7 или более поздней версии.
 
 ```
 BOOL bIsWindows7;
 ```
 
-## <a name="clractivecaptiongradient"></a> AFX_GLOBAL_DATA::clrActiveCaptionGradient
+## <a name="clractivecaptiongradient"></a>AFX_GLOBAL_DATA:: Клрактивекаптионградиент
 
-Задает цвет градиента заголовка активного окна. Обычно используется для закрепляемых панелей.
+Задает цвет градиента для активного заголовка. Обычно используется для закрепляемых панелей.
 
 ```
 COLORREF clrActiveCaptionGradient;
 ```
 
-## <a name="clrinactivecaptiongradient"></a> AFX_GLOBAL_DATA::clrInactiveCaptionGradient
+## <a name="clrinactivecaptiongradient"></a>AFX_GLOBAL_DATA:: Клринактивекаптионградиент
 
-Задает цвет градиента заголовка неактивного окна. Обычно используется для закрепляемых панелей.
+Задает цвет градиента для неактивного заголовка. Обычно используется для закрепляемых панелей.
 
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
 
-## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
+## <a name="getitaskbarlist"></a>AFX_GLOBAL_DATA:: Жетитаскбарлист
 
 Создает и сохраняет в глобальных данных указатель на `ITaskBarList` интерфейс.
 
@@ -830,9 +830,9 @@ ITaskbarList *GetITaskbarList();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `ITaskbarList` интерфейс успешное завершение создания панель объект списка задач; Значение NULL, если происходит сбой при создании или текущая операционная система меньше, чем Windows 7.
+Указатель на `ITaskbarList` интерфейс при успешности создания объекта списка задач. Значение NULL, если создание завершается ошибкой или если текущая операционная система меньше Windows 7.
 
-## <a name="getitaskbarlist3"></a> AFX_GLOBAL_DATA::GetITaskbarList3
+## <a name="getitaskbarlist3"></a>AFX_GLOBAL_DATA::GetITaskbarList3
 
 Создает и сохраняет в глобальных данных указатель на `ITaskBarList3` интерфейс.
 
@@ -842,9 +842,9 @@ ITaskbarList3 *GetITaskbarList3();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `ITaskbarList3` интерфейс успешное завершение создания панель объект списка задач; Значение NULL, если происходит сбой при создании или текущая операционная система меньше, чем Windows 7.
+Указатель на `ITaskbarList3` интерфейс при успешности создания объекта списка задач. Значение NULL, если создание завершается ошибкой или если текущая операционная система меньше Windows 7.
 
-## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
+## <a name="getshellautohidebars"></a>AFX_GLOBAL_DATA:: Жетшеллаутохидебарс
 
 Определяет положения автоматически скрываемых панелей оболочки.
 
@@ -854,17 +854,17 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целочисленное значение, закодированное флаги, определяющие расположение автоматическое скрытие полос. Комбинирует следующие значения: AFX_AUTOHIDE_BOTTOM AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT AFX_AUTOHIDE_RIGHT.
+Целочисленное значение с закодированными флагами, задающих позиции автоматически скрытых полос. Он может сочетать следующие значения: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.
 
-## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
+## <a name="releasetaskbarrefs"></a>AFX_GLOBAL_DATA:: Релеасетаскбаррефс
 
-Освобождает интерфейсы, полученные через `GetITaskbarList` и `GetITaskbarList3` методы.
+Освобождает интерфейсы, полученные с `GetITaskbarList` помощью `GetITaskbarList3` методов и.
 
 ```
 void ReleaseTaskBarRefs();
 ```
 
-## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
+## <a name="shellcreateitemfromparsingname"></a>AFX_GLOBAL_DATA:: Шеллкреатеитемфромпарсингнаме
 
 Создает и инициализирует объект элемента оболочки из имени синтаксического анализа.
 
@@ -878,36 +878,36 @@ HRESULT ShellCreateItemFromParsingName(
 
 ### <a name="parameters"></a>Параметры
 
-*pszPath*<br/>
-[in] Указатель на отображаемое имя.
+*псзпас*<br/>
+окне Указатель на отображаемое имя.
 
-*pbc*<br/>
-Указатель на контекст привязки, который управляет операцию синтаксического анализа.
+*пбк*<br/>
+Указатель на контекст привязки, управляющий операцией синтаксического анализа.
 
 *riid*<br/>
-Ссылку на идентификатор интерфейса.
+Ссылка на идентификатор интерфейса.
 
-*ppv*<br/>
-[out] Когда эта функция возвращает, содержит указатель интерфейса, запрашиваемый в *riid*. Обычно это будет `IShellItem` или `IShellItem2`.
+*ппв*<br/>
+заполняет При возврате этой функции содержит указатель интерфейса, запрошенный в *riid*. Как правило `IShellItem` , это или `IShellItem2`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK, если выполнение прошло успешно; в противном случае значение ошибки.
+В случае успешного выполнения возвращает значение S_OK; значение ошибки в противном случае.
 
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../hierarchy-chart.md)<br/>
 [Структуры, стили, обратные вызовы и схемы сообщений](structures-styles-callbacks-and-message-maps.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Части и состояния](/windows/desktop/controls/parts-and-states)<br/>
+[COLORREF](/windows/win32/gdi/colorref)<br/>
+[Части и состояния](/windows/win32/controls/parts-and-states)<br/>
 [CDC::DrawText](cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)<br/>
-[Включение и контроль композиции DWM](/windows/desktop/dwm/composition-ovw)<br/>
+[DrawThemeTextEx](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[диспетчер окон рабочего стола](/windows/win32/dwm/dwm-overview)<br/>
+[Включение и Управление композицией DWM](/windows/win32/dwm/composition-ovw)<br/>
 [Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[Функция GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
-[Структура NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
-[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
+[Функция Жетсисколор](/windows/win32/api/winuser/nf-winuser-getsyscolor)<br/>
+[жетсисколорбруш](/windows/win32/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[Структура НОНКЛИЕНТМЕТРИКС](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw)<br/>
+[афксрегистеркласс](application-information-and-management.md#afxregisterclass)<br/>
+[афкссровресаурцеексцептион](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)

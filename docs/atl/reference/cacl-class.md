@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915892"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497888"
 ---
 # <a name="cacl-class"></a>Класс Какл
 
@@ -84,7 +84,7 @@ class CAcl
 
 ## <a name="remarks"></a>Примечания
 
-`ACL` Структура представляет собой заголовок списка ACL (список управления доступом). В список ACL входит последовательный список из нуля или более записей [ACE](/windows/desktop/SecAuthZ/access-control-entries) (записи управления доступом). Отдельные элементы ACE в списке ACL нумеруются от 0 до *n – 1*, где *n* — число записей ACE в списке ACL. При редактировании списка управления доступом приложение ссылается на запись управления доступом (ACE) в списке управления доступом по индексу.
+`ACL` Структура представляет собой заголовок списка ACL (список управления доступом). В список ACL входит последовательный список из нуля или более записей [ACE](/windows/win32/SecAuthZ/access-control-entries) (записи управления доступом). Отдельные элементы ACE в списке ACL нумеруются от 0 до *n – 1*, где *n* — число записей ACE в списке ACL. При редактировании списка управления доступом приложение ссылается на запись управления доступом (ACE) в списке управления доступом по индексу.
 
 Существует два типа списков ACL:
 
@@ -96,9 +96,9 @@ class CAcl
 
 Объект также может иметь связанные с ним сведения о безопасности на уровне системы в виде списка управления доступом системы, управляемого системным администратором. Системный список управления доступом позволяет системному администратору выполнять аудит любых попыток получить доступ к объекту.
 
-Дополнительные сведения см. в обсуждении [ACL](/windows/desktop/SecAuthZ/access-control-lists) в Windows SDK.
+Дополнительные сведения см. в обсуждении [ACL](/windows/win32/SecAuthZ/access-control-lists) в Windows SDK.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="requirements"></a>Требования
 
@@ -126,7 +126,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Примечания
 
-Это определение типа определяет тип массива, используемый для определения управляющих флагов, относящихся к типу элемента управления доступом (ACE). Полный список возможных флагов см. в определении [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Это определение типа определяет тип массива, используемый для определения управляющих флагов, относящихся к типу элемента управления доступом (ACE). Полный список возможных флагов см. в определении [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="cacetypearray"></a>Какл:: Кацетипеаррай
 
@@ -138,7 +138,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Примечания
 
-Это определение типа определяет тип массива, используемый для определения природы объектов записи управления доступом (ACE), таких как ACCESS_ALLOWED_ACE_TYPE или ACCESS_DENIED_ACE_TYPE. Полный список возможных типов см. в определении [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Это определение типа определяет тип массива, используемый для определения природы объектов записи управления доступом (ACE), таких как ACCESS_ALLOWED_ACE_TYPE или ACCESS_DENIED_ACE_TYPE. Полный список возможных типов см. в определении [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="cacl"></a>Какл:: Какл
 
@@ -214,7 +214,7 @@ void GetAclEntries(
 
 Содержимое каждого массива соответствует друг другу, то есть первый элемент `CAccessMaskArray` массива соответствует первому элементу `CSidArray` массива и т. д.
 
-Дополнительные сведения о типах и флагах ACE см. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Дополнительные сведения о типах и флагах ACE см. в разделе [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getaclentry"></a>Какл:: Жетаклентри
 
@@ -258,7 +258,7 @@ void GetAclEntry(
 
 Этот метод извлечет все сведения об отдельном элементе управления доступом, предоставляя больше информации, чем [какл:: жетаклентриес](#getaclentries) .
 
-Дополнительные сведения о типах и флагах ACE см. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Дополнительные сведения о типах и флагах ACE см. в разделе [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="getlength"></a>Какл:: DATALENGTH
 

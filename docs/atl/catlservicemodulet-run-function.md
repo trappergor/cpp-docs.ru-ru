@@ -1,25 +1,25 @@
 ---
-title: Функция CAtlServiceModuleT::Run
+title: 'Функция функция CAtlServiceModuleT:: Run'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 0f50c13912bbfef861e8650ee7589daea1e45725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c35020996852731a8f22c15860d4cceb7a8bdb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250850"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491520"
 ---
-# <a name="catlservicemoduletrun-function"></a>Функция CAtlServiceModuleT::Run
+# <a name="catlservicemoduletrun-function"></a>Функция функция CAtlServiceModuleT:: Run
 
-`Run` содержит вызовы `PreMessageLoop`, `RunMessageLoop`, и `PostMessageLoop`. После вызова, `PreMessageLoop` сначала сохраняет идентификатор потока службы. Служба будет использовать этот идентификатор, чтобы завершить свою работу, отправляя сообщение WM_QUIT с помощью функции Win32 API, [PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea).
+`Run`содержит вызовы `PreMessageLoop`, `RunMessageLoop`и. `PostMessageLoop` После вызова `PreMessageLoop` сначала сохраняет идентификатор потока службы. Служба будет использовать этот идентификатор для закрытия, отправив сообщение WM_QUIT с помощью функции API Win32, [постсреадмессаже](/windows/win32/api/winuser/nf-winuser-postthreadmessagew).
 
-`PreMessageLoop` затем вызывает `InitializeSecurity`. По умолчанию `InitializeSecurity` вызовы [CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) с дескриптором безопасности, присваивается значение NULL, означающее, что любой пользователь имеет доступ к объекту.
+`PreMessageLoop`затем вызывает `InitializeSecurity`метод. По умолчанию `InitializeSecurity` вызывает [CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) с дескриптором безопасности со значением NULL, что означает, что любой пользователь имеет доступ к вашему объекту.
 
-Если вы не хотите, чтобы службы, чтобы указать собственный уровень безопасности, переопределить `PreMessageLoop` и не вызывайте `InitializeSecurity`, и затем COM определяет параметры безопасности из реестра. Настройка параметров реестра удобно с [DCOMCNFG](../atl/dcomcnfg.md) служебная программа, описанных в этом разделе.
+Если вы не хотите, чтобы служба определяла собственную безопасность, переопределите `PreMessageLoop` и не вызывает `InitializeSecurity`, а com определит параметры безопасности из реестра. Для настройки параметров реестра удобно использовать служебную программу [DCOMCNFG](../atl/dcomcnfg.md) , которая обсуждается далее в этом разделе.
 
-После указания безопасности с помощью COM зарегистрирован объект таким образом, чтобы новые клиенты могут подключаться к программе. Наконец программа сообщает диспетчер управления службами (SCM), что он работает, и программа переходит в цикл обработки сообщений. Программа продолжает работать, пока она отправляет сообщение quit при завершении работы службы.
+После указания безопасности объект регистрируется в COM, чтобы новые клиенты могли подключаться к программе. Наконец, программа сообщает диспетчеру управления службами, что он работает, а программа входит в цикл обработки сообщений. Программа продолжает работать до тех пор, пока не будет отправлено сообщение о выходе после завершения работы службы.
 
 ## <a name="see-also"></a>См. также
 
@@ -27,4 +27,4 @@ ms.locfileid: "62250850"
 [Класс CSecurityDesc](../atl/reference/csecuritydesc-class.md)<br/>
 [Класс CSid](../atl/reference/csid-class.md)<br/>
 [Класс CDacl](../atl/reference/cdacl-class.md)<br/>
-[CAtlServiceModuleT::Run](../atl/reference/catlservicemodulet-class.md#run)
+[Функция CAtlServiceModuleT:: Run](../atl/reference/catlservicemodulet-class.md#run)

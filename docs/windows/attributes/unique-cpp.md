@@ -1,21 +1,21 @@
 ---
-title: Уникальный (атрибут COM C++)
+title: уникальный (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407111"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514903"
 ---
 # <a name="unique-c"></a>unique (C++)
 
-Указывает уникальный указатель.
+Задает уникальный указатель.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407111"
 
 ## <a name="remarks"></a>Примечания
 
-**Уникальный** атрибут C++ имеет ту же функциональность, что [уникальный](/windows/desktop/Midl/unique) описании атрибута MIDL.
+Атрибут **UNIQUE** C++ имеет те же функциональные возможности, что и [уникальный](/windows/win32/Midl/unique) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [ref](ref-cpp.md) пример для использовать **уникальный**.
+Пример использования **UNIQUE**см. в примере [ref](ref-cpp.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407111"
 
 |||
 |-|-|
-|**Применение**|**TypeDef**, **структуры**, **объединение**, параметр интерфейса, метод интерфейса|
+|**Относится к**|**typedef**, **struct**, **Union**, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

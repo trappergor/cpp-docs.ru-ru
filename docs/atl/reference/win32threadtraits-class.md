@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d086a42f5dcdf005d10c8853776da66b691a8e11
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503760"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495479"
 ---
 # <a name="win32threadtraits-class"></a>Класс Win32ThreadTraits
 
-Этот класс предоставляет функции создания для потока Windows. Этот класс используется в том случае, если поток не будет использовать функции CRT.
+Этот класс предоставляет функцию создания для потока Windows. Используйте этот класс, если поток не будет использовать функции CRT.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,27 +36,27 @@ class Win32ThreadTraits
 
 |name|Описание|
 |----------|-----------------|
-|[Win32ThreadTraits::CreateThread](#createthread)|(Статический) Вызывайте эту функцию для создания потока, который не следует использовать функции CRT.|
+|[Win32ThreadTraits:: CreateThread](#createthread)|Статически Вызовите эту функцию, чтобы создать поток, который не должен использовать функции CRT.|
 
 ## <a name="remarks"></a>Примечания
 
-Поток признаки являются классы, предоставляющие функции создания для определенного типа потока. Функция создания совпадает с той же сигнатуре и семантику Windows [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) функции.
+Признаки потоков — это классы, которые предоставляют функцию создания для определенного типа потока. Функция создания имеет ту же сигнатуру и семантику, что и функция Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) .
 
-Поток признаки используются следующие классы:
+Признаки потоков используются в следующих классах:
 
-- [CThreadPool](../../atl/reference/cthreadpool-class.md)
+- [ксреадпул](../../atl/reference/cthreadpool-class.md)
 
-- [CWorkerThread](../../atl/reference/cworkerthread-class.md)
+- [кворкерсреад](../../atl/reference/cworkerthread-class.md)
 
-Если поток будет использовать функции CRT, используйте [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) вместо этого.
+Если поток будет использовать функции CRT, вместо него следует использовать [кртсреадтраитс](../../atl/reference/crtthreadtraits-class.md) .
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread
+##  <a name="createthread"></a>Win32ThreadTraits:: CreateThread
 
-Вызывайте эту функцию для создания потока, который не следует использовать функции CRT.
+Вызовите эту функцию, чтобы создать поток, который не должен использовать функции CRT.
 
 ```
 static HANDLE CreateThread(
@@ -70,34 +70,34 @@ static HANDLE CreateThread(
 
 ### <a name="parameters"></a>Параметры
 
-*lpsa*<br/>
+*лпса*<br/>
 Атрибуты безопасности для нового потока.
 
-*dwStackSize*<br/>
+*двстакксизе*<br/>
 Размер стека для нового потока.
 
-*pfnThreadProc*<br/>
-Процедура потока нового потока.
+*пфнсреадпрок*<br/>
+Потоковая процедура нового потока.
 
-*pvParam*<br/>
+*пвпарам*<br/>
 Параметр, передаваемый в процедуру потока.
 
-*dwCreationFlags*<br/>
-Создание флагов ("0" или "CREATE_SUSPENDED").
+*двкреатионфлагс*<br/>
+Флаги создания (0 или CREATE_SUSPENDED).
 
-*pdwThreadId*<br/>
-[out] Адрес переменной DWORD, который, в случае успешного выполнения получает идентификатор только что созданному потоку.
+*пдвсреадид*<br/>
+заполняет Адрес переменной типа DWORD, которая в случае успешного выполнения получает идентификатор созданного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор в только что созданному потоку или значение NULL в случае сбоя. Вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) Чтобы получить расширенные сведения об ошибке.
+Возвращает маркер вновь созданного потока или значение NULL при сбое. Вызовите [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы получить расширенные сведения об ошибке.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) для получения дополнительных сведений о параметрах для этой функции.
+Дополнительные сведения о параметрах этой функции см. в разделе [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) .
 
-Эта функция вызывает `CreateThread` при создании потока.
+Эта функция вызывает `CreateThread` метод, чтобы создать поток.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

@@ -7,42 +7,42 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320374"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492665"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (совместимо с предотвращением исполнения данных (DEP))
 
-Указывает, что исполняемый файл совместим с функцией предотвращения исполнения данных Windows.
+Указывает, что исполняемый файл совместим с функцией предотвращения выполнения данных Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/NXCOMPAT**[**:NO**]
+> **/NXCOMPAT** [ **: НЕТ**]
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию **/NXCOMPAT** включен.
+По умолчанию **/NXCOMPAT** имеет значение ON.
 
-**: No** можно использовать для явного указания исполняемый файл как несовместимые с предотвращением выполнения данных.
+**/NXCOMPAT: No** можно использовать для явного указания исполняемого файла в качестве несовместимого с предотвращением выполнения данных.
 
-Дополнительные сведения о Предотвращение выполнения данных см. в статьях:
+Дополнительные сведения об предотвращении выполнения данных см. в следующих статьях:
 
 - [Подробное описание функции предотвращения выполнения данных (DEP)](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [Предотвращение выполнения данных](/windows/desktop/Memory/data-execution-prevention)
+- [Предотвращение выполнения данных](/windows/win32/Memory/data-execution-prevention)
 
 - [Предотвращение выполнения данных (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
+1. Перейдите на страницу свойства**командной строки** **компоновщика** >  **свойств** > конфигурации.
 
-1. Введите параметр в **Дополнительные параметры** поле. Выберите **ОК** или **применить** для применения изменений.
+1. Введите параметр в поле **Дополнительные параметры** . Нажмите кнопку **ОК** или **Применить** , чтобы применить изменение.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 

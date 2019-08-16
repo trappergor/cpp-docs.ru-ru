@@ -1,17 +1,17 @@
 ---
-title: Работа с потоками (C++ COM атрибут)
+title: Потоковая модельC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: cdebf06a62ebbd1d8648b9777fe200bc7a373261
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407241"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513928"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -26,31 +26,31 @@ ms.locfileid: "62407241"
 ### <a name="parameters"></a>Параметры
 
 *model*<br/>
-(Необязательно) Один из следующих моделей потоков:
+Используемых Одна из следующих потоков моделей:
 
-- `apartment` (потоковое)
+- `apartment`(потоковое разделение)
 
-- `neutral` (Компоненты .NET framework без интерфейса пользователя)
+- `neutral`(.NET Framework компонентов без пользовательского интерфейса)
 
-- `single` (простой threading)
+- `single`(простая организация потоков)
 
-- `free` (свободным созданием потоков)
+- `free`(свободная организация)
 
-- `both` (подразделения и свободной потоковой модели)
+- `both`(потоковая подразделение и свободная организация)
 
 Значение по умолчанию — `apartment`.
 
 ## <a name="remarks"></a>Примечания
 
-**Threading** C++: атрибут не отображается в созданного IDL-файла, но будет использоваться в реализации COM-объекта.
+Атрибут потоковой обработки не отображается в созданном IDL-файле, но будет использоваться в реализации объекта COM. C++
 
-В проектах ATL Если [coclass](coclass.md) присутствует также атрибут, потоковой модели, указанный *модели* передается как параметр-шаблон [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) класса , вставленные `coclass` атрибута.
+В проектах ATL, если имеется также атрибут [coclass](coclass.md) , потоковая модель, заданная *моделью* , передается в качестве параметра шаблона в `coclass` класс [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , который вставляется атрибутом.
 
-**Threading** атрибут также защищает доступ к [event_source](event-source.md).
+Атрибут **потоковой обработки** также защищает доступ к [event_source](event-source.md).
 
 ## <a name="example"></a>Пример
 
-См. в разделе [Лицензированные](licensed.md) пример для использовать **threading**.
+Пример использования **потоков**см. в примере с [лицензией](licensed.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -58,10 +58,10 @@ ms.locfileid: "62407241"
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -71,4 +71,4 @@ ms.locfileid: "62407241"
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Поддержка многопоточности для устаревшего кода (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Нейтральный подразделения](/windows/desktop/cossdk/neutral-apartments)
+[Нейтральные подразделения](/windows/win32/cossdk/neutral-apartments)

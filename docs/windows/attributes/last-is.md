@@ -1,21 +1,21 @@
 ---
-title: last_is (C++ атрибут COM)
+title: last_is (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.last_is
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409425"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514521"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-Указывает индекс последнего элемента массива для передачи.
+Задает индекс последнего передаваемого элемента массива.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409425"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
-Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
+*expression*<br/>
+Одно или несколько выражений языка C. Пустые слоты аргументов разрешены.
 
 ## <a name="remarks"></a>Примечания
 
-**Last_is** C++ атрибут имеет ту же функциональность, что [last_is](/windows/desktop/Midl/last-is) описании атрибута MIDL.
+Атрибут **last_is** C++ имеет те же функциональные возможности, что и атрибут [last_is](/windows/win32/Midl/last-is) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [first_is](first-is.md) пример указания фрагмент массива.
+Пример указания раздела массива см. в разделе [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409425"
 
 |||
 |-|-|
-|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

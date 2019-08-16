@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: e31e7d68676a40da51f214496a13072d0d4d2b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dab5c716cc21c0a07eaf03def7e0346c877f55b5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310322"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502054"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 
@@ -20,7 +20,7 @@ ms.locfileid: "62310322"
 >  Дополнительные сведения о [CStringT](../../atl-mfc-shared/reference/cstringt-class.md) и других классах, относящихся как с MFC-, так и к ATL-программированию, см. в разделе [Classes Shared by MFC and ATL](../../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md).
 
 > [!IMPORTANT]
->  Классы MFC и их члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Классы MFC и их члены нельзя использовать в приложениях, которые выполняются в среда выполнения Windows.
 
 ## <a name="in-this-section"></a>В этом разделе
 
@@ -127,7 +127,7 @@ ms.locfileid: "62310322"
 Предоставляет функции поля со списком Windows.
 
 [Класс CClientDC](../../mfc/reference/cclientdc-class.md)<br/>
-Обрабатывает вызовы функций Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) во время разработки и функций [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения.
+Обрабатывает вызовы функций Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) во время разработки и функций [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) во время уничтожения.
 
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.
@@ -160,7 +160,7 @@ ms.locfileid: "62310322"
 Управляет контекстными меню (другое название — всплывающие меню).
 
 [Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
-Базовый класс для классов панелей элементов управления [класс CStatusBar](../../mfc/reference/cstatusbar-class.md), [класс CToolBar](../../mfc/reference/ctoolbar-class.md), [класс CDialogBar](../../mfc/reference/cdialogbar-class.md), [класс CReBar](../../mfc/reference/crebar-class.md)и [ Класс COleResizeBar](../../mfc/reference/coleresizebar-class.md).
+Базовый класс для классов панели управления [класс CStatusBar](../../mfc/reference/cstatusbar-class.md), класс [CToolBar](../../mfc/reference/ctoolbar-class.md), [класс CDialogBar](../../mfc/reference/cdialogbar-class.md), класс [кребар](../../mfc/reference/crebar-class.md)и [класс колересизебар](../../mfc/reference/coleresizebar-class.md).
 
 [Класс CCriticalSection](../../mfc/reference/ccriticalsection-class.md)<br/>
 Класс представляет "критическую секцию" — объект синхронизации, позволяющий ограничить доступ к определенному фрагменту кода в любой момент времени одним потоком.
@@ -385,7 +385,7 @@ ms.locfileid: "62310322"
 Представляет состояние, связанное с файлом исключения.
 
 [Класс CFileFind](../../mfc/reference/cfilefind-class.md)<br/>
-Выполняет поиск локального файла и является базовым классом для [класс CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) и [класс CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), которые выполняют поиск файлов Интернета.
+Выполняет поиск по локальному файлу и является базовым классом для класса [кгоферфилефинд](../../mfc/reference/cgopherfilefind-class.md) и [класса кфтпфилефинд](../../mfc/reference/cftpfilefind-class.md), который выполняет поиск файлов в Интернете.
 
 [Класс CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)<br/>
 Позволяет реализовать стандартную строку диалоговых окон "Найти и заменить" в приложении.
@@ -409,7 +409,7 @@ ms.locfileid: "62310322"
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном с элементами для управления окном.
 
 [Класс CFrameWndEx](../../mfc/reference/cframewndex-class.md)<br/>
-Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет [класс CFrameWnd](../../mfc/reference/cframewnd-class.md) класса.
+Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет класс [класса CFrameWnd](../../mfc/reference/cframewnd-class.md) .
 
 [Класс CFtpConnection](../../mfc/reference/cftpconnection-class.md)<br/>
 Управляет FTP-подключением к интернет-серверу и включает прямую обработку каталогов и файлов на этом сервере.
@@ -430,7 +430,7 @@ ms.locfileid: "62310322"
 Помогает в поиске файлов Интернета на серверах gopher.
 
 [Класс CGopherLocator](../../mfc/reference/cgopherlocator-class.md)<br/>
-Получает средство «указатель» с сервера gopher, определяет тип и делает средство поиска доступным для [класс CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md).
+Получает Gopher "Локатор" от сервера gopher, определяет тип указателя и делает указатель доступным для [класса кгоферфилефинд](../../mfc/reference/cgopherfilefind-class.md).
 
 [Класс CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)<br/>
 Предоставляет функциональные возможности стандартного элемента управления "заголовок" Windows.
@@ -445,7 +445,7 @@ ms.locfileid: "62310322"
 Представляет компонент редактирования HTML.
 
 [Класс CHtmlEditDoc](../../mfc/reference/chtmleditdoc-class.md)<br/>
-С помощью [класс CHtmlEditView](../../mfc/reference/chtmleditview-class.md), предоставляет функции платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.
+[Класс CHtmlEditView](../../mfc/reference/chtmleditview-class.md)предоставляет функциональные возможности платформы редактирования WebBrowser в контексте архитектуры представления документов MFC.
 
 [Класс CHtmlEditView](../../mfc/reference/chtmleditview-class.md)<br/>
 Предоставляет функции платформы редактирования WebBrowser в контексте архитектуры документов или представлений MFC.
@@ -517,7 +517,7 @@ ms.locfileid: "62310322"
 Инкапсулирует функциональность элемента управления "список", который отображает коллекцию элементов, где каждый элемент состоит из значка (списка изображений) и метки.
 
 [Класс CListView](../../mfc/reference/clistview-class.md)<br/>
-Упрощает использование элемента управления списком и [класс CListCtrl](../../mfc/reference/clistctrl-class.md), который инкапсулирует список функциональность в архитектуру представления документов MFC.
+Упрощает использование элемента управления "список" и [класса CListCtrl](../../mfc/reference/clistctrl-class.md), класса, который инкапсулирует функции управления списками, с архитектурой "документ-представление" MFC.
 
 [Класс CLongBinary](../../mfc/reference/clongbinary-class.md)<br/>
 Упрощает работу с очень большими объектами двоичных данных (BLOB-объектами) в базе данных.
@@ -550,19 +550,19 @@ ms.locfileid: "62310322"
 Предоставляет функции дочернего окна многодокументного интерфейса Windows (MDI) и элементы для управления окном.
 
 [Класс CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)<br/>
-Предоставляет функциональные возможности дочернего окна многодокументного интерфейса Windows. Он расширяет функциональные возможности [класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.
+Предоставляет функциональные возможности дочернего окна многодокументного интерфейса Windows. Он расширяет функциональные возможности [класса CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.
 
 [Класс CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)<br/>
 Предоставляет функции фреймового окна многодокументного интерфейса Windows (MDI) и элементы для управления окном.
 
 [Класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)<br/>
-Расширяет функциональность [класс CFrameWnd](../../mfc/reference/cframewnd-class.md), окно фрейма Windows многодокументного интерфейса (MDI).
+Расширяет функциональные возможности [класса CFrameWnd](../../mfc/reference/cframewnd-class.md)— окна фрейма многодокументного интерфейса Windows (MDI).
 
 [Класс CMDITabInfo](../../mfc/reference/cmditabinfo-class.md)<br/>
 Используется для передачи параметров методу [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) . Задайте элементы этого класса, чтобы контролировать поведение групп вкладок MDI.
 
 [Класс CMemFile](../../mfc/reference/cmemfile-class.md)<br/>
-[Класс CFile](../../mfc/reference/cfile-class.md)-производный класс, поддерживающий файлы памяти.
+Класс, производный от [класса кфиле](../../mfc/reference/cfile-class.md), который поддерживает файлы памяти.
 
 [Класс CMemoryException](../../mfc/reference/cmemoryexception-class.md)<br/>
 Представляет условие исключения вне памяти.
@@ -589,7 +589,7 @@ ms.locfileid: "62310322"
 Реализует базовую функциональность для окон с вкладками.
 
 [Класс CMFCButton](../../mfc/reference/cmfcbutton-class.md)<br/>
-Расширяет его функциональные возможности [класс CButton](../../mfc/reference/cbutton-class.md) класс, например выравнивание текста кнопки, объединение текста кнопки и изображения, выбор курсора и задание подсказки.
+Добавляет к классу [класса кбуттон](../../mfc/reference/cbutton-class.md) функциональные возможности, такие как выровняйте текст кнопки, объединение текста кнопки и изображения, выбор курсора и указание всплывающей подсказки.
 
 [Класс CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)<br/>
 Панель элементов управления, которая может отображать три элемента: кнопка, текстовую метку и растровое изображение. Она может содержать только один элемент каждого типа одновременно. Можно выровнять каждый элемент по левому или правому краю элемента управления или по центру. Также можно применить плоский или трехмерный стиль к верхним и нижним границам заголовка окна.
@@ -601,7 +601,7 @@ ms.locfileid: "62310322"
 Представляет панель элементов управления с возможностью закрепления, которая может выбирать цвета в документе или приложении.
 
 [Класс CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)<br/>
-`CMFCColorButton` И [класс CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md) классы используются совместно для реализации управление палитрой.
+Классы `CMFCColorButton` [классов и кмфкколорбар](../../mfc/reference/cmfccolorbar-class.md) используются совместно для реализации элемента управления "Выбор цвета".
 
 [Класс CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)<br/>
 Представляет диалоговое окно выбора цвета.
@@ -628,7 +628,7 @@ ms.locfileid: "62310322"
 Панель инструментов, которая появляется, когда пользователь нажимает и удерживает кнопку верхнего уровня панели инструментов.
 
 [Класс CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-Тип кнопки панели инструментов, который при нажатии ведет себя как обычная кнопка. Тем не менее, он открывает панель инструментов с раскрывающимся ([класс CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) Если пользователь нажимает и удерживает кнопку панели инструментов.
+Тип кнопки панели инструментов, который при нажатии ведет себя как обычная кнопка. Однако он открывает раскрывающуюся панель инструментов ([класс кмфкдропдовнтулбар](../../mfc/reference/cmfcdropdowntoolbar-class.md) , если пользователь нажимает и удерживает кнопку на панели инструментов.
 
 [Класс CMFCDynamicLayout](../../mfc/reference/cmfcdynamiclayout-class.md)<br/>
 Определяет порядок перемещения и изменения размеров элементов управления при изменении размеров окна.
@@ -658,7 +658,7 @@ ms.locfileid: "62310322"
 Отображает кнопку в виде гиперссылки и вызывает целевой объект связи при нажатии кнопки.
 
 [Класс CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)<br/>
-Расширяет функциональность [класс CListCtrl](../../mfc/reference/clistctrl-class.md) счет функциональные возможности элемента управления заголовка расширенной поддержки [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md).
+Расширяет функциональные возможности класса [класса CListCtrl](../../mfc/reference/clistctrl-class.md) , поддерживая функциональные возможности расширенного управления заголовком [класса кмфчеадерктрл](../../mfc/reference/cmfcheaderctrl-class.md).
 
 [Класс CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)<br/>
 Поддерживает замаскированный элемента управления "Поле ввода", который проверяет введенные пользователем данные на соответствие маске и отображает установленные результаты в соответствии с шаблоном.
@@ -670,10 +670,10 @@ ms.locfileid: "62310322"
 Кнопку, которая отображает контекстное меню и сообщает, какие пункты выбирает в меню пользователь.
 
 [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
-Область со вкладками, которая имеет внешний вид области **Область переходов** в Microsoft Outlook 2000 или Outlook 2003. `CMFCOutlookBar` Объект содержит [класс CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) объекта и ряд вкладок. Вкладки могут быть [класс CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) объектов или `CWnd`-объекты, производные от. Пользователю панель Outlook отображается как последовательность кнопок и область отображения. Когда пользователь нажимает кнопку, отображается соответствующая область элемента управления или кнопки.
+Область со вкладками, которая имеет внешний вид области **Область переходов** в Microsoft Outlook 2000 или Outlook 2003. Объект содержит объект [класса кмфкаутлукбартабктрл](../../mfc/reference/cmfcoutlookbartabctrl-class.md) и ряд вкладок. `CMFCOutlookBar` Вкладки могут быть либо [CMFCOutlookBarPane объектами класса](../../mfc/reference/cmfcoutlookbarpane-class.md) , либо `CWnd`производными объектами. Пользователю панель Outlook отображается как последовательность кнопок и область отображения. Когда пользователь нажимает кнопку, отображается соответствующая область элемента управления или кнопки.
 
 [Класс CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)<br/>
-Элемент управления, производный от [класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , может быть вставлен на панель Outlook ([класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Область панели Outlook содержит столбец больших кнопок. Пользователь может прокрутить список с кнопками вверх и вниз, если он больше области, в которой отображается. Когда пользователь окончательно удаляет область панели Outlook из панели Outlook, она может стать плавающей или прикрепиться к окну основного фрейма.
+Элемент управления, производный от [класса CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , который можно вставить в панель Outlook ([Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Область панели Outlook содержит столбец больших кнопок. Пользователь может прокрутить список с кнопками вверх и вниз, если он больше области, в которой отображается. Когда пользователь окончательно удаляет область панели Outlook из панели Outlook, она может стать плавающей или прикрепиться к окну основного фрейма.
 
 [Класс CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 Элемент управления "вкладка", который имеет внешний вид раздела **Область переходов** в Microsoft Outlook.
@@ -715,7 +715,7 @@ ms.locfileid: "62310322"
 Реализует отдельную кнопку, расположенную в левом верхнем углу окна приложения. При нажатии кнопки открывается меню, которое обычно содержит общие команды **Файл** , **Открыть**, **Сохранить**и **Выход**.
 
 [Класс CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-Базовый класс для всех элементов, которые можно добавить к [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.
+Базовый класс для всех элементов, которые можно добавить в [класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.
 
 [Класс CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 Реализует кнопки, которые можно размещать на панели элементов, например на панелях, панелях быстрого доступа и во всплывающих меню.
@@ -724,7 +724,7 @@ ms.locfileid: "62310322"
 Позволяет организовать набор кнопок ленты в группу. Все кнопки в группе располагаются непосредственно рядом с друг с другом по горизонтали и заключены в границу.
 
 [Класс CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-Реализует вкладку ленты, содержащую группу [класс CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md).
+Реализует вкладку ленты, содержащую группу [класса CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md).
 
 [Класс CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)<br/>
 Реализует флажок, который можно добавлять на панель ленты, панель быстрого доступа или во всплывающее меню.
@@ -757,7 +757,7 @@ ms.locfileid: "62310322"
 Реализует гиперссылку, которая расположена на ленте. Гиперссылка при щелчке открывает веб-страницу.
 
 [Класс CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)<br/>
-Реализует панель ленты, которое отображается при нажатии кнопки [класс CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Реализует панель ленты, которая отображается, когда вы щелкнули [класс кмфкриббонаппликатионбуттон](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 [Класс CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)<br/>
 Реализует контекстно-зависимую панель инструментов контекстного меню.
@@ -802,25 +802,25 @@ ms.locfileid: "62310322"
 Реализует список доступных для щелчка элементов (задач).
 
 [Класс CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
-Вспомогательный класс, представляющий задачи для элемента управления области задач ([класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект задач представляет элемент в группе задач ([класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.
+Вспомогательный класс, представляющий задачи для элемента управления "область задач" ([класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). Объект Task представляет элемент в группе задач ([класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). Каждая задача может иметь команду, которую платформа выполняет, когда пользователь щелкает задачу, и значок, который присутствует слева от имени задачи.
 
 [Класс CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)<br/>
-Вспомогательный класс [класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.
+Вспомогательный класс, используемый элементом управления [класса CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) . Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.
 
 [Класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)<br/>
-Напоминает [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку возможностей пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
+Напоминает [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку функций пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
 
 [Класс CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md)<br/>
 Управление изображениями на панели инструментов, загруженными из ресурсов приложения или из файлов.
 
 [Класс CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)<br/>
-Содержит идентификаторы ресурса изображений панели инструментов в различных состояниях. `CMFCToolBarInfo` — Это вспомогательный класс, который используется как параметр [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) метод.
+Содержит идентификаторы ресурса изображений панели инструментов в различных состояниях. `CMFCToolBarInfo`— Это вспомогательный класс, который используется в качестве параметра метода [CMFCToolBar:: лоадтулбарекс](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) .
 
 [Класс CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 Кнопка панели инструментов, содержащая всплывающее меню.
 
 [Класс CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
-Немодальное диалоговое окно вкладки ([класс CPropertySheet](../../mfc/reference/cpropertysheet-class.md)), позволяющий пользователям настраивать панели инструментов, меню, сочетания клавиш, определенные пользователем инструменты и визуальный стиль в приложении. Обычно пользователь осуществляет доступ к этому диалоговому окну, выбирая **Настроить** в меню **Сервис** .
+Диалоговое окно немодальной вкладки ([класс CPropertySheet](../../mfc/reference/cpropertysheet-class.md)), позволяющее пользователю настраивать панели инструментов, меню, сочетания клавиш, пользовательские средства и визуальный стиль в приложении. Обычно пользователь осуществляет доступ к этому диалоговому окну, выбирая **Настроить** в меню **Сервис** .
 
 [Класс CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)<br/>
 Расширенная реализация всплывающей подсказки на основе класса [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Подсказка на основе класса `CMFCToolTipCtrl` может отображать значок, метку и описание. Можно настроить его внешний вид с помощью градиентной заливки, пользовательских цветов текста и границы, полужирного шрифта, скругленных углов или стиля всплывающего предупреждения.
@@ -844,7 +844,7 @@ ms.locfileid: "62310322"
 Имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Windows XP или Vista.
 
 [Класс CMFCVisualManagerWindows7](../../mfc/reference/cmfcvisualmanagerwindows7-class.md)<br/>
-Придает приложению внешний вид приложений Windows 7.
+Предоставляет приложению внешний вид приложения Windows 7.
 
 [Класс CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)<br/>
 Позволяет пользователю управлять дочерними окнами MDI в приложении MDI.
@@ -853,13 +853,13 @@ ms.locfileid: "62310322"
 Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.
 
 [Класс CMonikerFile](../../mfc/reference/cmonikerfile-class.md)<br/>
-Представляет поток данных ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) с именем [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Представляет поток данных ([IStream](/windows/win32/api/objidl/nn-objidl-istream)) с именем [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker).
 
 [Класс CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 Инкапсулирует функциональность элемента управления "календарь месяца".
 
 [Класс CMouseManager](../../mfc/reference/cmousemanager-class.md)<br/>
-Позволяет пользователю связать различные команды с конкретным [CView Class](../../mfc/reference/cview-class.md) объекта, когда пользователь дважды щелкает внутри представления.
+Позволяет пользователю связывать различные команды с определенным объектом [класса CView](../../mfc/reference/cview-class.md) , когда пользователь дважды щелкает внутри этого представления.
 
 [Класс CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)<br/>
 Определяет шаблон документа, реализующий многодокументный интерфейс (MDI).
@@ -871,7 +871,7 @@ ms.locfileid: "62310322"
 Многостраничное диалоговое окно последовательно отображает несколько HTML-страниц и обрабатывает события каждой страницы.
 
 [Класс CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)<br/>
-Расширяет [класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md). Может поддерживать несколько областей. Вместо одного внутреннего дескриптора на панели элементов управления `CMultiPaneFrameWnd` содержит [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объект, который позволяет пользователю выполнять прикрепление одного `CMultiPaneFrameWnd` к другому и динамически создавать несколько с плавающей запятой, с вкладками Windows.
+Расширяет [класс кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md). Может поддерживать несколько областей. Вместо одного внедренного маркера в панели `CMultiPaneFrameWnd` элементов управления содержит объект [класса CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) , позволяющий пользователю закреплять один `CMultiPaneFrameWnd` элемент на другой и динамически создавать несколько плавающих окон с вкладками.
 
 [Класс CMutex](../../mfc/reference/cmutex-class.md)<br/>
 Класс представляет мьютекс — объект синхронизации, позволяющий ограничить доступ к ресурсу одним потоком.
@@ -922,7 +922,7 @@ ms.locfileid: "62310322"
 Обеспечивает поддержку пользовательских интерфейсов клиентских элементов управления.
 
 [Класс COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)<br/>
-Дополнительные сведения см. в разделе [OLEUICONVERT](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiconverta) структуры в пакете Windows SDK.
+Дополнительные сведения см. в описании структуры [олеуиконверт](/windows/win32/api/oledlg/ns-oledlg-oleuiconvertw) в Windows SDK.
 
 [Класс COleCurrency](../../mfc/reference/colecurrency-class.md)<br/>
 Инкапсулирует тип данных `CURRENCY` автоматизации OLE.
@@ -1012,7 +1012,7 @@ ms.locfileid: "62310322"
 Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.
 
 [Класс COleVariant](../../mfc/reference/colevariant-class.md)<br/>
-Инкапсулирует тип данных [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
+Инкапсулирует тип данных [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) .
 
 [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 Класс `CPagerCtrl` создается элемент управления страничного навигатора Windows, который может выполнить прокрутку и отобразить содержащееся окно, которое не помещается в содержащее его окно.
@@ -1021,7 +1021,7 @@ ms.locfileid: "62310322"
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном OLE "Параметры страницы" Windows с дополнительной поддержкой установки и изменения полей печати.
 
 [Класс CPaintDC](../../mfc/reference/cpaintdc-class.md)<br/>
-Класс контекста устройства, производный от [класс CDC](../../mfc/reference/cdc-class.md).
+Класс контекста устройства, производный от [класса CDC](../../mfc/reference/cdc-class.md).
 
 [Класс CPalette](../../mfc/reference/cpalette-class.md)<br/>
 Инкапсулирует цветовую палитру Windows.
@@ -1030,7 +1030,7 @@ ms.locfileid: "62310322"
 Усовершенствованный вариант [CControlBar Class](../../mfc/reference/ccontrolbar-class.md). При обновлении существующего проекта MFC потребуется заменить все вхождения `CControlBar` вхождениями `CPane`.
 
 [Класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md)<br/>
-Базовый компонент модели закрепления, реализуемой MFC. Объект этого класса хранит указатели на две области закрепления или два экземпляра `CPaneContainer.` . Также он содержит указатель на разделитель, который разделяет области (или контейнеры). Вкладывая контейнеры внутрь контейнеров, платформа строит двоичное дерево, представляющее сложные макеты закрепления. Корень двоичного дерева хранится в [класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) объекта.
+Базовый компонент модели закрепления, реализуемой MFC. Объект этого класса хранит указатели на две области закрепления или два экземпляра `CPaneContainer.` . Также он содержит указатель на разделитель, который разделяет области (или контейнеры). Вкладывая контейнеры внутрь контейнеров, платформа строит двоичное дерево, представляющее сложные макеты закрепления. Корень двоичного дерева хранится в объекте [класса CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md) .
 
 [Класс CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 Управляет хранением и отображением текущего макета закрепления.
@@ -1060,7 +1060,7 @@ ms.locfileid: "62310322"
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном Windows для печати.
 
 [Класс CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)<br/>
-Инкапсулирует службы, предоставляемые вкладкой свойств печати Windows.
+Инкапсулирует службы, предоставляемые страницей свойств печати Windows.
 
 [Класс CProgressCtrl](../../mfc/reference/cprogressctrl-class.md)<br/>
 Предоставляет функциональные возможности стандартного элемента управления "индикатор выполнения" Windows.
@@ -1099,7 +1099,7 @@ ms.locfileid: "62310322"
 Представление, которое отображает записи базы данных в элементах управления.
 
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Аналогичную Windows [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect).
+Аналогично [структуре прямоугольника](/windows/win32/api/windef/ns-windef-rect)Windows.
 
 [Класс CRectTracker](../../mfc/reference/crecttracker-class.md)<br/>
 Позволяет отображать и перемещать элемент, а также различными способами изменять его размеры.
@@ -1117,22 +1117,22 @@ ms.locfileid: "62310322"
 Инкапсулирует область интерфейса графических устройств Windows (GDI).
 
 [Класс CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)<br/>
-С помощью [класс CRichEditView](../../mfc/reference/cricheditview-class.md) и [класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), предоставляет функции элемента управления форматированным редактированием в контексте архитектуры представлений документов MFC.
+Класс [CRichEditView Class](../../mfc/reference/cricheditview-class.md) и [класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)предоставляет функциональные возможности элемента управления Rich Edit в контексте архитектуры представления документов MFC.
 
 [Класс CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)<br/>
 Предоставляет функции элемента управления форматированным редактированием.
 
 [Класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>
-С помощью [класс CRichEditView](../../mfc/reference/cricheditview-class.md) и [класс CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), предоставляет функции элемента управления форматированным редактированием в контексте архитектуры представлений документов MFC.
+Класс [CRichEditView Class](../../mfc/reference/cricheditview-class.md) и [класс кричедиткнтритем](../../mfc/reference/cricheditcntritem-class.md)предоставляет функциональные возможности элемента управления Rich Edit в контексте архитектуры представления документов MFC.
 
 [Класс CRichEditView](../../mfc/reference/cricheditview-class.md)<br/>
-С помощью [класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) и [класс CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), предоставляет функции элемента управления форматированным редактированием в контексте архитектуры представлений документов MFC.
+Класс [CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md) и [класс кричедиткнтритем](../../mfc/reference/cricheditcntritem-class.md)предоставляет функциональные возможности элемента управления Rich Edit в контексте архитектуры представления документов MFC.
 
 [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 Предоставляет функции элемента управления полосой прокрутки Windows.
 
 [Класс CScrollView](../../mfc/reference/cscrollview-class.md)<br/>
-Объект [CView Class](../../mfc/reference/cview-class.md) с возможностями прокрутки.
+[Класс CView](../../mfc/reference/cview-class.md) с возможностями прокрутки.
 
 [Класс CSemaphore](../../mfc/reference/csemaphore-class.md)<br/>
 Представляет "семафор" — объект синхронизации, позволяющий ограниченному числу потоков в одном или нескольких процессах осуществлять доступ к ресурсу. Сохраняет численность потоков, которые в настоящее время осуществляют доступ к заданному ресурсу.
@@ -1144,7 +1144,7 @@ ms.locfileid: "62310322"
 Вспомогательный класс, который можно использовать для создания экземпляров класса [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).
 
 [Класс CSharedFile](../../mfc/reference/csharedfile-class.md)<br/>
-[Класс CMemFile](../../mfc/reference/cmemfile-class.md)-производный класс, который поддерживает общие файлы памяти.
+Класс, производный от [класса кмемфиле](../../mfc/reference/cmemfile-class.md), который поддерживает файлы общей памяти.
 
 [Класс CShellManager](../../mfc/reference/cshellmanager-class.md)<br/>
 Реализует несколько методов, которые позволяют работать с указателями в списках идентификаторов (PIDL).
@@ -1165,7 +1165,7 @@ ms.locfileid: "62310322"
 Инкапсулирует переход с синусоидальной скоростью, амплитуда которого определяется начальной скоростью переменной анимации.
 
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Аналог структуры [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) в ОС Windows, реализующий относительные координаты или положение.
+Аналог структуры [SIZE](/windows/win32/api/windef/ns-windef-size) в ОС Windows, реализующий относительные координаты или положение.
 
 [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)<br/>
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.
@@ -1204,7 +1204,7 @@ ms.locfileid: "62310322"
 Предоставляет функциональные возможности стандартного элемента управления "индикатор статуса" Windows.
 
 [Класс CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>
-Представляет файл потока среды выполнения C, как открытые с помощью функции времени выполнения [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md).
+Представляет файл потока времени выполнения языка C, Открытый в функции времени выполнения [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md).
 
 [Класс CStringArray](../../mfc/reference/cstringarray-class.md)<br/>
 Поддерживает массивы объектов `CString` .
@@ -1222,7 +1222,7 @@ ms.locfileid: "62310322"
 Предоставляет функциональные возможности стандартного элемента управления "вкладка" Windows.
 
 [Класс CTabView](../../mfc/reference/ctabview-class.md)<br/>
-Упрощает использование класса элемента управления tab ([класс CTabView](../../mfc/reference/ctabview-class.md)) в приложениях, использующих архитектуру документа/представления MFC.
+Упрощает использование класса элемента управления Tab ([класс ктабвиев](../../mfc/reference/ctabview-class.md)) в приложениях, использующих архитектуру документов и представлений MFC.
 
 [Класс CTaskDialog](../../mfc/reference/ctaskdialog-class.md)<br/>
 Всплывающее диалоговое окно, которое функционирует как окно сообщения, но может отображать дополнительные сведения для пользователя. `CTaskDialog` также включает функции для получения сведений от пользователя.
@@ -1261,10 +1261,10 @@ ms.locfileid: "62310322"
 Создается для остановки операции пользователя.
 
 [Класс CUserTool](../../mfc/reference/cusertool-class.md)<br/>
-Элемент меню, запускающий внешнее приложение. **Средства** вкладке **Настройка** диалоговое окно ([класс CMFCToolBarsCustomizeDialog](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) позволяет пользователю добавить пользовательские средства, а также указать имя, команду, аргументы, и исходный каталог для каждого пользовательского средства.
+Элемент меню, запускающий внешнее приложение. Вкладка **средства** диалогового окна **Настройка** ([класс кмфктулбарскустомизедиалог](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) позволяет пользователю добавлять пользовательские средства и указывать имя, команду, аргументы и исходный каталог для каждого инструмента пользователя.
 
 [Класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)<br/>
-Поддерживает коллекцию объектов [класс CUserTool](../../mfc/reference/cusertool-class.md) объектов в приложении. Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. Объект `CUserToolsManager` позволяет пользователю или разработчику добавить в приложение новые пользовательские инструменты. Он поддерживает выполнение команд, связанных со средствами пользователя, а также сохраняет сведения о пользовательских средствах в реестре Windows.
+Поддерживает коллекцию объектов [класса кусертул](../../mfc/reference/cusertool-class.md) в приложении. Пользовательский инструмент — это пункт меню, который запускает внешнее приложение. Объект `CUserToolsManager` позволяет пользователю или разработчику добавить в приложение новые пользовательские инструменты. Он поддерживает выполнение команд, связанных со средствами пользователя, а также сохраняет сведения о пользовательских средствах в реестре Windows.
 
 [Класс CView](../../mfc/reference/cview-class.md)<br/>
 Предоставляет базовую функциональность для определяемых пользователем классов представления.

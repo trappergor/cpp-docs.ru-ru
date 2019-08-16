@@ -1,21 +1,21 @@
 ---
-title: идентификатор (атрибут COM C++)
+title: ID (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501410"
 ---
 # <a name="id"></a>id
 
-Указывает *dispid* параметра для функции-члена (свойство или метод, в интерфейс или диспетчерский интерфейс).
+Задает параметр *DISPID* для функции-члена (свойства или метода в интерфейсе или DISP).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409503"
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор DISPID*<br/>
-Идентификатор диспетчеризации метода интерфейса.
+*DISPID*<br/>
+Идентификатор диспетчеризации для метода интерфейса.
 
 ## <a name="remarks"></a>Примечания
 
-**Идентификатор** атрибут C++ имеет ту же функциональность, что [идентификатор](/windows/desktop/Midl/id) описании атрибута MIDL.
+Атрибут **ID** C++ имеет те же функциональные возможности, что и атрибут [ID](/windows/win32/Midl/id) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) пример демонстрирует использование **идентификатор**.
+Пример использования **идентификатора**см. в примере для [привязки](bindable.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409503"
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

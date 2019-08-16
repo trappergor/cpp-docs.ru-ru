@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC4214
 ms.assetid: 79a8bf0d-8cc7-4159-a6a2-d0e543749069
-ms.openlocfilehash: 925e7268bcf087961fcefb67898e5705a4ec6bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0ae8603d896a77e984ab97a019dd39689b1536
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346912"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509846"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>Предупреждение компилятора ресурсов RC4214
 
-Недопустимая кодовая страница: игнорируется
+Недопустимая кодовая страница: пропускается
 
-RC-файле содержится аргумент кодовой страницы и кодовую страницу, указанную является недопустимым. См. в разделе [IsValidCodePage](/windows/desktop/api/winnls/nf-winnls-isvalidcodepage) Дополнительные сведения.
+RC-файл содержал аргумент codepage, и указана недопустимая кодовая страница. Дополнительные сведения см. в разделе [исвалидкодепаже](/windows/win32/api/winnls/nf-winnls-isvalidcodepage) .

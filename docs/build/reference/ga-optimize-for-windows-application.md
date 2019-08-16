@@ -10,16 +10,16 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: a5eb6a10f3c4833ecc3e9d9c8451894788ebd938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292319"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492856"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Оптимизация для приложений Windows)
 
-Результаты в более эффективный код для файла .exe для доступа к переменным локальное хранилище потока (TLS).
+Приводит к более эффективному коду exe-файла для доступа к переменным локального хранилища потока (TLS).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,13 +29,13 @@ ms.locfileid: "62292319"
 
 ## <a name="remarks"></a>Примечания
 
-**/GA** ускоряет доступ к данным объявлен с [__declspec(thread)](../../cpp/declspec.md) в приложении на базе Windows. Если этот параметр имеет значение, [__tls_index](/windows/desktop/ProcThread/thread-local-storage) макрос полагается равным 0.
+**/GA** ускоряет доступ к данным, объявленным с помощью [__declspec (thread)](../../cpp/declspec.md) в программе на основе Windows. Если задан этот параметр, макрос [__tls_index](/windows/win32/ProcThread/thread-local-storage) считается равным 0.
 
-С помощью **/GA** для библиотеки DLL может привести к созданию неверного кода.
+Использование **/GA** для библиотеки DLL может привести к неправильному созданию кода.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 

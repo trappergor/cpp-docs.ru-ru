@@ -1,5 +1,5 @@
 ---
-title: Класс CAccelerateDecelerateTransition
+title: Класс Какцелератедецелератетранситион
 ms.date: 11/04/2016
 f1_keywords:
 - CAccelerateDecelerateTransition
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-ms.openlocfilehash: dbebe794ba76ae4abd3d1e3ea6bc8ee31bc3007f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e55e81b4d9b5c324f86bfd141b74d9faa362d94
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151205"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507741"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>Класс CAccelerateDecelerateTransition
+# <a name="cacceleratedeceleratetransition-class"></a>Класс Какцелератедецелератетранситион
 
 Реализует переход между ускорением и замедлением.
 
@@ -30,26 +30,26 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 |name|Описание|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Создает объект перехода.|
+|[Какцелератедецелератетранситион:: Какцелератедецелератетранситион](#cacceleratedeceleratetransition)|Конструирует объект перехода.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[Какцелератедецелератетранситион:: Create](#create)|Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода. (Переопределяет [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Доля времени, затраченный на ускорение длительности.|
-|[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Доля времени, затраченного на замедление длительности.|
-|[CAccelerateDecelerateTransition::m_duration](#m_duration)|Длительность перехода.|
-|[CAccelerateDecelerateTransition::m_finalValue](#m_finalvalue)|Значение переменной анимации в конце перехода.|
+|[Какцелератедецелератетранситион:: m_accelerationRatio](#m_accelerationratio)|Отношение времени, затраченного на время, которое ускоряется до длительности.|
+|[Какцелератедецелератетранситион:: m_decelerationRatio](#m_decelerationratio)|Отношение времени, затраченного на замедление, к длительности.|
+|[Какцелератедецелератетранситион:: m_duration](#m_duration)|Длительность перехода.|
+|[Какцелератедецелератетранситион:: m_finalValue](#m_finalvalue)|Значение переменной анимации в конце перехода.|
 
 ## <a name="remarks"></a>Примечания
 
-Во время accelerate-Замедление перехода, ускоряет переменной анимации и затем замедляется за период времени перехода, заканчивая указанное значение. Можно управлять как быстро переменной ускоряется и замедляется независимо друг от друга, путем указания различных ускорение и замедление коэффициенты. Если Начальная скорость равен нулю, отношение ускорение равно дробное число длительность, переменная будет потрачена на ускорение; Аналогичным образом с замедление отношение. Если Начальная скорость имеет ненулевое значение, то часть времени между скорость достижения нуля и в конце перехода. Отношение ускорение и замедление отношение сумма должна составлять более 1.0. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+Во время перехода с ускорением от ускорение переменная анимации ускоряется, а затем замедляется на протяжении перехода, заканчивая указанным значением. Можно управлять тем, насколько быстро переменная ускоряется и замедляется независимо друг от друга, указывая различные коэффициенты ускорения и замедления. Если начальная скорость равна нулю, коэффициент ускорения — это доля продолжительности, которую переменная будет тратить на ускорение. Аналогично соотношение замедления. Если начальная скорость не равна нулю, то это доля времени между достижением нуля и концом перехода. Коэффициент ускорения и коэффициент замедления должен суммироваться максимум до 1,0. Так как все переходы очищаются автоматически, рекомендуется выделять их с помощью оператора New. Инкапсулированный COM-объект Иуианиматионтранситион создается методом Каниматионконтроллер:: Аниматеграуп, пока он не будет равен NULL. Изменение переменных-членов после создания этого объекта COM не имеет силы.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -63,9 +63,9 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="cacceleratedeceleratetransition"></a>  CAccelerateDecelerateTransition::CAccelerateDecelerateTransition
+##  <a name="cacceleratedeceleratetransition"></a>Какцелератедецелератетранситион:: Какцелератедецелератетранситион
 
-Создает объект перехода.
+Конструирует объект перехода.
 
 ```
 CAccelerateDecelerateTransition(
@@ -77,21 +77,21 @@ CAccelerateDecelerateTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*длитель*<br/>
 Длительность перехода.
 
-*finalValue*<br/>
+*финалвалуе*<br/>
 Значение переменной анимации в конце перехода.
 
 *accelerationRatio*<br/>
-Доля времени, затраченный на ускорение длительности.
+Отношение времени, затраченного на время, которое ускоряется до длительности.
 
 *decelerationRatio*<br/>
-Доля времени, затраченного на замедление длительности.
+Отношение времени, затраченного на замедление, к длительности.
 
-##  <a name="create"></a>  CAccelerateDecelerateTransition::Create
+##  <a name="create"></a>Какцелератедецелератетранситион:: Create
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода.
 
 ```
 virtual BOOL Create(
@@ -101,30 +101,30 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*pLibrary*<br/>
-Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+*плибрари*<br/>
+Указатель на [интерфейс иуианиматионтранситионлибрари](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+Значение TRUE, если переход успешно создан; в противном случае — FALSE.
 
-##  <a name="m_accelerationratio"></a>  CAccelerateDecelerateTransition::m_accelerationRatio
+##  <a name="m_accelerationratio"></a>Какцелератедецелератетранситион:: m_accelerationRatio
 
-Доля времени, затраченный на ускорение длительности.
+Отношение времени, затраченного на время, которое ускоряется до длительности.
 
 ```
 DOUBLE m_accelerationRatio;
 ```
 
-##  <a name="m_decelerationratio"></a>  CAccelerateDecelerateTransition::m_decelerationRatio
+##  <a name="m_decelerationratio"></a>Какцелератедецелератетранситион:: m_decelerationRatio
 
-Доля времени, затраченного на замедление длительности.
+Отношение времени, затраченного на замедление, к длительности.
 
 ```
 DOUBLE m_decelerationRatio;
 ```
 
-##  <a name="m_duration"></a>  CAccelerateDecelerateTransition::m_duration
+##  <a name="m_duration"></a>Какцелератедецелератетранситион:: m_duration
 
 Длительность перехода.
 
@@ -132,7 +132,7 @@ DOUBLE m_decelerationRatio;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CAccelerateDecelerateTransition::m_finalValue
+##  <a name="m_finalvalue"></a>Какцелератедецелератетранситион:: m_finalValue
 
 Значение переменной анимации в конце перехода.
 

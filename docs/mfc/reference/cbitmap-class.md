@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916237"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507445"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 После завершения работы с объектом `CBitmap` , созданным функцией `CreateBitmap` , сначала выберите битовую карту из контекста устройства, а затем удалите объект `CBitmap` .
 
-Дополнительные сведения см. в описании `bmBits` поля `BITMAP` в структуре. Структура [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) рассматривается в описании функции-члена [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
+Дополнительные сведения см. в описании `bmBits` поля `BITMAP` в структуре. Структура [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) рассматривается в описании функции-члена [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: Креатебитмапиндирект
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Параметры
 
 *лпбитмап*<br/>
-Указывает на структуру [точечного рисунка](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) , содержащую сведения о растровом изображении.
+Указывает на структуру [точечного рисунка](/windows/win32/api/wingdi/ns-wingdi-bitmap) , содержащую сведения о растровом изображении.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -178,7 +178,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 Хотя точечный рисунок нельзя выбрать непосредственно для устройства вывода, его можно выбрать в качестве текущего точечного рисунка для контекста устройства памяти с помощью [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject) и скопировать в любой совместимый контекст устройства с помощью [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [CDC:: Функция Стретчблт](../../mfc/reference/cdc-class.md#stretchblt) . (Функция [CDC::P атблт](../../mfc/reference/cdc-class.md#patblt) может скопировать точечный рисунок для текущей кисти непосредственно в контекст дисплея устройства.)
 
-Если структура, на которую указывает параметр *лпбитмап* , заполнена с помощью `GetObject` функции, биты точечного рисунка не указываются и битовая карта не инициализируется. `BITMAP` Чтобы инициализировать точечный рисунок, приложение может использовать функцию, такую как [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [сетдибитс](/windows/desktop/api/wingdi/nf-wingdi-setdibits) , для копирования битов из точечного рисунка, определенного `CGdiObject::GetObject` первым параметром, в растровое изображение, созданное. `CreateBitmapIndirect`
+Если структура, на которую указывает параметр *лпбитмап* , заполнена с помощью `GetObject` функции, биты точечного рисунка не указываются и битовая карта не инициализируется. `BITMAP` Чтобы инициализировать точечный рисунок, приложение может использовать функцию, такую как [CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt) или [сетдибитс](/windows/win32/api/wingdi/nf-wingdi-setdibits) , для копирования битов из точечного рисунка, определенного `CGdiObject::GetObject` первым параметром, в растровое изображение, созданное. `CreateBitmapIndirect`
 
 По завершении работы с `CBitmap` объектом, созданным с помощью `CreateBitmapIndirect` функции, сначала выберите точечный рисунок из `CBitmap` контекста устройства, а затем удалите объект.
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Параметры
 
 *пбитмап*<br/>
-Указатель на структуру [точечного рисунка](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) , которая получит свойства изображения. Этот параметр не может иметь значение NULL.
+Указатель на структуру [точечного рисунка](/windows/win32/api/wingdi/ns-wingdi-bitmap) , которая получит свойства изображения. Этот параметр не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -408,7 +408,7 @@ BOOL LoadMappedBitmap(
 
 По умолчанию `LoadMappedBitmap` будет сопоставлять цвета, часто используемые в глифах кнопок.
 
-Сведения о создании сопоставленного точечного рисунка см. в разделе Windows Function [креатемаппедбитмап](https://go.microsoft.com/fwlink/p/?linkid=230562) и структура [колормап](/windows/desktop/api/commctrl/ns-commctrl-colormap) в Windows SDK.
+Сведения о создании сопоставленного точечного рисунка см. в разделе Windows Function [креатемаппедбитмап](https://go.microsoft.com/fwlink/p/?linkid=230562) и структура [колормап](/windows/win32/api/commctrl/ns-commctrl-colormap) в Windows SDK.
 
 ##  <a name="loadoembitmap"></a>CBitmap:: Лоадоембитмап
 
@@ -469,7 +469,7 @@ operator HBITMAP() const;
 
 Этот оператор является оператором приведения, который поддерживает прямое использование `HBITMAP` объекта.
 
-Дополнительные сведения об использовании графических объектов см. в разделе [графические объекты](/windows/desktop/gdi/graphic-objects) в Windows SDK.
+Дополнительные сведения об использовании графических объектов см. в разделе [графические объекты](/windows/win32/gdi/graphic-objects) в Windows SDK.
 
 ##  <a name="setbitmapbits"></a>CBitmap:: Сетбитмапбитс
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: c3fd57510a38d597b827f80ab98a0be280ad31e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254102"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507183"
 ---
 # <a name="ccomboboxex-class"></a>Класс CComboBoxEx
 
@@ -59,54 +59,54 @@ class CComboBoxEx : public CComboBox
 
 |name|Описание|
 |----------|-----------------|
-|[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Создает объект `CComboBoxEx`.|
+|[CComboBoxEx:: CComboBoxEx](#ccomboboxex)|Создает объект `CComboBoxEx`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CComboBoxEx::Create](#create)|Создает поле со списком и присоединяет его к `CComboBoxEx` объекта.|
-|[CComboBoxEx::CreateEx](#createex)|Создает поле со списком с указанным расширенные стили Windows и присоединяет его к `ComboBoxEx` объекта.|
-|[CComboBoxEx::DeleteItem](#deleteitem)|Удаляет элемент из `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::GetComboBoxCtrl](#getcomboboxctrl)|Извлекает указатель на дочерний элемент управления поля со списком.|
-|[CComboBoxEx::GetEditCtrl](#geteditctrl)|Извлекает дескриптор в область редактирования элемента управления `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Извлекает расширенные стили, которые используются для `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::GetImageList](#getimagelist)|Извлекает указатель на список изображений, назначенные `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::GetItem](#getitem)|Получение сведений об элементе для заданного `ComboBoxEx` элемента.|
-|[CComboBoxEx::HasEditChanged](#haseditchanged)|Определяет, если пользователь изменил содержимое `ComboBoxEx` изменение элемента управления вводом.|
-|[CComboBoxEx::InsertItem](#insertitem)|Вставляет новый элемент в `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Задает расширенные стили в `ComboBoxEx` элемента управления.|
+|[CComboBoxEx:: Create](#create)|Создает поле со списком и прикрепляет его к `CComboBoxEx` объекту.|
+|[CComboBoxEx:: Креатикс](#createex)|Создает поле со списком с заданными расширенными стилями Windows и присоединяет `ComboBoxEx` его к объекту.|
+|[CComboBoxEx::D Елетеитем](#deleteitem)|Удаляет элемент из `ComboBoxEx` элемента управления.|
+|[CComboBoxEx:: Жеткомбобоксктрл](#getcomboboxctrl)|Извлекает указатель на элемент управления дочернего поля со списком.|
+|[CComboBoxEx:: Жетедитктрл](#geteditctrl)|Получает маркер для элемента управления "поле ввода `ComboBoxEx` ".|
+|[CComboBoxEx::GetExtendedStyle](#getextendedstyle)|Извлекает расширенные стили, используемые для `ComboBoxEx` элемента управления.|
+|[CComboBoxEx::GetImageList](#getimagelist)|Извлекает указатель на список изображений, назначенный `ComboBoxEx` элементу управления.|
+|[CComboBoxEx:: DataItem](#getitem)|Извлекает сведения об элементе для заданного `ComboBoxEx` элемента.|
+|[CComboBoxEx:: Хаседитчанжед](#haseditchanged)|Определяет, изменил ли пользователь содержимое элемента управления " `ComboBoxEx` поле ввода", введя.|
+|[CComboBoxEx:: InsertItem](#insertitem)|Вставляет новый элемент в `ComboBoxEx` элемент управления.|
+|[CComboBoxEx::SetExtendedStyle](#setextendedstyle)|Задает расширенные стили в `ComboBoxEx` элементе управления.|
 |[CComboBoxEx::SetImageList](#setimagelist)|Задает список изображений для `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::SetItem](#setitem)|Задает атрибуты для элемента в `ComboBoxEx` элемента управления.|
-|[CComboBoxEx::SetWindowTheme](#setwindowtheme)|Задает визуальный стиль Расширенное поле со списком, элемент управления ".|
+|[CComboBoxEx:: Сетитем](#setitem)|Задает атрибуты элемента в `ComboBoxEx` элементе управления.|
+|[CComboBoxEx:: SetWindowTheme](#setwindowtheme)|Задает визуальный стиль расширенного элемента управления "поле со списком".|
 
 ## <a name="remarks"></a>Примечания
 
-С помощью `CComboBoxEx` для создания элементов управления со списком, больше не нужно реализовывать свой собственный образ, код отрисовки. Вместо этого используйте `CComboBoxEx` к образам доступа из списка изображений.
+Используя `CComboBoxEx` для создания элементов управления "поле со списком", вам больше не нужно реализовывать собственный код рисования изображений. Вместо этого используйте `CComboBoxEx` для доступа к изображениям из списка изображений.
 
 ## <a name="image-list-support"></a>Поддержка списка изображений
 
-В поле со списком стандартных владельцем поле со списком отвечает за рисование изображения, создавая поле со списком, как элемент управления рисуемого владельцем. При использовании `CComboBoxEx`, необходимо установить эти стили CBS_OWNERDRAWFIXED и CBS_HASSTRINGS, так как они подразумеваются. В противном случае необходимо написать код для выполнения операций рисования. Объект `CComboBoxEx` элемент управления поддерживает до трех образов каждого элемента: один для выбранного состояния, один для невыбранном состоянии и один для наложения изображения.
+В стандартном поле со списком владелец поля со списком отвечает за Рисование изображения путем создания поля со списком в качестве элемента управления, рисуемого владельцем. При использовании `CComboBoxEx`не нужно задавать стили рисования CBS_OWNERDRAWFIXED и CBS_HASSTRINGS, так как они являются подразумеваемыми. В противном случае необходимо написать код для выполнения операций рисования. `CComboBoxEx` Элемент управления поддерживает до трех изображений на элемент: один для выбранного состояния, один для невыбранного состояния, а другой для изображения оверлея.
 
 ## <a name="styles"></a>Стили
 
-`CComboBoxEx` поддерживает стили CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST и WS_CHILD. Все стили, переданный при создании окна игнорируются элементом управления. После создания окна другие поля со списком можно предоставить стили окна путем вызова `CComboBoxEx` функция-член [SetExtendedStyle](#setextendedstyle). С помощью этих стилей можно:
+`CComboBoxEx`поддерживает стили CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST и WS_CHILD. Все остальные стили, переданные при создании окна, игнорируются элементом управления. После создания окна можно указать другие стили поля со списком, вызвав `CComboBoxEx` функцию-член [сетекстендедстиле](#setextendedstyle). С помощью этих стилей можно:
 
-- Набор операций поиска в списке, чтобы учитывать регистр.
+- Задайте для строк поиска в списке регистр символов.
 
-- Создать поле со списком, использующего символ косой черты («/»), обратной косой черты ("\\") и в течение периода (".") символы в качестве разделителей слов. Это позволяет пользователю переходить из word в word, нажав клавиши CTRL + стрелка.
+- Создайте элемент управления "поле со списком", в котором используются символы косой черты ("\\/"), обратной косой черты ("") и точки (".") в качестве разделителей слов. Это позволяет пользователям переходить от Word к Word с помощью сочетания клавиш CTRL + стрелка.
 
-- Задайте поля со списком управления поле для отображения или не выводит изображение. Если изображение не отображается, в поле со списком можно удалить отступ текста, который допустим для изображения.
+- Задайте для элемента управления "поле со списком" значение "отображать" или "не отображать изображение". Если изображение не отображается, поле со списком может удалить отступ текста, который соответствует изображению.
 
-- Создайте узкий поле со списком, включая изменение его размера, поэтому она обрезает ширина поля со списком содержащихся в нем.
+- Создайте небольшой элемент управления "поле со списком", в том числе его размер, чтобы он был вырезан в расширенном поле со списком, которое оно содержит.
 
-Эти флаги стиля описаны далее в [использование CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Эти флаги стиля описаны далее в разделе [Использование CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
-## <a name="item-retention-and-callback-item-attributes"></a>Хранение элементов и атрибутов элемента обратного вызова
+## <a name="item-retention-and-callback-item-attributes"></a>Атрибуты хранения элементов и элементов обратного вызова
 
-Сведения об элементе, например индексы элементов и изображений, необходимые значения отступов и текстовых строк, хранится в структуре Win32 [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema), как описано в пакете Windows SDK. Эта структура также содержит элементы, соответствующие флаги обратного вызова.
+Сведения об элементе, такие как индексы для элементов и изображений, значения отступов и текстовые строки, хранятся в структуре Win32 [комбобоксекситем](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw), как описано в Windows SDK. Структура также содержит элементы, соответствующие флагам обратного вызова.
 
-Подробные Общие сведения, см. в разделе [использование CComboBoxEx](../../mfc/using-ccomboboxex.md).
+Подробное описание концептуального обсуждения см. в разделе [Использование CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -124,17 +124,17 @@ class CComboBoxEx : public CComboBox
 
 **Заголовок:** afxcmn.h
 
-##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx
+##  <a name="ccomboboxex"></a>CComboBoxEx:: CComboBoxEx
 
-Эта функция-член для создания вызова `CComboBoxEx` объекта.
+Вызовите эту функцию-член, `CComboBoxEx` чтобы создать объект.
 
 ```
 CComboBoxEx();
 ```
 
-##  <a name="create"></a>  CComboBoxEx::Create
+##  <a name="create"></a>CComboBoxEx:: Create
 
-Создает поле со списком и присоединяет его к `CComboBoxEx` объекта.
+Создает поле со списком и прикрепляет его к `CComboBoxEx` объекту.
 
 ```
 virtual BOOL Create(
@@ -146,33 +146,33 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*dwStyle*<br/>
-Задает сочетание стили поля со списком, применяется к поле со списком. См. в разделе **"Примечания"** ниже дополнительные сведения о стилях.
+*двстиле*<br/>
+Задает сочетание стилей полей со списком, применяемых к полю со списками. Дополнительные сведения о стилях см. в разделе **Примечания** ниже.
 
 *rect*<br/>
-Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, которая является положение и размер поля со списком.
+Ссылка на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , которая является положением и размером поля со списком.
 
-*pParentWnd*<br/>
-Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, который является родительским окном в поле со списком (обычно `CDialog`). Он не должен иметь значение NULL.
+*ппарентвнд*<br/>
+Указатель на объект [CWnd](../../mfc/reference/cwnd-class.md) , который является родительским окном поля со списком (обычно `CDialog`). Оно не должно иметь значение NULL.
 
 *nID*<br/>
-Указывает идентификатор элемента управления поля со списком.
+Задает идентификатор элемента управления поля со списком.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если объект был создан успешно; в противном случае 0.
+Ненулевое значение, если объект успешно создан; в противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
-Создание `CComboBoxEx` объекта в два этапа:
+`CComboBoxEx` Создайте объект в два этапа:
 
 1. Вызовите [CComboBoxEx](#ccomboboxex) для создания `CComboBoxEx` объекта.
 
-1. Вызов этой функцией-членом, которая создает расширенные поля со списком Windows и присоединяет его к `CComboBoxEx` объекта.
+1. Вызовите эту функцию члена, которая создает расширенное поле со списком Windows и присоединяет его `CComboBoxEx` к объекту.
 
-При вызове `Create`, MFC инициализирует Общие элементы управления.
+При вызове `Create`MFC инициализирует общие элементы управления.
 
-При создании поля со списком, можно указать любые или все из следующих поле со списком стилей:
+При создании поля со списком можно указать любые или все из следующих стилей поля со списком:
 
 - CBS_SIMPLE
 
@@ -184,13 +184,13 @@ virtual BOOL Create(
 
 - WS_CHILD
 
-Все стили, переданный при создании окна учитываются. `ComboBoxEx` Управления также поддерживает расширенные стили, которые предоставляют дополнительные возможности. Эти стили описаны в [ComboBoxEx управления расширенные стили](/windows/desktop/Controls/comboboxex-control-extended-styles), в пакете Windows SDK. Установка этих стилей путем вызова [SetExtendedStyle](#setextendedstyle).
+Все остальные стили, переданные при создании окна, игнорируются. `ComboBoxEx` Элемент управления также поддерживает расширенные стили, предоставляющие дополнительные возможности. Эти стили описаны в разделе [ComboBoxEx Control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles)в Windows SDK. Задайте эти стили, вызвав [сетекстендедстиле](#setextendedstyle).
 
-Если вы хотите использовать windows расширенных стилей с элементом управления, вызовите [CreateEx](#createex) вместо `Create`.
+Если вы хотите использовать расширенные стили Windows с элементом управления, вызовите [креатикс](#createex) вместо `Create`.
 
-##  <a name="createex"></a>  CComboBoxEx::CreateEx
+##  <a name="createex"></a>CComboBoxEx:: Креатикс
 
-Вызывайте эту функцию для создания расширенных поле со списком (дочернего окна) и связать его с `CComboBoxEx` объекта.
+Вызовите эту функцию, чтобы создать расширенный элемент управления "поле со списком" (дочернее окно `CComboBoxEx` ) и связать его с объектом.
 
 ```
 virtual BOOL CreateEx(
@@ -203,20 +203,20 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwExStyle*<br/>
-Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows, см. в разделе *dwExStyle* параметр для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.
+*двексстиле*<br/>
+Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
-*dwStyle*<br/>
-Стиль элемента управления поля со списком. См. в разделе [создать](#create) список стилей.
+*двстиле*<br/>
+Стиль элемента управления "поле со списком". Список стилей см. в разделе [CREATE](#create) .
 
 *rect*<br/>
-Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , описывающую размер и расположение создаваемого окна в клиентских координатах *ппарентвнд*.
 
-*pParentWnd*<br/>
-Указатель на окно, которое является родительским для элемента управления.
+*ппарентвнд*<br/>
+Указатель на окно, которое является родительским элементом управления.
 
 *nID*<br/>
-Идентификатор элемента управления дочернего окна.
+Идентификатор дочернего окна элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -224,11 +224,11 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `CreateEx` вместо `Create` применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**.
+Используйте `CreateEx`вместо для применения расширенных стилей Windows, заданных в WS_EX_ расширенного стиля Windows. `Create`
 
-`CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Необходимо задать расширенные стили конкретных Расширенное поле со списком элемента управления с помощью [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать CBES_EX_CASESENSITIVE подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [стили расширенных элементов управления ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) в пакете Windows SDK.
+`CreateEx`создает элемент управления с расширенными стилями Windows, заданным параметром *двексстиле*. Необходимо задать расширенные стили, относящиеся к расширенному элементу управления "поле со списком", с помощью [сетекстендедстиле](#setextendedstyle). Например, используйте `CreateEx` для установки таких стилей, как WS_EX_CONTEXTHELP, но используйте `SetExtendedStyle` для установки таких стилей, как CBES_EX_CASESENSITIVE. Дополнительные сведения см. в описании стилей в разделе [ComboBoxEx Control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) в Windows SDK.
 
-##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem
+##  <a name="deleteitem"></a>CComboBoxEx::D Елетеитем
 
 Удаляет элемент из `ComboBoxEx` элемента управления.
 
@@ -238,20 +238,20 @@ int DeleteItem(int iIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*iIndex*<br/>
+*ииндекс*<br/>
 Отсчитываемый от нуля индекс удаляемого элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество элементов, оставшихся в элементе управления. Если *iIndex* является недопустимым, функция возвращает CB_ERR.
+Количество элементов, остающихся в элементе управления. Если *ииндекс* является недопустимым, функция возвращает CB_ERR.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), как описано в пакете Windows SDK. При вызове DeleteItem, [WM_NOTIFY](/windows/desktop/controls/wm-notify) сообщение с уведомлением CBEN_DELETEITEM будут отправляться в родительское окно.
+Эта функция члена реализует функциональность сообщения [CBEM_DELETEITEM](/windows/win32/Controls/cbem-deleteitem), как описано в Windows SDK. При вызове DeleteItem в родительское окно будет отправлено сообщение [WM_NOTIFY](/windows/win32/controls/wm-notify) с уведомлением CBEN_DELETEITEM.
 
-##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
+##  <a name="getcomboboxctrl"></a>CComboBoxEx:: Жеткомбобоксктрл
 
-Вызывайте эту функцию члена, чтобы получить указатель на поле со списком в `CComboBoxEx` объекта.
+Вызовите эту функцию-член, чтобы получить указатель на элемент управления "поле `CComboBoxEx` со списком" в объекте.
 
 ```
 CComboBox* GetComboBoxCtrl();
@@ -263,13 +263,13 @@ CComboBox* GetComboBoxCtrl();
 
 ### <a name="remarks"></a>Примечания
 
-`CComboBoxEx` Элемент управления состоит из родительского окна, который инкапсулирует `CComboBox`.
+Элемент управления состоит из родительского окна, которое инкапсулирует `CComboBox`. `CComboBoxEx`
 
-`CComboBox` Объект, на которые указывает возвращаемое значение является временным и разрушается во время следующей обработки время простоя.
+`CComboBox` Объект, на который указывает возвращаемое значение, является временным объектом и уничтожается во время следующего времени обработки простоя.
 
-##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl
+##  <a name="geteditctrl"></a>CComboBoxEx:: Жетедитктрл
 
-Вызывайте эту функцию члена, чтобы получить указатель на поле ввода поля со списком.
+Вызовите эту функцию-член, чтобы получить указатель на элемент управления Edit для поля со списком.
 
 ```
 CEdit* GetEditCtrl();
@@ -277,17 +277,17 @@ CEdit* GetEditCtrl();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [CEdit](../../mfc/reference/cedit-class.md) объекта.
+Указатель на объект [CEdit](../../mfc/reference/cedit-class.md) .
 
 ### <a name="remarks"></a>Примечания
 
-Объект `CComboBoxEx` элемент управления использует поле редактирования при его создании в стиле CBS_DROPDOWN.
+`CComboBoxEx` Элемент управления использует поле ввода при его создании с использованием стиля CBS_DROPDOWN.
 
-`CEdit` Объект, на которые указывает возвращаемое значение является временным и разрушается во время следующей обработки время простоя.
+`CEdit` Объект, на который указывает возвращаемое значение, является временным объектом и уничтожается во время следующего времени обработки простоя.
 
-##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle
+##  <a name="getextendedstyle"></a>CComboBoxEx:: Жетекстендедстиле
 
-Эта функция-член для получения расширенных стилей, которые используются для вызова `CComboBoxEx` элемента управления.
+Вызовите эту функцию-член для получения расширенных стилей, `CComboBoxEx` используемых для элемента управления.
 
 ```
 DWORD GetExtendedStyle() const;
@@ -295,15 +295,15 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение DWORD, содержащее расширенные стили, используемые для элемента управления полем со списком.
+Значение типа DWORD, содержащее расширенные стили, используемые для элемента управления "поле со списком".
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [стили расширенных элементов управления ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) в пакете SDK для Windows, Дополнительные сведения об этих стилях.
+Дополнительные сведения об этих стилях см. в разделе [ComboBoxEx Control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) в Windows SDK.
 
-##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList
+##  <a name="getimagelist"></a>CComboBoxEx::/ImageList
 
-Вызывайте эту функцию члена, чтобы получить указатель на список изображений, используемых `CComboBoxEx` элемента управления.
+Вызовите эту функцию-член, чтобы получить указатель на список изображений, используемый `CComboBoxEx` элементом управления.
 
 ```
 CImageList* GetImageList() const;
@@ -311,15 +311,15 @@ CImageList* GetImageList() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объекта. Если происходит сбой, эта функция-член возвращает значение NULL.
+Указатель на объект [CImageList](../../mfc/reference/cimagelist-class.md) . В случае сбоя эта функция члена возвращает значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-`CImageList` Объект, на которые указывает возвращаемое значение является временным и разрушается во время следующей обработки время простоя.
+`CImageList` Объект, на который указывает возвращаемое значение, является временным объектом и уничтожается во время следующего времени обработки простоя.
 
-##  <a name="getitem"></a>  CComboBoxEx::GetItem
+##  <a name="getitem"></a>CComboBoxEx:: DataItem
 
-Получение сведений об элементе для заданного `ComboBoxEx` элемента.
+Извлекает сведения об элементе для заданного `ComboBoxEx` элемента.
 
 ```
 BOOL GetItem(COMBOBOXEXITEM* pCBItem);
@@ -327,20 +327,20 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 
 ### <a name="parameters"></a>Параметры
 
-*pCBItem*<br/>
-Указатель на [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) структуры, который будет получать сведения об элементе.
+*пкбитем*<br/>
+Указатель на структуру [комбобоксекситем](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , которая будет принимать сведения об элементе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если операция выполнена успешно; в противном случае 0.
+Ненулевое значение, если операция выполнена успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_GETITEM](/windows/desktop/Controls/cbem-getitem), как описано в пакете Windows SDK.
+Эта функция члена реализует функциональность сообщения [CBEM_GETITEM](/windows/win32/Controls/cbem-getitem), как описано в Windows SDK.
 
-##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged
+##  <a name="haseditchanged"></a>CComboBoxEx:: Хаседитчанжед
 
-Определяет, если пользователь изменил содержимое `ComboBoxEx` изменение элемента управления вводом.
+Определяет, изменил ли пользователь содержимое элемента управления " `ComboBoxEx` поле ввода", введя.
 
 ```
 BOOL HasEditChanged();
@@ -348,15 +348,15 @@ BOOL HasEditChanged();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если введенное пользователем в поле ввода элемента управления; в противном случае 0.
+Ненулевое значение, если пользователь ввел в поле ввода элемента управления; в противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_HASEDITCHANGED](/windows/desktop/Controls/cbem-haseditchanged), как описано в пакете Windows SDK.
+Эта функция члена реализует функциональность сообщения [CBEM_HASEDITCHANGED](/windows/win32/Controls/cbem-haseditchanged), как описано в Windows SDK.
 
-##  <a name="insertitem"></a>  CComboBoxEx::InsertItem
+##  <a name="insertitem"></a>CComboBoxEx:: InsertItem
 
-Вставляет новый элемент в `ComboBoxEx` элемента управления.
+Вставляет новый элемент в `ComboBoxEx` элемент управления.
 
 ```
 int InsertItem(const COMBOBOXEXITEM* pCBItem);
@@ -364,20 +364,20 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="parameters"></a>Параметры
 
-*pCBItem*<br/>
-Указатель на [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) структуры, который будет получать сведения об элементе. Эта структура содержит значения флага обратного вызова для элемента.
+*пкбитем*<br/>
+Указатель на структуру [комбобоксекситем](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , которая будет принимать сведения об элементе. Эта структура содержит значения флагов обратного вызова для элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Индекс, по которому был вставлен новый элемент, если выполнение прошло успешно; в противном случае-1.
+Индекс, по которому новый элемент был вставлен в случае успеха; в противном случае — 1.
 
 ### <a name="remarks"></a>Примечания
 
-При вызове `InsertItem`, [WM_NOTIFY](/windows/desktop/controls/wm-notify) сообщений с [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) уведомление будет отправлено в родительское окно.
+При вызове `InsertItem`в родительское окно будет отправлено сообщение [WM_NOTIFY](/windows/win32/controls/wm-notify) с уведомлением [CBEN_INSERTITEM](/windows/win32/Controls/cben-insertitem) .
 
-##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
+##  <a name="setextendedstyle"></a>CComboBoxEx:: Сетекстендедстиле
 
-Эта функция члена задать расширенные стили, используемые для расширенного элемента управления списком.
+Вызовите эту функцию-член, чтобы задать расширенные стили, используемые для расширенного элемента управления поля со списком.
 
 ```
 DWORD SetExtendedStyle(
@@ -387,23 +387,23 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-*dwExMask*<br/>
-Значение DWORD, указывающее, какие стили в *dwExStyles* , могут быть затронуты. Расширенные стили в *dwExMask* будет изменен. Все другие стили сохраняются как есть. Если этот параметр равен нулю, то все стили в *dwExStyles* будут применяться.
+*двексмаск*<br/>
+Значение типа DWORD, указывающее, какие стили в *двексстилес* должны быть затронуты. Будут изменены только расширенные стили в *двексмаск* . Все остальные стили будут поддерживаться как есть. Если этот параметр равен нулю, будут затронуты все стили в *двексстилес* .
 
-*dwExStyles*<br/>
-Значение DWORD, содержащее поле со списком расширенные стили, чтобы задать для элемента управления.
+*двексстилес*<br/>
+Значение типа DWORD, содержащее поле со списком, элементы управления расширенными стилями, заданными для элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение DWORD, содержащее расширенные стили, которые ранее использовали для элемента управления.
+Значение типа DWORD, содержащее расширенные стили, которые ранее использовались для элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [стили расширенных элементов управления ComboBoxEx](/windows/desktop/Controls/comboboxex-control-extended-styles) в пакете SDK для Windows, Дополнительные сведения об этих стилях.
+Дополнительные сведения об этих стилях см. в разделе [ComboBoxEx Control Extended Styles](/windows/win32/Controls/comboboxex-control-extended-styles) в Windows SDK.
 
-Чтобы создать поле со списком расширенного элемента управления с использованием windows расширенных стилей, используйте [CreateEx](#createex).
+Для создания расширенного элемента управления "поле со списком" с расширенными стилями Windows используйте [креатикс](#createex).
 
-##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList
+##  <a name="setimagelist"></a>CComboBoxEx:: Сетимажелист
 
 Задает список изображений для `ComboBoxEx` элемента управления.
 
@@ -413,22 +413,22 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="parameters"></a>Параметры
 
-*pImageList*<br/>
-Указатель на `CImageList` объект, содержащий изображения для использования в `CComboBoxEx` элемента управления.
+*пимажелист*<br/>
+Указатель на `CImageList` объект, содержащий изображения для использования `CComboBoxEx` с элементом управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) объект, содержащий изображения, ранее используемые `CComboBoxEx` элемента управления. Значение NULL, если список изображений не был ранее установлен.
+Указатель на объект [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий изображения, которые ранее использовались `CComboBoxEx` элементом управления. Значение NULL, если список изображений ранее не был задан.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_SETIMAGELIST](/windows/desktop/Controls/cbem-setimagelist), как описано в пакете Windows SDK. Если изменить высоту элемента управления по умолчанию, вызовите функцию Win32 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) для изменения размеров элемента управления, после вызова метода `SetImageList`, или он будет отображаться правильно.
+Эта функция члена реализует функциональность сообщения [CBEM_SETIMAGELIST](/windows/win32/Controls/cbem-setimagelist), как описано в Windows SDK. Если изменить высоту элемента управления редактирования по умолчанию, вызовите функцию Win32 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) , чтобы изменить размер элемента управления после вызова `SetImageList`, или он будет отображаться неправильно.
 
-`CImageList` Объект, на которые указывает возвращаемое значение является временным и разрушается во время следующей обработки время простоя.
+`CImageList` Объект, на который указывает возвращаемое значение, является временным объектом и уничтожается во время следующего времени обработки простоя.
 
-##  <a name="setitem"></a>  CComboBoxEx::SetItem
+##  <a name="setitem"></a>CComboBoxEx:: Сетитем
 
-Задает атрибуты для элемента в `ComboBoxEx` элемента управления.
+Задает атрибуты элемента в `ComboBoxEx` элементе управления.
 
 ```
 BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
@@ -436,20 +436,20 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="parameters"></a>Параметры
 
-*pCBItem*<br/>
-Указатель на [COMBOBOXEXITEM](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema) структуры, который будет получать сведения об элементе.
+*пкбитем*<br/>
+Указатель на структуру [комбобоксекситем](/windows/win32/api/commctrl/ns-commctrl-comboboxexitemw) , которая будет принимать сведения об элементе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если операция выполнена успешно; в противном случае 0.
+Ненулевое значение, если операция выполнена успешно; в противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_SETITEM](/windows/desktop/Controls/cbem-setitem), как описано в пакете Windows SDK.
+Эта функция члена реализует функциональность сообщения [CBEM_SETITEM](/windows/win32/Controls/cbem-setitem), как описано в Windows SDK.
 
-##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme
+##  <a name="setwindowtheme"></a>CComboBoxEx:: SetWindowTheme
 
-Задает визуальный стиль Расширенное поле со списком, элемент управления ".
+Задает визуальный стиль расширенного элемента управления "поле со списком".
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -457,8 +457,8 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="parameters"></a>Параметры
 
-*pszSubAppName*<br/>
-Указатель на строку Юникода, которая содержит поле Расширенное поле со списком визуальный стиль для задания.
+*псзсубаппнаме*<br/>
+Указатель на строку в Юникоде, содержащую расширенный визуальный стиль поля со списком для задания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -466,11 +466,11 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности [CBEM_SETWINDOWTHEME](/windows/desktop/Controls/cbem-setwindowtheme) сообщения, как описано в пакете Windows SDK.
+Эта функция члена эмулирует функциональность сообщения [CBEM_SETWINDOWTHEME](/windows/win32/Controls/cbem-setwindowtheme) , как описано в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFCIE для MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CComboBox](../../mfc/reference/ccombobox-class.md)

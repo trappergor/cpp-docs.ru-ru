@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 6fac62e396791da69d8d94f6c42337c8c3afd528
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 00515e6822dad000c6745063c72d0ffaf367670b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916990"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504254"
 ---
 # <a name="colecurrency-class"></a>Класс COleCurrency
 
@@ -128,15 +128,15 @@ COleCurrency(
 
 - COleCurrency () конструирует `COleCurrency` объект, инициализированный значением 0 (ноль).
 
-- COleCurrency (`cySrc`) конструирует `COleCurrency` объект из значения [валюты](/windows/desktop/api/wtypes/ns-wtypes-tagcy) .
+- COleCurrency (`cySrc`) конструирует `COleCurrency` объект из значения [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) .
 
 - COleCurrency (`curSrc`) конструирует `COleCurrency` объект из существующего `COleCurrency` объекта. Новый объект имеет то же состояние, что и исходный объект.
 
-- COleCurrency (`varSrc`) конструирует `COleCurrency` объект. Пытается преобразовать структуру [Variant](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) или `COleVariant` объект в значение валюты (VT_CY). Если это преобразование выполнено успешно, преобразованное значение копируется в новый `COleCurrency` объект. Если это не так, значение `COleCurrency` объекта устанавливается равным нулю (0), а его состояние — недопустимо.
+- COleCurrency (`varSrc`) конструирует `COleCurrency` объект. Пытается преобразовать структуру [Variant](/windows/win32/api/oaidl/ns-oaidl-variant) или `COleVariant` объект в значение валюты (VT_CY). Если это преобразование выполнено успешно, преобразованное значение копируется в новый `COleCurrency` объект. Если это не так, значение `COleCurrency` объекта устанавливается равным нулю (0), а его состояние — недопустимо.
 
 - `COleCurrency(`нунитс`, `нфрактионалунитс`) Constructs a `COleCurrency ' объект из указанных числовых компонентов. Если абсолютное значение дробной части больше 10 000, в единицы измерения вносится соответствующая корректировка. Обратите внимание, что единицы и дробная часть указываются с помощью длинных значений со знаком.
 
-Дополнительные сведения см. в разделе [Валюта](/windows/desktop/api/wtypes/ns-wtypes-tagcy) и [варианты](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) в Windows SDK.
+Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -236,14 +236,14 @@ enum CurrencyStatus {
 
 ##  <a name="m_cur"></a>COleCurrency:: m_cur
 
-Базовая структура [валюты](/windows/desktop/api/wtypes/ns-wtypes-tagcy) для этого `COleCurrency` объекта.
+Базовая структура [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) для этого `COleCurrency` объекта.
 
 ### <a name="remarks"></a>Примечания
 
 > [!CAUTION]
 >  Изменение значения в `CURRENCY` структуре, к которой обращается указатель, возвращенное этой функцией, приведет к изменению `COleCurrency` значения этого объекта. Он не изменяет состояние этого `COleCurrency` объекта.
 
-Дополнительные сведения см. в записи [валюты](/windows/desktop/api/wtypes/ns-wtypes-tagcy) в Windows SDK.
+Дополнительные сведения см. в записи [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) в Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency:: M_STATUS
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 - **operator = (** *варсрк* **)** Если преобразование `VARIANT` значения (или объекта [COleVariant](../../mfc/reference/colevariant-class.md) ) в денежную единицу ( `VT_CY`) прошло успешно, преобразованное значение копируется в этот `COleCurrency` объект, а его состояние устанавливается в допустимое. Если преобразование завершилось неудачно, значение `COleCurrency` объекта задается равным 0, а его состояние — "недопустимо".
 
-Дополнительные сведения см. в разделе [Валюта](/windows/desktop/api/wtypes/ns-wtypes-tagcy) и [варианты](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) в Windows SDK.
+Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
 
 ### <a name="example"></a>Пример
 

@@ -1,5 +1,5 @@
 ---
-title: статистические выражения (C++ COM атрибут)
+title: статистические выраженияC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e3f84fbc781bd5187ae0c3461a6c8d68a29aa0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262181"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501885"
 ---
 # <a name="aggregates"></a>статистические выражения
 
@@ -28,17 +28,17 @@ ms.locfileid: "62262181"
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
+*этому*<br/>
 Указывает CLSID статистически вычисляемого объекта.
 
-*имя_переменной*<br/>
-Имя переменной для вставки. Эта переменная содержит `IUnknown` из статистически вычисляемого объекта.
+*variable_name*<br/>
+Имя переменной для вставки. Эта переменная содержит `IUnknown` коллекцию объектов, для которых выполняется статистическая обработка.
 
 ## <a name="remarks"></a>Примечания
 
 При применении к объекту атрибут **aggregates** языка C++ реализует внешнюю программу-оболочку статистически вычисляемого объекта (указан в `clsid`).
 
-Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.
+Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например, если `progid` применяется, `vi_progid` то применяются также `coclass` и.
 
 ### <a name="atl-projects"></a>Проекты ATL
 
@@ -83,10 +83,10 @@ struct CObject : IObject
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Да|
-|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Один или несколько из следующих элементов: `coclass`, `progid`или `vi_progid`.|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
@@ -95,6 +95,6 @@ struct CObject : IObject
 [Атрибуты COM](com-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Статистическая обработка](/windows/desktop/com/aggregation)<br/>
-[Статистическую обработку](/windows/desktop/Midl/aggregatable)<br/>
+[Статистическая обработка](/windows/win32/com/aggregation)<br/>
+[Статистически](/windows/win32/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

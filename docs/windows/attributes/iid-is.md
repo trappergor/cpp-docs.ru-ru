@@ -1,21 +1,21 @@
 ---
-title: iid_is (C++ атрибут COM)
+title: iid_is (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.iid_is
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409529"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514660"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-Указывает идентификатор IID интерфейса COM, на которые указывает указатель интерфейса.
+Указывает идентификатор IID COM-интерфейса, на который указывает указатель интерфейса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,12 +25,12 @@ ms.locfileid: "62409529"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
-Выражение языка C, которое указывает IID COM-интерфейса, на который указывает указатель интерфейса.
+*expression*<br/>
+Выражение языка C, указывающее идентификатор IID COM-интерфейса, на который указывает указатель интерфейса.
 
 ## <a name="remarks"></a>Примечания
 
-**Iid_is** C++ атрибут имеет ту же функциональность, что [iid_is](/windows/desktop/Midl/iid-is) описании атрибута MIDL.
+Атрибут **iid_is** C++ имеет те же функциональные возможности, что и атрибут [iid_is](/windows/win32/Midl/iid-is) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -57,10 +57,10 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Применение**|Параметр интерфейса, элемент данных|
+|**Относится к**|Параметр интерфейса, член данных|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

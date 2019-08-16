@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915746"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496518"
 ---
 # <a name="csacl-class"></a>Класс Ксакл
 
@@ -64,7 +64,7 @@ class CSacl : public CAcl
 
 Используйте методы класса, предоставляемые для добавления, удаления, создания и удаления записей ACE из `SACL` объекта. См. также [атлжетсакл](security-global-functions.md#atlgetsacl) и [атлсетсакл](security-global-functions.md#atlsetsacl).
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -129,7 +129,7 @@ bool AddAuditAce(
 
 `CSacl` Объект содержит записи управления доступом (ACE), которые указывают типы попыток доступа, которые создают записи аудита в журнале событий безопасности. Этот метод добавляет такой элемент управления доступом к `CSacl` объекту.
 
-Описание различных флагов, которые можно задать в параметре *AceFlags* , см. в разделе [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) .
+Описание различных флагов, которые можно задать в параметре *AceFlags* , см. в разделе [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) .
 
 ##  <a name="csacl"></a>  CSacl::CSacl
 
@@ -222,7 +222,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>См. также
 
 [Класс CAcl](../../atl/reference/cacl-class.md)<br/>
-[Списки](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Туз](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Списки](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Туз](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

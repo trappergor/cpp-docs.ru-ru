@@ -1,21 +1,21 @@
 ---
-title: size_is (C++ атрибут COM)
+title: size_is (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407332"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514042"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-Укажите объем памяти, выделенной для размера указатели, размер указателей на указатели по размеру и одно - или многомерные массивы.
+Укажите размер памяти, выделенной для указателей размера, размеры указателей для указателей размеров, а также однокомпонентные или многомерные массивы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,16 +25,16 @@ ms.locfileid: "62407332"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
-Размер памяти, выделенной для размера указателей.
+*expression*<br/>
+Размер памяти, выделенной для указателей размера.
 
 ## <a name="remarks"></a>Примечания
 
-**Size_is** C++ атрибут имеет ту же функциональность, что [size_is](/windows/desktop/Midl/size-is) описании атрибута MIDL.
+Атрибут **size_is** C++ имеет те же функциональные возможности, что и атрибут [size_is](/windows/win32/Midl/size-is) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [first_is](first-is.md) пример указания фрагмент массива.
+Пример указания раздела массива см. в примере для [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,9 +42,9 @@ ms.locfileid: "62407332"
 
 |||
 |-|-|
-|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|`max_is`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

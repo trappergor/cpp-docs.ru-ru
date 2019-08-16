@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707100"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492382"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример Реализация страницы свойств
 
@@ -71,7 +71,7 @@ ms.locfileid: "65707100"
 Эти элементы управления будут использоваться для отображения имени файла документа и его состояния "только для чтения".
 
 > [!NOTE]
->  Ресурс диалогового окна не содержит фрейм или кнопки команд, а также не имеет ожидаемых вкладок. Эти функции предоставляются фреймом страницы свойств, например, созданным с помощью вызова [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe).
+>  Ресурс диалогового окна не содержит фрейм или кнопки команд, а также не имеет ожидаемых вкладок. Эти функции предоставляются фреймом страницы свойств, например, созданным с помощью вызова [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe).
 
 ##  <a name="vcconadding_message_handlers"></a> Добавление обработчиков сообщений
 

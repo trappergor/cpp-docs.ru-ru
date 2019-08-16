@@ -1,17 +1,17 @@
 ---
-title: helpstring (атрибут COM C++)
+title: helpstring (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409594"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490877"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,11 +30,11 @@ ms.locfileid: "62409594"
 
 ## <a name="remarks"></a>Примечания
 
-**Helpstring** атрибут C++ имеет ту же функциональность, что [helpstring](/windows/desktop/Midl/helpstring) описании атрибута MIDL.
+Атрибут **helpString** C++ имеет те же функциональные возможности, что и атрибут [helpString](/windows/win32/Midl/helpstring) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [defaultvalue](defaultvalue.md) пример демонстрирует использование **helpstring**.
+Пример использования **helpString**см. в примере для [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409594"
 
 |||
 |-|-|
-|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|
+|**Относится к**|**Interface**, **typedef**, **класс**, метод, свойство|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

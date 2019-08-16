@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915713"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496493"
 ---
 # <a name="csecuritydesc-class"></a>Класс Ксекуритидеск
 
@@ -107,7 +107,7 @@ class CSecurityDesc
 
 Приложения не должны изменять `SECURITY_DESCRIPTOR` структуру напрямую, а вместо этого должны использовать предоставленные методы класса.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="requirements"></a>Требования
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>Параметры
 
 *пстр*<br/>
-Указатель на строку, завершающуюся нулем, которая содержит [дескриптор безопасности строкового формата](/windows/desktop/SecAuthZ/security-descriptor-string-format) для преобразования.
+Указатель на строку, завершающуюся нулем, которая содержит [дескриптор безопасности строкового формата](/windows/win32/SecAuthZ/security-descriptor-string-format) для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -165,7 +165,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 Строку можно создать с помощью [ксекуритидеск:: ToString](#tostring). Преобразование дескриптора безопасности в строку упрощает хранение и передачу.
 
-Этот метод вызывает [конвертстрингсекуритидескриптортосекуритидескриптор](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Этот метод вызывает [конвертстрингсекуритидескриптортосекуритидескриптор](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает [жетсекуритидескрипторконтрол](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
+Этот метод вызывает [жетсекуритидескрипторконтрол](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на структуру [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor) .
+Возвращает указатель на структуру [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor) .
 
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если дескриптор безопасности имеет относительный формат со всеми сведениями о безопасности в непрерывном блоке памяти. Возвращает значение false, если дескриптор безопасности имеет абсолютный формат. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Возвращает значение true, если дескриптор безопасности имеет относительный формат со всеми сведениями о безопасности в непрерывном блоке памяти. Возвращает значение false, если дескриптор безопасности имеет абсолютный формат. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeabsolute"></a>Ксекуритидеск:: Макеабсолуте
 
@@ -496,7 +496,7 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="remarks"></a>Примечания
 
-Дескриптор безопасности в абсолютном формате содержит указатели на содержащиеся в нем сведения, а не на саму информацию. Дескриптор безопасности в автономном формате содержит сведения в непрерывном блоке памяти. В самоотносительном дескрипторе `SECURITY_DESCRIPTOR` безопасности структура всегда запускает сведения, но другие компоненты дескриптора безопасности могут следовать структуре в любом порядке. Вместо использования адресов памяти компоненты самоотносительного дескриптора безопасности идентифицируются по смещению от начала дескриптора безопасности. Этот формат полезен, если дескриптор безопасности должен быть сохранен на диске или передан с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Дескриптор безопасности в абсолютном формате содержит указатели на содержащиеся в нем сведения, а не на саму информацию. Дескриптор безопасности в автономном формате содержит сведения в непрерывном блоке памяти. В самоотносительном дескрипторе `SECURITY_DESCRIPTOR` безопасности структура всегда запускает сведения, но другие компоненты дескриптора безопасности могут следовать структуре в любом порядке. Вместо использования адресов памяти компоненты самоотносительного дескриптора безопасности идентифицируются по смещению от начала дескриптора безопасности. Этот формат полезен, если дескриптор безопасности должен быть сохранен на диске или передан с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="remarks"></a>Примечания
 
-Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в нем, а не на саму информацию. Дескриптор безопасности в автономном формате содержит сведения в непрерывном блоке памяти. В самоотносительном дескрипторе `SECURITY_DESCRIPTOR` безопасности структура всегда запускает сведения, но другие компоненты дескриптора безопасности могут следовать структуре в любом порядке. Вместо использования адресов памяти компоненты дескриптора безопасности идентифицируются по смещению от начала дескриптора безопасности. Этот формат полезен, если дескриптор безопасности должен быть сохранен на диске или передан с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors).
+Дескриптор безопасности в абсолютном формате содержит указатели на сведения, содержащиеся в нем, а не на саму информацию. Дескриптор безопасности в автономном формате содержит сведения в непрерывном блоке памяти. В самоотносительном дескрипторе `SECURITY_DESCRIPTOR` безопасности структура всегда запускает сведения, но другие компоненты дескриптора безопасности могут следовать структуре в любом порядке. Вместо использования адресов памяти компоненты дескриптора безопасности идентифицируются по смещению от начала дескриптора безопасности. Этот формат полезен, если дескриптор безопасности должен быть сохранен на диске или передан с помощью протокола связи. Дополнительные сведения см. в разделе [абсолютные и самостоятельные дескрипторы безопасности](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors).
 
 ##  <a name="operator_eq"></a>Ксекуритидеск:: operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Параметры
 
 *контролбитсофинтерест*<br/>
-Маска SECURITY_DESCRIPTOR_CONTROL, указывающая устанавливаемые биты элемента управления. Список флагов, которые можно задать, см. в разделе [сетсекуритидескрипторконтрол](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Маска SECURITY_DESCRIPTOR_CONTROL, указывающая устанавливаемые биты элемента управления. Список флагов, которые можно задать, см. в разделе [сетсекуритидескрипторконтрол](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *контролбитстосет*<br/>
 Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает новые значения для битов элемента управления, заданных маской *контролбитсофинтерест* . Этот параметр может быть сочетанием флагов, перечисленных для параметра *контролбитсофинтерест* .
@@ -564,7 +564,7 @@ bool SetControl(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает [сетсекуритидескрипторконтрол](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
+Этот метод вызывает [сетсекуритидескрипторконтрол](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>Параметры
 
 *пстр*<br/>
-Указатель на строку, завершающуюся нулем, которая будет принимать [дескриптор безопасности строкового формата](/windows/desktop/SecAuthZ/security-descriptor-string-format).
+Указатель на строку, завершающуюся нулем, которая будет принимать [дескриптор безопасности строкового формата](/windows/win32/SecAuthZ/security-descriptor-string-format).
 
 *Си*<br/>
 Задает сочетание битовых флагов SECURITY_INFORMATION для указания компонентов дескриптора безопасности, включаемых в выходную строку.
@@ -697,13 +697,13 @@ bool ToString(
 
 Если список DACL имеет значение NULL, а контрольный бит SE_DACL_PRESENT задан во входном дескрипторе безопасности, метод завершается ошибкой.
 
-Если список DACL имеет значение NULL и бит управления SE_DACL_PRESENT не задан во входном дескрипторе безопасности, результирующая строка дескриптора безопасности не имеет компонента D:. Дополнительные сведения см. в разделе [Формат строки дескриптора безопасности](/windows/desktop/SecAuthZ/security-descriptor-string-format) .
+Если список DACL имеет значение NULL и бит управления SE_DACL_PRESENT не задан во входном дескрипторе безопасности, результирующая строка дескриптора безопасности не имеет компонента D:. Дополнительные сведения см. в разделе [Формат строки дескриптора безопасности](/windows/win32/SecAuthZ/security-descriptor-string-format) .
 
-Этот метод вызывает [конвертстрингсекуритидескриптортосекуритидескриптор](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora).
+Этот метод вызывает [конвертстрингсекуритидескриптортосекуритидескриптор](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw).
 
 ## <a name="see-also"></a>См. также
 
 [Пример безопасности](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447787"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501918"
 ---
 # <a name="ltistreamgt-operators"></a>Операторы &lt;istream&gt;
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **Ширина**; в противном случае это размер самого крупного массива `Elem` , который может быть объявлен. Функция всегда сохраняет значение `Elem()` после извлеченных элементов, которые он хранит. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate) (**failbit**). В любом случае она вызывает `Istr`. **Ширина** (0) и возвращает *ISTR*.
 
-**Примечание по безопасности** Строка, завершающаяся нулем, извлекаемая из входного потока, не должна превышать размер строки *целевого буфера.* Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Примечание по безопасности** Строка, завершающаяся нулем, извлекаемая из входного потока, не должна превышать размер строки целевого буфера. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Функция-шаблон:
 

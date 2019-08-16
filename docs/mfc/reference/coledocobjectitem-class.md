@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916966"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504008"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 Идентификатор выполняемой команды. Должен входить в группу, обозначенную *пгуидкмдграуп*.
 
 *нкмдексекопт*<br/>
-Задает параметры выполнения команды. По умолчанию задайте для выполнения команды без запроса пользователя. Список значений см. в разделе [олекмдексекопт](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) .
+Задает параметры выполнения команды. По умолчанию задайте для выполнения команды без запроса пользователя. Список значений см. в разделе [олекмдексекопт](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) .
 
 *пгуидкмдграуп*<br/>
 Уникальный идентификатор группы команд. По умолчанию имеет значение NULL, которое указывает стандартную группу. Команда, передаваемая в *нкмдид* , должна принадлежать к группе.
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс [иоледокументвиев](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) текущего активного представления. Если текущее представление отсутствует, возвращается значение NULL.
+Указатель на интерфейс [иоледокументвиев](/windows/win32/api/docobj/nn-docobj-ioledocumentview) текущего активного представления. Если текущее представление отсутствует, возвращается значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 Идентификатор команды, для которой выполняется запрос.
 
 *пдвстатус*<br/>
-Указатель на флаги, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
+Указатель на флаги, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf).
 
 *пкмдтекст*<br/>
-Указатель на структуру [олекмдтекст](/windows/desktop/api/docobj/ns-docobj-olecmdtext) , в которой возвращаются имя и сведения о состоянии для одной команды. Может иметь значение NULL, чтобы указать, что вызывающему объекту не требуются эти сведения.
+Указатель на структуру [олекмдтекст](/windows/win32/api/docobj/ns-docobj-olecmdtext) , в которой возвращаются имя и сведения о состоянии для одной команды. Может иметь значение NULL, чтобы указать, что вызывающему объекту не требуются эти сведения.
 
 *пгуидкмдграуп*<br/>
 Уникальный идентификатор группы команд; может иметь значение NULL, чтобы указать стандартную группу.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Полный список возвращаемых значений см. в разделе [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) в Windows SDK.
+Полный список возвращаемых значений см. в разделе [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена эмулирует функциональность метода [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , как описано в Windows SDK.
+Эта функция члена эмулирует функциональность метода [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) , как описано в Windows SDK.
 
 ##  <a name="release"></a>COleDocObjectItem:: Release
 

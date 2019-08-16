@@ -1,5 +1,5 @@
 ---
-title: Интерфейс IDocHostUIHandlerDispatch
+title: Интерфейс Идочостуихандлердиспатч
 ms.date: 07/02/2019
 f1_keywords:
 - IDocHostUIHandlerDispatch
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: a60c178eff1e02c3032e792f9a0420dfeab82388
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: a9e672144160528e6a2fbfe4cb702c4d211ef720
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552170"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495912"
 ---
-# <a name="idochostuihandlerdispatch-interface"></a>Интерфейс IDocHostUIHandlerDispatch
+# <a name="idochostuihandlerdispatch-interface"></a>Интерфейс Идочостуихандлердиспатч
 
-Интерфейс для синтаксического анализа Microsoft HTML и механизм визуализации.
+Интерфейс для механизма анализа и подготовки отчетов в формате HTML (Майкрософт).
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,39 +32,39 @@ interface IDocHostUIHandlerDispatch : IDispatch
 ### <a name="public-methods"></a>Открытые методы
 
 > [!NOTE]
->  Ссылки в следующей таблице являются INet SDK справочных разделов для членов [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) интерфейс. `IDocHostUIHandlerDispatch` имеет ту же функциональность, что `IDocUIHostHandler`, с той разницей, что `IDocHostUIHandlerDispatch` является disp-интерфейсом, тогда как `IDocUIHostHandler` — это пользовательский интерфейс.
+>  Ссылки в следующей таблице относятся к справочным разделам пакета SDK INet для членов интерфейса [идокуихоссандлер](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) . `IDocHostUIHandlerDispatch`функция имеет те же функциональные `IDocUIHostHandler`возможности, что и, в `IDocHostUIHandlerDispatch` отличие от того, что `IDocUIHostHandler` является disp-интерфейсом, в то время как является настраиваемым.
 
 |||
 |-|-|
-|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Также вызывается, когда модальный пользовательский Интерфейс отображает MSHTML.|
-|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Вызывается в основном MSHTML, чтобы разрешить основному приложению заменить объект данных MSHTML.|
-|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|Вызвано MSHTML, при его использовании в качестве целевого объекта перетаскивания, чтобы разрешить основному приложению предоставить альтернативный интерфейс [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
-|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|Вызывается средой MSHTML для получения интерфейса IDispatch главного приложения.|
-|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|Возвращает возможности пользовательского интерфейса, MSHTML узла.|
-|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|Возвращает раздел реестра, под которой MSHTML хранятся пользовательские настройки.|
-|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|Вызывается, когда MSHTML удаляет его меню и панелей инструментов.|
-|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
-|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
-|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|Вызывается из реализации MSHTML [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
-|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|Вызывается из MSHTML, чтобы отобразить контекстное меню.|
-|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|Позволяет узлу для замены MSHTML меню и панелей инструментов.|
-|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|Вызывается средой MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) вызывается.|
-|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Вызывается средой MSHTML, чтобы разрешить основному возможность изменить URL-адрес для загрузки.|
-|[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Уведомляет основное приложение об изменении состояния команды.|
+|[енаблемоделесс](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|Вызывается из MSHTML реализации [метода IOleInPlaceActiveObject:: енаблемоделесс](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless). Также вызывается, когда MSHTML отображает модальный пользовательский интерфейс.|
+|[филтердатаобжект](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|Вызывается на узле MSHTML для того, чтобы разрешить узлу заменить объект данных MSHTML.|
+|[жетдроптаржет](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|Вызывается MSHTML, когда используется в качестве цели перетаскивания, чтобы позволить узлу предоставить альтернативный [интерфейс IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget).|
+|[Внешний](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|Вызывается MSHTML для получения интерфейса IDispatch узла.|
+|[жесостинфо](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|Получает возможности пользовательского интерфейса узла MSHTML.|
+|[жетоптионкэйпас](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|Возвращает раздел реестра, в котором MSHTML хранит настройки пользователя.|
+|[хидеуи](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|Вызывается, когда MSHTML удаляет свои меню и панели инструментов.|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|Вызывается из MSHTML реализации [метода IOleInPlaceActiveObject:: OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate).|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|Вызывается из MSHTML реализации [метода IOleInPlaceActiveObject:: OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate).|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|Вызывается из MSHTML реализации [метода IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder).|
+|[шовконтекстмену](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|Вызывается из MSHTML для вывода контекстного меню.|
+|[Параметра showUI задано](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|Позволяет узлу заменять меню и панели инструментов MSHTML.|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|Вызывается MSHTML при вызове [метода IOleInPlaceActiveObject:: TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite:: TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) .|
+|[транслатеурл](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|Вызывается MSHTML, чтобы разрешить узлу изменять URL-адрес для загрузки.|
+|[упдатеуи](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|Уведомляет основное приложение об изменении состояния команды.|
 
 ## <a name="remarks"></a>Примечания
 
-Узел можно заменить меню, панелей инструментов и контекстные меню, используемые анализ Microsoft HTML и механизм визуализации (MSHTML), реализовав этот интерфейс.
+Узел может заменить меню, панели инструментов и контекстные меню, используемые модулем синтаксического анализа и визуализации Microsoft HTML (MSHTML), путем реализации этого интерфейса.
 
 ## <a name="requirements"></a>Требования
 
-Определение этого интерфейса доступна как файл IDL или C++, как показано ниже.
+Определение этого интерфейса доступно в виде IDL или C++, как показано ниже.
 
 |Тип определения|Файл|
 |---------------------|----------|
-|IDL|ATLIFace.idl|
-|C++|Насколько (также входит в ATLBase.h)|
+|IDL|Описана. idl|
+|C++|Описана. h (также входит в ATLBase. h)|
 
 ## <a name="see-also"></a>См. также
 
-[IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))
+[идокуихоссандлер](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

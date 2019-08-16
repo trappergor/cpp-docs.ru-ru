@@ -4,12 +4,12 @@ ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 87d2bf434aef3a85bf7fa19f5886bec106515809
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552330"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513664"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Подготовка тестового компьютера для выполнения исполняемого файла отладки
 
@@ -25,7 +25,7 @@ ms.locfileid: "67552330"
 - Используйте локальное развертывание для установки отладочной версии конкретной библиотеки DLL Visual C++ в каталоге установки приложения, используя файлы, находящиеся в каталоге Program Files или Program Files (x86) внутри \Microsoft Visual Studio \<версия>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Для удаленной отладки приложения, созданного с помощью Visual Studio 2005 или Visual Studio 2008 на другом компьютере, необходимо развернуть отладочные версии визуального элемента C++ библиотеки DLL в качестве общих сборок side-by-side. Вы можете использовать проект установки или установщик Windows для установки подходящих модулей слияния.
+    >  Для удаленной отладки приложения, созданного с помощью Visual Studio 2005 или Visual Studio 2008 на другом компьютере, необходимо развернуть отладочные версии библиотек DLL визуальной C++ библиотеки в качестве общих параллельных сборок. Вы можете использовать проект установки или установщик Windows для установки подходящих модулей слияния.
 
 - Используйте параметр **Развернуть** в диалоговом окне **Диспетчер конфигураций** Visual Studio, чтобы скопировать выходные и другие файлы проекта на удаленный компьютер.
 
@@ -34,6 +34,6 @@ ms.locfileid: "67552330"
 ## <a name="see-also"></a>См. также
 
 [Развертывание в Visual C++](deployment-in-visual-cpp.md)<br>
-[Параметры командной строки установщика Windows](/windows/desktop/Msi/command-line-options)<br>
+[Параметры командной строки установщика Windows](/windows/win32/Msi/command-line-options)<br>
 [Примеры развертывания](deployment-examples.md)<br>
 [Remote Debugging](/visualstudio/debugger/remote-debugging)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], owner-drawn tabs
 - drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
-ms.openlocfilehash: 8c52bb325764f0edfff315edf21128f117c1a67b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade5cd6b7d9bcb3dc398993c1758c7849fdc1f20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391404"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508288"
 ---
 # <a name="making-owner-drawn-tabs"></a>Создание определяемых владельцем вкладок
 
-Можно определить отдельные элементы элемента управления вкладки ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) быть владельцем элементы. Дополнительные сведения см. в разделе [Owner-Drawn вкладки](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.
+Отдельные элементы элемента управления "Вкладка" ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) можно определить как элементы, рисуемые владельцем. Дополнительные сведения см. в разделе [вкладки, рисуемые владельцем](/windows/win32/Controls/tab-controls) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

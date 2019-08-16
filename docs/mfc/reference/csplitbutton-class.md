@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916778"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502841"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Примечания
 
-Класс является производным от класса [кбуттон.](../../mfc/reference/cbutton-class.md) `CSplitButton` Элемент управления "разворачивающаяся кнопка" — это элемент управления "Кнопка" со стилем BS_SPLITBUTTON. Он отображает пользовательское меню, когда пользователь щелкает стрелку раскрывающегося списка. Дополнительные сведения см. в статье стили BS_SPLITBUTTON и BS_DEFSPLITBUTTON в разделе [стили кнопок](/windows/desktop/Controls/button-styles).
+Класс является производным от класса [кбуттон.](../../mfc/reference/cbutton-class.md) `CSplitButton` Элемент управления "разворачивающаяся кнопка" — это элемент управления "Кнопка" со стилем BS_SPLITBUTTON. Он отображает пользовательское меню, когда пользователь щелкает стрелку раскрывающегося списка. Дополнительные сведения см. в статье стили BS_SPLITBUTTON и BS_DEFSPLITBUTTON в разделе [стили кнопок](/windows/win32/Controls/button-styles).
 
 На следующем рисунке показано диалоговое окно, содержащее элемент управления страничный навигатор и элемент управления (1) разворачивающаяся кнопка. Стрелка раскрывающегося списка (2) уже была нажата, и отображается подменю (3).
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*пнмхдр*|окне Указатель на структуру [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , содержащую сведения об уведомлении [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
-|*пресулт*|заполняет (Не используется; значение не возвращается.) Возвращаемое значение уведомления [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) .|
+|*пнмхдр*|окне Указатель на структуру [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) , содержащую сведения об уведомлении [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
+|*пресулт*|заполняет (Не используется; значение не возвращается.) Возвращаемое значение уведомления [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) .|
 
 ### <a name="remarks"></a>Примечания
 

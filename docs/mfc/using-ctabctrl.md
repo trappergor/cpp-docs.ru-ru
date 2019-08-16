@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510782"
 ---
 # <a name="using-ctabctrl"></a>Использование CTabCtrl
 
-«Вкладка» является аналогом разделителей в записной книжке, так и с метками папки CAB-файла. Используйте элемент управления вкладки, представленный классом [CTabCtrl](../mfc/reference/ctabctrl-class.md), чтобы показать несколько страниц данных или элементов управления в отношении пользователя, поочередно и в формате, который предлагает однорангового узла или логическую связь между каждой страницы.
+Элемент управления "Вкладка" аналогичен разделителям в записной книжке или папкам с метками в CAB-файле. Используйте элемент управления "Вкладка", представленный классом [CTabCtrl](../mfc/reference/ctabctrl-class.md), чтобы отображать несколько страниц данных или элементов управления для пользователя по одной за раз, в формате, который предлагает одноранговую или логическую связь между каждой страницей.
 
-Дополнительные сведения о табуляции элементов управления, см. в разделе [вкладок](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.
+Дополнительные сведения об элементах управления "Вкладка" см. в разделе [элементы управления "Вкладка](/windows/win32/Controls/tab-controls) " в Windows SDK.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Элементы управления "Вкладка" и страницы свойств](../mfc/tab-controls-and-property-sheets.md)
 

@@ -1,29 +1,29 @@
 ---
-title: Функция CAtlServiceModuleT::ServiceMain
+title: 'Функция функция CAtlServiceModuleT:: ServiceMain'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-ms.openlocfilehash: 81cd8fcbdf275063b243e215301eff504a2b5cc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b79767d4c1696174f90a325ea152ccc7939ed9fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223213"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491712"
 ---
-# <a name="catlservicemoduletservicemain-function"></a>Функция CAtlServiceModuleT::ServiceMain
+# <a name="catlservicemoduletservicemain-function"></a>Функция функция CAtlServiceModuleT:: ServiceMain
 
-Диспетчер управления службами (SCM) вызывает `ServiceMain` при открытии приложения службы на панели управления, выберите службу и нажмите кнопку **запустить**.
+Диспетчер управления службами вызывается `ServiceMain` при открытии приложения панели управления "службы", выборе службы и нажатии кнопки " **запустить**".
 
-После SCM вызывает `ServiceMain`, службы необходимо предоставить диспетчер управления Службами функцию обработчика событий. Эта функция позволяет диспетчера управления Службами для получения сведений о состоянии службы и передать конкретные инструкции (например, приостановка или остановка). Диспетчер управления Службами получает эту функцию, когда служба передает `_Handler` функции Win32 API, [RegisterServiceCtrlHandler](/windows/desktop/api/winsvc/nf-winsvc-registerservicectrlhandlera). (`_Handler` является статической функции-члене, вызывающая функцию-член [обработчик](../atl/reference/catlservicemodulet-class.md#handler).)
+После вызова `ServiceMain`SCM служба должна предоставить SCM функцию обработчика. Эта функция позволяет SCM получать состояние службы и передавать конкретные инструкции (такие как приостановка или остановка). SCM получает эту функцию, когда служба передается `_Handler` в функцию API Win32, [регистерсервицектрлхандлер](/windows/win32/api/winsvc/nf-winsvc-registerservicectrlhandlerw). (`_Handler` — это статическая функция-член, которая вызывает [обработчик](../atl/reference/catlservicemodulet-class.md#handler)функции-члена, не являющейся статическим.)
 
-Во время запуска службы также сообщает о его текущее состояние диспетчера управления Службами. Это достигается путем передачи SERVICE_START_PENDING функции Win32 API, [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).
+При запуске служба также должна сообщать SCM о своем текущем состоянии. Это достигается путем передачи SERVICE_START_PENDING функции Win32 API [сбой SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus).
 
-`ServiceMain` затем вызывает `CAtlExeModuleT::InitializeCom`, который вызывает функцию интерфейса API Win32 [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex). По умолчанию `InitializeCom` передает флаг COINIT_MULTITHREADED функции. Этот флаг указывает, что она является свободным сервером.
+`ServiceMain`затем вызывает `CAtlExeModuleT::InitializeCom`метод, который вызывает функцию [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)интерфейса API Win32. По умолчанию `InitializeCom` передает флаг COINIT_MULTITHREADED в функцию. Этот флаг указывает, что программа является свободным потоком сервера.
 
-Теперь `CAtlServiceModuleT::Run` вызывается для выполнения основной рабочей службы. `Run` продолжает выполняться до остановки службы.
+`CAtlServiceModuleT::Run` Теперь вызывается для выполнения основной работы службы. `Run`будет выполняться до тех пор, пока служба не будет остановлена.
 
 ## <a name="see-also"></a>См. также
 
 [Службы](../atl/atl-services.md)<br/>
-[CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+[Функция CAtlServiceModuleT:: ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)

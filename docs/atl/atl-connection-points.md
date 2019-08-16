@@ -6,20 +6,20 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: 4d94396ef8839516d9bfee15a2611cce66baa6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252315"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491811"
 ---
 # <a name="atl-connection-points"></a>Точки подключения ATL
 
 Доступный для подключения объект поддерживает исходящие интерфейсы. Исходящий интерфейс позволяет объекту обмениваться данными с клиентом. Для каждого исходящего интерфейса доступный для подключения объект предоставляет точку подключения. Каждый исходящий интерфейс реализуется клиентов для объекта, который называется приемником.
 
-![Точки подключения](../atl/media/vc2zw31.gif "точек подключения")
+![Точки подключения](../atl/media/vc2zw31.gif "Точки подключения")
 
-Каждая точка подключения поддерживает [IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint) интерфейс. Доступный для соединения объект предоставляет свои точки подключения клиенту через [IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer) интерфейс.
+Каждая точка подключения поддерживает интерфейс [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) . Подключаемый объект предоставляет клиенту точки подключения через интерфейс [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) .
 
 ## <a name="in-this-section"></a>В этом разделе
 
@@ -34,7 +34,7 @@ ms.locfileid: "62252315"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[ATL](../atl/active-template-library-atl-concepts.md)<br/>
+[ШАБЛОН](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
 ## <a name="see-also"></a>См. также

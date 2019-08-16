@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396747"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509391"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
+# <a name="_interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -145,10 +145,10 @@ __int64 _InterlockedExchange64_rel(
 #### <a name="parameters"></a>Параметры
 
 *Целевой объект*<br/>
-[in, out] Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.
+[вход, выход] Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.
 
 *Значение*<br/>
-[in] Значение для обмена со значением, на которые указывают `Target`.
+окне Значение для обмена со значением, `Target`на которое указывает.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -158,13 +158,13 @@ __int64 _InterlockedExchange64_rel(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<> Intrin. h|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<> Intrin. h|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<> использованием immintrin. h|
 
 ## <a name="remarks"></a>Примечания
 
-`_InterlockedExchange` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange) функции.
+`_InterlockedExchange`предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккедексчанже](/windows/win32/api/winnt/nf-winnt-interlockedexchange) .
 
 Существуют несколько вариантов `_InterlockedExchange`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
@@ -178,7 +178,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="example"></a>Пример
 
-Пример использования `_InterlockedExchange`, см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
+Пример использования `_InterlockedExchange`см. в разделе [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

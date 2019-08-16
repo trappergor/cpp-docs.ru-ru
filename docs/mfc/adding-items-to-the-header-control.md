@@ -6,26 +6,26 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], adding items
 - header controls [MFC], adding items to
 ms.assetid: 2e9a28b1-7302-4a93-8037-c5a4183e589a
-ms.openlocfilehash: 897612c6d5ac96704cc0a945df65146e6a01480a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d9a35123ddbe77b8e5e1779651fc4cde233863ae
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394758"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509316"
 ---
 # <a name="adding-items-to-the-header-control"></a>Добавление элементов в элемент управления "Заголовок"
 
-После создания элемента управления заголовка ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) в его родительского окна, добавьте «заголовка произвольное число условий фильтра» необходимо: обычно по одному на столбец.
+После создания элемента управления "заголовок" ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) в его родительском окне Добавьте столько элементов заголовка, сколько требуется: обычно по одному на столбец.
 
-### <a name="to-add-a-header-item"></a>Чтобы добавить элемент заголовка
+### <a name="to-add-a-header-item"></a>Добавление элемента заголовка
 
-1. Подготовка [HD_ITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.
+1. Подготовьте структуру [HD_ITEM](/windows/win32/api/commctrl/ns-commctrl-_hd_itemw) .
 
-1. Вызовите [CHeaderCtrl::InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), передачи структуры.
+1. Вызовите метод [CHeaderCtrl:: InsertItem](../mfc/reference/cheaderctrl-class.md#insertitem), передав структуру.
 
 1. Повторите шаги 1 и 2 для дополнительных элементов.
 
-Дополнительные сведения см. в разделе [Добавление элемента управления заголовка](/windows/desktop/Controls/header-controls) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [Добавление элемента в элемент управления "заголовок](/windows/win32/Controls/header-controls) " в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

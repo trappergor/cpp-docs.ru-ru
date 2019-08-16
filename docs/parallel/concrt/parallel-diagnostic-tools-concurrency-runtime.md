@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 34b2421dfc53deeb35dcc659a8d555983e583737
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449249"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510496"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)
 
@@ -17,51 +17,51 @@ Visual Studio предоставляет расширенную поддержк
 
 ## <a name="debugging"></a>Отладка
 
-Отладчик Visual Studio включает в себя **Параллельные стеки** окне **параллельных задач** окно, и **контроль параллельных данных** окна. Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка параллельного приложения](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) и [как: Использование окна параллельных контрольных значений](/visualstudio/debugger/how-to-use-the-parallel-watch-window).
+Отладчик Visual Studio включает окно Параллельные **стеки** , окно **параллельных задач** и окно параллельных **контрольных значений** . Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка параллельного](/visualstudio/debugger/walkthrough-debugging-a-parallel-application) приложения [и выполнение следующих действий: Используйте окно](/visualstudio/debugger/how-to-use-the-parallel-watch-window)параллельные контрольные значения.
 
 ## <a name="profiling"></a>Профилирование
 
-Средства профилирования предоставляют три представления данных, отображающие графическую, табличную и числовую информацию о том, как многопоточное приложение взаимодействует с самим собой и с другими программами. Представления позволяют быстро определить проблемные области и перейти из точек на графических изображениях к стекам вызовов, вызовите сайтов и исходный код. Дополнительные сведения см. в разделе [Визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer).
+Средства профилирования предоставляют три представления данных, в которых отображаются графические, табличные и числовые сведения о взаимодействии многопоточного приложения с самим собой и с другими программами. Представления позволяют быстро выявить области проблем и переходить от точек графических экранов к стекам вызовов, сайтам вызовов и исходному коду. Дополнительные сведения см. в разделе [Визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer).
 
 ## <a name="event-tracing"></a>Трассировка событий
 
-Среда выполнения с параллелизмом использует [трассировки событий для Windows](/windows/desktop/ETW/event-tracing-portal) (ETW), чтобы уведомлять средства инструментирования, такие как средства профилирования, при возникновении различных событий. Эти события: при активации или отключении планировщика, контекст начинается, завершается, блокирует, разблокирует или возвращает, или когда параллельный алгоритм начинается или заканчивается.
+Среда выполнения с параллелизмом использует [трассировку событий Windows](/windows/win32/ETW/event-tracing-portal) (ETW) для уведомления средств инструментирования, таких как профилировщики, при возникновении различных событий. Эти события включают в себя, когда планировщик активируется или деактивируется, когда контекст запускается, завершается, блокируется, разблокируется или выдается, а также при начале или окончании параллельного алгоритма.
 
-Средства, такие как [визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) с помощью этой функции; таким образом, вы обычно нет необходимости работать непосредственно с этими событиями. Тем не менее, эти события полезны при разработке пользовательского профилировщика или при использовании средств трассировки событий, таких как [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
+Такие средства, как [Визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) , используют эту функцию. Таким образом, обычно не требуется работать с этими событиями напрямую. Однако эти события полезны при разработке пользовательского профилировщика или при использовании таких средств трассировки событий, как [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
-Среда выполнения с параллелизмом создает эти события только в том случае, если трассировка включена. Вызовите [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) функции, чтобы включить трассировку событий и [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) функцию отключения трассировки.
+Среда выполнения с параллелизмом вызывает эти события только при включенной трассировке. Вызовите функцию [Concurrency:: енаблетраЦинг](reference/concurrency-namespace-functions.md#enabletracing) , чтобы включить трассировку событий и функцию [Concurrency::D исаблетраЦинг](reference/concurrency-namespace-functions.md#disabletracing) , чтобы отключить трассировку.
 
-В следующей таблице описаны события, которые среда выполнения вызывает при включенной трассировке события:
+В следующей таблице описаны события, которые среда выполнения вызывает при включенной трассировке событий.
 
 |событие|Описание|Значение|
 |-----------|-----------------|-----------|
-|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Идентификатор поставщика трассировки событий Windows среды выполнения с параллелизмом.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
-|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|Помечает событий, связанных с контекстами.|`5727a00f-50be-4519-8256-f7699871fecb`|
-|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Отмечает входы и выходы вызовов [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм.|`31c8da6b-6165-4042-8b92-949e315f4d84`|
-|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Отмечает входы и выходы вызовов [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм.|`5cb7d785-9d66-465d-bae1-4611061b5434`|
-|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Отмечает входы и выходы вызовов [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) алгоритм.|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
-|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|Помечает события, относящиеся к [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
-|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Помечает событий, связанных с виртуальными процессорами.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[Concurrency:: ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|Идентификатор поставщика трассировки событий Windows для среда выполнения с параллелизмом.|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[Concurrency:: Контекстевентгуид](reference/concurrency-namespace-constants1.md#contexteventguid)|Отмечает события, связанные с контекстами.|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|Помечает вход и Exit для вызовов алгоритма [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) .|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|Помечает вход и Exit для вызовов алгоритма [Concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) .|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[Concurrency::P Плпараллелинвокивентгуид](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|Помечает вход и Exit для вызовов алгоритма [Concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) .|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[Concurrency:: Счедулеревентгуид](reference/concurrency-namespace-constants1.md#schedulereventguid)|Отмечает события, связанные с [планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md).|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[Concurrency:: Виртуалпроцессоревентгуид](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|Отмечает события, связанные с виртуальными процессорами.|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
-Среда выполнения с параллелизмом определяет, но не вызывает сейчас, следующие события. Среда выполнения резервирует эти события для использования в будущем:
+Среда выполнения с параллелизмом определяет, но в настоящее время не вызывает следующие события. Среда выполнения резервирует эти события для будущего использования:
 
-- [concurrency::ConcRTEventGuid](reference/concurrency-namespace-constants1.md#concrteventguid)
+- [Concurrency:: Конкртевентгуид](reference/concurrency-namespace-constants1.md#concrteventguid)
 
-- [concurrency::ScheduleGroupEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)
+- [Concurrency:: Счедулеграупевентгуид](reference/concurrency-namespace-constants1.md#schedulereventguid)
 
-- [concurrency::ChoreEventGuid](reference/concurrency-namespace-constants1.md#choreeventguid)
+- [Concurrency:: Чоривентгуид](reference/concurrency-namespace-constants1.md#choreeventguid)
 
-- [concurrency::LockEventGuid](reference/concurrency-namespace-constants1.md#lockeventguid)
+- [Concurrency:: Локкевентгуид](reference/concurrency-namespace-constants1.md#lockeventguid)
 
-- [concurrency::ResourceManagerEventGuid](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
+- [Concurrency:: Ресаурцеманажеревентгуид](reference/concurrency-namespace-constants1.md#resourcemanagereventguid)
 
-[Concurrency::ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) перечисление указывает возможные операции, трассируемые событием. Например, при входе `parallel_for` алгоритм, то среда выполнения вызывает `PPLParallelForEventGuid` событий и предоставляет `CONCRT_EVENT_START` операции. Прежде чем `parallel_for` Возвращает алгоритм, то среда выполнения снова вызывает `PPLParallelForEventGuid` событий и предоставляет `CONCRT_EVENT_END` операции.
+Перечисление [Concurrency:: ConcRT_EventType](reference/concurrency-namespace-enums.md#concrt_eventtype) указывает возможные операции, которые отслеживает событие. Например, во время входа `parallel_for` алгоритма среда выполнения `PPLParallelForEventGuid` создает событие и предоставляет `CONCRT_EVENT_START` его в качестве операции. Перед возвратом `PPLParallelForEventGuid`алгоритма среда выполнения снова создает событие и предоставляет `CONCRT_EVENT_END` его в качестве операции. `parallel_for`
 
-В следующем примере показано, как включить трассировку для вызова `parallel_for`. Среда выполнения не трассируется первый вызов `parallel_for` так, как трассировка не включена. Вызов `EnableTracing` позволяет среде выполнения для трассировки второй вызов `parallel_for`.
+В следующем примере показано, как включить трассировку для вызова `parallel_for`. Среда выполнения не выполняет трассировку первого вызова, `parallel_for` так как трассировка не включена. Вызов метода `EnableTracing` позволяет среде выполнения выполнить трассировку второго `parallel_for`вызова.
 
 [!code-cpp[concrt-etw#1](../../parallel/concrt/codesnippet/cpp/parallel-diagnostic-tools-concurrency-runtime_1.cpp)]
 
-Среда выполнения отслеживает количество раз, которые можно вызвать `EnableTracing` и `DisableTracing`. Таким образом при вызове метода `EnableTracing` несколько раз, необходимо вызвать `DisableTracing` такое же количество раз, чтобы отключить трассировку.
+Среда выполнения отслеживает количество вызовов `EnableTracing` и. `DisableTracing` Поэтому при многократном вызове `EnableTracing` для отключения трассировки необходимо вызвать `DisableTracing` одинаковое число раз.
 
 ## <a name="see-also"></a>См. также
 

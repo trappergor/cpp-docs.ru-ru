@@ -1,5 +1,5 @@
 ---
-title: Глобальные функции регистрации серверов
+title: Глобальные функции регистрации сервера
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -8,33 +8,33 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 2088bd938aeac70193165cdbd43bd10203ecc49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197462"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495464"
 ---
-# <a name="server-registration-global-functions"></a>Глобальные функции регистрации серверов
+# <a name="server-registration-global-functions"></a>Глобальные функции регистрации сервера
 
-Эти функции обеспечивают поддержку для регистрации и отмены регистрации серверных объектов в карте объектов.
+Эти функции обеспечивают поддержку регистрации и отмены регистрации объектов сервера в сопоставлении объектов.
 
 > [!IMPORTANT]
->  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Функции, перечисленные в следующей таблице, нельзя использовать в приложениях, выполняемых в среда выполнения Windows.
 
 |||
 |-|-|
-|[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|Эта функция вызывается для регистрации каждого из объектов в карте объектов.|
-|[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|Эта функция вызывается для отмены регистрации каждого из объектов в карте объектов.|
-|[AtlComModuleRegisterClassObjects](#atlcommoduleregisterclassobjects)|Эта функция вызывается для регистрации объектов класса.|
-|[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Эта функция вызывается для отмены объектов классов из COM-модуля.|
-|[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Эта функция вызывается для получения объекта класса.|
+|[атлкоммодулерегистерсервер](#atlcommoduleregisterserver)|Эта функция вызывается для регистрации каждого из объектов в карте объектов.|
+|[атлкоммодулеунрегистерсервер](#atlcommoduleunregisterserver)|Эта функция вызывается для отмены регистрации каждого из объектов в карте объектов.|
+|[атлкоммодулерегистерклассобжектс](#atlcommoduleregisterclassobjects)|Эта функция вызывается для регистрации объектов класса.|
+|[атлкоммодулеревокеклассобжектс](#atlcommodulerevokeclassobjects)|Эта функция вызывается для отмены объектов класса из модуля COM.|
+|[атлкоммодулежетклассобжект](#atlcommodulegetclassobject)|Эта функция вызывается для получения объекта класса.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>атлкоммодулерегистерсервер
 
 Эта функция вызывается для регистрации каждого из объектов в карте объектов.
 
@@ -47,26 +47,26 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*<br/>
-Указатель на COM-модуля.
+*пкоммодуле*<br/>
+Указатель на модуль COM.
 
-*bRegTypeLib*<br/>
-Значение TRUE, если для регистрации библиотеки типов.
+*брегтипелиб*<br/>
+Значение TRUE, если библиотека типов должна быть зарегистрирована.
 
-*pCLSID*<br/>
-Указывает идентификатор CLSID объекта для регистрации. Если значение равно NULL, будет зарегистрировано всех объектов в карте объектов.
+*пклсид*<br/>
+Указывает на идентификатор CLSID регистрируемого объекта. Если значение равно NULL, будут зарегистрированы все объекты в сопоставлении объектов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-`AtlComModuleRegisterServer` проверяет карте автоматически созданных объектов ATL и регистрирует каждый объект в сопоставлении. Если *pCLSID* не NULL, то только объект, на который ссылается *pCLSID* зарегистрирован; в противном случае все объекты зарегистрированы.
+`AtlComModuleRegisterServer`просматривает автоматически сформированную карту объектов ATL и регистрирует каждый объект на карте. Если *пклсид* не равен null, регистрируется только объект, на который ссылается *пклсид* . в противном случае регистрируются все объекты.
 
-Эта функция вызывается [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver).
+Эта функция вызывается методом [катлкоммодуле:: регистерсервер](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>атлкоммодулеунрегистерсервер
 
 Эта функция вызывается для отмены регистрации каждого из объектов в карте объектов.
 
@@ -79,26 +79,26 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*<br/>
-Указатель на COM-модуля.
+*пкоммодуле*<br/>
+Указатель на модуль COM.
 
-*bUnRegTypeLib*<br/>
-Значение TRUE, если для регистрации библиотеки типов.
+*бунрегтипелиб*<br/>
+Значение TRUE, если библиотека типов должна быть зарегистрирована.
 
-*pCLSID*<br/>
-Указывает идентификатор CLSID объекта для отмены регистрации. Если значение равно NULL всех объектов в карте объектов будет отменена.
+*пклсид*<br/>
+Указывает на CLSID объекта, регистрация которого будет отменена. Если значение NULL для всех объектов в сопоставлении объектов будет отменена регистрация.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-`AtlComModuleUnregisterServer` проверяет карте объектов ATL и отменяет регистрацию каждого объекта в схеме. Если *pCLSID* не NULL, то только объект, на который ссылается *pCLSID* регистрация которой удалена; в противном случае все объекты, не зарегистрированы.
+`AtlComModuleUnregisterServer`проходит по карте объектов ATL и отменяет регистрацию каждого объекта в сопоставлении. Если *пклсид* не равно null, то отменяется только объект, на который ссылается *пклсид* . в противном случае отменяется регистрация всех объектов.
 
-Эта функция вызывается [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver).
+Эта функция вызывается методом [катлкоммодуле:: унрегистерсервер](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+##  <a name="atlcommoduleregisterclassobjects"></a>атлкоммодулерегистерклассобжектс
 
 Эта функция вызывается для регистрации объектов класса.
 
@@ -111,24 +111,24 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*<br/>
-Указатель на COM-модуля.
+*пкоммодуле*<br/>
+Указатель на модуль COM.
 
-*dwClsContext*<br/>
-Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. См. в разделе [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) для получения дополнительных сведений.
+*двклсконтекст*<br/>
+Задает контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Дополнительные сведения см. в разделе [клскткс](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) .
 
 *dwFlags*<br/>
-Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. См. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) для получения дополнительных сведений.
+Определяет типы соединения с объектом класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Дополнительные сведения см. в разделе [регклс](/windows/win32/api/combaseapi/ne-combaseapi-regcls) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Эта вспомогательная функция используемой [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
+Эта вспомогательная функция используется [CComModule:: регистерклассобжектс](ccommodule-class.md#registerclassobjects) (устарела в ATL 7,0) и [CAtlExeModuleT:: регистерклассобжектс](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+##  <a name="atlcommodulerevokeclassobjects"></a>атлкоммодулеревокеклассобжектс
 
 Эта функция вызывается для удаления фабрики или фабрик класса из таблицы запущенных объектов.
 
@@ -138,18 +138,18 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*<br/>
-Указатель на COM-модуля.
+*пкоммодуле*<br/>
+Указатель на модуль COM.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Эта вспомогательная функция используемой [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (устаревший в ATL 7.0) и [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
+Эта вспомогательная функция используется [CComModule:: ревокеклассобжектс](ccommodule-class.md#revokeclassobjects) (устарела в ATL 7,0) и [CAtlExeModuleT:: ревокеклассобжектс](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>атлкоммодулежетклассобжект
 
 Эта функция вызывается для получения фабрики класса.
 
@@ -163,25 +163,25 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*pComModule*<br/>
-Указатель на COM-модуля.
+*пкоммодуле*<br/>
+Указатель на модуль COM.
 
-*rclsid*<br/>
-CLSID создаваемого объекта.
+*рклсид*<br/>
+Идентификатор CLSID создаваемого объекта.
 
 *riid*<br/>
-Идентификатор IID запрошенного интерфейса.
+IID запрашиваемого интерфейса.
 
-*ppv*<br/>
-Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
+*ппв*<br/>
+Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс, *ППВ* имеет значение null.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Эта вспомогательная функция используемой [CComModule::GetClassObject](ccommodule-class.md#getclassobject) (устаревший в ATL 7.0) и [CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject).
+Эта вспомогательная функция используется [CComModule:: жетклассобжект](ccommodule-class.md#getclassobject) (устарела в ATL 7,0) и [CAtlDllModuleT:: жетклассобжект](catldllmodulet-class.md#getclassobject).
 
 ## <a name="see-also"></a>См. также
 

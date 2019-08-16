@@ -40,18 +40,18 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ef6a06a4889119e39e72a9e495e5d4f9e17cf56
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374107"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505151"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Класс CMFCOutlookBarPane
 
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
-Элемент управления, производный от [класс CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , может быть вставлен на панель Outlook ( [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Область панели Outlook содержит столбец больших кнопок. Пользователь может прокрутить список с кнопками вверх и вниз, если он больше области, в которой отображается. Когда пользователь окончательно удаляет область панели Outlook из панели Outlook, она может стать плавающей или прикрепиться к окну основного фрейма.
+Элемент управления, производный от [класса CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) , который можно вставить в панель Outlook ( [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)). Область панели Outlook содержит столбец больших кнопок. Пользователь может прокрутить список с кнопками вверх и вниз, если он больше области, в которой отображается. Когда пользователь окончательно удаляет область панели Outlook из панели Outlook, она может стать плавающей или прикрепиться к окну основного фрейма.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -72,46 +72,46 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCOutlookBarPane::AddButton](#addbutton)|Добавляет кнопку область панели Outlook.|
-|[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Определяет, закреплением области к другой панели или окне фрейма. (Переопределяет [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|
-|`CMFCOutlookBarPane::CanBeRestored`|Определяет, будет ли система может восстановиться панель инструментов в исходное состояние после настройки. (Переопределяет [CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
-|[CMFCOutlookBarPane::ClearAll](#clearall)|Освобождает ресурсы, используемые изображения в область панели Outlook.|
-|[CMFCOutlookBarPane::Create](#create)|Создает область панели Outlook.|
+|[CMFCOutlookBarPane:: AddButton](#addbutton)|Добавляет кнопку в панель Outlook.|
+|[CMFCOutlookBarPane:: Канбеаттачед](#canbeattached)|Определяет, можно ли закрепить панель в другой области или окне фрейма. (Переопределяет [CBasePane:: канбеаттачед](../../mfc/reference/cbasepane-class.md#canbeattached).)|
+|`CMFCOutlookBarPane::CanBeRestored`|Определяет, может ли система восстановить исходное состояние панели инструментов после настройки. (Переопределяет [CMFCToolBar:: канбересторед](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
+|[CMFCOutlookBarPane:: ClearAll](#clearall)|Освобождает ресурсы, используемые образами на панели Outlook.|
+|[CMFCOutlookBarPane:: Create](#create)|Создает панель Outlook.|
 |`CMFCOutlookBarPane::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|`CMFCOutlookBarPane::Dock`|Вызывается платформой, чтобы закрепить область панели Outlook. (Переопределяет `CPane::Dock`.)|
-|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Указывает ли стрелки прокрутки на область панели Outlook переместить список кнопок, страницы или кнопки.|
-|[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Возвращает цвет обычного текста (не выбрано) область панели Outlook.|
-|`CMFCOutlookBarPane::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Определяет, существует ли фоновое изображение загружается для область панели Outlook.|
-|`CMFCOutlookBarPane::IsChangeState`|Определяет, может быть закреплено плавающую панель. (Переопределяет `CPane::IsChangeState`.)|
-|[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|Определяет, является ли граница кнопки затененную при кнопки выделяется и отображается фонового изображения.|
-|`CMFCOutlookBarPane::OnBeforeFloat`|Вызывается платформой, когда область будет о число с плавающей запятой. (Переопределяет [CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat).)|
-|[CMFCOutlookBarPane::RemoveButton](#removebutton)|Удаляет кнопка с указанным идентификатором команды.|
-|`CMFCOutlookBarPane::RestoreOriginalstate`|Восстанавливает первоначальное состояние панели инструментов. (Переопределяет [CMFCToolBar::RestoreOriginalState](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate).)|
-|[CMFCOutlookBarPane::SetBackColor](#setbackcolor)|Задает цвет фона.|
-|[CMFCOutlookBarPane::SetBackImage](#setbackimage)|Задает фоновое изображение.|
-|[CMFCOutlookBarPane::SetDefaultState](#setdefaultstate)|Сбрасывает область панели Outlook на исходный набор кнопок.|
-|[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Задает количество пикселей, заполнения, используемого вокруг кнопки в область панели Outlook.|
-|[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Задает цвета обычных и выделенный текст в область панели Outlook.|
-|[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Задает прозрачный цвет для область панели Outlook.|
-|`CMFCOutlookBarPane::SmartUpdate`|Используется внутренним образом для обновления панели Outlook. (Переопределяет `CMFCToolBar::SmartUpdate`.)|
+|`CMFCOutlookBarPane::Dock`|Вызывается платформой для закрепления панели панели Outlook. (Переопределяет `CPane::Dock`.)|
+|[CMFCOutlookBarPane:: Енаблепажескроллмоде](#enablepagescrollmode)|Указывает, прокручивается ли стрелки прокрутки в области панели Outlook к списку кнопок по страницам или по кнопке.|
+|[CMFCOutlookBarPane:: Жетрегуларколор](#getregularcolor)|Возвращает обычный (не выбранный) цвет текста панели Outlook.|
+|`CMFCOutlookBarPane::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
+|[CMFCOutlookBarPane:: Исбаккграундтекстуре](#isbackgroundtexture)|Определяет, загружено ли фоновое изображение для панели Outlook.|
+|`CMFCOutlookBarPane::IsChangeState`|Определяет, может ли быть закреплена Плавающая панель. (Переопределяет `CPane::IsChangeState`.)|
+|[CMFCOutlookBarPane:: Исдравшадедхигхлигхт](#isdrawshadedhighlight)|Определяет, затенена ли граница кнопки при выделении кнопки и отображении фонового изображения.|
+|`CMFCOutlookBarPane::OnBeforeFloat`|Вызывается структурой, когда область перемещается в float. (Переопределяет [CPane:: онбефорефлоат](../../mfc/reference/cpane-class.md#onbeforefloat).)|
+|[CMFCOutlookBarPane:: Ремовебуттон](#removebutton)|Удаляет кнопку с указанным ИДЕНТИФИКАТОРом команды.|
+|`CMFCOutlookBarPane::RestoreOriginalstate`|Восстанавливает первоначальное состояние панели инструментов. (Переопределяет [CMFCToolBar:: рестореоригиналстате](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate).)|
+|[CMFCOutlookBarPane:: Сетбаккколор](#setbackcolor)|Задает цвет фона.|
+|[CMFCOutlookBarPane:: Сетбаккимаже](#setbackimage)|Задает фоновое изображение.|
+|[CMFCOutlookBarPane:: Сетдефаултстате](#setdefaultstate)|Сбрасывает панель Outlook к исходному набору кнопок.|
+|[CMFCOutlookBarPane:: Сетекстраспаце](#setextraspace)|Задает число пикселей заполнения, используемое вокруг кнопок в области панели Outlook.|
+|[CMFCOutlookBarPane:: Сеттекстколор](#settextcolor)|Задает цвета обычного и выделенного текста в области панели Outlook.|
+|[CMFCOutlookBarPane:: Сеттранспарентколор](#settransparentcolor)|Задает прозрачный цвет для панели Outlook.|
+|`CMFCOutlookBarPane::SmartUpdate`|Используется для внутренних целей для обновления панели Outlook. (Переопределяет `CMFCToolBar::SmartUpdate`.)|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Указывает, какие пункты контекстного меню отображаются в режим настройки.|
-|[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Удаляет все кнопки из область панели Outlook. (Переопределяет [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|
+|[CMFCOutlookBarPane:: Енаблеконтекстменуитемс](#enablecontextmenuitems)|Указывает, какие пункты контекстного меню отображаются в режиме настройки.|
+|[CMFCOutlookBarPane:: Ремовеаллбуттонс](#removeallbuttons)|Удаляет все кнопки с панели Outlook. (Переопределяет [CMFCToolBar:: ремовеаллбуттонс](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|
 
 ## <a name="remarks"></a>Примечания
 
-Сведения о том, как реализовать панель Outlook, см. в разделе [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+Сведения о том, как реализовать панель Outlook, см. в разделе [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
-Например, панель Outlook см. в разделе OutlookDemo примера проекта.
+Пример панели Outlook см. в примере проекта Аутлукдемо.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как использовать различные методы `CMFCOutlookBarPane` класса. В примере показано создание область панели Outlook, включить режим прокрутки страниц, Включение закрепления и задать цвет фона панели. Этот фрагмент кода является частью [пример Outlook с несколькими представлениями](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как использовать различные методы `CMFCOutlookBarPane` класса. В этом примере показано, как создать панель Outlook, включить режим прокрутки страницы, включить закрепление и задать цвет фона для панели Outlook. Этот фрагмент кода является частью примера " [множественные представления Outlook](../../overview/visual-cpp-samples.md)".
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]
@@ -128,7 +128,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+[кмфкбасетулбар](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
@@ -136,11 +136,11 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxoutlookbarpane.h
+**Заголовок:** афксаутлукбарпане. h
 
-##  <a name="addbutton"></a>  CMFCOutlookBarPane::AddButton
+##  <a name="addbutton"></a>CMFCOutlookBarPane:: AddButton
 
-Добавляет кнопку область панели Outlook.
+Добавляет кнопку в панель Outlook.
 
 ```
 BOOL AddButton(
@@ -177,46 +177,46 @@ BOOL AddButton(
 
 ### <a name="parameters"></a>Параметры
 
-*uiImage*<br/>
-[in] Указывает идентификатор ресурса растрового изображения.
+*уиимаже*<br/>
+окне Указывает идентификатор ресурса точечного рисунка.
 
-*lpszLabel*<br/>
-[in] Задает текст кнопки.
+*лпсзлабел*<br/>
+окне Задает текст кнопки.
 
-*iIdCommand*<br/>
-[in] Указывает идентификатор элемента управления button.
+*иидкомманд*<br/>
+окне Задает идентификатор элемента управления "Кнопка".
 
-*iInsertAt*<br/>
-[in] Отсчитываемый от нуля индекс указывает на странице панели outlook, по которому следует вставить кнопку.
+*иинсертат*<br/>
+окне Указывает отсчитываемый от нуля индекс на странице панели Outlook, с которой нужно вставить кнопку.
 
-*uiLabel*<br/>
-[in] Идентификатор ресурса строки.
+*уилабел*<br/>
+окне Идентификатор строкового ресурса.
 
-*szBmpFileName*<br/>
-[in] Задает имя файла образа диска для загрузки.
+*сзбмпфиленаме*<br/>
+окне Указывает имя загружаемого файла образа диска.
 
-*szLabel*<br/>
-[in] Задает текст кнопки.
+*сзлабел*<br/>
+окне Задает текст кнопки.
 
-*hBmp*<br/>
-[in] Дескриптор точечного рисунка для кнопки.
+*хбмп*<br/>
+окне Маркер для точечного рисунка кнопки.
 
 *hIcon*<br/>
-[in] Дескриптор значка для кнопки.
+окне Маркер значка кнопок.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кнопка был успешно добавлен; в противном случае — значение FALSE.
+Значение TRUE, если кнопка была успешно добавлена; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет вставить новую кнопку на страницу панели Outlook. Изображение кнопки можно загрузить из ресурсов приложения или из файла на диске.
+Этот метод используется для вставки новой кнопки в страницу панели Outlook. Изображение этой кнопки можно загрузить либо из ресурсов приложения, либо из файла на диске.
 
-Если идентификатор страницы, указанный параметром *uiPageID* равно -1, кнопка будет вставлена в первой страницы.
+Если идентификатор страницы, указанный параметром *уипажеид* , равен-1, кнопка вставляется в первую страницу.
 
-Если указанный индекс *iInsertAt* равно -1, будет добавлена кнопка, в конце страницы.
+Если индекс, указанный параметром *иинсертат* , равен-1, то кнопка добавляется в конец страницы.
 
-##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached
+##  <a name="canbeattached"></a>CMFCOutlookBarPane:: Канбеаттачед
 
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
@@ -228,9 +228,9 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="clearall"></a>  CMFCOutlookBarPane::ClearAll
+##  <a name="clearall"></a>CMFCOutlookBarPane:: ClearAll
 
-Освобождает ресурсы, используемые образы в область панели Outlook.
+Освобождает ресурсы, используемые образами на панели Outlook.
 
 ```
 void ClearAll();
@@ -238,11 +238,11 @@ void ClearAll();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод напрямую вызывает [CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear), который вызывается в образах, используемых область панели Outlook.
+Этот метод напрямую вызывает [кмфктулбаримажес:: Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear), который вызывается для изображений, используемых в области панели Outlook.
 
-##  <a name="create"></a>  CMFCOutlookBarPane::Create
+##  <a name="create"></a>CMFCOutlookBarPane:: Create
 
-Создает область панели Outlook.
+Создает панель Outlook.
 
 ```
 virtual BOOL Create(
@@ -254,31 +254,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*pParentWnd*<br/>
-[in] Указывает родительского окна элемента управления панели панель Outlook. Не должен иметь значение NULL.
+*ппарентвнд*<br/>
+окне Задает родительское окно элемента управления панели Outlook. Не может иметь значение NULL.
 
-*dwStyle*<br/>
-[in] Стиль окна.  Список стилей окна, см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*двстиле*<br/>
+окне Стиль окна.  Список стилей окна см. в разделе [стили окон](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *uiID*<br/>
-[in] Идентификатор элемента управления. Должно быть уникальным, чтобы включить сохранение состояния элемента управления.
+окне Идентификатор элемента управления. Должен быть уникальным, чтобы обеспечить сохранение состояния элемента управления.
 
-*dwControlBarStyle*<br/>
-[in] Указывает специальные стили, которые определяют поведение элемента управления область панели Outlook при отсоединении их от панели Outlook.
+*двконтролбарстиле*<br/>
+окне Задает специальные стили, определяющие поведение элемента управления панели Outlook при его отсоединении от панели Outlook.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Для создания `CMFCOutlookBarPane` объект, сначала вызовите конструктор, а затем вызовите `Create`, который создает панели элемента управления панели Outlook и присоединяет его к `CMFCOutlookBarPane` объекта.
+Для создания `CMFCOutlookBarPane` объекта сначала необходимо вызвать конструктор, а затем вызвать метод `Create`, который создает элемент управления панели Outlook и `CMFCOutlookBarPane` присоединяет его к объекту.
 
-Дополнительные сведения о `dwControlBarStyle` см. в разделе [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
+Дополнительные сведения о `dwControlBarStyle` см. в разделе [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).
 
-##  <a name="enablecontextmenuitems"></a>  CMFCOutlookBarPane::EnableContextMenuItems
+##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane:: Енаблеконтекстменуитемс
 
-Указывает, какие пункты контекстного меню отображаются в режим настройки.
+Указывает, какие пункты контекстного меню отображаются в режиме настройки.
 
 ```
 virtual BOOL EnableContextMenuItems(
@@ -288,28 +288,28 @@ virtual BOOL EnableContextMenuItems(
 
 ### <a name="parameters"></a>Параметры
 
-*pButton*<br/>
-[in] Указатель на кнопку панели инструментов, нажимает пользователь.
+*пбуттон*<br/>
+окне Указатель на кнопку на панели инструментов, которую щелкнул пользователь.
 
-*pPopup*<br/>
-[in] Указатель в контекстном меню.
+*ппопуп*<br/>
+окне Указатель на контекстное меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если должны отображаться в контекстном меню; в противном случае — значение FALSE.
+Возвращает значение TRUE, если контекстное меню должно отображаться; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод, чтобы изменить стандартный контекстное меню framework, платформа отображает в режим настройки.
+Переопределите этот метод, чтобы изменить стандартное контекстное меню платформы, которое платформа отображает в режиме настройки.
 
-Реализация по умолчанию проверяет режим настройки ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) и если он устанавливается в значение TRUE отключает все сочетания элементов меню, за исключением **удалить**. После этого он просто передает входные параметры `CMFCToolBar::EnableContextMenuItems`.
+Реализация по умолчанию проверяет режим настройки ( [CMFCToolBar:: искустомиземоде](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) и, если он имеет значение true, отключает все пункты контекстного меню, кроме **Delete**. Затем он просто передает входные параметры в `CMFCToolBar::EnableContextMenuItems`.
 
 > [!NOTE]
-> *Контекстное меню* является синонимом для контекстного меню.
+> *Контекстное меню* является синонимом контекстного меню.
 
-##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode
+##  <a name="enablepagescrollmode"></a>CMFCOutlookBarPane:: Енаблепажескроллмоде
 
-Указывает ли стрелки прокрутки на область панели Outlook переместить список кнопок страницу за страницей, или кнопку, кнопку.
+Указывает, прокручивается ли стрелки прокрутки в области панели Outlook к списку кнопок на странице или по кнопке.
 
 ```
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
@@ -317,12 +317,12 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bPageScroll*<br/>
-[in] Значение TRUE, если включите режим прокрутки страницы. Если значение равно FALSE, отключите режим прокрутки страниц.
+*бпажескролл*<br/>
+окне Если значение — TRUE, включите режим прокрутки страницы. Если значение равно FALSE, отключите режим прокрутки страницы.
 
-##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor
+##  <a name="getregularcolor"></a>CMFCOutlookBarPane:: Жетрегуларколор
 
-Возвращает обычному (то есть невыделенные) цвет текста область панели Outlook.
+Возвращает обычный (невыбранный) цвет текста панели Outlook.
 
 ```
 DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
@@ -330,15 +330,15 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущий цвет текста как значение RGB.
+Текущий цвет текста в виде значения цвета RGB.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCOutlookBarPane::SetTextColor](#settextcolor) задать текущий цвет текста (обычные и выбранного) панели Outlook. Цвет текста по умолчанию можно получить, вызвав [GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor) функции с индексом COLOR_WINDOW.
+Используйте [CMFCOutlookBarPane:: сеттекстколор](#settextcolor) , чтобы установить текущий (обычный и выбранный) цвет текста панели Outlook. Цвет текста по умолчанию можно получить, вызвав функцию [жетсисколор](/windows/win32/api/winuser/nf-winuser-getsyscolor) с индексом COLOR_WINDOW.
 
-##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture
+##  <a name="isbackgroundtexture"></a>CMFCOutlookBarPane:: Исбаккграундтекстуре
 
-Определяет, существует ли фоновое изображение загружается для область панели Outlook.
+Определяет, загружено ли фоновое изображение для панели Outlook.
 
 ```
 BOOL IsBackgroundTexture() const;
@@ -346,17 +346,17 @@ BOOL IsBackgroundTexture() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если фоновое изображение для отображения; в противном случае — значение FALSE.
+Значение TRUE, если имеется фоновое изображение для показа; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Фоновое изображение можно добавить, вызвав [CMFCOutlookBarPane::SetBackImage](#setbackimage) функции.
+Фоновое изображение можно добавить, вызвав функцию [CMFCOutlookBarPane:: сетбаккимаже](#setbackimage) .
 
-Если фоновое изображение отсутствует, фон закрашивается с цвет, указанный с помощью [CMFCOutlookBarPane::SetBackColor](#setbackcolor).
+Если фоновое изображение отсутствует, фон закрашивается цветом, заданным с помощью [CMFCOutlookBarPane:: сетбаккколор](#setbackcolor).
 
-##  <a name="isdrawshadedhighlight"></a>  CMFCOutlookBarPane::IsDrawShadedHighlight
+##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane:: Исдравшадедхигхлигхт
 
-Определяет, является ли граница кнопки затененную при кнопки выделяется и отображается фонового изображения.
+Определяет, затенена ли граница кнопки при выделении кнопки и отображении фонового изображения.
 
 ```
 BOOL IsDrawShadedHighlight() const;
@@ -364,19 +364,19 @@ BOOL IsDrawShadedHighlight() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если границы кнопки затенены; в противном случае — значение FALSE.
+Значение TRUE, если границы кнопки затенены; в противном случае — FALSE.
 
-##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons
+##  <a name="removeallbuttons"></a>CMFCOutlookBarPane:: Ремовеаллбуттонс
 
-Удаляет все кнопки из область панели Outlook.
+Удаляет все кнопки с панели Outlook.
 
 ```
 virtual void RemoveAllButtons();
 ```
 
-##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton
+##  <a name="removebutton"></a>CMFCOutlookBarPane:: Ремовебуттон
 
-Удаляет кнопка с указанным идентификатором команды.
+Удаляет кнопку с указанным ИДЕНТИФИКАТОРом команды.
 
 ```
 BOOL RemoveButton(UINT iIdCommand);
@@ -384,14 +384,14 @@ BOOL RemoveButton(UINT iIdCommand);
 
 ### <a name="parameters"></a>Параметры
 
-*iIdCommand*<br/>
-[in] Указывает идентификатор команды кнопки для удаления.
+*иидкомманд*<br/>
+окне Указывает идентификатор команды удаляемой кнопки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кнопки был успешно удален; Значение FALSE, если заданный идентификатор команды не является допустимым.
+Значение TRUE, если кнопка была успешно удалена; Значение FALSE, если указан недопустимый идентификатор команды.
 
-##  <a name="setbackcolor"></a>  CMFCOutlookBarPane::SetBackColor
+##  <a name="setbackcolor"></a>CMFCOutlookBarPane:: Сетбаккколор
 
 Задает цвет фона панели Outlook.
 
@@ -406,9 +406,9 @@ void SetBackColor(COLORREF color);
 
 ### <a name="remarks"></a>Примечания
 
-Вызывайте эту функцию, чтобы задать текущий цвет фона панели Outlook. Цвет фона используется только в том случае, если имеется фоновое изображение отсутствует.
+Вызовите эту функцию, чтобы задать текущий цвет фона для панели Outlook. Цвет фона используется только при отсутствии фонового изображения.
 
-##  <a name="setbackimage"></a>  CMFCOutlookBarPane::SetBackImage
+##  <a name="setbackimage"></a>CMFCOutlookBarPane:: Сетбаккимаже
 
 Задает фоновое изображение.
 
@@ -418,16 +418,16 @@ void SetBackImage(UINT uiImageID);
 
 ### <a name="parameters"></a>Параметры
 
-*uiImageID*<br/>
-[in] Указывает идентификатор ресурса изображения.
+*уиимажеид*<br/>
+окне Указывает идентификатор ресурса изображения.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод для установки Outlook линейки фонового изображения. Осуществляется список фоновых изображений, внедренных [класс CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) объекта.
+Вызовите этот метод, чтобы задать фоновое изображение в панели Outlook. Список фоновых изображений управляется внедренным объектом [класса кмфктулбаримажес](../../mfc/reference/cmfctoolbarimages-class.md) .
 
-##  <a name="setdefaultstate"></a>  CMFCOutlookBarPane::SetDefaultState
+##  <a name="setdefaultstate"></a>CMFCOutlookBarPane:: Сетдефаултстате
 
-Сбрасывает область панели Outlook на исходный набор кнопок.
+Сбрасывает панель Outlook к исходному набору кнопок.
 
 ```
 void SetDefaultState();
@@ -435,19 +435,19 @@ void SetDefaultState();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод восстанавливает исходный набор кнопок панели Outlook. Этот метод аналогичен `CMFCOutlookBarPane::RestoreOriginalstate`, за исключением того, что это не вызывает перерисовывает область панели Outlook.
+Этот метод восстанавливает исходный набор кнопок панели Outlook. Этот метод подобен `CMFCOutlookBarPane::RestoreOriginalstate`, за исключением того, что он не запускает перерисовку панели Outlook.
 
-##  <a name="setextraspace"></a>  CMFCOutlookBarPane::SetExtraSpace
+##  <a name="setextraspace"></a>CMFCOutlookBarPane:: Сетекстраспаце
 
-Задает количество пикселей, заполнения, используемого вокруг кнопки в область панели Outlook.
+Задает число пикселей заполнения, используемое вокруг кнопок в области панели Outlook.
 
 ```
 void SetExtraSpace()
 ```
 
-##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor
+##  <a name="settextcolor"></a>CMFCOutlookBarPane:: Сеттекстколор
 
-Задает цвета обычных и выделенный текст в область панели Outlook.
+Задает цвета обычного и выделенного текста в области панели Outlook.
 
 ```
 void SetTextColor(
@@ -457,15 +457,15 @@ void SetTextColor(
 
 ### <a name="parameters"></a>Параметры
 
-*clrRegText*<br/>
-[in] Указывает новый цвет для невыбранных текста.
+*клррегтекст*<br/>
+окне Задает новый цвет для невыделенного текста.
 
-*clrSelText*<br/>
-[in] Указывает новый цвет выделенного текста.
+*клрселтекст*<br/>
+окне Задает новый цвет для выделенного текста.
 
-##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor
+##  <a name="settransparentcolor"></a>CMFCOutlookBarPane:: Сеттранспарентколор
 
-Задает прозрачный цвет для область панели Outlook.
+Задает прозрачный цвет для панели Outlook.
 
 ```
 void SetTransparentColor(COLORREF color);
@@ -474,11 +474,11 @@ void SetTransparentColor(COLORREF color);
 ### <a name="parameters"></a>Параметры
 
 *color*<br/>
-Указывает новый прозрачный цвет.
+Задает новый прозрачный цвет.
 
 ### <a name="remarks"></a>Примечания
 
-Прозрачный цвет необходим для отображения прозрачные изображения. Все вхождения этот цвет в изображения закрашивается вместо цветом фона.  Нет, не наложения изображений фона и переднего плана.
+Прозрачный цвет необходим для вывода прозрачных изображений. Любое вхождение этого цвета в изображении закрашивается цветом фона.  Не существует смешивания фоновых и передних изображений.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,21 +1,21 @@
 ---
-title: ms_union (C++ атрибут COM)
+title: ms_union (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409113"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514379"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-Управляет выравниванием представление данных сети nonencapsulated объединений.
+Управляет выравниванием представления данных сети для неинкапсулированных объединений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409113"
 
 ## <a name="remarks"></a>Примечания
 
-**Ms_union** C++ атрибут имеет ту же функциональность, что [ms_union](/windows/desktop/Midl/ms-union-attrib) описании атрибута MIDL.
+Атрибут **ms_union** C++ имеет те же функциональные возможности, что и атрибут [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -60,9 +60,9 @@ __interface IFireTabCtrl {
 
 |||
 |-|-|
-|**Применение**|Nonencapsulated объединения|
+|**Относится к**|Неинкапсулированные объединения|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

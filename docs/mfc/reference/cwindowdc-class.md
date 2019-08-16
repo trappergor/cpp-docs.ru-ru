@@ -1,5 +1,5 @@
 ---
-title: Класс CWindowDC
+title: Класс Квиндовдк
 ms.date: 11/04/2016
 f1_keywords:
 - CWindowDC
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-ms.openlocfilehash: 55a9ccfc496c95c9e7410cbd5645135ee555ff26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef9b4917dc834eb8335690f9b0d171245f5c170
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502156"
 ---
-# <a name="cwindowdc-class"></a>Класс CWindowDC
+# <a name="cwindowdc-class"></a>Класс Квиндовдк
 
 Производное от `CDC`.
 
@@ -39,13 +39,13 @@ class CWindowDC : public CDC
 
 |name|Описание|
 |----------|-----------------|
-|[CWindowDC::m_hWnd](#m_hwnd)|HWND, к которому `CWindowDC` подключен.|
+|[Квиндовдк:: m_hWnd](#m_hwnd)|HWND, к которому присоединен `CWindowDC` этот объект.|
 
 ## <a name="remarks"></a>Примечания
 
-Вызывает функцию Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc)во время создания и [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения. Это означает, что `CWindowDC` объект производит доступ к целой области экрана [CWnd](../../mfc/reference/cwnd-class.md) (клиентские и неклиентские области).
+Вызывает функцию Windows [жетвиндовдк](/windows/win32/api/winuser/nf-winuser-getwindowdc)во время создания и [релеаседк](/windows/win32/api/winuser/nf-winuser-releasedc) в момент уничтожения. Это означает, что `CWindowDC` объект получает доступ ко всей области окна [CWnd](../../mfc/reference/cwnd-class.md) (как клиентские, так и неклиентские области).
 
-Дополнительные сведения об использовании `CWindowDC`, см. в разделе [контексты устройств](../../mfc/device-contexts.md).
+Дополнительные сведения об использовании `CWindowDC`см. в разделе контексты [устройств](../../mfc/device-contexts.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,11 +57,11 @@ class CWindowDC : public CDC
 
 ## <a name="requirements"></a>Требования
 
-Header: afxwin.h
+Заголовок: AFXWIN. h
 
-##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC
+##  <a name="cwindowdc"></a>Квиндовдк:: Квиндовдк
 
-Создает `CWindowDC` объект, который обращается к целой области экрана (клиентские и неклиентские) `CWnd` объекта, на который указывает *pWnd*.
+Конструирует объект, обращающийся ко всей области экрана (как клиенту, так и к клиенту) `CWnd` объекта, на который указывает *приводится*. `CWindowDC`
 
 ```
 explicit CWindowDC(CWnd* pWnd);
@@ -69,22 +69,22 @@ explicit CWindowDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-Окно которого клиентской области, будут получать доступ к объекту контекста устройства.
+*Приводится*<br/>
+Окно, в клиентской области которого будет доступ объект контекста устройства.
 
 ### <a name="remarks"></a>Примечания
 
-Конструктор вызывает функцию Windows [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc).
+Конструктор вызывает функцию Windows [жетвиндовдк](/windows/win32/api/winuser/nf-winuser-getwindowdc).
 
-Исключения (типа `CResourceException`) создается, если Windows `GetWindowDC` вызов завершается ошибкой. Контекст устройства не могут быть доступны в том случае, если Windows уже выделен все контексты его доступных устройств. Приложения конкурирует за пять общих отображения контексты, доступные в любой момент времени в группе Windows.
+Исключение (типа `CResourceException`) создается при сбое вызова Windows `GetWindowDC` . Контекст устройства может быть недоступен, если в Windows уже выделены все доступные контексты устройств. Приложение будет конкурировать за пять распространенных контекстов вывода, доступных в любой момент в Windows.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd
+##  <a name="m_hwnd"></a>Квиндовдк:: m_hWnd
 
-HWND `CWnd` указатель используется для создания `CWindowDC` объекта.
+HWND `CWnd` указателя используется для `CWindowDC` создания объекта.
 
 ```
 HWND m_hWnd;
@@ -92,11 +92,11 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>Примечания
 
-`m_hWnd` является защищенной переменной типа HWND.
+`m_hWnd`— Это защищенная переменная типа HWND.
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CWindowDC::CWindowDC](#cwindowdc).
+  См. пример для [квиндовдк:: квиндовдк](#cwindowdc).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlFile
+title: Класс Катлфиле
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFile
@@ -20,19 +20,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 784086b1c2edef5eb0de3bba4a97d1e3cc6272e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260231"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497823"
 ---
-# <a name="catlfile-class"></a>Класс CAtlFile
+# <a name="catlfile-class"></a>Класс Катлфиле
 
-Этот класс предоставляет тонкую оболочку Windows API обработки файлов.
+Этот класс предоставляет тонкую оболочку для API-интерфейса обработки файлов Windows.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,45 +46,45 @@ class CAtlFile : public CHandle
 
 |name|Описание|
 |----------|-----------------|
-|[CAtlFile::CAtlFile](#catlfile)|Конструктор.|
+|[Катлфиле:: Катлфиле](#catlfile)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CAtlFile::Create](#create)|Этот метод используется для создания или открытия файла.|
-|[CAtlFile::Flush](#flush)|Этот метод используется для очистки буферов для файла и потере всех буферизованных данных для записи в файл.|
-|[CAtlFile::GetOverlappedResult](#getoverlappedresult)|Этот метод используется для получения результатов операции перекрывающегося на файле.|
-|[CAtlFile::GetPosition](#getposition)|Вызовите этот метод для получения текущего положения указателя файла из файла.|
-|[CAtlFile::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер файла в байтах.|
-|[CAtlFile::LockRange](#lockrange)|Вызовите этот метод, чтобы заблокировать регион, в файле, чтобы запретить доступ к нему другими процессами.|
-|[CAtlFile::Read](#read)|Этот метод используется для чтения данных из файла, начиная с позиции, указанной проверкой указатель файла.|
-|[CAtlFile::Seek](#seek)|Этот метод используется для перемещения файла указателя файла.|
-|[CAtlFile::SetSize](#setsize)|Вызовите этот метод, чтобы задать размер файла.|
-|[CAtlFile::UnlockRange](#unlockrange)|Вызовите этот метод, чтобы разблокировать область файла.|
-|[CAtlFile::Write](#write)|Этот метод используется для записи данных в файл, начиная с позиции, указанной проверкой указатель файла.|
+|[Катлфиле:: Create](#create)|Вызовите этот метод, чтобы создать или открыть файл.|
+|[Катлфиле:: Flush](#flush)|Вызовите этот метод, чтобы очистить буферы для файла и вызвать запись всех буферизованных данных в файл.|
+|[Катлфиле:: GetOverlappedResult](#getoverlappedresult)|Вызовите этот метод, чтобы получить результаты операции перекрытия файла.|
+|[Катлфиле:: Disposition](#getposition)|Вызовите этот метод, чтобы получить текущую позиции указателя файла из файла.|
+|[Катлфиле:: DataSize](#getsize)|Вызовите этот метод, чтобы получить размер файла в байтах.|
+|[Катлфиле:: Локкранже](#lockrange)|Вызовите этот метод, чтобы заблокировать область в файле, чтобы предотвратить доступ других процессов к нему.|
+|[Катлфиле:: Read](#read)|Вызывайте этот метод для чтения данных из файла, начиная с позиции, указанной указателем файла.|
+|[Катлфиле:: Seek](#seek)|Вызовите этот метод, чтобы переместить указатель файла файла.|
+|[Катлфиле:: SetSize](#setsize)|Вызовите этот метод, чтобы задать размер файла.|
+|[Катлфиле:: Унлоккранже](#unlockrange)|Вызовите этот метод, чтобы разблокировать область файла.|
+|[Катлфиле:: Write](#write)|Вызывайте этот метод для записи данных в файл, начиная с позиции, указанной указателем файла.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CAtlFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
+|[Катлфиле:: m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс используется в том случае, когда потребности обработки файлов относительно просты, но дополнительные абстракции, чем предоставляет Windows API является обязательным, не включая зависимости MFC.
+Используйте этот класс, если потребности в обработке файлов относительно просты, но требуется более абстракция, чем Windows API, без включения зависимостей MFC.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CHandle](../../atl/reference/chandle-class.md)
+[чандле](../../atl/reference/chandle-class.md)
 
 `CAtlFile`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlfile.h
+**Заголовок:** атлфиле. h
 
-##  <a name="catlfile"></a>  CAtlFile::CAtlFile
+##  <a name="catlfile"></a>Катлфиле:: Катлфиле
 
 Конструктор.
 
@@ -98,21 +98,21 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="parameters"></a>Параметры
 
 *file*<br/>
-Объект файла.
+Объект File.
 
 *hFile*<br/>
-Дескриптор файла.
+Маркер файла.
 
 *pTM*<br/>
 Указатель на объект CAtlTransactionManager.
 
 ### <a name="remarks"></a>Примечания
 
-Конструктор копии передает право владения дескриптор файла из исходного `CAtlFile` объект для вновь созданного объекта.
+Конструктор копий передает владение маркером файла из исходного `CAtlFile` объекта в вновь сконструированный объект.
 
-##  <a name="create"></a>  CAtlFile::Create
+##  <a name="create"></a>Катлфиле:: Create
 
-Этот метод используется для создания или открытия файла.
+Вызовите этот метод, чтобы создать или открыть файл.
 
 ```
 HRESULT Create(
@@ -127,38 +127,38 @@ HRESULT Create(
 
 ### <a name="parameters"></a>Параметры
 
-*szFilename*<br/>
+*сзфиленаме*<br/>
 Имя файла.
 
-*dwDesiredAccess*<br/>
-Необходимый доступ. См. в разделе *dwDesiredAccess* в [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) в пакете Windows SDK.
+*двдесиредакцесс*<br/>
+Требуемый доступ. См. раздел *двдесиредакцесс* in [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) в Windows SDK.
 
-*dwShareMode*<br/>
-Режим общего доступа. См. в разделе *dwShareMode* в `CreateFile`.
+*двшаремоде*<br/>
+Режим общего доступа. См . раздел `CreateFile`двшаремоде in.
 
-*dwCreationDisposition*<br/>
-Расположение для создания. См. в разделе *dwCreationDisposition* в `CreateFile`.
+*двкреатиондиспоситион*<br/>
+Расстановка создания. См . раздел `CreateFile`двкреатиондиспоситион in.
 
-*dwFlagsAndAttributes*<br/>
-Флаги и атрибуты. См. в разделе *dwFlagsAndAttributes* в `CreateFile`.
+*двфлагсандаттрибутес*<br/>
+Флаги и атрибуты. См . раздел `CreateFile`двфлагсандаттрибутес in.
 
-*lpsa*<br/>
-Атрибуты безопасности. См. в разделе *lpSecurityAttributes* в `CreateFile`.
+*лпса*<br/>
+Атрибуты безопасности. См . раздел `CreateFile`лпсекуритяттрибутес in.
 
-*hTemplateFile*<br/>
-Файл шаблона. См. в разделе *hTemplateFile* в `CreateFile`.
+*хтемплатефиле*<br/>
+Файл шаблона. См . раздел `CreateFile`хтемплатефиле in.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea) для создания или открытия файла.
+Вызывает [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilew) для создания или открытия файла.
 
-##  <a name="flush"></a>  CAtlFile::Flush
+##  <a name="flush"></a>Катлфиле:: Flush
 
-Этот метод используется для очистки буферов для файла и потере всех буферизованных данных для записи в файл.
+Вызовите этот метод, чтобы очистить буферы для файла и вызвать запись всех буферизованных данных в файл.
 
 ```
 HRESULT Flush() throw();
@@ -166,15 +166,15 @@ HRESULT Flush() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [FlushFileBuffers](/windows/desktop/api/fileapi/nf-fileapi-flushfilebuffers) сквозной буферизированные данные в файл.
+Вызывает [FlushFileBuffers](/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers) для сброса буферизованных данных в файл.
 
-##  <a name="getoverlappedresult"></a>  CAtlFile::GetOverlappedResult
+##  <a name="getoverlappedresult"></a>Катлфиле:: GetOverlappedResult
 
-Этот метод используется для получения результатов операции перекрывающегося на файле.
+Вызовите этот метод, чтобы получить результаты операции перекрытия файла.
 
 ```
 HRESULT GetOverlappedResult(
@@ -185,26 +185,26 @@ HRESULT GetOverlappedResult(
 
 ### <a name="parameters"></a>Параметры
 
-*pOverlapped*<br/>
-Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) в пакете Windows SDK.
+*поверлаппед*<br/>
+Перекрывающаяся структура. См. раздел *лповерлаппед* в [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) в Windows SDK.
 
-*dwBytesTransferred*<br/>
-Число переданных байтов. См. в разделе *lpNumberOfBytesTransferred* в `GetOverlappedResult`.
+*двбитестрансферред*<br/>
+Переданные байты. См . раздел `GetOverlappedResult`лпнумберофбитестрансферред in.
 
-*bWait*<br/>
-Параметр ожидания. См. в разделе *bWait* в `GetOverlappedResult`.
+*бваит*<br/>
+Параметр wait. См . раздел `GetOverlappedResult`бваит in.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [GetOverlappedResult](/windows/desktop/api/ioapiset/nf-ioapiset-getoverlappedresult) для получения результатов операции перекрывающегося на файле.
+Вызывает [GetOverlappedResult](/windows/win32/api/ioapiset/nf-ioapiset-getoverlappedresult) для получения результатов операции перекрытия файла.
 
-##  <a name="getposition"></a>  CAtlFile::GetPosition
+##  <a name="getposition"></a>Катлфиле:: Disposition
 
-Этот метод используется для получения текущего положения указателя файла.
+Вызовите этот метод, чтобы получить текущую позиции указателя файла.
 
 ```
 HRESULT GetPosition(ULONGLONG& nPos) const throw();
@@ -213,17 +213,17 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="parameters"></a>Параметры
 
 *nPos*<br/>
-Позиция, в байтах.
+Расположение в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) для получения текущего положения указателя файла.
+Вызывает [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) , чтобы получить текущую позиции указателя файла.
 
-##  <a name="getsize"></a>  CAtlFile::GetSize
+##  <a name="getsize"></a>Катлфиле:: DataSize
 
 Вызовите этот метод, чтобы получить размер файла в байтах.
 
@@ -233,20 +233,20 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nLen*<br/>
+*нлен*<br/>
 Число байтов в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [GetFileSize](/windows/desktop/api/fileapi/nf-fileapi-getfilesize) для получения размера файла в байтах.
+Вызывает [GetFileSize](/windows/win32/api/fileapi/nf-fileapi-getfilesize) для получения размера файла в байтах.
 
-##  <a name="lockrange"></a>  CAtlFile::LockRange
+##  <a name="lockrange"></a>Катлфиле:: Локкранже
 
-Вызовите этот метод, чтобы заблокировать регион, в файле, чтобы запретить доступ к нему другими процессами.
+Вызовите этот метод, чтобы заблокировать область в файле, чтобы предотвратить доступ других процессов к нему.
 
 ```
 HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
@@ -255,20 +255,20 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="parameters"></a>Параметры
 
 *nPos*<br/>
-Позиция в файле, где должна начинаться блокировки.
+Место в файле, где должна начинаться блокировка.
 
-*nCount*<br/>
-Длина диапазона байтов, который будет заблокирован.
+*нкаунт*<br/>
+Длина блокируемого диапазона байтов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [LockFile](/windows/desktop/api/fileapi/nf-fileapi-lockfile) снять блокировку с области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Вы можете заблокировать более одной области файла, но разрешены не перекрывающихся областей. При снятии блокировки области, с помощью [CAtlFile::UnlockRange](#unlockrange), диапазон байтов должен точно соответствовать регион, который ранее был заблокирован. `LockRange` не объединяет смежные разделы; Если два заблокированных раздела являются смежными, чтобы разблокировать каждого отдельно.
+Вызывает [локкфиле](/windows/win32/api/fileapi/nf-fileapi-lockfile) для блокировки области в файле. Блокировка байтов в файле предотвращает доступ других процессов к этим байтам. Можно заблокировать несколько регионов файла, но перекрывающиеся области не допускаются. При разблокировании области с помощью [катлфиле:: унлоккранже](#unlockrange)диапазон байтов должен точно соответствовать региону, который был ранее заблокирован. `LockRange`не выполняет слияние смежных областей; Если два заблокированных региона являются смежными, каждый из них необходимо разблокировать отдельно.
 
-##  <a name="m_ptm"></a>  CAtlFile::m_pTM
+##  <a name="m_ptm"></a>Катлфиле:: m_pTM
 
 Указатель на `CAtlTransactionManager` объект.
 
@@ -278,9 +278,9 @@ CAtlTransactionManager* m_pTM;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="read"></a>  CAtlFile::Read
+##  <a name="read"></a>Катлфиле:: Read
 
-Этот метод используется для чтения данных из файла, начиная с позиции, указанной проверкой указатель файла.
+Вызывайте этот метод для чтения данных из файла, начиная с позиции, указанной указателем файла.
 
 ```
 HRESULT Read(
@@ -307,31 +307,31 @@ HRESULT Read(
 ### <a name="parameters"></a>Параметры
 
 *pBuffer*<br/>
-Указатель на буфер, который будет получать данные, считанные из файла.
+Указатель на буфер, который будет принимать данные, считанные из файла.
 
-*nBufSize*<br/>
+*нбуфсизе*<br/>
 Размер буфера в байтах.
 
-*nBytesRead*<br/>
+*нбитесреад*<br/>
 Количество прочитанных байтов.
 
-*pOverlapped*<br/>
-Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile) в пакете Windows SDK.
+*поверлаппед*<br/>
+Перекрывающаяся структура. См. раздел *лповерлаппед* in [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile) в Windows SDK.
 
-*pfnCompletionRoutine*<br/>
-Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) в пакете Windows SDK.
+*пфнкомплетионраутине*<br/>
+Подпрограммы завершения. См. раздел *лпкомплетионраутине* в [реадфиликс](/windows/win32/api/fileapi/nf-fileapi-readfileex) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Первые три формы вызвать [ReadFile](/windows/desktop/api/fileapi/nf-fileapi-readfile), последний [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) для чтения данных из файла. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.
+Первые три формы вызывают [ReadFile](/windows/win32/api/fileapi/nf-fileapi-readfile), последнюю [реадфиликс](/windows/win32/api/fileapi/nf-fileapi-readfileex) чтение данных из файла. Используйте [катлфиле:: Seek](#seek) для перемещения указателя файла.
 
-##  <a name="seek"></a>  CAtlFile::Seek
+##  <a name="seek"></a>Катлфиле:: Seek
 
-Этот метод используется для перемещения файла указателя файла.
+Вызовите этот метод, чтобы переместить указатель файла файла.
 
 ```
 HRESULT Seek(
@@ -341,21 +341,21 @@ HRESULT Seek(
 
 ### <a name="parameters"></a>Параметры
 
-*nOffset*<br/>
-Смещение от начальной точки, заданной параметром *dwFrom*.
+*ноффсет*<br/>
+Смещение от начальной точки, заданной параметром *двфром*.
 
-*dwFrom*<br/>
+*двфром*<br/>
 Начальная точка (FILE_BEGIN, FILE_CURRENT или FILE_END).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) для перемещения указателя файла.
+Вызывает [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) для перемещения указателя файла.
 
-##  <a name="setsize"></a>  CAtlFile::SetSize
+##  <a name="setsize"></a>Катлфиле:: SetSize
 
 Вызовите этот метод, чтобы задать размер файла.
 
@@ -365,18 +365,18 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nNewLen*<br/>
+*нневлен*<br/>
 Новая длина файла в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [SetFilePointer](/windows/desktop/api/fileapi/nf-fileapi-setfilepointer) и [SetEndOfFile](/windows/desktop/api/fileapi/nf-fileapi-setendoffile) для установки размера файла. При возвращении указатель файла находится в конце файла.
+Вызывает [SetFilePointer](/windows/win32/api/fileapi/nf-fileapi-setfilepointer) и [SetEndOfFile](/windows/win32/api/fileapi/nf-fileapi-setendoffile) , чтобы задать размер файла. При возврате указатель файла размещается в конце файла.
 
-##  <a name="unlockrange"></a>  CAtlFile::UnlockRange
+##  <a name="unlockrange"></a>Катлфиле:: Унлоккранже
 
 Вызовите этот метод, чтобы разблокировать область файла.
 
@@ -387,22 +387,22 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="parameters"></a>Параметры
 
 *nPos*<br/>
-Позиция в файле, где должна начинаться снятие блокировки.
+Место в файле, где должна начинаться разблокировка.
 
-*nCount*<br/>
-Длина диапазона байтов должен быть разблокирован.
+*нкаунт*<br/>
+Длина диапазона байтов для разблокировки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [UnlockFile](/windows/desktop/api/fileapi/nf-fileapi-unlockfile) для разблокировки область файла.
+Вызывает [унлоккфиле](/windows/win32/api/fileapi/nf-fileapi-unlockfile) , чтобы разблокировать регион файла.
 
-##  <a name="write"></a>  CAtlFile::Write
+##  <a name="write"></a>Катлфиле:: Write
 
-Этот метод используется для записи данных в файл, начиная с позиции, указанной проверкой указатель файла.
+Вызывайте этот метод для записи данных в файл, начиная с позиции, указанной указателем файла.
 
 ```
 HRESULT Write(
@@ -425,30 +425,30 @@ HRESULT Write(
 ### <a name="parameters"></a>Параметры
 
 *pBuffer*<br/>
-Буфер, содержащий данные для записи в файл.
+Буфер, содержащий данные, записываемые в файл.
 
-*nBufSize*<br/>
-Число байтов, передаваемых из буфера.
+*нбуфсизе*<br/>
+Число байтов, которое необходимо передать из буфера.
 
-*pOverlapped*<br/>
-Перекрывающуюся структуру. См. в разделе *lpOverlapped* в [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) в пакете Windows SDK.
+*поверлаппед*<br/>
+Перекрывающаяся структура. См. раздел *лповерлаппед* в [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile) в Windows SDK.
 
-*pfnCompletionRoutine*<br/>
-Подпрограммы завершения. См. в разделе *lpCompletionRoutine* в [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) в пакете Windows SDK.
+*пфнкомплетионраутине*<br/>
+Подпрограммы завершения. См. раздел *лпкомплетионраутине* в [вритефиликс](/windows/win32/api/fileapi/nf-fileapi-writefileex) в Windows SDK.
 
 *pnBytesWritten*<br/>
-Байты для записи.
+Записанные байты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Первые три формы вызвать [WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile), последний вызовы [WriteFileEx](/windows/desktop/api/fileapi/nf-fileapi-writefileex) для записи данных в файл. Используйте [CAtlFile::Seek](#seek) для перемещения указателя файла.
+Первые три формы вызывают [WriteFile](/windows/win32/api/fileapi/nf-fileapi-writefile), последний вызывает [вритефиликс](/windows/win32/api/fileapi/nf-fileapi-writefileex) для записи данных в файл. Используйте [катлфиле:: Seek](#seek) для перемещения указателя файла.
 
 ## <a name="see-also"></a>См. также
 
-[Пример бегущей строки](../../overview/visual-cpp-samples.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Образец бегущей строки](../../overview/visual-cpp-samples.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CHandle](../../atl/reference/chandle-class.md)

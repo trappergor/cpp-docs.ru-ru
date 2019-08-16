@@ -1,21 +1,21 @@
 ---
-title: defaultvtable (атрибут COM C++)
+title: defaultvtable (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 813fb9dd4edf2f6e522e7310ba1e8bfcd55ed2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab37af4deab516dc01f55f986811668737cf18c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147955"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501651"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
-Определяет интерфейс как интерфейс по умолчанию vtable для COM-объекта.
+Определяет интерфейс как интерфейс vtable по умолчанию для COM-объекта.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,15 +26,15 @@ ms.locfileid: "62147955"
 ### <a name="parameters"></a>Параметры
 
 *interface*<br/>
-Указанный интерфейс, который вы хотите иметь vtable по умолчанию для COM-объекта.
+Указанный интерфейс, для которого требуется использовать vtable по умолчанию для COM-объекта.
 
 ## <a name="remarks"></a>Примечания
 
-**Defaultvtable** атрибут C++ имеет ту же функциональность, что [defaultvtable](/windows/desktop/Midl/defaultvtable) описании атрибута MIDL.
+Атрибут **defaultvtable** C++ имеет те же функциональные возможности, что и атрибут [defaultvtable](/windows/win32/Midl/defaultvtable) MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано атрибуты для класса, используйте **defaultvtable** для указания интерфейс по умолчанию:
+В следующем коде показаны атрибуты класса, которые используют **defaultvtable** для указания интерфейса по умолчанию:
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -68,10 +68,10 @@ class CMyC3 : public IMyI3 {};
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

@@ -1,17 +1,17 @@
 ---
-title: с переменным количеством аргументов (C++ COM атрибут)
+title: vararg (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407215"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514896"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407215"
 
 ## <a name="remarks"></a>Примечания
 
-**Vararg** атрибут C++ имеет ту же функциональность, что [vararg](/windows/desktop/Midl/vararg) описании атрибута MIDL.
+Атрибут **vararg** C++ имеет те же функциональные возможности, что и атрибут [vararg](/windows/win32/Midl/vararg) в MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -51,10 +51,10 @@ __interface X : public IUnknown
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
