@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866155"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505443"
 ---
 # <a name="cmfcrebar-class"></a>Класс Кмфкребар
 
@@ -120,7 +120,7 @@ BOOL AddBar(
 [вход, выход] Указывает битовую карту, отображаемую в фоновом элементе главной панели.
 
 *двстиле*<br/>
-окне Содержит стиль, применяемый к полосе. Полный список стилей диапазонов см. в описании `fStyle` структуры [ребарбандинфо](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) в документации по Windows SDK.
+окне Содержит стиль, применяемый к полосе. Полный список стилей диапазонов см. в описании `fStyle` структуры [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) в документации по Windows SDK.
 
 *клрфоре*<br/>
 окне Представляет цвет переднего плана главной панели.
@@ -150,7 +150,7 @@ BOOL Create(
 [вход, выход] Указатель на родительское окно этого элемента управления главной панели.
 
 *двктрлстиле*<br/>
-окне Задает стиль элемента управления главной панели. Значение стиля по умолчанию — **RBS_BANDBORDERS**, которое отображает узкие строки для разделения смежных полос в элементе управления главной панели. Список допустимых стилей см. в разделе [стили элементов управления главной](/windows/desktop/Controls/rebar-control-styles) панели в документации по Windows SDK.
+окне Задает стиль элемента управления главной панели. Значение стиля по умолчанию — **RBS_BANDBORDERS**, которое отображает узкие строки для разделения смежных полос в элементе управления главной панели. Список допустимых стилей см. в разделе [стили элементов управления главной](/windows/win32/Controls/rebar-control-styles) панели в документации по Windows SDK.
 
 *двстиле*<br/>
 окне Стиль окна элемента управления главной панели. Список допустимых стилей см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
