@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 5bc9c0190ea200b25b8ea3b20311c98c1c131838
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: cd0c1ed85969d50548cf6b2be1d5677ed62110bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821265"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502570"
 ---
 # <a name="cscrollbar-class"></a>Класс Кскроллбар
 
@@ -203,7 +203,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="parameters"></a>Параметры
 
 *пскроллинфо*<br/>
-Указатель на структуру [скроллбаринфо](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo) .
+Указатель на структуру [скроллбаринфо](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -211,7 +211,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция члена эмулирует функциональность сообщения [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo) , как описано в Windows SDK.
+Эта функция члена эмулирует функциональность сообщения [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) , как описано в Windows SDK.
 
 ##  <a name="getscrollinfo"></a>Кскроллбар:: Жетскроллинфо
 

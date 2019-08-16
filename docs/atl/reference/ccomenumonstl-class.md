@@ -1,5 +1,5 @@
 ---
-title: Класс CComEnumOnSTL
+title: Класс Ккоменумонстл
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnumOnSTL
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: f9bf9c227984b2fdbf460f970357f395934b238c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab11ea5e5347c9c8684e8710e9742fdbcad8a46b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246386"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497164"
 ---
-# <a name="ccomenumonstl-class"></a>Класс CComEnumOnSTL
+# <a name="ccomenumonstl-class"></a>Класс Ккоменумонстл
 
-Этот класс определяет перечислитель COM-объекта на основе коллекции стандартной библиотеки C++.
+Этот класс определяет объект перечислителя COM на основе коллекции C++ стандартной библиотеки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,44 +32,44 @@ CollType>,
 
 #### <a name="parameters"></a>Параметры
 
-*Base*<br/>
-COM-перечислитель. См. в разделе [IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring) пример.
+*Из*<br/>
+Перечислитель COM. Пример см. в разделе [иенумстринг](/windows/win32/api/objidl/nn-objidl-ienumstring) .
 
-*piid*<br/>
+*пиид*<br/>
 Указатель на идентификатор интерфейса интерфейса перечислителя.
 
 *T*<br/>
-Тип элемента, доступные в интерфейсе перечислителя.
+Тип элемента, предоставляемого интерфейсом перечислителя.
 
-*Копировать*<br/>
-Объект [Копировать политику](../../atl/atl-copy-policy-classes.md) класса.
+*Copy*.<br/>
+Класс [политики копирования](../../atl/atl-copy-policy-classes.md) .
 
-*CollType*<br/>
-Класс контейнера стандартной библиотеки C++.
+*коллтипе*<br/>
+Класс C++ контейнера стандартной библиотеки.
 
 ## <a name="remarks"></a>Примечания
 
-`CComEnumOnSTL` Определяет объект перечислителя COM на основе коллекции стандартной библиотеки C++. Этот класс может использоваться сама по себе или в сочетании с [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md). Стандартная последовательность действий при помощи этого класса приводятся ниже. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).
+`CComEnumOnSTL`Определяет объект перечислителя COM на основе коллекции C++ стандартной библиотеки. Этот класс можно использовать самостоятельно или в сочетании с [иколлектиононстлимпл](../../atl/reference/icollectiononstlimpl-class.md). Ниже приведены типичные действия по использованию этого класса. Дополнительные сведения см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md).
 
-## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Чтобы использовать этот класс с ICollectionOnSTLImpl:
+## <a name="to-use-this-class-with-icollectiononstlimpl"></a>Чтобы использовать этот класс с Иколлектиононстлимпл:
 
-- **TypeDef** специализации этого класса.
+- **Определение** специализации этого класса.
 
-- Используйте **typedef** как последним аргументом шаблона в специализации `ICollectionOnSTLImpl`.
+- Используйте **typedef** в качестве окончательного аргумента шаблона в специализации `ICollectionOnSTLImpl`.
 
-См. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md) пример.
+Пример см. в разделе [коллекции и перечислители ATL](../../atl/atl-collections-and-enumerators.md) .
 
-## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Чтобы использовать этот класс, независимо от ICollectionOnSTLImpl:
+## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>Использование этого класса независимо от Иколлектиононстлимпл:
 
-- **TypeDef** специализации этого класса.
+- **Определение** специализации этого класса.
 
 - Используйте **typedef** в качестве аргумента шаблона в специализации `CComObject`.
 
 - Создайте экземпляр `CComObject` специализации.
 
-- Инициализируйте объект перечислителя, вызвав [IEnumOnSTLImpl::Init](../../atl/reference/ienumonstlimpl-class.md#init).
+- Инициализируйте объект перечислителя путем вызова [иенумонстлимпл:: init](../../atl/reference/ienumonstlimpl-class.md#init).
 
-- Возвращает интерфейс перечислителя для клиента.
+- Возврат интерфейса перечислителя клиенту.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -79,31 +79,31 @@ COM-перечислитель. См. в разделе [IEnumString](/windows/d
 
 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)
+[иенумонстлимпл](../../atl/reference/ienumonstlimpl-class.md)
 
 `CComEnumOnSTL`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже код обеспечивает общую функцию для создания и инициализации объекта перечислителя.
+Приведенный ниже код предоставляет универсальную функцию для управления созданием и инициализацией объекта перечислителя.
 
 [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]
 
-Эта функция шаблона можно использовать для реализации `_NewEnum` свойство интерфейса коллекции, как показано ниже:
+Эта функция шаблона может использоваться для реализации `_NewEnum` свойства интерфейса коллекции, как показано ниже:
 
 [!code-cpp[NVC_ATL_COM#35](../../atl/codesnippet/cpp/ccomenumonstl-class_2.h)]
 
-Этот код создает **typedef** для `CComEnumOnSTL` , предоставляющий вектор `CComVariant`s с помощью параметра `IEnumVariant` интерфейс. `CVariantCollection` Класс уточняет `CreateSTLEnumerator` для работы с объектами перечислитель этого типа.
+Этот код создает **typedef** `CComEnumOnSTL` для, который предоставляет вектор из `CComVariant`с помощью `IEnumVariant` интерфейса. `CVariantCollection` Класс просто `CreateSTLEnumerator` специализируется на работе с объектами перечислителя этого типа.
 
 ## <a name="see-also"></a>См. также
 
-[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[Образец ATLCollections: Демонстрирует пользовательских классов политики копирования, ICollectionOnSTLImpl и CComEnumOnSTL](../../overview/visual-cpp-samples.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[иенумонстлимпл](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Пример Атлколлектионс: Демонстрирует классы политики Иколлектиононстлимпл, Ккоменумонстл и пользовательского копирования](../../overview/visual-cpp-samples.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)<br/>
+[ккомобжектсреадмодел](atl-typedefs.md#ccomobjectthreadmodel)<br/>
 [Класс IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)
