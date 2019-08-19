@@ -1,5 +1,5 @@
 ---
-title: Класс CSecurityAttributes
+title: Класс Ксекуритяттрибутес
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: b26de7a2a3426ed2fe86bd7ef50f6c5410fa5364
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
-ms.translationtype: MT
+ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503198"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915727"
 ---
-# <a name="csecurityattributes-class"></a>Класс CSecurityAttributes
+# <a name="csecurityattributes-class"></a>Класс Ксекуритяттрибутес
 
-Этот класс является тонкой оболочкой для структуры атрибуты безопасности.
+Этот класс является тонкой оболочкой для структуры атрибутов безопасности.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,19 +35,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |name|Описание|
 |----------|-----------------|
-|[CSecurityAttributes::CSecurityAttributes](#csecurityattributes)|Конструктор.|
+|[Ксекуритяттрибутес:: Ксекуритяттрибутес](#csecurityattributes)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CSecurityAttributes::Set](#set)|Вызовите этот метод для задания атрибутов `CSecurityAttributes` объекта.|
+|[Ксекуритяттрибутес:: Set](#set)|Вызовите этот метод, чтобы задать атрибуты `CSecurityAttributes` объекта.|
 
 ## <a name="remarks"></a>Примечания
 
-`SECURITY_ATTRIBUTES` Структура содержит [дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) используется для создания объекта и указывает, наследуется ли дескриптор, полученный путем указания этой структуры.
+Структура `SECURITY_ATTRIBUTES` содержит [дескриптор](/windows/desktop/api/winnt/ns-winnt-security_descriptor) безопасности, используемый для создания объекта, и указывает, наследуется ли полученный дескриптор путем указания этой структуры.
 
-Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,9 +57,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h
+**Заголовок:** атлсекурити. h
 
-##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes
+##  <a name="csecurityattributes"></a>Ксекуритяттрибутес:: Ксекуритяттрибутес
 
 Конструктор.
 
@@ -70,15 +70,15 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>Параметры
 
-*rSecurityDescriptor*<br/>
+*рсекуритидескриптор*<br/>
 Ссылка на дескриптор безопасности.
 
-*bInheritsHandle*<br/>
+*бинхеритшандле*<br/>
 Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.
 
-##  <a name="set"></a>  CSecurityAttributes::Set
+##  <a name="set"></a>Ксекуритяттрибутес:: Set
 
-Вызовите этот метод для задания атрибутов `CSecurityAttributes` объекта.
+Вызовите этот метод, чтобы задать атрибуты `CSecurityAttributes` объекта.
 
 ```
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -86,10 +86,10 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>Параметры
 
-*rSecurityDescriptor*<br/>
+*рсекуритидескриптор*<br/>
 Ссылка на дескриптор безопасности.
 
-*bInheritHandle*<br/>
+*бинхерисандле*<br/>
 Определяет, наследуется ли возвращаемый дескриптор при создании процесса. Если этот элемент имеет значение true, новый процесс наследует дескриптор.
 
 ### <a name="remarks"></a>Примечания
@@ -98,8 +98,8 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../overview/visual-cpp-samples.md)<br/>
+[Пример безопасности](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[Дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)
