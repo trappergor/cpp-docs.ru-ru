@@ -1,23 +1,30 @@
 ---
-title: nullopt_t структуры
-ms.date: 11/04/2016
+title: Структура nullopt_t
+ms.date: 08/04/2019
 f1_keywords:
 - optional/std::nullopt_t
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: 813a25fc7fa50460f251671c39c41c3d2a26a2e7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- optional/std::nullopt
+ms.openlocfilehash: 1f453a5d75de3f6dedb133d55c094a4f4274e08f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268506"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957044"
 ---
-# <a name="nulloptt-struct"></a>nullopt_t структуры
+# <a name="nullopt_t-struct"></a>Структура nullopt_t
 
-Тип пустой структурой, используется как уникальный тип для указания состояния не, содержащего значение `optional` объектов.
+Тип `nullopt_t` — уникальный, пустой тип, который указывает, что [необязательный](optional-class.md) объект не содержит значения.
+
+Константа `nullopt` типа `nullopt_t` указывает `optional` , что тип имеет неинициализированное состояние. Его можно использовать для инициализации `optional` объекта или по сравнению с одним.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-struct nullopt_t{see below};
-inline constexpr nullopt_t nullopt(unspecified);
+struct nullopt_t;
+inline constexpr nullopt_t nullopt{ /*implementation-defined*/ };
 ```
+
+## <a name="see-also"></a>См. также
+
+[\<Необязательный >](optional.md)\
+[необязательный класс](optional-class.md)
