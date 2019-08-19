@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916961"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504169"
 ---
 # <a name="colepropertiesdialog-class"></a>Класс Колепропертиесдиалог
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 ИДОК или ИДКАНЦЕЛ в случае успеха; в противном случае — 0. ИДОК и ИДКАНЦЕЛ — это константы, которые указывают, выбрал ли пользователь кнопку ОК или Отмена.
 
-Если возвращается ИДКАНЦЕЛ, можно вызвать функцию Windows [коммдлжекстендедеррор](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
+Если возвращается ИДКАНЦЕЛ, можно вызвать функцию Windows [коммдлжекстендедеррор](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
 
 ##  <a name="m_gp"></a>Колепропертиесдиалог:: m_gp
 
-Структура типа [олеуигнрлпропс](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa), используемая для инициализации страницы «Общие» диалогового окна «свойства OLE-объекта».
+Структура типа [олеуигнрлпропс](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw), используемая для инициализации страницы «Общие» диалогового окна «свойства OLE-объекта».
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>Колепропертиесдиалог:: m_lp
 
-Структура типа [олеуилинкпропс](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa), используемая для инициализации страницы ссылки диалогового окна Свойства объекта OLE.
+Структура типа [олеуилинкпропс](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw), используемая для инициализации страницы ссылки диалогового окна Свойства объекта OLE.
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ OLEUILINKPROPS m_lp;
 
 ##  <a name="m_op"></a>Колепропертиесдиалог:: m_Op
 
-Структура типа [олеуиобжектпропс](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa), используемая для инициализации диалогового окна Общие свойства объекта OLE.
+Структура типа [олеуиобжектпропс](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw), используемая для инициализации диалогового окна Общие свойства объекта OLE.
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 Эта структура содержит элементы, используемые для инициализации страниц общих, связанных и представлений.
 
-Дополнительные сведения см. в разделе структуры ОЛЕУИОБЖЕКТПРОПС и [олеуилинкпропс](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa) в Windows SDK.
+Дополнительные сведения см. в разделе структуры ОЛЕУИОБЖЕКТПРОПС и [олеуилинкпропс](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) в Windows SDK.
 
 ##  <a name="m_psh"></a>Колепропертиесдиалог:: m_psh
 
-Структура типа [пропшисеадер](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2), члены которой хранят характеристики объекта диалогового окна.
+Структура типа [пропшисеадер](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2), члены которой хранят характеристики объекта диалогового окна.
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>Колепропертиесдиалог:: m_vp
 
-Структура типа [олеуивиевпропс](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa), используемая для инициализации страницы «представление» диалогового окна Свойства объекта OLE.
+Структура типа [олеуивиевпропс](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw), используемая для инициализации страницы «представление» диалогового окна Свойства объекта OLE.
 
 ```
 OLEUIVIEWPROPS m_vp;

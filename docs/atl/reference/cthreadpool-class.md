@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915690"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496311"
 ---
 # <a name="cthreadpool-class"></a>Класс Ксреадпул
 
@@ -78,7 +78,7 @@ class CThreadPool : public IThreadPoolConfig
 
 Сразу после создания потока, *Worker*::`Initialize` будет вызываться для объекта, связанного с этим потоком. Непосредственно перед уничтожением потока будет вызван *Рабочий процесс*:`Terminate` :. Оба метода должны принимать аргумент **void** <strong>\*</strong> . Значение этого аргумента передается в пул потоков с помощью параметра *Пвворкерпарам* [Ксреадпул:: Initialize](#initialize).
 
-При наличии рабочих элементов в очереди и рабочих потоков, доступных для работы, Рабочий поток выберет элемент из очереди и вызовет `Execute` метод *рабочего* объекта для этого потока. Затем в метод передаются три элемента: элемент из очереди `pvWorkerParam` , который передается в *Worker*:: `Initialize` и *Worker*: `Terminate`:, и указатель на структуру [OVERLAPPED](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped) , используемую для очереди порта завершения ввода-вывода. .
+При наличии рабочих элементов в очереди и рабочих потоков, доступных для работы, Рабочий поток выберет элемент из очереди и вызовет `Execute` метод *рабочего* объекта для этого потока. Затем в метод передаются три элемента: элемент из очереди `pvWorkerParam` , который передается в *Worker*:: `Initialize` и *Worker*: `Terminate`:, и указатель на структуру [OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) , используемую для очереди порта завершения ввода-вывода. .
 
 *Рабочий* класс объявляет тип элементов, которые будут поставлены в очередь в пуле потоков, предоставляя typedef, *Worker*:: `RequestType`. Этот тип должен поддерживать приведение к ULONG_PTR и из него.
 
@@ -344,7 +344,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет запрос на завершение работы во все потоки в пуле. Если время ожидания истекает, этот метод вызывает [TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) для любого потока, который не завершил работу. Этот метод вызывается автоматически из деструктора класса.
+Этот метод отправляет запрос на завершение работы во все потоки в пуле. Если время ожидания истекает, этот метод вызывает [TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) для любого потока, который не завершил работу. Этот метод вызывается автоматически из деструктора класса.
 
 ## <a name="see-also"></a>См. также
 

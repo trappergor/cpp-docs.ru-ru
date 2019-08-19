@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: edae0e3d4751461bc8a5eb6644f5fdc62b0a5e8a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916859"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502828"
 ---
 # <a name="cpropertysheet-class"></a>Класс CPropertySheet
 
@@ -107,13 +107,13 @@ class CPropertySheet : public CWnd
 
 |name|Описание|
 |----------|-----------------|
-|[CPropertySheet:: m_psh](#m_psh)|Структура [Пропшисеадер](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) Windows. Предоставляет доступ к базовым параметрам страницы свойств.|
+|[CPropertySheet:: m_psh](#m_psh)|Структура [Пропшисеадер](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) Windows. Предоставляет доступ к базовым параметрам страницы свойств.|
 
 ## <a name="remarks"></a>Примечания
 
 Страница свойств состоит из `CPropertySheet` объекта и одного или нескольких объектов [CPropertyPage](../../mfc/reference/cpropertypage-class.md) . Платформа отображает страницу свойств в виде окна с набором индексов вкладок и областью, которая содержит текущую выбранную страницу. Пользователь переходит на определенную страницу с помощью соответствующей вкладки.
 
-`CPropertySheet`обеспечивает поддержку расширенной структуры [пропшисеадер](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2) , представленной в Windows 98 и windows NT 2000. Структура содержит дополнительные флаги и члены, поддерживающие использование фонового рисунка "водяного знака".
+`CPropertySheet`обеспечивает поддержку расширенной структуры [пропшисеадер](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) , представленной в Windows 98 и windows NT 2000. Структура содержит дополнительные флаги и члены, поддерживающие использование фонового рисунка "водяного знака".
 
 Чтобы автоматически отображать эти новые изображения в объекте страницы свойств, передайте допустимые значения для изображений битовой карты и палитры в вызове [CPropertySheet:: конструировать](#construct) или [CPropertySheet:: CPropertySheet](#cpropertysheet).
 
@@ -584,7 +584,7 @@ CTabCtrl* GetTabControl() const;
 
 ##  <a name="m_psh"></a>CPropertySheet:: m_psh
 
-Структура, члены которой хранят характеристики [пропшисеадер](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2).
+Структура, члены которой хранят характеристики [пропшисеадер](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Примечания
 
@@ -613,7 +613,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 Единицы диалоговых окон задаются в терминах текущей базовой единицы диалогового окна, производной от средней ширины и высоты символов шрифта, используемого для текста диалогового окна. Одна горизонтальная единица — это одна четвертая единица базовой ширины диалогового окна, а одна единица по вертикали — одна восьмая от базовой единицы высоты диалогового окна.
 
-Функция Windows [жетдиалогбасеунитс](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) возвращает сведения о размере для системного шрифта, но при использовании стиля DS_SETFONT в файле определения ресурса можно указать другой шрифт для каждой страницы свойств. Функция Windows [мапдиалогрект](/windows/desktop/api/winuser/nf-winuser-mapdialogrect) , описанная в Windows SDK, использует соответствующий шрифт для этого диалогового окна.
+Функция Windows [жетдиалогбасеунитс](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) возвращает сведения о размере для системного шрифта, но при использовании стиля DS_SETFONT в файле определения ресурса можно указать другой шрифт для каждой страницы свойств. Функция Windows [мапдиалогрект](/windows/win32/api/winuser/nf-winuser-mapdialogrect) , описанная в Windows SDK, использует соответствующий шрифт для этого диалогового окна.
 
 Функция-член заменяет единицы диалогового окна в лпрект с помощью единиц экрана (пикселей), чтобы прямоугольник можно было использовать для создания диалогового окна или размещения элемента управления в поле. `MapDialogRect`
 
@@ -666,9 +666,9 @@ void PressButton(int nButton);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о сообщении Windows SDK Прессбуттон см. в разделе [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) .
+Дополнительные сведения о сообщении Windows SDK Прессбуттон см. в разделе [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) .
 
-При вызове `PressButton` метода не будет отправлено уведомление [PSN_APPLY](/windows/desktop/Controls/psn-apply) со страницы свойств в платформу. Чтобы отправить это уведомление, вызовите [CPropertyPage:: ОНОК](../../mfc/reference/cpropertypage-class.md#onok).
+При вызове `PressButton` метода не будет отправлено уведомление [PSN_APPLY](/windows/win32/Controls/psn-apply) со страницы свойств в платформу. Чтобы отправить это уведомление, вызовите [CPropertyPage:: ОНОК](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Пример
 

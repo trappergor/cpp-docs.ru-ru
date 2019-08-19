@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915727"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496498"
 ---
 # <a name="csecurityattributes-class"></a>Класс Ксекуритяттрибутес
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Примечания
 
-Структура `SECURITY_ATTRIBUTES` содержит [дескриптор](/windows/desktop/api/winnt/ns-winnt-security_descriptor) безопасности, используемый для создания объекта, и указывает, наследуется ли полученный дескриптор путем указания этой структуры.
+Структура `SECURITY_ATTRIBUTES` содержит [дескриптор](/windows/win32/api/winnt/ns-winnt-security_descriptor) безопасности, используемый для создания объекта, и указывает, наследуется ли полученный дескриптор путем указания этой структуры.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -100,6 +100,6 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 [Пример безопасности](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[Дескриптор безопасности](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[Дескриптор безопасности](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

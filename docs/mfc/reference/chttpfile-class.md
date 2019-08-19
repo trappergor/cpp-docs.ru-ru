@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915998"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505964"
 ---
 # <a name="chttpfile-class"></a>Класс Чттпфиле
 
@@ -126,7 +126,7 @@ BOOL AddRequestHeaders(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [хттпендрекуест](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) в Windows SDK.
+Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [хттпендрекуест](/windows/win32/api/wininet/nf-wininet-httpendrequestw) в Windows SDK.
 
 *лпбуффин*<br/>
-Указатель на инициализированное [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) , описывающее входной буфер, используемый для операции.
+Указатель на инициализированное [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) , описывающее входной буфер, используемый для операции.
 
 *двконтекст*<br/>
 Идентификатор контекста для `CHttpFile` операции. Дополнительные сведения об этом параметре см. в разделе "Примечания".
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS Обычно приложение запрашивает заголовки ответа, но приложение может также запрашивать заголовки запросов с помощью этого флага.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME для этих заголовков, значение которых является строкой даты и времени, например "Last-Modified-Time", этот флаг возвращает значение заголовка как стандартную структуру Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) , не требующую от приложения анализа данных. При использовании этого флага может потребоваться `SYSTEMTIME` переопределение функции.
+- HTTP_QUERY_FLAG_SYSTEMTIME для этих заголовков, значение которых является строкой даты и времени, например "Last-Modified-Time", этот флаг возвращает значение заголовка как стандартную структуру Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) , не требующую от приложения анализа данных. При использовании этого флага может потребоваться `SYSTEMTIME` переопределение функции.
 
 - HTTP_QUERY_FLAG_NUMBER для этих заголовков, значение которых равно числу, например код состояния, этот флаг возвращает данные в виде 32-разрядного числа.
 
@@ -315,11 +315,11 @@ BOOL QueryInfo(
 Значение индекса. См. *лпдвиндекс*.
 
 *псистиме*<br/>
-Указатель на структуру Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) .
+Указатель на структуру Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -398,7 +398,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается неудачно, можно вызвать функцию Win32 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) , чтобы определить причину ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 Число байтов, отправляемых в запросе.
 
 *dwFlags*<br/>
-Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [хттпсендрекуестекс](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) в Windows SDK.
+Флаги, описывающие операцию. Список соответствующих флагов см. в разделе [хттпсендрекуестекс](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) в Windows SDK.
 
 *двконтекст*<br/>
 Идентификатор контекста для `CHttpFile` операции. Дополнительные сведения об этом параметре см. в разделе "Примечания".
 
 *лпбуффин*<br/>
-Указатель на инициализированное [INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa) , описывающее входной буфер, используемый для операции.
+Указатель на инициализированное [INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw) , описывающее входной буфер, используемый для операции.
 
 *лпбуффаут*<br/>
 Указатель на инициализированное INTERNET_BUFFERS, описывающее выходной буфер, используемый для операции.

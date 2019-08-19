@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496295"
 ---
 # <a name="ctokengroups-class"></a>Класс Ктокенграупс
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Примечания
 
-[Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, который описывает контекст безопасности процесса или потока и выделяется каждому пользователю, вошедшему в систему Windows.
+[Маркер доступа](/windows/win32/SecAuthZ/access-tokens) — это объект, который описывает контекст безопасности процесса или потока и выделяется каждому пользователю, вошедшему в систему Windows.
 
-Класс `CTokenGroups` является оболочкой для структуры [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups), содержащей сведения об идентификаторах безопасности групп (SID) в маркере доступа.
+Класс `CTokenGroups` является оболочкой для структуры [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups), содержащей сведения об идентификаторах безопасности групп (SID) в маркере доступа.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="requirements"></a>Требования
 
@@ -95,7 +95,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 Атрибуты, связываемые с `CSid` объектом.
 
 *ртокенграупс*<br/>
-Структура [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Структура [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ### <a name="remarks"></a>Примечания
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>Параметры
 
 *rhs*<br/>
-Объект или структура [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , с `CTokenGroups` которой создается объект. `CTokenGroups`
+Объект или структура [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , с `CTokenGroups` которой создается объект. `CTokenGroups`
 
 ### <a name="remarks"></a>Примечания
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Извлекает указатель на структуру [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) , принадлежащую `CTokenGroups` объекту маркера доступа.
+Извлекает указатель на структуру [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) , принадлежащую `CTokenGroups` объекту маркера доступа.
 
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>Параметры
 
 *rhs*<br/>
-Объект или структура [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) `CTokenGroups` для назначения объекту. `CTokenGroups`
+Объект или структура [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) `CTokenGroups` для назначения объекту. `CTokenGroups`
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Примечания
 
-Приводит значение к указателю на структуру [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) .
+Приводит значение к указателю на структуру [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) .
 
 ## <a name="see-also"></a>См. также
 
