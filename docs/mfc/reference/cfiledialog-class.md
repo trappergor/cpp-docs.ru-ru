@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: a7287b2e3011159573f44e9247e016d81d893491
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
-ms.translationtype: HT
+ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821070"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506597"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 
@@ -258,11 +258,11 @@ class CFileDialog : public CCommonDialog
 После инициализации элементов управления диалогового окна вызовите метод [CFileDialog::D омодал](#domodal) , чтобы отобразить диалоговое окно, чтобы пользователь мог ввести путь и имя файла. `DoModal`Возвращает значение, указывающее, щелкнул пользователь кнопку ОК (ИДОК) или Отмена (ИДКАНЦЕЛ). Если `DoModal` возвращает идок, можно использовать одну `CFileDialog` из открытых функций члена для получения сведений, получающих пользователя.
 
 > [!NOTE]
-> В Windows Vista или более поздних версиях несколько вызовов [ифиледиалог:: сетфилетипес](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) вызывает ошибку. Второй вызов метода `SetFileTypes` для любого экземпляра `CFileDialog` функции возвратит E_UNEXPECTED в Windows Vista или более поздней версии. Некоторые `CFileDialog` функции методов вызывают `SetFileTypes`. Например, два вызова `CFileDialog::DoModal` для одного и того же экземпляра `CFileDialog` создает [Assert](diagnostic-services.md#assert).
+> В Windows Vista или более поздних версиях несколько вызовов [ифиледиалог:: сетфилетипес](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) вызывает ошибку. Второй вызов метода `SetFileTypes` для любого экземпляра `CFileDialog` функции возвратит E_UNEXPECTED в Windows Vista или более поздней версии. Некоторые `CFileDialog` функции методов вызывают `SetFileTypes`. Например, два вызова `CFileDialog::DoModal` для одного и того же экземпляра `CFileDialog` создает [Assert](diagnostic-services.md#assert).
 
 `CFileDialog`включает несколько защищенных членов, которые позволяют выполнять пользовательскую обработку нарушений общего доступа, проверки имени файла и уведомления об изменении списка. Эти защищенные члены являются функциями обратного вызова, которые не должны использоваться большинством приложений, так как обработка по умолчанию выполняется автоматически. Записи схемы сообщений для этих функций не требуются, так как они являются стандартными виртуальными функциями.
 
-Вы можете использовать функцию Windows [коммдлжекстендедеррор](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка во время инициализации диалогового окна, и получить дополнительные сведения об ошибке.
+Вы можете использовать функцию Windows [коммдлжекстендедеррор](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка во время инициализации диалогового окна, и получить дополнительные сведения об ошибке.
 
 Уничтожение `CFileDialog` объектов обрабатывается автоматически. Нет необходимости вызывать метод [CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog).
 
@@ -604,7 +604,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ИДОК или ИДКАНЦЕЛ. Если возвращается ИДКАНЦЕЛ, вызовите функцию Windows [коммдлжекстендедеррор](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
+ИДОК или ИДКАНЦЕЛ. Если возвращается ИДКАНЦЕЛ, вызовите функцию Windows [коммдлжекстендедеррор](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
 
 ИДОК и ИДКАНЦЕЛ — это константы, которые указывают, выбрал ли пользователь кнопку ОК или Отмена.
 
@@ -827,7 +827,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 
 Используйте эту функцию только в Windows Vista или более поздней версии с объектом, для которого параметр *бвистастиле* имеет значение true. Если вы используете эту функцию, когда *бвистастиле* имеет значение false, он вернет NULL в режим Release и выдаст утверждение в режиме отладки.
 
-Дополнительные сведения об интерфейсе `IFileDialogCustomize` см. в разделе [ифиледиалогкустомизе](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+Дополнительные сведения об интерфейсе `IFileDialogCustomize` см. в разделе [ифиледиалогкустомизе](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ### <a name="example"></a>Пример
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 Используйте эту функцию только в Windows Vista или более поздней версии с объектом, для которого параметр *бвистастиле* имеет значение true. Эта функция возвращает значение null, `CFileDialog` если не является **открытым** диалоговым окном или если *бвистастиле* имеет значение false. В этом последнем случае функция возвращает значение NULL в режиме выпуска — в режиме отладки будет создано утверждение.
 
-Дополнительные сведения об интерфейсе `IFileOpenDialog` см. в разделе [ифилеопендиалог](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
+Дополнительные сведения об интерфейсе `IFileOpenDialog` см. в разделе [ифилеопендиалог](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Пример
 
@@ -875,7 +875,7 @@ IFileSaveDialog* GetIFileSaveDialog();
 
 Используйте эту функцию только в Windows Vista или более поздней версии с объектом, для которого параметр *бвистастиле* имеет значение true. Эта функция возвращает null, если `CFileDialog` не является диалоговым окном **сохранения** или если *бвистастиле* имеет значение false. В этом последнем случае функция возвращает значение NULL в режиме выпуска — в режиме отладки будет создано утверждение.
 
-Дополнительные сведения об интерфейсе `IFileSaveDialog` см. в разделе [ифилесаведиалог](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
+Дополнительные сведения об интерфейсе `IFileSaveDialog` см. в разделе [ифилесаведиалог](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog).
 
 ### <a name="example"></a>Пример
 
@@ -1185,7 +1185,7 @@ virtual void OnFileNameChange();
 
 Система отправляет сообщение CDN_SELCHANGE, когда пользователь выбирает новый файл или папку в списке файлов диалогового окна **Открыть** или **Сохранить как** . Переопределите этот метод, если вы хотите выполнять любые действия в ответ на это сообщение.
 
-Система отправляет это сообщение только в том случае, если диалоговое окно было создано с включенным флагом OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange). Сведения о флаге OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)окон.
+Система отправляет это сообщение только в том случае, если диалоговое окно было создано с включенным флагом OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange). Сведения о флаге OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)окон.
 
 ##  <a name="onfilenameok"></a>CFileDialog:: Онфиленамеок
 
@@ -1217,7 +1217,7 @@ virtual void OnFolderChange();
 
 Сообщение уведомления отправляется при открытии новой папки в диалоговом окне Открыть или сохранить как.
 
-Уведомление отправляется только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)окон.
+Уведомление отправляется только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)окон.
 
 ##  <a name="oninitdone"></a>CFileDialog:: Онинитдоне
 
@@ -1231,7 +1231,7 @@ virtual void OnInitDone();
 
 Система отправляет это уведомление, когда система завершает упорядочение элементов управления в диалоговом окне **Открытие** или **Сохранение как** , чтобы освободить место для элементов управления дочернего диалогового окна.
 
-Система отправляет этот объект только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)окон.
+Система отправляет этот объект только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)окон.
 
 > [!NOTE]
 > Диалоговые окна файлов стилей Windows Vista и более поздних версий не поддерживают эту функцию. При попытке использовать эту функцию в диалоговом окне файла стиля Windows Vista или более поздней версии будет выдано исключение [кнотсуппортедексцептион](../../mfc/reference/cnotsupportedexception-class.md).
@@ -1331,7 +1331,7 @@ virtual void OnTypeChange();
 
 Сообщение уведомления отправляется, когда пользователь выбирает новый тип файла из списка типов файлов в диалоговом окне Открыть или сохранить как.
 
-Уведомление отправляется только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)окон.
+Уведомление отправляется только в том случае, если диалоговое окно было создано с использованием стиля OFN_EXPLORER. Дополнительные сведения об уведомлении см. в разделе [CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange). Сведения о стиле OFN_EXPLORER см. в статьях структура [OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew) , а [также открытие и сохранение в виде диалоговых](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)окон.
 
 ##  <a name="removecontrolitem"></a>CFileDialog:: Ремовеконтролитем
 
@@ -1594,7 +1594,7 @@ void SetTemplate(
 Система будет использовать только один из указанных шаблонов. Система определяет, какой шаблон следует использовать, в зависимости от наличия стиля OFN_EXPLORER и операционной системы, в которой работает приложение. Если указать как обозреватель, так и шаблон, не являющийся обозревателем, можно легко поддерживать Windows NT 3,51, Windows NT 4,0 и более поздние версии, а также Windows 95 и более поздние версии.
 
 > [!NOTE]
-> Диалоговые окна файлов в формате Windows Vista и более поздних версий не поддерживают эту функцию. При попытке использовать эту функцию в диалоговом окне файл стиля Windows Vista или более поздней версии будет выдано исключение [кнотсуппортедексцептион](../../mfc/reference/cnotsupportedexception-class.md). Альтернативой является использование настроенного диалогового окна. Дополнительные сведения об использовании пользовательской `CFileDialog`функции см. в разделе [ифиледиалогкустомизе](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
+> Диалоговые окна файлов в формате Windows Vista и более поздних версий не поддерживают эту функцию. При попытке использовать эту функцию в диалоговом окне файл стиля Windows Vista или более поздней версии будет выдано исключение [кнотсуппортедексцептион](../../mfc/reference/cnotsupportedexception-class.md). Альтернативой является использование настроенного диалогового окна. Дополнительные сведения об использовании пользовательской `CFileDialog`функции см. в разделе [ифиледиалогкустомизе](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize).
 
 ##  <a name="startvisualgroup"></a>CFileDialog:: Стартвисуалграуп
 
@@ -1628,7 +1628,7 @@ void UpdateOFNFromShellDialog();
 
 В версиях Windows до Windows Vista структура данных [OpenFileName](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) элемента была непрерывно синхронизирована с состоянием `CFileDialog`. Любые изменения в переменной члена [m_ofn](#m_ofn) непосредственно затронули состояние диалогового окна. Кроме того, любые изменения состояния диалогового окна сразу же обновляют переменную члена m_ofn.
 
-В Windows Vista или более поздней `m_ofn` версии структура данных не обновляется автоматически. Чтобы гарантировать точность данных в `m_ofn` переменной члена, следует `UpdateOFNFromShellDialog` вызвать функцию перед доступом к данным. Windows вызывает эту функцию автоматически во время обработки [ифиледиалог:: OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
+В Windows Vista или более поздней `m_ofn` версии структура данных не обновляется автоматически. Чтобы гарантировать точность данных в `m_ofn` переменной члена, следует `UpdateOFNFromShellDialog` вызвать функцию перед доступом к данным. Windows вызывает эту функцию автоматически во время обработки [ифиледиалог:: OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
 Дополнительные сведения об использовании `CFileDialog` класса в Windows Vista или более поздней версии см. в разделе [класс CFileDialog](../../mfc/reference/cfiledialog-class.md).
 

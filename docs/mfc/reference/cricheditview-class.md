@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: eacb41a7ae4c42a34a67f57dc0af0d966d134c14
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916749"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502633"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -357,11 +357,11 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Структура [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , которая содержит атрибуты форматирования символов для текущего выделения.
+Структура [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая содержит атрибуты форматирования символов для текущего выделения.
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в описании сообщения [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) и структуры [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) и структуры [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -369,7 +369,7 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ##  <a name="getclipboarddata"></a>CRichEditView:: Жетклипбоарддата
 
-Платформа вызывает эту функцию как часть обработки [иричедитолекаллбакк:: жетклипбоарддата](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
+Платформа вызывает эту функцию как часть обработки [иричедитолекаллбакк:: жетклипбоарддата](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata).
 
 ```
 virtual HRESULT GetClipboardData(
@@ -382,7 +382,7 @@ virtual HRESULT GetClipboardData(
 ### <a name="parameters"></a>Параметры
 
 *лпчрг*<br/>
-Указатель на структуру [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) , определяющую диапазон символов (и элементов OLE) для копирования в объект данных, указанный параметром *лплпдатаобж*.
+Указатель на структуру [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) , определяющую диапазон символов (и элементов OLE) для копирования в объект данных, указанный параметром *лплпдатаобж*.
 
 *двреко*<br/>
 Флаг операции буфера обмена. Может принимать одно из следующих значений.
@@ -398,14 +398,14 @@ virtual HRESULT GetClipboardData(
 - RECO_PASTE вставка из буфера обмена.
 
 *лпричдатаобж*<br/>
-Указатель на объект [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) , содержащий данные буфера обмена из элемента управления Rich Edit ( [Иричедитоле:: жетклипбоарддата](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata)).
+Указатель на объект [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) , содержащий данные буфера обмена из элемента управления Rich Edit ( [Иричедитоле:: жетклипбоарддата](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)).
 
 *лплпдатаобж*<br/>
 Указатель на переменную указателя, которая получает адрес `IDataObject` объекта, представляющего диапазон, указанный в параметре *лпчрг* . Значение *лплпдатаобж* игнорируется, если возвращается ошибка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение HRESULT, сообщающее об успешном выполнении операции. Дополнительные сведения о HRESULT см. в разделе [структура кодов ошибок COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.
+Значение HRESULT, сообщающее об успешном выполнении операции. Дополнительные сведения о HRESULT см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -413,11 +413,11 @@ virtual HRESULT GetClipboardData(
 
 Это расширенный переопределяемый объект.
 
-Дополнительные сведения см. в разделе [иричедитоле:: жетклипбоарддата](/windows/desktop/api/richole/nf-richole-iricheditole-getclipboarddata), [Иричедитолекаллбакк:: жетклипбоарддата](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getclipboarddata)и [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) в Windows SDK и см. в разделе [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) в Windows SDK.
+Дополнительные сведения см. в разделе [иричедитоле:: жетклипбоарддата](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata), [Иричедитолекаллбакк:: жетклипбоарддата](/windows/win32/api/richole/nf-richole-iricheditolecallback-getclipboarddata)и [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) в Windows SDK и см. в разделе [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) в Windows SDK.
 
 ##  <a name="getcontextmenu"></a>CRichEditView:: ContextMenu
 
-Платформа вызывает эту функцию как часть обработки [иричедитолекаллбакк:: ContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu).
+Платформа вызывает эту функцию как часть обработки [иричедитолекаллбакк:: ContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu).
 
 ```
 virtual HMENU GetContextMenu(
@@ -435,7 +435,7 @@ virtual HMENU GetContextMenu(
 Указатель на `OLEOBJECT` структуру, указывающую первый выбранный объект OLE, если выделенный фрагмент содержит один или несколько элементов OLE. Если выделение не содержит элементов, *лполеобж* имеет значение null. `OLEOBJECT` Структура содержит указатель на таблицу v-table объекта OLE.
 
 *лпчрг*<br/>
-Указатель на структуру [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) , содержащую текущее выделение.
+Указатель на структуру [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) , содержащую текущее выделение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -459,7 +459,7 @@ virtual HMENU GetContextMenu(
 
 Реализация по умолчанию возвращает значение NULL. Это расширенный переопределяемый объект.
 
-Дополнительные сведения см. в разделе [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) и [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-charrange) в Windows SDK.
+Дополнительные сведения см. в разделе [IRichEditOleCallback::GetContextMenu](/windows/win32/api/richole/nf-richole-iricheditolecallback-getcontextmenu) и [CHARRANGE](/windows/win32/api/richedit/ns-richedit-charrange) в Windows SDK.
 
 ##  <a name="getdocument"></a>CRichEditView:: a Document
 
@@ -539,11 +539,11 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Структура [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , которая содержит атрибуты форматирования абзаца для текущего выделения.
+Структура [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , которая содержит атрибуты форматирования абзаца для текущего выделения.
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) Message и [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) Message и [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
 
 ##  <a name="getprintrect"></a>CRichEditView:: Жетпринтрект
 
@@ -626,7 +626,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Значение, указывающее метод, используемый для определения длины текста. Этот элемент может быть одним или несколькими значениями, перечисленными в элементе flags элемента [жеттекстленгсекс](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) , описанным в Windows SDK.
+Значение, указывающее метод, используемый для определения длины текста. Этот элемент может быть одним или несколькими значениями, перечисленными в элементе flags элемента [жеттекстленгсекс](/windows/win32/api/richedit/ns-richedit-gettextlengthex) , описанным в Windows SDK.
 
 *укодепаже*<br/>
 Кодовая страница для перевода (CP_ACP для кодовой страницы ANSI, 1200 для Юникода).
@@ -637,7 +637,7 @@ long GetTextLengthEx(
 
 ### <a name="remarks"></a>Примечания
 
-`GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения см. в разделе [об элементах управления Rich Edit](/windows/desktop/Controls/about-rich-edit-controls) в Windows SDK.
+`GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения см. в разделе [об элементах управления Rich Edit](/windows/win32/Controls/about-rich-edit-controls) в Windows SDK.
 
 ##  <a name="insertfileasobject"></a>CRichEditView:: Инсертфилеасобжект
 
@@ -671,7 +671,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о HRESULT см. в разделе [структура кодов ошибок COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.
+Дополнительные сведения о HRESULT см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes) в Windows SDK.
 
 ##  <a name="isricheditformat"></a>CRichEditView:: Исричедитформат
 
@@ -763,7 +763,7 @@ void OnCharEffect(
 
 Каждый вызов этой функции переключает указанные эффекты форматирования для текущего выделения.
 
-Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) в Windows SDK.
+Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -826,7 +826,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 ### <a name="parameters"></a>Параметры
 
 *лпстг*<br/>
-Указатель на объект [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) .
+Указатель на объект [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -838,7 +838,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 
 Это расширенный переопределяемый объект.
 
-Дополнительные сведения см. в разделе [IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) в Windows SDK.
+Дополнительные сведения см. в разделе [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) в Windows SDK.
 
 ##  <a name="onparaalign"></a>CRichEditView:: Онпараалигн
 
@@ -963,9 +963,9 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите эту функцию, чтобы изменить выходное уведомление из [мессажебип](/windows/desktop/api/winuser/nf-winuser-messagebeep).
+Переопределите эту функцию, чтобы изменить выходное уведомление из [мессажебип](/windows/win32/api/winuser/nf-winuser-messagebeep).
 
-Дополнительные сведения см. в разделе [мессажебип](/windows/desktop/api/winuser/nf-winuser-messagebeep) в Windows SDK.
+Дополнительные сведения см. в разделе [мессажебип](/windows/win32/api/winuser/nf-winuser-messagebeep) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -997,7 +997,7 @@ void OnUpdateCharEffect(
 
 Маска *двмаск* указывает, какие атрибуты форматирования символов следует проверять. Флаги *двеффект* список атрибутов форматирования символов, которые нужно задать или очистить.
 
-Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) в Windows SDK.
+Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1050,7 +1050,7 @@ long PrintInsideRect(
 Указатель на контекст устройства для области вывода.
 
 *ректлайаут*<br/>
-[Rect](/windows/desktop/api/windef/ns-windef-tagrect) или [крект](../../atl-mfc-shared/reference/crect-class.md) , определяющие область вывода.
+[Rect](/windows/win32/api/windef/ns-windef-rect) или [крект](../../atl-mfc-shared/reference/crect-class.md) , определяющие область вывода.
 
 *ниндексстарт*<br/>
 Отсчитываемый от нуля индекс первого форматируемого символа.
@@ -1121,7 +1121,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="parameters"></a>Параметры
 
 *лпдатаобж*<br/>
-Указатель на [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject) для запроса.
+Указатель на [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) для запроса.
 
 *лпкфформат*<br/>
 Указатель на допустимый формат данных.
@@ -1143,7 +1143,7 @@ virtual HRESULT QueryAcceptData(
 
 Переопределите эту функцию, чтобы она обрабатывала другую организацию COM-элементов в производном классе документа. Это расширенный переопределяемый объект.
 
-Дополнительные сведения о HRESULT и `IDataObject`см. в разделе [структура кодов ошибок com](/windows/desktop/com/structure-of-com-error-codes) и [IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)соответственно в Windows SDK.
+Дополнительные сведения о HRESULT и `IDataObject`см. в разделе [структура кодов ошибок com](/windows/win32/com/structure-of-com-error-codes) и [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)соответственно в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1160,13 +1160,13 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-Структура [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , содержащая новые атрибуты форматирования символов по умолчанию.
+Структура [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , содержащая новые атрибуты форматирования символов по умолчанию.
 
 ### <a name="remarks"></a>Примечания
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *CF* .
 
-Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) Message и [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) Message и [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1227,7 +1227,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Параметры
 
 *pf*<br/>
-Структура [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , содержащая новые атрибуты форматирования абзаца по умолчанию.
+Структура [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , содержащая новые атрибуты форматирования абзаца по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1237,7 +1237,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *PF* .
 
-Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) Message и [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) Message и [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 

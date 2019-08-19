@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 5f8379d20d8c8d525cd645e1d4aa0c751e16f531
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f4ecc96ee53d6c688d17afa9957ccbf5060ca3fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915536"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496275"
 ---
 # <a name="ctokenprivileges-class"></a>Класс Ктокенпривилежес
 
@@ -71,13 +71,13 @@ class CTokenPrivileges
 
 ## <a name="remarks"></a>Примечания
 
-[Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, который описывает контекст безопасности процесса или потока и выделяется каждому пользователю, вошедшему в систему Windows.
+[Маркер доступа](/windows/win32/SecAuthZ/access-tokens) — это объект, который описывает контекст безопасности процесса или потока и выделяется каждому пользователю, вошедшему в систему Windows.
 
-Маркер доступа используется для описания различных привилегий безопасности, предоставляемых каждому пользователю. Привилегия состоит из 64-разрядного числа, которое называется локальным уникальным идентификатором ( [LUID](/windows/desktop/api/winnt/ns-winnt-luid)) и строкой дескриптора.
+Маркер доступа используется для описания различных привилегий безопасности, предоставляемых каждому пользователю. Привилегия состоит из 64-разрядного числа, которое называется локальным уникальным идентификатором ( [LUID](/windows/win32/api/winnt/ns-winnt-luid)) и строкой дескриптора.
 
-Класс `CTokenPrivileges` является оболочкой для структуры [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) и содержит 0 или более привилегий. Права доступа могут добавляться, удаляться или запрашиваться с помощью предоставленных методов класса.
+Класс `CTokenPrivileges` является оболочкой для структуры [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) и содержит 0 или более привилегий. Права доступа могут добавляться, удаляться или запрашиваться с помощью предоставленных методов класса.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/desktop/SecAuthZ/access-control) в Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="requirements"></a>Требования
 
@@ -101,7 +101,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 Если задано значение true, привилегия включена. Если задано значение false, привилегия отключена.
 
 *рпривилежес*<br/>
-Ссылка на структуру [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) . Права и атрибуты копируются из этой структуры и добавляются в `CTokenPrivileges` объект.
+Ссылка на структуру [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) . Права и атрибуты копируются из этой структуры и добавляются в `CTokenPrivileges` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -123,7 +123,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 `CTokenPrivileges` Объект, присваиваемый новому объекту.
 
 *рпривилежес*<br/>
-Структура [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) , которую нужно назначить новому `CTokenPrivileges` объекту.
+Структура [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) , которую нужно назначить новому `CTokenPrivileges` объекту.
 
 ### <a name="remarks"></a>Примечания
 
@@ -230,7 +230,7 @@ void GetLuidsAndAttributes(
 ### <a name="parameters"></a>Параметры
 
 *ппривилежес*<br/>
-Указатель на массив объектов [LUID](/windows/desktop/api/winnt/ns-winnt-luid) . `CLUIDArray`— Это определение типа, `CAtlArray<LUID> CLUIDArray`определенное как.
+Указатель на массив объектов [LUID](/windows/win32/api/winnt/ns-winnt-luid) . `CLUIDArray`— Это определение типа, `CAtlArray<LUID> CLUIDArray`определенное как.
 
 *паттрибутес*<br/>
 Указатель на массив объектов типа DWORD. Если этот параметр опущен или имеет значение NULL, атрибуты не извлекаются. `CAttributes`— Это определение типа, `CAtlArray <DWORD> CAttributes`определенное как.
@@ -273,7 +273,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на структуру [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) .
+Возвращает указатель на структуру [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) .
 
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege
 
@@ -309,7 +309,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="parameters"></a>Параметры
 
 *рпривилежес*<br/>
-Структура [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) , которую необходимо назначить `CTokenPrivileges` объекту.
+Структура [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) , которую необходимо назначить `CTokenPrivileges` объекту.
 
 *rhs*<br/>
 `CTokenPrivileges` Объект, присваиваемый объекту.
@@ -328,13 +328,13 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ### <a name="remarks"></a>Примечания
 
-Приводит значение к указателю на структуру [TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges) .
+Приводит значение к указателю на структуру [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) .
 
 ## <a name="see-also"></a>См. также
 
 [Пример безопасности](../../overview/visual-cpp-samples.md)<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-token_privileges)<br/>
-[LUID](/windows/desktop/api/winnt/ns-winnt-luid)<br/>
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes)<br/>
+[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)<br/>
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

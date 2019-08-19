@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 253b1958a93fea28fa2d1408bc8238a5eb0ca519
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916808"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503153"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -296,7 +296,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="parameters"></a>Параметры
 
 *нформат*<br/>
-Формат данных буфера обмена для запроса. Этот параметр может быть одним из стандартных форматов буфера обмена или значением, возвращаемым функцией [регистерклипбоардформат](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata).
+Формат данных буфера обмена для запроса. Этот параметр может быть одним из стандартных форматов буфера обмена или значением, возвращаемым функцией [регистерклипбоардформат](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -306,7 +306,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 
 Если *нформат* имеет значение 0 `CanPaste` , будет пытаться использовать любой формат в буфере обмена.
 
-Дополнительные сведения см. в разделе [EM_CANPASTE](/windows/desktop/Controls/em-canpaste) Message и [регистерклипбоардформат](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata) Function в Windows SDK.
+Дополнительные сведения см. в разделе [EM_CANPASTE](/windows/win32/Controls/em-canpaste) Message и [регистерклипбоардформат](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) Function в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -328,7 +328,7 @@ BOOL CanRedo() const;
 
 Чтобы обнаружить имя операции в очереди повторов, вызовите метод [CRichEditCtrl:: жетредонаме](#getredoname). Чтобы повторить последнюю операцию отмены, вызовите метод [Redo](#redo).
 
-Дополнительные сведения см. в разделе [EM_CANREDO](/windows/desktop/Controls/em-canredo) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_CANREDO](/windows/win32/Controls/em-canredo) в Windows SDK.
 
 ##  <a name="canundo"></a>CRichEditCtrl:: Канундо
 
@@ -344,7 +344,7 @@ BOOL CanUndo() const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_CANUNDO](/windows/desktop/Controls/em-canundo) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_CANUNDO](/windows/win32/Controls/em-canundo) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -371,7 +371,7 @@ int CharFromPos(CPoint pt) const;
 
 Эта функция-член работает с элементом управления Rich Edit. Чтобы получить сведения для элемента управления "поле ввода", вызовите метод [CEdit:: чарфромпос](../../mfc/reference/cedit-class.md#charfrompos).
 
-Дополнительные сведения см. в разделе [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) в Windows SDK.
 
 ##  <a name="clear"></a>CRichEditCtrl:: Clear
 
@@ -387,7 +387,7 @@ void Clear();
 
 Чтобы удалить текущее выделение и поместить удаленное содержимое в буфер обмена, вызовите функцию [вырезания](#cut) члена.
 
-Дополнительные сведения см. в разделе [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) в Windows SDK.
+Дополнительные сведения см. в разделе [WM_CLEAR](/windows/win32/dataxchg/wm-clear) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -403,7 +403,7 @@ void Copy();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [WM_COPY](/windows/desktop/dataxchg/wm-copy) в Windows SDK.
+Дополнительные сведения см. в разделе [WM_COPY](/windows/win32/dataxchg/wm-copy) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -424,10 +424,10 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *двстиле*<br/>
-Задает стиль элемента управления "поле ввода". Примените сочетание стилей окон, перечисленных в разделе **"Примечания** " ниже, и [стили элементов управления](/windows/desktop/Controls/edit-control-styles), описанные в Windows SDK.
+Задает стиль элемента управления "поле ввода". Примените сочетание стилей окон, перечисленных в разделе **"Примечания** " ниже, и [стили элементов управления](/windows/win32/Controls/edit-control-styles), описанные в Windows SDK.
 
 *rect*<br/>
-Задает размер и расположение элемента управления "поле ввода". Может быть объектом [крект](../../atl-mfc-shared/reference/crect-class.md) или структурой [Rect](/windows/desktop/api/windef/ns-windef-tagrect) .
+Задает размер и расположение элемента управления "поле ввода". Может быть объектом [крект](../../atl-mfc-shared/reference/crect-class.md) или структурой [Rect](/windows/win32/api/windef/ns-windef-rect) .
 
 *ппарентвнд*<br/>
 Указывает родительское окно элемента управления редактирования (часто это [CDialog](../../mfc/reference/cdialog-class.md)). Оно не должно иметь значение NULL.
@@ -447,7 +447,7 @@ virtual BOOL Create(
 
 Когда `Create` выполняется, Windows отправляет сообщения [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)и [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) в элемент управления "поле ввода".
 
-Эти сообщения по умолчанию обрабатываются функциями элементов [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) в `CWnd` базовом классе. Чтобы расширить обработку сообщений по умолчанию, создайте производный класс `CRichEditCtrl`от, добавьте к новому классу схему сообщений и переопределите приведенные выше функции-члены обработчика сообщений. Переопределение `OnCreate`, например, для выполнения необходимой инициализации нового класса.
+Эти сообщения по умолчанию обрабатываются функциями элементов [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), и [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) в базовом классе `CWnd`. Чтобы расширить обработку сообщений по умолчанию, создайте производный класс `CRichEditCtrl`от, добавьте к новому классу схему сообщений и переопределите приведенные выше функции-члены обработчика сообщений. Переопределение `OnCreate`, например, для выполнения необходимой инициализации нового класса.
 
 Применить следующие [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) к элементу управления "поле ввода".
 
@@ -461,7 +461,7 @@ virtual BOOL Create(
 
 - WS_TABSTOP включить элемент управления "поле ввода" в порядок перехода.
 
-Дополнительные сведения о стилях окна см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в Windows SDK.
+Дополнительные сведения о стилях окна см. в разделе [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -483,10 +483,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Параметры
 
 *двексстиле*<br/>
-Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в Windows SDK.
+Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
 *двстиле*<br/>
-Задает стиль элемента управления "поле ввода". Примените сочетание стилей окон, перечисленных в разделе **"Примечания** " раздела [Создание](#create) и [изменение стилей элементов управления](/windows/desktop/Controls/edit-control-styles), описанных в Windows SDK.
+Задает стиль элемента управления "поле ввода". Примените сочетание стилей окон, перечисленных в разделе **"Примечания** " раздела [Создание](#create) и [изменение стилей элементов управления](/windows/win32/Controls/edit-control-styles), описанных в Windows SDK.
 
 *rect*<br/>
 Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , описывающую размер и расположение создаваемого окна в клиентских координатах *ппарентвнд*.
@@ -535,7 +535,7 @@ void Cut();
 
 Чтобы удалить текущее выделение без помещения удаленного текста в буфер обмена, вызовите функцию [clear](#clear) Member.
 
-Дополнительные сведения см. в разделе [WM_CUT](/windows/desktop/dataxchg/wm-cut) в Windows SDK.
+Дополнительные сведения см. в разделе [WM_CUT](/windows/win32/dataxchg/wm-cut) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Параметры
 
 *пдисплайрект*<br/>
-Указатель на объект [Rect](/windows/desktop/api/windef/ns-windef-tagrect) или [крект](../../atl-mfc-shared/reference/crect-class.md) , указывающий область устройства для вывода текста.
+Указатель на объект [Rect](/windows/win32/api/windef/ns-windef-rect) или [крект](../../atl-mfc-shared/reference/crect-class.md) , указывающий область устройства для вывода текста.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -562,7 +562,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 
 Текст и элементы OLE обрезаются с областью, заданной указателем *пдисплайрект*.
 
-Дополнительные сведения см. в разделе [EM_DISPLAYBAND](/windows/desktop/Controls/em-displayband) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_DISPLAYBAND](/windows/win32/Controls/em-displayband) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -582,7 +582,7 @@ void EmptyUndoBuffer();
 
 Флаг отмены автоматически снимается при каждом вызове члена [CWnd](../../mfc/reference/cwnd-class.md) функции [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext).
 
-Дополнительные сведения см. в разделе [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -601,10 +601,10 @@ long FindText(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Список возможных значений см. в разделе *wParam* в [EM_FINDTEXTEXT](/windows/desktop/Controls/em-findtextex) в Windows SDK.
+Список возможных значений см. в разделе *wParam* в [EM_FINDTEXTEXT](/windows/win32/Controls/em-findtextex) в Windows SDK.
 
 *пфиндтекст*<br/>
-Указатель на структуру [финдтекстекс](/windows/desktop/api/richedit/ns-richedit-findtextexa) , которая предоставляет параметры для поиска и возвращает диапазон, в котором обнаружено совпадение.
+Указатель на структуру [финдтекстекс](/windows/win32/api/richedit/ns-richedit-findtextexw) , которая предоставляет параметры для поиска и возвращает диапазон, в котором обнаружено совпадение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -612,9 +612,9 @@ long FindText(
 
 ### <a name="remarks"></a>Примечания
 
-Можно выполнить поиск либо вверх, либо вниз, установив правильные параметры диапазона в структуре [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) в `FINDTEXTEX` структуре.
+Можно выполнить поиск либо вверх, либо вниз, установив правильные параметры диапазона в структуре [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) в `FINDTEXTEX` структуре.
 
-Дополнительные сведения см. в разделе [EM_FINDTEXTEX](/windows/desktop/Controls/em-findtextex) Message и [финдтекстекс](/windows/desktop/api/richedit/ns-richedit-findtextexa) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_FINDTEXTEX](/windows/win32/Controls/em-findtextex) Message и [финдтекстекс](/windows/win32/api/richedit/ns-richedit-findtextexw) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -640,7 +640,7 @@ DWORD FindWordBreak(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-На основе параметра *нкоде*. Дополнительные сведения см. в разделе [EM_FINDWORDBREAK](/windows/desktop/Controls/em-findwordbreak) в Windows SDK.
+На основе параметра *нкоде*. Дополнительные сведения см. в разделе [EM_FINDWORDBREAK](/windows/win32/Controls/em-findwordbreak) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -659,7 +659,7 @@ long FormatRange(
 ### <a name="parameters"></a>Параметры
 
 *PFR*<br/>
-Указатель на структуру [форматранже](/windows/desktop/api/richedit/ns-richedit-formatrange) , которая содержит сведения о выходном устройстве. Значение NULL указывает, что кэшированные данные в элементе управления Rich Edit могут быть освобождены.
+Указатель на структуру [форматранже](/windows/win32/api/richedit/ns-richedit-formatrange) , которая содержит сведения о выходном устройстве. Значение NULL указывает, что кэшированные данные в элементе управления Rich Edit могут быть освобождены.
 
 *бдисплай*<br/>
 Указывает, должен ли отображаться текст. Значение FALSE показывает, что текст просто измеряется.
@@ -672,7 +672,7 @@ long FormatRange(
 
 Как правило, за этим вызовом следует вызов [дисплайбанд](#displayband).
 
-Дополнительные сведения см. в разделе [EM_FORMATRANGE](/windows/desktop/Controls/em-formatrange) Message и [форматранже](/windows/desktop/api/richedit/ns-richedit-formatrange) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_FORMATRANGE](/windows/win32/Controls/em-formatrange) Message и [форматранже](/windows/win32/api/richedit/ns-richedit-formatrange) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -699,7 +699,7 @@ CPoint GetCharPos(long lChar) const;
 
 Символ задается путем предоставления значения индекса, начинающегося с нуля. Если *лчар* больше, чем индекс последнего символа в этом `CRichEditCtrl` объекте, возвращаемое значение указывает координаты положения символа сразу после последнего символа в этом `CRichEditCtrl` объекте.
 
-Дополнительные сведения см. в разделе [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) в Windows SDK.
 
 ##  <a name="getdefaultcharformat"></a>CRichEditCtrl:: Жетдефаултчарформат
 
@@ -744,7 +744,7 @@ long GetEventMask() const;
 
 Маска события указывает, какие сообщения `CRichEditCtrl` уведомления отправляет объект в его родительское окно.
 
-Дополнительные сведения см. в разделе [EM_GETEVENTMASK](/windows/desktop/Controls/em-geteventmask) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETEVENTMASK](/windows/win32/Controls/em-geteventmask) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -764,7 +764,7 @@ int GetFirstVisibleLine() const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -780,13 +780,13 @@ IRichEditOle* GetIRichEditOle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс [иричедитоле](/windows/desktop/api/richole/nn-richole-iricheditole) , который может использоваться для доступа к функциональным `CRichEditCtrl` возможностям OLE этого объекта; Значение NULL, если интерфейс недоступен.
+Указатель на интерфейс [иричедитоле](/windows/win32/api/richole/nn-richole-iricheditole) , который может использоваться для доступа к функциональным `CRichEditCtrl` возможностям OLE этого объекта; Значение NULL, если интерфейс недоступен.
 
 ### <a name="remarks"></a>Примечания
 
 Используйте этот интерфейс для доступа к `CRichEditCtrl` функциональным возможностям OLE этого объекта.
 
-Дополнительные сведения см. в разделе сообщения [EM_GETOLEINTERFACE](/windows/desktop/Controls/em-getoleinterface) и интерфейс [иричедитоле](/windows/desktop/api/richole/nn-richole-iricheditole) в Windows SDK.
+Дополнительные сведения см. в разделе сообщения [EM_GETOLEINTERFACE](/windows/win32/Controls/em-getoleinterface) и интерфейс [иричедитоле](/windows/win32/api/richole/nn-richole-iricheditole) в Windows SDK.
 
 ##  <a name="getlimittext"></a>CRichEditCtrl:: Жетлимиттекст
 
@@ -804,7 +804,7 @@ long GetLimitText() const;
 
 Ограничение текста — это максимальный объем текста в байтах, который может быть принят элементом управления Rich Edit.
 
-Дополнительные сведения см. в разделе [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -847,7 +847,7 @@ int GetLine(
 > [!NOTE]
 >  Так как первое слово в буфере содержит количество копируемых символов, убедитесь, что размер буфера не меньше 4 байт.
 
-Дополнительные сведения см. в разделе [EM_GETLINE](/windows/desktop/Controls/em-getline) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETLINE](/windows/win32/Controls/em-getline) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -867,7 +867,7 @@ int GetLineCount() const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -889,7 +889,7 @@ BOOL GetModify() const;
 
 Windows поддерживает внутренний флаг, указывающий, изменилось ли содержимое элемента управления Rich Edit. Этот флаг снимается при создании элемента управления "поле ввода" и может также быть сброшен путем вызова функции-члена [сетмодифи](#setmodify) .
 
-Дополнительные сведения см. в разделе [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETMODIFY](/windows/win32/Controls/em-getmodify) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -905,7 +905,7 @@ UINT GetOptions() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сочетание текущих значений флагов параметров. Список этих значений см. в описании параметра *фоптионс* в сообщении [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) , как описано в Windows SDK.
+Сочетание текущих значений флагов параметров. Список этих значений см. в описании параметра *фоптионс* в сообщении [EM_SETOPTIONS](/windows/win32/Controls/em-setoptions) , как описано в Windows SDK.
 
 ##  <a name="getparaformat"></a>CRichEditCtrl:: Жетпараформат
 
@@ -918,9 +918,9 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="parameters"></a>Параметры
 
 *pf*<br/>
-В первой версии — указатель на структуру [формата](/windows/desktop/api/richedit/ns-richedit-paraformat) с параметром, в которой хранятся атрибуты форматирования абзаца текущего выделения.
+В первой версии — указатель на структуру [формата](/windows/win32/api/richedit/ns-richedit-paraformat) с параметром, в которой хранятся атрибуты форматирования абзаца текущего выделения.
 
-Во второй версии — указатель на структуру [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , которая представляет собой расширенное расширение Edit 2,0 для `PARAFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
+Во второй версии — указатель на структуру [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , которая представляет собой расширенное расширение Edit 2,0 для `PARAFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -930,7 +930,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 Если выбрано более одного абзаца, *PF* получает атрибуты первого выбранного абзаца. Возвращаемое значение указывает, какие атрибуты согласованы по всему выбору.
 
-Дополнительные сведения см. в описании сообщения [EM_GETPARAFORMAT](/windows/desktop/Controls/em-getparaformat) и `PARAFORMAT` структур `PARAFORMAT2` и в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) и `PARAFORMAT` структур `PARAFORMAT2` и в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -949,10 +949,10 @@ BOOL GetPunctuation(
 ### <a name="parameters"></a>Параметры
 
 *fType*<br/>
-Флаг типа пунктуации, как описано в параметре *fType* параметра [EM_GETPUNCTUATION](/windows/desktop/Controls/em-getpunctuation) в Windows SDK.
+Флаг типа пунктуации, как описано в параметре *fType* параметра [EM_GETPUNCTUATION](/windows/win32/Controls/em-getpunctuation) в Windows SDK.
 
 *лппунк*<br/>
-Указатель на структуру [пунктуации](/windows/desktop/api/richedit/ns-richedit-punctuation) , как описано в Windows SDK.
+Указатель на структуру [пунктуации](/windows/win32/api/richedit/ns-richedit-punctuation) , как описано в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -973,13 +973,13 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Параметры
 
 *лпрект*<br/>
-[Крект](../../atl-mfc-shared/reference/crect-class.md) или указатель на [Rect](/windows/desktop/api/windef/ns-windef-tagrect) для получения прямоугольника форматирования данного `CRichEditCtrl` объекта.
+[Крект](../../atl-mfc-shared/reference/crect-class.md) или указатель на [Rect](/windows/win32/api/windef/ns-windef-rect) для получения прямоугольника форматирования данного `CRichEditCtrl` объекта.
 
 ### <a name="remarks"></a>Примечания
 
 Прямоугольник форматирования — это ограничивающий прямоугольник для текста. Это значение не зависит от размера `CRichEditCtrl` объекта.
 
-Дополнительные сведения см. в разделе [EM_GETRECT](/windows/desktop/Controls/em-getrect) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETRECT](/windows/win32/Controls/em-getrect) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -995,7 +995,7 @@ UNDONAMEID GetRedoName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха `GetRedoName` Возвращает тип перечисления [ундонамеид](/windows/desktop/api/richedit/ne-richedit-undonameid) , указывающий тип следующего действия в очереди повторов элемента управления. Если очередь повтора пуста или если действие повтора в очереди имеет неизвестный тип, `GetRedoName` возвращает 0.
+В случае успеха `GetRedoName` Возвращает тип перечисления [ундонамеид](/windows/win32/api/richedit/ne-richedit-undonameid) , указывающий тип следующего действия в очереди повторов элемента управления. Если очередь повтора пуста или если действие повтора в очереди имеет неизвестный тип, `GetRedoName` возвращает 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1016,7 +1016,7 @@ void GetSel(
 ### <a name="parameters"></a>Параметры
 
 *Кредит*<br/>
-Ссылка на структуру [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) для получения границ текущего выделения.
+Ссылка на структуру [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) для получения границ текущего выделения.
 
 *нстартчар*<br/>
 Отсчитываемый от нуля индекс первого символа в текущем выделенном фрагменте.
@@ -1034,7 +1034,7 @@ void GetSel(
 
 Выбор включает все, если начало`cpMin` (или *нстартчар*) равно 0, а конец (`cpMax` или *нендчар*) равен-1.
 
-Дополнительные сведения см. в разделе [EM_EXGETSEL](/windows/desktop/Controls/em-exgetsel) Message и [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_EXGETSEL](/windows/win32/Controls/em-exgetsel) Message и [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1051,9 +1051,9 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) для получения атрибутов форматирования символов для текущего выделения.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) для получения атрибутов форматирования символов для текущего выделения.
 
-Во второй версии — указатель на структуру [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , которая является расширенным расширением формата 2,0 для `CHARFORMAT` структуры, чтобы получить атрибуты форматирования символов для текущего выделения.
+Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая является расширенным расширением формата 2,0 для `CHARFORMAT` структуры, чтобы получить атрибуты форматирования символов для текущего выделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1063,7 +1063,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 
 Параметр *CF* получает атрибуты первого символа в текущем выделенном фрагменте. Возвращаемое значение указывает, какие атрибуты согласованы по всему выбору.
 
-Дополнительные сведения см. в описании сообщения [EM_GETCHARFORMAT](/windows/desktop/Controls/em-getcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1093,7 +1093,7 @@ WORD GetSelectionType() const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_SELECTIONTYPE](/windows/desktop/Controls/em-selectiontype) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SELECTIONTYPE](/windows/win32/Controls/em-selectiontype) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1124,7 +1124,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 
 При использовании первой формы, **жетселтекст (** `lpBuf` **)** , необходимо убедиться в том, что буфер достаточно велик для текста, который он получает. Вызовите [жетсел](#getsel) , чтобы определить количество символов в текущем выделенном фрагменте.
 
-Дополнительные сведения см. в разделе [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETSELTEXT](/windows/win32/Controls/em-getseltext) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1144,7 +1144,7 @@ long GetTextLength() const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) в Windows SDK.
+Дополнительные сведения см. в разделе [WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1163,7 +1163,7 @@ long GetTextLengthEx(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Значение, указывающее метод, используемый для определения длины текста. Этот элемент может быть одним или несколькими значениями, перечисленными в элементе flags элемента [жеттекстленгсекс](/windows/desktop/api/richedit/ns-richedit-gettextlengthex) , описанным в Windows SDK.
+Значение, указывающее метод, используемый для определения длины текста. Этот элемент может быть одним или несколькими значениями, перечисленными в элементе flags элемента [жеттекстленгсекс](/windows/win32/api/richedit/ns-richedit-gettextlengthex) , описанным в Windows SDK.
 
 *укодепаже*<br/>
 Кодовая страница для перевода (CP_ACP для кодовой страницы ANSI, 1200 для Юникода).
@@ -1174,7 +1174,7 @@ long GetTextLengthEx(
 
 ### <a name="remarks"></a>Примечания
 
-`GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения [об элементах управления](/windows/desktop/Controls/about-rich-edit-controls) "поле ввода" см. в разделе о Windows сдкфор.
+`GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения [об элементах управления](/windows/win32/Controls/about-rich-edit-controls) "поле ввода" см. в разделе о Windows сдкфор.
 
 ##  <a name="gettextmode"></a>CRichEditCtrl:: Жеттекстмоде
 
@@ -1186,7 +1186,7 @@ UINT GetTextMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Набор битовых флагов из типа перечисления [TEXTMODE](/windows/desktop/api/richedit/ne-richedit-tagtextmode) , как описано в Windows SDK. Флаги указывают текущий текстовый режим и уровень отмены элемента управления.
+Набор битовых флагов из типа перечисления [TEXTMODE](/windows/win32/api/richedit/ne-richedit-textmode) , как описано в Windows SDK. Флаги указывают текущий текстовый режим и уровень отмены элемента управления.
 
 ##  <a name="gettextrange"></a>CRichEditCtrl:: Жеттекстранже
 
@@ -1216,9 +1216,9 @@ int GetTextRange(
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_GETTEXTRANGE](/windows/desktop/Controls/em-gettextrange) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETTEXTRANGE](/windows/win32/Controls/em-gettextrange) в Windows SDK.
 
-`GetTextRange`поддерживает широкие возможности редактирования 2,0. Дополнительные сведения [об элементах управления](/windows/desktop/Controls/about-rich-edit-controls) "поле ввода" см. в разделе о Windows сдкфор.
+`GetTextRange`поддерживает широкие возможности редактирования 2,0. Дополнительные сведения [об элементах управления](/windows/win32/Controls/about-rich-edit-controls) "поле ввода" см. в разделе о Windows сдкфор.
 
 ##  <a name="getundoname"></a>CRichEditCtrl:: Жетундонаме
 
@@ -1230,7 +1230,7 @@ UNDONAMEID GetUndoName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если действие отмены находится в очереди отмены элемента управления, `GetUndoName` Возвращает тип перечисления [ундонамеид](/windows/desktop/api/richedit/ne-richedit-undonameid) , указывающий тип следующего действия в очереди. Если очередь отмены пуста или если действие отмены в очереди имеет неизвестный тип, `GetUndoName` возвращает 0.
+Если действие отмены находится в очереди отмены элемента управления, `GetUndoName` Возвращает тип перечисления [ундонамеид](/windows/win32/api/richedit/ne-richedit-undonameid) , указывающий тип следующего действия в очереди. Если очередь отмены пуста или если действие отмены в очереди имеет неизвестный тип, `GetUndoName` возвращает 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1246,7 +1246,7 @@ UINT GetWordWrapMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущие параметры переноса слов и разбиения на слова. Эти параметры описаны в разделе [EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) в Windows SDK.
+Текущие параметры переноса слов и разбиения на слова. Эти параметры описаны в разделе [EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1274,7 +1274,7 @@ void HideSelection(
 
 Если *бперм* имеет значение true, он изменяет параметр ECO_NOHIDESEL для этого `CRichEditCtrl` объекта. Краткое описание этого параметра см. в разделе [сетоптионс](#setoptions). С помощью этой функции можно задать все параметры для этого `CRichEditCtrl` объекта.
 
-Дополнительные сведения см. в разделе [EM_HIDESELECTION](/windows/desktop/Controls/em-hideselection) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_HIDESELECTION](/windows/win32/Controls/em-hideselection) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1295,12 +1295,12 @@ void LimitText(long nChars = 0);
 
 ### <a name="remarks"></a>Примечания
 
-Изменение ограничения текста ограничивает только текст, который может вводить пользователь. Он не влияет на текст, уже имеющийся в элементе управления "поле ввода", и не влияет на длину текста, скопированного в элемент управления функцией члена [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) в `CWnd`. Если приложение использует `SetWindowText` функцию для размещения большего текста в элементе управления "поле ввода" `LimitText`, чем указано в вызове, пользователь может удалить любой текст в элементе управления "поле ввода". Однако ограничение текста не позволит пользователю заменить существующий текст новым текстом, если только удаление текущего фрагмента текста не повлечет за пределы текста.
+Изменение ограничения текста ограничивает только текст, который может вводить пользователь. Он не влияет на текст, уже имеющийся в элементе управления "поле ввода", и не влияет на длину текста, скопированного в элемент управления "поле ввода" функцией члена [SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) в `CWnd`. Если приложение использует `SetWindowText` функцию для размещения большего текста в элементе управления "поле ввода" `LimitText`, чем указано в вызове, пользователь может удалить любой текст в элементе управления "поле ввода". Однако ограничение текста не позволит пользователю заменить существующий текст новым текстом, если только удаление текущего фрагмента текста не повлечет за пределы текста.
 
 > [!NOTE]
 >  Для ограничения текста каждый элемент OLE считается одиночным символом.
 
-Дополнительные сведения см. в разделе [EM_EXLIMITTEXT](/windows/desktop/Controls/em-exlimittext) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_EXLIMITTEXT](/windows/win32/Controls/em-exlimittext) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1327,7 +1327,7 @@ long LineFromChar(long nIndex) const;
 
 Символьный индекс — это число символов от начала элемента управления Rich Edit. Для подсчета символов элемент OLE считается одиночным символом.
 
-Дополнительные сведения см. в разделе [EM_EXLINEFROMCHAR](/windows/desktop/Controls/em-exlinefromchar) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_EXLINEFROMCHAR](/windows/win32/Controls/em-exlinefromchar) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1354,7 +1354,7 @@ int LineIndex(int nLine = -1) const;
 
 Индекс символа — это число символов от начала элемента управления Rich Edit до указанной строки.
 
-Дополнительные сведения см. в разделе [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_LINEINDEX](/windows/win32/controls/em-lineindex) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1381,7 +1381,7 @@ int LineLength(int nLine = -1) const;
 
 Используйте функцию-член [линеиндекс](#lineindex) , чтобы получить индекс символа для заданного номера строки в этом `CRichEditCtrl` объекте.
 
-Дополнительные сведения см. в разделе [EM_LINELENGTH](/windows/desktop/Controls/em-linelength) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_LINELENGTH](/windows/win32/Controls/em-linelength) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1411,7 +1411,7 @@ void LineScroll(
 
 `LineScroll`можно использовать для прокрутки по горизонтали за последним символом любой строки.
 
-Дополнительные сведения см. в разделе [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_LINESCROLL](/windows/win32/Controls/em-linescroll) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1429,7 +1429,7 @@ void Paste();
 
 Данные вставляются только в том случае, если буфер обмена содержит данные в распознанном формате.
 
-Дополнительные сведения см. в разделе [WM_PASTE](/windows/desktop/dataxchg/wm-paste) в Windows SDK.
+Дополнительные сведения см. в разделе [WM_PASTE](/windows/win32/dataxchg/wm-paste) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1461,7 +1461,7 @@ void PasteSpecial(
 
 Новый материал вставляется в позицию курсора, где находится курсор.
 
-Дополнительные сведения см. в разделе [EM_PASTESPECIAL](/windows/desktop/Controls/em-pastespecial) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_PASTESPECIAL](/windows/win32/Controls/em-pastespecial) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1486,7 +1486,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) в Windows SDK.
 
 ##  <a name="redo"></a>CRichEditCtrl:: Redo
 
@@ -1502,7 +1502,7 @@ BOOL Redo();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_REDO](/windows/desktop/Controls/em-redo) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_REDO](/windows/win32/Controls/em-redo) в Windows SDK.
 
 ##  <a name="replacesel"></a>CRichEditCtrl:: Реплацесел
 
@@ -1530,7 +1530,7 @@ void ReplaceSel(
 
 Эта функция форматирует вставленный текст с помощью существующего форматирования символов. При замене всего диапазона текста (путем вызова `SetSel`(0,-1) перед вызовом `ReplaceSel`) имеется символ конца абзаца, сохраняющий форматирование предыдущего абзаца, который в унаследован вставленным текстом.
 
-Дополнительные сведения см. в разделе [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_REPLACESEL](/windows/win32/Controls/em-replacesel) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1548,7 +1548,7 @@ void RequestResize();
 
 Эта функция полезна при обработке [CWnd:: OnSize](../../mfc/reference/cwnd-class.md#onsize) для ненижнего `CRichEditCtrl` объекта.
 
-Дополнительные сведения см. в сообщении [EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize) и в разделе **элементы управления** "неограниченный набор" для элементов [управления Rich Edit](/windows/desktop/Controls/about-rich-edit-controls) в Windows SDK.
+Дополнительные сведения см. в сообщении [EM_REQUESTRESIZE](/windows/win32/Controls/em-requestresize) и в разделе **элементы управления** "неограниченный набор" для элементов [управления Rich Edit](/windows/win32/Controls/about-rich-edit-controls) в Windows SDK.
 
 ##  <a name="setautourldetect"></a>CRichEditCtrl:: Сетаутаурлдетект
 
@@ -1569,10 +1569,10 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Примечания
 
-Если этот параметр включен, элемент управления Rich Edit будет сканировать текст, чтобы определить, соответствует ли он стандартному формату URL-адреса. Список этих форматов URL-адресов см. в разделе [EM_AUTOURLDETECT](/windows/desktop/Controls/em-autourldetect) в Windows SDK.
+Если этот параметр включен, элемент управления Rich Edit будет сканировать текст, чтобы определить, соответствует ли он стандартному формату URL-адреса. Список этих форматов URL-адресов см. в разделе [EM_AUTOURLDETECT](/windows/win32/Controls/em-autourldetect) в Windows SDK.
 
 > [!NOTE]
->  Не устанавливайте `SetAutoURLDetect` значение true, если в элементе управления "поле ввода" используется CFE_LINKный результат для текста, отличного от URL-адресов. `SetAutoURLDetect`включает этот результат для URL-адресов и отключает его для всего остального текста. Дополнительные сведения о CFE_LINK см. в разделе [EN_LINK](/windows/desktop/Controls/en-link).
+>  Не устанавливайте `SetAutoURLDetect` значение true, если в элементе управления "поле ввода" используется CFE_LINKный результат для текста, отличного от URL-адресов. `SetAutoURLDetect`включает этот результат для URL-адресов и отключает его для всего остального текста. Дополнительные сведения о CFE_LINK см. в разделе [EN_LINK](/windows/win32/Controls/en-link).
 
 ##  <a name="setbackgroundcolor"></a>CRichEditCtrl:: Сетбаккграундколор
 
@@ -1598,9 +1598,9 @@ COLORREF SetBackgroundColor(
 
 ### <a name="remarks"></a>Примечания
 
-Цвет фона может быть установлен в системное значение или в указанное значение [COLORREF](/windows/desktop/gdi/colorref) .
+Цвет фона может быть установлен в системное значение или в указанное значение [COLORREF](/windows/win32/gdi/colorref) .
 
-Дополнительные сведения см. в разделе [EM_SETBKGNDCOLOR](/windows/desktop/Controls/em-setbkgndcolor) Message и [COLORREF](/windows/desktop/gdi/colorref) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETBKGNDCOLOR](/windows/win32/Controls/em-setbkgndcolor) Message и [COLORREF](/windows/win32/gdi/colorref) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1618,9 +1618,9 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов по умолчанию.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов по умолчанию.
 
-Во второй версии — указатель на структуру [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
+Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1630,7 +1630,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *CF* .
 
-Дополнительные сведения см. в описании сообщения [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1657,7 +1657,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 
 Маска события указывает, какие сообщения `CRichEditCtrl` уведомления отправляет объект в его родительское окно.
 
-Дополнительные сведения см. в разделе [EM_SETEVENTMASK](/windows/desktop/Controls/em-seteventmask) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETEVENTMASK](/windows/win32/Controls/em-seteventmask) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1680,7 +1680,7 @@ void SetModify(BOOL bModified = TRUE);
 
 Измененный флаг показывает, был ли изменен текст в элементе управления "поле ввода". Он автоматически задается при каждом изменении пользователем текста. Его значение можно получить с помощью функции члена [GetModify](#getmodify).
 
-Дополнительные сведения см. в разделе [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETMODIFY](/windows/win32/Controls/em-setmodify) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1697,7 +1697,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 ### <a name="parameters"></a>Параметры
 
 *пкаллбакк*<br/>
-Указатель на объект [иричедитолекаллбакк](/windows/desktop/api/richole/nn-richole-iricheditolecallback) , который будет `CRichEditCtrl` использоваться этим объектом для получения ресурсов и сведений, связанных с OLE.
+Указатель на объект [иричедитолекаллбакк](/windows/win32/api/richole/nn-richole-iricheditolecallback) , который будет `CRichEditCtrl` использоваться этим объектом для получения ресурсов и сведений, связанных с OLE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1705,9 +1705,9 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
 
 ### <a name="remarks"></a>Примечания
 
-Этот `CRichEditCtrl` объект вызывает [IUnknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) для увеличения числа использований для COM-объекта, заданного параметром *пкаллбакк*.
+Этот `CRichEditCtrl` объект вызывает [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) для увеличения числа использований для COM-объекта, заданного параметром *пкаллбакк*.
 
-Дополнительные сведения см. в разделе сообщения [EM_SETOLECALLBACK](/windows/desktop/Controls/em-setolecallback) и интерфейс [иричедитолекаллбакк](/windows/desktop/api/richole/nn-richole-iricheditolecallback) в Windows SDK.
+Дополнительные сведения см. в разделе сообщения [EM_SETOLECALLBACK](/windows/win32/Controls/em-setolecallback) и интерфейс [иричедитолекаллбакк](/windows/win32/api/richole/nn-richole-iricheditolecallback) в Windows SDK.
 
 ##  <a name="setoptions"></a>CRichEditCtrl:: Сетоптионс
 
@@ -1755,7 +1755,7 @@ void SetOptions(
 
 - ECO_VERTICAL рисует текст и объекты в вертикальном направлении. Доступно только для азиатских языков.
 
-Дополнительные сведения см. в разделе [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETOPTIONS](/windows/win32/Controls/em-setoptions) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1773,9 +1773,9 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="parameters"></a>Параметры
 
 *pf*<br/>
-В первой версии — указатель на структуру [формата](/windows/desktop/api/richedit/ns-richedit-paraformat) с новым атрибутом форматирования абзаца по умолчанию.
+В первой версии — указатель на структуру [формата](/windows/win32/api/richedit/ns-richedit-paraformat) с новым атрибутом форматирования абзаца по умолчанию.
 
-Во второй версии — указатель на структуру [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) , которая представляет собой расширенное расширение Edit 2,0 для `PARAFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
+Во второй версии — указатель на структуру [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) , которая представляет собой расширенное расширение Edit 2,0 для `PARAFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1785,7 +1785,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *PF* .
 
-Дополнительные сведения см. в описании сообщения [EM_SETPARAFORMAT](/windows/desktop/Controls/em-setparaformat) и `PARAFORMAT` структур `PARAFORMAT2` и в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) и `PARAFORMAT` структур `PARAFORMAT2` и в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1804,10 +1804,10 @@ BOOL SetPunctuation(
 ### <a name="parameters"></a>Параметры
 
 *fType*<br/>
-Флаг пунктуации. Список возможных значений см. в разделе параметр *fType* для [EM_SETPUNCTUATION](/windows/desktop/Controls/em-setpunctuation) в Windows SDK.
+Флаг пунктуации. Список возможных значений см. в разделе параметр *fType* для [EM_SETPUNCTUATION](/windows/win32/Controls/em-setpunctuation) в Windows SDK.
 
 *лппунк*<br/>
-Указатель на структуру [пунктуации](/windows/desktop/api/richedit/ns-richedit-punctuation) , как описано в Windows SDK.
+Указатель на структуру [пунктуации](/windows/win32/api/richedit/ns-richedit-punctuation) , как описано в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1838,7 +1838,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 Краткое описание этого параметра см. в разделе [сетоптионс](#setoptions). С помощью этой функции можно задать все параметры для этого `CRichEditCtrl` объекта.
 
-Дополнительные сведения см. в разделе [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1855,13 +1855,13 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Параметры
 
 *лпрект*<br/>
-[Крект](../../atl-mfc-shared/reference/crect-class.md) или указатель на [Rect](/windows/desktop/api/windef/ns-windef-tagrect) , указывающий новые границы для прямоугольника форматирования.
+[Крект](../../atl-mfc-shared/reference/crect-class.md) или указатель на [Rect](/windows/win32/api/windef/ns-windef-rect) , указывающий новые границы для прямоугольника форматирования.
 
 ### <a name="remarks"></a>Примечания
 
 Прямоугольник форматирования — это ограничивающий прямоугольник для текста. Ограничивающий прямоугольник не зависит от размера окна элемента управления Rich Edit. При первом `CRichEditCtrl` создании этого объекта размер прямоугольника форматирования совпадает с размером клиентской области окна. Используйте `SetRect` , чтобы сделать прямоугольник форматирования больше или меньше, чем окно редактирования с расширенными возможностями.
 
-Дополнительные сведения см. в разделе [EM_SETRECT](/windows/desktop/Controls/em-setrect) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETRECT](/windows/win32/Controls/em-setrect) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1888,7 +1888,7 @@ void SetSel(CHARRANGE& cr);
 Отсчитываемый от нуля индекс последнего символа для выбора.
 
 *Кредит*<br/>
-Структура [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) , которая содержит границы текущего выделения.
+Структура [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) , которая содержит границы текущего выделения.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1902,7 +1902,7 @@ void SetSel(CHARRANGE& cr);
 
 Чтобы выделить весь текст в этом `CRichEditCtrl` объекте, вызовите `SetSel` с начальным индексом 0 и конечным индексом-1.
 
-Дополнительные сведения см. в разделе [EM_EXSETSEL](/windows/desktop/Controls/em-exsetsel) Message и [чарранже](/windows/desktop/api/richedit/ns-richedit-charrange) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_EXSETSEL](/windows/win32/Controls/em-exsetsel) Message и [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1920,9 +1920,9 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выделения.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выделения.
 
-Во второй версии — указатель на структуру [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выделения.
+Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1932,7 +1932,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *CF* .
 
-Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) и `CHARFORMAT` структуры и `CHARFORMAT2` в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) и `CHARFORMAT` структуры и `CHARFORMAT2` в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1971,7 +1971,7 @@ BOOL SetTargetDevice(
 
 Если эта функция выполнена успешно, элемент управления Rich Edit владеет контекстом устройства, передаваемым в качестве параметра. В этом случае вызывающая функция не должна уничтожить контекст устройства.
 
-Дополнительные сведения см. в разделе [EM_SETTARGETDEVICE](/windows/desktop/Controls/em-settargetdevice) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETTARGETDEVICE](/windows/win32/Controls/em-settargetdevice) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1988,7 +1988,7 @@ BOOL SetTextMode(UINT fMode);
 ### <a name="parameters"></a>Параметры
 
 *фмоде*<br/>
-Задает новые параметры для текстового режима элемента управления и параметров уровня отмены. Список возможных значений см. в параметре mode для [EM_SETTEXTMODE](/windows/desktop/Controls/em-settextmode) в Windows SDK.
+Задает новые параметры для текстового режима элемента управления и параметров уровня отмены. Список возможных значений см. в параметре mode для [EM_SETTEXTMODE](/windows/win32/Controls/em-settextmode) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1998,7 +1998,7 @@ BOOL SetTextMode(UINT fMode);
 
 Описание текстовых режимов см. в разделе EM_SETTEXTMODE в Windows SDK.
 
-Эта функция члена завершается ошибкой, если элемент управления содержит текст. Чтобы убедиться, что элемент управления пуст, отправьте сообщение [WM_SETTEXT](/windows/desktop/winmsg/wm-settext) с пустой строкой.
+Эта функция члена завершается ошибкой, если элемент управления содержит текст. Чтобы убедиться, что элемент управления пуст, отправьте сообщение [WM_SETTEXT](/windows/win32/winmsg/wm-settext) с пустой строкой.
 
 ##  <a name="setundolimit"></a>CRichEditCtrl:: Сетундолимит
 
@@ -2033,9 +2033,9 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/desktop/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выбранного слова.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выбранного слова.
 
-Во второй версии — указатель на структуру [CHARFORMAT2](/windows/desktop/api/richedit/ns-richedit-charformat2a) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выбранного слова.
+Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выбранного слова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2045,7 +2045,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 
 Эта функция изменяет только атрибуты, `dwMask` указанные членом *CF* .
 
-Дополнительные сведения см. в описании сообщения [EM_SETCHARFORMAT](/windows/desktop/Controls/em-setcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
+Дополнительные сведения см. в описании сообщения [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) и `CHARFORMAT` структур `CHARFORMAT2` и в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2062,7 +2062,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="parameters"></a>Параметры
 
 *уфлагс*<br/>
-Параметры, заданные для переноса по словам и разбиения по словам. Список возможных параметров см. в разделе [EM_SETWORDWRAPMODE](/windows/desktop/Controls/em-setwordwrapmode) в Windows SDK.
+Параметры, заданные для переноса по словам и разбиения по словам. Список возможных параметров см. в разделе [EM_SETWORDWRAPMODE](/windows/win32/Controls/em-setwordwrapmode) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2084,7 +2084,7 @@ void StopGroupTyping();
 
 Элемент управления сохраняет следующее действие ввода, если оно есть, в новое действие в очереди отмены.
 
-Дополнительные сведения см. в разделе [EM_STOPGROUPTYPING](/windows/desktop/Controls/em-stopgrouptyping) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_STOPGROUPTYPING](/windows/win32/Controls/em-stopgrouptyping) в Windows SDK.
 
 ##  <a name="streamin"></a>CRichEditCtrl:: Streaming
 
@@ -2102,7 +2102,7 @@ long StreamIn(
 Флаги, указывающие форматы входных данных. Дополнительные сведения см. в разделе "Примечания".
 
 *требуем*<br/>
-Структура [едитстреам](/windows/desktop/api/richedit/ns-richedit-editstream) , указывающая входной поток. Дополнительные сведения см. в разделе "Примечания".
+Структура [едитстреам](/windows/win32/api/richedit/ns-richedit-editstream) , указывающая входной поток. Дополнительные сведения см. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2120,7 +2120,7 @@ long StreamIn(
 
 В параметре ES указывается функция обратного вызова, которая заполняет буфер текстом. `EDITSTREAM` Эта функция обратного вызова вызывается повторно, пока входной поток не будет исчерпан.
 
-Дополнительные сведения см. в разделе [EM_STREAMIN](/windows/desktop/Controls/em-streamin) Message и [едитстреам](/windows/desktop/api/richedit/ns-richedit-editstream) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_STREAMIN](/windows/win32/Controls/em-streamin) Message и [едитстреам](/windows/win32/api/richedit/ns-richedit-editstream) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2144,7 +2144,7 @@ long StreamOut(
 Флаги, указывающие форматы выходных данных. Дополнительные сведения см. в разделе "Примечания".
 
 *требуем*<br/>
-Структура [едитстреам](/windows/desktop/api/richedit/ns-richedit-editstream) , указывающая выходной поток. Дополнительные сведения см. в разделе "Примечания".
+Структура [едитстреам](/windows/win32/api/richedit/ns-richedit-editstream) , указывающая выходной поток. Дополнительные сведения см. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2166,7 +2166,7 @@ long StreamOut(
 
 В параметре ES указывается функция обратного вызова, которая заполняет буфер текстом. `EDITSTREAM` Эта функция обратного вызова вызывается повторно, пока выходной поток не будет исчерпан.
 
-Дополнительные сведения см. в разделе [EM_STREAMOUT](/windows/desktop/Controls/em-streamout) Message и [едитстреам](/windows/desktop/api/richedit/ns-richedit-editstream) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_STREAMOUT](/windows/win32/Controls/em-streamout) Message и [едитстреам](/windows/win32/api/richedit/ns-richedit-editstream) Structure статьи Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2190,7 +2190,7 @@ BOOL Undo();
 
 Операция отмены также может быть отменена. Например, можно восстановить удаленный текст при первом вызове метода `Undo`. Пока нет промежуточных операций редактирования, можно удалить текст еще раз с помощью второго вызова `Undo`.
 
-Дополнительные сведения см. в разделе [EM_UNDO](/windows/desktop/Controls/em-undo) в Windows SDK.
+Дополнительные сведения см. в разделе [EM_UNDO](/windows/win32/Controls/em-undo) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
