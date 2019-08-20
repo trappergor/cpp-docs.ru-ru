@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468423"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500218"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 Сопоставляет одну строку символов другой, выполняя указанное преобразование, зависящее от языкового стандарта. Эту функцию можно также использовать для создания ключа сортировки для входной строки.
 
@@ -72,7 +72,7 @@ int __crtLCMapStringW(
 
 ## <a name="remarks"></a>Примечания
 
-Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa).
+Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw).
 
 ## <a name="requirements"></a>Требования
 
