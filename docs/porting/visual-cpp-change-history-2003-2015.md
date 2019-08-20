@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451287"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510358"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
 
@@ -277,7 +277,7 @@ ms.locfileid: "66451287"
 
 - **часы**
 
-   В предыдущих версиях функция [clock](../c-runtime-library/reference/clock.md) была реализована с помощью функции API-интерфейса Windows [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). При такой реализации функция clock зависела от системного времени и поэтому не была обязательно монотонной. Реализация функции clock была изменена с учетом [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) и теперь является монотонной.
+   В предыдущих версиях функция [clock](../c-runtime-library/reference/clock.md) была реализована с помощью функции API-интерфейса Windows [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). При такой реализации функция clock зависела от системного времени и поэтому не была обязательно монотонной. Реализация функции clock была изменена с учетом [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) и теперь является монотонной.
 
 - **fstat и _utime**
 
@@ -313,7 +313,7 @@ ms.locfileid: "66451287"
 
 - **steady_clock**
 
-   Реализация \<chrono> для [steady_clock](../standard-library/steady-clock-struct.md) была изменена в соответствии с требованиями равномерности и монотонности стандарта C++. `steady_clock` теперь основан на функции [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx), а `high_resolution_clock` теперь является определением типа для `steady_clock`. В результате в Visual Studio `steady_clock::time_point` теперь является определением типа для `chrono::time_point<steady_clock>`, однако в других реализациях это может быть не так.
+   Реализация \<chrono> для [steady_clock](../standard-library/steady-clock-struct.md) была изменена в соответствии с требованиями равномерности и монотонности стандарта C++. `steady_clock` теперь основан на функции [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter), а `high_resolution_clock` теперь является определением типа для `steady_clock`. В результате в Visual Studio `steady_clock::time_point` теперь является определением типа для `chrono::time_point<steady_clock>`, однако в других реализациях это может быть не так.
 
 - **Распределители и константы**
 
@@ -2541,7 +2541,7 @@ ms.locfileid: "66451287"
 
 - **Недопустимость поддержки атрибутивного кода ATL** (уровень 1 (`/W1`) включен по умолчанию)
 
-   Предыдущие версии компилятора поддерживали атрибутивный код ATL. На следующем этапе процесса отмены поддержки атрибутивного кода ATL, который [начался в Visual Studio 2008](https://msdn.microsoft.com/library/bb384632), атрибутивный код ATL выведен из эксплуатации. Для выявления такого нерекомендуемого кода компилятор теперь выдает предупреждение C4467.
+   Предыдущие версии компилятора поддерживали атрибутивный код ATL. На следующем этапе процесса отмены поддержки атрибутивного кода ATL, который [начался в Visual Studio 2008](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008), атрибутивный код ATL выведен из эксплуатации. Для выявления такого нерекомендуемого кода компилятор теперь выдает предупреждение C4467.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -3238,7 +3238,7 @@ ms.locfileid: "66451287"
 
 - Поддержка новой лямбда-нотации исключает поддержку указания в коде GUID без кавычек в атрибуте uuid IDL.
 
-- .NET Framework 4 вводит концепцию исключений поврежденных состояний — исключений, оставляющих процесс в состоянии неустранимых повреждений. По умолчанию невозможно перехватить исключение поврежденного состояния даже с помощью параметра компилятора /EHa, который перехватывает все прочие исключения.                 Чтобы явно перехватить исключение поврежденного состояния, используйте инструкции __try-\__except. Или примените атрибут [HandledProcessCorruptedStateExceptions], чтобы включить функцию перехвата исключений поврежденного состояния.  Это изменение влияет главным образом на системных программистов, которым может потребоваться перехватить исключение поврежденного состояния. Восемь исключений: STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Дополнительные сведения об этих исключениях см. в разделе о макросе [GetExceptionCode](/windows/desktop/Debug/getexceptioncode).
+- .NET Framework 4 вводит концепцию исключений поврежденных состояний — исключений, оставляющих процесс в состоянии неустранимых повреждений. По умолчанию невозможно перехватить исключение поврежденного состояния даже с помощью параметра компилятора /EHa, который перехватывает все прочие исключения.                 Чтобы явно перехватить исключение поврежденного состояния, используйте инструкции __try-\__except. Или примените атрибут [HandledProcessCorruptedStateExceptions], чтобы включить функцию перехвата исключений поврежденного состояния.  Это изменение влияет главным образом на системных программистов, которым может потребоваться перехватить исключение поврежденного состояния. Восемь исключений: STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION, EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 Дополнительные сведения об этих исключениях см. в разделе о макросе [GetExceptionCode](/windows/win32/Debug/getexceptioncode).
 
 - Измененный параметр компилятора `/GS` предотвращает переполнение буфера более комплексно, чем в предыдущих версиях. Эта версия может включать в стек дополнительные проверки безопасности, которые могут отрицательно сказываться на общей производительности. Используйте новое ключевое слово `__declspec(safebuffers)`, чтобы указать компилятору на то, что не следует вставлять проверки безопасности для конкретной функции.
 

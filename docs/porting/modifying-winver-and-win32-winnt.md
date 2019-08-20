@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a624118bdd192c5ec677be81f0b410d2392e62e9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449070"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511600"
 ---
-# <a name="modifying-winver-and-win32winnt"></a>Изменение WINVER и _WIN32_WINNT
+# <a name="modifying-winver-and-_win32_winnt"></a>Изменение WINVER и _WIN32_WINNT
 
 Visual C++ больше не поддерживает создание программ для Windows 95, Windows 98, Windows ME, Windows NT и Windows 2000. Если ваши макросы **WINVER** или **_WIN32_WINNT** предназначены для одной из этих версий Windows, необходимо изменить такие макросы. При обновлении проекта, созданного с помощью более ранней версии Visual C++, могут появиться ошибки компиляции, связанные с макросами **WINVER** или **_WIN32_WINNT** , если они назначены версии Windows, которая больше не поддерживается.
 
@@ -53,7 +53,7 @@ Visual C++ больше не поддерживает создание прог�
 
 Также можно определить этот макрос с помощью параметра компилятора `/D`. Для получения дополнительной информации см. [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).
 
-Дополнительные сведения о значении этих макросов см. в разделе [Использование заголовков Windows](/windows/desktop/WinProg/using-the-windows-headers).
+Дополнительные сведения о значении этих макросов см. в разделе [Использование заголовков Windows](/windows/win32/WinProg/using-the-windows-headers).
 
 ## <a name="see-also"></a>См. также
 

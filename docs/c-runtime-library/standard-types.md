@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915315"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500635"
 ---
 # <a name="standard-types"></a>Стандартные типы
 
@@ -202,7 +202,7 @@ ms.locfileid: "68915315"
 |Структуры `div_t`, `ldiv_t` и `lldiv_t`|Хранят значения, возвращаемые [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) и [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), соответственно.|STDLIB.H|
 |Целое число `errno_t`|Используется для параметра или типа возвращаемого функцией значения, который относится к кодам ошибок `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Структура `_exception`|Хранит сведения об ошибке для [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
-|`_EXCEPTION_POINTERS`|Содержит запись исключения. Дополнительные сведения см. в разделе [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|Содержит запись исключения. Дополнительные сведения см. в разделе [EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers).|FPIEEE.H|
 |Структура `FILE`|Хранит сведения о текущем состоянии потока; используется во всех потоковых операциях ввода-вывода.|STDIO.H|
 |Структуры `_finddata_t`, `_wfinddata_t`, `_finddata32_t`, `_wfinddata32_t`, `_finddatai64_t`, `_wfinddatai64_t`, `__finddata64_t`, `__wfinddata64_t`, `__finddata32i64_t`, `__wfinddata32i64_t`, `__finddata64i32_t`, `__wfinddata64i32_t`|Хранит информацию об атрибутах файла, которую возвращают [_findfirst, _wfindfirst и связанные с ними функции](../c-runtime-library/reference/findfirst-functions.md) или [_findnext, _wfindnext и связанные с ними функции](../c-runtime-library/reference/findnext-functions.md). Дополнительные сведения о членах структур вы найдете в статье [Функции поиска имени файла](../c-runtime-library/filename-search-functions.md).|IO.H, WCHAR.H|
 |Структура `_FPIEEE_RECORD`|Содержит информацию, связанную с исключением плавающей запятой IEEE; передается определяемому пользователем обработчику перехвата с помощью [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md).|FPIEEE.H|
