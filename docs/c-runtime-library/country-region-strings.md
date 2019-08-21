@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49eb6bc4473d9e54c06c3bf9290f8c3c96640415
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463470"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500248"
 ---
 # <a name="countryregion-strings"></a>строки страны и региона
 
-Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых разными версиями операционной системы Windows, см. в столбцах **Язык**, **Расположение** и **Тег языка** таблицы, которая приведена в [приложении A (поведение продуктов)](https://msdn.microsoft.com/library/cc233982.aspx) справочника по коду языка Windows. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/desktop/intl/nls--name-based-apis-sample).
+Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых разными версиями операционной системы Windows, см. в столбцах **Язык**, **Расположение** и **Тег языка** в таблице, которая приведена в [приложении с описанием поведения продукта](https://msdn.microsoft.com/library/cc233982.aspx) в справочнике по идентификаторам кода языка Windows [MS-LCID]. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [ многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Дополнительные поддерживаемые строки страны и региона
 
@@ -23,7 +23,7 @@ ms.locfileid: "50463470"
 
 |Строка страны или региона|Сокращение|Соответствующее название языкового стандарта|
 |----------------------------|------------------|----------------------------|
-|america|USA|ru-RU|
+|america|USA|en-US|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
 |czech|CZE|cs-CZ|
@@ -44,8 +44,8 @@ ms.locfileid: "50463470"
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|USA|ru-RU|
-|us|USA|ru-RU|
+|united-states|USA|en-US|
+|us|USA|en-US|
 
 ## <a name="see-also"></a>См. также
 
