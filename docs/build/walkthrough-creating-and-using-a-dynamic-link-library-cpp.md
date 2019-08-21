@@ -2,17 +2,17 @@
 title: Пошаговое руководство. Создание и использование собственной библиотеки динамической компоновки (C++)
 description: Сведения о создании библиотеки динамической компоновки Windows (DLL) в Visual Studio с использованием C++.
 ms.custom: conceptual
-ms.date: 07/17/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9dffec9d7d974ceb3bf1ca4546a303fab47ee0be
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299809"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630684"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Пошаговое руководство. Создание и использование собственной библиотеки динамической компоновки (C++)
 
@@ -210,7 +210,7 @@ ms.locfileid: "68299809"
 
    ```cpp
    // MathLibrary.cpp : Defines the exported functions for the DLL.
-   #include "stdafx.h" // use pch.h in Visual Studio 2019
+   #include "pch.h" // use stdafx.h in Visual Studio 2017 and earlier
    #include <utility>
    #include <limits.h>
    #include "MathLibrary.h"
@@ -267,7 +267,7 @@ ms.locfileid: "68299809"
    }
    ```
 
-Чтобы убедиться, что все работает, скомпилируйте библиотеку динамической компоновки. Чтобы выполнить компиляцию, последовательно выберите **Сборка** > **Собрать решение**. Результат должен выглядеть примерно так. Обратите внимание, что исполняемый файл DLL и связанные с ним выходные данные  компилятора помещаются в папку, которая называется Отладка непосредственно под папкой решения. При создании сборки выпуска выходные данные будут помещены в папку с именем *Release*:
+Чтобы убедиться, что все работает, скомпилируйте библиотеку динамической компоновки. Чтобы выполнить компиляцию, последовательно выберите **Сборка** > **Собрать решение**. Результат должен выглядеть примерно так. Обратите внимание, что исполняемый файл DLL и связанные с ним выходные данные компилятора помещаются в папку, которая называется Отладка непосредственно под папкой решения. При создании сборки выпуска выходные данные будут помещены в папку с именем *Release*:
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
