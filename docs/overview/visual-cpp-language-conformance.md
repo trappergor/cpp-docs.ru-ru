@@ -1,18 +1,18 @@
 ---
-title: Соответствие Microsoft Visual C++ стандартам языка
-ms.date: 07/02/2019
+title: Таблица соответствия Microsoft Visual C++ стандартам языка
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 2b5d7774734eae992935af9bd4abd408dd387d7d
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552361"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980529"
 ---
-# <a name="microsoft-c-language-conformance-table"></a>Соответствие Microsoft Visual C++ стандартам языка
+# <a name="microsoft-c-language-conformance-table"></a>Таблица соответствия Microsoft Visual C++ стандартам языка
 
 Этот раздел содержит сводку по соответствию функций компилятора и функций стандартной библиотеки для компилятора Microsoft Visual C++ в Visual Studio 2019 и прежних версиях языковым стандартам ISO C++03, C++11, C++14 и C++17, C++20. Каждое название функции компилятора и стандартной библиотеки является ссылкой на документ по C++ стандарта ISO, где находится ее описание (если функция доступна на момент публикации). В столбце поддерживаемых версий перечислены версии Visual Studio, в которых впервые появилась поддержка функции.
 
@@ -23,14 +23,14 @@ ms.locfileid: "67552361"
 
 ## <a name="compiler-features"></a>Функции компилятора
 
-|Область функции| |
+| | |
 |----|---|
-|__Основные возможности языка C++03/11__|__Поддерживается__|
+|__Основные возможности языка C++03/11__|__Поддерживается__|
 |&nbsp;&nbsp;В любом другом месте|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Двухэтапный поиск по имени|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 Выражение SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Препроцессор C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Частично <sup>[C](#note_C)</sup>|
-|__Основные возможности языка C++14__|__Поддерживается__|
+|__Основные возможности языка C++14__|__Поддерживается__|
 |&nbsp;&nbsp;[N3323 Настраиваемое контекстное преобразование](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Двоичные литералы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Возвращаемые типы auto и decltype(auto)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -42,7 +42,7 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[N3651 Шаблоны переменных](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)|VS 2015.2|
 |&nbsp;&nbsp;[N3652 Расширенный constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017 15.0|
 |&nbsp;&nbsp;[N3653 Инициализаторы элементов по умолчанию для агрегатов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017 15.0|
-|__Основные возможности языка C++17__|__Поддерживается__|
+|__Основные возможности языка C++17__|__Поддерживается__|
 |&nbsp;&nbsp;[N4086 Удаление триграфов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Новые правила для автоматического использования с braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 Имя типа в параметрах шаблона](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -83,10 +83,6 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P0145R3 Уточнение порядка вычисления выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Порядок вычисления аргументов функции ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Упаковка расширений в объявлениях using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Пропуск нераспознанных атрибутов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|Область функции| |
-|----|---|
 |__Основные возможности языка C++17 (сообщения о дефектах)__|__Поддерживается__|
 |&nbsp;&nbsp;[P0702R1 Исправление выведения шаблона аргумента класса для конструкторов списка инициализаторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 Ослабление правил поиска точки настройки структурированных привязок](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P0929R2 Проверка на наличие типов абстрактного класса](https://wg21.link/P0929R2)|Нет|
 |&nbsp;&nbsp;[P1009R2 Определение размера массива в новых выражениях](https://wg21.link/P1009R2)|Нет|
 |&nbsp;&nbsp;[P1286R2 Альтернативное решение для CWG DR1778](https://wg21.link/P1286R2)|Нет|
-|Область функции| |
-|----|---|
 |__Основные возможности языка C++20__|__Поддерживается__|
 |&nbsp;&nbsp;[P0704R1 Исправления указателей элементов const lvalue, проверенных по ссылке](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 Использование char16_t и char32_t в формате UTF-16 и UTF-32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Изменение активного элемента объединения внутри constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept для \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 Оператор трехстороннего сравнения (космический корабль) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 Запрет агрегирования с объявленными пользователем конструкторами](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Назначенный конструктор инициализации](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Разрешение в лямбда-выражении захвата объекта\[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 Оператор трехстороннего сравнения (космический корабль) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,7 +106,6 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P0641R2 Несовпадение const с конструктором копирования по умолчанию](https://wg21.link/P0641R2)|Partial|
 |&nbsp;&nbsp;[P0306R4 Добавление \_\_VA_OPT\_\_ для пропуска и удаления запятых](https://wg21.link/P0306R4)|Нет|
 |&nbsp;&nbsp;[P0315R4 Разрешение лямбда-выражений в невычисляемых контекстах](https://wg21.link/P0315R4)|Нет|
-|&nbsp;&nbsp;[P0409R2 Разрешение в лямбда-выражении захвата объекта\[=, this\]](https://wg21.link/P0409R2)|Нет|
 |&nbsp;&nbsp;[P0428R2 Знакомый синтаксис шаблона для универсальных лямбда-выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Нет|
 |&nbsp;&nbsp;[P0479R5 Атрибуты \[\[likely\]\] и \[\[unlikely\]\]](https://wg21.link/P0479R5)|Нет|
 |&nbsp;&nbsp;[P0542R5 Контракты](https://wg21.link/P0542R5)|Нет|
@@ -151,9 +142,9 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P1353R0 Отсутствующие макросы тестирования функций](https://wg21.link/P1353R0)|Нет|
 |&nbsp;&nbsp;[P1381R1 Захват указателей на структурированные привязки](https://wg21.link/P1381R1)|Нет|
 
-## <a name="standard-library-features"></a>Стандартные возможности библиотеки
+## <a name="standard-library-features"></a>Функции стандартной библиотеки
 
-|Область функции| |
+| | |
 |---|---|
 |__Функции стандартной библиотеки C++20__|__Поддерживается__|
 |&nbsp;&nbsp;[P0809R0 Сравнение неупорядоченных контейнеров](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
@@ -220,7 +211,7 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P1227R2 std::ssize() со знаком, span::size() без знака](https://wg21.link/P1227R2)|Нет|
 |&nbsp;&nbsp;[P1285R0 Усовершенствование требований полноты для признаков типов](https://wg21.link/P1285R0)|Нет|
 |&nbsp;&nbsp;[P1357R1 is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|Нет|
-|__Функции стандартной библиотеки C++17__|__Поддерживается__|
+|__Функции стандартной библиотеки C++17__|__Поддерживается__|
 |&nbsp;&nbsp;[LWG 2221 Отформатированный оператор вывода для nullptr](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4089 Безопасные преобразования в unique_ptr\<T[]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -303,7 +294,7 @@ ms.locfileid: "67552361"
 |&nbsp;&nbsp;[P0607R0 Встроенные переменные для стандартной библиотеки](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Перевод \<codecvt> в разряд нерекомендуемых](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0682R1 Исправление простых преобразований строк](https://wg21.link/P0682R1)|VS 2015 15.7 <sup>[17](#note_17)</sup>|
-|__Функции стандартной библиотеки C++14__|__Поддерживается__|
+|__Функции стандартной библиотеки C++14__|__Поддерживается__|
 |&nbsp;&nbsp;[N3462 SFINAE result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr для \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr для \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
