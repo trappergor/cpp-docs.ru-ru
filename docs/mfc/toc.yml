@@ -11,22 +11,7 @@
         - name: Общие разделы по MFC
           href: general-mfc-topics.md
         - name: Использование файлов с исходным кодом MFC
-          expanded: false
-          items:
-            - name: Использование файлов с исходным кодом MFC
-              href: using-the-mfc-source-files.md
-            - name: Пример комментариев
-              href: an-example-of-the-comments.md
-            - name: — Комментарий реализации
-              href: decrement-implementation-comment.md
-            - name: — Комментарий конструкторов
-              href: decrement-constructors-comment.md
-            - name: — Комментарий атрибутов
-              href: decrement-attributes-comment.md
-            - name: — Комментарий операций
-              href: decrement-operations-comment.md
-            - name: — Комментарий переопределяемости
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: Версии библиотек MFC
           expanded: false
           items:

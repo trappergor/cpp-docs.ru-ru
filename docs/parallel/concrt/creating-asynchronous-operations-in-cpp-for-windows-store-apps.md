@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512248"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631737"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций C++ в для приложений UWP
 
@@ -70,10 +70,10 @@ ms.locfileid: "69512248"
 
 Возвращаемый тип `create_async` определяется типом аргументов. Например, если рабочая функция не возвращает значение и не сообщает о ходе выполнения, `create_async` возвращает `IAsyncAction`. Если рабочая функция не возвращает значение и сообщает о ходе выполнения, `create_async` возвращает `IAsyncActionWithProgress`. Чтобы сообщить о ходе выполнения, укажите объект [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) в качестве параметра рабочей функции. Возможность уведомления о ходе выполнения позволяет отчитываться о выполненном объеме работы и оставшемся объеме (например, в процентах). Это также позволяет сообщать о результатах, как только они становятся доступными.
 
-Интерфейсы `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, `IAsyncActionOperationWithProgress<TProgress, TProgress>` предоставляют метод `Cancel` , позволяющий отменить асинхронную операцию. Класс `task` работает с токенами отмены. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Уже выполняющаяся работа может отслеживать свой токен отмены и останавливаться, когда имеет такую возможность. Этот механизм описан подробнее в документе [Cancellation in the PPL](cancellation-in-the-ppl.md). Можно соединить отмену задач с помощью методов`Cancel` среда выполнения Windows двумя способами. Во-первых, можно определить рабочую функцию, передаваемую `create_async` для получения объекта [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Когда метод `Cancel` вызывается, этот токен отмены отменяется, и обычные правила отмены применяются к основному объекту `task` , поддерживающему вызов метода `create_async` . Если объект `cancellation_token` не предоставляется, базовый объект `task` определит его неявно. Определите объект `cancellation_token` при необходимости совместно реагировать на отмену в вашей рабочей функции. Пример раздела [: Управление выполнением в среда выполнения Windows приложении с C++ помощью и](#example-app) XAML демонстрирует пример выполнения отмены в приложении универсальная платформа Windows (UWP) с C# и XAML, в котором используется пользовательский компонент Среда выполнения Windows C++ .
+Интерфейсы `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, `IAsyncActionOperationWithProgress<TProgress, TProgress>` предоставляют метод `Cancel` , позволяющий отменить асинхронную операцию. Класс `task` работает с токенами отмены. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Уже выполняющаяся работа может отслеживать свой токен отмены и останавливаться, когда имеет такую возможность. Этот механизм описан подробнее в документе [Cancellation in the PPL](cancellation-in-the-ppl.md). Можно соединить отмену задач с помощью методов`Cancel` среда выполнения Windows двумя способами. Во-первых, можно определить рабочую функцию, передаваемую `create_async` для получения объекта [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . При вызове `task`методаэтот токен отмены отменяется, а обычные правила отмены применяются к базовому объекту, который поддерживает `create_async` вызов. `Cancel` Если объект `cancellation_token` не предоставляется, базовый объект `task` определит его неявно. Определите объект `cancellation_token` при необходимости совместно реагировать на отмену в вашей рабочей функции. Пример раздела [: Управление выполнением в среда выполнения Windows приложении с C++ помощью и](#example-app) XAML демонстрирует пример выполнения отмены в приложении универсальная платформа Windows (UWP) с C# и XAML, в котором используется пользовательский компонент Среда выполнения Windows C++ .
 
 > [!WARNING]
->  В цепочке продолжений задач всегда очищайте состояние, а затем вызывайте метод [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) , когда токен отмены отменяется. Если возврат выполняется раньше вместо вызова `cancel_current_task`, операция переходит в состояние завершения вместо состояния отмены.
+>  В цепочке продолжений задач всегда очищать состояние, а затем вызывать [Concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) при отмене токена отмены. Если возврат выполняется раньше вместо вызова `cancel_current_task`, операция переходит в состояние завершения вместо состояния отмены.
 
 В следующей таблице приведены сочетания, которые можно использовать для определения асинхронных операций в приложении.
 
@@ -161,7 +161,7 @@ ms.locfileid: "69512248"
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-Добавьте следующие выражения `#include` в pch.h.
+Добавьте следующие `#include` инструкции в *PCH. h*.
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 
