@@ -23,7 +23,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459591"
 ---
-# <a name="basicfstream-class"></a>Класс basic_fstream
+# <a name="basic_fstream-class"></a>Класс basic_fstream
 
 Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.
 
