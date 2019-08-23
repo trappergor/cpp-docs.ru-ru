@@ -86,6 +86,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Справочник по схеме Tasks.VS.JSON (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Справочник по схеме Launch.vs.json (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: Проекты CMake
       expanded: false
       items:
