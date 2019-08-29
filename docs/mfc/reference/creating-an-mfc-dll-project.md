@@ -1,6 +1,6 @@
 ---
 title: Создание проекта библиотеки DLL MFC
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.mfcdll.project
 helpviewer_keywords:
@@ -9,38 +9,36 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708226"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108480"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Создание проекта библиотеки DLL MFC
 
-Библиотека DLL MFC — это двоичный файл, который выступает в качестве общей библиотеки функций, которые могут использоваться одновременно несколькими приложениями. Самый простой способ создания проекта MFC DLL является использование мастера MFC DLL.
+Библиотека DLL MFC — это двоичный файл, который выступает в качестве общей библиотеки функций, которые могут одновременно использоваться несколькими приложениями. Самый простой способ создать проект библиотеки DLL MFC — использовать мастер DLL MFC.
 
 > [!NOTE]
->  Вид функций в интегрированной среде разработки может зависеть от текущих параметров или выпуска и могут отличаться от описанных в справке. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  Внешний вид функций в интегрированной среде разработки может зависеть от текущих параметров или выпуска и может отличаться от описанных в справке. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Чтобы создать проект библиотеки DLL MFC, с помощью мастера MFC DLL
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Создание проекта библиотеки DLL MFC с помощью мастера библиотек DLL MFC
 
-1. Следуйте инструкциям в разделе справки [создайте проект консольного приложения C++](../../get-started/tutorial-console-cpp.md).
+1. Следуйте инструкциям в разделе справки по [созданию приложения MFC](creating-an-mfc-application.md) , но в списке доступных шаблонов выберите **Библиотека динамической компоновки MFC** или библиотека **DLL MFC** .
 
-**Примечание** в **новый проект** выберите `MFC DLL` значок в области «Шаблоны», чтобы открыть мастер библиотек DLL MFC.
-
-1. Задайте параметры приложения с помощью [параметры приложения](../../mfc/reference/application-settings-mfc-dll-wizard.md) странице [мастера MFC DLL](../../mfc/reference/mfc-dll-wizard.md).
+1. Определите параметры приложения на странице [Параметры приложения](../../mfc/reference/application-settings-mfc-dll-wizard.md) [мастера библиотек DLL MFC](../../mfc/reference/mfc-dll-wizard.md).
 
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.
 
-1. Нажмите кнопку **Готово** закрыть мастер и откройте новый проект в **обозревателе решений**.
+1. Нажмите кнопку **Готово** , чтобы закрыть мастер и открыть новый проект в **Обозреватель решений**.
 
-После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для Visual Studio C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть его файлы при помощи **обозревателя решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>См. также
 
-[C++типы проектов в Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Типы проектов C++ в Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Страницы свойств](../../build/reference/property-pages-visual-cpp.md)
 
