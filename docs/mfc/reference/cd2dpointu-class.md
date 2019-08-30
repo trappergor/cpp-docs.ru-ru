@@ -1,6 +1,6 @@
 ---
 title: Класс CD2DPointU
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DPointU
 - AFXRENDERTARGET/CD2DPointU
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-ms.openlocfilehash: d66793abbb83015891df348eef8384e5c97baf2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6289d33aa0672d1ee423d91b11527dccfc868da7
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396318"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177181"
 ---
 # <a name="cd2dpointu-class"></a>Класс CD2DPointU
 
@@ -31,13 +31,13 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 |name|Описание|
 |----------|-----------------|
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|Перегружен. Создает `CD2DPointU` из объекта `D2D1_POINT_2U` объекта.|
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|Перегружен. `CD2DPointU` Конструирует объект`D2D1_POINT_2U` из объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |name|Описание|
 |----------|-----------------|
-|[CD2DPointU::operator CPoint](#operator_cpoint)|Преобразует `CD2DPointU` для `CPoint` объекта.|
+|[CD2DPointU:: operator CPoint](#operator_cpoint)|Преобразует `CD2DPointU` в`CPoint` объект.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -47,16 +47,16 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxrendertarget.h
+**Заголовок:** афксрендертаржет. h
 
-##  <a name="cd2dpointu"></a>  CD2DPointU::CD2DPointU
+##  <a name="cd2dpointu"></a>CD2DPointU::CD2DPointU
 
-Создает объект CD2DPointU из CPoint объекта.
+Конструирует объект CD2DPointU из объекта CPoint.
 
 ```
 CD2DPointU(const CPoint& pt);
 CD2DPointU(const D2D1_POINT_2U& pt);
-  CD2DPointU(const D2D1_POINT_2U* pt);
+CD2DPointU(const D2D1_POINT_2U* pt);
 CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```
 
@@ -65,15 +65,15 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 *pt*<br/>
 Исходная точка
 
-*uX*<br/>
+*Взаимодействия*<br/>
 Источник X
 
 *uY*<br/>
 Источник Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint
+##  <a name="operator_cpoint"></a>CD2DPointU:: operator CPoint
 
-Преобразует CD2DPointU CPoint.
+Преобразует CD2DPointU в объект CPoint.
 
 ```
 operator CPoint();
