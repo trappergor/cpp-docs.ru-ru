@@ -1,6 +1,6 @@
 ---
 title: Класс Кфтпконнектион
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506370"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177284"
 ---
 # <a name="cftpconnection-class"></a>Класс Кфтпконнектион
 
@@ -171,11 +171,13 @@ CInternetFile* Command(
 Указатель на строку, содержащую отправляемую команду.
 
 *ереспонсе*<br/>
-Определяет, следует ли ожидать ответ FTP-сервера. Может принимать одно из следующих значений:
+Указывает, ожидается ли ответ от FTP-сервера. Может принимать одно из следующих значений:
 
 - `CmdRespNone`Ответ не ожидается.
-
 - `CmdRespRead`Ожидается ответ.
+- `CmdRespWrite`Не используется.
+
+Кмдреспонсетипе является членом Кфтпконнектион, определенным в *афксинет. h*.
 
 *dwFlags*<br/>
 Значение, содержащее флаги, управляющие этой функцией. Полный список см. в разделе [фтпкомманд](/windows/win32/api/wininet/nf-wininet-ftpcommandw).
