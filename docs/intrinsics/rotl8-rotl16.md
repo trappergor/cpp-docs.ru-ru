@@ -1,6 +1,6 @@
 ---
 title: _rotl8, _rotl16
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _rotl8
 - _rotl16
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 8c87c7a5fa1c2bee475b0e4508b5c1571dc449de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390481"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218029"
 ---
-# <a name="rotl8-rotl16"></a>_rotl8, _rotl16
+# <a name="_rotl8-_rotl16"></a>_rotl8, _rotl16
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -23,7 +23,7 @@ ms.locfileid: "62390481"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned char _rotl8(
    unsigned char value,
    unsigned char shift
@@ -34,13 +34,13 @@ unsigned short _rotl16(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*value*<br/>
-[in] Значение для поворота.
+*value*\
+окне Значение для поворота.
 
-*shift*<br/>
-[in] Число разрядов для поворота.
+*мести*\
+окне Число битов для поворота.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -50,18 +50,18 @@ unsigned short _rotl16(
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`_rotl8`|x86, ARM, x64|
-|`_rotl16`|x86, ARM, x64|
+|`_rotl8`|x86, ARM, x64, ARM64|
+|`_rotl16`|x86, ARM, x64, ARM64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-В отличие от операции сдвига влево, при выполнении левого поворота старшие разряды, попавшие за верхний предел, перемещаются в наименьшие разряды.
+В отличие от операции сдвига влево, при выполнении левого вращения старшие биты, которые выходят за пределы верхнего конца, перемещаются на наименее значащие биты.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // rotl.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -102,5 +102,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 
 ## <a name="see-also"></a>См. также
 
-[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[_rotr8, _rotr16](../intrinsics/rotr8-rotr16.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

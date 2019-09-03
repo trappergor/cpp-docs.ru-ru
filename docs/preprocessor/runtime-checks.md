@@ -1,6 +1,6 @@
 ---
-title: runtime_checks
-ms.date: 11/04/2016
+title: Прагма runtime_checks
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.runtime_checks
 - runtime_checks_CPP
@@ -8,58 +8,55 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1c8e6cca27e157818e6ec80182f8fefa112daf1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179988"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216619"
 ---
-# <a name="runtimechecks"></a>runtime_checks
+# <a name="runtime_checks-pragma"></a>Прагма runtime_checks
+
 Отключает или восстанавливает параметры [/RTC](../build/reference/rtc-run-time-error-checks.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma runtime_checks( "[runtime_checks]", {restore | off} )
-```
+> **#pragma runtime_checks ("** [ *runtime_checks* ] **",** { **RESTORE** | **Off** } **)**
 
 ## <a name="remarks"></a>Примечания
 
-Невозможно включить проверку времени выполнения, не включенную с параметром компилятора. Например, если вы не укажете `/RTCs`, указав `#pragma runtime_checks( "s", restore)` не будет включению проверки кадра стека.
+Нельзя включить проверку времени выполнения, которая не была включена параметром компилятора. Например, если не указать `/RTCs` в командной строке, при указании параметра `#pragma runtime_checks( "s", restore)` не будет включена проверка кадра стека.
 
-Директива pragma **runtime_checks** должна находиться за пределами функции; она вступает в силу в первой функции, определенной после этой директивы. Аргументы *restore* и *off* включают или отключают параметры, указанные в директиве **runtime_checks** .
+Директива pragma **runtime_checks** должна находиться за пределами функции и вступает в силу при первой функции, определенной после того, как будет показана директива pragma. Аргументы **restore** и **off** включают или отключают параметры, указанные в директиве **runtime_checks** .
 
 Директива **runtime_checks** может содержать ноль или несколько параметров, приведенных в следующей таблице.
 
-### <a name="parameters-of-the-runtimechecks-pragma"></a>Параметры директивы pragma runtime_checks
+### <a name="parameters-of-the-runtime_checks-pragma"></a>Параметры директивы pragma runtime_checks
 
-|Параметры|Тип проверки времени выполнения|
+| Параметры | Тип проверки времени выполнения |
 |--------------------|-----------------------------|
-|*s*|Включает проверку (кадра) стека.|
-|*c*|Сообщает, когда значение назначается меньшему типу данных, что приводит к потере данных.|
-|*u*|Сообщает о том, что переменная используется до ее определения.|
+| **s** | Включает проверку (кадра) стека. |
+| **c** | Сообщает, когда значение назначается меньшему типу данных, что приводит к потере данных. |
+| **u** | Сообщает об использовании переменной перед ее определением. |
 
-Это же буквы используются с `/RTC` параметр компилятора. Пример:
+Эти параметры являются теми же, которые используются с `/RTC` параметром компилятора. Например:
 
-```
+```cpp
 #pragma runtime_checks( "sc", restore )
 ```
 
-Директива pragma **runtime_checks** с пустой строкой (**""**) представляет собой специальную форму директивы.
+Директива pragma **runtime_checks** с пустой строкой ( **""** ) представляет собой специальную форму директивы.
 
-- При использовании параметра *off* она отключает проверки ошибок во время выполнения, перечисленные в таблице выше.
+- При использовании параметра **Off** происходит включение проверок ошибок во время выполнения, перечисленных в приведенной выше таблице.
 
-- При использовании *восстановить* параметр, она сбрасывает проверки ошибок во время выполнения до указанных с `/RTC` параметр компилятора.
+- При использовании параметра RESTORE он сбрасывает проверки ошибок во время выполнения до тех, которые были указаны с помощью `/RTC` параметра компилятора.
 
-```
+```cpp
 #pragma runtime_checks( "", off )
-.
-.
-.
+/* runtime checks are off in this region */
 #pragma runtime_checks( "", restore )
 ```
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

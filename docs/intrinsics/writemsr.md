@@ -1,6 +1,6 @@
 ---
 title: __writemsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writemsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: ac57bac1d132c581ee12048b89d13ed1d1fdb7da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389714"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219131"
 ---
-# <a name="writemsr"></a>__writemsr
+# <a name="__writemsr"></a>__writemsr
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает запись для регистра (`wrmsr`) инструкции.
+Создает инструкцию Write для конкретной модели Register`wrmsr`().
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __writemsr(
    unsigned long Register,
    unsigned __int64 Value
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Регистрация*<br/>
-[in] Модельнозависимого регистра.
+*Зарегистрировать*\
+окне Регистр, зависящий от модели.
 
-*Значение*<br/>
-[in] Записываемое значение.
+*Значений*\
+окне Записываемое значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -44,14 +44,14 @@ void __writemsr(
 |---------------|------------------|
 |`__writemsr`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция может использоваться только в режиме ядра, и эта процедура доступна только как встроенная.
+Эта функция может использоваться только в режиме ядра, и эта подпрограммы доступна только в качестве встроенной функции.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

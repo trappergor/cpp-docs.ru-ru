@@ -1,19 +1,19 @@
 ---
 title: __umulh
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umulh
 helpviewer_keywords:
 - __umulh intrinsic
 ms.assetid: d241b53a-e6f7-4af1-9f6e-84e149158f03
-ms.openlocfilehash: 3a42de276b483f98e2eaf9d0c8505d7f1d5b5bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf098657d1bd5b7ef8a4ffc21f487d2ce619a04e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390117"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219667"
 ---
-# <a name="umulh"></a>__umulh
+# <a name="__umulh"></a>__umulh
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -21,20 +21,20 @@ ms.locfileid: "62390117"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __umulh(
    unsigned __int64 a,
    unsigned __int64 b
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*a*<br/>
-[in] Первое число для перемножения.
+*конкретного*\
+[in] Первое число для умножения.
 
-*b*<br/>
-[in] Второе число для перемножения.
+*&* \
+[in] Второе число для умножения.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -46,7 +46,7 @@ unsigned __int64 __umulh(
 |---------------|------------------|
 |`__umulh`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -54,7 +54,7 @@ unsigned __int64 __umulh(
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // umulh.cpp
 // processor: X64
 #include <cstdio>
@@ -82,4 +82,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,19 +1,19 @@
 ---
 title: __writecr0
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr0
 helpviewer_keywords:
 - _writecr0 intrinsic
 ms.assetid: a143d08d-0333-4e1b-91b4-4acb2ae91b5a
-ms.openlocfilehash: 24d9ffe0e07269fedf19f90a7c66a07e3c5e7d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f00796242ae352d32935c2551d50f2d93d734ec
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389948"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219305"
 ---
-# <a name="writecr0"></a>__writecr0
+# <a name="__writecr0"></a>__writecr0
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -21,16 +21,16 @@ ms.locfileid: "62389948"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void writecr0(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Данные*<br/>
-[in] Значение для записи в регистре CR0.
+*Data*\
+окне Значение, записываемое в CR0 регистр.
 
 ## <a name="requirements"></a>Требования
 
@@ -38,7 +38,7 @@ void writecr0(
 |---------------|------------------|
 |`__writecr0`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -48,4 +48,4 @@ void writecr0(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

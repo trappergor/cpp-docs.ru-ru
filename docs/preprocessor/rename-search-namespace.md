@@ -1,40 +1,38 @@
 ---
-title: rename_search_namespace
-ms.date: 10/18/2018
+title: rename_search_namespace, атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - rename_search_namespace
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42c6edb6aa34b441db8041dd2974728c138b2c82
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179780"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216625"
 ---
-# <a name="renamesearchnamespace"></a>rename_search_namespace
+# <a name="rename_search_namespace-import-attribute"></a>rename_search_namespace, атрибут импорта
 
-**Конкретных C++**
+**C++Зависящ**
 
-Имеет ту же функциональность, что [rename_namespace](../preprocessor/rename-namespace.md) атрибут, однако применяется для библиотек типов, используемых вами `#import` директиву [auto_search](../preprocessor/auto-search.md) атрибута.
+Функция имеет те же функциональные возможности, что и атрибут [rename_namespace](../preprocessor/rename-namespace.md) , но используется в библиотеках типов, `#import` где используется директива вместе с атрибутом [auto_search](../preprocessor/auto-search.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-rename_search_namespace("NewName")
-```
+> **#import** *Библиотека типов* **rename_search_namespace (** "*новое_имя*" **)**
 
 ### <a name="parameters"></a>Параметры
 
-*NewName*<br/>
+*NewName*\
 Новое имя пространства имен.
 
 ## <a name="remarks"></a>Примечания
 
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

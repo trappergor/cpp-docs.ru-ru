@@ -1,6 +1,6 @@
 ---
-title: pop_macro
-ms.date: 11/04/2016
+title: Прагма pop_macro
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180138"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218294"
 ---
-# <a name="popmacro"></a>pop_macro
-Задает значение *имени-макроса* значению на вершине стека этого макроса.
+# <a name="pop_macro-pragma"></a>Прагма pop_macro
+
+Задает в качестве значения макроса *имени макроса* значение в верхней части стека для этого макроса.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma pop_macro("
-macro_name
-")
-```
+> **#pragma pop_macro (** "*Macro-Name*" **)**
 
 ## <a name="remarks"></a>Примечания
 
-Во-первых, необходимо отправить [push_macro](../preprocessor/push-macro.md) для *имени-макроса* перед выполнением **pop_macro**.
+Перед тем как вы сможете выполнить **pop_macro**, необходимо выполнить [push_macro](../preprocessor/push-macro.md) для *макроопределения-Name* .
 
 ## <a name="example"></a>Пример
 
@@ -66,4 +63,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,38 +1,37 @@
 ---
 title: __vmx_vmclear
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmclear
 helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5807402cf0a9d8a9ef1ded1d112d22a801633e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390065"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219541"
 ---
-# <a name="vmxvmclear"></a>__vmx_vmclear
+# <a name="__vmx_vmclear"></a>__vmx_vmclear
 
 **Блок, относящийся только к системам Microsoft**
 
-Инициализирует структуру управления указанной виртуальной машины (VMCS) и устанавливает состояние запуска `Clear`.
+Инициализирует указанную структуру управления виртуальными машинами (VMCS) и задает для ее `Clear`состояния запуска значение.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned char __vmx_vmclear(
    unsigned __int64 *VmcsPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*VmcsPhysicalAddress*|[in] Указатель на адрес памяти 64-разрядной, содержащий физический адрес VMCS для очистки.|
+*вмксфисикаладдресс*\
+окне Указатель на 64-разрядное расположение в памяти, которое содержит физический адрес VMCS для очистки.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -44,9 +43,9 @@ unsigned char __vmx_vmclear(
 
 ## <a name="remarks"></a>Примечания
 
-Приложение может выполнять операцию VM-enter, либо при помощи [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функция может использоваться только с VMCS, состояние запуска которой — `Clear`и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функция может использоваться только с VMCS, состояние запуска которой — `Launched`. Следовательно, используйте [__vmx_vmclear](../intrinsics/vmx-vmclear.md) функцию для задания состояния запуска VMCS `Clear`. Используйте [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функции для первой операции VM-enter и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции для последующих операций VM-enter.
+Приложение может выполнить операцию типа "виртуальная машина — ввод" с помощью функции [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) . Функция [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) может использоваться только с VMCS, состояние запуска которого — `Clear`, а функция [__vmx_vmresume](../intrinsics/vmx-vmresume.md) может использоваться только с VMCS, состояние запуска которого —. `Launched` Следовательно, используйте функцию [__vmx_vmclear](../intrinsics/vmx-vmclear.md) , чтобы установить состояние запуска VMCS на `Clear`. Используйте функцию [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) для первой операции ВМ — Enter и функции [__vmx_vmresume](../intrinsics/vmx-vmresume.md) для ПОСЛЕДУЮЩЕЙ операции ввода виртуальной машины.
 
-Функция `__vmx_vmclear` эквивалентна инструкции компьютера `VMCLEAR` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция `__vmx_vmclear` эквивалентна инструкции компьютера `VMCLEAR` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе "Техническая спецификация виртуализации Intel для архитектуры IA-32 Intel" номер документа C97063-002 на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Требования
 
@@ -54,12 +53,12 @@ unsigned char __vmx_vmclear(
 |---------------|------------------|
 |`__vmx_vmclear`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

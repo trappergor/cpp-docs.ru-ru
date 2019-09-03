@@ -1,34 +1,34 @@
 ---
 title: __getcallerseflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _getcallerseflags
 - _getcallerseflags_cpp
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264105"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222163"
 ---
-# <a name="getcallerseflags"></a>__getcallerseflags
+# <a name="__getcallerseflags"></a>__getcallerseflags
 
 **Блок, относящийся только к системам Microsoft**
 
-Возвращает значение EFLAGS из контекста вызывающей стороны.
+Возвращает значение ЕФЛАГС из контекста вызывающего объекта.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned int __getcallerseflags(void);
 ```
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Значение EFLAGS из контекста вызывающей стороны.
+Значение ЕФЛАГС из контекста вызывающего объекта.
 
 ## <a name="requirements"></a>Требования
 
@@ -36,7 +36,7 @@ unsigned int __getcallerseflags(void);
 |---------------|------------------|
 |`__getcallerseflags`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -44,7 +44,7 @@ unsigned int __getcallerseflags(void);
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // getcallerseflags.cpp
 // processor: x86, x64
 
@@ -82,4 +82,4 @@ EFLAGS 0x206
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedAnd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349466"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217777"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>Встроенные функции _InterlockedAnd
+# <a name="_interlockedand-intrinsic-functions"></a>Встроенные функции _InterlockedAnd
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -71,7 +71,7 @@ ms.locfileid: "62349466"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedAnd(
    long volatile * value,
    long mask
@@ -170,13 +170,13 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*value*<br/>
-[in, out] Указатель на первый операнд заменяется результатом.
+*value*\
+[вход, выход] Указатель на первый операнд, который должен быть заменен результатом.
 
-*Маска*<br/>
-[in] Второй операнд.
+*виде*\
+окне Второй операнд.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -186,16 +186,17 @@ __int64 _InterlockedAnd64_rel(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
-|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86, ARM, x64, ARM64|\<> Intrin. h|
+|`_InterlockedAnd64`|ARM, x64, ARM64|\<> Intrin. h|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<> Intrin. h|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<> Intrin. h|
+|`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86, x64|\<> использованием immintrin. h|
 
 ## <a name="remarks"></a>Примечания
 
 Число в имени каждой функции указывает разрядность аргументов.
 
-На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
+На платформах ARM и ARM64 используйте встроенные функции с `_acq` суффиксами и `_rel` для семантики получения и освобождения, например в начале и в конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
 
 Встроенные функции с суффиксом `_np` («нет упреждающей выборки") запрещают возможную вставку компилятором операции упреждающей выборки.
 
@@ -203,7 +204,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // InterlockedAnd.cpp
 // Compile with: /Oi
 #include <stdio.h>
@@ -229,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

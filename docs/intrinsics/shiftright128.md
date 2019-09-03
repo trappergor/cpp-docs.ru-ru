@@ -1,19 +1,19 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390338"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220013"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390338"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Значение подверсии*<br/>
-[in] Младшие 64 разряда 128-разрядной величины для сдвига.
+*ловпарт*\
+окне Младший 64 бит 128-разрядного количества для сдвига.
 
-*HighPart*<br/>
-[in] Старшие 64 разряда 128-разрядной величины для сдвига.
+*хигхпарт*\
+окне Старшие 64 бит 128-разрядного количества для сдвига.
 
-*SHIFT*<br/>
-[in] Количество битов для сдвига.
+*Мести*\
+окне Число битов для сдвига.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -50,7 +50,7 @@ unsigned __int64 __shiftright128(
 |---------------|------------------|
 |`__shiftright128`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -58,11 +58,11 @@ unsigned __int64 __shiftright128(
 
 ## <a name="example"></a>Пример
 
-Например, см. в разделе [__shiftleft128](../intrinsics/shiftleft128.md).
+Пример см. в разделе [__shiftleft128](../intrinsics/shiftleft128.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__shiftleft128](../intrinsics/shiftleft128.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __inwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inwordstring
 - __inwordstring_cpp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f67e15bc5eef9fbe9cc8d12e95afcdf869e3b1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263455"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221880"
 ---
-# <a name="inwordstring"></a>__inwordstring
+# <a name="__inwordstring"></a>__inwordstring
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -23,7 +23,7 @@ ms.locfileid: "62263455"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __inwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __inwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Порт*<br/>
-[in] Порт для чтения из.
+*Порту*\
+окне Порт, из которого производится чтение.
 
-*буфер*<br/>
-[out] Данные, считанные из порта записывается здесь.
+*Двойной*\
+заполняет Данные, считанные с порта, записываются здесь.
 
-*Количество*<br/>
-[in] Число слов в данных для чтения.
+*Расчета*\
+окне Число слов данных для чтения.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,7 +48,7 @@ void __inwordstring(
 |---------------|------------------|
 |`__inwordstring`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -58,4 +58,4 @@ void __inwordstring(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

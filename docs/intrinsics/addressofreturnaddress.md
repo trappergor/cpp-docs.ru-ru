@@ -1,6 +1,6 @@
 ---
 title: _AddressOfReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _AddressOfReturnAddress_cpp
 - _AddressOfReturnAddress
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: 79d1e4645c60fb4231a53aaefdcf1fe0f3c876c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264807"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221071"
 ---
-# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+# <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
 **Блок, относящийся только к системам Microsoft**
 
-Предоставляет адрес области памяти, содержащий обратный адрес текущей функции. Этот адрес не может использоваться для доступа к другим расположениям памяти (например, аргументов функции).
+Предоставляет адрес расположения в памяти, в котором содержится обратный адрес текущей функции. Этот адрес не может использоваться для доступа к другим расположениям в памяти (например, аргументы функции).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void * _AddressOfReturnAddress();
 ```
 
@@ -31,19 +31,19 @@ void * _AddressOfReturnAddress();
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`_AddressOfReturnAddress`|x86, x64|
+|`_AddressOfReturnAddress`|x86, x64, ARM, ARM64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Когда `_AddressOfReturnAddress` используется в программы, скомпилированной с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_AddressOfReturnAddress` вызов скомпилирована как собственная функция. Если функция скомпилирована как управляемые вызовы в функцию, содержащую `_AddressOfReturnAddress`, `_AddressOfReturnAddress` может вести себя непредусмотренным образом.
+Если `_AddressOfReturnAddress` используется в программе, скомпилированной с [параметром/CLR](../build/reference/clr-common-language-runtime-compilation.md), `_AddressOfReturnAddress` то функция, содержащая вызов, компилируется как собственная функция. Если функция, скомпилированная как управляемые вызовы в функцию, `_AddressOfReturnAddress`содержащую `_AddressOfReturnAddress` , может работать не так, как ожидалось.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // compiler_intrinsics_AddressOfReturnAddress.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -77,5 +77,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)

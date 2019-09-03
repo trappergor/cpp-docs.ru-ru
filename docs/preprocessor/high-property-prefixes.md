@@ -1,48 +1,46 @@
 ---
-title: high_property_prefixes
-ms.date: 10/18/2018
+title: high_property_prefixes, атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - high_property_prefixes
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44f6f1afae479f803f4c6d866ef3ee38744561
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409842"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219003"
 ---
-# <a name="highpropertyprefixes"></a>high_property_prefixes
+# <a name="high_property_prefixes-import-attribute"></a>high_property_prefixes, атрибут импорта
 
-**Конкретных C++**
+**C++Зависящ**
 
 Задает другие префиксы для трех методов свойств.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *Библиотека типов* **high_property_prefixes (** "*префикс*" **,** "*путпрефикс*" **,** "*путрефпрефикс*" **)**
 
 ### <a name="parameters"></a>Параметры
 
-*GetPrefix*<br/>
-Префикс, используемый для `propget` методы.
+*Префикс*\
+Префикс, который будет использоваться для `propget` методов.
 
-*PutPrefix*<br/>
-Префикс, используемый для `propput` методы.
+*путпрефикс*\
+Префикс, который будет использоваться для `propput` методов.
 
-*PutRefPrefix*<br/>
-Префикс, используемый для `propputref` методы.
+*путрефпрефикс*\
+Префикс, который будет использоваться для `propputref` методов.
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию высокоуровневые обработки ошибок `propget`, `propput`, и `propputref` методы предоставляются функциями-членами, префиксы `Get`, `Put`, и `PutRef`, соответственно.
+По умолчанию высокоуровневые `propget`методы обработки ошибок, `propput`и `propputref` предоставляются функциями-членами с префиксами `Get`, `Put`и `PutRef`соответственно.
 
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

@@ -1,38 +1,37 @@
 ---
-title: raw_interfaces_only
-ms.date: 11/04/2016
+title: raw_interfaces_only, атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - raw_interfaces_only
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b79aa4dbafa204d84f4d6ed7ec78fdec1b81fa7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179793"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216204"
 ---
-# <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Конкретных C++**
+# <a name="raw_interfaces_only-import-attribute"></a>raw_interfaces_only, атрибут импорта
 
-Отключает создание функций оболочки обработки ошибок и [свойство](../cpp/property-cpp.md) объявления, в которых используются такие функции оболочки.
+**C++Зависящ**
+
+Подавляет создание функций-оболочек обработки ошибок и объявлений [свойств](../cpp/property-cpp.md) , использующих эти функции-оболочки.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-raw_interfaces_only
-```
+> **#import** *Библиотека типов* **raw_interfaces_only**
 
 ## <a name="remarks"></a>Примечания
 
-**Raw_interfaces_only** атрибут приводит также к префикс по умолчанию, используемое для именования удалены функции, не являющийся свойством. Как правило, используется префикс **raw_**. Если этот атрибут задан, имена функций берутся непосредственно из библиотеки типов.
+Атрибут **raw_interfaces_only** также вызывает префикс по умолчанию, используемый при именовании удаляемых функций, не являющихся свойствами. Как правило, префикс имеет `raw_`значение. Если этот атрибут указан, имена функций берутся непосредственно из библиотеки типов.
 
 Этот атрибут позволяет предоставлять только низкоуровневое содержимое библиотеки типов.
 
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

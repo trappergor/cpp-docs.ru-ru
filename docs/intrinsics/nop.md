@@ -1,28 +1,28 @@
 ---
 title: __nop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __nop
 helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4561bcb84063f3707825c8ca164867d41500e2db
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396630"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221675"
 ---
-# <a name="nop"></a>__nop
+# <a name="__nop"></a>__nop
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает специфические для платформы машинный код, который не выполняет никаких действий.
+Создает машинный код, зависящий от платформы, который не выполняет никаких операций.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __nop();
 ```
 
@@ -32,15 +32,15 @@ void __nop();
 |---------------|------------------|
 |`__nop`|x86, ARM, x64, ARM64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="remarks"></a>Примечания
 
-Функция `__nop` эквивалентна инструкции компьютера `NOP` . Дополнительные сведения о x86 и x64 поиска для документа, «руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник по набору инструкций,» в [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция `__nop` эквивалентна инструкции компьютера `NOP` . Дополнительные сведения об архитектуре x86 и x64 см. в документе "Руководство разработчика по архитектуры Intel, том 2: Справочник по набору инструкций "на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__noop](../intrinsics/noop.md)

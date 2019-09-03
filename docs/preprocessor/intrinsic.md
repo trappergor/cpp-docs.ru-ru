@@ -1,6 +1,6 @@
 ---
-title: intrinsic
-ms.date: 04/11/2018
+title: Прагма intrinsic
+ms.date: 08/29/2019
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
@@ -8,30 +8,28 @@ helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb4403abf5e278ed3727af660579e22ab69592c7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212383"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220938"
 ---
-# <a name="intrinsic"></a>intrinsic
+# <a name="intrinsic-pragma"></a>Прагма intrinsic
 
 Указывает, что функции, заданные в списка аргументов этой директивы, вызываются как встроенные.
 
 ## <a name="syntax"></a>Синтаксис
 
-```cpp
-#pragma intrinsic( function1 [, function2, ...] )
-```
+> **Встроенная #pragma (** *функция1* [ **,** _функция2_ ...] **)**
 
 ## <a name="remarks"></a>Примечания
 
-**Внутренние** директива pragma указывает компилятору, что поведение функции известно.  Компилятор может вызвать функцию и не заменять вызов функции подставляемыми инструкциями, если это позволит повысить производительность.
+**Встроенная** директива pragma сообщает компилятору, что функция имеет известное поведение. Компилятор может вызвать функцию и не заменять вызов функции подставляемыми инструкциями, если это позволит повысить производительность.
 
-Ниже перечислены функции библиотеки со встроенными формами. Один раз **внутренние** директивы, он начинает действовать с первого определения функции, содержащее указанную встроенную функцию. Ее действие продолжается до конца исходного файла, или на внешний вид `function` pragma, указав ту же встроенную функцию. **Внутренние** директива pragma может использоваться только за пределами определения функции — на глобальном уровне.
+Ниже перечислены функции библиотеки со встроенными формами. После того как встроенная директива pragma будет показана, она вступает в силу в первом определении функции, содержащей указанную подставляемую функцию. Результат переходит в конец исходного файла или на внешний вид `function` директивы pragma, указывающей ту же встроенную функцию. **Встроенная** директива pragma может использоваться только за пределами определения функции на глобальном уровне.
 
-Следующие функции имеют встроенные формы, и которые используются при указании [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
+Следующие функции имеют встроенные формы, а внутренние формы используются при указании [/Oi](../build/reference/oi-generate-intrinsic-functions.md):
 
 |||||
 |-|-|-|-|
@@ -42,15 +40,15 @@ ms.locfileid: "62212383"
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|[memset](../c-runtime-library/reference/memset-wmemset.md)||
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)||
 
-Программы, в которых используются встроенные функции, выполняются быстрее, поскольку они не порождают дополнительную нагрузку, связанную с вызовом функций. Однако они могут иметь больший размер, поскольку в них создается дополнительный код.
+Программы, использующие встроенные функции, выполняются быстрее, так как они не имеют издержек вызовов функций, но могут быть больше из-за создания дополнительного кода.
 
-**x86 конкретных**
+**Только для x86**
 
-`_disable` И `_enable` встроенные функции создания инструкции режима ядра для прерываний и отключать и могут быть полезны в режиме ядра драйверы.
+Встроенная `_enable` функция исоздаетинструкциирежимаядрадляотключенияиливключенияпрерыванийиможетбытьполезнавдрайверахрежимаядра.`_disable`
 
 ### <a name="example"></a>Пример
 
-Скомпилируйте следующий код из командной строки с `cl -c -FAs sample.c` и просмотрите sample.asm увидите, что в x86 инструкции CLI и STI для Процессоров:
+Скомпилируйте следующий код из командной строки с помощью `cl -c -FAs sample.c` и взгляните на Sample. ASM, чтобы увидеть, что они включают в себя команды CLI для x86 и сти:
 
 ```cpp
 // pragma_directive_intrinsic.cpp
@@ -67,16 +65,16 @@ int main() {
 }
 ```
 
-**Конец x86 конкретных**
+**Только для платформы x86**
 
-Функции с плавающей запятой, перечисленные ниже, не имеют полноценных встроенных форм. Однако у них есть версии, позволяющие передавать аргументы напрямую в микросхему операций с плавающей запятой, а не помещать их в стек программы:
+Перечисленные ниже функции с плавающей запятой не имеют истинных встроенных форм. Однако у них есть версии, позволяющие передавать аргументы напрямую в микросхему операций с плавающей запятой, а не помещать их в стек программы:
 
 |||||
 |-|-|-|-|
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
-Указанные ниже функции с плавающей запятой имеют полноценных встроенных форм, при указании [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md), и [/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) (или любой параметр, в котором содержится параметр: [/ Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)и/O2):
+Перечисленные ниже функции с плавающей запятой имеют истинные встроенные формы при указании [/Oi](../build/reference/oi-generate-intrinsic-functions.md), [/Og](../build/reference/og-global-optimizations.md)и [/FP: Fast](../build/reference/fp-specify-floating-point-behavior.md) (или любого параметра, включающего/OG: [/Ox](../build/reference/ox-full-optimization.md), [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)и [/O2](../build/reference/o1-o2-minimize-size-maximize-speed.md)):
 
 |||||
 |-|-|-|-|
@@ -84,11 +82,11 @@ int main() {
 |[atan2](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|
 |[cos](../c-runtime-library/reference/cos-cosf-cosl.md)||||
 
-Можно использовать [/fp: strict](../build/reference/fp-specify-floating-point-behavior.md) или [/Za](../build/reference/za-ze-disable-language-extensions.md) для переопределения поколения true встроенных параметров с плавающей запятой. В этом случае функции будут создаваться как библиотечные процедуры, которые передают аргументы напрямую в микросхему операций с плавающей запятой, а не в стек программы.
+Можно использовать [/FP:](../build/reference/fp-specify-floating-point-behavior.md) with или [/Za](../build/reference/za-ze-disable-language-extensions.md) для переопределения создания истинных встроенных параметров с плавающей запятой. В этом случае функции будут создаваться как библиотечные процедуры, которые передают аргументы напрямую в микросхему операций с плавающей запятой, а не в стек программы.
 
-См. в разделе [#pragma function](../preprocessor/function-c-cpp.md) сведения и пример о том, как включать и отключать встроенные функции в блоке исходного текста.
+Сведения и пример включения и отключения встроенных функций для блока исходного текста см. в разделе [#pragma функция](../preprocessor/function-c-cpp.md) .
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

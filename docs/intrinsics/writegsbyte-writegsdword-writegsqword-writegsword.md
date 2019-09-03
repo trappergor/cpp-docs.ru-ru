@@ -1,6 +1,6 @@
 ---
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writegsbyte
 - __writegsqword
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: dbd3fff75107ae61f7680dee84b72ff3153bfa8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389779"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221199"
 ---
-# <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
+# <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
 **Блок, относящийся только к системам Microsoft**
 
-Запись памяти в расположении, заданном в качестве смещения относительно начала сегмент GS.
+Запись памяти в расположение, заданное смещением относительно начала сегмента GS.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __writegsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -46,13 +46,13 @@ void __writegsqword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала GS для записи.
+*Собой*\
+окне Смещение от начала GS для записи.
 
-*Данные*<br/>
-[in] Записываемое значение.
+*Data*\
+окне Записываемое значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -63,15 +63,15 @@ void __writegsqword(
 |`__writegsqword`|X64|
 |`__writegsword`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенная.
+Эти подпрограммы доступны только в качестве встроенных.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

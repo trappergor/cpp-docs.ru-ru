@@ -1,6 +1,6 @@
 ---
 title: __int2c
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __int2c
 - __int2c_cpp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - int 2c instruction
 - __int2c intrinsic
 ms.assetid: aa20ff30-adef-42bb-8577-8010f3122f8e
-ms.openlocfilehash: 36ef8acd3d71c08a356d4210f16205828f691fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8c94ae78a121157a6347548356631b04e8733d5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348897"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222098"
 ---
-# <a name="int2c"></a>__int2c
+# <a name="__int2c"></a>__int2c
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `int 2c` инструкция, которая запускает `2c` прерываний.
+Формирует инструкцию, которая `2c` запускает прерывание. `int 2c`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __int2c(void);
 ```
 
@@ -34,10 +34,10 @@ void __int2c(void);
 |---------------|------------------|
 |`__int2c`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

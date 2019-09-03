@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396578"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217146"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `rdtsc` инструкция, которая возвращает метку времени процессора. Метка времени процессора регистрирует число тактов с момента последнего сброса.
+`rdtsc` Формирует инструкцию, которая возвращает метку времени процессора. В метке времени процессора записывается число циклов часов с момента последнего сброса.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-64-разрядное целое число без знака, представляющее счетчик тактов.
+64-битовое целое число без знака, представляющее число тактов.
 
 ## <a name="requirements"></a>Требования
 
@@ -37,17 +37,17 @@ unsigned __int64 __rdtsc();
 |---------------|------------------|
 |`__rdtsc`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта процедура доступна только как встроенная.
+Эта подпрограммы доступна только в качестве встроенной функции.
 
-Интерпретация TSC значения в этом поколении оборудования отличается от более ранних версий x64. См. в разделе руководства оборудования, Дополнительные сведения.
+Интерпретация значения TSC в последующих поколениях оборудования отличается от интерпретации в более ранних версиях x64. Дополнительные сведения см. в руководстве по оборудованию.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -71,4 +71,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

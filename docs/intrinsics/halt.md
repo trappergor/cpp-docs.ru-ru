@@ -1,6 +1,6 @@
 ---
 title: __halt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __halt
 - __halt_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344439"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222153"
 ---
-# <a name="halt"></a>__halt
+# <a name="__halt"></a>__halt
 
 **Блок, относящийся только к системам Microsoft**
 
-Приостанавливает микропроцессор, пока не произойдет прерывание включена, немаскируемое прерывание (NMI) или сброс событий.
+Прерывает работу микропроцессора до включенного прерывания, немаскированного прерывания (NMI) или сброса.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __halt( void );
 ```
 
@@ -33,14 +33,14 @@ void __halt( void );
 |---------------|------------------|
 |`__halt`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-`__halt` Функция эквивалентна `HLT` инструкции компьютера и доступна только в режиме ядра. Дополнительные сведения см. в документе «Руководство разработчика архитектуры Intel программного обеспечения, том 2: Справочник по набору инструкций,» в [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция эквивалентна инструкции компьютера и доступна только в режиме ядра. `HLT` `__halt` Дополнительные сведения см. в документе "Руководство разработчика по архитектуры Intel, том 2: Справочник по набору инструкций "на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
