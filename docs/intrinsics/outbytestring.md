@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396617"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217169"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `rep outsb` инструкция, которая отправляет первый `Count` байтов данных, на которые указывают `Buffer` на порт, заданный `Port`.
+Формирует инструкцию, которая отправляет первые `Count` байты данных, на которые указывает `Buffer` , на порт, указанный `Port`параметром. `rep outsb`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Порт*<br/>
-[in] Порт для отправки данных.
+*Порту*\
+окне Порт, в который отправляются данные.
 
-*буфер*<br/>
-[in] Данные будут отправлены для указанного порта.
+*Двойной*\
+окне Данные, которые должны быть отправлены по указанному порту.
 
-*Количество*<br/>
-[in] Число байтов данных для отправки.
+*Расчета*\
+окне Число байтов данных для отправки.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -58,4 +58,4 @@ void __outbytestring(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
