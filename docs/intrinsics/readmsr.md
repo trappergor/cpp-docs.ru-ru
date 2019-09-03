@@ -1,6 +1,6 @@
 ---
 title: __readmsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readmsr
 helpviewer_keywords:
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4398b9d42369e3a914dbec1ed2d14cafecf58483
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262779"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222335"
 ---
-# <a name="readmsr"></a>__readmsr
+# <a name="__readmsr"></a>__readmsr
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `rdmsr` инструкция, которая считывает регистр конкретной модели, определяемое `register` и возвращает его значение.
+Формирует инструкцию, которая считывает регистр `register` , зависящий от модели, и возвращает его значение. `rdmsr`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*register*<br/>
-[in] Модельнозависимого регистра для чтения.
+*зарегистрировать*\
+окне Зависящий от модели регистр для чтения.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -44,16 +44,16 @@ __int64 __readmsr(
 |---------------|------------------|
 |`__readmsr`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция доступна только в режиме ядра и процедура доступна только как встроенная.
+Эта функция доступна только в режиме ядра, и подпрограммы доступны только в качестве встроенных.
 
-Дополнительные сведения см. в документации AMD.
+Дополнительные сведения см. в документации по AMD.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
