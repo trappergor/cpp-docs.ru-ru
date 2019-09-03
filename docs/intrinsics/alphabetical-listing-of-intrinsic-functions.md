@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264319"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220085"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Алфавитный список встроенных функций
 
-В следующих разделах описаны характерные для Майкрософт встроенные функции, доступные на некоторых или всех архитектурах. Другие поддерживаемые встроенные функции описаны производителями процессоров, в файлах заголовков или на веб-узлах. См. в разделе [встроенные функции ARM](../intrinsics/arm-intrinsics.md), [x86 встроенные функции](../intrinsics/x86-intrinsics-list.md), и [x64 встроенные функции](../intrinsics/x64-amd64-intrinsics-list.md) разделы для ссылки на документацию производителя. Функции библиотеки времени выполнения (CRT) C, которые имеют встроенные функции, реализованные для них не документируется здесь. Эти функции описаны в [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md).
+В следующих разделах описаны характерные для Майкрософт встроенные функции, доступные на некоторых или всех архитектурах. Другие поддерживаемые встроенные функции описаны производителями процессоров, в файлах заголовков или на веб-узлах. Ссылки на документацию по производителям см. в разделах встроенные функции [ARM](../intrinsics/arm-intrinsics.md), [встроенные функции x86](../intrinsics/x86-intrinsics-list.md)и [встроенные функции x64](../intrinsics/x64-amd64-intrinsics-list.md) . Функции библиотеки времени выполнения C (CRT), для которых реализованы встроенные объекты, здесь не описаны. Эти функции описаны в справочнике по [библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
@@ -75,9 +75,9 @@ ms.locfileid: "62264319"
 
 [Встроенные функции _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[Встроенные функции _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[встроенные функции _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[Встроенные функции _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[встроенные функции _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
 [Встроенные функции _InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
@@ -275,4 +275,4 @@ ms.locfileid: "62264319"
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)
