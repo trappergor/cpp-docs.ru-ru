@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedExchange
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 53c3545be5e74d802fe63f8e7c03d2a7a2b26110
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509391"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221993"
 ---
 # <a name="_interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
 
@@ -59,7 +59,7 @@ ms.locfileid: "69509391"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedExchange(
    long volatile * Target,
    long Value
@@ -142,12 +142,12 @@ __int64 _InterlockedExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Целевой объект*<br/>
+*Мишень*\
 [вход, выход] Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.
 
-*Значение*<br/>
+*Значений*\
 окне Значение для обмена со значением, `Target`на которое указывает.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -158,9 +158,11 @@ __int64 _InterlockedExchange64_rel(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86, ARM, x64|\<> Intrin. h|
-|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<> Intrin. h|
-|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86, x64|\<> использованием immintrin. h|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`|x86, ARM, x64, ARM64|\<> Intrin. h|
+|`_InterlockedExchange64`|ARM, x64, ARM64|\<> Intrin. h|
+|`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM, ARM64|\<> Intrin. h|
+|`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`|x86, x64|\<> использованием immintrin. h|
+|`_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|X64|\<> использованием immintrin. h|
 
 ## <a name="remarks"></a>Примечания
 
@@ -170,7 +172,7 @@ __int64 _InterlockedExchange64_rel(
 
 Функция `_InterlockedExchange` работает с 32-разрядными целыми значениями, `_InterlockedExchange8`работает с 8-разрядными целыми значениями, `_InterlockedExchange16` работает с 16-разрядными целыми значениями и `_InterlockedExchange64` работает с 64-разрядными целыми значениями.
 
-На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
+На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
 
 На платформах Intel ®, поддерживающих инструкции Hardware Lock Elision (HLE), встроенные функции с суффиксами `_HLEAcquire` и `_HLERelease` включают подсказку процессору, как можно повысить производительность, устраняя шаг записи с блокировкой оборудования. Если эти встроенные функции вызываются на платформах, не поддерживающих HLE, подсказка игнорируется.
 
@@ -184,6 +186,6 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[Ключевые слова](../cpp/keywords-cpp.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

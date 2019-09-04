@@ -1,6 +1,6 @@
 ---
 title: __stosb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosb
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosb intrinsic
 - stosb instruction
 ms.assetid: 634589ed-2da3-439b-a381-a214d89bf10c
-ms.openlocfilehash: 679f1a892a6ee5b458a05d1577ecf766bed385dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf74da4c8b5aa97e542d89f55b3ed8411db9bac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390286"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221211"
 ---
-# <a name="stosb"></a>__stosb
+# <a name="__stosb"></a>__stosb
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает инструкцию строка магазина (`rep stosb`).
+Создает инструкцию строки хранения (`rep stosb`).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __stosb(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*dest*<br/>
-[out] Целевой для операции.
+*Местоназначение*\
+заполняет Назначение операции.
 
-*Данные*<br/>
-[in] Сохраняемые данные.
+*Data*\
+окне Данные для хранения.
 
-*Количество*<br/>
-[in] Длина блока байтов для записи.
+*Расчета*\
+окне Длина записываемого блока байтов.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,11 +48,11 @@ void __stosb(
 |---------------|------------------|
 |`__stosb`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Результатом является то, что символ `Data` записывается в блок `Count` байтов в `Dest` строку.
+В результате символьные *данные* записываются в блок *числа* байтов в *целевой* строке.
 
 Эта процедура доступна только как встроенная функция.
 
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

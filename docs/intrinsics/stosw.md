@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390299"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219926"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает инструкцию строка магазина (`rep stosw`).
+Создает инструкцию строки хранения (`rep stosw`).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*dest*<br/>
-[out] Целевой для операции.
+*Местоназначение*\
+заполняет Назначение операции.
 
-*Данные*<br/>
-[in] Сохраняемые данные.
+*Data*\
+окне Данные для хранения.
 
-*Количество*<br/>
-[in] Длина блока слов для записи.
+*Расчета*\
+окне Длина блока слов для записи.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Результатом является то, что слово `Data` записывается в блок `Count` ключевые слова в `Dest` строку.
+В результате *данные* слова записываются в блок количества слов в *целевой* строке.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

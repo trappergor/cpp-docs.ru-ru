@@ -2,12 +2,13 @@
 title: MFC и ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 2d986c3237a6fa58cfcebef29939dbf6b1c316ae
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.topic: landing-page
+ms.openlocfilehash: 3eba0731c01fe232334efb4a2ff7df7179747b3e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706623"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218741"
 ---
 # <a name="mfc-and-atl"></a>MFC и ATL
 
@@ -17,7 +18,7 @@ ms.locfileid: "65706623"
 
 В Visual Studio 2015 Visual C++ — это необязательный компонент, а компоненты MFC и ATL являются необязательными компонентами в составе Visual C++. Если эти компоненты не выбраны, при установке Visual Studio будет предложено установить их при первой попытке создать или открыть проект MFC или ATL.
 
-В Visual Studio 2017 и более поздних версиях MFC и ATL являются необязательными компонентами в разделе **разработка классических приложений C++** рабочей нагрузки в программу Visual Studio Installer. Можно установить поддержку ATL без использования MFC, или в сочетании поддержка MFC и ATL (MFC зависит от ATL). Дополнительные сведения о рабочих нагрузок и компонентов, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio).
+В Visual Studio 2017 и более поздних версиях MFC и ATL являются необязательными подкомпонентами при **разработке классических приложений с C++**  рабочей нагрузкой в Visual Studio Installerной программе. Можно установить поддержку ATL без MFC или сочетать поддержку MFC и ATL (MFC зависит от ATL). Дополнительные сведения о рабочих нагрузках и компонентах см. в [статье Установка Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="related-articles"></a>Связанные статьи
 

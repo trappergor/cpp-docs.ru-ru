@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAddLargeStatistic
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAddLargeStatistic
 - _InterlockedAddLargeStatistic_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de8c5b7dfd2462dddcb98324ebacc44c8148d85e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349492"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222087"
 ---
-# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+# <a name="_interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
 **Блок, относящийся только к системам Microsoft**
 
-Выполняет блокируемое сложение, в котором первый операнд является 64-разрядное значение.
+Выполняет сложение с блокировкой, в котором первый операнд является 64-битным значением.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedAddLargeStatistic(
    __int64 volatile * Addend,
    long Value
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Слагаемое*<br/>
-[in, out] Указатель на первый операнд в операции добавления. Значение, на которое заменяется результатом сложения.
+*Слагаемое*\
+[вход, выход] Указатель на первый операнд операции добавления. Значение, на которое указывает, заменяется результатом сложения.
 
-*Значение*<br/>
-[in] Второй операнд; значение для первого операнда.
+*Значений*\
+окне Второй операнд; значение, добавляемое к первому операнду.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -48,17 +48,17 @@ long _InterlockedAddLargeStatistic(
 |---------------|------------------|
 |`_InterlockedAddLargeStatistic`|x86|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта встроенная функция не является атомарным, так как он реализован как два отдельных заблокированной инструкции. Atomic чтения 64-разрядной, выполняемое в другом потоке во время выполнения это внутренние может привести значение несогласованные выполняется чтение.
+`_InterlockedAddLargeStatistic` Встроенная функция не является атомарной, поскольку реализуется как две отдельные инструкции блокировки. Атомарный 64-разрядный Read, происходящий в другом потоке во время выполнения встроенного параметра, может привести к считыванию несогласованного значения.
 
-Эта функция действует как барьер чтения и записи. Дополнительные сведения см. в разделе [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
+`_InterlockedAddLargeStatistic`ведет себя как барьер для чтения и записи. Дополнительные сведения см. в разделе [_ReadWriteBarrier](../intrinsics/readwritebarrier.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

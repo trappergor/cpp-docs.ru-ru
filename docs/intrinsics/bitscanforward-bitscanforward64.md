@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264222"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222213"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -26,7 +26,7 @@ ms.locfileid: "62264222"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Index*<br/>
-[out] Загрузить с позиции разряда Первый значащий разряд (1) найден.
+*Номер*\
+заполняет Загружается с битовой позицией первого установленного бита (1).
 
-*Маска*<br/>
-[in] 32-разрядная или 64-разрядное значение для поиска.
+*Виде*\
+окне 32-разрядное или 64-разрядное значение для поиска.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -57,14 +57,14 @@ unsigned char _BitScanForward64(
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`_BitScanForward`|x86, ARM, x64|
-|`_BitScanForward64`|ARM, x64|
+|`_BitScanForward`|x86, ARM, x64, ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>Входные данные
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>Пример результатов выполнения
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
@@ -110,4 +106,4 @@ Mask: 12 Index: 2
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

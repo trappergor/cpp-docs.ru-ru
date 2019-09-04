@@ -1,6 +1,6 @@
 ---
-title: managed, unmanaged
-ms.date: 11/04/2016
+title: Директивы pragma managed, unmanaged
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -12,42 +12,41 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 7fa1e3274b85faa9f3f72f4db5bf586ee5d8e274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409867"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218809"
 ---
-# <a name="managed-unmanaged"></a>managed, unmanaged
-Позволяет на уровне функций контролировать режим их компиляции: с управляемым или неуправляемым кодом.
+# <a name="managed-unmanaged-pragmas"></a>Директивы pragma managed, unmanaged
+
+Включите управление на уровне функций для компиляции функций как управляемых или неуправляемых.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma managed
-#pragma unmanaged
-#pragma managed([push,] on | off)
-#pragma managed(pop)
-```
+> **управляемые #pragma**\
+> **неуправляемый #pragma**\
+> **управляемый #pragma (** [ **Push,** ] { **On** | **Off** } **)** \
+> **управляемый #pragma (POP)**
 
 ## <a name="remarks"></a>Примечания
 
-[/CLR](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора содержит элемент управления на уровне модуля для компиляции функции управляемый или неуправляемый.
+Параметр компилятора [/CLR](../build/reference/clr-common-language-runtime-compilation.md) обеспечивает управление на уровне модуля для компиляции функций как управляемых, так и неуправляемых.
 
-Неуправляемая функция компилируется для собственной платформы, и среда CLR передает выполнение этой части программы в собственную платформу.
+Для собственной платформы будет скомпилирована неуправляемая функция. Выполнение этой части программы будет передано в собственную платформу средой CLR.
 
 При использовании параметра `/clr` по умолчанию функции компилируются как управляемые.
 
 При применении этих директив pragma выполните следующие действия.
 
-- Добавляйте директиву #pragma перед функцией, а не в теле функции.
+- Добавьте директиву pragma перед функцией, но не внутри тела функции.
 
-- Добавьте директиву pragma после операторов `#include`. Не используйте эти директивы pragma перед операторами `#include`.
+- Добавьте директиву pragma после операторов `#include`. Не используйте эти директивы pragma `#include` перед инструкциями.
 
-Компилятор игнорирует **управляемых** и **неуправляемых** директивы pragma Если `/clr` не используется в компиляцию.
+Компилятор игнорирует **управляемые** и неуправляемые директивы pragma, если `/clr` в компиляции не используется.
 
-При создании экземпляра шаблонной функции режим ее компиляции (управляемый или неуправляемый код) определяется состоянием этой директивы #pragma в момент определения шаблона.
+При создании экземпляра функции-шаблона состояние директивы pragma при определении шаблона определяет, является ли он управляемым или неуправляемым.
 
 Дополнительные сведения см. в разделе [Инициализация смешанных сборок](../dotnet/initialization-of-mixed-assemblies.md).
 
@@ -89,4 +88,4 @@ In unmanaged function.
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

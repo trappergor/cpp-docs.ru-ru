@@ -1,6 +1,6 @@
 ---
 title: __outdwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outdwordstring intrinsic
 - rep outsd instruction
 ms.assetid: 55b31a65-aab7-4b5c-b61d-d9e2fb0c497a
-ms.openlocfilehash: 51cb4a97d271d6d41d39d1025e3a5d34b273cdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50908a65795af617f18a497c073cfefe009dfd80
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396591"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217159"
 ---
-# <a name="outdwordstring"></a>__outdwordstring
+# <a name="__outdwordstring"></a>__outdwordstring
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `rep outsd` инструкция, которая отправляет `Count` двойных слов, начиная с `Buffer` номера порта ввода-вывода, определяемое `Port`.
+Формирует инструкцию, которая отправляет `Count` даублевордс, начиная `Buffer` с порта ввода-вывода, заданного параметром `Port`. `rep outsd`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __outdwordstring(
    unsigned short Port,
    unsigned long* Buffer,
@@ -31,16 +31,16 @@ void __outdwordstring(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Порт*<br/>
-[in] Порт для отправки данных.
+*Порту*\
+окне Порт, в который отправляются данные.
 
-*буфер*<br/>
-[in] Указатель на данные, которые будут отправлены для указанного порта.
+*Двойной*\
+окне Указатель на данные, которые должны быть отправлены по указанному порту.
 
-*Количество*<br/>
-[in] Число двойных слов для отправки.
+*Расчета*\
+окне Число даублевордс для отправки.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,7 +48,7 @@ void __outdwordstring(
 |---------------|------------------|
 |`__outdwordstring`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -58,4 +58,4 @@ void __outdwordstring(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,52 +1,56 @@
 ---
 title: __vmx_vmwrite
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmwrite
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-ms.openlocfilehash: e52b1f181f00ce013a111d1a5a62abeff544e20a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdc5590858f160db24bf75ef11c8f20b204a3152
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389987"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219396"
 ---
-# <a name="vmxvmwrite"></a>__vmx_vmwrite
+# <a name="__vmx_vmwrite"></a>__vmx_vmwrite
 
 **Блок, относящийся только к системам Microsoft**
 
-Записывает заданное значение указанного поля в текущей структуре управления виртуальной машины (VMCS).
+Записывает указанное значение в указанное поле в структуре управления текущей виртуальной машиной (VMCS).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned char __vmx_vmwrite(
    size_t Field,
    size_t FieldValue
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Поле*|[in] Поле VMCS для записи.|
-|*FieldValue*|[in] Значение для записи в поле VMCS.|
+*Полями*\
+окне Поле VMCS для записи.
+
+*FieldValue*\
+окне Значение, записываемое в поле VMCS.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-0, операция выполнена успешно.
+0,0
+Операция успешно выполнена.
 
-1 операция завершилась с расширенные сведения о состоянии в `VM-instruction error field` текущей структуре vmcs.
+одного
+Не удалось выполнить операцию; расширенные сведения о состоянии доступны в `VM-instruction error field` текущей структуре VMCS.
 
-2 сбой операции без сведений о состоянии.
+открыт
+Сбой операции без сведений о состоянии.
 
 ## <a name="remarks"></a>Примечания
 
-Функция `__vmx_vmwrite` эквивалентна инструкции компьютера `VMWRITE` . Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.
+Функция `__vmx_vmwrite` эквивалентна инструкции компьютера `VMWRITE` . Значением `Field` параметра является индекс поля в кодировке, описанный в документации Intel. Для получения дополнительной информации выполните поиск приложения C из раздела "Техническая спецификация виртуализации Intel для архитектуры IA-32" на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Требования
 
@@ -54,11 +58,11 @@ unsigned char __vmx_vmwrite(
 |---------------|------------------|
 |`__vmx_vmwrite`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmread](../intrinsics/vmx-vmread.md)

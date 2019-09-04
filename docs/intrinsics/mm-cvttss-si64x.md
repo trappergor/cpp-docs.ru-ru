@@ -1,41 +1,41 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396656"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217413"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Блок, относящийся только к системам Microsoft**
 
-Выдает x64 расширенной версии функции Convert с усечение числа с плавающей запятой одиночной точности в 64-битовое целое число (`cvttss2si`) инструкции.
+Выдает расширенную версию x64 инструкции CONVERT с плавающей запятой одиночной точности до 64-разрядного целого числа (`cvttss2si`).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*value*<br/>
-[in] `__m128` Структуру, содержащую значения с плавающей запятой одиночной точности.
+*value*\
+окне Структура `__m128` , содержащая значения с плавающей точкой одиночной точности.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Результат преобразования первое значение с плавающей запятой в 64-битовое целое число.
+Результат преобразования первого значения с плавающей запятой в 64-разрядное целое число.
 
 ## <a name="requirements"></a>Требования
 
@@ -43,17 +43,17 @@ __int64 _mm_cvttss_si64x(
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Встроенная отличается от `_mm_cvtss_si64x` только в том, что неточный преобразования усеченное в сторону нуля. Так как `__m128` структура представляет регистр XMM, создается инструкция перемещает данные из регистр XMM в оперативной памяти.
+Внутренняя функция отличается от `_mm_cvtss_si64x` того, что неточные преобразования усекаются в сторону нуля. `__m128` Поскольку структура представляет регистр XMM, созданная инструкция перемещает данные из регистра XMM в системную память.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[__m128](../cpp/m128.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

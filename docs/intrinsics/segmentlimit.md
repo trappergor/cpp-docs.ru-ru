@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390390"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217996"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `lsl` инструкций (предел сегмента нагрузки).
+Создает инструкцию `lsl` (ограничение загрузки сегментов).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*a*<br/>
-[in] Константа, задающая селекторе сегмента.
+*конкретного*\
+окне Константа, указывающая селектор сегмента.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ограничение размера сегмента средства выбора сегмента, определяемое `a`при условии, что селектор является допустимым и видимым, текущего уровня разрешений.
+Ограничение сегмента для селектора сегмента, заданноепараметром, если селектор является допустимым и видимым на текущем уровне разрешений.
 
 ## <a name="requirements"></a>Требования
 
@@ -43,17 +43,17 @@ unsigned long __segmentlimit(
 |---------------|------------------|
 |`__segmentlimit`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Если не удается получить ограничение размера сегмента, эта инструкция завершается ошибкой. В случае сбоя эта инструкция снимает флаг ZF и возвращаемое значение не определено.
+Если ограничение сегмента не может быть получено, эта инструкция завершается ошибкой. При сбое эта инструкция очищает флаг ЗФ, и возвращаемое значение не определено.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -109,4 +109,4 @@ sl was changed
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,44 +1,42 @@
 ---
-title: no_registry
-ms.date: 10/18/2018
+title: no_registry, атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - no_registry
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-ms.openlocfilehash: 2a0fd9a761f765aa9562ab18c095f683b80c7987
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c81cc2f570cb9ac4e977dac6d55cb69e491d3b2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411322"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220721"
 ---
-# <a name="noregistry"></a>no_registry
+# <a name="no_registry-import-attribute"></a>no_registry, атрибут импорта
 
-**no_registry** указывает компилятору не искать в реестре библиотеки типов, импортированные с `#import`.
+**no_registry** указывает компилятору не выполнять поиск в реестре библиотек типов, импортированных с помощью `#import`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#import filename no_registry
-```
+> **#import** *Библиотека типов* **no_registry**
 
 ### <a name="parameters"></a>Параметры
 
-*filename*<br/>
+*Библиотека типов*\
 Библиотека типов.
 
 ## <a name="remarks"></a>Примечания
 
-Если указанная библиотека типов не найден в каталогах включения, компиляция завершается ошибкой, даже если библиотека типов находится в реестре.  **no_registry** распространяет на другие библиотеки типов, неявно импортированные с использованием `auto_search`.
+Если библиотека типов, на которую указывает ссылка, не найдена в каталогах включения, компиляция завершается сбоем, даже если библиотека типов находится в реестре.  **no_registry** распространяется на другие библиотеки типов, которые неявно импортируются `auto_search`с помощью.
 
-Компилятор никогда не ищет в реестре библиотеки типов, указанные по имени файла и переданные непосредственно в директиву `#import`.
+Компилятор не ищет в реестре библиотеки типов, которые указаны по имени файла и передаются непосредственно `#import`в.
 
-При `auto_search` указано, дополнительный `#import`s будет создана с **no_registry** задание начального `#import` (если начального `#import` директиву **no_registry** , `auto_search`-созданный `#import` также **no_registry**.)
+Если `auto_search` указан параметр, дополнительные `#import` директивы создаются с помощью параметра **no_registry** начального `#import`значения. Если начальная `#import` директивабыла `auto_search`no_registry, создается `#import` также **no_registry**.
 
-**no_registry** полезно, если вы хотите импортировать кросс-библиотеках типов без риска, что компилятор найдет более старой версии файла в реестре. **no_registry** также полезен, если библиотека типов не зарегистрирована.
+**no_registry** полезен, если требуется импортировать библиотеки типов с перекрестными ссылками. Компилятор не находит более раннюю версию файла в реестре. **no_registry** также полезен, если библиотека типов не зарегистрирована.
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

@@ -1,6 +1,6 @@
 ---
-title: сообщение
-ms.date: 11/04/2016
+title: Прагма message
+ms.date: 08/29/2019
 f1_keywords:
 - message_CPP
 - vc-pragma.message
@@ -8,31 +8,30 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48605fbef3b6d81c140e663e950429cd3dcf9b19
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371743"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218792"
 ---
-# <a name="message"></a>сообщение
+# <a name="message-pragma"></a>Прагма message
+
 Отправляет строковый литерал в стандартный вывод, не завершая компиляцию.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma message( messagestring )
-```
+> **сообщение #pragma (** *Строка сообщения* **)**
 
 ## <a name="remarks"></a>Примечания
 
-Типичное применение **сообщение** pragma — Отображать информационные сообщения во время компиляции.
+Обычно директива pragma **сообщения** используется для вывода информационных сообщений во время компиляции.
 
-*Messagestring* параметр может быть макросом, который развертывается в строковый литерал, и можно сцепить эти макросы со строковыми литералами в любой комбинации.
+Параметр *строки сообщения* может быть макросом, который расширяется до строкового литерала, и можно объединить такие макросы с строковыми литералами в любом сочетании.
 
-При использовании предопределенного макроса в **сообщение** pragma, макрос должен вернуть строку, в противном случае вам придется преобразовать вывод макроса в строку.
+При использовании предопределенного макроса в директиве pragma **сообщения** макрос должен возвращать строку. В противном случае необходимо преобразовать выходные данные макроса в строку.
 
-В следующем фрагменте кода используется **сообщение** директивы pragma, для отображения сообщений во время компиляции:
+В следующем фрагменте кода используется директива pragma **Message** для вывода сообщений во время компиляции:
 
 ```cpp
 // pragma_directives_message1.cpp
@@ -59,4 +58,4 @@ ms.locfileid: "62371743"
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
