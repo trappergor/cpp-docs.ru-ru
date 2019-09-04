@@ -146,7 +146,7 @@
               href: build/why-floating-point-numbers-may-lose-precision.md
             - name: IEEE-представление с плавающей запятой
               href: build/ieee-floating-point-representation.md
-            - name: Рекомендации по оптимизации срочного кода
+            - name: Рекомендации по оптимизации критичного по времени кода
               href: build/tips-for-improving-time-critical-code.md
             - name: При использовании имен функций без скобок () код не создается
               href: build/using-function-name-without-parens-produces-no-code.md
@@ -213,7 +213,7 @@
           items:
             - name: Виды библиотек DLL
               href: build/kinds-of-dlls.md
-            - name: Несовместимые с MFC библиотеки DLL Обзор
+            - name: 'Несовместимые с MFC библиотеки DLL: Обзор'
               href: build/non-mfc-dlls-overview.md
             - name: "Обычные библиотеки DLL MFC, статически связанные с\_MFC"
               href: build/regular-dlls-statically-linked-to-mfc.md
@@ -343,7 +343,7 @@
               href: build/stack-usage.md
             - name: Пролог и эпилог для 64-разрядных систем
               href: build/prolog-and-epilog.md
-            - name: Обработки исключений в 64-разрядных системах
+            - name: Обработка исключений в 64-разрядных системах
               href: build/exception-handling-x64.md
     - name: Настройка проектов C++ для процессоров ARM
       expanded: false
@@ -356,9 +356,9 @@
           href: build/overview-of-arm-abi-conventions.md
         - name: Общие сведения о соглашениях ABI ARM64
           href: build/arm64-windows-abi-conventions.md
-        - name: Обработка исключений ARM
+        - name: Обработка исключений в ARM
           href: build/arm-exception-handling.md
-        - name: Обработка исключений ARM64
+        - name: Обработка исключений в ARM64
           href: build/arm64-exception-handling.md
     - name: Настройка программ для Windows XP
       href: build/configuring-programs-for-windows-xp.md
@@ -6375,7 +6375,7 @@
                       href: c-runtime-library/compatibility.md
                     - name: "Приложения UWP, среда выполнения Windows и среда выполнения\_C"
                       href: c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md
-                    - name: Совместимость ANSI с C
+                    - name: Соответствие ANSI C
                       href: c-runtime-library/ansi-c-compliance.md
                     - name: UNIX
                       href: c-runtime-library/unix.md
