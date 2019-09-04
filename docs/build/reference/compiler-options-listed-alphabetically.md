@@ -1,14 +1,14 @@
 ---
 title: Параметры компилятора в алфавитном порядке
-ms.date: 05/06/2019
+ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693431"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273634"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -21,23 +21,25 @@ ms.locfileid: "67693431"
 |[/AI](ai-specify-metadata-directories.md)|Указывает каталог поиска для разрешения ссылок на файлы, указанные в директиве [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/analyze](analyze-code-analysis.md)|Включение анализа кода.|
 |[/arch](arch-minimum-cpu-architecture.md)|Задает архитектуру для создания кода.|
-|[/ await](await-enable-coroutine-support.md)|Включите расширения сопрограммы (возобновляемые функции).|
+|[/await](await-enable-coroutine-support.md)|Включить расширения для подподпрограмм (возобновляемые функции).|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Увеличивает число адресуемых секций в OBJ-файле.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Сохраняет комментарии на этапе предварительной обработки.|
 |[/c](c-compile-without-linking.md)|Задает компиляцию без компоновки.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Задает число потоков cl.exe, используемых для оптимизации и создания кода.|
 |[/clr](clr-common-language-runtime-compilation.md)|Создает выходной файл, предназначенный для выполнения в среде CLR.|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Управлять вычислением constexpr во время компиляции.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Управление вычислением constexpr во время компиляции.|
 |[/D](d-preprocessor-definitions.md)|Определяет константы и макросы.|
-|[/ Diagnostics](diagnostics-compiler-diagnostic-options.md)|Определяет формат диагностических сообщений.|
+|[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Управляет форматом диагностических сообщений.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Сведение документирующих комментариев в XML-файл.|
 |[/E](e-preprocess-to-stdout.md)|Копирует выходные данные препроцессора в стандартный вывод.|
 |[/EH](eh-exception-handling-model.md)|Задает модель обработки исключений.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Копирует выходные данные препроцессора в стандартный вывод.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Позволяет передавать данные о внутренних ошибках (ICE) непосредственно в корпорацию Майкрософт C++ team.|
-|[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Задание набора символов исполнения.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Позволяет предоставлять сведения о внутренних ошибках компилятора (ICE) непосредственно команде Майкрософт C++ .|
+|[/Execution-charset](execution-charset-set-execution-character-set.md)|Задать кодировку выполнения.|
+|[/експериментал: module](experimental-module.md)|Включает экспериментальную поддержку модулей.|
+|[/експериментал: препроцессор](experimental-preprocessor.md)|Включает экспериментальную поддержку поддержки препроцессора.|
 |[/F](f-set-stack-size.md)|Задает размер стека.|
-|[/favor](favor-optimize-for-architecture-specifics.md)|Создает код, которая оптимизирована для конкретных x64 архитектуры или для специфики микроархитектур в AMD64 и расширенной памяти 64 архитектурах технологии (EM64T).|
+|[/favor](favor-optimize-for-architecture-specifics.md)|Создает код, оптимизированный для определенной архитектуры x64 или для особенностей микроархитектуры в архитектурах AMD64 и Extended Memory 64 (EM64T).|
 |[/FA](fa-fa-listing-file.md)|Создает файл листинга.|
 |[/Fa](fa-fa-listing-file.md)|Задает имя файла листинга.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Вывод полного пути файлов исходного кода, переданных программе cl.exe, в диагностическом тексте.|
@@ -45,7 +47,7 @@ ms.locfileid: "67693431"
 |[/Fe](fe-name-exe-file.md)|Переименовывает исполняемый файл.|
 |[/FI](fi-name-forced-include-file.md)|Выполняет предварительную обработку указанного включаемого файла.|
 |[/Fi](fi-preprocess-output-file-name.md)|Задает предобработанное имя выходного файла.|
-|[/Fm](fm-name-mapfile.md)|Создает файл сопоставления.|
+|[/Fm](fm-name-mapfile.md)|Создает файл отображения.|
 |[/Fo](fo-object-file-name.md)|Создает объектный файл.|
 |[/fp](fp-specify-floating-point-behavior.md)|Задает поведение чисел с плавающей запятой.|
 |[/Fp](fp-name-dot-pch-file.md)|Задает имя файла предкомпилированного заголовка.|
@@ -75,11 +77,11 @@ ms.locfileid: "67693431"
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__stdcall` (только архитектура x86).|
 |[/H](h-restrict-length-of-external-names.md)|Не рекомендуется. Ограничивает длину внешних (открытых) имен.|
 |[/HELP](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для x64 компиляторы (собственные и кросс-компиляция).|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ исправлять.|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для компиляторов x64 (собственная и перекрестная компиляция).|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ с возможностью исправления.|
 |[/I](i-additional-include-directories.md)|Осуществляет поиск включаемых файлов в каталоге.|
 |[/J](j-default-char-type-is-unsigned.md)|Изменяет тип `char` по умолчанию.|
-|[/JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
+|[/ЖМК](jmc.md)|Поддерживает встроенную C++ отладку только мой код.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Компилятор и компоновщик создадут двоичный файл для выполнения в ядре Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Создает библиотеку динамической компоновки.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Создает отладочную библиотеку динамической компоновки.|
@@ -97,33 +99,34 @@ ms.locfileid: "67693431"
 |[/Od](od-disable-debug.md)|Отключает оптимизацию.|
 |[/Og](og-global-optimizations.md)|Не рекомендуется. Использует глобальную оптимизацию.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Создает встроенные функции.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|Позволяет [ `#pragma omp` ](../../preprocessor/omp.md) директив в исходном коде.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|[`#pragma omp`](../../preprocessor/omp.md) Включает директиву в исходном коде.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет уменьшению размера кода.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет быстрому коду.|
-|[/Ox](ox-full-optimization.md)|Использует максимальную оптимизацию (/Ob2gity /Gs).|
+|[/Ox](ox-full-optimization.md)|Подмножество/O2, не включающее/GF или/Ги.|
 |[/Oy](oy-frame-pointer-omission.md)|Отказ от использования указателя фрейма (только архитектура x86).|
 |[/P](p-preprocess-to-a-file.md)|Записывает выходные данные препроцессора в файл.|
-|[/ permissive-](permissive-standards-conformance.md)|Режим соответствия standard.|
+|[/permissive-](permissive-standards-conformance.md)|Задать режим стандартного соответствия.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Создает быстрые трансцендентные функции.|
 |[/QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Подавляет использование функции `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип (только архитектура x86).|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Удаляет команды `fwait` внутри блоков `try` .|
 |[/Qpar (автоматический параллелизатор)](qpar-auto-parallelizer.md)|Включает автоматическую параллелизацию циклов, которые помечены с помощью директивы [#pragma loop()](../../preprocessor/loop.md) .|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Использует целочисленные инструкции перемещения значений с плавающей запятой и отключает определенные оптимизации загрузки значений с плавающей запятой.|
+|[/Qspectre](qspectre.md)|Настраивает создание компилятором инструкций для устранения некоторых уязвимостей Spectre варианта 1.|
 |[/Qvec/report (уровень отчетности автоматического векторизатора)](qvec-report-auto-vectorizer-reporting-level.md)|Включает уровни отчетов для автоматической векторизации.|
 |[/RTC](rtc-run-time-error-checks.md)|Включает проверку ошибок во время выполнения.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Включает дополнительные функции безопасности и предупреждения.|
 |[/showIncludes](showincludes-list-include-files.md)|Отображает список включаемых файлов во время компиляции.|
-|[кодировки/Source](source-charset-set-source-character-set.md)|Задание исходной кодировки.|
-|[/std](std-specify-language-standard-version.md)|Селектор совместимости стандартной версии C++.|
+|[указаны кодировки/Source-charset](source-charset-set-source-character-set.md)|Задать исходную кодировку.|
+|[/std](std-specify-language-standard-version.md)|C++Стандартный селектор совместимости версий.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Указывает исходный файл на языке C.|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Указывает, что все исходные файлы, C.|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|Указывает все исходные файлы — C.|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|Указывает исходный файл на языке C++.|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Указывает, что все исходные файлы C++.|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|Указывает все исходные файлы C++.|
 |[/U](u-u-undefine-symbols.md)|Удаляет предварительно определенный макрос.|
 |[/u](u-u-undefine-symbols.md)|Удаляет все предварительно определенные макросы.|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Набор источника и выполнения кодировки UTF-8.|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Задайте кодировку UTF-8 для исходного кода и кодировки выполнения.|
 |[/V](v-version-number.md)|Не рекомендуется. Задает строку версии OBJ-файла.|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
+|[/Validate-charset](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 на наличие только совместимых символов.|
 |[/vd](vd-disable-construction-displacements.md)|Подавляет или включает скрытые vtordisp-члены класса.|
 |[/vmb](vmb-vmg-representation-method.md)|Использует оптимальное основание для указателей на члены.|
 |[/vmg](vmb-vmg-representation-method.md)|Использует полное обобщение для указателей на члены.|
@@ -148,20 +151,20 @@ ms.locfileid: "67693431"
 |[/Yd](yd-place-debug-information-in-object-file.md)|Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. Используйте вместо этого параметр [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Вводит ссылку PCH при создании отладочной библиотеки.|
 |[/Yu](yu-use-precompiled-header-file.md)|Использует файл предкомпилированного заголовка при построении.|
-|[/Z7](z7-zi-zi-debug-information-format.md)|Приводит к возникновению ошибки совместимости с C 7.0 отладочную информацию.|
+|[/Z7](z7-zi-zi-debug-information-format.md)|Создает отладочную информацию, совместимую C 7,0.|
 |[/Za](za-ze-disable-language-extensions.md)|Отключает расширения языка.|
-|[/Zc](zc-conformance.md)|Задает стандартное поведение [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (отключить расширения языка)](za-ze-disable-language-extensions.md)|
+|[/Zc](zc-conformance.md)|Задает стандартное поведение в [/Ze](za-ze-disable-language-extensions.md). [/Za,/Ze (Отключение расширений языка)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
-|[/Zf](zf.md)|Улучшает время создания в параллельные сборки PDB-файла.|
-|[/Zg](zg-generate-function-prototypes.md)|Удален в Visual Studio 2015. Создает прототипы функций.|
+|[/Zf](zf.md)|Улучшает время создания PDB в параллельных сборках.|
+|[/Zg](zg-generate-function-prototypes.md)|Удалено в Visual Studio 2015. Создает прототипы функций.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Включает отладочную информацию в базу данных программы, совместимую с функцией "Изменить и продолжить".|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Создает полную отладочную информацию.|
 |[/Zl](zl-omit-default-library-name.md)|Удаляет имя библиотеки по умолчанию из файла OBJ (только архитектура x86).|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|Указывает предел выделения памяти для предкомпилированного заголовка.|
-|[/Zo](zo-enhance-optimized-debugging.md)|Создает расширенные сведения об отладке для оптимизированного кода.|
+|[/ZO](zo-enhance-optimized-debugging.md)|Создает улучшенную отладочную информацию для оптимизированного кода.|
 |[/Zp](zp-struct-member-alignment.md)|Упаковывает члены структур.|
 |[/Zs](zs-syntax-check-only.md)|Проверяет только синтаксис.|
-|[/ZW](zw-windows-runtime-compilation.md)|Создает выходной файл для запуска в среде выполнения Windows.|
+|[/ZW](zw-windows-runtime-compilation.md)|Создает выходной файл для запуска на среда выполнения Windows.|
 
 ## <a name="see-also"></a>См. также
 

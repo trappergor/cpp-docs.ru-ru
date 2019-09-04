@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257794"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273659"
 ---
 # <a name="compiler-error-c2760"></a>Ошибка компилятора C2760
 
-Синтаксическая ошибка: ожидается «Имя1» не «имя2»
+> Синтаксическая ошибка: требуется "*name1*" без "*имя2*"
 
-Оператор приведения используется с недопустимым оператором.
+## <a name="remarks"></a>Примечания
 
-Следующий пример приводит к возникновению ошибки C2760:
+Эта ошибка может быть вызвана несколькими способами. Обычно это вызвано последовательностью маркера, которую компилятор не может понять.
 
-```
+## <a name="example"></a>Пример
+
+В этом примере оператор приведения используется с недопустимым оператором.
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};

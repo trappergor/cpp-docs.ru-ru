@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCToolTipCtrl
+title: Класс Кмфктултипктрл
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolTipCtrl
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5376fd21f84411c86ade564d7c76d073ccb909a6
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388310"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273693"
 ---
-# <a name="cmfctooltipctrl-class"></a>Класс CMFCToolTipCtrl
+# <a name="cmfctooltipctrl-class"></a>Класс Кмфктултипктрл
 
 Расширенная реализация всплывающей подсказки на основе класса [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md). Подсказка на основе класса `CMFCToolTipCtrl` может отображать значок, метку и описание. Можно настроить его внешний вид с помощью градиентной заливки, пользовательских цветов текста и границы, полужирного шрифта, скругленных углов или стиля всплывающего предупреждения.
 
@@ -63,58 +63,47 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCToolTipCtrl::GetIconSize](#geticonsize)|Возвращает размер значка во всплывающей подсказке.|
-|[CMFCToolTipCtrl::GetParams](#getparams)|Возвращает параметры отображения всплывающей подсказки.|
-|[CMFCToolTipCtrl::OnDrawBorder](#ondrawborder)|Рисует границу всплывающей подсказки.|
-|[CMFCToolTipCtrl::OnDrawDescription](#ondrawdescription)||
-|[CMFCToolTipCtrl::OnDrawIcon](#ondrawicon)|Отображает значок во всплывающей подсказке.|
-|[CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel)|Рисует заголовок всплывающей подсказки или вычисляет размер метки.|
-|[CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator)|Рисует разделитель между меткой и описанием во всплывающей подсказке.|
-|[CMFCToolTipCtrl::OnFillBackground](#onfillbackground)|Заливает фон всплывающей подсказки.|
-|[CMFCToolTipCtrl::SetDescription](#setdescription)|Задает описание, которое отображается во всплывающей подсказке.|
-|[CMFCToolTipCtrl::SetFixedWidth](#setfixedwidth)||
-|[CMFCToolTipCtrl::SetHotRibbonButton](#sethotribbonbutton)||
-|[CMFCToolTipCtrl::SetLocation](#setlocation)||
-|[CMFCToolTipCtrl::SetParams](#setparams)|Задает внешний вид всплывающей подсказки с помощью объекта `CMFCToolTipInfo`.|
+|[Кмфктултипктрл:: Жетиконсизе](#geticonsize)|Возвращает размер значка во всплывающей подсказке.|
+|[Кмфктултипктрл:: params](#getparams)|Возвращает параметры отображения всплывающей подсказки.|
+|[Кмфктултипктрл:: Ондравбордер](#ondrawborder)|Рисует границу всплывающей подсказки.|
+|[Кмфктултипктрл:: Ондравдескриптион](#ondrawdescription)||
+|[Кмфктултипктрл:: Ондравикон](#ondrawicon)|Отображает значок во всплывающей подсказке.|
+|[Кмфктултипктрл:: Ондравлабел](#ondrawlabel)|Рисует заголовок всплывающей подсказки или вычисляет размер метки.|
+|[Кмфктултипктрл:: Ондравсепаратор](#ondrawseparator)|Рисует разделитель между меткой и описанием во всплывающей подсказке.|
+|[Кмфктултипктрл:: Онфиллбаккграунд](#onfillbackground)|Заливает фон всплывающей подсказки.|
+|[Кмфктултипктрл:: SetDescription](#setdescription)|Задает описание, которое отображается во всплывающей подсказке.|
+|[Кмфктултипктрл:: Сетфикседвидс](#setfixedwidth)||
+|[Кмфктултипктрл:: Сесотриббонбуттон](#sethotribbonbutton)||
+|[Кмфктултипктрл:: SetLocation](#setlocation)||
+|[Кмфктултипктрл:: SetParams](#setparams)|Задает внешний вид всплывающей подсказки с помощью объекта `CMFCToolTipInfo`.|
 
 ## <a name="remarks"></a>Примечания
 
-Используйте `CMFCToolTipCtrl`, `CMFCToolTipInfo`, и [класс CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) объектов друг с другом, чтобы реализовать в своем приложении настроенные всплывающие подсказки.
+Используйте `CMFCToolTipCtrl`объекты `CMFCToolTipInfo`классов, и [ктултипманажер](../../mfc/reference/ctooltipmanager-class.md) для реализации настраиваемых подсказок в приложении.
 
 Например, чтобы реализовать всплывающие подсказки в виде выносок, сделайте следующее:
 
-1. Используйте [класс CWinAppEx](../../mfc/reference/cwinappex-class.md) метод для инициализации диспетчера всплывающих подсказок в приложении.
+1. Используйте метод [класса CWinAppEx](../../mfc/reference/cwinappex-class.md) для инициализации диспетчера подсказок в приложении.
 
 2. Создайте структуру `CMFCToolTipInfo`, чтобы задать необходимый стиль оформления:
 
 ```
 CMFCToolTipInfo params;
-    params.m_bBoldLabel = FALSE;
-    params.m_bDrawDescription = FALSE;
-    params.m_bDrawIcon = FALSE;
-    params.m_bRoundedCorners = TRUE;
-    params.m_bDrawSeparator = FALSE;
-    if (m_bCustomColors)
+params.m_bBoldLabel = FALSE;
+params.m_bDrawDescription = FALSE;
+params.m_bDrawIcon = FALSE;
+params.m_bRoundedCorners = TRUE;
+params.m_bDrawSeparator = FALSE;
+if (m_bCustomColors)
 {
-    params.m_clrFill = RGB (255,
-    255,
-    255);
-
-    params.m_clrFillGradient = RGB (228,
-    228,
-    240);
-
-    params.m_clrText = RGB (61,
-    83,
-    80);
-
-    params.m_clrBorder = RGB (144,
-    149,
-    168);
+    params.m_clrFill = RGB (255, 255, 255);
+    params.m_clrFillGradient = RGB (228, 228, 240);
+    params.m_clrText = RGB (61, 83, 80);
+    params.m_clrBorder = RGB (144, 149, 168);
 
 }
 ```
-3. Используйте [CTooltipManager::SetTooltipParams](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) метод, чтобы задать стиль оформления для всех всплывающих подсказок в приложении с помощью стили, определенные в `CMFCToolTipInfo` объекта:
+3. Используйте метод [ктултипманажер:: сеттултиппарамс](../../mfc/reference/ctooltipmanager-class.md#settooltipparams) , чтобы задать визуальный стиль для всех всплывающих подсказок в приложении с помощью стилей, определенных в `CMFCToolTipInfo` объекте.
 
 ```
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
@@ -150,13 +139,13 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
 
 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)
 
-[CMFCToolTipCtrl](../../mfc/reference/cmfctooltipctrl-class.md)
+[кмфктултипктрл](../../mfc/reference/cmfctooltipctrl-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxtooltipctrl.h
+**Заголовок:** афкстултипктрл. h
 
-##  <a name="cmfctooltipctrl"></a>  CMFCToolTipCtrl::CMFCToolTipCtrl
+##  <a name="cmfctooltipctrl"></a>Кмфктултипктрл:: Кмфктултипктрл
 
 ```
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
@@ -164,11 +153,11 @@ CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pParams*<br/>
+окне *ппарамс*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="geticonsize"></a>  CMFCToolTipCtrl::GetIconSize
+##  <a name="geticonsize"></a>Кмфктултипктрл:: Жетиконсизе
 
 Возвращает размер значка во всплывающей подсказке.
 
@@ -180,7 +169,7 @@ virtual CSize GetIconSize();
 
 Размер значка в пикселях.
 
-##  <a name="getparams"></a>  CMFCToolTipCtrl::GetParams
+##  <a name="getparams"></a>Кмфктултипктрл:: params
 
 Возвращает параметры отображения всплывающей подсказки.
 
@@ -190,9 +179,9 @@ const CMFCToolTipInfo& GetParams() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущие параметры отображения всплывающей подсказки, которые хранятся в [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объекта.
+Текущие параметры экрана всплывающей подсказки, которые хранятся в объекте [класса кмфктултипинфо](../../mfc/reference/cmfctooltipinfo-class.md) .
 
-##  <a name="ondrawborder"></a>  CMFCToolTipCtrl::OnDrawBorder
+##  <a name="ondrawborder"></a>Кмфктултипктрл:: Ондравбордер
 
 Рисует границу всплывающей подсказки.
 
@@ -206,19 +195,19 @@ virtual void OnDrawBorder(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник всплывающей подсказки.
+окне Ограничивающий прямоугольник подсказки.
 
-*clrLine*<br/>
-[in] Цвет границы.
+*клрлине*<br/>
+окне Цвет границы.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод в производном классе, чтобы настроить внешний вид границы всплывающей подсказки.
+Переопределите этот метод в производном классе, чтобы настроить внешний вид границы подсказки.
 
-##  <a name="ondrawdescription"></a>  CMFCToolTipCtrl::OnDrawDescription
+##  <a name="ondrawdescription"></a>Кмфктултипктрл:: Ондравдескриптион
 
 ```
 virtual CSize OnDrawDescription(
@@ -229,15 +218,15 @@ virtual CSize OnDrawDescription(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 [in] *rect*<br/>
-[in] *bCalcOnly*<br/>
+окне *бкалконли*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawicon"></a>  CMFCToolTipCtrl::OnDrawIcon
+##  <a name="ondrawicon"></a>Кмфктултипктрл:: Ондравикон
 
 Отображает значок во всплывающей подсказке.
 
@@ -250,20 +239,20 @@ virtual BOOL OnDrawIcon(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
-*rectImage*<br/>
-[in] Координаты значка.
+*ректимаже*<br/>
+окне Координаты значка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если значок рисования. В противном случае — значение FALSE.
+Значение TRUE, если значок был нарисован. В противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод в производном классе, чтобы отобразить пользовательский значок. Необходимо также переопределить [CMFCToolTipCtrl::GetIconSize](#geticonsize) для включения всплывающей подсказки обеспечить правильное вычисление макета текста и описание.
+Переопределите этот метод в производном классе, чтобы отобразить пользовательский значок. Необходимо также переопределить [кмфктултипктрл:: жетиконсизе](#geticonsize) , чтобы позволить подсказке правильно вычислить макет текста и описания.
 
-##  <a name="ondrawlabel"></a>  CMFCToolTipCtrl::OnDrawLabel
+##  <a name="ondrawlabel"></a>Кмфктултипктрл:: Ондравлабел
 
 Рисует заголовок всплывающей подсказки или вычисляет размер метки.
 
@@ -277,23 +266,23 @@ virtual CSize OnDrawLabel(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник области метки.
+окне Ограничивающий прямоугольник области метки.
 
-*bCalcOnly*<br/>
-[in] Значение TRUE, если метка не будет рисоваться.
+*бкалконли*<br/>
+окне Если значение равно TRUE, метка не будет отображаться.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер метки, в пикселях.
+Размер метки в пикселях.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод в производном классе, если вы хотите настроить внешний вид метка всплывающей подсказки.
+Переопределите этот метод в производном классе, если необходимо настроить внешний вид метки подсказки.
 
-##  <a name="ondrawseparator"></a>  CMFCToolTipCtrl::OnDrawSeparator
+##  <a name="ondrawseparator"></a>Кмфктултипктрл:: Ондравсепаратор
 
 Рисует разделитель между меткой и описанием во всплывающей подсказке.
 
@@ -308,24 +297,24 @@ virtual void OnDrawSeparator(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 *x1*<br/>
-[in] Горизонтальная координата в левый конец разделителя.
+окне Горизонтальная координата левого конца разделителя.
 
-*x2*<br/>
-[in] Горизонтальная координата справа от разделителя.
+*штук*<br/>
+окне Горизонтальная координата правого конца разделителя.
 
 *Y*<br/>
-[in] Вертикальная координата разделителя.
+окне Вертикальная координата разделителя.
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию проводит линию из точки (x1, y) до точки (x2, y).
+Реализация по умолчанию рисует строку от точки (x1, y) до точки (x2, y).
 
 Переопределите этот метод в производном классе, чтобы настроить внешний вид разделителя.
 
-##  <a name="onfillbackground"></a>  CMFCToolTipCtrl::OnFillBackground
+##  <a name="onfillbackground"></a>Кмфктултипктрл:: Онфиллбаккграунд
 
 Заливает фон всплывающей подсказки.
 
@@ -340,24 +329,24 @@ virtual void OnFillBackground(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Указывает прямоугольник, ограничивающий область для заливки.
+окне Задает ограничивающий прямоугольник области для заполнения.
 
-*clrText*<br/>
-[in] Цвет фона всплывающей подсказки.
+*клртекст*<br/>
+окне Цвет переднего плана подсказки.
 
-*clrLine*<br/>
-[in] Цвет границы и линии разделителя между элементами label и описание.
+*клрлине*<br/>
+окне Цвет границ и разделитель между меткой и описанием.
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию заполняет прямоугольник, который задается параметром *rect* цветом или шаблону, указанному в последний вызов к [CMFCToolTipCtrl::SetParams](#setparams).
+Реализация по умолчанию заполняет прямоугольник, заданный параметром *Rect* , цветом или шаблоном, указанным последним вызовом метода [Кмфктултипктрл:: SetParams](#setparams).
 
-Переопределите этот метод в производном классе, если вы хотите настроить внешний вид всплывающей подсказки.
+Переопределите этот метод в производном классе, если необходимо настроить внешний вид подсказки.
 
-##  <a name="setdescription"></a>  CMFCToolTipCtrl::SetDescription
+##  <a name="setdescription"></a>Кмфктултипктрл:: SetDescription
 
 Задает описание, которое отображается во всплывающей подсказке.
 
@@ -367,14 +356,14 @@ virtual void SetDescription(const CString strDesrciption);
 
 ### <a name="parameters"></a>Параметры
 
-*strDesrciption*<br/>
-[in] Текст описания.
+*стрдесрЦиптион*<br/>
+окне Текст описания.
 
 ### <a name="remarks"></a>Примечания
 
-Текст описания отображается на всплывающей подсказки в поле разделитель.
+Текст описания отображается в подсказке под разделителем.
 
-##  <a name="setfixedwidth"></a>  CMFCToolTipCtrl::SetFixedWidth
+##  <a name="setfixedwidth"></a>Кмфктултипктрл:: Сетфикседвидс
 
 ```
 void SetFixedWidth(
@@ -384,12 +373,12 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nWidthRegular*<br/>
-[in] *nWidthLargeImage*<br/>
+окне *нвидсрегулар*<br/>
+окне *нвидсларжеимаже*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="sethotribbonbutton"></a>  CMFCToolTipCtrl::SetHotRibbonButton
+##  <a name="sethotribbonbutton"></a>Кмфктултипктрл:: Сесотриббонбуттон
 
 ```
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -397,11 +386,11 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pRibbonButton*<br/>
+окне *приббонбуттон*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setlocation"></a>  CMFCToolTipCtrl::SetLocation
+##  <a name="setlocation"></a>Кмфктултипктрл:: SetLocation
 
 ```
 void SetLocation(CPoint pt);
@@ -409,13 +398,13 @@ void SetLocation(CPoint pt);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pt*<br/>
+окне *пт*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setparams"></a>  CMFCToolTipCtrl::SetParams
+##  <a name="setparams"></a>Кмфктултипктрл:: SetParams
 
-Задает внешний вид всплывающей подсказки с помощью [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объекта.
+Задает внешний вид всплывающей подсказки с помощью объекта [класса кмфктултипинфо](../../mfc/reference/cmfctooltipinfo-class.md) .
 
 ```
 void SetParams(CMFCToolTipInfo* pParams);
@@ -423,12 +412,12 @@ void SetParams(CMFCToolTipInfo* pParams);
 
 ### <a name="parameters"></a>Параметры
 
-*pParams*<br/>
-[in] Указатель на [класс CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) объект, содержащий параметры отображения.
+*ппарамс*<br/>
+окне Указатель на объект [класса кмфктултипинфо](../../mfc/reference/cmfctooltipinfo-class.md) , который содержит параметры вывода.
 
 ### <a name="remarks"></a>Примечания
 
-Каждый раз, когда подсказка отображается, он отрисовывается с помощью цвета и визуальные стили, *pParams* указывает. Значение *pParams* хранится в защищенный член `m_Params`, который может осуществляться с помощью производного класса, который переопределяет [CMFCToolTipCtrl::OnDrawBorder](#ondrawborder), [CMFCToolTipCtrl: : OnDrawIcon](#ondrawicon), [CMFCToolTipCtrl::OnDrawLabel](#ondrawlabel), [CMFCToolTipCtrl::OnDrawSeparator](#ondrawseparator), или [CMFCToolTipCtrl::OnFillBackground](#onfillbackground)для сохранения указанного внешнего вида.
+При отображении подсказки она рисуется с помощью цветов и визуальных стилей, которые *ппарамс* указывает. Значение *ппарамс* хранится в защищенном члене `m_Params`, доступ к которому может осуществляться производным классом, который переопределяет [кмфктултипктрл:: ондравбордер](#ondrawborder), [кмфктултипктрл:: ондравикон](#ondrawicon), [кмфктултипктрл:: ондравлабел ](#ondrawlabel), [Кмфктултипктрл:: Ондравсепаратор](#ondrawseparator)или [кмфктултипктрл:: онфиллбаккграунд](#onfillbackground) для поддержки указанного внешнего вида.
 
 ## <a name="see-also"></a>См. также
 
