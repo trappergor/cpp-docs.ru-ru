@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: Изменение свойств и целевых объектов без изменения файла проекта
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Clang/LLVM в проектах Visual Studio (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: Использование эталонных библиотек и компонентов во время сборки
           href: build/adding-references-in-visual-cpp-projects.md
         - name: Упорядочение выходных файлов проекта
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#Директива undef (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#Директива using (C++)'
+                    - name: '#Директива using (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: Операторы препроцессора
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: Грамматика препроцессора
                   href: preprocessor/preprocessor-grammar.md
-            - name: Директивы Pragma и ключевое слово __Pragma
+            - name: Директивы pragma и ключевое слово __pragma
               expanded: false
               items:
-                - name: Директивы Pragma и ключевое слово __Pragma
+                - name: Директивы pragma и ключевое слово __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: Прагма alloc_text
                   href: preprocessor/alloc-text.md
