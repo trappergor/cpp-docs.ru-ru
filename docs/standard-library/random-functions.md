@@ -1,26 +1,23 @@
 ---
 title: Функции &lt;random&gt;
-ms.date: 11/04/2016
+ms.date: 09/04/2019
 f1_keywords:
 - random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240390"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273830"
 ---
 # <a name="ltrandomgt-functions"></a>Функции &lt;random&gt;
 
-## <a name="generate_canonical"></a> generate_canonical
+## <a name="generate_canonical"></a>generate_canonical
 
 Возвращает значение с плавающей запятой из случайной последовательности.
-
-> [!NOTE]
-> В стандарте ISO C++ указано, что эта функция должна возвращать значения в диапазоне [ `0`, `1`). Visual Studio еще не выполняет это требование. Для получения значений в этом диапазоне используйте [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -29,15 +26,18 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*\
+*реалтипе*\
 Тип с плавающей запятой. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*BITS*\
-Генератор случайных чисел.
+*Числа*\
+Количество используемых битов случайности.
 
-*Gen*\
-Генератор случайных чисел.
+*Формирования*\
+Класс генератора случайных чисел.
+
+*Операций*\
+Ссылка на экземпляр генератора случайных чисел типа " *генератор*".
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция вызывает шаблон `operator()` из *Gen* многократно и преобразует возвращенные значения в значение с плавающей запятой `x` типа *RealType* пока она собрала заданного числа бит мантиссы в `x`. Является наименьшее значение из заданного числа *Bits* (который должно быть нулевым) и полное число разрядов мантиссы в *RealType*. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
+Функция шаблона *вызывает многократное* обращение `x` `operator()` и упаковывает возвращаемые значения в значение с плавающей запятой типа *реалтипе* до тех пор, пока не собрало указанное число битов мантиссаа в `x`. Указанное число является меньшим из *битов* (значение которого должно быть ненулевым) и полным числом битов мантисса в *реалтипе*. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
