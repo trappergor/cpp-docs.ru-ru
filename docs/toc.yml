@@ -213,7 +213,7 @@
           items:
             - name: Виды библиотек DLL
               href: build/kinds-of-dlls.md
-            - name: 'Несовместимые с MFC библиотеки DLL: Обзор'
+            - name: Несовместимые с MFC библиотеки DLL: обзор
               href: build/non-mfc-dlls-overview.md
             - name: "Обычные библиотеки DLL MFC, статически связанные с\_MFC"
               href: build/regular-dlls-statically-linked-to-mfc.md
