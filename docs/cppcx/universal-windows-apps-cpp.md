@@ -3,12 +3,12 @@ title: Универсальные приложения Windows (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: landing-page
-ms.openlocfilehash: 6c2bf7e44e3f1cb2c73ccaaed4363e34cbd7f0c9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218362"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741034"
 ---
 # <a name="universal-windows-apps-c"></a>Универсальные приложения Windows (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "70218362"
 
 |||
 |-|-|
-|[Справочник по языку Visual C++ (C++/CX)](visual-c-language-reference-c-cx.md)|Описывает набор расширений, упрощающих C++ использование среда выполнения Windows интерфейсов API и обеспечивающих обработку ошибок, основанную на исключениях.|
+|[C++Справочник по языку/CX](visual-c-language-reference-c-cx.md)|Описывает набор расширений, упрощающих C++ использование среда выполнения Windows интерфейсов API и обеспечивающих обработку ошибок, основанную на исключениях.|
 |[Построение приложений и библиотек (C++/CX)](building-apps-and-libraries-c-cx.md)|Описание создания библиотек DLL и статических библиотек, доступных из приложения или компонента C++/CX.|
 |[Учебник. Создание приложения "Hello, World" для UWP в C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Пошаговое руководство, в котором представлены основные понятия разработки приложений C++UWP в/CX. |
 |[Создание компонентов среда выполнения Windows в C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Описывает создание библиотек DLL, которые могут использовать другие приложения и компоненты UWP.|

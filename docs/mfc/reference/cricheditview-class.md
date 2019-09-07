@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502633"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741513"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -763,7 +763,7 @@ void OnCharEffect(
 
 Каждый вызов этой функции переключает указанные эффекты форматирования для текущего выделения.
 
-Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) в Windows SDK.
+Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -997,7 +997,7 @@ void OnUpdateCharEffect(
 
 Маска *двмаск* указывает, какие атрибуты форматирования символов следует проверять. Флаги *двеффект* список атрибутов форматирования символов, которые нужно задать или очистить.
 
-Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) в Windows SDK.
+Дополнительные сведения о параметрах *двмаск* и *двеффект* и их возможностях см. в разделе соответствующие элементы данных [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) в Windows SDK.
 
 ### <a name="example"></a>Пример
 

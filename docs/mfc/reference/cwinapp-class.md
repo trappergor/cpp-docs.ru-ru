@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916720"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741240"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp:: OnIdle](#onidle)|Переопределение для выполнения обработки времени простоя, зависящей от приложения.|
 |[CWinApp:: Опендокументфиле](#opendocumentfile)|Вызывается платформой для открытия документа из файла.|
 |[CWinApp::P Арсекоммандлине](#parsecommandline)|Анализирует отдельные параметры и флаги в командной строке.|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения до их отправки в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения до их отправки в функции Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|Перехватывает определенные сообщения до того, как они достигают приложения.|
 |[CWinApp::P Роцессшеллкомманд](#processshellcommand)|Обрабатывает аргументы и флаги командной строки.|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|Перехватывает все необработанные исключения, вызванные сообщением приложения и обработчиками команд.|
@@ -816,7 +816,7 @@ AFX_HELP_TYPE GetHelpMode();
 
 ##  <a name="getnextdoctemplate"></a>CWinApp:: Жетнекстдоктемплате
 
-Возвращает шаблон документа, идентифицируемый *POS*, а затем задает торговому терминалу значение "позиция".
+Возвращает шаблон документа, идентифицируемый *POS*, а затем задает *торговому терминалу* значение "позиция".
 
 ```
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>Параметры
 
 *ппринтдлг*<br/>
-Указатель на структуру [принтдлг](/windows/desktop/api/commdlg/ns-commdlg-tagpda) .
+Указатель на структуру [принтдлг](/windows/win32/api/commdlg/ns-commdlg-printdlga) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -902,7 +902,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary`выделяет буфер и возвращает его адрес в \* *ппдата*. Вызывающий объект отвечает за освобождение буфера с помощью инструкции **Delete []** .
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -943,7 +943,7 @@ UINT GetProfileInt(
 Эта функция-член не учитывает регистр, поэтому строки в параметрах *лпсзсектион* и *лпсзентри* могут различаться в случае.
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -980,7 +980,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>Примечания
 
 > [!IMPORTANT]
-> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> Данные, возвращаемые этой функцией, не обязательно завершаются НУЛЕМ, и вызывающий объект должен выполнить проверку. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ### <a name="example"></a>Пример
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 Указывает дополнительные данные. Используемое значение зависит от значения параметра *нкмд* . Значение по умолчанию — [HH_HELP_CONTEXT.](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command) `0x000F`
 
 *нкмд*<br/>
-Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании параметра *укомманд* , как описано в разделе функции API [хтмлхелпв](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw) или [хтмлхелпа](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) в Windows SDK.  
+Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании параметра *укомманд* , как описано в разделе функции API [хтмлхелпв](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw) или [хтмлхелпа](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) в Windows SDK.  
 
 ### <a name="remarks"></a>Примечания
 
@@ -1063,7 +1063,7 @@ virtual BOOL InitInstance();
 Переопределите `InitInstance` для инициализации каждого нового экземпляра приложения, работающего под управлением Windows. Как правило, переопределяется `InitInstance` для создания основного объекта окна и `CWinThread::m_pMainWnd` установки элемента данных для указания на это окно. Дополнительные сведения о переопределении этой функции члена см. в [разделе CWinApp: Класс](../../mfc/cwinapp-the-application-class.md)приложения.
 
 > [!NOTE]
-> Приложения MFC должны быть инициализированы как однопотоковое подразделение (STA). При вызове [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в `InitInstance` переопределении укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
+> Приложения MFC должны быть инициализированы как однопотоковое подразделение (STA). При вызове [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) в `InitInstance` переопределении укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Пример
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 Указывает на строку, завершающуюся нулем, которая содержит имя ресурса курсора. `CString` Для этого аргумента можно использовать.
 
 *нидресаурце*<br/>
-Идентификатор ресурса курсора. Список ресурсов см. в разделе [лоадкурсор](/windows/desktop/api/winuser/nf-winuser-loadcursora) в Windows SDK.
+Идентификатор ресурса курсора. Список ресурсов см. в разделе [лоадкурсор](/windows/win32/api/winuser/nf-winuser-loadcursorw) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1142,7 +1142,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 Для доступа к стандартным значкам Windows можно использовать функцию члена [лоадстандардикон](#loadstandardicon) или [лоадоемикон](#loadoemicon) .
 
 > [!NOTE]
-> Эта функция-член вызывает функцию Win32 API [лоадикон](/windows/desktop/api/winuser/nf-winuser-loadicona), которая может загрузить только значок, размер которого соответствует значениям СИСТЕМНЫХ метрик SM_CXICON и SM_CYICON.
+> Эта функция-член вызывает функцию Win32 API [лоадикон](/windows/win32/api/winuser/nf-winuser-loadiconw), которая может загрузить только значок, размер которого соответствует значениям СИСТЕМНЫХ метрик SM_CXICON и SM_CYICON.
 
 ##  <a name="loadoemcursor"></a>CWinApp:: Лоадоемкурсор
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>Параметры
 
 *лпсзиконнаме*<br/>
-Идентификатор константы манифеста, указывающий стандартный значок Windows. Эти идентификаторы определяются в WINDOWS. Высоты. Список возможных стандартных значений и их описания см. в описании параметра *лпиконнаме* в [лоадикон](/windows/desktop/api/winuser/nf-winuser-loadicona) в Windows SDK.
+Идентификатор константы манифеста, указывающий стандартный значок Windows. Эти идентификаторы определяются в WINDOWS. Высоты. Список возможных стандартных значений и их описания см. в описании параметра *лпиконнаме* в [лоадикон](/windows/win32/api/winuser/nf-winuser-loadiconw) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1784,7 +1784,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>CWinApp::P Ретранслатемессаже
 
-Переопределите эту функцию, чтобы отфильтровать сообщения окна до их отправки в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) реализация по умолчанию выполняет преобразование ключей ускорителя, поэтому необходимо вызвать метод `CWinApp::PreTranslateMessage`функция члена в переопределенной версии.
+Переопределите эту функцию, чтобы отфильтровать сообщения окна до их отправки в функции Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) реализация по умолчанию выполняет преобразование ключей ускорителя, поэтому необходимо вызвать метод `CWinApp::PreTranslateMessage`функция члена в переопределенной версии.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Параметры
 
 *пмсг*<br/>
-Указатель на структуру [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) , содержащую сообщение для обработки.
+Указатель на структуру [MSG](/windows/win32/api/winuser/ns-winuser-msg) , содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Указывает код обработчика. Эта функция члена использует код, чтобы определить, как обрабатывать *лпмсг.*
 
 *лпмсг*<br/>
-Указатель на структуру [сообщения](/windows/desktop/api/winuser/ns-winuser-tagmsg) Windows.
+Указатель на [сообщение](/windows/win32/api/winuser/ns-winuser-msg)Windows структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Указатель на неперехваченное исключение.
 
 *пмсг*<br/>
-Структура [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) сообщения, содержащая сведения о сообщении Windows, которое привело к созданию исключения платформой.
+Сообщение [структуры,](/windows/win32/api/winuser/ns-winuser-msg)содержащее сведения о сообщении Windows, которое привело к созданию исключения платформой.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Параметры
 
 *хдевнамес*<br/>
-Маркер структуры [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , который определяет имена драйверов, устройств и выходных портов конкретного принтера.
+Описатель [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)структуры, который определяет имена драйверов, устройств и выходных портов конкретного принтера.
 
 *хдевмоде*<br/>
 Маркер структуры [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , указывающий сведения об инициализации устройства и среде принтера.
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 Указывает дополнительные данные. Используемое значение зависит от значения параметра *нкмд* .
 
 *нкмд*<br/>
-Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании функции Windows [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) .
+Задает тип запрошенной справки. Список возможных значений и их влияние на параметр *двдата* см. в описании функции Windows [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) .
 
 ### <a name="remarks"></a>Примечания
 

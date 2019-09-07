@@ -2,22 +2,22 @@
 title: Атрибуты (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 5f74914ab65fdf2c1803b47665e16378991efa3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77962dc2d4b7f6bda90a5376e5154782365a4106
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209459"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740380"
 ---
 # <a name="attributes-ccx"></a>Атрибуты (C++/CX)
 
-Атрибут — это специальный класс ссылки, могут быть использованы в квадратных скобках типов среды выполнения Windows и методы, чтобы задавать определенное поведение при создании метаданных. Несколько предопределенных атрибутов — например, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)— обычно используются в C++/CX кода. В этом примере показано, как атрибут применяется к классу.
+Атрибут — это специальный тип ссылочного класса, который можно добавить в квадратные скобки, чтобы среда выполнения Windows типы и методы для указания определенных поведений при создании метаданных. Несколько предварительно определенных атрибутов, например [Windows:: Foundation:: Metadata:: WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), обычно используются в C++коде/CX. В этом примере показано, как атрибут применяется к классу.
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
 ## <a name="custom-attributes"></a>Настраиваемые атрибуты
 
-Также можно определять настраиваемые атрибуты. Настраиваемые атрибуты должны соответствовать следующим правилам среды выполнения Windows:
+Также можно определять настраиваемые атрибуты. Настраиваемые атрибуты должны соответствовать следующим правилам среда выполнения Windows:
 
 - настраиваемые атрибуты могут содержать только открытые поля;
 
@@ -46,5 +46,5 @@ ms.locfileid: "62209459"
 ## <a name="see-also"></a>См. также
 
 [Система типов (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)

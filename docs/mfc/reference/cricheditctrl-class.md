@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503153"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741545"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) для получения атрибутов форматирования символов для текущего выделения.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) для получения атрибутов форматирования символов для текущего выделения.
 
 Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая является расширенным расширением формата 2,0 для `CHARFORMAT` структуры, чтобы получить атрибуты форматирования символов для текущего выделения.
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов по умолчанию.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) , содержащую новые атрибуты форматирования символов по умолчанию.
 
 Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее атрибуты форматирования символов по умолчанию.
 
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выделения.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) , содержащую новые атрибуты форматирования символов для текущего выделения.
 
 Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выделения.
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащую новые атрибуты форматирования символов для текущего выбранного слова.
+В первой версии — указатель на структуру [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) , содержащую новые атрибуты форматирования символов для текущего выбранного слова.
 
 Во второй версии — указатель на структуру [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) , которая представляет собой расширенное расширение Edit 2,0 для `CHARFORMAT` структуры, содержащее новые атрибуты форматирования символов для текущего выбранного слова.
 

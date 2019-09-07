@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502258"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741421"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>Параметры
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) всплывающей подсказки.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) всплывающей подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*лптулинфо*|заполняет Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , которая получает сведения о текущем окне всплывающей подсказки.|
+|*лптулинфо*|заполняет Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , которая получает сведения о текущем окне всплывающей подсказки.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>Примечания
 
-Элементы `hwnd` и `uId` структуры [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , на которые ссылается *ктулинфо* , определяют средство. Если это средство зарегистрировано с помощью всплывающей подсказки `AddTool` `TOOLINFO` , то при предыдущем вызове структура заполняется сведениями о средстве.
+Элементы `hwnd` и `uId` структуры [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , на которые ссылается *ктулинфо* , определяют средство. Если это средство зарегистрировано с помощью всплывающей подсказки `AddTool` `TOOLINFO` , то при предыдущем вызове структура заполняется сведениями о средстве.
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 Указатель на объект `CPoint` , содержащий координаты проверяемой точки.
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , содержащую сведения об инструменте.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , содержащую сведения об инструменте.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>Параметры
 
 *лптулинфо*<br/>
-Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) , указывающую сведения, которые необходимо задать.
+Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) , указывающую сведения, которые необходимо задать.
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: Сеттулрект
 
