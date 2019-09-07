@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 3031b1e5870dd7f59af7adf48a6a77aaccdf53fc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f5c235008b72996424e01ee912ca78ecffab450a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507203"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741578"
 ---
 # <a name="ccolordialog-class"></a>Класс Кколордиалог
 
@@ -72,7 +72,7 @@ class CColorDialog : public CCommonDialog
 
 Для создания `CColorDialog` объекта используйте предоставленный конструктор или создайте производный от него новый класс и используйте собственный пользовательский конструктор.
 
-После создания диалогового окна можно задать или изменить любые значения в структуре [m_cc](#m_cc) , чтобы инициализировать значения элементов управления диалогового окна. Структура *m_cc* имеет тип [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolorw).
+После создания диалогового окна можно задать или изменить любые значения в структуре [m_cc](#m_cc) , чтобы инициализировать значения элементов управления диалогового окна. Структура *m_cc* имеет тип [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1).
 
 После инициализации элементов управления диалогового окна вызовите `DoModal` функцию-член, чтобы отобразить диалоговое окно и позволить пользователю выбрать цвет. `DoModal`Возвращает выбор пользователя либо кнопки ОК (ИДОК), либо Cancel (ИДКАНЦЕЛ) диалогового окна.
 
@@ -126,7 +126,7 @@ CColorDialog(
 Выбор цвета по умолчанию. Если значение не указано, по умолчанию используется RGB (0, 0, 0) (черный).
 
 *dwFlags*<br/>
-Набор флагов, которые настраивают функцию и внешний вид диалогового окна. Дополнительные сведения см. в описании структуры [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolorw) в Windows SDK.
+Набор флагов, которые настраивают функцию и внешний вид диалогового окна. Дополнительные сведения см. в описании структуры [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1) в Windows SDK.
 
 *ппарентвнд*<br/>
 Указатель на родительский узел или окно-владелец диалогового окна.
@@ -199,7 +199,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
 
 ##  <a name="m_cc"></a>Кколордиалог:: m_cc
 
-Структура типа [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolorw), члены которой хранят характеристики и значения диалогового окна.
+Структура типа [чусеколор](/windows/win32/api/commdlg/ns-commdlg-choosecolora~r1), члены которой хранят характеристики и значения диалогового окна.
 
 ```
 CHOOSECOLOR m_cc;

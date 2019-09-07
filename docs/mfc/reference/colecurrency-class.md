@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177404"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741646"
 ---
 # <a name="colecurrency-class"></a>Класс COleCurrency
 
@@ -128,7 +128,7 @@ COleCurrency(
 
 - COleCurrency () конструирует `COleCurrency` объект, инициализированный значением 0 (ноль).
 
-- COleCurrency (`cySrc`) конструирует `COleCurrency` объект из значения [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) .
+- COleCurrency (`cySrc`) конструирует `COleCurrency` объект из значения [валюты](/windows/win32/api/wtypes/ns-wtypes-cy~r1) .
 
 - COleCurrency (`curSrc`) конструирует `COleCurrency` объект из существующего `COleCurrency` объекта. Новый объект имеет то же состояние, что и исходный объект.
 
@@ -136,7 +136,7 @@ COleCurrency(
 
 - `COleCurrency(`нунитс`, `нфрактионалунитс`) Constructs a `COleCurrency ' объект из указанных числовых компонентов. Если абсолютное значение дробной части больше 10 000, в единицы измерения вносится соответствующая корректировка. Обратите внимание, что единицы и дробная часть указываются с помощью длинных значений со знаком.
 
-Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
+Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy~r1) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -236,14 +236,14 @@ enum CurrencyStatus {
 
 ##  <a name="m_cur"></a>COleCurrency:: m_cur
 
-Базовая структура [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) для этого `COleCurrency` объекта.
+Базовая структура [валюты](/windows/win32/api/wtypes/ns-wtypes-cy~r1) для этого `COleCurrency` объекта.
 
 ### <a name="remarks"></a>Примечания
 
 > [!CAUTION]
 >  Изменение значения в `CURRENCY` структуре, к которой обращается указатель, возвращенное этой функцией, приведет к изменению `COleCurrency` значения этого объекта. Он не изменяет состояние этого `COleCurrency` объекта.
 
-Дополнительные сведения см. в записи [валюты](/windows/win32/api/wtypes/ns-wtypes-cy) в Windows SDK.
+Дополнительные сведения см. в записи [валюты](/windows/win32/api/wtypes/ns-wtypes-cy~r1) в Windows SDK.
 
 ##  <a name="m_status"></a>COleCurrency:: M_STATUS
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 - **operator = (** *варсрк* **)** Если преобразование `VARIANT` значения (или объекта [COleVariant](../../mfc/reference/colevariant-class.md) ) в денежную единицу ( `VT_CY`) прошло успешно, преобразованное значение копируется в этот `COleCurrency` объект, а его состояние устанавливается в допустимое. Если преобразование завершилось неудачно, значение `COleCurrency` объекта задается равным 0, а его состояние — "недопустимо".
 
-Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
+Дополнительные сведения см. в разделе [Валюта](/windows/win32/api/wtypes/ns-wtypes-cy~r1) и [варианты](/windows/win32/api/oaidl/ns-oaidl-variant) в Windows SDK.
 
 ### <a name="example"></a>Пример
 

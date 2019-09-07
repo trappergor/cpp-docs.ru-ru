@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495944"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739560"
 ---
 # <a name="idataobjectimpl-class"></a>Класс Идатаобжектимпл
 
@@ -65,7 +65,7 @@ class IDataObjectImpl
 
 ## <a name="remarks"></a>Примечания
 
-Интерфейс [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) предоставляет методы для поддержки однородных передача данных. `IDataObject`использует стандартные структуры формата [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) и [стгмедиум](/windows/win32/api/objidl/ns-objidl-stgmedium) для получения и хранения данных.
+Интерфейс [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) предоставляет методы для поддержки однородных передача данных. `IDataObject`использует стандартные структуры формата [форматетк](/windows/win32/api/objidl/ns-objidl-formatetc) и [стгмедиум](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1) для получения и хранения данных.
 
 `IDataObject`также управляет подключениями к приемникам уведомлений, которые обрабатывали уведомления об изменении данных. Чтобы клиент получал уведомления об изменении данных из объекта данных, клиент должен реализовать интерфейс [иадвисесинк](/windows/win32/api/objidl/nn-objidl-iadvisesink) для объекта, который называется приемником уведомлений. Когда клиент вызывает `IDataObject::DAdvise`, устанавливается соединение между объектом данных и приемником уведомлений.
 

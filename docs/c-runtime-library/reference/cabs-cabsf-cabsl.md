@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623969"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739882"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -72,13 +72,13 @@ long double cabsl(
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cabs** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long** **двойные** значения. В программе на языке C **cabs** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CAB** -файлов, принимающие значения **_Fcomplex** или **_Lcomplex** , и возвращать значения **типа float** или **Long** **Double** . В программе на языке **CAB** -файлов всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**CAB**, **cabsf**, **CAB**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

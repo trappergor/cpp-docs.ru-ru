@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445673"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739853"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj, cprojf, cprojl
 
@@ -68,17 +68,17 @@ _Lcomplex cprojl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Самую внешнюю проекцию *z* на сферу Римана.
+Проекция *z* в сферу Римана Sphere.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cproj** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cproj** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **кпрож** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **кпрож** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**cproj**, **cprojf**, **cprojl**|\<complex.h>|\<ccomplex>|
+|**кпрож**, **кпрожф**, **кпрожл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

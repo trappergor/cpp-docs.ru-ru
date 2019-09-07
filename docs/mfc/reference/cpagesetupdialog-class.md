@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503016"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739764"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс Кпажесетупдиалог
 
@@ -305,7 +305,7 @@ PAGESETUPDLG m_psd;
 
 При непосредственном изменении `m_psd` элемента данных будет переопределено поведение по умолчанию.
 
-Дополнительные сведения о структуре [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-psdw) см. в Windows SDK.
+Дополнительные сведения о структуре [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) см. в Windows SDK.
 
 См. пример для [кпажесетупдиалог:: кпажесетупдиалог](#cpagesetupdialog).
 
@@ -393,7 +393,7 @@ virtual UINT PreDrawPage(
 - Конверт 0x01f в книжной ориентации (матрица точек)
 
 *ппсд*<br/>
-Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-psdw)см. в Windows SDK.
+Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)см. в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497769"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739551"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс Катлфилемаппингбасе
 
@@ -190,7 +190,7 @@ HRESULT MapFile(
 Смещение файла, с которого начинается сопоставление. Значение смещения должно быть кратным степени гранулярности выделения памяти в системе.
 
 *двмаппингпротектион*<br/>
-Защита, необходимая для представления файла при сопоставлении файла. См. раздел *флпротект* в [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) в Windows SDK.
+Защита, необходимая для представления файла при сопоставлении файла. См. раздел *флпротект* в [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) в Windows SDK.
 
 *дввиевдесиредакцесс*<br/>
 Указывает тип доступа к представлению файла и, таким образом, защиту страниц, сопоставленных с файлом. См. раздел *двдесиредакцесс* в [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) в Windows SDK.
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>Примечания
 
-После того как объект сопоставления файлов создан, размер файла не должен превышать размер объекта сопоставления файлов; Если это так, не все содержимое файла будет доступно для общего доступа. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) и [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) в Windows SDK.
+После того как объект сопоставления файлов создан, размер файла не должен превышать размер объекта сопоставления файлов; Если это так, не все содержимое файла будет доступно для общего доступа. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) и [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -233,7 +233,7 @@ HRESULT MapSharedMem(
 Указывает на логическое значение, равное TRUE, если объект сопоставления уже существовал.
 
 *лпса*<br/>
-Указатель на `SECURITY_ATTRIBUTES` структуру, которая определяет, может ли возвращаемый маркер наследоваться дочерними процессами. См. раздел *лпаттрибутес* в [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw) в Windows SDK.
+Указатель на `SECURITY_ATTRIBUTES` структуру, которая определяет, может ли возвращаемый маркер наследоваться дочерними процессами. См. раздел *лпаттрибутес* в [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) в Windows SDK.
 
 *двмаппингпротектион*<br/>
 Защита, необходимая для представления файлов при сопоставлении файла. См . раздел `CreateFileMapping` флпротект в Windows SDK.
@@ -247,7 +247,7 @@ HRESULT MapSharedMem(
 
 ### <a name="remarks"></a>Примечания
 
-`MapShareMem`позволяет совместно использовать существующий объект сопоставления файлов, созданный [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappingw), между процессами.
+`MapShareMem`позволяет совместно использовать существующий объект сопоставления файлов, созданный [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), между процессами.
 
 ##  <a name="openmapping"></a>Катлфилемаппингбасе:: Опенмаппинг
 

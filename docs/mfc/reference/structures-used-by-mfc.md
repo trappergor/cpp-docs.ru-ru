@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: da2df7758ef01d03380e8f8a2a79c8adec591d6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6010066b449727034918039e817012a2f31cf60b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511394"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741436"
 ---
 # <a name="structures-used-by-mfc"></a>Структуры, используемые MFC
 
@@ -29,13 +29,13 @@ ms.locfileid: "69511394"
 |[Структура CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[Структура PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)|
 |[Структура CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)|[Структура точки](/windows/win32/api/windef/ns-windef-point)|
 |[Структура CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)|[Структура RECT](/windows/win32/api/windef/ns-windef-rect)|
-|[Структура CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Структура RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndatw)|
+|[Структура CDaoQueryDefInfo](../../mfc/reference/cdaoquerydefinfo-structure.md)|[Структура RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata)|
 |[Структура CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[Структура SOCKADDR](/windows/win32/winsock/sockaddr-2)|
 |[Структура CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)|[Структура SOCKADDR_IN](/windows/win32/winsock/sockaddr-2)|
 |[Структура CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)|[Структура SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)
 |[Структура CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)|[Структура WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement)|
 |[Структура CODBCFieldInfo](../../mfc/reference/codbcfieldinfo-structure.md)|[Структура WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)
-|[Структура COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)|[Структура WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadatw)|
+|[Структура COLORADJUSTMENT](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)|[Структура WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)|
 |[Структура COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)|[Структура XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)|
 |[Структура CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)||
 |[Структура DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)||

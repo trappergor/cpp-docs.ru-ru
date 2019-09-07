@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741597"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 
@@ -680,7 +680,7 @@ void EnableMDITabbedGroups(
 
 При вызове этого метода с параметром *бенабле* , равным false, *Параметры* игнорируются.
 
-Даже если группы с вкладками MDI уже включены, вы можете вызвать этот метод еще раз, чтобы изменить параметры дочерних окон. Вызовите метод с параметром *бенабле* , для которого задано значение true `CMDITabInfo` , и измените члены объекта, заданные с помощью параметра params.
+Даже если группы с вкладками MDI уже включены, вы можете вызвать этот метод еще раз, чтобы изменить параметры дочерних окон. Вызовите метод с параметром *бенабле* , для которого задано значение true `CMDITabInfo` , и измените члены объекта, заданные с помощью параметра *params* .
 
 Дополнительные сведения об использовании групп с вкладками MDI см. в разделе [группы MDI с вкладками](../../mfc/mdi-tabbed-groups.md).
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 окне Кнопка панели инструментов.
 
 *пти*<br/>
-заполняет Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-toolinfow) .
+заполняет Указатель на структуру [тулинфо](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 

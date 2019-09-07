@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495115"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739578"
 ---
 # <a name="_u_stringorid-class"></a>Класс _U_STRINGorID
 
@@ -45,7 +45,7 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс предназначен для реализации оболочек для API управления ресурсами Windows, таких как функции [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew), [лоадикон](/windows/win32/api/winuser/nf-winuser-loadiconw)и [ЛОАДМЕНУ](/windows/win32/api/winuser/nf-winuser-loadmenuw) , которые принимают аргумент LPCTSTR, который может быть либо именем ресурса, либо его идентификатором.
+Этот класс предназначен для реализации оболочек для API управления ресурсами Windows, таких как функции [FindResource](/windows/win32/api/winbase/nf-winbase-findresourcea), [лоадикон](/windows/win32/api/winuser/nf-winuser-loadiconw)и [ЛОАДМЕНУ](/windows/win32/api/winuser/nf-winuser-loadmenuw) , которые принимают аргумент LPCTSTR, который может быть либо именем ресурса, либо его идентификатором.
 
 Класс определяет две перегрузки конструктора: одна принимает аргумент LPCTSTR, а другая принимает аргумент UINT. Аргумент UINT преобразуется в тип ресурса, совместимый с функциями управления ресурсами Windows, с помощью макроса МАКЕИНТРЕСАУРЦЕ и результата, хранящегося в единственном элементе данных класса [m_lpstr](#_u_stringorid__m_lpstr). Аргумент для конструктора LPCTSTR хранится непосредственно без преобразования.
 

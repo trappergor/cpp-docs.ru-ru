@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506474"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741556"
 ---
 # <a name="cfontdialog-class"></a>Класс Кфонтдиалог
 
@@ -146,7 +146,7 @@ CFontDialog(
 Указатель на структуру данных [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , которая позволяет задать некоторые характеристики шрифта.
 
 *чарформат*<br/>
-Указатель на структуру данных [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , которая позволяет задать некоторые характеристики шрифта в элементе управления Rich Edit.
+Указатель на структуру данных [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) , которая позволяет задать некоторые характеристики шрифта в элементе управления Rich Edit.
 
 *dwFlags*<br/>
 Указывает один или несколько флагов выбора шрифта. Одно или несколько предустановленных значений можно объединить с помощью побитового оператора OR. Если вы изменяете член структуры `m_cf.Flag`, используйте оператор OR в изменениях, чтобы сохранить поведение по умолчанию. Дополнительные сведения о каждом из этих флагов см. в описании структуры [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) в Windows SDK.
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>Параметры
 
 *CF*<br/>
-Структура [чарформат](/windows/win32/api/richedit/ns-richedit-_charformat) , содержащая сведения о форматировании символов выбранного шрифта.
+Структура [чарформат](/windows/win32/api/richedit/ns-richedit-charformata) , содержащая сведения о форматировании символов выбранного шрифта.
 
 ##  <a name="getcolor"></a>Кфонтдиалог:: "Color"
 

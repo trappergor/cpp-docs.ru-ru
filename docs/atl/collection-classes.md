@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: fe795e54274e1d32dddb7310446bfa5aea22091a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492473"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739524"
 ---
 # <a name="collection-classes"></a>Классы коллекций
 
@@ -32,9 +32,9 @@ ms.locfileid: "69492473"
 
 - [Ккомкиптрелементтраитс](../atl/reference/ccomqiptrelementtraits-class.md) Этот класс предоставляет методы, статические функции и определения типов, полезные при создании коллекций указателей на COM-интерфейсах.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Этот класс является оболочкой для структуры [типа данных SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) .
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Этот класс является оболочкой для структуры [типа данных SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) .
 
-- [Ккомсафеаррайбаунд](../atl/reference/ccomsafearraybound-class.md) Этот класс является оболочкой для структуры [сафеаррайбаунд](/windows/win32/api/oaidl/ns-oaidl-tagsafearraybound) .
+- [Ккомсафеаррайбаунд](../atl/reference/ccomsafearraybound-class.md) Этот класс является оболочкой для структуры [сафеаррайбаунд](/windows/win32/api/oaidl/ns-oaidl-safearraybound) .
 
 - [Ккомункаррай](../atl/reference/ccomunkarray-class.md) Этот класс хранит указатели **IUnknown** и предназначен для использования в качестве параметра для класса шаблона [иконнектионпоинтимпл](../atl/reference/iconnectionpointimpl-class.md) .
 
