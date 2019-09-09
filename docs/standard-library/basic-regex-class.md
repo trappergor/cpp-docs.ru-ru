@@ -13,7 +13,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453436"
 ---
-# <a name="basicregex-class"></a>Класс basic_regex
+# <a name="basic_regex-class"></a>Класс basic_regex
 
 Создание оболочки для регулярного выражения.
 
@@ -34,7 +34,7 @@ class basic_regex
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает объект, содержащий регулярное выражение. Объекты этого класса шаблона можно передать в функции шаблонов [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)и [regex_replace](../standard-library/regex-functions.md#regex_replace), а также подходящие аргументы текстовой строки, чтобы найти текст, соответствующий регулярному выражению. Существует две специализации этого класса шаблона с регулярным выражением определений типов [](../standard-library/regex-typedefs.md#regex) для элементов типа **char**и [wregex](../standard-library/regex-typedefs.md#wregex) для элементов типа **wchar_t**.
+Класс шаблона описывает объект, содержащий регулярное выражение. Объекты этого класса шаблона можно передать в функции шаблонов [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)и [regex_replace](../standard-library/regex-functions.md#regex_replace), а также подходящие аргументы текстовой строки, чтобы найти текст, соответствующий регулярному выражению. Существует две специализации этого класса шаблона с [регулярным выражением](../standard-library/regex-typedefs.md#regex) определений типов для элементов типа **char**и [wregex](../standard-library/regex-typedefs.md#wregex) для элементов типа **wchar_t**.
 
 Аргумент шаблона *ркстраитс* описывает различные важные свойства синтаксиса регулярных выражений, поддерживаемых классом шаблона. Класс, определяющий эти характеристики регулярного выражения, должен обладать таким же внешним интерфейсом, как и объект класса шаблона [regex_traits](../standard-library/regex-traits-class.md).
 
@@ -54,7 +54,7 @@ class basic_regex
 
 ### <a name="members"></a>Участники
 
-|Член|Значение по умолчанию|
+|Член|Default Value|
 |-|-|
 |public static const flag_type Икасе|regex_constants::icase|
 |открытые статические константы flag_type Sub|regex_constants::nosubs|

@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311336"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631607"
 ---
 # <a name="compiler-warning-c4687"></a>Предупреждение компилятора C4687
 
-«класс»: Запечатанный абстрактный класс не может реализовывать интерфейс «интерфейс»
+> "*класс*": запечатанный абстрактный класс не может реализовать интерфейс "*интерфейс*"
 
-Запечатанный абстрактный тип обычно содержит только для хранения статических функций-членов.
+## <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [абстрактный](../../extensions/abstract-cpp-component-extensions.md)и [запечатанный](../../extensions/sealed-cpp-component-extensions.md).
+Запечатанный абстрактный тип обычно полезен только для хранения статических функций-членов.
 
-C4687 выдается как ошибка по умолчанию. Вы можете отключить C4687 с [предупреждение](../../preprocessor/warning.md) директивы pragma. Если вы уверены, что вы хотите реализовать интерфейс в Запечатанный абстрактный тип, можно отключить C4687.
+Дополнительные сведения см. в разделе [абстрактные](../../extensions/abstract-cpp-component-extensions.md) и [запечатанные](../../extensions/sealed-cpp-component-extensions.md).
+
+По умолчанию C4687 выдается как ошибка. C4687 можно отключить с помощью директивы pragma [warning](../../preprocessor/warning.md) . Если вы уверены, что необходимо реализовать интерфейс в запечатанном абстрактном типе, можно отключить C4687.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4687.
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};
