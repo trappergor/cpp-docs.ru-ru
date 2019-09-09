@@ -1,6 +1,6 @@
 ---
-title: inline_recursion
-ms.date: 11/04/2016
+title: Прагма inline_recursion
+ms.date: 08/29/2019
 f1_keywords:
 - inline_recursion_CPP
 - vc-pragma.inline_recursion
@@ -8,30 +8,29 @@ helpviewer_keywords:
 - pragmas, inline_recursion
 - inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
-ms.openlocfilehash: 80ffabc6ac7c95fd7d9fb4e62bea38c2a04b04f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0169e06e8e47f7b0a7b3f73e809ddc988bcf1e95
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383702"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220954"
 ---
-# <a name="inlinerecursion"></a>inline_recursion
+# <a name="inline_recursion-pragma"></a>Прагма inline_recursion
+
 Управляет развертыванием встроенного кода непосредственных или взаимных рекурсивных вызовов функций.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma inline_recursion( [{on | off}] )
-```
+> **#pragma inline_recursion (** [{ **On** | **Off** }] **)**
 
 ## <a name="remarks"></a>Примечания
 
-Используйте эту директиву #pragma для функций управления помечен как [встроенного](../cpp/inline-functions-cpp.md) и [__inline](../cpp/inline-functions-cpp.md) или функции, которые компилятор автоматически разворачивается в группе `/Ob2` параметр. Требует использования этой директивы #pragma [/Ob](../build/reference/ob-inline-function-expansion.md) значения параметра компилятора 1 или 2. Состояние по умолчанию для **inline_recursion** отключен. Эта директива #pragma действует начиная с первого после нее вхождения вызова функции и не влияет на определение функции.
+Используйте эту директиву pragma для управления функциями, помеченными как [встроенные](../cpp/inline-functions-cpp.md) и [__inline](../cpp/inline-functions-cpp.md) или функциями, которые компилятор автоматически `/Ob2` расширяет при выборе параметра. Для использования этой директивы pragma требуется параметр компилятора [/Ob](../build/reference/ob-inline-function-expansion.md) , имеющий значение 1 или 2. Состояние по умолчанию для **inline_recursion** — Off. Эта директива pragma вступает в силу при первом вызове функции после того, как директива pragma будет показана и не влияет на определение функции.
 
-**Inline_recursion** директива pragma управляет как раскрываются рекурсивные функции. Если **inline_recursion** отключен, и если встроенная функция вызывает саму себя (прямо или косвенно), функция разворачивается только один раз. Если **inline_recursion** имеет значение on, функция разворачивается несколько раз, пока не достигнет значения, заданного с помощью [inline_depth](../preprocessor/inline-depth.md) pragma, значение по умолчанию для рекурсивных функций, определяемое `inline_depth` pragma, или значение, ограничиваемое.
+Директива pragma **inline_recursion** управляет развертыванием рекурсивных функций. Если **inline_recursion** имеет значение OFF и если встроенная функция вызывает саму себя прямо или косвенно, функция разворачивается только один раз. Если **inline_recursion** имеет значение ON, функция разворачивается несколько раз до тех пор, пока не достигнет значения, установленного с помощью директивы pragma [inline_depth](../preprocessor/inline-depth.md) , значения по умолчанию для `inline_depth` рекурсивных функций, определенных директивой pragma, или предела емкости.
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[inline_depth](../preprocessor/inline-depth.md)<br/>
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[inline_depth](../preprocessor/inline-depth.md)\
 [/Ob (расширение встраиваемых функций)](../build/reference/ob-inline-function-expansion.md)

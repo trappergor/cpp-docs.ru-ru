@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-за исключением того, что каждый элемент, *_Ch* последовательности, начинающейся с *str* , преобразуется в `_Ostr.`объект типа`_Ostr.` `Elem` `_Ch`путем вызова метода помещает ([Widening](../standard-library/basic-ios-class.md#widen)()). [](../standard-library/basic-ostream-class.md#put)
+за исключением того, что каждый элемент, *_Ch* последовательности, начинающейся с *str* , преобразуется в `_Ostr.`объект типа`_Ostr.` `Elem` `_Ch`путем вызова метода [помещает](../standard-library/basic-ostream-class.md#put)([Widening](../standard-library/basic-ios-class.md#widen)()).
 
 Функция-шаблон
 

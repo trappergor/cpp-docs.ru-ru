@@ -1,21 +1,21 @@
 ---
-title: (C++ COM атрибут nonextensible)
+title: нерасширяемыйC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407579"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514393"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-Указывает, что `IDispatch` реализация содержит только свойства и методы, перечисленных в описании интерфейса и не может быть расширен с помощью дополнительных членов во время выполнения.
+Указывает, что `IDispatch` реализация включает только свойства и методы, перечисленные в описании интерфейса, и не может быть расширена с помощью дополнительных элементов во время выполнения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407579"
 
 ## <a name="remarks"></a>Примечания
 
-**Nonextensible** атрибут C++ имеет ту же функциональность, что [nonextensible](/windows/desktop/Midl/nonextensible) описании атрибута MIDL.
+**Нерасширяемый** C++ атрибут имеет те же функциональные возможности, что и [нерасширяемый](/windows/win32/Midl/nonextensible) атрибут MIDL.
 
-Использование **nonextensible** также требуется [oleautomation](oleautomation.md) атрибута.
+Для использования **нерасширяемости** также требуется атрибут [oleautomation](oleautomation.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано один из способов использования **nonextensible** атрибут:
+В следующем коде показано одно использование **нерасширяемого** атрибута:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -54,10 +54,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Применение**|**interface**|
+|**Относится к**|**interface**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|`dual` и `oleautomation`, или `dispinterface`|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|`dual`и `oleautomation`, или`dispinterface`|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

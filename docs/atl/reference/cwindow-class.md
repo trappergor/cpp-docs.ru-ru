@@ -153,19 +153,19 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276861"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496163"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
 Этот класс предоставляет методы для управления окном.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -179,208 +179,208 @@ class CWindow
 
 |name|Описание|
 |----------|-----------------|
-|[CWindow::CWindow](#cwindow)|Конструктор.|
+|[CWindow:: CWindow](#cwindow)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Упорядочивает все свернутые дочерние окна.|
-|[CWindow::Attach](#attach)|Прикрепляет окно к `CWindow` объекта.|
-|[CWindow::BeginPaint](#beginpaint)|Подготавливает окна для рисования.|
-|[CWindow::BringWindowToTop](#bringwindowtotop)|Выводит окно к верхней части Z-координате.|
-|[CWindow::CenterWindow](#centerwindow)|Центрирование окна для данного окна.|
-|[CWindow::ChangeClipboardChain](#changeclipboardchain)|Удаляет окно из цепочки буфера обмена.|
-|[CWindow::CheckDlgButton](#checkdlgbutton)|Изменяет состояние пометки указанную кнопку.|
-|[CWindow::CheckRadioButton](#checkradiobutton)|Проверяет указанный переключатель.|
-|[CWindow::ChildWindowFromPoint](#childwindowfrompoint)|Возвращает дочернее окно, содержащее заданную точку.|
-|[CWindow::ChildWindowFromPointEx](#childwindowfrompointex)|Извлекает определенный тип дочернего окна, содержащего заданную точку.|
-|[CWindow::ClientToScreen](#clienttoscreen)|Преобразует клиентских координат в экранные координаты.|
-|[CWindow::Create](#create)|Создает окно.|
-|[CWindow::CreateCaret](#createcaret)|Создает новую форму системного курсора.|
-|[CWindow::CreateGrayCaret](#creategraycaret)|Создает серый прямоугольник для системного курсора.|
-|[CWindow::CreateSolidCaret](#createsolidcaret)|Создает сплошной прямоугольник для системного курсора.|
-|[CWindow::DeferWindowPos](#deferwindowpos)|Обновляет указанную структуру нескольких положение окна для указанного окна.|
-|[CWindow::DestroyWindow](#destroywindow)|Уничтожает окно, связанное с `CWindow` объекта.|
-|[CWindow::Detach](#detach)|Отсоединяет окно от `CWindow` объекта.|
-|[CWindow::DlgDirList](#dlgdirlist)|Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.|
-|[CWindow::DlgDirListComboBox](#dlgdirlistcombobox)|Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.|
+|[CWindow:: Арранжеикониквиндовс](#arrangeiconicwindows)|Упорядочивает все уменьшенные дочерние окна.|
+|[CWindow:: Attach](#attach)|Присоединяет окно к `CWindow` объекту.|
+|[CWindow:: Бегинпаинт](#beginpaint)|Подготавливает окно для рисования.|
+|[CWindow:: Брингвиндовтотоп](#bringwindowtotop)|Переводит окно в начало Z порядка.|
+|[CWindow:: Центервиндов](#centerwindow)|Центрирует окно по центру данного окна.|
+|[CWindow:: Чанжеклипбоардчаин](#changeclipboardchain)|Удаляет окно из цепочки средств просмотра буфера обмена.|
+|[CWindow:: Чеккдлгбуттон](#checkdlgbutton)|Изменяет состояние проверки указанной кнопки.|
+|[CWindow:: Чеккрадиобуттон](#checkradiobutton)|Проверяет указанный переключатель.|
+|[CWindow:: Чилдвиндовфромпоинт](#childwindowfrompoint)|Извлекает дочернее окно, содержащее указанную точку.|
+|[CWindow:: Чилдвиндовфромпоинтекс](#childwindowfrompointex)|Извлекает конкретный тип дочернего окна, содержащего указанную точку.|
+|[CWindow:: Клиенттоскрин](#clienttoscreen)|Преобразует клиентские координаты в экранные координаты.|
+|[CWindow:: Create](#create)|Создает окно.|
+|[CWindow::CreateCaret](#createcaret)|Создает новую фигуру для системного курсора.|
+|[CWindow:: Креатеграйкарет](#creategraycaret)|Создает серый прямоугольник для системного курсора.|
+|[CWindow::CreateSolidCaret](#createsolidcaret)|Создает закрашенный прямоугольник для системного курсора.|
+|[CWindow::D Ефервиндовпос](#deferwindowpos)|Обновляет указанную структуру с несколькими окнами для указанного окна.|
+|[CWindow::D Естройвиндов](#destroywindow)|Уничтожает окно, связанное с `CWindow` объектом.|
+|[CWindow::D етач](#detach)|Отсоединяет окно от `CWindow` объекта.|
+|[CWindow::D Лгдирлист](#dlgdirlist)|Заполняет список именами всех файлов, соответствующих указанному пути или имени файла.|
+|[CWindow::D Лгдирлисткомбобокс](#dlgdirlistcombobox)|Заполняет поле со списком именами всех файлов, соответствующих указанному пути или имени файла.|
 |[CWindow::DlgDirSelect](#dlgdirselect)|Извлекает текущее выделение из списка.|
-|[CWindow::DlgDirSelectComboBox](#dlgdirselectcombobox)|Извлекает текущее выделение из поля со списком.|
-|[CWindow::DragAcceptFiles](#dragacceptfiles)|Регистры, принимает окно перетаскивать файлы.|
-|[CWindow::DrawMenuBar](#drawmenubar)|Перерисовывает строку меню окна.|
-|[CWindow::EnableScrollBar](#enablescrollbar)|Включает или отключает стрелку полосы прокрутки.|
-|[CWindow::EnableWindow](#enablewindow)|Включает или отключает возможность ввода данных.|
-|[CWindow::EndPaint](#endpaint)|Отмечает завершение рисования.|
-|[CWindow::FlashWindow](#flashwindow)|Окно однократно мигает.|
-|[CWindow::GetClientRect](#getclientrect)|Извлекает координаты клиентской области.|
-|[CWindow::GetDC](#getdc)|Получает контекст устройства для клиентской области.|
-|[CWindow::GetDCEx](#getdcex)|Получает контекст устройства для клиентской области и позволяет параметры отсечения.|
-|[CWindow::GetDescendantWindow](#getdescendantwindow)|Возвращает потомков указанного окна.|
-|[CWindow::GetDlgControl](#getdlgcontrol)|Извлекает интерфейс в заданном элементе управления.|
-|[CWindow::GetDlgCtrlID](#getdlgctrlid)|Извлекает идентификатор окна (для дочерних окон).|
-|[CWindow::GetDlgHost](#getdlghost)|Извлекает указатель на интерфейс для управления ATL, контейнер размещается.|
-|[CWindow::GetDlgItem](#getdlgitem)|Извлекает указанного дочернего окна.|
-|[CWindow::GetDlgItemInt](#getdlgitemint)|Переводит текст элемента управления в целое число.|
-|[CWindow::GetDlgItemText](#getdlgitemtext)|Получает текст элемента управления.|
-|[CWindow::GetExStyle](#getexstyle)|Извлекает расширенные стили окна.|
-|[CWindow::GetFont](#getfont)|Извлекает текущий шрифт окна.|
-|[CWindow::GetHotKey](#gethotkey)|Определяет сочетания клавиш, связанные с окном.|
-|[CWindow::GetIcon](#geticon)|Получает больших или маленьких значка окна.|
-|[CWindow::GetLastActivePopup](#getlastactivepopup)|Получает самую последнюю активную всплывающего окна.|
-|[CWindow::GetMenu](#getmenu)|Извлекает меню окна.|
-|[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|Извлекает предыдущего или следующего элемента управления в группе элементов управления.|
-|[CWindow::GetNextDlgTabItem](#getnextdlgtabitem)|Извлекает предыдущего или следующего элемента управления, наличие WS_TABSTOP стиль.|
-|[CWindow::GetParent](#getparent)|Извлекает окно непосредственного родителя.|
-|[CWindow::GetScrollInfo](#getscrollinfo)|Извлекает параметры полосы прокрутки.|
-|[CWindow::GetScrollPos](#getscrollpos)|Получает положение ползунка полосы прокрутки.|
-|[CWindow::GetScrollRange](#getscrollrange)|Получает диапазон значений для полосы прокрутки.|
-|[CWindow::GetStyle](#getstyle)|Получает стили окна.|
-|[CWindow::GetSystemMenu](#getsystemmenu)|Создает копию объекта системное меню для изменения.|
-|[CWindow::GetTopLevelParent](#gettoplevelparent)|Извлекает окно верхнего уровня родительский объект или владельца.|
-|[CWindow::GetTopLevelWindow](#gettoplevelwindow)|Извлекает окно верхнего уровня владельца.|
-|[CWindow::GetTopWindow](#gettopwindow)|Извлекает окно верхнего уровня дочерние.|
-|[CWindow::GetUpdateRect](#getupdaterect)|Извлекает координаты наименьшего прямоугольника, который полностью входит область обновления.|
-|[CWindow::GetUpdateRgn](#getupdatergn)|Извлекает область обновления и копирует их в указанную область.|
-|[CWindow::GetWindow](#getwindow)|Извлекает указанное окно.|
-|[CWindow::GetWindowContextHelpId](#getwindowcontexthelpid)|Извлекает идентификатор контекста справки для окна.|
-|[CWindow::GetWindowDC](#getwindowdc)|Получает контекст устройства для всего содержимого окна.|
-|[CWindow::GetWindowLong](#getwindowlong)|Извлекает 32-разрядное значение с указанным смещением в открытое окно память.|
-|[CWindow::GetWindowLongPtr](#getwindowlongptr)|Извлекает сведения о указанного окна, включая значение с указанным смещением в открытое окно память.|
-|[CWindow::GetWindowPlacement](#getwindowplacement)|Получает состояние отображения, а также позиций.|
-|[CWindow::GetWindowProcessID](#getwindowprocessid)|Извлекает идентификатор процесса, создавший окно.|
-|[CWindow::GetWindowRect](#getwindowrect)|Извлекает ограничивающий размеры окна.|
-|[CWindow::GetWindowRgn](#getwindowrgn)|Получает копию области окна.|
+|[CWindow::D Лгдирселекткомбобокс](#dlgdirselectcombobox)|Извлекает текущее выделение из поля со списком.|
+|[CWindow::D Рагакцептфилес](#dragacceptfiles)|Регистрирует, принимает ли окно перетаскиваемые файлы.|
+|[CWindow::D Равменубар](#drawmenubar)|Перерисовывает строку меню окна.|
+|[CWindow:: Енаблескроллбар](#enablescrollbar)|Включает или отключает стрелки полосы прокрутки.|
+|[CWindow:: Енаблевиндов](#enablewindow)|Включает или отключает входные данные.|
+|[CWindow:: Ендпаинт](#endpaint)|Отмечает завершение рисования.|
+|[CWindow:: FlashWindow интерфейса](#flashwindow)|Окно однократно мигает.|
+|[CWindow:: Жетклиентрект](#getclientrect)|Извлекает координаты клиентской области.|
+|[CWindow:: GetDC](#getdc)|Извлекает контекст устройства для клиентской области.|
+|[CWindow:: Жетдцекс](#getdcex)|Извлекает контекст устройства для клиентской области и разрешает параметры обрезки.|
+|[CWindow:: Жетдесцендантвиндов](#getdescendantwindow)|Извлекает указанное подчиненное окно.|
+|[CWindow:: Жетдлгконтрол](#getdlgcontrol)|Извлекает интерфейс для указанного элемента управления.|
+|[CWindow:: Жетдлгктрлид](#getdlgctrlid)|Получает идентификатор окна (только для дочерних окон).|
+|[CWindow:: Жетдлгхост](#getdlghost)|Извлекает указатель на интерфейс для контейнера размещения элемента управления ATL.|
+|[CWindow:: Жетдлгитем](#getdlgitem)|Извлекает указанное дочернее окно.|
+|[CWindow:: Жетдлгитеминт](#getdlgitemint)|Преобразует текст элемента управления в целое число.|
+|[CWindow::GetDlgItemText](#getdlgitemtext)|Извлекает текст элемента управления.|
+|[CWindow::GetExStyle](#getexstyle)|Получает расширенные стили окна.|
+|[CWindow::GetFont](#getfont)|Получает текущий шрифт окна.|
+|[CWindow::GetHotKey](#gethotkey)|Определяет горячую клавишу, связанную с окном.|
+|[CWindow:: "Icon"](#geticon)|Извлекает крупный или маленький значок окна.|
+|[CWindow:: Жетластактивепопуп](#getlastactivepopup)|Возвращает последнее активное всплывающее окно.|
+|[CWindow:: Menu](#getmenu)|Получает меню окна.|
+|[CWindow::GetNextDlgGroupItem](#getnextdlggroupitem)|Извлекает предыдущий или следующий элемент управления в группе элементов управления.|
+|[CWindow::GetNextDlgTabItem](#getnextdlgtabitem)|Извлекает предыдущий или следующий элемент управления, имеющий стиль WS_TABSTOP.|
+|[CWindow:: Parent](#getparent)|Извлекает непосредственное родительское окно.|
+|[CWindow:: Жетскроллинфо](#getscrollinfo)|Получает параметры полосы прокрутки.|
+|[CWindow:: Жетскроллпос](#getscrollpos)|Извлекает расположение ползунка.|
+|[CWindow:: Жетскроллранже](#getscrollrange)|Получает диапазон полосы прокрутки.|
+|[CWindow:: штриховка](#getstyle)|Извлекает стили окна.|
+|[CWindow:: Жетсистеммену](#getsystemmenu)|Создает копию системного меню для изменения.|
+|[CWindow::GetTopLevelParent](#gettoplevelparent)|Извлекает родительский узел или окно-владелец верхнего уровня.|
+|[CWindow:: Жеттоплевелвиндов](#gettoplevelwindow)|Извлекает окно владельца верхнего уровня.|
+|[CWindow:: Жеттопвиндов](#gettopwindow)|Извлекает дочернее окно верхнего уровня.|
+|[CWindow:: Жетупдатерект](#getupdaterect)|Получает координаты наименьшего прямоугольника, полностью охватывающего область обновления.|
+|[CWindow:: Жетупдатергн](#getupdatergn)|Извлекает регион обновления и копирует его в указанный регион.|
+|[CWindow::/Window](#getwindow)|Извлекает указанное окно.|
+|[CWindow:: Жетвиндовконтексселпид](#getwindowcontexthelpid)|Получает идентификатор контекста справки окна.|
+|[CWindow::GetWindowDC](#getwindowdc)|Извлекает контекст устройства для всего окна.|
+|[CWindow::GetWindowLong](#getwindowlong)|Извлекает 32-разрядное значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow::GetWindowLongPtr](#getwindowlongptr)|Извлекает сведения об указанном окне, включая значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow:: Жетвиндовплацемент](#getwindowplacement)|Извлекает состояние отображения и позиции.|
+|[CWindow:: Жетвиндовпроцессид](#getwindowprocessid)|Возвращает идентификатор процесса, создавшего окно.|
+|[CWindow:: Жетвиндоврект](#getwindowrect)|Получает ограничивающие размеры окна.|
+|[CWindow::GetWindowRgn](#getwindowrgn)|Получает копию области окна окна.|
 |[CWindow::GetWindowText](#getwindowtext)|Извлекает текст окна.|
-|[CWindow::GetWindowTextLength](#getwindowtextlength)|Получает длину текста окна.|
-|[CWindow::GetWindowThreadID](#getwindowthreadid)|Извлекает идентификатор потока, создавшего указанного окна.|
-|[CWindow::GetWindowWord](#getwindowword)|Извлекает 16-разрядное значение с указанным смещением в открытое окно память.|
-|[CWindow::GotoDlgCtrl](#gotodlgctrl)|Устанавливает фокус клавиатуры в элемент управления в диалоговом окне.|
-|[CWindow::HideCaret](#hidecaret)|Скрывает системного курсора.|
-|[CWindow::HiliteMenuItem](#hilitemenuitem)|Выделяет или снимает выделение с меню верхнего уровня.|
-|[CWindow::Invalidate](#invalidate)|Делает недействительной всю клиентскую область.|
-|[CWindow::InvalidateRect](#invalidaterect)|Делает недействительной клиентскую область в пределах заданного прямоугольника.|
-|[CWindow::InvalidateRgn](#invalidatergn)|Делает недействительной клиентскую область в пределах заданной области.|
-|[CWindow::IsChild](#ischild)|Определяет, является ли указанное окно дочернего окна.|
-|[CWindow::IsDialogMessage](#isdialogmessage)|Определяет, предназначен ли сообщение для указанного диалогового окна.|
-|[CWindow::IsDlgButtonChecked](#isdlgbuttonchecked)|Определяет проверки состояния кнопки.|
-|[CWindow::IsIconic](#isiconic)|Определяет, является ли окно свернуто.|
-|[CWindow::IsParentDialog](#isparentdialog)|Определяет, если родительское окно элемента управления — это диалоговое окно.|
-|[CWindow::IsWindow](#iswindow)|Определяет, определяет ли указанного дескриптора окна существующему окну.|
-|[CWindow::IsWindowEnabled](#iswindowenabled)|Определяет, включен ли окно для ввода данных.|
-|[CWindow::IsWindowUnicode](#iswindowunicode)|Определяет, является ли указанное окно собственного окна Юникода.|
-|[CWindow::IsWindowVisible](#iswindowvisible)|Определяет состояние видимости для окна.|
-|[CWindow::IsZoomed](#iszoomed)|Определяет, является ли окно развернуто.|
-|[CWindow::KillTimer](#killtimer)|Удаляет событие таймера.|
-|[CWindow::LockWindowUpdate](#lockwindowupdate)|Отключает или включает рисования в окне.|
-|[CWindow::MapWindowPoints](#mapwindowpoints)|Преобразует набор точек из координатного пространства окна в координатное пространство другого окна.|
-|[CWindow::MessageBox](#messagebox)|Отображает окно сообщения.|
-|[CWindow::ModifyStyle](#modifystyle)|Изменение стилей окна.|
-|[CWindow::ModifyStyleEx](#modifystyleex)|Изменяет расширенные стили окна.|
-|[CWindow::MoveWindow](#movewindow)|Изменяет размер и положение окна.|
-|[CWindow::NextDlgCtrl](#nextdlgctrl)|Устанавливает фокус на следующий элемент управления в диалоговом окне.|
-|[CWindow::OpenClipboard](#openclipboard)|Открывает буфер обмена.|
-|[CWindow::PostMessage](#postmessage)|Помещает сообщение в очередь сообщений, связанный с потоком, создавший окно. Возвращает, не ждет поток для обработки сообщения.|
-|[CWindow::PrevDlgCtrl](#prevdlgctrl)|Устанавливает фокус клавиатуры на предыдущий элемент управления в диалоговом окне.|
-|[CWindow::Print](#print)|Запросы, что окна отрисовываемый на задаваемые значения контекста устройства.|
-|[CWindow::PrintClient](#printclient)|Запросы, что клиентской области окна отрисовываемый на задаваемые значения контекста устройства.|
-|[CWindow::RedrawWindow](#redrawwindow)|Обновляет заданную прямоугольную или другую в клиентской области.|
-|[CWindow::ReleaseDC](#releasedc)|Освобождает контекст устройства.|
-|[CWindow::ResizeClient](#resizeclient)|Изменяет размер окна.|
-|[CWindow::ScreenToClient](#screentoclient)|Преобразует экранные координаты в координатах клиентской области окна.|
-|[CWindow::ScrollWindow](#scrollwindow)|Прокручивает область указанного клиента.|
-|[CWindow::ScrollWindowEx](#scrollwindowex)|Прокручивает область указанного клиента с помощью дополнительных функций.|
-|[CWindow::SendDlgItemMessage](#senddlgitemmessage)|Отправляет сообщение в элемент управления.|
-|[CWindow::SendMessage](#sendmessage)|Отправляет сообщение в окно и ожидает сообщение процедуре окна обработано.|
-|[CWindow::SendMessageToDescendants](#sendmessagetodescendants)|Отправляет сообщение для указанного окон-потомков.|
-|[CWindow::SendNotifyMessage](#sendnotifymessage)|Отправляет сообщение в окно. Если был создан окно вызывающим потоком `SendNotifyMessage` не завершается, пока сообщение процедуре окна обработано. В противном случае возвращается немедленно.|
-|[CWindow::SetActiveWindow](#setactivewindow)|Активирует окно.|
-|[CWindow::SetCapture](#setcapture)|Отправляет все последующие мыши в окне.|
-|[CWindow::SetClipboardViewer](#setclipboardviewer)|Добавляет окно в цепочке средства просмотра буфера обмена.|
-|[CWindow::SetDlgCtrlID](#setdlgctrlid)|Изменяет идентификатор окна.|
-|[CWindow::SetDlgItemInt](#setdlgitemint)|Изменяет текст элемента управления в строковое представление целочисленного значения.|
-|[CWindow::SetDlgItemText](#setdlgitemtext)|Изменение текста элемента управления.|
-|[CWindow::SetFocus](#setfocus)|Задает фокус ввода в окно.|
+|[CWindow:: Жетвиндовтекстленгс](#getwindowtextlength)|Возвращает длину текста окна.|
+|[CWindow:: Жетвиндовсреадид](#getwindowthreadid)|Возвращает идентификатор потока, создавшего указанное окно.|
+|[CWindow:: Жетвиндовворд](#getwindowword)|Извлекает 16-разрядное значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow:: Готодлгктрл](#gotodlgctrl)|Устанавливает фокус клавиатуры на элемент управления в диалоговом окне.|
+|[CWindow:: Хидекарет](#hidecaret)|Скрывает системный курсор.|
+|[CWindow:: Хилитеменуитем](#hilitemenuitem)|Выделение или удаление выделения из пункта меню верхнего уровня.|
+|[CWindow:: недействительность](#invalidate)|Делает недействительной всю клиентскую область.|
+|[CWindow:: Инвалидатерект](#invalidaterect)|Делает недействительным клиентскую область в пределах указанного прямоугольника.|
+|[CWindow:: Инвалидатергн](#invalidatergn)|Делает недействительным клиентскую область в указанном регионе.|
+|[CWindow:: дочерний элемент](#ischild)|Определяет, является ли указанное окно дочерним окном.|
+|[CWindow:: Исдиалогмессаже](#isdialogmessage)|Определяет, предназначено ли сообщение для указанного диалогового окна.|
+|[CWindow:: Исдлгбуттончеккед](#isdlgbuttonchecked)|Определяет состояние проверки кнопки.|
+|[CWindow:: i Icon](#isiconic)|Определяет, является ли окно сведенным.|
+|[CWindow:: Испарентдиалог](#isparentdialog)|Определяет, является ли родительское окно элемента управления диалоговым окном.|
+|[CWindow:: «окно»](#iswindow)|Определяет, определяет ли указанный обработчик окна существующее окно.|
+|[CWindow::IsWindowEnabled](#iswindowenabled)|Определяет, включено ли для окна входные данные.|
+|[CWindow:: Исвиндовуникоде](#iswindowunicode)|Определяет, является ли указанное окно собственным окном Юникода.|
+|[CWindow:: Исвиндоввисибле](#iswindowvisible)|Определяет состояние видимости окна.|
+|[CWindow:: Zoom](#iszoomed)|Определяет, является ли окно развернутым.|
+|[CWindow:: Киллтимер](#killtimer)|Уничтожает событие таймера.|
+|[CWindow:: Локквиндовупдате](#lockwindowupdate)|Отключает или включает рисование в окне.|
+|[CWindow:: Мапвиндовпоинтс](#mapwindowpoints)|Преобразует набор точек из пространства координат окна в пространство координат другого окна.|
+|[CWindow:: MessageBox](#messagebox)|Отображает окно сообщения.|
+|[CWindow:: Модифистиле](#modifystyle)|Изменяет стили окна.|
+|[CWindow:: Модифистиликс](#modifystyleex)|Изменяет расширенные стили окна.|
+|[CWindow:: Мовевиндов](#movewindow)|Изменяет размер и расположение окна.|
+|[CWindow:: Некстдлгктрл](#nextdlgctrl)|Устанавливает фокус клавиатуры на следующий элемент управления в диалоговом окне.|
+|[CWindow:: Опенклипбоард](#openclipboard)|Открывает буфер обмена.|
+|[CWindow::P Остмессаже](#postmessage)|Помещает сообщение в очередь сообщений, связанную с потоком, создавшим окно. Возвращает, не дожидаясь обработки сообщения потоком.|
+|[CWindow::P Ревдлгктрл](#prevdlgctrl)|Устанавливает фокус клавиатуры на предыдущий элемент управления в диалоговом окне.|
+|[CWindow::P печать](#print)|Запрашивает прорисовку окна в указанном контексте устройства.|
+|[CWindow::P Ринтклиент](#printclient)|Запрашивает прорисовку клиентской области окна в указанном контексте устройства.|
+|[CWindow:: Редраввиндов](#redrawwindow)|Обновляет указанный прямоугольник или регион в клиентской области.|
+|[CWindow:: Релеаседк](#releasedc)|Освобождает контекст устройства.|
+|[CWindow:: Ресизеклиент](#resizeclient)|Изменяет размер окна.|
+|[CWindow::ScreenToClient](#screentoclient)|Преобразует экранные координаты в клиентские координаты.|
+|[CWindow:: Скроллвиндов](#scrollwindow)|Прокручивает указанную клиентскую область.|
+|[CWindow:: Скроллвиндовекс](#scrollwindowex)|Прокручивает указанную клиентскую область дополнительными функциями.|
+|[CWindow:: Сенддлгитеммессаже](#senddlgitemmessage)|Отправляет сообщение элементу управления.|
+|[CWindow:: SendMessage](#sendmessage)|Отправляет сообщение в окно и не возвращает результат, пока сообщение не будет обработано процедурой окна.|
+|[CWindow:: Сендмессажетодесцендантс](#sendmessagetodescendants)|Отправляет сообщение в указанные дочерние окна.|
+|[CWindow::SendNotifyMessage](#sendnotifymessage)|Отправляет сообщение в окно. Если окно было создано вызывающим потоком, `SendNotifyMessage` не возвращает значение до тех пор, пока процедура окна не обработала сообщение. В противном случае он возвращает значение немедленно.|
+|[CWindow:: Сетактивевиндов](#setactivewindow)|Активирует окно.|
+|[CWindow:: Сеткаптуре](#setcapture)|Отправляет все последующие входные данные мыши в окно.|
+|[CWindow::SetClipboardViewer](#setclipboardviewer)|Добавляет окно в цепочку средства просмотра буфера обмена.|
+|[CWindow:: Сетдлгктрлид](#setdlgctrlid)|Изменяет идентификатор окна.|
+|[CWindow:: Сетдлгитеминт](#setdlgitemint)|Изменяет текст элемента управления на строковое представление целочисленного значения.|
+|[CWindow::SetDlgItemText](#setdlgitemtext)|Изменяет текст элемента управления.|
+|[CWindow:: SetFocus](#setfocus)|Устанавливает фокус ввода на окно.|
 |[CWindow::SetFont](#setfont)|Изменяет текущий шрифт окна.|
-|[CWindow::SetHotKey](#sethotkey)|Связывает сочетания клавиш с окном.|
-|[CWindow::SetIcon](#seticon)|Изменяет больших или маленьких значка окна.|
-|[CWindow::SetMenu](#setmenu)|Изменяет текущее меню окна.|
-|[CWindow::SetParent](#setparent)|Изменяет родительское окно.|
-|[CWindow::SetRedraw](#setredraw)|Устанавливает или снимает флаг перерисовки.|
-|[CWindow::SetScrollInfo](#setscrollinfo)|Задает параметры полосы прокрутки.|
-|[CWindow::SetScrollPos](#setscrollpos)|Изменяет положение ползунка полосы прокрутки.|
-|[CWindow::SetScrollRange](#setscrollrange)|Изменяет диапазон значений для полосы прокрутки.|
-|[CWindow::SetTimer](#settimer)|Создает событие таймера.|
-|[CWindow::SetWindowContextHelpId](#setwindowcontexthelpid)|Задает идентификатор контекста справки для окна.|
-|[CWindow::SetWindowLong](#setwindowlong)|Задает 32-разрядное значение с указанным смещением в открытое окно память.|
-|[CWindow::SetWindowLongPtr](#setwindowlongptr)|Изменяет атрибут для указанного окна, а также задает значение с указанным смещением в открытое окно памяти.|
-|[CWindow::SetWindowPlacement](#setwindowplacement)|Задает состояние отображения, а также позиций.|
-|[CWindow::SetWindowPos](#setwindowpos)|Задает размер, положение и Z-порядке.|
-|[CWindow::SetWindowRgn](#setwindowrgn)|Задает область окна, окна.|
+|[CWindow::SetHotKey](#sethotkey)|Связывает горячую клавишу с окном.|
+|[CWindow:: Сетикон](#seticon)|Изменяет крупный или маленький значок окна.|
+|[CWindow:: Сетмену](#setmenu)|Изменяет текущее меню окна.|
+|[CWindow:: Сетпарент](#setparent)|Изменяет родительское окно.|
+|[CWindow:: Сетредрав](#setredraw)|Задает или очищает флаг перерисовки.|
+|[CWindow:: Сетскроллинфо](#setscrollinfo)|Задает параметры полосы прокрутки.|
+|[CWindow:: Сетскроллпос](#setscrollpos)|Изменяет расположение бегунка.|
+|[CWindow:: Сетскроллранже](#setscrollrange)|Изменяет диапазон полосы прокрутки.|
+|[CWindow:: Сеттимер](#settimer)|Создает событие таймера.|
+|[CWindow:: Сетвиндовконтексселпид](#setwindowcontexthelpid)|Задает идентификатор контекста справки для окна.|
+|[CWindow::SetWindowLong](#setwindowlong)|Задает 32-разрядное значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow::SetWindowLongPtr](#setwindowlongptr)|Изменяет атрибут указанного окна, а также задает значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow:: Сетвиндовплацемент](#setwindowplacement)|Задает отображение состояния и позиций.|
+|[CWindow:: SetWindowPos](#setwindowpos)|Задает размер, расположение и Z порядок.|
+|[CWindow::SetWindowRgn](#setwindowrgn)|Задает область окна для окна.|
 |[CWindow::SetWindowText](#setwindowtext)|Изменяет текст окна.|
-|[CWindow::SetWindowWord](#setwindowword)|Задает 16-разрядное значение с указанным смещением в открытое окно память.|
-|[CWindow::ShowCaret](#showcaret)|Отображает системного курсора.|
-|[CWindow::ShowOwnedPopups](#showownedpopups)|Показывает или скрывает всплывающие окна, принадлежащие окну.|
-|[CWindow::ShowScrollBar](#showscrollbar)|Показывает или скрывает полосу прокрутки.|
-|[CWindow::ShowWindow](#showwindow)|Задает состояние отображения окна.|
-|[CWindow::ShowWindowAsync](#showwindowasync)|Задает состояние отображения для окна, созданного в другом потоке.|
-|[CWindow::UpdateWindow](#updatewindow)|Обновляет клиентскую область.|
-|[CWindow::ValidateRect](#validaterect)|Проверяет клиентскую область в пределах заданного прямоугольника.|
-|[CWindow::ValidateRgn](#validatergn)|Проверяет клиентскую область в пределах заданной области.|
-|[CWindow::WinHelp](#winhelp)|Справка Windows запускается.|
+|[CWindow:: Сетвиндовворд](#setwindowword)|Задает 16-разрядное значение с указанным смещением в дополнительной памяти окна.|
+|[CWindow:: Шовкарет](#showcaret)|Отображает системный курсор.|
+|[CWindow:: Шововнедпопупс](#showownedpopups)|Показывает или скрывает всплывающие окна, принадлежащие окну.|
+|[CWindow:: Шовскроллбар](#showscrollbar)|Показывает или скрывает полосу прокрутки.|
+|[CWindow:: ShowWindow](#showwindow)|Задает режим отображения окна.|
+|[CWindow::ShowWindowAsync](#showwindowasync)|Задает состояние отображения окна, созданного другим потоком.|
+|[CWindow:: Упдатевиндов](#updatewindow)|Обновляет клиентскую область.|
+|[CWindow:: Валидатерект](#validaterect)|Проверяет клиентскую область в пределах указанного прямоугольника.|
+|[CWindow:: Валидатергн](#validatergn)|Проверяет клиентскую область в указанном регионе.|
+|[CWindow:: WinHelp](#winhelp)|Запускает справку Windows.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |name|Описание|
 |----------|-----------------|
-|[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|
-|[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|
+|[CWindow:: operator HWND](#operator_hwnd)|`CWindow` Преобразует объект в HWND.|
+|[CWindow:: operator =](#operator_eq)|Присваивает HWND `CWindow` объекту.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|
-|[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|
+|[CWindow:: m_hWnd](#m_hwnd)|Маркер окна, связанного с `CWindow` объектом.|
+|[CWindow:: Ркдефаулт](#rcdefault)|Содержит размеры окна по умолчанию.|
 
 ## <a name="remarks"></a>Примечания
 
-`CWindow` Предоставляет базовую функциональность для управления окном в ATL Многие из `CWindow` методы просто используйте одну из функций Win32 API. Например, сравнить прототипы для `CWindow::ShowWindow` и `ShowWindow`:
+`CWindow`предоставляет базовую функциональность для управления окном в ATL. Многие из `CWindow` методов просто заключают одну из функций API Win32. Например, Сравните прототипы для `CWindow::ShowWindow` и: `ShowWindow`
 
-|Метод CWindow|Функции Win32|
+|Метод CWindow|Функция Win32|
 |--------------------|--------------------|
-|**BOOL ShowWindow (int** `nCmdShow` **);**|**BOOL ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|
+|**Bool ShowWindow (int** `nCmdShow` **);**|**Bool ShowWindow (HWND** `hWnd` **, int** `nCmdShow` **);**|
 
-`CWindow::ShowWindow` вызывает функцию Win32 `ShowWindow` , передав `CWindow::m_hWnd` как первый параметр. Каждый `CWindow` передает метод, который непосредственно создает оболочку для функции Win32 `m_hWnd` член; таким образом, значительная часть `CWindow` документации содержит ссылку на пакет SDK для Windows.
+`CWindow::ShowWindow`вызывает функцию `ShowWindow` Win32, передавая `CWindow::m_hWnd` в качестве первого параметра. Каждый `CWindow` метод, который непосредственно заключает в оболочку для функции `m_hWnd` Win32, передает член, `CWindow` поэтому большая часть документации будет ссылаться на Windows SDK.
 
 > [!NOTE]
->  Не все функции Win32, связанных с окнами, упакованный в `CWindow`, а не каждый `CWindow` метод создает оболочку для функции Win32.
+>  Не каждая функция Win32 `CWindow`, связанная с окном, заключена в оболочку, а не каждый `CWindow` метод заключает в оболочку функцию Win32.
 
-`CWindow::m_hWnd` хранит HWND, который определяет окно. HWND прикреплен к объекту при вы:
+`CWindow::m_hWnd`хранит HWND, определяющий окно. HWND присоединяется к объекту в следующих случаях:
 
-- Укажите HWND в `CWindow`в конструктор.
+- Укажите HWND в `CWindow`конструкторе.
 
 - Вызовите метод `CWindow::Attach`.
 
-- Используйте `CWindow` **оператор =**.
+- Оператор `CWindow`USE **=** .
 
-- Создание или подкласс окно, с помощью одного из следующих классов, производный от `CWindow`:
+- Создайте или подклассировать окно с помощью одного из следующих классов, `CWindow`производных от:
 
-[CWindowImpl](../../atl/reference/cwindowimpl-class.md) позволяет создать новое окно или подкласс существующему окну.
+[Квиндовимпл](../../atl/reference/cwindowimpl-class.md) Позволяет создать новое окно или подкласс существующего окна.
 
-[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) реализует окно, содержатся внутри другого объекта. Существующее окно можно создать новое окно или подкласс.
+[Кконтаинедвиндов](../../atl/reference/ccontainedwindowt-class.md) Реализует окно, содержащееся в другом объекте. Можно создать новое окно или подкласс существующего окна.
 
-[CDialogImpl](../../atl/reference/cdialogimpl-class.md) позволяет создать модальное или немодальное диалоговое окно.
+[CDialogImpl](../../atl/reference/cdialogimpl-class.md) Позволяет создать модальное или немодальное диалоговое окно.
 
-Дополнительные сведения о windows, см. в разделе [Windows](/windows/desktop/winmsg/windows) и последующие разделы в пакете Windows SDK. Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
+Дополнительные сведения о Windows см. в разделе [Windows](/windows/win32/winmsg/windows) и последующих разделах в Windows SDK. Дополнительные сведения об использовании Windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin.h
+**Заголовок:** atlwin. h
 
-##  <a name="arrangeiconicwindows"></a>  CWindow::ArrangeIconicWindows
+##  <a name="arrangeiconicwindows"></a>CWindow:: Арранжеикониквиндовс
 
-Упорядочивает все свернутые дочерние окна.
+Упорядочивает все уменьшенные дочерние окна.
 
 ```
 UINT ArrangeIconicWindows() throw();
@@ -388,11 +388,11 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) в Windows SDK.
+См. раздел [арранжеикониквиндовс](/windows/win32/api/winuser/nf-winuser-arrangeiconicwindows) в Windows SDK.
 
-##  <a name="attach"></a>  CWindow::Attach
+##  <a name="attach"></a>CWindow:: Attach
 
-Прикрепляет окно определяется *hWndNew* для `CWindow` объекта.
+Присоединяет окно, идентифицируемое *хвнднев* , к `CWindow` объекту.
 
 ```
 void Attach(HWND hWndNew) throw();
@@ -400,16 +400,16 @@ void Attach(HWND hWndNew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hWndNew*<br/>
-[in] Дескриптор окна.
+*хвнднев*<br/>
+окне Маркер окна.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#1](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]
 
-##  <a name="beginpaint"></a>  CWindow::BeginPaint
+##  <a name="beginpaint"></a>CWindow:: Бегинпаинт
 
-Подготавливает окна для рисования.
+Подготавливает окно для рисования.
 
 ```
 HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
@@ -417,15 +417,15 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) в Windows SDK.
+См. раздел [бегинпаинт](/windows/win32/api/winuser/nf-winuser-beginpaint) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-##  <a name="bringwindowtotop"></a>  CWindow::BringWindowToTop
+##  <a name="bringwindowtotop"></a>CWindow:: Брингвиндовтотоп
 
-Выводит окно к верхней части Z-координате.
+Переводит окно в начало Z порядка.
 
 ```
 BOOL BringWindowToTop() throw();
@@ -433,15 +433,15 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) в Windows SDK.
+См. раздел [брингвиндовтотоп](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#3](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]
 
-##  <a name="centerwindow"></a>  CWindow::CenterWindow
+##  <a name="centerwindow"></a>CWindow:: Центервиндов
 
-Центрирование окна для данного окна.
+Центрирует окно по центру данного окна.
 
 ```
 BOOL CenterWindow(HWND hWndCenter = NULL) throw();
@@ -449,20 +449,20 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hWndCenter*<br/>
-[in] Дескриптор окна, для которого по центру. Если этот параметр имеет значение NULL (значение по умолчанию), метод установит *hWndCenter* окна родительское окно, если это дочернее окно. В противном случае она будет задана *hWndCenter* окну владельца окна.
+*хвндцентер*<br/>
+окне Маркер окна, по которому будет осуществляться центрирование. Если этот параметр равен NULL (значение по умолчанию), метод установит *хвндцентер* в родительское окно окна, если это дочернее окно. В противном случае он установит *хвндцентер* в окно владельца окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно центрируется успешно; в противном случае — значение FALSE.
+Значение TRUE, если окно успешно центрировано; в противном случае — значение FALSE.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#4](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]
 
-##  <a name="changeclipboardchain"></a>  CWindow::ChangeClipboardChain
+##  <a name="changeclipboardchain"></a>CWindow:: Чанжеклипбоардчаин
 
-Удаляет окно из цепочки буфера обмена.
+Удаляет окно из цепочки средств просмотра буфера обмена.
 
 ```
 BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
@@ -470,11 +470,11 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ChangeClipboardChain](/windows/desktop/api/winuser/nf-winuser-changeclipboardchain) в Windows SDK.
+См. раздел [чанжеклипбоардчаин](/windows/win32/api/winuser/nf-winuser-changeclipboardchain) в Windows SDK.
 
-##  <a name="checkdlgbutton"></a>  CWindow::CheckDlgButton
+##  <a name="checkdlgbutton"></a>CWindow:: Чеккдлгбуттон
 
-Изменяет состояние пометки указанную кнопку.
+Изменяет состояние проверки указанной кнопки.
 
 ```
 BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
@@ -482,9 +482,9 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CheckDlgButton](/windows/desktop/api/winuser/nf-winuser-checkdlgbutton) в Windows SDK.
+См. раздел [чеккдлгбуттон](/windows/win32/api/winuser/nf-winuser-checkdlgbutton) в Windows SDK.
 
-##  <a name="checkradiobutton"></a>  CWindow::CheckRadioButton
+##  <a name="checkradiobutton"></a>CWindow:: Чеккрадиобуттон
 
 Проверяет указанный переключатель.
 
@@ -497,11 +497,11 @@ BOOL CheckRadioButton(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CheckRadioButton](/windows/desktop/api/winuser/nf-winuser-checkradiobutton) в Windows SDK.
+См. раздел [чеккрадиобуттон](/windows/win32/api/winuser/nf-winuser-checkradiobutton) в Windows SDK.
 
-##  <a name="childwindowfrompoint"></a>  CWindow::ChildWindowFromPoint
+##  <a name="childwindowfrompoint"></a>CWindow:: Чилдвиндовфромпоинт
 
-Возвращает дочернее окно, содержащее заданную точку.
+Извлекает дочернее окно, содержащее указанную точку.
 
 ```
 HWND ChildWindowFromPoint(POINT point) const throw();
@@ -509,11 +509,11 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) в Windows SDK.
+См. раздел [чилдвиндовфромпоинт](/windows/win32/api/winuser/nf-winuser-childwindowfrompoint) в Windows SDK.
 
-##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
+##  <a name="childwindowfrompointex"></a>CWindow:: Чилдвиндовфромпоинтекс
 
-Извлекает определенный тип дочернего окна, содержащего заданную точку.
+Извлекает конкретный тип дочернего окна, содержащего указанную точку.
 
 ```
 HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
@@ -521,11 +521,11 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) в Windows SDK.
+См. раздел [чилдвиндовфромпоинтекс](/windows/win32/api/winuser/nf-winuser-childwindowfrompointex) в Windows SDK.
 
-##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
+##  <a name="clienttoscreen"></a>CWindow:: Клиенттоскрин
 
-Преобразует клиентских координат в экранные координаты.
+Преобразует клиентские координаты в экранные координаты.
 
 ```
 BOOL ClientToScreen(LPPOINT lpPoint) const throw();
@@ -534,11 +534,11 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) в Windows SDK.
+См. раздел [клиенттоскрин](/windows/win32/api/winuser/nf-winuser-clienttoscreen) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
+Вторая версия этого метода позволяет преобразовать координаты структуры [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
-##  <a name="create"></a>  CWindow::Create
+##  <a name="create"></a>CWindow:: Create
 
 Создает окно.
 
@@ -556,45 +556,45 @@ HWND Create(
 
 ### <a name="parameters"></a>Параметры
 
-*lpstrWndClass*<br/>
-[in] Указатель на класс окна.
+*лпстрвндкласс*<br/>
+окне Указатель на класс окна.
 
-*hWndParent*<br/>
-[in] Дескриптор окна родительского или владельца.
+*хвндпарент*<br/>
+окне Маркер родительского окна или окно владельца.
 
 *rect*<br/>
-[in] Переменная типа [_U_RECT](../../atl/reference/u-rect-class.md) задают позицию окна. Значение по умолчанию имеет значение NULL. Если данный аргумент принимает значение NULL, значение `CWindow::rcDefault` используется.
+окне Переменная типа [_U_RECT](../../atl/reference/u-rect-class.md) , указывающая расположение окна. Значение по умолчанию — NULL. Если этот параметр равен null, используется значение `CWindow::rcDefault` .
 
-*szWindowName*<br/>
-[in] Задает имя окна. Значение по умолчанию имеет значение NULL.
+*сзвиндовнаме*<br/>
+окне Задает имя окна. Значение по умолчанию — NULL.
 
-*dwStyle*<br/>
-[in] Стиль окна. Значение по умолчанию равно 0, то есть стиль не указывается. Список возможных значений см. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
+*двстиле*<br/>
+окне Стиль окна. Значение по умолчанию — 0, означающее, что стиль не указан. Список возможных значений см. в разделе [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в Windows SDK.
 
-*dwExStyle*<br/>
-[in] Стиль окна расширенного. Значение по умолчанию равно 0, то есть не расширенный стиль указывается. Список возможных значений см. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в пакете Windows SDK.
+*двексстиле*<br/>
+окне Расширенный стиль окна. Значение по умолчанию — 0, означающее, что расширенный стиль не указан. Список возможных значений см. в разделе [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
-*MenuOrID*<br/>
-[in] Переменная типа [_U_MENUorID](../../atl/reference/u-menuorid-class.md) указывать дескриптор меню или идентификатор окна. Значение по умолчанию — 0U.
+*менуорид*<br/>
+окне Переменная типа [_U_MENUorID](../../atl/reference/u-menuorid-class.md) , определяющая маркер для меню или идентификатор окна. Значение по умолчанию — 0U.
 
-*lpCreateParam*<br/>
-Указатель на окно создания данных, содержащихся в [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) структуры.
+*лпкреатепарам*<br/>
+Указатель на данные для создания окна, содержащиеся в структуре [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если в случае успешного выполнения дескриптор для созданного окна, определяемое [m_hWnd](#m_hwnd). В противном случае — значение NULL.
+В случае успешного выполнения маркер для только что созданного окна задается параметром [m_hWnd](#m_hwnd). В противном случае значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-`CWindow::rcDefault` определяется как `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.
+`CWindow::rcDefault`определяется как `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};`.
 
-См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK для Windows, Дополнительные сведения.
+Дополнительные сведения см. в разделе [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в Windows SDK.
 
-**Примечание** Если 0 используется как значение для *MenuOrID* параметр, он должен быть указан как 0U (значение по умолчанию) для предотвращения ошибок компилятора.
+**Примечание** . Если значение 0 используется в качестве значения параметра *менуорид* , его необходимо указать как 0U (значение по умолчанию), чтобы избежать ошибки компилятора.
 
-##  <a name="createcaret"></a>  CWindow::CreateCaret
+##  <a name="createcaret"></a>CWindow:: Креатекарет
 
-Создает новую форму системного курсора.
+Создает новую фигуру для системного курсора.
 
 ```
 BOOL CreateCaret(HBITMAP pBitmap) throw();
@@ -602,9 +602,9 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) в Windows SDK.
+См. раздел [креатекарет](/windows/win32/api/winuser/nf-winuser-createcaret) в Windows SDK.
 
-##  <a name="creategraycaret"></a>  CWindow::CreateGrayCaret
+##  <a name="creategraycaret"></a>CWindow:: Креатеграйкарет
 
 Создает серый прямоугольник для системного курсора.
 
@@ -614,13 +614,13 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) в Windows SDK.
+См. раздел [креатекарет](/windows/win32/api/winuser/nf-winuser-createcaret) в Windows SDK.
 
-Передает (HBITMAP) 1 для битовой карты обработки параметра функции Win32.
+Передает (ХБИТМАП) 1 для параметра обработчика битовой карты функции Win32.
 
-##  <a name="createsolidcaret"></a>  CWindow::CreateSolidCaret
+##  <a name="createsolidcaret"></a>CWindow:: Креатесолидкарет
 
-Создает сплошной прямоугольник для системного курсора.
+Создает закрашенный прямоугольник для системного курсора.
 
 ```
 BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
@@ -628,11 +628,11 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [CreateCaret](/windows/desktop/api/winuser/nf-winuser-createcaret) в Windows SDK.
+См. раздел [креатекарет](/windows/win32/api/winuser/nf-winuser-createcaret) в Windows SDK.
 
-Передает (HBITMAP) 0 для битовой карты обработки параметра функции Win32.
+Передает (ХБИТМАП) 0 параметру Bitmap Handle значение функции Win32.
 
-##  <a name="cwindow"></a>  CWindow::CWindow
+##  <a name="cwindow"></a>CWindow:: CWindow
 
 Конструктор.
 
@@ -643,18 +643,18 @@ CWindow(HWND hWnd = NULL) throw();
 ### <a name="parameters"></a>Параметры
 
 *hWnd*<br/>
-[in] Дескриптор окна.
+окне Маркер окна.
 
 ### <a name="remarks"></a>Примечания
 
-Инициализирует [m_hWnd](#m_hwnd) члена *hWnd*, который по умолчанию имеет значение NULL.
+Инициализирует элемент [m_hWnd](#m_hwnd) в *HWND*, который по умолчанию имеет значение null.
 
 > [!NOTE]
-> `CWindow::CWindow` не создает окно. Классы [CWindowImpl](../../atl/reference/cwindowimpl-class.md), [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md), и [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (все они являются производными от `CWindow`) предоставляют метод для создания в окне или диалоговом окне, который является затем присваивается `CWindow::m_hWnd`. Можно также использовать [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функции Win32.
+> `CWindow::CWindow`не создает окно. Классы [квиндовимпл](../../atl/reference/cwindowimpl-class.md), [кконтаинедвиндов](../../atl/reference/ccontainedwindowt-class.md)и [CDialogImpl](../../atl/reference/cdialogimpl-class.md) (все из которых являются производными от `CWindow`) предоставляют метод для создания окна или `CWindow::m_hWnd`диалогового окна, которое затем присваивается. Можно также использовать функцию Win32 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) .
 
-##  <a name="deferwindowpos"></a>  CWindow::DeferWindowPos
+##  <a name="deferwindowpos"></a>CWindow::D Ефервиндовпос
 
-Обновляет указанную структуру нескольких положение окна для указанного окна.
+Обновляет указанную структуру с несколькими окнами для указанного окна.
 
 ```
 HDWP DeferWindowPos(
@@ -669,11 +669,11 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) в Windows SDK.
+См. раздел [дефервиндовпос](/windows/win32/api/winuser/nf-winuser-deferwindowpos) в Windows SDK.
 
-##  <a name="destroywindow"></a>  CWindow::DestroyWindow
+##  <a name="destroywindow"></a>CWindow::D Естройвиндов
 
-Уничтожает окно, связанное с `CWindow` и устанавливает [m_hWnd](#m_hwnd) значение NULL.
+Уничтожает окно, связанное с `CWindow` объектом, и устанавливает [m_hWnd](#m_hwnd) в значение null.
 
 ```
 BOOL DestroyWindow() throw();
@@ -681,17 +681,17 @@ BOOL DestroyWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DestroyWindow](/windows/desktop/api/winuser/nf-winuser-destroywindow) в Windows SDK.
+См. раздел [дестройвиндов](/windows/win32/api/winuser/nf-winuser-destroywindow) в Windows SDK.
 
-Она не удаляет `CWindow` сам объект.
+Он не уничтожает `CWindow` сам объект.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#5](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]
 
-##  <a name="detach"></a>  CWindow::Detach
+##  <a name="detach"></a>CWindow::D етач
 
-Отсоединяет [m_hWnd](#m_hwnd) из `CWindow` и устанавливает `m_hWnd` значение NULL.
+Отсоединяет [m_hWnd](#m_hwnd) от `CWindow` объекта и устанавливает `m_hWnd` в значение null.
 
 ```
 HWND Detach() throw();
@@ -699,15 +699,15 @@ HWND Detach() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сопоставленный HWND `CWindow` объекта.
+HWND, связанный с `CWindow` объектом.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#6](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]
 
-##  <a name="dlgdirlist"></a>  CWindow::DlgDirList
+##  <a name="dlgdirlist"></a>CWindow::D Лгдирлист
 
-Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.
+Заполняет список именами всех файлов, соответствующих указанному пути или имени файла.
 
 ```
 int DlgDirList(
@@ -719,11 +719,11 @@ int DlgDirList(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DlgDirList](/windows/desktop/api/winuser/nf-winuser-dlgdirlista) в Windows SDK.
+См. раздел [длгдирлист](/windows/win32/api/winuser/nf-winuser-dlgdirlistw) в Windows SDK.
 
-##  <a name="dlgdirlistcombobox"></a>  CWindow::DlgDirListComboBox
+##  <a name="dlgdirlistcombobox"></a>CWindow::D Лгдирлисткомбобокс
 
-Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.
+Заполняет поле со списком именами всех файлов, соответствующих указанному пути или имени файла.
 
 ```
 int DlgDirListComboBox(
@@ -735,9 +735,9 @@ int DlgDirListComboBox(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DlgDirListComboBox](/windows/desktop/api/winuser/nf-winuser-dlgdirlistcomboboxa) в Windows SDK.
+См. раздел [длгдирлисткомбобокс](/windows/win32/api/winuser/nf-winuser-dlgdirlistcomboboxw) в Windows SDK.
 
-##  <a name="dlgdirselect"></a>  CWindow::DlgDirSelect
+##  <a name="dlgdirselect"></a>CWindow::D Лгдирселект
 
 Извлекает текущее выделение из списка.
 
@@ -750,9 +750,9 @@ BOOL DlgDirSelect(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DlgDirSelectEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectexa) в Windows SDK.
+См. раздел [длгдирселектекс](/windows/win32/api/winuser/nf-winuser-dlgdirselectexw) в Windows SDK.
 
-##  <a name="dlgdirselectcombobox"></a>  CWindow::DlgDirSelectComboBox
+##  <a name="dlgdirselectcombobox"></a>CWindow::D Лгдирселекткомбобокс
 
 Извлекает текущее выделение из поля со списком.
 
@@ -765,11 +765,11 @@ BOOL DlgDirSelectComboBox(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DlgDirSelectComboBoxEx](/windows/desktop/api/winuser/nf-winuser-dlgdirselectcomboboxexa) в Windows SDK.
+См. раздел [длгдирселекткомбобоксекс](/windows/win32/api/winuser/nf-winuser-dlgdirselectcomboboxexw) в Windows SDK.
 
-##  <a name="dragacceptfiles"></a>  CWindow::DragAcceptFiles
+##  <a name="dragacceptfiles"></a>CWindow::D Рагакцептфилес
 
-Регистры, принимает окно перетаскивать файлы.
+Регистрирует, принимает ли окно перетаскиваемые файлы.
 
 ```
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -777,9 +777,9 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DragAcceptFiles](/windows/desktop/api/shellapi/nf-shellapi-dragacceptfiles) в Windows SDK.
+См. раздел [DragAcceptFiles](/windows/win32/api/shellapi/nf-shellapi-dragacceptfiles) в Windows SDK.
 
-##  <a name="drawmenubar"></a>  CWindow::DrawMenuBar
+##  <a name="drawmenubar"></a>CWindow::D Равменубар
 
 Перерисовывает строку меню окна.
 
@@ -789,11 +789,11 @@ BOOL DrawMenuBar() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DrawMenuBar](/windows/desktop/api/winuser/nf-winuser-drawmenubar) в Windows SDK.
+См. раздел [дравменубар](/windows/win32/api/winuser/nf-winuser-drawmenubar) в Windows SDK.
 
-##  <a name="enablescrollbar"></a>  CWindow::EnableScrollBar
+##  <a name="enablescrollbar"></a>CWindow:: Енаблескроллбар
 
-Включает или отключает стрелку полосы прокрутки.
+Включает или отключает стрелки полосы прокрутки.
 
 ```
 BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
@@ -801,11 +801,11 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [EnableScrollBar](/windows/desktop/api/winuser/nf-winuser-enablescrollbar) в Windows SDK.
+См. раздел [енаблескроллбар](/windows/win32/api/winuser/nf-winuser-enablescrollbar) в Windows SDK.
 
-##  <a name="enablewindow"></a>  CWindow::EnableWindow
+##  <a name="enablewindow"></a>CWindow:: Енаблевиндов
 
-Включает или отключает возможность ввода данных.
+Включает или отключает входные данные.
 
 ```
 BOOL EnableWindow(BOOL bEnable = TRUE) throw();
@@ -813,13 +813,13 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) в Windows SDK.
+См. раздел [енаблевиндов](/windows/win32/api/winuser/nf-winuser-enablewindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#7](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]
 
-##  <a name="endpaint"></a>  CWindow::EndPaint
+##  <a name="endpaint"></a>CWindow:: Ендпаинт
 
 Отмечает завершение рисования.
 
@@ -829,13 +829,13 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint) в Windows SDK.
+См. раздел [ендпаинт](/windows/win32/api/winuser/nf-winuser-endpaint) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#2](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]
 
-##  <a name="flashwindow"></a>  CWindow::FlashWindow
+##  <a name="flashwindow"></a>CWindow:: FlashWindow интерфейса
 
 Окно однократно мигает.
 
@@ -845,9 +845,9 @@ BOOL FlashWindow(BOOL bInvert) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [flashwindow интерфейса](/windows/desktop/api/winuser/nf-winuser-flashwindow) в Windows SDK.
+См. раздел [FlashWindow интерфейса](/windows/win32/api/winuser/nf-winuser-flashwindow) в Windows SDK.
 
-##  <a name="getclientrect"></a>  CWindow::GetClientRect
+##  <a name="getclientrect"></a>CWindow:: Жетклиентрект
 
 Извлекает координаты клиентской области.
 
@@ -857,15 +857,15 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [метода GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) в Windows SDK.
+См. раздел [жетклиентрект](/windows/win32/api/winuser/nf-winuser-getclientrect) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#8](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]
 
-##  <a name="getdc"></a>  CWindow::GetDC
+##  <a name="getdc"></a>CWindow:: GetDC
 
-Получает контекст устройства для клиентской области.
+Извлекает контекст устройства для клиентской области.
 
 ```
 HDC GetDC() throw();
@@ -873,15 +873,15 @@ HDC GetDC() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) в Windows SDK.
+См. раздел [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-##  <a name="getdcex"></a>  CWindow::GetDCEx
+##  <a name="getdcex"></a>CWindow:: Жетдцекс
 
-Получает контекст устройства для клиентской области и позволяет параметры отсечения.
+Извлекает контекст устройства для клиентской области и разрешает параметры обрезки.
 
 ```
 HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
@@ -889,11 +889,11 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex) в Windows SDK.
+См. раздел [жетдцекс](/windows/win32/api/winuser/nf-winuser-getdcex) в Windows SDK.
 
-##  <a name="getdescendantwindow"></a>  CWindow::GetDescendantWindow
+##  <a name="getdescendantwindow"></a>CWindow:: Жетдесцендантвиндов
 
-Находит окно-потомков, указанной с помощью заданного идентификатора.
+Находит дочернее окно, указанное указанным идентификатором.
 
 ```
 HWND GetDescendantWindow(int nID) const throw();
@@ -902,19 +902,19 @@ HWND GetDescendantWindow(int nID) const throw();
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Идентификатор окна-потомков, требуется получить.
+окне Идентификатор возвращаемого окна-потомка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор окна-потомков.
+Маркер для дочернего окна.
 
 ### <a name="remarks"></a>Примечания
 
-`GetDescendantWindow` Выполняет полное дерево дочерних окон, а не только windows, которые являются непосредственными дочерними элементами.
+`GetDescendantWindow`выполняет поиск по всему дереву дочерних окон, а не только к окнам, которые являются непосредственными дочерними элементами.
 
-##  <a name="getdlgcontrol"></a>  CWindow::GetDlgControl
+##  <a name="getdlgcontrol"></a>CWindow:: Жетдлгконтрол
 
-Вызывайте эту функцию для получения указателя интерфейса элемента управления ActiveX, размещенного по составного элемента управления или диалоговое окно размещения элементов управления.
+Эта функция вызывается для получения указателя на интерфейс элемента управления ActiveX, размещенного в составном элементе управления или в диалоговом окне размещения элемента управления.
 
 ```
 HRESULT GetDlgControl(
@@ -926,25 +926,25 @@ HRESULT GetDlgControl(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Идентификатор ресурса элемента управления, который требуется получить.
+окне Идентификатор ресурса извлекаемого элемента управления.
 
 *IID*<br/>
-[in] Идентификатор интерфейса, вы хотите получить из элемента управления.
+окне Идентификатор интерфейса, который вы хотите получить из элемента управления.
 
-*ppCtrl*<br/>
-[out] Указатель на интерфейс.
+*ппктрл*<br/>
+заполняет Указатель на интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или любое допустимое значение HRESULT ошибки. Например, функция возвращает E_FAIL, если элемент управления, заданный *nID* не удается найти или E_NOINTERFACE, если элемент управления можно найти, но он не поддерживает интерфейс, определенный следующим *iid*.
+Возвращает значение S_OK при успешном выполнении или любую допустимую ошибку HRESULT. Например, функция возвращает значение E_FAIL, если не удается найти элемент управления, заданный параметром *NID* , и возвращает E_NOINTERFACE, если элемент управления может быть найден, но не поддерживает интерфейс, указанный в *IID*.
 
 ### <a name="remarks"></a>Примечания
 
-С помощью этого указателя, можно вызывать методы в интерфейсе.
+С помощью этого указателя можно вызывать методы интерфейса.
 
-##  <a name="getdlgctrlid"></a>  CWindow::GetDlgCtrlID
+##  <a name="getdlgctrlid"></a>CWindow:: Жетдлгктрлид
 
-Извлекает идентификатор окна (для дочерних окон).
+Получает идентификатор окна (только для дочерних окон).
 
 ```
 int GetDlgCtrlID() const throw();
@@ -952,11 +952,11 @@ int GetDlgCtrlID() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDlgCtrlID](/windows/desktop/api/winuser/nf-winuser-getdlgctrlid) в Windows SDK.
+См. раздел [жетдлгктрлид](/windows/win32/api/winuser/nf-winuser-getdlgctrlid) в Windows SDK.
 
-##  <a name="getdlghost"></a>  CWindow::GetDlgHost
+##  <a name="getdlghost"></a>CWindow:: Жетдлгхост
 
-Извлекает указатель на интерфейс для управления ATL, контейнер размещается.
+Извлекает указатель на интерфейс для контейнера размещения элемента управления ATL.
 
 ```
 HRESULT GetDlgHost(
@@ -968,25 +968,25 @@ HRESULT GetDlgHost(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Идентификатор ресурса элемента управления, который требуется получить.
+окне Идентификатор ресурса извлекаемого элемента управления.
 
 *IID*<br/>
-[in] Идентификатор интерфейса, вы хотите получить из элемента управления.
+окне Идентификатор интерфейса, который вы хотите получить из элемента управления.
 
-*ppHost*<br/>
-[out] Указатель на интерфейс.
+*пфост*<br/>
+заполняет Указатель на интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK, если заданная окна *iid* — это контейнер элемента управления и удалось получить запрошенный интерфейс. Возвращает значение E_FAIL, если окно не контейнер элемента управления, или в том случае, если не удалось получить интерфейс, запрошенный. Если появится окно с указанным Идентификатором не найден, то возвращаемое значение равно HRESULT_FROM_WIN32(ERROR_CONTROL_ID_NOT_FOUND).
+Возвращает значение S_OK, если окно, заданное параметром *IID* , является контейнером элемента управления, а запрошенный интерфейс может быть получен. Возвращает значение E_FAIL, если окно не является контейнером элемента управления, или если не удалось получить запрошенный интерфейс. Если окно с указанным ИДЕНТИФИКАТОРом не найдено, возвращаемое значение равно HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND).
 
 ### <a name="remarks"></a>Примечания
 
-С помощью этого указателя, можно вызывать методы в интерфейсе.
+С помощью этого указателя можно вызывать методы интерфейса.
 
-##  <a name="getdlgitem"></a>  CWindow::GetDlgItem
+##  <a name="getdlgitem"></a>CWindow:: Жетдлгитем
 
-Извлекает указанного дочернего окна.
+Извлекает указанное дочернее окно.
 
 ```
 HWND GetDlgItem(int nID) const throw();
@@ -994,11 +994,11 @@ HWND GetDlgItem(int nID) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDlgItem](/windows/desktop/api/winuser/nf-winuser-getdlgitem) в Windows SDK.
+См. раздел [жетдлгитем](/windows/win32/api/winuser/nf-winuser-getdlgitem) в Windows SDK.
 
-##  <a name="getdlgitemint"></a>  CWindow::GetDlgItemInt
+##  <a name="getdlgitemint"></a>CWindow:: Жетдлгитеминт
 
-Переводит текст элемента управления в целое число.
+Преобразует текст элемента управления в целое число.
 
 ```
 UINT GetDlgItemInt(
@@ -1009,11 +1009,11 @@ UINT GetDlgItemInt(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-getdlgitemint) в Windows SDK.
+См. раздел [жетдлгитеминт](/windows/win32/api/winuser/nf-winuser-getdlgitemint) в Windows SDK.
 
 ##  <a name="getdlgitemtext"></a>  CWindow::GetDlgItemText
 
-Получает текст элемента управления.
+Извлекает текст элемента управления.
 
 ```
 UINT GetDlgItemText(
@@ -1028,15 +1028,15 @@ BOOL GetDlgItemText(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetDlgItemText](/windows/desktop/api/winuser/nf-winuser-getdlgitemtexta) в Windows SDK.
+См. раздел [жетдлгитемтекст](/windows/win32/api/winuser/nf-winuser-getdlgitemtextw) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Вторая версия этого метода позволяет копировать текст элемента управления на строку BSTR. Эта версия возвращает значение TRUE, если текст копируется успешно; в противном случае — значение FALSE.
+Вторая версия этого метода позволяет скопировать текст элемента управления в BSTR. Эта версия возвращает значение TRUE, если текст успешно скопирован. в противном случае — значение FALSE.
 
-##  <a name="getexstyle"></a>  CWindow::GetExStyle
+##  <a name="getexstyle"></a>CWindow:: Жетексстиле
 
-Извлекает расширенные стили окна окна.
+Получает расширенные стили окна окна.
 
 ```
 DWORD GetExStyle() const throw();
@@ -1044,19 +1044,19 @@ DWORD GetExStyle() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Окно расширенных стилей.
+Расширенные стили окна.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы получить стили регулярных окна, вызовите [GetStyle](#getstyle).
+Чтобы получить обычные стили окна, вызовите метод " [BackStyle](#getstyle)".
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#10](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]
 
-##  <a name="getfont"></a>  CWindow::GetFont
+##  <a name="getfont"></a>CWindow:: font
 
-Извлекает текущий шрифт окна, отправляя [WM_GETFONT](/windows/desktop/winmsg/wm-getfont) сообщение в окно.
+Получает текущий шрифт окна, отправляя в окно сообщение [WM_GETFONT](/windows/win32/winmsg/wm-getfont) .
 
 ```
 HFONT GetFont() const throw();
@@ -1064,11 +1064,11 @@ HFONT GetFont() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор шрифта.
+Маркер шрифта.
 
-##  <a name="gethotkey"></a>  CWindow::GetHotKey
+##  <a name="gethotkey"></a>CWindow:: насочетание клавиш
 
-Определяет сочетания клавиш, связанные с окном, отправляя сообщение WM_GETHOTKEY.
+Определяет горячую клавишу, связанную с окном, отправляя сообщение WM_GETHOTKEY.
 
 ```
 DWORD GetHotKey() const throw();
@@ -1076,11 +1076,11 @@ DWORD GetHotKey() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Виртуальному коду клавиши и модификаторы для сочетания клавиш, связанные с окном. Список возможных модификаторы, см. в разделе [WM_GETHOTKEY](/windows/desktop/inputdev/wm-gethotkey) в пакете Windows SDK. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.
+Виртуальный код клавиши и модификаторы для сочетания клавиш, связанного с окном. Список возможных модификаторов см. в разделе [WM_GETHOTKEY](/windows/win32/inputdev/wm-gethotkey) в Windows SDK. Список стандартных виртуальных клавиш см. в разделе Winuser. h.
 
-##  <a name="geticon"></a>  CWindow::GetIcon
+##  <a name="geticon"></a>CWindow:: "Icon"
 
-Извлекает дескриптор окна больших или маленьких значка.
+Получает маркер для большого или маленького значка окна.
 
 ```
 HICON GetIcon(BOOL bBigIcon = TRUE) const;
@@ -1088,20 +1088,20 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bBigIcon*<br/>
-[in] Если значение равно TRUE (значение по умолчанию) метод возвращает крупных значков. В противном случае возвращается мелкого значка.
+*ббигикон*<br/>
+окне Если TRUE (значение по умолчанию), метод возвращает крупный значок. В противном случае возвращается маленький значок.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор значка.
+Маркер значка.
 
 ### <a name="remarks"></a>Примечания
 
-`GetIcon` отправляет [WM_GETICON](/windows/desktop/winmsg/wm-geticon) сообщение в окно.
+`GetIcon`отправляет сообщение [WM_GETICON](/windows/win32/winmsg/wm-geticon) в окно.
 
-##  <a name="getlastactivepopup"></a>  CWindow::GetLastActivePopup
+##  <a name="getlastactivepopup"></a>CWindow:: Жетластактивепопуп
 
-Получает самую последнюю активную всплывающего окна.
+Возвращает последнее активное всплывающее окно.
 
 ```
 HWND GetLastActivePopup() const throw();
@@ -1109,11 +1109,11 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) в Windows SDK.
+См. раздел [жетластактивепопуп](/windows/win32/api/winuser/nf-winuser-getlastactivepopup) в Windows SDK.
 
-##  <a name="getmenu"></a>  CWindow::GetMenu
+##  <a name="getmenu"></a>CWindow:: Menu
 
-Извлекает меню окна.
+Получает меню окна.
 
 ```
 HMENU GetMenu() const throw();
@@ -1121,11 +1121,11 @@ HMENU GetMenu() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetMenu](/windows/desktop/api/winuser/nf-winuser-getmenu) в Windows SDK.
+См. [меню](/windows/win32/api/winuser/nf-winuser-getmenu) Windows SDK.
 
-##  <a name="getnextdlggroupitem"></a>  CWindow::GetNextDlgGroupItem
+##  <a name="getnextdlggroupitem"></a>CWindow:: Жетнекстдлгграупитем
 
-Извлекает предыдущего или следующего элемента управления в группе элементов управления.
+Извлекает предыдущий или следующий элемент управления в группе элементов управления.
 
 ```
 HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
@@ -1133,11 +1133,11 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetNextDlgGroupItem](/windows/desktop/api/winuser/nf-winuser-getnextdlggroupitem) в Windows SDK.
+См. раздел [жетнекстдлгграупитем](/windows/win32/api/winuser/nf-winuser-getnextdlggroupitem) в Windows SDK.
 
-##  <a name="getnextdlgtabitem"></a>  CWindow::GetNextDlgTabItem
+##  <a name="getnextdlgtabitem"></a>CWindow:: Жетнекстдлгтабитем
 
-Извлекает предыдущего или следующего элемента управления, наличие WS_TABSTOP стиль.
+Извлекает предыдущий или следующий элемент управления, имеющий стиль WS_TABSTOP.
 
 ```
 HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
@@ -1145,11 +1145,11 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetNextDlgTabItem](/windows/desktop/api/winuser/nf-winuser-getnextdlgtabitem) в Windows SDK.
+См. раздел [жетнекстдлгтабитем](/windows/win32/api/winuser/nf-winuser-getnextdlgtabitem) в Windows SDK.
 
-##  <a name="getparent"></a>  CWindow::GetParent
+##  <a name="getparent"></a>CWindow:: Parent
 
-Извлекает окно непосредственного родителя.
+Извлекает непосредственное родительское окно.
 
 ```
 HWND GetParent() const throw();
@@ -1157,15 +1157,15 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) в Windows SDK.
+См. раздел " [родители](/windows/win32/api/winuser/nf-winuser-getparent) " в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#11](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]
 
-##  <a name="getscrollinfo"></a>  CWindow::GetScrollInfo
+##  <a name="getscrollinfo"></a>CWindow:: Жетскроллинфо
 
-Извлекает параметры полосы прокрутки.
+Получает параметры полосы прокрутки.
 
 ```
 BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
@@ -1173,11 +1173,11 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetScrollInfo](/windows/desktop/api/winuser/nf-winuser-getscrollinfo) в Windows SDK.
+См. раздел [жетскроллинфо](/windows/win32/api/winuser/nf-winuser-getscrollinfo) в Windows SDK.
 
-##  <a name="getscrollpos"></a>  CWindow::GetScrollPos
+##  <a name="getscrollpos"></a>CWindow:: Жетскроллпос
 
-Получает положение ползунка полосы прокрутки.
+Извлекает расположение ползунка.
 
 ```
 int GetScrollPos(int nBar) const throw();
@@ -1185,11 +1185,11 @@ int GetScrollPos(int nBar) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) в Windows SDK.
+См. раздел [жетскроллпос](/windows/win32/api/winuser/nf-winuser-getscrollpos) в Windows SDK.
 
-##  <a name="getscrollrange"></a>  CWindow::GetScrollRange
+##  <a name="getscrollrange"></a>CWindow:: Жетскроллранже
 
-Получает диапазон значений для полосы прокрутки.
+Получает диапазон полосы прокрутки.
 
 ```
 BOOL GetScrollRange(
@@ -1200,11 +1200,11 @@ BOOL GetScrollRange(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetScrollRange](/windows/desktop/api/winuser/nf-winuser-getscrollrange) в Windows SDK.
+См. раздел [жетскроллранже](/windows/win32/api/winuser/nf-winuser-getscrollrange) в Windows SDK.
 
-##  <a name="getstyle"></a>  CWindow::GetStyle
+##  <a name="getstyle"></a>CWindow:: штриховка
 
-Получает стили окна окна.
+Извлекает стили окна окна.
 
 ```
 DWORD GetStyle() const throw();
@@ -1216,15 +1216,15 @@ DWORD GetStyle() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы получить расширенные стили окна, вызовите [GetExStyle](#getexstyle).
+Чтобы получить расширенные стили окна, вызовите [жетексстиле](#getexstyle).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#12](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]
 
-##  <a name="getsystemmenu"></a>  CWindow::GetSystemMenu
+##  <a name="getsystemmenu"></a>CWindow:: Жетсистеммену
 
-Создает копию объекта системное меню для изменения.
+Создает копию системного меню для изменения.
 
 ```
 HMENU GetSystemMenu(BOOL bRevert) const throw();
@@ -1232,11 +1232,11 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetSystemMenu](/windows/desktop/api/winuser/nf-winuser-getsystemmenu) в Windows SDK.
+См. раздел [жетсистеммену](/windows/win32/api/winuser/nf-winuser-getsystemmenu) в Windows SDK.
 
-##  <a name="gettoplevelparent"></a>  CWindow::GetTopLevelParent
+##  <a name="gettoplevelparent"></a>CWindow:: Жеттоплевелпарент
 
-Извлекает окно верхнего уровня родительского окна.
+Извлекает родительское окно верхнего уровня окна.
 
 ```
 HWND GetTopLevelParent() const throw();
@@ -1244,11 +1244,11 @@ HWND GetTopLevelParent() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор верхнего уровня родительского окна.
+Маркер родительского окна верхнего уровня.
 
-##  <a name="gettoplevelwindow"></a>  CWindow::GetTopLevelWindow
+##  <a name="gettoplevelwindow"></a>CWindow:: Жеттоплевелвиндов
 
-Извлекает окно верхнего уровня родительский объект или владельца окна.
+Извлекает родительское окно или его владельца в окне верхнего уровня.
 
 ```
 HWND GetTopLevelWindow() const throw();
@@ -1256,11 +1256,11 @@ HWND GetTopLevelWindow() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор окна-владельца верхнего уровня.
+Маркер для окна владельца верхнего уровня.
 
-##  <a name="gettopwindow"></a>  CWindow::GetTopWindow
+##  <a name="gettopwindow"></a>CWindow:: Жеттопвиндов
 
-Извлекает окно верхнего уровня дочерние.
+Извлекает дочернее окно верхнего уровня.
 
 ```
 HWND GetTopWindow() const throw();
@@ -1268,15 +1268,15 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) в Windows SDK.
+См. раздел [жеттопвиндов](/windows/win32/api/winuser/nf-winuser-gettopwindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#13](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]
 
-##  <a name="getupdaterect"></a>  CWindow::GetUpdateRect
+##  <a name="getupdaterect"></a>CWindow:: Жетупдатерект
 
-Извлекает координаты наименьшего прямоугольника, который полностью входит область обновления.
+Получает координаты наименьшего прямоугольника, полностью охватывающего область обновления.
 
 ```
 BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
@@ -1284,11 +1284,11 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetUpdateRect](/windows/desktop/api/winuser/nf-winuser-getupdaterect) в Windows SDK.
+См. раздел [жетупдатерект](/windows/win32/api/winuser/nf-winuser-getupdaterect) в Windows SDK.
 
-##  <a name="getupdatergn"></a>  CWindow::GetUpdateRgn
+##  <a name="getupdatergn"></a>CWindow:: Жетупдатергн
 
-Извлекает область обновления и копирует их в указанную область.
+Извлекает регион обновления и копирует его в указанный регион.
 
 ```
 int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
@@ -1296,9 +1296,9 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetUpdateRgn](/windows/desktop/api/winuser/nf-winuser-getupdatergn) в Windows SDK.
+См. раздел [жетупдатергн](/windows/win32/api/winuser/nf-winuser-getupdatergn) в Windows SDK.
 
-##  <a name="getwindow"></a>  CWindow::GetWindow
+##  <a name="getwindow"></a>CWindow::/Window
 
 Извлекает указанное окно.
 
@@ -1308,11 +1308,11 @@ HWND GetWindow(UINT nCmd) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе `GetWindow` в Windows SDK.
+См `GetWindow` . раздел Windows SDK.
 
-##  <a name="getwindowcontexthelpid"></a>  CWindow::GetWindowContextHelpId
+##  <a name="getwindowcontexthelpid"></a>CWindow:: Жетвиндовконтексселпид
 
-Извлекает идентификатор контекста справки для окна.
+Получает идентификатор контекста справки окна.
 
 ```
 DWORD GetWindowContextHelpId() const throw();
@@ -1320,11 +1320,11 @@ DWORD GetWindowContextHelpId() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowContextHelpId](/windows/desktop/api/winuser/nf-winuser-getwindowcontexthelpid) в Windows SDK.
+См. раздел [жетвиндовконтексселпид](/windows/win32/api/winuser/nf-winuser-getwindowcontexthelpid) в Windows SDK.
 
-##  <a name="getwindowdc"></a>  CWindow::GetWindowDC
+##  <a name="getwindowdc"></a>CWindow:: Жетвиндовдк
 
-Получает контекст устройства для всего содержимого окна.
+Извлекает контекст устройства для всего окна.
 
 ```
 HDC GetWindowDC() throw();
@@ -1332,15 +1332,15 @@ HDC GetWindowDC() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowDC](/windows/desktop/api/winuser/nf-winuser-getwindowdc) в Windows SDK.
+См. раздел [жетвиндовдк](/windows/win32/api/winuser/nf-winuser-getwindowdc) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#14](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]
 
-##  <a name="getwindowlong"></a>  CWindow::GetWindowLong
+##  <a name="getwindowlong"></a>CWindow:: Жетвиндовлонг
 
-Извлекает 32-разрядное значение с указанным смещением в открытое окно память.
+Извлекает 32-разрядное значение с указанным смещением в дополнительной памяти окна.
 
 ```
 LONG GetWindowLong(int nIndex) const throw();
@@ -1348,14 +1348,14 @@ LONG GetWindowLong(int nIndex) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) в Windows SDK.
+См. раздел [жетвиндовлонг](/windows/win32/api/winuser/nf-winuser-getwindowlongw) в Windows SDK.
 
 > [!NOTE]
->  Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте [CWindow::GetWindowLongPtr](#getwindowlongptr).
+>  Чтобы написать код, совместимый как с 32-разрядными, так и с 64-разрядными версиями Windows, используйте [CWindow:: жетвиндовлонгптр](#getwindowlongptr).
 
 ##  <a name="getwindowlongptr"></a>  CWindow::GetWindowLongPtr
 
-Извлекает сведения о указанного окна, включая значение с указанным смещением в открытое окно память.
+Извлекает сведения об указанном окне, включая значение с указанным смещением в дополнительной памяти окна.
 
 ```
 LONG_PTR GetWindowLongPtr(int nIndex) const throw();
@@ -1363,20 +1363,20 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) в Windows SDK.
+См. раздел [жетвиндовлонгптр](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы получить указатель или дескриптор, эта функция заменяет `CWindow::GetWindowLong` метод.
+При извлечении указателя или маркера эта функция заменяет `CWindow::GetWindowLong` метод.
 
 > [!NOTE]
->  Указатели и дескрипторы являются 32 бита на Windows 32-разрядных и 64 разряда на 64-разрядной Windows.
+>  Указатели и дескрипторы — это 32 бит на 32-разрядной версии Windows и 64 бит в 64-bit Windows.
 
-Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте `CWindow::GetWindowLongPtr`.
+Чтобы написать код, совместимый как с 32-разрядными, так и с 64-разрядными `CWindow::GetWindowLongPtr`версиями Windows, используйте.
 
-##  <a name="getwindowplacement"></a>  CWindow::GetWindowPlacement
+##  <a name="getwindowplacement"></a>CWindow:: Жетвиндовплацемент
 
-Получает состояние отображения, а также позиций.
+Извлекает состояние отображения и позиции.
 
 ```
 BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
@@ -1384,11 +1384,11 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) в Windows SDK.
+См. раздел [жетвиндовплацемент](/windows/win32/api/winuser/nf-winuser-getwindowplacement) в Windows SDK.
 
-##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
+##  <a name="getwindowprocessid"></a>CWindow:: Жетвиндовпроцессид
 
-Извлекает идентификатор процесса, создавший окно.
+Возвращает идентификатор процесса, создавшего окно.
 
 ```
 DWORD GetWindowProcessID() throw();
@@ -1396,15 +1396,15 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
+См. раздел [жетвиндовсреадпроцессид](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#15](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]
 
-##  <a name="getwindowrect"></a>  CWindow::GetWindowRect
+##  <a name="getwindowrect"></a>CWindow:: Жетвиндоврект
 
-Извлекает ограничивающий размеры окна.
+Получает ограничивающие размеры окна.
 
 ```
 BOOL GetWindowRect(LPRECT lpRect) const throw();
@@ -1412,11 +1412,11 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowRect](/windows/desktop/api/winuser/nf-winuser-getwindowrect) в Windows SDK.
+См. раздел [жетвиндоврект](/windows/win32/api/winuser/nf-winuser-getwindowrect) в Windows SDK.
 
-##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
+##  <a name="getwindowrgn"></a>CWindow:: Жетвиндовргн
 
-Получает копию области окна.
+Получает копию области окна окна.
 
 ```
 int GetWindowRgn(HRGN hRgn) throw();
@@ -1424,9 +1424,9 @@ int GetWindowRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowRgn](/windows/desktop/api/winuser/nf-winuser-getwindowrgn) в Windows SDK.
+См. раздел [жетвиндовргн](/windows/win32/api/winuser/nf-winuser-getwindowrgn) в Windows SDK.
 
-##  <a name="getwindowtext"></a>  CWindow::GetWindowText
+##  <a name="getwindowtext"></a>CWindow:: Жетвиндовтекст
 
 Извлекает текст окна.
 
@@ -1438,31 +1438,31 @@ int GetWindowText(CSimpleString& strText) const;
 
 ### <a name="parameters"></a>Параметры
 
-*lpszStringBuf*<br/>
+*лпсзстрингбуф*<br/>
 Буфер, в который записывается текст окна.
 
-*nMaxCount*<br/>
+*нмакскаунт*<br/>
 Размер буфера в символах; соответствует также максимальному числу символов для записи.
 
-*bstrText*<br/>
-BSTR, в котором для хранения текста окна.
+*бстртекст*<br/>
+Объект BSTR, в котором сохраняется текст окна.
 
-*strText*<br/>
+*стртекст*<br/>
 Объект `CString` для хранения текста окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если текст копируется успешно, возвращаемое значение равно TRUE; в противном случае возвращает значение FALSE.
+Если текст успешно копируется, возвращается значение TRUE. в противном случае возвращается значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) в Windows SDK.
+См. раздел [жетвиндовтекст](/windows/win32/api/winuser/nf-winuser-getwindowtextw) в Windows SDK.
 
-Вторая версия этого метода позволяет сохранять текст в строке BSTR; Третья версия позволяет хранить результат в [CString](../../atl-mfc-shared/reference/cstringt-class.md), так как `CSimpleString` является базовым классом для `CString`.
+Вторая версия этого метода позволяет хранить текст в BSTR; Третья версия позволяет сохранить результат в [CString](../../atl-mfc-shared/reference/cstringt-class.md), поскольку `CSimpleString` является базовым классом `CString`.
 
-##  <a name="getwindowtextlength"></a>  CWindow::GetWindowTextLength
+##  <a name="getwindowtextlength"></a>CWindow:: Жетвиндовтекстленгс
 
-Получает длину текста окна.
+Возвращает длину текста окна.
 
 ```
 int GetWindowTextLength() const throw();
@@ -1470,11 +1470,11 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) в Windows SDK.
+См. раздел [жетвиндовтекстленгс](/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw) в Windows SDK.
 
-##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
+##  <a name="getwindowthreadid"></a>CWindow:: Жетвиндовсреадид
 
-Извлекает идентификатор потока, создавшего указанного окна.
+Возвращает идентификатор потока, создавшего указанное окно.
 
 ```
 DWORD GetWindowThreadID() throw();
@@ -1482,15 +1482,15 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
+См. раздел [жетвиндовсреадпроцессид](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#16](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]
 
-##  <a name="getwindowword"></a>  CWindow::GetWindowWord
+##  <a name="getwindowword"></a>CWindow:: Жетвиндовворд
 
-Извлекает 16-разрядное значение с указанным смещением в открытое окно память.
+Извлекает 16-разрядное значение с указанным смещением в дополнительной памяти окна.
 
 ```
 WORD GetWindowWord(int nIndex) const throw();
@@ -1498,11 +1498,11 @@ WORD GetWindowWord(int nIndex) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga) в Windows SDK.
+См. раздел [жетвиндовлонг](/windows/win32/api/winuser/nf-winuser-getwindowlongw) в Windows SDK.
 
-##  <a name="gotodlgctrl"></a>  CWindow::GotoDlgCtrl
+##  <a name="gotodlgctrl"></a>CWindow:: Готодлгктрл
 
-Устанавливает фокус клавиатуры в элемент управления в диалоговом окне.
+Устанавливает фокус клавиатуры на элемент управления в диалоговом окне.
 
 ```
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
@@ -1510,11 +1510,11 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) в Windows SDK.
+См. раздел [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) в Windows SDK.
 
-##  <a name="hidecaret"></a>  CWindow::HideCaret
+##  <a name="hidecaret"></a>CWindow:: Хидекарет
 
-Скрывает системного курсора.
+Скрывает системный курсор.
 
 ```
 BOOL HideCaret() throw();
@@ -1522,15 +1522,15 @@ BOOL HideCaret() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [HideCaret](/windows/desktop/api/winuser/nf-winuser-hidecaret) в Windows SDK.
+См. раздел [хидекарет](/windows/win32/api/winuser/nf-winuser-hidecaret) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#17](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]
 
-##  <a name="hilitemenuitem"></a>  CWindow::HiliteMenuItem
+##  <a name="hilitemenuitem"></a>CWindow:: Хилитеменуитем
 
-Выделяет или снимает выделение с меню верхнего уровня.
+Выделение или удаление выделения из пункта меню верхнего уровня.
 
 ```
 BOOL HiliteMenuItem(
@@ -1541,9 +1541,9 @@ BOOL HiliteMenuItem(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [HiliteMenuItem](/windows/desktop/api/winuser/nf-winuser-hilitemenuitem) в Windows SDK.
+См. раздел [хилитеменуитем](/windows/win32/api/winuser/nf-winuser-hilitemenuitem) в Windows SDK.
 
-##  <a name="invalidate"></a>  CWindow::Invalidate
+##  <a name="invalidate"></a>CWindow:: недействительность
 
 Делает недействительной всю клиентскую область.
 
@@ -1553,17 +1553,17 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [InvalidateRect](/windows/desktop/api/winuser/nf-winuser-invalidaterect) в Windows SDK.
+См. раздел [инвалидатерект](/windows/win32/api/winuser/nf-winuser-invalidaterect) в Windows SDK.
 
-Передает значение NULL `RECT` параметр `InvalidateRect` функции Win32.
+Передает значение NULL для `RECT` параметра `InvalidateRect` функции Win32.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#18](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]
 
-##  <a name="invalidaterect"></a>  CWindow::InvalidateRect
+##  <a name="invalidaterect"></a>CWindow:: Инвалидатерект
 
-Делает недействительной клиентскую область в пределах заданного прямоугольника.
+Делает недействительным клиентскую область в пределах указанного прямоугольника.
 
 ```
 BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
@@ -1571,11 +1571,11 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [InvalidateRect](/windows/desktop/api/winuser/nf-winuser-invalidaterect) в Windows SDK.
+См. раздел [инвалидатерект](/windows/win32/api/winuser/nf-winuser-invalidaterect) в Windows SDK.
 
-##  <a name="invalidatergn"></a>  CWindow::InvalidateRgn
+##  <a name="invalidatergn"></a>CWindow:: Инвалидатергн
 
-Делает недействительной клиентскую область в пределах заданной области.
+Делает недействительным клиентскую область в указанном регионе.
 
 ```
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
@@ -1583,15 +1583,15 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [InvalidateRgn](/windows/desktop/api/winuser/nf-winuser-invalidatergn) в Windows SDK.
+См. раздел [инвалидатергн](/windows/win32/api/winuser/nf-winuser-invalidatergn) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Указывает **void** типа возвращаемого значения, хотя `InvalidateRgn` Win32 функция всегда возвращает значение TRUE.
+Указывает тип возвращаемого значения **void** , в `InvalidateRgn` то время как функция Win32 всегда возвращает значение true.
 
-##  <a name="ischild"></a>  CWindow::IsChild
+##  <a name="ischild"></a>CWindow:: дочерний элемент
 
-Определяет, является ли указанное окно дочернего окна.
+Определяет, является ли указанное окно дочерним окном.
 
 ```
 BOOL IsChild(const HWND hWnd) const throw();
@@ -1599,11 +1599,11 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsChild](/windows/desktop/api/winuser/nf-winuser-ischild) в Windows SDK.
+См. сведения о [дочернем](/windows/win32/api/winuser/nf-winuser-ischild) элементе в Windows SDK.
 
-##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
+##  <a name="isdialogmessage"></a>CWindow:: Исдиалогмессаже
 
-Определяет, предназначен ли сообщение для указанного диалогового окна.
+Определяет, предназначено ли сообщение для указанного диалогового окна.
 
 ```
 BOOL IsDialogMessage(LPMSG lpMsg) throw();
@@ -1611,11 +1611,11 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsDialogMessage](/windows/desktop/api/winuser/nf-winuser-isdialogmessagea) в Windows SDK.
+См. раздел [исдиалогмессаже](/windows/win32/api/winuser/nf-winuser-isdialogmessagew) в Windows SDK.
 
-##  <a name="isdlgbuttonchecked"></a>  CWindow::IsDlgButtonChecked
+##  <a name="isdlgbuttonchecked"></a>CWindow:: Исдлгбуттончеккед
 
-Определяет проверки состояния кнопки.
+Определяет состояние проверки кнопки.
 
 ```
 UINT IsDlgButtonChecked(int nIDButton) const throw();
@@ -1623,11 +1623,11 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsDlgButtonChecked](/windows/desktop/api/winuser/nf-winuser-isdlgbuttonchecked) в Windows SDK.
+См. раздел [исдлгбуттончеккед](/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked) в Windows SDK.
 
-##  <a name="isiconic"></a>  CWindow::IsIconic
+##  <a name="isiconic"></a>CWindow:: i Icon
 
-Определяет, является ли окно свернуто.
+Определяет, является ли окно сведенным.
 
 ```
 BOOL IsIconic() const throw();
@@ -1635,15 +1635,15 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) в Windows SDK.
+См. [Icon](/windows/win32/api/winuser/nf-winuser-isiconic) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#19](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]
 
-##  <a name="isparentdialog"></a>  CWindow::IsParentDialog
+##  <a name="isparentdialog"></a>CWindow:: Испарентдиалог
 
-Определяет, если родительское окно элемента управления — это диалоговое окно.
+Определяет, является ли родительское окно элемента управления диалоговым окном.
 
 ```
 BOOL IsParentDialog() throw();
@@ -1651,11 +1651,11 @@ BOOL IsParentDialog() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если родительское окно диалога, FALSE в противном случае.
+Возвращает значение TRUE, если родительское окно является диалоговым, и FALSE в противном случае.
 
-##  <a name="iswindow"></a>  CWindow::IsWindow
+##  <a name="iswindow"></a>CWindow:: «окно»
 
-Определяет, определяет ли указанного дескриптора окна существующему окну.
+Определяет, определяет ли указанный обработчик окна существующее окно.
 
 ```
 BOOL IsWindow() throw();
@@ -1663,15 +1663,15 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) в Windows SDK.
+См. [окно](/windows/win32/api/winuser/nf-winuser-iswindow) «Windows SDK».
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#20](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]
 
-##  <a name="iswindowenabled"></a>  CWindow::IsWindowEnabled
+##  <a name="iswindowenabled"></a>CWindow:: Исвиндовенаблед
 
-Определяет, включен ли окно для ввода данных.
+Определяет, включено ли для окна входные данные.
 
 ```
 BOOL IsWindowEnabled() const throw();
@@ -1679,15 +1679,15 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) в Windows SDK.
+См. раздел [исвиндовенаблед](/windows/win32/api/winuser/nf-winuser-iswindowenabled) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#21](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]
 
-##  <a name="iswindowvisible"></a>  CWindow::IsWindowVisible
+##  <a name="iswindowvisible"></a>CWindow:: Исвиндоввисибле
 
-Определяет состояние видимости для окна.
+Определяет состояние видимости окна.
 
 ```
 BOOL IsWindowVisible() const throw();
@@ -1695,15 +1695,15 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) в Windows SDK.
+См. раздел [исвиндоввисибле](/windows/win32/api/winuser/nf-winuser-iswindowvisible) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#22](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]
 
-##  <a name="iswindowunicode"></a>  CWindow::IsWindowUnicode
+##  <a name="iswindowunicode"></a>CWindow:: Исвиндовуникоде
 
-Определяет, является ли указанное окно собственного окна Юникода.
+Определяет, является ли указанное окно собственным окном Юникода.
 
 ```
 BOOL IsWindowUnicode() throw();
@@ -1711,15 +1711,15 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) в Windows SDK.
+См. раздел [исвиндовуникоде](/windows/win32/api/winuser/nf-winuser-iswindowunicode) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#23](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]
 
-##  <a name="iszoomed"></a>  CWindow::IsZoomed
+##  <a name="iszoomed"></a>CWindow:: Zoom
 
-Определяет, является ли окно развернуто.
+Определяет, является ли окно развернутым.
 
 ```
 BOOL IsZoomed() const throw();
@@ -1727,11 +1727,11 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) в Windows SDK.
+См. раздел « [Zoom](/windows/win32/api/winuser/nf-winuser-iszoomed) » в Windows SDK.
 
-##  <a name="killtimer"></a>  CWindow::KillTimer
+##  <a name="killtimer"></a>CWindow:: Киллтимер
 
-Уничтожает событие таймера, созданные `CWindow::SetTimer`.
+Уничтожает событие таймера, `CWindow::SetTimer`созданное.
 
 ```
 BOOL KillTimer(UINT nIDEvent) throw();
@@ -1739,11 +1739,11 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) в Windows SDK.
+См. раздел [киллтимер](/windows/win32/api/winuser/nf-winuser-killtimer) в Windows SDK.
 
-##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
+##  <a name="lockwindowupdate"></a>CWindow:: Локквиндовупдате
 
-Отключает или включает рисования в окне, вызвав [LockWindowUpdate](/windows/desktop/api/winuser/nf-winuser-lockwindowupdate) функции Win32.
+Отключает или включает рисование в окне путем вызова функции Win32 [локквиндовупдате](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) .
 
 ```
 BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
@@ -1752,27 +1752,27 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ### <a name="parameters"></a>Параметры
 
 *Блок*<br/>
-[in] Если значение TRUE (значение по умолчанию), окно будет заблокирована. В противном случае он будет разблокирована.
+окне Если TRUE (значение по умолчанию), окно будет заблокировано. В противном случае он будет разблокирован.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно успешно заблокирована; в противном случае — значение FALSE.
+Значение TRUE, если окно успешно заблокировано; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Если *блок* имеет значение TRUE, этот метод передает [m_hWnd](#m_hwnd) функции Win32; в противном случае он передает значение NULL.
+Если значение *bLock* равно true, этот метод передает [m_hWnd](#m_hwnd) функции Win32. в противном случае он передает значение NULL.
 
-##  <a name="m_hwnd"></a>  CWindow::m_hWnd
+##  <a name="m_hwnd"></a>CWindow:: m_hWnd
 
-Содержит дескриптор окна, связанный с `CWindow` объекта.
+Содержит маркер окна, связанного с `CWindow` объектом.
 
 ```
 HWND m_hWnd throw() throw();
 ```
 
-##  <a name="mapwindowpoints"></a>  CWindow::MapWindowPoints
+##  <a name="mapwindowpoints"></a>CWindow:: Мапвиндовпоинтс
 
-Преобразует набор точек из координатного пространства окна в координатное пространство другого окна.
+Преобразует набор точек из пространства координат окна в пространство координат другого окна.
 
 ```
 int MapWindowPoints(
@@ -1787,11 +1787,11 @@ int MapWindowPoints(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) в Windows SDK.
+См. раздел [мапвиндовпоинтс](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
+Вторая версия этого метода позволяет преобразовать координаты структуры [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
-##  <a name="messagebox"></a>  CWindow::MessageBox
+##  <a name="messagebox"></a>CWindow:: MessageBox
 
 Отображает окно сообщения.
 
@@ -1804,15 +1804,15 @@ int MessageBox(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) в Windows SDK.
+См. раздел [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#24](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]
 
-##  <a name="modifystyle"></a>  CWindow::ModifyStyle
+##  <a name="modifystyle"></a>CWindow:: Модифистиле
 
-Изменение стилей окна `CWindow` объекта.
+Изменяет стили `CWindow` окна объекта.
 
 ```
 BOOL ModifyStyle(
@@ -1823,42 +1823,42 @@ BOOL ModifyStyle(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*<br/>
-[in] Указывает стили окна для удаления во время изменения стиля.
+*двремове*<br/>
+окне Задает стили окна, которые будут удалены во время изменения стиля.
 
-*dwAdd*<br/>
-[in] Указывает стили окна для добавления во время изменения стиля.
+*двадд*<br/>
+окне Задает стили окна, добавляемые во время изменения стиля.
 
-*nFlags*<br/>
-[in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.
+*нфлагс*<br/>
+окне Флаги позиционирования окна. Список возможных значений см. в описании функции [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если изменяются стили окна; в противном случае — значение FALSE.
+Значение TRUE, если стили окна изменены; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функция Windows SDKfor сведения о стилях доступное окно.
+Добавляемые или удаляемые стили можно объединять с помощью побитового оператора &#124; or (). Сведения о доступных стилях окна см. в описании функции [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в разделе Windows сдкфор.
 
-Если *nFlags* не равно нулю, `ModifyStyle` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:
+Если *нфлагс* имеет ненулевое значение, `ModifyStyle` вызывает функцию `SetWindowPos`Win32 и перерисовывает окно путем объединения *нфлагс* со следующими четырьмя флагами:
 
-- SWP_NOSIZE сохраняет текущий размер.
+- SWP_NOSIZE оставляет текущий размер.
 
-- SWP_NOMOVE сохраняет текущую позицию.
+- SWP_NOMOVE оставляет текущую заданное расположение.
 
-- SWP_NOZORDER сохраняет текущий Z-порядка.
+- SWP_NOZORDER оставляет текущий Z порядок.
 
 - SWP_NOACTIVATE не активирует окно.
 
-Для изменения окна расширенных стилей, вызовите [ModifyStyleEx](#modifystyleex).
+Чтобы изменить расширенные стили окна, вызовите [модифистиликс](#modifystyleex).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#25](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]
 
-##  <a name="modifystyleex"></a>  CWindow::ModifyStyleEx
+##  <a name="modifystyleex"></a>CWindow:: Модифистиликс
 
-Изменяет расширенные стили окна из `CWindow` объекта.
+Изменяет расширенные стили `CWindow` окна объекта.
 
 ```
 BOOL ModifyStyleEx(
@@ -1869,42 +1869,42 @@ BOOL ModifyStyleEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwRemove*<br/>
-[in] Задает расширенные стили для удаления во время изменения стиля.
+*двремове*<br/>
+окне Задает расширенные стили, которые будут удалены во время изменения стиля.
 
-*dwAdd*<br/>
-[in] Задает расширенные стили нужно добавлять во время изменения стиля.
+*двадд*<br/>
+окне Задает расширенные стили, добавляемые во время изменения стиля.
 
-*nFlags*<br/>
-[in] Флаги размещения окна. Список возможных значений см. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) функции в пакете Windows SDK.
+*нфлагс*<br/>
+окне Флаги позиционирования окна. Список возможных значений см. в описании функции [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если изменяются расширенные стили окна; в противном случае — значение FALSE.
+Значение TRUE, если стили расширенного окна изменены. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Стили, чтобы добавить или удалить могут объединяться с помощью побитовой операции или ( &#124; ) оператор. См. в разделе [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функция Windows SDKfor сведения о доступных расширенные стили.
+Добавляемые или удаляемые стили можно объединять с помощью побитового оператора &#124; or (). Сведения о доступных расширенных стилях см. в описании функции [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в разделе Windows сдкфор.
 
-Если *nFlags* не равно нулю, `ModifyStyleEx` вызывает функцию Win32 `SetWindowPos`и перерисовывает окна путем объединения *nFlags* с использованием следующих четырех флагов:
+Если *нфлагс* имеет ненулевое значение, `ModifyStyleEx` вызывает функцию `SetWindowPos`Win32 и перерисовывает окно путем объединения *нфлагс* со следующими четырьмя флагами:
 
-- SWP_NOSIZE сохраняет текущий размер.
+- SWP_NOSIZE оставляет текущий размер.
 
-- SWP_NOMOVE сохраняет текущую позицию.
+- SWP_NOMOVE оставляет текущую заданное расположение.
 
-- SWP_NOZORDER сохраняет текущий Z-порядка.
+- SWP_NOZORDER оставляет текущий Z порядок.
 
 - SWP_NOACTIVATE не активирует окно.
 
-Чтобы изменить windows с помощью стилей регулярных окна, вызовите [ModifyStyle](#modifystyle).
+Чтобы изменить Windows с помощью обычных стилей окна, вызовите [модифистиле](#modifystyle).
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#26](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]
 
-##  <a name="movewindow"></a>  CWindow::MoveWindow
+##  <a name="movewindow"></a>CWindow:: Мовевиндов
 
-Изменяет размер и положение окна.
+Изменяет размер и расположение окна.
 
 ```
 BOOL MoveWindow(
@@ -1921,13 +1921,13 @@ BOOL MoveWindow(
 
 ### <a name="remarks"></a>Примечания
 
-Для окна верхнего уровня параметры объекта x и y являются относительно верхнего левого угла экрана. Для дочернего объекта окна они являются относительно левого верхнего угла клиентской области родительского окна.
+Для объекта окна верхнего уровня параметры x и y задаются относительно левого верхнего угла экрана. Для объекта дочернего окна они расположены относительно левого верхнего угла клиентской области родительского окна.
 
-Вторая версия этого метода использует [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, чтобы определить новое положение, ширину и высоту окна.
+Вторая версия этого метода использует структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) для определения новой координаты, ширины и высоты окна.
 
-##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
+##  <a name="nextdlgctrl"></a>CWindow:: Некстдлгктрл
 
-Устанавливает фокус на следующий элемент управления в диалоговом окне.
+Устанавливает фокус клавиатуры на следующий элемент управления в диалоговом окне.
 
 ```
 void NextDlgCtrl() const throw();
@@ -1935,9 +1935,9 @@ void NextDlgCtrl() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) в Windows SDK.
+См. раздел [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) в Windows SDK.
 
-##  <a name="openclipboard"></a>  CWindow::OpenClipboard
+##  <a name="openclipboard"></a>CWindow:: Опенклипбоард
 
 Открывает буфер обмена.
 
@@ -1947,27 +1947,27 @@ BOOL OpenClipboard() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard) в Windows SDK.
+См. раздел [опенклипбоард](/windows/win32/api/winuser/nf-winuser-openclipboard) в Windows SDK.
 
-##  <a name="operator_hwnd"></a>  CWindow::operator HWND
+##  <a name="operator_hwnd"></a>CWindow:: operator HWND
 
-Преобразует `CWindow` объект HWND.
+`CWindow` Преобразует объект в HWND.
 
 ```
 operator HWND() const throw();
 ```
 
-##  <a name="operator_eq"></a>  CWindow::operator =
+##  <a name="operator_eq"></a>CWindow:: operator =
 
-Назначает HWND для `CWindow` объекта, задав [m_hWnd](#m_hwnd) члена `hWnd`.
+Присваивает HWND `CWindow` объекту, устанавливая для `hWnd`элемента [m_hWnd](#m_hwnd) значение.
 
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```
 
-##  <a name="postmessage"></a>  CWindow::PostMessage
+##  <a name="postmessage"></a>CWindow::P Остмессаже
 
-Помещает сообщение в очередь сообщений, связанный с потоком, создавший окно.
+Помещает сообщение в очередь сообщений, связанную с потоком, создавшим окно.
 
 ```
 BOOL PostMessage(
@@ -1978,15 +1978,15 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) в Windows SDK.
+См. [сообщение](/windows/win32/api/winuser/nf-winuser-postmessagew) в Windows SDK.
 
-Возвращает, не ждет поток для обработки сообщения.
+Возвращает, не дожидаясь обработки сообщения потоком.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#27](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]
 
-##  <a name="prevdlgctrl"></a>  CWindow::PrevDlgCtrl
+##  <a name="prevdlgctrl"></a>CWindow::P Ревдлгктрл
 
 Устанавливает фокус клавиатуры на предыдущий элемент управления в диалоговом окне.
 
@@ -1996,11 +1996,11 @@ void PrevDlgCtrl() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [WM_NEXTDLGCTL](/windows/desktop/dlgbox/wm-nextdlgctl) в Windows SDK.
+См. раздел [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) в Windows SDK.
 
-##  <a name="print"></a>  CWindow::Print
+##  <a name="print"></a>CWindow::P печать
 
-Отправляет [WM_PRINT](/windows/desktop/gdi/wm-print) сообщение в окно запроса, что он рисования самого себя в заданном контексте устройства.
+Отправляет в окно сообщение [WM_PRINT](/windows/win32/gdi/wm-print) , чтобы запросить его прорисовку в указанном контексте устройства.
 
 ```
 void Print(HDC hDC, DWORD dwFlags) const throw();
@@ -2009,26 +2009,26 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 ### <a name="parameters"></a>Параметры
 
 *hDC*<br/>
-[in] Дескриптор контекста устройства.
+окне Маркер контекста устройства.
 
 *dwFlags*<br/>
-[in] Параметры рисования. Можно использовать один или несколько из следующих флагов:
+окне Задает параметры рисования. Можно сочетать один или несколько следующих флагов:
 
-- PRF_CHECKVISIBLE рисовать окно, только в том случае, если он видим.
+- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видимо.
 
-- PRF_CHILDREN рисования всех видимых дочерних окон.
+- PRF_CHILDREN Нарисуйте все видимые дочерние окна.
 
-- PRF_CLIENT рисования клиентской области окна.
+- PRF_CLIENT Нарисуйте клиентскую область окна.
 
 - PRF_ERASEBKGND стереть фон перед рисованием окна.
 
-- PRF_NONCLIENT рисования неклиентской области окна.
+- PRF_NONCLIENT Нарисуйте неклиентскую область окна.
 
-- Рисование PRF_OWNED все принадлежащие windows.
+- PRF_OWNED Нарисуйте все собственные окна.
 
-##  <a name="printclient"></a>  CWindow::PrintClient
+##  <a name="printclient"></a>CWindow::P Ринтклиент
 
-Отправляет [WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient) сообщение в окно запроса, что он рисования клиентской области в заданном контексте устройства.
+Отправляет сообщение [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) в окно, чтобы запросить прорисовку клиентской области в указанном контексте устройства.
 
 ```
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
@@ -2037,24 +2037,24 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ### <a name="parameters"></a>Параметры
 
 *hDC*<br/>
-[in] Дескриптор контекста устройства.
+окне Маркер контекста устройства.
 
 *dwFlags*<br/>
-[in] Указывает параметры для рисования. Можно использовать один или несколько из следующих флагов:
+окне Задает параметры рисования. Можно сочетать один или несколько следующих флагов:
 
-- PRF_CHECKVISIBLE рисовать окно, только в том случае, если он видим.
+- PRF_CHECKVISIBLE Нарисуйте окно только в том случае, если оно видимо.
 
-- PRF_CHILDREN рисования всех видимых дочерних окон.
+- PRF_CHILDREN Нарисуйте все видимые дочерние окна.
 
-- PRF_CLIENT рисования клиентской области окна.
+- PRF_CLIENT Нарисуйте клиентскую область окна.
 
 - PRF_ERASEBKGND стереть фон перед рисованием окна.
 
-- PRF_NONCLIENT рисования неклиентской области окна.
+- PRF_NONCLIENT Нарисуйте неклиентскую область окна.
 
-- Рисование PRF_OWNED все принадлежащие windows.
+- PRF_OWNED Нарисуйте все собственные окна.
 
-##  <a name="rcdefault"></a>  CWindow::rcDefault
+##  <a name="rcdefault"></a>CWindow:: Ркдефаулт
 
 Содержит размеры окна по умолчанию.
 
@@ -2062,9 +2062,9 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 static RECT rcDefault;
 ```
 
-##  <a name="redrawwindow"></a>  CWindow::RedrawWindow
+##  <a name="redrawwindow"></a>CWindow:: Редраввиндов
 
-Обновляет заданную прямоугольную или другую в клиентской области.
+Обновляет указанный прямоугольник или регион в клиентской области.
 
 ```
 BOOL RedrawWindow(
@@ -2077,13 +2077,13 @@ throw()
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) в Windows SDK.
+См. раздел [редраввиндов](/windows/win32/api/winuser/nf-winuser-redrawwindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#28](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]
 
-##  <a name="releasedc"></a>  CWindow::ReleaseDC
+##  <a name="releasedc"></a>CWindow:: Релеаседк
 
 Освобождает контекст устройства.
 
@@ -2093,15 +2093,15 @@ int ReleaseDC(HDC hDC);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) в Windows SDK.
+См. раздел [релеаседк](/windows/win32/api/winuser/nf-winuser-releasedc) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#9](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]
 
-##  <a name="resizeclient"></a>  CWindow::ResizeClient
+##  <a name="resizeclient"></a>CWindow:: Ресизеклиент
 
-Изменяет размер окна по размеру области указанного клиента.
+Изменяет размер окна до указанного размера клиентской области.
 
 ```
 BOOL ResizeClient(
@@ -2112,18 +2112,18 @@ BOOL ResizeClient(
 
 ### <a name="parameters"></a>Параметры
 
-*nWidth*<br/>
+*нвидс*<br/>
 Новая ширина окна в пикселях.
 
-*nHeight*<br/>
+*нхеигхт*<br/>
 Новая высота окна в пикселях.
 
 *bRedraw*<br/>
-Флаг, указывающий, следует ли перерисовать изменения. Значение по умолчанию — FALSE, указывает, что изменения не будут перерисовываться окна.
+Флаг, указывающий, следует ли перерисовывать изменения. Значение по умолчанию — FALSE, означающее, что окно не перерисовывает изменения.
 
-##  <a name="screentoclient"></a>  CWindow::ScreenToClient
+##  <a name="screentoclient"></a>CWindow:: Скринтоклиент
 
-Преобразует экранные координаты в координатах клиентской области окна.
+Преобразует экранные координаты в клиентские координаты.
 
 ```
 BOOL ScreenToClient(LPPOINT lpPoint) const throw();
@@ -2132,13 +2132,13 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) в Windows SDK.
+См. раздел [скринтоклиент](/windows/win32/api/winuser/nf-winuser-screentoclient) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
+Вторая версия этого метода позволяет преобразовать координаты структуры [Rect](/previous-versions/dd162897\(v=vs.85\)) .
 
-##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
+##  <a name="scrollwindow"></a>CWindow:: Скроллвиндов
 
-Прокручивает область указанного клиента.
+Прокручивает указанную клиентскую область.
 
 ```
 BOOL ScrollWindow(
@@ -2150,11 +2150,11 @@ BOOL ScrollWindow(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow) в Windows SDK.
+См. раздел [скроллвиндов](/windows/win32/api/winuser/nf-winuser-scrollwindow) в Windows SDK.
 
-##  <a name="scrollwindowex"></a>  CWindow::ScrollWindowEx
+##  <a name="scrollwindowex"></a>CWindow:: Скроллвиндовекс
 
-Прокручивает область указанного клиента с помощью дополнительных функций.
+Прокручивает указанную клиентскую область дополнительными функциями.
 
 ```
 int ScrollWindowEx(
@@ -2169,11 +2169,11 @@ int ScrollWindowEx(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ScrollWindowEx](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) в Windows SDK.
+См. раздел [скроллвиндовекс](/windows/win32/api/winuser/nf-winuser-scrollwindowex) в Windows SDK.
 
-##  <a name="senddlgitemmessage"></a>  CWindow::SendDlgItemMessage
+##  <a name="senddlgitemmessage"></a>CWindow:: Сенддлгитеммессаже
 
-Отправляет сообщение в элемент управления.
+Отправляет сообщение элементу управления.
 
 ```
 LRESULT SendDlgItemMessage(
@@ -2185,11 +2185,11 @@ LRESULT SendDlgItemMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SendDlgItemMessage](/windows/desktop/api/winuser/nf-winuser-senddlgitemmessagea) в Windows SDK.
+См. раздел [сенддлгитеммессаже](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew) в Windows SDK.
 
-##  <a name="sendmessage"></a>  CWindow::SendMessage
+##  <a name="sendmessage"></a>CWindow:: SendMessage
 
-Отправляет сообщение в окно и ожидает сообщение процедуре окна обработано.
+Отправляет сообщение в окно и не возвращает результат, пока сообщение не будет обработано процедурой окна.
 
 ```
 LRESULT SendMessage(
@@ -2206,15 +2206,15 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) в Windows SDK.
+См. раздел [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#29](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]
 
-##  <a name="sendmessagetodescendants"></a>  CWindow::SendMessageToDescendants
+##  <a name="sendmessagetodescendants"></a>CWindow:: Сендмессажетодесцендантс
 
-Отправляет указанное сообщение для всех непосредственных дочерних объектов `CWindow` объекта.
+Отправляет указанное сообщение всем непосредственным дочерним `CWindow` объектам объекта.
 
 ```
 void SendMessageToDescendants(
@@ -2227,22 +2227,22 @@ void SendMessageToDescendants(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-[in] Отправляемое сообщение.
+окне Отправляемое сообщение.
 
 *wParam*<br/>
-[in] Дополнительные сведения, относящиеся к сообщению.
+окне Дополнительные сведения, относящиеся к конкретному сообщению.
 
 *lParam*<br/>
-[in] Дополнительные сведения, относящиеся к сообщению.
+окне Дополнительные сведения, относящиеся к конкретному сообщению.
 
-*bDeep*<br/>
-[in] Если значение равно TRUE (значение по умолчанию), будут отправляться сообщения для всех окон-потомков; в противном случае он будет отправляться только к непосредственным дочерним окнам.
+*бдип*<br/>
+окне Если TRUE (значение по умолчанию), сообщение будет отправлено всем окнам-потомкам; в противном случае он будет отправлен только в непосредственные дочерние окна.
 
 ### <a name="remarks"></a>Примечания
 
-Если *bDeep* имеет значение TRUE, сообщение отправляется Кроме того для всех окон-потомков.
+Если *БДИП* имеет значение true, сообщение также отправляется во все остальные окна-потомки.
 
-##  <a name="sendnotifymessage"></a>  CWindow::SendNotifyMessage
+##  <a name="sendnotifymessage"></a>CWindow:: Сенднотифимессаже
 
 Отправляет сообщение в окно.
 
@@ -2255,11 +2255,11 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) в Windows SDK.
+См. раздел [сенднотифимессаже](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) в Windows SDK.
 
-Если был создан окно вызывающим потоком `SendNotifyMessage` не завершается, пока сообщение процедуре окна обработано. В противном случае возвращается немедленно.
+Если окно было создано вызывающим потоком, `SendNotifyMessage` не возвращает значение до тех пор, пока процедура окна не обработала сообщение. В противном случае он возвращает значение немедленно.
 
-##  <a name="setactivewindow"></a>  CWindow::SetActiveWindow
+##  <a name="setactivewindow"></a>CWindow:: Сетактивевиндов
 
 Активирует окно.
 
@@ -2269,15 +2269,15 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) в Windows SDK.
+См. раздел [сетактивевиндов](/windows/win32/api/winuser/nf-winuser-setactivewindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#30](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]
 
-##  <a name="setcapture"></a>  CWindow::SetCapture
+##  <a name="setcapture"></a>CWindow:: Сеткаптуре
 
-Отправляет все последующие мыши в окне.
+Отправляет все последующие входные данные мыши в окно.
 
 ```
 HWND SetCapture() throw();
@@ -2285,11 +2285,11 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) в Windows SDK.
+См. раздел [сеткаптуре](/windows/win32/api/winuser/nf-winuser-setcapture) в Windows SDK.
 
-##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
+##  <a name="setclipboardviewer"></a>CWindow:: Сетклипбоардвиевер
 
-Добавляет окно в цепочке средства просмотра буфера обмена.
+Добавляет окно в цепочку средства просмотра буфера обмена.
 
 ```
 HWND SetClipboardViewer() throw();
@@ -2297,11 +2297,11 @@ HWND SetClipboardViewer() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetClipboardViewer](/windows/desktop/api/winuser/nf-winuser-setclipboardviewer) в Windows SDK.
+См. раздел [сетклипбоардвиевер](/windows/win32/api/winuser/nf-winuser-setclipboardviewer) в Windows SDK.
 
-##  <a name="setdlgctrlid"></a>  CWindow::SetDlgCtrlID
+##  <a name="setdlgctrlid"></a>CWindow:: Сетдлгктрлид
 
-Идентификатор окна задает указанное значение.
+Задает для идентификатора окна указанное значение.
 
 ```
 int SetDlgCtrlID(int nID) throw();
@@ -2310,15 +2310,15 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Новое значение, задаваемое для окна идентификатор.
+окне Новое значение, которое необходимо задать для идентификатора окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения прежний идентификатор окна. в противном случае 0.
+В случае успеха предыдущий идентификатор окна; в противном случае — 0.
 
-##  <a name="setdlgitemint"></a>  CWindow::SetDlgItemInt
+##  <a name="setdlgitemint"></a>CWindow:: Сетдлгитеминт
 
-Изменяет текст элемента управления в строковое представление целочисленного значения.
+Изменяет текст элемента управления на строковое представление целочисленного значения.
 
 ```
 BOOL SetDlgItemInt(
@@ -2329,11 +2329,11 @@ BOOL SetDlgItemInt(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetDlgItemInt](/windows/desktop/api/winuser/nf-winuser-setdlgitemint) в Windows SDK.
+См. раздел [сетдлгитеминт](/windows/win32/api/winuser/nf-winuser-setdlgitemint) в Windows SDK.
 
 ##  <a name="setdlgitemtext"></a>  CWindow::SetDlgItemText
 
-Изменение текста элемента управления.
+Изменяет текст элемента управления.
 
 ```
 BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
@@ -2341,11 +2341,11 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetDlgItemText](/windows/desktop/api/winuser/nf-winuser-setdlgitemtexta) в Windows SDK.
+См. раздел [сетдлгитемтекст](/windows/win32/api/winuser/nf-winuser-setdlgitemtextw) в Windows SDK.
 
-##  <a name="setfocus"></a>  CWindow::SetFocus
+##  <a name="setfocus"></a>CWindow:: SetFocus
 
-Задает фокус ввода в окно.
+Устанавливает фокус ввода на окно.
 
 ```
 HWND SetFocus() throw();
@@ -2353,15 +2353,15 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) в Windows SDK.
+См. раздел [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#31](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]
 
-##  <a name="setfont"></a>  CWindow::SetFont
+##  <a name="setfont"></a>CWindow:: Сетфонт
 
-Изменяет текущий шрифт окна, отправляя [WM_SETFONT](/windows/desktop/winmsg/wm-setfont) сообщение в окно.
+Изменяет текущий шрифт окна, отправляя в окно сообщение [WM_SETFONT](/windows/win32/winmsg/wm-setfont) .
 
 ```
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
@@ -2369,15 +2369,15 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hFont*<br/>
-[in] Дескриптор нового шрифта.
+*хфонт*<br/>
+окне Маркер для нового шрифта.
 
 *bRedraw*<br/>
-[in] Если значение TRUE (значение по умолчанию), окно перерисовывается. В противном случае он не является.
+окне Если TRUE (значение по умолчанию), окно перерисовывается. В противном случае — нет.
 
-##  <a name="sethotkey"></a>  CWindow::SetHotKey
+##  <a name="sethotkey"></a>CWindow:: Сесоткэй
 
-Связывает сочетания клавиш с окном, отправляя сообщение WM_SETHOTKEY.
+Связывает горячую клавишу с окном, отправляя сообщение WM_SETHOTKEY.
 
 ```
 int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
@@ -2385,19 +2385,19 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*wVirtualKeyCode*<br/>
-[in] Виртуального кода клавиши сочетания клавиш. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h.
+*ввиртуалкэйкоде*<br/>
+окне Код виртуального ключа для сочетания клавиш. Список стандартных виртуальных клавиш см. в разделе Winuser. h.
 
-*wModifiers*<br/>
-[in] Модификаторы клавиш. Список возможных значений см. в разделе WM_SETHOTKEY в пакете Windows SDK.
+*вмодифиерс*<br/>
+окне Модификаторы сочетания клавиш. Список возможных значений см. в разделе WM_SETHOTKEY в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Список возможных возвращаемых значений см. в разделе [WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey) в пакете Windows SDK.
+Список возможных возвращаемых значений см. в разделе [WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey) в Windows SDK.
 
-##  <a name="seticon"></a>  CWindow::SetIcon
+##  <a name="seticon"></a>CWindow:: Сетикон
 
-Задает значок окна больших или маленьких значка, идентифицируемый *hIcon*.
+Устанавливает крупный или маленький значок окна в значок, определенный параметром *Хикон*.
 
 ```
 HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
@@ -2406,20 +2406,20 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 ### <a name="parameters"></a>Параметры
 
 *hIcon*<br/>
-[in] Дескриптор значка.
+окне Маркер для нового значка.
 
-*bBigIcon*<br/>
-[in] Если значение TRUE (значение по умолчанию), метод устанавливает крупных значков. В противном случае он устанавливает маленького значка.
+*ббигикон*<br/>
+окне Если TRUE (значение по умолчанию), метод задает крупный значок. В противном случае устанавливается маленький значок.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор значок "Назад".
+Маркер для предыдущего значка.
 
 ### <a name="remarks"></a>Примечания
 
-`SetIcon` отправляет [WM_SETICON](/windows/desktop/winmsg/wm-seticon) сообщение в окно.
+`SetIcon`отправляет сообщение [WM_SETICON](/windows/win32/winmsg/wm-seticon) в окно.
 
-##  <a name="setmenu"></a>  CWindow::SetMenu
+##  <a name="setmenu"></a>CWindow:: Сетмену
 
 Изменяет текущее меню окна.
 
@@ -2429,9 +2429,9 @@ BOOL SetMenu(HMENU hMenu) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetMenu](/windows/desktop/api/winuser/nf-winuser-setmenu) в Windows SDK.
+См. раздел [сетмену](/windows/win32/api/winuser/nf-winuser-setmenu) в Windows SDK.
 
-##  <a name="setparent"></a>  CWindow::SetParent
+##  <a name="setparent"></a>CWindow:: Сетпарент
 
 Изменяет родительское окно.
 
@@ -2441,15 +2441,15 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetParent](/windows/desktop/api/winuser/nf-winuser-setparent) в Windows SDK.
+См. раздел [сетпарент](/windows/win32/api/winuser/nf-winuser-setparent) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#32](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]
 
-##  <a name="setredraw"></a>  CWindow::SetRedraw
+##  <a name="setredraw"></a>CWindow:: Сетредрав
 
-Устанавливает или снимает флаг перерисовки, отправляя [WM_SETREDRAW](/windows/desktop/gdi/wm-setredraw) сообщение в окно.
+Устанавливает или снимает флаг перерисовки, отправляя в окно сообщение [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) .
 
 ```
 void SetRedraw(BOOL bRedraw = TRUE) throw();
@@ -2458,17 +2458,17 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 ### <a name="parameters"></a>Параметры
 
 *bRedraw*<br/>
-[in] Указывает состояние флага перерисовки. Если значение TRUE (значение по умолчанию), перерисовки флаг установлен; Если значение равно FALSE, флаг снят.
+окне Задает состояние флага перерисовки. Если TRUE (значение по умолчанию), устанавливается флаг перерисовки; Если значение равно FALSE, флажок снимается.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите `SetRedraw` для разрешения смены перерисовку либо для предотвращения изменения из объекта.
+Вызовите `SetRedraw` , чтобы разрешить перерисовку изменений или предотвратить перерисовку изменений.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#33](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]
 
-##  <a name="setscrollinfo"></a>  CWindow::SetScrollInfo
+##  <a name="setscrollinfo"></a>CWindow:: Сетскроллинфо
 
 Задает параметры полосы прокрутки.
 
@@ -2481,11 +2481,11 @@ int SetScrollInfo(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetScrollInfo](/windows/desktop/api/winuser/nf-winuser-setscrollinfo) в Windows SDK.
+См. раздел [сетскроллинфо](/windows/win32/api/winuser/nf-winuser-setscrollinfo) в Windows SDK.
 
-##  <a name="setscrollpos"></a>  CWindow::SetScrollPos
+##  <a name="setscrollpos"></a>CWindow:: Сетскроллпос
 
-Изменяет положение ползунка полосы прокрутки.
+Изменяет расположение бегунка.
 
 ```
 int SetScrollPos(
@@ -2496,11 +2496,11 @@ int SetScrollPos(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetScrollPos](/windows/desktop/api/winuser/nf-winuser-setscrollpos) в Windows SDK.
+См. раздел [сетскроллпос](/windows/win32/api/winuser/nf-winuser-setscrollpos) в Windows SDK.
 
-##  <a name="setscrollrange"></a>  CWindow::SetScrollRange
+##  <a name="setscrollrange"></a>CWindow:: Сетскроллранже
 
-Изменяет диапазон значений для полосы прокрутки.
+Изменяет диапазон полосы прокрутки.
 
 ```
 BOOL SetScrollRange(
@@ -2512,9 +2512,9 @@ BOOL SetScrollRange(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetScrollRange](/windows/desktop/api/winuser/nf-winuser-setscrollrange) в Windows SDK.
+См. раздел [сетскроллранже](/windows/win32/api/winuser/nf-winuser-setscrollrange) в Windows SDK.
 
-##  <a name="settimer"></a>  CWindow::SetTimer
+##  <a name="settimer"></a>CWindow:: Сеттимер
 
 Создает событие таймера.
 
@@ -2527,9 +2527,9 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) в Windows SDK.
+См. раздел [сеттимер](/windows/win32/api/winuser/nf-winuser-settimer) в Windows SDK.
 
-##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
+##  <a name="setwindowcontexthelpid"></a>CWindow:: Сетвиндовконтексселпид
 
 Задает идентификатор контекста справки для окна.
 
@@ -2539,11 +2539,11 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowContextHelpId](/windows/desktop/api/winuser/nf-winuser-setwindowcontexthelpid) в Windows SDK.
+См. раздел [сетвиндовконтексселпид](/windows/win32/api/winuser/nf-winuser-setwindowcontexthelpid) в Windows SDK.
 
-##  <a name="setwindowlong"></a>  CWindow::SetWindowLong
+##  <a name="setwindowlong"></a>CWindow:: SetWindowLong
 
-Задает 32-разрядное значение с указанным смещением в открытое окно память.
+Задает 32-разрядное значение с указанным смещением в дополнительной памяти окна.
 
 ```
 LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
@@ -2551,14 +2551,14 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) в Windows SDK.
+См. раздел [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) в Windows SDK.
 
 > [!NOTE]
->  Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте [CWindow::SetWindowLongPtr](#setwindowlongptr).
+>  Чтобы написать код, совместимый как с 32-разрядными, так и с 64-разрядными версиями Windows, используйте [CWindow:: сетвиндовлонгптр](#setwindowlongptr).
 
 ##  <a name="setwindowlongptr"></a>  CWindow::SetWindowLongPtr
 
-Изменяет атрибут для указанного окна, а также задает значение с указанным смещением в открытое окно памяти.
+Изменяет атрибут указанного окна, а также задает значение с указанным смещением в дополнительной памяти окна.
 
 ```
 LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
@@ -2566,13 +2566,13 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) в Windows SDK.
+См. раздел [сетвиндовлонгптр](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) в Windows SDK.
 
-Эта функция заменяет `CWindow::SetWindowLong` метод. Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте `CWindow::SetWindowLongPtr`.
+Эта функция заменяет `CWindow::SetWindowLong` метод. Чтобы написать код, совместимый как с 32-разрядными, так и с 64-разрядными `CWindow::SetWindowLongPtr`версиями Windows, используйте.
 
-##  <a name="setwindowplacement"></a>  CWindow::SetWindowPlacement
+##  <a name="setwindowplacement"></a>CWindow:: Сетвиндовплацемент
 
-Задает состояние отображения, а также позиций.
+Задает отображение состояния и позиций.
 
 ```
 BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
@@ -2580,11 +2580,11 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) в Windows SDK.
+См. раздел [сетвиндовплацемент](/windows/win32/api/winuser/nf-winuser-setwindowplacement) в Windows SDK.
 
-##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
+##  <a name="setwindowpos"></a>CWindow:: SetWindowPos
 
-Задает размер, положение и Z-порядке.
+Задает размер, расположение и Z порядок.
 
 ```
 BOOL SetWindowPos(
@@ -2603,13 +2603,13 @@ BOOL SetWindowPos(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) в Windows SDK.
+См. раздел [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) в Windows SDK.
 
-Вторая версия этого метода использует [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, чтобы задать новое положение, ширину и высоту окна.
+Вторая версия этого метода использует структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) для задания новой координаты, ширины и высоты окна.
 
-##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
+##  <a name="setwindowrgn"></a>CWindow:: Сетвиндовргн
 
-Задает область окна, окна.
+Задает область окна для окна.
 
 ```
 int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
@@ -2617,7 +2617,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowRgn](/windows/desktop/api/winuser/nf-winuser-setwindowrgn) в Windows SDK.
+См. раздел [сетвиндовргн](/windows/win32/api/winuser/nf-winuser-setwindowrgn) в Windows SDK.
 
 ##  <a name="setwindowtext"></a>  CWindow::SetWindowText
 
@@ -2629,15 +2629,15 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) в Windows SDK.
+См. раздел [SetWindowText](/windows/win32/api/winuser/nf-winuser-setwindowtextw) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#34](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]
 
-##  <a name="setwindowword"></a>  CWindow::SetWindowWord
+##  <a name="setwindowword"></a>CWindow:: Сетвиндовворд
 
-Задает 16-разрядное значение с указанным смещением в открытое окно память.
+Задает 16-разрядное значение с указанным смещением в дополнительной памяти окна.
 
 ```
 WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
@@ -2645,11 +2645,11 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) в Windows SDK.
+См. раздел [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) в Windows SDK.
 
-##  <a name="showcaret"></a>  CWindow::ShowCaret
+##  <a name="showcaret"></a>CWindow:: Шовкарет
 
-Отображает системного курсора.
+Отображает системный курсор.
 
 ```
 BOOL ShowCaret() throw();
@@ -2657,13 +2657,13 @@ BOOL ShowCaret() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowCaret](/windows/desktop/api/winuser/nf-winuser-showcaret) в Windows SDK.
+См. раздел [шовкарет](/windows/win32/api/winuser/nf-winuser-showcaret) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#35](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]
 
-##  <a name="showownedpopups"></a>  CWindow::ShowOwnedPopups
+##  <a name="showownedpopups"></a>CWindow:: Шововнедпопупс
 
 Показывает или скрывает всплывающие окна, принадлежащие окну.
 
@@ -2673,9 +2673,9 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) в Windows SDK.
+См. раздел [шововнедпопупс](/windows/win32/api/winuser/nf-winuser-showownedpopups) в Windows SDK.
 
-##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
+##  <a name="showscrollbar"></a>CWindow:: Шовскроллбар
 
 Показывает или скрывает полосу прокрутки.
 
@@ -2685,11 +2685,11 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowScrollBar](/windows/desktop/api/winuser/nf-winuser-showscrollbar) в Windows SDK.
+См. раздел [шовскроллбар](/windows/win32/api/winuser/nf-winuser-showscrollbar) в Windows SDK.
 
-##  <a name="showwindow"></a>  CWindow::ShowWindow
+##  <a name="showwindow"></a>CWindow:: ShowWindow
 
-Задает состояние отображения окна.
+Задает режим отображения окна.
 
 ```
 BOOL ShowWindow(int nCmdShow) throw();
@@ -2697,7 +2697,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) в Windows SDK.
+См. раздел [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2705,7 +2705,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ##  <a name="showwindowasync"></a>  CWindow::ShowWindowAsync
 
-Задает состояние отображения для окна, созданного в другом потоке.
+Задает состояние отображения окна, созданного другим потоком.
 
 ```
 BOOL ShowWindowAsync(int nCmdShow) throw();
@@ -2713,9 +2713,9 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) в Windows SDK.
+См. раздел [showWindowAsync](/windows/win32/api/winuser/nf-winuser-showwindowasync) в Windows SDK.
 
-##  <a name="updatewindow"></a>  CWindow::UpdateWindow
+##  <a name="updatewindow"></a>CWindow:: Упдатевиндов
 
 Обновляет клиентскую область.
 
@@ -2725,15 +2725,15 @@ BOOL UpdateWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow) в Windows SDK.
+См. раздел [упдатевиндов](/windows/win32/api/winuser/nf-winuser-updatewindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#37](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]
 
-##  <a name="validaterect"></a>  CWindow::ValidateRect
+##  <a name="validaterect"></a>CWindow:: Валидатерект
 
-Проверяет клиентскую область в пределах заданного прямоугольника.
+Проверяет клиентскую область в пределах указанного прямоугольника.
 
 ```
 BOOL ValidateRect(LPCRECT lpRect) throw();
@@ -2741,11 +2741,11 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ValidateRect](/windows/desktop/api/winuser/nf-winuser-validaterect) в Windows SDK.
+См. раздел [валидатерект](/windows/win32/api/winuser/nf-winuser-validaterect) в Windows SDK.
 
-##  <a name="validatergn"></a>  CWindow::ValidateRgn
+##  <a name="validatergn"></a>CWindow:: Валидатергн
 
-Проверяет клиентскую область в пределах заданной области.
+Проверяет клиентскую область в указанном регионе.
 
 ```
 BOOL ValidateRgn(HRGN hRgn) throw();
@@ -2753,11 +2753,11 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ValidateRgn](/windows/desktop/api/winuser/nf-winuser-validatergn) в Windows SDK.
+См. раздел [валидатергн](/windows/win32/api/winuser/nf-winuser-validatergn) в Windows SDK.
 
-##  <a name="winhelp"></a>  CWindow::WinHelp
+##  <a name="winhelp"></a>CWindow:: WinHelp
 
-Справка Windows запускается.
+Запускает справку Windows.
 
 ```
 BOOL WinHelp(
@@ -2768,8 +2768,8 @@ BOOL WinHelp(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) в Windows SDK.
+См. раздел [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

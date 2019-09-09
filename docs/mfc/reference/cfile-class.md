@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375759"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506586"
 ---
 # <a name="cfile-class"></a>Класс Кфиле
 
@@ -142,7 +142,7 @@ class CFile : public CObject
 
 Как правило, дисковый файл открывается автоматически при `CFile` создании и закрытии при уничтожении. Статические функции-члены позволяют опрашивать состояние файла, не открывая файл.
 
-Дополнительные сведения об `CFile`использовании см. в статьях [файлы MFC](../../mfc/files-in-mfc.md) и [Обработка файлов](../../c-runtime-library/file-handling.md) в справочнике по *библиотеке времени выполнения*.
+Дополнительные сведения об `CFile`использовании см. в статьях [файлы MFC](../../mfc/files-in-mfc.md) и [Обработка файлов](../../c-runtime-library/file-handling.md) в *справочнике по библиотеке времени выполнения*.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -382,7 +382,7 @@ virtual CString GetFileTitle() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает [жетфилетитле](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) для получения заголовка файла. В случае успеха метод возвращает строку, которую система будет использовать для вывода имени файла пользователю. В противном случае метод вызывает [пасфиндфиленаме](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) для получения имени файла (включая расширение файла) базового файла. Это означает, что расширение файла не всегда включается в возвращаемую строку заголовка файла. Дополнительные сведения см. в разделе [жетфилетитле](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea) и [пасфиндфиленаме](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) в Windows SDK.
+Этот метод вызывает [жетфилетитле](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) для получения заголовка файла. В случае успеха метод возвращает строку, которую система будет использовать для вывода имени файла пользователю. В противном случае метод вызывает [пасфиндфиленаме](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) для получения имени файла (включая расширение файла) базового файла. Это означает, что расширение файла не всегда включается в возвращаемую строку заголовка файла. Дополнительные сведения см. в разделе [жетфилетитле](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew) и [пасфиндфиленаме](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) в Windows SDK.
 
 Чтобы получить полный путь к файлу, включая имя, [вызовите метод](#getfilepath)Multipath. Чтобы вернуть только имя файла, вызовите метод [filename](#getfilename).
 
@@ -466,7 +466,7 @@ static BOOL PASCAL GetStatus(
 
 Нестатическая версия `GetStatus` извлекает сведения о состоянии открытого файла, связанного с данным `CFile` объектом.  Статическая версия `GetStatus` получает состояние файла из заданного пути к файлу без открытия файла. Эта версия полезна для тестирования прав на существование и доступ к файлу.
 
-`m_attribute` Элемент`CFileStatus` структуры ссылается на набор атрибутов файла. Класс предоставляет тип перечисления атрибута, чтобы атрибуты файла можно было указать символьно:  `CFile`
+`m_attribute` Элемент`CFileStatus` структуры ссылается на набор атрибутов файла. Класс предоставляет тип перечисления атрибута, чтобы атрибуты файла можно было указать символьно: `CFile`
 
 ```
 enum Attribute {
@@ -600,10 +600,10 @@ virtual BOOL Open(
 
 |`pError`|Произошла ошибка|Возвращаемое значение|Кфиликсцептион содержимое|
 |--------------|------------------------|------------------|----------------------------|
-|NULL|Нет|true|Н/Д|
-|PTR для`CFileException`|Нет|true|без изменений|
-|NULL|Да|false|Н/Д|
-|PTR для`CFileException`|Да|false|инициализировано для описания ошибки|
+|NULL|Нет|TRUE|Н/Д|
+|PTR для`CFileException`|Нет|TRUE|без изменений|
+|NULL|Да|FALSE|Н/Д|
+|PTR для`CFileException`|Да|FALSE|инициализировано для описания ошибки|
 
 ### <a name="example"></a>Пример
 
@@ -613,7 +613,7 @@ virtual BOOL Open(
 
 ##  <a name="operator_handle"></a>ОБРАБОТЧИК Кфиле:: operator
 
-Этот оператор используется для передачи `CFile` в объект обработчика таких функций, как [реадфиликс](/windows/desktop/api/fileapi/nf-fileapi-readfileex) и [функции getFileTime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime) , для которых `HANDLE`требуется.
+Этот оператор используется для передачи `CFile` в объект обработчика таких функций, как [реадфиликс](/windows/win32/api/fileapi/nf-fileapi-readfileex) и [функции getFileTime](/windows/win32/api/fileapi/nf-fileapi-getfiletime) , для которых `HANDLE`требуется.
 
 ```
 operator HANDLE() const;

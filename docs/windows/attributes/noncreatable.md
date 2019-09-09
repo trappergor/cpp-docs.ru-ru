@@ -1,21 +1,21 @@
 ---
-title: noncreatable (атрибут COM C++)
+title: несоздаваемый (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: a10d93650c0ae564019a09b34c3a604d12327998
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e855497cb6f619ecdaa6aedf16a04f045a60faa7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305324"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514562"
 ---
 # <a name="noncreatable"></a>noncreatable
 
-Определяет объект, который не может быть создан сама по себе.
+Определяет объект, который не может быть создан самим по себе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,9 +25,9 @@ ms.locfileid: "62305324"
 
 ## <a name="remarks"></a>Примечания
 
-**Noncreatable** атрибут C++ имеет ту же функциональность, что [noncreatable](/windows/desktop/Midl/noncreatable) описании атрибута MIDL и автоматически передает вызов в созданный. IDL-файл компилятором.
+**Несоздаваемый** C++ атрибут имеет те же функциональные возможности, что и [несоздаваемый](/windows/win32/Midl/noncreatable) атрибут MIDL, и автоматически передается в созданный объект. IDL-файл компилятором.
 
-Если этот атрибут используется в проекте, где применяется ATL, поведение атрибута изменяется. Помимо описанного выше поведения, атрибут также вставляет [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Этот макрос с библиотекой ATL указывает, что объект не может быть создан извне.
+Если этот атрибут используется в проекте, использующем ATL, поведение атрибута изменяется. В дополнение к описанному выше поведению, атрибут также внедряет макрос [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) . Этот макрос указывает ATL, что объект не может быть создан извне.
 
 ## <a name="example"></a>Пример
 
@@ -55,10 +55,10 @@ class CMyClass : public A
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

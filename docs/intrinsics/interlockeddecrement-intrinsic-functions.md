@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedDecrement
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,22 +44,22 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396760"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217675"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
+# <a name="_interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
 
 **Блок, относящийся только к системам Microsoft**
 
-Предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) функции.
+Предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккеддекремент](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) .
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,10 +98,10 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*lpAddend*<br/>
-[in, out] Указатель на переменную на единицу.
+*лпадденд*\
+[вход, выход] Указатель на переменную, которую необходимо уменьшить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -111,10 +111,11 @@ __int64 _InterlockedDecrement64_nf(
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`_InterlockedDecrement`, `_InterlockedDecrement16`, `_InterlockedDecrement64`|x86, ARM, x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`, `_InterlockedDecrement16`|x86, ARM, x64, ARM64|
+|`_InterlockedDecrement64`|ARM, x64, ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -122,9 +123,9 @@ __int64 _InterlockedDecrement64_nf(
 
 Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedDecrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedDecrement64`работает с 64-разрядными целыми значениями.
 
-На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
+На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
 
-Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровнять](../cpp/align-cpp.md).
+Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровняйте](../cpp/align-cpp.md).
 
 Эти процедуры доступны только как встроенные объекты.
 
@@ -198,6 +199,6 @@ void __cdecl SimpleThread(void* pParam) {
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[Ключевые слова](../cpp/keywords-cpp.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

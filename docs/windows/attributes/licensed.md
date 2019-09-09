@@ -1,21 +1,21 @@
 ---
-title: Лицензированные (атрибут COM C++)
+title: лицензированоC++ (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409334"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514451"
 ---
 # <a name="licensed"></a>licensed
 
-Указывает, что COM-объект, к которому он применяется предоставляется по лицензии и должны быть созданы при помощи `IClassFactory2`.
+Указывает, что COM-объект, к которому применяется, имеет лицензию, и его необходимо создать `IClassFactory2`с помощью.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409334"
 
 ## <a name="remarks"></a>Примечания
 
-**Лицензированные** атрибут C++ имеет ту же функциональность, что [Лицензированные](/windows/desktop/Midl/licensed) описании атрибута MIDL.
+Атрибут **Licensed** C++ имеет те же функциональные возможности, что и [лицензированный](/windows/win32/Midl/licensed) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -54,10 +54,10 @@ public:
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|`coclass`|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
