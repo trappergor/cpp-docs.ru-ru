@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: c170deef8bf76bdd223bde01794f8996dc77922d
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400940"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273703"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Пошаговое руководство. Тестирование проекта (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "67400940"
 
 1. Выберите следующую строку кода:
 
-   `Cardgame.solitaire(1);`
+   `Cardgame solitaire(1);`
 
 1. Чтобы задать точку останова на этой строке, в строке меню выберите **Отладка** > **Точка останова** или нажмите клавишу **F9**. Слева от строки появляется красный кружок, указывающий, что точка останова задана. Чтобы удалить точку останова, снова выберите эту команду в меню или нажмите клавишу **F9**.
 
