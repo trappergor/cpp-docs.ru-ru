@@ -3,12 +3,12 @@ title: Создание и настройка проекта Linux CMake в Visu
 description: Создание, настройка, изменение и компиляция проекта Linux CMake в Visual Studio
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042667"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383412"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Создание и настройка проекта Linux CMake
 
@@ -112,7 +112,18 @@ add_executable(hello-cmake hello.cpp)
 
 Чтобы отладить код в указанной целевой системе отладки, задайте точку останова, выберите целевой объект CMake в качестве элемента автозагрузки на панели инструментов рядом с параметром проекта, а затем щелкните **&#x23f5; Запустить** на панели инструментов или нажмите клавишу F5.
 
-Чтобы настроить аргументы командной строки для программы, нажмите кнопку **Переключить целевые объекты** в верхней части **обозревателя решений** и выберите **Представление целевых объектов**. Щелкните целевой объект правой кнопкой мыши и выберите **Параметры отладки и запуска**. Будет открыт или создан файл конфигурации launch.vs.json, который содержит сведения о программе. Чтобы указать дополнительные аргументы, добавьте их в массив JSON `args`. Дополнительные сведения см. в статьях [Проекты "Открыть папку" для C++](../build/open-folder-projects-cpp.md) и [Настройка сеансов отладки CMake](../build/configure-cmake-debugging-sessions.md).
+Чтобы настроить аргументы командной строки для программы, нажмите кнопку **Переключить целевые объекты** в верхней части **обозревателя решений** и выберите **Представление целевых объектов**. Щелкните целевой объект правой кнопкой мыши и выберите **Параметры отладки и запуска**. Будет открыт или создан файл конфигурации launch.vs.json, который содержит сведения о программе. Чтобы указать расположение исходных файлов, добавьте в файл свойство **sourceFileMap**, как показано в следующем примере:
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+Чтобы указать дополнительные аргументы, добавьте их в массив JSON `args`. Дополнительные сведения см. в статьях [Проекты "Открыть папку" для C++](../build/open-folder-projects-cpp.md) и [Настройка сеансов отладки CMake](../build/configure-cmake-debugging-sessions.md).
 
 ## <a name="configure_cmake_linux"></a> Настройка параметров CMake для Linux
 

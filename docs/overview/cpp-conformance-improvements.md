@@ -1,26 +1,26 @@
 ---
 title: Улучшение соответствия C++
-ms.date: 06/14/2019
+ms.date: 08/30/2019
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1652c7ab9a48de65b32123b34c3231a0b06a410a
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194766"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222318"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
 В каждом выпуске Microsoft C++ добавляются улучшения соответствия и исправления ошибок. В этой статье перечислены улучшения в разбивке по основным выпускам и версиям системы. Также здесь перечислены основные исправления ошибок в разбивке по версиям. Чтобы перейти непосредственно к изменениям в конкретной версии, используйте список из **этой статьи**.
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a> Усовершенствования в Visual Studio 2019 RTW (версия 16.0)
+## <a name="improvements_160"></a> Улучшения соответствия в Visual Studio 2019 RTW (версия 16.0)
 
-Visual Studio 2019 RTW содержит следующие улучшения соответствия, исправления ошибок и изменения в поведении в компиляторе Microsoft C++ (MSVC).
+Visual Studio 2019 RTW содержит следующие улучшения соответствия, исправления ошибок и изменения в поведении в компиляторе Microsoft C++ (MSVC)
 
 **Примечание.** Возможности C ++ 20 будут доступны в режиме `/std:c++latest` до завершения реализации C++20 для компилятора и IntelliSense. На этом этапе будет введен режим компилятора `/std:c++20`.
 
@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-### <a name="reinterpretcast-from-an-overloaded-function"></a>`reinterpret_cast` из перегруженной функции
+### <a name="reinterpret_cast-from-an-overloaded-function"></a>`reinterpret_cast` из перегруженной функции
 
 Аргумент `reinterpret_cast` не является одним из контекстов, в которых разрешен адрес перегруженной функции. Приведенный ниже код компилируется без ошибок в Visual Studio 2017, но в Visual Studio 2019 выдает ошибку *C2440: невозможно выполнить преобразование из overloaded-function в fp*:
 
@@ -134,7 +134,7 @@ int main()
 
 Чтобы избежать этой ошибки, удалите квалификатор `constexpr` или измените режим совместимости на `/std:c++17`.
 
-### <a name="stdcreatedirectory-failure-codes"></a>Коды сбоя `std::create_directory`
+### <a name="stdcreate_directory-failure-codes"></a>Коды сбоя `std::create_directory`
 
 Безусловная реализация [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf) из C ++ 20. Это изменяет `std::create_directory`, чтобы проверить, был ли целевой объект уже каталогом со сбоем. Ранее все ошибки типа ERROR_ALREADY_EXISTS были включены в коды "Выполнено успешно, но каталог не создан".
 
@@ -150,7 +150,7 @@ int main()
 
 [P0883 "Устранение атомарной инициализации"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) меняет `std::atomic`, чтобы инициализировать T по значению, а не по умолчанию. Это исправление включается при использовании Clang/LLVM со стандартной библиотекой Майкрософт. В настоящее время оно отключено для компилятора Microsoft C++ в качестве обходного решения для ошибки во время обработки `constexpr`.
 
-### <a name="removecvref-and-removecvreft"></a>`remove_cvref` и `remove_cvref_t`
+### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` и `remove_cvref_t`
 
 Реализация признаков типа `remove_cvref` и `remove_cvref_t` из [P0550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf). Они удаляют ссылочность и cv-квалификацию из типа без ограничения функций и массивов до указателей (в отличие от `std::decay` и `std::decay_t`).
 
@@ -162,9 +162,9 @@ int main()
 
 [C++ 20 P1008R1 — запрет агрегирования с объявленными пользователем конструкторами](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf) завершен.
 
-## <a name="improvements_161"></a> Усовершенствования в Visual Studio 2019 версии 16.1
+## <a name="improvements_161"></a> Улучшения соответствия C++ в 16.1
 
-### <a name="char8t"></a>char8_t
+### <a name="char8_t"></a>char8_t
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html). C ++ 20 добавляет новый тип символа, который используется для представления частей кода UTF-8. Строковые литералы `u8` в C++20 имеют тип `const char8_t[N]`, а не `const char[N]`, как было раньше. Аналогичные изменения предложены для стандарта C в [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm). Рекомендации по обеспечению обратной совместимости для `char8_t` приведены в [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html). Компилятор Microsoft C++ добавляет поддержку `char8_t` в Visual Studio 2019 версии 16.1, если вы укажете параметр компилятора **/Zc:char8_t**. В будущем он будет поддерживаться с [/std:c++latest](../build/reference/std-specify-language-standard-version.md), который можно отменить, чтобы восстановить поведение C ++ 17 с помощью **/Zc:char8_t-** . Компилятор EDG, лежащий в основе IntelliSense, пока не поддерживает эту возможность, поэтому возникают ложные ошибки для IntelliSense, которые не влияют на фактическую компиляцию.
 
@@ -175,7 +175,7 @@ const char* s = u8"Hello"; // C++17
 const char8_t* s = u8"Hello"; // C++20
 ```
 
-### <a name="stdtypeidentity-metafunction-and-stdidentity-function-object"></a>Метафункция std::type_identity и объект функции std::identity
+### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>Метафункция std::type_identity и объект функции std::identity
 
 [P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf). Устаревшее расширение класса шаблонов `std::identity` было удалено и заменено на метафункцию `std::type_identity` и объект функции `std::identity` в C++20. Они доступны только в [/std:c++latest](../build/reference/std-specify-language-standard-version.md).
 
@@ -241,9 +241,156 @@ void f() {
 - `remove()`, `remove_if()` и `unique()` для `list` и `forward_list` теперь возвращают `size_type`;
 - `shift_left()` и `shift_right()` добавлены к \<algorithm>.
 
-## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a>Исправления ошибок и изменения в поведении в Visual Studio 2019
 
-### <a name="correct-diagnostics-for-basicstring-range-constructor"></a>Правильная диагностика для конструктора диапазонов basic_string
+## <a name="improvements_162"></a> Улучшения соответствия C++ в 16.2
+
+### <a name="noexcept-constexpr-functions"></a>Функции noexcept constexpr
+
+Функции constexpr больше не считаются `noexcept` по умолчанию при использовании в константном выражении. Это изменение в поведении обусловлено разрешением [CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) и включено в [/permissive-](../build/reference/permissive-standards-conformance.md). Следующий пример компилируется в Visual Studio 2019 версии 16.1 и более ранних версиях, но вызывает C2338 в Visual Studio 2019 версии 16.2:
+
+```cpp
+constexpr int f() { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept"); // C2338 in 16.2
+}
+```
+
+Чтобы устранить эту ошибку, добавьте выражение `noexcept` в объявление функции:
+
+```cpp
+constexpr int f() noexcept { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept");
+}
+```
+
+### <a name="binary-expressions-with-different-enum-types"></a>Двоичные выражения с различными типами перечисления
+
+Возможность применять обычные арифметические преобразования к операндам, где один имеет тип перечисления, а другой — другой тип перечисления или тип с плавающей запятой, является нерекомендуемым в C++ 20 ([P1120R0](http://wg21.link/p1120r0)). В Visual Studio 2019 версии 16.2 и более поздних в следующем примере кода создается предупреждение уровня 4, если включен параметр компилятора [/std:c ++latest](../build/reference/std-specify-language-standard-version.md):
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+    int i = a | b; // warning C5054: operator '|': deprecated between enumerations of different types
+}
+```
+
+Чтобы избежать этого предупреждения, используйте [static_cast](../cpp/static-cast-operator.md) для преобразования второго операнда:
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+  int i = a | static_cast<int>(b);
+}
+```
+
+### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>Двоичные выражения с типами перечисления и с плавающей запятой
+
+Возможность применять обычные арифметические преобразования к операндам, где один имеет тип перечисления, а другой — другой тип перечисления или тип с плавающей запятой, является нерекомендуемым в C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Иными словами, использование двоичной операции между типом перечисления и типом с плавающей запятой теперь является предупреждением, если включен параметр компилятора [/std:c++latest](../build/reference/std-specify-language-standard-version.md):
+
+```cpp
+enum E1 { a };
+int main() {
+  double i = a * 1.1;
+}
+```
+
+Чтобы избежать этого предупреждения, используйте [static_cast](../cpp/static-cast-operator.md) для преобразования второго операнда:
+
+```cpp
+enum E1 { a };
+int main() {
+   double i = static_cast<int>(a) * 1.1;
+}
+```
+
+### <a name="equality-and-relational-comparisons-of-arrays"></a>Равенство и реляционные сравнения массивов
+
+Равенство и сравнение отношений между двумя операндами типа массива являются устаревшими в C++ 20 ([P1120R0](http://wg21.link/p1120r0)). Иными словами, операция сравнения между двумя массивами (независимо от схожести приоритета и экстента) теперь является предупреждением. Начиная с Visual Studio 2019 версии 16.2 следующий код создает *C5056: оператор "==": не рекомендуется для типов массивов*, если включен параметр компилятора [/std:c++latest](../build/reference/std-specify-language-standard-version.md):
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (a == b) { return 1; }
+}
+```
+
+Чтобы избежать этого предупреждения, можно сравнить адреса первых элементов:
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (&a[0] == &b[0]) { return 1; }
+}
+```
+
+Чтобы определить, равно ли содержимое двух массивов, используйте функцию [std::equal](../standard-library/algorithm-functions.md#equal):
+
+```cpp
+std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
+```
+
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>Результат определения оператора трехстороннего сравнения в == и !=
+
+Определение оператора трехстороннего сравнения ( **<=>** ) больше не будет переписывать выражения, включающие **==** или **!=** , если оператор не помечен как `= default` ([P1185R2](https://wg21.link/p1185r2)). Следующий пример компилируется в Visual Studio 2019 RTW и версии 16.1, но вызывает C2678 в Visual Studio 2019 версии 16.2:
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+Чтобы избежать этой ошибки, определите оператор == или объявите его по умолчанию:
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+  bool operator==(const S&) const = default;
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+### <a name="standard-library-improvements"></a>Улучшения стандартной библиотеки
+
+- \<charconv>`to_chars()` с фиксированной или научной точностью. (Общая точность в настоящее время запланирована на версию 16.4.)
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): atomic\<float>, atomic\<double>, atomic\<long double>
+- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): endian
+- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): Поддержка библиотек для char8_t
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] для STL, часть 1
+- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address()
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version>
+- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): noexcept для конструктора перемещения std::function
+
+## <a name="update_160"></a> Исправления ошибок и изменения в поведении в Visual Studio 2019
+
+### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>Правильная диагностика для конструктора диапазонов basic_string
 
 В Visual Studio 2019 конструктор диапазонов `basic_string` больше не подавляет диагностику компилятора с помощью `static_cast`. Приведенный ниже код компилируется без предупреждений в Visual Studio 2017, несмотря на возможную потерю данных при преобразовании из `wchar_t` в `char` при инициализации `out`:
 
@@ -443,7 +590,7 @@ int main()
 }
 ```
 
-### <a name="iterator-debugging-and-stdmoveiterator"></a>Отладка перечислителя и `std::move_iterator`
+### <a name="iterator-debugging-and-stdmove_iterator"></a>Отладка перечислителя и `std::move_iterator`
 
 Функция отладки итераторов теперь может правильно развертывать `std::move_iterator`. Например, `std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` теперь использует быстрый путь `memcpy`.
 
@@ -475,11 +622,11 @@ int main()
 
 Библиотека параллельных алгоритмов теперь правильно использует реальное семейство `WaitOnAddress` в Windows 8 и более поздних версий вместо того, чтобы всегда использовать Windows 7 и более ранние фиктивные версии.
 
-### <a name="stdsystemcategorymessage-whitespace"></a>Пробелы в `std::system_category::message()`
+### <a name="stdsystem_categorymessage-whitespace"></a>Пробелы в `std::system_category::message()`
 
 `std::system_category::message()` теперь удаляет конечный пробел из возвращенного сообщения.
 
-### <a name="stdlinearcongruentialengine-divide-by-zero"></a>Деление на ноль в `std::linear_congruential_engine`
+### <a name="stdlinear_congruential_engine-divide-by-zero"></a>Деление на ноль в `std::linear_congruential_engine`
 
 Некоторые условия, приводящие к тому, что `std::linear_congruential_engine` вызывает деление на ноль, были исправлены.
 
@@ -505,7 +652,7 @@ int main()
 
 - Добавлены перегрузки для функций-членов слияния и извлечения контейнеров, которые принимают контейнеры rvalue в соответствии с [P0083 "Соединение карт и наборов"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)
 
-### <a name="stdbasicistreamread-processing-of-rn--n"></a>Обработка \\r\\n => \\n в `std::basic_istream::read`
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>Обработка \\r\\n => \\n в `std::basic_istream::read`
 
 `std::basic_istream::read` исправлен так, чтобы не записывать временные данные в части предоставленного буфера при обработке операции \\r\\n => \\n. Это изменение несколько нивелирует преимущество в производительности, достигнутое в Visual Studio 2017 15.8 для операций чтения размером более 4 КБ. Но при этом сохраняется повышенная эффективность за счет избавления от трех виртуальных вызовов на каждый символ.
 
@@ -517,15 +664,65 @@ int main()
 
 Исправлена регрессия в операторе присваивания `std::pair`, которая появилась при реализации [LWG 2729 "Отсутствует SFINAE для std::pair::operator="](https://cplusplus.github.io/LWG/issue2729). Теперь снова правильно принимаются типы, которые можно преобразовывать в `std::pair`.
 
-### <a name="non-deduced-contexts-for-addconstt"></a>Невыводимые контексты для `add_const_t`
+### <a name="non-deduced-contexts-for-add_const_t"></a>Невыводимые контексты для `add_const_t`
 
 Исправлена ошибка признаков дополнительного типа, где `add_const_t` и связанные функции должны быть невыводимым контекстом. Другими словами, `add_const_t` должен быть псевдонимом для `typename add_const<T>::type`, а не `const T`.
 
+## <a name="update_162"></a> Исправления ошибок и изменения в поведении в версии 16.2
+
+### <a name="const-comparators-for-associative-containers"></a>Константные блоки сравнения для ассоциативных контейнеров
+
+Код для поиска и вставки в [set](../standard-library/set-class.md), [map](../standard-library/map-class.md), [multiset](../standard-library/multiset-class.md) и [multimap](../standard-library/multimap-class.md) был объединен для уменьшения размера кода. Операции вставки теперь вызывают сравнение "меньше чем" для функтора сравнения `const`, как это делали ранее операции поиска. Следующий код компилируется в Visual Studio 2019 версии 16.1 и более ранних версиях, но вызывает C3848 в Visual Studio 2019 версии 16.2:
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+struct K
+{
+   int a;
+   string b = "label";
+};
+
+struct Comparer  {
+   bool operator() (K a, K b) {
+      return a.a < b.a;
+   }
+};
+
+map<K, double, Comparer> m;
+
+K const s1{1};
+K const s2{2};
+K const s3{3};
+
+int main() {
+
+   m.emplace(s1, 1.08);
+   m.emplace(s2, 3.14);
+   m.emplace(s3, 5.21);
+
+}
+```
+
+Чтобы избежать этой ошибки, используйте оператор сравнения `const`:
+
+```cpp
+struct Comparer  {
+   bool operator() (K a, K b) const {
+      return a.a < b.a;
+   }
+};
+
+```
+
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a> Усовершенствования в Visual Studio 2017 RTW (версия 15.0)
+## <a name="improvements_150"></a> Улучшения соответствия в Visual Studio 2017 RTW (версия 15.0)
 
 Благодаря поддержке обобщенного `constexpr` и NSDMI (нестатическая инициализация элементов данных) для статистических выражений, компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
 
@@ -541,7 +738,7 @@ int main()
 
 Выражения, объявленные как `constexpr`, теперь могут содержать определенные виды объявлений, операторы if и switch, операторы циклов, а также изменения объектов, время существования которых началось с вычисления выражения constexpr. Кроме того, теперь не требуется, чтобы нестатическая функция-член `constexpr` явным образом была `const`. Дополнительные сведения см. в статье [Нестрогие ограничения для функций constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html).
 
-### <a name="c17-terse-staticassert"></a>C++17 Сжатое `static_assert`
+### <a name="c17-terse-static_assert"></a>C++17 Сжатое `static_assert`
 
 Параметр сообщения для `static_assert` является необязательным. Дополнительные сведения см. в разделе [Расширение static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf).
 
@@ -553,7 +750,7 @@ int main()
 
 Циклы for на основе диапазона больше не требуют, чтобы `begin()` и `end()` возвращали объекты одного типа. Это изменение позволяет `end()` возвращать граничную метку согласно использованию в диапазонах [range-v3](https://github.com/ericniebler/range-v3) и технической спецификации по диапазонам (которая уже готова, но еще не опубликована). Дополнительные сведения см. в разделе [Обобщение цикла For на основе диапазона](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html).
 
-## <a name="improvements_153"></a> Усовершенствования в Visual Studio 2017 версии 15.3
+## <a name="improvements_153"></a> Улучшения соответствия в 15.3
 
 ### <a name="constexpr-lambdas"></a>Лямбда-выражения constexpr
 
@@ -567,7 +764,7 @@ int main()
 
 Оператор `if` может включать инициализатор, который вводит переменную в области видимости блока внутри самого оператора. Дополнительные сведения см. в разделе [Операторы if с инициализатором](../cpp/if-else-statement-cpp.md#if_with_init).
 
-### <a name="maybeunused-and-nodiscard-attributes"></a>Атрибуты `[[maybe_unused]]` и `[[nodiscard]]`
+### <a name="maybe_unused-and-nodiscard-attributes"></a>Атрибуты `[[maybe_unused]]` и `[[nodiscard]]`
 
 Новый атрибут `[[maybe_unused]]` подавляет предупреждения о неиспользовании сущности. Атрибут `[[nodiscard]]` создает предупреждение, если при вызове функции отбрасывается возвращаемое значение. Дополнительные сведения см. в статье [Attributes in C++](../cpp/attributes.md) (Атрибуты в C++).
 
@@ -595,7 +792,7 @@ int main()
 
 Ключевое слово `register`, ранее признанное нерекомендуемым (и игнорируемое компилятором), теперь удалено из языка. Дополнительные сведения см. в документе об [удалении нерекомендуемого ключевого слова register](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html).
 
-## <a name="improvements_155"></a> Усовершенствования в Visual Studio 2017 версии 15.5
+## <a name="improvements_155"></a> Улучшения соответствия в 15.5
 
 Функции, отмеченные как \[14], доступны без дополнительных условий даже в режиме **/std:c++14**.
 
@@ -611,7 +808,7 @@ int main()
 
 [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html): `not_fn` является заменой `not1` и `not2`.
 
-### <a name="rewording-enablesharedfromthis"></a>Изменение формулировки для `enable_shared_from_this`
+### <a name="rewording-enable_shared_from_this"></a>Изменение формулировки для `enable_shared_from_this`
 
 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html): класс `enable_shared_from_this` добавлен в C++11. Стандарт C++17 обновляет спецификацию, чтобы лучше обрабатывать некоторые пограничные случаи. [14]
 
@@ -627,19 +824,19 @@ int main()
 
 [P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html). До появления C++17 шаблон класса `std::function` содержал несколько конструкторов, принимающих аргумент распределителя. Однако использование распределителей в данном контексте было проблематичным, а семантика — неясной. Проблема конструкторов теперь устранена.
 
-### <a name="fixes-for-notfn"></a>Исправления для `not_fn()`
+### <a name="fixes-for-not_fn"></a>Исправления для `not_fn()`
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html). Новая формулировка `std::not_fn` поддерживает передачу категории значения при вызове класса-оболочки.
 
-### <a name="sharedptrt-sharedptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`, `shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html): внесение изменений `shared_ptr` из Library Fundamentals в C++17. [14]
 
-### <a name="fixing-sharedptr-for-arrays"></a>Исправление `shared_ptr` для массивов
+### <a name="fixing-shared_ptr-for-arrays"></a>Исправление `shared_ptr` для массивов
 
 [P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html): исправления поддержки shared_ptr для массивов. [14]
 
-### <a name="clarifying-insertreturntype"></a>Пояснение `insert_return_type`
+### <a name="clarifying-insert_return_type"></a>Пояснение `insert_return_type`
 
 [P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html): ассоциативные и неупорядоченные контейнеры с уникальными ключами имеют функцию-член `insert`, возвращающую `insert_return_type` вложенного типа. Тип возвращаемого значения теперь определяется как специализация типа, который параметризуется по итератору и типу узла контейнера.
 
@@ -659,7 +856,7 @@ int main()
 
 Стандартная библиотека была обновлена в ответ на изменения в компиляторе C++17. Среди прочего добавлен `noexcept` в систему типов и удалены динамические спецификации исключений.
 
-## <a name="improvements_156"></a> Улучшения в Visual Studio 2017 версии 15.6
+## <a name="improvements_156"></a> Улучшения соответствия в 15.6
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17. Основы работы с библиотеками V1
 
@@ -669,7 +866,7 @@ int main()
 
 [P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html). Переместите `adopt_lock_t` в начало списка параметров, чтобы `scoped_lock` разрешил согласованное использование `scoped_lock`. Разрешите конструктору `std::variant` участвовать в разрешении перегрузки в большем числе случаев, чтобы поддерживать присваивание копированием.
 
-## <a name="improvements_157"></a> Усовершенствования в Visual Studio 2017 версии 15.7
+## <a name="improvements_157"></a> Улучшения соответствия в 15.7
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17 Изменение формулировки наследуемых конструкторов
 
@@ -837,11 +1034,11 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html). Перемещение новых функций по простому преобразованию строк из P0067R5 в новый заголовок \<charconv> и другие усовершенствования, включая изменение обработки ошибок для использования `std::errc` вместо `std::error_code`.
 
-### <a name="c17-constexpr-for-chartraits-partial"></a>C++17: `constexpr` для `char_traits` (частично)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++17: `constexpr` для `char_traits` (частично)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html). Изменения в функциях-членах `length`, `compare` и `find` типа `std::traits_type`, позволяющие использовать `std::string_view` в константных выражениях. (В Visual Studio 2017 версии 15.6 поддерживается только для Clang/LLVM. В версии 15.7, предварительная версия 2, почти полная поддержка и для ClXX.)
 
-## <a name="improvements_159"></a> Усовершенствования в Visual Studio 2017 версии 15.9
+## <a name="improvements_159"></a> Улучшения соответствия в 15.9
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>Порядок вычисления слева направо для операторов `->*`, `[]`, `>>` и `<<`
 
@@ -1198,7 +1395,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Исправления ошибок в Visual Studio 2017 версии 15.3
+## <a name="update_153"></a> Исправления ошибок в 15.3
 
 ### <a name="calls-to-deleted-member-templates"></a>Вызовы шаблонов удаленного элемента
 
@@ -1460,7 +1657,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 Это предупреждение отключено при использовании **/Wv:18** и включено по умолчанию на уровне предупреждений W2.
 
-### <a name="stdisconvertible-for-array-types"></a>`std::is_convertible` для типов массивов
+### <a name="stdis_convertible-for-array-types"></a>`std::is_convertible` для типов массивов
 
 В предыдущих версиях компилятора класс [std::is_convertible](../standard-library/is-convertible-class.md) выдавал неверные результаты для типов массива. Из-за этого разработчикам библиотек необходимо было особым образом обрабатывать в компиляторе Microsoft C++ признаки типа `std::is_convertible<...>`. В следующем примере статические функции assert успешно срабатывают в предыдущих версиях Visual Studio, но в Visual Studio 2017 версии 15.3 завершаются ошибкой:
 
@@ -1481,7 +1678,7 @@ static_assert(std::is_convertible<Array, Array&>::value, "");
    To test() { return std::declval<From>(); }
 ```
 
-### <a name="private-destructors-and-stdisconstructible"></a>Частные деструкторы и `std::is_constructible`
+### <a name="private-destructors-and-stdis_constructible"></a>Частные деструкторы и `std::is_constructible`
 
 Предыдущие версии компилятора не проверяли, является ли деструктор закрытым, при получении результата [std::is_constructible](../standard-library/is-constructible-class.md). Теперь это принимается во внимание. В следующем примере статические функции assert успешно срабатывают в предыдущих версиях Visual Studio, но в Visual Studio 2017 версии 15.3 завершаются ошибкой:
 
@@ -1570,7 +1767,7 @@ struct A
 
 Это предупреждение по умолчанию отключено и относится только к коду, скомпилированному с параметром **/Wall**.
 
-## <a name="update_155"></a> Исправления ошибок и другие изменения поведения в Visual Studio 2017 версии 15.5
+## <a name="update_155"></a> Исправления ошибок и другие изменения в поведении в версии 15.5
 
 ### <a name="partial-ordering-change"></a>Частичное упорядочение изменений
 
@@ -1783,7 +1980,7 @@ warning C4619: #pragma warning: there is no warning number '4001'
 /* single line comment */
 ```
 
-### <a name="declspec-attributes-with-extern-c-linkage"></a>Атрибуты `__declspec` с компоновкой `extern "C"`
+### <a name="__declspec-attributes-with-extern-c-linkage"></a>Атрибуты `__declspec` с компоновкой `extern "C"`
 
 В более ранних версиях Visual Studio компилятор игнорировал атрибуты `__declspec(...)`, когда `__declspec(...)` был применен перед спецификацией компоновки `extern "C"`. Это поведение приводило к созданию кода, который не планировался пользователем, с возможными последствиями для среды выполнения. Это предупреждение было добавлено в Visual Studio версии 15.3, но было отключено по умолчанию. В Visual Studio 2017 версии 15.5 предупреждение включено по умолчанию.
 
@@ -1848,7 +2045,7 @@ void f() { typeid(S); } //C2027 in 15.5
 error C2027: use of undefined type 'S'
 ```
 
-### <a name="stdisconvertible-target-type"></a>Тип целевого объекта `std::is_convertible`
+### <a name="stdis_convertible-target-type"></a>Тип целевого объекта `std::is_convertible`
 
 Для `std::is_convertible` необходимо, чтобы целевой тип был допустимым возвращаемым типом. В более ранних версиях Visual Studio компилятор неправильно разрешал использование абстрактных типов, что могло приводить к неверному разрешению перегрузки и непредусмотренному поведению среды выполнения.  Следующий код теперь правильно выводит предупреждение C2338:
 
@@ -1921,11 +2118,11 @@ struct X {
 const int X::size; // C5041
 ```
 
-### <a name="extern-c-declspec-warning-c4768-now-on-by-default"></a>Теперь предупреждение C4768 `extern "C" __declspec(...)` включено по умолчанию
+### <a name="extern-c-__declspec-warning-c4768-now-on-by-default"></a>Теперь предупреждение C4768 `extern "C" __declspec(...)` включено по умолчанию
 
 Это предупреждение было добавлено в Visual Studio 2017 версии 15.3, но было отключено по умолчанию. В Visual Studio 2017 версии 15.5 предупреждение включено по умолчанию. Дополнительные сведения см. в разделе [Новое предупреждение для атрибутов \_\_declspec](#declspec).
 
-### <a name="defaulted-functions-and-declspecnothrow"></a>Заданные по умолчанию функции и `__declspec(nothrow)`
+### <a name="defaulted-functions-and-__declspecnothrow"></a>Заданные по умолчанию функции и `__declspec(nothrow)`
 
 Компилятор ранее разрешал объявление установленных по умолчанию функций с `__declspec(nothrow)`, если соответствующие базовые функции или функции-члены разрешали исключения. Это противоречит стандарту C++ и может привести к неопределенному поведению во время выполнения. Согласно стандарту, такие функции должны быть определены как удаленные, если имеется несовпадение спецификации исключений.  Если указан параметр **/std:c++17**, приведенный ниже код выдает ошибку C2280: *попытка ссылки на удаленную функцию. Функция была неявно удалена из-за несовместимости спецификации явного исключения со спецификацией неявного объявления*.
 
@@ -2029,7 +2226,7 @@ int main()
 }
 ```
 
-## <a name="update_157"></a> Исправления ошибок и другие изменения в поведении в Visual Studio 2017 версии 15.7
+## <a name="update_157"></a> Исправления ошибок и другие изменения в поведении в версии 15.7
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C++17 Аргумент по умолчанию в шаблоне основного класса
 
@@ -2165,7 +2362,7 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 15.8
+## <a name="update_158"></a> Исправления ошибок и изменения в поведении в версии 15.8
 
 Изменения компилятора в Visual Studio 2017 версии 15.8 входят в категорию исправления ошибок и изменений в поведении и перечислены ниже:
 
@@ -2180,7 +2377,7 @@ using  X = typename T;
 
 Чтобы исправить эту ошибку, измените вторую строку на `using  X = T;`.
 
-### <a name="declspec-on-right-side-of-alias-template-definitions"></a>`__declspec()` справа от определений шаблонов псевдонимов
+### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>`__declspec()` справа от определений шаблонов псевдонимов
 
 Ключевое слово [__declspec](../cpp/declspec.md) теперь запрещено указывать справа от определения шаблона псевдонима. Ранее компилятор принимал такой код, но игнорировал его и никогда не создавал предупреждение об устаревании при использовании псевдонима.
 
@@ -2372,7 +2569,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 версии 15.9
+## <a name="update_159"></a> Исправления ошибок и изменения в поведении в версии 15.9
 
 ### <a name="identifiers-in-member-alias-templates"></a>Идентификаторы в шаблонах псевдонимов членов
 
@@ -2557,9 +2754,13 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
+::: moniker range="vs-2015"
+
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Улучшения соответствия стандарту C++ в Visual Studio 2015
 
 Полный список улучшений соответствия вплоть до версии Visual Studio 2015 с обновлением 3 см. в разделе [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ 2003–2015).
+
+::: moniker-end
 
 ## <a name="see-also"></a>См. также
 
