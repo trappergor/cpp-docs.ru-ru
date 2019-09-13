@@ -1,4 +1,4 @@
-- name: C++ в Visual Studio
+﻿- name: C++ в Visual Studio
   items:
     - name: C++ в Visual Studio
       href: overview/visual-cpp-in-visual-studio.md
@@ -215,7 +215,7 @@
           items:
             - name: Виды библиотек DLL
               href: build/kinds-of-dlls.md
-            - name: Несовместимые с MFC библиотеки DLL: обзор
+            - name: 'Несовместимые с MFC библиотеки DLL: Обзор'
               href: build/non-mfc-dlls-overview.md
             - name: "Обычные библиотеки DLL MFC, статически связанные с\_MFC"
               href: build/regular-dlls-statically-linked-to-mfc.md
@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: Файлы и потоки
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Текстовые и двоичные потоки
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Байтовые и широкие потоки
                       href: c-runtime-library/byte-and-wide-streams.md

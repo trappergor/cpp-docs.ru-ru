@@ -1,6 +1,6 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand_s
 apilocation:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 2bbefad60d1d54ece0b467fc411ca9b6b7fe498f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499553"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927452"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -51,7 +51,7 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль в случае успешного выполнения; в противном случае — код ошибки. Если входной указатель _рандомвалуе_ является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **еинвал** и устанавливает значение переводится в **еинвал**. Если функция завершается ошибкой по какой-либо другой причине, *_рандомвалуе_ имеет значение 0.
+Ноль в случае успешного выполнения; в противном случае — код ошибки. Если входной указатель _рандомвалуе_ является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **еинвал** **и устанавливает значение** переводится в **еинвал**. Если функция завершается ошибкой по какой-либо другой причине, *_рандомвалуе_ имеет значение 0.
 
 ## <a name="remarks"></a>Примечания
 

@@ -1,6 +1,6 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b72a485287684fc85f1e232e89774e07a5e3f42b
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356697"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927490"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Указывает действие, выполняемое при аварийном завершении программы.
 
 > [!NOTE]
-> Не используйте [прервать](abort.md) функции, чтобы завершить работу в приложение Microsoft Store, за исключением сценариев тестирования или отладки. Закрытие приложения Store способов программным способом или пользовательского интерфейса не разрешены согласно [политики Microsoft Store](/legal/windows/agreements/store-policies). Дополнительные сведения см. в разделе [жизненный цикл приложения UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Не используйте функцию [Abort](abort.md) для завершения работы Microsoft Store приложения, за исключением сценариев тестирования или отладки. В соответствии с [политиками Microsoft Store](/legal/windows/agreements/store-policies)не разрешено закрывать приложения Магазина программным способом или с помощью пользовательского интерфейса. Дополнительные сведения см. в статье [жизненный цикл приложения UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,10 +49,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>Параметры
 
 *flags*<br/>
-Новое значение [прервать](abort.md) флаги.
+Новое значение флагов [прерывания](abort.md) .
 
-*Маска*<br/>
-Маска для [прервать](abort.md) флаги биты.
+*виде*<br/>
+Маска для устанавливаемых битов флагов [прерывания](abort.md) .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -60,7 +60,7 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>Примечания
 
-Существует два [прервать](abort.md) флаги: **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение при аварийном завершении программы. Сообщение о том, что приложение вызвало [прервать](abort.md) функции. По умолчанию сообщение выводится. **_CALL_REPORTFAULT**, если значение, указывает, что аварийный дамп памяти Watson и отчет при [прервать](abort.md) вызывается. По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
+Существует два флага [прерывания](abort.md) : **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение при аварийном завершении программы. В сообщении указывается, что приложение вызвало функцию [Abort](abort.md) . По умолчанию сообщение выводится. **_CALL_REPORTFAULT**(если задано) указывает, что создается дамп аварийной работы программы Watson и сообщается, когда вызывается метод [Abort](abort.md) . По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
 
 ## <a name="requirements"></a>Требования
 
