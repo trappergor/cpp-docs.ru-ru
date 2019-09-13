@@ -1,6 +1,6 @@
 ---
 title: C++Отладка страниц свойств
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
 f1_keywords:
@@ -35,12 +35,12 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: a63ac181b4ef281d6d78d951a46bba85103ba636
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537800"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927734"
 ---
 # <a name="c-debugging-property-pages"></a>C++Отладка страниц свойств
 
@@ -71,10 +71,10 @@ ms.locfileid: "68537800"
 **Элементов**
 
 - **Только машинный код** — только машинный код
-- Только управляемый — только управляемый
+- Только **управляемый** — только управляемый
 - **Смешанные**
 - **Авто**
-- Скрипт **-Скрипт**
+- **Скрипт-скрипт**
 - **Только GPU (C++ amp)** — только GPU (C++ amp)
 
 ### <a name="environment"></a>Среда
@@ -132,8 +132,8 @@ ms.locfileid: "68537800"
 
 **Элементов**
 
-- **Удаленный с проверкой** подлинности Windows — удаленный с проверкой подлинности [Windows](/windows-server/security/windows-authentication/windows-authentication-overview).
-- **Удаленный без проверки** подлинности — удаленный без проверки подлинности.
+- **Удаленный с проверкой** подлинности Windows — удаленный с [проверкой подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview).
+- **Удаленный без проверки подлинности** — удаленный без проверки подлинности.
 
 ### <a name="debugger-type"></a>Тип отладчика
 
@@ -142,10 +142,10 @@ ms.locfileid: "68537800"
 **Элементов**
 
 - **Только машинный код** — только машинный код
-- Только управляемый — только управляемый
+- Только **управляемый** — только управляемый
 - **Смешанные**
 - **Авто**
-- Скрипт **-Скрипт**
+- **Скрипт-скрипт**
 - **Только GPU (C++ amp)** — только GPU (C++ amp)
 
 ### <a name="environment"></a>Среда
@@ -202,10 +202,10 @@ ms.locfileid: "68537800"
 **Элементов**
 
 - **Только машинный код** — только машинный код
-- Только управляемый — только управляемый
+- Только **управляемый** — только управляемый
 - **Смешанные**
 - **Авто**
-- Скрипт **-Скрипт**
+- **Скрипт-скрипт**
 
 ## <a name="web-service-debugger-property-page"></a>Страница свойств отладчика веб-службы
 
@@ -220,10 +220,10 @@ ms.locfileid: "68537800"
 **Элементов**
 
 - **Только машинный код** — только машинный код
-- Только управляемый — только управляемый
+- Только **управляемый** — только управляемый
 - **Смешанные**
 - **Авто**
-- Скрипт **-Скрипт**
+- **Скрипт-скрипт**
 
 ### <a name="sql-debugging"></a>Отладка SQL
 
