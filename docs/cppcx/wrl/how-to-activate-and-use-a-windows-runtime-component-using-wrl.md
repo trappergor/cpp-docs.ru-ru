@@ -3,12 +3,12 @@ title: Практическое руководство. Активация и и
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498395"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926063"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среда выполнения Windows с помощью WRL
 
@@ -48,7 +48,7 @@ ms.locfileid: "69498395"
 
    Среда выполнения Windows использует полные имена для указания типов. `RuntimeClass_Windows_Foundation_Uri` Параметр — это строка, предоставляемая среда выполнения Windows и содержащая имя требуемого класса среды выполнения.
 
-4. Инициализируйте переменную [Microsoft:: WRL:: оболочки:: HString](hstring-class.md) , которая представляет универсальный `"http://www.microsoft.com"`код ресурса (URI).
+4. Инициализируйте переменную [Microsoft:: WRL:: оболочки:: HString](hstring-class.md) , которая представляет универсальный `"https://www.microsoft.com"`код ресурса (URI).
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 
