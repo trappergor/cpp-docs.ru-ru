@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285157"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501016"
 ---
 # <a name="memset-wmemset"></a>memset, wmemset
 
@@ -69,9 +69,9 @@ wchar_t *wmemset(
 
 ## <a name="remarks"></a>Примечания
 
-Задает первый *число* символов *dest* символу *c*.
+Устанавливает первые символы подсчета для *dest* на символ *c*.
 
-**Примечание по безопасности** убедитесь, что буфер назначения имеет достаточно места для по крайней мере *число* символов. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Примечание по безопасности** Убедитесь, что в буфере назначения достаточно места, чтобы не меньше символов подсчета. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 ## <a name="requirements"></a>Требования
 

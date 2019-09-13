@@ -1,45 +1,43 @@
 ---
-title: exclude (#import)
-ms.date: 10/18/2018
+title: исключить атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - exclude
 helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
-ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a3625ee0dd44f3e2731e1240fea5f3dd4ed109e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389324"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218718"
 ---
-# <a name="exclude-import"></a>исключить (\#импорт)
+# <a name="exclude-import-attribute"></a>исключить атрибут импорта
 
-**Конкретных C++**
+**C++Зависящ**
 
 Исключает элементы из создаваемых файлов заголовка библиотеки типов.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-exclude("Name1"[, "Name2",...])
-```
+> **#import** *Библиотека типов* **Exclude (** "*name1*" [ **,** "*имя2*"...] **)**
 
 ### <a name="parameters"></a>Параметры
 
-*Name1*<br/>
+*Name1*\
 Первый исключаемый элемент.
 
-*Имя 2*<br/>
-Второй исключаемый элемент (при необходимости).
+*Name2*\
+Используемых Второй и более поздние элементы, которые необходимо исключить при необходимости.
 
 ## <a name="remarks"></a>Примечания
 
-Библиотеки типов могут содержать определения элементов, которые определены в системных заголовочных файлах или других библиотеках типов. Этот атрибут может принимать любое количество аргументов, каждый из которых является именем исключаемого элемента, находящегося на верхнем уровне библиотеки типов.
+Библиотеки типов могут содержать определения элементов, которые определены в системных заголовочных файлах или других библиотеках типов. Этот атрибут может принимать любое количество аргументов, где каждый представляет собой элемент библиотеки типов верхнего уровня, который должен быть исключен.
 
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

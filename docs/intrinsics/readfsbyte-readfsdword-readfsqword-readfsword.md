@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte, __readfsdword, __readfsqword, __readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262740"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222360"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
 
 **Блок, относящийся только к системам Microsoft**
 
-Прочитать память из расположения, указанной в качестве смещения относительно начала сегмента FS.
+Считывает память из расположения, заданного смещением относительно начала сегмента службы федерации.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала `FS` считаны.
+*Собой*\
+окне Смещение от начала `FS` до чтения из.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Содержимое памяти байт, слово, двойное или quadword (как указано в имени функции, вызываемой) в расположении `FS:[Offset]`.
+Содержимое памяти в байтах, слово, даублеворд или куадворд (как указано именем функции с именем) в расположении `FS:[Offset]`.
 
 ## <a name="requirements"></a>Требования
 
@@ -64,15 +64,15 @@ unsigned __int64 __readfsqword(
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенные функции.
+Эти подпрограммы доступны только в виде встроенных функций.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

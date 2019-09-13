@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl Class
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821252"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108489"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl:: OnDragEnter](#ondragenter)|Вызывается структурой при первом перетаскивании курсора в окно элемента управления "Вкладка".|
 |[CMFCTabCtrl:: OnDragOver](#ondragover)|Вызывается платформой во время операции перетаскивания при перемещении мыши по конечному окну перетаскивания. (Переопределяет [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl:: Оншовтабдокументсмену](#onshowtabdocumentsmenu)|Отображает всплывающее меню окон с вкладками, ждет, пока пользователь не выберет вкладку, и сделает выбранную вкладку активной вкладкой.|
-|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна до их отправки в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CMFCBaseTabCtrl::P ретранслатемессаже](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
+|`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна до их отправки в функции Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CMFCBaseTabCtrl::P ретранслатемессаже](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
 |`CMFCTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет набора вкладок. (Переопределяет [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Устанавливает текущую вкладку элемента управления "Вкладка" как активную вкладку в группе вкладок многодокументного интерфейса.|
 |[CMFCTabCtrl:: Сетактиветаб](#setactivetab)|Активирует вкладку. (Переопределяет [CMFCBaseTabCtrl:: сетактиветаб](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 окне Указывает на объект данных, который содержит данные, перетаскиваемые пользователем.
 
 *двкэйстате*<br/>
-окне Содержит состояние клавиш модификатора. Этот параметр является побитовым сочетанием (или) следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **Параметры сообщения** статьи [о вводе](/windows/desktop/inputdev/about-mouse-input)с помощью мыши.
+окне Содержит состояние клавиш модификатора. Этот параметр является побитовым сочетанием (или) следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **Параметры сообщения** статьи [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
 *point*<br/>
 окне Содержит текущее расположение курсора в координатах клиента.
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 окне Указатель на объект [коледатаобжект](../../mfc/reference/coledataobject-class.md) , который перетаскивается на целевой объект перетаскивания.
 
 *двкэйстате*<br/>
-окне Состояние клавиш-модификаторов, которое является побитовым сочетанием (или) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе "Параметры сообщения" статьи [о вводе](/windows/desktop/inputdev/about-mouse-input)с помощью мыши.
+окне Состояние клавиш-модификаторов, которое является побитовым сочетанием (или) MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе "Параметры сообщения" статьи [о вводе](/windows/win32/inputdev/about-mouse-input)с помощью мыши.
 
 *point*<br/>
 окне Текущее расположение мыши.
@@ -970,7 +970,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод не отправляет уведомление AFX_WM_CHANGE_ACTIVE_TAB в родительское окно элемента управления "Вкладка".
+Это `AFX_WM_CHANGE_ACTIVE_TAB` уведомление отправляется родительскому окну и родительской рамке элемента управления "Вкладка".
 
 Метод автоматически вызывает метод [CMFCTabCtrl:: хидеактивевиндовхорзскроллбар](#hideactivewindowhorzscrollbar) , чтобы предотвратить мерцание экрана. `SetActiveTab`
 

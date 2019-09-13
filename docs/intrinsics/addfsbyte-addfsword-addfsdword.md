@@ -1,6 +1,6 @@
 ---
 title: __addfsbyte, __addfsword, __addfsdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addfsbyte_cpp
 - __addfsdword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - __addfsword intrinsic
 - __addfsbyte intrinsic
 ms.assetid: 706c70df-6b52-4401-9268-2977ed8ad715
-ms.openlocfilehash: 61053d9f8c56d8352b12ed535dfa870c0856f558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302e58ed13c144913e7806a0a8b7adc202a67ef6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264482"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218520"
 ---
-# <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
+# <a name="__addfsbyte-__addfsword-__addfsdword"></a>__addfsbyte, __addfsword, __addfsdword
 
 **Блок, относящийся только к системам Microsoft**
 
-Добавить значение в ячейку памяти, указанной в качестве смещения относительно начала `FS` сегмента.
+Добавьте значение в место в памяти, заданное смещением относительно начала `FS` сегмента.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __addfsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -43,13 +43,13 @@ void __addfsdword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала `FS`.
+*Собой*\
+окне Смещение от начала `FS`.
 
-*Данные*<br/>
-[in] Значение, добавляемое в область памяти.
+*Data*\
+окне Значение, добавляемое в область памяти.
 
 ## <a name="requirements"></a>Требования
 
@@ -59,15 +59,17 @@ void __addfsdword(
 |`__addfsword`|x86|
 |`__addfsdword`|x86|
 
+**Заголовочный файл** \<> Intrin. h
+
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенные функции.
+Эти подпрограммы доступны только в виде встроенных функций.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__incfsbyte, \__incfsword, \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)\
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

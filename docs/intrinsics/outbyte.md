@@ -1,41 +1,41 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262974"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217194"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `out` инструкция, которая отправляет 1 байт, установленный параметром `Data` номера порта ввода-вывода, определяемое `Port`.
+Формирует инструкцию, которая отправляет 1 байт, `Data` указанный портом ввода-вывода, указанным в `Port`параметре. `out`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Порт*<br/>
-[in] Порт для отправки данных.
+*Порту*\
+окне Порт, в который отправляются данные.
 
-*Данные*<br/>
-[in] Байт, будут отправлены для указанного порта.
+*Data*\
+окне Байт, отправляемый с указанного порта.
 
 ## <a name="requirements"></a>Требования
 
@@ -43,7 +43,7 @@ void __outbyte(
 |---------------|------------------|
 |`__outbyte`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -53,4 +53,4 @@ void __outbyte(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,24 +1,38 @@
 ---
 title: Пример файла проекта
-ms.date: 10/09/2018
+ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0eb87c3f3ba8bd60f0944ad673d22f9b84e070a5
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217742"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630765"
 ---
 # <a name="project-files"></a>Файлы проекта
 
-Объект C++ файл проекта в Visual Studio — это XML-файл имеет расширение имени файла с расширением VCXPROJ, содержащие сведения, необходимые для построения C++ проекта. Обратите внимание, что файл проекта импортирует разные файлы проекта с расширением *.props* или *.targets*. Эти файлы содержат дополнительные сведения о сборке и могут сами ссылаться на другие файлы с расширением *.props* или *.targets*. Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и *.props* и *.targets* файлы, см. в разделе [страница свойств каталогов VC ++](vcpp-directories-property-page.md), [компилятор C++, задать и сборки свойства в Visual Studio](../working-with-project-properties.md) и [стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
+Файл C++ проекта в Visual Studio представляет собой XML-файл с расширением VCXPROJ и содержит сведения, необходимые для построения C++ проекта. Обратите внимание, что файл проекта импортирует различные файлы проекта, имеющие расширение ". props" или ". targets". Эти файлы содержат дополнительные сведения о сборке и могут ссылаться на другие файлы ". props" и ". targets". Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и файлах ". props" и ". targets" см. в разделе [Страница свойств каталогов VC + +](vcpp-directories-property-page.md), [ C++ Установка свойств компилятора и сборки в Visual Studio](../working-with-project-properties.md) и [Общие макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Пример
 
+::: moniker range=">=vs-2019"
+
+Следующий пример файла VCXPROJ был создан с помощью **мастера рабочего стола Windows** в диалоговом окне " **Создание проекта** ". Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот пример невозможно обработать из-за отсутствия требуемого исходного файла и файла заголовков.) Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
 Для создания приведенного ниже примера файла VCXPROJ было задано значение **Консольное приложение Win32** в диалоговом окне **Новый проект**. Для обработки файла проекта используйте средство msbuild.exe из командной строки или команду **Сборка** в IDE. (Этот пример невозможно обработать из-за отсутствия требуемого исходного файла и файла заголовков.) Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).
+
+::: moniker-end
+
+
+>[!NOTE]
+> Для проектов в Visual Studio 2017 и более ранних `pch.h` версий `stdafx.h` измените `pch.cpp` на `stdafx.cpp`и на.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -102,12 +116,12 @@ ms.locfileid: "65217742"
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SomeProjName.cpp" />
-    <ClCompile Include="stdafx.cpp">
+    <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>

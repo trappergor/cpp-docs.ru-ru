@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrld
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrld
 helpviewer_keywords:
 - __vmx_vmptrld intrinsic
 - VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-ms.openlocfilehash: e3d552720d454a4f22af368616b3953452c6db0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b5a8b34b652ae1f011e89c793a7157c9e435ee
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390039"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219505"
 ---
-# <a name="vmxvmptrld"></a>__vmx_vmptrld
+# <a name="__vmx_vmptrld"></a>__vmx_vmptrld
 
 **Блок, относящийся только к системам Microsoft**
 
-Загружает указатель на текущую структуру управления виртуальной машины (VMCS) из указанного адреса.
+Загружает указатель на текущую структуру управления виртуальными машинами (VMCS) по указанному адресу.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 int __vmx_vmptrld(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,25 +30,25 @@ int __vmx_vmptrld(
 
 ### <a name="parameters"></a>Параметры
 
-*VmcsPhysicalAddress*<br/>
-[in] Адрес, где хранится указатель VMCS.
+*вмксфисикаладдресс*\
+окне Адрес, по которому хранится указатель VMCS.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-0<br/>
+0,0
 Операция успешно выполнена.
 
-1<br/>
+одного
 Не удалось выполнить операцию; расширенные сведения о состоянии доступны в `VM-instruction error field` текущей структуре VMCS.
 
-2<br/>
+открыт
 Сбой операции без сведений о состоянии.
 
 ## <a name="remarks"></a>Примечания
 
 Указатель VMCS — это 64-разрядный физический адрес.
 
-Функция `__vmx_vmptrld` эквивалентна инструкции компьютера `VMPTRLD` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция `__vmx_vmptrld` эквивалентна инструкции компьютера `VMPTRLD` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе "Техническая спецификация виртуализации Intel для архитектуры IA-32 Intel" номер документа C97063-002 на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Требования
 
@@ -56,11 +56,11 @@ int __vmx_vmptrld(
 |---------------|------------------|
 |`__vmx_vmptrld`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)

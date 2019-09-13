@@ -1,44 +1,42 @@
 ---
 title: Создание элемента управления ActiveX MFC
-ms.date: 09/12/2018
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.activex.project
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d35b788910b0c73a3b6da85faf119958ffbccea0
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708256"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108445"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Создание элемента управления ActiveX MFC
 
-Программы управления ActiveX являются модульные программы, разработанные для предоставления определенной функциональности в родительское приложение. Например можно создать элемент управления, например кнопки для использования в диалоговом окне или панели инструментов для использования на веб-странице.
+Программы элементов управления ActiveX — это модульные программы, предназначенные для предоставления конкретного типа функциональности родительскому приложению. Например, можно создать такой элемент управления, как кнопка для использования в диалоговом окне, или панель инструментов для использования на веб-странице.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения см. в разделе [элементы управления ActiveX](../activex-controls.md).
+> ActiveX — это устаревшая технология, которую не следует использовать для новой разработки. Дополнительные сведения см. в разделе [элементы управления ActiveX](../activex-controls.md).
 
-Самый простой способ создания элемента управления MFC ActiveX является использование [мастер элементов управления ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
+Самый простой способ создать элемент управления ActiveX MFC — использовать [Мастер элементов ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md).
 
-### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Для создания элемента управления ActiveX MFC, с помощью мастера элементов управления ActiveX MFC
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>Создание элемента управления ActiveX MFC с помощью мастера элементов ActiveX MFC
 
-1. Следуйте инструкциям в разделе справки [создайте проект консольного приложения C++](../../get-started/tutorial-console-cpp.md).
+1. Следуйте инструкциям в разделе справки по [созданию приложения MFC](creating-an-mfc-application.md) , но выберите **элемент ActiveX MFC** в списке доступных шаблонов.
 
-1. В **новый проект** выберите **элемента управления ActiveX MFC** значок в области «Шаблоны», чтобы открыть мастер элементов управления ActiveX MFC.
-
-1. Определение вашего [параметры приложения](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [имена элементов управления](../../mfc/reference/control-names-mfc-activex-control-wizard.md), и [управлять параметрами](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) с помощью мастера элементов управления ActiveX MFC.
+1. Определите [Параметры приложения](../../mfc/reference/application-settings-mfc-activex-control-wizard.md), [имена элементов управления](../../mfc/reference/control-names-mfc-activex-control-wizard.md)и [Параметры управления](../../mfc/reference/control-settings-mfc-activex-control-wizard.md) с помощью мастера элементов ActiveX MFC.
 
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.
 
-1. Нажмите кнопку **Готово** закрыть мастер и открыть проект в среде разработки.
+1. Нажмите кнопку **Готово** для завершения работы мастера и откройте новый проект в среде разработки.
 
-После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для Visual Studio C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть файлы, созданные в **Обозреватель решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-После создания проекта, можно использовать мастеры кода для добавления [функции](../../ide/add-member-function-wizard.md), [переменных](../../ide/add-member-variable-wizard.md), [события](../../ide/add-event-wizard.md), [свойства](../../ide/names-add-property-wizard.md), и [методы](../../ide/add-method-wizard.md). Дополнительные сведения о настройке элементов управления ActiveX, см. в разделе [элементы ActiveX в MFC](../../mfc/mfc-activex-controls.md).
+После создания проекта можно использовать мастера кода для добавления [функций](../../ide/add-member-function-wizard.md), [переменных](../../ide/add-member-variable-wizard.md), [событий](../../ide/add-event-wizard.md), [свойств](../../ide/names-add-property-wizard.md)и [методов](../../ide/add-method-wizard.md). Дополнительные сведения о настройке элемента управления ActiveX см. в разделе [элементы управления ActiveX в MFC](../../mfc/mfc-activex-controls.md).
 
 ## <a name="see-also"></a>См. также
 

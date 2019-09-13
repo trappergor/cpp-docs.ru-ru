@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedCompareExchange
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
 - _InterlockedCompareExchange8_nf
@@ -48,22 +48,22 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 26dff1c902fff495d5efe45d8da10b1c5da72878
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344439"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222054"
 ---
-# <a name="interlockedcompareexchange-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchange
+# <a name="_interlockedcompareexchange-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchange
 
 **Блок, относящийся только к системам Microsoft**
 
-Блокируемые сравнения и обмена.
+Выполняет взаимоблокировку сравнения и обмена.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedCompareExchange(
    long volatile * Destination,
    long Exchange,
@@ -176,16 +176,16 @@ __int64 _InterlockedCompareExchange64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Назначение*<br/>
-[in, out] Указатель на значение назначения. Знак игнорируется
+*Местоназначение*\
+[вход, выход] Указатель на целевое значение. Знак игнорируется
 
-*Exchange*<br/>
-[in] Значение Exchange. Знак игнорируется
+*Сообщения*\
+окне Значение обмена. Знак игнорируется
 
-*Сравниваемый операнд*<br/>
-[in] Значение для сравнения с местом назначения. Знак игнорируется
+*Сравниваемый операнд*\
+окне Значение, сравниваемое с целевым объектом. Знак игнорируется
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -195,22 +195,22 @@ __int64 _InterlockedCompareExchange64_rel(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64, ARM64|\<> Intrin. h|
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM, ARM64|\<> Intrin. h|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<> Intrin. h|
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<> использованием immintrin. h|
 
 ## <a name="remarks"></a>Примечания
 
-`_InterlockedCompareExchange` выполняет атомарные сравнение `Destination` со значением `Comparand` значение. Если значение `Destination` равно значению `Comparand`, значение `Exchange` сохранится по адресу, указанному `Destination`. В противном случае не ни одна из операций.
+`_InterlockedCompareExchange`выполняет атомарное сравнение `Destination` значения `Comparand` со значением. Если значение `Destination` равно значению `Comparand`, значение `Exchange` сохранится по адресу, указанному `Destination`. В противном случае не выполняет никаких операций.
 
-`_InterlockedCompareExchange` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) функции.
+`_InterlockedCompareExchange`предоставляет встроенную поддержку компилятора для функции Win32 Windows SDK [интерлоккедкомпариксчанже](/windows/win32/api/winnt/nf-winnt-interlockedcompareexchange) .
 
-Существуют несколько вариантов на `_InterlockedCompareExchange` , различаются в зависимости от типов данных, они включают и ли получить конкретного процессора или используются семантика освобождения.
+Существует несколько вариаций в `_InterlockedCompareExchange` зависимости от типов данных, которые они используют, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
-Хотя `_InterlockedCompareExchange` функция работает с длинными целыми значениями, `_InterlockedCompareExchange8` работает с 8-разрядными целыми значениями, `_InterlockedCompareExchange16` работает с короткими целыми значениями и `_InterlockedCompareExchange64` работает с 64-разрядными целыми значениями.
+Хотя функция работает с длинными целочисленными значениями `_InterlockedCompareExchange8` , работает с 8-разрядными целочисленными значениями, `_InterlockedCompareExchange16` работает с короткими `_InterlockedCompareExchange64` целочисленными значениями и работает с 64-разрядными целыми значениями. `_InterlockedCompareExchange`
 
-На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции ARM с `_nf` суффикса («без границ») не действуют как барьер памяти.
+На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции ARM с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
 
 Встроенные функции с суффиксом `_np` («нет упреждающей выборки") запрещают возможную вставку компилятором операции упреждающей выборки.
 
@@ -220,9 +220,9 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="example"></a>Пример
 
-В следующем примере `_InterlockedCompareExchange` используется для простой синхронизации потоков нижнего уровня. Такой подход имеет свои ограничения, в качестве основы для многопоточного программирования; она появится на продемонстрировать типичное использование блокирующих встроенных функций. Для получения наилучших результатов используйте Windows API. Дополнительные сведения о многопоточном программировании см. в разделе [написание многопоточной программы Win32](../parallel/writing-a-multithreaded-win32-program.md).
+В следующем примере `_InterlockedCompareExchange` используется для простой синхронизации потоков нижнего уровня. Этот подход имеет свои ограничения в качестве основания для многопоточного программирования. представлен пример типичного использования блокируемых встроенных функций. Для получения наилучших результатов используйте Windows API. Дополнительные сведения о многопоточном программировании см. [в разделе Написание многопоточной программы Win32](../parallel/multithreading-with-c-and-win32.md#writing-a-multithreaded-win32-program).
 
-```
+```cpp
 // intrinExample.cpp
 // compile with: /EHsc /O2
 // Simple example of using _Interlocked* intrinsics to
@@ -296,7 +296,6 @@ namespace MyInterlockedIntrinsicLock
 }
 
 // ------------------------------------------------------------------
-
 // Data shared by threads
 
 queue<int> SharedQueue;
@@ -435,8 +434,8 @@ int main(
 
 ## <a name="see-also"></a>См. также
 
-[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
-[Встроенные функции _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)\
+[Встроенные функции _InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[Ключевые слова](../cpp/keywords-cpp.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

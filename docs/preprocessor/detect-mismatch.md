@@ -1,6 +1,6 @@
 ---
-title: detect_mismatch
-ms.date: 11/04/2016
+title: Прагма detect_mismatch
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.detect_mismatch
 - detect_mismatch_CPP
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 42a3ba61cefe3b2db01aef24b802e3a51fed55d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e247b3f251bce47710a3380fb295597314a3bd8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389337"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222391"
 ---
-# <a name="detectmismatch"></a>detect_mismatch
+# <a name="detect_mismatch-pragma"></a>Прагма detect_mismatch
+
 Помещает запись в объект. Компоновщик проверяет эти записи на предмет наличия потенциальных несоответствий.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma detect_mismatch("name", "value")
-```
+> **#pragma detect_mismatch (** "*Name*" **,** "*value*" **)**
 
 ## <a name="remarks"></a>Примечания
 
-При компоновке проекта компоновщик создает ошибку `LNK2038`, если проект содержит 2 объекта с одинаковыми именами `name`, но разными значениями `value`. Используйте эту директиву #pragma для предотвращения компоновки несогласованных объектных файлов.
+При связывании проекта компоновщик создает ошибку [LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md) , если проект содержит два объекта с одинаковым *именем* , но у каждого из них другое *значение*. Используйте эту директиву #pragma для предотвращения компоновки несогласованных объектных файлов.
 
-Имя и значение являются строковыми литералами и подчиняются правилам для строковых литералов в отношении escape-символов и объединения. Они чувствительны к регистру и не может содержать запятую, знак равенства, кавычки, или **null** символ.
+И *имя* , и *значение* являются строковыми литералами и подчиняются правилам для строковых литералов в отношении escape-символов и сцепления. Они чувствительны к регистру и не могут содержать запятую, знак равенства, кавычки или символ **null** .
 
 ## <a name="example"></a>Пример
 
@@ -50,4 +49,4 @@ int main ()
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

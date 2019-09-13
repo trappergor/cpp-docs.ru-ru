@@ -2,12 +2,12 @@
 title: Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 27cfe90f33f71d82af90cf4fa62186c1c0a189ce
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182944"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511554"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)
 
@@ -86,7 +86,7 @@ ms.locfileid: "66182944"
 dumpbin.exe /LINKERMEMBER somelibrary.lib
 ```
 
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t – это собственный тип)
+### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t – это собственный тип)
 
 (В Microsoft Visual C++ 6.0 и более ранней версии **wchar_t** не был реализован как встроенный тип, а объявлялся в файле wchar.h как определение типа для короткого числа без знака.) Стандарт C++ требует, чтобы **wchar_t** был встроенным типом. Использование версии определения типа может вызывать проблемы переносимости. Если при обновлении с более ранней версии Visual Studio возникает ошибка компилятора C2664 в связи с тем, что код пытается выполнить неявное преобразование типа **wchar_t** в тип **unsigned short**, рекомендуется изменить код, чтобы устранить ошибку, но не менять значение параметра `/Zc:wchar_t-`. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
@@ -168,7 +168,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ATL и MFC являются относительно стабильными API, однако и в них периодически вносятся изменения. Дополнительные сведения см. в разделе [Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md), а также в разделах [Новые возможности Visual C++ в Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) и [Улучшения соответствия C++ в Visual Studio](../overview/cpp-conformance-improvements.md).
 
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 уже определен в MSVCRTD.lib
+### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 уже определен в MSVCRTD.lib
 
 Эта ошибка может возникать в приложениях MFC. Она указывает на проблему очередности между библиотекой CRT и библиотеки MFC. Сначала нужно связывать MFC, чтобы она предоставляла операторы new и delete. Чтобы устранить ошибку, используйте параметр `/NODEFAULTLIB` для пропуска этих библиотек по умолчанию: MSVCRTD.lib и mfcs140d.lib. Затем добавьте эти библиотеки в качестве дополнительных зависимостей.
 
@@ -176,7 +176,7 @@ ATL и MFC являются относительно стабильными API,
 
 Если исходный код скомпилирован для 32-разрядных систем, вы можете создать 64-разрядную версию приложения вместо 32-разрядной или в дополнение к ней. В общем случае следует сначала скомпилировать программу в 32-разрядном режиме, а затем попробовать 64-разрядный режим. Компиляция в 64-разрядном режиме не вызывает трудностей, однако в некоторых случаях может выявлять ошибки, скрытые в 32-разрядных сборках.
 
-Кроме того, следует помнить о возможных проблемах во время компиляции и выполнения, связанных с размером указателя, значениями времени и размера, а также описателями формата в функциях printf и scanf. Дополнительные сведения см. в разделах [Настройка Visual C++ для 64-разрядных целевых объектов с архитектурой x64](../build/configuring-programs-for-64-bit-visual-cpp.md) и [Общие вопросы использования Visual C++ для 64-разрядных систем](../build/common-visual-cpp-64-bit-migration-issues.md). Дополнительные советы по миграции см. в [руководстве по программированию для 64-разрядных версий Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows).
+Кроме того, следует помнить о возможных проблемах во время компиляции и выполнения, связанных с размером указателя, значениями времени и размера, а также описателями формата в функциях printf и scanf. Дополнительные сведения см. в разделах [Настройка Visual C++ для 64-разрядных целевых объектов с архитектурой x64](../build/configuring-programs-for-64-bit-visual-cpp.md) и [Общие вопросы использования Visual C++ для 64-разрядных систем](../build/common-visual-cpp-64-bit-migration-issues.md). Дополнительные советы по миграции см. в [руководстве по программированию для 64-разрядных версий Windows](/windows/win32/WinProg64/programming-guide-for-64-bit-windows).
 
 ## <a name="unicode-vs-mbcsascii"></a>Юникод и MBCS/ASCII
 

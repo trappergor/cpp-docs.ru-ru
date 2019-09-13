@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 143f06a0cf22265734d6d77f8fca4efd5ac3031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620289"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500076"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Функции [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) и [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, в которых не применяется кодовая страница Юникода. Список поддерживаемых языков для версий операционной системы см. в [приложении A (поведение продукта)](https://msdn.microsoft.com/library/cc233982.aspx) в справочнике по коду языка Windows. Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Тег языка** списка поддерживаемых языков. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/desktop/intl/nls--name-based-apis-sample).
+Функции [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) и [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, в которых не применяется кодовая страница Юникода. Список языков, поддерживаемых в разных версиях операционных систем, см. в [приложении с описанием поведения продукта](https://msdn.microsoft.com/library/cc233982.aspx) в справочнике по идентификаторам кода языка Windows [MS-LCID]. Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Тег языка** списка поддерживаемых языков. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [ многоязыковой поддержке с примером API на основе имени](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Дополнительные поддерживаемые строки языка
 

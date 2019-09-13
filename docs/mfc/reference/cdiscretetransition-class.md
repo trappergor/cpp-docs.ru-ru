@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-ms.openlocfilehash: dc2311f7dae71f7c3848b7825b297ec5c9747859
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7087dfa13972737f0a1244d2cc9a7088b23dc184
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168015"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506856"
 ---
 # <a name="cdiscretetransition-class"></a>Класс CDiscreteTransition
 
@@ -39,25 +39,25 @@ class CDiscreteTransition : public CBaseTransition;
 
 |name|Описание|
 |----------|-----------------|
-|[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|Создает объект отдельный переход и инициализирует его параметры.|
+|[Кдискрететранситион:: Кдискрететранситион](#cdiscretetransition)|Создает дискретный объект перехода и инициализирует его параметры.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CDiscreteTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[Кдискрететранситион:: Create](#create)|Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода. (Переопределяет [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
-|[CDiscreteTransition::m_delay](#m_delay)|Количество времени, на который откладывать мгновенное переключение конечные значения.|
-|[CDiscreteTransition::m_hold](#m_hold)|Количество времени, по которому для хранения переменной в окончательное значение.|
+|[Кдискрететранситион:: m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
+|[Кдискрететранситион:: m_delay](#m_delay)|Промежуток времени, на который откладывается мгновенное переключение на окончательное значение.|
+|[Кдискрететранситион:: m_hold](#m_hold)|Количество времени, на которое удерживается переменная в конечном значении.|
 
 ## <a name="remarks"></a>Примечания
 
-Во время перехода дискретные анимации переменной остается равным начальное значение для времени истечения указанной задержки, а затем переключается мгновенно указанного конечное значение и сохраняет это значение в течение данной удержание времени. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+Во время дискретного перехода переменная анимации остается в начальном значении для указанного времени задержки, затем переключается на указанное конечное значение и остается в этом значении в течение заданного времени удержания. Так как все переходы очищаются автоматически, рекомендуется выделять их с помощью оператора New. Инкапсулированный COM-объект Иуианиматионтранситион создается методом Каниматионконтроллер:: Аниматеграуп, пока он не будет равен NULL. Изменение переменных-членов после создания этого объекта COM не имеет силы.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -65,15 +65,15 @@ class CDiscreteTransition : public CBaseTransition;
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CDiscreteTransition](../../mfc/reference/cdiscretetransition-class.md)
+[кдискрететранситион](../../mfc/reference/cdiscretetransition-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition
+##  <a name="cdiscretetransition"></a>Кдискрететранситион:: Кдискрететранситион
 
-Создает объект отдельный переход и инициализирует его параметры.
+Создает дискретный объект перехода и инициализирует его параметры.
 
 ```
 CDiscreteTransition(
@@ -84,18 +84,18 @@ CDiscreteTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*Задержка*<br/>
-Количество времени, на который откладывать мгновенное переключение конечные значения.
+*держивая*<br/>
+Промежуток времени, на который откладывается мгновенное переключение на окончательное значение.
 
-*dblFinalValue*<br/>
+*дблфиналвалуе*<br/>
 Значение переменной анимации в конце перехода.
 
-*Удержание*<br/>
-Количество времени, по которому для хранения переменной в окончательное значение.
+*Нажмите*<br/>
+Количество времени, на которое удерживается переменная в конечном значении.
 
-##  <a name="create"></a>  CDiscreteTransition::Create
+##  <a name="create"></a>Кдискрететранситион:: Create
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку переходов для создания COM-объекта инкапсулированного перехода.
 
 ```
 virtual BOOL Create(
@@ -103,14 +103,14 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```
 
-*pLibrary*<br/>
-Указатель на [IUIAnimationTransitionLibrary интерфейс](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
+*плибрари*<br/>
+Указатель на [интерфейс иуианиматионтранситионлибрари](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), который определяет библиотеку стандартных переходов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+Значение TRUE, если переход успешно создан; в противном случае — FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>Кдискрететранситион:: m_dblFinalValue
 
 Значение переменной анимации в конце перехода.
 
@@ -118,17 +118,17 @@ virtual BOOL Create(
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_delay"></a>  CDiscreteTransition::m_delay
+##  <a name="m_delay"></a>Кдискрететранситион:: m_delay
 
-Количество времени, на который откладывать мгновенное переключение конечные значения.
+Промежуток времени, на который откладывается мгновенное переключение на окончательное значение.
 
 ```
 UI_ANIMATION_SECONDS m_delay;
 ```
 
-##  <a name="m_hold"></a>  CDiscreteTransition::m_hold
+##  <a name="m_hold"></a>Кдискрететранситион:: m_hold
 
-Количество времени, по которому для хранения переменной в окончательное значение.
+Количество времени, на которое удерживается переменная в конечном значении.
 
 ```
 UI_ANIMATION_SECONDS m_hold;

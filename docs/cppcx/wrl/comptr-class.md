@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606491"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498416"
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`объявляет тип, представляющий указатель базового интерфейса. Используйте `ComPtr<>` для объявления переменной, а затем используйте оператор доступа к членам стрелки ()`->`для доступа к функции-члену интерфейса.
 
-Дополнительные сведения о смарт-указателях см. в подразделе "интеллектуальные указатели COM" статьи [рекомендации по кодированию com](/windows/desktop/LearnWin32/com-coding-practices) в библиотеке MSDN.
+Дополнительные сведения о смарт-указателях см. в подразделе "интеллектуальные указатели COM" статьи [рекомендации по кодированию com](/windows/win32/LearnWin32/com-coding-practices) в библиотеке MSDN.
 
 ## <a name="members"></a>Участники
 

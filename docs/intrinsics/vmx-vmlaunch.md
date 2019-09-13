@@ -1,30 +1,29 @@
 ---
 title: __vmx_vmlaunch
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmlaunch
 helpviewer_keywords:
 - VMLAUNCH instruction
 - __vmx_vmlaunch intrinsic
 ms.assetid: 708f7c38-b7c1-4ee7-bfc4-0daeb9cc9360
-ms.openlocfilehash: 37f3a39ee7b0d4d24f26fab2347ac9fca020ec47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d78e5181fdd43e10431e12d0cf540c8c9c2e719
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390091"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219545"
 ---
-# <a name="vmxvmlaunch"></a>__vmx_vmlaunch
+# <a name="__vmx_vmlaunch"></a>__vmx_vmlaunch
 
 **Блок, относящийся только к системам Microsoft**
 
-Помещает вызывающего приложения в состоянии некорневую операцию VMX (введите виртуальной Машины), используя текущую структуру управления виртуальной машины (VMCS).
+Помещает вызывающее приложение в VMX состояние операции, не являющейся корневой (ввод ВИРТУАЛЬНОЙ машины), используя текущую структуру управления виртуальными машинами (VMCS).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-unsigned char __vmx_vmlaunch(
-   void);
+```C
+unsigned char __vmx_vmlaunch(void);
 ```
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -37,9 +36,9 @@ unsigned char __vmx_vmlaunch(
 
 ## <a name="remarks"></a>Примечания
 
-Приложение может выполнять операцию VM-enter, либо при помощи [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции. [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) функция может использоваться только с VMCS, состояние запуска которой — `Clear`и [__vmx_vmresume](../intrinsics/vmx-vmresume.md) функция может использоваться только с VMCS, состояние запуска которой — `Launched`. Следовательно, используйте [__vmx_vmclear](../intrinsics/vmx-vmclear.md) функцию для задания состояния запуска VMCS `Clear`, а затем с помощью [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) для первой операции VM-enter и функцию[__vmx_vmresume](../intrinsics/vmx-vmresume.md) функции для последующих операций VM-enter.
+Приложение может выполнить операцию типа "виртуальная машина — ввод" с помощью функции [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или [__vmx_vmresume](../intrinsics/vmx-vmresume.md) . Функция [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) может использоваться только с VMCS, состояние запуска которого — `Clear`, а функция [__vmx_vmresume](../intrinsics/vmx-vmresume.md) может использоваться только с VMCS, состояние запуска которого —. `Launched` Следовательно, используйте функцию [__vmx_vmclear](../intrinsics/vmx-vmclear.md) , чтобы установить состояние запуска VMCS в `Clear`, а затем используйте функцию [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) для первой операции ВМ-Enter и функцию [__vmx_vmresume](../intrinsics/vmx-vmresume.md) для последующей виртуальной машины — Enter. Operations.
 
-Функция `__vmx_vmlaunch` эквивалентна инструкции компьютера `VMLAUNCH` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция `__vmx_vmlaunch` эквивалентна инструкции компьютера `VMLAUNCH` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе "Техническая спецификация виртуализации Intel для архитектуры IA-32 Intel" номер документа C97063-002 на сайте корпорации [Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Требования
 
@@ -47,12 +46,12 @@ unsigned char __vmx_vmlaunch(
 |---------------|------------------|
 |`__vmx_vmlaunch`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmresume](../intrinsics/vmx-vmresume.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmresume](../intrinsics/vmx-vmresume.md)\
 [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

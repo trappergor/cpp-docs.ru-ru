@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-ms.openlocfilehash: bc4c027ff26df89539b22c6d04f1d1dc95fc459a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: d097996e61a3d461dacd3d30e13b9262c7d32434
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916405"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508048"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Уведомления из элемента управления "Rich Edit"
 
@@ -22,13 +22,13 @@ ms.locfileid: "68916405"
 
 В следующих абзацах перечислены несколько конкретных уведомлений и их использование.
 
-- EN_MSGFILTER обработка уведомлений EN_MSGFILTER позволяет классу, элементу управления Rich Edit или его родительскому окну, фильтровать все входные данные клавиатуры и мыши в элементе управления. Обработчик может предотвратить обработку сообщения клавиатуры или мыши или изменить сообщение, изменив указанную структуру [мсгфилтер](/windows/desktop/api/richedit/ns-richedit-msgfilter) .
+- EN_MSGFILTER обработка уведомлений EN_MSGFILTER позволяет классу, элементу управления Rich Edit или его родительскому окну, фильтровать все входные данные клавиатуры и мыши в элементе управления. Обработчик может предотвратить обработку сообщения клавиатуры или мыши или изменить сообщение, изменив указанную структуру [мсгфилтер](/windows/win32/api/richedit/ns-richedit-msgfilter) .
 
 - EN_PROTECTED обрабатывает сообщение уведомления EN_PROTECTED, чтобы определить, когда пользователь пытается изменить защищенный текст. Чтобы пометить диапазон текста как защищенный, можно задать защищенный символ. Дополнительные сведения см. [в разделе Форматирование символов в элементах управления Rich Edit](../mfc/character-formatting-in-rich-edit-controls.md).
 
-- EN_DROPFILES можно разрешить пользователю удалять файлы в элементе управления Rich Edit, обрабатывая сообщение уведомления EN_DROPFILES. Указанная структура [ендропфилес](/windows/desktop/api/richedit/ns-richedit-endropfiles) содержит сведения об удаляемых файлах.
+- EN_DROPFILES можно разрешить пользователю удалять файлы в элементе управления Rich Edit, обрабатывая сообщение уведомления EN_DROPFILES. Указанная структура [ендропфилес](/windows/win32/api/richedit/ns-richedit-endropfiles) содержит сведения об удаляемых файлах.
 
-- EN_SELCHANGE приложение может обнаружить, когда текущее выделение изменится, обрабатывая сообщение уведомления EN_SELCHANGE. В сообщении уведомления указана структура [селчанже](/windows/desktop/api/richedit/ns-richedit-selchange) , содержащая сведения о новом выделенном фрагменте.
+- EN_SELCHANGE приложение может обнаружить, когда текущее выделение изменится, обрабатывая сообщение уведомления EN_SELCHANGE. В сообщении уведомления указана структура [селчанже](/windows/win32/api/richedit/ns-richedit-selchange) , содержащая сведения о новом выделенном фрагменте.
 
 ## <a name="see-also"></a>См. также
 

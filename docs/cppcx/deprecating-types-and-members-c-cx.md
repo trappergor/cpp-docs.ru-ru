@@ -2,19 +2,19 @@
 title: Перевод типов и членов в разряд нерекомендуемых (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301504"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740502"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>Перевод типов и членов в разряд нерекомендуемых (C++/CX)
 
-В C++/CX, прекращении типов среды выполнения Windows и члены для производителей и получателей с помощью [не рекомендуемые к использованию](/uwp/api/windows.foundation.metadata.deprecatedattribute) атрибут поддерживается. При использовании элемента API, к которому был применен этот атрибут, вы получите предупреждение времени компиляции, в котором указывается, что данный элемент является нерекомендуемым и предлагается альтернатива. В собственных открытых типах и методах вы можете применять этот атрибут с заданием своего сообщения.
+В C++языке/CX поддерживается устаревшая поддержка типов Среда выполнения Windows и членов для поставщиков и потребителей с использованием [устаревшего](/uwp/api/windows.foundation.metadata.deprecatedattribute) атрибута. При использовании элемента API, к которому был применен этот атрибут, вы получите предупреждение времени компиляции, в котором указывается, что данный элемент является нерекомендуемым и предлагается альтернатива. В собственных открытых типах и методах вы можете применять этот атрибут с заданием своего сообщения.
 
 > [!CAUTION]
-> [Не рекомендуемые к использованию](/uwp/api/windows.foundation.metadata.deprecatedattribute) атрибут предназначен для использования только с типами среды выполнения Windows. Для стандартных классов и членов C++ используйте [__declspec(deprecated)](../cpp/deprecated-cpp.md).
+> [Устаревший](/uwp/api/windows.foundation.metadata.deprecatedattribute) атрибут предназначен для использования только с типами среда выполнения Windows. Для стандартных классов и членов C++ используйте [__declspec(deprecated)](../cpp/deprecated-cpp.md).
 
 ### <a name="example"></a>Пример
 
@@ -42,13 +42,13 @@ public:
 | |
 |-|
 |элемент управления XAML|
-|делегат|
+|delegate|
 |событие|
 |поле перечисления|
 |перечисление|
-|структура|
+|struct|
 |метод|
-|класс|
+|class|
 |интерфейс|
 |свойство;|
 |поле структуры|
@@ -57,5 +57,5 @@ public:
 ## <a name="see-also"></a>См. также
 
 [Система типов](../cppcx/type-system-c-cx.md)<br/>
-[Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)

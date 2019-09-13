@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 828a1ec68fef631700d5b64e6aeeec6660acf9a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155206"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498742"
 ---
-# <a name="comerror-class"></a>Класс _com_error
+# <a name="_com_error-class"></a>Класс _com_error
 
 **Блок, относящийся только к системам Microsoft**
 
-Объект **_com_error** представляет условие исключения, обнаруженное функциями оболочки обработки ошибок в файлах заголовков, создаваемых из библиотеки типов или одним из классов поддержки COM. **_Com_error** класс инкапсулирует код ошибки HRESULT и все связанные `IErrorInfo Interface` объекта.
+Объект **_com_error** представляет условие исключения, обнаруженное функциями-оболочками обработки ошибок в файлах заголовков, созданных из библиотеки типов или одним из классов поддержки COM. Класс **_com_error** инкапсулирует код ошибки HRESULT и любой связанный `IErrorInfo Interface` объект.
 
 ### <a name="construction"></a>Создание экземпляра
 
 |||
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|Создает **_com_error** объекта.|
+|[_com_error](../cpp/com-error-com-error.md)|Конструирует объект **_com_error** .|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор =](../cpp/com-error-operator-equal.md)|Присвоение существующего **_com_error** объект с другим объектом.|
+|[Оператор =](../cpp/com-error-operator-equal.md)|Присваивает существующий объект **_com_error** другому объекту.|
 
 ### <a name="extractor-functions"></a>Функции извлечения
 
 |||
 |-|-|
-|[Ошибка](../cpp/com-error-error.md)|Возвращает значение HRESULT, переданный в конструктор.|
+|[Ошибка](../cpp/com-error-error.md)|Извлекает значение HRESULT, передаваемое конструктору.|
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|Получает объект `IErrorInfo`, переданный конструктору.|
-|[WCode](../cpp/com-error-wcode.md)|Получает код ошибки 16-разрядное, сопоставленный в инкапсулированном виде HRESULT.|
+|[WCode](../cpp/com-error-wcode.md)|Извлекает 16-разрядный код ошибки, сопоставленный с инкапсулированным значением HRESULT.|
 
 ### <a name="ierrorinfo-functions"></a>Функции IErrorInfo
 
@@ -46,31 +46,31 @@ ms.locfileid: "62155206"
 |[Описание](../cpp/com-error-description.md)|Вызывает функцию `IErrorInfo::GetDescription`.|
 |[HelpContext](../cpp/com-error-helpcontext.md)|Вызывает функцию `IErrorInfo::GetHelpContext`.|
 |[HelpFile](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|
-|[Источник](../cpp/com-error-source.md)|Вызывает функцию `IErrorInfo::GetSource`.|
+|[Source](../cpp/com-error-source.md)|Вызывает функцию `IErrorInfo::GetSource`.|
 |[GUID](../cpp/com-error-guid.md)|Вызывает функцию `IErrorInfo::GetGUID`.|
 
 ### <a name="format-message-extractor"></a>Извлечение сообщения формата
 
 |||
 |-|-|
-|[ErrorMessage](../cpp/com-error-errormessage.md)|Получает строковое сообщение для значения HRESULT, хранящегося в **_com_error** объекта.|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Извлекает строковое сообщение для HRESULT, хранящегося в объекте **_com_error** .|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Средства сопоставления ExepInfo.wCode с HRESULT
 
 |||
 |-|-|
-|[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|Сопоставляется 16-разрядное в 32-разрядное значение HRESULT `wCode`.|
-|[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-разрядный `wCode` 32-разрядное значение HRESULT.|
+|[хресулттовкоде](../cpp/com-error-hresulttowcode.md)|Сопоставляет 32-разрядное значение HRESULT с 16 `wCode`-разрядным.|
+|[вкодетохресулт](../cpp/com-error-wcodetohresult.md)|Сопоставляет 16-бит `wCode` с 32-битным значением HRESULT.|
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<comdef.h >
+**Заголовок:** \<> comdef. h
 
-`Lib:` comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)
+`Lib:`комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t Native Type)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) )
 
 ## <a name="see-also"></a>См. также
 
 [Классы поддержки модели COM компилятора](../cpp/compiler-com-support-classes.md)<br/>
-[Интерфейс IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)
+[Интерфейс IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)

@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: атрибут импорта embedded_idl
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389350"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216325"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>атрибут импорта embedded_idl
 
-**Конкретных C++**
+**C++Зависящ**
 
-Указывает, что библиотека типов записывается в файл .tlh с сохранением кода, созданного с атрибутами.
+Указывает, записывается ли библиотека типов в `.tlh` файл с сохраненным кодом, сформированным атрибутом.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-embedded_idl[("param")]
-```
+> **#import** *Библиотека типов* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>Параметры
 
-*param*<br/>
-Допустимо одно из двух значений:
+**emitidl**\
+Сведения о типе, импортированные из *библиотеки типов* , находятся в IDL, созданном для проекта с атрибутами. Это поведение является значением по умолчанию и действует, если параметр не указан в `embedded_idl`.
 
-- **emitidl**: Сведения о типах, импортированные из библиотеки типов будет присутствовать в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.  Это значение по умолчанию, которое будет действовать, если параметр для `embedded_idl` не указан.
-
-- **no_emitidl**: Сведения о типах, импортированные из библиотеки типов будет отсутствовать в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.
+**"no_emitidl"** \
+Сведения о типе, импортированные из *библиотеки типов* , ОТСУТСТВУЮТ в IDL, созданном для проекта с атрибутами.
 
 ## <a name="example"></a>Пример
 
@@ -44,11 +41,9 @@ embedded_idl[("param")]
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>Примечания
-
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

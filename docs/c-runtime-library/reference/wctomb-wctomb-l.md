@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: df0abdd644027f9bab8cd177dfd4d0af4c98df35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6902ff925e49d894f70b0d7083b99388d5271d1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188549"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500741"
 ---
-# <a name="wctomb-wctombl"></a>wctomb, _wctomb_l
+# <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
 Преобразует расширенный символ в соответствующий многобайтовый символ. Существуют более безопасные версии этих функций; см. раздел [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md).
 
@@ -56,7 +56,7 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>Параметры
 
-*mbchar*<br/>
+*мбчар*<br/>
 Адрес последовательности многобайтовых символов.
 
 *wchar*<br/>
@@ -64,13 +64,13 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctomb** преобразует расширенный символ в Многобайтовый символ, он возвращает число байтов (которое больше никогда не **MB_CUR_MAX**) в расширенном символе. Если *wchar* является нуль-символ Юникода (L '\0'), **wctomb** возвращает значение 1. Если целевой указатель *mbchar* — **NULL**, **wctomb** возвращает 0. Если преобразование не поддерживается в текущем языковом стандарте, **wctomb** возвращает -1 и **errno** присваивается **EILSEQ**.
+Если **wctomb** преобразует расширенный символ в многобайтовый символ, он возвращает число байтов (которое никогда не превышает **MB_CUR_MAX**) в расширенном символе. Если *WCHAR* является расширенным символом NULL (L ' \ 0 '), **wctomb** возвращает 1. Если целевой указатель *мбчар* имеет **значение NULL**, **wctomb** возвращает 0. Если преобразование невозможно в текущем языковом стандарте, **wctomb** возвращает значение-1, а для возврата — **еилсек**.
 
 ## <a name="remarks"></a>Примечания
 
-**Wctomb** функция преобразует его *wchar* аргумент в соответствующий Многобайтовый символ и сохраняет результат в *mbchar*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентична **wctomb** за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **wctomb** Преобразует аргумент *WCHAR* в соответствующий многобайтовый символ и сохраняет результат в *мбчар*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентичен **wctomb** , за исключением того, что он использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** проверяет свои параметры. Если *mbchar* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает -1.
+**wctomb** проверяет свои параметры. Если *мбчар* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено , параметру **еинвал** присваивается значение, а функция возвращает-1.
 
 ## <a name="requirements"></a>Требования
 
@@ -118,4 +118,4 @@ Convert a wide character:
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

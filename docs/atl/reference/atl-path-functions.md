@@ -41,79 +41,79 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 683fd9c6464187e416ea032840507b2062de1fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248194"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497985"
 ---
 # <a name="atl-path-functions"></a>Функции пути ATL
 
-Библиотека ATL предоставляет класс ATLPath для управления путями в виде [CPathT](cpatht-class.md). Этот код можно найти в atlpath.h.
+ATL предоставляет класс ATLPath для манипуляции путями в форме [кпаст](cpatht-class.md). Этот код можно найти в atlpath. h.
 
 ### <a name="related-classes"></a>Связанные классы
 
 |||
 |-|-|
-|[Класс CPathT](cpatht-class.md)|Этот класс представляет собой путь.|
+|[Класс CPathT](cpatht-class.md)|Этот класс представляет путь.|
 
 ### <a name="related-typedefs"></a>Связанные определения типов
 
 |||
 |-|-|
-|`CPath`|Специализация [CPathT](cpatht-class.md) с помощью `CString`.|
-|`CPathA`|Специализация [CPathT](cpatht-class.md) с помощью `CStringA`.|
-|`CPathW`|Специализация [CPathT](cpatht-class.md) с помощью `CStringW`.|
+|`CPath`|Специализация [кпаст](cpatht-class.md) с помощью `CString`.|
+|`CPathA`|Специализация [кпаст](cpatht-class.md) с помощью `CStringA`.|
+|`CPathW`|Специализация [кпаст](cpatht-class.md) с помощью `CStringW`.|
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
-|[ATLPath::AddBackslash](#addbackslash)|Эта функция представляет собой перегруженную оболочку для [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).|
-|[ATLPath::AddExtension](#addextension)|Эта функция представляет собой перегруженную оболочку для [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).|
-|[ATLPath::Append](#append)|Эта функция представляет собой перегруженную оболочку для [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).|
-|[ATLPath::BuildRoot](#buildroot)|Эта функция представляет собой перегруженную оболочку для [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).|
-|[ATLPath::Canonicalize](#canonicalize)|Эта функция представляет собой перегруженную оболочку для [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).|
-|[ATLPath::Combine](#combine)|Эта функция представляет собой перегруженную оболочку для [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).|
-|[ATLPath::CommonPrefix](#commonprefix)|Эта функция представляет собой перегруженную оболочку для [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).|
-|[ATLPath::CompactPath](#compactpath)|Эта функция представляет собой перегруженную оболочку для [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).|
-|[ATLPath::CompactPathEx](#compactpathex)|Эта функция представляет собой перегруженную оболочку для [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).|
-|[ATLPath::FileExists](#fileexists)|Эта функция представляет собой перегруженную оболочку для [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).|
-|[ATLPath::FindExtension](#findextension)|Эта функция представляет собой перегруженную оболочку для [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).|
-|[ATLPath::FindFileName](#findfilename)|Эта функция представляет собой перегруженную оболочку для [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).|
-|[ATLPath::GetDriveNumber](#getdrivenumber)|Эта функция представляет собой перегруженную оболочку для [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).|
-|[ATLPath::IsDirectory](#isdirectory)|Эта функция представляет собой перегруженную оболочку для [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).|
-|[ATLPath::IsFileSpec](#isfilespec)|Эта функция представляет собой перегруженную оболочку для [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).|
-|[ATLPath::IsPrefix](#isprefix)|Эта функция представляет собой перегруженную оболочку для [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).|
-|[ATLPath::IsRelative](#isrelative)|Эта функция представляет собой перегруженную оболочку для [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).|
-|[ATLPath::IsRoot](#isroot)|Эта функция представляет собой перегруженную оболочку для [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).|
-|[ATLPath::IsSameRoot](#issameroot)|Эта функция представляет собой перегруженную оболочку для [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).|
-|[ATLPath::IsUNC](#isunc)|Эта функция представляет собой перегруженную оболочку для [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).|
-|[ATLPath::IsUNCServer](#isuncserver)|Эта функция представляет собой перегруженную оболочку для [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).|
-|[ATLPath::IsUNCServerShare](#isuncservershare)|Эта функция представляет собой перегруженную оболочку для [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).|
-|[ATLPath::MakePretty](#makepretty)|Эта функция представляет собой перегруженную оболочку для [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).|
-|[ATLPath::MatchSpec](#matchspec)|Эта функция представляет собой перегруженную оболочку для [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).|
-|[ATLPath::QuoteSpaces](#quotespaces)|Эта функция представляет собой перегруженную оболочку для [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).|
-|[ATLPath::RelativePathTo](#relativepathto)|Эта функция представляет собой перегруженную оболочку для [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).|
-|[ATLPath::RemoveArgs](#removeargs)|Эта функция представляет собой перегруженную оболочку для [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).|
-|[ATLPath::RemoveBackslash](#removebackslash)|Эта функция представляет собой перегруженную оболочку для [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).|
-|[ATLPath::RemoveBlanks](#removeblanks)|Эта функция представляет собой перегруженную оболочку для [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).|
-|[ATLPath::RemoveExtension](#removeextension)|Эта функция представляет собой перегруженную оболочку для [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).|
-|[ATLPath::RemoveFileSpec](#removefilespec)|Эта функция представляет собой перегруженную оболочку для [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).|
-|[ATLPath::RenameExtension](#renameextension)|Эта функция представляет собой перегруженную оболочку для [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).|
-|[ATLPath::SkipRoot](#skiproot)|Эта функция представляет собой перегруженную оболочку для [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).|
-|[ATLPath::StripPath](#strippath)|Эта функция представляет собой перегруженную оболочку для [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).|
-|[ATLPath::StripToRoot](#striptoroot)|Эта функция представляет собой перегруженную оболочку для [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).|
-|[ATLPath::UnquoteSpaces](#unquotespaces)|Эта функция представляет собой перегруженную оболочку для [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).|
+|[ATLPath:: Аддбаккслаш](#addbackslash)|Эта функция является перегруженной оболочкой для [пасаддбаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).|
+|[ATLPath:: Аддекстенсион](#addextension)|Эта функция является перегруженной оболочкой для [пасаддекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).|
+|[ATLPath:: Append](#append)|Эта функция является перегруженной оболочкой для [пасаппенд](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).|
+|[ATLPath:: BuildRoot](#buildroot)|Эта функция является перегруженной оболочкой для [пасбуилдрут](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).|
+|[ATLPath:: канонизировать](#canonicalize)|Эта функция является перегруженной оболочкой для [пасканоникализе](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).|
+|[ATLPath:: Combine](#combine)|Эта функция является перегруженной оболочкой для [паскомбине](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).|
+|[ATLPath:: Коммонпрефикс](#commonprefix)|Эта функция является перегруженной оболочкой для [паскоммонпрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).|
+|[ATLPath:: Компактпас](#compactpath)|Эта функция является перегруженной оболочкой для [паскомпактпас](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).|
+|[ATLPath:: Компактпасекс](#compactpathex)|Эта функция является перегруженной оболочкой для [паскомпактпасекс](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).|
+|[ATLPath:: FileExists](#fileexists)|Эта функция является перегруженной оболочкой для [пасфиликсистс](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).|
+|[ATLPath:: Финдекстенсион](#findextension)|Эта функция является перегруженной оболочкой для [пасфиндекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).|
+|[ATLPath:: Финдфиленаме](#findfilename)|Эта функция является перегруженной оболочкой для [пасфиндфиленаме](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).|
+|[ATLPath::GetDriveNumber](#getdrivenumber)|Эта функция является перегруженной оболочкой для [пасжетдривенумбер](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).|
+|[ATLPath:: подкаталог](#isdirectory)|Эта функция является перегруженной оболочкой для [пасисдиректори](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).|
+|[ATLPath::IsFileSpec](#isfilespec)|Эта функция является перегруженной оболочкой для [пасисфилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).|
+|[ATLPath:: "префикс"](#isprefix)|Эта функция является перегруженной оболочкой для [пасиспрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).|
+|[ATLPath:: a](#isrelative)|Эта функция является перегруженной оболочкой для [пасисрелативе](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).|
+|[ATLPath:: \ root](#isroot)|Эта функция является перегруженной оболочкой для [пасисрут](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).|
+|[ATLPath::IsSameRoot](#issameroot)|Эта функция является перегруженной оболочкой для [пасиссамерут](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).|
+|[ATLPath:: Исунк](#isunc)|Эта функция является перегруженной оболочкой для [пасисунк](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).|
+|[ATLPath::IsUNCServer](#isuncserver)|Эта функция является перегруженной оболочкой для [пасисунксервер](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).|
+|[ATLPath:: Исунксервершаре](#isuncservershare)|Эта функция является перегруженной оболочкой для [пасисунксервершаре](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).|
+|[ATLPath:: Макепретти](#makepretty)|Эта функция является перегруженной оболочкой для [пасмакепретти](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).|
+|[ATLPath:: Матчспек](#matchspec)|Эта функция является перегруженной оболочкой для [пасматчспек](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).|
+|[ATLPath:: Куотеспацес](#quotespaces)|Эта функция является перегруженной оболочкой для [паскуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).|
+|[ATLPath:: Релативепасто](#relativepathto)|Эта функция является перегруженной оболочкой для [пасрелативепасто](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).|
+|[ATLPath:: Ремовеаргс](#removeargs)|Эта функция является перегруженной оболочкой для [пасремовеаргс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).|
+|[ATLPath:: Ремовебаккслаш](#removebackslash)|Эта функция является перегруженной оболочкой для [пасремовебаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).|
+|[ATLPath:: Ремовебланкс](#removeblanks)|Эта функция является перегруженной оболочкой для [пасремовебланкс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).|
+|[ATLPath:: Ремовикстенсион](#removeextension)|Эта функция является перегруженной оболочкой для [пасремовикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).|
+|[ATLPath:: Ремовефилеспек](#removefilespec)|Эта функция является перегруженной оболочкой для [пасремовефилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).|
+|[ATLPath:: Ренамикстенсион](#renameextension)|Эта функция является перегруженной оболочкой для [пасренамикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).|
+|[ATLPath:: Скипрут](#skiproot)|Эта функция является перегруженной оболочкой для [пасскипрут](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).|
+|[ATLPath:: Стриппас](#strippath)|Эта функция является перегруженной оболочкой для [пасстриппас](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).|
+|[ATLPath::StripToRoot](#striptoroot)|Эта функция является перегруженной оболочкой для [пасстрипторут](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).|
+|[ATLPath:: Ункуотеспацес](#unquotespaces)|Эта функция является перегруженной оболочкой для [пасункуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlpath.h
+**Заголовок:** atlpath. h
 
-## <a name="addbackslash"></a> ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath:: Аддбаккслаш
 
-Эта функция представляет собой перегруженную оболочку для [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha).
+Эта функция является перегруженной оболочкой для [пасаддбаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -124,11 +124,11 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha) сведения.
+Дополнительные сведения см. в разделе [пасаддбаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw) .
 
-## <a name="addextension"></a> ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath:: Аддекстенсион
 
-Эта функция представляет собой перегруженную оболочку для [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona).
+Эта функция является перегруженной оболочкой для [пасаддекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -139,11 +139,11 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona) сведения.
+Дополнительные сведения см. в разделе [пасаддекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw) .
 
-## <a name="append"></a> ATLPath::Append
+## <a name="append"></a>ATLPath:: Append
 
-Эта функция представляет собой перегруженную оболочку для [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda).
+Эта функция является перегруженной оболочкой для [пасаппенд](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -154,11 +154,11 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda) сведения.
+Дополнительные сведения см. в разделе [пасаппенд](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw) .
 
-## <a name="buildroot"></a> ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath:: BuildRoot
 
-Эта функция представляет собой перегруженную оболочку для [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota).
+Эта функция является перегруженной оболочкой для [пасбуилдрут](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -169,11 +169,11 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota) сведения.
+Дополнительные сведения см. в разделе [пасбуилдрут](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw) .
 
-## <a name="canonicalize"></a> ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath:: канонизировать
 
-Эта функция представляет собой перегруженную оболочку для [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea).
+Эта функция является перегруженной оболочкой для [пасканоникализе](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -184,11 +184,11 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea) сведения.
+Дополнительные сведения см. в разделе [пасканоникализе](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew) .
 
-## <a name="combine"></a> ATLPath::Combine
+## <a name="combine"></a>ATLPath:: Combine
 
-Эта функция представляет собой перегруженную оболочку для [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea).
+Эта функция является перегруженной оболочкой для [паскомбине](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -207,11 +207,11 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. PathCombine.
+Дополнительные сведения см. в разделе Паскомбине.
 
-## <a name="commonprefix"></a> ATLPath::CommonPrefix
+## <a name="commonprefix"></a>ATLPath:: Коммонпрефикс
 
-Эта функция представляет собой перегруженную оболочку для [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa).
+Эта функция является перегруженной оболочкой для [паскоммонпрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -229,11 +229,11 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa) сведения.
+Дополнительные сведения см. в разделе [паскоммонпрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw) .
 
-## <a name="compactpath"></a> ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath:: Компактпас
 
-Эта функция представляет собой перегруженную оболочку для [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha).
+Эта функция является перегруженной оболочкой для [паскомпактпас](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -251,11 +251,11 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha) сведения.
+Дополнительные сведения см. в разделе [паскомпактпас](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw) .
 
-## <a name="compactpathex"></a> ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath:: Компактпасекс
 
-Эта функция представляет собой перегруженную оболочку для [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa).
+Эта функция является перегруженной оболочкой для [паскомпактпасекс](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -275,11 +275,11 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa) сведения.
+Дополнительные сведения см. в разделе [паскомпактпасекс](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw) .
 
-## <a name="fileexists"></a> ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath:: FileExists
 
-Эта функция представляет собой перегруженную оболочку для [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa).
+Эта функция является перегруженной оболочкой для [пасфиликсистс](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -290,11 +290,11 @@ inline BOOL FileExists(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa) сведения.
+Дополнительные сведения см. в разделе [пасфиликсистс](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw) .
 
-## <a name="findextension"></a> ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath:: Финдекстенсион
 
-Эта функция представляет собой перегруженную оболочку для [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona).
+Эта функция является перегруженной оболочкой для [пасфиндекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -305,11 +305,11 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona) сведения.
+Дополнительные сведения см. в разделе [пасфиндекстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw) .
 
-## <a name="findfilename"></a> ATLPath::FindFileName
+## <a name="findfilename"></a>ATLPath:: Финдфиленаме
 
-Эта функция представляет собой перегруженную оболочку для [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea).
+Эта функция является перегруженной оболочкой для [пасфиндфиленаме](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -320,11 +320,11 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) сведения.
+Дополнительные сведения см. в разделе [пасфиндфиленаме](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) .
 
-## <a name="getdrivenumber"></a> ATLPath::GetDriveNumber
+## <a name="getdrivenumber"></a>ATLPath:: Жетдривенумбер
 
-Эта функция представляет собой перегруженную оболочку для [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera).
+Эта функция является перегруженной оболочкой для [пасжетдривенумбер](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -335,11 +335,11 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera) сведения.
+Дополнительные сведения см. в разделе [пасжетдривенумбер](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw) .
 
-## <a name="isdirectory"></a>  ATLPath::IsDirectory
+## <a name="isdirectory"></a>ATLPath:: подкаталог
 
-Эта функция представляет собой перегруженную оболочку для [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya).
+Эта функция является перегруженной оболочкой для [пасисдиректори](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw).
 
 ```
 inline BOOL IsDirectory(const char* pszPath);
@@ -348,11 +348,11 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. PathIsDirectory.
+Дополнительные сведения см. в разделе Пасисдиректори.
 
-## <a name="isfilespec"></a> ATLPath::IsFileSpec
+## <a name="isfilespec"></a>ATLPath:: Исфилеспек
 
-Эта функция представляет собой перегруженную оболочку для [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca).
+Эта функция является перегруженной оболочкой для [пасисфилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -363,11 +363,11 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca) сведения.
+Дополнительные сведения см. в разделе [пасисфилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw) .
 
-## <a name="isprefix"></a> ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath:: "префикс"
 
-Эта функция представляет собой перегруженную оболочку для [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa).
+Эта функция является перегруженной оболочкой для [пасиспрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -378,11 +378,11 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa) сведения.
+Дополнительные сведения см. в разделе [пасиспрефикс](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw) .
 
-## <a name="isrelative"></a> ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath:: a
 
-Эта функция представляет собой перегруженную оболочку для [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea).
+Эта функция является перегруженной оболочкой для [пасисрелативе](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -393,11 +393,11 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea) сведения.
+Дополнительные сведения см. в разделе [пасисрелативе](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew) .
 
-## <a name="isroot"></a> ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath:: \ root
 
-Эта функция представляет собой перегруженную оболочку для [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota).
+Эта функция является перегруженной оболочкой для [пасисрут](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -408,11 +408,11 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota) сведения.
+Дополнительные сведения см. в разделе [пасисрут](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw) .
 
-## <a name="issameroot"></a> ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath:: Иссамерут
 
-Эта функция представляет собой перегруженную оболочку для [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota).
+Эта функция является перегруженной оболочкой для [пасиссамерут](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -423,11 +423,11 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota) сведения.
+Дополнительные сведения см. в разделе [пасиссамерут](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw) .
 
-## <a name="isunc"></a> ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath:: Исунк
 
-Эта функция представляет собой перегруженную оболочку для [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca).
+Эта функция является перегруженной оболочкой для [пасисунк](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -438,11 +438,11 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca) сведения.
+Дополнительные сведения см. в разделе [пасисунк](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw) .
 
-## <a name="isuncserver"></a> ATLPath::IsUNCServer
+## <a name="isuncserver"></a>ATLPath:: Исунксервер
 
-Эта функция представляет собой перегруженную оболочку для [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera).
+Эта функция является перегруженной оболочкой для [пасисунксервер](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -453,11 +453,11 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera) сведения.
+Дополнительные сведения см. в разделе [пасисунксервер](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw) .
 
-## <a name="isuncservershare"></a> ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>ATLPath:: Исунксервершаре
 
-Эта функция представляет собой перегруженную оболочку для [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea).
+Эта функция является перегруженной оболочкой для [пасисунксервершаре](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -468,11 +468,11 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea) сведения.
+Дополнительные сведения см. в разделе [пасисунксервершаре](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew) .
 
-## <a name="makepretty"></a> ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath:: Макепретти
 
-Эта функция представляет собой перегруженную оболочку для [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya).
+Эта функция является перегруженной оболочкой для [пасмакепретти](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -483,11 +483,11 @@ inline BOOL MakePretty(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya) сведения.
+Дополнительные сведения см. в разделе [пасмакепретти](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw) .
 
-## <a name="matchspec"></a> ATLPath::MatchSpec
+## <a name="matchspec"></a>ATLPath:: Матчспек
 
-Эта функция представляет собой перегруженную оболочку для [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca).
+Эта функция является перегруженной оболочкой для [пасматчспек](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -498,11 +498,11 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca) сведения.
+Дополнительные сведения см. в разделе [пасматчспек](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw) .
 
-## <a name="quotespaces"></a> ATLPath::QuoteSpaces
+## <a name="quotespaces"></a>ATLPath:: Куотеспацес
 
-Эта функция представляет собой перегруженную оболочку для [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa).
+Эта функция является перегруженной оболочкой для [паскуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -513,11 +513,11 @@ inline void QuoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa) сведения.
+Дополнительные сведения см. в разделе [паскуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw) .
 
-## <a name="relativepathto"></a> ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath:: Релативепасто
 
-Эта функция представляет собой перегруженную оболочку для [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa).
+Эта функция является перегруженной оболочкой для [пасрелативепасто](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -539,11 +539,11 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa) сведения.
+Дополнительные сведения см. в разделе [пасрелативепасто](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow) .
 
-## <a name="removeargs"></a> ATLPath::RemoveArgs
+## <a name="removeargs"></a>ATLPath:: Ремовеаргс
 
-Эта функция представляет собой перегруженную оболочку для [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa).
+Эта функция является перегруженной оболочкой для [пасремовеаргс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -554,11 +554,11 @@ inline void RemoveArgs(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa) сведения.
+Дополнительные сведения см. в разделе [пасремовеаргс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw) .
 
-## <a name="removebackslash"></a> ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath:: Ремовебаккслаш
 
-Эта функция представляет собой перегруженную оболочку для [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha).
+Эта функция является перегруженной оболочкой для [пасремовебаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -569,11 +569,11 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha) сведения.
+Дополнительные сведения см. в разделе [пасремовебаккслаш](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw) .
 
-## <a name="removeblanks"></a> ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath:: Ремовебланкс
 
-Эта функция представляет собой перегруженную оболочку для [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa).
+Эта функция является перегруженной оболочкой для [пасремовебланкс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -584,11 +584,11 @@ inline void RemoveBlanks(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa) сведения.
+Дополнительные сведения см. в разделе [пасремовебланкс](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw) .
 
-## <a name="removeextension"></a> ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath:: Ремовикстенсион
 
-Эта функция представляет собой перегруженную оболочку для [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona).
+Эта функция является перегруженной оболочкой для [пасремовикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -599,11 +599,11 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona) сведения.
+Дополнительные сведения см. в разделе [пасремовикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw) .
 
-## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath:: Ремовефилеспек
 
-Эта функция представляет собой перегруженную оболочку для [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca).
+Эта функция является перегруженной оболочкой для [пасремовефилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -614,11 +614,11 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca) сведения.
+Дополнительные сведения см. в разделе [пасремовефилеспек](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw) .
 
-## <a name="renameextension"></a> ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath:: Ренамикстенсион
 
-Эта функция представляет собой перегруженную оболочку для [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona).
+Эта функция является перегруженной оболочкой для [пасренамикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -629,11 +629,11 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona) сведения.
+Дополнительные сведения см. в разделе [пасренамикстенсион](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw) .
 
-## <a name="skiproot"></a> ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath:: Скипрут
 
-Эта функция представляет собой перегруженную оболочку для [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota).
+Эта функция является перегруженной оболочкой для [пасскипрут](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -644,11 +644,11 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota) сведения.
+Дополнительные сведения см. в разделе [пасскипрут](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw) .
 
-## <a name="strippath"></a> ATLPath::StripPath
+## <a name="strippath"></a>ATLPath:: Стриппас
 
-Эта функция представляет собой перегруженную оболочку для [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha).
+Эта функция является перегруженной оболочкой для [пасстриппас](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -659,11 +659,11 @@ inline void StripPath(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha) сведения.
+Дополнительные сведения см. в разделе [пасстриппас](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw) .
 
-## <a name="striptoroot"></a> ATLPath::StripToRoot
+## <a name="striptoroot"></a>ATLPath:: Стрипторут
 
-Эта функция представляет собой перегруженную оболочку для [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota).
+Эта функция является перегруженной оболочкой для [пасстрипторут](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -674,11 +674,11 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota) сведения.
+Дополнительные сведения см. в разделе [пасстрипторут](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw) .
 
-## <a name="unquotespaces"></a> ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath:: Ункуотеспацес
 
-Эта функция представляет собой перегруженную оболочку для [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa).
+Эта функция является перегруженной оболочкой для [пасункуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -689,4 +689,4 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa) сведения.
+Дополнительные сведения см. в разделе [пасункуотеспацес](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw) .

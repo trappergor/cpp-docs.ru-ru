@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCToolBarMenuButton
+title: Класс Кмфктулбарменубуттон
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarMenuButton
@@ -92,14 +92,14 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d6a9242066289f15e58179a03c4f609699141
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218029"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504716"
 ---
-# <a name="cmfctoolbarmenubutton-class"></a>Класс CMFCToolBarMenuButton
+# <a name="cmfctoolbarmenubutton-class"></a>Класс Кмфктулбарменубуттон
 
 Кнопка панели инструментов, содержащая всплывающее меню.
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
@@ -116,74 +116,74 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Создает объект `CMFCToolBarMenuButton`.|
+|[Кмфктулбарменубуттон:: Кмфктулбарменубуттон](#cmfctoolbarmenubutton)|Создает объект `CMFCToolBarMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::CompareWith](#comparewith)|Сравнивает данный экземпляр с предоставленным `CMFCToolBarButton` объекта. (Переопределяет [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
-|[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Копирует свойства другую кнопку панели инструментов для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
-|[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|Инициализирует меню панели инструментов из меню дескриптора Windows.|
-|[CMFCToolBarMenuButton::CreateMenu](#createmenu)|Создает меню Windows, которое состоит из команды в меню панели инструментов. Возвращает дескриптор меню Windows.|
-|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|Создает объект всплывающего меню ( [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) для отображения меню панели инструментов.|
-|[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
-|[CMFCToolBarMenuButton::GetCommands](#getcommands)|Предоставляет доступ только для чтения список команд в меню панели инструментов.|
-|[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|Возвращает прямоугольник, ограничивающий значок кнопки.|
-|[CMFCToolBarMenuButton::GetPaletteRows](#getpaletterows)|Возвращает количество строк в контекстном меню, когда меню находится в режиме палитры.|
-|[CMFCToolBarMenuButton::GetPopupMenu](#getpopupmenu)|Возвращает указатель на объект всплывающего меню, связанное с кнопкой.|
-|[CMFCToolBarMenuButton::HasButton](#hasbutton)||
-|[CMFCToolBarMenuButton::HaveHotBorder](#havehotborder)|Определяет, отображается ли граница кнопки, когда пользователь выбирает кнопку. (Переопределяет [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
-|[CMFCToolBarMenuButton::IsBorder](#isborder)||
-|[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
-|[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|Определяет, отображается ли во всплывающем меню.|
-|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|Вызывается платформой для определения, является ли пользователь может открыть подменю из выбранного пункта меню.|
-|[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|Определяет, является ли кнопка в монопольном режиме, то есть ли во всплывающем меню остается открытым, даже в том случае, когда пользователь перемещает указатель над другой панели инструментов или кнопки.|
-|[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|Определяет, является ли всплывающее меню в режиме палитры.|
-|[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
-|[CMFCToolBarMenuButton::IsTearOffMenu](#istearoffmenu)|Определяет, имеет ли всплывающее меню с перемещаемой панелью.|
-|[CMFCToolBarMenuButton::OnAfterCreatePopupMenu](#onaftercreatepopupmenu)||
-|[CMFCToolBarMenuButton::OnBeforeDrag](#onbeforedrag)|Указывает, можно ли перетаскивать кнопки. (Переопределяет [CMFCToolBarButton::OnBeforeDrag](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|
-|[CMFCToolBarMenuButton::OnCalculateSize](#oncalculatesize)|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
-|[CMFCToolBarMenuButton::OnCancelMode](#oncancelmode)|Вызывается платформой для обработки [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode) сообщения. (Переопределяет [CMFCToolBarButton::OnCancelMode](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|
-|[CMFCToolBarMenuButton::OnChangeParentWnd](#onchangeparentwnd)|Вызывается платформой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](cmfctoolbarbutton-class.md#onchangeparentwnd).)|
-|[CMFCToolBarMenuButton::OnClick](#onclick)|Вызывается платформой, когда пользователь нажимает кнопку мыши. (Переопределяет [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
-|[CMFCToolBarMenuButton::OnClickMenuItem](#onclickmenuitem)|Вызывается платформой, когда пользователь выбирает пункт контекстного меню.|
-|[CMFCToolBarMenuButton::OnContextHelp](#oncontexthelp)|Вызывается платформой, когда родительский инструментов обрабатывает сообщение WM_HELPHITTEST. (Переопределяет [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
-|[CMFCToolBarMenuButton::OnDraw](#ondraw)|Вызывается платформой для отрисовки кнопки с использованием указанных стилей и параметров. (Переопределяет [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
-|[CMFCToolBarMenuButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Вызывается платформой для отрисовки кнопки **команды** области **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
-|[CMFCToolBarMenuButton::OpenPopupMenu](#openpopupmenu)|Вызывается платформой, когда пользователь открывает во всплывающем меню.|
-|[CMFCToolBarMenuButton::ResetImageToDefault](#resetimagetodefault)|Задает значение по умолчанию изображение, связанное с кнопкой. (Переопределяет [CMFCToolBarButton::ResetImageToDefault](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|
-|[CMFCToolBarMenuButton::SaveBarState](#savebarstate)|Сохраняет состояние кнопки панели инструментов. (Переопределяет [CMFCToolBarButton::SaveBarState](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|
-|[CMFCToolBarMenuButton::Serialize](#serialize)|Считывает этот объект из архива или записывает его в архив. (Переопределяет [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
-|[CMFCToolBarMenuButton::SetACCData](#setaccdata)|Заполняет предоставленный `CAccessibilityData` объект с данные специальных возможностей с помощью кнопки панели инструментов. (Переопределяет [CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
-|[CMFCToolBarMenuButton::SetMenuOnly](#setmenuonly)|Указывает, можно ли добавить кнопки панели инструментов.|
-|[CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode)|Указывает, является ли всплывающее меню в режиме палитры.|
-|[CMFCToolBarMenuButton::SetMessageWnd](#setmessagewnd)||
-|[CMFCToolBarMenuButton::SetRadio](#setradio)|Заставляет кнопку меню панели инструментов, чтобы отобразить значок, указывающий, что он выбран.|
-|[CMFCToolBarMenuButton::SetTearOff](#settearoff)|Задает перемещаемое панели идентификатор всплывающего меню.|
+|[Кмфктулбарменубуттон:: Компаревис](#comparewith)|Сравнивает данный экземпляр с предоставленным `CMFCToolBarButton` объектом. (Переопределяет [CMFCToolBarButton:: компаревис](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
+|[Кмфктулбарменубуттон:: CopyFrom](#copyfrom)|Копирует свойства другой кнопки панели инструментов в текущую кнопку. (Переопределяет [CMFCToolBarButton:: CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
+|[Кмфктулбарменубуттон:: Креатефроммену](#createfrommenu)|Инициализирует меню панели инструментов из маркера меню Windows.|
+|[Кмфктулбарменубуттон:: Креатемену](#createmenu)|Создает меню Windows, состоящее из команд в меню панели инструментов. Возвращает маркер в меню окон.|
+|[Кмфктулбарменубуттон:: Креатепопупмену](#createpopupmenu)|Создает всплывающий объект меню ( [Класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)) для отображения меню панели инструментов.|
+|[Кмфктулбарменубуттон:: Енаблекуикккустомизе](#enablequickcustomize)||
+|[Кмфктулбарменубуттон:: выкоманд](#getcommands)|Предоставляет доступ только для чтения к списку команд в меню панели инструментов.|
+|[Кмфктулбарменубуттон:: Жетимажерект](#getimagerect)|Извлекает ограничивающий прямоугольник для изображения кнопки.|
+|[Кмфктулбарменубуттон:: Жетпалеттеровс](#getpaletterows)|Возвращает количество строк во всплывающем меню, если меню находится в режиме палитры.|
+|[Кмфктулбарменубуттон:: Жетпопупмену](#getpopupmenu)|Возвращает указатель на объект всплывающего меню, связанный с кнопкой.|
+|[Кмфктулбарменубуттон:: Хасбуттон](#hasbutton)||
+|[Кмфктулбарменубуттон:: Хавехотбордер](#havehotborder)|Определяет, отображается ли граница кнопки, когда пользователь нажимает кнопку. (Переопределяет [CMFCToolBarButton:: хавехотбордер](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|
+|[Кмфктулбарменубуттон:: "граница"](#isborder)||
+|[Кмфктулбарменубуттон:: Искликкедонмену](#isclickedonmenu)||
+|[Кмфктулбарменубуттон:: Исдроппеддовн](#isdroppeddown)|Определяет, отображается ли всплывающее меню.|
+|[Кмфктулбарменубуттон:: Исемптименуалловед](#isemptymenuallowed)|Вызывается платформой для определения того, может ли пользователь открыть подменю из выбранного пункта меню.|
+|[Кмфктулбарменубуттон:: Exclusive](#isexclusive)|Определяет, находится ли кнопка в монопольном режиме, то есть независимо от того, остается ли всплывающее меню открытым, даже когда пользователь наводит указатель на другую панель инструментов или кнопку.|
+|[Кмфктулбарменубуттон:: Исменупалеттемоде](#ismenupalettemode)|Определяет, находится ли всплывающее меню в режиме палитры.|
+|[Кмфктулбарменубуттон:: Искуиккмоде](#isquickmode)||
+|[Кмфктулбарменубуттон:: Истеароффмену](#istearoffmenu)|Определяет, содержит ли всплывающее меню полосу разрыва.|
+|[Кмфктулбарменубуттон:: Онафтеркреатепопупмену](#onaftercreatepopupmenu)||
+|[Кмфктулбарменубуттон:: Онбефоредраг](#onbeforedrag)|Указывает, можно ли перетащить кнопку. (Переопределяет [CMFCToolBarButton:: онбефоредраг](../../mfc/reference/cmfctoolbarbutton-class.md#onbeforedrag).)|
+|[Кмфктулбарменубуттон:: Онкалкулатесизе](#oncalculatesize)|Вызывается платформой для вычисления размера кнопки для указанного контекста устройства и состояния закрепления. (Переопределяет [CMFCToolBarButton:: онкалкулатесизе](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
+|[Кмфктулбарменубуттон:: Онканцелмоде](#oncancelmode)|Вызывается платформой для работы с сообщением [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) . (Переопределяет [CMFCToolBarButton:: онканцелмоде](../../mfc/reference/cmfctoolbarbutton-class.md#oncancelmode).)|
+|[Кмфктулбарменубуттон:: Ончанжепарентвнд](#onchangeparentwnd)|Вызывается структурой при вставке кнопки в новую панель инструментов. (Переопределяет [CMFCToolBarButton:: ончанжепарентвнд](cmfctoolbarbutton-class.md#onchangeparentwnd).)|
+|[Кмфктулбарменубуттон:: OnClick](#onclick)|Вызывается структурой при нажатии пользователем кнопки мыши. (Переопределяет [CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
+|[Кмфктулбарменубуттон:: Онкликкменуитем](#onclickmenuitem)|Вызывается платформой, когда пользователь выбирает элемент во всплывающем меню.|
+|[Кмфктулбарменубуттон:: Онконтексселп](#oncontexthelp)|Вызывается структурой, когда родительская панель инструментов обрабатывает сообщение WM_HELPHITTEST. (Переопределяет [CMFCToolBarButton:: онконтексселп](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|
+|[Кмфктулбарменубуттон:: OnDraw](#ondraw)|Вызывается платформой для рисования кнопки с использованием указанных стилей и параметров. (Переопределяет [CMFCToolBarButton:: OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
+|[Кмфктулбарменубуттон:: Ондравонкустомизелист](#ondrawoncustomizelist)|Вызывается платформой для нарисовании кнопки в области **команды** диалогового окна " **Настройка** ". (Переопределяет [CMFCToolBarButton:: ондравонкустомизелист](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|
+|[Кмфктулбарменубуттон:: Опенпопупмену](#openpopupmenu)|Вызывается платформой, когда пользователь открывает всплывающее меню.|
+|[Кмфктулбарменубуттон:: Ресетимажетодефаулт](#resetimagetodefault)|Задает значение по умолчанию для изображения, связанного с кнопкой. (Переопределяет [CMFCToolBarButton:: ресетимажетодефаулт](../../mfc/reference/cmfctoolbarbutton-class.md#resetimagetodefault).)|
+|[Кмфктулбарменубуттон:: Савебарстате](#savebarstate)|Сохраняет состояние кнопки панели инструментов. (Переопределяет [CMFCToolBarButton:: савебарстате](../../mfc/reference/cmfctoolbarbutton-class.md#savebarstate).)|
+|[Кмфктулбарменубуттон:: Serialize](#serialize)|Считывает этот объект из архива или записывает его в архив. (Переопределяет [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
+|[Кмфктулбарменубуттон:: Сетаккдата](#setaccdata)|Заполняет предоставленный `CAccessibilityData` объект данными специальных возможностей из кнопки панели инструментов. (Переопределяет [CMFCToolBarButton:: сетаккдата](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata).)|
+|[Кмфктулбарменубуттон:: Сетменуонли](#setmenuonly)|Указывает, можно ли добавить кнопку на панель инструментов.|
+|[Кмфктулбарменубуттон:: Сетменупалеттемоде](#setmenupalettemode)|Указывает, находится ли всплывающее меню в режиме палитры.|
+|[Кмфктулбарменубуттон:: Сетмессажевнд](#setmessagewnd)||
+|[Кмфктулбарменубуттон:: Сетрадио](#setradio)|Заставляет кнопку меню панели инструментов отображать значок, указывающий, что он выбран.|
+|[Кмфктулбарменубуттон:: Сеттеарофф](#settearoff)|Указывает идентификатор отрезков для всплывающего меню.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Рисует значка на кнопке меню.|
+|[Кмфктулбарменубуттон::D Равдокументикон](#drawdocumenticon)|Рисует значок на кнопке меню.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Если значение равно TRUE, всегда вызывается платформой [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при рисовании кнопки.|
+|[Кмфктулбарменубуттон:: m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|Если значение — TRUE, платформа всегда вызывает [CFrameWndEx:: ондравменуимаже](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при прорисовке кнопки.|
 
 ## <a name="remarks"></a>Примечания
 
-Объект `CMFCToolBarMenuButton` может отображаться как меню, элемент меню имеет вложенные меню, кнопка, которая выполняет команду или отображает меню или кнопки, которая отображает только меню. Вы определите поведение и внешний вид кнопки меню, указав параметры, такие как изображения, текста, дескриптор меню и идентификатор, связанный с кнопкой в конструкторе `CMFCToolbarMenuButton::CMFCToolbarMenuButton`.
+`CMFCToolBarMenuButton` Может отображаться как меню, пункт меню, имеющий подменю, кнопку, которая выполняет команду или отображает меню, или кнопку, отображающую только меню. Вы определяете поведение и внешний вид кнопки меню, указывая такие параметры, как изображение, текст, маркер меню и идентификатор команды, связанные с кнопкой в конструкторе `CMFCToolbarMenuButton::CMFCToolbarMenuButton`.
 
-Пользовательский класс, производный от `CMFCToolbarMenuButton` необходимо использовать класс [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) макрос. [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) макрос выдает ошибку при закрытии приложения.
+Пользовательский класс, производный от `CMFCToolbarMenuButton` класса, должен использовать макрос [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) . Макрос [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate) создает ошибку при закрытии приложения.
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCToolBarMenuButton` объекта. Код иллюстрирует способ указать, что раскрывающееся меню находится в режиме палитры и укажите идентификатор для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопку меню из строки меню. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как настроить `CMFCToolBarMenuButton` объект. В коде показано, как указать, что раскрывающееся меню находится в режиме палитры, и указать идентификатор для неразрывной панели, создаваемой при перетаскивании кнопки меню из строки меню. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -193,13 +193,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)
+[кмфктулбарменубуттон](../../mfc/reference/cmfctoolbarmenubutton-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxtoolbarmenubutton.h
 
-##  <a name="cmfctoolbarmenubutton"></a>  CMFCToolBarMenuButton::CMFCToolBarMenuButton
+##  <a name="cmfctoolbarmenubutton"></a>Кмфктулбарменубуттон:: Кмфктулбарменубуттон
 
 Создает объект `CMFCToolBarMenuButton`.
 
@@ -218,34 +218,34 @@ CMFCToolBarMenuButton(
 ### <a name="parameters"></a>Параметры
 
 *src*<br/>
-[in] Существующий `CMFCToolBarMenuButton` объект, который необходимо скопировать в это `CMFCToolBarMenuButton` объекта.
+окне Существующий `CMFCToolBarMenuButton` объект, который будет скопирован в этот `CMFCToolBarMenuButton` объект.
 
 *uiID*<br/>
-[in] Идентификатор команды для выполнения, когда пользователь нажимает кнопку; или (целое число без знака) -1 для кнопки меню, непосредственно не выполнить команду.
+окне Идентификатор команды, выполняемой при нажатии пользователем кнопки; или (UINT) — 1 для кнопки меню, которая не выполняет команду напрямую.
 
 *hMenu*<br/>
-[in] Дескриптор меню; или значение NULL, если нет кнопки меню.
+окне Маркер для меню; или значение NULL, если кнопка не имеет меню.
 
-*iImage*<br/>
-[in] Индекс изображения для кнопки; или -1, если эта кнопка не имеет значка или использует значок для команды, заданной параметром *uiID*. Индекс является одинаковым для каждого `CMFCToolBarImages` объекта в приложении.
+*иимаже*<br/>
+окне Индекс изображения для кнопки; или-1, если эта кнопка не имеет значка или использует значок для команды, заданной параметром *уиид*. Индекс одинаков для каждого `CMFCToolBarImages` объекта в приложении.
 
 *lpszText*<br/>
-[in] Текст кнопки меню панели инструментов.
+окне Текст кнопки меню панели инструментов.
 
-*bUserButton*<br/>
-[in] Значение TRUE, если кнопка отображает изображение, определяемые пользователем; Значение FALSE, если кнопка отображает предопределенные изображения, связанного с команда, заданная *uiID*.
+*бусербуттон*<br/>
+окне Значение TRUE, если кнопка отображает изображение, определенное пользователем; Значение FALSE, если кнопка отображает предопределенное изображение, связанное с командой, заданной параметром *уиид*.
 
 ### <a name="remarks"></a>Примечания
 
-Если *uiID* является допустимым ИД команды, кнопка выполняет эту команду, когда пользователь щелкает его. Если *hMenu* является дескриптором допустимым меню, кнопки предоставляет раскрывающееся меню, когда он отображается в меню находится в панели инструментов или подменю. Если оба *uiID* и *hMenu* являются допустимыми, split-кнопкой с часть, которая выполнит команду, когда пользователь щелкает и часть с стрелка вниз, которая будет раскрывающегося меню при пользователя щелкает его. Тем не менее если *hMenu* допустим, пользователь не сможет нажмите кнопку, чтобы выполнить команду, при вставке в меню кнопки.
+Если *уиид* является ДОПУСТИМЫм идентификатором команды, кнопка выполняет эту команду, когда пользователь нажимает ее. Если *HMENU* является допустимым маркером меню, кнопка предоставляет раскрывающееся меню, если оно отображается в меню на панели инструментов или в подменю. Если оба *уиид* и *HMENU* являются допустимыми, кнопка является разворачивающейся кнопкой с частью, которая будет выполнять команду, когда пользователь щелкает ее, и часть со стрелкой вниз, которая раскрывает меню, когда пользователь щелкает его. Однако если *HMENU* является допустимым, пользователь не сможет нажать кнопку, чтобы выполнить команду при вставке кнопки в меню.
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCToolBarMenuButton` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как создать объект `CMFCToolBarMenuButton` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 
-##  <a name="comparewith"></a>  CMFCToolBarMenuButton::CompareWith
+##  <a name="comparewith"></a>Кмфктулбарменубуттон:: Компаревис
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
@@ -253,13 +253,13 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *других*<br/>
+окне *другие*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
+##  <a name="copyfrom"></a>Кмфктулбарменубуттон:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -267,13 +267,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *src*<br/>
+окне *src*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="createfrommenu"></a>  CMFCToolBarMenuButton::CreateFromMenu
+##  <a name="createfrommenu"></a>Кмфктулбарменубуттон:: Креатефроммену
 
-Инициализирует меню панели инструментов из меню дескриптора Windows.
+Инициализирует меню панели инструментов из маркера меню Windows.
 
 ```
 virtual void CreateFromMenu(HMENU hMenu);
@@ -282,17 +282,17 @@ virtual void CreateFromMenu(HMENU hMenu);
 ### <a name="parameters"></a>Параметры
 
 *hMenu*<br/>
-[in] Дескриптор для меню.
+окне Маркер меню.
 
 ### <a name="remarks"></a>Примечания
 
-Кнопки панели инструментов меню можно отображать подменю раскрывающегося списка.
+Кнопка меню панели инструментов может отображать раскрывающееся меню.
 
-Платформа вызывает этот метод для инициализации команды в подменю из меню.
+Платформа вызывает этот метод для инициализации команд из меню в подменю.
 
-##  <a name="createmenu"></a>  CMFCToolBarMenuButton::CreateMenu
+##  <a name="createmenu"></a>Кмфктулбарменубуттон:: Креатемену
 
-Создание меню, которое состоит из команды в меню панели инструментов. Возвращает дескриптор для меню.
+Создает меню, состоящее из команд в меню панели инструментов. Возвращает маркер в меню.
 
 ```
 virtual HMENU CreateMenu() const;
@@ -300,15 +300,15 @@ virtual HMENU CreateMenu() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение handle в меню, если успех. Значение NULL, если список команд, связанных с кнопкой панели инструментов меню пуст.
+Маркер меню в случае успеха. Значение NULL, если список команд, связанных с кнопкой меню панели инструментов, пуст.
 
 ### <a name="remarks"></a>Примечания
 
-Можно переопределить этот метод в производном классе для настройки способа создания меню.
+Этот метод можно переопределить в производном классе, чтобы настроить способ создания меню.
 
-##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
+##  <a name="createpopupmenu"></a>Кмфктулбарменубуттон:: Креатепопупмену
 
-Создает `CMFCPopupMenu` объект для отображения меню панели инструментов.
+`CMFCPopupMenu` Создает объект для вывода меню панели инструментов.
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -316,17 +316,17 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `CMFCPopupMenu` объекта, который отображает раскрывающееся меню, связанное с кнопкой панели инструментов меню.
+Указатель на `CMFCPopupMenu` объект, отображающий раскрывающееся меню, связанное с кнопкой меню панели инструментов.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой для подготовки Отображение раскрывающегося меню, связанное с кнопкой.
+Этот метод вызывается платформой для подготовки к отображению раскрывающегося меню, связанного с кнопкой.
 
-Реализация по умолчанию просто создает и возвращает новый `CMFCPopupMenu` объекта. Переопределите этот метод, если вы хотите использовать производным типом класса [класс CMFCPopupMenu](cmfcpopupmenu-class.md) или выполнять дополнительную инициализацию.
+Реализация по умолчанию просто конструирует и возвращает новый `CMFCPopupMenu` объект. Переопределите этот метод, если вы хотите использовать производный тип [класса CMFCPopupMenu](cmfcpopupmenu-class.md) или выполнить дополнительную инициализацию.
 
-##  <a name="drawdocumenticon"></a>  CMFCToolBarMenuButton::DrawDocumentIcon
+##  <a name="drawdocumenticon"></a>Кмфктулбарменубуттон::D Равдокументикон
 
-Рисует значок документа на кнопке меню.
+Рисует значок документа в кнопке меню.
 
 ```
 void DrawDocumentIcon(
@@ -338,19 +338,19 @@ void DrawDocumentIcon(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
-*rectImage*<br/>
-[in] Координаты ограничивающего прямоугольника изображения.
+*ректимаже*<br/>
+окне Координаты прямоугольника, ограничивающего изображение.
 
 *hIcon*<br/>
-[in] Дескриптор значка.
+окне Маркер значка.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод принимает значок документа и отображает его на кнопке меню, по центру области, заданной *rectImage*.
+Этот метод принимает значок документа и рисует его с помощью кнопки меню, расположенной в области, заданной параметром *ректимаже*.
 
-##  <a name="enablequickcustomize"></a>  CMFCToolBarMenuButton::EnableQuickCustomize
+##  <a name="enablequickcustomize"></a>Кмфктулбарменубуттон:: Енаблекуикккустомизе
 
 ```
 void EnableQuickCustomize();
@@ -358,7 +358,7 @@ void EnableQuickCustomize();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="hasbutton"></a>  CMFCToolBarMenuButton::HasButton
+##  <a name="hasbutton"></a>Кмфктулбарменубуттон:: Хасбуттон
 
 ```
 virtual BOOL HasButton() const;
@@ -368,7 +368,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="havehotborder"></a>  CMFCToolBarMenuButton::HaveHotBorder
+##  <a name="havehotborder"></a>Кмфктулбарменубуттон:: Хавехотбордер
 
 ```
 virtual BOOL HaveHotBorder() const;
@@ -378,7 +378,7 @@ virtual BOOL HaveHotBorder() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isborder"></a>  CMFCToolBarMenuButton::IsBorder
+##  <a name="isborder"></a>Кмфктулбарменубуттон:: "граница"
 
 ```
 virtual BOOL IsBorder() const;
@@ -388,7 +388,7 @@ virtual BOOL IsBorder() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isclickedonmenu"></a>  CMFCToolBarMenuButton::IsClickedOnMenu
+##  <a name="isclickedonmenu"></a>Кмфктулбарменубуттон:: Искликкедонмену
 
 ```
 BOOL IsClickedOnMenu() const;
@@ -398,7 +398,7 @@ BOOL IsClickedOnMenu() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isquickmode"></a>  CMFCToolBarMenuButton::IsQuickMode
+##  <a name="isquickmode"></a>Кмфктулбарменубуттон:: Искуиккмоде
 
 ```
 BOOL IsQuickMode();
@@ -408,9 +408,9 @@ BOOL IsQuickMode();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getcommands"></a>  CMFCToolBarMenuButton::GetCommands
+##  <a name="getcommands"></a>Кмфктулбарменубуттон:: выкоманд
 
-Предоставляет доступ только для чтения список команд в меню панели инструментов.
+Предоставляет доступ только для чтения к списку команд в меню панели инструментов.
 
 ```
 const CObList& GetCommands() const;
@@ -418,15 +418,15 @@ const CObList& GetCommands() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Константную ссылку на [класс CObList](../../mfc/reference/coblist-class.md) объект, содержащий коллекцию [класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) объектов.
+Константная ссылка на объект [класса коблист](../../mfc/reference/coblist-class.md) , который содержит коллекцию объектов [класса CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) .
 
 ### <a name="remarks"></a>Примечания
 
-Кнопки панели инструментов меню можно отображать подменю. Можно предоставить список команд в подменю в конструкторе или в [CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu) как дескриптор меню (HMENU). Меню преобразуется в список объектов, которые являются производными от [класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) и хранятся во внутреннем `CObList` объекта. Этот список доступен, вызвав этот метод.
+Кнопка меню панели инструментов может отображать подменю. Вы можете указать список команд в подменю в конструкторе или в [кмфктулбарменубуттон:: креатефроммену](#createfrommenu) в качестве маркера меню (HMENU). Меню преобразуется в список объектов, которые являются производными от [класса CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) и хранятся во внутреннем `CObList` объекте. Доступ к этому списку можно получить, вызвав этот метод.
 
-##  <a name="getimagerect"></a>  CMFCToolBarMenuButton::GetImageRect
+##  <a name="getimagerect"></a>Кмфктулбарменубуттон:: Жетимажерект
 
-Возвращает прямоугольник, ограничивающий значок кнопки.
+Извлекает ограничивающий прямоугольник для изображения кнопки.
 
 ```
 void GetImageRect(CRect& rectImage);
@@ -434,12 +434,12 @@ void GetImageRect(CRect& rectImage);
 
 ### <a name="parameters"></a>Параметры
 
-*rectImage*<br/>
-[out] Ссылку на `CRect` объект, получающий координаты ограничивающего прямоугольника изображения.
+*ректимаже*<br/>
+заполняет Ссылка на `CRect` объект, который получает координаты ограничивающего прямоугольника изображения.
 
-##  <a name="getpaletterows"></a>  CMFCToolBarMenuButton::GetPaletteRows
+##  <a name="getpaletterows"></a>Кмфктулбарменубуттон:: Жетпалеттеровс
 
-Возвращает количество строк в раскрывающемся меню, когда меню находится в режиме палитры.
+Возвращает количество строк в раскрывающемся меню, если меню находится в режиме палитры.
 
 ```
 int GetPaletteRows() const;
@@ -447,15 +447,15 @@ int GetPaletteRows() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество строк в палитре.
+Число строк в палитре.
 
 ### <a name="remarks"></a>Примечания
 
-При «меню» будет переведена в режим палитры, пункты меню будет отображаться в нескольких столбцах с ограниченное число строк. Вызовите этот метод, чтобы получить количество строк. Можно включить или отключить режим палитры и укажите число строк с помощью [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
+Если для кнопки меню выбран режим палитра, пункты меню будут отображаться в нескольких столбцах с ограниченным числом строк. Вызовите этот метод, чтобы получить количество строк. Можно включить или отключить режим палитры и указать число строк с помощью [кмфктулбарменубуттон:: сетменупалеттемоде](#setmenupalettemode).
 
-##  <a name="getpopupmenu"></a>  CMFCToolBarMenuButton::GetPopupMenu
+##  <a name="getpopupmenu"></a>Кмфктулбарменубуттон:: Жетпопупмену
 
-Возвращает указатель на [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , представляющий стрелку раскрывающегося меню кнопки.
+Возвращает указатель на объект [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , представляющий раскрывающееся меню кнопки.
 
 ```
 CMFCPopupMenu* GetPopupMenu() const;
@@ -463,15 +463,15 @@ CMFCPopupMenu* GetPopupMenu() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объект, который был создан при framework нарисованную вложенного меню меню кнопки панели инструментов; Значение NULL, если нет подменю отображается.
+Указатель на объект [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , который был создан, когда платформа нарисована подменю для кнопки меню панели инструментов; Значение NULL, если подменю не отображается.
 
 ### <a name="remarks"></a>Примечания
 
-Если кнопки панели инструментов меню отображает раскрывающееся меню, кнопки создает [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объект для представления в меню. Вызовите этот метод, чтобы получить указатель на `CMFCPopupMenu` объект. Не следует хранить возвращаемого указателя, так как он является временным и становится недействительным, когда пользователь закрывает раскрывающееся меню.
+Когда на кнопке меню панели инструментов отображается раскрывающееся меню, кнопка создает объект [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) для представления меню. Вызовите этот метод, чтобы получить указатель на `CMFCPopupMenu` объект. Не следует хранить возвращаемый указатель, так как он является временным и становится недействительным, когда пользователь закрывает раскрывающееся меню.
 
-##  <a name="isdroppeddown"></a>  CMFCToolBarMenuButton::IsDroppedDown
+##  <a name="isdroppeddown"></a>Кмфктулбарменубуттон:: Исдроппеддовн
 
-Указывает, отображается ли в данный момент во всплывающем меню.
+Указывает, отображается ли всплывающее меню в данный момент.
 
 ```
 virtual BOOL IsDroppedDown() const;
@@ -479,11 +479,11 @@ virtual BOOL IsDroppedDown() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кнопка панели инструментов меню отображает его подменю; в противном случае — значение FALSE.
+Значение TRUE, если на кнопке меню панели инструментов отображается подменю; в противном случае — FALSE.
 
-##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
+##  <a name="isemptymenuallowed"></a>Кмфктулбарменубуттон:: Исемптименуалловед
 
-Указывает, отображает ли пунктов меню пустой подменю.
+Указывает, показывают ли пункты меню пустые подменю.
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
@@ -491,17 +491,17 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если платформа открывается подменю из пункта меню выбранного даже в том случае, если подменю является пустым; в противном случае — значение FALSE.
+Значение TRUE, если платформа открывает подменю из текущего выбранного пункта меню, даже если подменю пусто; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой, когда пользователь пытается открыть подменю из пункта меню выбранного. Если подменю является пустым и `IsEmptyMenuAllowed` возвращает значение FALSE, не будут открываться подменю.
+Платформа вызывает этот метод, когда пользователь пытается открыть подменю из текущего выбранного пункта меню. Если подменю пусто и `IsEmptyMenuAllowed` возвращает значение false, подменю не откроется.
 
-Реализация по умолчанию возвращает значение FALSE. Переопределите этот метод для настройки этого поведения.
+Реализация по умолчанию возвращает значение FALSE. Переопределите этот метод, чтобы настроить это поведение.
 
-##  <a name="isexclusive"></a>  CMFCToolBarMenuButton::IsExclusive
+##  <a name="isexclusive"></a>Кмфктулбарменубуттон:: Exclusive
 
-Указывает, является ли кнопка в монопольном режиме.
+Указывает, находится ли кнопка в монопольном режиме.
 
 ```
 virtual BOOL IsExclusive() const;
@@ -509,17 +509,17 @@ virtual BOOL IsExclusive() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кнопка работает в монопольном режиме; в противном случае — значение FALSE.
+Значение TRUE, если кнопка работает в монопольном режиме; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Когда пользователь, открывается контекстное меню для кнопки и затем перемещает указатель мыши на другую кнопку панели инструментов или меню, во всплывающем меню закрывается, если кнопка находится в монопольном режиме.
+Когда пользователь открывает всплывающее меню для кнопки, а затем наводит указатель мыши на другую панель инструментов или кнопку меню, всплывающее меню закрывается, если кнопка не находится в монопольном режиме.
 
-Реализация по умолчанию всегда возвращает значение FALSE. Переопределите этот метод в производном классе, если вы хотите включить в монопольном режиме.
+Реализация по умолчанию всегда возвращает значение FALSE. Переопределите этот метод в производном классе, если хотите включить монопольный режим.
 
-##  <a name="ismenupalettemode"></a>  CMFCToolBarMenuButton::IsMenuPaletteMode
+##  <a name="ismenupalettemode"></a>Кмфктулбарменубуттон:: Исменупалеттемоде
 
-Определяет, является ли раскрывающееся меню в режиме палитры.
+Определяет, находится ли раскрывающееся меню в режиме палитры.
 
 ```
 BOOL IsMenuPaletteMode() const;
@@ -527,15 +527,15 @@ BOOL IsMenuPaletteMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если палитре режим включен, в противном случае — значение FALSE.
+Значение TRUE, если режим палитры включен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-При «меню» будет переведена в режим палитры, пункты меню отображаются в несколько столбцов с ограниченное число строк. Вызовите этот метод, чтобы получить количество строк. Можно включить или отключить режим палитры, вызвав [CMFCToolBarMenuButton::SetMenuPaletteMode](#setmenupalettemode).
+Если для кнопки меню выбран режим палитра, пункты меню отображаются в нескольких столбцах с ограниченным числом строк. Вызовите этот метод, чтобы получить количество строк. Вы можете включить или отключить режим палитры, вызвав [кмфктулбарменубуттон:: сетменупалеттемоде](#setmenupalettemode).
 
-##  <a name="istearoffmenu"></a>  CMFCToolBarMenuButton::IsTearOffMenu
+##  <a name="istearoffmenu"></a>Кмфктулбарменубуттон:: Истеароффмену
 
-Указывает, имеет ли раскрывающееся меню с перемещаемой панелью.
+Указывает, содержит ли раскрывающееся меню полосу разрыва.
 
 ```
 virtual BOOL IsTearOffMenu() const;
@@ -543,15 +543,15 @@ virtual BOOL IsTearOffMenu() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кнопки панели инструментов меню перемещаемой панелью; в противном случае — значение FALSE.
+Значение TRUE, если кнопка меню панели инструментов содержит линию разрыва; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Для включения функции перемещаемой и задания перемещаемой штрих-код, вызовите [CMFCToolBarMenuButton::SetTearOff](#settearoff).
+Чтобы включить функцию удаления и задать идентификатор строки разрыва, вызовите [кмфктулбарменубуттон:: сеттеарофф](#settearoff).
 
-##  <a name="m_balwayscallownerdraw"></a>  CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw
+##  <a name="m_balwayscallownerdraw"></a>Кмфктулбарменубуттон:: m_bAlwaysCallOwnerDraw
 
-Указывает, всегда ли платформа вызывает [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при рисовании кнопки.
+Указывает, будет ли платформа всегда вызывать [CFrameWndEx:: ондравменуимаже](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) при прорисовке кнопки.
 
 ```
 static BOOL m_bAlwaysCallOwnerDraw;
@@ -559,9 +559,9 @@ static BOOL m_bAlwaysCallOwnerDraw;
 
 ### <a name="remarks"></a>Примечания
 
-Когда эта переменная-член имеет значение TRUE, кнопки всегда вызывает [CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) метод для отображения изображения на кнопке. Когда `m_bAlwaysCallOwnerDraw` имеет значение FALSE, самой кнопке Рисует изображение, если изображение является стандартным. В противном случае он вызывает `OnDrawMenuImage`.
+Если для этой переменной-члена задано значение TRUE, кнопка всегда вызывает метод [CFrameWndEx:: ондравменуимаже](../../mfc/reference/cframewndex-class.md#ondrawmenuimage) , чтобы отобразить изображение на кнопке. Если `m_bAlwaysCallOwnerDraw` имеет значение false, то сама кнопка рисует изображение, если изображение предопределено заранее. В противном случае `OnDrawMenuImage`он вызывает.
 
-##  <a name="onaftercreatepopupmenu"></a>  CMFCToolBarMenuButton::OnAfterCreatePopupMenu
+##  <a name="onaftercreatepopupmenu"></a>Кмфктулбарменубуттон:: Онафтеркреатепопупмену
 
 ```
 virtual void OnAfterCreatePopupMenu();
@@ -569,7 +569,7 @@ virtual void OnAfterCreatePopupMenu();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onbeforedrag"></a>  CMFCToolBarMenuButton::OnBeforeDrag
+##  <a name="onbeforedrag"></a>Кмфктулбарменубуттон:: Онбефоредраг
 
 ```
 virtual BOOL OnBeforeDrag() const;
@@ -579,7 +579,7 @@ virtual BOOL OnBeforeDrag() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="oncalculatesize"></a>  CMFCToolBarMenuButton::OnCalculateSize
+##  <a name="oncalculatesize"></a>Кмфктулбарменубуттон:: Онкалкулатесизе
 
 ```
 virtual SIZE OnCalculateSize(
@@ -590,15 +590,15 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *sizeDefault*<br/>
-[in] *bHorz*<br/>
+окне *основной контроллер домена*<br/>
+окне *сизедефаулт*<br/>
+окне *бхорз*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="oncancelmode"></a>  CMFCToolBarMenuButton::OnCancelMode
+##  <a name="oncancelmode"></a>Кмфктулбарменубуттон:: Онканцелмоде
 
 ```
 virtual void OnCancelMode();
@@ -606,7 +606,7 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onchangeparentwnd"></a>  CMFCToolBarMenuButton::OnChangeParentWnd
+##  <a name="onchangeparentwnd"></a>Кмфктулбарменубуттон:: Ончанжепарентвнд
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -614,11 +614,11 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWndParent*<br/>
+окне *пвндпарент*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onclick"></a>  CMFCToolBarMenuButton::OnClick
+##  <a name="onclick"></a>Кмфктулбарменубуттон:: OnClick
 
 ```
 virtual BOOL OnClick(
@@ -628,16 +628,16 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
-[in] *bDelay*<br/>
+окне *приводится*<br/>
+окне *бделай*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onclickmenuitem"></a>  CMFCToolBarMenuButton::OnClickMenuItem
+##  <a name="onclickmenuitem"></a>Кмфктулбарменубуттон:: Онкликкменуитем
 
-Вызывается платформой, когда пользователь выбирает элемент в раскрывающемся меню.
+Вызывается структурой, когда пользователь выбирает элемент в раскрывающемся меню.
 
 ```
 virtual BOOL OnClickMenuItem();
@@ -645,15 +645,15 @@ virtual BOOL OnClickMenuItem();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение FALSE, если платформа должна продолжаться меню по умолчанию элемент обработки; значение TRUE, в противном случае. Реализация по умолчанию всегда возвращает значение FALSE.
+Значение FALSE, если платформа должна продолжить обработку элемента меню по умолчанию; в противном случае — значение TRUE. Реализация по умолчанию всегда возвращает значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Когда пользователь выбирает пункт меню, платформа выполняет команду, связанный с данным элементом.
+Когда пользователь щелкает пункт меню, платформа выполняет команду, связанную с этим элементом.
 
-Чтобы настроить обработку элемента меню, переопределите `OnClickMenuItem` в класс, производный от `CMFCToolBarMenuButton` класса. Необходимо также переопределить [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) и замените кнопок меню, которые требуют специальной обработки с помощью экземпляров производного класса.
+Чтобы настроить обработку элементов меню, переопределите `OnClickMenuItem` в классе, производном `CMFCToolBarMenuButton` от класса. Необходимо также переопределить [CFrameWndEx:: оншовпопупмену](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) и заменить кнопки меню, требующие особой обработки, экземплярами производного класса.
 
-##  <a name="oncontexthelp"></a>  CMFCToolBarMenuButton::OnContextHelp
+##  <a name="oncontexthelp"></a>Кмфктулбарменубуттон:: Онконтексселп
 
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -661,13 +661,13 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
+окне *приводится*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondraw"></a>  CMFCToolBarMenuButton::OnDraw
+##  <a name="ondraw"></a>Кмфктулбарменубуттон:: OnDraw
 
 ```
 virtual void OnDraw(
@@ -683,18 +683,18 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 [in] *rect*<br/>
-[in] *pImages*<br/>
-[in] *bHorz*<br/>
-[in] *bCustomizeMode*<br/>
-[in] *bHighlight*<br/>
-[in] *bDrawBorder*<br/>
-[in] *bGrayDisabledButtons*<br/>
+окне *пимажес*<br/>
+окне *бхорз*<br/>
+окне *бкустомиземоде*<br/>
+окне *бхигхлигхт*<br/>
+окне *бдравбордер*<br/>
+окне *бграйдисабледбуттонс*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarMenuButton::OnDrawOnCustomizeList
+##  <a name="ondrawoncustomizelist"></a>Кмфктулбарменубуттон:: Ондравонкустомизелист
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -705,17 +705,17 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 [in] *rect*<br/>
-[in] *bSelected*<br/>
+окне *бселектед*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="openpopupmenu"></a>  CMFCToolBarMenuButton::OpenPopupMenu
+##  <a name="openpopupmenu"></a>Кмфктулбарменубуттон:: Опенпопупмену
 
-Вызывается платформой, когда пользователь открывает раскрывающееся меню, кнопки панели инструментов меню.
+Вызывается структурой, когда пользователь открывает раскрывающееся меню кнопки меню панели инструментов.
 
 ```
 virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
@@ -723,18 +723,18 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-[in] Определяет окно, которое получает команды выберите в раскрывающемся меню. Он может иметь значение NULL, только в том случае, если родительское окно имеет кнопку меню панели инструментов.
+*Приводится*<br/>
+окне Указывает окно, которое получает команды раскрывающегося меню. Он может иметь значение NULL, только если кнопка меню панели инструментов имеет родительское окно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объект был создан и открыт успешно; в противном случае — значение FALSE.
+Значение TRUE, если объект [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) был успешно создан и открыт. в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция вызывается платформой, когда пользователь открывает раскрывающееся меню с панели инструментов меню.
+Эта функция вызывается платформой, когда пользователь открывает раскрывающееся меню из кнопки меню панели инструментов.
 
-##  <a name="resetimagetodefault"></a>  CMFCToolBarMenuButton::ResetImageToDefault
+##  <a name="resetimagetodefault"></a>Кмфктулбарменубуттон:: Ресетимажетодефаулт
 
 ```
 virtual void ResetImageToDefault();
@@ -742,7 +742,7 @@ virtual void ResetImageToDefault();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="savebarstate"></a>  CMFCToolBarMenuButton::SaveBarState
+##  <a name="savebarstate"></a>Кмфктулбарменубуттон:: Савебарстате
 
 ```
 virtual void SaveBarState();
@@ -750,9 +750,9 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой при создании кнопки панели инструментов в результате операции перетаскивания и вставки. Этот метод вызывает метод [CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) метод всплывающее меню верхнего уровня, что приводит к родительской кнопки, всплывающее меню, чтобы повторно создать его меню.
+Платформа вызывает этот метод при создании кнопки на панели инструментов в результате операции перетаскивания. Этот метод вызывает метод [CMFCPopupMenu:: SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate) всплывающего меню верхнего уровня, в результате чего родительская кнопка всплывающего меню воссоздает свое меню.
 
-##  <a name="serialize"></a>  CMFCToolBarMenuButton::Serialize
+##  <a name="serialize"></a>Кмфктулбарменубуттон:: Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -764,7 +764,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setaccdata"></a>  CMFCToolBarMenuButton::SetACCData
+##  <a name="setaccdata"></a>Кмфктулбарменубуттон:: Сетаккдата
 
 Задает данные специальных возможностей для элемента ленты.
 
@@ -776,7 +776,7 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*<br/>
+*ппарент*<br/>
 Родительское окно для элемента ленты.
 
 *data*<br/>
@@ -788,11 +788,11 @@ virtual BOOL SetACCData(
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод задает данные специальных возможностей для элемента ленты и всегда возвращает значение TRUE. Переопределите этот метод, чтобы задать данные специальных возможностей и возвращать значение, указывающее на успешное или неуспешное выполнение.
+По умолчанию этот метод задает данные о специальных возможностях для элемента Ribbon и всегда возвращает значение TRUE. Переопределите этот метод, чтобы задать данные специальных возможностей и возвращать значение, указывающее на успешное или неуспешное выполнение.
 
-##  <a name="setmenuonly"></a>  CMFCToolBarMenuButton::SetMenuOnly
+##  <a name="setmenuonly"></a>Кмфктулбарменубуттон:: Сетменуонли
 
-Указывает, рисуется ли кнопки как кнопки меню или разворачивающуюся кнопку, если он имеет идентификатор допустимые команды и подменю.
+Указывает, рисуется ли кнопка в виде кнопки меню или разворачивающейся кнопки, если у нее есть допустимый идентификатор команды и подменю.
 
 ```
 void SetMenuOnly(BOOL bMenuOnly);
@@ -800,14 +800,14 @@ void SetMenuOnly(BOOL bMenuOnly);
 
 ### <a name="parameters"></a>Параметры
 
-*bMenuOnly*<br/>
-[in] Значение TRUE, чтобы показать эту кнопку, как кнопка меню, когда ее идентификатор допустимые команды и подменю, FALSE нужно показать эту кнопку, как разворачивающуюся кнопку, если он имеет идентификатор допустимые команды и подменю.
+*бменуонли*<br/>
+окне Значение TRUE для отображения этой кнопки в виде кнопки меню, если она содержит допустимый идентификатор команды и подменю, значение FALSE, чтобы отобразить эту кнопку в виде разворачивающейся кнопки, если у нее есть допустимый идентификатор команды и подменю.
 
 ### <a name="remarks"></a>Примечания
 
-Как правило Если кнопки панели инструментов меню есть вложенное меню и идентификатор команды, меню вероятно разворачивающуюся кнопку с главной кнопки и прикрепленное кнопка со стрелкой вниз. Если этот метод вызывается и *bMenuOnly* имеет значение TRUE, кнопка отображается вместо одного меню кнопка со стрелкой вниз на кнопке. Когда пользователь нажимает клавишу со стрелкой в любом из режимов, открывается подменю и когда пользователь щелкает часть не стрелку кнопки в любом из режимов платформа выполняет команду.
+Как правило, когда у кнопки меню панели инструментов есть подменю и идентификатор команды, меню представляет собой разворачивающуюся кнопку, которая имеет главную кнопку и присоединенную кнопку со стрелкой вниз. Если вызвать этот метод и *бменуонли* имеет значение true, то кнопка будет выглядеть как одна кнопка меню с стрелкой вниз в кнопке. Когда пользователь щелкает стрелку в любом из режимов, открывается подменю, а когда пользователь нажимает на кнопку, не относящуюся к стрелке, в любом режиме платформа выполняет команду.
 
-##  <a name="setmenupalettemode"></a>  CMFCToolBarMenuButton::SetMenuPaletteMode
+##  <a name="setmenupalettemode"></a>Кмфктулбарменубуттон:: Сетменупалеттемоде
 
 Указывает, находится ли раскрывающееся меню в режиме палитры.
 
@@ -819,17 +819,17 @@ void SetMenuPaletteMode(
 
 ### <a name="parameters"></a>Параметры
 
-*bMenuPaletteMode*<br/>
-[in] Указывает, находится ли раскрывающееся меню в режиме палитры.
+*бменупалеттемоде*<br/>
+окне Указывает, находится ли раскрывающееся меню в режиме палитры.
 
-*nPaletteRows*<br/>
-[in] Количество строк в палитре.
+*нпалеттеровс*<br/>
+окне Число строк в палитре.
 
 ### <a name="remarks"></a>Примечания
 
-В режиме палитры все пункты меню отображаются в виде по нескольким столбцам палитры. Укажите число строк с помощью *nPaletteRows*.
+В режиме палитры все пункты меню отображаются в виде палитры с многостолбцовыми. Число строк указывается с помощью *нпалеттеровс*.
 
-##  <a name="setmessagewnd"></a>  CMFCToolBarMenuButton::SetMessageWnd
+##  <a name="setmessagewnd"></a>Кмфктулбарменубуттон:: Сетмессажевнд
 
 ```
 void SetMessageWnd(CWnd* pWndMessage);
@@ -837,13 +837,13 @@ void SetMessageWnd(CWnd* pWndMessage);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWndMessage*<br/>
+окне *пвндмессаже*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setradio"></a>  CMFCToolBarMenuButton::SetRadio
+##  <a name="setradio"></a>Кмфктулбарменубуттон:: Сетрадио
 
-Задает кнопку меню панели инструментов для отображения переключателя значок стиль кнопки, если флажок установлен.
+Задает кнопку меню панели инструментов для вывода значка стиля переключателя, если он установлен.
 
 ```
 virtual void SetRadio();
@@ -851,13 +851,13 @@ virtual void SetRadio();
 
 ### <a name="remarks"></a>Примечания
 
-При рисовании кнопки меню во проверки, он вызывает [CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) для рисования значок галочки. По умолчанию `OnDrawMenuCheck` запросов, что текущий наглядный диспетчер рисует флажок стиль меток над кнопки меню. После вызова этого метода, текущий наглядный диспетчер вместо рисует флажок стиль кнопки переключателя на кнопке меню. Это изменение невозможно отменить.
+При нарисовании кнопки меню во время ее проверки вызывается [CMFCVisualManager:: ондравменучекк](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck) , чтобы нарисовать значок галочки. По умолчанию `OnDrawMenuCheck` запрашивает, чтобы текущий диспетчер визуальных элементов выводит флажок стиля флажка в кнопке меню. После вызова этого метода текущий диспетчер визуальных элементов отображает флажок стиля переключателя на кнопке меню. Это изменение нельзя отменить.
 
-При вызове этого метода и кнопку меню отображается в настоящий момент, она будет обновлена.
+При вызове этого метода и нажатии кнопки меню в данный момент выполняется обновление.
 
-##  <a name="settearoff"></a>  CMFCToolBarMenuButton::SetTearOff
+##  <a name="settearoff"></a>Кмфктулбарменубуттон:: Сеттеарофф
 
-Указывает идентификатор перемещаемой панелью, выберите в раскрывающемся меню.
+Указывает идентификатор неразрывной строки для раскрывающегося меню.
 
 ```
 virtual void SetTearOff(UINT uiBarID);
@@ -865,14 +865,14 @@ virtual void SetTearOff(UINT uiBarID);
 
 ### <a name="parameters"></a>Параметры
 
-*uiBarID*<br/>
-[in] Указывает новый перемещаемое панели идентификатор.
+*уибарид*<br/>
+окне Указывает новый идентификатор отрезков.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод используется для указания идентификатора для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопку меню из строки меню. Если *uiBarID* параметр равен 0, пользователь не может создать кнопку меню.
+Вызовите этот метод, чтобы указать идентификатор для неразрывной панели, создаваемой при перетаскивании кнопки меню из строки меню. Если значение параметра *уибарид* равно 0, пользователь не может удалить кнопку меню.
 
-Вызовите [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) для включения функции перемещаемое меню в приложении.
+Вызовите [CWinAppEx:: енаблетеароффменус](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) , чтобы включить функцию удаления меню в приложении.
 
 ## <a name="see-also"></a>См. также
 

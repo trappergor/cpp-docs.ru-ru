@@ -1,5 +1,5 @@
 ---
-title: версия (атрибут COM C++)
+title: версия (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.version
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a432267632b1f2a716a833a485b182cd93a27e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407163"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514874"
 ---
 # <a name="version-c"></a>version (C++)
 
-Идентифицирует конкретную версию несколькими версиями класса.
+Определяет определенную версию для нескольких версий класса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,15 +27,15 @@ ms.locfileid: "62407163"
 ### <a name="parameters"></a>Параметры
 
 *version*<br/>
-Номер версии `coclass`. Если не указан, 1.0 помещаются в IDL-файл.
+Номер `coclass`версии. Если не указано, 1,0 будет помещена в IDL-файл.
 
 ## <a name="remarks"></a>Примечания
 
-**Версии** атрибут C++ имеет ту же функциональность, что [версии](/windows/desktop/Midl/version) описании атрибута MIDL и передается через созданного IDL-файла.
+Атрибут **Version** C++ имеет те же функциональные возможности, что и атрибут MIDL [версии](/windows/win32/Midl/version) , и передается в созданный IDL-файл.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [bindable](bindable.md) пример для использовать **версии**.
+Пример использования **версии**см. в примере с [возможностью привязки](bindable.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -43,10 +43,10 @@ ms.locfileid: "62407163"
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

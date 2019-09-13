@@ -1,48 +1,46 @@
 ---
-title: raw_property_prefixes
-ms.date: 10/18/2018
+title: raw_property_prefixes, атрибут импорта
+ms.date: 08/29/2019
 f1_keywords:
 - raw_property_prefixes
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d91470781e7c5f673fd228c24904322d1db8b3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179806"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216042"
 ---
-# <a name="rawpropertyprefixes"></a>raw_property_prefixes
+# <a name="raw_property_prefixes-import-attribute"></a>raw_property_prefixes, атрибут импорта
 
-**Конкретных C++**
+**C++Зависящ**
 
 Задает другие префиксы для трех методов свойств.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
-```
+> **#import** *Библиотека типов* **raw_property_prefixes (** "*префикс*" **,** "*путпрефикс*" **,** "*путрефпрефикс*" **)**
 
 ### <a name="parameters"></a>Параметры
 
-*GetPrefix*<br/>
-Префикс, используемый для `propget` методы.
+*Префикс*\
+Префикс, используемый для `propget` методов.
 
-*PutPrefix*<br/>
-Префикс, используемый для `propput` методы.
+*путпрефикс*\
+Префикс, используемый для `propput` методов.
 
-*PutRefPrefix*<br/>
-Префикс, используемый для `propputref` методы.
+*путрефпрефикс*\
+Префикс, используемый для `propputref` методов.
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию низкоуровневые `propget`, `propput`, и `propputref` методы предоставляются функциями-членами, именами, содержащими префиксы **get_**, **put_**, и **putref_** соответственно. Эти префиксы совместимы с именами, используемыми в файлах заголовков, которые генерирует MIDL.
+По умолчанию методы низкого уровня `propget`, `propput`и `propputref` предоставляются функциями-членами с именем с помощью префиксов `get_`, `put_`и `putref_`соответственно. Эти префиксы совместимы с именами, используемыми в файлах заголовков, которые генерирует MIDL.
 
-**КОНЕЦ конкретных C++**
+**КОНЕЦ C++ конкретного**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)\
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: Страницы свойств средства манифестов
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606442"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927680"
 ---
 # <a name="manifest-tool-property-pages"></a>Страницы свойств средства манифестов
 
-Используйте эти страницы, чтобы указать общие параметры для [MT. exe](https://msdn.microsoft.com/library/aa375649). Эти страницы находятся в разделе**Свойства** >  **проекта** > **Свойства** > конфигурации**манифеста**.
+Используйте эти страницы, чтобы указать общие параметры для [MT. exe](/windows/win32/sbscs/mt-exe). Эти страницы находятся в разделе**Свойства** >  **проекта** > **Свойства** > конфигурации**манифеста**.
 
 ## <a name="general-property-page"></a>Страница свойств "Общие"
 
@@ -105,7 +105,7 @@ ms.locfileid: "68606442"
 
 ## <a name="isolated-com-property-page"></a>Изолированная страница свойств COM
 
-Дополнительные сведения об изолированном com см. в разделе [изолированные приложения](/windows/desktop/SbsCs/isolated-applications) и [инструкции. Создание изолированных приложений для использования COM](../how-to-build-isolated-applications-to-consume-com-components.md)-компонентов.
+Дополнительные сведения об изолированном com см. в разделе [изолированные приложения](/windows/win32/SbsCs/isolated-applications) и [инструкции. Создание изолированных приложений для использования COM](../how-to-build-isolated-applications-to-consume-com-components.md)-компонентов.
 
 ###  <a name="type-library-file"></a>Файл библиотеки типов
 

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCPropertyGridCtrl
+title: Класс Кмфкпропертигридктрл
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -150,14 +150,14 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168131"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505173"
 ---
-# <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
+# <a name="cmfcpropertygridctrl-class"></a>Класс Кмфкпропертигридктрл
 
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
@@ -175,129 +175,129 @@ class CMFCPropertyGridCtrl : public CWnd
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Создает объект `CMFCPropertyGridCtrl`.|
+|[Кмфкпропертигридктрл:: Кмфкпропертигридктрл](#cmfcpropertygridctrl)|Создает объект `CMFCPropertyGridCtrl`.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|`CMFCPropertyGridCtrl::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CMFCPropertyGridCtrl::accLocation`|Вызывается платформой для получения текущего положения указанного объекта на экране. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CMFCPropertyGridCtrl::accSelect](#accselect)|Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта. (Переопределяет [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CMFCPropertyGridCtrl::AddProperty](#addproperty)|Добавляет новое свойство элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::AlwaysShowUserToolTip](#alwaysshowusertooltip)||
-|[CMFCPropertyGridCtrl::CloseColorPopup](#closecolorpopup)|Закрывает диалоговое окно выбора цвета.|
-|[CMFCPropertyGridCtrl::Create](#create)|Создает элемент управления сетки свойств и присоединяет его к объект элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::DeleteProperty](#deleteproperty)|Удаляет указанное свойство из элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::DrawControlBarColors](#drawcontrolbarcolors)||
-|[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)|Включает или отключает область описания, который отображается под списком свойств.|
-|[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)|Включает или отключает элемент управления заголовка в верхней части элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::EnsureVisible](#ensurevisible)|Прокручивает элемент управления сетки свойств и расширяет элементы свойств, пока указанное свойство является видимым.|
-|[CMFCPropertyGridCtrl::ExpandAll](#expandall)|Разворачивает или сворачивает все узлы элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::FindItemByData](#finditembydata)|Извлекает свойства, которое связано со значением DWORD определяемые пользователем.|
-|`CMFCPropertyGridCtrl::get_accChild`|Вызывается платформой для извлечения адреса интерфейса `IDispatch` для указанного дочернего элемента. (Переопределяет [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Вызывается платформой для извлечения количества дочерних элементов, принадлежащих этому объекту. (Переопределяет [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CMFCPropertyGridCtrl::get_accDefaultAction`|Вызывается платформой для извлечения строки, описывающей действие объекта по умолчанию. (Переопределяет [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CMFCPropertyGridCtrl::get_accDescription`|Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта. (Переопределяет [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода. (Переопределяет [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Вызывается платформой для извлечения объекта `Help` строки свойства. (Переопределяет [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Вызывается платформой для извлечения полный путь к **WinHelp** файл, связанный с указанным объектом и идентификатором нужного раздела в файле. (Переопределяет [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Вызывается платформой для извлечения сочетания клавиш указанного объекта или клавиши доступа к нему. (Переопределяет [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CMFCPropertyGridCtrl::get_accName`|Вызывается платформой для извлечения имени указанного объекта. (Переопределяет [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CMFCPropertyGridCtrl::get_accRole`|Вызывается платформой для извлечения информации, описывающей роль указанного объекта. (Переопределяет [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Вызывается платформой для извлечения выбранного дочернего элемента этого объекта. (Переопределяет [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CMFCPropertyGridCtrl::get_accState`|Вызывается платформой для извлечения текущего состояния указанного объекта. (Переопределяет [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CMFCPropertyGridCtrl::get_accValue`|Вызывается платформой для извлечения значения указанного объекта. (Переопределяет [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)|Получает цвет фона текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Извлекает Windows шрифт текста в сетке свойств текущего элемента управления в полужирный стиль.|
-|[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Извлекает выбранного свойства.|
-|[CMFCPropertyGridCtrl::GetCustomColors](#getcustomcolors)|Получает цвет, заданные для элементов управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetDescriptionHeight](#getdescriptionheight)|Получает высоту области описания, расположенный в нижней части элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetDescriptionRows](#getdescriptionrows)|Возвращает число строк в области описания текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetHeaderCtrl](#getheaderctrl)|Извлекает внутренний [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта, что инфраструктура использует для отображения текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetHeaderHeight](#getheaderheight)|Получает высоту заголовка элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetLeftColumnWidth](#getleftcolumnwidth)|Получает ширину левого столбца из текущего элемента управления сетки свойств, содержащий имя каждого свойства.|
-|[CMFCPropertyGridCtrl::GetListRect](#getlistrect)|Получает ограничивающий прямоугольник элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetProperty](#getproperty)|Извлекает указатель на свойство объекта, который соответствует указанному индексу элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::GetPropertyColumnWidth](#getpropertycolumnwidth)|Извлекает текущую ширину столбца, содержащего значения свойств.|
-|[CMFCPropertyGridCtrl::GetPropertyCount](#getpropertycount)|Получает количество свойств в сетке свойств.|
-|[CMFCPropertyGridCtrl::GetRowHeight](#getrowheight)|Получает высоту строки в сетке свойств.|
-|[CMFCPropertyGridCtrl::GetScrollBarCtrl](#getscrollbarctrl)|Извлекает указатель на полосе прокрутки в сетке свойств. (Переопределяет [CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
-|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Возвращает цвет текста, элементов свойств в сетке свойств.|
-|`CMFCPropertyGridCtrl::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCPropertyGridCtrl::HitTest](#hittest)|Извлекает указатель на объект свойства, соответствующий элемент управления сетки свойств в том случае, если указанная точка находится в элементе. Этот метод также указывает область элемента управления сетки свойств, который содержит точку.|
-|[CMFCPropertyGridCtrl::InitHeader](#initheader)|Инициализирует внутренний [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта, что инфраструктура использует для отображения текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::IsAlphabeticMode](#isalphabeticmode)|Указывает, является ли элемент управления сетки свойств в режиме является буквой алфавита.|
-|[CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip](#isalwaysshowusertooltip)||
-|[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)|Указывает, отображается ли область описания элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::IsGroupNameFullWidth](#isgroupnamefullwidth)|Указывает, отображается ли имя каждого свойства группы по ширине элемента текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Указывает, отображается ли элемент управления заголовка.|
-|[CMFCPropertyGridCtrl::IsMarkModifiedProperties](#ismarkmodifiedproperties)|Указывает, отображение элемента управления сетки свойств измененных свойств.|
-|[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.|
-|[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Указывает, является ли внешний вид элемента управления сетки свойств в стиле, который используется платформой VS .NET.|
-|[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Указывает способ отображения измененных свойств.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Удаляет все объекты свойств элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Для восстановления первоначальных значений всех свойств.|
-|[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Задает или сбрасывает алфавитном порядке.|
-|[CMFCPropertyGridCtrl::SetBoolLabels](#setboollabels)|Задает текст, логические меток.|
-|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Выбирает свойства в сетке свойств.|
-|[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)|Указывает пользовательских цветов для различных элементов управления сетки свойств.|
-|[CMFCPropertyGridCtrl::SetDescriptionRows](#setdescriptionrows)|Указывает количество строк, отображаемых в разделе "Описание" из текущего элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::SetGroupNameFullWidth](#setgroupnamefullwidth)|Указывает, следует ли отображать всю ширину имя категории для группы свойств в сетке свойств.|
-|[CMFCPropertyGridCtrl::SetListDelimiter](#setlistdelimiter)|Определяет символ, который будет использоваться в качестве разделителя в списке значений свойств.|
-|[CMFCPropertyGridCtrl::SetShowDragContext](#setshowdragcontext)|Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.|
-|[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)|Задает внешний вид элемента управления сетки свойств стиля, используемого в VS .NET.|
-|[CMFCPropertyGridCtrl::UpdateColor](#updatecolor)|Задает значение цвета свойства текущего выбранного цвета.|
+|`CMFCPropertyGridCtrl::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd:: акчиттест](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CMFCPropertyGridCtrl::accLocation`|Вызывается платформой для получения текущего положения указанного объекта на экране. (Переопределяет [CWnd:: акклокатион](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[Кмфкпропертигридктрл:: Аккселект](#accselect)|Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта. (Переопределяет [CWnd:: аккселект](../../mfc/reference/cwnd-class.md#accselect).)|
+|[Кмфкпропертигридктрл:: AddProperty](#addproperty)|Добавляет новое свойство в элемент управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Алвайсшовусертултип](#alwaysshowusertooltip)||
+|[Кмфкпропертигридктрл:: Клосеколорпопуп](#closecolorpopup)|Закрывает диалоговое окно «Выбор цвета».|
+|[Кмфкпропертигридктрл:: Create](#create)|Создает элемент управления "сетка свойств" и присоединяет его к управляющему объекту сетки свойств.|
+|[Кмфкпропертигридктрл::D Елетепроперти](#deleteproperty)|Удаляет указанное свойство из элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл::D Равконтролбарколорс](#drawcontrolbarcolors)||
+|[Кмфкпропертигридктрл:: Енабледескриптионареа](#enabledescriptionarea)|Включает или отключает область описания, отображаемую под списком свойств.|
+|[Кмфкпропертигридктрл:: Енаблехеадерктрл](#enableheaderctrl)|Включает или отключает элемент управления "заголовок" в верхней части элемента управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Енсуревисибле](#ensurevisible)|Прокручивает элемент управления сетки свойств и разворачивает элементы свойств, пока указанное свойство не станет видимым.|
+|[Кмфкпропертигридктрл:: кнопки развернуть все](#expandall)|Развертывает или сворачивает узлы элементов управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Финдитембидата](#finditembydata)|Извлекает свойство, связанное с определяемым пользователем значением DWORD.|
+|`CMFCPropertyGridCtrl::get_accChild`|Вызывается платформой для извлечения адреса интерфейса `IDispatch` для указанного дочернего элемента. (Переопределяет [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|[CMFCPropertyGridCtrl::get_accChildCount](#get_accchildcount)|Вызывается платформой для извлечения количества дочерних элементов, принадлежащих этому объекту. (Переопределяет [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CMFCPropertyGridCtrl::get_accDefaultAction`|Вызывается платформой для извлечения строки, описывающей действие объекта по умолчанию. (Переопределяет [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CMFCPropertyGridCtrl::get_accDescription`|Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта. (Переопределяет [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|[CMFCPropertyGridCtrl::get_accFocus](#get_accfocus)|Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода. (Переопределяет [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|[CMFCPropertyGridCtrl::get_accHelp](#get_acchelp)|Вызывается платформой для получения строки `Help` свойства объекта. (Переопределяет [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CMFCPropertyGridCtrl::get_accHelpTopic](#get_acchelptopic)|Вызвано платформой для получения полного пути к файлу **WinHelp** , связанному с указанным объектом, и идентификатором соответствующего раздела в этом файле. (Переопределяет [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|[CMFCPropertyGridCtrl::get_accKeyboardShortcut](#get_acckeyboardshortcut)|Вызывается платформой для извлечения сочетания клавиш указанного объекта или клавиши доступа к нему. (Переопределяет [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CMFCPropertyGridCtrl::get_accName`|Вызывается платформой для извлечения имени указанного объекта. (Переопределяет [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CMFCPropertyGridCtrl::get_accRole`|Вызывается платформой для извлечения информации, описывающей роль указанного объекта. (Переопределяет [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CMFCPropertyGridCtrl::get_accSelection](#get_accselection)|Вызывается платформой для извлечения выбранного дочернего элемента этого объекта. (Переопределяет [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CMFCPropertyGridCtrl::get_accState`|Вызывается платформой для извлечения текущего состояния указанного объекта. (Переопределяет [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CMFCPropertyGridCtrl::get_accValue`|Вызывается платформой для извлечения значения указанного объекта. (Переопределяет [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[Кмфкпропертигридктрл:: Жетбкколор](#getbkcolor)|Возвращает цвет фона текущего элемента управления сетки свойств.|
+|[CMFCPropertyGridCtrl::GetBoldFont](#getboldfont)|Извлекает шрифт Windows, который текст в текущей сетке свойств имеет полужирный стиль.|
+|[CMFCPropertyGridCtrl::GetCurSel](#getcursel)|Извлекает текущее выбранное свойство.|
+|[Кмфкпропертигридктрл:: Жеткустомколорс](#getcustomcolors)|Извлекает пользовательские цвета, определенные в данный момент для элементов управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Жетдескриптионхеигхт](#getdescriptionheight)|Получает высоту области описания, расположенной в нижней части элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Жетдескриптионровс](#getdescriptionrows)|Извлекает количество строк в области описания текущего элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Жесеадерктрл](#getheaderctrl)|Извлекает внутренний объект [кмфчеадерктрл](../../mfc/reference/cmfcheaderctrl-class.md) , используемый платформой для вывода текущего элемента управления сеткой свойств.|
+|[Кмфкпропертигридктрл:: Жесеадерхеигхт](#getheaderheight)|Извлекает высоту заголовка элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Жетлефтколумнвидс](#getleftcolumnwidth)|Получает ширину левого столбца текущего элемента управления сетки свойств, который содержит имя каждого свойства.|
+|[Кмфкпропертигридктрл:: Жетлистрект](#getlistrect)|Извлекает ограничивающий прямоугольник элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Property](#getproperty)|Извлекает указатель на объект свойства, соответствующий указанному индексу элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Жетпропертиколумнвидс](#getpropertycolumnwidth)|Возвращает текущую ширину столбца, содержащего значения свойств.|
+|[Кмфкпропертигридктрл:: Жетпропертикаунт](#getpropertycount)|Извлекает количество свойств в элементе управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Жетровхеигхт](#getrowheight)|Получает высоту строки в элементе управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Жетскроллбарктрл](#getscrollbarctrl)|Извлекает указатель на элемент управления "полоса прокрутки" в элементе управления "сетка свойств". (Переопределяет [CWnd:: жетскроллбарктрл](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|
+|[CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)|Возвращает цвет текста элементов свойств в текущем элементе управления сетки свойств.|
+|`CMFCPropertyGridCtrl::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
+|[Кмфкпропертигридктрл:: HitTest](#hittest)|Получает указатель на объект свойства, соответствующий элементу управления сетки свойств, если указанная точка находится в элементе. Этот метод также указывает область в элементе управления "сетка свойств", которая содержит точку.|
+|[Кмфкпропертигридктрл:: Инисеадер](#initheader)|Инициализирует внутренний объект [кмфчеадерктрл](../../mfc/reference/cmfcheaderctrl-class.md) , используемый платформой для вывода текущего элемента управления сеткой свойств.|
+|[Кмфкпропертигридктрл:: Исалфабетикмоде](#isalphabeticmode)|Указывает, находится ли элемент управления сетки свойств в алфавитном режиме.|
+|[Кмфкпропертигридктрл:: Исалвайсшовусертултип](#isalwaysshowusertooltip)||
+|[Кмфкпропертигридктрл:: Исдескриптионареа](#isdescriptionarea)|Указывает, отображается ли область описания элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Исграупнамефуллвидс](#isgroupnamefullwidth)|Указывает, отображается ли каждое имя группы свойств по ширине элемента управления текущей сетки свойств.|
+|[CMFCPropertyGridCtrl::IsHeaderCtrl](#isheaderctrl)|Указывает, отображается ли заголовок элемента управления.|
+|[Кмфкпропертигридктрл:: Исмаркмодифиедпропертиес](#ismarkmodifiedproperties)|Указывает, как элемент управления "сетка свойств" отображает измененные свойства.|
+|[Кмфкпропертигридктрл:: Исшовдрагконтекст](#isshowdragcontext)|Указывает, перерисовывает ли платформа столбцы "имя" и "значение" текущего элемента управления сетки свойств, когда пользователь изменяет размер столбцов.|
+|[Кмфкпропертигридктрл:: Исвсдотнетлук](#isvsdotnetlook)|Указывает, имеет ли внешний вид элемента управления "сетка свойств" стиль, используемый VS .NET.|
+|[Кмфкпропертигридктрл:: Маркмодифиедпропертиес](#markmodifiedproperties)|Указывает способ отображения измененных свойств.|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[Кмфкпропертигридктрл:: RemoveAll](#removeall)|Удаляет все объекты свойств из элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Ресеторигиналвалуес](#resetoriginalvalues)|Восстанавливает исходное значение всех свойств.|
+|[Кмфкпропертигридктрл:: Сеталфабетикмоде](#setalphabeticmode)|Устанавливает или сбрасывает алфавитный режим.|
+|[Кмфкпропертигридктрл:: Сетбуллабелс](#setboollabels)|Задает текст логических меток.|
+|[CMFCPropertyGridCtrl::SetCurSel](#setcursel)|Выбирает свойство в элементе управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Сеткустомколорс](#setcustomcolors)|Задает пользовательские цвета для различных элементов управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Сетдескриптионровс](#setdescriptionrows)|Указывает число строк, отображаемых в разделе Описание текущего элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Сетграупнамефуллвидс](#setgroupnamefullwidth)|Указывает, следует ли отображать полную ширину имени категории для группы свойств в текущем элементе управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Сетлистделимитер](#setlistdelimiter)|Определяет символ, который будет использоваться в качестве разделителя в списке значений свойств.|
+|[Кмфкпропертигридктрл:: Сетшовдрагконтекст](#setshowdragcontext)|Указывает, перерисовывает ли платформа столбцы "имя" и "значение" текущего элемента управления сетки свойств, когда пользователь изменяет размер столбцов.|
+|[Кмфкпропертигридктрл:: Сетвсдотнетлук](#setvsdotnetlook)|Устанавливает внешний вид элемента управления "сетка свойств" в стиле, используемом в VS .NET.|
+|[Кмфкпропертигридктрл:: Упдатеколор](#updatecolor)|Задает значение цвета для выбранного в данный момент свойства цвета.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Перерисовывает элемента управления сетки свойств и его свойства.|
-|[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Вызывается элементом управления сетки свойств сортировки свойств.|
-|[CMFCPropertyGridCtrl::EditItem](#edititem)|Вызывается платформой, когда пользователь начинает изменение свойства.|
-|[CMFCPropertyGridCtrl::EndEditItem](#endedititem)|Вызывается платформой, когда пользователь останавливает путем изменения свойства.|
-|[CMFCPropertyGridCtrl::Init](#init)|Вызывается платформой для инициализации элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::OnChangeSelection](#onchangeselection)|Вызывается платформой при изменении текущего выделения.|
-|[CMFCPropertyGridCtrl::OnClickButton](#onclickbutton)|Вызывается платформой при нажатии кнопки свойству.|
-|[CMFCPropertyGridCtrl::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы вокруг элемента управления сетки свойств.|
-|[CMFCPropertyGridCtrl::OnDrawDescription](#ondrawdescription)|Вызвано структурой для прорисовки области описания и отображения текста описания.|
-|[CMFCPropertyGridCtrl::OnDrawList](#ondrawlist)|Вызвано структурой для отображения списка свойств в сетке свойств.|
-|[CMFCPropertyGridCtrl::OnDrawProperty](#ondrawproperty)|Вызвано структурой для отображения свойства.|
-|[CMFCPropertyGridCtrl::OnPropertyChanged](#onpropertychanged)|Вызывается платформой при изменении значения свойства.|
-|[CMFCPropertyGridCtrl::OnSelectCombo](#onselectcombo)|Вызывается платформой при выборе свойство, которое содержит поле со списком.|
-|[CMFCPropertyGridCtrl::ValidateItemData](#validateitemdata)|Вызывается платформой для проверки данных свойства.|
+|[Кмфкпропертигридктрл:: Аджустлайаут](#adjustlayout)|Перерисовывает элемент управления сетки свойств и его свойства.|
+|[Кмфкпропертигридктрл:: Компарепропс](#compareprops)|Вызывается элементом управления "сетка свойств" для сортировки свойств.|
+|[Кмфкпропертигридктрл:: EditItem](#edititem)|Вызывается платформой, когда пользователь начинает изменять свойство.|
+|[Кмфкпропертигридктрл:: Ендедититем](#endedititem)|Вызывается платформой, когда пользователь останавливает изменение свойства.|
+|[Кмфкпропертигридктрл:: init](#init)|Вызывается платформой для инициализации элемента управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Ончанжеселектион](#onchangeselection)|Вызывается структурой при изменении текущего выбора.|
+|[Кмфкпропертигридктрл:: Онкликкбуттон](#onclickbutton)|Вызывается структурой при нажатии кнопки свойства.|
+|[Кмфкпропертигридктрл:: Ондравбордер](#ondrawborder)|Вызывается структурой для рисования границы вокруг элемента управления сетки свойств.|
+|[Кмфкпропертигридктрл:: Ондравдескриптион](#ondrawdescription)|Вызывается структурой для рисования области описания и отображения текста описания.|
+|[Кмфкпропертигридктрл:: Ондравлист](#ondrawlist)|Вызывается платформой для вывода списка свойств в элементе управления "сетка свойств".|
+|[Кмфкпропертигридктрл:: Ондравпроперти](#ondrawproperty)|Вызывается платформой для вывода свойства.|
+|[Кмфкпропертигридктрл:: OnPropertyChanged](#onpropertychanged)|Вызывается структурой при изменении значения свойства.|
+|[Кмфкпропертигридктрл:: Онселекткомбо](#onselectcombo)|Вызывается платформой при выборе свойства, содержащего элемент управления "поле со списком".|
+|[Кмфкпропертигридктрл:: Валидатеитемдата](#validateitemdata)|Вызывается платформой для проверки данных свойства.|
 
 ## <a name="remarks"></a>Примечания
 
-`CMFCPropertyGridCtrl` Класс отображает элемент управления сетки свойств, содержащий редактируемых свойств, производный от [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) класса. Каждое свойство может представлять тип и может содержать подэлементы. Элемента управления сетки свойств поддерживает переменного размера область внизу, можно отобразить описание выбранного свойства.
+Класс отображает элемент управления сетки свойств, который содержит редактируемые свойства, производные от класса [кмфкпропертигридпроперти.](../../mfc/reference/cmfcpropertygridproperty-class.md) `CMFCPropertyGridCtrl` Каждое свойство может представлять тип и может содержать подэлементы. Элемент управления "сетка свойств" поддерживает область с изменяемым размером в нижней части, которая может отображать описание выбранного свойства.
 
-Для использования элемента управления сетки свойств, создать `CMFCPropertyGridCtrl` объекта, а затем вызвать [CMFCPropertyGridCtrl::Create](#create) метод. Используйте [CMFCPropertyGridCtrl::AddProperty](#addproperty) метод для добавления свойства в список.
+Чтобы использовать элемент управления "сетка свойств", `CMFCPropertyGridCtrl` создайте объект и затем вызовите метод [кмфкпропертигридктрл:: Create](#create) . Чтобы добавить свойства в список, используйте метод [кмфкпропертигридктрл:: AddProperty](#addproperty) .
 
-## <a name="selection-properties"></a>Выбор свойства
+## <a name="selection-properties"></a>Свойства выбора
 
-Вместо представления значений, элемент свойства можно запустить диалоговое окно, которое позволяет пользователю выбрать цвет, файл или шрифта.
+Вместо представления значения элемент свойства может открыть диалоговое окно, позволяющее пользователю выбрать цвет, файл или шрифт.
 
-В следующей таблице перечислены четыре типа свойства выбора:
+В следующей таблице перечислены четыре типа свойств выбора.
 
 |Класс|Описание|
 |-----------|-----------------|
-|[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Свойство общего назначения, которое используется для указания значения строки, логические значения, дат и т. д.|
-|[Класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Свойство, которое используется для выбора значения цвета.|
-|[Класс CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Свойство, которое используется для выбора файла.|
-|[Класс CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Свойство, которое используется для выбора шрифта.|
+|[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Свойство общего назначения, которое используется для указания значения строк, логических значений, дат и т. д.|
+|[Класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Свойство, используемое для выбора значения цвета.|
+|[Класс CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)|Свойство, используемое для выбора файла.|
+|[Класс CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)|Свойство, используемое для выбора шрифта.|
 
 ## <a name="illustrations"></a>Рисунки
 
-Следующие иллюстрации отображения элемента управления сетки свойств, который отображает свойства двумя способами. Первой иллюстрацией отображает свойства иерархически и вторая отображает свойства по алфавиту.
+На следующем рисунке показан элемент управления сетки свойств, отображающий свойства двумя способами. На первой иллюстрации отображаются свойства иерархически, а во втором — свойства в алфавитном порядке.
 
-![Лист свойств списка свойство](../../mfc/reference/media/proplist.png "лист свойств списка свойств")
+![Страница свойств списка свойств](../../mfc/reference/media/proplist.png "Страница свойств списка свойств")
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку объект элемента управления сетки свойств с помощью различных методов в `CMFCPropertyGridCtrl` класса. В примере, как включить элемент управления заголовка, включить область описания и задать внешний вид элемента управления сетки свойств. В примере также показано, как задать режим для элемента управления, при котором элемент управления сортирует все свойства, содержащиеся в ней по имени свойства и как задать настраиваемые цвета для различных элементов элемента управления сетки свойств. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как настроить управляющий объект сетки свойств с помощью различных методов в `CMFCPropertyGridCtrl` классе. В примере показано, как включить элемент управления «заголовок», включить область «Описание» и задать внешний вид элемента управления «сетка свойств». В примере также показано, как задать алфавитный режим для элемента управления, с помощью которого элемент управления сортирует все свойства, которые он содержит, по имени свойства и как задать пользовательские цвета для различных элементов элемента управления "сетка свойств". Этот пример является частью [примера новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -313,13 +313,13 @@ class CMFCPropertyGridCtrl : public CWnd
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
+[кмфкпропертигридктрл](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxpropertygridctrl.h
+**Заголовок:** афкспропертигридктрл. h
 
-##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
+##  <a name="accselect"></a>Кмфкпропертигридктрл:: Аккселект
 
 ```
 virtual HRESULT accSelect(
@@ -329,16 +329,16 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *flagsSelect*<br/>
-[in] *varChild*<br/>
+окне *флагсселект*<br/>
+окне *варчилд*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="addproperty"></a>  CMFCPropertyGridCtrl::AddProperty
+##  <a name="addproperty"></a>Кмфкпропертигридктрл:: AddProperty
 
-Добавляет новое свойство элемента управления сетки свойств.
+Добавляет новое свойство в элемент управления сетки свойств.
 
 ```
 int AddProperty(
@@ -349,26 +349,26 @@ int AddProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на свойство.
+*ппроп*<br/>
+окне Указатель на свойство.
 
 *bRedraw*<br/>
-[in] Значение TRUE, чтобы немедленно перерисовать свойство в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+окне Значение TRUE, чтобы перерисовать свойство немедленно. в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
-*bAdjustLayout*<br/>
-[in] Значение TRUE, чтобы повторно вычислить как нарисуйте текст и значение свойства, а затем свойство; Значение FALSE, используемый для отрисовки свойства существующих вычислений. Значение по умолчанию — TRUE.
+*баджустлайаут*<br/>
+окне Значение TRUE для повторного вычисления того, как нарисовать текст и значение свойства, а затем нарисовать свойство; Значение FALSE, чтобы использовать существующие вычисления для рисования свойства. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если этот метод выполняется успешно, отсчитываемый от нуля индекс позиции в сетке свойств, где добавляется свойство; в противном случае — значение -1.
+Если этот метод выполняется, отсчитываемый от нуля индекс позиции в элементе управления сетки свойств, в которую добавляется свойство; в противном случае — значение-1.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод добавляет указатель к указанному свойству в конец списка свойств в сетке свойств. Не уничтожения свойства или разрешить их за пределы области видимости, перед уничтожением сетку. Когда вы закончите с помощью элемента управления сетки свойств, вызовите [CMFCPropertyGridCtrl::RemoveAll](#removeall) для удаления всех добавленных свойств. Метод AddProperty завершается неудачей, если указанное свойство уже был добавлен в список.
+Этот метод добавляет указатель на указанное свойство в конец списка свойств в элементе управления "сетка свойств". Не уничтожайте свойства или разрешите их выход из области до уничтожения элемента управления Grid. Завершив работу с элементом управления "сетка свойств", вызовите метод [кмфкпропертигридктрл:: RemoveAll](#removeall) , чтобы удалить все добавленные свойства. Метод AddProperty завершается ошибкой, если указанное свойство уже было добавлено в список.
 
-##  <a name="adjustlayout"></a>  CMFCPropertyGridCtrl::AdjustLayout
+##  <a name="adjustlayout"></a>Кмфкпропертигридктрл:: Аджустлайаут
 
-Перерисовывает элемента управления сетки свойств и его свойства.
+Перерисовывает элемент управления сетки свойств и его свойства.
 
 ```
 virtual void AdjustLayout();
@@ -376,7 +376,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод повторно вычисляет способ рисования всей сетке свойств и его свойства, включая изображения, шрифты и элементов управления.
+Этот метод выполняет повторное вычисление рисования всего элемента управления "сетка свойств" и его свойств, включая изображения, шрифты и элементы управления.
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
@@ -386,13 +386,13 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bShow*<br/>
+окне *бшов*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="closecolorpopup"></a>  CMFCPropertyGridCtrl::CloseColorPopup
+##  <a name="closecolorpopup"></a>Кмфкпропертигридктрл:: Клосеколорпопуп
 
-Закрывает диалоговое окно выбора цвета.
+Закрывает диалоговое окно «Выбор цвета».
 
 ```
 virtual void CloseColorPopup();
@@ -400,9 +400,9 @@ virtual void CloseColorPopup();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о диалоговом окне выбора цвета, см. в разделе [класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
+Дополнительные сведения о диалоговом окне "Выбор цвета" см. в разделе [класс кмфкпропертигридколорпроперти](../../mfc/reference/cmfcpropertygridcolorproperty-class.md).
 
-##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
+##  <a name="cmfcpropertygridctrl"></a>Кмфкпропертигридктрл:: Кмфкпропертигридктрл
 
 Создает объект `CMFCPropertyGridCtrl`.
 
@@ -414,9 +414,9 @@ CMFCPropertyGridCtrl();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="compareprops"></a>  CMFCPropertyGridCtrl::CompareProps
+##  <a name="compareprops"></a>Кмфкпропертигридктрл:: Компарепропс
 
-Вызывается элементом управления сетки свойств сортировки свойств.
+Вызывается элементом управления "сетка свойств" для сортировки свойств.
 
 ```
 virtual int CompareProps(
@@ -436,17 +436,17 @@ virtual int CompareProps(
 
 |Возвращаемое значение|Описание|
 |------------------|-----------------|
-|< 0|Имя *pProp1* параметра меньше, чем имя *pProp2* параметра.|
-|0|Имя *pProp1* совпадают имя *pProp2* параметра.|
-|> 0|Имя *pProp1* объект больше, чем имя *pProp2* параметра.|
+|< 0|Имя параметра *pProp1* меньше, чем имя параметра *pProp2* .|
+|0|Имя параметра *pProp1* равно имени параметра *pProp2* .|
+|> 0|Имя объекта *pProp1* больше, чем имя параметра *pProp2* .|
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод использует [CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод для сравнения `CMFCPropertyGridProperty::m_strName` элементы из указанных параметров.
+По умолчанию этот метод использует метод [CString:: Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) для сравнения `CMFCPropertyGridProperty::m_strName` элементов указанных параметров.
 
-##  <a name="create"></a>  CMFCPropertyGridCtrl::Create
+##  <a name="create"></a>Кмфкпропертигридктрл:: Create
 
-Создает элемент управления сетки свойств и присоединяет его к объект элемента управления сетки свойств.
+Создает элемент управления "сетка свойств" и присоединяет его к управляющему объекту сетки свойств.
 
 ```
 virtual BOOL Create(
@@ -458,29 +458,29 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*dwStyle*<br/>
-[in] Побитовое сочетание (OR) [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*двстиле*<br/>
+окне Побитовое сочетание (или) [стилей окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
 *rect*<br/>
-[in] Координаты ограничивающего прямоугольника, который определяет размер и положение окна, в клиенте *pParentWnd*.
+окне Ограничивающий прямоугольник, указывающий размер и расположение окна в координатах клиента *ппарентвнд*.
 
-*pParentWnd*<br/>
-[in] Указатель на родительское окно. Не должен иметь значение NULL.
+*ппарентвнд*<br/>
+окне Указатель на родительское окно. Не может иметь значение NULL.
 
 *nID*<br/>
-[in] Идентификатор дочернего окна.
+окне Идентификатор дочернего окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно был создан успешно; в противном случае — значение FALSE.
+Значение TRUE, если окно было успешно создано; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Для создания элемента управления сетки свойств, первый вызов [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) для создания объекта сетки свойств. Затем вызовите `CMFCPropertyGridCtrl::Create`.
+Чтобы создать элемент управления "сетка свойств", сначала вызовите [кмфкпропертигридктрл:: кмфкпропертигридктрл](#cmfcpropertygridctrl) , чтобы создать объект сетки свойств. Затем вызовите `CMFCPropertyGridCtrl::Create`.
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод в `CMFCPropertyGridCtrl` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, `Create` как использовать метод в `CMFCPropertyGridCtrl` классе. Этот пример является частью [примера новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
@@ -497,24 +497,24 @@ BOOL DeleteProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на свойство.
+*ппроп*<br/>
+окне Указатель на свойство.
 
 *bRedraw*<br/>
-[in] Значение TRUE для перерисовки элемента управления сетки свойств; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+окне Значение TRUE для перерисовки элемента управления "сетка свойств"; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
-*bAdjustLayout*<br/>
-[in] Значение TRUE, чтобы повторно вычислить способ рисования текста, изображений и элементов в сетке свойств, а затем нарисуйте элемент управления; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+*баджустлайаут*<br/>
+окне Значение TRUE, чтобы пересчитать, как нарисовать весь текст, изображения и элементы в элементе управления "сетка свойств", а затем нарисовать элемент управления. в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет удалить свойство и вложенные элементы, из элемента управления сетки свойств.
+Этот метод используется для удаления свойства и всех вложенных элементов из элемента управления сетки свойств.
 
-##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
+##  <a name="drawcontrolbarcolors"></a>Кмфкпропертигридктрл::D Равконтролбарколорс
 
 ```
 BOOL DrawControlBarColors() const;
@@ -524,9 +524,9 @@ BOOL DrawControlBarColors() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="edititem"></a>  CMFCPropertyGridCtrl::EditItem
+##  <a name="edititem"></a>Кмфкпропертигридктрл:: EditItem
 
-Вызывается платформой, когда пользователь начинает изменение свойства.
+Вызывается платформой, когда пользователь начинает изменять свойство.
 
 ```
 virtual BOOL EditItem(
@@ -536,21 +536,21 @@ virtual BOOL EditItem(
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на свойство.
+*ппроп*<br/>
+окне Указатель на свойство.
 
-*lptClick*<br/>
-[in] Точка элемента управления сетки свойств, который был щелкнут пользователем необходимо начать операцию редактирования. Точка находится в координатах клиентской области окна элемента управления. Значение по умолчанию имеет значение NULL.
+*лпткликк*<br/>
+окне Точка на элементе управления сетки свойств, которую пользователь щелкнул для начала операции редактирования. Точка находится в клиентских координатах элемента управления. Значение по умолчанию — NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если метод успешно выполнен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="enabledescriptionarea"></a>  CMFCPropertyGridCtrl::EnableDescriptionArea
+##  <a name="enabledescriptionarea"></a>Кмфкпропертигридктрл:: Енабледескриптионареа
 
-Включает или отключает область описания, который отображается под списком свойств в сетке свойств.
+Включает или отключает область описания, отображаемую под списком свойств в элементе управления "сетка свойств".
 
 ```
 void EnableDescriptionArea(BOOL bEnable=TRUE);
@@ -559,15 +559,15 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить область описания; Значение FALSE, чтобы отключить области описания. Значение по умолчанию — TRUE.
+окне Значение TRUE, чтобы включить область описания; Значение FALSE, чтобы отключить область описания. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-В области описания отображаются в нижней части элемента управления сетки свойств. По умолчанию в области описания отключено и не видны.
+Область Описание отображается в нижней части элемента управления сетки свойств. По умолчанию область описания отключена и невидима.
 
 ##  <a name="enableheaderctrl"></a>  CMFCPropertyGridCtrl::EnableHeaderCtrl
 
-Включает или отключает элемент управления заголовка в верхней части элемента управления сетки свойств.
+Включает или отключает элемент управления "заголовок" в верхней части элемента управления "сетка свойств".
 
 ```
 void EnableHeaderCtrl(
@@ -579,17 +579,17 @@ void EnableHeaderCtrl(
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить элемент управления заголовка; Значение FALSE, чтобы отключить элемент управления заголовка. Значение по умолчанию — TRUE.
+окне Значение TRUE, чтобы включить элемент управления "заголовок"; Значение FALSE, чтобы отключить элемент управления "заголовок". Значение по умолчанию — TRUE.
 
-*lpszLeftColumn*<br/>
-[in] Заголовок левого столбца в элементе управления заголовком. Значение по умолчанию — **свойство**.
+*лпсзлефтколумн*<br/>
+окне Заголовок левого столбца элемента управления "заголовок". Значение по умолчанию — **Property**.
 
-*lpszRightColumn*<br/>
-[in] Заголовок части правого столбца в элементе управления заголовком. Значение по умолчанию — **значение**.
+*лпсзригхтколумн*<br/>
+окне Заголовок правого столбца элемента управления "заголовок". Значение по умолчанию — **value**.
 
-##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem
+##  <a name="endedititem"></a>Кмфкпропертигридктрл:: Ендедититем
 
-Вызывается платформой, когда пользователь заканчивает путем изменения свойства.
+Вызывается платформой, когда пользователь заканчивает изменение свойства.
 
 ```
 virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
@@ -597,18 +597,18 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bUpdateData*<br/>
-[in] Значение TRUE, чтобы указать, что измененного свойства данных должны проверяться при завершении операции редактирования; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+*бупдатедата*<br/>
+окне Значение TRUE, чтобы указать, что измененные данные свойства должны быть проверены после завершения операции редактирования. в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если операция редактирования завершена успешно; Значение FALSE, если данные измененного свойства не является допустимым или если следует продолжить операцию редактирования.
+Значение TRUE, если операция редактирования завершилась успешно. Значение FALSE, если измененные данные свойства недопустимы, или если операция редактирования должна быть продолжена.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ensurevisible"></a>  CMFCPropertyGridCtrl::EnsureVisible
+##  <a name="ensurevisible"></a>Кмфкпропертигридктрл:: Енсуревисибле
 
-Прокручивает элемент управления сетки свойств и расширяет элементы свойств, пока указанное свойство является видимым.
+Прокручивает элемент управления сетки свойств и разворачивает элементы свойств, пока указанное свойство не станет видимым.
 
 ```
 void EnsureVisible(
@@ -618,17 +618,17 @@ void EnsureVisible(
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на свойство.
+*ппроп*<br/>
+окне Указатель на свойство.
 
-*bExpandParents*<br/>
-[in] Значение TRUE, чтобы развернуть родительские элементы для отображения указанного свойства; в противном случае — значение FALSE. Значение по умолчанию — FALSE.
+*бекспандпарентс*<br/>
+окне Значение TRUE, чтобы развернуть родительские элементы, чтобы сделать указанное свойство видимым; в противном случае — значение FALSE. Значение по умолчанию — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="expandall"></a>  CMFCPropertyGridCtrl::ExpandAll
+##  <a name="expandall"></a>Кмфкпропертигридктрл:: кнопки развернуть все
 
-Разворачивает или сворачивает все узлы элемента управления сетки свойств.
+Развертывает или сворачивает узлы элементов управления сетки свойств.
 
 ```
 void ExpandAll(BOOL bExpand=TRUE);
@@ -636,14 +636,14 @@ void ExpandAll(BOOL bExpand=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bExpand*<br/>
-[in] Значение TRUE, чтобы развернуть все узлы; Значение FALSE, чтобы свернуть все узлы. Значение по умолчанию — TRUE.
+*бекспанд*<br/>
+окне Значение TRUE, чтобы развернуть все узлы; Значение FALSE, чтобы свернуть все узлы. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="finditembydata"></a>  CMFCPropertyGridCtrl::FindItemByData
+##  <a name="finditembydata"></a>Кмфкпропертигридктрл:: Финдитембидата
 
-Извлекает свойства, которое связано со значением DWORD определяемые пользователем.
+Извлекает свойство, связанное с определяемым пользователем значением DWORD.
 
 ```
 CMFCPropertyGridProperty* FindItemByData(
@@ -653,19 +653,19 @@ CMFCPropertyGridProperty* FindItemByData(
 
 ### <a name="parameters"></a>Параметры
 
-*dwData*<br/>
-[in] Значение типа DWORD.
+*двдата*<br/>
+окне Значение типа DWORD.
 
-*bSearchSubItems*<br/>
-[in] Значение TRUE для поиска свойства вложенных элементов; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+*бсеарчсубитемс*<br/>
+окне Значение TRUE для поиска дочерних элементов свойства; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект связанного свойства, если этот метод выполнен успешно; в противном случае — значение NULL.
+Указатель на связанный объект свойства, если этот метод выполнен. в противном случае значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) конструктор или [CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) метод, чтобы связать значение типа DWORD со свойством.
+Используйте конструктор [кмфкпропертигридктрл:: кмфкпропертигридктрл](#cmfcpropertygridctrl) или метод [Кмфкпропертигридпроперти:: SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata) , чтобы связать параметр DWORD со свойством.
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
@@ -675,7 +675,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pcountChildren*<br/>
+окне *пкаунтчилдрен*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -689,7 +689,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pvarChild*<br/>
+окне *пварчилд*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -705,8 +705,8 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *varChild*<br/>
-[in] *pszHelp*<br/>
+окне *варчилд*<br/>
+окне *псзелп*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -723,9 +723,9 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pszHelpFile*<br/>
-[in] *varChild*<br/>
-[in] *pidTopic*<br/>
+окне *псзелпфиле*<br/>
+окне *варчилд*<br/>
+окне *пидтопик*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -741,8 +741,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *varChild*<br/>
-[in] *pszKeyboardShortcut*<br/>
+окне *варчилд*<br/>
+окне *псзкэйбоардшорткут*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -756,15 +756,15 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pvarChildren*<br/>
+окне *пварчилдрен*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getbkcolor"></a>  CMFCPropertyGridCtrl::GetBkColor
+##  <a name="getbkcolor"></a>Кмфкпропертигридктрл:: Жетбкколор
 
-Получает цвет фона текущего элемента управления сетки свойств.
+Возвращает цвет фона текущего элемента управления сетки свойств.
 
 ```
 COLORREF GetBkColor() const;
@@ -776,11 +776,11 @@ COLORREF GetBkColor() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод получает цвет, который она используется для рисования фона текущего элемента управления сетки свойств. [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor) метод получает цвет переднего плана.
+Этот метод получает цвет, используемый платформой для отрисовки фона текущего элемента управления сетки свойств. Метод [кмфкпропертигридктрл:: жеттекстколор](#gettextcolor) извлекает цвет переднего плана.
 
 ##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont
 
-Извлекает шрифта Windows, который используется для рисования текста в текущей сетке свойств в полужирный стиль.
+Извлекает шрифт Windows, используемый для рисования текста в текущем элементе управления сетки свойств полужирным начертанием.
 
 ```
 CFont& GetBoldFont();
@@ -788,11 +788,11 @@ CFont& GetBoldFont();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылку на [CFont](../../mfc/reference/cfont-class.md) , описывающий характеристики жирным шрифтом.
+Ссылка на объект [кфонт](../../mfc/reference/cfont-class.md) , описывающий характеристики полужирного шрифта.
 
-##  <a name="getcursel"></a>  CMFCPropertyGridCtrl::GetCurSel
+##  <a name="getcursel"></a>Кмфкпропертигридктрл:: рекурсивно
 
-Извлекает выбранного свойства.
+Извлекает текущее выбранное свойство.
 
 ```
 CMFCPropertyGridProperty* GetCurSel() const;
@@ -800,13 +800,13 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на свойство объекта, который соответствует для выбранного элемента в сетке свойств.
+Указатель на объект свойства, соответствующий выбранному элементу в элементе управления сетки свойств.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getcustomcolors"></a>  CMFCPropertyGridCtrl::GetCustomColors
+##  <a name="getcustomcolors"></a>Кмфкпропертигридктрл:: Жеткустомколорс
 
-Получает цвет, заданные для элементов управления сетки свойств.
+Извлекает пользовательские цвета, определенные в данный момент для элементов управления "сетка свойств".
 
 ```
 void GetCustomColors(
@@ -821,34 +821,34 @@ void GetCustomColors(
 
 ### <a name="parameters"></a>Параметры
 
-*clrBackground*<br/>
-[out] Цвет фона значений свойств.
+*клрбаккграунд*<br/>
+заполняет Цвет фона значений свойств.
 
-*clrText*<br/>
-[out] Цвет имена свойств и текст значение свойства.
+*клртекст*<br/>
+заполняет Цвет имен свойств и значения свойства Text.
 
-*clrGroupBackground*<br/>
-[out] Цвет фона группы свойств.
+*клрграупбаккграунд*<br/>
+заполняет Цвет фона группы свойств.
 
-*clrGroupText*<br/>
-[out] Цвет текста в группе свойств.
+*клрграуптекст*<br/>
+заполняет Цвет текста в группе свойств.
 
-*clrDescriptionBackground*<br/>
-[out] Цвет фона области описания.
+*клрдескриптионбаккграунд*<br/>
+заполняет Цвет фона области описания.
 
-*clrDescriptionText*<br/>
-[out] Цвет текста в области описания.
+*клрдескриптионтекст*<br/>
+заполняет Цвет текста в области описания.
 
-*clrLine*<br/>
-[out] Цвет линии, протянутые между свойствами.
+*клрлине*<br/>
+заполняет Цвет линий, рисуемых между свойствами.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors) метод для задания пользовательских цветов.
+Используйте метод [кмфкпропертигридктрл:: сеткустомколорс](#setcustomcolors) для задания пользовательских цветов.
 
-##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight
+##  <a name="getdescriptionheight"></a>Кмфкпропертигридктрл:: Жетдескриптионхеигхт
 
-Получает высоту области описания, который находится в нижней части элемента управления сетки свойств.
+Извлекает высоту области описания, расположенной в нижней части элемента управления сетки свойств.
 
 ```
 int GetDescriptionHeight() const;
@@ -860,13 +860,13 @@ int GetDescriptionHeight() const;
 
 ### <a name="remarks"></a>Примечания
 
-Высота области описания вычисляется автоматически и имеет значение 1/4 высоту элемента управления сетки свойств.
+Высота области описания вычисляется автоматически и устанавливается в 1/4 высоту элемента управления сетки свойств.
 
-Используйте [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) метод, чтобы отобразить или скрыть область описания. Используйте [CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea) метод, чтобы определить, отображается ли скрытые области описания.
+Используйте метод [кмфкпропертигридктрл:: енабледескриптионареа](#enabledescriptionarea) для отображения или скрытия области описания. Используйте метод [кмфкпропертигридктрл:: исдескриптионареа](#isdescriptionarea) , чтобы определить, отображается ли область описания или скрыта.
 
-##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows
+##  <a name="getdescriptionrows"></a>Кмфкпропертигридктрл:: Жетдескриптионровс
 
-Возвращает число строк в области описания текущего элемента управления сетки свойств.
+Извлекает количество строк в области описания текущего элемента управления сетки свойств.
 
 ```
 int GetDescriptionRows() const;
@@ -874,15 +874,15 @@ int GetDescriptionRows() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество строк в области описания текущего элемента управления сетки свойств.
+Число строк в области описания текущего элемента управления сетки свойств.
 
 ### <a name="remarks"></a>Примечания
 
-[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) конструктор инициализирует область описания для 3 строк.
+Конструктор [кмфкпропертигридктрл:: кмфкпропертигридктрл](#cmfcpropertygridctrl) Инициализирует область описания до 3 строк.
 
-##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl
+##  <a name="getheaderctrl"></a>Кмфкпропертигридктрл:: Жесеадерктрл
 
-Извлекает внутренний [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта, что инфраструктура использует для отображения текущего элемента управления сетки свойств.
+Извлекает внутренний объект [кмфчеадерктрл](../../mfc/reference/cmfcheaderctrl-class.md) , используемый платформой для вывода текущего элемента управления сеткой свойств.
 
 ```
 virtual CMFCHeaderCtrl& GetHeaderCtrl();
@@ -892,9 +892,9 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 
 Ссылка на объект `CMFCHeaderCtrl`.
 
-##  <a name="getheaderheight"></a>  CMFCPropertyGridCtrl::GetHeaderHeight
+##  <a name="getheaderheight"></a>Кмфкпропертигридктрл:: Жесеадерхеигхт
 
-Получает высоту заголовка элемента управления сетки свойств.
+Извлекает высоту заголовка элемента управления сетки свойств.
 
 ```
 int GetHeaderHeight() const;
@@ -906,9 +906,9 @@ int GetHeaderHeight() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getleftcolumnwidth"></a>  CMFCPropertyGridCtrl::GetLeftColumnWidth
+##  <a name="getleftcolumnwidth"></a>Кмфкпропертигридктрл:: Жетлефтколумнвидс
 
-Получает ширину левого столбца из текущего элемента управления сетки свойств, содержащий имя каждого свойства.
+Получает ширину левого столбца текущего элемента управления сетки свойств, который содержит имя каждого свойства.
 
 ```
 int GetLeftColumnWidth() const;
@@ -916,15 +916,15 @@ int GetLeftColumnWidth() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ширина столбца имя.
+Ширина столбца имен.
 
 ### <a name="remarks"></a>Примечания
 
-Правом столбце элемента управления сетки свойств содержит значение каждого свойства.
+Правый столбец элемента управления "сетка свойств" содержит значение для каждого свойства.
 
-##  <a name="getlistrect"></a>  CMFCPropertyGridCtrl::GetListRect
+##  <a name="getlistrect"></a>Кмфкпропертигридктрл:: Жетлистрект
 
-Получает ограничивающий прямоугольник элемента управления сетки свойств.
+Извлекает ограничивающий прямоугольник элемента управления сетки свойств.
 
 ```
 CRect GetListRect() const;
@@ -932,13 +932,13 @@ CRect GetListRect() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ограничивающий прямоугольник элемента управления сетки свойств. Этот прямоугольник не включает область описания и заголовка.
+Ограничивающий прямоугольник элемента управления сетки свойств. Этот прямоугольник не включает область описания и заголовок.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getproperty"></a>  CMFCPropertyGridCtrl::GetProperty
+##  <a name="getproperty"></a>Кмфкпропертигридктрл:: Property
 
-Извлекает указатель на свойство объекта, который соответствует указанному индексу элемента в сетке свойств.
+Извлекает указатель на объект свойства, соответствующий указанному индексу элемента в элементе управления сетки свойств.
 
 ```
 CMFCPropertyGridProperty* GetProperty(int nIndex) const;
@@ -946,20 +946,20 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-[in] Отсчитываемый от нуля индекс элемента управления сетки свойств.
+*ниндекс*<br/>
+окне Отсчитываемый от нуля индекс элемента управления сетки свойств.
 
-Этот метод утверждает, если *nIndex* меньше нуля или больше или равно числу свойств.
+Этот метод утверждает, имеет ли параметр *ниндекс* значение меньше нуля или больше или равно числу свойств.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект свойства, соответствующий указанному индексу в том случае, если этот метод выполнен успешно; в противном случае `NULL`.
+Указатель на объект свойства, соответствующий указанному индексу, если этот метод выполнен успешно; в противном случае —. `NULL`
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getpropertycolumnwidth"></a>  CMFCPropertyGridCtrl::GetPropertyColumnWidth
+##  <a name="getpropertycolumnwidth"></a>Кмфкпропертигридктрл:: Жетпропертиколумнвидс
 
-Извлекает текущую ширину столбца, содержащего значения свойств.
+Возвращает текущую ширину столбца, содержащего значения свойств.
 
 ```
 int GetPropertyColumnWidth() const;
@@ -967,15 +967,15 @@ int GetPropertyColumnWidth() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущая ширина столбца, который содержит значения свойств.
+Текущая ширина столбца, содержащего значения свойств.
 
 ### <a name="remarks"></a>Примечания
 
-Столбец справа в сетке свойств содержит значения свойств. Клиент может использовать разделенное поле элемента управления сетки свойств для изменения ширины столбца значения.
+Столбец справа в элементе управления "сетка свойств" содержит значения свойств. Клиент может использовать поле разделения элемента управления "сетка свойств" для изменения ширины столбца значений.
 
-##  <a name="getpropertycount"></a>  CMFCPropertyGridCtrl::GetPropertyCount
+##  <a name="getpropertycount"></a>Кмфкпропертигридктрл:: Жетпропертикаунт
 
-Получает количество свойств в сетке свойств.
+Извлекает количество свойств в элементе управления "сетка свойств".
 
 ```
 int GetPropertyCount() const;
@@ -983,13 +983,13 @@ int GetPropertyCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество свойств.
+Число свойств.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getrowheight"></a>  CMFCPropertyGridCtrl::GetRowHeight
+##  <a name="getrowheight"></a>Кмфкпропертигридктрл:: Жетровхеигхт
 
-Получает высоту строки в сетке свойств.
+Получает высоту строки в элементе управления "сетка свойств".
 
 ```
 int GetRowHeight() const;
@@ -1001,11 +1001,11 @@ int GetRowHeight() const;
 
 ### <a name="remarks"></a>Примечания
 
-Высота строки равна текущей высоты шрифта, а также 4 точкам.
+Высота строки равна текущей высоте шрифта плюс 4 пиксела.
 
-##  <a name="getscrollbarctrl"></a>  CMFCPropertyGridCtrl::GetScrollBarCtrl
+##  <a name="getscrollbarctrl"></a>Кмфкпропертигридктрл:: Жетскроллбарктрл
 
-Извлекает указатель на полосе прокрутки в сетке свойств.
+Извлекает указатель на элемент управления "полоса прокрутки" в элементе управления "сетка свойств".
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1013,20 +1013,20 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nBar*<br/>
-[in] Ориентация полосы прокрутки, которое должно быть SB_VERT.
+*нбар*<br/>
+окне Ориентация полосы прокрутки, которая должна быть SB_VERT.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект или значение NULL, если полосы прокрутки или ориентацию полосы прокрутки и прокрутка является SB_HORZ.
+Указатель на объект полосы прокрутки или значение NULL, если полоса прокрутки отсутствует, или если ориентация полосы прокрутки не SB_HORZ.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет получить прямой доступ к вертикальной полосе прокрутки.
+Используйте этот метод, чтобы получить прямой доступ к элементу управления вертикальной полосой прокрутки.
 
 ##  <a name="gettextcolor"></a>  CMFCPropertyGridCtrl::GetTextColor
 
-Получает цвет, используемый для рисования текста элементов свойств в сетке свойств.
+Возвращает цвет, используемый для рисования текста элементов свойств в текущем элементе управления сетки свойств.
 
 ```
 COLORREF GetTextColor() const;
@@ -1038,11 +1038,11 @@ COLORREF GetTextColor() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод получает цвет, который инфраструктура использует для рисования на переднем плане текущего элемента управления сетки свойств. [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor) метод получает цвет фона.
+Этот метод получает цвет, используемый платформой для отрисовки переднего плана текущего элемента управления сетки свойств. Метод [кмфкпропертигридктрл:: жетбкколор](#getbkcolor) извлекает цвет фона.
 
-##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest
+##  <a name="hittest"></a>Кмфкпропертигридктрл:: HitTest
 
-Извлекает указатель на объект свойства, соответствующий элемент управления сетки свойств в том случае, если указанная точка находится в элементе. Этот метод также указывает область элемента управления сетки свойств, который содержит точку.
+Получает указатель на объект свойства, соответствующий элементу управления сетки свойств, если указанная точка находится в элементе. Этот метод также указывает область в элементе управления "сетка свойств", которая содержит точку.
 
 ```
 CMFCPropertyGridProperty* HitTest(
@@ -1054,36 +1054,36 @@ CMFCPropertyGridProperty* HitTest(
 ### <a name="parameters"></a>Параметры
 
 *pt*<br/>
-[in] Точка, в координатах клиентской области окна.
+окне Точка в координатах клиента.
 
-*pnArea*<br/>
-[in, out] Указатель на `ClickArea` переменной. При возвращении данного метода указывает переменная *область свойств* , содержащей заданную точку. Дополнительные сведения о область свойств см. в разделе "Примечания".
+*пнареа*<br/>
+[вход, выход] Указатель на `ClickArea` переменную. При возврате из этого метода переменная указывает *область свойств* , содержащую указанную точку. Дополнительные сведения об области свойств см. в разделе Примечания.
 
-*bPropsOnly*<br/>
-[in] Значение TRUE, чтобы проверить только область свойств; Значение FALSE, чтобы проверить *область описания* Если указанная точка находится не в области свойств. Значение по умолчанию — FALSE. Дополнительные сведения об области описания см. в разделе "Примечания".
+*бпропсонли*<br/>
+окне Значение TRUE, чтобы протестировать только область свойств; FALSE для проверки *области описания* , если указанная точка не находится в области свойств. Значение по умолчанию — FALSE. Дополнительные сведения об области описания см. в разделе Примечания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если *bPropsOnly* параметр имеет значение TRUE и указанная точка находится в области свойства, возвращаемое значение является указателем на соответствующий объект свойства. Кроме того *pnArea* параметр имеет значение для определенной области, содержащую указанную точку. В противном случае возвращает значение NULL и *pnArea* параметр не изменяется.
+Если параметр *бпропсонли* имеет значение true, а указанная точка находится в области свойств, то возвращаемое значение является указателем на соответствующий объект свойства. Кроме того, параметр *пнареа* устанавливается в определенную область, содержащую указанную точку. В противном случае возвращается значение NULL, а параметр *пнареа* не изменяется.
 
-Если *bPropsOnly* параметр имеет значение FALSE, возвращаемое значение всегда равно NULL. Тем не менее, если указанная точка находится в области описания *pnArea* параметр имеет значение `CMFCPropertyGridProperty::ClickDescription`.
+Если параметр *бпропсонли* имеет значение false, то возвращаемым значением всегда будет NULL. Однако если указанная точка находится в области описания, параметр *пнареа* имеет значение `CMFCPropertyGridProperty::ClickDescription`.
 
 ### <a name="remarks"></a>Примечания
 
-Термин *область свойств* ссылается на один из именем, значением, или развернуть окно области элемента управления сетки свойств. *Область описания* — зона в нижней части элемента управления сетки свойств. Если щелкнуть элемент управления сетки свойств, области описания отображаются описание соответствующего свойства.
+*Область свойств* термин ссылается на одно из областей имени, значения или области развертывания элемента управления сетки свойств. *Область Описание* — это зона в нижней части элемента управления сетки свойств. При щелчке элемента управления сетки свойств в области Описание отображается описание соответствующего свойства.
 
-Этот метод задает значение переменной *pnArea* указывает параметр. Ниже перечислены возможные значения и соответствующие области.
+Этот метод задает значение переменной, на которую указывает параметр *пнареа* . В следующей таблице перечислены возможные значения и соответствующие области.
 
 |Значение|Область|
 |-----------|----------|
-|`ClickArea::ClickExpandBox`|Свойство разверните элемент управления ".|
+|`ClickArea::ClickExpandBox`|Элемент управления "расширение" для свойства.|
 |`ClickArea::ClickName`|Имя свойства.|
 |`ClickArea::ClickValue`|Значение свойства.|
 |`CMFCPropertyGridProperty::ClickDescription`|Область описания элемента управления сетки свойств.|
 
-##  <a name="init"></a>  CMFCPropertyGridCtrl::Init
+##  <a name="init"></a>Кмфкпропертигридктрл:: init
 
-Вызывается платформой для инициализации элемента управления сетки свойств.
+Вызывается платформой для инициализации элемента управления "сетка свойств".
 
 ```
 virtual void Init();
@@ -1091,17 +1091,17 @@ virtual void Init();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="initheader"></a>  CMFCPropertyGridCtrl::InitHeader
+##  <a name="initheader"></a>Кмфкпропертигридктрл:: Инисеадер
 
-Инициализирует внутренний [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта, что инфраструктура использует для отображения текущего элемента управления сетки свойств.
+Инициализирует внутренний объект [кмфчеадерктрл](../../mfc/reference/cmfcheaderctrl-class.md) , используемый платформой для вывода текущего элемента управления сеткой свойств.
 
 ```
 virtual void InitHeader();
 ```
 
-##  <a name="isalphabeticmode"></a>  CMFCPropertyGridCtrl::IsAlphabeticMode
+##  <a name="isalphabeticmode"></a>Кмфкпропертигридктрл:: Исалфабетикмоде
 
-Указывает, является ли элемент управления сетки свойств в режиме является буквой алфавита.
+Указывает, находится ли элемент управления сетки свойств в алфавитном режиме.
 
 ```
 BOOL IsAlphabeticMode() const;
@@ -1109,15 +1109,15 @@ BOOL IsAlphabeticMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если элемента управления сетки свойств в режиме является буквой алфавита. в противном случае — значение FALSE.
+Значение TRUE, если элемент управления сетки свойств находится в алфавитном режиме; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Если в режим элемента управления сетки свойств, все свойства сортируются в алфавитном порядке по их именам. В противном случае свойства группируются под их родительских узлов.
+Если элемент управления сетки свойств находится в алфавитном режиме, все свойства сортируются в алфавитном порядке по именам. В противном случае свойства группируются под их родительскими узлами.
 
-Используйте [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode) метод, чтобы включить или отключить режим.
+Используйте метод [кмфкпропертигридктрл:: сеталфабетикмоде](#setalphabeticmode) , чтобы включить или отключить алфавитный режим.
 
-##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
+##  <a name="isalwaysshowusertooltip"></a>Кмфкпропертигридктрл:: Исалвайсшовусертултип
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;
@@ -1127,7 +1127,7 @@ BOOL IsAlwaysShowUserToolTip() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isdescriptionarea"></a>  CMFCPropertyGridCtrl::IsDescriptionArea
+##  <a name="isdescriptionarea"></a>Кмфкпропертигридктрл:: Исдескриптионареа
 
 Указывает, отображается ли область описания элемента управления сетки свойств.
 
@@ -1137,15 +1137,15 @@ BOOL IsDescriptionArea() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если отображается в области описания; в противном случае — значение FALSE.
+Значение TRUE, если область описания отображается; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) метод для скрытия или отображения области описания.
+Используйте метод [кмфкпропертигридктрл:: енабледескриптионареа](#enabledescriptionarea) , чтобы скрыть или отобразить область описания.
 
-##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth
+##  <a name="isgroupnamefullwidth"></a>Кмфкпропертигридктрл:: Исграупнамефуллвидс
 
-Указывает, отображается ли имя каждого свойства группы по ширине элемента текущего элемента управления сетки свойств.
+Указывает, отображается ли каждое имя группы свойств по ширине элемента управления текущей сетки свойств.
 
 ```
 BOOL IsGroupNameFullWidth() const;
@@ -1153,15 +1153,15 @@ BOOL IsGroupNameFullWidth() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если имена групп отображаются по ширине элемента управления сетки свойств; Значение FALSE, если имена групп усекаются в столбце справа (значение) элемента управления.
+Значение TRUE, если имена групп отображаются по ширине элемента управления "сетка свойств"; Значение FALSE, если имена групп усекаются по правому столбцу (значение) элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-Объект *группы* — это коллекция связанных свойств в сетке свойств. Если элемент управления отображается иерархически, *имя группы* отображается как заголовок категории в строке над группой.
+*Группа* — это коллекция связанных свойств в элементе управления "сетка свойств". Если элемент управления отображается иерархически, *имя группы* отображается в строке над группой в виде названия категории.
 
 ##  <a name="isheaderctrl"></a>  CMFCPropertyGridCtrl::IsHeaderCtrl
 
-Указывает, отображается ли элемент управления заголовка.
+Указывает, отображается ли заголовок элемента управления.
 
 ```
 BOOL IsHeaderCtrl() const;
@@ -1169,15 +1169,15 @@ BOOL IsHeaderCtrl() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если отображается элемент управления заголовка; в противном случае — значение FALSE.
+Значение TRUE, если элемент управления "заголовок" отображается; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl) метод для скрытия или отображения в элементе управления заголовком.
+Используйте метод [кмфкпропертигридктрл:: енаблехеадерктрл](#enableheaderctrl) , чтобы скрыть или отобразить элемент управления "заголовок".
 
-##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties
+##  <a name="ismarkmodifiedproperties"></a>Кмфкпропертигридктрл:: Исмаркмодифиедпропертиес
 
-Указывает, отображение элемента управления сетки свойств измененных свойств.
+Указывает, как элемент управления "сетка свойств" отображает измененные свойства.
 
 ```
 BOOL IsMarkModifiedProperties() const;
@@ -1185,13 +1185,13 @@ BOOL IsMarkModifiedProperties() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если полужирный стиль, используемый для отображения измененных свойств; Значение FALSE, если обычный стиль, используемый для отображения измененных свойств.
+TRUE, если для вывода измененных свойств используется полужирный стиль; Значение FALSE, если для вывода измененных свойств используется обычный стиль.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isshowdragcontext"></a>  CMFCPropertyGridCtrl::IsShowDragContext
+##  <a name="isshowdragcontext"></a>Кмфкпропертигридктрл:: Исшовдрагконтекст
 
-Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.
+Указывает, перерисовывает ли платформа столбцы "имя" и "значение" текущего элемента управления сетки свойств, когда пользователь изменяет размер столбцов.
 
 ```
 BOOL IsShowDragContext() const;
@@ -1199,15 +1199,15 @@ BOOL IsShowDragContext() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если платформа перерисовывает столбцы имени и значения во время операции изменения размера; Значение FALSE, если платформа перерисовывает столбцы, по завершении операции перетаскивания.
+Значение TRUE, если платформа перерисовывает столбцы имени и значения во время операции изменения размера; Значение FALSE, если платформа перерисовывает столбцы после завершения операции перетаскивания.
 
 ### <a name="remarks"></a>Примечания
 
-Пользователя можно изменить размер столбцов имени и значения из элемента управления сетки свойств путем перетаскивания разделителя между столбцами. Если контекст перетаскивания отображается, изменяются столбцы имени и значения, до тех пор, пока пользователь перетаскивает разделитель. В противном случае разделителе перемещается, но столбцы не перерисовываются, пока завершится операция перетаскивания.
+Пользователь может изменить размер столбцов «имя» и «значение» элемента управления «сетка свойств», перетащив линию разделения между столбцами. Если контекст перетаскивания отображается, размер столбцов имени и значения изменяется при условии, что пользователь перетаскивает разделительную линию. В противном случае полоса разбиения перемещается, но столбцы не перерисовывается до завершения операции перетаскивания.
 
-##  <a name="isvsdotnetlook"></a>  CMFCPropertyGridCtrl::IsVSDotNetLook
+##  <a name="isvsdotnetlook"></a>Кмфкпропертигридктрл:: Исвсдотнетлук
 
-Указывает, является ли внешний вид элемента управления сетки свойств в стиле Visual Studio .NET.
+Указывает, относится ли внешний вид элемента управления "сетка свойств" к стилю Visual Studio .NET.
 
 ```
 BOOL IsVSDotNetLook() const;
@@ -1215,13 +1215,13 @@ BOOL IsVSDotNetLook() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если элемент управления сетки свойств в стиле Visual Studio .NET; в противном случае — значение FALSE.
+Значение TRUE, если элемент управления сетки свойств относится к стилю Visual Studio .NET; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) метод для задания элемента управления сетки свойств в стиле Visual Studio .NET.
+Используйте метод [кмфкпропертигридктрл:: сетвсдотнетлук](#setvsdotnetlook) , чтобы задать элемент управления "сетка свойств" стилем Visual Studio .NET.
 
-##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties
+##  <a name="markmodifiedproperties"></a>Кмфкпропертигридктрл:: Маркмодифиедпропертиес
 
 Указывает способ отображения измененных свойств.
 
@@ -1233,17 +1233,17 @@ void MarkModifiedProperties(
 
 ### <a name="parameters"></a>Параметры
 
-*bMark*<br/>
-[in] True, если изменены свойства в полужирный стиль; Значение FALSE для отображения измененных свойств в обычного начертания. Значение по умолчанию — TRUE.
+*бмарк*<br/>
+окне Значение TRUE для вывода измененных свойств полужирным шрифтом; Значение FALSE для вывода измененных свойств в обычном стиле. Значение по умолчанию — TRUE.
 
 *bRedraw*<br/>
-[in] Значение true для перерисовки элемента управления сетки свойств немедленно; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+окне Значение TRUE для немедленного перерисовки элемента управления "сетка свойств"; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onchangeselection"></a>  CMFCPropertyGridCtrl::OnChangeSelection
+##  <a name="onchangeselection"></a>Кмфкпропертигридктрл:: Ончанжеселектион
 
-Вызывается платформой при изменении текущего выделения.
+Вызывается структурой при изменении текущего выбора.
 
 ```
 virtual void OnChangeSelection(
@@ -1255,16 +1255,16 @@ virtual void OnChangeSelection(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pNewSel*|[in] Указатель на только что выбранного свойства.|
-|*pOldSel*|[in] Указатель на ранее выбранного свойства.|
+|*пневсел*|окне Указатель на только что выбранное свойство.|
+|*полдсел*|окне Указатель на ранее выбранное свойство.|
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию этот метод не выполняет никаких действий.
+Реализация по умолчанию этого метода не выполняет никаких действий.
 
-##  <a name="onclickbutton"></a>  CMFCPropertyGridCtrl::OnClickButton
+##  <a name="onclickbutton"></a>Кмфкпропертигридктрл:: Онкликкбуттон
 
-Вызывается платформой при нажатии кнопки свойству.
+Вызывается структурой при нажатии кнопки свойства.
 
 ```
 virtual void OnClickButton(CPoint point);
@@ -1273,15 +1273,15 @@ virtual void OnClickButton(CPoint point);
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-[in] Точка, в координатах клиентской области окна.
+окне Точка в координатах клиента.
 
 ### <a name="remarks"></a>Примечания
 
 По умолчанию этот метод обновляет текущее значение свойства.
 
-##  <a name="ondrawborder"></a>  CMFCPropertyGridCtrl::OnDrawBorder
+##  <a name="ondrawborder"></a>Кмфкпропертигридктрл:: Ондравбордер
 
-Вызывается платформой для рисования границы вокруг элемента управления сетки свойств.
+Вызывается структурой для рисования границы вокруг элемента управления сетки свойств.
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -1290,13 +1290,13 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawdescription"></a>  CMFCPropertyGridCtrl::OnDrawDescription
+##  <a name="ondrawdescription"></a>Кмфкпропертигридктрл:: Ондравдескриптион
 
-Вызвано структурой для прорисовки области описания и отображения текста описания.
+Вызывается структурой для рисования области описания и отображения текста описания.
 
 ```
 virtual void OnDrawDescription(
@@ -1307,18 +1307,18 @@ virtual void OnDrawDescription(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Прямоугольник, который указывает место для прорисовки области описания.
+окне Прямоугольник, указывающий, где следует нарисовать область описания.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea) метод для отображения в области описания.
+Используйте метод [кмфкпропертигридктрл:: енабледескриптионареа](#enabledescriptionarea) для вывода области описания.
 
-##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList
+##  <a name="ondrawlist"></a>Кмфкпропертигридктрл:: Ондравлист
 
-Вызвано структурой для отображения списка свойств в сетке свойств.
+Вызывается платформой для вывода списка свойств в элементе управления "сетка свойств".
 
 ```
 virtual void OnDrawList(CDC* pDC);
@@ -1327,13 +1327,13 @@ virtual void OnDrawList(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawproperty"></a>  CMFCPropertyGridCtrl::OnDrawProperty
+##  <a name="ondrawproperty"></a>Кмфкпропертигридктрл:: Ондравпроперти
 
-Вызвано структурой для отображения свойства.
+Вызывается платформой для вывода свойства.
 
 ```
 virtual int OnDrawProperty(
@@ -1344,20 +1344,20 @@ virtual int OnDrawProperty(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
-*pProp*<br/>
-[in] Указатель на объект свойства.
+*ппроп*<br/>
+окне Указатель на объект свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="onpropertychanged"></a>  CMFCPropertyGridCtrl::OnPropertyChanged
 
-Вызывается платформой при изменении значения свойства.
+Вызывается структурой при изменении значения свойства.
 
 ```
 virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
@@ -1365,16 +1365,16 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на объект свойства, значение которого изменилось.
+*ппроп*<br/>
+окне Указатель на объект свойства, значение которого изменилось.
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод отправляет [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) сообщение владельцу элемента управления сетки свойств.
+По умолчанию этот метод отправляет сообщение [AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md) владельцу элемента управления сетки свойств.
 
-##  <a name="onselectcombo"></a>  CMFCPropertyGridCtrl::OnSelectCombo
+##  <a name="onselectcombo"></a>Кмфкпропертигридктрл:: Онселекткомбо
 
-Вызывается платформой при выборе свойство, которое содержит поле со списком.
+Вызывается платформой при выборе свойства, содержащего элемент управления "поле со списком".
 
 ```
 void OnSelectCombo();
@@ -1382,9 +1382,9 @@ void OnSelectCombo();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="removeall"></a>  CMFCPropertyGridCtrl::RemoveAll
+##  <a name="removeall"></a>Кмфкпропертигридктрл:: RemoveAll
 
-Удаляет все объекты свойств элемента управления сетки свойств.
+Удаляет все объекты свойств из элемента управления сетки свойств.
 
 ```
 void RemoveAll();
@@ -1392,7 +1392,7 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="resetoriginalvalues"></a>  CMFCPropertyGridCtrl::ResetOriginalValues
+##  <a name="resetoriginalvalues"></a>Кмфкпропертигридктрл:: Ресеторигиналвалуес
 
 Восстанавливает исходные значения всех свойств.
 
@@ -1403,13 +1403,13 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bRedraw*<br/>
-[in] Значение TRUE для перерисовки списка свойств; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+окне Значение TRUE для перерисовки списка свойств; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setalphabeticmode"></a>  CMFCPropertyGridCtrl::SetAlphabeticMode
+##  <a name="setalphabeticmode"></a>Кмфкпропертигридктрл:: Сеталфабетикмоде
 
-Задает или сбрасывает режим.
+Устанавливает или сбрасывает алфавитный режим.
 
 ```
 void SetAlphabeticMode(BOOL bSet=TRUE);
@@ -1417,16 +1417,16 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bSet*<br/>
-[in] Значение TRUE, чтобы задать режим; FALSE-Сброс режим является буквой алфавита. Значение по умолчанию — TRUE.
+*Управляемое bSet*<br/>
+окне Значение TRUE, чтобы задать алфавитный режим. FALSE сброс алфавитного режима. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-Если в режим элемента управления сетки свойств, элемент управления сортирует все свойства, содержащиеся в ней по имени свойства.
+Если элемент управления сетки свойств находится в алфавитном режиме, элемент управления сортирует все свойства, которые он содержит, по имени свойства.
 
-##  <a name="setboollabels"></a>  CMFCPropertyGridCtrl::SetBoolLabels
+##  <a name="setboollabels"></a>Кмфкпропертигридктрл:: Сетбуллабелс
 
-Задает текст, логические меток.
+Задает текст логических меток.
 
 ```
 void SetBoolLabels(
@@ -1436,17 +1436,17 @@ void SetBoolLabels(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszTrue*<br/>
-[in] Текстовая строка для отображения для логическое значение true.
+*лпсзтруе*<br/>
+окне Текстовая строка, отображаемая для логического значения true.
 
-*lpszFalse*<br/>
-[in] Текстовая строка для отображения для логическое значение false.
+*лпсзфалсе*<br/>
+окне Текстовая строка, отображаемая для логического значения false.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setcursel"></a>  CMFCPropertyGridCtrl::SetCurSel
+##  <a name="setcursel"></a>Кмфкпропертигридктрл:: Сеткурсел
 
-Выбирает свойства в сетке свойств.
+Выбирает свойство в элементе управления "сетка свойств".
 
 ```
 void SetCurSel(
@@ -1456,19 +1456,19 @@ void SetCurSel(
 
 ### <a name="parameters"></a>Параметры
 
-*pProp*<br/>
-[in] Указатель на объект свойства.
+*ппроп*<br/>
+окне Указатель на объект свойства.
 
 *bRedraw*<br/>
-[in] Значение true для перерисовки элемента управления сетки свойств немедленно; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+окне Значение TRUE для немедленного перерисовки элемента управления "сетка свойств"; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет отменить выбор текущего элемента в сетке свойств, а затем выберите элемент, соответствующий указанному свойству.
+Используйте этот метод, чтобы отменить выбор текущего элемента в элементе управления "сетка свойств", а затем выбрать элемент, соответствующий указанному свойству.
 
 ##  <a name="setcustomcolors"></a>  CMFCPropertyGridCtrl::SetCustomColors
 
-Указывает пользовательских цветов для различных элементов из элемента управления сетки свойств.
+Задает пользовательские цвета для различных элементов элемента управления "сетка свойств".
 
 ```
 void SetCustomColors(
@@ -1483,36 +1483,36 @@ void SetCustomColors(
 
 ### <a name="parameters"></a>Параметры
 
-*clrBackground*<br/>
-[in] Цвет фона значений свойств.
+*клрбаккграунд*<br/>
+окне Цвет фона значений свойств.
 
-*clrText*<br/>
-[in] Цвет имена свойств и текст значение свойства.
+*клртекст*<br/>
+окне Цвет имен свойств и значения свойства Text.
 
-*clrGroupBackground*<br/>
-[in] Цвет фона группы свойств.
+*клрграупбаккграунд*<br/>
+окне Цвет фона группы свойств.
 
-*clrGroupText*<br/>
-[in] Новый цвет текста группы свойств.
+*клрграуптекст*<br/>
+окне Новый цвет текста для группы свойств.
 
-*clrDescriptionBackground*<br/>
-[in] Цвет фона области описания.
+*клрдескриптионбаккграунд*<br/>
+окне Цвет фона области описания.
 
-*clrDescriptionText*<br/>
-[in] Цвет текста в области описания.
+*клрдескриптионтекст*<br/>
+окне Цвет текста в области описания.
 
-*clrLine*<br/>
-[in] Цвет линии, протянутые между свойствами.
+*клрлине*<br/>
+окне Цвет линий, рисуемых между свойствами.
 
 ### <a name="remarks"></a>Примечания
 
-Для любого параметра укажите `((COLORREF)-1)` цвета значение цвета по умолчанию для этого элемента из элемента управления сетки свойств.
+Для любого параметра укажите `((COLORREF)-1)` значение цвета, чтобы использовать цвет по умолчанию для этого элемента в элементе управления сетки свойств.
 
-Чтобы настроить внешний вид конкретного свойства, являются производными от класса [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) класса и затем Переопределите [CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [ CMFCPropertyGridProperty::OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox), и [CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) методы.
+Чтобы настроить внешний вид конкретного свойства, создайте производный класс от класса [кмфкпропертигридпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md) , а затем переопределите [Кмфкпропертигридпроперти:: ондравнаме](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname), [кмфкпропертигридпроперти:: OnDrawValue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue), [ Методы Кмфкпропертигридпроперти:: Ондравекспандбокс](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)и [кмфкпропертигридпроперти:: ондравбуттон](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton) .
 
 ##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows
 
-Указывает количество строк, отображаемых в разделе "Описание" из текущего элемента управления сетки свойств.
+Указывает число строк, отображаемых в разделе Описание текущего элемента управления сетки свойств.
 
 ```
 void SetDescriptionRows(int nDescRows);
@@ -1520,12 +1520,12 @@ void SetDescriptionRows(int nDescRows);
 
 ### <a name="parameters"></a>Параметры
 
-*nDescRows*<br/>
-[in] Число строк, отображаемых в описание свойства.
+*ндескровс*<br/>
+окне Число строк, отображаемых в описании свойства.
 
-##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth
+##  <a name="setgroupnamefullwidth"></a>Кмфкпропертигридктрл:: Сетграупнамефуллвидс
 
-Указывает, следует ли отображать всю ширину имя категории для группы свойств в сетке свойств.
+Указывает, следует ли отображать полную ширину имени категории для группы свойств в текущем элементе управления сетки свойств.
 
 ```
 void SetGroupNameFullWidth(
@@ -1535,21 +1535,21 @@ void SetGroupNameFullWidth(
 
 ### <a name="parameters"></a>Параметры
 
-*bGroupNameFullWidth*<br/>
-[in] Значение TRUE, чтобы отобразить полный ширину имя категории, независимо от ширины столбца имени свойства. Значение FALSE, чтобы ограничить ширину имя категории, по ширине столбец имени свойства. Значение по умолчанию — TRUE.
+*бграупнамефуллвидс*<br/>
+окне Значение TRUE, чтобы отобразить полную ширину имени категории независимо от ширины столбца имени свойства. Значение FALSE, чтобы ограничить ширину имени категории шириной столбца имени свойства. Значение по умолчанию — TRUE.
 
 *bRedraw*<br/>
-[in] Значение true, чтобы обновления элемента управления сетки свойств немедленно; Значение FALSE, чтобы обновить элемент управления, при следующей перерисовывать событие происходит. Значение по умолчанию — TRUE.
+окне Значение TRUE, чтобы немедленно обновить элемент управления "сетка свойств"; Значение FALSE, чтобы обновить элемент управления при возникновении следующего события перерисовки. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-Элемента управления сетки свойств состоит из изменяемого размера *имя свойства* столбца и *значение свойства* столбца. Имя столбца будет также начала значение столбца. Чтобы изменить размер столбцов, перетащите границу между столбцами.
+Элемент управления "сетка свойств" состоит из столбца "имя изменяемого *Свойства* " и столбца " *значение свойства* ". Конец столбца имя также является началом столбца значение. Чтобы изменить размер столбцов, перетащите границу между столбцами.
 
-Условия *имя группы* и *имя категории* являются взаимозаменяемыми в этом методе. Имя категории отображается на строку, которая ведет набор связанных свойств и значений. Этот метод определяет, ли ширина столбца имя свойства также определяет ширину отображаемого категория.
+Термины *имя группы* и *имя категории* в данном методе взаимозаменяемы. Имя категории отображается в строке, которая заголовков набора связанных свойств и значений. Этот метод указывает, будет ли ширина столбца имени свойства также задается по ширине отображаемого имени категории.
 
-##  <a name="setlistdelimiter"></a>  CMFCPropertyGridCtrl::SetListDelimiter
+##  <a name="setlistdelimiter"></a>Кмфкпропертигридктрл:: Сетлистделимитер
 
-Определяет символ, который используется в качестве разделителя в списке значений свойств.
+Определяет символ, используемый в качестве разделителя в списке значений свойств.
 
 ```
 void SetListDelimiter(TCHAR c);
@@ -1558,17 +1558,17 @@ void SetListDelimiter(TCHAR c);
 ### <a name="parameters"></a>Параметры
 
 *c*<br/>
-[in] Символ для использования в качестве разделителя.
+окне Символ, используемый в качестве разделителя.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет определить символ разделителя в список значений свойств, которые используются в [CMFCPropertyGridProperty::CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) конструктор. В этом конструкторе, задайте *bIsValueList* значение TRUE для параметра.
+Используйте этот метод, чтобы определить символ-разделитель в списке значений свойств, используемых в конструкторе [кмфкпропертигридпроперти:: кмфкпропертигридпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md#cmfcpropertygridproperty) . В этом конструкторе присвойте параметру *бисвалуелист* значение true.
 
-По умолчанию [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl) конструктор задает знак-разделитель запятая (,).
+По умолчанию конструктор [кмфкпропертигридктрл:: кмфкпропертигридктрл](#cmfcpropertygridctrl) устанавливает символ-разделитель запятой (",").
 
-##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext
+##  <a name="setshowdragcontext"></a>Кмфкпропертигридктрл:: Сетшовдрагконтекст
 
-Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.
+Указывает, перерисовывает ли платформа столбцы "имя" и "значение" текущего элемента управления сетки свойств, когда пользователь изменяет размер столбцов.
 
 ```
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
@@ -1576,16 +1576,16 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bShowDragContext*<br/>
-[in] Значение TRUE, если перерисовка столбцы имени и значения во время операции изменения размера; Значение FALSE, если перерисовка столбцы, по завершении операции перетаскивания. Значение по умолчанию — TRUE.
+*бшовдрагконтекст*<br/>
+окне Значение TRUE, чтобы перерисовывать столбцы имени и значения во время операции изменения размера; Значение FALSE для перерисовки столбцов после завершения операции перетаскивания. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-Пользователя можно изменить размер столбцов имени и значения из элемента управления сетки свойств путем перетаскивания разделителя между столбцами. Если контекст перетаскивания отображается, изменяются столбцы имени и значения, до тех пор, пока пользователь перетаскивает разделитель. В противном случае разделителе перемещается, но столбцы не перерисовываются, пока завершится операция перетаскивания.
+Пользователь может изменить размер столбцов «имя» и «значение» элемента управления «сетка свойств», перетащив линию разделения между столбцами. Если контекст перетаскивания отображается, размер столбцов имени и значения изменяется при условии, что пользователь перетаскивает разделительную линию. В противном случае полоса разбиения перемещается, но столбцы не перерисовывается до завершения операции перетаскивания.
 
-##  <a name="setvsdotnetlook"></a>  CMFCPropertyGridCtrl::SetVSDotNetLook
+##  <a name="setvsdotnetlook"></a>Кмфкпропертигридктрл:: Сетвсдотнетлук
 
-Задает внешний вид элемента управления сетки свойств стиля, который используется в Visual Studio .NET.
+Устанавливает внешний вид элемента управления "сетка свойств" в стиле, используемом в Visual Studio .NET.
 
 ```
 void SetVSDotNetLook(BOOL bSet=TRUE);
@@ -1593,14 +1593,14 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bSet*<br/>
-[in] Значение true, чтобы набор сетке свойств управления на стиль, который используется в Visual Studio .NET; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+*Управляемое bSet*<br/>
+окне Значение TRUE, чтобы задать для элемента управления "сетка свойств" стиль, используемый в Visual Studio .NET. в противном случае — значение FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="updatecolor"></a>  CMFCPropertyGridCtrl::UpdateColor
 
-Задает значение цвета свойства текущего выбранного цвета.
+Задает значение цвета для выбранного в данный момент свойства цвета.
 
 ```
 virtual void UpdateColor(COLORREF color);
@@ -1609,13 +1609,13 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="parameters"></a>Параметры
 
 *color*<br/>
-[in] Значение цвета RGB.
+окне Значение цвета RGB.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод утверждает в режиме отладки, если свойство текущего выбранного элемента управления сетки свойств не является свойством color.
+Этот метод утверждается в режиме отладки, если текущее выбранное свойство элемента управления "сетка свойств" не является свойством цвета.
 
-##  <a name="validateitemdata"></a>  CMFCPropertyGridCtrl::ValidateItemData
+##  <a name="validateitemdata"></a>Кмфкпропертигридктрл:: Валидатеитемдата
 
 Вызывается платформой для проверки данных свойства.
 
@@ -1627,17 +1627,17 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pProp*|[in] Указатель на свойство. Этот параметр не используется.|
+|*ппроп*|окне Указатель на свойство. Этот параметр не используется.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение TRUE.
+Всегда имеет значение TRUE.
 
 ### <a name="remarks"></a>Примечания
 
-[CMFCPropertyGridCtrl::EndEditItem](#endedititem) метод вызывает этот метод для проверки данных. По умолчанию этот метод не использует его *pProp* параметр и его возвращаемое значение всегда имеет значение TRUE.
+Метод [кмфкпропертигридктрл:: ендедититем](#endedititem) вызывает этот метод для проверки данных. По умолчанию этот метод не использует свой параметр *ппроп* , и его возвращаемое значение всегда равно true.
 
-При переопределении этого метода, возвращает значение TRUE, если указанное свойство данных является допустимым. В противном случае возвращает значение FALSE, в этом случае платформа не обновляет свойство.
+При переопределении этого метода возвращается значение TRUE, если указанные данные свойства являются допустимыми. В противном случае возвращается значение FALSE, в этом случае платформа не обновляет свойство.
 
 ## <a name="see-also"></a>См. также
 

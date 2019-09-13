@@ -5,84 +5,84 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 0a91b34dc28ace3a8fc0fe1ac1c59d86b19ece43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c0a64ff34a86c5581fe552ce2dbf0d12ea8e96
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235229"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739524"
 ---
 # <a name="collection-classes"></a>Классы коллекций
 
-Следующие классы поддерживают массивы, списки, карт, а также методы признаки для оказания помощи сравнения и доступ к элементам.
+Следующие классы поддерживают массивы, списки, карты, а также методы признаков для помощи в сравнении и доступе к элементам.
 
-- [CAtlArray](../atl/reference/catlarray-class.md) этот класс реализует объект массива.
+- [CAtlArray](../atl/reference/catlarray-class.md) Этот класс реализует объект Array.
 
-- [CAtlList](../atl/reference/catllist-class.md) этот класс предоставляет методы для создания и управления объект списка.
+- [Катллист](../atl/reference/catllist-class.md) Этот класс предоставляет методы для создания объекта списка и управления им.
 
-- [CAtlMap](../atl/reference/catlmap-class.md) этот класс предоставляет методы для создания и управления объект карты.
+- [CAtlMap](../atl/reference/catlmap-class.md) Этот класс предоставляет методы для создания объекта Map и управления им.
 
-- [CAutoPtrArray](../atl/reference/cautoptrarray-class.md) этот класс предоставляет методы, используемые при создании массива интеллектуальных указателей.
+- [Каутоптраррай](../atl/reference/cautoptrarray-class.md) Этот класс предоставляет методы, полезные при построении массива смарт-указателей.
 
-- [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекции интеллектуальных указателей.
+- [Каутоптрелементтраитс](../atl/reference/cautoptrelementtraits-class.md) Этот класс предоставляет методы, статические функции и определения типов, полезные при создании коллекций смарт-указателей.
 
-- [CAutoPtrList](../atl/reference/cautoptrlist-class.md) этот класс предоставляет методы, используемые при построении списка интеллектуальные указатели.
+- [Каутоптрлист](../atl/reference/cautoptrlist-class.md) Этот класс предоставляет методы, полезные при создании списка смарт-указателей.
 
-- [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) этот класс предоставляет методы, статические функции и определения типов, полезных при создании коллекции с помощью интеллектуальных указателей, новые векторные и удаление операторов.
+- [Каутовекторптрелементтраитс](../atl/reference/cautovectorptrelementtraits-class.md) Этот класс предоставляет методы, статические функции и определения типов, полезные при создании коллекций смарт-указателей с помощью операторов Vector New и DELETE.
 
-- [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) этот класс предоставляет методы, статические функции и определения типов, полезных при создании коллекции COM указателей на интерфейс.
+- [Ккомкиптрелементтраитс](../atl/reference/ccomqiptrelementtraits-class.md) Этот класс предоставляет методы, статические функции и определения типов, полезные при создании коллекций указателей на COM-интерфейсах.
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md) этот класс является оболочкой для [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) структуры.
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md) Этот класс является оболочкой для структуры [типа данных SAFEARRAY](/windows/win32/api/oaidl/ns-oaidl-safearray) .
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) этот класс является оболочкой для [SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound) структуры.
+- [Ккомсафеаррайбаунд](../atl/reference/ccomsafearraybound-class.md) Этот класс является оболочкой для структуры [сафеаррайбаунд](/windows/win32/api/oaidl/ns-oaidl-safearraybound) .
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) в этом классе хранится **IUnknown** указатели и предназначен для использования в качестве параметра [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) класс шаблона.
+- [Ккомункаррай](../atl/reference/ccomunkarray-class.md) Этот класс хранит указатели **IUnknown** и предназначен для использования в качестве параметра для класса шаблона [иконнектионпоинтимпл](../atl/reference/iconnectionpointimpl-class.md) .
 
-- [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) этот класс предоставляет два статических функций для преобразования символов в верхний или нижний регистр.
+- [Кдефаултчартраитс](../atl/reference/cdefaultchartraits-class.md) Этот класс предоставляет две статические функции для преобразования символов между прописными и строчными буквами.
 
-- [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) этого класса предоставляют функции сравнения элемент по умолчанию.
+- [Кдефаулткомпаретраитс](../atl/reference/cdefaultcomparetraits-class.md) Этот класс предоставляет функции сравнения элементов по умолчанию.
 
-- [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) этот класс предоставляет функции и методы по умолчанию для класса коллекции.
+- [Кдефаултелементтраитс](../atl/reference/cdefaultelementtraits-class.md) Этот класс предоставляет методы и функции по умолчанию для класса коллекции.
 
-- [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) этот класс предоставляет статическую функцию для вычисления хэш-значения.
+- [Кдефаулсаштраитс](../atl/reference/cdefaulthashtraits-class.md) Этот класс предоставляет статическую функцию для вычисления хэш-значений.
 
-- [CElementTraits](../atl/reference/celementtraits-class.md) этот класс используется классами коллекцию для предоставления методов и функций для перемещения, копирования, сравнения и операциях хеширования.
+- [Целементтраитс](../atl/reference/celementtraits-class.md) Этот класс используется классами коллекций для предоставления методов и функций для операций перемещения, копирования, сравнения и хэширования.
 
-- [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) этот класс предоставляет по умолчанию методы копирования и перемещения для класса коллекции.
+- [Целементтраитсбасе](../atl/reference/celementtraitsbase-class.md) Этот класс предоставляет методы копирования и перемещения по умолчанию для класса коллекции.
 
-- [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекций указателей кучи.
+- [Чеапптрелементтраитс](../atl/reference/cheapptrelementtraits-class.md) Этот класс предоставляет методы, статические функции и определения типов, которые полезны при создании коллекций указателей кучи.
 
-- [CHeapPtrList](../atl/reference/cheapptrlist-class.md) этот класс предоставляет методы, используемые при построении списка указатели кучи.
+- [Чеапптрлист](../atl/reference/cheapptrlist-class.md) Этот класс предоставляет методы, полезные при построении списка указателей на кучу.
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md) этот класс предоставляет методы, используемые при создании массива указателей COM-интерфейса.
+- [Цинтерфацеаррай](../atl/reference/cinterfacearray-class.md) Этот класс предоставляет методы, полезные при построении массива указателей на COM-интерфейс.
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md) этот класс предоставляет методы, используемые при построении списка указателей интерфейса СОМ.
+- [Цинтерфацелист](../atl/reference/cinterfacelist-class.md) Этот класс предоставляет методы, полезные при создании списка указателей на COM-интерфейс.
 
-- [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) этот класс предоставляет методы по умолчанию, а также функции для класса коллекции состоят из примитивных типов данных.
+- [Кпримитивилементтраитс](../atl/reference/cprimitiveelementtraits-class.md) Этот класс предоставляет методы и функции по умолчанию для класса коллекции, состоящего из примитивных типов данных.
 
-- [CRBMap](../atl/reference/crbmap-class.md) этот класс представляет структуру сопоставления, с помощью двоичного красно-черного дерева.
+- [Крбмап](../atl/reference/crbmap-class.md) Этот класс представляет структуру сопоставления с помощью двоичного дерева из красного черного.
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) этот класс представляет структуру сопоставления, которая позволяет каждого ключа должны быть сопоставлены более одного значения, с помощью двоичного красно-черного дерева.
+- [Крбмултимап](../atl/reference/crbmultimap-class.md) Этот класс представляет структуру сопоставления, которая позволяет связать каждый ключ с более чем одним значением с помощью двоичного дерева из красного черного.
 
-- [CRBTree](../atl/reference/crbtree-class.md) этот класс предоставляет методы для создания и использования красно-черного дерева.
+- [Крбтри](../atl/reference/crbtree-class.md) Этот класс предоставляет методы для создания и использования дерева с красным и черным цветами.
 
-- [CSimpleArray](../atl/reference/csimplearray-class.md) этот класс предоставляет методы для управления простого массива.
+- [Ксимплеаррай](../atl/reference/csimplearray-class.md) Этот класс предоставляет методы для управления простым массивом.
 
-- [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) этот класс представляет вспомогательный объект для [CSimpleArray](../atl/reference/csimplearray-class.md) класса.
+- [Ксимплеаррайекуалхелпер](../atl/reference/csimplearrayequalhelper-class.md) Этот класс является вспомогательным классом для класса [ксимплеаррай](../atl/reference/csimplearray-class.md) .
 
-- [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) этот класс представляет вспомогательный объект для [CSimpleArray](../atl/reference/csimplearray-class.md) класса.
+- [Ксимплеаррайекуалхелперфалсе](../atl/reference/csimplearrayequalhelperfalse-class.md) Этот класс является вспомогательным классом для класса [ксимплеаррай](../atl/reference/csimplearray-class.md) .
 
-- [CSimpleMap](../atl/reference/csimplemap-class.md) этот класс обеспечивает поддержку для массива простое сопоставление.
+- [Ксимплемап](../atl/reference/csimplemap-class.md) Этот класс обеспечивает поддержку простого массива сопоставления.
 
-- [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) этот класс представляет вспомогательный объект для [CSimpleMap](../atl/reference/csimplemap-class.md) класса.
+- [Ксимплемапекуалхелпер](../atl/reference/csimplemapequalhelper-class.md) Этот класс является вспомогательным классом для класса [ксимплемап](../atl/reference/csimplemap-class.md) .
 
-- [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) этот класс представляет вспомогательный объект для [CSimpleMap](../atl/reference/csimplemap-class.md) класса.
+- [Ксимплемапекуалхелперфалсе](../atl/reference/csimplemapequalhelperfalse-class.md) Этот класс является вспомогательным классом для класса [ксимплемап](../atl/reference/csimplemap-class.md) .
 
-- [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) этот класс предоставляет статические функции, используемые классами коллекцию хранения `CString` объектов.
+- [Кстринжелементтраитс](../atl/reference/cstringelementtraits-class.md) Этот класс предоставляет статические функции, используемые классами `CString` коллекций, в которых хранятся объекты.
 
-- [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) этот класс предоставляет статические функции, связанные с строк, которые хранятся в объектах класса коллекции. Это похоже на [CStringElementTraits](../atl/reference/cstringelementtraits-class.md), но выполняет сравнение без учета регистра.
+- [Кстринжелементтраитси](../atl/reference/cstringelementtraitsi-class.md) Этот класс предоставляет статические функции, связанные со строками, хранящимися в объектах класса коллекции. Он аналогичен [кстринжелементтраитс](../atl/reference/cstringelementtraits-class.md), но выполняет сравнения без учета регистра.
 
-- [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) этот класс предоставляет статические функции, связанные с строк, которые хранятся в объектах класса коллекции. Объекты-строки обрабатываются как ссылки.
+- [Кстрингрефелементтраитс](../atl/reference/cstringrefelementtraits-class.md) Этот класс предоставляет статические функции, связанные со строками, хранящимися в объектах класса коллекции. Строковые объекты обрабатываются как ссылки.
 
 ## <a name="related-articles"></a>Связанные статьи
 
@@ -90,5 +90,5 @@ ms.locfileid: "62235229"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../atl/atl-class-overview.md)<br/>
+[Обзор класса](../atl/atl-class-overview.md)<br/>
 [Классы коллекций](../atl/atl-collection-classes.md)

@@ -1,6 +1,6 @@
 ---
 title: Страницы свойств компилятора MIDL
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
 f1_keywords:
@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492163"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927694"
 ---
 # <a name="midl-property-pages"></a>Страницы свойств MIDL
 
@@ -62,7 +62,7 @@ ms.locfileid: "68492163"
 
 ### <a name="preprocessor-definitions"></a>Определения препроцессора
 
-Задает одно или несколько определений, включая макросы MIDL[](/windows/win32/midl/-d)(/d\[)\].
+Задает одно или несколько определений, включая макросы MIDL (\[макросы\][/D](/windows/win32/midl/-d))).
 
 ### <a name="additional-include-directories"></a>Дополнительные каталоги включаемых файлов
 
@@ -129,15 +129,15 @@ ms.locfileid: "68492163"
 
 ### <a name="generate-stubless-proxies"></a>Создание прокси без заглушек
 
-Создание полностью интерпретируемых заглушек с расширениями и прокси без заглушек для объектных интерфейсов ([/Oicf](/windows/win32/midl/-Oicf), [/OIF](/windows/win32/midl/-Oif) ).
+Создание полностью интерпретируемых заглушек с расширениями и прокси без заглушек для объектных интерфейсов ([/Oicf](/windows/win32/midl/-oi), [/OIF](/windows/win32/midl/-oi) ).
 
 ### <a name="suppress-compiler-warnings"></a>Подавление предупреждений компилятора
 
-Подавлять предупреждающие сообщения компилятора ([/no_warn](/windows/win32/midl/-no_warn)).
+Подавлять предупреждающие сообщения компилятора ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Режим конфигурации приложения
 
-Разрешить выбранные атрибуты ACF в IDL-файле ([/app_config](/windows/win32/midl/-app_config)).
+Разрешить выбранные атрибуты ACF в IDL-файле ([/app_config](/windows/win32/midl/-app-config)).
 
 ### <a name="locale-id"></a>КОД локали
 
@@ -187,7 +187,7 @@ ms.locfileid: "68492163"
 
 **Элементов**
 
-- Заглушка заглушки
+- **Заглушка заглушки**
 - **None** — нет.
 
 ### <a name="generate-server-stub-files"></a>Создание файлов заглушки сервера
@@ -196,7 +196,7 @@ ms.locfileid: "68492163"
 
 **Элементов**
 
-- Заглушка заглушки
+- **Заглушка заглушки**
 - **None** — нет.
 
 ### <a name="client-stub-file"></a>Клиентский файл заглушки
@@ -220,7 +220,7 @@ ms.locfileid: "68492163"
 
 ### <a name="c-preprocess-options"></a>Параметры предварительной обработки C
 
-Указывает параметры для передачи препроцессору компилятора C (параметры[/cpp_opt](/windows/win32/midl/-cpp_opt) ).
+Указывает параметры для передачи препроцессору компилятора C (параметры[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Отменить определения препроцессора
 
@@ -258,15 +258,15 @@ ms.locfileid: "68492163"
 
 ### <a name="prepend-with-abi-namespace"></a>Начало с пространством имен "ABI"
 
-Добавьте в начало пространства имен ABI все типы.  ([/ns_prefix](/windows/win32/midl/-ns_prefix)).
+Добавьте в начало пространства имен ABI все типы.  ([/ns_prefix](/windows/win32/midl/-ns-prefix)).
 
 ### <a name="validate-parameters"></a>Проверка параметров
 
-Создайте дополнительные сведения для проверки параметров ([/robust](/windows/win32/midl/-robust) | [/robust](/windows/win32/midl/-no_robust)).
+Создайте дополнительные сведения для проверки параметров ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Выравнивание членов структуры
 
-Задает уровень упаковки для структур в целевой системе ([/ZpN](/windows/win32/midl/-zpn)).
+Задает уровень упаковки для структур в целевой системе (/ZpN).
 
 **Элементов**
 

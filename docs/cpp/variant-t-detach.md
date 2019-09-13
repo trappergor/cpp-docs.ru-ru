@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 719852c4556291747b612d54c44d4bf82caa9188
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8426c80af04b2c0906af150ea3e91304335e9f69
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165935"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500562"
 ---
-# <a name="varianttdetach"></a>_variant_t::Detach
+# <a name="_variant_tdetach"></a>_variant_t::Detach
 
 **Блок, относящийся только к системам Microsoft**
 
-Отключает инкапсулированный `VARIANT` из данного `_variant_t` объекта.
+Отсоединяет инкапсулированный `VARIANT` объект от этого `_variant_t` объекта.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ VARIANT Detach( );
 
 ## <a name="remarks"></a>Примечания
 
-Извлекает и возвращает инкапсулированный `VARIANT`, а затем очищает данный `_variant_t` объекта без его удаления. Эта функция-член удаляет `VARIANT` из инкапсуляции и задает `VARTYPE` этого `_variant_t` объекта значение VT_EMPTY. Вы выпуске возвращаемого `VARIANT` путем вызова [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear) функции.
+Извлекает и возвращает инкапсулированный `VARIANT`, а затем очищает этот `_variant_t` объект без его уничтожения. Эта функция члена удаляет `VARIANT` из инкапсуляции и `VARTYPE` задает для этого `_variant_t` объекта значение VT_EMPTY. Для освобождения возвращаемого `VARIANT` метода необходимо вызвать функцию [вариантклеар](/windows/win32/api/oleauto/nf-oleauto-variantclear) .
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

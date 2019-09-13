@@ -1,6 +1,6 @@
 ---
 title: __movsq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 4e4908cd5ffc28840b5a48b735048cccb557e97c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263171"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217260"
 ---
-# <a name="movsq"></a>__movsq
+# <a name="__movsq"></a>__movsq
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает повторяющиеся строки перемещения (`rep movsq`) инструкции.
+Формирует повторяющуюся инструкцию перемещения строки`rep movsq`().
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __movsq(
-   unsigned char* Dest,
+   unsigned char* Destination,
    unsigned char* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*dest*<br/>
-[out] Целевой для операции.
+*Местоназначение*\
+заполняет Назначение операции.
 
-*Источник*<br/>
-[in] Источник операции.
+*Source*\
+окне Источник операции.
 
-*Количество*<br/>
-[in] Число учетверенных слова для копирования.
+*Расчета*\
+окне Число куадвордс для копирования.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,17 +48,17 @@ void __movsq(
 |---------------|------------------|
 |`__movsq`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-В результате первый `Count` учетверенных слова, на которые указывают `Source` копируются `Dest` строка.
+В результате первый *Счетчик* куадвордс, на который указывает *источник* , копируется в целевую строку.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // movsq.cpp
 // processor: x64
 #include <stdio.h>
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

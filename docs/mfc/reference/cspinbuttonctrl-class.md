@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502439"
 ---
 # <a name="cspinbuttonctrl-class"></a>Класс CSpinButtonCtrl
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *двстиле*<br/>
-Задает стиль элемента управления "Кнопка". Примените любое сочетание стилей элементов управления "Счетчик" к элементу управления. Эти стили описаны в разделе [стили элементов управления "вверх/вниз](/windows/desktop/Controls/up-down-control-styles) " в Windows SDK.
+Задает стиль элемента управления "Кнопка". Примените любое сочетание стилей элементов управления "Счетчик" к элементу управления. Эти стили описаны в разделе [стили элементов управления "вверх/вниз](/windows/win32/Controls/up-down-control-styles) " в Windows SDK.
 
 *rect*<br/>
 Задает размер и расположение элемента управления "Кнопка". Это может быть либо объект [крект](../../atl-mfc-shared/reference/crect-class.md) , либо структура [Rect](/previous-versions/dd162897\(v=vs.85\))
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Параметры
 
 *двексстиле*<br/>
-Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) в Windows SDK.
+Задает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе параметр *двексстиле* для [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) в Windows SDK.
 
 *двстиле*<br/>
-Задает стиль элемента управления "Кнопка". Примените любое сочетание стилей элементов управления "Счетчик" к элементу управления. Эти стили описаны в разделе [стили элементов управления "вверх/вниз](/windows/desktop/Controls/up-down-control-styles) " в Windows SDK.
+Задает стиль элемента управления "Кнопка". Примените любое сочетание стилей элементов управления "Счетчик" к элементу управления. Эти стили описаны в разделе [стили элементов управления "вверх/вниз](/windows/win32/Controls/up-down-control-styles) " в Windows SDK.
 
 *rect*<br/>
 Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , описывающую размер и расположение создаваемого окна в клиентских координатах *ппарентвнд*.
@@ -200,7 +200,7 @@ UINT GetAccel(
 Число элементов в массиве, заданном параметром *пакцел*.
 
 *пакцел*<br/>
-Указатель на массив структур [удакцел](/windows/desktop/api/commctrl/ns-commctrl-udaccel) , которые получают сведения о ускорении.
+Указатель на массив структур [удакцел](/windows/win32/api/commctrl/ns-commctrl-udaccel) , которые получают сведения о ускорении.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>Параметры
 
 *накцел*<br/>
-Число структур [удакцел](/windows/desktop/api/commctrl/ns-commctrl-udaccel) , заданных параметром *пакцел*.
+Число структур [удакцел](/windows/win32/api/commctrl/ns-commctrl-udaccel) , заданных параметром *пакцел*.
 
 *пакцел*<br/>
 Указатель на массив структур УДАКЦЕЛ, содержащих сведения об ускорении. Элементы должны быть отсортированы в порядке возрастания на основе `nSec` элемента.

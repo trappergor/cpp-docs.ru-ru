@@ -1,36 +1,36 @@
 ---
 title: __writecr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr8
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: 44b009e68f3dd7825bc064e5f9f4ee8d03d7fb4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8df13c15b5cd8a51b77d65ad930a1852809ee30
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389909"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219234"
 ---
-# <a name="writecr8"></a>__writecr8
+# <a name="__writecr8"></a>__writecr8
 
 **Блок, относящийся только к системам Microsoft**
 
-Записывает значение `Data` CR8 регистр.
+Записывает значение `Data` в регистр CR8.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void writecr8(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Данные*<br/>
-[in] Значение для записи в CR8 регистр.
+*Data*\
+окне Значение, записываемое в CR8 регистр.
 
 ## <a name="requirements"></a>Требования
 
@@ -38,14 +38,14 @@ void writecr8(
 |---------------|------------------|
 |`__writecr8`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.
+`__writecr8` Встроенная функция доступна только в режиме ядра, и подпрограммы доступны только в качестве встроенных.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

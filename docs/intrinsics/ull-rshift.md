@@ -1,45 +1,45 @@
 ---
 title: __ull_rshift
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ull_rshift
 helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e914a019877482058c6b2842d3138cda02f1e228
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390130"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219707"
 ---
-# <a name="ullrshift"></a>__ull_rshift
+# <a name="__ull_rshift"></a>__ull_rshift
 
 **Блок, относящийся только к системам Microsoft**
 
-Смещает 64-разрядное значение, определяемое первый параметр справа в x64, количество битов, указанное в качестве второго параметра.
+в x64 сдвигает 64-разрядное значение, заданное первым параметром, вправо на число битов, заданное вторым параметром.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __ull_rshift(
    unsigned __int64 mask, 
    int nBit
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Маска*<br/>
-[in] 64-разрядное целое значение для сдвига вправо.
+*виде*\
+окне 64-разрядное целочисленное значение, которое нужно сдвинуть вправо.
 
-*nBit*<br/>
-[in] Количество битов для сдвига, остаток от деления 32 на x86 и остаток от деления 64 в x64.
+*нбит*\
+окне Число битов для сдвига, остаток от деления 32 на x86 и по модулю 64 на x64.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Маска сдвинуты `nBit` bits.
+Маска, смещенная по `nBit` битам.
 
 ## <a name="requirements"></a>Требования
 
@@ -47,15 +47,15 @@ unsigned __int64 __ull_rshift(
 |---------------|------------------|
 |`__ull_rshift`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Если второй параметр больше, чем 31 x86 (63 в x64), это число берется остаток от деления 32 (64 в x64) для определения числа битов для сдвига. `ull` В имени указывает `unsigned long long (unsigned __int64)`.
+Если второй параметр больше 31 для x86 (63 в x64), то это число берется по модулю 32 (64 в x64), чтобы определить число битов для сдвига. В имени указывается `unsigned long long (unsigned __int64)`. `ull`
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // ull_rshift.cpp
 // compile with: /EHsc
 // processor: x86, x64
@@ -74,9 +74,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Вывод
-
-```
+```Output
 1
 ```
 
@@ -84,6 +82,6 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[__ll_lshift](../intrinsics/ll-lshift.md)<br/>
-[__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__ll_lshift](../intrinsics/ll-lshift.md)\
+[__ll_rshift](../intrinsics/ll-rshift.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

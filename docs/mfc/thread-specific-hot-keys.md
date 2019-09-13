@@ -7,18 +7,18 @@ helpviewer_keywords:
 - threading [MFC], hot keys in CHotKeyCtrl
 - access keys [MFC], hot keys
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
-ms.openlocfilehash: a54aa878b0160132157879127f8335c951e91785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49bac6ac357924c26f131bbd8e1092cd74514167
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511136"
 ---
 # <a name="thread-specific-hot-keys"></a>Сочетания клавиш для определенного потока
 
-Приложение задает сочетания клавиш определенного потока ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью Windows `RegisterHotKey` функции. Когда пользователь нажимает клавишу конкретного потока, Windows отправляет [WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey) сообщение в начале очереди сообщений в определенном потоке. Сообщение WM_HOTKEY содержит виртуального кода клавиши, состояние сдвига и определяемые пользователем идентификатор конкретного сочетания клавиш, которая была нажата. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h. Дополнительные сведения об этом методе см. в разделе [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey).
+Приложение устанавливает горячую клавишу для конкретного потока ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) с помощью функции Windows `RegisterHotKey` . Когда пользователь нажимает на специальную клавишу для конкретного потока, Windows отправляет сообщение [WM_HOTKEY](/windows/win32/inputdev/wm-hotkey) в начало очереди сообщений определенного потока. Сообщение WM_HOTKEY содержит виртуальный код ключа, состояние сдвига и определяемый пользователем идентификатор определенного сочетания клавиш. Список стандартных виртуальных клавиш см. в разделе Winuser. h. Дополнительные сведения об этом методе см. в разделе [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey).
 
-Обратите внимание, что состояние сдвига помечает используемые в вызове `RegisterHotKey` не совпадают, возвращаемыми [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) функция-член; вам придется преобразовать эти флаги перед вызовом `RegisterHotKey`.
+Обратите внимание, что флаги состояния сдвига, `RegisterHotKey` используемые в вызове, не совпадают с параметрами [, возвращаемыми функцией члена функции](../mfc/reference/chotkeyctrl-class.md#gethotkey) . перед вызовом `RegisterHotKey`необходимо преобразовать эти флаги.
 
 ## <a name="see-also"></a>См. также
 

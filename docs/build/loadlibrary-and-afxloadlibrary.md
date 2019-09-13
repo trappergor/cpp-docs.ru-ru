@@ -10,27 +10,27 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 661d7742fb0fedae45bc063ba3821193d6c5438e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220607"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493207"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
 
-Обрабатывает вызов [LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa) или [LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(или [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) для явного связывания с библиотекой DLL. Если функция выполняется успешно, он сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.
+Процессы вызывают [лоадлибрарекса](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) или [Лоадлибрарексв](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (или [афкслоадлибрари](../mfc/reference/application-information-and-management.md#afxloadlibrary)) для явного связывания с библиотекой DLL. Если функция выполнена, она сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает в нее маркер, который можно использовать с другими функциями в явной компоновке, например `GetProcAddress` и. `FreeLibrary`
 
-`LoadLibrary` пытается обнаружить библиотеку DLL с помощью той же последовательности поиска, который используется для неявного связывания. Если системе не удается найти библиотеку DLL или функция точки входа возвращает значение FALSE, `LoadLibrary` возвращает значение NULL. Если вызов `LoadLibrary` указан модуль DLL, уже сопоставленный с адресным пространством вызывающего процесса, функция возвращает дескриптор библиотеки DLL и увеличивает счетчик ссылок модуля.
+`LoadLibrary`пытается найти библиотеку DLL с помощью той же последовательности поиска, которая используется для неявной компоновки. Если системе не удается найти библиотеку DLL или если функция точки входа возвращает значение false, `LoadLibrary` возвращает значение null. Если при вызове `LoadLibrary` метода указан модуль DLL, который уже сопоставлен с адресным пространством вызывающего процесса, функция возвращает маркер библиотеки DLL и увеличивает счетчик ссылок модуля.
 
-Если библиотеки DLL есть функция точки входа, операционная система вызывает функцию в контексте потока, который вызвал `LoadLibrary`. Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу из-за предыдущего вызова `LoadLibrary` , имеющий не последовал вызов `FreeLibrary` функции.
+Если библиотека DLL имеет функцию точки входа, операционная система вызывает функцию в контексте потока, вызвавшего `LoadLibrary`. Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу из-за предыдущего вызова `LoadLibrary` , не имеющего соответствующего вызова `FreeLibrary` функции.
 
-Для приложений MFC, загружающих библиотеки расширений DLL MFC, мы рекомендуем использовать `AfxLoadLibrary` вместо `LoadLibrary`. `AfxLoadLibrary` обрабатывает синхронизацию потока перед вызовом метода `LoadLibrary`. Интерфейс (прототип функции) `AfxLoadLibrary` совпадает со значением `LoadLibrary`.
+Для приложений MFC, которые загружают библиотеки DLL расширения MFC, рекомендуется использовать `AfxLoadLibrary` `LoadLibrary`вместо. `AfxLoadLibrary`обрабатывает синхронизацию потоков перед вызовом `LoadLibrary`. Интерфейс (прототип функции) `AfxLoadLibrary` `LoadLibrary`совпадает с.
 
-Если Windows не удается загрузить библиотеку DLL, процесс может попытаться восстановить выполнение после ошибки. Например процесс может уведомить пользователя об ошибке и попросите пользователя указать другой путь к библиотеке DLL.
+Если Windows не удается загрузить библиотеку DLL, процесс может попытаться выполнить восстановление после ошибки. Например, процесс может уведомить пользователя об ошибке и попросить пользователя указать другой путь к библиотеке DLL.
 
 > [!IMPORTANT]
-> Не забудьте указать полный путь для всех библиотек DLL. Текущий каталог выполняется поиск при загрузке файлов. Если вы не рассматриваются как предназначенные путь к файлу, файл, который не является тот могут быть загружены. Другой способ избежать этого, — с помощью [/DEPENDENTLOADFLAG](reference/dependentloadflag.md) параметр компоновщика.
+> Обязательно укажите полный путь к любым библиотекам DLL. Текущий каталог сначала ищется при загрузке файлов. Если путь к файлу не указан, может быть загружен файл, который не является необходимым для загрузки. Другой способ избежать этого — использовать параметр компоновщика [/депендентлоадфлаг](reference/dependentloadflag.md) .
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 
@@ -40,7 +40,7 @@ ms.locfileid: "65220607"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Порядок поиска библиотеки динамической компоновки](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [Порядок поиска библиотек динамической компоновки](/windows/win32/Dlls/dynamic-link-library-search-order)
 
 - [Функции FreeLibrary и AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
@@ -48,4 +48,4 @@ ms.locfileid: "65220607"
 
 ## <a name="see-also"></a>См. также
 
-- [Создание библиотек DLL на C/C++ в Visual Studio](dlls-in-visual-cpp.md)
+- [Создание библиотек DLL C/C++ в Visual Studio](dlls-in-visual-cpp.md)

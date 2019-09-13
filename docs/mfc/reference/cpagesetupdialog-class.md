@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: b81e2a65d09bf5dadbc0860d692caee7a4bd386f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916938"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739764"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс Кпажесетупдиалог
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION отключает элемент управления диалогового окна «ориентация страницы».
 
-- PSD_RETURNDEFAULT приводит `CPageSetupDialog` к возврату структур [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) , инициализированных для принтера системы по умолчанию без отображения диалогового окна. Предполагается, что оба `hDevNames` аргумента и `hDevMode` имеют значение null. в противном случае функция возвращает ошибку. Если системный принтер по умолчанию поддерживается старым драйвером принтера (более ранним, чем Windows версии 3,0) `hDevNames` , возвращается только. `hDevMode` имеет значение null.
+- PSD_RETURNDEFAULT приводит `CPageSetupDialog` к возврату структур [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) и [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) , инициализированных для принтера системы по умолчанию без отображения диалогового окна. Предполагается, что оба `hDevNames` аргумента и `hDevMode` имеют значение null. в противном случае функция возвращает ошибку. Если системный принтер по умолчанию поддерживается старым драйвером принтера (более ранним, чем Windows версии 3,0) `hDevNames` , возвращается только. `hDevMode` имеет значение null.
 
 - PSD_DISABLEPAPER отключает элемент управления "Выбор бумаги".
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>Кпажесетупдиалог:: Креатепринтердк
 
-Создает контекст печатающего устройства из структур [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) .
+Создает контекст печатающего устройства из структур [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) и [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) .
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-ИДОК или ИДКАНЦЕЛ. Если возвращается ИДКАНЦЕЛ, вызовите функцию Windows [коммдлжекстендедеррор](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
+ИДОК или ИДКАНЦЕЛ. Если возвращается ИДКАНЦЕЛ, вызовите функцию Windows [коммдлжекстендедеррор](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) , чтобы определить, произошла ли ошибка.
 
 ИДОК и ИДКАНЦЕЛ — это константы, которые указывают, выбрал ли пользователь кнопку ОК или Отмена.
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Структура данных [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , которая содержит сведения об инициализации устройства и среде драйвера печати. Необходимо разблокировать память, занятую этой структурой, с помощью функции Windows [глобалунлокк](/windows/desktop/api/winbase/nf-winbase-globalunlock) , которая описана в Windows SDK.
+Структура данных [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) , которая содержит сведения об инициализации устройства и среде драйвера печати. Необходимо разблокировать память, занятую этой структурой, с помощью функции Windows [глобалунлокк](/windows/win32/api/winbase/nf-winbase-globalunlock) , которая описана в Windows SDK.
 
 ##  <a name="getdrivername"></a>Кпажесетупдиалог:: GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Параметры
 
 *лпректмаргинс*<br/>
-Указатель на структуру [Rect](/windows/desktop/api/windef/ns-windef-tagrect) или объект [крект](../../atl-mfc-shared/reference/crect-class.md) , описывающий поля печати для текущего выбранного принтера (в 1/1000 дюймах или 1/100 мм). Если вы не заинтересованы в этом прямоугольнике, передайте значение NULL для этого параметра.
+Указатель на структуру [Rect](/windows/win32/api/windef/ns-windef-rect) или объект [крект](../../atl-mfc-shared/reference/crect-class.md) , описывающий поля печати для текущего выбранного принтера (в 1/1000 дюймах или 1/100 мм). Если вы не заинтересованы в этом прямоугольнике, передайте значение NULL для этого параметра.
 
 *лпректминмаргинс*<br/>
 Указатель на `RECT` структуру или `CRect` объект, описывающие минимальное поле печати для выбранного принтера (в 1/1000 дюймах или 1/100 мм). Если вы не заинтересованы в этом прямоугольнике, передайте значение NULL для этого параметра.
@@ -305,7 +305,7 @@ PAGESETUPDLG m_psd;
 
 При непосредственном изменении `m_psd` элемента данных будет переопределено поведение по умолчанию.
 
-Дополнительные сведения о структуре [пажесетупдлг](/windows/desktop/api/commdlg/ns-commdlg-tagpsda) см. в Windows SDK.
+Дополнительные сведения о структуре [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) см. в Windows SDK.
 
 См. пример для [кпажесетупдиалог:: кпажесетупдиалог](#cpagesetupdialog).
 
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - WM_PSD_YAFULLPAGERECT область для представления адреса возврата. Эта область распространяется на границы области образца страницы.
 
 *лпрект*<br/>
-Указатель на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [Rect](/windows/desktop/api/windef/ns-windef-tagrect) , содержащий координаты области рисования.
+Указатель на объект [крект](../../atl-mfc-shared/reference/crect-class.md) или [Rect](/windows/win32/api/windef/ns-windef-rect) , содержащий координаты области рисования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -393,7 +393,7 @@ virtual UINT PreDrawPage(
 - Конверт 0x01f в книжной ориентации (матрица точек)
 
 *ппсд*<br/>
-Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [пажесетупдлг](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)см. в Windows SDK.
+Указатель на структуру `PAGESETUPDLG`. Дополнительные сведения о [пажесетупдлг](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)см. в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

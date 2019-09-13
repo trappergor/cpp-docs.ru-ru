@@ -46,43 +46,43 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6be7d29a4b43ac10980601708f5bcc666a48dd58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309061"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511382"
 ---
 # <a name="reflected-window-message-ids"></a>Отраженные идентификаторы сообщений окон
 
-Подкласс быстрый способ создания элемента управления ActiveX или другие специализированного элемента управления является окном. Дополнительные сведения см. в разделе [элементы управления MFC ActiveX: Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Для быстрого создания элемента управления ActiveX или другого специализированного элемента управления необходимо создать подкласс окна. Дополнительные сведения см. в [разделе элементы управления ActiveX в MFC. Подклассировать элемент управления](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)Windows.
 
-Чтобы предотвратить получение окно сообщения, отправленные элемент управления Windows, контейнера элемента управления [COleControl](../mfc/reference/colecontrol-class.md) создает окно «рефлектор» для перехвата определенных сообщений окна и отправить их обратно в элемент управления. Элемент управления, в его процедуре окна, затем может обрабатывать эти отраженные сообщения, выполнив действия, соответствующие для элемента управления ActiveX.
+Чтобы контейнер элемента управления не получал сообщения окна, отправленные подклассом Windows Control, [COleControl](../mfc/reference/colecontrol-class.md) создает окно "Reflector" для перехвата определенных оконных сообщений и их отправки обратно в элемент управления. Затем элемент управления в его процедуре Window может обработать эти отраженные сообщения, выполнив действия, соответствующие элементу управления ActiveX.
 
-Ниже приведены сообщения, которые могут быть перехвачены и соответствующие сообщения, отправляемые в окне reflector.
+В следующей таблице показаны перехваченные сообщения и соответствующие сообщения, которые отправляет окно Reflector.
 
-|Сообщение, отправленное с помощью элемента управления|Сообщение, отражаемый для элемента управления|
+|Сообщение, отправленное элементом управления|Сообщение, отраженное в элементе управления|
 |---------------------------------|--------------------------------------|
-|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|
-|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
-|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
-|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
-|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
-|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
-|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
-|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|
-|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
-|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|
-|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
-|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
-|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
-|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
+|[WM_COMMAND](/windows/win32/menurc/wm-command)|OCM_COMMAND|
+|[WM_CTLCOLORBTN](/windows/win32/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
+|[WM_CTLCOLOREDIT](/windows/win32/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
+|[WM_CTLCOLORDLG](/windows/win32/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
+|[WM_CTLCOLORLISTBOX](/windows/win32/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
+|[WM_CTLCOLORSCROLLBAR](/windows/win32/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
+|[WM_CTLCOLORSTATIC](/windows/win32/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
+|[WM_DRAWITEM](/windows/win32/Controls/wm-drawitem)|OCM_DRAWITEM|
+|[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)|OCM_MEASUREITEM|
+|[WM_DELETEITEM](/windows/win32/Controls/wm-deleteitem)|OCM_DELETEITEM|
+|[WM_VKEYTOITEM](/windows/win32/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
+|[WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem)|OCM_CHARTOITEM|
+|[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
+|[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
-|[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
+|[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
->  Если элемент управления работает в системе Win32, существует несколько видов WM_CTLCOLOR\* она может получать сообщения. Дополнительные сведения см. в разделе WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, которые, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+>  Если элемент управления работает в системе Win32, существует несколько типов сообщений WM_CTLCOLOR\* , которые он может получить. Дополнительные сведения см. в разделе WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
 
 ## <a name="see-also"></a>См. также
 

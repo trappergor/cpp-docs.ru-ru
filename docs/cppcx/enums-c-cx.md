@@ -2,22 +2,22 @@
 title: Перечисления (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3bdcff03872dcfe83f0be5752cec4f567fbc6b72
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345820"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740209"
 ---
 # <a name="enums-ccx"></a>Перечисления (C++/CX)
 
-C++Поддерживает /CX `public enum class` ключевое слово, которое является аналогом стандартный C++ `scoped  enum`. При использовании перечислителя, объявленного с помощью ключевого слова `public enum class` , необходимо использовать идентификатор перечисления, чтобы определить область каждого значения перечислителя.
+C++/CX поддерживает `public enum class` ключевое слово, аналогом к стандарту C++ `scoped  enum`. При использовании перечислителя, объявленного с помощью ключевого слова `public enum class` , необходимо использовать идентификатор перечисления, чтобы определить область каждого значения перечислителя.
 
 ### <a name="remarks"></a>Примечания
 
 Объявление `public enum class` , не содержащее спецификатор доступа, например `public`, обрабатывается как стандартное [перечисление С++ с областью видимости](../cpp/enumerations-cpp.md).
 
-Объект `public enum class` или `public enum struct` объявление может иметь базовый тип любого целочисленного типа, несмотря на то, что в самой среде выполнения Windows требует тип int32 или uint32 для перечислений флагов. Следующий синтаксис описывает части объявления `public enum class` или `public enum struct`.
+Объявление `public enum class` или`public enum struct` может иметь базовый тип любого целочисленного типа, хотя сам среда выполнения Windows требует, чтобы тип был Int32, или UInt32 для перечисления flags. Следующий синтаксис описывает части объявления `public enum class` или `public enum struct`.
 
 В этом примере показано, как определить открытый класс перечисления:
 
@@ -40,5 +40,5 @@ C++Поддерживает /CX `public enum class` ключевое слово,
 ## <a name="see-also"></a>См. также
 
 [Система типов](../cppcx/type-system-c-cx.md)<br/>
-[Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-ms.openlocfilehash: b1c1b5a79cdf5ee2a4a17d969d23ce0d0d85ab54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44fc9755cd69050ea82145636f01614258943794
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500583"
 ---
-# <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
+# <a name="_com_errorerrormessage"></a>_com_error::ErrorMessage
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -27,11 +27,11 @@ const TCHAR * ErrorMessage( ) const throw( );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает строковое сообщение для HRESULT записанного в `_com_error` объекта. Если значение HRESULT равно сопоставлен 16-битный [wCode](../cpp/com-error-wcode.md), универсальное сообщение "`IDispatch error #<wCode>`" возвращается. Если сообщение не найдено, возвращается универсальное сообщение "`Unknown error #<hresult>`". Возвращаемая строка является Юникода или многобайтовая строка, в зависимости от состояния макроса _UNICODE.
+Возвращает строковое сообщение для HRESULT, записанного в `_com_error` объекте. Если HRESULT является сопоставленным 16-битным [wCode](../cpp/com-error-wcode.md), возвращается универсальное сообщение "`IDispatch error #<wCode>`". Если сообщение не найдено, возвращается универсальное сообщение "`Unknown error #<hresult>`". Возвращаемая строка может быть строкой в Юникоде или многобайтовой кодировкой в зависимости от состояния макроса _UNICODE.
 
 ## <a name="remarks"></a>Примечания
 
-Извлекает соответствующий текст системного сообщения для HRESULT записанного в `_com_error` объекта. Текст системного сообщения получается путем вызова Win32 [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) функции. Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.
+Извлекает соответствующий текст системного сообщения для HRESULT, `_com_error` записанного в объекте. Текст системного сообщения получается путем вызова функции "Win32 [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage) ". Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

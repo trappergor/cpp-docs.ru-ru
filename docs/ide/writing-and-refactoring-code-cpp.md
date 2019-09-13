@@ -3,12 +3,13 @@ title: Редактирование и рефакторинг кода C++ в Vi
 description: Используйте редактор кода C++ в Visual Studio для форматирования, навигации, понимания и рефакторинга кода.
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: d4a74608a95df0fdd461f55d26fee97332a66aa8
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.topic: landing-page
+ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741630"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221524"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Редактирование и рефакторинг кода C++ в Visual Studio
 
@@ -182,7 +183,7 @@ Visual Studio, начиная с версии 2017, также поддержи
 
 Экспериментальные функции, которые могут присутствовать или отсутствовать в будущих версиях Visual Studio, можно найти в диалоговом окне [экспериментальных функций C++ для текстового редактора](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental). В Visual Studio, начиная с версии 2017, в этом диалоговом окне можно включить **прогнозную технологию IntelliSense**.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Чтение и понимание кода C++](read-and-understand-code-cpp.md)</br>
 [Перемещение по базе кода С++ в Visual Studio](navigate-code-cpp.md)</br>

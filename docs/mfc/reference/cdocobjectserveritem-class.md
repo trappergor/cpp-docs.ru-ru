@@ -1,5 +1,5 @@
 ---
-title: Класс CDocObjectServerItem
+title: Класс Кдокобжектсерверитем
 ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d44791415626f1a94500b9c3885581d67e8fe42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391157"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506823"
 ---
-# <a name="cdocobjectserveritem-class"></a>Класс CDocObjectServerItem
+# <a name="cdocobjectserveritem-class"></a>Класс Кдокобжектсерверитем
 
 Реализует команды OLE-сервера специально для серверов DocObject.
 
@@ -39,13 +39,13 @@ class CDocObjectServerItem : public COleServerItem
 
 |name|Описание|
 |----------|-----------------|
-|[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|Создает объект `CDocObjectServerItem`.|
+|[Кдокобжектсерверитем:: Кдокобжектсерверитем](#cdocobjectserveritem)|Создает объект `CDocObjectServerItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CDocObjectServerItem::GetDocument](#getdocument)|Извлекает указатель на документ, который содержит элемент.|
+|[Кдокобжектсерверитем:: a Document](#getdocument)|Извлекает указатель на документ, содержащий элемент.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
@@ -53,15 +53,15 @@ class CDocObjectServerItem : public COleServerItem
 |----------|-----------------|
 |[CDocObjectServerItem::OnDoVerb](#ondoverb)|Вызывается для выполнения команды.|
 |[CDocObjectServerItem::OnHide](#onhide)|Создает исключение, если платформа пытается скрыть элемент DocObject.|
-|[CDocObjectServerItem::OnShow](#onshow)|Вызывается платформой, чтобы сделать DocObject элемента на месте active. Если элемент не DocObject, вызывает [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow).|
+|[Кдокобжектсерверитем:: onShow](#onshow)|Вызывается платформой для того, чтобы элемент DocObject был активен на месте. Если элемент не является DocObject, вызывает [COleServerItem:: onShow](../../mfc/reference/coleserveritem-class.md#onshow).|
 
 ## <a name="remarks"></a>Примечания
 
-`CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnDoVerb](#ondoverb), and [OnShow](#onshow).
+`CDocObjectServerItem`Определяет переопределяемые функции элементов: [OnHide](#onhide), [Ондоверб](#ondoverb)и [onHide](#onshow).
 
-Для использования `CDocObjectServerItem`, убедиться, что [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) в переопределите вашей `COleServerDoc`-производном классе возвращает новый `CDocObjectServerItem` объекта. Если вам нужно изменить функциональные возможности элемента, можно создать новый экземпляр собственного `CDocObjectServerItem`-производного класса.
+Чтобы использовать `CDocObjectServerItem`, убедитесь, что переопределение [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) в `COleServerDoc`классе, производном от, `CDocObjectServerItem` возвращает новый объект. Если необходимо изменить какие `CDocObjectServerItem`-либо функции в элементе, можно создать новый экземпляр класса, производного от.
 
-Дополнительные сведения о DocObjects см. в разделе [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) и [COleCmdUI](../../mfc/reference/colecmdui-class.md) в *Справочник по библиотеке MFC*.
+Дополнительные сведения о Докобжектс см. в разделе [кдокобжектсервер](../../mfc/reference/cdocobjectserver-class.md) и [колекмдуи](../../mfc/reference/colecmdui-class.md) в *справочнике по MFC*.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,7 +69,7 @@ class CDocObjectServerItem : public COleServerItem
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocItem](../../mfc/reference/cdocitem-class.md)
+[кдоЦитем](../../mfc/reference/cdocitem-class.md)
 
 [COleServerItem](../../mfc/reference/coleserveritem-class.md)
 
@@ -77,9 +77,9 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxdocob.h
+**Заголовок:** афксдокоб. h
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+##  <a name="cdocobjectserveritem"></a>Кдокобжектсерверитем:: Кдокобжектсерверитем
 
 Создает объект `CDocObjectServerItem`.
 
@@ -89,15 +89,15 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 
 ### <a name="parameters"></a>Параметры
 
-*pServerDoc*<br/>
+*псервердок*<br/>
 Указатель на документ, который будет содержать новый элемент DocObject.
 
-*bAutoDelete*<br/>
-Указывает, может ли быть удален объект при отпускании ссылку на него. Установите значение FALSE, если аргумент `CDocObjectServerItem` объект является неотъемлемой частью данных документа. Задано значение TRUE, если объект является вторичной структура, используемая для определения диапазона в данных документа, которые могут удаляться платформой.
+*баутоделете*<br/>
+Указывает, можно ли удалить объект при освобождении ссылки на него. Если `CDocObjectServerItem` объект является неотъемлемой частью данных документа, задайте для аргумента значение false. Задайте значение TRUE, если объект является вторичной структурой, используемой для обнаружения диапазона в данных документа, который может быть удален платформой.
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+##  <a name="getdocument"></a>Кдокобжектсерверитем:: a Document
 
-Извлекает указатель на документ, который содержит элемент.
+Извлекает указатель на документ, содержащий элемент.
 
 ```
 COleServerDoc* GetDocument() const;
@@ -105,11 +105,11 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на документ, который содержит элемент; Значение NULL, если элемент не является частью документа.
+Указатель на документ, содержащий элемент; Значение NULL, если элемент не является частью документа.
 
 ### <a name="remarks"></a>Примечания
 
-Это позволяет доступ к документу сервера, который передается в качестве аргумента для [CDocObjectServerItem](#cdocobjectserveritem) конструктор.
+Это позволяет получить доступ к серверному документу, переданному в качестве аргумента в конструктор [кдокобжектсерверитем](#cdocobjectserveritem) .
 
 ##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
 
@@ -121,16 +121,16 @@ virtual void OnDoVerb(LONG iVerb);
 
 ### <a name="parameters"></a>Параметры
 
-*iVerb*<br/>
-Указывает команду для выполнения. Возможные значения см. в разделе [функция IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) в пакете Windows SDK.
+*иверб*<br/>
+Задает выполняемую команду. Возможные значения см. в разделе [иолеобжект::D оверб](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию реализация вызывает [OnShow](#onshow) функция-член, если элемент является DocObject и указан OLEIVERB_INPLACEACTIVATE или OLEIVERB_SHOW. Если элемент не DocObject или указан другой команды, по умолчанию реализация вызывает [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb).
+Реализация по умолчанию вызывает функцию [-член](#onshow) OnShow если элемент является DocObject, а параметр OLEIVERB_INPLACEACTIVATE или OLEIVERB_SHOW задан. Если элемент не является DocObject или задан другой глагол, реализация по умолчанию вызывает [COleServerItem:: ондоверб](../../mfc/reference/coleserveritem-class.md#ondoverb).
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 
-Вызвано структурой для скрытия элемента.
+Вызывается платформой для скрытия элемента.
 
 ```
 virtual void OnHide();
@@ -138,11 +138,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию вызывает исключение, если элемент является DocObject. Не удается скрыть active DocObject элемент, так как она использует представление целиком. Необходимо отключить элемент DocObject, чтобы убрать его. Если элемент не DocObject, реализация по умолчанию вызывает [COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide).
+Реализация по умолчанию создает исключение, если элемент является DocObject. Нельзя скрыть активный элемент DocObject, так как он занимает все представление. Чтобы убрать элемент DocObject, необходимо отключить его. Если элемент не является DocObject, реализация по умолчанию вызывает [COleServerItem:: onHide](../../mfc/reference/coleserveritem-class.md#onhide).
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+##  <a name="onshow"></a>Кдокобжектсерверитем:: onShow
 
-Вызывается платформой для указания серверное приложение, чтобы сделать DocObject элемента на месте active.
+Вызывается платформой для указания серверному приложению сделать активным элемент DocObject.
 
 ```
 virtual void OnShow();
@@ -150,7 +150,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>Примечания
 
-Если элемент не DocObject, реализация по умолчанию вызывает [COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen). Переопределите эту функцию, если вы хотите выполнить специальная обработка при открытии элемента DocObject.
+Если элемент не является DocObject, реализация по умолчанию вызывает [COleServerItem:: onShow](../../mfc/reference/coleserveritem-class.md#onopen). Переопределите эту функцию, если требуется выполнить специальную обработку при открытии элемента DocObject.
 
 ## <a name="see-also"></a>См. также
 

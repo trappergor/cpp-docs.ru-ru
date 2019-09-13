@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148059"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501654"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-Используется для оптимизации кода Visual Basic.
+Используется для Visual Basic оптимизации кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62148059"
 
 ## <a name="remarks"></a>Примечания
 
-**Defaultcollelem** атрибут C++ имеет ту же функциональность, что [defaultcollelem](/windows/desktop/Midl/defaultcollelem) описании атрибута MIDL.
+Атрибут **дефаултколлелем** C++ имеет те же функциональные возможности, что и атрибут [дефаултколлелем](/windows/win32/Midl/defaultcollelem) MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показан метод интерфейса с помощью **defaultcollelem** атрибут:
+В следующем коде показан метод интерфейса с использованием атрибута **дефаултколлелем** :
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -50,10 +50,10 @@ __interface IMyForm
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

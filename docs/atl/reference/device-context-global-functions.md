@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: aeebec65def9364e56156f6bb323815da012e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d225bd0cd996fd908479b5a93aad81ea0428900b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276566"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496103"
 ---
 # <a name="device-context-global-functions"></a>Глобальные функции контекста устройства
 
@@ -17,11 +17,11 @@ ms.locfileid: "62276566"
 
 |||
 |-|-|
-|[AtlCreateTargetDC](#atlcreatetargetdc)|Создает контекст устройства.|
+|[атлкреатетаржетдк](#atlcreatetargetdc)|Создает контекст устройства.|
 
-##  <a name="atlcreatetargetdc"></a>  AtlCreateTargetDC
+##  <a name="atlcreatetargetdc"></a>атлкреатетаржетдк
 
-Создает контекст устройства для устройства, заданного в [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) структуры.
+Создает контекст устройства для устройства, указанного в структуре [двтаржетдевице](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) .
 
 ```
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
@@ -29,25 +29,25 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 ### <a name="parameters"></a>Параметры
 
-*hdc*<br/>
-[in] Существующий дескриптор контекста устройства, или значение NULL.
+*HDC*<br/>
+окне Существующий обработчик контекста устройства или значение NULL.
 
 *ptd*<br/>
-[in] Указатель на `DVTARGETDEVICE` структуру, содержащую сведения о целевом устройстве.
+окне Указатель на `DVTARGETDEVICE` структуру, содержащую сведения о целевом устройстве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор контекста устройства для устройства, заданного в `DVTARGETDEVICE`. Если устройство не указано, возвращает дескриптор для устройства отображения по умолчанию.
+Возвращает маркер для контекста устройства для устройства, указанного в `DVTARGETDEVICE`. Если устройство не указано, возвращает маркер в устройство дисплея по умолчанию.
 
 ### <a name="remarks"></a>Примечания
 
-Если структура имеет значение NULL и *hdc* имеет значение NULL, создает контекст устройства для устройства отображения по умолчанию.
+Если структура имеет значение NULL и *HDC* имеет значение null, создает контекст устройства для устройства вывода по умолчанию.
 
-Если *hdc* не равно NULL и *ptd* имеет значение NULL, функция возвращает существующий *hdc*.
+Если параметр *HDC* не равен null и *ПТД* имеет значение null, функция возвращает существующий параметр *HDC*.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin.h
+**Заголовок:** atlwin. h
 
 ## <a name="see-also"></a>См. также
 

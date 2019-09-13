@@ -1,21 +1,21 @@
 ---
-title: implements_category (C++ атрибут COM)
+title: implements_category (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6e0036b7008b67a1e21bcbe64977f4703bbdf3be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504230"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514631"
 ---
-# <a name="implementscategory"></a>implements_category
+# <a name="implements_category"></a>implements_category
 
-— Указывает категории компонента, реализуемый целевого класса.
+Указывает категории компонентов, реализуемых целевым классом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,17 +26,17 @@ ms.locfileid: "66504230"
 ### <a name="parameters"></a>Параметры
 
 *implements_category*<br/>
-Идентификатор реализованного категории.
+Идентификатор реализованной категории.
 
 ## <a name="remarks"></a>Примечания
 
-**Implements_category** C++ атрибут задает категории компонентов, реализуемый целевого класса. Это делается путем создания карты категории и добавления отдельных записей, указанных **implements_category** атрибута. Дополнительные сведения см. в разделе [категорий компонентов и как они работают](/windows/desktop/com/component-categories-and-how-they-work).
+Атрибут **implements_category** C++ указывает категории компонентов, реализуемых целевым классом. Это можно сделать, создав карту категорий и добавив отдельные записи, указанные атрибутом **implements_category** . Дополнительные сведения см. в разделах [категории компонентов и принципы их работы](/windows/win32/com/component-categories-and-how-they-work).
 
-Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.
+Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например, если `progid` применяется, `vi_progid` то применяются также `coclass` и.
 
 ## <a name="example"></a>Пример
 
-Следующий код указывает, что следующий объект реализует `Control` категории.
+Следующий код указывает, что следующий объект реализует `Control` категорию.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -57,10 +57,10 @@ class CMyClass {};
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
+|**Относится к**|**класс**, **Структура**|
 |**Повторяемый**|Да|
-|**Обязательные атрибуты**|Одно из следующих: `coclass`, `progid`, или `vi_progid`|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Один из следующих элементов: `coclass`, `progid`или`vi_progid`|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

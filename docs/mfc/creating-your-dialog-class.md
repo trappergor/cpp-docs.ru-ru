@@ -1,6 +1,6 @@
 ---
 title: Создание классов диалоговых окон
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: bacedc49fcdabdd5dc7fb0f392a66afd3baadd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424d18196063456245e2a4841b42e6e447bded17
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241769"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907329"
 ---
 # <a name="creating-your-dialog-class"></a>Создание классов диалоговых окон
 
-В каждом диалоговом окне, в приложении создайте новый класс диалогового окна для работы с ресурса диалогового окна.
+Для каждого диалогового окна в программе создайте новый класс диалогового окна для работы с ресурсом диалогового окна.
 
-[Добавление класса](../ide/adding-a-class-visual-cpp.md) описывается создание нового класса диалогового окна. При создании класса диалогового окна с помощью мастера добавления класса, он пишет следующие элементы. H и. CPP-файлов, указываемые:
+[Добавление класса](../ide/adding-a-class-visual-cpp.md) объясняет, как создать новый класс диалогового окна. При создании класса диалогового окна с помощью [мастера классов](reference/mfc-class-wizard.md)он записывает следующие элементы в h-и CPP-файлы, указанные ниже.
 
-В. H-файл:
+В h файл:
 
-- Объявление класса для класса диалогового окна. Класс, производный от [CDialog](../mfc/reference/cdialog-class.md).
+- Объявление класса для диалогового класса. Класс является производным от класса [CDialog](../mfc/reference/cdialog-class.md).
 
-В. CPP-файл:
+В cpp – файле:
 
-- Сопоставление сообщений для класса.
+- Схема сообщений для класса.
 
 - Стандартный конструктор для диалогового окна.
 
-- Переопределение [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) функция-член. Измените эту функцию. Он используется для возможности обмена и проверки данных диалогового окна, как описано далее в [обмен данными диалоговых окон и проверка](../mfc/dialog-data-exchange-and-validation.md).
+- Переопределение функции члена [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Измените эту функцию. Он используется для обмена данными диалоговых окон и проверки, как описано далее в разделе [Обмен и проверка данных диалоговых окон](../mfc/dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,6 +1,6 @@
 ---
-title: region, endregion
-ms.date: 10/18/2018
+title: Директивы pragma region, endregion
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.endregion
 - endregion_CPP
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - endregion pragma
 - region pragma
 ms.assetid: c697f807-622f-4796-851b-68a42bbecd84
-ms.openlocfilehash: c73a90aa2be83d643b74dde4645081e89da3ff73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a01e04582ac81d678aa0702945c62ee974a4428
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179754"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222378"
 ---
-# <a name="region-endregion"></a>region, endregion
+# <a name="region-endregion-pragmas"></a>Директивы pragma region, endregion
 
-`#pragma region` позволяет указать блок кода, который можно разворачивать и сворачивать с помощью [возможности структурирования](/visualstudio/ide/outlining) редактор кода Visual Studio.
+`#pragma region`позволяет указать блок кода, который можно развернуть или свернуть при использовании [функции структурирования](/visualstudio/ide/outlining) в редакторе Visual Studio Code.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma region name
-#pragma endregion comment
-```
+> **регион #pragma** *имя*\
+> **#pragma endregion** *Комментарий*
 
 ### <a name="parameters"></a>Параметры
 
-*comment*<br/>
-(Необязательно) Комментарий, который будет отображаться в редакторе кода.
+*Метки*\
+Используемых Комментарий, отображаемый в редакторе кода.
 
-*name*<br/>
-(Необязательно) Имя области.  Имя, отображаемое в редакторе кода.
+*безымян*\
+Используемых Имя региона. Это имя отображается в редакторе кода.
 
 ## <a name="remarks"></a>Примечания
 
-`#pragma endregion` Помечает конец `#pragma region` блока.
+`#pragma endregion`Помечает конец `#pragma region` блока.
 
-Объект `#region` блок должен заканчиваться `#pragma endregion`.
+Блок должен заканчиваться `#pragma endregion`директивой. `#region`
 
 ## <a name="example"></a>Пример
 
@@ -59,4 +57,4 @@ int main() {}
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

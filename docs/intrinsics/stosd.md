@@ -1,6 +1,6 @@
 ---
 title: __stosd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: 43a0efcfb94b7e53dacec16caccdacf86a96f5bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390260"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219983"
 ---
-# <a name="stosd"></a>__stosd
+# <a name="__stosd"></a>__stosd
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает инструкцию строка магазина (`rep stosd`).
+Создает инструкцию строки хранения (`rep stosd`).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __stosd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*dest*<br/>
-[out] Целевой для операции.
+*Местоназначение*\
+заполняет Назначение операции.
 
-*Данные*<br/>
-[in] Сохраняемые данные.
+*Data*\
+окне Данные для хранения.
 
-*Количество*<br/>
-[in] Длина блока двойных слов для записи.
+*Расчета*\
+окне Длина блока даублевордс для записи.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,17 +48,17 @@ void __stosd(
 |---------------|------------------|
 |`__stosd`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Результатом является то, что двойное `Data` записывается в блок `Count` двойных слов в области памяти, на которые указывают `Dest`.
+В результате *данные* даублеворд записываются в блок *Count* даублевордс в расположении памяти, на которое указывает *назначение*.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```C
 // stosd.c
 // processor: x86, x64
 
@@ -89,4 +89,4 @@ printf_s( "%u %u %u %u",
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

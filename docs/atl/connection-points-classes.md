@@ -1,37 +1,37 @@
 ---
-title: Точки подключения классов (ATL)
+title: Классы точек подключения (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - classes [C++], connection points
 - connection points classes
 ms.assetid: 076365fa-299a-4dce-84c3-a5dff0e0da1f
-ms.openlocfilehash: 8e1ee67f75af1fa38693f7ddb487580ab733cc58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dba06b072e1e9ca545ccbea196fcfe371b02157
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250818"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492442"
 ---
 # <a name="connection-points-classes"></a>Классы точек подключения
 
-Следующие классы обеспечивают поддержку точек подключения.
+Следующие классы обеспечивают поддержку точек подключения:
 
-- [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) реализует контейнер точек соединения.
+- [Иконнектионпоинтконтаинеримпл](../atl/reference/iconnectionpointcontainerimpl-class.md) Реализует контейнер точки соединения.
 
-- [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) реализует точку соединения.
+- [Иконнектионпоинтимпл](../atl/reference/iconnectionpointimpl-class.md) Реализует точку соединения.
 
-- [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) реализует объект точки подключения, представляющий [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) интерфейс.
+- [Ипропертинотифисинккп](../atl/reference/ipropertynotifysinkcp-class.md) Реализует точку соединения, представляющую интерфейс [ипропертинотифисинк](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) .
 
-- [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) управляет неограниченное количество подключений между точкой подключения и его приемников.
+- [Ккомдинамикункаррай](../atl/reference/ccomdynamicunkarray-class.md) Управляет неограниченными подключениями между точкой подключения и ее приемниками.
 
-- [CComUnkArray](../atl/reference/ccomunkarray-class.md) управляет фиксированного числа подключений между точки подключения и его приемников.
+- [Ккомункаррай](../atl/reference/ccomunkarray-class.md) Управляет фиксированным числом соединений между точкой подключения и ее приемниками.
 
-- [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) уведомляет приемником клиента, который свойство объекта был изменен или изменением.
+- [Кфирепропнотифевент](../atl/reference/cfirepropnotifyevent-class.md) Уведомляет приемник клиента, что свойство объекта изменилось или собирается его изменить.
 
-- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) обеспечивает поддержку точек подключения для ATL COM-объекта. Эти соединения будут сопоставлены с картой приемника событий, предоставляемый COM-объект.
+- [IDispEventImpl](../atl/reference/idispeventimpl-class.md) Обеспечивает поддержку точек соединения для COM-объекта ATL. Эти точки соединения сопоставляются с картой приемника событий, которая предоставляется объектом COM.
 
-- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) сопоставить работает вместе с приемником событий в классе события соответствующим функциям обработки.
+- [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) Работает в сочетании с картой приемника событий в классе для маршрутизации событий в соответствующую функцию обработчика.
 
 ## <a name="related-articles"></a>Связанные статьи
 
@@ -41,6 +41,6 @@ ms.locfileid: "62250818"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../atl/atl-class-overview.md)<br/>
+[Обзор класса](../atl/atl-class-overview.md)<br/>
 [Макросы для работы с точками подключения](../atl/reference/connection-point-macros.md)<br/>
 [Глобальные функции точек подключения](../atl/reference/connection-point-global-functions.md)

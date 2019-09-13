@@ -6,18 +6,18 @@ helpviewer_keywords:
 - COM interfaces, base interface
 - IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-ms.openlocfilehash: 17561092c6cccbad264bb82d68dbef9c0e078f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9faa4cffcdc8e6840dfbbe141cb63f51155ded
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250299"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492069"
 ---
 # <a name="iunknown"></a>IUnknown
 
-[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) является базовым интерфейсом каждого второго COM-интерфейса.  Этот интерфейс определяет три метода: [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref), и [выпуска](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) позволяет пользователю интерфейса запрашивать указатель на другой интерфейс объекта. [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) и [выпуска](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) реализуют подсчет ссылок в интерфейсе.
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) является базовым интерфейсом для каждого другого COM-интерфейса.  Этот интерфейс определяет три метода: [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)), [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)и [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release). [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)) позволяет пользователю интерфейса запрашивать у объекта указатель на другой интерфейс. [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) и [Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) реализуют подсчет ссылок на интерфейсе.
 
 ## <a name="see-also"></a>См. также
 
 [Введение в модель COM](../atl/introduction-to-com.md)<br/>
-[IUnknown и наследование интерфейса](/windows/desktop/com/iunknown-and-interface-inheritance)
+[IUnknown и наследование интерфейсов](/windows/win32/com/iunknown-and-interface-inheritance)

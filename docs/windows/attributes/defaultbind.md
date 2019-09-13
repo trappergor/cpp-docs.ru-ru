@@ -1,21 +1,21 @@
 ---
-title: defaultbind (атрибут COM C++)
+title: дефаултбинд (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultbind
 helpviewer_keywords:
 - defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-ms.openlocfilehash: f0dd9101966f22253e6c4098c3c64d22d0a0cba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f612c4869a62a84a6a2af99057ced365f875f2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148072"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490989"
 ---
 # <a name="defaultbind"></a>defaultbind
 
-Указывает единственное свойство, представляющим объект наилучшим образом.
+Указывает отдельное, связываемое свойство, которое лучше соответствует объекту.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,11 +25,11 @@ ms.locfileid: "62148072"
 
 ## <a name="remarks"></a>Примечания
 
-**Defaultbind** атрибут C++ имеет ту же функциональность, что [defaultbind](/windows/desktop/Midl/defaultbind) описании атрибута MIDL.
+Атрибут **дефаултбинд** C++ имеет те же функциональные возможности, что и атрибут [дефаултбинд](/windows/win32/Midl/defaultbind) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) пример демонстрирует использование **defaultbind**.
+Пример использования **дефаултбинд**см. в примере для [привязки](bindable.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -37,10 +37,10 @@ ms.locfileid: "62148072"
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

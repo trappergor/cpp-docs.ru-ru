@@ -24,26 +24,26 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-ms.openlocfilehash: dfafe7c3c7c7cd43dd2ac194f5ed96fa8ea265ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dd9b9d3f3905a923cd9c51856c1c39819cb162
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323207"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502131"
 ---
 # <a name="data-types-mfc"></a>Типы данных (MFC)
 
-В этом разделе перечислены типы данных, чаще всего используется в библиотеке Microsoft Foundation Class. Большинство типов данных имеют такие же, как в платформе Software Development Kit (SDK), другие являются уникальными для MFC.
+В этом разделе перечислены типы данных, наиболее часто используемые в библиотека Microsoft Foundation Class. Большая часть типов данных аналогична версии пакета средств разработки программного обеспечения (SDK) платформы, а другие являются уникальными для MFC.
 
-Сведения о типах данных, используемых в пакет SDK для Windows и MFC, см. в разделе [типы данных Windows](/windows/desktop/WinProg/windows-data-types).
+Сведения о типах данных, используемых как в Windows SDK, так и в MFC, см. в разделе [типы данных Windows](/windows/win32/WinProg/windows-data-types).
 
-Следующие типы данных, уникальные для библиотеки Microsoft Foundation Class.
+К типам данных, уникальным для библиотека Microsoft Foundation Class, относятся следующие:
 
-- УСТАНОВИТЕ значение, используемое для обозначения положение элемента в коллекции; используемые классы коллекций MFC.
+- РАЗМЕЩЕНИЕ значения, используемого для обозначения расположения элемента в коллекции; используется классами коллекций MFC.
 
-- LPCRECT 32-разрядный указатель на константу (неизменяемым) `RECT` структуры.
+- Лпкрект — 32-разрядный указатель на постоянную (неизменяемую `RECT` ) структуру.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../mfc/class-library-overview.md)<br/>
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Обзор класса](../../mfc/class-library-overview.md)<br/>
+[Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

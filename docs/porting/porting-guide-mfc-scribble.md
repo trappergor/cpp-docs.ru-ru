@@ -2,12 +2,12 @@
 title: 'Руководство по переносу: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448961"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511535"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Руководство по переносу: MFC Scribble
 
@@ -65,7 +65,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-Это предупреждение, а не сообщение об ошибке, которое появляется очень часто при обновлении проекта Visual Studio C++. Это макрос, который определяет, в какой самой ранней версии Windows будет запускаться приложение. Если проигнорировать предупреждение, принимается значение по умолчанию (_WIN32_WINNT_MAXVER), то есть будет использоваться текущая версия Windows. Таблицу возможных значений см. в статье [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers) (Использование заголовков Windows). Например, можно выбрать вариант запуска в любой версии, начиная с Vista.
+Это предупреждение, а не сообщение об ошибке, которое появляется очень часто при обновлении проекта Visual Studio C++. Это макрос, который определяет, в какой самой ранней версии Windows будет запускаться приложение. Если проигнорировать предупреждение, принимается значение по умолчанию (_WIN32_WINNT_MAXVER), то есть будет использоваться текущая версия Windows. Таблицу возможных значений см. в статье [Using the Windows Headers](/windows/win32/WinProg/using-the-windows-headers) (Использование заголовков Windows). Например, можно выбрать вариант запуска в любой версии, начиная с Vista.
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

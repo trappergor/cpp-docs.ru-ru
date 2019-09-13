@@ -13,9 +13,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456398"
 ---
-# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+# <a name="_iterator_debug_level"></a>_ITERATOR_DEBUG_LEVEL
 
-Макрос _ITERATOR_DEBUG_LEVEL определяет, включены [](../standard-library/checked-iterators.md) ли проверенные итераторы и [Поддержка итератора отладки](../standard-library/debug-iterator-support.md) . Этот макрос заменяет и объединяет функциональные возможности старых макросов _SECURE_SCL и _HAS_ITERATOR_DEBUGGING.
+Макрос _ITERATOR_DEBUG_LEVEL определяет, включены ли [проверенные итераторы](../standard-library/checked-iterators.md) и [Поддержка итератора отладки](../standard-library/debug-iterator-support.md) . Этот макрос заменяет и объединяет функциональные возможности старых макросов _SECURE_SCL и _HAS_ITERATOR_DEBUGGING.
 
 ## <a name="macro-values"></a>Значение макроса
 
@@ -35,7 +35,7 @@ ms.locfileid: "68456398"
 
 ## <a name="remarks"></a>Примечания
 
-Макрос _ITERATOR_DEBUG_LEVEL определяет, включены [](../standard-library/checked-iterators.md) ли проверенные итераторы, а также в режиме отладки, включена ли [Поддержка итераторов отладки](../standard-library/debug-iterator-support.md) . Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, проверяемые итераторы гарантируют, что границы контейнеров не перезаписываются. Если значение _ITERATOR_DEBUG_LEVEL равно 0, то итераторы не проверяются. Если _ITERATOR_DEBUG_LEVEL определен как 1, любое ненадежное использование итератора вызывает ошибку времени выполнения и программа завершается. Если _ITERATOR_DEBUG_LEVEL определен как 2, ненадежное использование итератора приводит к появлению диалогового окна "Assert" и "Error Runtime", которое позволяет переключиться на отладчик.
+Макрос _ITERATOR_DEBUG_LEVEL определяет, включены ли [проверенные итераторы](../standard-library/checked-iterators.md) , а также в режиме отладки, включена ли [Поддержка итераторов отладки](../standard-library/debug-iterator-support.md) . Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, проверяемые итераторы гарантируют, что границы контейнеров не перезаписываются. Если значение _ITERATOR_DEBUG_LEVEL равно 0, то итераторы не проверяются. Если _ITERATOR_DEBUG_LEVEL определен как 1, любое ненадежное использование итератора вызывает ошибку времени выполнения и программа завершается. Если _ITERATOR_DEBUG_LEVEL определен как 2, ненадежное использование итератора приводит к появлению диалогового окна "Assert" и "Error Runtime", которое позволяет переключиться на отладчик.
 
 Так как макрос _ITERATOR_DEBUG_LEVEL поддерживает аналогичные функции для макросов _SECURE_SCL и _HAS_ITERATOR_DEBUGGING, возможно, вы не уверены, какое значение макроса и макроса использовать в конкретной ситуации. Чтобы избежать путаницы, рекомендуется использовать только макрос _ITERATOR_DEBUG_LEVEL. В этой таблице описывается эквивалентное значение макроса _ITERATOR_DEBUG_LEVEL, используемое для различных значений _SECURE_SCL и _HAS_ITERATOR_DEBUGGING в существующем коде.
 

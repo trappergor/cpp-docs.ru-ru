@@ -1,38 +1,38 @@
 ---
 title: Параметры /Q (низкоуровневые операции)
-ms.date: 1/23/2018
+ms.date: 01/23/2018
 f1_keywords:
 - /q
 helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6348226aa38d1f2eefdf9e19e27c4c87bd2f0812
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927673"
 ---
 # <a name="q-options-low-level-operations"></a>Параметры /Q (низкоуровневые операции)
 
-Можно использовать **/Q** параметры компилятора для выполнения следующих операций низкого уровня компилятора:
+Параметры компилятора **/q** можно использовать для выполнения следующих низкоуровневых операций компилятора:
 
-- [/ Qfast_transcendentals (принудительное использование быстрых трансцендентных функций)](qfast-transcendentals-force-fast-transcendentals.md): Создает быстрые трансцендентные функции.
+- [/Qfast_transcendentals (принудительная Быстрая трансцендентные функции)](qfast-transcendentals-force-fast-transcendentals.md): Создает быстрые трансцендентные функции.
 
-- [/ QIfist (подавление _ftol)](qifist-suppress-ftol.md): Подавляет `_ftol` при преобразования из типа с плавающей запятой в целочисленный тип является обязательным (x86 только).
+- [/QIfist (отключение _ftol)](qifist-suppress-ftol.md): Подавляет, `_ftol` если требуется преобразование из типа с плавающей запятой в целочисленный тип (только архитектура x86).
 
-- [/ Qimprecise_fwaits (удалить ожидания в блоке Try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Удаляет команды `fwait` внутри блоков `try` .
+- [/Qimprecise_fwaits (удаление fwaits внутри блоков try)](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md): Удаляет команды `fwait` внутри блоков `try` .
 
-- [/ Qpar (автоматический Параллелизатор)](qpar-auto-parallelizer.md): Включает автоматическую параллелизацию циклов, которые помечены с помощью директивы [#pragma loop()](../../preprocessor/loop.md) .
+- [/Qpar (авто-параллелизатора)](qpar-auto-parallelizer.md): Включает автоматическую параллелизацию циклов, которые помечены с помощью директивы [#pragma loop()](../../preprocessor/loop.md) .
 
-- [/ Qpar-report (уровень отчетности автоматического Параллелизатора)](qpar-report-auto-parallelizer-reporting-level.md): Включает уровни отчетов для автоматической параллелизации.
+- [/Qpar-report (авто Параллелизатора Reporting Level)](qpar-report-auto-parallelizer-reporting-level.md): Включает уровни отчетов для автоматической параллелизации.
 
-- [/ Qsafe_fp_loads](qsafe-fp-loads.md): Подавляет оптимизацию для загрузок регистре с плавающей запятой, а также для перемещения между памятью и регистры MMX.
+- [/Qsafe_fp_loads](qsafe-fp-loads.md): Подавляет оптимизацию для загрузок регистров с плавающей запятой и перемещения между регистрами памяти и MMX.
 
-- [/ Qspectre](qspectre.md): Создает инструкции для устранения уязвимостей безопасности, определенных Spectre.
+- [/Qspectre](qspectre.md): Создает инструкции по устранению определенных уязвимостей системы безопасности устранением рисков Spectre.
 
-- [/ Qvec-report (уровень отчетности автоматического Векторизатора)](qvec-report-auto-vectorizer-reporting-level.md): Включает уровни отчетов для автоматической векторизации.
+- [/Qvec-report (авто векторизатора Reporting Level)](qvec-report-auto-vectorizer-reporting-level.md): Включает уровни отчетов для автоматической векторизации.
 
 ## <a name="see-also"></a>См. также
 

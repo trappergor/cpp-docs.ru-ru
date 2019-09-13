@@ -1,21 +1,21 @@
 ---
-title: wire_marshal (C++ атрибут COM)
+title: wire_marshal (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407020"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514849"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-Указывает тип данных, который будет использоваться для передачи данных вместо типа данных приложения.
+Указывает тип данных, который будет использоваться для передачи вместо типа данных, зависящего от приложения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407020"
 
 ## <a name="remarks"></a>Примечания
 
-**Wire_marshal** C++ атрибут имеет ту же функциональность, что [wire_marshal](/windows/desktop/Midl/wire-marshal) описании атрибута MIDL.
+Атрибут **wire_marshal** C++ имеет те же функциональные возможности, что и атрибут [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -53,10 +53,10 @@ ms.locfileid: "62407020"
 
 |||
 |-|-|
-|**Применение**|**typedef**|
+|**Относится к**|**typedef**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

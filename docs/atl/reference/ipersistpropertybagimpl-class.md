@@ -1,5 +1,5 @@
 ---
-title: Класс IPersistPropertyBagImpl
+title: Класс Иперсистпропертибагимпл
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 15b9c9738d921c4c6f7837f9280c6dd6b09392d6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503149"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495778"
 ---
-# <a name="ipersistpropertybagimpl-class"></a>Класс IPersistPropertyBagImpl
+# <a name="ipersistpropertybagimpl-class"></a>Класс Иперсистпропертибагимпл
 
-Этот класс реализует `IUnknown` и позволяет сохранить его свойства в контейнер свойств, предоставляемых клиентом объекту.
+Этот класс реализует `IUnknown` и позволяет объекту сохранять свои свойства в контейнере свойств, предоставляемом клиентом.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IPersistPropertyBagImpl`.
+Класс, производный от `IPersistPropertyBagImpl`.
 
 ## <a name="members"></a>Участники
 
@@ -43,18 +43,18 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 
 |name|Описание|
 |----------|-----------------|
-|[IPersistPropertyBagImpl::GetClassID](#getclassid)|Извлекает идентификатор CLSID объекта.|
-|[IPersistPropertyBagImpl::InitNew](#initnew)|Инициализирует только что созданный объект. Реализация ATL, возвращается значение s_ок.|
-|[IPersistPropertyBagImpl::Load](#load)|Загружает свойства объекта из контейнера свойств, предоставляемых клиентом.|
-|[IPersistPropertyBagImpl::Save](#save)|Сохраняет свойства объекта в контейнер свойств, предоставляемых клиентом.|
+|[Иперсистпропертибагимпл::, ClassID](#getclassid)|Получает CLSID объекта.|
+|[Иперсистпропертибагимпл:: InitNew](#initnew)|Инициализирует вновь созданный объект. Реализация ATL возвращает значение S_OK.|
+|[Иперсистпропертибагимпл:: Load](#load)|Загружает свойства объекта из контейнера свойств, предоставляемого клиентом.|
+|[Иперсистпропертибагимпл:: Save](#save)|Сохраняет свойства объекта в контейнере свойств, предоставляемом клиентом.|
 
 ## <a name="remarks"></a>Примечания
 
-[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) интерфейс позволяет объекту сохранить свои свойства в контейнер свойств, предоставляемых клиентом. Класс `IPersistPropertyBagImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+Интерфейс [IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) позволяет объекту сохранять свои свойства в контейнере свойств, предоставляемом клиентом. Класс `IPersistPropertyBagImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown` , отправляя сведения в устройство дампа в отладочных сборках.
 
-`IPersistPropertyBag` работает в сочетании с [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) и [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Эти последний два интерфейса должен быть реализован с помощью клиента. Через `IPropertyBag`, клиент сохраняет и загружает отдельных свойств объекта. Через `IErrorLog`, объект и на клиенте можно сообщить о каких-либо ошибок.
+`IPersistPropertyBag`работает в сочетании с [ипропертибаг](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) и [иеррорлог](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Эти два последних интерфейса должны быть реализованы клиентом. С `IPropertyBag`помощью Клиент сохраняет и загружает отдельные свойства объекта. С `IErrorLog`помощью объект и клиент могут сообщать об обнаруженных ошибках.
 
-**Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -64,11 +64,11 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID
+##  <a name="getclassid"></a>Иперсистпропертибагимпл::, ClassID
 
-Извлекает идентификатор CLSID объекта.
+Получает CLSID объекта.
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
@@ -76,11 +76,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) в Windows SDK.
+См. [IPersist:: ClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) в Windows SDK.
 
-##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew
+##  <a name="initnew"></a>Иперсистпропертибагимпл:: InitNew
 
-Инициализирует только что созданный объект.
+Инициализирует вновь созданный объект.
 
 ```
 STDMETHOD(InitNew)();
@@ -92,11 +92,11 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) в Windows SDK.
+См. раздел [IPersistPropertyBag:: InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) в Windows SDK.
 
-##  <a name="load"></a>  IPersistPropertyBagImpl::Load
+##  <a name="load"></a>Иперсистпропертибагимпл:: Load
 
-Загружает свойства объекта из контейнера свойств, предоставляемых клиентом.
+Загружает свойства объекта из контейнера свойств, предоставляемого клиентом.
 
 ```
 STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
@@ -104,13 +104,13 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ### <a name="remarks"></a>Примечания
 
-ATL использует сопоставление свойств объекта для извлечения этой информации.
+Для получения этих сведений в ATL используется схема свойств объекта.
 
-См. в разделе [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) в Windows SDK.
+См. раздел [IPersistPropertyBag:: Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) в Windows SDK.
 
-##  <a name="save"></a>  IPersistPropertyBagImpl::Save
+##  <a name="save"></a>Иперсистпропертибагимпл:: Save
 
-Сохраняет свойства объекта в контейнер свойств, предоставляемых клиентом.
+Сохраняет свойства объекта в контейнере свойств, предоставляемом клиентом.
 
 ```
 STDMETHOD(Save)(
@@ -121,11 +121,11 @@ STDMETHOD(Save)(
 
 ### <a name="remarks"></a>Примечания
 
-ATL использует сопоставление свойств объекта для хранения подобной информации. По умолчанию этот метод сохраняет все свойства, независимо от значения *fSaveAllProperties*.
+Для хранения этих сведений в ATL используется схема свойств объекта. По умолчанию этот метод сохраняет все свойства независимо от значения *фсавеаллпропертиес*.
 
-См. в разделе [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) в Windows SDK.
+См. раздел [IPersistPropertyBag:: Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 
 [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

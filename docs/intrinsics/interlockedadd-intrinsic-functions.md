@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedAdd
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349521"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217734"
 ---
-# <a name="interlockedadd-intrinsic-functions"></a>Встроенные функции _InterlockedAdd
+# <a name="_interlockedadd-intrinsic-functions"></a>Встроенные функции _InterlockedAdd
 
 **Блок, относящийся только к системам Microsoft**
 
-Эти функции выполняет атомарное сложение, который гарантирует, что операция выполняется успешно при более чем один поток имеет доступ к общей переменной.
+Эти функции выполняют атомарное сложение, что обеспечивает успешное завершение операции, если несколько потоков имеют доступ к общей переменной.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 long _InterlockedAdd(
    long volatile * Addend,
    long Value
@@ -76,13 +76,13 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Слагаемое*<br/>
-[in, out] Указатель на целое число для сложения; заменяется результатом сложения.
+*Слагаемое*\
+[вход, выход] Указатель на целое число, которое необходимо добавить; заменяется результатом сложения.
 
-*Значение*<br/>
-[in] Добавляемое значение.
+*Значений*\
+окне Добавляемое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -92,20 +92,20 @@ __int64 _InterlockedAdd64_rel(
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM|
-|`_InterlockedAdd_acq`|ARM|
-|`_InterlockedAdd_nf`|ARM|
-|`_InterlockedAdd_rel`|ARM|
-|`_InterlockedAdd64`|ARM|
-|`_InterlockedAdd64_acq`|ARM|
-|`_InterlockedAdd64_nf`|ARM|
-|`_InterlockedAdd64_rel`|ARM|
+|`_InterlockedAdd`|ARM, ARM64|
+|`_InterlockedAdd_acq`|ARM, ARM64|
+|`_InterlockedAdd_nf`|ARM, ARM64|
+|`_InterlockedAdd_rel`|ARM, ARM64|
+|`_InterlockedAdd64`|ARM, ARM64|
+|`_InterlockedAdd64_acq`|ARM, ARM64|
+|`_InterlockedAdd64_nf`|ARM, ARM64|
+|`_InterlockedAdd64_rel`|ARM, ARM64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Версии этих функций с суффиксами `_acq` или `_rel` выполняют блокируемое сложение с последующим получением или освобождением семантики. *Получить семантику* означает, что результат операции является видимым для всех процессоров и потоков до более поздней версии память операций чтения и записи. Получение полезно при входе в критический раздел. *Освободить семантику* означает, что вся память, считывает и записывает принудительно будут сделаны видимыми для всех процессоров и потоков, прежде чем результат операции будет виден сам. Освобождение полезно при выходе из критического раздела. Встроенные функции с `_nf` суффикса («без границ») не действуют как барьер памяти.
+Версии этих функций с суффиксами `_acq` или `_rel` выполняют блокируемое сложение с последующим получением или освобождением семантики. *Семантика получения* означает, что результат операции становится видимым для всех потоков и процессоров до последующего выполнения операций чтения и записи в память. Получение полезно при входе в критический раздел. *Семантика выпуска* означает, что все операции чтения и записи памяти должны быть сделаны видимыми для всех потоков и процессоров до того, как результат операции станет видимым. Освобождение полезно при выходе из критического раздела. Встроенные функции с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
 
 Эти процедуры доступны только как встроенные объекты.
 
@@ -171,5 +171,5 @@ Return value: ffff00ffffffff
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

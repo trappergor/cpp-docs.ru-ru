@@ -1,38 +1,37 @@
 ---
 title: __writeeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writeeflags
 helpviewer_keywords:
 - __writeeflags intrinsics
 ms.assetid: a62a522c-d7fa-4f10-a620-a3b32bdf3f17
-ms.openlocfilehash: 6679a3b16def3ed413c5cec2a4bb7d5fe5d732c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e43789d2fbed1bdc52665531c61c6c932a27f5ab
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389922"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219144"
 ---
-# <a name="writeeflags"></a>__writeeflags
+# <a name="__writeeflags"></a>__writeeflags
 
-Записывает указанное значение в программу состояния и управления (EFLAGS) регистрации.
+Записывает указанное значение в Регистр состояния программы и контроль (ЕФЛАГС).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-void __writeeflags(unsigned Value);
-void __writeeflags(unsigned __int64 Value);
+```C
+void __writeeflags(unsigned Value); /* x86 */
+void __writeeflags(unsigned __int64 Value); /* x64 */
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Значение*|[in] Значение для записи в EFLAGS регистр. `Value` Равен 32 бита времени для 32-разрядной платформе и 64 бита времени для 64-разрядной платформе.|
+*Значений*\
+окне Значение, записываемое в ЕФЛАГС регистр. `Value` Параметр имеет длину 32 бит/с для 32-разрядной платформы и 64 разрядов для 64-разрядной платформы.
 
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенные функции.
+Эти подпрограммы доступны только в виде встроенных функций.
 
 ## <a name="requirements"></a>Требования
 
@@ -40,11 +39,11 @@ void __writeeflags(unsigned __int64 Value);
 |---------------|------------------|
 |`__writeeflags`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

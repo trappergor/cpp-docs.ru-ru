@@ -2,12 +2,13 @@
 title: Облачное и веб-программирование в Visual C++
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: landing-page
+ms.openlocfilehash: cf638bb42985fd22f7befea02c1c893387ce98c8
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790360"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218515"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -48,11 +49,11 @@ ms.locfileid: "65790360"
 
   Клиентский класс HTTP среды выполнения Windows, основанный на классе .NET Framework с тем же именем в пространстве имен System.Web. `HttpClient` полностью поддерживает асинхронной отправку и загрузку по протоколу HTTP, а также фильтры конвейера, позволяющие вставлять пользовательские обработчики HTTP в конвейер. Пакет Windows SDK содержит примеры фильтров для лимитных сетей, проверки подлинности OAuth и т. д. Для приложений, предназначенных для универсальной платформы Windows, мы рекомендуем использовать класс `Windows::Web:HttpClient`.
 
-- [Интерфейс IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [Интерфейс IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   Предоставляет собственный интерфейс COM, который можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP или вызова команд GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
-- [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 
   Windows API, который можно использовать в классических приложениях Windows для подключения к Интернету.
 

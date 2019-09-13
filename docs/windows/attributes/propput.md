@@ -1,17 +1,17 @@
 ---
-title: propput (атрибут COM C++)
+title: propput (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propput
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: c9853b38675abfa0a94a319ac752eb2ef61a48e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407527"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514192"
 ---
 # <a name="propput"></a>propput
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407527"
 
 ## <a name="remarks"></a>Примечания
 
-**Propput** атрибут C++ имеет ту же функциональность, что [propput](/windows/desktop/Midl/propput) описании атрибута MIDL.
+Атрибут **propput** C++ имеет те же функциональные возможности, что и атрибут [propput](/windows/win32/Midl/propput) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) использовать образец **propput**.
+Пример использования параметра **propput**см. в примере для [привязки](bindable.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -37,9 +37,9 @@ ms.locfileid: "62407527"
 
 |||
 |-|-|
-|**Применение**|Метод|
+|**Относится к**|Метод|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|`propget`, `propputref`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).

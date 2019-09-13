@@ -38,16 +38,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 71ebc02dc56b45e8790bfac7b7d4bac80d5f7729
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500487"
 ---
 # <a name="hstring-class"></a>Класс HString
 
-Вспомогательный класс для управления жизненным циклом [HSTRING](/windows/desktop/WinRT/hstring) с помощью шаблон RAII.
+Вспомогательный класс для управления временем существования [HString](/windows/win32/WinRT/hstring) с помощью шаблона RAII.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -57,7 +57,7 @@ class HString;
 
 ## <a name="remarks"></a>Примечания
 
-Среда выполнения Windows предоставляет доступ к строкам посредством [HSTRING](/windows/desktop/WinRT/hstring) дескрипторов. `HString` Класс предоставляет удобные функции и операторы для упрощения использования дескрипторов HSTRING. Этот класс может обрабатывать время существования HSTRING, которому он принадлежит через шаблон RAII.
+Среда выполнения Windows предоставляет доступ к строкам через дескрипторы [HString](/windows/win32/WinRT/hstring) . `HString` Класс предоставляет удобные функции и операторы для упрощения использования дескрипторов HString. Этот класс может управлять временем существования HSTRING, которому он владеет, с помощью шаблона RAII.
 
 ## <a name="members"></a>Участники
 
@@ -65,32 +65,32 @@ class HString;
 
 name                                | Описание
 ----------------------------------- | -----------------------------------------------------
-[HString::HString](#hstring)        | Инициализирует новый экземпляр класса `HString`.
-[HString:: ~ HString](#tilde-hstring) | Удаляет текущий экземпляр `HString` класса.
+[HString:: HString](#hstring)        | Инициализирует новый экземпляр класса `HString`.
+[HString:: ~ HString](#tilde-hstring) | Уничтожает текущий экземпляр `HString` класса.
 
 ### <a name="public-methods"></a>Открытые методы
 
 name                                     | Описание
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[HString::Attach](#attach)               | Связывает указанный `HString` объект с текущим `HString` объекта.
-[HString::CopyTo](#copyto)               | Копирует текущий `HString` объект в объект HSTRING.
-[HString::Detach](#detach)               | Отменяет связывание заданных `HString` объект с его базовым значением.
-[HString::Get](#get)                     | Получает значение базового дескриптора HSTRING.
-[HString::GetAddressOf](#getaddressof)   | Извлекает указатель на базовый дескриптор HSTRING.
-[HString::GetRawBuffer](#getrawbuffer)   | Извлекает указатель на основные данные строки.
-[HString::IsValid](#isvalid)             | Указывает, является ли текущий `HString` объект является допустимым.
-[HString::MakeReference](#makereference) | Создает `HStringReference` объект из указанного строкового параметра.
-[HString::Release](#release)             | Удаляет базовое строковое значение и инициализирует текущий `HString` объекта пустое значение.
-[HString::Set](#set)                     | Задает значение текущего `HString` объекта с помощью указанной строки расширенных символов или `HString` параметра.
+[HString:: Attach](#attach)               | Связывает указанный `HString` объект с текущим `HString` объектом.
+[HString:: CopyTo](#copyto)               | Копирует текущий `HString` объект в объект HString.
+[HString::D етач](#detach)               | Отменяет связь указанного `HString` объекта с его базовым значением.
+[HString:: Get](#get)                     | Получает значение базового маркера HSTRING.
+[HString:: GetAddressOf](#getaddressof)   | Извлекает указатель на базовый маркер HSTRING.
+[HString:: Жетравбуффер](#getrawbuffer)   | Извлекает указатель на базовые строковые данные.
+[HString:: IsValid](#isvalid)             | Указывает, является ли `HString` текущий объект допустимым.
+[HString:: MakeReference](#makereference) | `HStringReference` Создает объект из указанного строкового параметра.
+[HString:: Release](#release)             | Удаляет базовое строковое значение и инициализирует текущий `HString` объект в пустое значение.
+[HString:: Set](#set)                     | Устанавливает значение текущего `HString` объекта в указанную строку или `HString` параметр расширенных символов.
 
 ### <a name="public-operators"></a>Открытые операторы
 
 name                                         | Описание
 -------------------------------------------- | ----------------------------------------------------------------------------
-[Оператор HString::operator =](#operator-assign)       | Перемещает значение другого `HString` объект с текущим `HString` объекта.
-[Оператор HString::operator ==](#operator-equality)    | Указывает, равны ли два параметра.
-[Оператор HString::operator! =](#operator-inequality)  | Указывает, действительно ли два параметра не равны.
-[Оператор HString::operator&lt;](#operator-less-than) | Указывает, является ли первый параметр меньше значения второго параметра.
+[HString:: operator =](#operator-assign)       | Перемещает значение другого `HString` объекта в текущий `HString` объект.
+[HString:: operator = =](#operator-equality)    | Указывает, равны ли два параметра.
+[HString:: operator! =](#operator-inequality)  | Указывает, являются ли два параметра неравными.
+[HString:: operator&lt;](#operator-less-than) | Указывает, меньше ли первый параметр второго параметра.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -98,21 +98,21 @@ name                                         | Описание
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft::WRL::Wrappers
+**Пространство имен:** Программы Microsoft:: WRL:: оболочки
 
 ## <a name="tilde-hstring"></a>HString:: ~ HString
 
-Удаляет текущий экземпляр `HString` класса.
+Уничтожает текущий экземпляр `HString` класса.
 
 ```cpp
 ~HString() throw()
 ```
 
-## <a name="attach"></a>HString::Attach
+## <a name="attach"></a>HString:: Attach
 
-Связывает указанный `HString` объект с текущим `HString` объекта.
+Связывает указанный `HString` объект с текущим `HString` объектом.
 
 ```cpp
 void Attach(
@@ -122,12 +122,12 @@ void Attach(
 
 ### <a name="parameters"></a>Параметры
 
-*HSTR*<br/>
+*хстр*<br/>
 Существующий объект `HString`.
 
-## <a name="copyto"></a>HString::CopyTo
+## <a name="copyto"></a>HString:: CopyTo
 
-Копирует текущий `HString` объект в объект HSTRING.
+Копирует текущий `HString` объект в объект HString.
 
 ```cpp
 HRESULT CopyTo(
@@ -142,11 +142,11 @@ HSTRING, который получает копию.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [WindowsDuplicateString](/windows/desktop/api/winstring/nf-winstring-windowsduplicatestring) функции.
+Этот метод вызывает функцию [виндовсдупликатестринг](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
-## <a name="detach"></a>HString::Detach
+## <a name="detach"></a>HString::D етач
 
-Отменяет связывание заданных `HString` объект с его базовым значением.
+Отменяет связь указанного `HString` объекта с его базовым значением.
 
 ```cpp
 HSTRING Detach() throw()
@@ -154,11 +154,11 @@ HSTRING Detach() throw()
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовый `HString` значение до запуска операции отсоединения.
+Базовое `HString` значение до начала операции отсоединения.
 
-## <a name="get"></a>HString::Get
+## <a name="get"></a>HString:: Get
 
-Получает значение базового дескриптора HSTRING.
+Получает значение базового маркера HSTRING.
 
 ```cpp
 HSTRING Get() const throw()
@@ -168,9 +168,9 @@ HSTRING Get() const throw()
 
 Значение базового дескриптора HSTRING.
 
-## <a name="getaddressof"></a>HString::GetAddressOf
+## <a name="getaddressof"></a>HString:: GetAddressOf
 
-Извлекает указатель на базовый дескриптор HSTRING.
+Извлекает указатель на базовый маркер HSTRING.
 
 ```cpp
 HSTRING* GetAddressOf() throw()
@@ -184,23 +184,23 @@ HSTRING* GetAddressOf() throw()
 
 После этой операции строковое значение базового дескриптора HSTRING будет уничтожено.
 
-## <a name="getrawbuffer"></a>HString::GetRawBuffer
+## <a name="getrawbuffer"></a>HString:: Жетравбуффер
 
-Извлекает указатель на основные данные строки.
+Извлекает указатель на базовые строковые данные.
 
 ```cpp
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
 ### <a name="parameters"></a>Параметры
 
-*Длина* указатель на **int** переменную, которая получает длину данных.
+*Длина* Указатель на переменную **int** , которая получает длину данных.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект **const** указатель на основные данные строки.
+**Константный** указатель на базовые строковые данные.
 
 
-## <a name="hstring"></a>HString::HString
+## <a name="hstring"></a>HString:: HString
 
 Инициализирует новый экземпляр класса `HString`.
 
@@ -211,21 +211,21 @@ HString(HString&& other) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*HSTR*<br/>
-Дескриптор HSTRING.
+*хстр*<br/>
+Обработчик HSTRING.
 
 *other*<br/>
 Существующий объект `HString`.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует новый `HString` объект, который является пустым.
+Первый конструктор инициализирует новый `HString` пустой объект.
 
-Второй конструктор инициализирует новый `HString` значение существующего *других* параметра, а затем удаляет *других* параметра.
+Второй конструктор инициализирует новый `HString` объект значением существующего *другого* параметра, а затем уничтожает *другой* параметр.
 
-## <a name="isvalid"></a>HString::IsValid
+## <a name="isvalid"></a>HString:: IsValid
 
-Указывает, является ли текущий `HString` объект пуст или не.
+Указывает, является ли `HString` текущий объект пустым.
 
 ```cpp
 bool IsValid() const throw()
@@ -233,11 +233,11 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Параметры
 
-**значение true,** Если текущий `HString` объект не является пустой; в противном случае **false**.
+**значение true** , если `HString` текущий объект не пуст; в противном случае — **значение false**.
 
-## <a name="makereference"></a>HString::MakeReference
+## <a name="makereference"></a>HString:: MakeReference
 
-Создает `HStringReference` объект из указанного строкового параметра.
+`HStringReference` Создает объект из указанного строкового параметра.
 
 ```cpp
 template<unsigned int sizeDest>
@@ -252,22 +252,22 @@ template<unsigned int sizeDest>
 
 ### <a name="parameters"></a>Параметры
 
-*sizeDest*<br/>
-Параметр шаблона, который указывает размер целевой `HStringReference` буфера.
+*самый заданный размер*<br/>
+Параметр шаблона, указывающий размер буфера назначения `HStringReference` .
 
 *str*<br/>
 Ссылка на строку расширенных символов.
 
-*функция Len*<br/>
-Максимальная длина *str* буфером параметров для использования в данной операции. Если *len* параметр не указан, весь *str* используется параметр.
+*len*<br/>
+Максимальная длина буфера параметров *str* для использования в этой операции. Если параметр *Len* не указан, используется весь параметр *str* .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`HStringReference` Объект, значение которого совпадает со значением указанного *str* параметра.
+Объект, значение которого совпадает с заданным параметром *str.* `HStringReference`
 
-## <a name="operator-assign"></a>Оператор HString::operator =-оператор
+## <a name="operator-assign"></a>Оператор HString:: operator =
 
-Перемещает значение другого `HString` объект с текущим `HString` объекта.
+Перемещает значение другого `HString` объекта в текущий `HString` объект.
 
 ```cpp
 HString& operator=(HString&& other) throw()
@@ -280,9 +280,9 @@ HString& operator=(HString&& other) throw()
 
 ### <a name="remarks"></a>Примечания
 
-Значение существующего *других* объект копируется в текущий `HString` объекта, а затем *других* уничтожении объекта.
+Значение существующего объекта копируется в текущий `HString` объект, а затем удаляется *другой* объект.
 
-## <a name="operator-equality"></a>Оператор HString::operator ==-оператор
+## <a name="operator-equality"></a>Оператор HString:: operator = =
 
 Указывает, равны ли два параметра.
 
@@ -310,19 +310,19 @@ inline bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*<br/>
-Первый параметр для сравнения. *LHS* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть `HString` объектом или `HStringReference` или обработчиком HString.
 
 *rhs*<br/>
-Второй параметр для сравнения. *rhs* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
+Второй сравниваемый параметр. *RHS* может быть `HString` объектом или `HStringReference` или HString.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
+**значение true** , если параметры *LHS* и *RHS* равны; в противном случае — **значение false**.
 
-## <a name="operator-inequality"></a>Оператор HString::operator! =-оператор
+## <a name="operator-inequality"></a>Оператор HString:: operator! =
 
-Указывает, действительно ли два параметра не равны.
+Указывает, являются ли два параметра неравными.
 
 ```cpp
 inline bool operator!=( const HString& lhs,
@@ -343,19 +343,19 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*<br/>
-Первый параметр для сравнения. *LHS* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть `HString` объектом или `HStringReference` или обработчиком HString.
 
 *rhs*<br/>
-Второй параметр для сравнения. *rhs* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
+Второй сравниваемый параметр. *RHS* может быть `HString` объектом или `HStringReference` или HString.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если *lhs* и *rhs* параметры не равны; в противном случае — значение **false**.
+**значение true** , если параметры *LHS* и *RHS* не равны; в противном случае — **значение false**.
 
-## <a name="operator-less-than"></a>Оператор HString::operator&lt; оператор
+## <a name="operator-less-than"></a>Оператор HString::&lt; operator
 
-Указывает, является ли первый параметр меньше значения второго параметра.
+Указывает, меньше ли первый параметр второго параметра.
 
 ```cpp
 inline bool operator<(
@@ -365,27 +365,27 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*lhs*<br/>
-Первый параметр для сравнения. *LHS* можно ссылаться на `HString`.
+*LHS*<br/>
+Первый сравниваемый параметр. *LHS* может быть ссылкой на `HString`.
 
 *rhs*<br/>
-Второй параметр для сравнения. *правая часть* можно ссылаться на `HString`.
+Второй сравниваемый параметр. *RHS* может быть ссылкой на `HString`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.
+**значение true** , если параметр *LHS* меньше параметра *RHS* ; в противном случае — **значение false**.
 
-## <a name="release"></a>HString::Release
+## <a name="release"></a>HString:: Release
 
-Удаляет базовое строковое значение и инициализирует текущий `HString` объекта пустое значение.
+Удаляет базовое строковое значение и инициализирует текущий `HString` объект в пустое значение.
 
 ```cpp
 void Release() throw()
 ```
 
-## <a name="set"></a>HString::Set
+## <a name="set"></a>HString:: Set
 
-Задает значение текущего `HString` объекта с помощью указанной строки расширенных символов или `HString` параметра.
+Устанавливает значение текущего `HString` объекта в указанную строку или `HString` параметр расширенных символов.
 
 ```cpp
 HRESULT Set(
@@ -404,8 +404,8 @@ HRESULT Set(
 *str*<br/>
 Строка расширенных символов.
 
-*функция Len*<br/>
-Максимальная длина *str* параметр, который будет назначен текущий `HString` объекта.
+*len*<br/>
+Максимальная длина параметра *str* , назначенного текущему `HString` объекту.
 
-*HSTR*<br/>
+*хстр*<br/>
 Существующий объект `HString`.

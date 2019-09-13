@@ -1,6 +1,6 @@
 ---
 title: __addgsbyte, __addgsword, __addgsdword, __addgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __addgsdword
 - __addgsqword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __addgsdword intrinsic
 - __addgsbyte intrinsic
 ms.assetid: 4fa03e69-d849-49ed-ba37-1d3aa23c2a21
-ms.openlocfilehash: 61fff704e600296443964ab62a0b58799c87b51b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dddd8b4a887dc0e01107f8c1036a399b4e52d2e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264430"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221080"
 ---
-# <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
+# <a name="__addgsbyte-__addgsword-__addgsdword-__addgsqword"></a>__addgsbyte, __addgsword, __addgsdword, __addgsqword
 
 **Блок, относящийся только к системам Microsoft**
 
-Добавить значение в ячейку памяти, указанной в качестве смещения относительно начала `GS` сегмента.
+Добавьте значение в место в памяти, заданное смещением относительно начала `GS` сегмента.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __addgsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __addgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала `GS`.
+*Собой*\
+окне Смещение от начала `GS`.
 
-*Данные*<br/>
-[in] Значение, добавляемое в область памяти.
+*Data*\
+окне Значение, добавляемое в область памяти.
 
 ## <a name="requirements"></a>Требования
 
@@ -67,15 +67,17 @@ void __addgsqword(
 |`__addgsdword`|X64|
 |`__addgsqword`|X64|
 
+**Заголовочный файл** \<> Intrin. h
+
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенная.
+Эти подпрограммы доступны только в качестве встроенных.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)\
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

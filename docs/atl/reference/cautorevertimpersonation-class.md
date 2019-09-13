@@ -1,5 +1,5 @@
 ---
-title: Класс CAutoRevertImpersonation
+title: Класс Кауторевертимперсонатион
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoRevertImpersonation
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1941bfcd7689ab9d22f5094af0eb833a84dab6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259941"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497688"
 ---
-# <a name="cautorevertimpersonation-class"></a>Класс CAutoRevertImpersonation
+# <a name="cautorevertimpersonation-class"></a>Класс Кауторевертимперсонатион
 
-Этот класс возвращает [CAccessToken](../../atl/reference/caccesstoken-class.md) объектов nonimpersonating состояние, когда оно выходит за пределы области.
+Этот класс возвращает объекты [CAccessToken](../../atl/reference/caccesstoken-class.md) в неолицетворенное состояние, если оно выходит за пределы области.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,32 +34,32 @@ class CAutoRevertImpersonation
 
 |name|Описание|
 |----------|-----------------|
-|[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Создает `CAutoRevertImpersonation` объекта|
-|[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Уничтожает объект и отменяет олицетворение токена доступа.|
+|[Кауторевертимперсонатион:: Кауторевертимперсонатион](#cautorevertimpersonation)|`CAutoRevertImpersonation` Конструирует объект|
+|[Кауторевертимперсонатион:: ~ Кауторевертимперсонатион](#dtor)|Уничтожает объект и отменяет олицетворение маркера доступа.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CAutoRevertImpersonation::Attach](#attach)|Автоматизирует редакция олицетворения маркера доступа.|
-|[CAutoRevertImpersonation::Detach](#detach)|Отменяет редакция автоматическое олицетворение.|
-|[CAutoRevertImpersonation::GetAccessToken](#getaccesstoken)|Возвращает значение текущего маркера доступа, связанный с данным объектом.|
+|[Кауторевертимперсонатион:: Attach](#attach)|Автоматизирует переверсию маркера доступа для олицетворения.|
+|[Кауторевертимперсонатион::D етач](#detach)|Отмена автоматической переверсии олицетворения.|
+|[Кауторевертимперсонатион:: GetAccessToken](#getaccesstoken)|Извлекает маркер доступа Current, связанный с данным объектом.|
 
 ## <a name="remarks"></a>Примечания
 
-[Маркер доступа](/windows/desktop/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделяется для каждого вошедшего в систему Windows NT или Windows 2000. Эти маркеры доступа может быть представлено с `CAccessToken` класса.
+[Маркер доступа](/windows/win32/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока, который выделяется каждому пользователю, вошедшему в систему Windows NT или Windows 2000. Эти маркеры доступа можно представить с помощью `CAccessToken` класса.
 
-Иногда бывает необходимо олицетворять маркеры доступа. Этот класс предоставляется для удобства, но он не выполняет олицетворение маркеров доступа; выполняет только автоматическое редакция nonimpersonated состояние. Это обусловлено олицетворение маркер доступа можно выполнить несколькими способами.
+Иногда требуется олицетворять маркеры доступа. Этот класс предоставляется для удобства, но не выполняет олицетворение маркеров доступа. Он выполняет только автоматическую переверсию до состояния без олицетворения. Это связано с тем, что олицетворение доступа к маркеру может выполняться несколькими разными способами.
 
-Введение в модель управления доступом в Windows, см. в разделе [контроля доступа](/windows/desktop/SecAuthZ/access-control) в пакете Windows SDK.
+Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h
+**Заголовок:** атлсекурити. h
 
-##  <a name="attach"></a>  CAutoRevertImpersonation::Attach
+##  <a name="attach"></a>Кауторевертимперсонатион:: Attach
 
-Автоматизирует редакция олицетворения маркера доступа.
+Автоматизирует переверсию маркера доступа для олицетворения.
 
 ```
 void Attach(const CAccessToken* pAT) throw();
@@ -67,14 +67,14 @@ void Attach(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*личный маркер доступа*<br/>
-Адрес [CAccessToken](../../atl/reference/caccesstoken-class.md) объект автоматически отменены
+*pAT*<br/>
+Адрес объекта [CAccessToken](../../atl/reference/caccesstoken-class.md) для автоматического изменения
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод следует использовать, только если [CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) объект был создан с пустым `CAccessToken` указателем, или если [отсоединения](#detach) был вызван ранее. В простых случаях необязательно для использования этого метода.
+Этот метод следует использовать, только если объект [кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) был создан с пустым `CAccessToken` указателем или если метод [Detach](#detach) был вызван ранее. В простых случаях использовать этот метод необязательно.
 
-##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation
+##  <a name="cautorevertimpersonation"></a>Кауторевертимперсонатион:: Кауторевертимперсонатион
 
 Создает объект `CAutoRevertImpersonation`.
 
@@ -84,16 +84,16 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*личный маркер доступа*<br/>
-Адрес [CAccessToken](../../atl/reference/caccesstoken-class.md) объект автоматически отменены.
+*pAT*<br/>
+Адрес объекта [CAccessToken](../../atl/reference/caccesstoken-class.md) для автоматического изменения.
 
 ### <a name="remarks"></a>Примечания
 
-Фактический олицетворение маркера доступа должно выполняться отдельно от, а лучше — до создания `CAutoRevertImpersonation` объекта. Олицетворение будут автоматически отменены при `CAutoRevertImpersonation` объект выходит за пределы области.
+Фактическое олицетворение маркера доступа следует выполнять отдельно от и, прежде чем создавать `CAutoRevertImpersonation` объект. Это олицетворение будет восстановлено автоматически, когда `CAutoRevertImpersonation` объект выходит из области действия.
 
-##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation
+##  <a name="dtor"></a>Кауторевертимперсонатион:: ~ Кауторевертимперсонатион
 
-Уничтожает объект и отменяет олицетворение токена доступа.
+Уничтожает объект и отменяет олицетворение маркера доступа.
 
 ```
 ~CAutoRevertImpersonation() throw();
@@ -101,11 +101,11 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Отменяет любое олицетворение в данный момент, установленный для [CAccessToken](../../atl/reference/caccesstoken-class.md) объект, предоставленный при создании или с помощью [Attach](#attach) метод. Если нет `CAccessToken` имеет связанный, деструктор не оказывает влияния.
+Отменяет все олицетворения, действующие в данный момент для объекта [CAccessToken](../../atl/reference/caccesstoken-class.md) , предоставленного либо при конструировании, либо с помощью метода [attach](#attach) . `CAccessToken` Если не связан, деструктор не оказывает никакого влияния.
 
-##  <a name="detach"></a>  CAutoRevertImpersonation::Detach
+##  <a name="detach"></a>Кауторевертимперсонатион::D етач
 
-Отменяет редакция автоматическое олицетворение.
+Отмена автоматической переверсии олицетворения.
 
 ```
 const CAccessToken* Detach() throw();
@@ -113,15 +113,15 @@ const CAccessToken* Detach() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Адрес ранее назначенного [CAccessToken](../../atl/reference/caccesstoken-class.md), или значение NULL, если ассоциации не существует.
+Адрес ранее связанного [CAccessToken](../../atl/reference/caccesstoken-class.md)или значение null, если ассоциация не существовала.
 
 ### <a name="remarks"></a>Примечания
 
-Вызов **отсоединения** предотвращает `CAutoRevertImpersonation` объект вернуть олицетворения, в настоящее время действует для [CAccessToken](../../atl/reference/caccesstoken-class.md) объект, связанный с данным объектом. `CAutoRevertImpersonation` Затем можно удалить с помощью не влияет или повторного сопоставления тот же или другой `CAccessToken` с помощью [Attach](#attach).
+При вызове Detach `CAutoRevertImpersonation` объект не сможет отменить олицетворение, действующее в данный момент для объекта [CAccessToken](../../atl/reference/caccesstoken-class.md) , связанного с этим объектом. `CAutoRevertImpersonation`Затем можно уничтожить без влияния или повторно связать с тем же или с другим `CAccessToken` объектом с помощью [attach](#attach).
 
-##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken
+##  <a name="getaccesstoken"></a>Кауторевертимперсонатион:: GetAccessToken
 
-Возвращает значение текущего маркера доступа, связанный с данным объектом.
+Извлекает маркер доступа Current, связанный с данным объектом.
 
 ```
 const CAccessToken* GetAccessToken() throw();
@@ -129,14 +129,14 @@ const CAccessToken* GetAccessToken() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Адрес ранее назначенного [CAccessToken](../../atl/reference/caccesstoken-class.md), или значение NULL, если ассоциации не существует.
+Адрес ранее связанного [CAccessToken](../../atl/reference/caccesstoken-class.md)или значение null, если ассоциация не существовала.
 
 ### <a name="remarks"></a>Примечания
 
-Если этот метод вызывается для целей, которые включают редакция олицетворения из `CAccessToken` объекта, [отсоединения](#detach) следует использовать метод.
+Если этот метод вызывается для целей, включающих переверсию олицетворения `CAccessToken` объекта, вместо нее следует использовать метод [Detach](#detach) .
 
 ## <a name="see-also"></a>См. также
 
-[Пример ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
-[Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Пример Атлсекурити](../../overview/visual-cpp-samples.md)<br/>
+[Маркеры доступа](/windows/win32/SecAuthZ/access-tokens)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)

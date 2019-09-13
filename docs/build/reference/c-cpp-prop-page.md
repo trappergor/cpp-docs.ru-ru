@@ -1,14 +1,14 @@
 ---
 title: Свойства CC++ /Project (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537572"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927748"
 ---
 # <a name="cc-property-pages"></a>C/C++ страницы свойств
 
@@ -254,7 +254,7 @@ ms.locfileid: "68537572"
 **Элементов**
 
 - **Да** — включить проверку безопасности с помощью Guard Sets [/Guard: CF](guard-enable-control-flow-guard.md).
-- **No**
+- **Нет**
 
 ### <a name="enable-function-level-linking"></a>Включить компоновку на уровне функций
 
@@ -314,7 +314,7 @@ ms.locfileid: "68537572"
 
 Включает или отключает режим соответствия. Задает [/permissive-](permissive-standards-conformance.md).
 
-### <a name="treat-wchart-as-built-in-type"></a>Считать WChar_t встроенным типом
+### <a name="treat-wchar_t-as-built-in-type"></a>Считать WChar_t встроенным типом
 
 При указании тип wchar_t преобразуется в собственный тип, сопоставляемый с __wchar_t, таким же образом, как и при кратком сопоставлении с __int16. [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) по умолчанию включен.
 

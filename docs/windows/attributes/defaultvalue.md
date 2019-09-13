@@ -1,21 +1,21 @@
 ---
-title: DefaultValue (атрибут COM C++)
+title: DefaultValue (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147968"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490918"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-Позволяет задавать значение по умолчанию для типизированного необязательного параметра.
+Разрешает спецификацию значения по умолчанию для типизированного необязательного параметра.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,11 +30,11 @@ ms.locfileid: "62147968"
 
 ## <a name="remarks"></a>Примечания
 
-**Defaultvalue** атрибут C++ имеет ту же функциональность, что [defaultvalue](/windows/desktop/Midl/defaultvalue) описании атрибута MIDL.
+Атрибут **DefaultValue** C++ имеет те же функциональные возможности, что и атрибут MIDL [DefaultValue](/windows/win32/Midl/defaultvalue) .
 
 ## <a name="example"></a>Пример
 
-В следующем коде показан метод интерфейса с помощью **defaultvalue** атрибут:
+В следующем коде показан метод интерфейса с атрибутом **DefaultValue** :
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -60,10 +60,10 @@ __interface IFireTabCtrl : IDispatch {
 
 |||
 |-|-|
-|**Применение**|Параметр интерфейса|
+|**Относится к**|Параметр интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

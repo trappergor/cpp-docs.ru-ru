@@ -1,17 +1,17 @@
 ---
-title: недоступная для просмотра (атрибут COM C++)
+title: недоступный дляC++ просмотра (атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409126"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514387"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409126"
 
 ## <a name="remarks"></a>Примечания
 
-**Недоступная для просмотра** атрибут C++ имеет ту же функциональность, что [недоступная для просмотра](/windows/desktop/Midl/nonbrowsable) описании атрибута MIDL.
+**Неотображаемый** C++ атрибут имеет те же функциональные возможности, что и [неотображаемый](/windows/win32/Midl/nonbrowsable) атрибут MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -49,10 +49,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**Применение**|Метод интерфейса|
+|**Относится к**|Метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

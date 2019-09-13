@@ -2,16 +2,16 @@
 title: /INTEGRITYCHECK (требование проверки подписи)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: a46f31140c01753fdaa6e72fd0f741f569a5ad94
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1732c612501b66753635b272f94764975c555f75
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450448"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492851"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (требование проверки подписи)
 
-Указывает, что цифровая подпись бинарного образа должна быть проверена во время загрузки.
+Указывает, что цифровая подпись двоичного образа должна проверяться во время загрузки.
 
 ```
 /INTEGRITYCHECK[:NO]
@@ -21,7 +21,7 @@ ms.locfileid: "66450448"
 
 По умолчанию **/INTEGRITYCHECK** отключен.
 
-**/INTEGRITYCHECK** наборы параметров, в заголовке PE исполняемого файла или файла DLL, флаг для диспетчера памяти для проверки цифровой подписи для загрузки образа в Windows. Этот параметр, должно быть задано для 32-разрядных и 64-разрядных библиотек DLL, реализующих кода режима ядра, загруженного некоторыми компонентами Windows и рекомендуется для всех драйверов устройств в Windows Vista, Windows 7, Windows 8, Windows Server 2008 и Windows Server 2012. Версии Windows до Windows Vista игнорируют этот флажок. Дополнительные сведения см. в разделе [принудительно целостности подписи из переносимых исполняемых (PE) файлов](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
+Набор параметров **/INTEGRITYCHECK** — в заголовке PE файла DLL или исполняемого файла — флаг, который диспетчер памяти проверяет на наличие цифровой подписи, чтобы загрузить изображение в Windows. Этот параметр должен быть установлен как для 32-разрядных, так и для 64-разрядных библиотек DLL, которые реализуют код режима ядра, загружаемый определенными компонентами Windows, и рекомендуется для всех драйверов устройств в Windows Vista, Windows 7, Windows 8, Windows Server 2008 и Windows Server 2012. В версиях Windows, предшествовавших Windows Vista, этот флаг не учитывается. Дополнительные сведения см. в разделе [Принудительная проверка подписывания переносимых исполняемых файлов (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx).
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
@@ -31,14 +31,14 @@ ms.locfileid: "66450448"
 
 1. Разверните узел **Компоновщик**.
 
-1. Выберите **командной строки** страницу свойств.
+1. Выберите страницу свойств **Командная строка** .
 
-1. В **Дополнительные параметры**, введите `/INTEGRITYCHECK` или `/INTEGRITYCHECK:NO`.
+1. В окне **Дополнительные параметры**введите `/INTEGRITYCHECK` или `/INTEGRITYCHECK:NO`.
 
 ## <a name="see-also"></a>См. также
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)<br/>
-[Принудительная целостность подписи из переносимых исполняемых (PE) файлов](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
-[Пошаговое руководство о подписи кода режима ядра](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
-[Библиотеки DLL инициализации приложений в Windows 7 и Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)
+[Принудительная целостность подписывания переносимых исполняемых файлов (PE)](https://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
+[Требования к подписывания кода в режиме ядра](/windows-hardware/drivers/install/kernel-mode-code-signing-requirements--windows-vista-and-later-)<br/>
+[Библиотеки DLL и безопасная загрузка](/windows/win32/dlls/secure-boot-and-appinit-dlls)

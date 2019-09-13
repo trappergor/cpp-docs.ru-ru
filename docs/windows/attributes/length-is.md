@@ -1,21 +1,21 @@
 ---
-title: length_is (C++ атрибут COM)
+title: length_is (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.length_is
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514524"
 ---
-# <a name="lengthis"></a>length_is
+# <a name="length_is"></a>length_is
 
-Указывает количество элементов массива для передачи.
+Указывает число передаваемых элементов массива.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,16 +25,16 @@ ms.locfileid: "62409308"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
-Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
+*expression*<br/>
+Одно или несколько выражений языка C. Пустые слоты аргументов разрешены.
 
 ## <a name="remarks"></a>Примечания
 
-**Length_is** C++ атрибут имеет ту же функциональность, что [length_is](/windows/desktop/Midl/length-is) описании атрибута MIDL.
+Атрибут **length_is** C++ имеет те же функциональные возможности, что и атрибут [length_is](/windows/win32/Midl/length-is) MIDL.
 
 ## <a name="example"></a>Пример
 
-См. в разделе [first_is](first-is.md) пример указания фрагмент массива.
+Пример указания раздела массива см. в разделе [first_is](first-is.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409308"
 
 |||
 |-|-|
-|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

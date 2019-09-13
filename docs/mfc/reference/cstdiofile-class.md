@@ -1,6 +1,6 @@
 ---
 title: Класс Кстдиофиле
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: 068e59fdc19821487bc78141d10743363221518e
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375844"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177489"
 ---
 # <a name="cstdiofile-class"></a>Класс Кстдиофиле
 
@@ -89,7 +89,7 @@ class CStdioFile : public CFile
 ```
 CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
-  CStdioFile(FILE* pOpenStream);
+CStdioFile(FILE* pOpenStream);
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -107,7 +107,7 @@ CStdioFile(
 Указывает указатель файла, возвращенный при вызове функции [fopen](../../c-runtime-library/reference/fopen-wfopen.md)среды выполнения C.
 
 *лпсзфиленаме*<br/>
-Указывает строку, которая является путем к требуемому файлу. Путь может быть относительным или абсолютным.
+Указывает строку, которая является путем к требуемому файлу. Путь может быть как относительным, так и абсолютным.
 
 *нопенфлагс*<br/>
 Задает параметры для создания файлов, совместного использования файлов и режимов доступа к файлам. Можно указать несколько параметров с помощью побитового оператора или **|** ().
@@ -165,7 +165,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Параметры
 
 *лпсзфиленаме*<br/>
-Строка, которая является путем к требуемому файлу. Путь может быть относительным или абсолютным.
+Строка, которая является путем к требуемому файлу. Путь может быть как относительным, так и абсолютным.
 
 *нопенфлагс*<br/>
 Общий доступ и режим доступа. Указывает действие, выполняемое при открытии файла. Параметры можно комбинировать с помощью оператора побитового или (&#124;). Требуется одно разрешение на доступ и один параметр общего ресурса; режимы Модекреате и Моденоинхерит являются необязательными.

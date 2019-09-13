@@ -7,26 +7,26 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: f769de7bcf3e410cca717c17237d1e49ef8562c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8915b3af083ebe318e8527b2f83099bf61e7e3ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394771"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509308"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>Добавление вкладок в элемент управления "Вкладка"
 
-После создания вкладок ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), добавьте столько вкладок, как требуется.
+После создания элемента управления "Вкладка" ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) добавьте столько вкладок, сколько необходимо.
 
-### <a name="to-add-a-tab-item"></a>Чтобы добавить элемент вкладки
+### <a name="to-add-a-tab-item"></a>Добавление элемента вкладки
 
-1. Подготовка [TCITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtcitema) структуры.
+1. Подготовьте структуру [тЦитем](/windows/win32/api/commctrl/ns-commctrl-tcitemw) .
 
-1. Вызовите [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), передачи структуры.
+1. Вызовите метод [CTabCtrl:: InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), передав структуру.
 
-1. Повторите шаги 1 и 2 для элементов дополнительные вкладки.
+1. Повторите шаги 1 и 2 для дополнительных элементов вкладки.
 
-Дополнительные сведения см. в разделе [Создание элемента управления Tab](/windows/desktop/Controls/tab-controls) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [Создание элемента управления "Вкладка"](/windows/win32/Controls/tab-controls) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

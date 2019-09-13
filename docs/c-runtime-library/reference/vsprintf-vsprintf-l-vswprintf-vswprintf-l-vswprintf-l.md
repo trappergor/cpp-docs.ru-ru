@@ -1,6 +1,6 @@
 ---
 title: vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 apiname:
 - _vswprintf_l
 - _vsprintf_l
@@ -46,14 +46,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57fa0428e8aecf7b728029a0c4cc21f8abc353bf
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383429"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273652"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 
 Записывают форматированные выходные данные с помощью указателя на список аргументов. Существуют более безопасные версии этих функций; см. раздел [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md).
 
@@ -120,37 +120,37 @@ int _vswprintf_l(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*\
 Место хранения выходных данных.
 
-*count*<br/>
-Максимальное количество символов для хранения, в версиях двухбайтную строку этой функции.
+*расчета*\
+Максимальное число символов для хранения в строках расширенной версии этой функции.
 
-*format*<br/>
+*формат*\
 Спецификация формата.
 
-*argptr*<br/>
+*аргптр*\
 Указатель на список аргументов.
 
-*locale*<br/>
+*языкового стандарта*\
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**vsprintf** и **vswprintf** возвращают число записанных символов, не включая завершающий нуль-символ, или отрицательное значение, если произошла ошибка вывода. Если *буфера* или *формат* является пустым указателем, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+**vsprintf** и **vswprintf** возвращают число записанных символов, не включая завершающий нуль-символ, или отрицательное значение, если возникает ошибка вывода. Если *buffer* или *Format* является пустым указателем, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих функций принимает указатель на список аргументов и затем форматирует и записывает указанные данные в память, на которые указывают *буфера*.
+Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в память, на которую указывает *буфер*.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
 > [!IMPORTANT]
-> С помощью **vsprintf**, что не позволяет ограничить количество символов записывается, что означает, что код, с помощью этой функции может привести к переполнению буфера. Используйте вместо нее [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) или вызывайте [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md), чтобы определить требуемый размер буфера. Кроме того, убедитесь, что *формат* не является строкой, определяемые пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+> С помощью **vsprintf**невозможно ограничить число записанных символов. Это означает, что код, использующий эту функцию, подвержен переполнению буфера. Используйте вместо нее [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) или вызывайте [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md), чтобы определить требуемый размер буфера. Кроме того, убедитесь, что *Формат* не является определяемой пользователем строкой. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**vswprintf** соответствует стандарту ISO C, который требует указания второго параметра, *число*, типа **size_t**. Чтобы принудительно нестандартное поведение, определите **_CRT_NON_CONFORMING_SWPRINTFS**. Старое поведение может оказаться в будущей версии, поэтому код необходимо изменить для использования новым стандартным поведением.
+**vswprintf** соответствует стандарту ISO C, для которого требуется второй параметр, *Count*, типа **size_t**. Чтобы принудительно использовать старое нестандартное поведение, определите **_CRT_NON_CONFORMING_SWPRINTFS**. Старое поведение может не быть в следующей версии, поэтому необходимо изменить код, чтобы использовать новое согласованное поведение.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
@@ -176,15 +176,16 @@ int _vswprintf_l(
 
 ```C
 // crt_vsprintf.c
-// compile with: /W3
+// compile with: cl /W4 crt_vsprintf.c
 // This program uses vsprintf to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
     va_list args;
     int     len;
@@ -197,12 +198,14 @@ void test( char * format, ... )
                                 + 1; // terminating '\0'
 
     buffer = (char*)malloc( len * sizeof(char) );
+    if ( 0 != buffer )
+    {
+        vsprintf( buffer, format, args ); // C4996
+        // Note: vsprintf is deprecated; consider using vsprintf_s instead
+        puts( buffer );
 
-    vsprintf( buffer, format, args ); // C4996
-    // Note: vsprintf is deprecated; consider using vsprintf_s instead
-    puts( buffer );
-
-    free( buffer );
+        free( buffer );
+    }
     va_end( args );
 }
 
@@ -220,10 +223,10 @@ This is a string
 
 ## <a name="see-also"></a>См. также
 
-[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
-[Функции vprintf](../../c-runtime-library/vprintf-functions.md)<br/>
-[Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
-[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
-[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)\
+[Функции vprintf](../../c-runtime-library/vprintf-functions.md)\
+[Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
+[printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[va_arg, va_copy, va_end, va_start](va-arg-va-copy-va-end-va-start.md)

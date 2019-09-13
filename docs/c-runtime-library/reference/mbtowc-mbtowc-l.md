@@ -26,14 +26,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156620"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499733"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
 Преобразует многобайтовый символ в соответствующий расширенный символ.
 
@@ -58,7 +58,7 @@ int _mbtowc_l(
 *wchar*<br/>
 Адрес расширенного символа (тип **wchar_t**).
 
-*mbchar*<br/>
+*мбчар*<br/>
 Адрес последовательности байтов (многобайтовый символ).
 
 *count*<br/>
@@ -69,11 +69,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **mbchar** не **NULL** и, если объект, *mbchar* допустимый Многобайтовый символ, указывающий forms **mbtowc** возвращает длину в байт многобайтового символа. Если *mbchar* — **NULL** или объект, который он указывает — это двухбайтовая нуль-символом (L '\0'), функция возвращает значение 0. Если объект, *mbchar* точек не образует допустимый Многобайтовый символ в первых *число* символов, возвращается значение -1.
+Если **мбчар** не **равно NULL** и объект, который *мбчар* указывает на форму допустимого многобайтового символа, **mbtowc** возвращает длину многобайтового символа в байтах. Если *мбчар* имеет **значение NULL** или объект, на который он указывает, является расширенным символом NULL (L ' \ 0 '), функция возвращает значение 0. Если объект, на который указывает *мбчар* , не формирует допустимый многобайтовый символ в первых символах *Count* , возвращается значение-1.
 
 ## <a name="remarks"></a>Примечания
 
-**Mbtowc** функция преобразует *число* или меньше байт, на которые указывают *mbchar*, если *mbchar* не **NULL**, соответствующий расширенный символ. **mbtowc** сохраняет результирующий расширенный символ в *wchar,* Если *wchar* не **NULL**. **mbtowc** не проверяет более **MB_CUR_MAX** байт. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **mbtowc** преобразует *число* байтов, на которое указывает *мбчар*, если *мбчар* не равно **null**, в соответствующий расширенный символ. **mbtowc** сохраняет полученный расширенный символ в параметре *WCHAR,* если *WCHAR* не равен **null**. **mbtowc** не проверяет более **MB_CUR_MAX** байт. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>См. также
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [Языковой стандарт](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

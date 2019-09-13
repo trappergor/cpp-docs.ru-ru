@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCPropertyGridFontProperty
+title: Класс Кмфкпропертигридфонтпроперти
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3c5b806482a97d64a9ffab92877781cb8778b6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310582"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505115"
 ---
-# <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
+# <a name="cmfcpropertygridfontproperty-class"></a>Класс Кмфкпропертигридфонтпроперти
 
-`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, который открывает диалоговое окно выбора шрифта.
+`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления "список свойств", открывающий диалоговое окно выбора шрифта.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,18 +35,18 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|
+|[Кмфкпропертигридфонтпроперти:: Кмфкпропертигридфонтпроперти](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|
 |`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
-|[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.|
-|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.|
-|`CMFCPropertyGridFontProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|`CMFCPropertyGridFontProperty::OnClickButton`|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве. (Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [кмфкпропертигридпроперти:: форматпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
+|[Кмфкпропертигридфонтпроперти:: "Color"](#getcolor)|Извлекает цвет шрифта, который выбирает пользователь в диалоговом окне Шрифт.|
+|[CMFCPropertyGridFontProperty::GetLogFont](#getlogfont)|Извлекает шрифт, который пользователь выбирает в диалоговом окне Шрифт.|
+|`CMFCPropertyGridFontProperty::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
+|`CMFCPropertyGridFontProperty::OnClickButton`|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве. (Переопределяет [кмфкпропертигридпроперти:: онкликкбуттон](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ## <a name="remarks"></a>Примечания
 
@@ -54,13 +54,13 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[кмфкпропертигридпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-[CMFCPropertyGridFontProperty](../../mfc/reference/cmfcpropertygridfontproperty-class.md)
+[кмфкпропертигридфонтпроперти](../../mfc/reference/cmfcpropertygridfontproperty-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxpropertygridctrl.h
+**Заголовок:** афкспропертигридктрл. h
 
 ##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty
 
@@ -79,36 +79,36 @@ CMFCPropertyGridFontProperty(
 ### <a name="parameters"></a>Параметры
 
 *strName*<br/>
-[in] Имя свойства.
+окне Имя свойства.
 
-*LF*<br/>
-[in] Структура логического шрифта, которая определяет атрибуты шрифта.
+*возврата*<br/>
+окне Логическая структура шрифта, указывающая атрибуты шрифта.
 
-*dwFontDialogFlags*<br/>
-[in] Стили, которые применяются в диалоговом окне шрифта, который отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — битовую комбинацию (OR) флагов CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в разделе *флаги* параметр [структуры CHOOSEFONT](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta).
+*двфонтдиалогфлагс*<br/>
+окне Стили, которые применяются к диалоговому окну Шрифт, которое отображается при нажатии кнопки раскрывающегося списка значение свойства. Значение по умолчанию — это побитовое сочетание (или) CF_EFFECTS и CF_SCREENFONTS. Дополнительные сведения см. в описании параметра flags [структуры CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw).
 
-*lpszDescr*<br/>
-[in] Описание свойства шрифта. Значение по умолчанию имеет значение NULL.
+*лпсздескр*<br/>
+окне Описание свойства Font. Значение по умолчанию — NULL.
 
-*dwData*<br/>
-[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.
+*двдата*<br/>
+окне Данные конкретного приложения, такие как целое число или указатель на другие данные, связанные со свойством. Значение по умолчанию — 0.
 
 *color*<br/>
-[in] Цвет шрифта. Значением по умолчанию является цвет по умолчанию.
+окне Цвет шрифта. Значением по умолчанию является цвет по умолчанию.
 
 ### <a name="remarks"></a>Примечания
 
-Объект `CMFCPropertyGridFontProperty` объект представляет свойство font в элементе управления шрифта сетки свойств.
+`CMFCPropertyGridFontProperty` Объект представляет свойство Font в элементе управления шрифта сетки свойств.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как построить объект `CMFCPropertyGridFontProperty` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как создать объект `CMFCPropertyGridFontProperty` класса. Этот пример является частью [примера новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]
 
 ##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor
 
-Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.
+Извлекает цвет шрифта, который выбирает пользователь в диалоговом окне Шрифт.
 
 ```
 COLORREF GetColor() const;
@@ -116,13 +116,13 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение цвета RGB, представляющее цвет выбранного шрифта.
+Значение цвета RGB, представляющее выбранный цвет шрифта.
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont
 
-Получает шрифт, который пользователь выбирает в диалоговом окне шрифта.
+Извлекает шрифт, который пользователь выбирает в диалоговом окне Шрифт.
 
 ```
 LPLOGFONT GetLogFont();
@@ -130,7 +130,7 @@ LPLOGFONT GetLogFont();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структуру, которая описывает шрифт.
+Указатель на структуру [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) , описывающую выбранный шрифт.
 
 ### <a name="remarks"></a>Примечания
 

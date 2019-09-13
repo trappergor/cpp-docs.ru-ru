@@ -1,19 +1,19 @@
 ---
 title: __readcr4
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr4
 helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
-ms.openlocfilehash: b67016846768be778881c02b395c8d6f3af1ef3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d43b5204d412de40284f89cfd4d74f1c1f9d86d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396500"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216731"
 ---
-# <a name="readcr4"></a>__readcr4
+# <a name="__readcr4"></a>__readcr4
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62396500"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __readcr4(void);
 ```
 
@@ -35,14 +35,14 @@ unsigned __int64 __readcr4(void);
 |---------------|------------------|
 |`__readcr4`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.
+Встроенная функция доступна только в режиме ядра, и подпрограммы доступны только в качестве встроенных.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

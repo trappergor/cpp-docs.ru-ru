@@ -5,40 +5,40 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22739e5671fb0300011de84d976eff0ce26eaedb
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242319"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907587"
 ---
 # <a name="creating-the-header-control"></a>Создание элемента управления "Заголовок"
 
-Элемент управления заголовка не доступны напрямую в редакторе диалоговых окон (хотя можно добавить элемент управления "список", который включает элемент управления заголовка).
+Элемент управления "заголовок" не доступен непосредственно в редакторе диалоговых окон (хотя можно добавить элемент управления "список", включающий элемент управления "заголовок").
 
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>Чтобы поместить элемент управления заголовка в диалоговом окне
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>Размещение элемента управления "заголовок" в диалоговом окне
 
-1. Вручную внедрить переменную-член типа [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) в классов диалоговых окон.
+1. Вручную внедрите переменную-член типа [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) в класс диалогового окна.
 
-1. В [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), создание и установка стилей для `CHeaderCtrl`, поместите ее и отобразить ее.
+1. В [онинитдиалог](../mfc/reference/cdialog-class.md#oninitdialog)создайте и задайте стили для `CHeaderCtrl`, разместите его и отобразите.
 
-1. Добавьте элементы управления заголовка.
+1. Добавление элементов в элемент управления "заголовок".
 
-1. Используйте окно свойств для сопоставления функции обработчика в класс диалоговых окон для всех уведомлений, управления заголовка сообщения, вы должны обрабатывать (см. в разделе [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)).
+1. Используйте [мастер классов](reference/mfc-class-wizard.md) для сопоставления функций обработчика в классе диалогового окна с любыми сообщениями уведомления элемента управления заголовками, которые необходимо обменять (см. раздел [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)).
 
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Чтобы поместить элемент управления заголовка в представлении (не CListView)
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>Размещение элемента управления "заголовок" в представлении (не в CListView)
 
-1. Внедрение [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) объекта в классе представления.
+1. Внедрите объект [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) в класс представления.
 
-1. Стиль, размещение и отображение окна элемента управления заголовка в представлении [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) функция-член.
+1. Стиль, расположение и отображение окна элемента управления "заголовок" в функции элемента [онинитиалупдате](../mfc/reference/cview-class.md#oninitialupdate) представления.
 
-1. Добавьте элементы управления заголовка.
+1. Добавление элементов в элемент управления "заголовок".
 
-1. Используйте окно свойств для сопоставления функции обработчика в классе представления для всех уведомлений, управления заголовка сообщения, вы должны обрабатывать (см. в разделе [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)).
+1. Используйте [мастер классов](reference/mfc-class-wizard.md) для сопоставления функций обработчика в классе представления с любыми сообщениями уведомления элемента управления заголовками, которые необходимо обменять (см. раздел [сопоставление сообщений с функциями](../mfc/reference/mapping-messages-to-functions.md)).
 
-В любом случае объект внедренный элемент управления создается при создании объекта представления или диалогового окна. Затем необходимо вызвать [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) для создания окна элемента управления. Чтобы разместить элемент управления, вызовите [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) для определения исходный размер и положение элемента управления и [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) задать нужное место. Затем добавьте элементы, как описано в разделе [Добавление элементов управления заголовка](../mfc/adding-items-to-the-header-control.md).
+В любом случае внедренный объект элемента управления создается при создании объекта представления или диалогового окна. Затем необходимо вызвать метод [CHeaderCtrl:: Create](../mfc/reference/cheaderctrl-class.md#create) , чтобы создать окно управления. Чтобы разместить элемент управления, вызовите [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout) , чтобы определить начальный размер и положение элемента управления и [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) , чтобы задать нужное положение. Затем добавьте элементы, как описано в разделе [Добавление элементов в элемент управления "заголовок"](../mfc/adding-items-to-the-header-control.md).
 
-Дополнительные сведения см. в разделе [Создание элемента управления заголовка](/windows/desktop/Controls/header-controls) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [Создание элемента управления "заголовок](/windows/win32/Controls/header-controls) " в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

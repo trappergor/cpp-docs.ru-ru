@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398268"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500508"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper - функция
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper - функция
 
 Проверяет, что тип заданного аргумента является производным от интерфейса `IUnknown`.
 
 > [!IMPORTANT]
-> Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Используйте [IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args) вместо этого.
+> Данная специализация шаблона поддерживает инфраструктуру WRL и не предназначена для использования непосредственно из кода. Вместо этого используйте [IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,18 +33,18 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип аргумента *pp*.
+Тип аргумента *PP*.
 
 *PP*<br/>
 Двойной косвенный указатель.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Аргумент *pp* приведен указатель для указатель для **void**.
+Аргумент *PP* приведение указателя к указателю на тип **void**.
 
 ## <a name="remarks"></a>Примечания
 
-Ошибка времени компиляции создается в том случае, если параметр шаблона *T* не является производным от `IUnknown`.
+Если параметр шаблона *T* не является производным от `IUnknown`, создается ошибка времени компиляции.
 
 ## <a name="requirements"></a>Требования
 

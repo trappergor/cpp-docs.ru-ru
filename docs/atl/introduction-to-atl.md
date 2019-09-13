@@ -6,24 +6,24 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261921"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492105"
 ---
 # <a name="introduction-to-atl"></a>Введение в ATL
 
-ATL является Active Template Library, классы набора основанных на шаблонах C++ с помощью которого можно легко создавать небольших, быстрых объектов модели объектов компонента (COM). Он имеет специальную поддержку для основных компонентов COM, включая: биржевые реализации [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2), и `IDispatch`; двойной интерфейсы; Стандартные интерфейсы перечислителя COM; точки подключения; перемещаемые интерфейсы; и элементы управления ActiveX.
+ATL — это библиотека активных шаблонов, набор классов на основе C++ шаблонов, с помощью которых можно легко создавать небольшие, быстрые объекты модели компонентов (com). Она имеет специальную поддержку ключевых возможностей com, включая следующие акции: стандартные реализации [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown), [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory), [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)и `IDispatch`; сдвоенные интерфейсы перечислителя com; точки подключения, разрывы интерфейс и элементы управления ActiveX.
 
-Код ATL можно использовать для создания однопоточными объектами, объекты модели подразделения, объекты модели свободных потоков или свободнопоточный и модели объектов.
+Код ATL можно использовать для создания однопотоковых объектов, объектов модели-контейнера, объектов модели свободных потоков, а также для объектов модели с произвольным потоком и потоковым контейнером.
 
-В этом разделе рассматриваются:
+В этом разделе рассматриваются следующие темы:
 
-- Как [библиотека шаблонов](../atl/using-a-template-library.md) отличается от стандартной библиотеки.
+- Отличия [библиотеки шаблонов](../atl/using-a-template-library.md) от стандартной библиотеки.
 
-- Какие вы [могут делать с библиотекой ATL, а](../atl/scope-of-atl.md).
+- Что вы [можете и не можете делать с помощью ATL](../atl/scope-of-atl.md).
 
 - [Рекомендации по выбору между ATL и MFC](../atl/recommendations-for-choosing-between-atl-and-mfc.md).
 

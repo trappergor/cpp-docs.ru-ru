@@ -1,91 +1,91 @@
 ---
 title: Грамматика препроцессора
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179884"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222258"
 ---
 # <a name="preprocessor-grammar"></a>Грамматика препроцессора
 
-*строки элемента управления*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *идентификатор* *строке токена*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** <em>идентификатор</em> **(** *идентификатор*<sub>opt</sub> **,** ... **,** *идентификатор*<sub>opt</sub> **)** *строке токена*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** *последовательность цифр* **"** *filename* **"** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#error** *строке токена*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *строке токена*
+*Строка управления*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *идентификатор* *Строка токена* <sub>неявное согласие</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *идентификатор* **(** &#x2800;идентификатор&#x200B;<sub>OPT</sub> **,** ... **,** *идентификатор* &#x200B; <sub></sub>opt&#x2800; **)** *токен — строка*<sub></sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _путь — спецификация_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** _путь — спецификация_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *последовательность цифр* **"** _имя файла_ **"** &#x200B; <sub>неявное согласие</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *идентификатор*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *Строка токена*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *Строка токена*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**определенные (** *идентификатор* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**определенные** *идентификатор*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Константное выражение
+*константное выражение*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**определено (** &#x2800;*идентификатор*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**определен** *идентификатор*\
+&nbsp;&nbsp;&nbsp;&nbsp;любое другое константное выражение
 
-*условный* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*IF часть* *elif части*<sub>opt</sub> *else часть*<sub>opt</sub> *endif строка*
+*условное*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Если-часть* *elif — части* <sub>неявное согласие</sub> *else-Part* <sub>неявное согласие</sub> *endif-строка*
 
-*IF часть* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+*If-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*Если-Line* *текстовая надпись*
 
-*строки IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *идентификатор*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
+*If-Line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *константное выражение*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *идентификатор*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *идентификатор*
 
-*elif части* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif строка* *текста*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif части* *elif строка* *текста*
+*elif — части*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif — строка* *текстовая надпись*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif — части* *elif — строка* *текстовая надпись*
 
-*elif строка* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
+*elif-строка*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *константное выражение*
 
-*Else часть* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*else-Part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*else-Line* *текстовая надпись*
 
-*Else строка* :<br/>
+*else-Line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*ENDIF строка* :<br/>
+*endif-строка*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*последовательность цифр* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*последовательность цифр*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*число*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*цифра* : один из<br/>
+*digit*: один из \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*токен строки* :<br/>
+*Строка токена*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Строка токенов
 
-*токен* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+*токен*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*This*\
+&nbsp;&nbsp;&nbsp;&nbsp;*Идентификатор*\
+&nbsp;&nbsp;&nbsp;&nbsp;*выходит*\
+&nbsp;&nbsp;&nbsp;&nbsp;*станции*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*Имя файла* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Имя файла юридические операционной системы
+*имя файла*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Имя файла допустимой операционной системы
 
-*PATH-spec* :<br/>
+*path-Spec*: \
 &nbsp;&nbsp;&nbsp;&nbsp;Допустимый путь к файлу
 
-*текст* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Любая текстовая последовательность
+*текст*: \
+&nbsp;&nbsp;&nbsp;&nbsp;Любая последовательность текста
 
 > [!NOTE]
-> Следующие Нетерминальные элементы в [лексические соглашения](../cpp/lexical-conventions.md) раздел *Справочник по языку C++* : *константы*, *константного выражения* , *идентификатор*, *ключевое слово*, *оператор*, и *знак препинания*.
+> Следующие Нетерминальные значения расширены в разделе [лексические обозначения](../cpp/lexical-conventions.md) справочника *C++* по языку: константа, *константное выражение*, *идентификатор*, *ключевое слово*, *оператор*и  *знак препинания*.
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о грамматике (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[Сводка по грамматике (C++C/)](../preprocessor/grammar-summary-c-cpp.md)

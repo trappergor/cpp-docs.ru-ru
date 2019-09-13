@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263819"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217275"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает строку переместить (`rep movsb`) инструкции.
+Создает инструкцию перемещения строки`rep movsb`().
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Назначение*<br/>
-[out] Указатель на место назначения копирования.
+*Местоназначение*\
+заполняет Указатель на место назначения копии.
 
-*Источник*<br/>
-[in] Указатель на источник копирования.
+*Source*\
+окне Указатель на источник копии.
 
-*Количество*<br/>
-[in] Число байтов для копирования.
+*Расчета*\
+окне Число байтов для копирования.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-В результате первый `Count` байт, на которые указывают `Source` копируются `Destination` строка.
+В результате первые `Count` байты, на которые указывает, `Source` копируются в `Destination` строку.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ A big black dog. A big black dog.
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

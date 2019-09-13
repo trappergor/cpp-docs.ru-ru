@@ -1,17 +1,17 @@
 ---
 title: Виртуальные функции
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393848"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926093"
 ---
 # <a name="virtual-functions"></a>Виртуальные функции
 
@@ -19,7 +19,7 @@ ms.locfileid: "62393848"
 
 Виртуальные функции обеспечивают вызов соответствующей функции для объекта независимо от выражения, используемого для вызова функции.
 
-Предположим, что базовый класс содержит функцию, объявленную как [виртуального](../cpp/virtual-cpp.md) и производный класс определяет ту же функцию. Функция производного класса вызывается для объектов производного класса, даже если она вызывается с помощью указателя или ссылки на базовый класс. В следующем примере показан базовый класс, который предоставляет реализацию функции `PrintBalance` и два производных класса.
+Предположим, что базовый класс содержит функцию, объявленную как [Виртуальная](../cpp/virtual-cpp.md) , а производный класс определяет ту же функцию. Функция производного класса вызывается для объектов производного класса, даже если она вызывается с помощью указателя или ссылки на базовый класс. В следующем примере показан базовый класс, который предоставляет реализацию функции `PrintBalance` и два производных класса.
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Вывод
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 Обратите внимание, что независимо от того, вызывается ли функция `NameOf` с помощью указателя на `Base` или указателя на `Derived`, вызывается функция для `Derived`. Вызывается функция для `Derived`, поскольку `NameOf` является виртуальной функцией, и `pBase` и `pDerived` указывают на объект типа `Derived`.
 
-Так как виртуальные функции вызываются только для объектов типов классов, нельзя объявлять глобальной или статической функции как **виртуального**.
+Поскольку виртуальные функции вызываются только для объектов типов классов, глобальные или статические функции нельзя объявлять как **Виртуальные**.
 
-**Виртуальных** слово может использоваться при объявлении переопределяющих функций в производном классе, но он не нужен; переопределения виртуальных функций всегда являются виртуальными.
+Ключевое слово **Virtual** можно использовать при объявлении переопределяемых функций в производном классе, но это не обязательно; переопределения виртуальных функций всегда являются виртуальными.
 
-Виртуальные функции в базовом классе необходимо определить, если они объявлены с помощью *чистый спецификатор*. (Дополнительные сведения о чистых виртуальных функций, см. в разделе [абстрактные классы](../cpp/abstract-classes-cpp.md).)
+Виртуальные функции в базовом классе должны быть определены, если они не объявлены с помощью *чистого описателя*. (Дополнительные сведения о чистых виртуальных функциях см. в разделе [абстрактные классы](../cpp/abstract-classes-cpp.md).)
 
 Механизм вызова виртуальных функций можно подавить, явно указав имя функции с помощью оператора разрешения области действия (`::`). Рассмотрим предыдущий пример с классом `Account`. Для вызова `PrintBalance` в базовом классе используйте следующий код.
 

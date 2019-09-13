@@ -1,6 +1,6 @@
 ---
 title: __incgsbyte, __incgsword, __incgsdword, __incgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incgsdword
 - __incgsqword_cpp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264027"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217795"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
+# <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte, __incgsword, __incgsdword, __incgsqword
 
 **Блок, относящийся только к системам Microsoft**
 
-Добавьте одно значение в ячейку памяти, указанной в качестве смещения относительно начала `GS` сегмента.
+Добавьте одно значение к значению в месте в памяти, заданном смещением относительно начала `GS` сегмента.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __incgsbyte(
    unsigned long Offset
 );
@@ -46,10 +46,10 @@ void __incgsqword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала `GS`.
+*Собой*\
+окне Смещение от начала `GS`.
 
 ## <a name="requirements"></a>Требования
 
@@ -60,15 +60,17 @@ void __incgsqword(
 |`__incgsdword`|X64|
 |`__incgsqword`|X64|
 
+**Заголовочный файл** \<> Intrin. h
+
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенная.
+Эти подпрограммы доступны только в качестве встроенных.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[\__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

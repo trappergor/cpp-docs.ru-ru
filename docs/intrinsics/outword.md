@@ -1,41 +1,41 @@
 ---
 title: Встроенная функция __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262961"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221403"
 ---
-# <a name="outword"></a>Встроенная функция __outword
+# <a name="__outword"></a>Встроенная функция __outword
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает `out` инструкция, которая отправляет слово `Data` номера порта ввода-вывода, определяемое `Port`.
+Формирует инструкцию, которая отправляет слово с *данными* о порте ввода-вывода, указанном портом. `out`
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Порт*<br/>
-[in] Порт для отправки данных.
+*Порту*\
+окне Порт, в который отправляются данные.
 
-*Данные*<br/>
-[in] Передаваемые данные.
+*Data*\
+окне Данные для отправки.
 
 ## <a name="requirements"></a>Требования
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
@@ -53,4 +53,4 @@ void __outword(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: check_stack
-ms.date: 11/04/2016
+title: Прагма check_stack
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
@@ -9,38 +9,37 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c976692ec36cedcb73825ee0cc7093736a3a3dc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212403"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216137"
 ---
-# <a name="checkstack"></a>check_stack
-Указывает компилятору на необходимость выключения стековых зондов, если `off` (или `-`) указан, или если включить стековые зонды `on` (или `+`) указан.
+# <a name="check_stack-pragma"></a>Прагма check_stack
+
+Указывает компилятору отключить зонды стека, если задано значение **Off** (или **-** ), или включить проверку стека, если задано значение **On** (или **+** ).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma check_stack([ {on | off}] )
-#pragma check_stack{+ | -}
-```
+> **#pragma check_stack (** [{ **On** | **Off** }] **)** \
+> **#pragma check_stack** { **+**  |  **-** }
 
 ## <a name="remarks"></a>Примечания
 
-Если аргумент не указан, стековые зонды обрабатываются в соответствии с настройкой по умолчанию. Эта директива #pragma начинает действовать с первой функции, определенной после вхождения данной директивы. Стековые зонды не являются частью макросов или функций, создаваемых как встроенные.
+Эта директива #pragma начинает действовать с первой функции, определенной после вхождения данной директивы. Стековые зонды не являются частью макросов или функций, создаваемых как встроенные.
 
-Если вы не предоставите аргумент для **check_stack** pragma, проверка стека возвращается к поведение, заданное в командной строке. Дополнительные сведения см. в разделе [справочнике по компилятору](../build/reference/compiler-options.md). Взаимодействие `#pragma check_stack` и [/GS](../build/reference/gs-control-stack-checking-calls.md) приведена в следующей таблице.
+Если не предоставить аргумент для директивы pragma **check_stack** , проверка стека вернется к поведению, указанному в командной строке. Дополнительные сведения см. в разделе [Параметры компилятора](../build/reference/compiler-options.md). В следующей таблице приведены `#pragma check_stack` сведения о взаимодействии параметров и параметра [/GS](../build/reference/gs-control-stack-checking-calls.md) .
 
-### <a name="using-the-checkstack-pragma"></a>Использование директивы #pragma check_stack
+### <a name="using-the-check_stack-pragma"></a>Использование директивы #pragma check_stack
 
 |Синтаксис|Скомпилировано с использованием<br /><br /> параметра /Gs?|Действие|
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` или<br /><br /> `#pragma check_stack`|Да|Отключает проверку стека для последующих функций|
 |`#pragma check_stack( )` или<br /><br /> `#pragma check_stack`|Нет|Включает проверку стека для последующих функций|
-|`#pragma check_stack(on)`<br /><br /> Или `#pragma check_stack +`|"Да" или "Нет"|Включает проверку стека для последующих функций|
-|`#pragma check_stack(off)`<br /><br /> Или `#pragma check_stack -`|"Да" или "Нет"|Отключает проверку стека для последующих функций|
+|`#pragma check_stack(on)`<br /><br /> ни`#pragma check_stack +`|"Да" или "Нет"|Включает проверку стека для последующих функций|
+|`#pragma check_stack(off)`<br /><br /> ни`#pragma check_stack -`|"Да" или "Нет"|Отключает проверку стека для последующих функций|
 
 ## <a name="see-also"></a>См. также
 
-[Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263208"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221720"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает строку переместить (`rep movsw`) инструкции.
+Создает инструкцию перемещения строки`rep movsw`().
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*dest*<br/>
-[out] Целевой для операции.
+*Местоназначение*\
+заполняет Назначение операции.
 
-*Источник*<br/>
-[in] Источник операции.
+*Source*\
+окне Источник операции.
 
-*Количество*<br/>
-[in] Число слов для копирования.
+*Расчета*\
+окне Число копируемых слов.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86, x64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-В результате первый `Count` слов, на которые указывают `Source` копируются `Dest` строка.
+В результате первые слова *Count* , на которые указывает *источник* , копируются в целевую строку.
 
 Эта процедура доступна только как встроенная функция.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -86,4 +86,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

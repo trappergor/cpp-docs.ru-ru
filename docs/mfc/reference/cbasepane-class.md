@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164170"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507460"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 
@@ -196,153 +196,153 @@ class CBasePane : public CWnd
 
 |name|Описание|
 |----------|-----------------|
-|`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` не используйте этот метод.|
-|`CBasePane::accSelect`|Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта. (Переопределяет [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CBasePane::AddPane](#addpane)|Добавляет панель в диспетчере закрепления.|
-|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Перенаправляет вызов в диспетчере закрепления, чтобы настроить макет закрепления.|
-|[CBasePane::AdjustLayout](#adjustlayout)|Вызывается платформой при области следует изменить его внутренней структуры.|
-|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Вычисляет размер по горизонтали на панели элементов управления.|
-|[CBasePane::CanAcceptPane](#canacceptpane)|Определяет, ли другой области можно прикреплять к области.|
-|[CBasePane::CanAutoHide](#canautohide)|Определяет, поддерживает ли области режим автоматического скрытия.|
-|[CBasePane::CanBeAttached](#canbeattached)|Определяет, закреплением панели на другую панель.|
-|[CBasePane::CanBeClosed](#canbeclosed)|Определяет, можно ли закрыть области.|
-|[CBasePane::CanBeDocked](#canbedocked)|Определяет, закреплением панели на другую панель.|
-|[CBasePane::CanBeResized](#canberesized)|Определяет, возможно ли изменение размеров области.|
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Указывает, может ли быть преобразован в документ с вкладками MDI области.|
-|[CBasePane::CanFloat](#canfloat)|Определяет, может ли перемещаться области.|
-|[CBasePane::CanFocus](#canfocus)|Указывает, может ли области получать фокус.|
-|[CBasePane::CopyState](#copystate)|Копирует состояние заданной области.|
-|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Если область может перемещаться, создает окна области.|
-|[CBasePane::CreateEx](#createex)|Создает панель управления.|
-|[CBasePane::DockPane](#dockpane)|Закрепляет область на другую панель, или в окне фрейма.|
-|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Закрепляет область с помощью сведений о типе времени выполнения.|
-|[CBasePane::DockToFrameWindow](#docktoframewindow)|Закрепляет закрепляемую панель кадр.|
-|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Определяет, могут ли другой области динамически вставлены между этой областью и родительского фрейма.|
-|[CBasePane::EnableDocking](#enabledocking)|Включает закрепление области в главном фрейме.|
-|[CBasePane::EnableGripper](#enablegripper)|Включает или отключает границу. Если значок захвата включен, пользователь может перетаскивать его, чтобы изменить положение панели.|
+|`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd:: акчиттест](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CBasePane::accLocation`|Вызвано платформой для получения текущего расположения на экране для указанного объекта. (Переопределяет [CWnd:: акклокатион](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CBasePane:: Аккнотифйобжектфокусевент](#accnotifyobjectfocusevent)|`CBasePane`не использует этот метод.|
+|`CBasePane::accSelect`|Вызывается платформой для изменения выбранной области или перемещения фокуса клавиатурного ввода указанного объекта. (Переопределяет [CWnd:: аккселект](../../mfc/reference/cwnd-class.md#accselect).)|
+|[CBasePane:: Аддпане](#addpane)|Добавляет панель в диспетчер закрепления.|
+|[CBasePane:: Аджустдоккинглайаут](#adjustdockinglayout)|Перенаправляет вызов диспетчеру закрепления для настройки макета закрепления.|
+|[CBasePane:: Аджустлайаут](#adjustlayout)|Вызывается структурой, когда область должна изменить ее внутренний макет.|
+|[CBasePane:: Калкфикседлайаут](#calcfixedlayout)|Вычисляет горизонтальный размер панели элементов управления.|
+|[CBasePane:: Канакцептпане](#canacceptpane)|Определяет, можно ли закрепить другую панель на панели.|
+|[CBasePane:: Канаутохиде](#canautohide)|Определяет, поддерживает ли панель режим автоматического скрытия.|
+|[CBasePane:: Канбеаттачед](#canbeattached)|Определяет, можно ли закрепить панель на другой панели.|
+|[CBasePane:: Канбеклосед](#canbeclosed)|Определяет, можно ли закрыть панель.|
+|[CBasePane:: Канбедоккед](#canbedocked)|Определяет, можно ли закрепить панель на другой панели.|
+|[CBasePane:: Канбересизед](#canberesized)|Определяет, можно ли изменить размер панели.|
+|[CBasePane:: Канбетаббеддокумент](#canbetabbeddocument)|Указывает, можно ли преобразовать область в документ с вкладками MDI.|
+|[CBasePane:: Канфлоат](#canfloat)|Определяет, может ли панель быть плавающей.|
+|[CBasePane:: Канфокус](#canfocus)|Указывает, может ли панель получать фокус.|
+|[CBasePane:: Копистате](#copystate)|Копирует состояние заданной панели.|
+|[CBasePane:: Креатедефаултминифраме](#createdefaultminiframe)|Если панель может быть плавающей, создает окно с мини-рамкой.|
+|[CBasePane:: Креатикс](#createex)|Создает элемент управления "панель".|
+|[CBasePane::D Оккпане](#dockpane)|Закрепляет панель на другой панели или в окне фрейма.|
+|[CBasePane::D Оккпанеусингртти](#dockpaneusingrtti)|Закрепляет панель с помощью сведений о типе времени выполнения.|
+|[CBasePane::D Окктофрамевиндов](#docktoframewindow)|Закрепляет закрепляемую область для рамки.|
+|[CBasePane::D Оесалловдининсертбефоре](#doesallowdyninsertbefore)|Определяет, можно ли динамически вставлять другую панель между этой панелью и родительским фреймом.|
+|[CBasePane:: Енабледоккинг](#enabledocking)|Включает закрепление панели в главном фрейме.|
+|[CBasePane:: Енаблегриппер](#enablegripper)|Включает или отключает захват. Если захват включен, пользователь может перетащить его, чтобы изменить расположение панели.|
 |`CBasePane::FillWindowRect`|Используется внутренним образом.|
-|[CBasePane::FloatPane](#floatpane)|Смещает области.|
-|`CBasePane::get_accChild`|Вызывается платформой для извлечения адреса интерфейса `IDispatch` для указанного дочернего элемента. (Переопределяет [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|`CBasePane::get_accChildCount`|Вызывается платформой для извлечения нескольких дочерних объектов, принадлежащих этому объекту. (Переопределяет [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CBasePane::get_accDefaultAction`|Вызывается платформой для извлечения строку, описывающую действие по умолчанию для объекта. (Переопределяет [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CBasePane::get_accDescription`|Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта. (Переопределяет [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|`CBasePane::get_accFocus`|Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода. (Переопределяет [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|`CBasePane::get_accHelp`|Вызывается платформой для извлечения строки свойства Help объекта. (Переопределяет [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Вызывается платформой для извлечения полного пути файла WinHelp, связанного с указанным объектом и идентификатором нужного раздела в этом файле. (Переопределяет [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|`CBasePane::get_accKeyboardShortcut`|Вызывается платформой для извлечения заданное сочетание клавиш для объекта. (Переопределяет [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CBasePane::get_accName`|Вызывается платформой для извлечения имени указанного объекта. (Переопределяет [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CBasePane::get_accParent`|Вызывается платформой для извлечения `IDispatch` интерфейс для родительского объекта. (Переопределяет [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
-|`CBasePane::get_accRole`|Вызывается платформой для извлечения информации, описывающей роль указанного объекта. (Переопределяет [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CBasePane::get_accSelection](#get_accselection)|Вызывается платформой для извлечения выбранного дочернего элемента этого объекта. (Переопределяет [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CBasePane::get_accState`|Вызывается платформой для извлечения текущего состояния указанного объекта. (Переопределяет [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CBasePane::get_accValue`|Вызывается платформой для извлечения значения указанного объекта. (Переопределяет [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CBasePane::GetCaptionHeight](#getcaptionheight)|Возвращает высоту заголовка.|
-|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Возвращает стиль панели управления.|
-|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Возвращает текущее выравнивание панели.|
-|[CBasePane::GetDockingMode](#getdockingmode)|Возвращает текущий режим закрепления для области.|
-|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Возвращает указатель на сайте закрепления для области окна.|
-|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Возвращает CBRS_ALIGN_ стили, которые применяются к области.|
-|[CBasePane::GetMFCStyle](#getmfcstyle)|Возвращает стили области, относящийся к MFC.|
-|[CBasePane::GetPaneIcon](#getpaneicon)|Возвращает дескриптор для значка панели.|
+|[CBasePane:: Флоатпане](#floatpane)|Перемещает панель в перемещаемую область.|
+|`CBasePane::get_accChild`|Вызывается платформой для извлечения адреса интерфейса `IDispatch` для указанного дочернего элемента. (Переопределяет [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|`CBasePane::get_accChildCount`|Вызвано платформой для получения количества дочерних элементов, принадлежащих этому объекту. (Переопределяет [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CBasePane::get_accDefaultAction`|Вызвано платформой для получения строки, описывающей действие по умолчанию для объекта. (Переопределяет [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CBasePane::get_accDescription`|Вызывается платформой для извлечения строки, описывающей внешний вид указанного объекта. (Переопределяет [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|`CBasePane::get_accFocus`|Вызывается платформой для извлечения объекта, имеющего фокус клавиатурного ввода. (Переопределяет [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|`CBasePane::get_accHelp`|Вызывается платформой для получения строки свойства справки для объекта. (Переопределяет [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CBasePane:: get_accHelpTopic](#get_acchelptopic)|Вызвано платформой для получения полного пути к файлу WinHelp, связанному с указанным объектом, и идентификатором соответствующего раздела в этом файле. (Переопределяет [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|`CBasePane::get_accKeyboardShortcut`|Вызвано структурой для получения указанного сочетания клавиш для объекта. (Переопределяет [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CBasePane::get_accName`|Вызывается платформой для извлечения имени указанного объекта. (Переопределяет [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CBasePane::get_accParent`|Вызывается платформой для получения `IDispatch` интерфейса для родителя объекта. (Переопределяет [CWnd:: get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
+|`CBasePane::get_accRole`|Вызывается платформой для извлечения информации, описывающей роль указанного объекта. (Переопределяет [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CBasePane:: get_accSelection](#get_accselection)|Вызывается платформой для извлечения выбранного дочернего элемента этого объекта. (Переопределяет [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CBasePane::get_accState`|Вызывается платформой для извлечения текущего состояния указанного объекта. (Переопределяет [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CBasePane::get_accValue`|Вызывается платформой для извлечения значения указанного объекта. (Переопределяет [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[CBasePane:: Жеткаптионхеигхт](#getcaptionheight)|Возвращает высоту заголовка.|
+|[CBasePane:: Жетконтролбарстиле](#getcontrolbarstyle)|Возвращает стиль панели элементов управления.|
+|[CBasePane:: Жеткурренталигнмент](#getcurrentalignment)|Возвращает выравнивание текущей области.|
+|[CBasePane:: Жетдоккингмоде](#getdockingmode)|Возвращает текущий режим закрепления для панели.|
+|[CBasePane:: Жетдоккситефрамевнд](#getdocksiteframewnd)|Возвращает указатель на окно, которое является сайтом закрепления для панели.|
+|[CBasePane:: Жетенабледалигнмент](#getenabledalignment)|Возвращает стили CBRS_ALIGN_, которые применяются к панели.|
+|[CBasePane:: Жетмфкстиле](#getmfcstyle)|Возвращает стили панели, относящиеся к MFC.|
+|[CBasePane:: Жетпанеикон](#getpaneicon)|Возвращает маркер значка панели.|
 |`CBasePane::GetPaneRect`|Используется внутренним образом.|
-|[CBasePane::GetPaneRow](#getpanerow)|Возвращает указатель на [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)объект место закрепления панели.|
-|[CBasePane::GetPaneStyle](#getpanestyle)|Возвращает стиль панели.|
-|[CBasePane::GetParentDockSite](#getparentdocksite)|Возвращает указатель на родительский сайт закрепления.|
-|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Возвращает указатель на родительское окно минифрейма.|
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Возвращает указатель на панель с вкладками родительского.|
-|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Возвращает указатель на родительское окно, на вкладке.|
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|Этот метод вызывается платформой, когда область восстанавливается из архива.|
-|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Указывает, скрыт ли области в режиме предварительного просмотра.|
-|[CBasePane::InsertPane](#insertpane)|Регистрирует указанную область в диспетчере закрепления.|
-|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Указывает, поддерживает ли области Active Accessibility.|
-|[CBasePane::IsAutoHideMode](#isautohidemode)|Определяет, находится ли область в режиме автоматического скрытия.|
-|[CBasePane::IsDialogControl](#isdialogcontrol)|Указывает, является ли области элемента управления диалогового окна.|
-|[CBasePane::IsDocked](#isdocked)|Определяет, закреплена ли области.|
-|[CBasePane::IsFloating](#isfloating)|Определяет, с плавающей запятой области.|
-|[CBasePane::IsHorizontal](#ishorizontal)|Определяет, закреплена ли области по горизонтали.|
-|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Указывает, является ли область в окне фрейма несколькими областями.|
-|[CBasePane::IsMDITabbed](#ismditabbed)|Определяет, добавлен ли области дочернего окна MDI как документ с вкладками.|
-|[CBasePane::IsPaneVisible](#ispanevisible)|Указывает, установлен ли флаг WS_VISIBLE для области.|
-|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Определяет, является ли указанная точка рядом с сайтом закрепления.|
-|[CBasePane::IsResizable](#isresizable)|Определяет, возможно ли изменение размеров области.|
-|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Определяет, восстанавливается ли области из реестра.|
-|[CBasePane::IsTabbed](#istabbed)|Определяет, ли области был вставлен в элементе управления "Вкладка" окна с вкладками.|
+|[CBasePane:: Жетпанеров](#getpanerow)|Возвращает указатель на объект [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), в котором закреплена панель.|
+|[CBasePane:: Жетпанестиле](#getpanestyle)|Возвращает стиль панели.|
+|[CBasePane:: Жетпарентдокксите](#getparentdocksite)|Возвращает указатель на родительский сайт закрепления.|
+|[CBasePane:: Жетпарентминифраме](#getparentminiframe)|Возвращает указатель на родительское окно мини-кадра.|
+|[CBasePane:: Жетпаренттаббедпане](#getparenttabbedpane)|Возвращает указатель на родительскую панель с вкладками.|
+|[CBasePane:: Жетпаренттабвнд](#getparenttabwnd)|Возвращает указатель на родительское окно, расположенное внутри вкладки.|
+|[CBasePane:: Жетрецентвисиблестате](#getrecentvisiblestate)|Платформа вызывает этот метод при восстановлении панели из архива.|
+|[CBasePane:: Хидеинпринтпревиевмоде](#hideinprintpreviewmode)|Указывает, скрыта ли панель в режиме предварительного просмотра.|
+|[CBasePane:: Инсертпане](#insertpane)|Регистрирует указанную панель с помощью диспетчера закрепления.|
+|[CBasePane:: Исакцессибилитикомпатибле](#isaccessibilitycompatible)|Указывает, поддерживает ли панель Active Accessibility.|
+|[CBasePane:: Исаутохидемоде](#isautohidemode)|Определяет, находится ли панель в режиме автоматического скрытия.|
+|[CBasePane:: Исдиалогконтрол](#isdialogcontrol)|Указывает, является ли панель элементом управления диалогового окна.|
+|[CBasePane:: DOCKER](#isdocked)|Определяет, закреплена ли панель.|
+|[CBasePane:: float](#isfloating)|Определяет, является ли панель плавающей.|
+|[CBasePane:: по горизонтали](#ishorizontal)|Определяет, закреплена ли панель по горизонтали.|
+|[CBasePane:: Исинфлоатингмултипанефрамевнд](#isinfloatingmultipaneframewnd)|Указывает, находится ли панель в окне фрейма с несколькими панелями.|
+|[CBasePane:: Исмдитаббед](#ismditabbed)|Определяет, была ли область добавлена в дочернее окно MDI в виде документа с вкладками.|
+|[CBasePane:: Испаневисибле](#ispanevisible)|Указывает, установлен ли флаг WS_VISIBLE для панели.|
+|[CBasePane:: Испоинтнеардокксите](#ispointneardocksite)|Определяет, находится ли указанная точка вблизи сайта закрепления.|
+|[CBasePane:: Исресизабле](#isresizable)|Определяет, можно ли изменить размер панели.|
+|[CBasePane:: Исресторедфромрегистри](#isrestoredfromregistry)|Определяет, восстанавливается ли панель из реестра.|
+|[CBasePane:: с вкладками](#istabbed)|Определяет, вставлена ли панель в элемент управления вкладки окна с вкладками.|
 |`CBasePane::IsTooltipTopmost`|Используется внутренним образом.|
-|[CBasePane::IsVisible](#isvisible)|Определяет, является ли видимой области.|
-|[CBasePane::LoadState](#loadstate)|Загружает состояние панели из реестра.|
-|[CBasePane::MoveWindow](#movewindow)|Перемещает область.|
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительской области.|
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой непосредственно перед области изменении его родительского окна.|
-|[CBasePane::OnDrawCaption](#ondrawcaption)|Этот метод вызывается платформой при рисовании заголовок.|
-|[CBasePane::OnMovePaneDivider](#onmovepanedivider)|В настоящее время этот метод не используется.|
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Вызывается платформой при построении меню, которое содержит список областей.|
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Вызывается платформой, когда область удаляется из его родительского окна мини-рамки.|
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` не используйте этот метод.|
+|[CBasePane:: Visible](#isvisible)|Определяет, видима ли панель.|
+|[CBasePane:: LoadState](#loadstate)|Загружает состояние панели из реестра.|
+|[CBasePane:: Мовевиндов](#movewindow)|Перемещает панель.|
+|[CBasePane:: Онафтерчанжепарент](#onafterchangeparent)|Вызывается структурой при изменении родителя панели.|
+|[CBasePane:: Онбефоречанжепарент](#onbeforechangeparent)|Вызывается платформой непосредственно перед тем, как панель изменит свое родительское окно.|
+|[CBasePane:: Ондравкаптион](#ondrawcaption)|Платформа вызывает этот метод при прорисовке заголовка.|
+|[CBasePane:: Онмовепанедивидер](#onmovepanedivider)|Этот метод в настоящее время не используется.|
+|[CBasePane:: Онпанеконтекстмену](#onpanecontextmenu)|Вызывается платформой при построении меню со списком панелей.|
+|[CBasePane:: Онремовефромминифраме](#onremovefromminiframe)|Вызывается структурой при удалении панели из родительского окна мини-фрейма.|
+|[CBasePane:: Онсетаккдата](#onsetaccdata)|`CBasePane`не использует этот метод.|
 |`CBasePane::OnUpdateCmdUI`|Используется внутренним образом.|
-|[CBasePane::PaneFromPoint](#panefrompoint)|Возвращает область, содержащее заданную точку.|
-|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` не используйте этот метод.|
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из списка в диспетчере закрепления.|
-|[CBasePane::SaveState](#savestate)|Сохраняет состояние панели в реестр.|
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Выбирает шрифт по умолчанию для контекста устройства.|
+|[CBasePane::P Анефромпоинт](#panefrompoint)|Возвращает панель, содержащую заданную точку.|
+|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CBasePane:: RecalcLayout](#recalclayout)|`CBasePane`не использует этот метод.|
+|[CBasePane:: Ремовепанефромдоккманажер](#removepanefromdockmanager)|Отменяет регистрацию панели и удаляет ее из списка в диспетчере закрепления.|
+|[CBasePane:: SaveState](#savestate)|Сохраняет состояние панели в реестр.|
+|[CBasePane:: Селектдефаултфонт](#selectdefaultfont)|Выбирает шрифт по умолчанию для данного контекста устройства.|
 |`CBasePane::Serialize`|Считывает этот объект из архива или записывает в него. (Переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Задает стиль панели управления.|
-|[CBasePane::SetDockingMode](#setdockingmode)|Задает режим для области закрепления.|
+|[CBasePane:: Сетконтролбарстиле](#setcontrolbarstyle)|Задает стиль панели управления.|
+|[CBasePane:: Сетдоккингмоде](#setdockingmode)|Задает режим стыковки для панели.|
 |`CBasePane::SetMDITabbed`|Используется внутренним образом.|
-|[CBasePane::SetPaneAlignment](#setpanealignment)|Задает выравнивание для области.|
+|[CBasePane:: Сетпанеалигнмент](#setpanealignment)|Задает выравнивание для панели.|
 |`CBasePane::SetPaneRect`|Используется внутренним образом.|
-|[CBasePane::SetPaneStyle](#setpanestyle)|Задает стиль области.|
+|[CBasePane:: Сетпанестиле](#setpanestyle)|Задает стиль панели.|
 |`CBasePane::SetRestoredFromRegistry`|Используется внутренним образом.|
-|[CBasePane::SetWindowPos](#setwindowpos)|Изменяет размер, положение и Z-порядок панели.|
-|[CBasePane::ShowPane](#showpane)|Показывает или скрывает область.|
-|[CBasePane::StretchPane](#stretchpane)|Растягивает панель по вертикали или горизонтали.|
-|[CBasePane::UndockPane](#undockpane)|Удаляет области из сайта закрепления, по умолчанию ползунок или окна области, где она в настоящее время закреплена.|
+|[CBasePane:: SetWindowPos](#setwindowpos)|Изменяет размер, расположение и Z-порядок панели.|
+|[CBasePane:: Шовпане](#showpane)|Показывает или скрывает панель.|
+|[CBasePane:: Стретчпане](#stretchpane)|Растягивает панель по вертикали или горизонтали.|
+|[CBasePane:: Ундоккпане](#undockpane)|Удаляет панель с сайта закрепления, ползунка по умолчанию или окно мини-кадра, в котором она в данный момент закреплена.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|
+|[CBasePane::D Опаинт](#dopaint)|Заполняет фон панели.|
 
 ## <a name="remarks"></a>Примечания
 
-Если вы хотите создать класс области, который поддерживает расширенные функции закрепления, доступные в MFC, необходимо выполнить наследование из `CBasePane` или из [класс CPane](../../mfc/reference/cpane-class.md).
+Если вы хотите создать класс панели, поддерживающий расширенные функции стыковки, доступные в MFC, необходимо наследовать его от `CBasePane` [класса CPane](../../mfc/reference/cpane-class.md)или.
 
 ## <a name="customization-tips"></a>Советы по настройке
 
-Следующие советы настройки относятся к `CBasePane Class` и всем классам, наследующим от него:
+Следующие советы по настройке относятся к `CBasePane Class` и любым классам, наследующим от него:
 
-- При создании области можно применить несколько новых стилей.
+- При создании области можно применить несколько новых стилей:
 
-  - AFX_CBRS_FLOAT делает float области.
+  - AFX_CBRS_FLOAT делает панель плавающей.
 
   - AFX_CBRS_AUTOHIDE включает режим автоматического скрытия.
 
-  - AFX_CBRS_CLOSE включает области, чтобы закрыть (скрытый).
+  - AFX_CBRS_CLOSE позволяет закрыть панель (скрытой).
 
   Это флаги, которые можно комбинировать с помощью операции побитового или.
 
-`CBasePane` реализует следующие виртуальные методы логическое чтобы отразить эти флаги: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Их можно переопределить в производных классах для настройки их поведения.
+`CBasePane`реализует следующие виртуальные логические методы для отражения этих флагов: [CBasePane:: канбеклосед](#canbeclosed), [CBasePane:: канаутохиде](#canautohide), [CBasePane:: канфлоат](#canfloat). Их можно переопределить в производных классах, чтобы настроить их поведение.
 
-- Вы можете настроить поведение прикрепления, переопределение [CBasePane::CanAcceptPane](#canacceptpane). У вашей панели возвращает значение FALSE из этого метода, чтобы предотвратить другую панель закрепления к нему.
+- Поведение закрепления можно настроить путем переопределения [CBasePane:: канакцептпане](#canacceptpane). Чтобы панель не заблокировалась, она возвращает FALSE из этого метода.
 
-- Если вы хотите создать статический область, не могут перемещаться и, запрещает закрепление перед ним любые другие области (аналогично панели Outlook в примере OutlookDemo), создайте его как неплавающего и переопределить [CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore) вернет FALSE. Реализация по умолчанию возвращает значение FALSE, если область создана без AFX_CBRS_FLOAT стиль.
+- Если необходимо создать статическую панель, которая не может быть плавающей и не допустить закрепления других панелей перед ней (аналогично панели Outlook в примере Аутлукдемо), создайте ее как неплавающую и переопределите [CBasePane::D оесалловдининсертбефоре](#doesallowdyninsertbefore) для возврата IsFalse. Реализация по умолчанию возвращает значение FALSE, если панель создается без стиля AFX_CBRS_FLOAT.
 
-- Создайте все панели с идентификаторами, отличным от -1.
+- Создайте все панели с идентификаторами, отличными от-1.
 
-- Чтобы определить область видимости, используйте [CBasePane::IsVisible](#isvisible). Он правильно обрабатывает состояние видимости в с вкладками и режима автоматического скрытия.
+- Чтобы определить видимость панели, используйте [CBasePane:: Visible](#isvisible). Он правильно обрабатывает состояние видимости в режимах табуляции и автоматического скрытия.
 
-- Если вы хотите создать область неплавающего переменного размера, создайте его без AFX_CBRS_FLOAT стиля и вызов [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
+- Если вы хотите создать неплавающую панель с изменяемыми размерами, создайте ее без стиля AFX_CBRS_FLOAT и вызовите метод [CFrameWnd::D оккконтролбар](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
 
-- Запрет макет закрепления в области или удалить его панели закрепления панели инструментов, вызовите [CBasePane::UndockPane](#undockpane). Не вызывайте этот метод, областями в режиме автоматического скрытия или областей, которые находятся на вкладках окон с вкладками.
+- Чтобы исключить панель из макета закрепления или удалить панель инструментов с панели закрепления, вызовите [CBasePane:: ундоккпане](#undockpane). Не вызывайте этот метод для панелей в режиме автоматического скрытия или для панелей, расположенных на вкладках окон с вкладками.
 
-- Если вы хотите float или открепить область, в которой находится в режиме автоматического скрытия, необходимо вызвать [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) со значением FALSE в качестве первого аргумента, перед вызовом метода [CBasePane::FloatPane](#floatpane) или [ CBasePane::UndockPane](#undockpane).
+- Если требуется переместить или отстыковать область, которая находится в режиме автоматического скрытия, необходимо вызвать [CDockablePane:: сетаутохидемоде](../../mfc/reference/cdockablepane-class.md#setautohidemode) с false в качестве первого аргумента перед вызовом [CBasePane:: флоатпане](#floatpane) или [CBasePane:: ундоккпане](#undockpane).
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CBasePane` . В примере показано получение области из `CFrameWndEx` класс и как задать режим закрепления панели выравнивание и стиль панели. Приведенный код взят из [примера Word Pad](../../overview/visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CBasePane` . В примере показано, как получить панель из `CFrameWndEx` класса и как задать режим закрепления, выравнивание панели и стиль панели. Код представлен в образце [Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -358,11 +358,11 @@ class CBasePane : public CWnd
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxbasepane.h
+**Заголовок:** афксбасепане. h
 
-##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent
+##  <a name="accnotifyobjectfocusevent"></a>CBasePane:: Аккнотифйобжектфокусевент
 
-`CBasePane` не используйте этот метод.
+`CBasePane`не использует этот метод.
 
 ```
 virtual void AccNotifyObjectFocusEvent(int);
@@ -371,11 +371,11 @@ virtual void AccNotifyObjectFocusEvent(int);
 ### <a name="parameters"></a>Параметры
 
 *int*<br/>
-[in] Не используется.
+окне Не используется.
 
-##  <a name="addpane"></a>  CBasePane::AddPane
+##  <a name="addpane"></a>CBasePane:: Аддпане
 
-Добавляет панель в диспетчере закрепления.
+Добавляет панель в диспетчер закрепления.
 
 ```
 void AddPane(CBasePane* pBar);
@@ -383,18 +383,18 @@ void AddPane(CBasePane* pBar);
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-[in] Указатель на область для добавления.
+*пбар*<br/>
+окне Указатель на область для добавления.
 
 ### <a name="remarks"></a>Примечания
 
-Это удобный метод, который добавляет панель в диспетчере закрепления. С помощью этого метода, не нужно писать код, который анализирует тип родительского фрейма.
+Это удобный метод, который добавляет панель в диспетчер закрепления. С помощью этого метода не нужно писать код, который анализирует тип родительского фрейма.
 
-Дополнительные сведения см. в разделе [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) и [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).
+Дополнительные сведения см. в разделе [класс кдоккингманажер](../../mfc/reference/cdockingmanager-class.md) и [CMDIFrameWndEx:: аддпане](../../mfc/reference/cmdiframewndex-class.md#addpane).
 
-##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CBasePane:: Аджустдоккинглайаут
 
-Перенаправляет вызов в диспетчере закрепления, чтобы настроить макет закрепления.
+Перенаправляет вызов диспетчеру закрепления для настройки макета закрепления.
 
 ```
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
@@ -402,18 +402,18 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*hdwp*<br/>
-[out] Дескриптор на структуру, содержащую несколько позиций окон.
+*хдвп*<br/>
+заполняет Маркер структуры, содержащей несколько позиций окна.
 
 ### <a name="remarks"></a>Примечания
 
-Это удобный метод, который настраивает макет закрепления. С помощью этого метода, не нужно писать код, который анализирует тип родительского фрейма.
+Это удобный метод, который корректирует макет закрепления. С помощью этого метода не нужно писать код, который анализирует тип родительского фрейма.
 
-Дополнительные сведения см. в разделе [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
+Дополнительные сведения см. в разделе [кдоккингманажер:: аджустдоккинглайаут](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
 
-##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout
+##  <a name="adjustlayout"></a>CBasePane:: Аджустлайаут
 
-Вызывается платформой для настройки макета внутренней области.
+Вызывается платформой для корректировки внутреннего макета панели.
 
 ```
 virtual void AdjustLayout();
@@ -421,11 +421,11 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой при области, который необходимо настроить его внутренней структуры. Базовая реализация ничего не делает.
+Платформа вызывает этот метод, когда область должна изменить ее внутренний макет. Базовая реализация ничего не делает.
 
-##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CBasePane:: Калкфикседлайаут
 
-Вычисляет размер по горизонтали на панели элементов управления.
+Вычисляет горизонтальный размер панели элементов управления.
 
 ```
 virtual CSize CalcFixedLayout(
@@ -435,23 +435,23 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Параметры
 
-*bStretch*<br/>
-[in] Указывает, должен быть растянут панели, размер кадра. *BStretch* параметр имеет ненулевое значение, если панели не закрепляемую панель, (недоступно для закрепления) и доступна 0 при закрепленными или с плавающей запятой (закрепления).
+*бстретч*<br/>
+окне Указывает, следует ли растянуть линию до размера рамки. Параметр *бстретч* имеет ненулевое значение, если панель не является закрепляемой (недоступна для закрепления) и равна 0, когда она закреплена или плавающая (доступна для закрепления).
 
-*bHorz*<br/>
-[in] Указывает, что полоса становится горизонтальной или вертикальной. *BHorz* параметр имеет ненулевое значение, если в строке его компонент ориентирован горизонтально и равно 0, если он его компонент ориентирован вертикально.
+*бхорз*<br/>
+окне Указывает, что линейка горизонтально или вертикально. Параметр *бхорз* имеет ненулевое значение, если линейка ориентирован горизонтально и имеет значение 0, если оно вертикально.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-На панели управления размер в пикселях из `CSize` объекта.
+Размер панели управления (в пикселях) `CSize` объекта.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе "Примечания" [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
+См. раздел "Примечания" в [CControlBar:: калкфикседлайаут](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane
+##  <a name="canacceptpane"></a>CBasePane:: Канакцептпане
 
-Определяет, ли другой области можно прикреплять к области.
+Определяет, можно ли закрепить другую панель на панели.
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -459,24 +459,24 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-[in] Указатель на область для закрепления.
+*пбар*<br/>
+окне Указатель на область для закрепления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если может быть принят другой области; в противном случае — значение FALSE.
+Значение TRUE, если можно принять другую область. в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой перед его закрепляет область, определяемое *pBar* для текущей области.
+Платформа вызывает этот метод перед тем, как закрепляет панель, указанную параметром *пбар* , на текущую панель.
 
-Используйте этот метод и [CBasePane::CanBeDocked](#canbedocked) метод для управления, как панели закрепления на другие панели в приложении.
+Используйте этот метод и метод [CBasePane:: канбедоккед](#canbedocked) для управления тем, как панели закрепляются на других панелях приложения.
 
 Реализация по умолчанию возвращает значение FALSE.
 
-##  <a name="canautohide"></a>  CBasePane::CanAutoHide
+##  <a name="canautohide"></a>CBasePane:: Канаутохиде
 
-Определяет, поддерживает ли области режим автоматического скрытия.
+Определяет, поддерживает ли панель режим автоматического скрытия.
 
 ```
 virtual BOOL CanAutoHide() const;
@@ -484,19 +484,19 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если эта область поддерживает режим автоматического скрытия; в противном случае — значение FALSE.
+Значение TRUE, если эта панель поддерживает режим автоматического скрытия; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает эту функцию, чтобы определить, поддерживает ли области режим автоматического скрытия.
+Платформа вызывает эту функцию, чтобы определить, поддерживает ли панель режим автоматического скрытия.
 
-Во время построения, эту возможность можно задать, передав флаг AFX_CBRS_AUTOHIDE [CBasePane::CreateEx](#createex).
+Во время создания можно задать эту возможность, передав флаг AFX_CBRS_AUTOHIDE в [CBasePane:: креатикс](#createex).
 
-Реализация по умолчанию проверяет AFX_CBRS_AUTOHIDE флага. Переопределите этот метод в производном классе, чтобы настроить это поведение.
+Реализация по умолчанию проверяет флаг AFX_CBRS_AUTOHIDE. Переопределите этот метод в производном классе, чтобы настроить это поведение.
 
-##  <a name="canbeattached"></a>  CBasePane::CanBeAttached
+##  <a name="canbeattached"></a>CBasePane:: Канбеаттачед
 
-Определяет, закреплением области к другой панели или окне фрейма.
+Определяет, можно ли закрепить панель в другой области или окне фрейма.
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -504,15 +504,15 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если области можно прикреплять к другой панели или окне фрейма; в противном случае — значение FALSE.
+Значение TRUE, если область может быть закреплена на другой панели или в окне фрейма; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию возвращает значение FALSE. Переопределите этот метод в производном классе, чтобы включить или отключить возможность закрепления без вызова [CBasePane::EnableDocking](#enabledocking).
+Реализация по умолчанию возвращает значение FALSE. Переопределите этот метод в производном классе, чтобы включить или отключить возможность закрепления без вызова [CBasePane:: енабледоккинг](#enabledocking).
 
-##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed
+##  <a name="canbeclosed"></a>CBasePane:: Канбеклосед
 
-Определяет, можно ли закрыть области.
+Определяет, можно ли закрыть панель.
 
 ```
 virtual BOOL CanBeClosed() const;
@@ -520,19 +520,19 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область можно закрыть; в противном случае — значение FALSE.
+Значение TRUE, если область может быть закрыта; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, чтобы определить, можно ли закрыть области. Если метод возвращает значение TRUE, **закрыть** добавляется кнопка заголовка панели или, если панель открывается как плавающее окно, в заголовке окна плавающего окна области.
+Платформа вызывает этот метод, чтобы определить, можно ли закрыть панель. Если метод возвращает значение TRUE, кнопка **Закрыть** добавляется в строку заголовка панели или, если она является плавающей, в строку заголовка окна плавающего панели.
 
-Во время построения, эту возможность можно задать, передав флаг AFX_CBRS_CLOSE [CBasePane::CreateEx](#createex).
+Во время создания можно задать эту возможность, передав флаг AFX_CBRS_CLOSE в [CBasePane:: креатикс](#createex).
 
-Реализация по умолчанию проверяет AFX_CBRS_CLOSE флага.
+Реализация по умолчанию проверяет флаг AFX_CBRS_CLOSE.
 
-##  <a name="canbedocked"></a>  CBasePane::CanBeDocked
+##  <a name="canbedocked"></a>CBasePane:: Канбедоккед
 
-Определяет, закреплением панели на другую панель.
+Определяет, можно ли закрепить панель на другой панели.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -540,24 +540,24 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pDockBar*<br/>
-[in] Указатель на другую панель.
+*пдоккбар*<br/>
+окне Указатель на другую панель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если в этой области можно прикреплять к другой области; в противном случае — значение FALSE.
+Значение TRUE, если эту область можно закрепить на другой панели; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой перед его закрепляет область, определяемое *pDockBar* для текущей области.
+Платформа вызывает этот метод перед тем, как закрепляет панель, указанную параметром *пдоккбар* , на текущую панель.
 
-Используйте этот метод и [CBasePane::CanAcceptPane](#canacceptpane) метод для управления, как панели закрепления на другие панели в приложении.
+Используйте этот метод и метод [CBasePane:: канакцептпане](#canacceptpane) для управления тем, как панели закрепляются на других панелях приложения.
 
 Реализация по умолчанию возвращает значение FALSE.
 
-##  <a name="canberesized"></a>  CBasePane::CanBeResized
+##  <a name="canberesized"></a>CBasePane:: Канбересизед
 
-Определяет, возможно ли изменение размеров области.
+Определяет, можно ли изменить размер панели.
 
 ```
 virtual BOOL CanBeResized() const;
@@ -565,15 +565,15 @@ virtual BOOL CanBeResized() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если можно изменять размер области; в противном случае — значение FALSE.
+Значение TRUE, если размер области можно изменить; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод проверяет AFX_CBRS_RESIZE флаг, который задается по умолчанию в `CBasePane::OnCreate`. Если этот флаг не задан, в диспетчере закрепления флаги области нахождения вместо закрепить ее внутренним образом.
+Этот метод проверяет флаг AFX_CBRS_RESIZE, который задается по умолчанию в `CBasePane::OnCreate`. Если этот флаг не указан, диспетчер стыковки помечает панель как неперемещаемую вместо закрепления.
 
-##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument
+##  <a name="canbetabbeddocument"></a>CBasePane:: Канбетаббеддокумент
 
-Указывает, может ли быть преобразован в документ с вкладками MDI области.
+Указывает, можно ли преобразовать область в документ с вкладками MDI.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -581,15 +581,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область может быть преобразован в документ с вкладками; в противном случае — значение FALSE. `CBasePane::CanBeTabbedDocument` Всегда возвращает значение FALSE.
+Значение TRUE, если область можно преобразовать в документ с вкладками; в противном случае — значение FALSE. `CBasePane::CanBeTabbedDocument`всегда возвращает значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Только объекты, определенные `CBasePane`-производные типы, такие как [класс CDockablePane](../../mfc/reference/cdockablepane-class.md), может быть преобразован в документы с вкладками.
+Только объекты определенных `CBasePane`производных типов, например [класс CDockablePane](../../mfc/reference/cdockablepane-class.md), можно преобразовать в документы с вкладками.
 
-##  <a name="canfloat"></a>  CBasePane::CanFloat
+##  <a name="canfloat"></a>CBasePane:: Канфлоат
 
-Определяет, может ли перемещаться области.
+Определяет, может ли панель быть плавающей.
 
 ```
 virtual BOOL CanFloat() const;
@@ -597,22 +597,22 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область может перемещаться; в противном случае — значение FALSE.
+Значение TRUE, если панель может быть плавающей; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, чтобы определить, может ли перемещаться области.
+Платформа вызывает этот метод, чтобы определить, может ли панель быть плавающей.
 
-Во время построения, эту возможность можно задать, передав флаг AFX_CBRS_FLOAT [CBasePane::CreateEx](#createex).
+Во время создания можно задать эту возможность, передав флаг AFX_CBRS_FLOAT в [CBasePane:: креатикс](#createex).
 
 > [!NOTE]
->  Framework предполагает, что неплавающего области являются статическими и не могли изменять их состояние закрепления. Таким образом платформа не сохраняет состояние закрепления неплавающего областей.
+>  Платформа предполагает, что неплавающие панели являются статическими и их состояние закрепления не может измениться. Таким образом, платформа не сохраняет состояние закрепления неплавающих панелей.
 
-Реализация по умолчанию проверяет AFX_CBRS_FLOAT стиля.
+Реализация по умолчанию проверяет стиль AFX_CBRS_FLOAT.
 
-##  <a name="canfocus"></a>  CBasePane::CanFocus
+##  <a name="canfocus"></a>CBasePane:: Канфокус
 
-Указывает, может ли области получать фокус.
+Указывает, может ли панель получать фокус.
 
 ```
 virtual BOOL CanFocus() const;
@@ -620,17 +620,17 @@ virtual BOOL CanFocus() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область может получать фокус; в противном случае — значение FALSE.
+Значение TRUE, если область может получать фокус; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод в производном классе для управления фокус. Например так как панели инструментов не может получать фокус, этот метод возвращает значение FALSE, когда он вызывается для объектов панели инструментов.
+Переопределите этот метод в производном классе, чтобы управлять фокусом. Например, поскольку панели инструментов не могут получать фокус, этот метод возвращает значение FALSE при вызове для объектов панели инструментов.
 
-Платформа framework пытается задать фокус ввода, когда закрепления или оставить плавающим, область.
+Платформа пытается установить фокус ввода, когда область закреплена или плавающая.
 
-##  <a name="copystate"></a>  CBasePane::CopyState
+##  <a name="copystate"></a>CBasePane:: Копистате
 
-Копирует состояние заданной области.
+Копирует состояние заданной панели.
 
 ```
 virtual void CopyState(CBasePane* pOrgBar);
@@ -638,16 +638,16 @@ virtual void CopyState(CBasePane* pOrgBar);
 
 ### <a name="parameters"></a>Параметры
 
-*pOrgBar*<br/>
-[in] Указатель на другую панель.
+*поргбар*<br/>
+окне Указатель на другую панель.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод копирует состояние с *pOrgBar* на эту панель.
+Этот метод копирует состояние из *поргбар* в эту панель.
 
-##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CBasePane:: Креатедефаултминифраме
 
-Если область может перемещаться, этот метод создает окно области для него.
+Если панель может быть плавающей, этот метод создает для него окно с мини-рамкой.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -655,22 +655,22 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>Параметры
 
-*rectInitial*<br/>
-[in] Указывает начальное координаты окна области.
+*ректинитиал*<br/>
+окне Задает начальные координаты окна мини-кадра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новый окна области или значение NULL, если не удалось создать.
+Указатель на новое окно мини-кадра или значение NULL, если создание завершилось ошибкой.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, если область переключается в плавающем состоянии. Метод создает окно области и присоединяет области для этого окна.
+Платформа вызывает этот метод, когда панель переключается в плавающее состояние. Метод создает окно с мини-рамкой и прикрепляет область к этому окну.
 
 Реализация по умолчанию возвращает значение NULL.
 
-##  <a name="createex"></a>  CBasePane::CreateEx
+##  <a name="createex"></a>CBasePane:: Креатикс
 
-Создает панель управления.
+Создает элемент управления "панель".
 
 ```
 virtual BOOL CreateEx(
@@ -687,60 +687,60 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*dwStyleEx*<br/>
-[in] Расширенные стили (см. в разделе [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Дополнительные сведения).
+*двстиликс*<br/>
+окне Расширенные стили (Дополнительные сведения см. в разделе [CWnd:: креатикс](../../mfc/reference/cwnd-class.md#createex) ).
 
-*lpszClassName*<br/>
-[in] Имя класса окна.
+*лпсзкласснаме*<br/>
+окне Имя класса окна.
 
-*lpszWindowName*<br/>
-[in] Имя окна.
+*лпсзвиндовнаме*<br/>
+окне Имя окна.
 
-*dwStyle*<br/>
-[in] Стиль окна (см. в разделе [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
+*двстиле*<br/>
+окне Стиль окна (см. раздел [CWnd:: креатикс](../../mfc/reference/cwnd-class.md#createex)).
 
 *rect*<br/>
-[in] Исходного прямоугольника.
+окне Начальный прямоугольник.
 
-*pParentWnd*<br/>
-[in] Указатель на родительское окно.
+*ппарентвнд*<br/>
+окне Указатель на родительское окно.
 
 *nID*<br/>
-[in] Указывает идентификатор области. Должно быть уникальным.
+окне Указывает идентификатор панели. Должно быть уникальным.
 
-*dwControlBarStyle*<br/>
-[in] Флагов стилей для панели.
+*двконтролбарстиле*<br/>
+окне Флаги стиля для областей.
 
 *pContext*<br/>
-[in] Указатель на `CcreateContext`
+окне Указатель на`CcreateContext`
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область создана успешно. в противном случае — значение FALSE.
+Значение TRUE, если панель создана успешно; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Создает окно класса `lpszClassName`. Если указать WS_CAPTION, этот метод очищает бит стиля WS_CAPTION и задает `CBasePane::m_bHasCaption` значение true, так как библиотека не поддерживает области с субтитрами.
+Создает окно класса `lpszClassName`. При указании WS_CAPTION этот метод очищает бит стиля WS_CAPTION и устанавливает `CBasePane::m_bHasCaption` значение true, так как библиотека не поддерживает панели с заголовками.
 
-Можно использовать любое сочетание стилей окна дочерних и панель (CBRS_) стили элементов управления MFC.
+Можно использовать любое сочетание стилей дочерних окон и стилей элементов управления MFC (CBRS_).
 
-Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:
+Библиотека добавляет несколько новых стилей для панелей. В следующей таблице описаны новые стили.
 
 |Стиль|Описание|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Области может перемещаться.|
-|AFX_CBRS_AUTOHIDE|Область поддерживает режим автоматического скрытия|
-|AFX_CBRS_RESIZE|Размер области может быть изменен. **Внимание!**  Этот стиль не реализован.|
-|AFX_CBRS_CLOSE|При закрытии области.|
-|AFX_CBRS_AUTO_ROLLUP|Возможность выполнять сведение области, когда отображается.|
-|AFX_CBRS_REGULAR_TABS|При на другую панель, в которой этот стиль закрепляет одну область, создается регулярное окна с вкладками. (Дополнительные сведения см. в разделе [класс CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
-|AFX_CBRS_OUTLOOK_TABS|При на другую панель, в которой этот стиль закрепляет одну область, создается окно с вкладками в стиле Outlook. (Дополнительные сведения см. в разделе [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).)|
+|AFX_CBRS_FLOAT|Панель может быть плавающей.|
+|AFX_CBRS_AUTOHIDE|Панель поддерживает режим автоматического скрытия|
+|AFX_CBRS_RESIZE|Размер панели можно изменить. **Важно!**  Этот стиль не реализован.|
+|AFX_CBRS_CLOSE|Область может быть закрыта.|
+|AFX_CBRS_AUTO_ROLLUP|Область может быть сведена, когда она перемещается.|
+|AFX_CBRS_REGULAR_TABS|Когда одна панель закрепляется на другой панели с этим стилем, создается обычное окно с вкладками. (Дополнительные сведения см. в разделе [класс ктаббедпане](../../mfc/reference/ctabbedpane-class.md).)|
+|AFX_CBRS_OUTLOOK_TABS|Когда одна панель закрепляется на другой панели с этим стилем, создается окно с вкладками в стиле Outlook. (Дополнительные сведения см. в разделе [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).)|
 
-Чтобы использовать новые стили, укажите их в *dwControlBarStyle*.
+Чтобы использовать новые стили, укажите их в *двконтролбарстиле*.
 
-##  <a name="dockpane"></a>  CBasePane::DockPane
+##  <a name="dockpane"></a>CBasePane::D Оккпане
 
-Закрепляет область на другую панель, или в окне фрейма.
+Закрепляет панель на другой панели или в окне фрейма.
 
 ```
 virtual BOOL DockPane(
@@ -751,28 +751,28 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Параметры
 
-*pDockBar*<br/>
-[in] Указатель на другую панель.
+*пдоккбар*<br/>
+окне Указатель на другую панель.
 
-*lpRect*<br/>
-[in] Указывает прямоугольник назначения.
+*лпрект*<br/>
+окне Задает прямоугольник назначения.
 
 *dockMethod*<br/>
-[in] Задает метод закрепления.
+окне Задает метод закрепления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если успешно; был закреплен на панели управления в противном случае — значение FALSE.
+Значение TRUE, если панель управления успешно закреплена; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Вызывайте эту функцию, чтобы закрепить панель для другой области или панель закрепления ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)), указанным параметром *pDockBar*, или для главного фрейма Если *pDockBar* имеет значение NULL.
+Вызывайте эту функцию, чтобы закрепить панель на другой панели или в строке закрепления ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)), заданной параметром *пдоккбар*, или в основной кадр, если *пдоккбар* имеет значение null.
 
-*dockMethod* указывает, каким образом закрепленной панели. См. в разделе [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) список возможных значений.
+*доккмесод* указывает, как закреплена панель. Список возможных значений см. в разделе [CPane::D оккпане](../../mfc/reference/cpane-class.md#dockpane) .
 
-##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI
+##  <a name="dockpaneusingrtti"></a>CBasePane::D Оккпанеусингртти
 
-Закрепляет область с помощью сведений о типе времени выполнения.
+Закрепляет панель с помощью сведений о типе времени выполнения.
 
 ```
 void DockPaneUsingRTTI(BOOL bUseDockSite);
@@ -780,12 +780,12 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 
 ### <a name="parameters"></a>Параметры
 
-*bUseDockSite*<br/>
-[in] Значение TRUE, если закрепите на сайте закрепления. Если значение равно FALSE, закрепите родительского фрейма.
+*буседокксите*<br/>
+окне Если значение — TRUE, закрепите на сайте закрепления. Если значение равно FALSE, закрепите в родительском фрейме.
 
-##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow
+##  <a name="docktoframewindow"></a>CBasePane::D Окктофрамевиндов
 
-Закрепляет закрепляемую панель кадр.
+Закрепляет закрепляемую область для рамки.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -799,35 +799,35 @@ virtual BOOL DockToFrameWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*dwAlignment*<br/>
-[in] В части, которую требуется закрепить на панели, чтобы родительского фрейма.
+*двалигнмент*<br/>
+окне Сторона родительского фрейма, в которую необходимо закрепить панель.
 
-*lpRect*<br/>
-[in] Требуемый размер.
+*лпрект*<br/>
+окне Требуемый размер.
 
-*dwDockFlags*<br/>
-[in] Игнорируется.
+*двдоккфлагс*<br/>
+окне Игнорируют.
 
-*pRelativeBar*<br/>
-[in] Игнорируется.
+*прелативебар*<br/>
+окне Игнорируют.
 
-*nRelativeIndex*<br/>
-[in] Игнорируется.
+*нрелативеиндекс*<br/>
+окне Игнорируют.
 
-*bOuterEdge*<br/>
-[in] Если значение TRUE и существует являются другие закрепляемые панели на стороне, заданные *dwAlignment*, области, расположенной за пределами области, ближе к краем родительского фрейма. Если значение равно FALSE, области закрепляется ближе относительно центральной части клиентской области.
+*баутередже*<br/>
+окне Если значение TRUE и существуют другие закрепляемые области на стороне, заданной параметром *двалигнмент*, панель закрепляется за пределами других панелей, ближе к краю родительского фрейма. Если значение равно FALSE, панель закрепляется ближе к центру клиентской области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод завершается ошибкой, если разделитель панели ( [класс CPaneDivider](../../mfc/reference/cpanedivider-class.md)) не может быть создан. В противном случае он всегда возвращает значение TRUE.
+Этот метод завершается ошибкой, если не удается создать разделитель панели ( [класс кпанедивидер](../../mfc/reference/cpanedivider-class.md)). В противном случае он всегда возвращает значение TRUE.
 
-##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore
+##  <a name="doesallowdyninsertbefore"></a>CBasePane::D Оесалловдининсертбефоре
 
-Определяет, могут ли другой области динамически вставлены между этой областью и родительского фрейма.
+Определяет, можно ли динамически вставлять другую панель между этой панелью и родительским фреймом.
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -835,19 +835,19 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если пользователь может вставить другой области; в противном случае — значение FALSE.
+Значение TRUE, если пользователь может вставить другую панель; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, чтобы определить, может ли пользователь динамически вставить область перед этой панели.
+Платформа вызывает этот метод, чтобы определить, может ли пользователь динамически вставлять область перед этой областью.
 
-Например предположим, что приложение создает панель, закрепленной в левой части окна (например, панели Outlook). Чтобы предотвратить работу пользователя закрепление другую панель слева от первой области, переопределите этот метод и возвращает значение FALSE.
+Например, предположим, что приложение создает панель, закрепленную в левой части фрейма (например, на панели Outlook). Чтобы запретить пользователю закреплять другую панель слева от первой панели, Переопределите этот метод и возвратите FALSE.
 
-Мы рекомендуем в Переопределите этот метод и возвращает значение FALSE для неплавающего панелей, производных от [класс CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Рекомендуется переопределять этот метод и возвращать FALSE для неплавающих панелей, производных от [класса CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
 Реализация по умолчанию возвращает значение TRUE.
 
-##  <a name="dopaint"></a>  CBasePane::DoPaint
+##  <a name="dopaint"></a>CBasePane::D Опаинт
 
 Заполняет фон панели.
 
@@ -858,15 +858,15 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+окне Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию вызывает текущий наглядный диспетчер для заливки фона ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
+Реализация по умолчанию вызывает текущий диспетчер визуальных элементов для заполнения фона ( [CMFCVisualManager:: онфиллбарбаккграунд](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
 
-##  <a name="enabledocking"></a>  CBasePane::EnableDocking
+##  <a name="enabledocking"></a>CBasePane:: Енабледоккинг
 
-Включает закрепление области в главном фрейме.
+Включает закрепление панели в главном фрейме.
 
 ```
 virtual void EnableDocking(DWORD dwAlignment);
@@ -874,20 +874,20 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Параметры
 
-*dwAlignment*<br/>
-[in] Задает выравнивание по закрепления, чтобы включить.
+*двалигнмент*<br/>
+окне Задает выравнивание закрепления для включения.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод, чтобы включить выравнивание закрепления для главного фрейма. Вы можете передать сочетание флагов CBRS_ALIGN_ (Дополнительные сведения см. в разделе [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
+Вызовите этот метод, чтобы включить выравнивание закрепления для основного фрейма. Можно передать сочетание флагов CBRS_ALIGN_ (Дополнительные сведения см. в разделе [CControlBar:: енабледоккинг](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
 
-`EnableDocking` устанавливает внутренний флаг `CBasePane::m_dwEnabledAlignment` и платформа проверяет этот флаг, если панель закреплена.
+`EnableDocking`устанавливает внутренний флаг `CBasePane::m_dwEnabledAlignment` , и платформа проверяет этот флаг, когда панель закреплена.
 
-Вызовите [CBasePane::GetEnabledAlignment](#getenabledalignment) для определения закрепления выравнивание для области.
+Вызовите метод [CBasePane:: жетенабледалигнмент](#getenabledalignment) , чтобы определить выравнивание закрепления для области.
 
-##  <a name="enablegripper"></a>  CBasePane::EnableGripper
+##  <a name="enablegripper"></a>CBasePane:: Енаблегриппер
 
-Включает или отключает границу. Если значок захвата включен, пользователь может перетаскивать его, чтобы изменить положение панели.
+Включает или отключает захват. Если захват включен, пользователь может перетащить его, чтобы изменить расположение панели.
 
 ```
 virtual void EnableGripper(BOOL bEnable);
@@ -896,15 +896,15 @@ virtual void EnableGripper(BOOL bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить значок захвата; Значение FALSE, чтобы отключить его.
+окне Значение TRUE, чтобы включить захват; Значение FALSE, чтобы отключить его.
 
 ### <a name="remarks"></a>Примечания
 
-Инфраструктура использует этот метод для включения захвата вместо использования WS_CAPTION стиль.
+Платформа использует этот метод для включения захвата вместо использования стиля WS_CAPTION.
 
-##  <a name="floatpane"></a>  CBasePane::FloatPane
+##  <a name="floatpane"></a>CBasePane:: Флоатпане
 
-Смещает области.
+Перемещает панель в перемещаемую область.
 
 ```
 virtual BOOL FloatPane(
@@ -915,26 +915,26 @@ virtual BOOL FloatPane(
 
 ### <a name="parameters"></a>Параметры
 
-*rectFloat*<br/>
-[in] Задает координаты на экране, где отображается плавающей панели.
+*ректфлоат*<br/>
+окне Задает экранные координаты, в которых отображается плавающая панель.
 
 *dockMethod*<br/>
-[in] Указывает метод, закрепления, используемый для перемещения на панели.
+окне Указывает метод Dock, используемый для переброски панели.
 
 *bShow*<br/>
-[in] Указывает, является ли плавающей панели видимым (TRUE) или скрыта (FALSE).
+окне Указывает, является ли Плавающая панель видимой (TRUE) или скрытой (FALSE).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если области было плавающий успешно; в противном случае — значение FALSE.
+Значение TRUE, если панель была перемещена в плавающую область. в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод для плавающей панели на экран позицией, заданной параметром *rectFloat*.
+Вызовите этот метод, чтобы перечислить область в позиции экрана, заданной параметром *ректфлоат*.
 
-##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic
+##  <a name="get_acchelptopic"></a>CBasePane:: get_accHelpTopic
 
-Платформа вызывает этот метод, чтобы получить полный путь к **WinHelp** файл, связанный с указанным объектом и идентификатором нужного раздела в этом файле.
+Платформа вызывает этот метод для получения полного пути к файлу **WinHelp** , который связан с указанным объектом, и идентификатором соответствующего раздела в этом файле.
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -945,26 +945,26 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Параметры
 
-*pszHelpFile*<br/>
-[in] Адрес BSTR, который получает полный путь к **WinHelp** файл, связанный с указанным объектом, если таковые имеются.
+*псзелпфиле*<br/>
+окне Адрес объекта BSTR, который получает полный путь к файлу **WinHelp** , связанному с указанным объектом (при наличии).
 
-*varChild*<br/>
-[in] Указывает, является ли раздел справки требуется извлечь объект или одного из дочерних элементов объекта. Этот параметр может быть CHILDID_SELF (Чтобы получить раздел справки для объекта) или идентификатор дочернего (Чтобы получить раздел справки для одной из ее дочерних элементов объекта).
+*варчилд*<br/>
+окне Указывает, должен ли раздел справки извлекаться из объекта или одного из дочерних элементов объекта. Этот параметр может быть либо CHILDID_SELF (для получения раздела справки по объекту), либо ИДЕНТИФИКАТОРом дочернего элемента (для получения раздела справки для одного из дочерних элементов объекта).
 
-*pidTopic*<br/>
-[in] Идентифицирует **помочь** раздел файла, который связан с указанным объектом.
+*пидтопик*<br/>
+окне Определяет раздел файла **справки** , связанный с указанным объектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CBasePane` Этот метод не реализован. Таким образом `CBasePane::get_accHelpTopic` всегда возвращает значение S_FALSE.
+`CBasePane`не реализует этот метод. `CBasePane::get_accHelpTopic` Поэтому всегда возвращает значение S_FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция является частью возможностей Active Accessibility в MFC. Переопределите эту функцию в производном классе для предоставления сведений справки о объекта.
+Эта функция является частью поддержки Active Accessibility в MFC. Переопределите эту функцию в производном классе, чтобы предоставить справочную информацию об объекте.
 
-##  <a name="get_accselection"></a>  CBasePane::get_accSelection
+##  <a name="get_accselection"></a>CBasePane:: get_accSelection
 
-Платформа вызывает этот метод для извлечения выбранного дочернего элемента этого объекта.
+Платформа вызывает этот метод, чтобы получить выбранные дочерние элементы этого объекта.
 
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
@@ -972,18 +972,18 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="parameters"></a>Параметры
 
-*pvarChildren*<br/>
-[in] Получает сведения, идентифицирующие выбранного дочернего.
+*пварчилдрен*<br/>
+окне Получает сведения, определяющие выбранные дочерние элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CBasePane` Этот метод не реализован. Если *pvarChildren* имеет значение NULL, этот метод возвращает значение E_INVALIDARG. В противном случае этот метод возвращает DISP_E_MEMBERNOTFOUND.
+`CBasePane`не реализует этот метод. Если *пварчилдрен* имеет значение null, этот метод возвращает E_INVALIDARG. В противном случае этот метод возвращает DISP_E_MEMBERNOTFOUND.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция является частью возможностей Active Accessibility в MFC. Переопределите эту функцию в производном классе, если у вас есть элементы не оконные пользовательского интерфейса, отличного от элементы ActiveX без окон.
+Эта функция является частью поддержки Active Accessibility в MFC. Переопределяйте эту функцию в производном классе при наличии неоконных элементов пользовательского интерфейса, отличных от безоконных элементов управления ActiveX.
 
-##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CBasePane:: Жеткаптионхеигхт
 
 Возвращает высоту заголовка.
 
@@ -995,9 +995,9 @@ virtual int GetCaptionHeight() const;
 
 Высота заголовка.
 
-##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle
+##  <a name="getcontrolbarstyle"></a>CBasePane:: Жетконтролбарстиле
 
-Возвращает стиль панели управления.
+Возвращает стиль панели элементов управления.
 
 ```
 virtual DWORD GetControlBarStyle() const
@@ -1009,18 +1009,18 @@ virtual DWORD GetControlBarStyle() const
 
 ### <a name="remarks"></a>Примечания
 
-Возвращаемое значение состоит из следующих значений.
+Возвращаемое значение представляет собой сочетание следующих возможных значений.
 
 |Стиль|Описание|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
+|AFX_CBRS_FLOAT|Делает панель управления плавающей.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|
-|AFX_CBRS_RESIZE|Включает изменение размера панели элементов управления. Если этот флаг установлен, панель элементов управления может быть помещено в закрепляемую панель.|
-|AFX_CBRS_CLOSE|Обеспечивает скрытие панели управления.|
+|AFX_CBRS_RESIZE|Включает изменение размера панели элементов управления. Если этот флаг установлен, панель управления может быть помещена в закрепляемую область.|
+|AFX_CBRS_CLOSE|Включает скрытие панели элементов управления.|
 
-##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment
+##  <a name="getcurrentalignment"></a>CBasePane:: Жеткурренталигнмент
 
-Возвращает текущее выравнивание панели.
+Возвращает выравнивание текущей области.
 
 ```
 virtual DWORD GetCurrentAlignment() const;
@@ -1028,18 +1028,18 @@ virtual DWORD GetCurrentAlignment() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущее выравнивание панели элементов управления. В следующей таблице показаны возможные значения:
+Текущее выравнивание панели элементов управления. Возможные значения приведены в следующей таблице.
 
 |Значение|Выравнивание|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Выравнивание по левому краю.|
 |CBRS_ALIGN_RIGHT|Выравнивание по правому краю.|
-|CBRS_ALIGN_TOP|Выравнивание по верхней границе.|
-|CBRS_ALIGN_BOTTOM|Выравнивание по нижней границе.|
+|CBRS_ALIGN_TOP|Выравнивание по верхнему краю.|
+|CBRS_ALIGN_BOTTOM|Выравнивание по нижнему краю.|
 
-##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode
+##  <a name="getdockingmode"></a>CBasePane:: Жетдоккингмоде
 
-Возвращает текущий режим закрепления для области.
+Возвращает текущий режим закрепления для панели.
 
 ```
 virtual AFX_DOCK_TYPE GetDockingMode() const;
@@ -1047,19 +1047,19 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-DT_STANDARD, если перетаскивание области на экране обозначается прямоугольника перетаскивания. DT_IMMEDIATE, если содержимое области при перетаскивании.
+DT_STANDARD. при перетаскивании панели на экране отображается прямоугольник перетаскивания. DT_IMMEDIATE, если содержимое панели перетаскивается.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, чтобы определить текущий режим закрепления панели.
+Платформа вызывает этот метод, чтобы определить текущий режим стыковки панели.
 
-Если `CBasePane::m_dockMode` — не определено (DT_UNDEFINED), то режим закрепления берется из глобальный режим закрепления (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
+Если `CBasePane::m_dockMode` значение не определено (DT_UNDEFINED), то режим закрепления берется из глобального режима стыковки (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
 
-Установив *m_dockMode* или переопределение `GetDockingMode` выбрать режим закрепления для каждой области.
+При установке *m_dockMode* или переопределении `GetDockingMode` можно управлять режимом стыковки для каждой панели.
 
-##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd
+##  <a name="getdocksiteframewnd"></a>CBasePane:: Жетдоккситефрамевнд
 
-Возвращает указатель на [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)объект место закрепления панели.
+Возвращает указатель на объект [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), в котором закреплена панель.
 
 ```
 virtual CWnd* GetDockSiteFrameWnd() const;
@@ -1067,15 +1067,15 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на сайте закрепления панели.
+Указатель на сайт закрепления панели.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод используется для получения указателя на сайте закрепления панели. Если открывается как плавающее окно области, на сайте закрепления можно фрейма главного окна, если область прикрепляется к главного фрейма или окна области.
+Вызовите этот метод, чтобы получить указатель на сайт закрепления панели. Узел закрепления может быть либо основным окном фрейма, если панель закреплена на главном фрейме, либо окном с мини-рамкой, если панель является плавающей.
 
-##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment
+##  <a name="getenabledalignment"></a>CBasePane:: Жетенабледалигнмент
 
-Возвращает CBRS_ALIGN_ стили, которые применяются к области.
+Возвращает стили CBRS_ALIGN_, которые применяются к панели.
 
 ```
 virtual DWORD GetEnabledAlignment() const;
@@ -1083,25 +1083,25 @@ virtual DWORD GetEnabledAlignment() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сочетание CBRS_ALIGN_ стили. В следующей таблице показаны возможные стили:
+Сочетание стилей CBRS_ALIGN_. В следующей таблице показаны возможные стили.
 
-|Flag|Включено выравнивание|
+|Flag|Выравнивание включено|
 |----------|-----------------------|
-|CBRS_ALIGN_LEFT|Левая граница.|
+|CBRS_ALIGN_LEFT|Слева.|
 |CBRS_ALIGN_RIGHT|Правильно.|
 |CBRS_ALIGN_TOP|Вверх.|
-|CBRS_ALIGN_BOTTOM|Нижняя часть.|
+|CBRS_ALIGN_BOTTOM|Нижний.|
 |CBRS_ALIGN_ANY|Сочетание всех флагов.|
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод, чтобы определить, включено выравнивание для области. Включено выравнивание означает сторон окна главного фрейма, которую можно закрепить панель.
+Вызовите этот метод, чтобы определить включенное выравнивание для панели. Включенное выравнивание — это стороны главного окна фрейма, к которым можно прикрепить область.
 
-Включить закрепления выравнивание с помощью [CBasePane::EnableDocking](#enabledocking).
+Включение выравнивания закрепления с помощью [CBasePane:: енабледоккинг](#enabledocking).
 
-##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle
+##  <a name="getmfcstyle"></a>CBasePane:: Жетмфкстиле
 
-Возвращает стили области, характерные для MFC.
+Возвращает стили панели, характерные для MFC.
 
 ```
 virtual DWORD GetMFCStyle() const;
@@ -1109,11 +1109,11 @@ virtual DWORD GetMFCStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сочетание стилей панели (AFX_CBRS_) данной библиотеки.
+Сочетание стилей панели, относящихся к библиотеке (AFX_CBRS_).
 
-##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon
+##  <a name="getpaneicon"></a>CBasePane:: Жетпанеикон
 
-Возвращает дескриптор для значка панели.
+Возвращает маркер значка панели.
 
 ```
 virtual HICON GetPaneIcon(BOOL bBigIcon);
@@ -1121,20 +1121,20 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 
 ### <a name="parameters"></a>Параметры
 
-*bBigIcon*<br/>
-[in] Указывает 32 пикселя значком 32 пикселя, если значение равно TRUE; Указывает 16 пикселей по 16 пикселей значок, если значение равно FALSE.
+*ббигикон*<br/>
+окне Задает значок 32 пикселей на 32 пикселей, если значение TRUE; Задает значок 16 пикселей на 16 пикселей при значении FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор значка области. Если операция завершилась неудачей, возвращает значение NULL.
+Маркер значка панели. В случае неудачи возвращает значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию реализация вызывает [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).
+Реализация по умолчанию вызывает [CWnd::. Icon](../../mfc/reference/cwnd-class.md#geticon).
 
-##  <a name="getpanerow"></a>  CBasePane::GetPaneRow
+##  <a name="getpanerow"></a>CBasePane:: Жетпанеров
 
-Возвращает указатель на [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)объект место закрепления панели.
+Возвращает указатель на объект [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md), в котором закреплена панель.
 
 ```
 CDockingPanesRow* GetPaneRow();
@@ -1142,13 +1142,13 @@ CDockingPanesRow* GetPaneRow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `CDockingPanesRow` Если панель закрепленными, или значение NULL, если он является перемещаемой.
+Указатель на `CDockingPanesRow` , если панель закреплена, или значение null, если она является плавающей.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод используется для доступа к строке, место закрепления панели. Например, чтобы упорядочить области в конкретной строке, вызвать `GetPaneRow` , а затем вызвать [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
+Вызовите этот метод, чтобы получить доступ к строке, в которой закреплена панель. Например, чтобы разместить панели в определенной строке, вызовите `GetPaneRow` и затем вызовите метод [CDockingPanesRow:: арранжепанес](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
 
-##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle
+##  <a name="getpanestyle"></a>CBasePane:: Жетпанестиле
 
 Возвращает стиль панели.
 
@@ -1158,9 +1158,9 @@ virtual DWORD GetPaneStyle() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сочетание стилей элементов управления панели (включая стили CBRS_), установленное с [CBasePane::SetPaneStyle](#setpanestyle) метод во время создания.
+Сочетание стилей панели элементов управления (включая стили CBRS_), заданных методом [CBasePane:: сетпанестиле](#setpanestyle) во время создания.
 
-##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite
+##  <a name="getparentdocksite"></a>CBasePane:: Жетпарентдокксите
 
 Возвращает указатель на родительский сайт закрепления.
 
@@ -1170,11 +1170,11 @@ virtual CDockSite* GetParentDockSite() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Родительского сайта закрепления.
+Родительский сайт закрепления.
 
-##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame
+##  <a name="getparentminiframe"></a>CBasePane:: Жетпарентминифраме
 
-Возвращает указатель на родительское окно минифрейма.
+Возвращает указатель на родительское окно мини-кадра.
 
 ```
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
@@ -1182,22 +1182,22 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bNoAssert*<br/>
-[in] Если значение равно TRUE, этот метод не проверяет наличие недопустимых указатели. Если этот метод вызывается в том случае, когда приложение завершает работу, установите этот параметр в значение TRUE.
+*бноассерт*<br/>
+окне Если значение — TRUE, этот метод не проверяет наличие недопустимых указателей. Если вы вызываете этот метод при выходе из приложения, присвойте этому параметру значение TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Допустимый указатель на родительское окно минифрейма Если области с плавающей запятой; в противном случае имеет значение NULL.
+Допустимый указатель на родительское окно мини-кадра, если панель является плавающей. в противном случае — NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Вызывайте эту функцию, чтобы получить указатель на родительское окно минифрейма. Этот метод используется для итерации по всем родительским элементам и проверяет наличие объекта производным от [класс CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
+Эта функция вызывается для получения указателя на родительское окно мини-кадра. Этот метод выполняет перебор всех родителей и проверяет наличие объекта, производного от [класса кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md).
 
-Используйте `GetParentMiniFrame` для определения, с плавающей запятой области.
+Используйте `GetParentMiniFrame` , чтобы определить, является ли панель плавающей.
 
-##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane
+##  <a name="getparenttabbedpane"></a>CBasePane:: Жетпаренттаббедпане
 
-Возвращает указатель на панель с вкладками родительского.
+Возвращает указатель на родительскую панель с вкладками.
 
 ```
 CBaseTabbedPane* GetParentTabbedPane() const;
@@ -1205,11 +1205,11 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на родительский панель с вкладками, если он существует; в противном случае имеет значение NULL.
+Указатель на родительскую панель с вкладками, если она существует; в противном случае — NULL.
 
-##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd
+##  <a name="getparenttabwnd"></a>CBasePane:: Жетпаренттабвнд
 
-Возвращает указатель на родительское окно, на вкладке.
+Возвращает указатель на родительское окно, расположенное внутри вкладки.
 
 ```
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
@@ -1217,8 +1217,8 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 
 ### <a name="parameters"></a>Параметры
 
-*hWndTab*<br/>
-[out] Если возвращаемое значение не равно NULL, этот параметр содержит дескриптор родительского окна с вкладками.
+*хвндтаб*<br/>
+заполняет Если возвращаемое значение не равно NULL, этот параметр содержит маркер родительского окна с вкладками.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1226,11 +1226,11 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция используется для получения указатель на родительское окно с вкладками. Иногда недостаточно для вызова `GetParent`, так как область может находиться внутри закрепляющую оболочку ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)) или внутри области адаптера ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)). С помощью `GetParentTabWnd` можно будет получить допустимый указатель в таких случаях (при условии, что родительского окна с вкладками).
+Эта функция используется для получения указателя на родительское окно с вкладками. Иногда недостаточно вызвать `GetParent`, так как панель может находиться внутри обертки закрепления ( [класс кдоккаблепанеадаптер](../../mfc/reference/cdockablepaneadapter-class.md)) или в адаптере панели ( [класс кдоккаблепанеадаптер](../../mfc/reference/cdockablepaneadapter-class.md)). С помощью `GetParentTabWnd` вы сможете получить допустимый указатель в таких случаях (если родительским элементом является окно с вкладками).
 
-##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState
+##  <a name="getrecentvisiblestate"></a>CBasePane:: Жетрецентвисиблестате
 
-Этот метод вызывается платформой, когда область восстанавливается из архива.
+Платформа вызывает этот метод при восстановлении панели из архива.
 
 ```
 virtual BOOL GetRecentVisibleState() const;
@@ -1238,11 +1238,11 @@ virtual BOOL GetRecentVisibleState() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Логическое значение, указывающее состояние последней видимой. Значение TRUE, если области отображалась при сериализации и должны быть видимыми при восстановлении. Если значение равно FALSE, области была скрыта при сериализации и должны быть скрыты при восстановлении.
+Логическое значение, указывающее Последнее видимое состояние. Если значение — TRUE, панель отображается при сериализации и должна быть видимой при восстановлении. Если значение равно FALSE, панель была скрыта при сериализации и должна быть скрыта при восстановлении.
 
-##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode
+##  <a name="hideinprintpreviewmode"></a>CBasePane:: Хидеинпринтпревиевмоде
 
-Указывает, скрыт ли области в режиме предварительного просмотра.
+Указывает, скрыта ли панель в режиме предварительного просмотра.
 
 ```
 virtual BOOL HideInPrintPreviewMode() const;
@@ -1250,15 +1250,15 @@ virtual BOOL HideInPrintPreviewMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если области не отображается в режиме предварительного просмотра; в противном случае — значение FALSE.
+Значение TRUE, если панель не отображается в режиме предварительного просмотра; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Базовый области не отображаются в режиме предварительного просмотра. Таким образом этот метод всегда возвращает значение TRUE.
+Базовые панели не отображаются в режиме предварительного просмотра. Таким образом, этот метод всегда возвращает значение TRUE.
 
-##  <a name="insertpane"></a>  CBasePane::InsertPane
+##  <a name="insertpane"></a>CBasePane:: Инсертпане
 
-Регистрирует указанную область в диспетчере закрепления.
+Регистрирует указанную панель с помощью диспетчера закрепления.
 
 ```
 BOOL InsertPane(
@@ -1269,22 +1269,22 @@ BOOL InsertPane(
 
 ### <a name="parameters"></a>Параметры
 
-*pControlBar*<br/>
-[in] Указатель на область для вставки.
+*пконтролбар*<br/>
+окне Указатель на область для вставки.
 
-*pTarget*<br/>
-[in] Указатель на соседней панели.
+*птаржет*<br/>
+окне Указатель на смежную область.
 
-*bAfter*<br/>
-[in] Если значение равно TRUE, *pControlBar* вставляется после *pTarget*. Если значение равно FALSE, *pControlBar* вставляется перед *pTarget*.
+*бафтер*<br/>
+окне Если значение — TRUE, *пконтролбар* вставляется после *птаржет*. Если значение равно FALSE, *пконтролбар* вставляется перед *птаржет*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно, значение FALSE в противном случае.
+Значение TRUE, если метод выполнен, и FALSE в противном случае.
 
-##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible
+##  <a name="isaccessibilitycompatible"></a>CBasePane:: Исакцессибилитикомпатибле
 
-Указывает, поддерживает ли области Active Accessibility.
+Указывает, поддерживает ли панель Active Accessibility.
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1292,11 +1292,11 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область поддерживает Active Accessibility; в противном случае — значение FALSE.
+Значение TRUE, если панель поддерживает Active Accessibility; в противном случае — значение FALSE.
 
-##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode
+##  <a name="isautohidemode"></a>CBasePane:: Исаутохидемоде
 
-Определяет, находится ли область в режиме автоматического скрытия.
+Определяет, находится ли панель в режиме автоматического скрытия.
 
 ```
 virtual BOOL IsAutoHideMode() const;
@@ -1304,15 +1304,15 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если области находится в режиме автоматического скрытия; в противном случае — значение FALSE.
+Значение TRUE, если панель находится в режиме автоматического скрытия; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Базовый областей нельзя автоматического скрытия. Этот метод всегда возвращает значение FALSE.
+Базовые панели не могут быть скрыты автоматически. Этот метод всегда возвращает значение FALSE.
 
-##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl
+##  <a name="isdialogcontrol"></a>CBasePane:: Исдиалогконтрол
 
-Указывает, является ли области управления диалогового окна.
+Указывает, является ли панель элементом управления "диалоговое окно".
 
 ```
 BOOL IsDialogControl() const;
@@ -1320,15 +1320,15 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель управления диалогового окна; в противном случае — значение FALSE.
+TRUE, если область является элементом управления диалогового окна; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Инфраструктура использует этот метод, чтобы обеспечить согласованность макета для всех панелей.
+Платформа использует этот метод для обеспечения согласованности макета для всех панелей.
 
-##  <a name="isdocked"></a>  CBasePane::IsDocked
+##  <a name="isdocked"></a>CBasePane:: DOCKER
 
-Определяет, закреплена ли области.
+Определяет, закреплена ли панель.
 
 ```
 virtual BOOL IsDocked() const;
@@ -1336,11 +1336,11 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если родительский области не мини-рамки или области с плавающей запятой в мини-рамки с другой области; в противном случае — значение FALSE.
+Значение TRUE, если родительский элемент области не является мини-рамкой, или если панель плавающей в мини-рамке с другой областью; в противном случае — значение FALSE.
 
-##  <a name="isfloating"></a>  CBasePane::IsFloating
+##  <a name="isfloating"></a>CBasePane:: float
 
-Определяет, с плавающей запятой области.
+Определяет, является ли панель плавающей.
 
 ```
 virtual BOOL IsFloating() const;
@@ -1348,15 +1348,15 @@ virtual BOOL IsFloating() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область является перемещаемой; в противном случае — значение FALSE.
+Значение TRUE, если панель является плавающей; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод возвращает противоположное значение из [CBasePane::IsDocked](#isdocked).
+Этот метод возвращает противоположное значение [CBasePane:: dockd](#isdocked).
 
-##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal
+##  <a name="ishorizontal"></a>CBasePane:: по горизонтали
 
-Определяет, закреплена ли области по горизонтали.
+Определяет, закреплена ли панель по горизонтали.
 
 ```
 virtual BOOL IsHorizontal() const;
@@ -1364,15 +1364,15 @@ virtual BOOL IsHorizontal() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель закреплена горизонтально; в противном случае — значение FALSE.
+Значение TRUE, если панель закреплена по горизонтали; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
 Реализация по умолчанию проверяет текущее выравнивание закрепления для CBRS_ORIENT_HORZ.
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd
+##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane:: Исинфлоатингмултипанефрамевнд
 
-Указывает, является ли область в окне фрейма несколькими областями ( [класс CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
+Указывает, находится ли панель в окне фрейма с несколькими панелями ( [класс кмултипанефрамевнд](../../mfc/reference/cmultipaneframewnd-class.md)).
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -1380,15 +1380,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель в окне фрейма несколькими областями; в противном случае — значение FALSE.
+Значение TRUE, если панель находится в окне рамки с несколькими панелями; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-В окне фрейма несколькими областями может перемещаться только закрепляемых областей. Таким образом `CBasePane::IsInFloatingMultiPaneFrameWnd` всегда возвращает значение FALSE.
+Только закрепляемые области могут перемещаться в окне фрейма с несколькими панелями. `CBasePane::IsInFloatingMultiPaneFrameWnd` Поэтому всегда возвращает значение false.
 
-##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed
+##  <a name="ismditabbed"></a>CBasePane:: Исмдитаббед
 
-Определяет, добавлен ли области дочернего окна MDI как документ с вкладками.
+Определяет, была ли область добавлена в дочернее окно MDI в виде документа с вкладками.
 
 ```
 virtual BOOL IsMDITabbed() const;
@@ -1396,11 +1396,11 @@ virtual BOOL IsMDITabbed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если был добавлен области дочернего окна MDI как документ с вкладками; в противном случае — значение FALSE.
+Значение TRUE, если панель была добавлена в дочернее окно MDI в виде документа с вкладками. в противном случае — значение FALSE.
 
-##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible
+##  <a name="ispanevisible"></a>CBasePane:: Испаневисибле
 
-Указывает, установлен ли флаг WS_VISIBLE для области.
+Указывает, установлен ли флаг WS_VISIBLE для панели.
 
 ```
 BOOL IsPaneVisible() const;
@@ -1408,15 +1408,15 @@ BOOL IsPaneVisible() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если установлено WS_VISIBLE; в противном случае — значение FALSE.
+Значение TRUE, если WS_VISIBLE задано. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте [CBasePane::IsVisible](#isvisible) для определения области видимости.
+Чтобы определить видимость панели, используйте [CBasePane:: Visible](#isvisible) .
 
-##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CBasePane:: Испоинтнеардокксите
 
-Определяет, является ли указанная точка рядом с сайтом закрепления.
+Определяет, находится ли указанная точка вблизи сайта закрепления.
 
 ```
 BOOL IsPointNearDockSite(
@@ -1428,25 +1428,25 @@ BOOL IsPointNearDockSite(
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-[in] Указанная точка.
+окне Указанная точка.
 
-*dwBarAlignment*<br/>
-[out] Задает край приближается к точке. Возможные значения: CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP и CBRS_ALIGN_BOTTOM
+*двбаралигнмент*<br/>
+заполняет Указывает, на каком крае находится приближается точка. Возможные значения: CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP и CBRS_ALIGN_BOTTOM
 
-*bOuterEdge*<br/>
-[out] Значение TRUE, если точка находится рядом с внешней границы элемента на сайте закрепления; Значение FALSE в противном случае.
+*баутередже*<br/>
+заполняет Значение TRUE, если точка близка к внешней границе сайта закрепления; В противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если точка находится рядом с сайтом закрепления; в противном случае — значение FALSE.
+Значение TRUE, если точка находится вблизи сайта закрепления; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Точка расположено на сайте закрепления, когда он находится в пределах уровня конфиденциальности, установите в диспетчере закрепления. Чувствительности по умолчанию — 15 пикселей.
+Точка находится вблизи сайта закрепления, если он находится в наборе чувствительности в диспетчере закрепления. Чувствительность по умолчанию составляет 15 пикселей.
 
-##  <a name="isresizable"></a>  CBasePane::IsResizable
+##  <a name="isresizable"></a>CBasePane:: Исресизабле
 
-Определяет, возможно ли изменение размеров области.
+Определяет, можно ли изменить размер панели.
 
 ```
 virtual BOOL IsResizable() const;
@@ -1458,13 +1458,13 @@ virtual BOOL IsResizable() const;
 
 ### <a name="remarks"></a>Примечания
 
-Областях [класс CDockablePane](../../mfc/reference/cdockablepane-class.md) размер может быть изменен.
+Можно изменять размеры областей [класса CDockablePane](../../mfc/reference/cdockablepane-class.md) .
 
-В строке состояния ( [класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) и на панели dock ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)) изменять нельзя.
+Размеры строки состояния ( [Класс CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) и строки закрепления ( [класс CDockSite](../../mfc/reference/cdocksite-class.md)) изменить нельзя.
 
-##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry
+##  <a name="isrestoredfromregistry"></a>CBasePane:: Исресторедфромрегистри
 
-Определяет, восстанавливается ли области из реестра.
+Определяет, восстанавливается ли панель из реестра.
 
 ```
 virtual BOOL IsRestoredFromRegistry() const;
@@ -1472,11 +1472,11 @@ virtual BOOL IsRestoredFromRegistry() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если области восстанавливается из реестра; в противном случае — значение FALSE.
+Значение TRUE, если панель восстанавливается из реестра; в противном случае — значение FALSE.
 
-##  <a name="istabbed"></a>  CBasePane::IsTabbed
+##  <a name="istabbed"></a>CBasePane:: с вкладками
 
-Определяет, ли области был вставлен в элементе управления "Вкладка" окна с вкладками.
+Определяет, вставлена ли панель в элемент управления вкладки окна с вкладками.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1484,15 +1484,15 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель элементов управления вставляется на вкладке окна с вкладками; в противном случае — значение FALSE.
+Значение TRUE, если панель управления вставляется на вкладку окна с вкладками; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод извлекает указатель на ближайший родительский объект и определяет, является ли класс среды выполнения родительского элемента [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
+Этот метод получает указатель на ближайший родительский объект и определяет, является ли класс среды выполнения родителя [классом CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-##  <a name="isvisible"></a>  CBasePane::IsVisible
+##  <a name="isvisible"></a>CBasePane:: Visible
 
-Определяет, является ли видимой области.
+Определяет, видима ли панель.
 
 ```
 virtual BOOL IsVisible() const;
@@ -1500,15 +1500,15 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область является видимой; в противном случае — значение FALSE.
+Значение TRUE, если область видима; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод можно используйте для определения области видимости. Не используйте `::IsWindowVisible`.
+Используйте этот метод, чтобы определить видимость панели. Не используйте `::IsWindowVisible`.
 
-Если области не представлено в форме вкладок (см. в разделе [CBasePane::IsTabbed](#istabbed)), этот метод проверяет WS_VISIBLE стиля. Если область является с вкладками, этот метод проверяет видимость родительского окна с вкладками. Если родительское окно является видимым, функция проверяет видимость вкладки панели с помощью [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
+Если панель не имеет вкладки (см. раздел [CBasePane:: с вкладками](#istabbed)), этот метод проверяет стиль WS_VISIBLE. Если панель находится на вкладках, этот метод проверяет видимость родительского окна с вкладками. Если родительское окно является видимым, функция проверяет видимость вкладки панели с помощью [CMFCBaseTabCtrl:: истабвисибле](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
 
-##  <a name="loadstate"></a>  CBasePane::LoadState
+##  <a name="loadstate"></a>CBasePane:: LoadState
 
 Загружает состояние панели из реестра.
 
@@ -1521,26 +1521,26 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszProfileName*<br/>
-[in] Имя профиля.
+*лпсзпрофиленаме*<br/>
+окне Имя профиля.
 
-*nIndex*<br/>
-[in] Индекс профиля.
+*ниндекс*<br/>
+окне Индекс профиля.
 
 *uiID*<br/>
-[in] Идентификатор области.
+окне Идентификатор области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние панели был загружен успешно; в противном случае — значение FALSE.
+Значение TRUE, если состояние панели было успешно загружено; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод, чтобы загрузить состояние панели из реестра. Переопределение в производном классе, чтобы загрузить дополнительные сведения, сохраненные с [CBasePane::SaveState](#savestate).
+Платформа вызывает этот метод для загрузки состояния панели из реестра. Переопределите его в производном классе, чтобы загрузить дополнительные сведения, сохраненные с помощью [CBasePane:: SaveState](#savestate).
 
-##  <a name="movewindow"></a>  CBasePane::MoveWindow
+##  <a name="movewindow"></a>CBasePane:: Мовевиндов
 
-Перемещает область.
+Перемещает панель.
 
 ```
 virtual HDWP MoveWindow(
@@ -1552,25 +1552,25 @@ virtual HDWP MoveWindow(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-[in] Прямоугольник, указав новое расположение и размер области.
+окне Прямоугольник, указывающий новое расположение и размер панели.
 
 *bRepaint*<br/>
-[in] Значение TRUE, если разрешено области. Если значение равно FALSE, области не разрешено.
+окне Если значение равно TRUE, панель перерисовывается. Если значение равно FALSE, панель не перерисовывается.
 
-*hdwp*<br/>
-[in] Дескриптор структуру позиции отложенного окна.
+*хдвп*<br/>
+окне Указатель на структуру отложенного позиционирования окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор структуру позиции отложенного окна, или значение NULL.
+Указатель на структуру отложенного позиционирования окна или значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Если передать значение NULL как *hdwp* параметра, этот метод перемещает окно в обычном режиме. Если передается дескриптор, этот метод выполняет отложенного перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) или сохранив возвращаемое значение из предыдущего вызова этого метода.
+При передаче NULL в качестве параметра *хдвп* этот метод перемещает окно в обычном режиме. При передаче обработчика этот метод выполняет отложенное перемещение окна. Вы можете получить маркер, вызвав [бегиндефервиндовпос](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos) или сохранив возвращаемое значение предыдущего вызова этого метода.
 
-##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
+##  <a name="onafterchangeparent"></a>CBasePane:: Онафтерчанжепарент
 
-Вызвано структурой после изменения родительской области.
+Вызвано структурой после изменения родительского элемента панели.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1578,18 +1578,18 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Параметры
 
-*pWndOldParent*<br/>
-[in] Указатель на предыдущий родительский элемент.
+*пвндолдпарент*<br/>
+окне Указатель на предыдущий родительский элемент.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой после родительской области изменений, обычно из-за операции закрепления или с плавающей запятой.
+Платформа вызывает этот метод после изменения родительского элемента панели, обычно из-за операции закрепления или плавающего объекта.
 
 Реализация по умолчанию не выполняет никаких действий.
 
-##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CBasePane:: Онбефоречанжепарент
 
-Вызывается платформой непосредственно перед области изменении его родительского окна.
+Вызывается платформой непосредственно перед тем, как панель изменит свое родительское окно.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1599,21 +1599,21 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndNewParent*<br/>
-[in] Указатель на нового родительского окна.
+*пвндневпарент*<br/>
+окне Указатель на новое родительское окно.
 
-*bDelay*<br/>
-[in] Указывает, может быть задержана корректировки макета.
+*бделай*<br/>
+окне Указывает, следует ли задерживать корректировки макета.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа вызывает этот метод перед изменения родительской области, обычно из-за закрепления, с плавающей запятой или операции автоматического скрытия.
+Платформа вызывает этот метод непосредственно перед изменением родительского элемента панели, обычно из-за операции закрепления, плавающего или автоматического скрытия.
 
 Реализация по умолчанию не выполняет никаких действий.
 
-##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption
+##  <a name="ondrawcaption"></a>CBasePane:: Ондравкаптион
 
-Этот метод вызывается платформой при рисовании заголовок.
+Платформа вызывает этот метод при прорисовке заголовка.
 
 ```
 virtual void OnDrawCaption();
@@ -1623,9 +1623,9 @@ virtual void OnDrawCaption();
 
 Этот метод не имеет функциональных возможностей для `CBasePane` класса.
 
-##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider
+##  <a name="onmovepanedivider"></a>CBasePane:: Онмовепанедивидер
 
-В настоящее время этот метод не используется.
+Этот метод в настоящее время не используется.
 
 ```
 virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
@@ -1633,12 +1633,12 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 
 ### <a name="parameters"></a>Параметры
 
-*неиспользуемые*<br/>
-[in] Не используется.
+*использующ*<br/>
+окне Не используется.
 
-##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
+##  <a name="onpanecontextmenu"></a>CBasePane:: Онпанеконтекстмену
 
-Вызывается платформой при построении меню, которое содержит список областей.
+Вызывается платформой при построении меню со списком панелей.
 
 ```
 virtual void OnPaneContextMenu(
@@ -1648,21 +1648,21 @@ virtual void OnPaneContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*pParentFrame*<br/>
-[in] Указатель на родительского фрейма.
+*ппарентфраме*<br/>
+окне Указатель на родительский фрейм.
 
 *point*<br/>
-[in] Указывает расположение контекстного меню.
+окне Задает расположение контекстного меню.
 
 ### <a name="remarks"></a>Примечания
 
-`OnPaneContextMenu` вызывает закрепления диспетчера, который ведет список областям, принадлежащим окну фрейма. Этот метод добавляет имена областей в контекстное меню и отображает его. Команды в меню Показать или скрыть отдельные области.
+`OnPaneContextMenu`вызывает диспетчер стыковки, который поддерживает список панелей, принадлежащих текущему фрейму окна. Этот метод добавляет имена панелей в контекстное меню и отображает их. Команды в меню отображают или скрывают отдельные панели.
 
-Переопределите этот метод для настройки этого поведения.
+Переопределите этот метод, чтобы настроить это поведение.
 
-##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame
+##  <a name="onremovefromminiframe"></a>CBasePane:: Онремовефромминифраме
 
-Вызывается платформой, когда область удаляется из его родительского окна мини-рамки.
+Вызывается структурой при удалении панели из родительского окна мини-фрейма.
 
 ```
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
@@ -1670,18 +1670,18 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 
 ### <a name="parameters"></a>Параметры
 
-*pMiniFrame*<br/>
-[in] Указатель на окно области, из которого удаляется области.
+*пминифраме*<br/>
+окне Указатель на окно мини-кадра, из которого удаляется панель.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой, когда область удаляется из области родительского окна (в результате закрепления, например).
+Платформа вызывает этот метод при удалении панели из родительского окна мини-кадра (например, в результате закрепления).
 
 Реализация по умолчанию не выполняет никаких действий.
 
-##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData
+##  <a name="onsetaccdata"></a>CBasePane:: Онсетаккдата
 
-`CBasePane` не используйте этот метод.
+`CBasePane`не использует этот метод.
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1689,8 +1689,8 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Параметры
 
-*lVal*<br/>
-[in] Не используется.
+*лвал*<br/>
+окне Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1698,9 +1698,9 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint
+##  <a name="panefrompoint"></a>CBasePane::P Анефромпоинт
 
-Возвращает область, содержащее заданную точку.
+Возвращает панель, содержащую заданную точку.
 
 ```
 CBasePane* PaneFromPoint(
@@ -1713,32 +1713,32 @@ CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-[in] Указывает точку, в экранных координатах, для проверки.
+окне Указывает точку (в экранных координатах) для проверки.
 
-*nSensitivity*<br/>
-[in] Увеличьте этот объем области поиска. Область будет удовлетворять условиям поиска, если заданная точка находится в области повышения.
+*нсенситивити*<br/>
+окне Увеличьте область поиска по этому объему. Панель будет удовлетворять условиям поиска, если заданная точка попадает в увеличенную область.
 
-*bExactBar*<br/>
-[in] Значение TRUE, чтобы игнорировать *nSensitivity* параметра; в противном случае — значение FALSE.
+*бексактбар*<br/>
+окне Значение TRUE, чтобы игнорировать параметр *нсенситивити* ; в противном случае — значение FALSE.
 
-*pRTCBarType*<br/>
-[in] Если значение не NULL, метод выполняет поиск только областей указанного типа.
+*прткбартипе*<br/>
+окне Если значение не равно NULL, метод выполняет поиск только на панелях указанного типа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CBasePane`-Производный объект, содержащий в момент, или значение NULL, если области не был найден.
+`CBasePane`Производный объект, который содержит заданную точку, или значение null, если область не найдена.
 
-##  <a name="recalclayout"></a>  CBasePane::RecalcLayout
+##  <a name="recalclayout"></a>CBasePane:: RecalcLayout
 
-`CBasePane` не используйте этот метод.
+`CBasePane`не использует этот метод.
 
 ```
 virtual void RecalcLayout();
 ```
 
-##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CBasePane:: Ремовепанефромдоккманажер
 
-Отменяет регистрацию область и удаляет его из списка в диспетчере закрепления.
+Отменяет регистрацию панели и удаляет ее из списка в диспетчере закрепления.
 
 ```
 void RemovePaneFromDockManager(
@@ -1751,22 +1751,22 @@ void RemovePaneFromDockManager(
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-[in] Указатель на область для удаления.
+*пбар*<br/>
+окне Указатель на панель, которую необходимо удалить.
 
-*bDestroy*<br/>
-[in] Значение TRUE, если уничтожается области удален.
+*бдестрой*<br/>
+окне Если значение — TRUE, удаленная панель уничтожается.
 
-*bAdjustLayout*<br/>
-[in] Значение TRUE, если настройте макет закрепления немедленно.
+*баджустлайаут*<br/>
+окне Если значение — TRUE, откорректируйте макет закрепления немедленно.
 
-*bAutoHide*<br/>
-[in] Значение TRUE, если макет закрепления относится к списку автоматического скрытия панели. Если значение равно FALSE, макет закрепления относится к список регулярных панелей.
+*баутохиде*<br/>
+окне Если значение — TRUE, макет закрепления связан со списком полос автоскрытия. Если значение равно FALSE, то макет закрепления связан со списком обычных панелей.
 
-*pBarReplacement*<br/>
-[in] Указатель на область, которая заменяет области удален.
+*пбарреплацемент*<br/>
+окне Указатель на панель, которая заменяет удаленную панель.
 
-##  <a name="savestate"></a>  CBasePane::SaveState
+##  <a name="savestate"></a>CBasePane:: SaveState
 
 Сохраняет состояние панели в реестр.
 
@@ -1779,26 +1779,26 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszProfileName*<br/>
-[in] Имя профиля.
+*лпсзпрофиленаме*<br/>
+окне Имя профиля.
 
-*nIndex*<br/>
-[in] Индекс профиля.
+*ниндекс*<br/>
+окне Индекс профиля.
 
 *uiID*<br/>
-[in] Идентификатор области.
+окне Идентификатор области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние было сохранено успешно. в противном случае — значение FALSE.
+Значение TRUE, если состояние успешно сохранено; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается платформой, когда она сохраняет состояние панели в реестр. Переопределить `SaveState` в производном классе для хранения дополнительной информации.
+Платформа вызывает этот метод при сохранении состояния панели в реестр. Переопределение `SaveState` в производном классе для хранения дополнительных сведений.
 
-##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont
+##  <a name="selectdefaultfont"></a>CBasePane:: Селектдефаултфонт
 
-Выбирает шрифт по умолчанию для контекста устройства.
+Выбирает шрифт по умолчанию для данного контекста устройства.
 
 ```
 CFont* SelectDefaultFont(CDC* pDC);
@@ -1807,13 +1807,13 @@ CFont* SelectDefaultFont(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Контекст устройства.
+окне Контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на значение по умолчанию [класс CFont](../../mfc/reference/cfont-class.md) объекта.
+Указатель на объект [класса кфонт](../../mfc/reference/cfont-class.md) по умолчанию.
 
-##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle
+##  <a name="setcontrolbarstyle"></a>CBasePane:: Сетконтролбарстиле
 
 Задает стиль панели управления.
 
@@ -1823,19 +1823,19 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwNewStyle*<br/>
-[in] Побитовое или сочетание следующих значений.
+*двневстиле*<br/>
+окне Побитовое или приведенное сочетание следующих возможных значений.
 
 |Стиль|Описание|
 |-----------|-----------------|
-|AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
+|AFX_CBRS_FLOAT|Делает панель управления плавающей.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|
-|AFX_CBRS_RESIZE|Включает изменение размера панели элементов управления. Если этот флаг установлен, панель элементов управления может быть помещено в закрепляемую панель.|
-|AFX_CBRS_CLOSE|Обеспечивает скрытие панели управления.|
+|AFX_CBRS_RESIZE|Включает изменение размера панели элементов управления. Если этот флаг установлен, панель управления может быть помещена в закрепляемую область.|
+|AFX_CBRS_CLOSE|Включает скрытие панели элементов управления.|
 
-##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode
+##  <a name="setdockingmode"></a>CBasePane:: Сетдоккингмоде
 
-Задает режим для области закрепления.
+Задает режим стыковки для панели.
 
 ```
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
@@ -1843,20 +1843,20 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 
 ### <a name="parameters"></a>Параметры
 
-*dockModeNew*<br/>
-[in] Задает новый режим закрепления для области.
+*доккмоденев*<br/>
+окне Задает новый режим стыковки для панели.
 
 ### <a name="remarks"></a>Примечания
 
-Платформа поддерживает два режима закрепления: "стандартный" и интерпретации.
+Платформа поддерживает два режима стыковки: Standard и immediate.
 
-В стандартном режиме закрепления панели и окна перемещения с помощью прямоугольника перетаскивания. В режиме интерпретации закрепления панели элементов управления и окна перемещаются немедленно вместе с их контекстом.
+В стандартном режиме стыковки панели и окна с мини-рамками перемещаются вокруг с помощью прямоугольника перетаскивания. В режиме мгновенной стыковки панели элементов управления и окна с мини-кадрами перемещаются сразу же с контекстом.
 
-Изначально глобально определенный режим закрепления [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Можно задать режим закрепления для каждой области по отдельности, используя `SetDockingMode` метод.
+Изначально режим закрепления определяется глобально с помощью [кдоккингманажер:: m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Режим закрепления можно задать для каждой панели отдельно с помощью `SetDockingMode` метода.
 
-##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment
+##  <a name="setpanealignment"></a>CBasePane:: Сетпанеалигнмент
 
-Задает выравнивание для области.
+Задает выравнивание для панели.
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -1864,25 +1864,25 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Параметры
 
-*dwAlignment*<br/>
-[in] Задает выравнивание по новой.
+*двалигнмент*<br/>
+окне Задает новое выравнивание.
 
 ### <a name="remarks"></a>Примечания
 
-Как правило, этот метод вызывается платформой при закреплении области из одной части главного фрейма в другой.
+Как правило, платформа вызывает этот метод, когда панель закреплена от одной стороны основной рамки к другой.
 
-В следующей таблице показаны возможные значения для *dwAlignment*:
+В следующей таблице приведены возможные значения для *двалигнмент*:
 
 |Значение|Выравнивание|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Выравнивание по левому краю.|
 |CBRS_ALIGN_RIGHT|Выравнивание по правому краю.|
-|CBRS_ALIGN_TOP|Выравнивание по верхней границе.|
-|CBRS_ALIGN_BOTTOM|Выравнивание по нижней границе.|
+|CBRS_ALIGN_TOP|Выравнивание по верхнему краю.|
+|CBRS_ALIGN_BOTTOM|Выравнивание по нижнему краю.|
 
-##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle
+##  <a name="setpanestyle"></a>CBasePane:: Сетпанестиле
 
-Задает стиль области.
+Задает стиль панели.
 
 ```
 virtual void SetPaneStyle(DWORD dwNewStyle);
@@ -1890,18 +1890,18 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
 
 ### <a name="parameters"></a>Параметры
 
-*dwNewStyle*<br/>
-[in] Задает новый стиль для задания.
+*двневстиле*<br/>
+окне Задает новый стиль для задания.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод может использоваться для задания любой стиль CBRS_, которые определены в файле afxres.h. Поскольку стиль панели и выравнивания области хранятся вместе, задайте новый стиль, сочетая ее с текущее выравнивание следующим образом.
+Этот метод можно использовать для установки любых стилей CBRS_, определенных в AFXRES. h. Так как стиль панели и выравнивание панели хранятся вместе, задайте новый стиль, объединив его с текущим выравниванием следующим образом.
 
 `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`
 
-##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos
+##  <a name="setwindowpos"></a>CBasePane:: SetWindowPos
 
-Изменяет размер, положение и Z-порядок панели.
+Изменяет размер, расположение и Z-порядок панели.
 
 ```
 virtual HDWP SetWindowPos(
@@ -1916,38 +1916,38 @@ virtual HDWP SetWindowPos(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndInsertAfter*<br/>
-[in] Идентифицирует `CWnd` объект, который предшествует это `CWnd` объекта в Z-порядка. Дополнительные сведения см. в разделе [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+*пвндинсертафтер*<br/>
+окне Определяет объект, который предшествует этому `CWnd` объекту в Z-порядке. `CWnd` Дополнительные сведения см. в разделе [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *x*<br/>
-[in] Задает положение левой части окна.
+окне Задает расположение левой стороны окна.
 
 *y*<br/>
-[in] Задает положение верхнего края окна.
+окне Задает расположение верхней границы окна.
 
 *cx*<br/>
-[in] Указывает ширину окна.
+окне Задает ширину окна.
 
 *CY*<br/>
-[in] Указывает высоту окна.
+окне Задает высоту окна.
 
-*nFlags*<br/>
-[in] Указывает параметры размера и положения. Дополнительные сведения см. в разделе [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+*нфлагс*<br/>
+окне Задает параметры размера и расположения. Дополнительные сведения см. в разделе [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
-*hdwp*<br/>
-[in] Дескриптор структуру, содержащую сведения о размере и позиции для одного или нескольких окон.
+*хдвп*<br/>
+окне Указатель на структуру, содержащую сведения о размере и положении для одного или нескольких окон.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор структуру позиции обновленное окно отложенного или значение NULL.
+Указатель на обновленную структуру расположения отложенного окна или значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Если *pWndInsertAfter* имеет значение NULL, этот метод вызывает метод [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Если *pWndInsertAfter* — не NULL, этот метод вызывает метод `DeferWindowPos`.
+Если *пвндинсертафтер* имеет значение null, этот метод вызывает [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Если *пвндинсертафтер* имеет значение, отличное от NULL, этот `DeferWindowPos`метод вызывает.
 
-##  <a name="showpane"></a>  CBasePane::ShowPane
+##  <a name="showpane"></a>CBasePane:: Шовпане
 
-Показывает или скрывает область.
+Показывает или скрывает панель.
 
 ```
 virtual void ShowPane(
@@ -1959,21 +1959,21 @@ virtual void ShowPane(
 ### <a name="parameters"></a>Параметры
 
 *bShow*<br/>
-[in] Указывает, следует ли отображать (TRUE) или скрыть (FALSE) область.
+окне Указывает, следует ли отображать (TRUE) или скрывать (FALSE) панель.
 
-*bDelay*<br/>
-[in] Значение TRUE, если повторное вычисление макет закрепления откладывается.
+*бделай*<br/>
+окне Если значение равно TRUE, повторное вычисление макета закрепления отложено.
 
 *bActivate*<br/>
-[in] Значение TRUE, если область активна, при отображении.
+окне Если значение — TRUE, панель активна при отображении.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отображает или скрывает панель. Используйте этот метод вместо `ShowWindow` так, как этот метод уведомляет соответствующие диспетчеры закрепления об изменениях в области видимости.
+Этот метод показывает или скрывает панель. Используйте этот метод вместо, `ShowWindow` поскольку этот метод уведомляет соответствующие диспетчеры стыковки об изменениях в области видимости.
 
-Используйте [CBasePane::IsVisible](#isvisible) для определения видимости текущей области.
+Чтобы определить текущую видимость области, используйте [CBasePane::-Visible](#isvisible) .
 
-##  <a name="stretchpane"></a>  CBasePane::StretchPane
+##  <a name="stretchpane"></a>CBasePane:: Стретчпане
 
 Растягивает панель по вертикали или горизонтали.
 
@@ -1985,19 +1985,19 @@ virtual CSize StretchPane(
 
 ### <a name="parameters"></a>Параметры
 
-*nLength*<br/>
-[in] Длина, по которому для растяжения области.
+*нленгс*<br/>
+окне Длина, на которую растягивается область.
 
-*bVert*<br/>
-[in] Если значение равно TRUE, растянуть области по вертикали. Если значение равно FALSE, stretch области по горизонтали.
+*бверт*<br/>
+окне Если значение — TRUE, растяните панель по вертикали. Если значение равно FALSE, растяжение панели по горизонтали.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер области растянутым.
+Размер растянутой области.
 
-##  <a name="undockpane"></a>  CBasePane::UndockPane
+##  <a name="undockpane"></a>CBasePane:: Ундоккпане
 
-Удаляет области из сайта закрепления, по умолчанию ползунок или окна области, где она в настоящее время закреплена.
+Удаляет панель с сайта закрепления, ползунка по умолчанию или окно мини-кадра, в котором она в данный момент закреплена.
 
 ```
 virtual void UndockPane(BOOL bDelay=FALSE);
@@ -2005,14 +2005,14 @@ virtual void UndockPane(BOOL bDelay=FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bDelay*<br/>
-Значение TRUE, если макет закрепления не пересчитывается немедленно.
+*бделай*<br/>
+Если значение — TRUE, макет закрепления не пересчитывается немедленно.
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод для управления состоянием области или исключить из макет закрепления панели.
+Вызовите этот метод, чтобы управлять состоянием панели или исключить панель из макета закрепления.
 
-Если вы хотите продолжать использовать эту панель, вызвать либо [CBasePane::DockPane](#dockpane) или [CBasePane::FloatPane](#floatpane) перед вызовом этого метода.
+Если вы хотите продолжить использовать эту панель, вызовите метод [CBasePane::D оккпане](#dockpane) или [CBasePane:: флоатпане](#floatpane) перед вызовом этого метода.
 
 ## <a name="see-also"></a>См. также
 

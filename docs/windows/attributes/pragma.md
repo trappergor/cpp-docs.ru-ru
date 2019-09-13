@@ -1,21 +1,21 @@
 ---
-title: Директива pragma (атрибут COM C++)
+title: pragma (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407462"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514274"
 ---
 # <a name="pragma"></a>pragma
 
-Создает указанную строку в созданного IDL-файла без использования кавычек.
+Выдает указанную строку в созданный IDL-файл без использования кавычек.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,11 +26,11 @@ ms.locfileid: "62407462"
 ### <a name="parameters"></a>Параметры
 
 *pragma_statement*<br/>
-Директива pragma, который вы хотите перейти на созданного IDL-файла.
+Директива pragma, которую необходимо поместить в созданный IDL-файл.
 
 ## <a name="remarks"></a>Примечания
 
-**Pragma** атрибут C++ имеет ту же функциональность, что [pragma](/windows/desktop/Midl/pragma) описании атрибута MIDL.
+Атрибут **директивы pragma** C++ имеет те же функциональные возможности, что и атрибут [pragma](/windows/win32/Midl/pragma) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -54,10 +54,10 @@ __interface A
 
 |||
 |-|-|
-|**Применение**|В любом месте|
+|**Относится к**|В любом месте|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

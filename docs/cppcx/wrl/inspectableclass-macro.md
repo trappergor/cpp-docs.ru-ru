@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: 9d194f5a87ac4a142301bc896cb3ed172f119473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee2a76edb967923a03ce6720b4163baf1cc48c32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398201"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500481"
 ---
 # <a name="inspectableclass-macro"></a>Макрос InspectableClass
 
-Задает уровень имя и доверия класса среды выполнения.
+Задает имя класса среды выполнения и уровень доверия.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,21 +26,21 @@ InspectableClass(
 
 ### <a name="parameters"></a>Параметры
 
-*runtimeClassName*<br/>
+*рунтимекласснаме*<br/>
 Полное текстовое имя класса среды выполнения.
 
 *trustLevel*<br/>
-Один из [TrustLevel](/windows/desktop/api/inspectable/ne-inspectable-trustlevel) значений перечисления.
+Одно из перечисляемых значений [TrustLevel](/windows/win32/api/inspectable/ne-inspectable-trustlevel) .
 
 ## <a name="remarks"></a>Примечания
 
-**InspectableClass** макрос может использоваться только с типами среды выполнения Windows.
+Макрос **InspectableClass** можно использовать только с типами среда выполнения Windows.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
-**Пространство имен:** Microsoft::WRL
+**Пространство имен:** Microsoft:: WRL
 
 ## <a name="see-also"></a>См. также
 

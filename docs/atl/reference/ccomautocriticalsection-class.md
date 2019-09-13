@@ -1,5 +1,5 @@
 ---
-title: Класс CComAutoCriticalSection
+title: Класс Ккомаутокритикалсектион
 ms.date: 11/04/2016
 f1_keywords:
 - CComAutoCriticalSection
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoCriticalSection class
 ms.assetid: 491a9d90-3398-4f90-88f5-fd2172a46b30
-ms.openlocfilehash: 613440eceb71f0277f4cc5de2af89fe263772797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 116c550f45bf622e7620b3a6f552339b4bcc24a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260198"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497928"
 ---
-# <a name="ccomautocriticalsection-class"></a>Класс CComAutoCriticalSection
+# <a name="ccomautocriticalsection-class"></a>Класс Ккомаутокритикалсектион
 
-`CComAutoCriticalSection` Предоставляет методы для получения и освобождения владения объект критической секции.
+`CComAutoCriticalSection`предоставляет методы для получения и освобождения владельца объекта критической секции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,28 +31,28 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 |name|Описание|
 |----------|-----------------|
-|[CComAutoCriticalSection::CComAutoCriticalSection](#ccomautocriticalsection)|Конструктор.|
-|[CComAutoCriticalSection:: ~ CComAutoCriticalSection](#dtor)|Деструктор|
+|[Ккомаутокритикалсектион:: Ккомаутокритикалсектион](#ccomautocriticalsection)|Конструктор.|
+|[Ккомаутокритикалсектион:: ~ Ккомаутокритикалсектион](#dtor)|Деструктор|
 
 ## <a name="remarks"></a>Примечания
 
-`CComAutoCriticalSection` Аналогично класс [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md), за исключением `CComAutoCriticalSection` автоматически инициализирует объект критической секции в конструкторе.
+`CComAutoCriticalSection`аналогичен классу [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md), за `CComAutoCriticalSection` исключением автоматической инициализации объекта критической секции в конструкторе.
 
-Как правило, используется `CComAutoCriticalSection` через `typedef` имя [AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection). Это имя ссылается на `CComAutoCriticalSection` при [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) используется.
+Обычно используется `CComAutoCriticalSection` `typedef` имя [аутокритикалсектион](ccommultithreadmodel-class.md#autocriticalsection). Это имя указывает `CComAutoCriticalSection` , когда используется [ккоммултисреадмодел](../../atl/reference/ccommultithreadmodel-class.md) .
 
-`Init` И `Term` методы из [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) недоступны при использовании этого класса.
+Методы `Init` и `Term` из [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md) недоступны при использовании этого класса.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
+[ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComAutoCriticalSection`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файле atlcore.h
+**Заголовок:** атлкоре. h
 
-##  <a name="ccomautocriticalsection"></a>  CComAutoCriticalSection::CComAutoCriticalSection
+##  <a name="ccomautocriticalsection"></a>Ккомаутокритикалсектион:: Ккомаутокритикалсектион
 
 Конструктор.
 
@@ -62,9 +62,9 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>Примечания
 
-Вызывает функцию Win32 [InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection), который инициализирует объект критической секции.
+Вызывает функцию Win32 [инитиализекритикалсектион](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), которая инициализирует объект критической секции.
 
-##  <a name="dtor"></a>  CComAutoCriticalSection:: ~ CComAutoCriticalSection
+##  <a name="dtor"></a>Ккомаутокритикалсектион:: ~ Ккомаутокритикалсектион
 
 Деструктор
 
@@ -74,10 +74,10 @@ CComAutoCriticalSection();
 
 ### <a name="remarks"></a>Примечания
 
-Деструктор вызывает [DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection), который освобождает все системные ресурсы, используемые объектом критический раздел.
+Деструктор вызывает [делетекритикалсектион](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), который освобождает все системные ресурсы, используемые объектом критического раздела.
 
 ## <a name="see-also"></a>См. также
 
 [Класс CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)

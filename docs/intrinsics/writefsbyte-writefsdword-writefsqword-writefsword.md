@@ -1,6 +1,6 @@
 ---
 title: __writefsbyte, __writefsdword, __writefsqword, __writefsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writefsword
 - __writefsbyte
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0cb70986fc75d14f23fb70efe89f48e10fb047e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389792"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219128"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
+# <a name="__writefsbyte-__writefsdword-__writefsqword-__writefsword"></a>__writefsbyte, __writefsdword, __writefsqword, __writefsword
 
 **Блок, относящийся только к системам Microsoft**
 
-Запись памяти в расположении, заданном в качестве смещения относительно начала сегмента FS.
+Запись памяти в расположение, указанное смещением относительно начала сегмента службы федерации.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 void __writefsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __writefsqword(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
-[in] Смещение от начала FS для записи.
+*Собой*\
+окне Смещение от начала объекта FS, в который производится запись.
 
-*Данные*<br/>
-[in] Записываемое значение.
+*Data*\
+окне Записываемое значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -67,15 +67,15 @@ void __writefsqword(
 |`__writefsdword`|x86|
 |`__writefsqword`|x86|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Эти процедуры доступны только как встроенные функции.
+Эти подпрограммы доступны только в виде встроенных функций.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

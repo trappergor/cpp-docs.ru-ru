@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154881"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498713"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает **_com_ptr_t** объекта.
+Конструирует объект **_com_ptr_t** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -135,32 +135,32 @@ explicit _com_ptr_t(
 
 #### <a name="parameters"></a>Параметры
 
-*pInterface*<br/>
+*пинтерфаце*<br/>
 Необработанный указатель на интерфейс.
 
-*fAddRef*<br/>
-Если значение равно TRUE, `AddRef` вызывается Увеличиваемый счетчик ссылок инкапсулированного указателя на интерфейс.
+*фаддреф*<br/>
+Если значение — `AddRef` true, вызывается для увеличения числа ссылок на указатель инкапсулированного интерфейса.
 
-*cp*<br/>
-Объект **_com_ptr_t** объекта.
+*CP*<br/>
+Объект **_com_ptr_t** .
 
 *p*<br/>
-Необработанный указатель на интерфейс, его тип отличается от типа интеллектуального указателя этого **_com_ptr_t** объекта.
+Необработанный указатель интерфейса, его тип отличается от типа интеллектуального указателя этого объекта **_com_ptr_t** .
 
-*varSrc*<br/>
+*варсрк*<br/>
 Объект `_variant_t`.
 
-*CLSID*<br/>
-`CLSID` Компонентного класса.
+*этому*<br/>
+Объект `CLSID` coclass.
 
-*dwClsContext*<br/>
+*двклсконтекст*<br/>
 Контекст для выполняющегося исполняемого кода.
 
 *lpcStr*<br/>
-Многобайтовая строка, которая содержит либо `CLSID` (начиная с "**{**«) или `ProgID`.
+Многобайтовая строка, содержащая либо `CLSID` (начиная с " **{** `ProgID`"), либо.
 
-*pOuter*<br/>
-Внешняя Неизвестная строка для [статистической обработки](/windows/desktop/com/aggregation).
+*паутер*<br/>
+Внешняя неизвестная для [агрегирования](/windows/win32/com/aggregation).
 
 ## <a name="see-also"></a>См. также
 

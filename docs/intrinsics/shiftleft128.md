@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390416"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218005"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390416"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-*Значение подверсии*<br/>
-[in] Младшие 64 разряда 128-разрядной величины для сдвига.
+*ловпарт*\
+окне Младший 64 бит 128-разрядного количества для сдвига.
 
-*HighPart*<br/>
-[in] Старшие 64 разряда 128-разрядной величины для сдвига.
+*хигхпарт*\
+окне Старшие 64 бит 128-разрядного количества для сдвига.
 
-*SHIFT*<br/>
-[in] Количество битов для сдвига.
+*Мести*\
+окне Число битов для сдвига.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -50,15 +50,15 @@ unsigned __int64 __shiftleft128(
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="remarks"></a>Примечания
 
-Это значение `Shift` всегда берется по модулю 64, поэтому, например, при вызове метода`__shiftleft128(1, 0, 64)`, функция будет сдвигать влево  разряды `0` младшей части возвращать старшую часть `0`, а не `1`, как в противном случае можно было ожидать.
+Значение *сдвига* всегда равно модулю 64, поэтому, например, при вызове `__shiftleft128(1, 0, 64)`функция переместит `0` младшие биты `0` влево и возвратит большую часть, а не `1` так, как может быть в противном случае.
 
 ## <a name="example"></a>Пример
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[__shiftright128](../intrinsics/shiftright128.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)

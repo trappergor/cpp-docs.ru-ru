@@ -1,24 +1,24 @@
 ---
-title: Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой COM
+title: Пошаговое руководство. Использование среда выполнения с параллелизмом в приложении с поддержкой COM
 ms.date: 04/25/2019
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 7249dc1c715861230170bc3efd4fb4aa75029bdb
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 23488522287ab5767c88cd3a3e90c09392634f46
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512095"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Пошаговое руководство. Использование среда выполнения с параллелизмом в приложении с поддержкой COM
 
-В этом документе демонстрируется использование среды выполнения с параллелизмом в приложении, которое использует компонент модели объектов (COM).
+В этом документе показано, как использовать среда выполнения с параллелизмом в приложении, использующем модель COM.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем приступать к этому руководству, приведены в следующих источниках:
+Прежде чем приступить к работе с этим пошаговым руководством, прочитайте следующие документы:
 
 - [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
@@ -28,101 +28,101 @@ ms.locfileid: "64857502"
 
 - [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)
 
-Дополнительные сведения о COM, см. в разделе [объектов модели компонентов (COM)](/windows/desktop/com/component-object-model--com--portal).
+Дополнительные сведения о модели COM см. в разделе [компонентная объектная модель (com)](/windows/win32/com/component-object-model--com--portal).
 
-## <a name="managing-the-lifetime-of-the-com-library"></a>Управление временем существования библиотеки COM
+## <a name="managing-the-lifetime-of-the-com-library"></a>Управление жизненным циклом библиотеки COM
 
-Несмотря на то, что использование COM с помощью среды выполнения с параллелизмом следует тем же принципам, как любой другой механизм параллелизма, следующие рекомендации помогут эти библиотеки вместе эффективного использования.
+Хотя использование COM с среда выполнения с параллелизмом следует тем же принципам, что и любой другой механизм параллелизма, следующие рекомендации помогут эффективно использовать эти библиотеки.
 
-- Необходимо вызвать поток [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) прежде, чем он использует библиотеку COM.
+- Прежде чем использовать библиотеку COM, поток должен вызвать [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) .
 
-- Можно вызвать поток `CoInitializeEx` несколько раз, пока он предоставляет те же аргументы, чтобы при каждом вызове.
+- Поток может вызываться `CoInitializeEx` несколько раз, если он предоставляет одни и те же аргументы для каждого вызова.
 
-- Для каждого вызова `CoInitializeEx`, необходимо также вызвать поток [CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize). Другими словами, вызовы `CoInitializeEx` и `CoUninitialize` должна быть сбалансирована.
+- Для каждого вызова `CoInitializeEx`поток должен также вызывать [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize). Иными словами, вызовы `CoInitializeEx` и `CoUninitialize` должны быть сбалансированы.
 
-- Для переключения из одного потока подразделения в другое, поток должен полностью освободить библиотеку COM перед вызовом `CoInitializeEx` с новой потоковой спецификации.
+- Чтобы переключиться с одного подразделения потока на другой, поток должен полностью освободить библиотеку COM перед вызовом `CoInitializeEx` с новой спецификацией потоков.
 
-Другие COM принципы применяются при использовании COM-Компонентов с помощью среды выполнения с параллелизмом. Например приложение, которое создает объект в однопотоковое подразделение (STA) и маршалирует этот объект в другое подразделение необходимо также указать цикл обработки сообщений для обработки входящих сообщений. Также следует помните, что маршалинг объектов между подразделениями может привести к снижению производительности.
+Другие принципы COM применяются при использовании COM с среда выполнения с параллелизмом. Например, приложение, которое создает объект в однопотоковом подразделении (STA) и маршалирует объект в другое подразделение, также должно предоставить цикл обработки сообщений, обрабатывающий входящие сообщения. Также помните, что маршалирование объектов между апартаментами может привести к снижению производительности.
 
 ### <a name="using-com-with-the-parallel-patterns-library"></a>Использование COM с библиотекой параллельных шаблонов
 
-При использовании COM-Компонентов с компонентом в параллельных шаблонов Library (PPL), например, группа задач или параллельный алгоритм, вызвать `CoInitializeEx` до использования библиотеки COM во время каждой задачи или итерации и вызов `CoUninitialize` до завершения каждой задачи или итерации . Приведенный ниже показано, как управлять временем существования библиотеки COM с помощью [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) объекта.
+При использовании COM с компонентом в библиотеке параллельных шаблонов (PPL), например в группе задач или параллельном алгоритме, необходимо вызвать `CoInitializeEx` перед использованием библиотеки COM во время каждой задачи или итерации и вызвать метод `CoUninitialize` до завершения каждой задачи или итерации. . В следующем примере показано, как управлять временем существования библиотеки COM с помощью объекта [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) .
 
 [!code-cpp[concrt-parallel-scripts#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_1.cpp)]
 
-Необходимо убедиться в том, что библиотека COM правильно освобождается при отмене задачи или параллельного алгоритма, или когда тело задачи вызывает исключение. Чтобы гарантировать, что задача вызывает `CoUninitialize` до ее завершения, используйте `try-finally` блока или *Получение ресурса есть инициализация* шаблон (RAII). В следующем примере используется `try-finally` блока для освобождения библиотеки COM при завершении или отмене задачи, или когда возникает исключение.
+Необходимо убедиться, что библиотека COM правильно освобождена при отмене задачи или параллельного алгоритма или в случае, если тело задачи создает исключение. Чтобы гарантировать вызов `CoUninitialize` задачи перед ее завершением, `try-finally` используйте блок или шаблон " *приобретение ресурсов — инициализация* " (RAII). В следующем примере используется `try-finally` блок для высвобождения библиотеки COM при завершении или отмене задачи, а также при возникновении исключения.
 
 [!code-cpp[concrt-parallel-scripts#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_2.cpp)]
 
-В следующем примере шаблон RAII для определения `CCoInitializer` класс, который управляет временем существования библиотеки COM в данной области.
+В следующем примере шаблон RAII используется для определения `CCoInitializer` класса, который управляет временем существования библиотеки COM в данной области.
 
 [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]
 
-Можно использовать `CCoInitializer` класс для автоматического освобождения библиотеки COM при завершении задачи, как показано ниже.
+`CCoInitializer` Класс можно использовать для автоматического освобождения библиотеки COM при завершении задачи, как показано ниже.
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
-Дополнительные сведения об отмене в среде выполнения с параллелизмом, см. в разделе [Отмена в PPL](cancellation-in-the-ppl.md).
+Дополнительные сведения об отмене в среда выполнения с параллелизмом см. [в разделе об отмене в PPL](cancellation-in-the-ppl.md).
 
 ### <a name="using-com-with-asynchronous-agents"></a>Использование COM с асинхронными агентами
 
-При использовании COM с асинхронными агентами, вызовите `CoInitializeEx` прежде чем использовать библиотеки COM в [Concurrency::agent:: Run](reference/agent-class.md#run) метод для агента. Затем вызовите `CoUninitialize` перед `run` возвращает метод. Не используйте подпрограммы управления COM в конструктор или деструктор агента, а не переопределяют [Concurrency::agent:: Start](reference/agent-class.md#start) или [concurrency::agent:: сделать](reference/agent-class.md#done) методы так, как эти методы являются вызывается из потока, отличного от `run` метод.
+При использовании COM с асинхронными агентами вызывайте `CoInitializeEx` перед использованием библиотеки COM в методе [Concurrency:: Agent:: Run](reference/agent-class.md#run) для агента. Затем вызовите `CoUninitialize` метод `run` перед возвратом из метода. Не используйте подпрограммы управления COM в конструкторе или деструкторе агента и не переопределяйте [Concurrency:: Agent:: Start](reference/agent-class.md#start) или [Concurrency:: Agent::d один](reference/agent-class.md#done) метод, поскольку эти методы вызываются из другого потока, чем `run` метод.
 
-В примере показан базовый класс агентов, с именем `CCoAgent`, который управляет библиотекой COM в `run` метод.
+В следующем примере показан базовый класс агента с именем `CCoAgent`, который управляет библиотекой COM `run` в методе.
 
 [!code-cpp[concrt-parallel-scripts#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_5.cpp)]
 
-Полный пример предоставляется далее в этом пошаговом руководстве.
+Полный пример приведен далее в этом пошаговом руководстве.
 
 ### <a name="using-com-with-lightweight-tasks"></a>Использование COM с упрощенными задачами
 
-Документ [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md) описывается роль упрощенных задач в среде выполнения с параллелизмом. Можно использовать модель COM с упрощенной задачи, так же, как и с любой подпрограммы поток, передаваемый `CreateThread` функции в Windows API. Эти действия показаны в следующем примере.
+В документе [планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md) описывается роль упрощенных задач в среда выполнения с параллелизмом. COM можно использовать с упрощенной задачей точно так же, как и с любой подпрограммой потока, передаваемым `CreateThread` в функцию в Windows API. Эти действия показаны в следующем примере.
 
 [!code-cpp[concrt-parallel-scripts#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_6.cpp)]
 
-## <a name="an-example-of-a-com-enabled-application"></a>Пример COM-приложение
+## <a name="an-example-of-a-com-enabled-application"></a>Пример приложения с поддержкой COM
 
-В этом разделе показано законченное приложение с поддержкой модели COM, которое использует `IScriptControl` интерфейс для выполнения скрипта, который вычисляет n<sup>th</sup> число Фибоначчи. В этом примере сначала вызывает скрипт из основного потока, а затем использует PPL и агенты для вызова скрипта одновременно.
+В этом разделе показано полноценное приложение с поддержкой COM, использующее `IScriptControl` интерфейс для выполнения сценария, который выполняет вычисление n-<sup>го</sup> числа Фибоначчи. Этот пример сначала вызывает скрипт из основного потока, а затем использует PPL и агенты для параллельного вызова скрипта.
 
-Рассмотрим следующую вспомогательную функцию, `RunScriptProcedure`, которая вызывает процедуру `IScriptControl` объекта.
+Рассмотрим следующую вспомогательную функцию, `RunScriptProcedure`которая вызывает процедуру `IScriptControl` в объекте.
 
 [!code-cpp[concrt-parallel-scripts#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_7.cpp)]
 
-`wmain` Функция создает `IScriptControl` , добавляет код сценария, вычисляет n его<sup>th</sup> число Фибоначчи, а затем вызывает `RunScriptProcedure` функция для запуска этого скрипта.
+Функция создает объект, добавляет к нему код скрипта, который выполняет вычисление n-<sup>го</sup> `RunScriptProcedure` числа Фибоначчи, а затем вызывает функцию для выполнения этого скрипта. `IScriptControl` `wmain`
 
 [!code-cpp[concrt-parallel-scripts#8](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_8.cpp)]
 
 ### <a name="calling-the-script-from-the-ppl"></a>Вызов скрипта из PPL
 
-Следующая функция `ParallelFibonacci`, использует [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм для вызова скрипта в параллельном режиме. Эта функция использует `CCoInitializer` класса для управления временем жизни библиотеки COM во время каждой итерации задачи.
+Следующая функция, `ParallelFibonacci`, использует алгоритм [параллелизма::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) для параллельного вызова скрипта. Эта функция использует `CCoInitializer` класс для управления временем существования библиотеки COM во время каждой итерации задачи.
 
 [!code-cpp[concrt-parallel-scripts#9](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_9.cpp)]
 
-Чтобы использовать `ParallelFibonacci` работать с примером, добавьте следующий код перед `wmain` возврата функции.
+Чтобы использовать `ParallelFibonacci` функцию с примером, добавьте следующий код `wmain` перед возвратом функции.
 
 [!code-cpp[concrt-parallel-scripts#10](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_10.cpp)]
 
 ### <a name="calling-the-script-from-an-agent"></a>Вызов скрипта из агента
 
-В следующем примере показан `FibonacciScriptAgent` класс, который вызывает процедуру сценария для вычисления n<sup>th</sup> число Фибоначчи. `FibonacciScriptAgent` Класс использует отправку сообщений для получения из главной программы входных параметров для функции скрипта. `run` Метод управляет временем существования библиотеки COM во всей задачи.
+В следующем примере показан `FibonacciScriptAgent` класс, который вызывает процедуру скрипта для расчета n-<sup>го</sup> числа Фибоначчи. `FibonacciScriptAgent` Класс использует передачу сообщений для получения от основной программы, входные значения в функцию скрипта. `run` Метод управляет временем существования библиотеки COM во всей задаче.
 
 [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]
 
-Следующая функция `AgentFibonacci`, создается несколько `FibonacciScriptAgent` и использует отправку сообщений для отправки нескольких входных значений для этих объектов.
+Следующая функция `AgentFibonacci`,, создает несколько `FibonacciScriptAgent` объектов и использует передачу сообщений для отправки нескольких входных значений в эти объекты.
 
 [!code-cpp[concrt-parallel-scripts#12](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_12.cpp)]
 
-Чтобы использовать `AgentFibonacci` работать с примером, добавьте следующий код перед `wmain` возврата функции.
+Чтобы использовать `AgentFibonacci` функцию с примером, добавьте следующий код `wmain` перед возвратом функции.
 
 [!code-cpp[concrt-parallel-scripts#13](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_13.cpp)]
 
 ### <a name="the-complete-example"></a>Полный пример
 
-Ниже приведен полный пример, в котором используется для вызова процедуры скрипта, которая вычисляет числа Фибоначчи параллельными алгоритмами и асинхронными агентами.
+В следующем коде показан полный пример, в котором используются параллельные алгоритмы и асинхронные агенты для вызова процедуры сценария, которая выполняет вычисление чисел Фибоначчи.
 
 [!code-cpp[concrt-parallel-scripts#14](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_14.cpp)]
 
-Следующий пример выходных данных примера.
+В примере выводится следующий пример выходных данных.
 
 ```Output
 Main Thread:
@@ -149,9 +149,9 @@ fib(12) = 144
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `parallel-scripts.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем `parallel-scripts.cpp` , а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**cl.exe /EHsc parallel-scripts.cpp /link ole32.lib**
+**CL. exe/EHsc Параллел-скриптс. cpp/Link ole32. lib**
 
 ## <a name="see-also"></a>См. также
 
@@ -161,4 +161,4 @@ fib(12) = 144
 [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)<br/>
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
-[Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+[планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)

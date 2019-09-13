@@ -1,21 +1,21 @@
 ---
-title: max_is (C++ атрибут COM)
+title: max_is (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409282"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514429"
 ---
-# <a name="maxis"></a>max_is
+# <a name="max_is"></a>max_is
 
-Определяет максимальное значение для индекса допустимым массивом.
+Задает максимальное значение для допустимого индекса массива.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,12 +25,12 @@ ms.locfileid: "62409282"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
-Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
+*expression*<br/>
+Одно или несколько выражений языка C. Пустые слоты аргументов разрешены.
 
 ## <a name="remarks"></a>Примечания
 
-**Max_is** C++ атрибут имеет ту же функциональность, что [max_is](/windows/desktop/Midl/max-is) описании атрибута MIDL.
+Атрибут **max_is** C++ имеет те же функциональные возможности, что и атрибут [max_is](/windows/win32/Midl/max-is) MIDL.
 
 ## <a name="requirements"></a>Требования
 
@@ -38,16 +38,16 @@ ms.locfileid: "62409282"
 
 |||
 |-|-|
-|**Применение**|В поле **структуры** или **объединение**, параметр интерфейса, метод интерфейса|
+|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
 |**Недопустимые атрибуты**|**size_is**|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Пример
 
-См. в разделе [first_is](first-is.md) пример указания фрагмент массива.
+Пример указания раздела массива см. в разделе [first_is](first-is.md) .
 
 ## <a name="see-also"></a>См. также
 

@@ -1,6 +1,6 @@
 ---
 title: Сведения об этапах настраиваемого построения и событиях построения.
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - builds [C++], events
 - custom build steps [C++], customizing builds
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400451"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177323"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Сведения об этапах настраиваемого построения и событиях построения.
 
@@ -38,7 +38,7 @@ ms.locfileid: "67400451"
 
 Формат вывода для настраиваемого этапа сборки или события сборки также может сделать работу с инструментом более удобной. Дополнительные сведения см. в разделе [Форматирование выходных данных этапа настраиваемой сборки или события сборки](formatting-the-output-of-a-custom-build-step-or-build-event.md).
 
-События и настраиваемые этапы сборки выполняются в следующем порядке вместе с другими этапами сборки:
+Для каждого проекта в решении события сборки и пользовательские шаги сборки выполняются в следующем порядке вместе с другими этапами сборки:
 
 1. Событие перед сборкой
 
