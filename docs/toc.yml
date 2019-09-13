@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: Файлы и потоки
-                      href: c-runtime-library/files-and-streams.md
-                    - name: Текстовые и двоичные потоки
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Байтовые и широкие потоки
                       href: c-runtime-library/byte-and-wide-streams.md
