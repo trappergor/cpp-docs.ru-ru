@@ -1,11 +1,11 @@
 ---
 title: sin, sinf, sinl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinl
 - sinf
 - sin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sinl
 - sinf
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4ef8ac08ada6162932bbf9b872f30e6aa88b79b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356256"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948066"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Вычисляет синус значение с плавающей запятой.
+Вычисляет синус значения с плавающей запятой.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -62,18 +65,18 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Sin** функции возвращают синус *x*. Если *x* больше или равно 263 или меньше или равно -263, происходит потеря значимости результата.
+Функции **sin** возвращают синус *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|_DOMAIN|
-|± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
+|± КНАН, С|Отсутствуют|_DOMAIN|
+|± ∞ (SIN, sinf, sinl)|INVALID|_DOMAIN|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **sin** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **sin** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sin** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C функция **sin** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,9 +1,9 @@
 ---
 title: _pclose
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _pclose
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _pclose
 - pclose
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156017"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951085"
 ---
-# <a name="pclose"></a>_pclose
+# <a name="_pclose"></a>_pclose
 
 Ожидает новый обработчик команд и закрывает поток по связанному каналу.
 
@@ -48,18 +51,18 @@ FILE *stream
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
-Значение, возвращаемое из предыдущего вызова **_popen**.
+*вышестоящий*<br/>
+Возвращаемое значение из предыдущего вызова **_popen**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает состояние завершения завершающего обработчика команд или значение -1, если произошла ошибка. Формат возвращаемого значения совпадает со значением, для **_cwait**, за исключением, что байты низкого и высокого порядка меняются местами. Если поток имеет **NULL**, **_pclose** задает **errno** для **EINVAL** и возвращает – 1.
+Возвращает состояние выхода для завершающего обработчика команд или-1 при возникновении ошибки. Формат возвращаемого значения тот же, что и для **_cwait**, за исключением того, что байты нижнего и верхнего порядка меняются местами. Если Stream имеет **значение NULL**, **_pclose** **устанавливает** **еинвал** и возвращает-1.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Pclose** функция ищет идентификатор процесса интерпретатор командной строки (Cmd.exe), запущенного связанным **_popen** вызова, выполняет [_cwait](cwait.md) вызвать для новой команды Процессор и закрывает поток по связанному каналу.
+Функция **_pclose** ищет идентификатор процесса командного процессора (cmd. exe), запущенный связанным вызовом **_popen** , выполняет вызов [_cwait](cwait.md) для нового обработчика команд и закрывает поток в соответствующем канале.
 
 ## <a name="requirements"></a>Требования
 

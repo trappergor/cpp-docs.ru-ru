@@ -1,11 +1,11 @@
 ---
 title: cimag, cimagf, cimagl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cimag
 - cimagf
 - cimagl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cimagf
 - cimagl
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38eef416afb078614ef26ab5d7c8810f46dd9a85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347604"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939166"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -65,13 +68,13 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cimag** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float**или **long** **двойные** значения. В программе на языке C **cimag** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Цимаг** , принимающие значения **_Fcomplex** или **_Lcomplex** , а также возвращать значения **типа float** или **Long** с типом **Double** . В программе на языке C **Цимаг** всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**cimag**, **cimagf**, **cimagl**|\<complex.h>|\<ccomplex>|
+|**Цимаг**, **Цимагф**, **Цимагл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

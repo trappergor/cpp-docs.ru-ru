@@ -1,10 +1,10 @@
 ---
 title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285338"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952802"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
 Копирует байты между буферами. Это версии функций [memcpy, wmemcpy](memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -58,7 +61,7 @@ errno_t wmemcpy_s(
 *dest*<br/>
 Новый буфер.
 
-*destSize*<br/>
+*дестсизе*<br/>
 Размер буфера назначения в байтах для функции memcpy_s и в расширенных символах (wchar_t) для wmemcpy_s.
 
 *src*<br/>
@@ -73,18 +76,18 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*dest*|*destSize*|*src*|*count*|Возвращаемое значение|Содержание *dest*|
+|*dest*|*дестсизе*|*src*|*count*|Возвращаемое значение|Содержимое конечного *объекта*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|any|any|any|0|0|Без изменений|
-|**NULL**|any|any|ненулевое значение|**EINVAL**|Без изменений|
-|any|any|**NULL**|ненулевое значение|**EINVAL**|*dest* обнуляется|
-|any|< *число*|any|ненулевое значение|**ERANGE**|*dest* обнуляется|
+|Любое действие|Любое действие|Любое действие|0|0|Без изменений|
+|**NULL**|Любое действие|Любое действие|ненулевое значение|**EINVAL**|Без изменений|
+|Любое действие|Любое действие|**NULL**|ненулевое значение|**EINVAL**|*конечный адрес* обнулен|
+|Любое действие|< *расчета*|Любое действие|ненулевое значение|**ERANGE**|*конечный адрес* обнулен|
 
 ## <a name="remarks"></a>Примечания
 
-**memcpy_s** копий *число* байтов из *src* для *dest*; **wmemcpy_s** копий *число* расширенных символов (два байта). Если источника и назначения перекрываются, поведение **memcpy_s** не определено. Используйте **memmove_s** для обработки перекрывающихся областей.
+**memcpy_s** копирует *число* байтов из *src* в *dest*; **wmemcpy_s** копирует символы расширенного *числа* (2 байта). Если источник и назначение перекрываются, поведение **memcpy_s** не определено. Используйте **memmove_s** для управления перекрывающимися областями.
 
-Эти функции проверяют свои параметры. Если *число* имеет ненулевое значение и *dest* или *src* является пустым указателем, или *destSize* меньше, чем *число*, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** или **ERANGE** и задайте **errno** к возвращаемому значению.
+Эти функции проверяют свои параметры. Если *Count* не равно нулю, а *dest* или *src* является пустым указателем, или *дестсизе* меньше *Count*, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **еинвал** или **ERANGE** и применяют **к возвращаемому** значению.
 
 ## <a name="requirements"></a>Требования
 

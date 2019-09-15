@@ -1,10 +1,10 @@
 ---
 title: _fseek_nolock, _fseeki64_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fseek_nolock
 - _fseeki64_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fseek_nolock
 - _fseeki64_nolock
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c72f44b214893a6702f5da5594db7725a2f02136
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287708"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956531"
 ---
-# <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock, _fseeki64_nolock
+# <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock, _fseeki64_nolock
 
 Перемещает файловый указатель в указанное местоположение.
 
@@ -58,7 +61,7 @@ int _fseeki64_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 *offset*<br/>
@@ -69,11 +72,11 @@ int _fseeki64_nolock(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Совпадение с кодом [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно.
+То же, что и [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md)соответственно.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции являются неблокирующей версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эти функции представляют собой неблокирующие версии [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md), соответственно. Они идентичны [fseek](fseek-fseeki64.md) и [_fseeki64](fseek-fseeki64.md) , за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,10 @@
 ---
 title: fegetround, fesetround
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetround
 - fesetround
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetround
 - fesetround
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-ms.openlocfilehash: 061f0c9563d284396e85c6de70a2fe0911218eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b210dbce3104820f667d4ad0b4421277567b279f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334376"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941200"
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 
@@ -54,9 +57,9 @@ int fesetround(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **fegetround** Возвращает режим округления как одно из значений округляющего макроса с плавающей. Возвращается отрицательное значение, если текущий режим округления невозможно определить.
+При успешном выполнении **fegetround** Возвращает режим округления в виде одного из значений макроса округления с плавающей точкой. Возвращается отрицательное значение, если текущий режим округления невозможно определить.
 
-В случае успешного выполнения **fesetround** возвращает 0. В противном случае возвращается ненулевое значение.
+При успешном выполнении **fesetround** возвращает 0. В противном случае возвращается ненулевое значение.
 
 ## <a name="remarks"></a>Примечания
 
@@ -77,13 +80,13 @@ int fesetround(
 
 - Результаты арифметических операций с плавающей запятой за пределами константных выражений.
 
-- Округляющие функции библиотеки, такие как **rint** и **nearbyint**.
+- Функции округления библиотеки, такие как **Печать** и **неарбинт**.
 
 - Значения, возвращаемые из математических функций стандартной библиотеки.
 
 Текущий режим округления не затрагивает следующие операции.
 
-- **Trunc**, **ceil**, **floor**, и **lround** функции библиотеки.
+- Функции библиотеки **TRUNC**, **ceil**, **Floor**и **лраунд** .
 
 - Приведения и преобразования с плавающей запятой, которые всегда округляются в сторону нуля.
 

@@ -1,9 +1,9 @@
 ---
 title: _close
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _close
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _close
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340018"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942936"
 ---
-# <a name="close"></a>_close
+# <a name="_close"></a>_close
 
 Закрывает файл.
 
@@ -49,15 +52,15 @@ int _close(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_Закрыть** возвращает 0, если файл был успешно закрыт. Возвращаемое значение-1 указывает на ошибку.
+**_close** возвращает 0, если файл был успешно закрыт. Возвращаемое значение, равное-1, указывает на ошибку.
 
 ## <a name="remarks"></a>Примечания
 
-**_Close** функция закрывает файл, связанный с *fd*.
+Функция **_close** закрывает файл, связанный с *демоном*.
 
-Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, нет необходимости вызывать **CloseHandle** Если файл был открыт с помощью функции Win32 **CreateFile** и преобразован в дескриптор файлов с помощью **_open_osfhandle**.
+Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Поэтому нет необходимости вызывать функцию **CloseHandle** , если файл был первоначально открыт с помощью функции Win32 **CreateFile** и преобразован в дескриптор файла с помощью **_open_osfhandle**.
 
-Эта функция проверяет свои параметры. Если *fd* является недопустимым дескриптором, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают -1 и **errno** присваивается **значение EBADF**.
+Эта функция проверяет свои параметры. Если *демон демона* является неверным дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 **, а для** возврата — **значение EBADF**.
 
 ## <a name="requirements"></a>Требования
 

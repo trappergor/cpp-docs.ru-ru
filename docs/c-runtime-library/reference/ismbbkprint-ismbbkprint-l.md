@@ -1,10 +1,10 @@
 ---
 title: _ismbbkprint, _ismbbkprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkprint
 - _ismbbkprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkprint_l
 - ismbbkprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2417718d7cb90e8032cfe9dad903d6610dc6ae7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954113"
 ---
-# <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
+# <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint, _ismbbkprint_l
 
 Определяет, является ли определенный многобайтовый символ знаком препинания.
 
@@ -61,7 +64,7 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkprint** возвращает ненулевое значение, если целое число *c* является текст или символ знака препинания отличные от ASCII или 0, если это не. Например, в только для кодовой страницы 932 **_ismbbkprint** тесты для катаканы буквенно-цифровые или пунктуационным символам катаканы (диапазон: 0xA1 – 0xDF). **_ismbbkprint** использует текущий языковой стандарт для параметров символов, зависящих от языкового стандарта. **_ismbbkprint_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** возвращает ненулевое значение, если целое число *c* является ТЕКСТОВым или не ASCII-символом пунктуации, или 0 в противном случае. Например, только в кодовой странице 932 тесты **_ismbbkprint** для символов азбуки катакана (буквенно-цифровой или катакана) (Range: 0xA1 – 0xDF). **_ismbbkprint** использует текущий языковой стандарт для параметров символов, зависящих от языкового стандарта. **_ismbbkprint_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

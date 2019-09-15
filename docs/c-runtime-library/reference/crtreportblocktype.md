@@ -1,9 +1,9 @@
 ---
 title: _CrtReportBlockType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtReportBlockType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtReportBlockType
 - CrtReportBlockType
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 186c63ce1619d6427436ff1458ca551e464d0bce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd50de1d1ade1d83b97bc465ff7e4c73b52fba2d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347419"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942338"
 ---
-# <a name="crtreportblocktype"></a>_CrtReportBlockType
+# <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
 Возвращает тип и подтип блока, связанные с указателем блока заданной отладочной кучи.
 
@@ -52,11 +55,11 @@ int _CrtReportBlockType(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При передаче допустимого указателя отладочной кучи, **_CrtReportBlockType** функция возвращает тип и подтип блока в виде **int**. При передаче недопустимого указателя функция возвращает значение -1.
+При передаче допустимого указателя отладочной кучи функция **_CrtReportBlockType** Возвращает тип блока и подтип в **виде целого числа.** При передаче недопустимого указателя функция возвращает значение -1.
 
 ## <a name="remarks"></a>Примечания
 
-Для извлечения типа и подтипа, возвращенный **_CrtReportBlockType**, используйте макрос **_BLOCK_TYPE** и **_BLOCK_SUBTYPE** (как определено в Crtdbg.h) для возвращаемого значения.
+Чтобы извлечь тип и подтип, возвращаемый функцией **_CrtReportBlockType**, используйте макросы **_BLOCK_TYPE** и **_BLOCK_SUBTYPE** (оба они определены в Crtdbg. h) для возвращаемого значения.
 
 Дополнительные сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 

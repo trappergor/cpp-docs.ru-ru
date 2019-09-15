@@ -1,10 +1,10 @@
 ---
 title: _ismbblead, _ismbblead_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbblead_l
 - _ismbblead
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbblead_l
 - istlead
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157215"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954064"
 ---
-# <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
+# <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
 Проверяет символ, чтобы определить, является ли он старшим байтом многобайтового символа.
 
@@ -65,13 +68,13 @@ int _ismbblead_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ненулевое значение, если целое число *c* является первым байтом многобайтового символа.
+Функция возвращает ненулевое значение, если целое число *c* является первым байтом многобайтового символа.
 
 ## <a name="remarks"></a>Примечания
 
-Многобайтовые символы состоят из старшего байта, за которым следует конечный байт. Старшие байты относятся к определенному диапазону данной кодировки. Например в код страницы 932 только, старший байт в диапазоне от 0x81 – 0x9F и 0xE0 – 0xFC.
+Многобайтовые символы состоят из старшего байта, за которым следует конечный байт. Старшие байты относятся к определенному диапазону данной кодировки. Например, только в кодовой странице 932, это диапазон из 0x81-0x9F и 0xE0-0xFC.
 
-**_ismbblead** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. **_ismbblead_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. **_ismbblead_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

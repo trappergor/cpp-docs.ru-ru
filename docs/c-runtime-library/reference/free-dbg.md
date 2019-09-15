@@ -1,9 +1,9 @@
 ---
 title: _free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _free_dbg
 - free_dbg
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956808"
 ---
-# <a name="freedbg"></a>_free_dbg
+# <a name="_free_dbg"></a>_free_dbg
 
 Освобождает блок памяти в куче (только в отладочной версии).
 
@@ -50,15 +53,15 @@ void _free_dbg(
 Указатель на выделенный блок памяти, который требуется освободить.
 
 *blockType*<br/>
-Тип блока памяти, освобождаемой: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**, или **_IGNORE_BLOCK**.
+Тип выделяемого блока памяти, который должен быть освобожден: **_CLIENT_BLOCK**, **_NORMAL_BLOCK**или **_IGNORE_BLOCK**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Free_dbg** функция — это отладочная версия [бесплатный](free.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_free_dbg** сокращается до вызова **бесплатный**. Оба **бесплатный** и **_free_dbg** освобождают блок памяти в основной куче, но **_free_dbg** включает две возможности отладки: возможность хранить освободившиеся блоки в куче связанном списке для моделирования условий недостатка памяти и параметр типа блока для освобождения конкретных типов выделения.
+Функция **_free_dbg** является отладочной версией функции [Free](free.md) . Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_free_dbg** уменьшается до вызова **Free**. Оба командлета **Free** и **_free_dbg** освобождают блок памяти в базовой куче, но **_free_dbg** поддерживает две функции отладки: возможность сохранения освобожденных блоков в связанном списке кучи для имитации нехватки памяти и параметра типа блока для конкретные типы выделения ресурсов.
 
-**_free_dbg** выполняет проверку допустимости для всех указанных файлов и расположений блоков перед выполнением операции освобождения. Приложение не ожидает предоставления этих сведений. Когда освобождается блок памяти, диспетчер отладочной кучи автоматически проверяет целостность буферов по обеим сторонам пользовательской части и выдает отчет об ошибке в случае их перезаписи. Если **_CRTDBG_DELAY_FREE_MEM_DF** битовое поле [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) флаг установлен, освободившийся блок заполняется значением 0xDD, назначенный **_FREE_BLOCK** блокировку типа, и хранится в кучи в связанном списке блоков памяти.
+**_free_dbg** выполняет проверку допустимости для всех указанных файлов и расположений блоков перед выполнением бесплатной операции. Приложение не ожидает предоставления этих сведений. Когда освобождается блок памяти, диспетчер отладочной кучи автоматически проверяет целостность буферов по обеим сторонам пользовательской части и выдает отчет об ошибке в случае их перезаписи. Если задано битовое поле **_CRTDBG_DELAY_FREE_MEM_DF** флага [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) , то освобожденный блок заполняется значением 0xDD, ему присваивается тип блока **_FREE_BLOCK** и хранится в связанном списке блоков памяти кучи.
 
-Если произошла ошибка при освобождении памяти, **errno** задается с помощью сведения из операционной системы от характера сбоя. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Если при освобождении памяти произошла ошибка, то параметру "очистить" **задается** информация из операционной системы о характере сбоя. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
@@ -72,7 +75,7 @@ void _free_dbg(
 
 ## <a name="example"></a>Пример
 
-Пример использования **_free_dbg**, см. в разделе [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
+Пример использования **_free_dbg**см. в разделе [crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2).
 
 ## <a name="see-also"></a>См. также
 
