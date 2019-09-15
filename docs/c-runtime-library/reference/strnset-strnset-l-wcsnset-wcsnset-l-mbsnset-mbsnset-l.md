@@ -1,14 +1,14 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnset
 - _strnset
 - _mbsnset_l
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncset_l
 - mbsnset_l
@@ -66,19 +69,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 3389213b423857fa0a8561c1d6bd13ae2d9d6d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209614"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946976"
 ---
-# <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
+# <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
 Инициализирует символы строки в соответствии с указанным символом. Существуют более безопасные версии этих функций; см. раздел [_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsnset** и **_mbsnset_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset** и **_mbsnset_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -138,11 +141,11 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Strnset** самое большее, функция задает первый *число* символов *str* для *c* (преобразовать **char**). Если *число* больше, чем длина *str*, длина *str* используется вместо *число*.
+Функция **_strnset** задает не более первого символа *подсчета* *str* в *c* (преобразуется в **char**). Если параметр *Count* превышает длину *str*, вместо *Count*используется длина *str* .
 
-**_wcsnset** и **_mbsnset** расширенных и многобайтовых символов версии **_strnset**. Строковые аргументы и возвращаемое значение **_wcsnset** являются двухбайтовые строки; аргументы **_mbsnset** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**_wcsnset** и **_mbsnset** — это версии **_strnset**для расширенных символов и многобайтовых символов. Строковые аргументы и возвращаемое значение **_wcsnset** являются строками расширенных символов. **_mbsnset** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbsnset** возвращает **NULL** и задает **errno** для **EINVAL**. **_strnset** и **_wcsnset** не проверяют свои параметры.
+**_mbsnset** проверяет свои параметры; Если *str* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено **, _mbsnset** возвращает значение NULL **и устанавливает в** качестве **значения** по **еинвал**. **_strnset** и **_wcsnset** не проверяют свои параметры.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

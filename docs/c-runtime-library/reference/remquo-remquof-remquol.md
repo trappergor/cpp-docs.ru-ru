@@ -1,11 +1,11 @@
 ---
 title: remquo, remquof, remquol
 ms.date: 04/05/2018
-apiname:
+api_name:
 - remquof
 - remquo
 - remquol
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remquof
 - remquol
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96357dda007e9bf12ddaf6091af47794bfc0630
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949366"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -53,30 +56,30 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Параметры
 
-*Число добавлений*<br/>
+*число ключей*<br/>
 Числитель.
 
-*denom*<br/>
+*деном*<br/>
 Знаменатель.
 
-*Текущее*<br/>
+*кво*<br/>
 Указатель на целое число для хранения значения, которое имеет знак и приблизительное абсолютное значение частного.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**remquo** возвращает остаток с плавающей запятой от *x* / *y*. Если значение *y* равно 0,0, **remquo** возвращает несигнальное значение NaN. Сведения о представлении NaN в тихом режиме, **printf** семейства, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **remquo** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Remquo** функция вычисляет остаток с плавающей запятой *f* из *x* / *y* таким образом, чтобы *x*   =  *я* \* *y* + *f*, где *я* должно быть целым числом , *f* имеет тот же знак, что *x*и абсолютное значение *f* меньше, чем абсолютное значение *y*.
+Функция **remquo** вычисляет значение *x* / *y* *остатка* с плавающей запятой, т. е. *x* = *i* \* *y* + *f*, где *i* — целое число, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **remquo** всегда принимает два **двойные** аргументы и возвращает **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **remquo** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> или \<math.h>|
+|**remquo**, **ремкуоф**, **ремкуол**|\<math.h>|\<cmath> или \<math.h>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

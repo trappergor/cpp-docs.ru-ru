@@ -1,11 +1,11 @@
 ---
 title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334792"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941296"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -93,13 +96,13 @@ long double fdiml(
 |-----------|------------|
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|
-|*x* или *y* имеет значение NaN|NaN|
+|*x* или *y* является NaN|NaN|
 
 Ошибки сообщаются, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **fdim** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **fdim** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фдим** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **фдим** всегда принимает и возвращает значение **типа Double**.
 
 За исключением обработки NaN, эта функция эквивалентна `fmax(x - y, 0)`.
 
@@ -107,7 +110,7 @@ long double fdiml(
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**fdim**, **fdimf**, **fdiml**|\<math.h>|\<cmath>|
+|**фдим**, **fdimf**, **фдимл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

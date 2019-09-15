@@ -1,10 +1,10 @@
 ---
 title: _getche, _getwche
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getwche
 - _getche
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwche
 - _getche
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - getwche function
 - _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
-ms.openlocfilehash: 87e9173e21ea51281276601b6fc5e3b73e244fca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf7aa10702dca5118d03d7ce2e2d4341941fc51c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287331"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955316"
 ---
-# <a name="getche-getwche"></a>_getche, _getwche
+# <a name="_getche-_getwche"></a>_getche, _getwche
 
 Получает символ из консоли с отображением.
 
@@ -56,7 +59,7 @@ wint_t _getwche( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_Getche** и **_getwche** функции считывают один символ из консоли с отображением, то, что символ выводится на консоль. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
+Функции **_getche** и **_getwche** считывают один символ из консоли с эхо-выводом, что означает, что символ отображается в консоли. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
 
 Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующих версий см. в разделе [_getche_nolock, _getwche_nolock](getche-nolock-getwche-nolock.md).
 

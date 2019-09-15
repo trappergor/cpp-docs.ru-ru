@@ -1,11 +1,11 @@
 ---
 title: casin, casinf, casinl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casin
 - casinf
 - casinl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casin
 - casinf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335598"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943383"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Извлекает арксинус комплексного числа, ветви выходят за пределы интервала [−1, + 1] на реальной оси.
+Извлекает арксинус комплексного числа, при этом ветвь разрывается за пределами интервала [-1, + 1] вдоль реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -68,17 +71,17 @@ _Lcomplex casinl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арксинус *z*, в радианах. Результат неограничен на мнимой оси и находится в интервале [-π/2, + π/2] на реальной оси.
+Арксинус *z*в радианах. Результат не ограничен на мнимой оси и в интервале [-π/2, + π/2] вдоль реальной оси.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **casin** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **casin** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Касин** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **Касин** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**casin**, **casinf**, **casinl**|\<complex.h>|\<ccomplex>|
+|**Касин**, **КАСИНФ**, **касинл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

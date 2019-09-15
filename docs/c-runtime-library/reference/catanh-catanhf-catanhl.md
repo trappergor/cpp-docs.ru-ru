@@ -1,11 +1,11 @@
 ---
 title: catanh, catanhf, catanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catanh
 - catanhf
 - catanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catanh
 - catanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340967"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943236"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh, catanhf, catanhl
 
-Извлекает обратный гиперболический тангенс комплексного числа, с помощью узловые выходят за пределы интервала [-1; + 1] на реальной оси.
+Извлекает обратный гиперболический тангенс комплексного числа, при этом ветвь разрывается за пределами интервала [-1; + 1] вдоль реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -68,17 +71,17 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обратный гиперболический тангенс *z*, в радианах. Результат неограничен на реальной оси и находится в интервале [-iπ/2, + iπ/2] на мнимой оси. Если возникает ошибка домена *z* не попадает в интервал [−1, + 1]. Ошибка полюса возникнет в том случае, если *z* имеет значение −1 или + 1.
+Обратный гиперболический тангенс *z*, в радианах. Результат будет раздельным по фактической оси и в интервале [-iπ/2; + iπ/2] вдоль мнимой оси. Если *z* находится за пределами интервала [-1, + 1], возникнет ошибка домена. Если *z* имеет значение-1 или + 1, возникает ошибка полюса.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **catanh** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **catanh** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **катанх** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **катанх** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**catanh**, **catanhf**, **catanhl**|\<complex.h>|\<ccomplex>|
+|**катанх**, **катанхф**, **катанхл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

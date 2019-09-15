@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357139"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948927"
 ---
-# <a name="rtcseterrortype"></a>_RTC_SetErrorType
+# <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
 Связывает обнаруженную проверкой во время выполнения ошибку (RTC) с типом. Обработчик ошибок определяет способ вывода ошибок указанного типа.
 
@@ -49,13 +52,13 @@ int _RTC_SetErrorType(
 Число от нуля до единицы и меньше значения, возвращаемого [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если вы используете **_CrtDbgReport** как обработчика ошибок, *ErrType* может быть только один из символов, определенных в [_CrtSetReportMode](crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.
+Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если в качестве обработчика ошибок используется **_CrtDbgReport** , *ErrType* может быть только одним из символов, определенных в [_CrtSetReportMode](crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.
 
-*ErrType* для _RTC_ERRTYPE_IGNORE имеет специальное значение для **_CrtSetReportMode**; Ошибка игнорируется.
+*ERRTYPE* _RTC_ERRTYPE_IGNORE имеет специальное значение для **_CrtSetReportMode**; ошибка игнорируется.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее значение для типа ошибки *тип*.
+Предыдущее *значение типа ошибки.*
 
 ## <a name="remarks"></a>Примечания
 

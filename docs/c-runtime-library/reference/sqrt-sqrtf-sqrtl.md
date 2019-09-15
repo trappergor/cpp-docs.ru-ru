@@ -1,11 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - sqrtl
 - sqrtf
 - sqrt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sqrt
 - sqrtf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354903"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958105"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -69,23 +72,23 @@ long double sqrtl(
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **sqrt** , принимающих **float** или **long** **двойные** типов. В программе на языке C **sqrt** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки функции **sqrt** , которые принимают типы **float** или **Long** типа **Double** . В программе C функция **sqrt** всегда принимает и возвращает **Double**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Sqrt** функции возвращают квадратный корень из *x*. По умолчанию если *x* отрицательное, **sqrt** возвращает неопределенное значение NaN.
+Функции **sqrt** возвращают квадратный корень из *x*. По умолчанию, если *x* является отрицательным, функция **sqrt** возвращает неопределенное значение NaN.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Ввод|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND|Нет|_DOMAIN|
-|- ∞|Нет|_DOMAIN|
-|x < 0|Нет|_DOMAIN|
+|± КНАН, С|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
+|x < 0|none|_DOMAIN|
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **скртф**, **sqrt**|\<math.h>|\<cmath>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -1,14 +1,14 @@
 ---
 title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285776"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953128"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -104,25 +107,25 @@ long long int llrintl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает округленное целочисленное значение *x*.
+В случае успеха возвращает округленное целочисленное значение *x*.
 
 |Проблемы|Назад|
 |-----------|------------|
-|*x* находится вне диапазона типа возвращаемого значения<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Вызывает **FE_INVALID** и возвращает ноль (0).|
+|*x* находится за пределами диапазона возвращаемого типа<br /><br /> *x* = ± ∞<br /><br /> *x* = NaN|Вызывает **FE_INVALID** и возвращает ноль (0).|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **lrint** и **llrint** , принимающих **float** и **long**  **двойные** типов. В программе на языке C **lrint** и **llrint** всегда имеют **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лринт** и **ллринт** , которые принимают типы **float** и **Long** **Double** . В программе на языке C **лринт** и **ллринт** всегда принимают значение **double**.
 
-Если *x* не представляет с плавающей запятой эквивалент целочисленного значения, эти функции вызывают **FE_INEXACT**.
+Если *x* не представляет эквивалент целочисленного значения с плавающей запятой, эти функции вызывают **FE_INEXACT**.
 
-**Системам Microsoft**: Если результат находится вне диапазона типа возвращаемого значения, или параметр является значением NaN или бесконечностью, возвращаемое значение это определяется реализацией. Компилятор Майкрософт возвращает нулевое значение (0).
+**Специально для Майкрософт**: Если результат выходит за пределы диапазона возвращаемого значения или если параметр является NaN или бесконечностью, то возвращаемое значение определяется реализацией. Компилятор Майкрософт возвращает нулевое значение (0).
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
+|**лринт**, **лринтф**, **лринтл**, **ллринт**, **ллринтф**, **ллринтл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -1,11 +1,11 @@
 ---
 title: tan, tanf, tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258630"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946901"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -63,22 +66,22 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Tan** функции возвращают тангенс *x*. Если *x* больше или равно 263 или меньше или равно -263, происходит потеря значимости результата.
+Функции **Tan** возвращают тангенс *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Входные данные|Исключение SEH|**Matherr** исключение|
+|Ввод|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|Нет|_DOMAIN|
+|± КНАН, С|none|_DOMAIN|
 |± INF|**НЕДОПУСТИМЫЙ**|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **tan** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **tan** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **значения типа** **float** или **Long** . В программе на языке **Tan** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> или \<math.h>|
+|**Tan**, **TANF**, **танл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

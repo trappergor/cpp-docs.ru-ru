@@ -1,10 +1,10 @@
 ---
 title: isfinite, _finite, _finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333720"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957180"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite, _finite, _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite, _finite, _finitef
 
 Определяет, является ли значение с плавающей запятой конечным.
 
@@ -71,11 +74,11 @@ int _finitef(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`isfinite` Макрос и `_finite` и `_finitef` функции возвращают ненулевое значение, если *x* является либо обычный или subnormal конечное значение. Они возвращают значение 0, если аргумент является бесконечным или NaN. Встроенная функция шаблона C++ `isfinite` ведет себя так же, но возвращает **true** или **false**.
+Макросы и функции `_finitef` и возвращают ненулевое значение, если x является нормальным или поднормальным конечным значением. `_finite` `isfinite` Они возвращают 0, если аргумент имеет бесконечное значение или NaN. C++ `isfinite` Встроенная функция шаблона ведет себя таким же образом, но возвращает **значение true** или **false**.
 
 ## <a name="remarks"></a>Примечания
 
-`isfinite` представляет собой макрос, если он компилируется как C и встроенная функция шаблона при компиляции как C++. `_finite` И `_finitef` функции, характерные для Майкрософт. Функция `_finitef` доступна только в случае компиляции для платформ x86, ARM или ARM64.
+`isfinite`макрос при компиляции в виде C и встроенная функция шаблона при компиляции как C++. Функции `_finite` и`_finitef` являются специфичными для Microsoft. Функция `_finitef` доступна только в случае компиляции для платформ x86, ARM или ARM64.
 
 ## <a name="requirements"></a>Требования
 

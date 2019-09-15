@@ -1,10 +1,10 @@
 ---
 title: _strdup_dbg, _wcsdup_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup_dbg
 - _wcsdup_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcsdup_dbg
 - strdup_dbg
@@ -31,16 +34,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353895"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958189"
 ---
-# <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
+# <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg, _wcsdup_dbg
 
-Версии [_strdup и _wcsdup](strdup-wcsdup-mbsdup.md) , которые используют отладочную версию **malloc**.
+Версии [_strdup и _wcsdup](strdup-wcsdup-mbsdup.md) , использующие отладочную версию **malloc**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,27 +64,27 @@ wchar_t *_wcsdup_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*strSource*<br/>
+*стрсаурце*<br/>
 Исходная строка, завершающаяся символом NULL.
 
 *blockType*<br/>
 Запрошенный тип блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
+Указатель на имя исходного файла, который запросил операцию выделения, или **значение NULL**.
 
 *linenumber*<br/>
-Номер строки в исходный файл, где была запрошена операция выделения или **NULL**.
+Номер строки в исходном файле, где была запрошена операция выделения, или **значение NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает указатель на место хранения для скопированной строки или **NULL** Если не удается выделить память.
+Каждая из этих функций возвращает указатель на место хранения копируемой строки или **значение NULL** , если не удается выделить хранилище.
 
 ## <a name="remarks"></a>Примечания
 
-**_Strdup_dbg** и **_wcsdup_dbg** функции аналогичны **_strdup** и **_wcsdup** за исключением того, что, когда **_ Отладка** будет определен, эти функции используют отладочную версию **malloc**, **_malloc_dbg**для выделения памяти для повторяющейся строки. Сведения о компонентах отладки **_malloc_dbg**, см. в разделе [_malloc_dbg](malloc-dbg.md).
+Функции **_strdup_dbg** и **_wcsdup_dbg** идентичны **_strdup** и **_wcsdup** , за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию **malloc**, **_malloc_dbg**, чтобы выделить память для дублирования строки. Сведения о функциях отладки **_malloc_dbg**см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы функций **_strdup** и **_wcsdup** сопоставляются **_strdup_dbg** и **_ wcsdup_dbg**, соответственно, с помощью *blockType* присвоено **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если вы не хотите пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Если определен **_CRTDBG_MAP_ALLOC** , вызовы методов **_strdup** и **_wcsdup** пересопоставляются с **_strdup_dbg** и **_wcsdup_dbg**соответственно, а *блокктипе* устанавливается в **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

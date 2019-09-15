@@ -1,14 +1,14 @@
 ---
 title: lround, lroundf, lroundl, llround, llroundf, llroundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - llround
 - llroundf
 - llroundl
 - lroundf
 - lround
 - lroundl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lround
 - lroundl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285849"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953014"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -89,21 +92,21 @@ long long llroundl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Lround** и **llround** функции возвращают ближайшее **long** или **long** **long** целое число *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
+Функции **лраунд** и **ллраунд** возвращают **ближайшее длинное** или **длинное** **целое** число в *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|± **КНАН**, **С**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **lround** или **llround** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **lround** и **llround** всегда принимают и возвращают **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лраунд** или **ллраунд** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **лраунд** и **ллраунд** всегда принимают и возвращают **double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**lround**, **lroundf**, **lroundl**, **llround**, **llroundf**, **llroundl**|\<math.h>|
+|**лраунд**, **лраундф**, **лраундл**, **ллраунд**, **ллраундф**, **ллраундл**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

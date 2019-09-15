@@ -1,11 +1,11 @@
 ---
 title: mktime, _mktime32, _mktime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mktime32
 - mktime
 - _mktime64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mktime
 - _mktime64
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-ms.openlocfilehash: c45b69f84a0aec159ed59a480e9358f27c8e85e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a282e9f27a0e8f2a91219facda96a5929d3982ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500988"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951522"
 ---
 # <a name="mktime-_mktime32-_mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -83,11 +86,11 @@ __time64_t _mktime64(
 
 - значение меньше нуля, чтобы указать, что код библиотеки времени выполнения языка C должен вычислить, действует ли стандартное время или переход на зимнее время.
 
-Библиотека времени выполнения языка C определит режим перехода на зимнее время на основе значения переменной среды [TZ](tzset.md). Если не задано, то вызов Win32 API [жеттимезонеинформатион](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) используется для получения сведений о летнем времени из операционной системы. В случае сбоя библиотека предполагает, что для реализации вычисления перехода на зимнее время используются правила для США. **tm_isdst** является обязательным полем. Если оно не задано, его значение является неопределенным, а возвращаемые значения этих функций — непредсказуемыми. Если *timeptr* указывает на структуру **TM** , возвращенную предыдущим вызовом [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)или [localtime](localtime-localtime32-localtime64.md) (или вариантов этих функций), поле **tm_isdst** содержит правильное значение.
+Библиотека времени выполнения языка C определит режим перехода на зимнее время на основе значения переменной среды [TZ](tzset.md). Если **не задано** , то вызов Win32 API [жеттимезонеинформатион](/windows/win32/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) используется для получения сведений о летнем времени из операционной системы. В случае сбоя библиотека предполагает, что для реализации вычисления перехода на зимнее время используются правила для США. **tm_isdst** является обязательным полем. Если оно не задано, его значение является неопределенным, а возвращаемые значения этих функций — непредсказуемыми. Если *timeptr* указывает на структуру **TM** , возвращенную предыдущим вызовом [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md)или [localtime](localtime-localtime32-localtime64.md) (или вариантов этих функций), поле **tm_isdst** содержит правильное значение.
 
 Обратите внимание, что **gmtime** и **localtime** (и **_gmtime32**, **_gmtime64**, **_localtime32**и **_localtime64**) используют один буфер для каждого потока для преобразования. При указании этого буфера для **функциях mktime**, **_mktime32** или **_mktime64**предыдущее содержимое уничтожается.
 
-Эти функции проверяют свои параметры. Если параметр *timeptr* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 и задают значение **еинвал**.
+Эти функции проверяют свои параметры. Если параметр *timeptr* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 и **задают значение** **еинвал**.
 
 ## <a name="requirements"></a>Требования
 

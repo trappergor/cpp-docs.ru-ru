@@ -1,10 +1,10 @@
 ---
 title: _popen, _wpopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _popen
 - _wpopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499602"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950997"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -70,7 +73,7 @@ FILE *_wpopen(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает поток, связанный с одним концом созданного канала. Другой конец канала связан со стандартным инициированным потоком ввода и вывода команд. Эти функции возвращают значение **NULL** при возникновении ошибки. Если ошибка является недопустимым параметром, например, если *команда* или *режим* является пустым указателем, или *режим* не является допустимым, то для параметра « **еинвал**» устанавливается значение «равно». Сведения о допустимых режимах см. в разделе "Примечания".
+Возвращает поток, связанный с одним концом созданного канала. Другой конец канала связан со стандартным инициированным потоком ввода и вывода команд. Эти функции возвращают значение **NULL** при возникновении ошибки. Если ошибка является недопустимым параметром, например, если *команда* или *режим* является пустым указателем, или *режим* не является допустимым, **то для параметра** « **еинвал**» устанавливается значение «равно». Сведения о допустимых режимах см. в разделе "Примечания".
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

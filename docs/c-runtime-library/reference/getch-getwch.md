@@ -1,10 +1,10 @@
 ---
 title: _getch, _getwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getch
 - _getwch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwch
 - _getch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122892945e8542afa7f9f944f984387db7c5ec8a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331850"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955476"
 ---
-# <a name="getch-getwch"></a>_getch, _getwch
+# <a name="_getch-_getwch"></a>_getch, _getwch
 
 Получает символ из консоли без отображения.
 
@@ -56,7 +59,7 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_Getch** и **_getwch** функции считывают один символ из консоли, но знак не. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
+Функции **_getch** и **_getwch** считывают один символ из консоли без вывода символа. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
 
 Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующих версий см. в разделе [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 

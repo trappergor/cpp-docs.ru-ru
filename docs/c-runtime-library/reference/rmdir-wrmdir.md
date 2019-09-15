@@ -1,10 +1,10 @@
 ---
 title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wrmdir
 - _rmdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - trmdir
 - _trmdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 0d0d9a25b70746174a66abbe088b297a5d9a0942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357464"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949206"
 ---
-# <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
+# <a name="_rmdir-_wrmdir"></a>_rmdir, _wrmdir
 
 Удаляет каталог.
 
@@ -57,12 +60,12 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Параметры
 
-*DirName*<br/>
+*dirname*<br/>
 Путь к каталогу, который следует удалить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает 0, если каталог был успешно удален. Возвращаемое значение-1 указывает на ошибку и **errno** присваивается одно из следующих значений:
+Каждая из этих функций возвращает 0, если каталог был успешно удален. Возвращаемое значение, равное-1, указывает на ошибку, а в качестве значения свойства « **No** » задано одно из следующих значений:
 
 |Значение errno|Условие|
 |-|-|
@@ -74,9 +77,9 @@ int _wrmdir(
 
 ## <a name="remarks"></a>Примечания
 
-**_Rmdir** функция удаляет каталог, заданный параметром *dirname*. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.
+Функция **_rmdir** удаляет каталог, указанный параметром *dirname*. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.
 
-**_wrmdir** — это двухбайтовая версия **_rmdir**; *dirname* аргумент **_wrmdir** — строка расширенных символов. **_wrmdir** и **_rmdir** идентично в противном случае.
+**_wrmdir** — это версия **_rmdir**для расширенных символов; Аргумент *dirname* для **_wrmdir** является строкой расширенных символов. в противном случае **_wrmdir** и **_rmdir** ведут себя одинаково.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

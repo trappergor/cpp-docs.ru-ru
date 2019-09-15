@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357213"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949014"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-Назначает функцию в качестве обработчика для сообщений о проверке на ошибки во время выполнения (RTC). Эта функция устарела; Используйте **_RTC_SetErrorFuncW** вместо этого.
+Назначает функцию в качестве обработчика для сообщений о проверке на ошибки во время выполнения (RTC). Эта функция является устаревшей; Вместо этого используйте **_RTC_SetErrorFuncW** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,11 +51,11 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ранее определенная функция обработки ошибок. Если нет ранее определенной функции, возвращает **NULL**.
+Ранее определенная функция обработки ошибок. Если ранее определенная функция отсутствует, возвращает **значение NULL**.
 
 ## <a name="remarks"></a>Примечания
 
-Не используйте эту функцию; Вместо этого используйте **_RTC_SetErrorFuncW**. Она сохраняется только для обратной совместимости.
+Не используйте эту функцию. Вместо этого используйте **_RTC_SetErrorFuncW**. Она сохраняется только для обратной совместимости.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,14 +1,14 @@
 ---
-title: log, logf, logl, log10, log10f, log10l
+title: log, логф, логл, LOG10, log10f, log10l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log10f
 - logf
 - log10
 - log
 - log10l
 - logl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logf
 - logl
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286016"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953230"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, логф, логл, LOG10, log10f, log10l
 
 Вычисляет логарифмы.
 
@@ -76,25 +79,25 @@ long double log10( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Журнала** функции возвращают натуральный логарифм (базовый *e*) из *x* при успешном выполнении. **Log10** функции возвращают десятичный логарифм. Если *x* является отрицательным, эти функции возвращают неопределенное (IND), по умолчанию. Если *x* равно 0, возвращается бесконечность (INF).
+Функции **журнала** возвращают натуральный логарифм (основание *e*) *x* в случае успеха. Функции **LOG10** возвращают десятичный логарифм. Если *x* является отрицательным, эти функции по умолчанию возвращают неопределенное значение («вывод»). Если *x* равно 0, они возвращают бесконечность (INF).
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|_DOMAIN|
+|± КНАН, С|none|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**Журнал** и **log10** иметь реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+в **log** и **LOG10** реализована реализация, использующая Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **журнала** и **log10** , принимающие и возвращающие **float** или **long double** значения. В программе на языке C **журнала** и **log10** всегда принимают и возвращают **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **log** и **LOG10** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **log** и **LOG10** всегда принимают и возвращают **double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**Журнал**, **logf**, **logl**, **log10**, **log10f**, **log10l**|\<math.h>|
+|**log**, **логф**, **логл**, **LOG10**, **log10f**, **log10l**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

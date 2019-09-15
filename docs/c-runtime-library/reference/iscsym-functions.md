@@ -1,7 +1,7 @@
 ---
 title: iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswcsym_l
 - __iswcsym
 - __iscsym
@@ -10,7 +10,7 @@ apiname:
 - __iswcsymf
 - __iscsymf
 - _iscsymf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswcsym_l
 - _iswcsymf_l
@@ -62,14 +65,14 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331640"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954416"
 ---
-# <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
+# <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym, iscsymf, __iscsym, __iswcsym, __iscsymf, __iswcsymf, _iscsym_l, _iswcsym_l, _iscsymf_l, _iswcsymf_l
 
 Определяет, представляет ли целое число символ, который может использоваться в идентификаторе.
 
@@ -111,28 +114,28 @@ int _iswcsymf_l(
 ### <a name="parameters"></a>Параметры
 
 *c*<br/>
-Проверяемое целое число. *c* должно быть в диапазоне от 0 до 255, для узких символов версию функции.
+Проверяемое целое число. значение *c* должно быть в диапазоне от 0-255 до версии с узким символом функции.
 
 *locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Оба **__iscsym** и **__iswcsym** возвращают ненулевое значение, если *c* — это буква, символ подчеркивания или цифра. Оба **__iscsymf** и **__iswcsymf** возвращают ненулевое значение, если *c* является буквой или символом подчеркивания. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста. Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют *языкового стандарта* переданный вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+И **__iscsym** , и **__iswcsym** возвращают ненулевое значение, если *c* — буква, символ подчеркивания или цифра. И **__iscsymf** , и **__iswcsymf** возвращают ненулевое значение, если *c* — буква или символ подчеркивания. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста. Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный *языковой стандарт* вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Примечания
 
 Эти подпрограммы реализуются в виде макросов за исключением случаев, когда определен макрос препроцессора _CTYPE_DISABLE_MACROS. При использовании версий этих подпрограмм, реализованных в виде макроса, аргументы могут вычисляться несколько раз. При использовании выражений со списками аргументов следует соблюдать осторожность.
 
-Для обеспечения обратной совместимости **iscsym** и **iscsymf** определяются как макросы только тогда, когда [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0; в противном случае они будут неопределенными.
+Для обеспечения обратной совместимости **исксим** и **исксимф** определяются как макросы только в том случае, если [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) не определена или определена как 0. в противном случае они не определены.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
+|**исксим**, **исксимф**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
 
-**Iscsym**, **iscsymf**, **__iscsym**, **__iswcsym**, **__iscsymf**, **__ iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**, и **_iswcsymf_l** подпрограммы, Системам Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Подпрограммы **исксим**, **исксимф**, **__iscsym**, **__iswcsym** **, __iscsymf,** **__iswcsymf**, **_iscsym_l**, **_iswcsym_l**, **_iscsymf_l**и **_iswcsymf_l** являются специфичными для Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

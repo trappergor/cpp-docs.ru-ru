@@ -1,7 +1,7 @@
 ---
 title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nextafterf
 - _nextafterf
 - nextafter
@@ -10,7 +10,7 @@ apiname:
 - nexttoward
 - nexttowardf
 - nexttowardl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nextafter
 - _nextafter
@@ -48,14 +51,14 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c56c9f8032c9af2ed4404428abe3b9ee26b4b603
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156191"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951353"
 ---
-# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
+# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
 Возвращает следующее представимое значение с плавающей запятой.
 
@@ -92,21 +95,21 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает следующее представимое значение с плавающей запятой возвращаемого типа после *x* в направлении *y*. Если *x* и *y* равны, функция возвращает *y*, преобразованное в возвращаемый тип, с помощью исключение не запускается. Если *x* не равно *y*, а результатом является денормализованное число или нуль, **FE_UNDERFLOW** и **FE_INEXACT** состояний исключения с плавающей запятой заданы, и возвращается правильный результат. Если параметр *x* или *y* имеет значение NAN, то возвращаемое значение является одним из входных значений NaN. Если *x* является конечным и результат является бесконечным или не может быть представлен в типе, бесконечность со знаком возвращается значение NAN или, **FE_OVERFLOW** и **FE_INEXACT** задаются состояния исключения с плавающей запятой, и **errno** присваивается **ERANGE**.
+Возвращает следующее представимое значение с плавающей запятой возвращаемого типа после *x* в направлении *y*. Если *x* и *y* равны, функция возвращает *y*, преобразованную в тип возвращаемого значения, без исключения. Если *x* не равно *y*, а результат имеет значение денормализованное или равное нулю, то задаются состояния исключения **FE_UNDERFLOW** и **FE_INEXACT** с плавающей запятой и возвращается правильный результат. Если либо *x* , либо *y* является NaN, то возвращаемое значение является одним из входных значений NaN. Если *x* является конечным, а результат является бесконечным или не может быть представлен в типе, возвращается правильно подписанная бесконечность или NaN, выдаются состояния исключения **FE_OVERFLOW** и **FE_INEXACT** с плавающей запятой **, а для** свойства "значение по ошибке" — **ERANGE** .
 
 ## <a name="remarks"></a>Примечания
 
-**Nextafter** и **nexttoward** семейства функций эквивалентны за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* преобразуется в тип возвращаемого значения.
+Семейства функций **nextafter** и **нексттовард** эквивалентны, за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* , преобразованное в тип возвращаемого значения.
 
-Поскольку C++ допускает перегрузку, если включить \<cmath > можно вызывать перегрузки **nextafter** и **nexttoward** , которые возвращают **float** и **long** **двойные** типов. В программе на языке C **nextafter** и **nexttoward** всегда возвращать **двойные**.
+Поскольку C++ допускает перегрузку, при включении \<cmath > можно вызывать перегрузки **nextafter** и **нексттовард** , возвращающие типы **float** и **Long** **Double** . В программе на языке C **nextafter** и **нексттовард** всегда возвращают **double**.
 
-**_Nextafter** и **_nextafterf** функции только к системам Майкрософт. **_Nextafterf** функция доступна только в том случае, при компиляции для x64.
+Функции **_nextafter** и **_nextafterf** относятся только к Майкрософт. Функция **_nextafterf** доступна только при компиляции для x64.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**, **nextafterf**, **nextafterl**, **_nextafterf**, **nexttoward**, **nexttowardf**, **nexttowardl**|\<math.h>|\<math.h> или \<cmath>|
+|**nextafter**, **некстафтерф**, **некстафтерл**, **_nextafterf**, **нексттовард**, **нексттовардф**, **нексттовардл**|\<math.h>|\<math.h> или \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> или \<cfloat>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).

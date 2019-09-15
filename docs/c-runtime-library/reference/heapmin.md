@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157229"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954804"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 Освобождает неиспользуемую память кучи для операционной системы.
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **_heapmin** возвращает 0; в противном случае функция возвращает -1 и задает **errno** для **ENOSYS**.
+В случае успеха **_heapmin** возвращает 0; в противном случае функция возвращает значение-1 **и устанавливает для** **еносис**.
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Heapmin** функция минимизирует кучи, высвобождая неиспользуемую память для операционной системы. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция возвращает -1 и задает **errno** для **ENOSYS**.
+Функция **_heapmin** позволяет сокращать кучу, освобождая неиспользуемую память кучи от операционной системы. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция **возвращает значение-1 и устанавливает для** функции возврата к **еносис**.
 
 ## <a name="requirements"></a>Требования
 

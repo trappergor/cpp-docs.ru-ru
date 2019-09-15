@@ -1,11 +1,11 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155554"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957619"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
 Устанавливает интервал, на который указывает первый аргумент, в текущее календарное время в соответствии с заданной базой времени.
 
@@ -71,15 +74,15 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Значение *базового* при успешном завершении, в противном случае он возвращает ноль.
+Значение *base* в случае успеха, в противном случае возвращается ноль.
 
 ## <a name="remarks"></a>Примечания
 
-**Timespec_get** функции задают текущее время в структуре, на которые указывают *time_spec* аргумент. Все версии этой структуры имеют два члена: **tv_sec** и **tv_nsec**. **Tv_sec** имеет значение целому числу секунд и **tv_nsec** в целое число наносекунд, округленное до разрешения системных часов с начала эпохи, указанной по *базового*.
+Функции **timespec_get** задают текущее время в структуре, на которую указывает аргумент *time_spec* . Все версии этой структуры имеют два члена: **tv_sec** и **tv_nsec**. Значение **tv_sec** устанавливается равным целому числу секунд, а **tv_nsec** — целому числу наносекунд, округленному до разрешения системных часов с начала эпохи, заданной *базовым*.
 
 **Блок, относящийся только к системам Microsoft**
 
-Эти функции поддерживают только **TIME_UTC** как *базового* значение. Этот параметр задает *time_spec* число секунд и наносекунд с начала эпохи, полуночи 1 января 1970 года, время в формате UTC. В **структуры** **_timespec32**, **tv_sec** — **__time32_t** значение. В **структуры** **_timespec64**, **tv_sec** — **__time64_t** значение. В **структуры** **timespec**, **tv_sec** — **time_t** тип, который является 32-разрядный или 64 бита в длину в зависимости от того, следует ли препроцессора макрос _USE_32BIT_TIME_T определено. **Timespec_get** функция — это встраиваемая функция, которая вызывает **_timespec32_get** Если _USE_32BIT_TIME_T определено; в противном случае он вызывает **_timespec64_get**.
+Эти функции поддерживают только **TIME_UTC** в качестве *базового* значения. При этом значение *time_spec* устанавливается равным числу секунд и наносекундах с момента начала эпохи, полночь 1 января 1970 г., время в формате UTC. В **структуре** **_timespec32** **tv_sec** является значением **__time32_t** . В **структуре** **_timespec64** **tv_sec** является значением **__time64_t** . В **структуре** **timespec** **tv_sec** — это тип **time_t** , который имеет длину 32 бит или 64 бит в зависимости от того, определен ли макрос препроцессора _USE_32BIT_TIME_T. Функция **timespec_get** является встроенной функцией, которая вызывает **_timespec32_get** , если определен _USE_32BIT_TIME_T. в противном случае он вызывает **_timespec64_get**.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

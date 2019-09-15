@@ -1,11 +1,11 @@
 ---
 title: clog, clogf, clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340642"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942919"
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
 
@@ -68,7 +71,7 @@ _Lcomplex clogl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Натуральный логарифм *z*. Результат неограничен на реальной оси и находится в интервале [-iπ, + iπ] на мнимой оси.
+Натуральный логарифм *z*. Результат будет раздельным на реальной оси и в интервале [-iπ, + iπ] вдоль мнимой оси.
 
 Возможны следующие возвращаемые значения:
 
@@ -82,13 +85,13 @@ _Lcomplex clogl(
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **clog** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **clog** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **clog** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **clog** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**clog**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog**, **клогф**, **клогл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

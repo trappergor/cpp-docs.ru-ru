@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s, _wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288866"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942026"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s, _wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
 Получает значение из текущей среды.
 
@@ -77,26 +80,26 @@ errno_t _wdupenv_s(
 
 Нуль при успешном выполнении, код ошибки при сбое.
 
-Эти функции проверяют свои параметры. Если *буфера* или *varname* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции задают **errno** для **EINVAL** и вернуть **EINVAL**.
+Эти функции проверяют свои параметры. Если *buffer* или *имя_переменной* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **функции устанавливают значение** **еинвал** и возвращают **еинвал**.
 
-Если эти функции не может выделить достаточно памяти, он устанавливать *буфера* для **NULL** и *numberOfElements* для 0 и возвращают **ENOMEM**.
+Если эти функции не могут выделить достаточно памяти, они устанавливают для *buffer* **значение NULL** , а *numberOfElements* — на 0 и возвращают **еномем**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Dupenv_s** функция выполняет поиск в списке переменных среды для *varname*. Если переменная найдена, **_dupenv_s** выделяет буфер и копирует значение переменной в буфер. Адрес и длина буфера возвращаются в *буфера* и *numberOfElements*. Выделяя собственно буфер, **_dupenv_s** обеспечивает более удобную альтернативу [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+Функция **_dupenv_s** выполняет поиск в списке переменных среды для *VarName*. Если переменная найдена, **_dupenv_s** выделяет буфер и копирует значение переменной в буфер. Адрес и длина буфера возвращаются в *buffer* и *numberOfElements*. Выделяя сам буфер, **_dupenv_s** предоставляет более удобную альтернативу [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Ответственность за освобождение памяти путем вызова функции [free](free.md) лежит на вызывающей программе.
 
-Если переменная не найдена, затем *буфера* присваивается **NULL**, *numberOfElements* имеет значение 0, и возвращаемое значение равно 0, так как это не рассматривается как ошибка условие.
+Если переменная не найдена, то для параметра *buffer* задано **значение NULL**, *numberOfElements* — 0, а возвращаемое значение равно 0, поскольку эта ситуация не считается ошибкой.
 
-Если вы не интересует размер буфера можно передать **NULL** для *numberOfElements*.
+Если вы не заинтересованы в размере буфера, вы можете передать **значение NULL** для *numberOfElements*.
 
-**_dupenv_s** выполняется без учета регистра в операционной системе Windows. **_dupenv_s** использует копию среды, на которую указывает глобальная переменная **_environ** для доступа к среде. См. в разделе "Примечания" в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) обсуждение **_environ**.
+**_dupenv_s** не учитывает регистр в операционной системе Windows. **_dupenv_s** использует копию среды, на которую указывает глобальная переменная **_environ** для доступа к среде. Обсуждение **_environ**см. в примечаниях в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
 
-Значение в *буфера* является копией значения переменной среды; его изменение не оказывает влияния на среду. Чтобы изменить значение переменной среды, используйте функцию [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
+Значение в поле *buffer* является копией значения переменной среды; изменение этого действия не влияет на среду. Чтобы изменить значение переменной среды, используйте функцию [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md).
 
-**_wdupenv_s** — это двухбайтовая версия **_dupenv_s**; аргументы **_wdupenv_s** представляют собой строки расширенных символов. **_Wenviron** глобальная переменная — это двухбайтовая версия **_environ**. См. в разделе "Примечания" в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) дополнительную информацию о **_wenviron**.
+**_wdupenv_s** — это версия **_dupenv_s**для расширенных символов; аргументы **_wdupenv_s** — это строки расширенных символов. Глобальная переменная **_wenviron** — это версия **_environ**для расширенных символов. Дополнительные сведения об **_wenviron**см. в комментариях в [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

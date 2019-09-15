@@ -1,11 +1,11 @@
 ---
 title: ctan, ctanf, ctanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctan
 - ctanf
 - ctanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctan
 - ctanf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288758"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938446"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan, ctanf, ctanl
 
@@ -70,20 +73,20 @@ _Lcomplex ctanl(
 
 Тангенс *z*.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Ввод|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Нет|_DOMAIN|
-|± ∞ (**tan**, **tanf**)|INVALID|_DOMAIN|
+|± ∞, КНАН, ТО ЕСТЬ|none|_DOMAIN|
+|± ∞ (**Tan**, **TANF**)|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **ctan** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **ctan** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Ктан** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **Ктан** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**ctan**, **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**Ктан**, **ктанф**, **ктанл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -1,10 +1,10 @@
 ---
 title: isascii, __isascii, iswascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswascii
 - __isascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswascii
 - istascii
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287473"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954572"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii, __isascii, iswascii
+# <a name="isascii-__isascii-iswascii"></a>isascii, __isascii, iswascii
 
 Определяет, является ли определенный символ символом ASCII.
 
@@ -65,13 +68,13 @@ int iswascii(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих подпрограмм возвращает ненулевое значение, если **c** — конкретное представление символа ASCII. **__isascii** возвращает ненулевое значение, если **c** представляет собой символ ASCII (в диапазоне 0x00 – 0x7F). **iswascii** возвращает ненулевое значение, если **c** представляет собой символ ASCII расширенных символов. Каждая из этих подпрограмм возвращает 0, если **c** не удовлетворяет условию теста.
+Каждая из этих подпрограмм возвращает ненулевое значение, если **c** является определенным представлением символа ASCII. **__isascii** возвращает ненулевое значение, если **c** является символом ASCII (в диапазоне 0x00 – 0x7F). **исвасЦии** возвращает ненулевое значение, если **c** является представлением символа ASCII в расширенном виде символа. Каждая из этих подпрограмм возвращает 0, если **c** не удовлетворяет условию теста.
 
 ## <a name="remarks"></a>Примечания
 
-Оба **__isascii** и **iswascii** реализованы в виде макросов, если определен макрос препроцессора _CTYPE_DISABLE_MACROS.
+Как **__isascii** , так и **исвасЦии** реализуются как макросы, если только не определен макрос препроцессора _CTYPE_DISABLE_MACROS.
 
-Для обеспечения обратной совместимости **isascii** реализуется как макрос, только если [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0; в противном случае оно будет неопределенным.
+Для обеспечения обратной **совместимости в качестве** макроса применяется только в том случае, если [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0. в противном случае он не определен.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -83,10 +86,10 @@ int iswascii(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
+|**__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
 |**iswascii**|C: \<wctype.h>, \<ctype.h> или \<wchar.h><br /><br /> C++: \<cwctype>, \<cctype>, \<wctype.h>, \<ctype.h> или \<wchar.h>|
 
-**Isascii**, **__isascii** и **iswascii** функции только к системам Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Функции **__isascii** и **исвасЦии** являются специфичными **для Microsoft**. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

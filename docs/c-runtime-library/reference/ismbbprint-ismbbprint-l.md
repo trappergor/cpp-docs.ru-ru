@@ -1,10 +1,10 @@
 ---
 title: _ismbbprint, _ismbbprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbprint_l
 - _ismbbprint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbprint_l
 - _ismbbprint
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c40ddc931faa5f1dcff914d7c615207ed57d11cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286673"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954045"
 ---
-# <a name="ismbbprint-ismbbprintl"></a>_ismbbprint, _ismbbprint_l
+# <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint, _ismbbprint_l
 
 Определяет, является ли указанный многобайтовой символ печатным символом.
 
@@ -65,7 +68,7 @@ int _ismbbprint_l(
 
 `isprint(c) || _ismbbkprint(c)`
 
-имеет ненулевое значение для *c*, или 0, если это не так. **_ismbbprint** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbprint_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+параметр имеет ненулевое значение для *языка c*или значение 0, если нет. **_ismbbprint** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbprint_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

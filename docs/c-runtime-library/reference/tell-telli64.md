@@ -1,10 +1,10 @@
 ---
 title: _tell, _telli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _telli64
 - _tell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tell
 - telli64
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258576"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946259"
 ---
-# <a name="tell-telli64"></a>_tell, _telli64
+# <a name="_tell-_telli64"></a>_tell, _telli64
 
 Получает позицию указателя файла.
 
@@ -54,20 +57,20 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Параметры
 
-*Дескриптор*<br/>
+*справиться*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Текущая позиция указателя файла. Для устройств, которые не поддерживают поиск, возвращаемое значение не определено.
 
-Возвращаемое значение – 1 L указывает на ошибку. Если *обрабатывать* является недопустимым дескриптором, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **значение EBADF** и возвращают – 1 L.
+Возвращаемое значение-1L указывает на ошибку. Если *Handle* является недопустимым дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **значение EBADF** и возвращают-1L.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Примечания
 
-**_Tell** функция получает текущую позицию указателя файла (если таковые имеются), связанные с *обрабатывать* аргумент. Позиция выражается в виде количества байт от начала файла. Для **_telli64** функция, это значение выражается в виде 64-разрядное целое число.
+Функция **_tell** возвращает текущую позиции указателя файла (при наличии), связанного с аргументом *Handle* . Позиция выражается в виде количества байт от начала файла. Для функции **_telli64** это значение выражается в виде 64-разрядного целого числа.
 
 ## <a name="requirements"></a>Требования
 
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crttelltxt"></a>Входные данные: crt_tell.txt
+### <a name="input-crt_telltxt"></a>Входные данные: crt_tell.txt
 
 ```Input
 Line one.

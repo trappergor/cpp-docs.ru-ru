@@ -1,11 +1,11 @@
 ---
 title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348579"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939401"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Извлекает арккосинус комплексного числа, ветви выходят за пределы интервала [−1, + 1] на реальной оси.
+Извлекает арккосинус комплексного числа, при этом ветвь разрывается за пределами интервала [-1, + 1] вдоль реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,17 +64,17 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арккосинус *z*, в радианах. На мнимой оси результат неограничен и находится в интервале [0, π] на реальной оси. Если возникает ошибка домена *z* не попадает в интервал [−1, + 1].
+Арккосинус *z*, в радианах. На мнимой оси результат неограничен и находится в интервале [0, π] на реальной оси. Если *z* находится за пределами интервала [-1, + 1], возникнет ошибка домена.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cacos** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cacos** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Какос** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **Какос** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**Какос**, **какосф**, **какосл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

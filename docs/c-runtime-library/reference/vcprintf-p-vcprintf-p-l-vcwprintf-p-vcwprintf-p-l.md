@@ -1,12 +1,12 @@
 ---
 title: _vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcprintf_p
 - _vcwprintf_p_l
 - _vcprintf_p_l
 - _vcwprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vcwprintf_p
 - vcprintf_p_l
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a0cfcd5ff6c99ae521d1521c9467288daaf05913
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499367"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945744"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p, _vcprintf_p_l, _vcwprintf_p, _vcwprintf_p_l
 
@@ -93,7 +96,7 @@ int _vcwprintf_p_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Число выведенных символов или отрицательное значение в случае ошибки. Если параметр *Format* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено , в параметре **еинвал** устанавливается значение, а возвращается-1.
+Число выведенных символов или отрицательное значение в случае ошибки. Если параметр *Format* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, в** параметре **еинвал** устанавливается значение, а возвращается-1.
 
 ## <a name="remarks"></a>Примечания
 
@@ -108,7 +111,7 @@ int _vcwprintf_p_l(
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Кроме того, эти функции проверяют входной указатель и строку форматирования. Если параметр *Format* или *Argument* имеет **значение NULL**или строка формата содержит недопустимые символы форматирования, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 и устанавливают для **еинвал**значение.
+Кроме того, эти функции проверяют входной указатель и строку форматирования. Если параметр *Format* или *Argument* имеет **значение NULL**или строка формата содержит недопустимые символы форматирования, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

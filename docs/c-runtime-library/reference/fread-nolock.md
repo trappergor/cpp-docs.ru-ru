@@ -1,9 +1,9 @@
 ---
 title: _fread_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fread_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fread_nolock
 - fread_nolock
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _fread_nolock function
 - streams [C++], reading data from
 ms.assetid: 60e4958b-1097-46f5-a77b-94af5e7dba40
-ms.openlocfilehash: 81827363d670c7cdeeddcb86390323bf431c6f98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d896e3809d22c0f2752ef67c89233652bdade19
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287919"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956873"
 ---
-# <a name="freadnolock"></a>_fread_nolock
+# <a name="_fread_nolock"></a>_fread_nolock
 
 Читает данные из потока, не блокируя другие потоки.
 
@@ -59,7 +62,7 @@ size_t _fread_nolock(
 *count*<br/>
 Максимальное число читаемых элементов.
 
-*поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -68,7 +71,7 @@ size_t _fread_nolock(
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция представляет собой неблокирующую версию **fread**. Она идентична **fread** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эта функция является версией **fread**без блокировки. Он идентичен **fread** , за исключением того, что он не защищен от помех в других потоках. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 

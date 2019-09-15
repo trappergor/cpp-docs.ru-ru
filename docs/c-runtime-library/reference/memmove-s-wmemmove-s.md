@@ -1,10 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285156"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951783"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
 Перемещает один буфер в другой. Это версии функции [memmove, wmemmove](memmove-wmemmove.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -73,17 +76,17 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержание *dest*|
+|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержимое конечного *объекта*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|не изменено|
-|any|any|**NULL**|**EINVAL**|не изменено|
-|any|< *число*|any|**ERANGE**|не изменено|
+|**NULL**|Любое действие|Любое действие|**EINVAL**|не изменено|
+|Любое действие|Любое действие|**NULL**|**EINVAL**|не изменено|
+|Любое действие|< *расчета*|Любое действие|**ERANGE**|не изменено|
 
 ## <a name="remarks"></a>Примечания
 
-Копирует *число* байтов символов из *src* для *dest*. Если отдельные области источника и назначения перекрывают, **memmove_s** гарантирует, что байты исходного объекта в перекрывающейся области будут скопированы, прежде чем будут перезаписаны.
+Копирует *число* байтов символов из *src* в *dest*. Если некоторые регионы исходной области и места назначения перекрываются, **memmove_s** гарантирует, что исходные байты в перекрывающейся области будут скопированы перед перезаписью.
 
-Если *dest* или, если *src* является пустым указателем, или если строка назначения слишком мал, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
+Если *dest* или если *src* является пустым указателем или если строка назначения слишком мала, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **еинвал** и применяют **значение "** **еинвал**".
 
 ## <a name="requirements"></a>Требования
 

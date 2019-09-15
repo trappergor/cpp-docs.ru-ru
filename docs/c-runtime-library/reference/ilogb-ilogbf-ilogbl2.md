@@ -1,11 +1,11 @@
 ---
 title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331681"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954764"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -72,28 +75,28 @@ int ilogbl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возврат экспоненты по основанию 2 *x* как подписанный **int** значение.
+В случае успеха возвращайте экспоненту *x* 2 в виде значения **целого** числа со знаком.
 
 В противном случае возвращает одно из следующих значений, определенных в \<math.h>:
 
-|Входные данные|Результат|
+|Ввод|Результат|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF ±nan, неопределенное|FP_ILOGBNAN|
+|± INF, ± NaN, неопределенное|FP_ILOGBNAN|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **ilogb** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **ilogb** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **илогб** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **илогб** всегда принимает и возвращает значение **типа Double**.
 
-Вызов этой функции аналогичен вызову эквивалентной **logb** функции, а затем приведение возвращаемое значение к **int**.
+Вызов этой функции аналогичен вызову эквивалентной функции **logb** , а затем приведению возвращаемого значения к типу **int**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**ilogb**, **ilogbf**, **ilogbl**|\<math.h>|\<cmath>|
+|**илогб**, **илогбф**, **илогбл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

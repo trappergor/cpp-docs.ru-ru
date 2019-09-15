@@ -1,12 +1,12 @@
 ---
 title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287361"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953780"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
 Выполняет контекстно-зависимые тесты для старших и младших байтов многобайтовой символьной строки и определяет, указывает ли указатель данной подстроки старший или младший байт.
 
@@ -82,7 +85,7 @@ int _ismbstrail_l(
 *str*<br/>
 Указатель на начало строки или на предыдущий известный старший байт.
 
-*Текущий*<br/>
+*данном*<br/>
 Указатель на позицию в строке, которую нужно протестировать.
 
 *locale*<br/>
@@ -90,13 +93,13 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbslead** возвращает -1, если символ является старшим байтом и **_ismbstrail** возвращает -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если любой из аргументов оказывается **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **NULL** и задайте **errno** для **EINVAL**.
+**_ismbslead** возвращает-1, если символ является старшим байтом, а **_ismbstrail** возвращает-1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если любой из аргументов имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **значение NULL** и **задают значение** **еинвал**.
 
 ## <a name="remarks"></a>Примечания
 
-**_ismbslead** и **_ismbstrail** выполняются медленнее, чем **_ismbblead** и **_ismbbtrail** версии, так как они учитывает контекст строки.
+**_ismbslead** и **_ismbstrail** выполняются медленнее, чем версии **_ismbblead** и **_ismbbtrail** , так как они принимают в качестве строки контекст.
 
-В версиях этих функций с **_l** суффиксом идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный им языковой стандарт вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный языковой стандарт вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

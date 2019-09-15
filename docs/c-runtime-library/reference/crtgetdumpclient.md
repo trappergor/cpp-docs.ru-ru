@@ -1,9 +1,9 @@
 ---
 title: _CrtGetDumpClient
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetDumpClient
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5c6c7d4d123d2d419f104ddaabd57c10ad320e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339927"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938749"
 ---
-# <a name="crtgetdumpclient"></a>_CrtGetDumpClient
+# <a name="_crtgetdumpclient"></a>_CrtGetDumpClient
 
-Извлекает текущий определяемую приложением функцию для дампа **_CLIENT_BLOCK** введите блоки памяти (только отладочная версия).
+Извлекает текущую определяемую приложением функцию для дампа блоков памяти типа **_CLIENT_BLOCK** (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,7 +48,7 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtGetDumpClient** функция извлекает текущую функцию ловушка для дампа объектов, хранящихся в **_CLIENT_BLOCK** блоков памяти для выполнения C процесса дампа памяти отладки.
+Функция **_CrtGetDumpClient** извлекает текущую функцию-обработчик для дампа объектов, хранящихся в блоках памяти **_CLIENT_BLOCK** , для процесса дампа памяти отладки времени выполнения C.
 
 Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Написание функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).
 

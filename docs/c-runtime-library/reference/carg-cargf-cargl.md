@@ -1,11 +1,11 @@
 ---
 title: carg, cargf, cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340720"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939302"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -68,17 +71,17 @@ long double cargl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Аргумент (также известный как этап) *z*. Результат находится в интервале [-π, + π].
+Аргумент (также известный как фаза) *z*. Результат находится в интервале [-π, + π].
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **carg** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float**или **long** **двойные** значения. В программе на языке C **carg** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Карг** , принимающие значения **_Fcomplex** или **_Lcomplex** , а также возвращать значения **типа float** или **Long** с типом **Double** . В программе на языке C **Карг** всегда принимает значение **_Dcomplex** и возвращает значение **типа double** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**carg**, **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**Карг**, **каргф**, **Каргл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

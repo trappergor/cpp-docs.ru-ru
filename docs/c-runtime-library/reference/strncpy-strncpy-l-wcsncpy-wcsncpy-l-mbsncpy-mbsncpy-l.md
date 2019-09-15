@@ -1,14 +1,14 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499457"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947211"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -173,12 +176,12 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>Примечания
 
-Функция **strncpy** копирует символы начального *числа* *Стрсаурце* в *стрдест* и возвращает *стрдест*. Если параметр *Count* меньше или равен длине *стрсаурце*, то символ NULL не добавляется автоматически в скопированную строку. Если *Count* больше, чем длина *стрсаурце*, строка назначения дополняется символами NULL вплоть до длины. Поведение **strncpy** не определено, если исходная и Целевая строки перекрываются.
+Функция **strncpy** копирует символы начального *числа* *Стрсаурце* в *стрдест* и возвращает *стрдест*. Если параметр *Count* меньше или равен длине *стрсаурце*, то символ NULL не добавляется автоматически в скопированную строку. Если *Count* больше, чем длина *стрсаурце*, строка назначения дополняется символами NULL вплоть до *длины.* Поведение **strncpy** не определено, если исходная и Целевая строки перекрываются.
 
 > [!IMPORTANT]
 > **strncpy** не проверяет наличие достаточного места в *стрдест*; Это делает ее потенциальной причиной переполнения буфера. Аргумент *Count* ограничивает количество копируемых символов. Он не является ограничением размера *стрдест*. См. следующий пример. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Если *стрдест* или *стрсаурце* является пустым указателем или **значение** *Count* меньше или равно нулю, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 и устанавливают для **еинвал**значение.
+Если *стрдест* или *стрсаурце* является пустым указателем или **значение** *Count* меньше или равно нулю, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают-1 **и устанавливают для** **еинвал**значение.
 
 **wcsncpy** и **_mbsncpy** — это версии **strncpy**для расширенных символов и многобайтовых символов. Аргументы и возвращаемые значения **wcsncpy** и **_mbsncpy** различаются соответственно. В остальном эти шесть функций ведут себя идентично.
 

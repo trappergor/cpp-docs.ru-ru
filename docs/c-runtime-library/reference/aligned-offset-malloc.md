@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341773"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943860"
 ---
-# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+# <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
 Размещение памяти на указанной границе выравнивания.
 
@@ -57,17 +60,17 @@ void * _aligned_offset_malloc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на блок памяти, которая была выделена или **NULL** Если произошел сбой операции.
+Указатель на блок памяти, который был выделен, или **значение NULL** , если операция завершилась ошибкой.
 
 ## <a name="remarks"></a>Примечания
 
-**_aligned_offset_malloc** полезна в случаях, когда необходимо выравнивание вложенного элемента; например, если требуется выравнивание вложенного класса.
+**_aligned_offset_malloc** полезен в ситуациях, когда для вложенного элемента требуется выравнивание. Например, если для вложенного класса требуется выравнивание.
 
 **_aligned_offset_malloc** основан на **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
 
-**_aligned_offset_malloc** помечен `__declspec(noalias)` и `__declspec(restrict)`, это означает, что функция гарантированно не изменит глобальные переменные и для возвращаемого указателя не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти, или если запрошенный размер был больше, чем **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Эта **функция устанавливает** **еномем** в случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_offset_malloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно *размеру* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
 
 ## <a name="requirements"></a>Требования
 

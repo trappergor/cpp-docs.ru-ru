@@ -1,12 +1,12 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbctoupper_l
 - mbctolower_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156802"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952542"
 ---
-# <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
+# <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
 Проверяет и преобразовывает регистр многобайтового символа.
 
@@ -85,20 +88,20 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае он возвращает символ *c* без изменений.
+Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции проверяют символ *c* и, если это возможно, выполняют одно из следующих преобразований.
+Функции проверяют символ *c* и, если это возможно, применяют одно из следующих преобразований.
 
 |Подпрограммы|Преобразования|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Символ верхнего регистра в символ нижнего регистра.|
 |**_mbctoupper**, **_mbctoupper_l**|Символ нижнего регистра в символ верхнего регистра.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без **_l** суффикс использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии с **_l** суффикс идентична, за исключением того, что она использует параметр языкового стандарта переданный в качестве. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без суффикса **_l** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Версия с суффиксом **_l** идентична, за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В предыдущих версиях **_mbctolower** был вызван **jtolower**, и **_mbctoupper** был вызван **jtoupper**. В новом коде используйте новые имена.
+В предыдущих версиях **_mbctolower** назывался **жтоловер**, а **_mbctoupper** назывался **жтауппер**. В новом коде используйте новые имена.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

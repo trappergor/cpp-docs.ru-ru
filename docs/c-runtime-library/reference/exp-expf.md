@@ -1,11 +1,11 @@
 ---
 title: exp, expf, expl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - expf
 - expl
 - exp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _expl
 - expf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288192"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941637"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -64,30 +67,30 @@ long double expl(
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-С плавающей запятой значение exponentiate натуральный логарифм по основанию *e* по.
+Значение с плавающей запятой, експонентиате основание натурального логарифма по адресу *e* .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Exp** функции возвращают значение экспоненты параметра с плавающей запятой, *x*, при успешном выполнении. Результат является *e*<sup>*x*</sup>, где *e* является основанием натурального логарифма. В случае переполнения, функция возвращает INF (бесконечность), а также в случае переполнения **exp** возвращает 0.
+Функции **exp** возвращают экспоненциальное значение параметра с плавающей запятой *x*, если выполнено успешно. То есть результатом является *e*<sup>*x*</sup>, где *e* — основание натурального логарифма. При переполнении функция возвращает INF-файл (бесконечность) и при неточном потоке **exp** возвращает 0.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± Несигнальное значение NaN, неопределенным|Нет|_DOMAIN|
+|± Скрытого NaN, неопределенного|Отсутствуют|_DOMAIN|
 |± Бесконечности|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-**Exp** функция имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+Функция **exp** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающих **float** или **long double** аргумент. В программе на языке C **exp** всегда принимает и возвращает **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающие аргумент с **плавающей запятой** или **Long** . В программе C **exp** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|---------------------|---|
-|**EXP**, **expf**, **новыми концепциями**|\<math.h>|\<cmath> или \<math.h>|
+|**exp**, **експф**, **експл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
