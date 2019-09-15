@@ -1,7 +1,7 @@
 ---
 title: _itoa, функции _itow
 ms.date: 08/19/2019
-apiname:
+api_name:
 - itoa
 - _itoa
 - ltoa
@@ -15,7 +15,7 @@ apiname:
 - _ultow
 - _i64tow
 - _ui64tow
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -28,7 +28,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _itoa
 - _ltoa
@@ -99,12 +102,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: afe7a190fe6630e3fbcb42d0d782e050952f56fc
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 97085ab8a8c720d278374868f9b1c90a91a6da3b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630413"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953567"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -183,7 +186,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>Примечания
 
-Функции **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa** преобразуют цифры заданного аргумента *значения* в строку символов, завершающуюся нулем, и сохраняют результат (до 33 символов для **_itoa** , **_ltoa**, **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в буфере. Если *основание системы счисления* равно 10, а *значение* отрицательное, то первым символом хранимой строки будет знак **-** "минус" (). Функции **_itow**, **_ltow**, **_ultow**, **_i64tow**и **_ui64tow** — это версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa**для расширенных символов соответственно.
+Функции **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa** преобразуют цифры заданного аргумента *значения* в строку символов, завершающуюся нулем, и сохраняют результат (до 33 символов для **_itoa** , **_ltoa**, **_ultoa**и 65 для **_i64toa** и **_ui64toa**) в *буфере*. Если *основание системы счисления* равно 10, а *значение* отрицательное, то первым символом хранимой строки будет знак **-** "минус" (). Функции **_itow**, **_ltow**, **_ultow**, **_i64tow**и **_ui64tow** — это версии **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**и **_ui64toa**для расширенных символов соответственно.
 
 > [!IMPORTANT]
 > Эти функции могут записывать после конца буфера, который слишком мал. Чтобы предотвратить переполнение буфера, убедитесь, что *буфер* достаточно велик, чтобы вместить преобразованные цифры, а также завершающий символ NULL и знак подписывания. Неправильное использование этих функций может привести к серьезным проблемам безопасности в коде.
@@ -224,7 +227,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-В этом примере используется макрос счетчика преобразования для определения буфера, достаточного для того , чтобы он содержал неподписанную длинную длину в базовом 2:
+В этом примере используется макрос счетчика преобразования для определения буфера, достаточного для того, чтобы он содержал **неподписанную длинную** длину в базовом 2:
 
 ```cpp
 #include <wchar.h>

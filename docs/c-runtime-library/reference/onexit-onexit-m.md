@@ -1,10 +1,10 @@
 ---
 title: _onexit, _onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156049"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951348"
 ---
-# <a name="onexit-onexitm"></a>_onexit, _onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit, _onexit_m
 
 Регистрирует подпрограмму, вызываемую во время выхода.
 
@@ -59,15 +62,15 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_onexit** возвращает указатель на функцию, в случае успеха или **NULL** Если нет места для хранения указателя на функцию.
+**_onexit** возвращает указатель на функцию в случае успеха или **значение NULL** , если нет пробела для хранения указателя на функцию.
 
 ## <a name="remarks"></a>Примечания
 
-**_Onexit** функции передается адрес функции (*функция*) вызывается при нормальном завершении программы. Последовательные вызовы **_onexit** создают регистр функций, которые выполняются в порядке LIFO (последним in-first-out). Передаваемые в функции **_onexit** не могут принимать параметры.
+Функции **_onexit** передается адрес функции (*функции*), которая вызывается, когда программа завершается нормально. Последовательные вызовы **_onexit** создают регистр функций, которые выполняются в порядке ЛИФО (по принципу "последним подела — первым обслужен"). Функции, передаваемые в **_onexit** , не могут принимать параметры.
 
-В случае, когда **_onexit** вызывается из библиотеки DLL, подпрограммы, зарегистрированные с помощью **_onexit** выгрузке после выполнения для библиотеки DLL **DllMain** вызывается с DLL_PROCESS_DETACH.
+В случае, когда **_onexit** вызывается из библиотеки DLL, подпрограммы, зарегистрированные в **_onexit** , выполняются в выгрузке библиотеки DLL после вызова **DllMain** с помощью DLL_PROCESS_DETACH.
 
-**_onexit** является расширением Майкрософт. Чтобы обеспечить переносимость ANSI, используйте функцию [atexit](atexit.md). **_Onexit_m** версия функции для использования смешанного режима.
+**_onexit** — это расширение Майкрософт. Чтобы обеспечить переносимость ANSI, используйте функцию [atexit](atexit.md). **_Onexit_m** версия функции предназначена для использования в смешанном режиме.
 
 ## <a name="requirements"></a>Требования
 

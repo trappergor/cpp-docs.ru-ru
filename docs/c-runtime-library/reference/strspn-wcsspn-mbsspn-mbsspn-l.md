@@ -1,12 +1,12 @@
 ---
 title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspn_l
 - wcsspn
 - strspn
 - _mbsspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcsspn
 - wcsspn
@@ -41,19 +44,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-ms.openlocfilehash: dd3f27387fa180c7de9260e7cf8b7f6102915049
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e65e466e95464dbd928ff0d80d975ce23fc180c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223122"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946758"
 ---
-# <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
+# <a name="strspn-wcsspn-_mbsspn-_mbsspn_l"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Возвращает индекс первого вхождения в строке символа, который не относится к набору символов.
 
 > [!IMPORTANT]
-> **_mbsspn** и **_mbsspn_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** и **_mbsspn_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -82,7 +85,7 @@ size_t _mbsspn_l(
 *str*<br/>
 Строка для поиска, завершающаяся символом NULL.
 
-*strCharSet*<br/>
+*стрчарсет*<br/>
 Набор символов, завершающийся символом NULL.
 
 *locale*<br/>
@@ -90,13 +93,13 @@ size_t _mbsspn_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает целочисленное значение, задающее длину подстроки в *str* , состоящий только из символов в *strCharSet*. Если *str* начинается с символа не из *strCharSet*, функция возвращает значение 0.
+Возвращает целочисленное значение, задающее длину подстроки в *str* , которая состоит исключительно из символов в *стрчарсет*. Если *str* начинается с символа, не *стрчарсет*, функция возвращает 0.
 
 ## <a name="remarks"></a>Примечания
 
-**Strspn** функция возвращает индекс первого символа в *str* , не принадлежит к набору символов в *strCharSet*. Поиск не включает завершающие нуль-символы.
+Функция **strspn** возвращает индекс первого символа в *str* , не принадлежащего набору символов в *стрчарсет*. Поиск не включает завершающие нуль-символы.
 
-**wcsspn** и **_mbsspn** расширенных и многобайтовых символов версии **strspn**. Аргументы **wcsspn** являются двухбайтовые строки; аргументы **_mbsspn** представляют собой строки многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *strCharSet* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbspn** задает **errno** для **EINVAL** и возвращает значение 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+**wcsspn** и **_mbsspn** — это версии **strspn**для расширенных символов и многобайтовых символов. Аргументы **wcsspn** — это строки расширенных символов; **_mbsspn** являются строками многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *Стрчарсет* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено , _mbspn **устанавливает значение** переводится в **еинвал** и возвращает 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

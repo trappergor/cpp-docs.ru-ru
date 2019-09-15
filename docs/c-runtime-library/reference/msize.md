@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156295"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951436"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 Возвращает размер блока памяти, выделенного в куче.
 
@@ -50,15 +53,15 @@ size_t _msize(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_msize** возвращает размер (в байтах) как целое число без знака.
+**_msize** возвращает размер (в байтах) в виде целого числа без знака.
 
 ## <a name="remarks"></a>Примечания
 
-**_Msize** функция возвращает размер в байтах блока памяти, выделенной с помощью вызова **calloc**, **malloc**, или **realloc**.
+Функция **_msize** возвращает размер (в байтах) блока памяти, выделенного вызовом **calloc**, **malloc**или **realloc**.
 
-Когда приложение связано с отладочной версией библиотек времени выполнения языка C, **_msize** разрешается [_msize_dbg](msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+Если приложение связано с отладочной версией библиотек времени выполнения C, **_msize** разрешается в [_msize_dbg](msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *memblock* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает **errno** для **EINVAL** и возвращает – 1.
+Эта функция проверяет свои параметры. Если *мемблокк* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, **функция устанавливает значение** по **еинвал** и возвращает-1.
 
 ## <a name="requirements"></a>Требования
 

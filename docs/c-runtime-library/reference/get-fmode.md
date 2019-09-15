@@ -1,9 +1,9 @@
 ---
 title: _get_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_fmode
 - _get_fmode
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: dc4740b20ab7283dd8b9f73f458eaba34e582832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287566"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955887"
 ---
-# <a name="getfmode"></a>_get_fmode
+# <a name="_get_fmode"></a>_get_fmode
 
 Получает режим преобразования файла по умолчанию для операций файлового ввода-вывода.
 
@@ -45,16 +48,16 @@ errno_t _get_fmode(
 
 ### <a name="parameters"></a>Параметры
 
-*pmode*<br/>
-Указатель на целое число для заполнения текущий режим по умолчанию: **_O_TEXT** или **_O_BINARY**.
+*пмоде*<br/>
+Указатель на целое число, которое должно быть заполнено текущим режимом по умолчанию: **_O_TEXT** или **_O_BINARY**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *pmode* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает **EINVAL**.
+Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *пмоде* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** задается значение, а функция возвращает **еинвал**.
 
 ## <a name="remarks"></a>Примечания
 
-Функция возвращает значение [_fmode](../../c-runtime-library/fmode.md) глобальной переменной. Эта переменная определяет режим преобразования файла по умолчанию для обоих низкого уровня и поток операций файлового ввода-вывода, такие как **_open**, **_pipe**, **fopen**, и [ freopen](freopen-wfreopen.md).
+Функция возвращает значение [_fmode](../../c-runtime-library/fmode.md) глобальной переменной. Эта переменная задает режим преобразования файла по умолчанию для операций ввода-вывода с низким уровнем и потоковых файлов, таких как **_open**, **_pipe**, **fopen**и [freopen](freopen-wfreopen.md).
 
 ## <a name="requirements"></a>Требования
 

@@ -1,11 +1,11 @@
 ---
 title: modf, modff, modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156334"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951543"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -60,7 +63,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Значение с плавающей запятой.
 
-*intptr*<br/>
+*Дескриптор*<br/>
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -69,17 +72,17 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-**Modf** функции разбить значение с плавающей запятой *x* на дробную и целую части, каждая из которых имеет тот же знак, что *x*. Со знаком дробной части числа *x* возвращается. Целая часть сохраняется как значение с плавающей запятой в *intptr*.
+Функции **modf** разбивают значение *x* с плавающей запятой на дробные и целые части, каждый из которых имеет тот же знак, что и *x*. Возвращается знак дробной части *x* . Целая часть сохраняется как значение с плавающей запятой в *IntPtr*.
 
-**modf** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**modf** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **modf** , принимающие и возвращающие **float** или **long** **двойные** параметров. В программе на языке C **modf** всегда принимает два значения типа double и возвращает значение типа double.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **modf** , которые принимают и возвращают параметры с **плавающей запятой** или **длинные** **Double** . В программе на языке C **modf** всегда принимает два значения типа Double и возвращает значение типа Double.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
+|**modf**, **modff**, **модфл**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

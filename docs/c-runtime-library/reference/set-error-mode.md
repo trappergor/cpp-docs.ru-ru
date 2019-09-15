@@ -1,9 +1,9 @@
 ---
 title: _set_error_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_error_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_error_mode
 - _set_error_mode
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15a6d72a79f0498fb7d81094ed3595dea1cf444f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356658"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948567"
 ---
-# <a name="seterrormode"></a>_set_error_mode
+# <a name="_set_error_mode"></a>_set_error_mode
 
-Изменяет **__error_mode** для определения расположения не по умолчанию, где среда выполнения C записывает сообщение об ошибке для ошибки, которые могут вызвать завершение программы.
+Изменяет **__error_mode** , чтобы определить расположение, отличное от используемого по умолчанию, когда среда выполнения C записывает сообщение об ошибке для ошибки, которая может завершить программу.
 
 > [!IMPORTANT]
 > Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -56,20 +59,20 @@ int _set_error_mode(
 
 ## <a name="remarks"></a>Примечания
 
-Управляет приемником потока ошибок, задав значение **__error_mode**. Например, можно направить вывод в стандартную ошибку или использовать **MessageBox** API.
+Управляет приемником вывода ошибок, устанавливая значение **__error_mode**. Например, можно направить вывод в стандартную ошибку или использовать API **MessageBox** .
 
-*Mode_val* параметру можно присвоить одно из следующих значений.
+Параметру *mode_val* может быть присвоено одно из следующих значений.
 
 |Параметр|Описание|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|Приемник ошибок определяется по **__app_type**.|
+|**_OUT_TO_DEFAULT**|Приемник ошибки определяется **__app_type**.|
 |**_OUT_TO_STDERR**|Приемником ошибок является стандартная ошибка.|
 |**_OUT_TO_MSGBOX**|Приемником ошибок является окно сообщения.|
-|**_REPORT_ERRMODE**|Сообщает текущее **__error_mode** значение.|
+|**_REPORT_ERRMODE**|Сообщает текущее значение **__error_mode** .|
 
-При передаче функции значения, отличного от перечисленных, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_set_error_mode** задает **errno** для **EINVAL** и возвращает – 1.
+При передаче функции значения, отличного от перечисленных, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено , _Set_error_mode **устанавливает** **еинвал** и возвращает-1.
 
-При использовании с [assert](assert-macro-assert-wassert.md), **_set_error_mode** отображает сбоя оператор в диалоговом окне и предоставляет возможность выбора **пропустить** кнопку, чтобы пользователь мог продолжить выполнение программы.
+При использовании с [Assert](assert-macro-assert-wassert.md) **_set_error_mode** отображает оператор Failed в диалоговом окне и дает возможность нажать кнопку **пропустить** , чтобы можно было продолжить выполнение программы.
 
 ## <a name="requirements"></a>Требования
 

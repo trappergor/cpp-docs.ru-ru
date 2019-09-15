@@ -1,10 +1,10 @@
 ---
 title: memmove, wmemmove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memmove
 - wmemmove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memmove
 - wmemmove
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951778"
 ---
 # <a name="memmove-wmemmove"></a>memmove, wmemmove
 
@@ -68,7 +71,7 @@ wchar_t *wmemmove(
 
 ## <a name="remarks"></a>Примечания
 
-Копирует байты счетчика (**memmove**) или символы (**wmemmove**) из *src* в *dest*. Если отдельные области конечного объекта перекрывают области исходного объекта, то обе эти функции гарантируют, что байты исходного объекта в перекрывающейся области будут скопированы, прежде чем будут перезаписаны.
+Копирует байты *счетчика* (**memmove**) или символы (**wmemmove**) из *src* в *dest*. Если отдельные области конечного объекта перекрывают области исходного объекта, то обе эти функции гарантируют, что байты исходного объекта в перекрывающейся области будут скопированы, прежде чем будут перезаписаны.
 
 **Примечание о безопасности**. Убедитесь в том, что буфер назначения равен или превосходит по размеру исходный буфер. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 

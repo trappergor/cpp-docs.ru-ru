@@ -1,12 +1,12 @@
 ---
 title: isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswxdigit_l
 - iswxdigit
 - isxdigit
 - _isxdigit_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswxdigit
 - isxdigit
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 29429aa636d3a06b0ee6ceddfcc8a91a7db0e009
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18f360e66583dfbf5033f813deed0b56abc71260
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157361"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953580"
 ---
-# <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
+# <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit, iswxdigit, _isxdigit_l, _iswxdigit_l
 
 Определяет, представляет ли целое число шестнадцатеричный символ.
 
@@ -75,13 +78,13 @@ int _iswxdigit_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление шестнадцатеричной цифры. **isxdigit** возвращает ненулевое значение, если *c* — шестнадцатеричная цифра (А – F, a - f или 0 – 9). **iswxdigit** возвращает ненулевое значение, если *c* представляет собой расширенный символ, соответствующий шестнадцатеричному символу. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление шестнадцатеричной цифры. **isxdigit** возвращает ненулевое значение, если *c* является шестнадцатеричной цифрой (a-F, a-f или 0-9). **исвксдигит** возвращает ненулевое значение, если *c* является расширенным символом, который соответствует шестнадцатеричной цифре. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Для языкового стандарта «C» **iswxdigit** функция не поддерживает шестнадцатеричные символы Юникод полной ширины.
+Для локали "C" функция **исвксдигит** не поддерживает шестнадцатеричные символы Юникода в Юникоде.
 
-В версиях этих функций с **_l** суффикс используют языковой стандарт, переданный в вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** используют переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isxdigit** и **_isxdigit_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
+Поведение **isxdigit** и **_isxdigit_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

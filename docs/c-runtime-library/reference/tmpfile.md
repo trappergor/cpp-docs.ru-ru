@@ -1,9 +1,9 @@
 ---
 title: tmpfile
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f58c23050fe89f84f283c3784a7c0cee72637bf2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155567"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957542"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -42,15 +45,15 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **tmpfile** возвращает указатель потока. В противном случае возвращается **NULL** указатель.
+В случае успеха **tmpfile** возвращает указатель потока. В противном случае возвращается **пустой** указатель.
 
 ## <a name="remarks"></a>Примечания
 
-**Tmpfile** функция создает временный файл и возвращает указатель на этот поток. Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tempnam-wtempnam-tmpnam-wtmpnam.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
+Функция **tmpfile** создает временный файл и возвращает указатель на этот поток. Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tempnam-wtempnam-tmpnam-wtmpnam.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
 
-Если не удается открыть файл, **tmpfile** возвращает **NULL** указатель. Этот временный файл удаляется автоматически при закрытии файла, при завершении программы в обычном режиме или когда **_rmtmp** вызывается, предполагая, что текущий рабочий каталог не изменяется. Временный файл открыт в **w + b** режиме (двоичные чтение и запись).
+Если не удается открыть файл, **tmpfile** возвращает **пустой** указатель. Этот временный файл автоматически удаляется при закрытии файла, при завершении программы в обычном режиме или при вызове **_rmtmp** , предполагая, что текущий рабочий каталог не изменяется. Временный файл открывается в режиме **w + b** (двоичный для чтения и записи).
 
-Сбой может возникать при попытке более TMP_MAX (см. в разделе STDIO. H) вызовов с **tmpfile**.
+Сбой может произойти при попытке более TMP_MAX (см. STDIO). H) вызывает метод с **tmpfile**.
 
 ## <a name="requirements"></a>Требования
 

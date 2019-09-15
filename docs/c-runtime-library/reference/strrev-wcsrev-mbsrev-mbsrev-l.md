@@ -1,12 +1,12 @@
 ---
 title: _strrev, _wcsrev, _mbsrev, _mbsrev_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strrev
 - _ftcsrev
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499416"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946835"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev, _wcsrev, _mbsrev, _mbsrev_l
 
@@ -95,7 +98,7 @@ unsigned char *_mbsrev_l(
 
 Функция **_strrev** изменяет порядок символов в *str*на обратный. Завершающий нуль-символ остается на месте. **_wcsrev** и **_mbsrev** — это версии **_strrev**для расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **_wcsrev** являются строками расширенных символов. **_mbsrev** являются строками многобайтовых символов. Для **_mbsrev**порядок байтов в каждом многобайтовой кодировке в *str* не изменяется. В остальном эти три функции ведут себя идентично.
 
-**_mbsrev** проверяет свои параметры. Если либо *строка1* , либо *строка2* являются пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbsrev** возвращает **значение NULL** и устанавливает в качестве значения по **еинвал**. **_strrev** и **_wcsrev** не проверяют свои параметры.
+**_mbsrev** проверяет свои параметры. Если либо *строка1* , либо *строка2* являются пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, _mbsrev** возвращает значение NULL **и устанавливает в** качестве **значения** по **еинвал**. **_strrev** и **_wcsrev** не проверяют свои параметры.
 
 На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций идентичны, за исключением того, что у тех, кто не имеет суффикса **_l** , используется текущий языковой стандарт, а вместо этого суффикс **_l** использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

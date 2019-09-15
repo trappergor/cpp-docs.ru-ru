@@ -1,9 +1,9 @@
 ---
 title: terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - terminate
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b76ce42817fa1a6b79ef32965fcfa550a508e88d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155632"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946197"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Вызовы [прервать](abort.md) или функцию, указанную с помощью **set_terminate**.
+Вызывает [Abort](abort.md) или функцию, указанную с помощью **set_terminate**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,7 +44,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Примечания
 
-**Завершить** функция используется с обработкой исключений C++ и вызывается в следующих случаях:
+Функция **Terminate** используется с C++ обработкой исключений и вызывается в следующих случаях:
 
 - не удается найти подходящий обработчик catch для исключения C++;
 
@@ -49,7 +52,7 @@ void terminate( void );
 
 - стек поврежден после возникновения исключения.
 
-**завершить** вызовы [прервать](abort.md) по умолчанию. Это значение по умолчанию можно изменить, создав собственную функцию завершения и вызвав **set_terminate** с именем этой функции в качестве аргумента. **завершить** вызывает последнюю функцию, заданную в качестве аргумента для **set_terminate**. Дополнительные сведения см. в разделе [Необработанные исключения C++](../../cpp/unhandled-cpp-exceptions.md).
+по умолчанию [прерывания вызовов прерывается](abort.md) . Это значение по умолчанию можно изменить, создав собственную функцию завершения и вызвав **set_terminate** с именем функции в качестве аргумента. Функция **Terminate** вызывает последнюю функцию, заданную в качестве аргумента для **set_terminate**. Дополнительные сведения см. в разделе [Необработанные исключения C++](../../cpp/unhandled-cpp-exceptions.md).
 
 ## <a name="requirements"></a>Требования
 

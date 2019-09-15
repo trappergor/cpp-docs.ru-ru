@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331549"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952366"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -46,11 +49,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение *ps* — **NULL** или, если не в процессе преобразования.
+Ненулевое значение, если *PS* равно **null** или если не находится в середине преобразования.
 
 ## <a name="remarks"></a>Примечания
 
-При использовании одной из функций ANSI, который принимает **mbstate_t** указатель, передав адрес вашей **mbstate_t** будут возвращены сведения о том, был ли преобразован последний байт в буфере.
+При использовании одной из функций ANSI, принимающих указатель **mbstate_t** , передача адреса **mbstate_t** будет возвращать сведения о том, был ли преобразован последний байт в буфере.
 
 Для поддержки многобайтовых символов должна быть установлена соответствующая кодовая страница.
 

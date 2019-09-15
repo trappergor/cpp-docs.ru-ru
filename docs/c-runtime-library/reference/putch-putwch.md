@@ -1,10 +1,10 @@
 ---
 title: _putch, _putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358161"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950049"
 ---
-# <a name="putch-putwch"></a>_putch, _putwch
+# <a name="_putch-_putwch"></a>_putch, _putwch
 
 Записывает символ в строку.
 
@@ -62,11 +65,11 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение *c* в случае успешного выполнения. Если **_putch** завершается ошибкой, возвращается **EOF**; Если **_putwch** завершается ошибкой, возвращается **WEOF**.
+Возвращает значение *c* в случае успешного выполнения. Если **_putch** завершается сбоем, возвращается **EOF**; Если **_putwch** завершается сбоем, возвращается **WEOF**.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции записывают символ *c* напрямую, без буферизации в консоль. В Windows NT функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.
+Эти функции записывают символ *c* напрямую, без буферизации, в консоль. В Windows NT функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Дополнительные сведения см. в разделе **_putch_nolock**, **_putwch_nolock**.
 

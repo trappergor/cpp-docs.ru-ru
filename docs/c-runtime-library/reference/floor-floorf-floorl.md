@@ -1,11 +1,11 @@
 ---
 title: floor, floorf, floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333590"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957161"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -67,23 +70,23 @@ long double floorl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Floor** функции возвращают значение с плавающей запятой, которое представляет наибольшее целое число, меньшее или равное *x*. Ошибка не возвращается.
+Функции **Floor** возвращают значение с плавающей запятой, представляющее максимальное целое число, которое меньше или равно *x*. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|_DOMAIN|
+|± КНАН, С|none|_DOMAIN|
 
-**функция FLOOR** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+у **этажа** есть реализация, использующая Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **floor** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **floor** всегда принимает и возвращает **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **Floor** , которые принимают и возвращают значения **типа float** и **Long** . В программе на языке C функция **Floor** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**функция FLOOR**, **floorf**, **floorl**|\<math.h>|
+|**Floor**, **флурф**, **этаж**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

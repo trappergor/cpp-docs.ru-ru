@@ -1,11 +1,11 @@
 ---
 title: catan, catanf, catanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catan
 - catanf
 - catanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catan
 - catanf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204a05b4293fefa4378e54ce93a625bf890cf4d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335520"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943368"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Извлекает арктангенс комплексного числа узловые выходят за пределы интервала [-1; + 1] на мнимой оси.
+Извлекает арктангенс комплексного числа с ветвью, расположенной за пределами интервала [-1; + 1] вдоль мнимой оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,17 +64,17 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арктангенс *z*, в радианах. Результат неограничен на мнимой оси и находится в интервале [-π/2, + π/2] на реальной оси.
+Арктангенс *z*в радианах. Результат не ограничен на мнимой оси и в интервале [-π/2; + π/2] вдоль реальной оси.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **catan** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **catan** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Катан** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **Катан** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**catan**, **catanf**, **catanl**|\<complex.h>|\<ccomplex>|
+|**Катан**, **катанф**, **катанл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

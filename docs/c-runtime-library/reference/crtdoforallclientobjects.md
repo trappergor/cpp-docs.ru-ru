@@ -1,9 +1,9 @@
 ---
 title: _CrtDoForAllClientObjects
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDoForAllClientObjects
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626df0db1956efd26ee267cb8cacf8ea4a4570c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339723"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942533"
 ---
-# <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
+# <a name="_crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
-Вызывает предоставленную приложением функцию для всех **_CLIENT_BLOCK** типы в куче (только отладочная версия).
+Вызывает функцию, предоставляемую приложением, для всех типов **_CLIENT_BLOCK** в куче (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,21 +48,21 @@ void _CrtDoForAllClientObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*pfn-имени*<br/>
-Указатель на функцию обратного вызова функции, предоставляемой приложением. Первый параметр для этой функции указывает на данные. Второй параметр является указателем контекста, который передается в вызов **_CrtDoForAllClientObjects**.
+*PFN*<br/>
+Указатель на функцию обратного вызова функции, предоставляемой приложением. Первый параметр для этой функции указывает на данные. Второй параметр — это указатель контекста, который передается в вызов **_CrtDoForAllClientObjects**.
 
 *context*<br/>
 Указатель на контекст, предоставляемый приложением, для передачи в функцию, предоставляемую приложением.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtDoForAllClientObjects** выполняться поиск связанном списке кучи для блоков памяти с **_CLIENT_BLOCK** типа и вызывает предоставленную приложением функцию при блок этого типа находится. Найденный блок и *контекст* параметра передаются как аргументы в функцию, предоставляемую приложением. Во время отладки приложение может отследить определенную группу выделений путем явного вызова отладочные функции кучи для выделения памяти и указания, что блокам должен назначаться **_CLIENT_BLOCK** тип блока. Эти блоки затем могут отслеживаться по отдельности и включаться в разные отчеты об обнаружении утечки и состоянии памяти.
+Функция **_CrtDoForAllClientObjects** выполняет поиск блоков памяти в связанном списке кучи с типом **_CLIENT_BLOCK** и вызывает функцию, предоставляемую приложением, при обнаружении блока этого типа. Найденный блок и параметр *контекста* передаются в качестве аргументов функции, предоставляемой приложением. Во время отладки приложение может относить определенную группу выделений путем явного вызова отладочных функций кучи для выделения памяти и указания того, что блокам назначается тип блока **_CLIENT_BLOCK** . Эти блоки затем могут отслеживаться по отдельности и включаться в разные отчеты об обнаружении утечки и состоянии памяти.
 
-Если **_CRTDBG_ALLOC_MEM_DF** битовое поле [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) флаг не включена, **_CrtDoForAllClientObjects** сразу после его вызова. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtDoForAllClientObjects** удаляются во время предварительной обработки.
+Если битовое поле **_CRTDBG_ALLOC_MEM_DF** флага [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) не включено, **_CrtDoForAllClientObjects** немедленно возвращает значение. Если [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtDoForAllClientObjects** удаляются во время предварительной обработки.
 
-Дополнительные сведения о **_CLIENT_BLOCK** типа и его можно использовать другие функции отладки, см. в разделе [типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о типе **_CLIENT_BLOCK** и способах его использования другими функциями отладки см. в разделе [типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Если *pfn* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается **EINVAL** и функция возвращает значение.
+Если *PFN* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметру [_doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается значение **еинвал** , а функция возвращает.
 
 ## <a name="requirements"></a>Требования
 
@@ -69,7 +72,7 @@ void _CrtDoForAllClientObjects(
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-**Библиотеки:** Отладочные версии только универсальных библиотек времени выполнения C.
+**Libraries** Отладочные версии только универсальных библиотек времени выполнения C.
 
 ## <a name="see-also"></a>См. также
 

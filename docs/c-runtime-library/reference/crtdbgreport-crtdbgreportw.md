@@ -1,10 +1,10 @@
 ---
 title: _CrtDbgReport, _CrtDbgReportW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtDbgReport
 - _CrtDbgReportW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtDbgReport
 - CrtDbgReportW
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - CrtDbgReportW function
 - _CrtDbgReportW function
 ms.assetid: 6e581fb6-f7fb-4716-9432-f0145d639ecc
-ms.openlocfilehash: b5579a8996950c5f3e923f67ed2a5e667bb566fa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986777f755a749e858f7e51b5aa19f10090db13a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500005"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938837"
 ---
 # <a name="_crtdbgreport-_crtdbgreportw"></a>_CrtDbgReport, _CrtDbgReportW
 
@@ -92,7 +95,7 @@ int _CrtDbgReportW(
 
 **_CrtDbgReportW** — это версия **_CrtDbgReport**для расширенных символов. Все выходные данные и параметры строки отображаются как строки расширенных символов; в противном случае — аналогично версии с однобайтовыми символами.
 
-**_CrtDbgReport** и **_CrtDbgReportW** создают пользовательское сообщение для отчета об отладке, подставляяаргументы аргумента [**n**] в строку *формата* , используя те же правила, которые определены в **printf** или  **функции wprintf** . Затем эти функции создают отчет об отладке и определяют назначение или назначения на основе текущих режимов отчета и файла, определенного для *reportType*. При отправке отчета в окно сообщения отладки *имя файла*, **LineNumber**и *ModuleName* включаются в сведения, отображаемые в окне.
+**_CrtDbgReport** и **_CrtDbgReportW** создают пользовательское сообщение для отчета об отладке, подставляя аргументы *аргумента*[**n**] в строку *формата* , используя те же правила, которые определены в **printf** или  **функции wprintf** . Затем эти функции создают отчет об отладке и определяют назначение или назначения на основе текущих режимов отчета и файла, определенного для *reportType*. При отправке отчета в окно сообщения отладки *имя файла*, **LineNumber**и *ModuleName* включаются в сведения, отображаемые в окне.
 
 В следующей таблице перечислены доступные варианты для режима отчета, режимов и файла, а также результаты работы **_CrtDbgReport** и **_CrtDbgReportW**. Эти параметры определяются как битовые флаги в функции \<crtdbg.h>.
 

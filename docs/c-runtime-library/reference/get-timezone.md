@@ -1,9 +1,9 @@
 ---
 title: _get_timezone
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_timezone
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_timezone
 - get_timezone
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf77ca21383bcae6919b6c1d00b99c082ef99919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287447"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955637"
 ---
-# <a name="gettimezone"></a>_get_timezone
+# <a name="_get_timezone"></a>_get_timezone
 
 Извлекает разницу в секундах между временем в формате UTC и местным временем.
 
@@ -45,18 +48,18 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Параметры
 
-*секунд*<br/>
+*несколько*<br/>
 Разница в секундах между временем в формате UTC и местным временем.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Нуль в случае успешного выполнения или **errno** значение, если возникает ошибка.
+Нуль в случае успеха или **значение** пересчета при возникновении ошибки.
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_timezone** функция извлекает разница в секундах между временем UTC и местного времени к целому числу. Значение по умолчанию — 28800 секунд (тихоокеанское время, на 8 часов отстающее от UTC).
+Функция **_get_timezone** извлекает разность в секундах между временем UTC и местным временем в виде целого числа. Значение по умолчанию — 28800 секунд (тихоокеанское время, на 8 часов отстающее от UTC).
 
-Если *секунд* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если значение *секунд* равно **null**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
 ## <a name="requirements"></a>Требования
 

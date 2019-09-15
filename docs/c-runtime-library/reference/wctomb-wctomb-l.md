@@ -1,10 +1,10 @@
 ---
 title: wctomb, _wctomb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_l
 - wctomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb
 helpviewer_keywords:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 6902ff925e49d894f70b0d7083b99388d5271d1d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500741"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945002"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -64,13 +67,13 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctomb** преобразует расширенный символ в многобайтовый символ, он возвращает число байтов (которое никогда не превышает **MB_CUR_MAX**) в расширенном символе. Если *WCHAR* является расширенным символом NULL (L ' \ 0 '), **wctomb** возвращает 1. Если целевой указатель *мбчар* имеет **значение NULL**, **wctomb** возвращает 0. Если преобразование невозможно в текущем языковом стандарте, **wctomb** возвращает значение-1, а для возврата — **еилсек**.
+Если **wctomb** преобразует расширенный символ в многобайтовый символ, он возвращает число байтов (которое никогда не превышает **MB_CUR_MAX**) в расширенном символе. Если *WCHAR* является расширенным символом NULL (L ' \ 0 '), **wctomb** возвращает 1. Если целевой указатель *мбчар* имеет **значение NULL**, **wctomb** возвращает 0. Если преобразование невозможно в текущем языковом стандарте, **wctomb** **возвращает значение-1, а для** возврата — **еилсек**.
 
 ## <a name="remarks"></a>Примечания
 
 Функция **wctomb** Преобразует аргумент *WCHAR* в соответствующий многобайтовый символ и сохраняет результат в *мбчар*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентичен **wctomb** , за исключением того, что он использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** проверяет свои параметры. Если *мбчар* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено , параметру **еинвал** присваивается значение, а функция возвращает-1.
+**wctomb** проверяет свои параметры. Если *мбчар* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **,** параметру **еинвал** присваивается значение, а функция возвращает-1.
 
 ## <a name="requirements"></a>Требования
 

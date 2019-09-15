@@ -1,11 +1,11 @@
 ---
-title: COSH, coshf, coshl
+title: cosh, coshf, coshl
 ms.date: 04/11/2018
-apiname:
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347448"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938999"
 ---
-# <a name="cosh-coshf-coshl"></a>COSH, coshf, coshl
+# <a name="cosh-coshf-coshl"></a>cosh, coshf, coshl
 
 Вычисляет гиперболический косинус.
 
@@ -59,30 +62,30 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Гиперболический косинус *x*.
+Гиперболический косинус для *x*.
 
-По умолчанию, если результат слишком велик в **cosh**, **coshf**, или **coshl** вызвать, функция возвращает **HUGE_VAL** и задает **errno** для **ERANGE**.
+По умолчанию, если результат слишком велик в вызове **cosh**, **кошф**или **кошл** , функция возвращает **HUGE_VAL** **и устанавливает для** значения "от" до **ERANGE**.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
-|*x* ≥ 7.104760e + 002|**НЕТОЧНЫЙ**+**ПЕРЕПОЛНЕНИЯ**|**ПЕРЕПОЛНЕНИЕ**|
+|± **КНАН**, **С**|none|**_DOMAIN**|
+|*x* ≥ 7.104760 e + 002|**НЕТОЧНОЕ**+**ПЕРЕПОЛНЕНИЕ**|**ПОЛН**|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cosh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **cosh** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cosh** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **cosh** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> или \<math.h>|
+|**кошф**, **косл**, **кошл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-Ознакомьтесь с примером в [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
+См. пример в [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>См. также
 

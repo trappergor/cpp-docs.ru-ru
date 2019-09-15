@@ -1,12 +1,12 @@
 ---
 title: _snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snwscanf_s_l
 - _snwscanf_s
 - _snscanf_s
 - _snscanf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sntscanf_s
 - snscanf_s
@@ -49,14 +52,14 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 8d56999aea69c4674070410774d5a2fa11abb178
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33507990c1b7e2c6fd1b30e2bdb9277ab611ef2a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355696"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947950"
 ---
-# <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
+# <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s, _snscanf_s_l, _snwscanf_s, _snwscanf_s_l
 
 Считывает форматированные данные указанной длины из строки. Это версии функций [_snscanf, _snscanf_l, _snwscanf, _snwscanf_l](snscanf-snscanf-l-snwscanf-snwscanf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -89,11 +92,11 @@ int __cdecl _snwscanf_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Входные данные*<br/>
+*входной*<br/>
 Входная строка для анализа.
 
 *length*<br/>
-Число символов для анализа в *ввода*.
+Число символов для проверки во *входных данных*.
 
 *format*<br/>
 Один или несколько описателей формата.
@@ -102,26 +105,26 @@ int __cdecl _snwscanf_s_l(
 Используемый языковой стандарт.
 
 *argument_list*<br/>
-Необязательные аргументы для назначения в соответствии с строку формата.
+Необязательные аргументы, которые должны быть назначены в соответствии со строкой формата.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Возвращает значение **EOF** при возникновении ошибки или достижения конца строки до первого преобразования. Дополнительные сведения см. в разделе [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Возвращаемое значение — **EOF** для ошибки или, если конец строки достигнут перед первым преобразованием. Дополнительные сведения см. в разделе [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Если *входной* или *формат* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и задайте **errno** для **EINVAL**.
+Если параметр *input* или *Format* является **пустым** указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и применяют **значение** **еинвал**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция аналогична **sscanf_s** за исключением того, что предоставляет возможность задать фиксированное число символов для анализа из входной строки. Дополнительные сведения см. в разделе [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
+Эта функция похожа на **sscanf_s** , за исключением того, что она предоставляет возможность указать фиксированное число символов для проверки из входной строки. Дополнительные сведения см. в разделе [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md).
 
-Параметр размера буфера обязательным при использовании символов полей типа **c**, **C**, **s**, **S**, и **[** . Дополнительные сведения см. в разделе [Символы поля типа scanf](../../c-runtime-library/scanf-type-field-characters.md).
+Параметр размера буфера обязателен для символов поля типа **c**, **c**, **s**, **s**и **[** . Дополнительные сведения см. в разделе [Символы поля типа scanf](../../c-runtime-library/scanf-type-field-characters.md).
 
 > [!NOTE]
-> Параметр размера имеет тип **без знака**, а не **size_t**.
+> Параметр size имеет тип без **знака**, а не **size_t**.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

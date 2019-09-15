@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942000"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 Проверяет конец файла (EOF).
 
@@ -52,11 +55,11 @@ int _eof(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_eof** возвращает 1, если текущая позиция находится конец файла, или 0, если это не так. Возвращаемое значение-1 указывает на ошибку; в этом случае вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **значение EBADF**, который указывает недопустимый дескриптор файла.
+**_eof** возвращает 1, если текущая точка — конец файла, или 0, если нет. Возвращаемое значение, равное-1, указывает на ошибку; в этом случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **значение EBADF**устанавливается значение, указывающее на недопустимый дескриптор файла.
 
 ## <a name="remarks"></a>Примечания
 
-**_Eof** функция определяет, связан ли конец файла *fd* был достигнут.
+Функция **_eof** определяет, был ли достигнут конец файла, связанного с *демоном* .
 
 ## <a name="requirements"></a>Требования
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>Входные данные: crt_eof.txt
+### <a name="input-crt_eoftxt"></a>Входные данные: crt_eof.txt
 
 ```Input
 This file contains some text.

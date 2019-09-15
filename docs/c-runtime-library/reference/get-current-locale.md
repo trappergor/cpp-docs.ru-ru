@@ -1,9 +1,9 @@
 ---
 title: _get_current_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_current_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_current_locale
 - __get_current_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: 87c30ee701d8f7d3a89a0aa61ba18a7f854bc9b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332298"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956093"
 ---
-# <a name="getcurrentlocale"></a>_get_current_locale
+# <a name="_get_current_locale"></a>_get_current_locale
 
 Получает объект языкового стандарта, представляющий текущий языковой стандарт.
 
@@ -49,9 +52,9 @@ _locale_t _get_current_locale(void);
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_current_locale** функция получает текущий языковой стандарт и возвращает объект языкового стандарта, представляющий этот языковой стандарт.
+Функция **_get_current_locale** получает текущий языковой стандарт для потока и возвращает объект локали, представляющий этот языковой стандарт.
 
-Предыдущее имя функции, **__get_current_locale** (с двумя начальными символами подчеркивания) рекомендуется.
+Предыдущее имя этой функции, **__get_current_locale** (с двумя символами подчеркивания в начале), не рекомендуется к использованию.
 
 ## <a name="requirements"></a>Требования
 

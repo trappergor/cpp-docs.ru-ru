@@ -1,11 +1,11 @@
 ---
-title: fmod, fmodf, fmodl
+title: FMOD, фмодф, фмодл
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333356"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957079"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
+# <a name="fmod-fmodf-fmodl"></a>FMOD, фмодф, фмодл
 
 Вычисляет остаток с плавающей запятой.
 
@@ -72,19 +75,19 @@ long double fmodl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**fmod** возвращает остаток с плавающей запятой от *x* / *y*. Если значение *y* равно 0,0, **fmod** возвращает несигнальное значение NaN. Сведения о представлении NaN в тихом режиме, **printf** семейства, см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
+**FMOD** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Fmod** функция вычисляет остаток с плавающей запятой *f* из *x* / *y* таким образом, чтобы *x*  =  *я* \* *y* + *f*, где *я* должно быть целым числом, *f* имеет тот же знак, что *x*и абсолютное значение *f* меньше, чем абсолютное значение *y*.
+Функция **FMOD** вычисляет значение *x* / *y* *остатка* с плавающей запятой, т. е *. x* = *i* \* *y* + *f*, где *i* — целое число, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **fmod** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **fmod** всегда принимает два **двойные** аргументы и возвращает **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **FMOD** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**FMOD**, **фмодф**, **фмодл**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

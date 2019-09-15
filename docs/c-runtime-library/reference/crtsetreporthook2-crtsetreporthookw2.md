@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942217"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
 Устанавливает или удаляет определяемую клиентом функцию отчетов путем ее прикрепления к процессу создания отладочных отчетов среды выполнения языка C (только отладочная версия).
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>Параметры
 
 *mode*<br/>
-Действие, выполняемое: **_CRT_RPTHOOK_INSTALL** или **_CRT_RPTHOOK_REMOVE**.
+Предпринимаемое действие: **_CRT_RPTHOOK_INSTALL** или **_CRT_RPTHOOK_REMOVE**.
 
-*pfnNewHook*<br/>
-Отчетные установки или удаления в обычными символами или двухбайтовая версия этой функции.
+*пфнневхук*<br/>
+Обработчик отчета для установки или удаления в версии этой функции, которая является узким символом или расширенной символом.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
--1, если произошла ошибка, с помощью **EINVAL** или **ENOMEM** задать; в противном случае возвращает число ссылок *pfnNewHook* после вызова метода.
+-1, если обнаружена ошибка, с набором **еинвал** или **еномем** ; в противном случае возвращает счетчик ссылок *пфнневхук* после вызова.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtSetReportHook2** и **_CrtSetReportHookW2** позволяют прикреплять или откреплять функцию, тогда как [_CrtSetReportHook](crtsetreporthook.md) позволяет только прикреплять функцию.
+**_CrtSetReportHook2** и **_CrtSetReportHookW2** позволяют подключать или отменять ловушки функции, тогда как [_CrtSetReportHook](crtsetreporthook.md) позволяет только привязать функцию.
 
-**_CrtSetReportHook2** или **_CrtSetReportHookW2** следует использовать вместо **_CrtSetReportHook** когда вызов обработчика производится в DLL и когда могут быть загружены несколько DLL, а также настраиваться собственные функции-обработчики. В таком случае библиотеки DLL могут быть выгружены не в том порядке, в котором они были загружены, а функция-обработчик может продолжать указывать на выгруженную библиотеку DLL. Любой отладочный вывод вызывает сбой процесса, если функции-обработчики были добавлены с **_CrtSetReportHook**.
+**_CrtSetReportHook2** или **_CrtSetReportHookW2** следует использовать вместо **_CrtSetReportHook** при вызове обработчика в библиотеке DLL, а также при загрузке нескольких библиотек DLL и задании собственных функций-ловушек. В таком случае библиотеки DLL могут быть выгружены не в том порядке, в котором они были загружены, а функция-обработчик может продолжать указывать на выгруженную библиотеку DLL. Любой отладочный вывод аварийно завершает процесс, если функции-обработчики были добавлены с помощью **_CrtSetReportHook**.
 
-Все добавленные с помощью функции-обработчики **_CrtSetReportHook** , вызываются при отсутствии-обработчиков, добавлены функции с **_CrtSetReportHook2** или **_CrtSetReportHookW2** или если все-обработчики функции, добавленные с помощью **_CrtSetReportHook2** и **_CrtSetReportHookW2** возвращают **FALSE**.
+Любые функции-обработчики, добавленные с помощью **_CrtSetReportHook** , вызываются, если с **_CrtSetReportHook2** или **_CrtSetReportHookW2** не добавлены функции-обработчики или если все функции-обработчики добавлены с помощью **_CrtSetReportHook2** и **_ CrtSetReportHookW2** возвращает **значение false**.
 
 Доступна версия этой функции для расширенных символов. Функции-обработчики отчетов принимают строку, тип которой (расширенные или обычные символы) должен соответствовать версии используемой функции. Используйте следующий прототип функции для обработчиков отчетов, используемых с версией этой функции для расширенных символов:
 
@@ -83,10 +86,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Эти функции проверяют свои параметры. Если *режим* или **pfnNewNook** является недопустимым, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1.
+Эти функции проверяют свои параметры. Если *mode* или **пфнневнук** является недопустимым, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают-1.
 
 > [!NOTE]
-> Если приложение компилируется с **/CLR** и функция отчетов вызывается после выхода из приложения основной, CLR вызовет исключение, если функция отчетов вызывает функции CRT.
+> Если приложение компилируется с **параметром/CLR** и функция отчетов вызывается после того, как приложение завершило работу, среда CLR выдаст исключение, если функция отчетов вызывает какие-либо функции CRT.
 
 ## <a name="requirements"></a>Требования
 

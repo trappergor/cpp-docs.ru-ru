@@ -1,11 +1,11 @@
 ---
 title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157312"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953374"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -61,30 +64,30 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает натуральный логарифм абсолютного значения гамма-функции для *x*.
+В случае успеха возвращает натуральный логарифм абсолютного значения гамма-функции *x*.
 
 |Проблемы|Назад|
 |-----------|------------|
 |*x* = NaN|NaN|
-|*x* = ±0|+INFINITY|
+|*x* = ± 0|+INFINITY|
 |*x*= отрицательное целое число|+INFINITY|
-|±INFINITY|+INFINITY|
+|± БЕСКОНЕЧНОСТИ|+INFINITY|
 |ошибка полюса|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
-|Ошибка переполнения диапазона|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|
+|Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 
 Ошибки сообщаются, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **lgamma** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **lgamma** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **лгамма** всегда принимает и возвращает значение **типа Double**.
 
-Если x является рациональным числом, эта функция возвращает логарифм факториала (x - 1).
+Если x является рациональным числом, эта функция возвращает логарифм факториала (x-1).
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**лгамма**, **лгаммаф**, **лгаммал**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

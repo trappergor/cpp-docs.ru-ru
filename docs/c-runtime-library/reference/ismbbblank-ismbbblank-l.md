@@ -1,10 +1,10 @@
 ---
 title: _ismbbblank, _ismbbblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbblank_l
 - _ismbbblank
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,16 +16,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21f4c88b00774159f8e6945973641e67718494e6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286955"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954247"
 ---
-# <a name="ismbbblank-ismbbblankl"></a>_ismbbblank, _ismbbblank_l
+# <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
 Определяет, является ли указанный многобайтовый символ пустым символом.
 
@@ -54,7 +57,7 @@ int _ismbbblank_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbblank** возвращает ненулевое значение, если *c* представляет символ пробела (0x20), символ горизонтальной табуляции (0x09) или знак языкового стандарта, который используется для разделения слов в строке текста, для которых **isspace** true; в противном случае, возвращается 0. **_ismbbblank** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbblank_l** идентична, за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** возвращает ненулевое значение, если *c* представляет символ пробела (0x20), символ горизонтальной табуляции (0x09) или символ, зависящий от языкового стандарта, который используется для разделения слов в строке текста, для которой задано значение « **пробел** ». в противном случае возвращает 0. **_ismbbblank** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbblank_l** является идентичным за исключением того, что вместо этого использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

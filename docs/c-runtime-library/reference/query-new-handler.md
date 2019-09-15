@@ -1,9 +1,9 @@
 ---
 title: _query_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _query_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _query_new_handler
 - query_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357883"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949696"
 ---
-# <a name="querynewhandler"></a>_query_new_handler
+# <a name="_query_new_handler"></a>_query_new_handler
 
 Возвращает адрес текущей новой подпрограммы обработчика.
 
@@ -46,11 +49,11 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает адрес текущей новой подпрограммы обработчика, заданную функцией **_set_new_handler**.
+Возвращает адрес текущей новой подпрограммы обработчика, заданную параметром **_set_new_handler**.
 
 ## <a name="remarks"></a>Примечания
 
-C++ **_Query_new_handler** функция возвращает адрес текущей функции обработки исключений, задается C++ [_set_new_handler](set-new-handler.md) функции. **_set_new_handler** можно указать функцию обработки исключений, которая получает управление, если **новый** оператор не удается выделить память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
+C++ Функция **_query_new_handler** возвращает адрес текущей функции C++ обработки исключений, заданной функцией [_set_new_handler](set-new-handler.md) . **_set_new_handler** используется для указания функции обработки исключений, которая позволяет получить управление, если оператору **New** не удается выделить память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
 
 ## <a name="requirements"></a>Требования
 

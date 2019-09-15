@@ -1,10 +1,10 @@
 ---
 title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285278"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951842"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
 Сравнивает символы в двух буферах (без учета регистра).
 
@@ -74,18 +77,18 @@ int _memicmp_l(
 
 |Возвращаемое значение|Отношения между определенным числом начальных байтов буфера 1 и буфера 2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* меньше, чем *buffer2*.|
-|0|*buffer1* идентичен *buffer2*.|
-|> 0|*buffer1* больше, чем *buffer2*.|
+|< 0|*buffer1* меньше *buffer2*.|
+|0|*buffer1* идентично *buffer2*.|
+|> 0|*buffer1* больше *buffer2*.|
 |**_NLSCMPERROR**|Произошла ошибка.|
 
 ## <a name="remarks"></a>Примечания
 
-**_Memicmp** функция сравнивает первые *число* символы двух буферов *buffer1* и *buffer2* байт за байтом. Сравнение выполняется без учета регистра.
+Функция **_memicmp** сравнивает символы первого *числа* двух буферов *buffer1* и *buffer2* byte по байтам. Сравнение выполняется без учета регистра.
 
-Если параметр *buffer1* или *buffer2* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** и задает **errno** для **EINVAL**.
+Если *buffer1* или *buffer2* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** **и устанавливает значение** переводится в **еинвал**.
 
-**_memicmp** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_memicmp_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_memicmp** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_memicmp_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

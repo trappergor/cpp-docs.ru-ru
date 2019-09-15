@@ -1,9 +1,9 @@
 ---
 title: wctype
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,22 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctype
 helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f77082bbcc5f3cd9d82fb40993c3ac678e7e7ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155320"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957807"
 ---
 # <a name="wctype"></a>wctype
 
@@ -47,7 +50,7 @@ wctype_t wctype(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **LC_CTYPE** категории текущего языкового стандарта не определяет правило классификации, имя которого соответствует строке свойства *свойство*, функция возвращает нуль. В противном случае возвращается ненулевое значение, подходящее для использования в качестве второго аргумента последующего вызова [towctrans](towctrans.md).
+Если категория **LC_CTYPE** текущего языкового стандарта не определяет правило классификации, имя которого соответствует *свойству*строки свойства, функция возвращает ноль. В противном случае возвращается ненулевое значение, подходящее для использования в качестве второго аргумента последующего вызова [towctrans](towctrans.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -55,17 +58,17 @@ wctype_t wctype(
 
 |Функция|Эквивалентно|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c, wctype ("alnum"))|
-|iswalpha(c)|iswctype (c, wctype ("альфа"))|
-|iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
-|iswdigit(c)|iswctype(c, wctype( "digit" ) )|
-|iswgraph(c)|iswctype(c, wctype( "graph" ) )|
-|iswlower(c)|iswctype (c, wctype («ниже»))|
-|iswprint(c)|iswctype(c, wctype( "print" ) )|
-|iswpunct(c)|iswctype (c, wctype ("punct"))|
-|iswspace(c)|iswctype(c, wctype( "space" ) )|
-|iswupper(c)|iswctype (c, wctype ("верхний"))|
-|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
+|исвалнум (c)|iswctype (c, wctype ("алнум"))|
+|исвалфа (c)|iswctype (c, wctype ("Альфа"))|
+|исвкнтрл (c)|iswctype (c, wctype ("Вкладка"))|
+|исвдигит (c)|iswctype (c, wctype ("digit"))|
+|исвграф (c)|iswctype (c, wctype ("Graph"))|
+|iswlower (c)|iswctype (c, wctype ("ниже"))|
+|исвпринт (c)|iswctype (c, wctype ("Печать"))|
+|исвпункт (c)|iswctype (c, wctype ("punct"))|
+|исвспаце (c)|iswctype (c, wctype ("пробел"))|
+|iswupper (c)|iswctype (c, wctype ("Upper"))|
+|исвксдигит (c)|iswctype (c, wctype ("ксдигит"))|
 
 ## <a name="requirements"></a>Требования
 

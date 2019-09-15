@@ -1,14 +1,14 @@
 ---
 title: atan, atanf, atanl, atan2, atan2f, atan2l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atan2f
 - atan2l
 - atan2
 - atanf
 - atan
 - atanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atan
 - atan2l
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c485dea281d2b754628c9663e38ea10a9b6ab57
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341721"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939610"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan, atanf, atanl, atan2, atan2f, atan2l
 
-Вычисляет Арктангенс **x** (**atan**, **atanf**, и **atanl**) или Арктангенс **y** / **x** (**atan2**, **atan2f**, и **atan2l**).
+Вычисляет арктангенс значений **x** (**ATAN**, **атанф**и **атанл**) или арктангенс **y**/**x** (**atan2**, **atan2f**и **atan2l**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -76,27 +79,27 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**ATAN** Возвращает арктангенс *x* в диапазоне - π/2 до радианы π/2. **ATAN2** Возвращает арктангенс *y*/*x* в диапазоне - π до радианы π. Если *x* равно 0, **atan** возвращает 0. Если оба параметра **atan2** равны 0, функция возвращает значение 0. Все результаты даются в радианах.
+**ATAN** возвращает арктангенс *x* в диапазоне от-π/2 до π/2 радиан. **atan2** возвращает арктангенс *оси y*/*x* в диапазоне от-π до π радиан. Если *x* равно 0, **ATAN** возвращает 0. Если оба параметра **atan2** равны 0, функция возвращает 0. Все результаты даются в радианах.
 
-**ATAN2** использует признаки обоих параметров определяет квадрант возвращаемого значения.
+**atan2** использует символы обоих параметров для определения квадранта возвращаемого значения.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|± **КНАН**, **С**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 
-**Atan** функция вычисляет арктангенс (функцию обратного тангенса) *x*. **ATAN2** вычисляет Арктангенс *y*/*x* (если *x* равняется 0, **atan2** возвращает π/2, если *y* положительно, - π/2, если *y* отрицательно, или 0, если *y* равно 0.)
+Функция **ATAN** Вычисляет арктангенс (обратную функцию тангенса) для *x*. **atan2** Вычисляет арктангенс *y*/*x* (если *x* равен 0, **atan2** возвращает π/2, если *y* является положительным,-π/2, если *y* является отрицательным, или 0, если *y* равен 0).
 
-**ATAN** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**ATAN** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **atan** и **atan2** , принимающих **float** или **long** **double**  аргументы. В программе на языке C **atan** и **atan2** всегда имеют **двойные** аргументы и возвращать **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATAN** и **atan2** , которые **принимают аргументы типа** **float** или **Long** . В программе на языке C **ATAN** и **atan2** всегда принимают **два** аргумента и возвращают **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**ATAN**, **atan2**, **atanf**, **atan2f**, **atanl**, **atan2l**|\<math.h>|\<cmath> или \<math.h>|
+|**ATAN**, **atan2**, **атанф**, **atan2f**, **атанл**, **atan2l**|\<math.h>|\<cmath> или \<math.h>|
 
 ## <a name="example"></a>Пример
 

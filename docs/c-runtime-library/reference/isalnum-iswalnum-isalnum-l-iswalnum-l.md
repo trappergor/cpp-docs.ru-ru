@@ -1,12 +1,12 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalnum_l
 - _iswalnum_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 3aa9adada9ad904221b91e41ac2d843b174677ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331653"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954588"
 ---
-# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
+# <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
 Определяет, представляет ли целое число алфавитно-цифровой символ.
 
@@ -67,11 +70,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление буквы или цифры. **isalnum** возвращает ненулевое значение, если **isalpha** или **isdigit** имеет ненулевое значение для *c*, то есть если *c* находится в пределах в диапазоне A - Z, a - z или 0 - 9. **iswalnum** возвращает ненулевое значение, если **iswalpha** или **iswdigit** имеет ненулевое значение для *c*. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих подпрограмм возвращает ненулевое значение, если *c* является определенным представлением алфавитно-цифрового символа. **isAlnum** возвращает ненулевое значение, если для *языка Си* **или** **не равно нулю** , то есть если *c* находится внутри диапазонов a – z, a – z или 0-9. **исвалнум** возвращает ненулевое значение, если параметр **исвалфа** или **исвдигит** не равен нулю для *c*. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-В версиях этих функций с **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isalnum** и **_isalnum_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
+Поведение **isAlnum** и **_isalnum_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

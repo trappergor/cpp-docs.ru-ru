@@ -1,11 +1,11 @@
 ---
-title: TANH, tanhf, tanhl
+title: tanh, tanhf, tanhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tanh
 - tanhf
 - tanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tanh
 - tanhf
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258321"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957534"
 ---
-# <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
 Вычисляет гиперболический тангенс.
 
@@ -61,21 +64,21 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Tanh** функции возвращают гиперболический тангенс *x*. Ошибка не возвращается.
+Функции **tanh** возвращают гиперболический тангенс *x*. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|**Matherr** исключение|
+|Ввод|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|Нет|_DOMAIN|
+|± КНАН, С|none|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **tanh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **tanh** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **tanh** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C)|
 |-------------|---------------------|-|
-|**TANH**, **tanhf**, **tanhl**|\<math.h>|\<cmath> или \<math.h>|
+|**tanh**, **tanhf**, **танхл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

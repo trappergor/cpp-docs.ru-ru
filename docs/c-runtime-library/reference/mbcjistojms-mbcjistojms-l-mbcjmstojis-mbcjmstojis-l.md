@@ -1,12 +1,12 @@
 ---
 title: _mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbcjistojms
 - _mbcjmstojis
 - _mbcjistojms_l
 - _mbcjmstojis_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbcjistojms
 - _mbcjistojms
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: 22cf8eeb5f99b6abee624aa3b1d06246d7230652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bf1109cfba93042bd00acde4812706c1bbf7a01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156828"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952591"
 ---
-# <a name="mbcjistojms-mbcjistojmsl-mbcjmstojis-mbcjmstojisl"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
+# <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l
 
 Преобразуют символы стандартов Japan Industry Standard (JIS) и Japan Microsoft (JMS) в разных направлениях.
 
@@ -85,15 +88,15 @@ unsigned int _mbcjmstojis_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbcjistojms** функция преобразует символ стандарта Japan отрасли (JIS) в символ Microsoft Kanji (Shift JIS). Символ преобразуется только в том случае, если старший и младший байты находятся в диапазоне 0x21 - 0x7E. Если старший или младший байт находится за пределами этого диапазона **errno** присваивается **EILSEQ**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Функция **_mbcjistojms** преобразует символ стандартной отрасли (JIS) в символ Microsoft кандзи (Shift JIS). Символ преобразуется только в том случае, если ведущий и младший байт находятся в диапазоне 0x21-0x7E. Если старший или пробный байт находится за пределами этого **диапазона, то для параметра «** **еилсек**» устанавливается значение. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**_Mbcjmstojis** функция преобразует символ Shift JIS в символ JIS. Символ преобразуется только в том случае, если старший байт находится в диапазоне 0x81 – 0x9F или 0xE0 – 0xFC, а младший байт находится в диапазоне 0x40 – 0x7E или 0x80 – 0xFC. Обратите внимание, что некоторым кодовым точкам в этом диапазоне не соответствуют символы, в результате чего их преобразование невозможно.
+Функция **_mbcjmstojis** преобразует символ "Shift JIS" в символ JIS. Символ преобразуется только в том случае, если старший байт находится в диапазоне 0x81-0x9F или 0xE0-0xFC, а младший байт находится в диапазоне 0x40-0x7E или 0x80-0xFC. Обратите внимание, что некоторым кодовым точкам в этом диапазоне не соответствуют символы, в результате чего их преобразование невозможно.
 
-Значение *c* должен быть 16-разрядное значение, старшие 8 бит представляют старший байт символа для преобразования, а чьи младшие 8 битов — младший байт.
+Значение *c* должно представлять собой 16-разрядное значение, старшие 8 бит которого представляют старший байт преобразуемого символа, а младшие 8 бит — младший байт.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbcjistojms** и **_mbcjmstojis** были вызваны **jistojms** и **jmstojis**, соответственно. **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** и **_mbcjmstojis_l** должны использоваться вместо нее.
+В более ранних версиях **_mbcjistojms** и **_mbcjmstojis** назывались **жистожмс** и **жмстожис**соответственно. Вместо них следует использовать **_mbcjistojms**, **_mbcjistojms_l**, **_mbcjmstojis** и **_mbcjmstojis_l** .
 
 ## <a name="requirements"></a>Требования
 

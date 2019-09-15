@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342970"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942299"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 Извлекает или изменяет поведение, управляющее порогом заполнения буфера в функциях отладки.
 
@@ -44,16 +47,16 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ### <a name="parameters"></a>Параметры
 
-*newThreshold*<br/>
-Новый размер пороговое значение в байтах.
+*невсрешолд*<br/>
+Новый размер порогового значения в байтах.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее значение порогового значения.
+Предыдущее пороговое значение.
 
 ## <a name="remarks"></a>Примечания
 
-Отладочные версии некоторых функций CRT с улучшенной безопасностью заполняют буфер, переданный к ним с помощью специального символа (0xFE). Это помогает определить, когда функции был передан недопустимый размер. К сожалению, это также снижает производительность. Чтобы повысить производительность, используйте **_CrtSetDebugFillThreshold** для отключения заполнения буферов, размер которых превышает *newThreshold* пороговое значение. Объект *newThreshold* значение 0 отключает его для всех буферов.
+Отладочные версии некоторых функций CRT с повышенной безопасностью заполняют буфер, переданный им специальным символом (0xFE). Это помогает определить, когда функции был передан недопустимый размер. К сожалению, это также снижает производительность. Чтобы повысить производительность, используйте **_CrtSetDebugFillThreshold** , чтобы отключить заполнение буфера для буферов, превышающих пороговое значение *невсрешолд* . Значение *невсрешолд* , равное 0, отключает его для всех буферов.
 
 Пороговое значение по умолчанию — **SIZE_T_MAX**.
 
@@ -101,11 +104,11 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-Эта функция является характерные для Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эта функция относится только к Microsoft. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
-Отладочные версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md) только.
+Отладочные версии только [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md) .
 
 ## <a name="example"></a>Пример
 

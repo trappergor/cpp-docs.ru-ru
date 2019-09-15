@@ -1,11 +1,11 @@
 ---
 title: pow, powf, powl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - powl
 - pow
 - powf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - powl
 - pow
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232238"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950290"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Вычисляет *x* степени *y*.
+Вычисляет *x* , возведенное в степень *y*.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,25 +77,25 @@ long double pow( long double x, int y );  // C++ only
 
 |Значения x и y|Возвращаемое значение функции pow|
 |-----------------------|-------------------------|
-|*x* ! = 0.0 и *y* == 0.0|1|
-|*x* == 0,0 и *y* == 0.0|1|
-|*x* == 0,0 и *y* < 0|INF|
+|*x* ! = 0,0 и *y* = = 0,0|1|
+|*x* = = 0,0 и *y* = = 0,0|1|
+|*x* = = 0,0 и *y* < 0|INF|
 
 ## <a name="remarks"></a>Примечания
 
-**pow** не распознает целочисленных значений с плавающей запятой больше 2<sup>64</sup> (например, 1.0E100).
+**Pow** не распознает целочисленные значения с плавающей запятой больше 2<sup>64</sup> (например, 1.0 E100).
 
-**pow** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**Pow** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Так как C++ допускает перегрузку, можно вызывать любые из различных перегрузок **pow**. В программе на языке C **pow** всегда принимает два **двойные** значения и возвращает **двойные** значение.
+Поскольку C++ допускает перегрузку, можно вызвать любую из различных перегрузок **Pow**. В программе на языке C **Pow** всегда принимает два значения **типа Double** и возвращает значение **типа double** .
 
-Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первым параметром для **двойные**, **float**, или **long** **двойные**.
+Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первый параметр к типу **Double**, **float**или **Long** **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
-|**pow**, **powf**, **powl**|\<math.h>|\<math.h> или \<cmath>|
+|**Pow**, **powf**, **Повл**|\<math.h>|\<math.h> или \<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

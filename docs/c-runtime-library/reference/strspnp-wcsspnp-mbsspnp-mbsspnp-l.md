@@ -1,12 +1,12 @@
 ---
 title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsspnp
 - _mbsspnp
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223135"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946683"
 ---
-# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
+# <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Возвращают указатель на первый символ в заданной строке, который отсутствует в другой заданной строке.
 
 > [!IMPORTANT]
-> **_mbsspnp** и **_mbsspnp_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** и **_mbsspnp_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -83,7 +86,7 @@ unsigned char *_mbsspnp_l(
 *str*<br/>
 Строка для поиска, завершающаяся символом NULL.
 
-*набор символов*<br/>
+*charset*<br/>
 Набор символов, завершающийся символом NULL.
 
 *locale*<br/>
@@ -91,13 +94,13 @@ unsigned char *_mbsspnp_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_strspnp**, **_wcsspnp**, и **_mbsspnp** возвращают указатель на первый символ в *str* , не принадлежит к набору символов в *charset*. Каждая из этих функций возвращает **NULL** Если *str* состоит только из символов из *charset*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
+**_strspnp**, **_wcsspnp**и **_mbsspnp** возвращают указатель на первый символ в *str* , который не принадлежит набору символов в *CharSet*. Каждая из этих функций возвращает **значение NULL** , если *str* состоит исключительно из символов из *CharSet*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsspnp** функция возвращает указатель на Многобайтовый символ, который является первым символом в *str* , не принадлежит к набору символов в *charset*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с [многобайтовую кодовую страницу](../../c-runtime-library/code-pages.md) в настоящий момент. Поиск не включает завершающие нуль-символы.
+Функция **_mbsspnp** возвращает указатель на многобайтовый символ, который является первым символом в *str* , не принадлежащим набору символов в *CharSet*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) . Поиск не включает завершающие нуль-символы.
 
-Если параметр *str* или *charset* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Если параметр *str* или *CharSet* является пустым указателем, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **значение NULL** и **устанавливает** для **еинвал**.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -105,9 +108,9 @@ unsigned char *_mbsspnp_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** и **_wcsspnp** однобайтовых символов и расширенных версиях **_mbsspnp**. **_strspnp** и **_wcsspnp** ведут себя идентично **_mbsspnp** иначе; они предназначены только для этого сопоставления и не следует использовать по любой другой причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** и **_wcsspnp** — это однобайтовые и версии **_mbsspnp**для расширенных символов. поведение **_strspnp** и **_wcsspnp** идентично **_mbsspnp** в противном случае. они предоставляются только для этого сопоставления и не должны использоваться по какой бы то ни было причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** идентична за исключением того, что она использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** является идентичным за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

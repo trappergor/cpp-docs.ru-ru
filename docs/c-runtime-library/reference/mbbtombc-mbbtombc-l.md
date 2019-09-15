@@ -1,10 +1,10 @@
 ---
 title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtombc_l
 - _mbbtombc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtombc_l
 - _mbbtombc
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244e603a3234b755d19a1c1d0738e8c22d74b8e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156912"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952739"
 ---
-# <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
+# <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
 Преобразует однобайтовый многобайтовый символ в соответствующий двухбайтовый многобайтовый символ.
 
@@ -64,15 +67,15 @@ unsigned int _mbbtombc_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **_mbbtombc** успешно преобразует *c*, она возвращает Многобайтовый символ; в противном случае он возвращает *c*.
+Если **_mbbtombc** успешно преобразует *c*, он возвращает многобайтовый символ. в противном случае возвращается *c*.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbbtombc** функция преобразует определенный однобайтовый Многобайтовый символ в соответствующий двухбайтовый Многобайтовый символ. Символы должны быть в диапазоне 0x20 – 0x7E или 0xA1 – 0xDF для преобразования.
+Функция **_mbbtombc** Преобразует заданный однобайтовый многобайтововый символ в соответствующий двухбайтовый многобайтовый символ. Символы должны находиться в диапазоне от 0x20 до 0x7E или 0xA1-0xDF для преобразования.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта; см. описание [setlocale, _wsetlocale](setlocale-wsetlocale.md) Дополнительные сведения. Версии этих функций идентичны, за исключением того, что **_mbbtombc** использует текущий языковой стандарт для данного поведения, зависящего от языкового стандарта и **_mbbtombc_l** использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этой функции идентичны, за исключением того, что **_mbbtombc** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта, а **_mbbtombc_l** вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbbtombc** назывался **hantozen**. В новом коде использовать **_mbbtombc**.
+В более ранних версиях **_mbbtombc** был назван **хантозен**. Для нового кода используйте **_mbbtombc**.
 
 ## <a name="requirements"></a>Требования
 

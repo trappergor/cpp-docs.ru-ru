@@ -1,9 +1,9 @@
 ---
 title: _read
 ms.date: 02/13/2019
-apiname:
+api_name:
 - _read
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _read
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-ms.openlocfilehash: f4dd599f227192b8c3ce17a0321d6399319e1925
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 32238923aeef14230f68def15e27c676753faf61
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376313"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949535"
 ---
-# <a name="read"></a>_read
+# <a name="_read"></a>_read
 
 Считывает данные из файла.
 
@@ -70,7 +73,7 @@ int _read(
 
 ## <a name="remarks"></a>Примечания
 
-Функция **_read** считывает максимум *BUFFER_SIZE* байт в *буфер* из файла, связанного с демоном к памяти. Операция чтения начинается с текущего положения указателя файла, связанного с данным файлом. После операции чтения указатель файла указывает на следующий непрочитанный символ.
+Функция **_read** считывает максимум *BUFFER_SIZE* байт в *буфер* из файла, связанного с *демоном*к памяти. Операция чтения начинается с текущего положения указателя файла, связанного с данным файлом. После операции чтения указатель файла указывает на следующий непрочитанный символ.
 
 Если файл был открыт в текстовом режиме, чтение завершается, когда **_read** встречает символ CTRL + Z, который обрабатывается как индикатор конца файла. Чтобы очистить индикатор конца файла, следует использовать [_lseek](lseek-lseeki64.md).
 
@@ -126,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtreadtxt"></a>Входные данные: crt_read.txt
+### <a name="input-crt_readtxt"></a>Входные данные: crt_read.txt
 
 ```Input
 Line one.

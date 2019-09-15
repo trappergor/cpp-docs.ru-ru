@@ -1,9 +1,9 @@
 ---
 title: _heapchk
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapchk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapchk
 - heapchk
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: bdc0137761664a668d6ef95d739f09501e8290e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331718"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954811"
 ---
-# <a name="heapchk"></a>_heapchk
+# <a name="_heapchk"></a>_heapchk
 
 Выполняет проверки согласованности в куче.
 
@@ -45,7 +48,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_heapchk** возвращает одно из следующих целочисленных констант манифеста определенных в файле Malloc.h.
+**_heapchk** возвращает одну из следующих целочисленных констант манифеста, определенных в malloc. h.
 
 |Возвращаемое значение|Условие|
 |-|-|
@@ -55,11 +58,11 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Куча не инициализирована. |
 | **_HEAPOK** | Вероятно, куча согласована. |
 
-Кроме того, если возникает ошибка **_heapchk** задает **errno** для **ENOSYS**.
+Кроме того, при возникновении ошибки **_heapchk** **устанавливает значение** «от» до **еносис**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Heapchk** функция помогает при отладке проблем с кучей путем проверки на предмет минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** и задает **errno** для **ENOSYS**.
+Функция **_heapchk** помогает отладить проблемы, связанные с кучей, с помощью проверки на наличие минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** **и устанавливает значение** переводится в **еносис**.
 
 ## <a name="requirements"></a>Требования
 

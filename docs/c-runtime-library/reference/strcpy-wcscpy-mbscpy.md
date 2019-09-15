@@ -1,11 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -38,19 +41,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354111"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958263"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Копирует строку. Существуют более безопасные версии этих функций; см. раздел [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** нельзя использовать в приложениях, выполняемых в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -86,10 +89,10 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>Параметры
 
-*strDestination*<br/>
+*стрдестинатион*<br/>
 Конечная строка.
 
-*strSource*<br/>
+*стрсаурце*<br/>
 Исходная строка, завершающаяся символом NULL.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -98,12 +101,12 @@ unsigned char *_mbscpy(
 
 ## <a name="remarks"></a>Примечания
 
-**Strcpy** функции копий *strSource*, включая завершающий символ null, в расположение, которое определяется *strDestination*. Поведение **strcpy** не определено, если строки источника и назначения перекрываются.
+Функция **strcpy** копирует *стрсаурце*, включая завершающий символ null, в расположение, указанное в *стрдестинатион*. Поведение **strcpy** не определено, если исходная и Целевая строки перекрываются.
 
 > [!IMPORTANT]
-> Так как **strcpy** не проверяет, достаточно ли места в *strDestination* перед копированием *strSource*, это может возникнуть ошибка переполнения буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+> Так как **strcpy** не проверяет наличие достаточного места в *стрдестинатион* перед копированием *стрсаурце*, это может привести к переполнению буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-**wcscpy** и **_mbscpy** являются, соответственно, расширенных и многобайтовых символов версиях **strcpy**. Аргументы и возвращаемое значение **wcscpy** являются двухбайтовые строки; аргументы **_mbscpy** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcscpy** и **_mbscpy** — это версии **strcpy**, соответственно, расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **wcscpy** являются строками расширенных символов. **_mbscpy** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

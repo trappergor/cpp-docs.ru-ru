@@ -1,12 +1,12 @@
 ---
 title: _ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclegal_l
 - _ismbclegal
 - _ismbcsymbol
 - _ismbcsymbol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcsymbol_l
 - _ismbcsymbol_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e040db584725322e98d0a82b28912eea100aff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286836"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953806"
 ---
-# <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
+# <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
 Проверяет, является ли многобайтовый допустимым символьным знаком.
 
@@ -85,18 +88,18 @@ int _ismbcsymbol_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c*< = 255 и есть соответствующая **_ismbb** подпрограммы (например, **_ismbcalnum** соответствует **_ismbbalnum**), результат является возвращаемым значением соответствующего **_ismbb** подпрограммы.
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c*< = 255 и имеется соответствующая подпрограммы **_ismbb** (например, **_ismbcalnum** соответствует **_ismbbalnum**), результатом является возвращаемое значение соответствующей подпрограммы **_ismbb** .
 
 ## <a name="remarks"></a>Примечания
 
 Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Допустимый многобайтовый символ|Возвращает ненулевое значение, только если первый байт *c* находится в диапазонах 0x81 – 0x9F или 0xE0 – 0xFC, а второй — в диапазонах 0x40 – 0x7E или 0x80 – FC.|
-|**_ismbcsymbol**|Многобайтовый символ|Возвращает ненулевое значение, только если 0x8141 < =*c*< = 0x81AC.|
+|**_ismbclegal**|Допустимый многобайтовый символ|Возвращает ненулевое значение только в том случае, если первый байт *c* находится в диапазоне от 0X81-0X9F или 0XE0-0xFC, а второй байт находится в диапазоне 0X40-0x7E или 0X80-FC.|
+|**_ismbcsymbol**|Многобайтовый символ|Возвращает ненулевое значение только в том случае, если 0x8141 < =*c*< = 0x81AC.|
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

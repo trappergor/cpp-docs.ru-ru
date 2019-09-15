@@ -1,11 +1,11 @@
 ---
 title: cacosh, cacoshf, cacoshl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacosh
 - cacoshf
 - cacoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacosh
 - cacoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340733"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943407"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh, cacoshf, cacoshl
 
@@ -68,17 +71,17 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обратный гиперболический косинус *z*, в радианах. Результат неограничен, отрицательным на реальной оси и находится в интервале [-iπ, + iπ] на мнимой оси.
+Обратный гиперболический косинус *z*, в радианах. Результат будет неограниченным и неотрицательным вдоль реальной оси, а также в интервале [-iπ, + iπ] вдоль мнимой оси.
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cacosh** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cacosh** всегда принимает и возвращает **_Dcomplex** значение.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **какош** , которые принимают и возвращают значения **_Fcomplex** и **_Lcomplex** . В программе на языке C **какош** всегда принимает и возвращает значение **_Dcomplex** .
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**cacosh**,               **cacoshf**, **cacoshl**|\<complex.h>|\<ccomplex>|
+|**какош**, **какошф**, **какошл**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

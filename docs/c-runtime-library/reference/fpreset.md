@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333239"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957016"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 Сбрасывает пакет вычислений с плавающей запятой.
 
@@ -43,9 +46,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_Fpreset** функции повторно инициализирует пакет вычислений вычисления с плавающей запятой. **_fpreset** обычно используется вместе с **сигнала**, **системы**, или **_exec** или **_spawn** функции. Если программа перехватывает сигналы ошибок с плавающей запятой (**SIGFPE**) с **сигнала**, он безопасное восстановление после ошибок с плавающей запятой путем вызова **_fpreset** и с помощью **longjmp**.
+Функция **_fpreset** повторно инициализирует пакет математических вычислений с плавающей запятой. **_fpreset** обычно используется с **сигналами**, **системой**или функциями **_exec** или **_spawn** . Если программа перехватывает сигналы ошибки с плавающей запятой (**сигфпе**) с **сигналом**, ее можно безопасно восстановить после ошибок с плавающей запятой, вызвав **_fpreset** и используя **longjmp**.
 
-Эта функция устарела, при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) так, как среда CLR поддерживает только точность чисел с плавающей запятой по умолчанию.
+Эта функция является устаревшей при компиляции с [параметром/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md) , так как среда CLR поддерживает только точность с плавающей запятой по умолчанию.
 
 ## <a name="requirements"></a>Требования
 

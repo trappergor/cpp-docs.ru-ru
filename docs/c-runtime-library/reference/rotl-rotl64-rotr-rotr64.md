@@ -1,12 +1,12 @@
 ---
 title: _rotl, _rotl64, _rotr, _rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357412"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949150"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl, _rotl64, _rotr, _rotr64
 
-Циклически Сдвигает биты влево (**_rotl**) или вправо (**_rotr**).
+Поворот битов влево ( **_rotl**) или вправо ( **_rotr**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -87,7 +90,7 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>Примечания
 
-**_Rotl** и **_rotr** функции сдвигают *значение* по *shift* bits. **_rotl** выполняет циклический сдвиг влево. **_rotr** поворачивает сдвиг вправо. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
+Функции **_rotl** и **_rotr** поворачивают *значение* без знака на биты *сдвига* . **_rotl** поворачивает значение влево. **_rotr** поворачивает значение вправо. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
 
 ## <a name="requirements"></a>Требования
 

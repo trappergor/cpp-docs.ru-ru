@@ -1,9 +1,9 @@
 ---
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemCheckpoint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339875"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942363"
 ---
-# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+# <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-Получает текущее состояние отладочной кучи и сохраняет в предоставленной приложением **_CrtMemState** структуры (только отладочная версия).
+Получает текущее состояние отладочной кучи и сохраняет его в структуре **_CrtMemState** , предоставленной приложением (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,17 +48,17 @@ void _CrtMemCheckpoint(
 ### <a name="parameters"></a>Параметры
 
 *state*<br/>
-Указатель на **_CrtMemState** структуры для заполнения контрольными точками памяти.
+Указатель на структуру **_CrtMemState** для заполнения контрольной точки памяти.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtMemCheckpoint** функция создает моментальный снимок текущего состояния отладочной кучи в любой момент. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md) , для обнаружения утечек памяти и других проблем. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemState** удаляются во время предварительной обработки.
+Функция **_CrtMemCheckpoint** создает моментальный снимок текущего состояния отладочной кучи в любое заданное время. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md) , для обнаружения утечек памяти и других проблем. Если [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtMemState** удаляются во время предварительной обработки.
 
-Приложение должно передать указатель на ранее выделенный экземпляр **_CrtMemState** структуры, определенные в Crtdbg.h в *состояние* параметра. Если **_CrtMemCheckpoint** возникает ошибка во время создания контрольной точки, функция создает **_CRT_WARN** отладка отчет с описанием проблемы.
+Приложение должно передать указатель на ранее выделенный экземпляр структуры **_CrtMemState** , определенный в файле Crtdbg. h в параметре *State* . Если **_CrtMemCheckpoint** обнаруживает ошибку во время создания контрольной точки, функция создает отчет об отладке **_CRT_WARN** , описывающий проблему.
 
-Дополнительные сведения о функциях управления состоянием кучи и **_CrtMemState** структуры, см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о функциях состояния кучи и структуре **_CrtMemState** см. в разделе [функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
-Если *состояние* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается **EINVAL** и функция возвращает значение.
+Если параметр *State* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметру [_doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) присваивается значение **еинвал** , а функция возвращает.
 
 ## <a name="requirements"></a>Требования
 
@@ -65,7 +68,7 @@ void _CrtMemCheckpoint(
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-**Библиотеки:** Отладочные версии UCRT только.
+**Libraries** Только отладочные версии UCRT.
 
 ## <a name="see-also"></a>См. также
 

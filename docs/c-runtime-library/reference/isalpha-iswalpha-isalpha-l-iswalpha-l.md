@@ -1,12 +1,12 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalpha
 - _ismbcalpha_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157998"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954587"
 ---
-# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
+# <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
 Определяет, представляет ли целое число алфавитный символ.
 
@@ -78,11 +81,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление алфавитного символа. **isalpha** возвращает ненулевое значение, если *c* находится в диапазоне A - Z или a – z. **iswalpha** возвращает ненулевое значение только для расширенных символов, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** не равно нулю; то есть любые расширенные символы, определяемые реализацией в набор для которых **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** имеет ненулевое значение. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление алфавитного символа. Функция **in возвращает** ненулевое значение, если *c* находится внутри диапазонов a – z или a-z. **исвалфа** возвращает ненулевое значение только для расширенных символов, для которых [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** не равны нулю; то есть для любого расширенного символа, который является одним из наборов, определяемых реализацией, для которых ни один из **исвкнтрл**, **исвдигит**, **исвпункт**или **исвспаце** не равен нулю. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-В версиях этих функций с **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isalpha** и **_isalpha_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
+Поведение функций **_isalpha_l** и- **Alpha** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

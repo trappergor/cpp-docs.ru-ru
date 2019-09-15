@@ -1,12 +1,12 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268875"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945909"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
 Помещает обратно последний символ, считанный из консоли.
 
@@ -82,11 +85,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обе функции возвращают символ *c* при успешном выполнении. Если возникает ошибка, **_ungetch** возвращает значение **EOF** и **_ungetwch** возвращает **WEOF**.
+Обе функции возвращают символ *c* в случае успеха. Если возникает ошибка, **_ungetch** возвращает значение **EOF** , а **_ungetwch** возвращает **WEOF**.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции помещают символ *c* обратно в консоль, вызывая *c* быть следующего символа, считываемые **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** ошибкой, если они вызываются несколько раз до следующего чтения. *c* аргумент не может быть **EOF** (или **WEOF**).
+Эти функции отправляют символ *c* обратно в консоль, что приводит к тому, что *c* будет следующий символ, считанный **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** завершаются ошибкой, если они вызываются более одного раза до следующего считывания. Аргумент *c* не может быть **EOF** (или **WEOF**).
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 

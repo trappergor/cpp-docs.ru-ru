@@ -1,13 +1,13 @@
 ---
 title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - logb
 - _logb
 - _logbl
 - logbf
 - logbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - logb
 - logbl
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5fc59f786b00dcf4ab1056424d8442a03f3adbf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285717"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953153"
 ---
-# <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
+# <a name="logb-logbf-logbl-_logb-_logbf"></a>logb, logbf, logbl, _logb, _logbf
 
 Извлекает значение экспоненты для аргумента с плавающей запятой.
 
@@ -82,17 +85,17 @@ float _logbf(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**logb** возвращает несмещенной значение экспоненты для *x* как целое число со знаком, представленное в виде значения с плавающей запятой.
+**logb** возвращает Несмещенное значение экспоненты *x* как целое число со знаком, представленное в виде значения с плавающей запятой.
 
 ## <a name="remarks"></a>Примечания
 
-**Logb** функции извлекают экспоненциальное значение аргумента с плавающей запятой *x*, как если бы *x* было представлено с бесконечным диапазоном. Если аргумент *x* является денормализован, он интерпретируется как нормализованный.
+Функции **logb** извлекают экспоненциальное значение аргумента с плавающей запятой *x*, как если бы *x* были представлены с бесконечным диапазоном. Если аргумент *x* денормализован, он рассматривается как нормализованный.
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **logb** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **logb** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **logb** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **logb** всегда принимает и возвращает значение **типа Double**.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|_DOMAIN|
+|± КНАН, С|Отсутствуют|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
 ## <a name="requirements"></a>Требования
@@ -100,7 +103,7 @@ float _logbf(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
+|**logb**, **логбф**, **логбл**, **_logbf**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

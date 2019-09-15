@@ -1,9 +1,9 @@
 ---
 title: _commit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _commit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _commit
 - commit
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340363"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939048"
 ---
-# <a name="commit"></a>_commit
+# <a name="_commit"></a>_commit
 
 Записывает содержимое файла непосредственно на диск.
 
@@ -52,13 +55,13 @@ int _commit(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_commit** возвращает 0, если файл был успешно записан на диск. Возвращаемое значение-1 указывает на ошибку.
+**_commit** возвращает 0, если файл был успешно записан на диск. Возвращаемое значение, равное-1, указывает на ошибку.
 
 ## <a name="remarks"></a>Примечания
 
-**_Commit** функция вынуждает операционную систему записать файл, связанный с *fd* на диск. Этот вызов гарантирует, что указанный файл будет записан незамедлительно, а не по решению операционной системы.
+Функция **_commit** заставляет операционную систему записывать файл, связанный с *демоном* , на диск. Этот вызов гарантирует, что указанный файл будет записан незамедлительно, а не по решению операционной системы.
 
-Если *fd* является недопустимым дескриптором, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и **errno** присваивается **значение EBADF**.
+Если *демон демона* является недопустимым дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает значение-1 **, а** параметру возврата — **значение EBADF**.
 
 ## <a name="requirements"></a>Требования
 
