@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383442"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945236"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
 Записывают форматированные выходные данные, используя указатель на список аргументов, с возможностью указать порядок, в котором эти аргументы используются.
 
@@ -87,7 +90,7 @@ int _vswprintf_p_l(
 *buffer*<br/>
 Место хранения выходных данных.
 
-*sizeInBytes*<br/>
+*сизеинбитес*<br/>
 Размер *буфера* в символах.
 
 *count*<br/>
@@ -96,7 +99,7 @@ int _vswprintf_p_l(
 *format*<br/>
 Спецификация формата.
 
-*argptr*<br/>
+*аргптр*<br/>
 Указатель на список аргументов.
 
 *locale*<br/>
@@ -104,17 +107,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_vsprintf_p** и **_vswprintf_p** возвращают число записанных символов, не включая завершающий нуль-символ, или отрицательное значение, если произошла ошибка вывода.
+**_vsprintf_p** и **_vswprintf_p** возвращают число записанных символов, не включая завершающий нуль-символ, или отрицательное значение, если возникает ошибка вывода.
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих функций принимает указатель на список аргументов и затем форматирует и записывает указанные данные в память, на которые указывают *буфера*.
+Каждая из этих функций принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в память, на которую указывает *буфер*.
 
-Эти функции отличаются от **vsprintf_s** и **vswprintf_s** только в том, что они поддерживают позиционные параметры. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Эти функции отличаются от **vsprintf_s** и **vswprintf_s** только тем, что они поддерживают позиционированные параметры. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо локали текущего потока.
 
-Если *буфера* или *формат* параметры являются **NULL** указатели, если счетчик равен нулю, или если строка форматирования содержит недопустимые форматирования символов, недопустимых параметров вызывается обработчик, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Если *буфер* или параметры *формата* являются **пустыми** указателями, если параметр Count равен нулю или строка формата содержит недопустимые символы форматирования, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 и **задают значение** **еинвал**.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

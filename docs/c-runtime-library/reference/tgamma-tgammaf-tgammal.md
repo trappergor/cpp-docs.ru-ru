@@ -1,11 +1,11 @@
 ---
 title: tgamma, tgammaf, tgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - tgamma
 - tgammaf
 - tgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tgamma
 - tgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946211"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -72,27 +75,27 @@ long double tgammal(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает гамму *x*.
+В случае успеха возвращает гамму *x*.
 
-Ошибка диапазона может возникнуть, если абсолютное значение *x* слишком велико или слишком мал для типа данных. Ошибка домена или Ошибка диапазона может возникнуть, если *x* < = 0.
+Ошибка диапазона может возникать, если величина *x* слишком велика или слишком мала для типа данных. Если *x* < = 0, может возникать ошибка домена или диапазона.
 
 |Проблемы|Назад|
 |-----------|------------|
-|x = ±0|±INFINITY|
+|x = ± 0|± БЕСКОНЕЧНОСТИ|
 |x = negative integer|NaN|
-|x = -INFINITY|NaN|
+|x =-бесконечность|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |ошибка домена|NaN|
-|ошибка полюса|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|
-|ошибка переполнения диапазона|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|
+|ошибка полюса|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
+|ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 |ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
 
 Ошибки сообщаются, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **tgamma** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **tgamma** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **тгамма** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **тгамма** всегда принимает и возвращает значение **типа Double**.
 
 Если x является натуральным числом, эта функция возвращает факториал (x – 1).
 
@@ -100,7 +103,7 @@ long double tgammal(
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
+|**тгамма**, **tgammaf**, **тгаммал**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
