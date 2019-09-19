@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907660"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095871"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Добавление обработчика сообщения MFC
 
-Можно использовать [мастер классов](mfc-class-wizard.md) или окно **свойства** в **представлении классов** для добавления обработчика сообщений (функции-члена, которая обрабатывает сообщения Windows) в класс и преобразования сообщений Windows в обработчик сообщений. Можно также добавить [обработчик событий для любого элемента управления диалогового окна](../../windows/adding-event-handlers-for-dialog-box-controls.md). 
+Можно использовать [мастер классов](mfc-class-wizard.md) или окно **свойства** в **представлении классов** для добавления обработчика сообщений (функции-члена, которая обрабатывает сообщения Windows) в класс и преобразования сообщений Windows в обработчик сообщений. Можно также добавить [обработчик событий для любого элемента управления диалогового окна](../../windows/adding-event-handlers-for-dialog-box-controls.md).
 
 С помощью **мастера классов** или окна **свойств** (в **представление классов**) для определения функций обработки сообщений и событий можно автоматически обновить таблицу диспетчеризации сообщений (или карту сообщений) и файл заголовка класса.
 
