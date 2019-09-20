@@ -21,7 +21,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457645"
 ---
-# <a name="numget-class"></a>Класс num_get
+# <a name="num_get-class"></a>Класс num_get
 
 Шаблонный класс, описывающий объект, который можно использовать как аспект языкового стандарта для управления преобразованием последовательностей типа `CharType` в числовые значения.
 
@@ -441,7 +441,7 @@ iter_type get(
 
 Целочисленное поле ввода преобразуется теми же правилами, которые используются функциями просмотра для сопоставления и преобразования последовательности элементов **char** из файла. Предполагается, что каждый такой элемент **char** сопоставлен с эквивалентным элементом типа `CharType` с помощью простого сопоставления «один к одному». Эквивалентная спецификация преобразования сканирования определяется следующим образом:
 
-- Если `iosbase`. [Флаги](../standard-library/ios-base-class.md#flags) & `ios_base::basefield`Oct,Спецификация[](../standard-library/ios-functions.md#oct)преобразования —`lo`. == `ios_base::`
+- Если `iosbase`. [Флаги](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования — .`lo`
 
 - Если **iosbase. flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), спецификация преобразования имеет `lx`значение.
 

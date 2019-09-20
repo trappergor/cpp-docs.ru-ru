@@ -1,5 +1,5 @@
 ---
-title: Класс CComHeap
+title: Класс Ккомхеап
 ms.date: 11/04/2016
 f1_keywords:
 - CComHeap
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ded73047b895a44a22bdd5730886f7fc088c77a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259382"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497351"
 ---
-# <a name="ccomheap-class"></a>Класс CComHeap
+# <a name="ccomheap-class"></a>Класс Ккомхеап
 
-Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функции выделения памяти COM.
+Этот класс реализует [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md) с помощью функций выделения памяти com.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,18 +37,18 @@ class CComHeap : public IAtlMemMgr
 
 |name|Описание|
 |----------|-----------------|
-|[CComHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
-|[CComHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|
-|[CComHeap::GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.|
-|[CComHeap::Reallocate](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
+|[Ккомхеап:: allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[Ккомхеап:: Free](#free)|Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.|
+|[Ккомхеап:: DataSize](#getsize)|Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.|
+|[Ккомхеап:: перераспределение](#reallocate)|Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.|
 
 ## <a name="remarks"></a>Примечания
 
-`CComHeap` реализует функции выделения памяти, с помощью функции выделения COM, включая [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree), [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)и [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Максимальный объем памяти, выделяемой равно INT_MAX (2147483647) байт.
+`CComHeap` реализует функции выделения памяти с помощью функций выделения COM, включая [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc), [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree), [unalloc::GetSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize) и [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc). Максимальный объем памяти, который может быть выделен, равен INT_MAX (2147483647) байт.
 
 ## <a name="example"></a>Пример
 
-См. в примере [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
+См. пример для [иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,9 +58,9 @@ class CComHeap : public IAtlMemMgr
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок.** ATLComMem.h
+**Заголовок.** Атлкоммем. h
 
-##  <a name="allocate"></a>  CComHeap::Allocate
+##  <a name="allocate"></a>Ккомхеап:: allocate
 
 Вызовите этот метод, чтобы выделить блок памяти.
 
@@ -79,13 +79,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [CComHeap::Free](#free) или [CComHeap::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [ккомхеап:: Free](#free) или [ккомхеап:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
-Реализовано с помощью [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc).
+Реализуется с помощью функции [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc).
 
-##  <a name="free"></a>  CComHeap::Free
+##  <a name="free"></a>Ккомхеап:: Free
 
-Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.
+Вызовите этот метод, чтобы освободить блок памяти, выделенный этим диспетчером памяти.
 
 ```
 virtual void Free(void* p) throw();
@@ -94,15 +94,15 @@ virtual void Free(void* p) throw();
 ### <a name="parameters"></a>Параметры
 
 *p*<br/>
-Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым значением и не выполняет никаких действий.
+Указатель на область памяти, выделенную ранее данным диспетчером памяти. Значение NULL является допустимым и не выполняет никаких действий.
 
 ### <a name="remarks"></a>Примечания
 
-Реализовано с помощью [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree).
+Реализуется с помощью [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree).
 
-##  <a name="getsize"></a>  CComHeap::GetSize
+##  <a name="getsize"></a>Ккомхеап:: DataSize
 
-Вызовите этот метод, чтобы получить размер выделенного блока памяти, выделенной данным диспетчером памяти.
+Вызовите этот метод, чтобы получить выделенный размер блока памяти, выделенного этим диспетчером памяти.
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -119,9 +119,9 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Реализовано с помощью [IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize).
+Реализуется с помощью [unalloc:: DataSize](/windows/win32/api/objidlbase/nf-objidlbase-imalloc-getsize).
 
-##  <a name="reallocate"></a>  CComHeap::Reallocate
+##  <a name="reallocate"></a>Ккомхеап:: перераспределение
 
 Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
 
@@ -143,14 +143,14 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [CComHeap::Free](#free) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [ккомхеап:: Free](#free) , чтобы освободить память, выделенную этим методом.
 
-Реализовано с помощью [CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
+Реализуется с помощью [котаскмемреаллок](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc).
 
 ## <a name="see-also"></a>См. также
 
-[Образец DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Пример Динамикконсумер](../../overview/visual-cpp-samples.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
 [Класс CGlobalHeap](../../atl/reference/cglobalheap-class.md)<br/>

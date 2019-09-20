@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCShellTreeCtrl
+title: Класс Кмфкшеллтриктрл
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCShellTreeCtrl
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 1fc422c3aca3efe1fb177e7a3567530d70c27119
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97136342049a54d45af893962025f01eda4366d4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410065"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504908"
 ---
-# <a name="cmfcshelltreectrl-class"></a>Класс CMFCShellTreeCtrl
+# <a name="cmfcshelltreectrl-class"></a>Класс Кмфкшеллтриктрл
 
-`CMFCShellTreeCtrl` Класс расширяет [класс CTreeCtrl](../../mfc/reference/ctreectrl-class.md) функциональные возможности, отображая иерархию элементов оболочки.
+Класс расширяет функциональные возможности [класса CTreeCtrl](../../mfc/reference/ctreectrl-class.md) , отображая иерархию элементов оболочки. `CMFCShellTreeCtrl`
 
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 ## <a name="syntax"></a>Синтаксис
@@ -52,21 +52,21 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Включает или отключает контекстное меню.|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|Возвращает сочетание флагов, которые передаются [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
-|[CMFCShellTreeCtrl::GetItemPath](#getitempath)|Извлекает путь к элементу.|
-|[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|Возвращает указатель на [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объект, который используется вместе с это `CMFCShellTreeCtrl` объект для создания окна проводника.|
-|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Эта функция-член вызывается родительского окна в том случае, когда он получает сообщение уведомления, которое подходит к этому окну. (Переопределяет [CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify).)|
+|[Кмфкшеллтриктрл:: Енаблешеллконтекстмену](#enableshellcontextmenu)|Включает или отключает контекстное меню.|
+|[Флаги Кмфкшеллтриктрл:: "](#getflags)|Возвращает сочетание флагов, которые передаются в [ишеллфолдер:: енумобжектс](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).|
+|[Кмфкшеллтриктрл:: Жетитемпас](#getitempath)|Извлекает путь к элементу.|
+|[Кмфкшеллтриктрл:: Жетрелатедлист](#getrelatedlist)|Возвращает указатель на объект [класса кмфкшелллистктрл](../../mfc/reference/cmfcshelllistctrl-class.md) , используемый вместе с этим `CMFCShellTreeCtrl` объектом для создания окна, похожего на обозреватель.|
+|[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|Эта функция-член вызывается родительским окном этого окна при получении сообщения уведомления, которое применяется к этому окну. (Переопределяет [CWnd:: ончилднотифи](../../mfc/reference/cwnd-class.md#onchildnotify).)|
 |[CMFCShellTreeCtrl::OnGetItemIcon](#ongetitemicon)||
 |[CMFCShellTreeCtrl::OnGetItemText](#ongetitemtext)||
-|[CMFCShellTreeCtrl::Refresh](#refresh)|Обновляет и обновляет текущий `CMFCShellTreeCtrl` объекта.|
-|[CMFCShellTreeCtrl::SelectPath](#selectpath)|Выбирает элемент управления соответствующего дерева, на основании предоставленного PIDL или строкового пути.|
-|[CMFCShellTreeCtrl::SetFlags](#setflags)|Задает флаги для фильтрации дерева контекста (аналогичную флаги, используемые `IShellFolder::EnumObjects`).|
-|[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)|Задает отношение между текущим `CMFCShellTreeCtrl` объекта и `CMFCShellListCtrl` объекта.|
+|[Кмфкшеллтриктрл:: Refresh](#refresh)|Обновляет и перерисовывает текущий `CMFCShellTreeCtrl` объект.|
+|[Кмфкшеллтриктрл:: Селектпас](#selectpath)|Выбирает соответствующий элемент управления "дерево" на основе заданного ПИДЛ или пути к строке.|
+|[Кмфкшеллтриктрл:: Сетфлагс](#setflags)|Устанавливает флаги для фильтрации контекста дерева (аналогично флагам, `IShellFolder::EnumObjects`используемым).|
+|[Кмфкшеллтриктрл:: Сетрелатедлист](#setrelatedlist)|Задает отношение между текущим `CMFCShellTreeCtrl` объектом `CMFCShellListCtrl` и объектом.|
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс расширяет `CTreeCtrl` класс, включив программы для включения в дереве элементов оболочки Windows. Этот класс может быть связано с `CMFCShellListCtrl` объекта, чтобы создать полный окно обозревателя. Затем выбрав элемент в дереве будет отображен список элементов оболочки Windows в связанном списке.
+Этот класс расширяет `CTreeCtrl` класс, позволяя программе включать в дерево элементы оболочки Windows. Этот класс может быть связан с `CMFCShellListCtrl` объектом для создания полного окна проводника. Затем при выборе элемента в дереве отображается список элементов оболочки Windows в связанном списке.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -82,18 +82,18 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxshelltreeCtrl.h
+**Заголовок:** афксшеллтриктрл. h
 
 ## <a name="example"></a>Пример
 
-В следующем примере показывается, как создать объект класса `CMFCShellTreeCtrl`. Этот фрагмент кода является частью [пример Explorer](../../overview/visual-cpp-samples.md).
+В следующем примере показывается, как создать объект класса `CMFCShellTreeCtrl`. Этот фрагмент кода является частью [примера обозревателя](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#4](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]
 [!code-cpp[NVC_MFC_Explorer#5](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]
 
-##  <a name="enableshellcontextmenu"></a>  CMFCShellTreeCtrl::EnableShellContextMenu
+##  <a name="enableshellcontextmenu"></a>Кмфкшеллтриктрл:: Енаблешеллконтекстмену
 
-Позволяет в контекстном меню.
+Включает контекстное меню.
 
 ```
 void EnableShellContextMenu(BOOL bEnable = TRUE);
@@ -102,11 +102,11 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Логическое значение, указывающее, следует ли включить в контекстном меню.
+окне Логическое значение, указывающее, следует ли включить контекстное меню.
 
-##  <a name="getflags"></a>  CMFCShellTreeCtrl::GetFlags
+##  <a name="getflags"></a>Флаги Кмфкшеллтриктрл:: "
 
-Возвращает флаги, установленные для [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.
+Возвращает флаги, заданные для объекта [класса кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md) .
 
 ```
 DWORD GetFlags() const;
@@ -114,15 +114,15 @@ DWORD GetFlags() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Задайте значение DWORD, указывающее сочетание флагов, в настоящее время.
+Значение типа DWORD, указывающее сочетание флагов, заданных в данный момент.
 
 ### <a name="remarks"></a>Примечания
 
-Флаги установлены `CMFCShellTreeCtrl` отправляются в метод [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects) каждый раз, когда объект обновляется. Можно изменить флаги, с помощью [CMFCShellTreeCtrl::SetFlags](#setflags) метод.
+Флаги, заданные `CMFCShellTreeCtrl` в, отправляются в метод [ишеллфолдер:: енумобжектс](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects) при каждом обновлении объекта. Флаги можно изменить с помощью метода [кмфкшеллтриктрл:: сетфлагс](#setflags) .
 
-##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
+##  <a name="getitempath"></a>Кмфкшеллтриктрл:: Жетитемпас
 
-Получает путь элемента в [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.
+Извлекает путь к элементу в объекте [класса кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md) .
 
 ```
 BOOL GetItemPath(
@@ -133,10 +133,10 @@ BOOL GetItemPath(
 ### <a name="parameters"></a>Параметры
 
 *strPath*<br/>
-[out] Ссылка на строковый параметр. Метод записывает путь элемента для данного параметра.
+заполняет Ссылка на строковый параметр. Метод записывает путь к элементу в этот параметр.
 
-*htreeItem*<br/>
-[in] Метод возвращает путь для элемента управления дерева.
+*хтриитем*<br/>
+окне Метод получает путь для этого элемента управления "дерево".
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -144,13 +144,13 @@ BOOL GetItemPath(
 
 ### <a name="remarks"></a>Примечания
 
-Если этот метод завершается ошибкой, *strPath* содержит пустую строку.
+Если этот метод завершается с ошибкой, *strPath* содержит пустую строку.
 
-Если вы не укажете *hTreeItem*, этот метод пытается получить строки для текущего выбранного элемента. Если элемент не выбран и *hTreeItem* имеет значение NULL, этот метод завершается ошибкой.
+Если не указать *хтриитем*, этот метод попытается получить строку для выбранного в данный момент элемента. Если элемент не выбран и *хтриитем* имеет значение null, этот метод завершается ошибкой.
 
-##  <a name="getrelatedlist"></a>  CMFCShellTreeCtrl::GetRelatedList
+##  <a name="getrelatedlist"></a>Кмфкшеллтриктрл:: Жетрелатедлист
 
-Возвращает указатель на [класс CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) объект, связанный с данным [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.
+Возвращает указатель на объект [класса кмфкшелллистктрл](../../mfc/reference/cmfcshelllistctrl-class.md) , связанный с этим объектом [кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md) .
 
 ```
 CMFCShellListCtrl* GetRelatedList() const;
@@ -158,11 +158,11 @@ CMFCShellListCtrl* GetRelatedList() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `CMFCShellListCtrl` объект, связанный с данным объектом дерева элемента управления.
+Указатель на `CMFCShellListCtrl` объект, связанный с данным объектом управления "дерево".
 
 ### <a name="remarks"></a>Примечания
 
-С помощью `CMFCShellListCtrl` объекта вместе с `CMFCShellTreeCtrl` объекта, можно создать окно проводника. Используйте метод [CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist) для связи двух классов. После они связаны, платформа автоматически обновляет `CMFCShellListCtrl` Если элементом, выбранным в `CMFCShellTreeCtrl` изменения.
+Используя `CMFCShellListCtrl` объект вместе `CMFCShellTreeCtrl` с объектом, можно создать окно, похожее на обозреватель. Чтобы связать эти два класса, используйте метод [кмфкшеллтриктрл:: сетрелатедлист](#setrelatedlist) . После того как они связаны, платформа автоматически обновляет значение `CMFCShellListCtrl` , если выбор `CMFCShellTreeCtrl` изменяется.
 
 ##  <a name="onchildnotify"></a>  CMFCShellTreeCtrl::OnChildNotify
 
@@ -176,10 +176,10 @@ virtual BOOL OnChildNotify(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *сообщения*<br/>
-[in] *wParam*<br/>
-[in] *lParam*<br/>
-[in] *pLResult*<br/>
+окне *сообщение об ошибке*<br/>
+окне *wParam*<br/>
+окне *lParam*<br/>
+окне *плресулт*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -195,8 +195,8 @@ virtual int OnGetItemIcon(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pItem*<br/>
-[in] *bSelected*<br/>
+окне *питем*<br/>
+окне *бселектед*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -210,15 +210,15 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pItem*<br/>
+окне *питем*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="refresh"></a>  CMFCShellTreeCtrl::Refresh
+##  <a name="refresh"></a>Кмфкшеллтриктрл:: Refresh
 
-Обновляет и обновляет [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).
+Обновляет и перерисовывает [кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md).
 
 ```
 void Refresh();
@@ -226,11 +226,11 @@ void Refresh();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод, чтобы обновить иерархию элементов, отображаемых в `CMFCShellTreeCtrl`.
+Вызовите этот метод, чтобы обновить иерархию элементов, `CMFCShellTreeCtrl`отображаемых в.
 
-##  <a name="selectpath"></a>  CMFCShellTreeCtrl::SelectPath
+##  <a name="selectpath"></a>Кмфкшеллтриктрл:: Селектпас
 
-Выбирает элемент в [класс CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) на основе предоставленного пути.
+Выбирает элемент в [классе кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md) на основе заданного пути.
 
 ```
 BOOL SelectPath(LPCTSTR lpszPath);
@@ -239,19 +239,19 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszPath*<br/>
-[in] Строка, указывающая путь к элементу.
+*лпсзпас*<br/>
+окне Строка, указывающая путь к элементу.
 
-*lpidl*<br/>
-[in] PIDL, которое указывает элемент
+*лпидл*<br/>
+окне Объект ПИДЛ, указывающий элемент
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если выполнение прошло успешно; В противном случае — значение E_FAIL.
+Значение S_OK в случае успешного выполнения; E_FAIL в противном случае.
 
-##  <a name="setflags"></a>  CMFCShellTreeCtrl::SetFlags
+##  <a name="setflags"></a>Кмфкшеллтриктрл:: Сетфлагс
 
-Задает флаги для дерева контекст фильтра.
+Устанавливает флаги для фильтрации контекста дерева.
 
 ```
 void SetFlags(
@@ -262,18 +262,18 @@ void SetFlags(
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-[in] Флаги для установки.
+окне Устанавливаемые флаги.
 
-*bRefresh*<br/>
-[in] Логическое значение, указывающее ли `CMFCShellTreeCtrl` должен быть обновлен немедленно.
+*брефреш*<br/>
+окне Логическое значение, указывающее, `CMFCShellTreeCtrl` следует ли обновлять немедленно.
 
 ### <a name="remarks"></a>Примечания
 
-`CMFCShellTreeCtrl` Передает все значение флагов [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects). Дополнительные сведения о значениях различных флагов см. в разделе [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).
+Все флаги `CMFCShellTreeCtrl` передаются в [IShellFolder::EnumObjects](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects). Дополнительные сведения о значениях различных флагов см. в разделе [ишеллфолдер:: енумобжектс](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects).
 
-##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
+##  <a name="setrelatedlist"></a>Кмфкшеллтриктрл:: Сетрелатедлист
 
-Связывает [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) со [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) объекта.
+Связывает объект [кмфкшелллистктрл](../../mfc/reference/cmfcshelllistctrl-class.md) с объектом [кмфкшеллтриктрл](../../mfc/reference/cmfcshelltreectrl-class.md) .
 
 ```
 void SetRelatedList(CMFCShellListCtrl* pShellList);
@@ -281,14 +281,14 @@ void SetRelatedList(CMFCShellListCtrl* pShellList);
 
 ### <a name="parameters"></a>Параметры
 
-*pShellList*<br/>
-[in] Указатель на `CMFCShellListCtrl` объект.
+*пшелллист*<br/>
+окне Указатель на `CMFCShellListCtrl` объект.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод связывает `CMFCShellListCtrl` с `CMFCShellTreeCtrl`. Эти объекты могут отображаться в виде окна проводника: Если пользователь выбирает объект в `CMFCShellTreeCtrl`, связанные элементы в `CMFCShellListCtrl` будут обновляться автоматически.
+Этот метод связывает `CMFCShellListCtrl` `CMFCShellTreeCtrl`с. Эти объекты могут отображаться как окно `CMFCShellTreeCtrl`, похожее на обозреватель: Если пользователь выбирает объект в, связанные элементы `CMFCShellListCtrl` в будут автоматически обновлены.
 
-Используйте метод [CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist) извлекаемого `CMFCShellListCtrl` связанные с `CMFCShellTreeCtrl`.
+Используйте метод [кмфкшеллтриктрл:: жетрелатедлист](#getrelatedlist) , чтобы получить объект `CMFCShellListCtrl` , связанный с `CMFCShellTreeCtrl`.
 
 ## <a name="see-also"></a>См. также
 
