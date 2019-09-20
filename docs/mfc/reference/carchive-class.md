@@ -124,9 +124,9 @@ class CArchive
 
 Объект архива можно представить как тип двоичного потока. Как и поток ввода-вывода, Архив связан с файлом и позволяет выполнять буферизацию записи и чтения данных в хранилище и из него. Поток ввода-вывода обрабатывает последовательности символов ASCII, но Архив обрабатывает данные двоичных объектов в эффективном, неизбыточном формате.
 
-Прежде чем можно будет [](../../mfc/reference/cfile-class.md) создать `CArchive` объект, необходимо создать объект кфиле. Кроме того, необходимо убедиться, что состояние загрузки или хранения архива совместимо с режимом открытия файла. Вы ограничены одним активным архивом для каждого файла.
+Прежде чем можно будет [CFile](../../mfc/reference/cfile-class.md) создать `CArchive` объект, необходимо создать объект. Кроме того, необходимо убедиться, что состояние загрузки или хранения архива совместимо с режимом открытия файла. Вы ограничены одним активным архивом для каждого файла.
 
-При создании `CArchive` объекта он присоединяется к объекту класса `CFile` (или производного класса), который представляет открытый файл. Вы также указываете, будет ли Архив использоваться для загрузки или хранения. Объект может обрабатывать не только примитивные типы, но также объекты производных от CObject классов, предназначенных для сериализации. [](../../mfc/reference/cobject-class.md) `CArchive` Сериализуемый класс обычно имеет функцию `Serialize` -член и обычно использует макросы [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , как описано в разделе класс `CObject`.
+При создании `CArchive` объекта он присоединяется к объекту класса `CFile` (или производного класса), который представляет открытый файл. Вы также указываете, будет ли Архив использоваться для загрузки или хранения. Объект `CArchive` может обрабатывать не только примитивные типы, но также объекты производных от [CObject](../../mfc/reference/cobject-class.md) классов, предназначенных для сериализации. Сериализуемый класс обычно имеет функцию `Serialize` -член и обычно использует макросы [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) , как описано в разделе класс `CObject`.
 
 Перегруженные операторы извлечения ( **>>** ) и вставки ( **<<** ) являются удобными интерфейсами программирования архивов, поддерживающими как простые `CObject`типы, так и классы, производные от.
 
@@ -198,7 +198,7 @@ CArchive(
 
 Вы не сможете изменить эту спецификацию после создания архива.
 
-Вы не можете использовать `CFile` операции для изменения состояния файла, пока вы не закроете Архив. Любая такая операция приведет к повреждению целостности архива. Вы можете обращаться к положению указателя файла в любое время во время сериализации, получая объект файла архива из функции [члена GetObject](#getfile) , а затем используя функцию [Кфиле:: Disposition](../../mfc/reference/cfile-class.md#getposition) . Перед получением позиции указателя файла следует вызвать метод [CArchive:: Flush](#flush) .
+Вы не можете использовать `CFile` операции для изменения состояния файла, пока вы не закроете Архив. Любая такая операция приведет к повреждению целостности архива. Вы можете обращаться к положению указателя файла в любое время во время сериализации, получая объект файла архива из функции [члена GetObject, а](#getfile) затем используя функцию [Кфиле:: Disposition](../../mfc/reference/cfile-class.md#getposition) . Перед получением позиции указателя файла следует вызвать метод [CArchive:: Flush](#flush) .
 
 ### <a name="example"></a>Пример
 
@@ -274,7 +274,7 @@ UINT GetObjectSchema();
 
 Вызов этой функции допустим только при `CArchive` загрузке объекта ( [CArchive:: Load](#isloading) возвращает ненулевое значение). Он должен быть первым вызовом в `Serialize` функции и вызван только один раз. Возвращаемое значение (UINT)-1 указывает, что номер версии неизвестен.
 
-Производный класс может использовать VERSIONABLE_SCHEMA в сочетании с самой версией схемы (в макросе IMPLEMENT_SERIAL) для создания объекта с версией, т. е. объектом, для которого `Serialize` функция-член может читать `CObject` несколько версий. Функциональность платформы по умолчанию (без VERSIONABLE_SCHEMA) заключается в выдаче исключения при несовпадении версии.
+Производный класс может использовать VERSIONABLE_SCHEMA в сочетании с самой версией схемы (в макросе **IMPLEMENT_SERIAL) для**создания объекта с версией, т. е. объектом, для которого `Serialize` функция-член может читать `CObject` несколько версий. Функциональность платформы по умолчанию (без VERSIONABLE_SCHEMA) заключается в выдаче исключения при несовпадении версии.
 
 ### <a name="example"></a>Пример
 
@@ -599,9 +599,9 @@ CRuntimeClass* ReadClass(
 
 Если *пклассрефрекуестед* не равно null, `ReadClass` проверяет, совместимы ли архивные сведения о классе с вашим классом среды выполнения. Если оно несовместимо, `ReadClass` вызывает исключение [карчивиксцептион](../../mfc/reference/carchiveexception-class.md).
 
-Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [](../../mfc/reference/cnotsupportedexception-class.md) вызоветисключение`ReadClass` кнотсуппортедексцептион.
+Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md) вызовет исключение `ReadClass`.
 
-Если *псчема* имеет значение null, схему хранимого класса можно получить путем вызова [CArchive:: жетобжектсчема](#getobjectschema); в противном случае псчема будет содержать схему ранее сохраненного класса времени выполнения.  <strong>\*</strong>
+Если *псчема* имеет значение null, схему хранимого класса можно получить путем вызова [CArchive:: жетобжектсчема](#getobjectschema); в противном случае псчема будет содержать схему ранее сохраненного класса времени выполнения. <strong>\*</strong>
 
 Можно использовать [сериализекласс](#serializeclass) вместо `ReadClass`, который обрабатывает чтение и запись ссылки на класс.
 
@@ -691,7 +691,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 
 Например `ReadClass` ,`SerializeClass` проверяет, совместимы ли архивные сведения о классе с вашим классом среды выполнения. Если оно несовместимо, `SerializeClass` вызывает исключение [карчивиксцептион](../../mfc/reference/carchiveexception-class.md).
 
-Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [](../../mfc/reference/cnotsupportedexception-class.md) вызоветисключение`SerializeClass` кнотсуппортедексцептион.
+Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md) вызовет исключение `SerializeClass`.
 
 Используйте макрос [RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class) для получения значения параметра *прунтимекласс* . Базовый класс должен использовать макрос [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) .
 
@@ -816,7 +816,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 `WriteClass`проверяет, совместимы ли архивные сведения о классе с вашим классом среды выполнения. Если оно несовместимо, `WriteClass` вызывает исключение [карчивиксцептион](../../mfc/reference/carchiveexception-class.md).
 
-Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [](../../mfc/reference/cnotsupportedexception-class.md) вызоветисключение`WriteClass` кнотсуппортедексцептион.
+Класс среды выполнения должен использовать [DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial); в противном случае [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md) вызовет исключение `WriteClass`.
 
 Можно использовать [сериализекласс](#serializeclass) вместо `WriteClass`, который обрабатывает чтение и запись ссылки на класс.
 

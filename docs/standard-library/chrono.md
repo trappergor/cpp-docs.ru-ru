@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975909"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,11 +76,18 @@ ms.locfileid: "68459454"
 
 Дополнительные сведения о типах отношения, используемых в следующих определениях типов, см. в разделе [\<ratio>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Синоним для `duration` типа с тактовым периодом 1 НС. | |`typedef duration<long long, micro> microseconds;`| Синоним для `duration` типа с тактовым периодом 1 микросекунда. | |`typedef duration<long long, milli> milliseconds;`| Синоним для `duration` типа с тактовым периодом 1 миллисекунда. | |`typedef duration<long long> seconds;`| Синоним для `duration` типа с тактовым периодом в 1 секунду. | |`typedef duration<int, ratio<60> > minutes;` Синоним для `duration` типа с тактовым периодом в 1 минуту. | |`typedef duration<int, ratio<3600> > hours;`| Синоним для `duration` типа с тактовым периодом в 1 час. |
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|Синоним для `duration` типа с тактовым периодом 1 НС.|
+|`typedef duration<long long, micro> microseconds;`|Синоним для `duration` типа с тактовым периодом 1 микросекунда.|
+|`typedef duration<long long, milli> milliseconds;`|Синоним для `duration` типа с тактовым периодом 1 миллисекунда.|
+|`typedef duration<long long> seconds;`|Синоним для `duration` типа с тактовым периодом в 1 секунду.|
+|`typedef duration<int, ratio<60> > minutes;`|Синоним для `duration` типа с тактовым периодом в 1 минуту.|
+|`typedef duration<int, ratio<3600> > hours;`|Синоним для `duration` типа с тактовым периодом в 1 час.|
 
 ### <a name="literals"></a>Литералы
 
-**(C++ 11)** Заголовок Chrono > определяет следующие пользовательские литералы, которые можно использовать для более удобного удобства, типизации и сопровождения кода. [](../cpp/user-defined-literals-cpp.md) \< Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.
+**(C++11)** Заголовок \<Chrono > определяет следующие [пользовательские литералы](../cpp/user-defined-literals-cpp.md), которые можно использовать для более удобного удобства, типизации и сопровождения кода. Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.
 
 |||
 |-|-|

@@ -1,5 +1,5 @@
 ---
-title: Класс IViewObjectExImpl
+title: Класс Ивиевобжектексимпл
 ms.date: 11/04/2016
 f1_keywords:
 - IViewObjectExImpl
@@ -22,19 +22,19 @@ helpviewer_keywords:
 - advise sinks
 - IViewObjectExImpl class
 ms.assetid: ad6de760-1ee5-4883-b033-ae57beffc369
-ms.openlocfilehash: 4ed7a7e4a6070ba52c54c4dace687111cf7d33d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aead41f317d175eac9dcb094aa2070d82dc6185
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198217"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495505"
 ---
-# <a name="iviewobjecteximpl-class"></a>Класс IViewObjectExImpl
+# <a name="iviewobjecteximpl-class"></a>Класс Ивиевобжектексимпл
 
-Этот класс реализует `IUnknown` и предоставляет реализацию по умолчанию [IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), и [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) интерфейсов.
+Этот класс реализует `IUnknown` и предоставляет реализации по умолчанию интерфейсов [ивиевобжект](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)и [ивиевобжектекс](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) .
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IViewObjectExImpl`.
+Класс, производный от `IViewObjectExImpl`.
 
 ## <a name="members"></a>Участники
 
@@ -55,22 +55,22 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 |name|Описание|
 |----------|-----------------|
-|[IViewObjectExImpl::Draw](#draw)|Рисует представление элемента управления на контекст устройства.|
-|[IViewObjectExImpl::Freeze](#freeze)|Замораживает формируемого представление элемента управления, поэтому он не изменится до `Unfreeze`. Реализация ATL возвращает E_NOTIMPL.|
-|[IViewObjectExImpl::GetAdvise](#getadvise)|Извлекает существующее соединение приемнике уведомлений на элементе управления, если таковой имеется.|
-|[IViewObjectExImpl::GetColorSet](#getcolorset)|Возвращает логическую палитру, используемые элементом управления для рисования. Реализация ATL возвращает E_NOTIMPL.|
-|[IViewObjectExImpl::GetExtent](#getextent)|Получает отображаемый размер элемента управления в единицах HIMETRIC (0,01 мм на единицу) из данные-член класса элемента управления [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
-|[IViewObjectExImpl::GetNaturalExtent](#getnaturalextent)|Предоставляет подсказки контейнера по объект, который используется при изменении размеров его.|
-|[IViewObjectExImpl::GetRect](#getrect)|Возвращает прямоугольник, описывающий запрошенный вид рисования. Реализация ATL возвращает E_NOTIMPL.|
-|[IViewObjectExImpl::GetViewStatus](#getviewstatus)|Возвращает информацию о размытости объекта и поддерживаемых способах рисования.|
-|[IViewObjectExImpl::QueryHitPoint](#queryhitpoint)|Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.|
-|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Проверяет ли прямоугольник отображения элемента управления перекрывается любой точки в указанное расположение прямоугольника и возвращает значение HITRESULT в `pHitResult`.|
-|[IViewObjectExImpl::SetAdvise](#setadvise)|Настраивает подключение между элементом управления и приемника уведомлений, чтобы приемник может получать уведомления об изменениях в представлении элемента управления.|
-|[IViewObjectExImpl::Unfreeze](#unfreeze)|Снимает формируемого представление элемента управления. Реализация ATL возвращает E_NOTIMPL.|
+|[Ивиевобжектексимпл::D RAW](#draw)|Рисует представление элемента управления в контексте устройства.|
+|[Ивиевобжектексимпл:: Freeze](#freeze)|Закрепляет отображаемое представление элемента управления, чтобы оно не изменялось `Unfreeze`до. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Ивиевобжектексимпл:: Advise](#getadvise)|Возвращает существующее соединение приемника уведомлений в элементе управления, если таковое имеется.|
+|[Ивиевобжектексимпл:: Color](#getcolorset)|Возвращает логическую палитру, используемую элементом управления для рисования. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Ивиевобжектексимпл:: расширение](#getextent)|Получает отображаемый размер элемента управления в единицах HIMETRIC (0,01 миллиметра на единицу) из элемента данных класса элементов управления [ккомконтролбасе:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).|
+|[Ивиевобжектексимпл:: Жетнатуралекстент](#getnaturalextent)|Предоставляет подсказки по размеру из контейнера для объекта, используемого при изменении его размера пользователем.|
+|[Ивиевобжектексимпл:: коrect](#getrect)|Возвращает прямоугольник, описывающий запрошенный аспект рисования. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Ивиевобжектексимпл:: Жетвиевстатус](#getviewstatus)|Возвращает сведения о непрозрачности объекта и о поддерживаемых аспектах рисования.|
+|[Ивиевобжектексимпл:: Куерихитпоинт](#queryhitpoint)|Проверяет, находится ли указанная точка в указанном прямоугольнике, и возвращает значение [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) в `pHitResult`.|
+|[IViewObjectExImpl::QueryHitRect](#queryhitrect)|Проверяет, пересекается ли прямоугольник, отображаемый элементом управления, с любой точкой в указанном прямоугольнике расположения `pHitResult`и возвращает значение хитресулт в.|
+|[Ивиевобжектексимпл:: Сетадвисе](#setadvise)|Устанавливает соединение между элементом управления и приемником уведомлений, чтобы приемник мог получать уведомления об изменениях в представлении элемента управления.|
+|[Ивиевобжектексимпл:: unfreeze](#unfreeze)|Отменяет фиксацию отображаемого представления элемента управления. Реализация ATL возвращает значение E_NOTIMPL.|
 
 ## <a name="remarks"></a>Примечания
 
-[IViewObject](/windows/desktop/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/desktop/api/oleidl/nn-oleidl-iviewobject2), и [IViewObjectEx](/windows/desktop/api/ocidl/nn-ocidl-iviewobjectex) интерфейсы позволяют элемент управления отображать себя напрямую, а также для создания и управления приемника уведомлений для уведомления контейнер для изменения отображения элемента управления. `IViewObjectEx` Интерфейс обеспечивает поддержку для функций расширенного элемента управления, таких как рисование без мелькания, непрямоугольные и прозрачные элементы управления и нажатия (например, насколько близко щелчка кнопкой мыши необходимо следует учитывать в элементе управления). Класс `IViewObjectExImpl` предоставляет стандартную реализацию этих интерфейсов и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+Интерфейсы [ивиевобжект](/windows/win32/api/oleidl/nn-oleidl-iviewobject), [IViewObject2](/windows/win32/api/oleidl/nn-oleidl-iviewobject2)и [ивиевобжектекс](/windows/win32/api/ocidl/nn-ocidl-iviewobjectex) позволяют элементу управления непосредственно отображать себя, а также создавать приемник уведомлений и управлять им для уведомления контейнера об изменениях в отображении элемента управления. `IViewObjectEx` Интерфейс обеспечивает поддержку функций расширенного управления, таких как рисование без мерцания, непрямоугольные и прозрачные элементы управления, и проверка попадания (например, как близкое Нажатие мыши должно быть рассмотрено в элементе управления). Класс `IViewObjectExImpl` предоставляет реализацию этих интерфейсов по умолчанию и `IUnknown` реализует, отправляя сведения на устройство дампа в отладочных сборках.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -80,11 +80,11 @@ class ATL_NO_VTABLE IViewObjectExImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlctl.h
+**Заголовок:** атлктл. h
 
-##  <a name="draw"></a>  IViewObjectExImpl::Draw
+##  <a name="draw"></a>Ивиевобжектексимпл::D RAW
 
-Рисует представление элемента управления на контекст устройства.
+Рисует представление элемента управления в контексте устройства.
 
 ```
 STDMETHOD(Draw)(
@@ -101,13 +101,13 @@ STDMETHOD(Draw)(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод `CComControl::OnDrawAdvanced` которое в свою очередь вызывает класс элемента управления `OnDraw` метод. `OnDraw` Автоматически добавляется метод к классу элемента управления при создании элемента управления с помощью мастера управления ATL. По умолчанию мастер `OnDraw` рисует прямоугольник с надписью «ATL 3.0».
+Этот метод вызывает `CComControl::OnDrawAdvanced` , который, в свою очередь, вызывает `OnDraw` метод класса элемента управления. `OnDraw` Метод автоматически добавляется в класс элемента управления при создании элемента управления с помощью мастера элементов управления ATL. По умолчанию `OnDraw` мастер рисует прямоугольник с меткой "ATL 3,0".
 
-См. в разделе [IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw) в Windows SDK.
+См. раздел [ивиевобжект::D RAW](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw) в Windows SDK.
 
-##  <a name="freeze"></a>  IViewObjectExImpl::Freeze
+##  <a name="freeze"></a>Ивиевобжектексимпл:: Freeze
 
-Замораживает формируемого представление элемента управления, поэтому он не изменится до `Unfreeze`. Реализация ATL возвращает E_NOTIMPL.
+Закрепляет отображаемое представление элемента управления, чтобы оно не изменялось `Unfreeze`до. Реализация ATL возвращает значение E_NOTIMPL.
 
 ```
 STDMETHOD(Freeze)(
@@ -119,11 +119,11 @@ STDMETHOD(Freeze)(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IViewObject::Freeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-freeze) в Windows SDK.
+См. раздел [ивиевобжект:: Freeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-freeze) в Windows SDK.
 
-##  <a name="getadvise"></a>  IViewObjectExImpl::GetAdvise
+##  <a name="getadvise"></a>Ивиевобжектексимпл:: Advise
 
-Извлекает существующее соединение приемнике уведомлений на элементе управления, если таковой имеется.
+Возвращает существующее соединение приемника уведомлений в элементе управления, если таковое имеется.
 
 ```
 STDMETHOD(GetAdvise)(
@@ -134,13 +134,13 @@ STDMETHOD(GetAdvise)(
 
 ### <a name="remarks"></a>Примечания
 
-Приемник хранится в данные-член класса элемента управления [CComControlBase::m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
+Приемник рекомендаций хранится в элементе управления Data Control Member [ккомконтролбасе:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink).
 
-См. в разделе [IViewObject::GetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getadvise) в Windows SDK.
+См. раздел [ивиевобжект:: unadvise](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getadvise) в Windows SDK.
 
-##  <a name="getcolorset"></a>  IViewObjectExImpl::GetColorSet
+##  <a name="getcolorset"></a>Ивиевобжектексимпл:: Color
 
-Возвращает логическую палитру, используемые элементом управления для рисования. Реализация ATL возвращает E_NOTIMPL.
+Возвращает логическую палитру, используемую элементом управления для рисования. Реализация ATL возвращает значение E_NOTIMPL.
 
 ```
 STDMETHOD(GetColorSet)(
@@ -154,11 +154,11 @@ STDMETHOD(GetColorSet)(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IViewObject::GetColorSet](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-getcolorset) в Windows SDK.
+См. раздел [ивиевобжект:: Windows SDK Color](/windows/win32/api/oleidl/nf-oleidl-iviewobject-getcolorset) в.
 
-##  <a name="getextent"></a>  IViewObjectExImpl::GetExtent
+##  <a name="getextent"></a>Ивиевобжектексимпл:: расширение
 
-Получает отображаемый размер элемента управления в единицах HIMETRIC (0,01 мм на единицу) из данные-член класса элемента управления [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
+Получает отображаемый размер элемента управления в единицах HIMETRIC (0,01 миллиметра на единицу) из элемента данных класса элементов управления [ккомконтролбасе:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
 ```
 STDMETHOD(GetExtent)(
@@ -170,11 +170,11 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IViewObject2::GetExtent](/windows/desktop/api/oleidl/nf-oleidl-iviewobject2-getextent) в Windows SDK.
+См. раздел [IViewObject2:: "](/windows/win32/api/oleidl/nf-oleidl-iviewobject2-getextent) в Windows SDK.
 
-##  <a name="getnaturalextent"></a>  IViewObjectExImpl::GetNaturalExtent
+##  <a name="getnaturalextent"></a>Ивиевобжектексимпл:: Жетнатуралекстент
 
-Предоставляет подсказки контейнера по объект, который используется при изменении размеров его.
+Предоставляет подсказки по размеру из контейнера для объекта, используемого при изменении его размера пользователем.
 
 ```
 STDMETHOD(GetNaturalExtent)(
@@ -188,13 +188,13 @@ STDMETHOD(GetNaturalExtent)(
 
 ### <a name="remarks"></a>Примечания
 
-Если `dwAspect` — DVASPECT_CONTENT и *pExtentInfo "->" dwExtentMode* является DVEXTENT_CONTENT, задает * `psizel` на данные-член класса элемента управления [CComControlBase::m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). В противном случае возвращает ошибку HRESULT.
+Если `dwAspect` параметр имеет значение DVASPECT_CONTENT и *пекстентинфо-> двекстентмоде* является DVEXTENT_CONTENT, `psizel` устанавливает * в элемент данных класса элемента управления [ккомконтролбасе:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural). В противном случае возвращает ошибку HRESULT.
 
-См. в разделе [IViewObjectEx::GetNaturalExtent](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) в Windows SDK.
+См. раздел [ивиевобжектекс:: жетнатуралекстент](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getnaturalextent) в Windows SDK.
 
-##  <a name="getrect"></a>  IViewObjectExImpl::GetRect
+##  <a name="getrect"></a>Ивиевобжектексимпл:: коrect
 
-Возвращает прямоугольник, описывающий запрошенный вид рисования. Реализация ATL возвращает E_NOTIMPL.
+Возвращает прямоугольник, описывающий запрошенный аспект рисования. Реализация ATL возвращает значение E_NOTIMPL.
 
 ```
 STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
@@ -202,11 +202,11 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IViewObjectEx::GetRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getrect) в Windows SDK.
+См. раздел [ивиевобжектекс:: коrect](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getrect) в Windows SDK.
 
-##  <a name="getviewstatus"></a>  IViewObjectExImpl::GetViewStatus
+##  <a name="getviewstatus"></a>Ивиевобжектексимпл:: Жетвиевстатус
 
-Возвращает информацию о размытости объекта и поддерживаемых способах рисования.
+Возвращает сведения о непрозрачности объекта и о поддерживаемых аспектах рисования.
 
 ```
 STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
@@ -214,13 +214,13 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию задает ATL `pdwStatus` для указания, что элемент управления поддерживает VIEWSTATUS_OPAQUE (возможные значения приведены в [Просмотр СОСТОЯНИЯ](/windows/desktop/api/ocidl/ne-ocidl-tagviewstatus) перечисления).
+По умолчанию ATL `pdwStatus` указывает, что элемент управления поддерживает VIEWSTATUS_OPAQUE (возможные значения находятся в перечислении [виевстатус](/windows/win32/api/ocidl/ne-ocidl-viewstatus) ).
 
-См. в разделе [IViewObjectEx::GetViewStatus](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) в Windows SDK.
+См. раздел [ивиевобжектекс:: жетвиевстатус](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-getviewstatus) в Windows SDK.
 
 ##  <a name="queryhitpoint"></a>  IViewObjectExImpl::QueryHitPoint
 
-Проверяет, если указанная точка находится в указанный прямоугольник и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.
+Проверяет, находится ли указанная точка в указанном прямоугольнике, и возвращает значение [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) в `pHitResult`.
 
 ```
 STDMETHOD(QueryHitPoint)(
@@ -233,15 +233,15 @@ STDMETHOD(QueryHitPoint)(
 
 ### <a name="remarks"></a>Примечания
 
-Значение может быть HITRESULT_HIT или HITRESULT_OUTSIDE.
+Значение может быть либо HITRESULT_HIT, либо HITRESULT_OUTSIDE.
 
-Если `dwAspect` равно [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.
+Если `dwAspect` Equals равно [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.
 
-См. в разделе [IViewObjectEx::QueryHitPoint](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) в Windows SDK.
+См. раздел [ивиевобжектекс:: куерихитпоинт](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitpoint) в Windows SDK.
 
 ##  <a name="queryhitrect"></a>  IViewObjectExImpl::QueryHitRect
 
-Проверяет ли прямоугольник отображения элемента управления перекрывается любой точки в указанное расположение прямоугольника и возвращает [HITRESULT](/windows/desktop/api/ocidl/ne-ocidl-taghitresult) значение в `pHitResult`.
+Проверяет, пересекается ли прямоугольник, отображаемый элементом управления, с любой точкой в указанном прямоугольнике расположения и возвращает значение [HITRESULT](/windows/win32/api/ocidl/ne-ocidl-hitresult) в `pHitResult`.
 
 ```
 STDMETHOD(QueryHitRect)(
@@ -254,15 +254,15 @@ STDMETHOD(QueryHitRect)(
 
 ### <a name="remarks"></a>Примечания
 
-Значение может быть HITRESULT_HIT или HITRESULT_OUTSIDE.
+Значение может быть либо HITRESULT_HIT, либо HITRESULT_OUTSIDE.
 
-Если `dwAspect` равно [DVASPECT_CONTENT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.
+Если `dwAspect` Equals равно [DVASPECT_CONTENT](/windows/win32/api/wtypes/ne-wtypes-dvaspect), метод возвращает значение S_OK. В противном случае метод возвращает значение E_FAIL.
 
-См. в разделе [IViewObjectEx::QueryHitRect](/windows/desktop/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) в Windows SDK.
+См. раздел [ивиевобжектекс:: куерихитрект](/windows/win32/api/ocidl/nf-ocidl-iviewobjectex-queryhitrect) в Windows SDK.
 
-##  <a name="setadvise"></a>  IViewObjectExImpl::SetAdvise
+##  <a name="setadvise"></a>Ивиевобжектексимпл:: Сетадвисе
 
-Настраивает подключение между элементом управления и приемника уведомлений, чтобы приемник может получать уведомления об изменениях в представлении элемента управления.
+Устанавливает соединение между элементом управления и приемником уведомлений, чтобы приемник мог получать уведомления об изменениях в представлении элемента управления.
 
 ```
 STDMETHOD(SetAdvise)(
@@ -273,13 +273,13 @@ STDMETHOD(SetAdvise)(
 
 ### <a name="remarks"></a>Примечания
 
-Указатель на [IAdviseSink](/windows/desktop/api/objidl/nn-objidl-iadvisesink) интерфейс в приемнике уведомлений, хранится в данные-член класса элемента управления [CComControlBase::m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
+Указатель на интерфейс [иадвисесинк](/windows/win32/api/objidl/nn-objidl-iadvisesink) в приемнике уведомлений хранится в члене данных класса элемента управления [Ккомконтролбасе:: m_spAdviseSink](ccomcontrolbase-class.md#m_spadvisesink).
 
-См. в разделе [IViewObject::SetAdvise](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-setadvise) в Windows SDK.
+См. раздел [ивиевобжект:: сетадвисе](/windows/win32/api/oleidl/nf-oleidl-iviewobject-setadvise) в Windows SDK.
 
-##  <a name="unfreeze"></a>  IViewObjectExImpl::Unfreeze
+##  <a name="unfreeze"></a>Ивиевобжектексимпл:: unfreeze
 
-Снимает формируемого представление элемента управления. Реализация ATL возвращает E_NOTIMPL.
+Отменяет фиксацию отображаемого представления элемента управления. Реализация ATL возвращает значение E_NOTIMPL.
 
 ```
 STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
@@ -287,11 +287,11 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IViewObject::Unfreeze](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-unfreeze) в Windows SDK.
+См. раздел [ивиевобжект:: unfreeze](/windows/win32/api/oleidl/nf-oleidl-iviewobject-unfreeze) в Windows SDK.
 
-##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle
+##  <a name="closehandle"></a>Иворкерсреадклиент:: CloseHandle
 
-Реализуйте этот метод, чтобы закрыть дескриптор, связанный с данным объектом.
+Реализуйте этот метод, чтобы закрыть маркер, связанный с этим объектом.
 
 ```
 HRESULT CloseHandle(HANDLE hHandle);
@@ -299,26 +299,26 @@ HRESULT CloseHandle(HANDLE hHandle);
 
 ### <a name="parameters"></a>Параметры
 
-*hHandle*<br/>
-Дескриптор будет закрыт.
+*ххандле*<br/>
+Закрываемый обработчик.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Дескриптор, переданный этому методу был ранее связан с данным объектом, с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Маркер, переданный этому методу, был ранее связан с этим объектом посредством вызова [кворкерсреад:: аддхандле](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Пример
 
-В следующем коде показано простая реализация `IWorkerThreadClient::CloseHandle`.
+В следующем коде показана простая реализация `IWorkerThreadClient::CloseHandle`.
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]
 
-##  <a name="execute"></a>  IWorkerThreadClient::Execute
+##  <a name="execute"></a>Иворкерсреадклиент:: Execute
 
-Реализуйте этот метод для выполнения кода при оповещенным, дескриптор, связанный с данным объектом.
+Реализуйте этот метод для выполнения кода, когда дескриптор, связанный с этим объектом, получает сигнал.
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -326,30 +326,30 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>Параметры
 
-*dwParam*<br/>
-Параметр user.
+*двпарам*<br/>
+Параметр User.
 
-*hObject*<br/>
-Дескриптор, который оповещения.
+*хобжект*<br/>
+Дескриптор, который стал сигнальным.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK в случае успеха или ошибку HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Дескриптор и DWORD/указатель, переданный этому методу ранее был связан с данным объектом с помощью вызова [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).
+Маркер и DWORD или указатель, переданный этому методу, ранее были связаны с этим объектом посредством вызова [кворкерсреад:: аддхандле](../../atl/reference/cworkerthread-class.md#addhandle).
 
 ### <a name="example"></a>Пример
 
-В следующем коде показано простая реализация `IWorkerThreadClient::Execute`.
+В следующем коде показана простая реализация `IWorkerThreadClient::Execute`.
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iviewobjecteximpl-class_2.cpp)]
 
 ## <a name="see-also"></a>См. также
 
 [Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Интерфейсы, элементы управления ActiveX](/windows/desktop/com/activex-controls-interfaces)<br/>
+[Интерфейсы элементов управления ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>
 [Руководство](../../atl/active-template-library-atl-tutorial.md)<br/>
 [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

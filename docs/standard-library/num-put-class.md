@@ -21,7 +21,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457703"
 ---
-# <a name="numput-class"></a>Класс num_put
+# <a name="num_put-class"></a>Класс num_put
 
 Шаблонный класс, описывающий объект, который можно использовать как аспект языкового стандарта для управления преобразованиями числовых значений в последовательности типа `CharType`.
 
@@ -161,7 +161,7 @@ virtual iter_type do_put(
 
 Целочисленное поле вывода формируется теми же правилами, которые используются функциями печати для создания последовательности элементов **char** в файл. Предполагается, что каждый такой элемент char сопоставлен с эквивалентным элементом типа `CharType` с помощью простого сопоставления «один к одному». Однако, `do_put` где функция печати дополняет поле пробелами или цифрой 0, вместо этого использует `fill`. Эквивалентная спецификация преобразования печати определяется следующим образом:
 
-- Если **iosbase**. [Флаги](../standard-library/ios-base-class.md#flags) & `ios_base::basefield`Oct,Спецификация[](../standard-library/ios-functions.md#oct)преобразования —`lo`. == `ios_base::`
+- Если **iosbase**. [Флаги](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования — .`lo`
 
 - Если **iosbase. flags** & **ios_base:: basefield** == `ios_base::`[Hex](../standard-library/ios-functions.md#hex), спецификация преобразования имеет `lx`значение.
 
@@ -171,7 +171,7 @@ virtual iter_type do_put(
 
 Заполнение происходит, только если минимальное количество элементов *N*, требуемое для указания поля вывода, меньше, чем **iosbase**. [width](../standard-library/ios-base-class.md#width). Такое заполнение состоит из последовательности копий **заливки**в *N* - **столбцов** . Заполнение выполняется следующим образом:
 
-- Если **iosbase**. **Flags** & `ios_base::adjustfield`Left,[](../standard-library/ios-functions.md#left)флаг **добавляетсяв-** начало. == `ios_base::` (Заполнение происходит после сформированного текста.)
+- Если **iosbase**. **Flags** & `ios_base::adjustfield` == `ios_base::`[Left](../standard-library/ios-functions.md#left),флаг **-** добавляется в начало. (Заполнение происходит после сформированного текста.)
 
 - Если **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal), в начало добавляется флаг **0**. (Для числового поля вывода заполнение происходит там, где функции печати заполняют цифрой 0.)
 
@@ -213,9 +213,9 @@ virtual iter_type do_put(iter_type next,
 
 ведет себя так же, как первая, за исключением того, что она создает поле вывода с плавающей запятой из значения **val**. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) определяет последовательность, которая отделяет цифры целой части от цифр дробной части. Эквивалентная спецификация преобразования печати определяется следующим образом:
 
-- Если **iosbase**. **Флаги** & фиксированы`ios_base::floatfield`, спецификация[](../standard-library/ios-functions.md#fixed)преобразования имеет значение .`lf` == `ios_base::`
+- Если **iosbase**. **Флаги** & `ios_base::floatfield` == `ios_base::`[фиксированы](../standard-library/ios-functions.md#fixed), спецификация преобразования имеет значение `lf`.
 
-- Если **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), спецификация преобразования будет иметь значение `le`. Если **iosbase**. **Флаги** & [](../standard-library/ios-functions.md#uppercase) `e` `E`прописных букв не равны нулю, заменяются на.`ios_base::`
+- Если **iosbase**. **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), спецификация преобразования будет иметь значение `le`. Если **iosbase**. **Флаги** & `ios_base::`[прописных букв](../standard-library/ios-functions.md#uppercase) не равны нулю, `e` заменяется на `E`.
 
 - В противном случае спецификация преобразования будет иметь значение **lg**. Если **iosbase**. **Flags** & **ios_base:: прописные буквы** не `g` равны нулю, `G`заменяется на.
 

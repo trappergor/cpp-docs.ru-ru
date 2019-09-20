@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает `left.`[конец](../standard-library/container-class-end.md) [](../standard-library/container-class-begin.md) [](../standard-library/container-class-size.md) ` == right.size && equal(left.`размера.`, left.``, right.begin)`
+Возвращает ` == right.size && equal(left.`[начало](../standard-library/container-class-begin.md)`, left.`[конец](../standard-library/container-class-end.md)`, right.begin)` `left.`[размера](../standard-library/container-class-size.md).
 
 ## <a name="see-also"></a>См. также
 
