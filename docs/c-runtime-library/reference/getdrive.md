@@ -1,6 +1,6 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 api_name:
 - _getdrive
 api_location:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955089"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158762"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает текущий (используемый по умолчанию) диск (1=A, 2=B и т. д). Ошибка не возвращается.
+Возвращает текущий (используемый по умолчанию) диск (1=A, 2=B и т. д). Возвращаемое значение, равное нулю, означает, что текущий путь не начинается с буквы диска, например UNC-путь. Или это означает, что выделение внутреннего буфера завершилось ошибкой. При сбое `errno` внутреннего выделения устанавливается значение еномем.
 
 ## <a name="requirements"></a>Требования
 
