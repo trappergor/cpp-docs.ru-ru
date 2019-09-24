@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453021"
 ---
-# <a name="outputiteratortag-struct"></a>Структура output_iterator_tag
+# <a name="output_iterator_tag-struct"></a>Структура output_iterator_tag
 
 Класс, предоставляющий тип возвращаемого значения для `iterator_category` функции, представляющей итератор вывода.
 
@@ -32,7 +32,7 @@ ms.locfileid: "68453021"
 
 ## <a name="example"></a>Пример
 
-Пример [](../standard-library/iterator-traits-struct.md) использования `iterator_tag`s см. в разделе iterator_traits или [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) .
+Пример использования `iterator_tag`s см. в разделе [iterator_traits](../standard-library/iterator-traits-struct.md) или [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) .
 
 ## <a name="requirements"></a>Требования
 

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9c657bb0d583270f81658afa53f36b1be6a4fd4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221422"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493266"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>Функции FreeLibrary и AfxFreeLibrary
 
-Процессы, которые явно связать вызов DLL [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary) функционировать, когда модуль DLL больше не используется. Это функция уменьшает значение счетчика ссылок модуля и, если счетчик ссылок равен нулю, unmaps его из адресного пространства процесса.
+Процессы, которые явно связываются с библиотекой DLL, вызывают функцию [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) , если модуль DLL больше не нужен. Эта функция уменьшает счетчик ссылок модуля и, если счетчик ссылок равен нулю, отменяет его сопоставление с адресным пространством процесса.
 
-В приложении MFC использовать [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) вместо `FreeLibrary` выгрузка библиотеки DLL расширения MFC. Интерфейс (прототип функции) для `AfxFreeLibrary` совпадает со значением `FreeLibrary`.
+В приложении MFC используйте [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) вместо `FreeLibrary` для выгрузки библиотеки DLL расширения MFC. Интерфейс (прототип функции) для `AfxFreeLibrary` совпадает с. `FreeLibrary`
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 
@@ -40,6 +40,6 @@ ms.locfileid: "65221422"
 
 ## <a name="see-also"></a>См. также
 
-[Создание библиотек DLL на C/C++ в Visual Studio](dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Создание библиотек DLL C/C++ в Visual Studio](dlls-in-visual-cpp.md)<br/>
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

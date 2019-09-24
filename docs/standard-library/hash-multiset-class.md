@@ -93,7 +93,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448687"
 ---
-# <a name="hashmultiset-class"></a>Класс hash_multiset
+# <a name="hash_multiset-class"></a>Класс hash_multiset
 
 > [!NOTE]
 > Этот API устарел. Альтернатива — [класс unordered_multiset](../standard-library/unordered-multiset-class.md).
@@ -2376,7 +2376,7 @@ typedef key_compare value_compare;
 
 Дополнительные сведения о *характеристиках* см. в разделе [класс hash_multiset](../standard-library/hash-multiset-class.md) .
 
-Обратите внимание [](#key_compare) , что `value_compare` оба key_compare и являются синонимами для признаков параметра *шаблона.* Оба типа предоставляются для классов set и multiset, где они идентичны, для совместимости с классами map и multimap, где они различаются.
+Обратите внимание, что оба [key_compare](#key_compare) и `value_compare` являются синонимами для признаков параметра *шаблона.* Оба типа предоставляются для классов set и multiset, где они идентичны, для совместимости с классами map и multimap, где они различаются.
 
 ### <a name="example"></a>Пример
 
