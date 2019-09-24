@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonEdit
+title: Класс Кмфкриббонедит
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonEdit
@@ -73,16 +73,16 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f973074fbec3d04b1c1a74852b02ff2564217c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237097"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504951"
 ---
-# <a name="cmfcribbonedit-class"></a>Класс CMFCRibbonEdit
+# <a name="cmfcribbonedit-class"></a>Класс Кмфкриббонедит
 
-Реализует элемент управления, расположенный на панели ленты.
+Реализует элемент управления "Правка", расположенный на панели ленты.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -96,61 +96,61 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
+|[Кмфкриббонедит:: Кмфкриббонедит](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Указывает, является ли высоту `CMFCRibbonEdit` элемент управления может увеличиваться по вертикали в высоту строки ленты.|
-|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
-|[CMFCRibbonEdit::CopyFrom](#copyfrom)|Копирует состояние указанного `CMFCRibbonEdit` объект с текущим `CMFCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::CreateEdit](#createedit)|Создает новое текстовое поле для `CMFCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|Уничтожает `CMFCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::DropDownList](#dropdownlist)|Раскрывающееся поле со списком.|
-|[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|Включает и задает диапазон кнопка "Счетчик" для текстового поля.|
-|[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|Получает размер compact `CFMCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::GetEditText](#getedittext)|Извлекает текст в текстовом поле.|
-|[CMFCRibbonEdit::GetIntermediateSize](#getintermediatesize)|Получает размер промежуточных `CMFCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::GetTextAlign](#gettextalign)|Извлекает выравнивание текста в текстовом поле.|
-|[CMFCRibbonEdit::GetWidth](#getwidth)|Получает ширину в пикселях от `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|Указывает ли отображение размер для `CMFCRibbonEdit` элемент управления может быть compact.|
-|[CMFCRibbonEdit::HasFocus](#hasfocus)|Указывает, является ли `CMFCRIbbonEdit` управления имеет фокус.|
-|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|Указывает ли отображение размер для `CMFCRibbonEdit` элемент управления может быть большим.|
-|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|Указывает, имеет ли текстовое поле счетчика.|
-|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|Указывает, является ли `CMFCRibbonEdit` элемент управления выделяется.|
-|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|Вызывается платформой при размеры прямоугольника, отображаемое `CMFCRibbonEdit` управления изменениями.|
-|[CMFCRibbonEdit::OnDraw](#ondraw)|Вызывается платформой для отрисовки `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|Вызывается платформой для рисования метки и изображения для `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|Вызывается платформой для отрисовки `CMFCRibbonEdit` элемента управления в поле со списком команд.|
-|[CMFCRibbonEdit::OnEnable](#onenable)|Вызывается платформой для включения или отключения `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::OnHighlight](#onhighlight)|Вызывается платформой, когда указатель мыши входит или выходит за границы `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::OnKey](#onkey)|Вызывается платформой, когда пользователь нажимает подсказки клавиши и `CMFCRibbonEdit` управления имеет фокус.|
-|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|Вызывается платформой для обновления `CMFCRibbonEdit` управления, когда пользователь нажимает левую кнопку мыши на элементе управления.|
-|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|Вызывается платформой, когда пользователь отпускает левую кнопку мыши.|
-|[CMFCRibbonEdit::OnRTLChanged](#onrtlchanged)|Вызывается платформой для обновления `CMFCRibbonEdit` управления при изменении направление макета.|
-|[CMFCRibbonEdit::OnShow](#onshow)|Вызывается платформой для отображения или скрытия `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::Redraw](#redraw)|Обновляет отображение `CMFCRibbonEdit` элемента управления.|
-|[CMFCRibbonEdit::SetACCData](#setaccdata)|Задает данные специальных возможностей для `CMFCRibbonEdit` объекта.|
-|[CMFCRibbonEdit::SetEditText](#setedittext)|Задает текст в текстовом поле.|
-|[CMFCRibbonEdit::SetTextAlign](#settextalign)|Задает выравнивание текста текстового поля.|
-|[CMFCRibbonEdit::SetWidth](#setwidth)|Задает ширину текстового поля для `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: Канбестретчед](#canbestretched)|Указывает, может ли высота `CMFCRibbonEdit` элемента управления увеличиваться по вертикали до высоты строки ленты.|
+|[Кмфкриббонедит:: Кмфкриббонедит](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
+|[Кмфкриббонедит:: CopyFrom](#copyfrom)|Копирует состояние указанного `CMFCRibbonEdit` объекта в текущий `CMFCRibbonEdit` объект.|
+|[Кмфкриббонедит:: Креатидит](#createedit)|Создает новое текстовое поле для `CMFCRibbonEdit` объекта.|
+|[Кмфкриббонедит::D Естройктрл](#destroyctrl)|`CMFCRibbonEdit` Уничтожает объект.|
+|[Кмфкриббонедит::D Ропдовнлист](#dropdownlist)|Удаляет список.|
+|[Кмфкриббонедит:: Енаблеспинбуттонс](#enablespinbuttons)|Включает и задает диапазон кнопки "Счетчик" для текстового поля.|
+|[Кмфкриббонедит:: Жеткомпактсизе](#getcompactsize)|Получает компактный размер `CFMCRibbonEdit` объекта.|
+|[Кмфкриббонедит:: Жетедиттекст](#getedittext)|Извлекает текст из текстового поля.|
+|[Кмфкриббонедит:: GetIntermediateSize](#getintermediatesize)|Возвращает промежуточный размер `CMFCRibbonEdit` объекта.|
+|[Кмфкриббонедит:: Жеттексталигн](#gettextalign)|Извлекает выравнивание текста в текстовом поле.|
+|[Кмфкриббонедит:: Полуширинный](#getwidth)|Получает ширину `CMFCRibbonEdit` элемента управления в пикселях.|
+|[Кмфкриббонедит:: Хаскомпактмоде](#hascompactmode)|Указывает, может ли размер `CMFCRibbonEdit` отображаемого элемента управления сжиматься.|
+|[Кмфкриббонедит:: Хасфокус](#hasfocus)|Указывает, имеет `CMFCRIbbonEdit` ли элемент управления фокус.|
+|[Кмфкриббонедит:: Хасларжемоде](#haslargemode)|Указывает, может ли размер экрана для `CMFCRibbonEdit` элемента управления быть большим.|
+|[Кмфкриббонедит:: Хасспинбуттонс](#hasspinbuttons)|Указывает, содержит ли текстовое поле кнопку с вращением.|
+|[Кмфкриббонедит:: выделять](#ishighlighted)|Указывает, выделен `CMFCRibbonEdit` ли элемент управления.|
+|[Кмфкриббонедит:: Онафтерчанжерект](#onafterchangerect)|Вызывается структурой при изменении размеров отображаемого прямоугольника для `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: OnDraw](#ondraw)|Вызывается платформой для рисования `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: Ондравлабеландимаже](#ondrawlabelandimage)|Вызывается платформой для рисования метки и изображения для `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: Ондравонлист](#ondrawonlist)|Вызывается структурой для отрисовки `CMFCRibbonEdit` элемента управления в списке команд.|
+|[Кмфкриббонедит:: OnEnable](#onenable)|Вызывается платформой для включения или отключения `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: onhighlight](#onhighlight)|Вызывается структурой, когда указатель попадает или оставляет границы `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: Онкэй](#onkey)|Вызывается структурой, когда пользователь нажимает на KeyTip, а `CMFCRibbonEdit` элемент управления находится в фокусе.|
+|[Кмфкриббонедит:: Онлбуттондовн](#onlbuttondown)|Вызывается платформой для обновления `CMFCRibbonEdit` элемента управления при нажатии пользователем левой кнопки мыши на элементе управления.|
+|[Кмфкриббонедит:: Онлбуттонуп](#onlbuttonup)|Вызывается структурой, когда пользователь отпускает левую кнопку мыши.|
+|[Кмфкриббонедит:: Онртлчанжед](#onrtlchanged)|Вызывается платформой для обновления `CMFCRibbonEdit` элемента управления при изменении направления в макете.|
+|[Кмфкриббонедит:: onShow](#onshow)|Вызывается платформой для отображения или скрытия `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: перерисовка](#redraw)|Обновляет отображение `CMFCRibbonEdit` элемента управления.|
+|[Кмфкриббонедит:: Сетаккдата](#setaccdata)|Задает данные специальных возможностей для `CMFCRibbonEdit` объекта.|
+|[Кмфкриббонедит:: Сетедиттекст](#setedittext)|Задает текст в текстовом поле.|
+|[Кмфкриббонедит:: Сеттексталигн](#settextalign)|Задает выравнивание текста для текстового поля.|
+|[Кмфкриббонедит:: Сетвидс](#setwidth)|Задает ширину текстового поля для `CMFCRibbonEdit` элемента управления.|
 
 ## <a name="remarks"></a>Примечания
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCRibbonEdit` , Показать кнопки стрелками рядом с элемента управления редактирования и задайте текст элемента управления. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
+В следующем примере демонстрируется создание `CMFCRibbonEdit` объекта, отображение счетчиков рядом с элементом управления "поле ввода" и задание текста элемента управления "поле ввода". Этот фрагмент кода является частью [демонстрационного примера MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxRibbonEdit.h
+**Заголовок:** афксриббонедит. h
 
-##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched
+##  <a name="canbestretched"></a>Кмфкриббонедит:: Канбестретчед
 
-Указывает, является ли высоту [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления может увеличиваться по вертикали в высоту строки ленты.
+Указывает, может ли высота элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) увеличиваться вертикально до высоты строки ленты.
 
 ```
 virtual BOOL CanBeStretched();
@@ -162,9 +162,9 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="cmfcribbonedit"></a>  CMFCRibbonEdit::CMFCRibbonEdit
+##  <a name="cmfcribbonedit"></a>Кмфкриббонедит:: Кмфкриббонедит
 
-Создает [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Конструирует объект [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 CMFCRibbonEdit(
@@ -179,24 +179,24 @@ CMFCRibbonEdit();
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] ИД для команды `CMFCRibbonEdit` элемента управления.
+окне Идентификатор команды для `CMFCRibbonEdit` элемента управления.
 
-*nWidth*<br/>
-[in] Ширина в пикселях, текстового поля для `CMFCRibbonEdit` элемента управления.
+*нвидс*<br/>
+окне Ширина (в пикселях) текстового поля `CMFCRibbonEdit` элемента управления.
 
-*lpszLabel*<br/>
-[in] Метка для `CMFCRibbonEdit` элемента управления.
+*лпсзлабел*<br/>
+окне Метка для `CMFCRibbonEdit` элемента управления.
 
-*Изображение*<br/>
-[in] Индекс мелкое изображение для `CMFCRibbonEdit` элемента управления. Коллекция изображений небольшого размера, поддерживаемое родительской категории ленты.
+*нимаже*<br/>
+окне Индекс мелкого изображения, используемого для `CMFCRibbonEdit` элемента управления. Коллекция небольших изображений поддерживается родительской категорией ленты.
 
 ### <a name="remarks"></a>Примечания
 
-`CMFCRibbonEdit` Элемент управления не использовать большое изображение.
+`CMFCRibbonEdit` Элемент управления не использует большое изображение.
 
-##  <a name="copyfrom"></a>  CMFCRibbonEdit::CopyFrom
+##  <a name="copyfrom"></a>Кмфкриббонедит:: CopyFrom
 
-Копирует состояние указанного [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объект с текущим [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Копирует состояние указанного объекта [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) в текущий объект [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -205,15 +205,15 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>Параметры
 
 *src*<br/>
-[in] Источник `CMFCRibbonEdit` объекта.
+окне Исходный `CMFCRibbonEdit` объект.
 
 ### <a name="remarks"></a>Примечания
 
-*Src* параметр должен иметь тип `CMFCRibbonEdit`.
+Параметр *src* должен иметь тип `CMFCRibbonEdit`.
 
-##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit
+##  <a name="createedit"></a>Кмфкриббонедит:: Креатидит
 
-Создает новое текстовое поле для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Создает новое текстовое поле для объекта [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CMFCRibbonRichEditCtrl* CreateEdit(
@@ -223,21 +223,21 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndParent*<br/>
-[in] Указатель на родительское окно `CMFCRibbonEdit` объекта.
+*пвндпарент*<br/>
+окне Указатель на родительское окно `CMFCRibbonEdit` объекта.
 
-*dwEditStyle*<br/>
-[in] Задает стиль текстового поля. Вы можете объединить стили окна, перечисленных в разделе "Примечания" с [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles) , описанные в пакете Windows SDK.
+*дведитстиле*<br/>
+окне Задает стиль текстового поля. Стили окон, перечисленные в разделе "Примечания", можно объединить в [стили элемента управления Edit](/windows/win32/Controls/edit-control-styles) , описанные в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новое текстовое поле, если метод был выполнен успешно; в противном случае — значение NULL.
+Указатель на новое текстовое поле, если метод был успешным; в противном случае значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод в производном классе для создания настраиваемого текстового поля.
+Переопределите этот метод в производном классе, чтобы создать настраиваемое текстовое поле.
 
-Можно применить следующие [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) в текстовое поле:
+К текстовому полю можно применить следующие [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) :
 
 - **WS_CHILD**
 
@@ -249,9 +249,9 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 
 - **WS_TABSTOP**
 
-##  <a name="destroyctrl"></a>  CMFCRibbonEdit::DestroyCtrl
+##  <a name="destroyctrl"></a>Кмфкриббонедит::D Естройктрл
 
-Уничтожает [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Уничтожает объект [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void DestroyCtrl();
@@ -259,9 +259,9 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="dropdownlist"></a>  CMFCRibbonEdit::DropDownList
+##  <a name="dropdownlist"></a>Кмфкриббонедит::D Ропдовнлист
 
-Раскрывающееся поле со списком.
+Удаляет список.
 
 ```
 virtual void DropDownList();
@@ -269,11 +269,11 @@ virtual void DropDownList();
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод для раскрывающегося списка.
+По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод, чтобы раскрывающийся список.
 
-##  <a name="enablespinbuttons"></a>  CMFCRibbonEdit::EnableSpinButtons
+##  <a name="enablespinbuttons"></a>Кмфкриббонедит:: Енаблеспинбуттонс
 
-Включает и задает диапазон кнопка "Счетчик" для текстового поля.
+Включает и задает диапазон кнопки "Счетчик" для текстового поля.
 
 ```
 void EnableSpinButtons(
@@ -284,18 +284,18 @@ void EnableSpinButtons(
 ### <a name="parameters"></a>Параметры
 
 *Nмин.*<br/>
-[in] Минимальное значение кнопка "Счетчик".
+окне Минимальное значение кнопки счетчика.
 
 *Nмакс.*<br/>
-[in] Максимальное значение кнопка "Счетчик".
+окне Максимальное значение кнопки счетчика.
 
 ### <a name="remarks"></a>Примечания
 
-Кнопки "Счетчик" отобразить вверх и Стрелка вниз и пользователь может перемещаться через фиксированный набор значений.
+На кнопках счетчика отображается стрелка вверх и вниз, позволяющая пользователям перемещаться по фиксированному набору значений.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonEdit::GetCompactSize
+##  <a name="getcompactsize"></a>Кмфкриббонедит:: Жеткомпактсизе
 
-Получает размер compact [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Получает компактный размер объекта [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -304,17 +304,17 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Compact размер `CMFCRibbonEdit` объекта.
+Размер в компактном `CMFCRibbonEdit` объекте.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getedittext"></a>  CMFCRibbonEdit::GetEditText
+##  <a name="getedittext"></a>Кмфкриббонедит:: Жетедиттекст
 
-Извлекает текст в текстовом поле.
+Извлекает текст из текстового поля.
 
 ```
 CString GetEditText() const;
@@ -326,9 +326,9 @@ CString GetEditText() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonEdit::GetIntermediateSize
+##  <a name="getintermediatesize"></a>Кмфкриббонедит:: GetIntermediateSize
 
-Получает размер промежуточных [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Возвращает промежуточный размер объекта [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -337,7 +337,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -345,7 +345,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="gettextalign"></a>  CMFCRibbonEdit::GetTextAlign
+##  <a name="gettextalign"></a>Кмфкриббонедит:: Жеттексталигн
 
 Извлекает выравнивание текста в текстовом поле.
 
@@ -355,23 +355,23 @@ int GetTextAlign() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение перечисления выравнивание текста. Возможные значения в разделе "Примечания".
+Перечислимое значение выравнивания текста. Возможные значения см. в разделе "Примечания".
 
 ### <a name="remarks"></a>Примечания
 
-Возвращаемое значение является одним из следующих стилей элемента управления редактирования:
+Возвращаемое значение является одним из следующих стилей элемента управления Edit:
 
-- **ES_LEFT** для выравнивание по левому краю
+- **ES_LEFT** для выравнивания по левому краю
 
-- **ES_CENTER** для выравнивание по центру
+- **ES_CENTER** для выравнивания по центру
 
-- **ES_RIGHT** для выравнивание по правому краю
+- **ES_RIGHT** для выравнивания по правому краю
 
-Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles).
+Дополнительные сведения об этих стилях см. в разделе [Edit Control Styles](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth
+##  <a name="getwidth"></a>Кмфкриббонедит:: Полуширинный
 
-Получает ширину в пикселях от [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Получает ширину (в пикселях) элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 int GetWidth(BOOL bInFloatyMode = FALSE) const;
@@ -379,18 +379,18 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 
 ### <a name="parameters"></a>Параметры
 
-*bInFloatyMode*<br/>
-[in] Значение TRUE, если `CMFCRibbonEdit` элемент управления находится в режиме с плавающей запятой; в противном случае — значение FALSE.
+*бинфлоатимоде*<br/>
+окне Значение true, `CMFCRibbonEdit` если элемент управления находится в режиме с плавающей запятой; в противном случае — значение false.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ширина в пикселях от `CMFCRibbonEdit` элемента управления.
+Ширина (в пикселях `CMFCRibbonEdit` ) элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="hascompactmode"></a>  CMFCRibbonEdit::HasCompactMode
+##  <a name="hascompactmode"></a>Кмфкриббонедит:: Хаскомпактмоде
 
-Указывает ли отображение размер для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемент управления может быть compact.
+Указывает, может ли размер отображаемого элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) быть компактным.
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -402,11 +402,11 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод всегда возвращает значение TRUE. Переопределите этот метод, чтобы указать, может ли быть compact размер экрана.
+По умолчанию этот метод всегда возвращает значение TRUE. Переопределите этот метод, чтобы указать, может ли размер отображения быть компактным.
 
-##  <a name="hasfocus"></a>  CMFCRibbonEdit::HasFocus
+##  <a name="hasfocus"></a>Кмфкриббонедит:: Хасфокус
 
-Указывает, является ли [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления имеет фокус.
+Указывает, имеет ли элемент управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) фокус.
 
 ```
 virtual BOOL HasFocus() const;
@@ -414,13 +414,13 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если `CMFCRibbonEdit` управления имеет фокус; в противном случае — значение FALSE.
+Значение true, `CMFCRibbonEdit` если элемент управления имеет фокус; в противном случае — значение false.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="haslargemode"></a>  CMFCRibbonEdit::HasLargeMode
+##  <a name="haslargemode"></a>Кмфкриббонедит:: Хасларжемоде
 
-Указывает ли отображение размер для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления может быть большим.
+Указывает, может ли размер отображаемого элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) быть большим.
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -432,11 +432,11 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию этот метод всегда возвращает значение FALSE. Переопределите этот метод, чтобы указать, может ли быть больших размеров.
+По умолчанию этот метод всегда возвращает значение FALSE. Переопределите этот метод, чтобы указать, может ли размер отображения быть большим.
 
-##  <a name="hasspinbuttons"></a>  CMFCRibbonEdit::HasSpinButtons
+##  <a name="hasspinbuttons"></a>Кмфкриббонедит:: Хасспинбуттонс
 
-Указывает, имеет ли текстовое поле счетчика.
+Указывает, содержит ли текстовое поле кнопку с вращением.
 
 ```
 virtual BOOL HasSpinButtons() const;
@@ -444,13 +444,13 @@ virtual BOOL HasSpinButtons() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текстовое поле имеет кнопка "Счетчик"; в противном случае — значение FALSE.
+Значение TRUE, если текстовое поле содержит кнопку счетчика; в противном случае — FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ishighlighted"></a>  CMFCRibbonEdit::IsHighlighted
+##  <a name="ishighlighted"></a>Кмфкриббонедит:: выделять
 
-Указывает, является ли [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемент управления выделяется.
+Указывает, выделен ли элемент управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual BOOL IsHighlighted() const;
@@ -458,13 +458,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если `CMFCRibbonEdit` элемент управления выделен; в противном случае — значение FALSE.
+Значение true, `CMFCRibbonEdit` если элемент управления выделен; в противном случае — значение false.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onafterchangerect"></a>  CMFCRibbonEdit::OnAfterChangeRect
+##  <a name="onafterchangerect"></a>Кмфкриббонедит:: Онафтерчанжерект
 
-Вызывается платформой при размеры прямоугольника, отображаемое [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления изменений.
+Вызывается структурой при изменении размеров отображаемого прямоугольника для элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -473,13 +473,13 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondraw"></a>  CMFCRibbonEdit::OnDraw
+##  <a name="ondraw"></a>Кмфкриббонедит:: OnDraw
 
-Вызывается платформой для отрисовки [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Вызывается платформой для рисования элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -488,13 +488,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawlabelandimage"></a>  CMFCRibbonEdit::OnDrawLabelAndImage
+##  <a name="ondrawlabelandimage"></a>Кмфкриббонедит:: Ондравлабеландимаже
 
-Вызывается платформой для рисования метки и изображения для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Вызывается платформой для рисования метки и изображения для элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnDrawLabelAndImage(CDC* pDC);
@@ -503,13 +503,13 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawonlist"></a>  CMFCRibbonEdit::OnDrawOnList
+##  <a name="ondrawonlist"></a>Кмфкриббонедит:: Ондравонлист
 
-Вызывается платформой для отрисовки [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления в поле со списком команд.
+Вызывается платформой для рисования элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) в списке команд.
 
 ```
 virtual void OnDrawOnList(
@@ -524,30 +524,30 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
+окне Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
-*strText*<br/>
-[in] Отображаемый текст [ ] (../../mfc/reference/cmfcribbonedit-class.md "класс cmfcribbonedit").
+*стртекст*<br/>
+[in] Класс отображаемого текста [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit class").
 
-*nTextOffset*<br/>
-[in] Расстояние в пикселях от левого края поле со списком для отображения текста.
+*нтекстоффсет*<br/>
+окне Расстояние (в пикселях) от левого края окна списка до отображаемого текста.
 
 *rect*<br/>
-[in] Прямоугольник для отображения `CMFCRibbonEdit` элемента управления.
+окне Отображаемый прямоугольник для `CMFCRibbonEdit` элемента управления.
 
-*bIsSelected*<br/>
-[in] Этот параметр не используется.
+*бисселектед*<br/>
+окне Этот параметр не используется.
 
-*bHighlighted*<br/>
-[in] Этот параметр не используется.
+*бхигхлигхтед*<br/>
+окне Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
 
-В списке команд отображаются элементы управления ленты, чтобы разрешить пользователям настраивать панели инструментов быстрого доступа.
+В окне Список команд отображаются элементы управления ленты, позволяющие пользователям настраивать панель быстрого доступа.
 
-##  <a name="onenable"></a>  CMFCRibbonEdit::OnEnable
+##  <a name="onenable"></a>Кмфкриббонедит:: OnEnable
 
-Вызывается платформой для включения или отключения [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Вызывается платформой для включения или отключения элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnEnable(BOOL bEnable);
@@ -556,13 +556,13 @@ virtual void OnEnable(BOOL bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE для включения элемента управления; Значение FALSE, чтобы отключить элемент управления.
+окне Значение TRUE, чтобы включить элемент управления; Значение FALSE, чтобы отключить элемент управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onhighlight"></a>  CMFCRibbonEdit::OnHighlight
+##  <a name="onhighlight"></a>Кмфкриббонедит:: onhighlight
 
-Вызывается платформой, когда указатель мыши входит или выходит за границы [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Вызывается структурой, когда указатель попадает или оставляет границы элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnHighlight(BOOL bHighlight);
@@ -570,14 +570,14 @@ virtual void OnHighlight(BOOL bHighlight);
 
 ### <a name="parameters"></a>Параметры
 
-*bHighlight*<br/>
-[in] Значение TRUE, если указатель мыши находится в границах `CMFCRibbonEdit` управления; в противном случае — значение FALSE.
+*бхигхлигхт*<br/>
+окне Значение true, если указатель находится в границах `CMFCRibbonEdit` элемента управления; в противном случае — значение false.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onkey"></a>  CMFCRibbonEdit::OnKey
+##  <a name="onkey"></a>Кмфкриббонедит:: Онкэй
 
-Вызывается платформой, когда пользователь нажимает подсказки клавиши и [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления имеет фокус.
+Вызывается структурой, когда пользователь нажимает на KeyTip, а элемент управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) — фокус.
 
 ```
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -585,8 +585,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="parameters"></a>Параметры
 
-*bIsMenuKey*<br/>
-[in] Значение TRUE, если подсказки клавиши отображаются во всплывающем меню. в противном случае — значение FALSE.
+*бисменукэй*<br/>
+окне Значение TRUE, если KeyTip отображает всплывающее меню; в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -594,9 +594,9 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onlbuttondown"></a>  CMFCRibbonEdit::OnLButtonDown
+##  <a name="onlbuttondown"></a>Кмфкриббонедит:: Онлбуттондовн
 
-Вызывается платформой для обновления [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления, когда пользователь нажимает левую кнопку мыши на элементе управления.
+Вызывается платформой для обновления элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) , когда пользователь нажимает на элементе управления левую кнопку мыши.
 
 ```
 virtual void OnLButtonDown(CPoint point);
@@ -605,13 +605,13 @@ virtual void OnLButtonDown(CPoint point);
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onlbuttonup"></a>  CMFCRibbonEdit::OnLButtonUp
+##  <a name="onlbuttonup"></a>Кмфкриббонедит:: Онлбуттонуп
 
-Вызывается платформой, когда пользователь отпускает левую кнопку мыши.
+Вызывается структурой, когда пользователь отпускает левую кнопку мыши.
 
 ```
 virtual void OnLButtonUp(CPoint point);
@@ -620,13 +620,13 @@ virtual void OnLButtonUp(CPoint point);
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-[in] Этот параметр не используется.
+окне Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonEdit::OnRTLChanged
+##  <a name="onrtlchanged"></a>Кмфкриббонедит:: Онртлчанжед
 
-Вызывается платформой для обновления [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) управления при изменении направление макета.
+Вызывается платформой для обновления элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) при изменении направления в макете.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -634,14 +634,14 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Параметры
 
-*bIsRTL*<br/>
-[in] Значение TRUE, если макет справа налево; Значение FALSE, если макет слева направо.
+*бисртл*<br/>
+окне Значение TRUE, если макет размещается справа налево; Значение FALSE, если макет расположен слева направо.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onshow"></a>  CMFCRibbonEdit::OnShow
+##  <a name="onshow"></a>Кмфкриббонедит:: onShow
 
-Вызывается платформой для отображения или скрытия [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Вызывается платформой для отображения или скрытия элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void OnShow(BOOL bShow);
@@ -650,13 +650,13 @@ virtual void OnShow(BOOL bShow);
 ### <a name="parameters"></a>Параметры
 
 *bShow*<br/>
-[in] Значение TRUE для отображения элемента управления; Значение FALSE для скрытия элемента управления.
+окне Значение TRUE для отображения элемента управления; Значение FALSE, чтобы скрыть элемент управления.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="redraw"></a>  CMFCRibbonEdit::Redraw
+##  <a name="redraw"></a>Кмфкриббонедит:: перерисовка
 
-Обновляет отображение [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Обновляет отображение элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual void Redraw();
@@ -664,11 +664,11 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод перерисовывает прямоугольник отображения для `CMFCRibbonEdit` путем вызова косвенно [CWnd::RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow) с флагами RDW_INVALIDATE RDW_ERASE и RDW_UPDATENOW значение.
+Этот метод перерисовывает прямоугольник отображения для `CMFCRibbonEdit` объекта путем косвенного вызова [CWnd:: редраввиндов](/windows/win32/api/winuser/nf-winuser-redrawwindow) с установленными флагами RDW_INVALIDATE, RDW_ERASE и RDW_UPDATENOW.
 
-##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData
+##  <a name="setaccdata"></a>Кмфкриббонедит:: Сетаккдата
 
-Задает данные специальных возможностей для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) объекта.
+Задает данные специальных возможностей для объекта [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 virtual BOOL SetACCData(
@@ -678,11 +678,11 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*<br/>
+*ппарент*<br/>
 Указатель на родительское окно для `CMFCRibbonEdit` объекта.
 
 *data*<br/>
-Данные специальных возможностей для `CMFCRibbonEdit` объекта.
+Данные о специальных возможностях для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -690,7 +690,7 @@ virtual BOOL SetACCData(
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setedittext"></a>  CMFCRibbonEdit::SetEditText
+##  <a name="setedittext"></a>Кмфкриббонедит:: Сетедиттекст
 
 Задает текст в текстовом поле.
 
@@ -700,12 +700,12 @@ void SetEditText(CString strText);
 
 ### <a name="parameters"></a>Параметры
 
-*strText*<br/>
-[in] Текст для текстового поля.
+*стртекст*<br/>
+окне Текст для текстового поля.
 
-##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign
+##  <a name="settextalign"></a>Кмфкриббонедит:: Сеттексталигн
 
-Задает выравнивание текста текстового поля.
+Задает выравнивание текста для текстового поля.
 
 ```
 void SetTextAlign(int nAlign);
@@ -713,24 +713,24 @@ void SetTextAlign(int nAlign);
 
 ### <a name="parameters"></a>Параметры
 
-*nAlign*<br/>
-[in] Значение перечисления выравнивание текста. Возможные значения в разделе "Примечания".
+*налигн*<br/>
+окне Перечислимое значение выравнивания текста. Возможные значения см. в разделе "Примечания".
 
 ### <a name="remarks"></a>Примечания
 
-Параметр *nAlign* является одним из следующих изменение стилей элемента управления:
+Параметр *налигн* является одним из следующих стилей элемента управления Edit:
 
-- ES_LEFT для выравнивание по левому краю
+- ES_LEFT для выравнивания по левому краю
 
-- ES_CENTER для выравнивание по центру
+- ES_CENTER для выравнивания по центру
 
-- ES_RIGHT для выравнивание по правому краю
+- ES_RIGHT для выравнивания по правому краю
 
-Дополнительные сведения об этих стилей см. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles).
+Дополнительные сведения об этих стилях см. в разделе [Edit Control Styles](/windows/win32/Controls/edit-control-styles).
 
-##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth
+##  <a name="setwidth"></a>Кмфкриббонедит:: Сетвидс
 
-Задает ширину текстового поля для [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) элемента управления.
+Задает ширину текстового поля для элемента управления [кмфкриббонедит](../../mfc/reference/cmfcribbonedit-class.md) .
 
 ```
 void SetWidth(
@@ -740,15 +740,15 @@ void SetWidth(
 
 ### <a name="parameters"></a>Параметры
 
-*nWidth*<br/>
-[in] Ширина в пикселях, текстового поля.
+*нвидс*<br/>
+окне Ширина (в пикселях) текстового поля.
 
-*bInFloatyMode*<br/>
-Значение TRUE, чтобы задать ширину для режима с плавающей запятой; Значение FALSE, чтобы задать ширину для обычного режима.
+*бинфлоатимоде*<br/>
+Значение TRUE, чтобы задать ширину для плавающего режима. Значение FALSE, чтобы задать ширину для обычного режима.
 
 ### <a name="remarks"></a>Примечания
 
-`CMFCRibbonEdit` Элемент управления имеет два значения ширины в зависимости от его режим отображения: с плавающей запятой обычным и полноэкранным режимом.
+`CMFCRibbonEdit` Элемент управления имеет две ширины в зависимости от режима его просмотра: плавающий режим и обычный режим.
 
 ## <a name="see-also"></a>См. также
 
