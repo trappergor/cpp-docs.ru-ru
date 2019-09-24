@@ -37,7 +37,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447847"
 ---
-# <a name="basicstringbuf-class"></a>Класс basic_stringbuf
+# <a name="basic_stringbuf-class"></a>Класс basic_stringbuf
 
 Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную в объекте массива, и из нее.
 
@@ -183,7 +183,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>Примечания
 
-Если[](../standard-library/char-traits-struct.md#eof)[](../standard-library/char-traits-struct.md#to_char_type) *\_*   *\_значение meta* не равно **traits_type::** EOF, Защищенная виртуальная функция-член пытается вставить элемент traits_type:: to_char_type (Meta) в выходной буфер. Для этого существует несколько способов.
+Если *\_*  *\_значение meta* не равно **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), Защищенная виртуальная функция-член пытается вставить элемент traits_type:: [to_char_type](../standard-library/char-traits-struct.md#to_char_type) (Meta) в выходной буфер. Для этого существует несколько способов.
 
 - Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.
 

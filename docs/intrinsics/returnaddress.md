@@ -1,38 +1,38 @@
 ---
 title: _ReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _ReturnAddress
 helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390455"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218062"
 ---
-# <a name="returnaddress"></a>_ReturnAddress
+# <a name="_returnaddress"></a>_ReturnAddress
 
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+**Блок, относящийся только к системам Microsoft**
 
-`_ReturnAddress` Предоставляет адрес памяти инструкции в вызывающей функции, который будет выполнен после возврата управления вызывающему объекту.
+`_ReturnAddress` Встроенная функция предоставляет адрес инструкции в вызывающей функции, которая будет выполняться после возврата управления вызывающему объекту.
 
-Создавайте следующие программы и его пошагово в отладчике. При пошаговом выполнении программы, запишите адрес, возвращенный `_ReturnAddress`. Затем, сразу после возврата из функции где `_ReturnAddress` используется, и откройте [как: Использование окна дизассемблирования](/visualstudio/debugger/how-to-use-the-disassembly-window) и обратите внимание на то, что адрес следующую инструкцию для выполнения совпадает с адрес, возвращенный методом `_ReturnAddress`.
+Создайте следующую программу и пошаговую отладку в отладчике. При пошаговом выполнении программы обратите внимание на адрес, который возвращается `_ReturnAddress`из. Затем сразу после возврата из функции, в которой `_ReturnAddress` использовался, [откройте окно как: Используйте окно](/visualstudio/debugger/how-to-use-the-disassembly-window) дизассемблирования и обратите внимание, что адрес следующей инструкции, которая должна быть выполнена, соответствует адресу `_ReturnAddress`, возвращенному из.
 
-Оптимизацию, например встраивание может повлиять на обратный адрес. Например, если ниже пример программы компилируется с [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` будет подставляться в вызывающей функции — `main`. Таким образом, вызовы `_ReturnAddress` из `inline_func` и `main` каждый будет создавать то же значение.
+Такие оптимизации, как встраивание, могут повлиять на обратный адрес. Например, если пример программы, приведенный ниже, компилируется с помощью [/Ob1](../build/reference/ob-inline-function-expansion.md),`inline_func` будет встроен в вызывающую функцию `main`. Таким образом, вызовы `_ReturnAddress` из `inline_func` и `main` будут возвращать одно и то же значение.
 
-Когда `_ReturnAddress` используется в программы, скомпилированной с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_ReturnAddress` вызов будет скомпилировать как неуправляемую функцию. Если функция скомпилирована как управляемые вызовы в функцию, содержащую `_ReturnAddress`, `_ReturnAddress` может вести себя непредусмотренным образом.
+Если `_ReturnAddress` используется в программе, скомпилированной с [параметром/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, `_ReturnAddress` содержащая вызов, будет компилироваться как собственная функция. Если функция, скомпилированная как управляемые вызовы в функцию, `_ReturnAddress`содержащую `_ReturnAddress` , может работать не так, как ожидалось.
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<intrin.h >
+**Заголовочный файл** \<> Intrin. h
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // compiler_intrinsics__ReturnAddress.cpp
 #include <stdio.h>
 #include <intrin.h>
@@ -65,6 +65,6 @@ int main(void)
 
 ## <a name="see-also"></a>См. также
 
-[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)\
+[Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7c13ef8b9656c5c2fa6a90fefca0d9babbe1c84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252623"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491230"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -34,36 +34,36 @@ class CPoint : public tagPOINT
 
 |name|Описание|
 |----------|-----------------|
-|[CPoint::CPoint](#cpoint)|Создает документ `CPoint`.|
+|[CPoint:: CPoint](#cpoint)|Создает документ `CPoint`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CPoint::Offset](#offset)|Добавляет значения в таблицу `x` и `y` членами `CPoint`.|
+|[CPoint:: offset](#offset)|Добавляет значения `x` в элементы и `y` объекта. `CPoint`|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |name|Описание|
 |----------|-----------------|
-|[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размером или отрицание точку или разница размера между двумя точками или смещение с отрицательным размером.|
-|[CPoint::operator! =](#operator_neq)|Проверяет неравенство между двумя точками.|
-|[CPoint::operator +](#operator_add)|Возвращает сумму `CPoint` и размер или точки, или `CRect` смещается на размер.|
-|[CPoint::operator +=](#operator_add_eq)|Смещает `CPoint` путем добавления размера или точки.|
-|[CPoint::operator-=](#operator_-_eq)|Смещает `CPoint` путем вычитания размер или точки.|
-|[CPoint::operator ==](#operator_eq_eq)|Проверяет равенство между двумя точками.|
+|[CPoint:: operator —](#operator_-)|Возвращает разность `CPoint` между и размером, или отрицанием точки, либо разность размера между двумя точками или смещение на отрицательный размер.|
+|[CPoint:: operator! =](#operator_neq)|Проверяет на неравенство между двумя точками.|
+|[CPoint:: operator +](#operator_add)|Возвращает сумму `CPoint` , а также размер или точку `CRect` или смещение на размер.|
+|[CPoint:: operator + =](#operator_add_eq)|`CPoint` Смещение путем добавления размера или точки.|
+|[CPoint:: operator-=](#operator_-_eq)|`CPoint` Смещение путем вычитания размера или точки.|
+|[CPoint:: operator = =](#operator_eq_eq)|Проверяет равенство между двумя точками.|
 
 ## <a name="remarks"></a>Примечания
 
-Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры.
+Он также включает функции элементов для управления `CPoint` структурами и [точек](/windows/win32/api/windef/ns-windef-point) .
 
-Объект `CPoint` объект можно использовать везде, где `POINT` используется структура. Операторы этого класса, которые взаимодействуют с «размер» допускает оба [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры, так как они взаимозаменяемы.
-
-> [!NOTE]
->  Этот класс является производным от `tagPOINT` структуры. (Имя `tagPOINT` представляет собой наименее часто используемым `POINT` структуры.) Это означает, что данные-члены `POINT` структуры, `x` и `y`, являются членами доступные данные `CPoint`.
+Объект можно использовать везде, `POINT` где используется структура. `CPoint` Операторы этого класса, взаимодействующие с "size", принимают либо объекты [ксизе](../../atl-mfc-shared/reference/csize-class.md) , либо структуры [размера](/windows/win32/api/windef/ns-windef-size) , так как эти два являются взаимозаменяемыми.
 
 > [!NOTE]
->  Дополнительные сведения о общие служебные классы (как `CPoint`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+>  Этот класс является производным от `tagPOINT` структуры. (Имя `tagPOINT` `POINT` для структуры является менее часто используемым именем.) Это означает, что `POINT` элементы данных `x` структуры и `y`являются доступными элементами `CPoint`данных.
+
+> [!NOTE]
+>  Дополнительные сведения о общих классах служебной программы `CPoint`(например,) см. в разделе [Общие классы](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -73,9 +73,9 @@ class CPoint : public tagPOINT
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atltypes.h
+**Заголовок:** атлтипес. h
 
-##  <a name="cpoint"></a>  CPoint::CPoint
+##  <a name="cpoint"></a>CPoint:: CPoint
 
 Создает объект `CPoint`.
 
@@ -89,20 +89,20 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*initX*<br/>
+*иниткс*<br/>
 Определяет значение члена `x` структуры `CPoint`.
 
-*initY*<br/>
+*Инициализация*<br/>
 Определяет значение члена `y` структуры `CPoint`.
 
-*initPt*<br/>
-[ТОЧКА](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.
+*инитпт*<br/>
+Структура [точки](/windows/win32/api/windef/ns-windef-point) или `CPoint` , указывающая значения, используемые для `CPoint`инициализации.
 
 *initSize*<br/>
-[РАЗМЕР](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , определяет значения, используемые для инициализации `CPoint`.
+Структура [размера](/windows/win32/api/windef/ns-windef-size) или [ксизе](../../atl-mfc-shared/reference/csize-class.md) , указывающая значения, используемые для `CPoint`инициализации.
 
-*dwPoint*<br/>
-Наборы `x` члена младшее слово из *dwPoint* и `y` член для старшего слова из *dwPoint*.
+*двпоинт*<br/>
+Задает элементу `y` неупорядоченное слово *двпоинт* , а элемент — в слове двпоинт с высоким приоритетом. `x`
 
 ### <a name="remarks"></a>Примечания
 
@@ -135,9 +135,9 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```
 
-##  <a name="offset"></a>  CPoint::Offset
+##  <a name="offset"></a>CPoint:: offset
 
-Добавляет значения в таблицу `x` и `y` членами `CPoint`.
+Добавляет значения `x` в элементы и `y` объекта. `CPoint`
 
 ```
 void Offset(int xOffset, int yOffset) throw();
@@ -147,23 +147,23 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*xOffset*<br/>
-Указывает величина смещения `x` членом `CPoint`.
+*ксоффсет*<br/>
+Задает величину смещения `x` элемента `CPoint`.
 
-*Смещение*<br/>
-Указывает величина смещения `y` членом `CPoint`.
+*йоффсет*<br/>
+Задает величину смещения `y` элемента `CPoint`.
 
 *point*<br/>
-Указывает объем ( [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) или `CPoint`) смещения `CPoint`.
+Задает величину ( [POINT](/windows/win32/api/windef/ns-windef-point) или `CPoint`)смещения для`CPoint`.
 
 *size*<br/>
-Указывает объем ( [размер](/windows/desktop/api/windef/ns-windef-tagsize) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.
+Задает величину ( [size](/windows/win32/api/windef/ns-windef-size) или [ксизе](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CPoint::operator ==
+##  <a name="operator_eq_eq"></a>CPoint:: operator = =
 
 Проверяет равенство между двумя точками.
 
@@ -174,19 +174,19 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` объекта.
+Содержит структуру [точек](/windows/win32/api/windef/ns-windef-point) или `CPoint` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если точки совпадают; в противном случае 0.
+Ненулевое значение, если точки равны; в противном случае — 0.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]
 
-##  <a name="operator_neq"></a>  CPoint::operator! =
+##  <a name="operator_neq"></a>CPoint:: operator! =
 
-Проверяет неравенство между двумя точками.
+Проверяет на неравенство между двумя точками.
 
 ```
 BOOL operator!=(POINT point) const throw();
@@ -195,19 +195,19 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` объекта.
+Содержит структуру [точек](/windows/win32/api/windef/ns-windef-point) или `CPoint` объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если точки не равны; в противном случае 0.
+Ненулевое значение, если точки не равны; в противном случае — 0.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>  CPoint::operator +=
+##  <a name="operator_add_eq"></a>CPoint:: operator + =
 
-Первая перегрузка добавляет размер `CPoint`.
+Первая перегрузка добавляет размер в `CPoint`.
 
 ```
 void operator+=(SIZE size) throw();
@@ -217,24 +217,24 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит структуру [размера](/windows/win32/api/windef/ns-windef-size) или объект [ксизе](../../atl-mfc-shared/reference/csize-class.md) .
 
 *point*<br/>
-Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+Содержит структуру [точек](/windows/win32/api/windef/ns-windef-point) или объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="remarks"></a>Примечания
 
-Вторая перегрузка добавляет точку `CPoint`.
+Вторая перегрузка добавляет точку в `CPoint`.
 
-В обоих случаях сложения выполняется путем добавления `x` (или `cx`) членом правый операнд для `x` членом `CPoint` и добавление `y` (или `cy`) членом правый операнд `y` членом `CPoint`.
+В обоих случаях сложение выполняется `x` путем добавления элемента (или `cx`) правого операнда `CPoint` к `x` элементу и добавления `y` элемента (или `cy`) правого операнда в элемент `y` член .`CPoint`
 
-Например, добавление `CPoint(5, -7)` на переменную, которая содержит `CPoint(30, 40)` изменяет переменную `CPoint(35, 33)`.
+Например, добавление `CPoint(5, -7)` в переменную, которая содержит `CPoint(30, 40)` , изменяет переменную `CPoint(35, 33)`на.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CPoint::operator-=
+##  <a name="operator_-_eq"></a>CPoint:: operator-=
 
 Первая перегрузка вычитает размер из `CPoint`.
 
@@ -246,26 +246,26 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит структуру [размера](/windows/win32/api/windef/ns-windef-size) или объект [ксизе](../../atl-mfc-shared/reference/csize-class.md) .
 
 *point*<br/>
-Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+Содержит структуру [точек](/windows/win32/api/windef/ns-windef-point) или объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 ### <a name="remarks"></a>Примечания
 
-Вторая перегрузка вычитает точку с помощью `CPoint`.
+Вторая перегрузка вычитает точку из `CPoint`.
 
-В обоих случаях вычитания выполняется путем вычитания `x` (или `cx`) член правого операнда из `x` членом `CPoint` и вычитания `y` (или `cy`) членом справа операнд из `y` членом `CPoint`.
+В обоих случаях вычитание выполняется путем вычитания `x` элемента (или `cx`) правого операнда `CPoint` из `x` элемента и вычитания `y` элемента (или `cy`) правой стороны операнд из `y` элемента `CPoint`.
 
-Например, при вычитании `CPoint(5, -7)` из переменной, которая содержит `CPoint(30, 40)` изменяет переменную `CPoint(25, 47)`.
+Например, вычитание `CPoint(5, -7)` из переменной, которая содержит `CPoint(30, 40)` , изменяет переменную на `CPoint(25, 47)`.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]
 
-##  <a name="operator_add"></a>  CPoint::operator +
+##  <a name="operator_add"></a>CPoint:: operator +
 
-Этот оператор используется для смещения `CPoint` по `CPoint` или `CSize` объекта, или смещения `CRect` по `CPoint`.
+Этот оператор используется для смещения `CPoint` `CPoint` `CSize` объектаили`CRect` , а также для смещения a на. `CPoint`
 
 ```
 CPoint operator+(SIZE size) const throw();
@@ -276,31 +276,31 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит структуру [размера](/windows/win32/api/windef/ns-windef-size) или объект [ксизе](../../atl-mfc-shared/reference/csize-class.md) .
 
 *point*<br/>
-Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+Содержит структуру [точек](/windows/win32/api/windef/ns-windef-point) или объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
-*lpRect*<br/>
-Содержит указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+*лпрект*<br/>
+Содержит указатель на структуру [Rect](/windows/win32/api/windef/ns-windef-rect) или объект [крект](../../atl-mfc-shared/reference/crect-class.md) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CPoint` , являющийся смещением по размеру, `CPoint` , являющийся смещением точкой, или `CRect` смещается на точку.
+Объект `CPoint` , который смещается по размеру `CPoint` , смещению по точке или `CRect` смещению на точку.
 
 ### <a name="remarks"></a>Примечания
 
-Например, с помощью одного из первых двух перегрузок смещения `CPoint(25, -19)` точкой `CPoint(15, 5)` или размер `CSize(15, 5)` возвращает значение `CPoint(40, -14)`.
+Например, использование одной из первых двух перегрузок `CPoint(25, -19)` для смещения точки на точку `CPoint(15, 5)` или размер `CSize(15, 5)` возвращает значение `CPoint(40, -14)`.
 
-Добавление прямоугольника на момент Возвращает прямоугольник после компенсируется `x` и `y` значениями, указанными в точку. Например, используя последнюю перегрузку смещения прямоугольника `CRect(125, 219, 325, 419)` точкой `CPoint(25, -19)` возвращает `CRect(150, 200, 350, 400)`.
+Добавление прямоугольника в точку возвращает прямоугольник после смещения `x` значениями и `y` , заданными в точке. Например, использование последней перегрузки для смещения прямоугольника `CRect(125, 219, 325, 419)` на точку `CPoint(25, -19)` возвращает `CRect(150, 200, 350, 400)`.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>CPoint:: operator —
 
-Используйте один из первых двух перегрузок для вычитания `CPoint` или `CSize` объекта из `CPoint`.
+Используйте одну из первых двух перегрузок для вычитания `CPoint` объекта или `CSize` из. `CPoint`
 
 ```
 CSize operator-(POINT point) const throw();
@@ -312,29 +312,29 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>Параметры
 
 *point*<br/>
-Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+Структура [Point](/windows/win32/api/windef/ns-windef-point) или объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) .
 
 *size*<br/>
-Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Структура [размера](/windows/win32/api/windef/ns-windef-size) или объект [ксизе](../../atl-mfc-shared/reference/csize-class.md) .
 
-*lpRect*<br/>
-Указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+*лпрект*<br/>
+Указатель на структуру [Rect](/windows/win32/api/windef/ns-windef-rect) или объект [крект](../../atl-mfc-shared/reference/crect-class.md) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CSize` является различие между двумя точками `CPoint` , являющийся смещением путем размера `CRect` , являющийся смещением по отрицание является точкой, или `CPoint` то есть отрицание точки.
+Объект `CSize` , который представляет собой разность между двумя точками `CPoint` , которая смещается от отрицания размера, `CRect` , который смещается на `CPoint` отрицание точки, или, который является отрицанием точки.
 
 ### <a name="remarks"></a>Примечания
 
-Третья перегрузка смещения `CRect` с отрицанием `CPoint`. Наконец, использовать унарный оператор для отрицания `CPoint`.
+Третья перегрузка смещает a на `CRect` противоположность. `CPoint` Наконец, используйте унарный оператор для отрицания `CPoint`.
 
-Например, с помощью первая перегрузка найти разницу между двумя точками `CPoint(25, -19)` и `CPoint(15, 5)` возвращает `CSize(10, -24)`.
+Например, с помощью первой перегрузки можно найти разницу между двумя точками `CPoint(25, -19)` и `CPoint(15, 5)` возвратами `CSize(10, -24)`.
 
-Вычитание `CSize` из `CPoint` выполняет те же самые вычисления, как описано выше, но возвращает `CPoint` объекта, не `CSize` объекта. Например, с помощью вторая перегрузка для нахождение разности между точкой `CPoint(25, -19)` и размер `CSize(15, 5)` возвращает `CPoint(10, -24)`.
+Вычитание `CPoint` `CPoint` из выполняет то же вычисление, что и выше, но возвращает объект, `CSize` а не объект. `CSize` Например, используйте вторую перегрузку для определения разницы между точкой `CPoint(25, -19)` и `CPoint(10, -24)`размером `CSize(15, 5)` .
 
-Вычитания прямоугольник из точки Возвращает смещение прямоугольника, отрицательные результаты из `x` и `y` значениями, указанными в точку. Например, используя последнюю перегрузку смещения прямоугольника `CRect(125, 200, 325, 400)` точкой `CPoint(25, -19)` возвращает `CRect(100, 219, 300, 419)`.
+Вычитание прямоугольника из точки возвращает смещение прямоугольника по отрицательным `x` значениям и `y` , указанным в точке. Например, использование последней перегрузки для смещения прямоугольника `CRect(125, 200, 325, 400)` на точка `CPoint(25, -19)` возвращает `CRect(100, 219, 300, 419)`.
 
-Используйте унарный оператор для отрицания точку. Например, с помощью унарный оператор с точкой `CPoint(25, -19)` возвращает `CPoint(-25, 19)`.
+Используйте унарный оператор для отрицания точки. Например, использование унарного оператора с точкой `CPoint(25, -19)` возвращает. `CPoint(-25, 19)`
 
 ### <a name="example"></a>Пример
 
@@ -342,8 +342,8 @@ CPoint operator-() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Образец MDI-формы MFC](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Структура POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
+[Структура точки](/windows/win32/api/windef/ns-windef-point)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)
