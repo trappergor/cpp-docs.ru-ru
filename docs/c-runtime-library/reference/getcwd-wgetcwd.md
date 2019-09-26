@@ -1,6 +1,7 @@
 ---
 title: _getcwd, _wgetcwd
-ms.date: 11/04/2016
+description: Функции библиотеки времени выполнения C _getcwd, _wgetcwd получить текущий рабочий каталог.
+ms.date: 09/24/2019
 api_name:
 - _wgetcwd
 - _getcwd
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 27cfdc1eb59c2de788bbe5963a6fccffcb62cba0
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955246"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274632"
 ---
 # <a name="_getcwd-_wgetcwd"></a>_getcwd, _wgetcwd
 
@@ -62,10 +63,10 @@ wchar_t *_wgetcwd(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer*<br/>
+*двойной*\
 Место хранения пути.
 
-*maxlen*<br/>
+*maxlen*\
 Максимальная длина пути в символах: **char** для **_getcwd** и **wchar_t** для **_wgetcwd**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -78,7 +79,7 @@ wchar_t *_wgetcwd(
 
 Функция **_getcwd** возвращает полный путь к текущему рабочему каталогу для диска по умолчанию и сохраняет его в *буфере*. Целочисленный аргумент *maxlen* задает максимальную длину пути. Если длина пути (включая завершающий символ null) превышает *maxlen*, возникает ошибка. Аргумент *buffer* может иметь **значение NULL**. буфер как минимум размера *maxlen* (только при необходимости) автоматически выделяется с помощью **malloc**для хранения пути. Этот буфер можно впоследствии освободить, вызвав **Free** и передав ему возвращаемое значение **_getcwd** (указатель на выделенный буфер).
 
-**_getcwd** возвращает строку, представляющую путь к текущему рабочему каталогу. Если текущий рабочий каталог является корнем, строка заканчивается обратной косой чертой ( **\\** ). Если текущий рабочий каталог отличается от корневого, строка заканчивается именем каталога, а не обратной косой чертой.
+**_getcwd** возвращает строку, представляющую путь к текущему рабочему каталогу. Если текущий рабочий каталог является корнем, строка заканчивается обратной косой чертой (`\`). Если текущий рабочий каталог отличается от корневого, строка заканчивается именем каталога, а не обратной косой чертой.
 
 **_wgetcwd** — это версия **_getcwd**для расширенных символов; Аргумент *буфера* и возвращаемое значение **_wgetcwd** являются строками расширенных символов. в противном случае **_wgetcwd** и **_getcwd** ведут себя одинаково.
 
@@ -103,26 +104,28 @@ wchar_t *_wgetcwd(
 
 ```C
 // crt_getcwd.c
+// Compile with: cl /W4 crt_getcwd.c
 // This program places the name of the current directory in the
 // buffer array, then displays the name of the current directory
 // on the screen. Passing NULL as the buffer forces getcwd to allocate
 // memory for the path, which allows the code to support file paths
 // longer than _MAX_PATH, which are supported by NTFS.
 
-#include <direct.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include <direct.h> // _getcwd
+#include <stdlib.h> // free, perror
+#include <stdio.h>  // printf
+#include <string.h> // strlen
 
 int main( void )
 {
    char* buffer;
 
    // Get the current working directory:
-   if( (buffer = _getcwd( NULL, 0 )) == NULL )
+   if ( (buffer = _getcwd( NULL, 0 )) == NULL )
       perror( "_getcwd error" );
    else
    {
-      printf( "%s \nLength: %d\n", buffer, strnlen(buffer) );
+      printf( "%s \nLength: %zu\n", buffer, strlen(buffer) );
       free(buffer);
    }
 }
@@ -134,7 +137,7 @@ C:\Code
 
 ## <a name="see-also"></a>См. также
 
-[Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
-[_chdir, _wchdir](chdir-wchdir.md)<br/>
-[_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>
-[_rmdir, _wrmdir](rmdir-wrmdir.md)<br/>
+[Управление каталогами](../../c-runtime-library/directory-control.md)\
+[_chdir, _wchdir](chdir-wchdir.md)\
+[_mkdir, _wmkdir](mkdir-wmkdir.md)\
+[_rmdir, _wrmdir](rmdir-wrmdir.md)
