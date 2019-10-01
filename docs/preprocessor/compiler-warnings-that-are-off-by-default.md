@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685713"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712678"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>Предупреждения компилятора, выключенные по умолчанию
 
@@ -150,13 +150,13 @@ ms.locfileid: "71685713"
 |C5042 (уровень 3)|"*функция*": объявления функций в области блока не могут быть указаны "inline" в стандарте C++; Удалите спецификатор "inline" <sup>15,5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|Компилятор вставит устранение устранением рисков Spectre для загрузки памяти, если указан параметр/Qspectre <sup>15,7</sup>|
 
-<sup>14,1</sup> это предупреждение доступно начиная с обновления 1 для Visual Studio 2015. <br/>
-<sup>14,3</sup> это предупреждение доступно начиная с Visual Studio 2015 с обновлением 3. <br/>
-<sup>15,3</sup> это предупреждение доступно в Visual Studio 2017 версии 15,3. <br/>
-<sup>15,5</sup> это предупреждение доступно в Visual Studio 2017 версии 15,5. <br/>
-<sup>15,7</sup> это предупреждение доступно в Visual Studio 2017 версии 15,7. <br/>
-<sup>15,8</sup> это предупреждение доступно в Visual Studio 2017 версии 15,8. <br/>
-<sup>16,0</sup> это предупреждение доступно начиная с Visual Studio 2019 RTM. <br/>
+<sup>14,1</sup> это предупреждение доступно начиная с обновления 1 для Visual Studio 2015. \
+<sup>14,3</sup> это предупреждение доступно начиная с Visual Studio 2015 обновление 3. \
+<sup>15,3</sup> это предупреждение доступно начиная с Visual Studio 2017 версии 15,3. \
+<sup>15,5</sup> это предупреждение доступно начиная с Visual Studio 2017 версии 15,5. \
+<sup>15,7</sup> это предупреждение доступно начиная с Visual Studio 2017 версии 15,7. \
+<sup>15,8</sup> это предупреждение доступно начиная с Visual Studio 2017 версии 15,8. \
+<sup>16,0</sup> это предупреждение доступно начиная с Visual Studio 2019 RTM. \
 <sup>Разрешение</sup> Это предупреждение отключается, если не задан параметр компилятора [/permissive-](../build/reference/permissive-standards-conformance.md) .
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Предупреждения, отключенные по умолчанию в более ранних версиях

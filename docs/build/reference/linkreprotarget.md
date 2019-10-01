@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686908"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712686"
 ---
 # <a name="linkreprotarget-link-repro-file-name"></a>/ЛИНКРЕПРОТАРЖЕТ (имя файла для ссылки для воспроизведения)
 
@@ -38,6 +38,8 @@ ms.locfileid: "71686908"
 Дополнительные сведения о том, как и когда следует создавать канал передачи, см. в разделе " [ссылка для специалистов](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros) " статьи [как сообщить о проблеме с C++ набором инструментов Майкрософт](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 Для параметра **/линкрепротаржет** необходимо задать параметры **/линкрепро** и [/out](out-output-file-name.md) .
+
+**/Линкрепротаржет** доступен начиная с Visual Studio 2019 версии 16,1.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685582"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712698"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -88,7 +88,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Указывает компилятору на то, что приложение поддерживает адреса, превышающие два гигабайта.|
 |[/LIBPATH](libpath-additional-libpath.md)|Указывает путь для поиска перед путем среды библиотеки.|
 |[/ЛИНКРЕПРО](linkrepro.md)|Указывает путь для создания артефактов воспроизведения ссылок в.|
-|[/ЛИНКРЕПРОТАРЖЕТ](linkreprotarget.md)|Создает ссылку для воспроизведения только при создании указанного целевого объекта.|
+|[/ЛИНКРЕПРОТАРЖЕТ](linkreprotarget.md)|Создает ссылку для воспроизведения только при создании указанного целевого объекта. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Задает создание кода во время компоновки.|
 |[/MACHINE](machine-specify-target-platform.md)|Указывает целевую платформу.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Создает параллельный файл манифеста и при необходимости включает его в двоичный файл.|
@@ -137,7 +137,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Частично подписывает файл метаданных среды выполнения Windows (.winmd), установив открытый ключ в файле winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Обрабатывает предупреждения компоновщика как ошибки.|
 
-Дополнительные сведения см. в разделе [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> . Этот параметр доступен начиная с Visual Studio 2019 версии 16,1.
 
 ## <a name="see-also"></a>См. также
 
