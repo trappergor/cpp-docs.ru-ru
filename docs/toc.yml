@@ -409,6 +409,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Пример файла проекта
                   href: build/reference/project-files.md
+                - name: Структура файла VCXPROJ.FILTERS
+                  href: build/reference/vcxproj-filters-files.md
             - name: Страницы свойств проекта C++
               expanded: false
               items:
@@ -432,7 +434,7 @@
                   href: build/reference/command-line-property-pages.md
                 - name: Страница свойств NMake
                   href: build/reference/nmake-property-page.md
-                - name: Страницы свойств средства манифестов
+                - name: Страницы свойств сервиса манифестов
                   href: build/reference/manifest-tool-property-pages.md
                 - name: Страницы свойств ресурсов
                   href: build/reference/resources-property-pages.md
@@ -446,7 +448,7 @@
                   href: build/reference/xml-data-generator-tool-property-page.md
                 - name: Страницы свойств средства создания XML-документов
                   href: build/reference/xml-document-generator-tool-property-pages.md
-                - name: 'Страница свойств настраиваемого этапа сборки: Общие'
+                - name: 'Страница свойств настраиваемого этапа сборки: Общее'
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: Страницы свойств HLSL
                   href: build/reference/hlsl-property-pages.md
@@ -794,6 +796,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (создание прототипов функций)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (хэш-алгоритм для контрольной суммы в отладочной информации)
+                      href: build/reference/zh.md
                     - name: /Zl (опущенное имя библиотеки по умолчанию)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (определение ограничения на выделение памяти для предкомпилированного заголовка)
@@ -952,6 +956,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (дополнительный параметр libpath)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (связывание с именем каталога для воспроизведения)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (связывание с именем файла для воспроизведения)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (создание кода во время компоновки)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (определение целевой платформы)
@@ -1521,6 +1529,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: Навигация по коду C++
           href: ide/navigate-code-cpp.md
+        - name: Настройка параметров написания кода C++
+          href: ide/how-to-set-preferences.md
         - name: Совместная работа с использованием Live Share для C++
           href: ide/live-share-cpp.md
         - name: Изменение сигнатуры
@@ -1952,7 +1962,7 @@
               href: cppcx/template-ref-classes-c-cx.md
             - name: Интерфейсы
               href: cppcx/interfaces-c-cx.md
-            - name: перечислениям;
+            - name: Перечисления
               href: cppcx/enums-c-cx.md
             - name: Делегаты
               href: cppcx/delegates-c-cx.md
@@ -4840,7 +4850,7 @@
               items:
                 - name: Директивы pragma и ключевое слово __pragma
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
-                - name: Прагма alloc_text
+                - name: alloc_text - прагма
                   href: preprocessor/alloc-text.md
                 - name: Прагма auto_inline
                   href: preprocessor/auto-inline.md
@@ -8991,7 +9001,7 @@
                       href: standard-library/shared-ptr-class.md
                     - name: Класс unique_ptr
                       href: standard-library/unique-ptr-class.md
-                    - name: Класс weak_ptr
+                    - name: weak_ptr - класс
                       href: standard-library/weak-ptr-class.md
                 - name: <memory_resource>
                   expanded: false
@@ -9069,7 +9079,7 @@
                   items:
                     - name: <ostream>
                       href: standard-library/ostream.md
-                    - name: Класс basic_ostream
+                    - name: basic_ostream - класс
                       href: standard-library/basic-ostream-class.md
                     - name: Функции<ostream>
                       href: standard-library/ostream-functions.md
@@ -9630,7 +9640,7 @@
                       href: standard-library/slice-array-class.md
                     - name: Класс valarray
                       href: standard-library/valarray-class.md
-                    - name: Класс valarray<bool>
+                    - name: valarray<bool> - класс
                       href: standard-library/valarray-bool-class.md
                 - name: <variant>
                   expanded: false
@@ -9648,7 +9658,7 @@
                   items:
                     - name: <vector>
                       href: standard-library/vector.md
-                    - name: Класс vector
+                    - name: vector - класс
                       href: standard-library/vector-class.md
                     - name: Класс vector<bool>
                       expanded: false
@@ -9800,7 +9810,7 @@
                                   href: standard-library/container-class-size.md
                                 - name: 'Класс контейнера::swap'
                                   href: standard-library/container-class-swap.md
-            - name: Итераторы
+            - name: Iterators
               href: standard-library/iterators.md
             - name: Алгоритмы
               href: standard-library/algorithms.md
@@ -9873,10 +9883,10 @@
               href: standard-library/regular-expressions-cpp.md
             - name: Навигация по файловой системе
               href: standard-library/file-system-navigation.md
-        - name: Библиотека SafeInt
+        - name: SafeInt - библиотека
           expanded: false
           items:
-            - name: Библиотека SafeInt
+            - name: SafeInt - библиотека
               href: safeint/safeint-library.md
             - name: Класс SafeInt
               href: safeint/safeint-class.md
@@ -10415,7 +10425,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: Класс SchedulerPolicy
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: Класс simple_partitioner
+                        - name: simple_partitioner - класс
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Класс single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
