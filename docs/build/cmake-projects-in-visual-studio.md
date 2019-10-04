@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816367"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925573"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Проекты CMake в Visual Studio
 
@@ -58,12 +58,6 @@ Visual Studio использует файл с именем **CMakeSettings. JSO
 
 > [!NOTE]
 > Для других типов проектов открытых папок используются два дополнительных файла JSON: **CppProperties. JSON** и **tasks. vs. JSON**. Ни один из них не связан с проектами CMake.
-
-## <a name="import-an-existing-cache"></a>Импорт существующего кэша
-
-Когда вы импортируете существующий файл CMakeCache.txt, Visual Studio автоматически извлекает настраиваемые переменные и создает на их основе предварительно заполненный файл **CMakeSettings.json**. Исходный кэш никак не изменяется и по-прежнему может использоваться из командной строки либо с помощью любого средства или любой интегрированной среды разработки, использованных для его создания. Новый файл **CMakeSettings. JSON** помещается рядом с корневым файлом CMakeLists. txt проекта. Visual Studio создает кэш на основе файла параметров. Автоматическое создание кэша можно переопределить в **меню сервис > параметры > cmak > общие** .
-
-Импортируется не все содержимое кэша. Такие свойства, как генератор и расположение компиляторов, заменяются значениями по умолчанию, хорошо совместимыми с данной интегрированной средой разработки.
 
 ## <a name="open-an-existing-cache"></a>Открытие существующего кэша
 
