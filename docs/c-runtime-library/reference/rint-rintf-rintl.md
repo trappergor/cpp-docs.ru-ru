@@ -1,11 +1,11 @@
 ---
 title: rint, rintf, rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357594"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949269"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -58,22 +61,22 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Rint** функции возвращают значение с плавающей запятой, представляющий ближайшее целое число *x*. Промежуточные значения округляются согласно текущей настройке с плавающей запятой режим округления, так же, как **nearbyint** функции. В отличие от **nearbyint** функции, **rint** могут вызывать **FE_INEXACT** исключения с плавающей запятой, если результат отличается в значении из аргумента. Ошибка не возвращается.
+Функции **Печать** возвращают значение с плавающей запятой, представляющее ближайшее целое число до *x*. Среднее значение округляется в соответствии с текущим значением режима округления с плавающей запятой, аналогично функциям **неарбинт** . В отличие от функций **неарбинт** , функции **Печать** могут вызвать исключение **FE_INEXACT** с плавающей запятой, если результат отличается от значения аргумента. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Ввод|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Нет|Нет|
-|Денормализованные числа|EXCEPTION_FLT_UNDERFLOW|Нет|
+|± ∞, КНАН, ТО ЕСТЬ|none|none|
+|Денормализованные числа|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **rint** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **rint** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Печать** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **Печать** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**Печать**, **ринтф**, **rintl**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

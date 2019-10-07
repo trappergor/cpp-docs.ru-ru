@@ -1,12 +1,12 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strcspn
 - _mbscspn
@@ -39,19 +42,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353980"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940757"
 ---
-# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
+# <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
 Возвращает индекс первого вхождения в строке символа, который относится к набору символов.
 
 > [!IMPORTANT]
-> **_mbschr** и **_mbschr_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbschr** и **_mbschr_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -80,7 +83,7 @@ size_t _mbscspn_l(
 *str*<br/>
 Строка, завершающаяся символом NULL, для поиска.
 
-*strCharSet*<br/>
+*стрчарсет*<br/>
 Набор символов, завершающийся символом NULL.
 
 *locale*<br/>
@@ -88,15 +91,15 @@ size_t _mbscspn_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Эти функции возвращают индекс первого символа в *str* , который находится в *strCharSet*. Если ни один из символов в *str* в *strCharSet*, то возвращаемое значение представляет собой длину *str*.
+Эти функции возвращают индекс первого символа в *str* , который находится в *стрчарсет*. Если ни один из символов в *str* не находится в *стрчарсет*, возвращаемое значение равно длине *str*.
 
 Нет зарезервированных возвращаемых значений для указания ошибки.
 
 ## <a name="remarks"></a>Примечания
 
-**wcscspn** и **_mbscspn** расширенных и многобайтовых символов версии **strcspn**. Аргументы **wcscspn** являются двухбайтовые строки; аргументы **_mbscspn** представляют собой строки многобайтовых символов.
+**вкскспн** и **_mbscspn** — это версии **стркспн**для расширенных символов и многобайтовых символов. Аргументы **вкскспн** — это строки расширенных символов; **_mbscspn** являются строками многобайтовых символов.
 
-**_mbscspn** проверяет свои параметры. Если параметр *str* или *strCharSet* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 и устанавливает **errno** для **EINVAL**. **strcspn** и **wcscspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+**_mbscspn** проверяет свои параметры. Если *str* или *стрчарсет* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 **и устанавливает для** **еинвал**значение. **стркспн** и **вкскспн** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

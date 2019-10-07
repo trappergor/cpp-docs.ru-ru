@@ -1,12 +1,12 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strerror
 - _strerror
 - _wcserror
 - __wcserror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __sys_errlist
 - wcserror
@@ -43,16 +46,16 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b4d70687bc2f428162d035c80d6bc8525a8fb9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353863"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958148"
 ---
-# <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
+# <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
-Получает системную строку сообщения об (**strerror**, **_wcserror**) или форматирует строку сообщения пользовательские ошибки (**_strerror**, **__wcserror**). Существуют более безопасные версии этих функций; см. раздел [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
+Возвращает строку сообщения о системной ошибке (**strerror**, **_wcserror**) или формат пользовательской строки сообщения об ошибке ( **_strerror**, **__wcserror**). Существуют более безопасные версии этих функций; см. раздел [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -76,7 +79,7 @@ wchar_t * __wcserror(
 *errnum*<br/>
 Номер ошибки.
 
-*strErrMsg*<br/>
+*стреррмсг*<br/>
 Пользовательское сообщение.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -85,22 +88,22 @@ wchar_t * __wcserror(
 
 ## <a name="remarks"></a>Примечания
 
-**Strerror** функции карты *errnum* строку сообщения об ошибке и возвращает указатель на строку. Ни **strerror** , ни **_strerror** фактическую печать сообщения: Для этого необходимо вызвать функцию вывода, такие как [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Функция **strerror** сопоставляет *errnum* со строкой сообщения об ошибке и возвращает указатель на строку. Ни **strerror** , ни **_strerror** на самом деле не выводят сообщение: Для этого необходимо вызвать выходную функцию, например [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Если *strErrMsg* передается в качестве **NULL**, **_strerror** возвращает указатель на строку, содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *strErrMsg* не равно **NULL**, затем **_strerror** возвращает указатель на строку, содержащую (в порядке) строку сообщения, двоеточие, пробел, системная ошибка сообщение для последнего вызова библиотеки, которая создает ошибку и символа новой строки. Длина сообщения строки не должна превышать 94 символа.
+Если *стреррмсг* передается как **null**, **_strerror** возвращает указатель на строку, содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *стреррмсг* не равно **null**, то **_strerror** возвращает указатель на строку, содержащую (по порядку) строковое сообщение, двоеточие, пробел, системное сообщение об ошибке для последнего вызова библиотеки, который создает ошибку, и строку символов. Длина сообщения строки не должна превышать 94 символа.
 
-Фактический номер ошибки для **_strerror** хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Чтобы обеспечить точные результаты, вызовите **_strerror** сразу же после подпрограмма библиотеки возвращает ошибку. В противном случае последующие вызовы **strerror** или **_strerror** можно перезаписать **errno** значение.
+Фактический номер ошибки для **_strerror** хранится в [переменной.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Чтобы получить точные результаты, вызовите **_strerror** сразу после возврата библиотечной программы с ошибкой. В противном случае последующие вызовы **strerror** или **_strerror** могут перезаписать **значение** перезаписи.
 
-**_wcserror** и **__wcserror** представляют собой двухбайтовые версии **strerror** и **_strerror**, соответственно.
+**_wcserror** и **__wcserror** — это версии **strerror** и **_strerror**для расширенных символов соответственно.
 
-**_strerror**, **_wcserror**, и **__wcserror** не являются частью определения ANSI; они являются расширениями Майкрософт, и мы рекомендуем не использовать их место переносимого кода. Для обеспечения совместимости с ANSI используйте **strerror** вместо этого.
+**_strerror**, **_wcserror**и **__WCSERROR** не являются частью определения ANSI; они являются расширениями Майкрософт и не рекомендуют использовать их там, где нужен переносимый код. Для совместимости с ANSI используйте вместо него **strerror** .
 
-Для получения строк ошибок рекомендуется **strerror** или **_wcserror** вместо нерекомендуемых макросов [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и внутренних функций **__sys_errlist** и **__sys_nerr**.
+Для получения строк ошибок рекомендуется использовать **strerror** или **_wcserror** вместо устаревших макросов [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и устаревших внутренних функций **__sys_errlist** и **__sys_nerr**.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

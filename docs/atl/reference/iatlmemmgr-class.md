@@ -1,5 +1,5 @@
 ---
-title: Класс IAtlMemMgr
+title: Класс Иатлмеммгр
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlMemMgr
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276268"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496070"
 ---
-# <a name="iatlmemmgr-class"></a>Класс IAtlMemMgr
+# <a name="iatlmemmgr-class"></a>Класс Иатлмеммгр
 
 Этот класс представляет интерфейс для диспетчера памяти.
 
@@ -36,17 +36,17 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 |||
 |-|-|
-|[выделить](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
-|[бесплатно](#free)|Вызовите этот метод для освобождения блока памяти.|
+|[Памяти](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
+|[Свободный](#free)|Вызовите этот метод, чтобы освободить блок памяти.|
 |[GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти.|
-|[Перераспределение](#reallocate)|Вызовите этот метод для выполняют перераспределение блока памяти.|
+|[Перераспределения](#reallocate)|Вызовите этот метод, чтобы перераспределить блок памяти.|
 
 ## <a name="remarks"></a>Примечания
 
-Этот интерфейс реализуется [CComHeap](../../atl/reference/ccomheap-class.md), [CCRTHeap](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CGlobalHeap](../../atl/reference/cglobalheap-class.md), или [CWin32Heap](../../atl/reference/cwin32heap-class.md).
+Этот интерфейс реализуется с помощью [ккомхеап](../../atl/reference/ccomheap-class.md), [ккрсеап](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CCRTHeap](../../atl/reference/cglobalheap-class.md)или [CWin32Heap](../../atl/reference/cwin32heap-class.md).
 
 > [!NOTE]
->  Кучи локальные и глобальные функции выполняются медленнее, чем другими функциями управления памятью и не предоставляют меньше возможностей. Таким образом, новые приложения должны использовать [функции кучи](/windows/desktop/Memory/heap-functions). Они доступны в [CWin32Heap](../../atl/reference/cwin32heap-class.md) класса.
+>  Локальные и глобальные функции кучи выполняются медленнее, чем другие функции управления памятью, и не предоставляют столько функций. Поэтому новые приложения должны использовать [функции кучи](/windows/win32/Memory/heap-functions). Они доступны в классе [CWin32Heap](../../atl/reference/cwin32heap-class.md) .
 
 ## <a name="example"></a>Пример
 
@@ -54,9 +54,9 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlmem.h
+**Заголовок:** атлмем. h
 
-##  <a name="allocate"></a>  IAtlMemMgr::Allocate
+##  <a name="allocate"></a>Иатлмеммгр:: allocate
 
 Вызовите этот метод, чтобы выделить блок памяти.
 
@@ -75,15 +75,15 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [IAtlMemMgr::Free](#free) или [IAtlMemMgr::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
 ### <a name="example"></a>Пример
 
-Например, см. в разделе [IAtlMemMgr Обзор](../../atl/reference/iatlmemmgr-class.md).
+Пример см. в [обзоре иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="free"></a>  IAtlMemMgr::Free
+##  <a name="free"></a>Иатлмеммгр:: Free
 
-Вызовите этот метод для освобождения блока памяти.
+Вызовите этот метод, чтобы освободить блок памяти.
 
 ```
 void Free(void* p) throw();
@@ -96,13 +96,13 @@ void Free(void* p) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Используйте этот метод для освобождения памяти, полученных [IAtlMemMgr::Allocate](#allocate) или [IAtlMemMgr::Reallocate](#reallocate).
+Используйте этот метод для освобождения памяти, полученной с помощью [иатлмеммгр:: allocate](#allocate) или [иатлмеммгр:: reallocate](#reallocate).
 
 ### <a name="example"></a>Пример
 
-Например, см. в разделе [IAtlMemMgr Обзор](../../atl/reference/iatlmemmgr-class.md).
+Пример см. в [обзоре иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="getsize"></a>  IAtlMemMgr::GetSize
+##  <a name="getsize"></a>Иатлмеммгр:: DataSize
 
 Вызовите этот метод, чтобы получить размер выделенного блока памяти.
 
@@ -121,9 +121,9 @@ size_t GetSize(void* p) throw();
 
 ### <a name="example"></a>Пример
 
-Например, см. в разделе [IAtlMemMgr Обзор](../../atl/reference/iatlmemmgr-class.md).
+Пример см. в [обзоре иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="reallocate"></a>  IAtlMemMgr::Reallocate
+##  <a name="reallocate"></a>Иатлмеммгр:: перераспределение
 
 Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
 
@@ -145,17 +145,17 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите [IAtlMemMgr::Free](#free) или [IAtlMemMgr::Reallocate](#reallocate) для освобождения памяти, выделенной с помощью этого метода.
+Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
-По существу, этот метод освобождает память, существующих и выделяя новый блок памяти. На самом деле существующую память может быть расширенных или в противном случае повторного использования.
+По сути, этот метод освобождает имеющуюся память и выделяет новый блок памяти. На практике существующая память может быть расширена или использована повторно.
 
 ### <a name="example"></a>Пример
 
-Например, см. в разделе [IAtlMemMgr Обзор](../../atl/reference/iatlmemmgr-class.md).
+Пример см. в [обзоре иатлмеммгр](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu
+##  <a name="get_allowcontextmenu"></a>Иаксвинамбиентдиспатч:: get_AllowContextMenu
 
-`AllowContextMenu` Свойство указывает, разрешено ли размещенный элемент управления для отображения свое собственное контекстное меню.
+`AllowContextMenu` Свойство указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
 
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -163,8 +163,8 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowContextMenu*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбалловконтекстмену*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -172,11 +172,11 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="get_allowshowui"></a>  IAxWinAmbientDispatch::get_AllowShowUI
+##  <a name="get_allowshowui"></a>Иаксвинамбиентдиспатч:: get_AllowShowUI
 
-`AllowShowUI` Свойство указывает, разрешено ли размещенный элемент управления отображать пользовательский интерфейс.
+`AllowShowUI` Свойство указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
 
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -184,8 +184,8 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowShowUI*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбалловшовуи*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -193,11 +193,11 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_FALSE как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::get_AllowWindowlessActivation
+##  <a name="get_allowwindowlessactivation"></a>Иаксвинамбиентдиспатч:: get_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Свойство указывает, будет ли контейнер давать возможность активации без окна.
+`AllowWindowlessActivation` Свойство указывает, будет ли контейнер разрешать активацию без окон.
 
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -205,8 +205,8 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="parameters"></a>Параметры
 
-*pbAllowWindowless*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбалловвиндовлесс*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -214,11 +214,11 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="get_backcolor"></a>  IAxWinAmbientDispatch::get_BackColor
+##  <a name="get_backcolor"></a>Иаксвинамбиентдиспатч:: get_BackColor
 
-`BackColor` Свойство задает цвет фона окружения контейнера.
+`BackColor` Свойство задает цвет фона окружения для контейнера.
 
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -226,8 +226,8 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrBackground*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пклрбаккграунд*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -235,11 +235,11 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение по умолчанию этого свойства (в зависимости от родительского окна хоста является ли диалоговое окно или нет).
+Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW в качестве значения по умолчанию для этого свойства (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
-##  <a name="get_displayasdefault"></a>  IAxWinAmbientDispatch::get_DisplayAsDefault
+##  <a name="get_displayasdefault"></a>Иаксвинамбиентдиспатч:: get_DisplayAsDefault
 
-`DisplayAsDefault` является свойством окружения, который позволяет элементу управления проверить, является ли элемент управления по умолчанию.
+`DisplayAsDefault`— Это внешнее свойство, которое позволяет элементу управления определить, является ли он элементом управления по умолчанию.
 
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -247,8 +247,8 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="parameters"></a>Параметры
 
-*pbDisplayAsDefault*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбдисплайасдефаулт*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -256,11 +256,11 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_FALSE как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::get_DocHostDoubleClickFlags
+##  <a name="get_dochostdoubleclickflags"></a>Иаксвинамбиентдиспатч:: get_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Свойство определяет операцию, которая должна быть выполнена в соответствии с двойным щелчком.
+`DocHostDoubleClickFlags` Свойство указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
 
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -268,8 +268,8 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwDocHostDoubleClickFlags*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пдвдочостдаублекликкфлагс*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -277,11 +277,11 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_dochostflags"></a>  IAxWinAmbientDispatch::get_DocHostFlags
+##  <a name="get_dochostflags"></a>Иаксвинамбиентдиспатч:: get_DocHostFlags
 
-`DocHostFlags` Свойство указывает возможностями интерфейса пользователя объекта узла.
+`DocHostFlags` Свойство определяет возможности пользовательского интерфейса объекта узла.
 
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -289,8 +289,8 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*pdwDocHostFlags*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пдвдочостфлагс*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -298,9 +298,9 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_font"></a>  IAxWinAmbientDispatch::get_Font
+##  <a name="get_font"></a>Иаксвинамбиентдиспатч:: get_Font
 
 `Font` Свойство задает шрифт окружения контейнера.
 
@@ -310,8 +310,8 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*<br/>
-[out] Адрес `IFontDisp` указатель на интерфейс, используемый для получения текущего значения этого свойства.
+*пфонт*<br/>
+заполняет Адрес `IFontDisp` указателя интерфейса, используемого для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -319,11 +319,11 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_forecolor"></a>  IAxWinAmbientDispatch::get_ForeColor
+##  <a name="get_forecolor"></a>Иаксвинамбиентдиспатч:: get_ForeColor
 
-`ForeColor` Свойство задает цвет переднего плана окружения контейнера.
+`ForeColor` Свойство задает цвет переднего плана окружения.
 
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -331,8 +331,8 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="parameters"></a>Параметры
 
-*pclrForeground*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пклрфореграунд*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -340,11 +340,11 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует системный цвет окна как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
-##  <a name="get_localeid"></a>  IAxWinAmbientDispatch::get_LocaleID
+##  <a name="get_localeid"></a>Иаксвинамбиентдиспатч:: get_LocaleID
 
-`LocaleID` Свойство задает идентификатор внешней языковой стандарт контейнера.
+`LocaleID` Свойство определяет идентификатор локали контейнера.
 
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -352,8 +352,8 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="parameters"></a>Параметры
 
-*plcidLocaleID*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*плЦидлокалеид*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -361,13 +361,13 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует языковой стандарт пользователя по умолчанию как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
-С помощью этого метода можно обнаружить окружения локальный идентификатор, то есть LocaleID программы управления, используется. Зная код языка, можно вызвать код для загрузки заголовков зависящих от языкового стандарта, текст сообщения об ошибке, и так далее из файла ресурсов или вспомогательной библиотеке DLL.
+С помощью этого метода можно обнаружить внешний LocalID, т. е. LocaleID программы, в которой используется элемент управления. Зная LocaleID, вы можете вызвать код для загрузки заголовков для определенного языкового стандарта, текста сообщения об ошибке и т. д. из файла ресурсов или вспомогательной библиотеки DLL.
 
-##  <a name="get_messagereflect"></a>  IAxWinAmbientDispatch::get_MessageReflect
+##  <a name="get_messagereflect"></a>Иаксвинамбиентдиспатч:: get_MessageReflect
 
-`MessageReflect` Внешнее свойство указывает, отражает ли контейнер сообщений для размещенного элемента управления.
+Свойство `MessageReflect` окружения указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
 
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -375,8 +375,8 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="parameters"></a>Параметры
 
-*pbMessageReflect*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбмессажерефлект*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -384,9 +384,9 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="get_optionkeypath"></a>  IAxWinAmbientDispatch::get_OptionKeyPath
+##  <a name="get_optionkeypath"></a>Иаксвинамбиентдиспатч:: get_OptionKeyPath
 
 `OptionKeyPath` Свойство указывает путь к разделу реестра для параметров пользователя.
 
@@ -396,16 +396,16 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ### <a name="parameters"></a>Параметры
 
-*pbstrOptionKeyPath*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбстроптионкэйпас*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="get_showgrabhandles"></a>  IAxWinAmbientDispatch::get_ShowGrabHandles
+##  <a name="get_showgrabhandles"></a>Иаксвинамбиентдиспатч:: get_ShowGrabHandles
 
-`ShowGrabHandles` Внешнее свойство позволяет элементу управления узнать, если она должна нарисовать сам с маркерами захвата.
+Свойство `ShowGrabHandles` окружения позволяет элементу управления определить, должен ли он рисовать себя с маркерами захвата.
 
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -413,8 +413,8 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="parameters"></a>Параметры
 
-*pbShowGrabHandles*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбшовграбхандлес*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -422,11 +422,11 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 ### <a name="remarks"></a>Примечания
 
-ATL узла объекта реализация всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
+Реализация объекта узла ATL всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
 
-##  <a name="get_showhatching"></a>  IAxWinAmbientDispatch::get_ShowHatching
+##  <a name="get_showhatching"></a>Иаксвинамбиентдиспатч:: get_ShowHatching
 
-`ShowHatching` Внешнее свойство позволяет элементу управления узнать, если она должна нарисовать сам hatched.
+`ShowHatching` Внешнее свойство позволяет элементу управления определить, будет ли он нарисован штриховой.
 
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -434,8 +434,8 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="parameters"></a>Параметры
 
-*pbShowHatching*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбшовхатчинг*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -443,11 +443,11 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 ### <a name="remarks"></a>Примечания
 
-ATL узла объекта реализация всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
+Реализация объекта узла ATL всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
 
-##  <a name="get_usermode"></a>  IAxWinAmbientDispatch::get_UserMode
+##  <a name="get_usermode"></a>Иаксвинамбиентдиспатч:: get_UserMode
 
-`UserMode` Свойство задает режим работы окружения пользователя контейнера.
+`UserMode` Свойство указывает внешний пользовательский режим контейнера.
 
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -455,8 +455,8 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="parameters"></a>Параметры
 
-*pbUserMode*<br/>
-[out] Адрес переменной для получения текущего значения этого свойства.
+*пбусермоде*<br/>
+заполняет Адрес переменной для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -464,11 +464,11 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="put_allowcontextmenu"></a>  IAxWinAmbientDispatch::put_AllowContextMenu
+##  <a name="put_allowcontextmenu"></a>Иаксвинамбиентдиспатч::p ut_AllowContextMenu
 
-`AllowContextMenu` Свойство указывает, разрешено ли размещенный элемент управления для отображения свое собственное контекстное меню.
+`AllowContextMenu` Свойство указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
 
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -476,8 +476,8 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowContextMenu*<br/>
-[in] Новое значение этого свойства.
+*балловконтекстмену*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -485,11 +485,11 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="put_allowshowui"></a>  IAxWinAmbientDispatch::put_AllowShowUI
+##  <a name="put_allowshowui"></a>Иаксвинамбиентдиспатч::p ut_AllowShowUI
 
-`AllowShowUI` Свойство указывает, разрешено ли размещенный элемент управления отображать пользовательский интерфейс.
+`AllowShowUI` Свойство указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
 
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -497,8 +497,8 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowShowUI*<br/>
-[in] Новое значение этого свойства.
+*балловшовуи*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -506,11 +506,11 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_FALSE как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::put_AllowWindowlessActivation
+##  <a name="put_allowwindowlessactivation"></a>Иаксвинамбиентдиспатч::p ut_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Свойство указывает, будет ли контейнер давать возможность активации без окна.
+`AllowWindowlessActivation` Свойство указывает, будет ли контейнер разрешать активацию без окон.
 
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -518,8 +518,8 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="parameters"></a>Параметры
 
-*bAllowWindowless*<br/>
-[in] Новое значение этого свойства.
+*балловвиндовлесс*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -527,11 +527,11 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="put_backcolor"></a>  IAxWinAmbientDispatch::put_BackColor
+##  <a name="put_backcolor"></a>Иаксвинамбиентдиспатч::p ut_BackColor
 
-`BackColor` Свойство задает цвет фона окружения контейнера.
+`BackColor` Свойство задает цвет фона окружения для контейнера.
 
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -539,8 +539,8 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="parameters"></a>Параметры
 
-*clrBackground*<br/>
-[in] Новое значение этого свойства.
+*клрбаккграунд*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -548,11 +548,11 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение по умолчанию этого свойства (в зависимости от родительского окна хоста является ли диалоговое окно или нет).
+Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW в качестве значения по умолчанию для этого свойства (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
-##  <a name="put_displayasdefault"></a>  IAxWinAmbientDispatch::put_DisplayAsDefault
+##  <a name="put_displayasdefault"></a>Иаксвинамбиентдиспатч::p ut_DisplayAsDefault
 
-`DisplayAsDefault` является свойством окружения, который позволяет элементу управления проверить, является ли элемент управления по умолчанию.
+`DisplayAsDefault`— Это внешнее свойство, которое позволяет элементу управления определить, является ли он элементом управления по умолчанию.
 
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -560,8 +560,8 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="parameters"></a>Параметры
 
-*bDisplayAsDefault*<br/>
-[in] Новое значение этого свойства.
+*бдисплайасдефаулт*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -569,11 +569,11 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_FALSE как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::put_DocHostDoubleClickFlags
+##  <a name="put_dochostdoubleclickflags"></a>Иаксвинамбиентдиспатч::p ut_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Свойство определяет операцию, которая должна быть выполнена в соответствии с двойным щелчком.
+`DocHostDoubleClickFlags` Свойство указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
 
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -581,8 +581,8 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*dwDocHostDoubleClickFlags*<br/>
-[in] Новое значение этого свойства.
+*двдочостдаублекликкфлагс*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -590,11 +590,11 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_dochostflags"></a>  IAxWinAmbientDispatch::put_DocHostFlags
+##  <a name="put_dochostflags"></a>Иаксвинамбиентдиспатч::p ut_DocHostFlags
 
-`DocHostFlags` Свойство указывает возможностями интерфейса пользователя объекта узла.
+`DocHostFlags` Свойство определяет возможности пользовательского интерфейса объекта узла.
 
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -602,8 +602,8 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="parameters"></a>Параметры
 
-*dwDocHostFlags*<br/>
-[in] Новое значение этого свойства.
+*двдочостфлагс*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -611,9 +611,9 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_font"></a>  IAxWinAmbientDispatch::put_Font
+##  <a name="put_font"></a>Иаксвинамбиентдиспатч::p ut_Font
 
 `Font` Свойство задает шрифт окружения контейнера.
 
@@ -623,8 +623,8 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="parameters"></a>Параметры
 
-*pFont*<br/>
-[in] Новое значение этого свойства.
+*пфонт*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -632,11 +632,11 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_forecolor"></a>  IAxWinAmbientDispatch::put_ForeColor
+##  <a name="put_forecolor"></a>Иаксвинамбиентдиспатч::p ut_ForeColor
 
-`ForeColor` Свойство задает цвет переднего плана окружения контейнера.
+`ForeColor` Свойство задает цвет переднего плана окружения.
 
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -644,8 +644,8 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="parameters"></a>Параметры
 
-*clrForeground*<br/>
-[in] Новое значение этого свойства.
+*клрфореграунд*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -653,11 +653,11 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует системный цвет окна как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
-##  <a name="put_localeid"></a>  IAxWinAmbientDispatch::put_LocaleID
+##  <a name="put_localeid"></a>Иаксвинамбиентдиспатч::p ut_LocaleID
 
-`LocaleID` Свойство задает идентификатор внешней языковой стандарт контейнера.
+`LocaleID` Свойство определяет идентификатор локали контейнера.
 
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -665,8 +665,8 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="parameters"></a>Параметры
 
-*lcidLocaleID*<br/>
-[in] Новое значение этого свойства.
+*лЦидлокалеид*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -674,11 +674,11 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует языковой стандарт пользователя по умолчанию как значение по умолчанию этого свойства.
+Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
-##  <a name="put_messagereflect"></a>  IAxWinAmbientDispatch::put_MessageReflect
+##  <a name="put_messagereflect"></a>Иаксвинамбиентдиспатч::p ut_MessageReflect
 
-`MessageReflect` Внешнее свойство указывает, отражает ли контейнер сообщений для размещенного элемента управления.
+Свойство `MessageReflect` окружения указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
 
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
@@ -686,8 +686,8 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="parameters"></a>Параметры
 
-*bMessageReflect*<br/>
-[in] Новое значение этого свойства.
+*бмессажерефлект*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -695,9 +695,9 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="put_optionkeypath"></a>  IAxWinAmbientDispatch::put_OptionKeyPath
+##  <a name="put_optionkeypath"></a>Иаксвинамбиентдиспатч::p ut_OptionKeyPath
 
 `OptionKeyPath` Свойство указывает путь к разделу реестра для параметров пользователя.
 
@@ -707,16 +707,16 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ### <a name="parameters"></a>Параметры
 
-*bstrOptionKeyPath*<br/>
-[in] Новое значение этого свойства.
+*бстроптионкэйпас*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="put_usermode"></a>  IAxWinAmbientDispatch::put_UserMode
+##  <a name="put_usermode"></a>Иаксвинамбиентдиспатч::p ut_UserMode
 
-`UserMode` Свойство задает режим работы окружения пользователя контейнера.
+`UserMode` Свойство указывает внешний пользовательский режим контейнера.
 
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
@@ -724,8 +724,8 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="parameters"></a>Параметры
 
-*bUserMode*<br/>
-[in] Новое значение этого свойства.
+*бусермоде*<br/>
+окне Новое значение этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -733,11 +733,11 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация объекта узла ATL использует значение VARIANT_TRUE как значение по умолчанию этого свойства.
+В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
 
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+##  <a name="setambientdispatch"></a>Иаксвинамбиентдиспатчекс:: Сетамбиентдиспатч
 
-Этот метод вызывается в дополнение к интерфейс внешнее свойство по умолчанию с помощью определенного пользователем интерфейса.
+Этот метод вызывается для дополнения интерфейса внешнего свойства по умолчанию с определяемым пользователем интерфейсом.
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -745,20 +745,20 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*pDispatch*<br/>
+*пдиспатч*<br/>
 Указатель на новый интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
+Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Когда `SetAmbientDispatch` вызывается с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова любого свойства или методы, задаваемые для размещенным элементом управления, если эти свойства еще не заданы [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+Если метод `SetAmbientDispatch` вызывается с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова свойств или методов, запрашиваемых размещенным элементом управления, если эти свойства еще не предоставлены [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+##  <a name="attachcontrol"></a>Иаксвинхоствиндов:: Аттачконтрол
 
-Прикрепляет элемент существующего (и предварительно инициализированных) в объект узла, с помощью окна определяется *hWnd*.
+Присоединяет существующий (и ранее инициализированный) элемент управления к объекту узла с помощью окна, идентифицируемого *HWND*.
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -766,19 +766,19 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkControl*<br/>
-[in] Указатель на `IUnknown` интерфейса элемента управления должны быть присоединены к объекта узла.
+*пункконтрол*<br/>
+окне Указатель на `IUnknown` интерфейс элемента управления, который должен быть присоединен к объекту узла.
 
 *hWnd*<br/>
-[in] Дескриптор окна, используемый для размещения.
+окне Маркер окна, который будет использоваться для размещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+##  <a name="createcontrol"></a>Иаксвинхоствиндов:: CreateControl
 
-Создает элемент управления, инициализирует его и размещает его в окне, идентифицируемый *hWnd*.
+Создает элемент управления, инициализирует его и размещает его в окне, определяемом *HWND*.
 
 ```
 STDMETHOD(CreateControl)(
@@ -789,14 +789,14 @@ STDMETHOD(CreateControl)(
 
 ### <a name="parameters"></a>Параметры
 
-*lpTricsData*<br/>
-[in] Строка, определяющая элемент управления для создания. Может быть (необходимо использовать фигурные скобки) CLSID, ProgID, URL-адрес или необработанное HTML (с префиксом **MSHTML:**).
+*лптриксдата*<br/>
+окне Строка, идентифицирующая создаваемый элемент управления. Может быть идентификатором CLSID (должен содержать фигурные скобки), ProgID, URL-адрес или необработанный HTML (с префиксом **MSHTML:** ).
 
 *hWnd*<br/>
-[in] Дескриптор окна, используемый для размещения.
+окне Маркер окна, который будет использоваться для размещения.
 
-*pStream*<br/>
-[in] Указатель на интерфейс для поток, содержащий данные инициализации для элемента управления. Может иметь значение NULL.
+*пстреам*<br/>
+окне Указатель интерфейса для потока, содержащего данные инициализации для элемента управления. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -804,15 +804,15 @@ STDMETHOD(CreateControl)(
 
 ### <a name="remarks"></a>Примечания
 
-Это окно будет разделяться на подклассы объектом узла, предоставляя этот интерфейс, чтобы сообщения могут быть отражены в элемент управления и другие функции контейнеров будут работать.
+Это окно будет подклассировать объектом размещения, который предоставляет этот интерфейс, чтобы сообщения могли быть отражены в элементе управления, а другие функции контейнера будут работать.
 
-Вызов этого метода эквивалентен вызову [IAxWinHostWindow::CreateControlEx](#createcontrolex).
+Вызов этого метода эквивалентен вызову [иаксвинхоствиндов:: креатеконтролекс](#createcontrolex).
 
-Чтобы создать лицензированный элемент управления ActiveX, см. в разделе [IAxWinHostWindowLic::CreateControlLic](#createcontrollicex).
+Сведения о создании лицензированного элемента управления ActiveX см. в разделе [иаксвинхоствиндовлик:: креатеконтроллик](#createcontrollicex).
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+##  <a name="createcontrolex"></a>Иаксвинхоствиндов:: Креатеконтролекс
 
-Создает элемент управления ActiveX, инициализирует его и размещает его в указанном окне, аналогичную [IAxWinHostWindow::CreateControl](#createcontrol).
+Создает элемент управления ActiveX, инициализирует его и размещает его в указанном окне аналогично [иаксвинхоствиндов:: CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -826,23 +826,23 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="parameters"></a>Параметры
 
-*lpTricsData*<br/>
-[in] Строка, определяющая элемент управления для создания. Может быть (необходимо использовать фигурные скобки) CLSID, ProgID, URL-адрес или необработанное HTML (с префиксом **MSHTML:**).
+*лптриксдата*<br/>
+окне Строка, идентифицирующая создаваемый элемент управления. Может быть идентификатором CLSID (должен содержать фигурные скобки), ProgID, URL-адрес или необработанный HTML (с префиксом **MSHTML:** ).
 
 *hWnd*<br/>
-[in] Дескриптор окна, используемый для размещения.
+окне Маркер окна, который будет использоваться для размещения.
 
-*pStream*<br/>
-[in] Указатель на интерфейс для поток, содержащий данные инициализации для элемента управления. Может иметь значение NULL.
+*пстреам*<br/>
+окне Указатель интерфейса для потока, содержащего данные инициализации для элемента управления. Может иметь значение NULL.
 
-*ppUnk*<br/>
-[out] Адрес указателя, который будет получать `IUnknown` интерфейса созданный элемент управления. Может иметь значение NULL.
+*ппунк*<br/>
+заполняет Адрес указателя, который получит `IUnknown` интерфейс созданного элемента управления. Может иметь значение NULL.
 
-*riidAdvise*<br/>
-[in] Идентификатор исходящего интерфейса на содержащийся объект. Может быть IID_NULL.
+*риидадвисе*<br/>
+окне Идентификатор интерфейса для исходящего интерфейса в автономном объекте. Может быть IID_NULL.
 
-*punkAdvise*<br/>
-[in] Указатель на `IUnknown` интерфейс приемника объекта должен быть подключен к точкой соединения в автономной объекта, заданного параметром `iidSink`.
+*пункадвисе*<br/>
+окне Указатель на `IUnknown` интерфейс объекта приемника, который должен быть подключен к точке подключения в содержащемся объекте, указанном параметром `iidSink`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -850,13 +850,13 @@ STDMETHOD(CreateControlEx)(
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от `CreateControl` метода `CreateControlEx` также позволяет получать указатель интерфейса на вновь созданный элемент управления и настройка приемник событий для получения события, инициируемые элементом управления.
+В отличие от `CreateControl` метода, `CreateControlEx` также позволяет получить указатель интерфейса на только что созданном элементе управления и настроить приемник событий для получения событий, инициированных элементом управления.
 
-Чтобы создать лицензированный элемент управления ActiveX, см. в разделе [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex).
+Сведения о создании лицензированного элемента управления ActiveX см. в разделе [иаксвинхоствиндовлик:: креатеконтроллицекс](#createcontrollicex).
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+##  <a name="querycontrol"></a>Иаксвинхоствиндов:: Куериконтрол
 
-Возвращает заданный указатель интерфейса, предоставляемые размещенного элемента управления.
+Возвращает указанный указатель интерфейса, предоставленный размещенным элементом управления.
 
 ```
 STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
@@ -865,18 +865,18 @@ STDMETHOD(QueryControl)(REFIID riid, void** ppvObject);
 ### <a name="parameters"></a>Параметры
 
 *riid*<br/>
-[in] Идентификатор интерфейса для запрашиваемого элемента управления.
+окне Идентификатор интерфейса для запрашиваемого элемента управления.
 
-*ppvObject*<br/>
-[out] Адрес указателя, который получит указанный интерфейс созданный элемент управления.
+*ппвобжект*<br/>
+заполняет Адрес указателя, который получит указанный интерфейс созданного элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+##  <a name="setexternaldispatch"></a>Иаксвинхоствиндов:: Сетекстерналдиспатч
 
-Задает внешний disp-интерфейс, который доступен на вложенные элементы управления через [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) метод.
+Задает внешний диспетчерский интерфейс, доступный для вложенных элементов управления с помощью метода [идочостуихандлердиспатч:: External](../../atl/reference/idochostuihandlerdispatch-interface.md) .
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -884,16 +884,16 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisp*<br/>
-[in] Указатель на `IDispatch` интерфейс.
+*пдисп*<br/>
+окне Указатель на `IDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+##  <a name="setexternaluihandler"></a>Иаксвинхоствиндов:: Сетекстерналуихандлер
 
-Вызывайте эту функцию, чтобы задать внешний [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) интерфейс для `CAxWindow` объекта.
+Вызовите эту функцию, чтобы задать внешний интерфейс [идочостуихандлердиспатч](../../atl/reference/idochostuihandlerdispatch-interface.md) для `CAxWindow` объекта.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -901,8 +901,8 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="parameters"></a>Параметры
 
-*pDisp*<br/>
-[in] Указатель на `IDocHostUIHandlerDispatch` интерфейс.
+*пдисп*<br/>
+окне Указатель на `IDocHostUIHandlerDispatch` интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -910,11 +910,11 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция используется элементами управления (например, элемент управления браузера), отправляющие запросы к узлу для `IDocHostUIHandlerDispatch` интерфейс.
+Эта функция используется элементами управления (например, элементом управления веб-браузера), которые запрашивают `IDocHostUIHandlerDispatch` интерфейс узла узла.
 
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+##  <a name="createcontrollic"></a>Иаксвинхоствиндовлик:: Креатеконтроллик
 
-Создает лицензированный элемент управления, инициализирует его и размещает его в окне, идентифицируемый `hWnd`.
+Создает лицензированный элемент управления, инициализирует его и размещает его в окне, определяемом параметром `hWnd`.
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -926,22 +926,22 @@ STDMETHOD(CreateControlLic)(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLic*<br/>
-[in] BSTR, содержащий лицензионный ключ для элемента управления.
+*бстрлик*<br/>
+окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IAxWinHostWindow::CreateControl](#createcontrol) описание оставшихся параметров и возвращаемого значения.
+Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: CreateControl](#createcontrol) .
 
-Вызов этого метода эквивалентен вызову [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)
+Вызов этого метода эквивалентен вызову [иаксвинхоствиндовлик:: креатеконтроллицекс](#createcontrollicex)
 
 ### <a name="example"></a>Пример
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLic`.
+Пример, в котором используется `IAxWinHostWindowLic::CreateControlLic`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+##  <a name="createcontrollicex"></a>Иаксвинхоствиндовлик:: Креатеконтроллицекс
 
-Создает лицензированный элемент управления ActiveX, инициализирует его и размещает его в указанном окне, аналогичную [IAxWinHostWindow::CreateControl](#createcontrol).
+Создает лицензированный элемент управления ActiveX, инициализирует его и размещает его в указанном окне аналогично [иаксвинхоствиндов:: CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -956,17 +956,17 @@ STDMETHOD(CreateControlLicEx)(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLic*<br/>
-[in] BSTR, содержащий лицензионный ключ для элемента управления.
+*бстрлик*<br/>
+окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IAxWinHostWindow::CreateControlEx](#createcontrolex) описание оставшихся параметров и возвращаемого значения.
+Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: креатеконтролекс](#createcontrolex) .
 
 ### <a name="example"></a>Пример
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLicEx`.
+Пример, в котором используется `IAxWinHostWindowLic::CreateControlLicEx`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

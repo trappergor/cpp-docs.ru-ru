@@ -1,11 +1,11 @@
 ---
 title: cos, cosf, cosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cos
 - cosf
 - cosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cos
 - cosf
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335364"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942825"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -62,28 +65,28 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Косинус *x*. Если *x* больше или равно 263 или меньше или равно -263, происходит потеря значимости результата.
+Косинус *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|**_DOMAIN**|
+|± КНАН, С|none|**_DOMAIN**|
 |± INF|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cos** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **cos** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C функция **COS** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок C|Обязательный заголовок C++|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
+|**COS**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-Ознакомьтесь с примером в [sin, sinf, sinl](sin-sinf-sinl.md).
+См. пример в [sin, sinf, sinl](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>См. также
 

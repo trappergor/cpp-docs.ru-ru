@@ -1,11 +1,11 @@
 ---
 title: _Cmulcr, _FCmulcr, _LCmulcr
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcr
 - _FCmulcr
 - _LCmulcr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcr
 - _FCmulcr
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cmulcr function
 - _FCmulcr function
 - _LCmulcr function
-ms.openlocfilehash: ce45b1b1081faba18d8532d3a55d1be877cf84e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbff1c2cb0e66da77b6fdc8127b78fb475aa5080
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340408"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942889"
 ---
-# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
+# <a name="_cmulcr-_fcmulcr-_lcmulcr"></a>_Cmulcr, _FCmulcr, _LCmulcr
 
-Умножает комплексное число, число с плавающей запятой.
+Умножает комплексное число на число с плавающей запятой.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,18 +54,18 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Одно из сложных операнды для умножения.
+Один из сложных операндов для умножения.
 
 *y*<br/>
-Операнд для умножения с плавающей запятой.
+Операнд с плавающей запятой, который необходимо умножить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект **_Dcomplex**, **_Fcomplex**, или **_Lcomplex** структура, представляющая сложных произведение комплексного числа *x* и число flaoting *y*.
+Структура **_Dcomplex**, **_Fcomplex**или **_Lcomplex** , представляющая комплексное произведение комплексного числа *x* и флаотинг-Point Number *y*.
 
 ## <a name="remarks"></a>Примечания
 
-Так, как работают встроенные арифметические операторы в реализацией сложных типов, **_Cmulcr**, **_FCmulcr**, и **_LCmulcr** функции Упростите умножения сложных типов с типами с плавающей запятой.
+Поскольку встроенные арифметические операторы не работают в реализации сложных типов в Майкрософт, функции **_Cmulcr**, **_FCmulcr**и **_LCmulcr** упрощают умножение сложных типов на типы с плавающей запятой.
 
 ## <a name="requirements"></a>Требования
 
@@ -70,7 +73,7 @@ _Lcomplex _LCmulcr( _Lcomplex x, long double y );
 |-------------|--------------|------------------|
 |**_Cmulcr**, **_FCmulcr**, **_LCmulcr**|\<complex.h>|\<complex.h>|
 
-Эти функции зависят от Microsoft. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** характерные для Майкрософт эквивалентов в Нереализованная собственные типы C99 **double _Complex** , **float _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции относятся только к Microsoft. Типы **_Dcomplex**, **_Fcomplex**и **_Lcomplex** являются эквивалентами, специфичными для Microsoft, для нереализованных C99 машинных типов **Double _Complex**, **float _Complex**и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

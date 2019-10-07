@@ -1,10 +1,10 @@
 ---
 title: _tempnam_dbg, _wtempnam_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtempnam_dbg
 - _tempnam_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wtempnam_dbg
 - tempnam_dbg
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-ms.openlocfilehash: 804c8ad1f17c6ee1df563cafc69ee7aef494d1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73642730995ac5c0b47519fac64b30400d47767c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946251"
 ---
-# <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
+# <a name="_tempnam_dbg-_wtempnam_dbg"></a>_tempnam_dbg, _wtempnam_dbg
 
-Версии функции [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) , которые используют отладочную версию **malloc**, **_malloc_dbg**.
+Версии функций [_tempnam, _wtempnam, tmpnam, _wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) , которые используют отладочную версию **malloc**, **_malloc_dbg**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -62,33 +65,33 @@ wchar_t *_wtempnam_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*dir*<br/>
+*команды*<br/>
 Путь, используемый в имени файла, если переменная среды TMP отсутствует или TMP не является допустимым каталогом.
 
-*префикс*<br/>
-Строка, будет добавляться к именам, возвращенный **_tempnam**.
+*prefix*<br/>
+Строка, которая будет предваряться именами, возвращаемыми функцией **_tempnam**.
 
 *blockType*<br/>
 Запрошенный тип блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
+Указатель на имя исходного файла, который запросил операцию выделения, или **значение NULL**.
 
 *linenumber*<br/>
-Номер строки в исходный файл, где была запрошена операция выделения или **NULL**.
+Номер строки в исходном файле, где была запрошена операция выделения, или **значение NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает указатель на имя создаваемого или **NULL** в случае сбоя. Сбой может возникать, если указано недопустимое имя каталога в переменной среды TMP и в *dir* параметра.
+Каждая функция возвращает указатель на созданное имя или **значение NULL** в случае сбоя. Сбой может произойти, если в переменной среды TMP и в параметре *dir* указано недопустимое имя каталога.
 
 > [!NOTE]
-> **бесплатный** (или **free_dbg**) должны быть вызваны для указателей, выделенных функциями **_tempnam_dbg** и **_wtempnam_dbg**.
+> **бесплатный** (или **free_dbg**) необходимо вызывать для указателей, выделенных **_tempnam_dbg** и **_wtempnam_dbg**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Tempnam_dbg** и **_wtempnam_dbg** функции аналогичны **_tempnam** и **_wtempnam** за исключением того, что, когда **_DEBUG** будет определен, эти функции используют отладочную версию **malloc** и **_malloc_dbg**для выделения памяти в том случае, если **NULL** — передан в качестве первого параметра. Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
+Функции **_tempnam_dbg** и **_wtempnam_dbg** идентичны **_tempnam** и **_wtempnam** , за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию функций **malloc** и **_malloc_dbg**, для выделить память, если **значение NULL** передается как первый параметр. Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы функций **_tempnam** и **_wtempnam** сопоставляются **_tempnam_dbg** и **_ wtempnam_dbg**, соответственно, с помощью *blockType* присвоено **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если вы не хотите пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Если определен **_CRTDBG_MAP_ALLOC** , вызовы методов **_tempnam** и **_wtempnam** пересопоставляются с **_tempnam_dbg** и **_wtempnam_dbg**соответственно, а *блокктипе* устанавливается в **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

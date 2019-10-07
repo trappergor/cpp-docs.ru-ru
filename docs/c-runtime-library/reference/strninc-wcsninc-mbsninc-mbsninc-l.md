@@ -1,12 +1,12 @@
 ---
 title: _strninc, _wcsninc, _mbsninc, _mbsninc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strninc
 - wcsninc
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209726"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947072"
 ---
-# <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
+# <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Увеличивает строковый указатель по **n** символов.
+Перемещает указатель строки на **n** символов.
 
 > [!IMPORTANT]
-> **_mbsninc** и **_mbsninc_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsninc** и **_mbsninc_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -91,11 +94,11 @@ unsigned char *_mbsninc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм возвращает указатель на *str* после *str* был увеличен на *число* символов или **NULL** если предоставленный указатель находится **NULL**. Если *число* больше или равно числу символов в *str*, результат не определен.
+Каждая из этих подпрограмм возвращает указатель на *str* после увеличения значения параметра *str* символами *Count* или **null** , если предоставленный указатель имеет **значение NULL**. Если параметр *Count* больше или равен числу символов в *str*, результат не определен.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsninc** работать с шагом *str* по *число* многобайтовых символов. **_mbsninc** распознает последовательности многобайтовых символов в соответствии с [многобайтовую кодовую страницу](../../c-runtime-library/code-pages.md) в настоящий момент.
+Функция **_mbsninc** увеличивает значение *str* на *Count* многобайтовых символов. **_mbsninc** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) .
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -103,9 +106,9 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc** и **_wcsninc** -однобайтовыми строки и версий строки расширенных символов **_mbsninc**. **_wcsninc** и **_strninc** предоставляются только для этого сопоставления и не должны использоваться в противном случае. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+**_strninc** и **_wcsninc** — строка однобайтовых символов и версии **_mbsninc**для расширенных символов. **_wcsninc** и **_strninc** предоставляются только для этого сопоставления и не должны использоваться в других случаях. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsninc_l** идентична за исключением того, что она использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_mbsninc_l** является идентичным за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

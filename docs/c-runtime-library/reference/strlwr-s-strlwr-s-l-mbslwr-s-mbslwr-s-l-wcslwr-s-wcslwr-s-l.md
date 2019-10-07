@@ -1,14 +1,14 @@
 ---
 title: _strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strlwr_s_l
 - _mbslwr_s_l
 - _mbslwr_s
 - _wcslwr_s
 - _strlwr_s
 - _wcslwr_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strlwr_s_l
 - _strlwr_s
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70009f1d7d0230b37c6a59da20996842f976d02f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210057"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947591"
 ---
-# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
+# <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l
 
 Преобразует буквы в строке в строчные с использованием текущего или переданного языкового стандарта. Эти версии функций [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).
 
 > [!IMPORTANT]
-> **_mbslwr_s** и **_mbslwr_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslwr_s** и **_mbslwr_s_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -148,11 +151,11 @@ errno_t _wcslwr_s_l(
 
 Нуль в случае успеха или ненулевой код ошибки в случае ошибки.
 
-Эти функции проверяют свои параметры. Если *str* не является допустимым заканчивающуюся нулем строку, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функции возвращают **EINVAL** и задайте **errno** для **EINVAL**. Если *numberOfElements* меньше, чем длина строки, функции также возвращают **EINVAL** и задайте **errno** для **EINVAL**.
+Эти функции проверяют свои параметры. Если *str* не является допустимой строкой, завершающейся нулем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функции возвращают **еинвал** и **присвойте** параметру перестройку значение **еинвал**. Если *numberOfElements* меньше длины строки, функции также возвращают **еинвал** и **присвойте параметру «** **еинвал**» значение «назад».
 
 ## <a name="remarks"></a>Примечания
 
-**_Strlwr_s** преобразует функцию, в месте, прописную букву в *str* в нижний регистр. **_mbslwr_s** является версией многобайтовой кодировкой символов **_strlwr_s**. **_wcslwr_s** — это двухбайтовая версия **_strlwr_s**.
+Функция **_strlwr_s** преобразует (на месте) все прописные буквы в *str* в строчные. **_mbslwr_s** — это версия **_strlwr_s**с несколькими байтами. **_wcslwr_s** — это версия **_strlwr_s**для расширенных символов.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

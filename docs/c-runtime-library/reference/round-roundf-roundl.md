@@ -1,11 +1,11 @@
 ---
 title: round, roundf, roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357451"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949108"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -65,21 +68,21 @@ long double roundl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Округления** функции возвращают значение с плавающей запятой, представляющий ближайшее целое число *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
+Функции **Round** возвращают значение с плавающей запятой, представляющее ближайшее целое число к *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|± **КНАН**, **С**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **округления** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **округления** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Round** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C функция **Round** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**Округление**, **roundf**, **roundl**|\<math.h>|
+|**Round**, **раундф**, **Round**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

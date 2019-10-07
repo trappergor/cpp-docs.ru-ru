@@ -1,12 +1,12 @@
 ---
 title: strstr, wcsstr, _mbsstr, _mbsstr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsstr
 - wcsstr
 - _mbsstr_l
 - strstr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrstr
 - _ftcsstr
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c113e02f308b634b6bcb8aea6e46fc14b9abd92
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500822"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946588"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr, wcsstr, _mbsstr, _mbsstr_l
 
@@ -136,7 +139,7 @@ const unsigned char *_mbsstr_l(
 > [!IMPORTANT]
 > Эти функции могут создать угрозу в связи с проблемой переполнения буфера. Проблемы переполнения буфера могут использоваться для атаки на систему, поскольку они могут допустить выполнение произвольного кода, приводящего к несанкционированному повышению прав доступа. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, которая принимает указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на неконстантный. Макрос _CRT_CONST_CORRECT_OVERLOADS определяется, если доступны и **константные** , и неконстантные версии этих функций. Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок, определите символ _CONST_RETURN.
+В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, которая принимает указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. Макрос _CRT_CONST_CORRECT_OVERLOADS определяется, если доступны и **константные** , и**неконстантные** версии этих функций. Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок, определите символ _CONST_RETURN.
 
 На выходное значение влияет настройка LC_CTYPE в категории locale; Дополнительные сведения см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md). Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. версии с суффиксом **_l** идентичны за исключением того, что вместо них используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

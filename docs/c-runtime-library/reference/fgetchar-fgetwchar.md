@@ -1,10 +1,10 @@
 ---
 title: _fgetchar, _fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940862"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar, _fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
 Считывает символ из **stdin**.
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**\_fgetchar** возвращает символ, считанный как **int** или возвращает `EOF` для отображения ошибки или конца файла. **\_fgetwchar** возвращает, как [wint_t](../../c-runtime-library/standard-types.md), расширенный символ, который соответствует прочитанному символу, или `WEOF` для отображения ошибки или конца файла. Для обеих функций используйте **feof** или **ferror** различать ошибку и условием окончания файла.
+fgetchar возвращает символ, считанный как **целое** число `EOF` , или возвращает значение, указывающее на ошибку или конец файла.  **\_** фжетвчар возвращает, как [wint_t](../../c-runtime-library/standard-types.md), широкий символ, соответствующий символу Read или Return `WEOF` , который указывает на ошибку или конец файла.  **\_** Для обеих функций используйте **feof** или **ferror** для различения ошибки и условия конца файла.
 
 ## <a name="remarks"></a>Примечания
 
 Эти функции считывают один символ из **stdin**. Функция затем увеличивает указатель связанного файла (если определен), чтобы он указывал на следующий символ. Если поток находится в конце файла, для него устанавливается индикатор конца файла.
 
-**_fgetchar** эквивалентен `fgetc( stdin )`. Кроме того, это эквивалентно **getchar**, но реализуется только как функция, а не как функция и макрос. **_fgetwchar** — это двухбайтовая версия **_fgetchar**.
+**_fgetchar** эквивалентен `fgetc( stdin )`. Она также эквивалентна функции **GetChars**, но реализована только как функция, а не как функция и макрос. **_fgetwchar** — это версия **_fgetchar**для расширенных символов.
 
 Эти функции не совместимы со стандартом ANSI.
 
@@ -75,7 +78,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консолью —**stdin**, **stdout**, и **stderr**— необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью (**stdin**, **stdout**и **stderr**), необходимо перенаправить, прежде чем функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

@@ -12,7 +12,7 @@
           href: general-mfc-topics.md
         - name: Использование файлов с исходным кодом MFC
           href: using-the-mfc-source-files.md
-        - name: Версии библиотек MFC
+        - name: версии библиотек MFC
           expanded: false
           items:
             - name: Версии библиотек MFC
@@ -1001,7 +1001,7 @@
           items:
             - name: Диалоговые окна
               href: dialog-boxes.md
-            - name: Пример Отображение диалогового окна через команду меню
+            - name: 'Пример: Отображение диалогового окна через команду меню'
               href: example-displaying-a-dialog-box-via-a-menu-command.md
             - name: Список примеров диалоговых окон
               href: dialog-sample-list.md
@@ -1023,7 +1023,7 @@
             - name: Жизненный цикл диалогового окна
               expanded: false
               items:
-                - name: Жизненный цикл диалогового окна
+                - name: Работа с диалоговыми окнами в MFC
                   href: life-cycle-of-a-dialog-box.md
                 - name: Создание и отображение диалоговых окон
                   href: creating-and-displaying-dialog-boxes.md
@@ -2749,7 +2749,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: Структура CDaoRelationInfo
               href: reference/cdaorelationinfo-structure.md
-            - name: Структура CDaoRelationFieldInfo
+            - name: CDaoRelationFieldInfo - структура
               href: reference/cdaorelationfieldinfo-structure.md
             - name: Структура CDaoTableDefInfo
               href: reference/cdaotabledefinfo-structure.md

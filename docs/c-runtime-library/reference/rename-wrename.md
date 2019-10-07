@@ -1,10 +1,10 @@
 ---
 title: rename, _wrename
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rename
 - _wrename
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wrename
 - _trename
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d88c46fc055fb173264b40a56c755c360c7adf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357505"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949307"
 ---
-# <a name="rename-wrename"></a>rename, _wrename
+# <a name="rename-_wrename"></a>rename, _wrename
 
 Переименовывает файл или каталог.
 
@@ -68,7 +71,7 @@ int _wrename(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций при успешном выполнении возвращает 0. При возникновении ошибки функция возвращает ненулевое значение и задает **errno** к одному из следующих значений:
+Каждая из этих функций при успешном выполнении возвращает 0. При возникновении ошибки функция возвращает ненулевое значение **и задает для** нуля одно из следующих значений:
 
 |Значение errno|Условие|
 |-|-|
@@ -82,7 +85,7 @@ int _wrename(
 
 Функция **rename** переименовывает файл или каталог, указанный в *oldname* и присваивает имя, заданное в *newname*. Старое имя должно быть путем к существующему файлу или каталогу. Новое имя не должно быть путем к существующему файлу или каталогу. Можно использовать функцию **rename** для перемещения файла из одного каталога или с одного устройства на другое, указав другой путь в аргументе *newname*. Однако нельзя использовать функцию **rename** для перемещения каталога. Каталоги можно переименовать, но нельзя перемещать.
 
-**_wrename** — это двухбайтовая версия **_rename**; аргументы для **_wrename** представляют собой строки расширенных символов. **_wrename** и **_rename** идентично в противном случае.
+**_wrename** — это версия **_rename**для расширенных символов; аргументы для **_wrename** являются строками расширенных символов. в противном случае **_wrename** и **_rename** ведут себя одинаково.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

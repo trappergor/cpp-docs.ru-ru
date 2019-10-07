@@ -1,11 +1,11 @@
 ---
 title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cmulcc
 - _FCmulcc
 - _LCmulcc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cmulcc
 - _FCmulcc
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc21f8cbd2103993bc2b3e36020c57c8520f04a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335395"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939075"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
+# <a name="_cmulcc-_fcmulcc-_lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
 Умножает два комплексных числа.
 
@@ -51,18 +54,18 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Одно из сложных операнды для умножения.
+Один из сложных операндов для умножения.
 
 *y*<br/>
-Другие сложные операнд для умножения.
+Другой сложный операнд для умножения.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект **_Dcomplex**, **_Fcomplex**, или **_Lcomplex** структуру, которая представляет сложный продукт комплексных чисел *x* и *y*.
+Структура **_Dcomplex**, **_Fcomplex**или **_Lcomplex** , представляющая комплексное произведение комплексных чисел *x* и *y*.
 
 ## <a name="remarks"></a>Примечания
 
-Так, как работают встроенные арифметические операторы в реализацией сложных типов, **_Cmulcc**, **_FCmulcc**, и **_LCmulcc** функции Упростите умножения сложных типов.
+Поскольку встроенные арифметические операторы не работают в реализации сложных типов в Майкрософт, функции **_Cmulcc**, **_FCmulcc**и **_LCmulcc** упрощают умножение сложных типов.
 
 ## <a name="requirements"></a>Требования
 
@@ -70,7 +73,7 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Эти функции зависят от Microsoft. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** характерные для Майкрософт эквивалентов в Нереализованная собственные типы C99 **double _Complex** , **float _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции относятся только к Microsoft. Типы **_Dcomplex**, **_Fcomplex**и **_Lcomplex** являются эквивалентами, специфичными для Microsoft, для нереализованных C99 машинных типов **Double _Complex**, **float _Complex**и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

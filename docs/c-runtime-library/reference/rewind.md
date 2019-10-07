@@ -1,9 +1,9 @@
 ---
 title: rewind
 ms.date: 11/04/2016
-apiname:
+api_name:
 - rewind
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rewind
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357568"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949273"
 ---
 # <a name="rewind"></a>rewind
 
@@ -45,20 +48,20 @@ void rewind(
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="remarks"></a>Примечания
 
-**Rewind** функция перемещает файловый указатель, связанный с *поток* в начало файла. Вызов функции **rewind** аналогичен вызову
+Функция **Rewind** перемещает указатель файла, связанный с *потоком* , в начало файла. Вызов функции **rewind** аналогичен вызову
 
-**(void) fseek (** _поток_**, 0 L, SEEK_SET);**
+**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
 
-Однако в отличие от [fseek](fseek-fseeki64.md), **rewind** удаляет индикаторы ошибок для потока, а также индикатор окончания файла. Кроме того, в отличие от [fseek](fseek-fseeki64.md), **rewind** не возвращает значение, указывающее, был ли успешно перемещен указатель.
+Однако, в отличие от [fseek](fseek-fseeki64.md), **Rewind** очищает индикаторы ошибок для потока, а также индикатор конца файла. Кроме того, в отличие от [fseek](fseek-fseeki64.md), **перемотка назад** не возвращает значение, указывающее, успешно ли был перемещен указатель.
 
-Чтобы очистить буфер клавиатуры, используйте **rewind** с потоком **stdin**, который будет связан с клавиатуры по умолчанию.
+Чтобы очистить буфер клавиатуры, используйте **перемотка назад** с помощью потока **stdin**, связанного с клавиатурой по умолчанию.
 
-Если поток имеет **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает и **errno** присваивается **EINVAL**.
+Если Stream является **пустым** указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает значение, а параметру " **No** " — **еинвал**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

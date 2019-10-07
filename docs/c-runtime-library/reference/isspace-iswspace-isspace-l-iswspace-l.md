@@ -1,12 +1,12 @@
 ---
 title: isspace, iswspace, _isspace_l, _iswspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswspace
 - _istspace
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: bb3d18e5034be50d69531d2686b6c270ba55a1cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157387"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953646"
 ---
-# <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
+# <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
 Определяет, представляет ли целое число символ пробела.
 
@@ -74,17 +77,17 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление символа пробела. **isspace** возвращает ненулевое значение, если *c* является символом пробела (0x09 – 0x0D или 0x20). Результат проверки условия для **isspace** функция зависит от **LC_CTYPE** категории языкового стандарта; см. описание [setlocale, _wsetlocale](setlocale-wsetlocale.md) Дополнительные сведения. Версии этих функций, у которых нет **_l** суффикс используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; версии, которые имеют **_l** суффиксом идентичны, за исключением того, что они используют языковой стандарт, переданный в качестве. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Каждая из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление символа пробела. Функция « **Backspace** » возвращает ненулевое значение, если *c* — символ пробела (0x09-0x0D или 0x20). Результат условия теста для функции « **отбивка** » зависит от параметра « **LC_CTYPE** category» языкового стандарта. Дополнительные сведения см. [в разделе setlocale, _wsetlocale](setlocale-wsetlocale.md) . Версии этих функций, не имеющие суффикса **_l** , используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**iswspace** возвращает ненулевое значение, если *c* представляет собой расширенный символ, соответствующий стандартный символ пробела.
+**исвспаце** возвращает ненулевое значение, если *c* является расширенным символом, который соответствует стандартному символу пробела.
 
-Поведение **isspace** и **_isspace_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
+Поведение **_isspace_l** не **определено, если** *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+|**_** **истспаце**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
 
 ## <a name="requirements"></a>Требования
 

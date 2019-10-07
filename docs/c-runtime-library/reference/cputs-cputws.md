@@ -1,10 +1,10 @@
 ---
 title: _cputs, _cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340245"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942630"
 ---
-# <a name="cputs-cputws"></a>_cputs, _cputws
+# <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Переводит строку в консоль.
 
@@ -62,13 +65,13 @@ int _cputws(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **_cputs** возвращает 0. Если функция завершается с ошибкой, возвращается ненулевое значение.
+В случае успеха **_cputs** возвращает 0. Если функция завершается с ошибкой, возвращается ненулевое значение.
 
 ## <a name="remarks"></a>Примечания
 
-**_Cputs** функция записывает заканчивающуюся нулем строку, которая указывает *str* напрямую на консоль. Сочетание символов возврата каретки и перевода строки (CR-LF) не добавляется к такой строке автоматически.
+Функция **_cputs** записывает завершающуюся символом NULL строку, на которую указывает *str* , непосредственно в консоль. Сочетание символов возврата каретки и перевода строки (CR-LF) не добавляется к такой строке автоматически.
 
-Эта функция проверяет свои параметры. Если *str* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и возвращается значение -1.
+Эта функция проверяет свои параметры. Если *str* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, в** параметре **еинвал** устанавливается значение, а возвращается-1.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

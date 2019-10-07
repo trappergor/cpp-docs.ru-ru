@@ -1,11 +1,11 @@
 ---
 title: asinh, asinhf, asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939643"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh, asinhf, asinhl
 
@@ -58,21 +61,21 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Asinh** функции возвращают обратный гиперболический синус (гиперболический арксинус) *x*. Эта функция допустима для домена чисел с плавающей запятой. Если *x* является несигнальным значением NaN, неопределенным или бесконечным, возвращается то же значение.
+Функции **ASINH** возвращают обратный гиперболический синус (дугу гиперболического синуса) *x*. Эта функция допустима для домена чисел с плавающей запятой. Если *x* является недействительным неопределенным или бесконечностью, то возвращается одно и то же значение.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Ввод|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Нет|Нет|
+|± КНАН, ТО ЖЕ, INF|none|none|
 
 ## <a name="remarks"></a>Примечания
 
-При использовании C++ можно вызывать перегрузки **asinh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **asinh** всегда принимает и возвращает **двойные**.
+C++При использовании можно вызывать перегрузки **ASINH** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **ASINH** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|--------------|------------------|
-|**ASINH**, **asinhf**, **asinhl**|\<math.h>|\<cmath > или \<math.h <|
+|**ASINH**, **асинхф**, **асинхл**|\<math.h>|\<cmath > или \<Math. h <|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

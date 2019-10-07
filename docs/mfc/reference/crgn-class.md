@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741502"
 ---
 # <a name="crgn-class"></a>Класс Кргн
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[Кргн:: Комбинергн](#combinergn)|Задает объект таким образом, что он эквивалентен объединению двух указанных `CRgn` объектов. `CRgn`|
 |[Кргн:: Копиргн](#copyrgn)|Задает объект таким образом, чтобы он был копией указанного `CRgn` объекта. `CRgn`|
 |[Кргн:: Креатиллиптикргн](#createellipticrgn)|Инициализирует `CRgn` объект с помощью эллиптической области.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Инициализирует объект с помощью эллиптической области, определяемой структурой [Rect.](/windows/desktop/api/windef/ns-windef-tagrect) `CRgn`|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Инициализирует объект с помощью эллиптической области, определяемой структурой [Rect.](/windows/win32/api/windef/ns-windef-rect) `CRgn`|
 |[Кргн:: Креатефромдата](#createfromdata)|Создает регион из заданной области и данных преобразования.|
 |[Кргн:: Креатефромпас](#createfrompath)|Создает регион из пути, выбранного в заданном контексте устройства.|
 |[Кргн:: Креатеполигонргн](#createpolygonrgn)|Инициализирует `CRgn` объект с многоугольной областью. При необходимости система закрывает многоугольник автоматически, рисуя линию из последней вершины в первую.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Инициализирует `CRgn` объект с областью, состоящей из ряда замкнутых многоугольников. Многоугольники могут быть несвязанными, или они могут перекрываться.|
 |[Кргн:: Креатеректргн](#createrectrgn)|Инициализирует `CRgn` объект с прямоугольной областью.|
-|[Кргн:: Креатеректргниндирект](#createrectrgnindirect)|Инициализирует объект с прямоугольной областью, определенной структурой [Rect.](/windows/desktop/api/windef/ns-windef-tagrect) `CRgn`|
+|[Кргн:: Креатеректргниндирект](#createrectrgnindirect)|Инициализирует `CRgn` объект с прямоугольной областью, определенной параметром [RECT](/windows/win32/api/windef/ns-windef-rect)tructure.|
 |[Кргн:: Креатераундректргн](#createroundrectrgn)|Инициализирует `CRgn` объект с прямоугольной областью с закругленными углами.|
 |[Кргн:: Екуалргн](#equalrgn)|Проверяет два `CRgn` объекта, чтобы определить, являются ли они эквивалентными.|
 |[Кргн:: FromHandle](#fromhandle)|Возвращает указатель на `CRgn` объект при наличии маркера для области Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Параметры
 
 *лпксформ*<br/>
-Указывает на структуру данных [XForm](/windows/desktop/api/wingdi/ns-wingdi-tagxform) , определяющую преобразование, которое должно быть выполнено в области. Если этот указатель равен NULL, используется преобразование Identity.
+Указывает на структуру ATA [XForm](/windows/win32/api/wingdi/ns-wingdi-xform), которая определяет преобразование, выполняемое в регионе. Если этот указатель равен NULL, используется преобразование Identity.
 
 *нкаунт*<br/>
 Указывает число байтов, на которое указывает *пргндата*.
 
 *пргндата*<br/>
-Указывает на структуру данных [ргндата](/windows/desktop/api/wingdi/ns-wingdi-rgndata) , содержащую данные о регионе.
+Указывает на структуру данных [ргндата](/windows/win32/api/wingdi/ns-wingdi-rgndata) , содержащую данные о регионе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Параметры
 
 *лпргндата*<br/>
-Указывает на структуру данных [ргндата](/windows/desktop/api/wingdi/ns-wingdi-rgndata) , которая получает информацию. Если этот параметр имеет значение NULL, возвращаемое значение содержит число байтов, необходимых для данных региона.
+Указывает на структуру данных [ргндата](/windows/win32/api/wingdi/ns-wingdi-rgndata) , которая получает информацию. Если этот параметр имеет значение NULL, возвращаемое значение содержит число байтов, необходимых для данных региона.
 
 *нкаунт*<br/>
 Задает размер (в байтах) буфера *лпргндата* .
@@ -746,7 +746,7 @@ operator HRGN() const;
 
 Этот оператор является оператором приведения, который поддерживает прямое использование объекта ХРГН.
 
-Дополнительные сведения об использовании графических объектов см. в разделе [графические объекты](/windows/desktop/gdi/graphic-objects) статьи Windows SDK.
+Дополнительные сведения об использовании графических объектов см. в разделе [графические объекты](/windows/win32/gdi/graphic-objects) статьи Windows SDK.
 
 ##  <a name="ptinregion"></a>Кргн::P Тинрегион
 

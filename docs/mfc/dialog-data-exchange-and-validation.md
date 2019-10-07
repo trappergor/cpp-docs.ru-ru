@@ -15,24 +15,24 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: a52af898c844cce05a138b8bc0e608681d13a491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302102"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685748"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Обмен данными диалоговых окон и их проверка
 
-Обмен данными диалоговых окон (DDX) позволяет быстро и удобно для инициализации элементов управления в диалоговом окне и для сбора данных, вводимых пользователем. Проверка данных диалогового окна (DDV) позволяет быстро и удобно для проверки ввода данных в диалоговом окне. Чтобы воспользоваться преимуществами DDX и DDV к элементам Управления в диалоговые окна, используйте [член мастер добавления переменной-](../ide/add-member-variable-wizard.md) создание элементов данных и назначение их типы данных и указать правила проверки.
+Обмен данными диалога (DDX) — это простой способ инициализации элементов управления в диалоговом окне и сбора входных данных пользователем. Проверка данных диалогового окна (DDV) — это простой способ проверки ввода данных в диалоговом окне. Чтобы воспользоваться преимуществами DDX и DDV в диалоговых окнах, используйте [Мастер добавления переменной члена](../ide/add-member-variable-wizard.md) , чтобы создать элементы данных и задать их типы данных и указать правила проверки.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [Обмен данными диалоговых окон](../mfc/dialog-data-exchange.md)
+- [Обмен данными в диалоговом окне](../mfc/dialog-data-exchange.md)
 
 - [Проверка данных диалогового окна](../mfc/dialog-data-validation.md)
 
 ## <a name="see-also"></a>См. также
 
 [Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
+[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)

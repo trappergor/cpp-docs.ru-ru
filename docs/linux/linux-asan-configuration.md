@@ -2,12 +2,12 @@
 title: Настройка проектов Linux для использования санитайзера адресов
 description: Узнайте, как настроить проект C++ для Linux в Visual Studio для работы с AddressSanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: 2415e8971614de35f046b699ce99c3822faf9372
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
+ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66824173"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71195849"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Настройка проектов Linux для использования санитайзера адресов
 
@@ -32,7 +32,10 @@ ASan — это средство обнаружения ошибок испол
 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Включение ASan для проектов Linux на основе MSBuild
 
-Чтобы включить ASan для проектов Linux на основе MSBuild, щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Свойства**. Затем перейдите в меню **Свойства конфигурации** > **C/C++** > **Санитайзеры**. ASan включается с помощью флагов компоновщика и компилятора. При этом проект должен быть перекомпилирован.
+> [!NOTE]
+> Начиная с версии 16.4 Visual Studio 2019, AddressSanitizer для проектов Linux включается в разделе **Свойства конфигурации** > **C/C++**  > **Enable AddressSanitizer** (Включить AddressSanitizer).
+
+Чтобы включить ASan для проектов Linux на основе MSBuild, щелкните правой кнопкой мыши проект в **обозревателе решений** и выберите **Свойства**. Затем перейдите в меню **Свойства конфигурации** > **C/C++**  > **Санитайзеры**. ASan включается с помощью флагов компоновщика и компилятора. При этом проект должен быть перекомпилирован.
 
 ![Включение ASan для проекта MSBuild](media/msbuild-asan-prop-page.png)
 

@@ -1,10 +1,10 @@
 ---
 title: _getchar_nolock, _getwchar_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getchar_nolock
 - _getwchar_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getwchar_nolock
 - _getwchar_nolock
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: feeda65d06dbcfecb6ea5adc60934abf3d0df415
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331811"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955399"
 ---
-# <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
+# <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock, _getwchar_nolock
 
 Считывает символ из стандартного входного потока.
 
@@ -53,7 +56,7 @@ wint_t _getwchar_nolock( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_getchar_nolock** и **_getwchar_nolock** идентичны **getchar** и **getwchar** за исключением того, что они не защищены от помех со стороны других потоки. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+**_getchar_nolock** и **_getwchar_nolock** идентичны для функций **GetChars** и **getwchar** , за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -68,7 +71,7 @@ wint_t _getwchar_nolock( void );
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консоли, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

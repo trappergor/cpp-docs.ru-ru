@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356528"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948422"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-Включить или отключить поддержку **%n** формат в [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-функциями семейства.
+Включение или отключение поддержки формата **% n** в функциях [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-Family.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,16 +48,16 @@ int _set_printf_count_output(
 
 ### <a name="parameters"></a>Параметры
 
-*Включить*<br/>
-Ненулевое значение, чтобы включить **%n** поддерживает, 0, чтобы отключить **%n** поддержки.
+*параметр*<br/>
+Ненулевое значение для включения поддержки **% n** , 0 для отключения поддержки **% n** .
 
 ## <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Состояние **%n** поддержки перед вызовом этой функции: ненулевое значение, если **%n** была включена поддержка, 0, если оно было отключено.
+Состояние **% n** поддержки перед вызовом этой функции: ненулевое значение, если включена поддержка **% n** , и 0, если она была отключена.
 
 ## <a name="remarks"></a>Примечания
 
-В целях безопасности поддержка **%n** описатель формата отключен по умолчанию в **printf** и всех ее вариантах. Если **%n** встречается в **printf** является вызывают обработчик недопустимого параметра, как описано в спецификации формата, поведение по умолчанию [проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов **_set_printf_count_output** с ненулевым аргументом приведет к **printf**-функциями семейства для интерпретации **%n** как описано в разделе [формат Синтаксис описания: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+По соображениям безопасности поддержка описателя формата **% n** по умолчанию отключена в **printf** и всех ее вариантах. Если в спецификации формата **printf** обнаружено **% n** , поведение по умолчанию заключается в вызове обработчика недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Вызов **_set_printf_count_output** с ненулевым аргументом приводит к тому, что функция **printf**-Family интерпретирует **% n** , как описано в разделе [синтаксис спецификации формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
 ## <a name="requirements"></a>Требования
 

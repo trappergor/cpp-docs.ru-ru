@@ -3,12 +3,12 @@ title: Параметры компилятора в алфавитном пор�
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273634"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685324"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -99,7 +99,7 @@ ms.locfileid: "70273634"
 |[/Od](od-disable-debug.md)|Отключает оптимизацию.|
 |[/Og](og-global-optimizations.md)|Не рекомендуется. Использует глобальную оптимизацию.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Создает встроенные функции.|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|[`#pragma omp`](../../preprocessor/omp.md) Включает директиву в исходном коде.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Включает директиву [`#pragma omp`](../../preprocessor/omp.md) в исходном коде.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет уменьшению размера кода.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет быстрому коду.|
 |[/Ox](ox-full-optimization.md)|Подмножество/O2, не включающее/GF или/Ги.|
@@ -157,6 +157,7 @@ ms.locfileid: "70273634"
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
 |[/Zf](zf.md)|Улучшает время создания PDB в параллельных сборках.|
 |[/Zg](zg-generate-function-prototypes.md)|Удалено в Visual Studio 2015. Создает прототипы функций.|
+|[/ZH](zh.md)|Указывает MD5, SHA-1 или SHA-256 для контрольных сумм в отладочной информации.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Включает отладочную информацию в базу данных программы, совместимую с функцией "Изменить и продолжить".|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Создает полную отладочную информацию.|
 |[/Zl](zl-omit-default-library-name.md)|Удаляет имя библиотеки по умолчанию из файла OBJ (только архитектура x86).|

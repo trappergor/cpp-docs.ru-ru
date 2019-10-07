@@ -20,7 +20,7 @@ ms.locfileid: "68450340"
 > [!NOTE]
 > Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
-Выполняет переключение.`(right)` [](../standard-library/container-class-swap.md) `left.`
+Выполняет `left.`[переключение](../standard-library/container-class-swap.md)`(right)`.
 
 ## <a name="syntax"></a>Синтаксис
 

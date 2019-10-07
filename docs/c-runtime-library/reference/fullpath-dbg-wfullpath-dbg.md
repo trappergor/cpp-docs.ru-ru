@@ -1,10 +1,10 @@
 ---
 title: _fullpath_dbg, _wfullpath_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wfullpath_dbg
 - _fullpath_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wfullpath_dbg
 - _wfullpath_dbg
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9271e26bcf4a78ff8d2e4fcf108f1e483c22c1d7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332953"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956315"
 ---
-# <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
+# <a name="_fullpath_dbg-_wfullpath_dbg"></a>_fullpath_dbg, _wfullpath_dbg
 
-Версии [_fullpath, _wfullpath](fullpath-wfullpath.md) , которые используют отладочную версию **malloc** для выделения памяти.
+Версии [_fullpath, _wfullpath](fullpath-wfullpath.md) , использующие отладочную версию функции **malloc** для выделения памяти.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -63,33 +66,33 @@ wchar_t *_wfullpath_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*absPath*<br/>
-Указатель на буфер, содержащий абсолютный или полный путь, или **NULL**.
+*абспас*<br/>
+Указатель на буфер, содержащий абсолютный или полный путь, или **значение NULL**.
 
-*relPath*<br/>
+*релпас*<br/>
 Относительный путь.
 
-*MaxLength*<br/>
-Максимальная длина буфера абсолютного пути имя (*absPath*). Длина указывается в байтах для **_fullpath** и в расширенных символах (**wchar_t**) для **_wfullpath**.
+*maxLength*<br/>
+Максимальная длина абсолютного буфера имени пути (*абспас*). Это длина в байтах для **_fullpath** , но в расширенных символах (**wchar_t**) для **_wfullpath**.
 
 *blockType*<br/>
 Запрошенный тип блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
+Указатель на имя исходного файла, который запросил операцию выделения, или **значение NULL**.
 
 *linenumber*<br/>
-Номер строки в файле источника, в которой была запрошена операция выделения или **NULL**.
+Номер строки в исходном файле, в которой была запрошена операция выделения, или **значение NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает указатель на буфер, содержащий абсолютный путь (*absPath*). Если возникает ошибка (например, в том случае, если значение, переданное в *relPath* содержит букву диска, который является недопустимым или не найден, или если длина имени создаваемого абсолютного пути (*absPath*) больше, чем *maxLength*) функция возвращает **NULL**.
+Каждая функция возвращает указатель на буфер, содержащий абсолютный путь (*абспас*). Если возникает ошибка (например, если значение, передаваемое в *релпас* , содержит букву диска, которая не является допустимой или не может быть найдена, или длина созданного абсолютного пути (*абспас*) больше, чем *MaxLength*), функция возвращает  **Значение NULL**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Fullpath_dbg** и **_wfullpath_dbg** функции аналогичны **_fullpath** и **_wfullpath** за исключением того, что, когда **_DEBUG** будет определен, эти функции используют отладочную версию **malloc**, **_malloc_dbg**для выделения памяти в том случае, если **NULL** передается как первый параметр. Сведения о компонентах отладки **_malloc_dbg**, см. в разделе [_malloc_dbg](malloc-dbg.md).
+Функции **_fullpath_dbg** и **_wfullpath_dbg** идентичны **_fullpath** и **_wfullpath** , за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию **malloc**, **_malloc_dbg**, выделение памяти, если **значение NULL** передается как первый параметр. Сведения о функциях отладки **_malloc_dbg**см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить **_CRTDBG_MAP_ALLOC** флаг. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы функций **_fullpath** и **_wfullpath** сопоставляются **_fullpath_dbg** и **_wfullpath_dbg**, соответственно, с помощью *blockType* присвоено **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если вы не хотите пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC** . Если определен **_CRTDBG_MAP_ALLOC** , вызовы методов **_fullpath** и **_wfullpath** пересопоставляются с **_fullpath_dbg** и **_wfullpath_dbg**соответственно, а *блокктипе* устанавливается в **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

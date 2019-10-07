@@ -1,11 +1,11 @@
 ---
 title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atanhl
 - atanhf
 - atanh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atanhl
 - atanhf
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341292"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939587"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -58,22 +61,22 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Atanh** функции возвращают обратный гиперболический тангенс (гиперболический арктангенс) *x*. Если *x* больше 1 или меньше -1, **errno** присваивается **EDOM** и результатом является несигнальное значение NaN. Если *x* будет равно 1 или -1, положительная или отрицательная бесконечность возвращается, соответственно, и **errno** присваивается **ERANGE**.
+Функции **ATANH** возвращают обратный гиперболический тангенс (дугу гиперболического тангенса) *x*. Если значение *x* больше 1 или меньше-1, то параметру " **Едом** " передаются значения "% **", а** результатом является скрытое значение NaN. Если значение *x* равно 1 или-1, то возвращается положительная или отрицательная бесконечность, соответственно, **а параметру** переводится значение **ERANGE**.
 
-|Входные данные|Исключение SEH|**Matherr** исключение|
+|Ввод|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|± QNAN, IND|Нет|Нет|
-|*X* ≥ 1; *x* ≤ -1|Нет|Нет|
+|± КНАН, С|none|none|
+|*X* ≥ 1; *x* ≤ -1|none|none|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **atanh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **atanh** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ATANH** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **ATANH** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**ATANH**, **atanhf**, **atanhl**|\<math.h>|\<cmath> или \<math.h>|
+|**ATANH**, **атанхф**, **атанхл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

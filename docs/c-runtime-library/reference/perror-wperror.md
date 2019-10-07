@@ -1,10 +1,10 @@
 ---
 title: perror, _wperror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wperror
 - perror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wperror
 - _tperror
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156111"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951034"
 ---
-# <a name="perror-wperror"></a>perror, _wperror
+# <a name="perror-_wperror"></a>perror, _wperror
 
 Выводит сообщение об ошибке.
 
@@ -59,7 +62,7 @@ void _wperror(
 
 ## <a name="remarks"></a>Примечания
 
-**Perror** функция выводит сообщение об ошибке для **stderr**. **_wperror** — это двухбайтовая версия **_perror**; *сообщение* аргумент **_wperror** — строка расширенных символов. **_wperror** и **_perror** идентично в противном случае.
+Функция **perror** выводит сообщение об ошибке в **stderr**. **_wperror** — это версия **_perror**для расширенных символов; Аргумент *сообщения* для **_wperror** является строкой расширенных символов. в противном случае **_wperror** и **_perror** ведут себя одинаково.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -67,13 +70,13 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*сообщение* сначала выводится, а затем с помощью символа двоеточия, затем следует системное сообщение об ошибке для последнего вызова библиотеки, который вызвал ошибку и, наконец, символ новой строки. Если *сообщение* является пустым указателем или указателем на строку null **perror** выводит только системное сообщение об ошибке.
+сначала *выводится сообщение* , за которым следует двоеточие, затем — сообщение об ошибке системы для последнего вызова библиотеки, вызвавшего ошибку, и, наконец, символ новой строки. Если *Message* является пустым указателем или указателем на строку null, **perror** выводит только системное сообщение об ошибке.
 
-Номер ошибки хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (определенной в файле ERRNO.H). Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. **perror** печатает сообщение соответствующее сообщение об ошибке с помощью **errno** значение как индекс для **_sys_errlist**. Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определяется как максимальное число элементов в **_sys_errlist** массива.
+Номер ошибки хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (определенной в файле ERRNO.H). Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. **perror** выводит соответствующее сообщение об ошибке **, используя значение** переводятся в качестве индекса для **_sys_errlist**. Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определяется как максимальное число элементов в массиве **_sys_errlist** .
 
-Точные результаты вызова **perror** сразу же после подпрограмма библиотеки возвращает ошибку. В противном случае последующие вызовы могут перезаписать **errno** значение.
+Чтобы получить точные результаты, вызовите **perror** сразу после того, как подпрограммы библиотеки возвращают ошибку. В противном случае последующие вызовы могут перезаписать **значение** перезаписи.
 
-В Windows операционная система, некоторые **errno** значений, перечисленных в ERRNO. H не используются. Эти значения зарезервированы для использования операционной системой UNIX. См. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) список **errno** значения, используемые операционной системой Windows. **perror** выводит пустую строку для любых **errno** значение не используется в этих платформах.
+В операционной системе **Windows некоторые значения** переводятся в список в диапазоне от а. H не используется. Эти значения зарезервированы для использования операционной системой UNIX. **Список значений,** используемых операционной системой Windows, см. в разделе _doserrno, перечисление, [_sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **perror** выводит пустую строку для **любого значения** очистки, которое не используется этими платформами.
 
 ## <a name="requirements"></a>Требования
 

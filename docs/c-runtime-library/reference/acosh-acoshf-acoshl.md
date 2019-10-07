@@ -1,11 +1,11 @@
 ---
 title: acosh, acoshf, acoshl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acoshf
 - acosh
 - acoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acosh
 - acoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341695"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944078"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -61,22 +64,22 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Acosh** функции возвращают обратный гиперболический косинус (гиперболический арккосинус) *x*. Эти функции допустимы в домене *x* ≥ 1. Если *x* меньше 1, `errno` присваивается `EDOM` и результатом является несигнальное значение NaN. Если *x* является несигнальным значением NaN, неопределенным или бесконечным, возвращается то же значение.
+Функции **ACOSH** возвращают обратный гиперболический-косинус (Дуга гиперболического косинуса) *x*. Эти функции действительны для домена *x* ≥ 1. Если значение *x* меньше 1, `errno` то устанавливается в `EDOM` , а результатом является скрытое значение NaN. Если *x* является недействительным неопределенным или бесконечностью, то возвращается одно и то же значение.
 
-|Входные данные|Исключение SEH|Исключение`_matherr` |
+|Ввод|Исключение SEH|Исключение`_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Нет|Нет|
-|*x* < 1|Нет|Нет|
+|± КНАН, ТО ЖЕ, INF|none|none|
+|*x* < 1|none|none|
 
 ## <a name="remarks"></a>Примечания
 
-При использовании C++ можно вызывать перегрузки **acosh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **acosh** всегда принимает и возвращает **двойные**.
+C++При использовании можно вызывать перегрузки **ACOSH** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **ACOSH** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**ACOSH**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**ACOSH**, **acoshf**, **акошл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

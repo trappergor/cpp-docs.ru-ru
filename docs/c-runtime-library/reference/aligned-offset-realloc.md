@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_realloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_realloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - aligned_offset_realloc
 - _aligned_offset_realloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_offset_realloc function
 - _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
-ms.openlocfilehash: d5f87f9bdfff262826b8d4cc4da86069588cf9db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a24aef5c7d96cb8308ecfec424d0d59b48447f7b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341461"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943848"
 ---
-# <a name="alignedoffsetrealloc"></a>_aligned_offset_realloc
+# <a name="_aligned_offset_realloc"></a>_aligned_offset_realloc
 
 Изменяет размер блока памяти, который был выделен с помощью функции [_aligned_malloc](aligned-malloc.md) или [_aligned_offset_malloc](aligned-offset-malloc.md).
 
@@ -61,17 +64,17 @@ void * _aligned_offset_realloc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_aligned_offset_realloc** возвращает указатель void на блок памяти перераспределенном (и, возможно, перемещенном). Возвращает значение **NULL** Если размер равен нулю и аргумент буфера не **NULL**, или если не хватает доступной памяти для увеличения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.
+**_aligned_offset_realloc** возвращает указатель void на перераспределенный (и, возможно, перемещенный) блок памяти. Возвращаемое значение равно **null** , если размер равен нулю, а аргумент буфера не равен **null**, или если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.
 
-**_aligned_offset_realloc** помечен `__declspec(noalias)` и `__declspec(restrict)`, это означает, что функция гарантированно не изменит глобальные переменные и для возвращаемого указателя не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_offset_realloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
 ## <a name="remarks"></a>Примечания
 
-Как и [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** позволяет структуры выравниваться со смещением в структуре.
+Как и [_aligned_offset_malloc](aligned-offset-malloc.md), **_aligned_offset_realloc** позволяет выстроить структуру по смещению в пределах структуры.
 
-**_aligned_offset_realloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**, см. в разделе [malloc](malloc.md). Если *memblock* — **NULL**, эта функция вызывает **_aligned_offset_malloc** внутренним образом.
+**_aligned_offset_realloc** основан на **malloc**. Дополнительные сведения об использовании **_aligned_offset_malloc**см. в разделе [malloc](malloc.md). Если *мемблокк* имеет **значение NULL**, функция вызывает **_aligned_offset_malloc** внутренним образом.
 
-Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти, или если запрошенный размер был больше, чем **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_realloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Эта **функция устанавливает** **еномем** в случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_offset_realloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно *размеру* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
 
 ## <a name="requirements"></a>Требования
 

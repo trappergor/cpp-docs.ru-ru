@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_dbg, _wgetdcwd_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdcwd_dbg
 - _wgetdcwd_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdcwd_dbg
 - getdcwd_dbg
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb22f3716102c1b63b483e493eb44ac99228004
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331861"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955233"
 ---
-# <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
+# <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 
 Отладочные версии функций [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md) (доступны только во время отладки).
 
@@ -64,33 +67,33 @@ wchar_t *_wgetdcwd_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*Диск*<br/>
+*диск*<br/>
 Имя диска.
 
 *buffer*<br/>
 Место хранения пути.
 
-*MaxLen*<br/>
+*maxlen*<br/>
 Максимальная длина пути в символах: **char** для **_getdcwd_dbg** и **wchar_t** для **_wgetdcwd_dbg**.
 
 *blockType*<br/>
 Запрошенный тип блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
+Указатель на имя исходного файла, который запросил операцию выделения, или **значение NULL**.
 
 *linenumber*<br/>
-Номер строки в файле источника, в которой была запрошена операция выделения или **NULL**.
+Номер строки в исходном файле, в которой была запрошена операция выделения, или **значение NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на *буфера*. Объект **NULL** возвращаемое значение указывает на ошибку, и **errno** устанавливается в значение **ENOMEM**, том, что не хватает памяти для выделения *maxlen* байт (при **NULL** передан аргумент *буфера*), или к **ERANGE**, том, что путь не длиннее *maxlen*  символов. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Возвращает указатель на *буфер*. Возвращаемое значение **null** указывает на ошибку **, а для** свойства «вывод» установлено значение **еномем**, указывающее, что недостаточно памяти для выделения *maxlen* байт (если аргумент **null** задан как *buffer*) или **ERANGE** , указывающее, что длина пути превышает *maxlen* символов. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Getdcwd_dbg** и **_wgetdcwd_dbg** функции аналогичны **_getdcwd** и **_wgetdcwd** за исключением того, что, когда **_DEBUG** будет определен, эти функции используют отладочную версию **malloc** и **_malloc_dbg** для выделения памяти в том случае, если **NULL** передается как *буфера* параметра. Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
+Функции **_getdcwd_dbg** и **_wgetdcwd_dbg** идентичны **_getdcwd** и **_wgetdcwd** , за исключением того, что при определении **_DEBUG** эти функции используют отладочную версию функций **malloc** и **_malloc_dbg** для выделить память, если в качестве параметра *буфера* передается **значение NULL** . Дополнительные сведения см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить **_CRTDBG_MAP_ALLOC** флаг. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы функций **_getdcwd** и **_wgetdcwd** сопоставляются **_getdcwd_dbg** и **_ wgetdcwd_dbg**, соответственно, с помощью *blockType* присвоено **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если вы не хотите пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC** . Если определен **_CRTDBG_MAP_ALLOC** , вызовы методов **_getdcwd** и **_wgetdcwd** пересопоставляются с **_getdcwd_dbg** и **_wgetdcwd_dbg**соответственно, а *блокктипе* устанавливается в **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если не нужно помечать блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

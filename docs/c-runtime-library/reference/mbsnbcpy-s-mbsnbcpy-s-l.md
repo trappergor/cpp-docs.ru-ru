@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d00307f079ac72db93654f789c970b7f6a6e7dbe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331497"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952197"
 ---
-# <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
+# <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
 Копирует **n** байт строки в строку назначения. Это версии функций [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -79,13 +82,13 @@ errno_t _mbsnbcpy_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*strDest*<br/>
+*стрдест*<br/>
 Место назначение для копирования строки символов.
 
-*sizeInBytes*<br/>
+*сизеинбитес*<br/>
 Размер буфера назначения.
 
-*strSource*<br/>
+*стрсаурце*<br/>
 Копируемая строка символов.
 
 *count*<br/>
@@ -96,16 +99,16 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Нуль в случае успеха; **EINVAL** Если был передан недопустимый параметр.
+Нуль в случае успеха; **Еинвал** , если был передан неверный параметр.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsnbcpy_s** функции копий *число* байтов из *strSource* для *strDest*. Если *число* превышает размер *strDest*, либо из входных строк является указателем null или *sizeInBytes* или *число* равно 0, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **EINVAL**. Если строки источника и назначения перекрываются, поведение **_mbsnbcpy_s** не определено.
+Функция **_mbsnbcpy_s** копирует *число* байтов из *стрсаурце* в *стрдест*. Если параметр *Count* превышает размер *стрдест*, то любая из входных строк является пустым указателем, или *сизеинбитес* или *Count* имеет значение 0, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **еинвал**. Если исходная и Целевая строки перекрываются, поведение **_mbsnbcpy_s** не определено.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> В отличие от от небезопасной версии этой функции **_mbsnbcpy_s** не выполняет заполнение значениями null и значение null, всегда завершает строку.
+> В отличие от незащищенной версии этой функции, **_mbsnbcpy_s** не выполняет никаких внутренних дополнений NULL и всегда завершает строку.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 

@@ -1,9 +1,9 @@
 ---
 title: tmpfile_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpfile_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpfile_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155580"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946060"
 ---
-# <a name="tmpfiles"></a>tmpfile_s
+# <a name="tmpfile_s"></a>tmpfile_s
 
 Создает временный файл. Это версия функции [tmpfile](tmpfile.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -44,7 +47,7 @@ errno_t tmpfile_s(
 
 ### <a name="parameters"></a>Параметры
 
-*pFilePtr*<br/>
+*пфилептр*<br/>
 Адрес указателя для хранения адреса созданного указателя на поток.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -53,19 +56,19 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*pFilePtr*|**Возвращаемое значение**|**Содержание***pFilePtr*|
+|*пфилептр*|**Возвращаемое значение**|**Содержимое** *пфилептр*|
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|не изменено|
 
-Если возникает ошибка проверки приведенного выше параметра, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и возвращается значение **EINVAL**.
+Если возникает ошибка проверки приведенного выше параметра, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** устанавливается значение, а для возвращаемого значения — **еинвал**.
 
 ## <a name="remarks"></a>Примечания
 
-**Tmpfile_s** функция создает временный файл и помещает указатель на этот поток в *pFilePtr* аргумент. Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tmpnam-s-wtmpnam-s.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
+Функция **tmpfile_s** создает временный файл и помещает указатель на этот поток в аргументе *пфилептр* . Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tmpnam-s-wtmpnam-s.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
 
-Если не удается открыть файл, **tmpfile_s** записывает **NULL** для *pFilePtr* параметра. Этот временный файл удаляется автоматически при закрытии файла, при завершении программы в обычном режиме или когда **_rmtmp** вызывается, предполагая, что текущий рабочий каталог не изменяется. Временный файл открыт в **w + b** режиме (двоичные чтение и запись).
+Если файл не удается открыть, **tmpfile_s** записывает **значение NULL** в параметр *пфилептр* . Этот временный файл автоматически удаляется при закрытии файла, при завершении программы в обычном режиме или при вызове **_rmtmp** , предполагая, что текущий рабочий каталог не изменяется. Временный файл открывается в режиме **w + b** (двоичный для чтения и записи).
 
-Сбой может возникать при попытке более **TMP_MAX_S** (см. в разделе STDIO. H) вызовов с **tmpfile_s**.
+Сбой может произойти при попытке более **TMP_MAX_S** (см. stdio). H) вызывает метод с **tmpfile_s**.
 
 ## <a name="requirements"></a>Требования
 
@@ -78,7 +81,7 @@ errno_t tmpfile_s(
 ## <a name="example"></a>Пример
 
 > [!NOTE]
-> В этом примере может потребовать прав администратора, под управлением Windows.
+> В этом примере для запуска в Windows могут потребоваться права администратора.
 
 ```C
 // crt_tmpfile_s.c

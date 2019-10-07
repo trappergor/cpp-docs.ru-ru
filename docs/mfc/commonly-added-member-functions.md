@@ -6,19 +6,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], control-notification messages
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
-ms.openlocfilehash: 080f5f162d1e0542e392c39995e1c5e5ae303298
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 985048643192e218dd4f4df7766e1036aee5422b
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388544"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685599"
 ---
 # <a name="commonly-added-member-functions"></a>Часто добавляемые функции-члены
 
-Если диалоговое окно содержит кнопок, отличный от ОК "или" Отмена ", необходимо написать обработчик сообщений функции-члены в класс диалогового окна реагировать на сообщения уведомление элемента управления, которые они создают. Например, см. в разделе [Scribble](../overview/visual-cpp-samples.md) пример программы. Можно также обработать уведомление элемента управления сообщения от других элементов управления диалогового окна.
+Если в диалоговом окне содержатся кнопки, отличные от ОК или Отмена, необходимо написать функции-члены обработчика сообщений в классе диалогового окна, чтобы реагировать на создаваемые ими сообщения об элементах управления. Пример см. в примере программы [Scribble](../overview/visual-cpp-samples.md) . Кроме того, в диалоговом окне можно выполнять обработку сообщений об управлении уведомлениями из других элементов управления.
 
 ## <a name="see-also"></a>См. также
 
 [Диалоговые окна](../mfc/dialog-boxes.md)<br/>
-[Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Часто переопределяемые функции-члены](../mfc/commonly-overridden-member-functions.md)

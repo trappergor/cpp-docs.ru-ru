@@ -1,10 +1,10 @@
 ---
 title: remove, _wremove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wremove
 - remove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357700"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949434"
 ---
-# <a name="remove-wremove"></a>remove, _wremove
+# <a name="remove-_wremove"></a>remove, _wremove
 
 Удаление файла.
 
@@ -59,13 +62,13 @@ int _wremove(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается значение -1 и задает **errno** либо **EACCES** для указания, что путь задает файл только для чтения, указывает каталог или файл открыт, или к **ENOENT** Чтобы указать, что имя файла или путь не найден.
+Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается-1 и **устанавливается значение** **еакцес** , чтобы указать, что путь указывает на файл только для чтения, указывает каталог, Открытый файл или **еноент** , чтобы указать, что имя файла или путь не найдены.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Функция **remove** удаляет файл, указанный в параметре *path.* **_wremove** — это двухбайтовая версия **_Удалить**; *путь* аргумент **_wremove** — строка расширенных символов. **_wremove** и **_Удалить** идентично в противном случае. Чтобы можно было удалить файл, все дескрипторы файлов должны быть закрыты.
+Функция **remove** удаляет файл, указанный в параметре *path.* **_wremove** — это версия **_удалить**для расширенных символов; Аргумент *path* для **_wremove** является строкой расширенных символов. поведение **_wremove** и **_удалить** идентично в противном случае. Чтобы можно было удалить файл, все дескрипторы файлов должны быть закрыты.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -103,7 +106,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>Входные данные: crt_remove.txt
+### <a name="input-crt_removetxt"></a>Входные данные: crt_remove.txt
 
 ```Input
 This file will be deleted.

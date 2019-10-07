@@ -1,9 +1,9 @@
 ---
-title: frexp, frexpf, frexpl
+title: frexp, фрекспф, фрекспл
 ms.date: 04/05/2018
-apiname:
+api_name:
 - frexp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - frexp
 - _frexpl
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332979"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956640"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
+# <a name="frexp-frexpf-frexpl"></a>frexp, фрекспф, фрекспл
 
 Возвращает мантиссу и степень числа с плавающей запятой.
 
@@ -68,24 +71,24 @@ long double frexp(
 *x*<br/>
 Значение с плавающей запятой.
 
-*expptr*<br/>
+*експптр*<br/>
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**frexp** возвращает мантиссы. Если *x* равно 0, функция возвращает значение 0 для мантиссы и экспоненты. Если *expptr* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает значение 0.
+**frexp** возвращает мантисса. Если *x* равно 0, функция возвращает 0 для мантиссаа и экспоненты. Если *експптр* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **еинвал** и возвращает 0.
 
 ## <a name="remarks"></a>Примечания
 
-**Frexp** функция разбивает значение с плавающей запятой (*x*) на мантиссу (*m*) и показатель степени (*n*), при котором абсолютное значение *m* больше или равно 0,5 и меньше 1,0, и *x* = *m* * 2<sup>*n*</sup>. Целый показатель степени *n* хранится в расположении, указанном *expptr*.
+Функция **frexp** разбивает значение с плавающей запятой (*x*) в мантисса (*m*) и экспоненту (*n*) таким, что абсолютное значение *m* больше или равно 0,5 и меньше 1,0, и *x*  =  *m* * 2<sup>*n*</sup>. Целочисленная экспонента *n* хранится в расположении, на которое указывает *експптр*.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C **frexp** всегда принимает **двойные** и **int** указатель и возвращает **двойные**.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **frexp**. В программе на языке C **frexp** всегда принимает указатель типа **Double** и **int** и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**frexp**, **frexpf**, **frexpl**|\<math.h>|
+|**frexp**, **фрекспф**, **фрекспл**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

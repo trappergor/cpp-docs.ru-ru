@@ -1,9 +1,9 @@
 ---
 title: imaxdiv
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxdiv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxdiv
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157335"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954636"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -43,19 +46,19 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Параметры
 
-*Число добавлений*<br/>
+*число ключей*<br/>
 Числитель.
 
-*denom*<br/>
+*деном*<br/>
 Знаменатель.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**imaxdiv** вызван с аргументами типа [intmax_t](../../c-runtime-library/standard-types.md) возвращает структуру типа [imaxdiv_t](../../c-runtime-library/standard-types.md) , которая содержит частное и остаток.
+**imaxdiv** , вызванный с аргументами типа [intmax_t](../../c-runtime-library/standard-types.md) , возвращает структуру типа [imaxdiv_t](../../c-runtime-library/standard-types.md) , которая состоит из частного и остатка.
 
 ## <a name="remarks"></a>Примечания
 
-**Imaxdiv** функция делит *числа* по *denom* и тем самым Вычисляет частное и остаток. **Imaxdiv_t** структура содержит частное, **intmax_t** **quot**и остаток, **intmax_t** **rem**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
+Функция **imaxdiv** делит *число ключей* на *Деном* и, таким образом, вычислит частную и оставшуюся стороны. Структура **imaxdiv_t** содержит частное, **intmax_t** **quot**, а также остаток **intmax_t** **REM**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
 
 ## <a name="requirements"></a>Требования
 

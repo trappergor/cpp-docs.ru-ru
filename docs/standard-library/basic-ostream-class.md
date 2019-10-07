@@ -27,7 +27,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457870"
 ---
-# <a name="basicostream-class"></a>Класс basic_ostream
+# <a name="basic_ostream-class"></a>Класс basic_ostream
 
 Этот класс шаблона описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока с элементами типа `Elem`, также известными как [char_type](../standard-library/basic-ios-class.md#char_type), признаки символов которых определяются классом `Tr`, а также называется [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
@@ -270,7 +270,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-Преобразует `_Val` в логическое поле и вставляет его путем вызова [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem, OutIt >** [](../standard-library/ios-base-class.md#getloc)`(`getloc). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Здесь определяется как [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, TR >.** `OutIt` Функция возвращает **\*this**.
+Преобразует `_Val` в логическое поле и вставляет его путем вызова [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem, OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Здесь определяется как [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, TR >.** `OutIt` Функция возвращает **\*this**.
 
 Каждая из функций
 
@@ -537,7 +537,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="remarks"></a>Примечания
 
-Неформатированная [выходная функция](../standard-library/basic-ostream-class.md) вставляет последовательность элементов *Count* , начиная с *str*.
+[Неформатированная выходная функция](../standard-library/basic-ostream-class.md) вставляет последовательность элементов *Count* , начиная с *str*.
 
 ### <a name="example"></a>Пример
 

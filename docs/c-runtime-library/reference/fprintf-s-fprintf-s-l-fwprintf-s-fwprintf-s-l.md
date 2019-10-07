@@ -1,12 +1,12 @@
 ---
 title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fprintf_s_l
 - fwprintf_s
 - fprintf_s
 - _fwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftprintf_s
 - fprintf_s
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f15bee685b058c0c059d676bea48e2bc32d699
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333161"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956973"
 ---
-# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
+# <a name="fprintf_s-_fprintf_s_l-fwprintf_s-_fwprintf_s_l"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
 Печатает форматированные данные в поток. Это версии функций [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -75,14 +78,14 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 *format*<br/>
 Строка управления форматом.
 
 *argument_list*<br/>
-Необязательные аргументы строки формата.
+Необязательные аргументы для строки формата.
 
 *locale*<br/>
 Используемый языковой стандарт.
@@ -93,16 +96,16 @@ int _fwprintf_s_l(
 
 ## <a name="remarks"></a>Примечания
 
-**fprintf_s** форматирует и печатает набор символов и значений в выходной поток *поток*. Каждый аргумент в *argument_list* (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в *формат*. *Формат* использует аргумент [синтаксис описания для функции printf и wprintf формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+**fprintf_s** форматирует и выводит последовательность символов и значений в *поток*вывода. Каждый аргумент в *argument_list* (при его наличии) преобразуется и выводится в соответствии с соответствующей спецификацией формата в *формате*. Аргумент *Format* использует [синтаксис спецификации формата для функций printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-**fwprintf_s** — это двухбайтовая версия **fprintf_s**, в списке **fwprintf_s**, *формат* — строка расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fprintf_s** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
+**fwprintf_s** — это версия **fprintf_s**для расширенных символов; в **fwprintf_s** *Format* является строкой расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fprintf_s** в настоящее время не поддерживает вывод в поток Юникода.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-Как и небезопасные версии (см. в разделе [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), если параметр *поток* или *формат* является пустым указателем. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Как и небезопасные версии (см. [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md), если один из *потоков* или  *Format* является пустым указателем. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение-1 и **задают значение** **еинвал**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

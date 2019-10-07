@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157478"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954556"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 Определяет, связан ли дескриптор файла с устройством символьного ввода-вывода.
 
@@ -48,13 +51,13 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_isatty** возвращает ненулевое значение, если дескриптор связан с устройством символьного ввода. В противном случае **_isatty** возвращает 0.
+**_isatty** возвращает ненулевое значение, если дескриптор связан с символьным устройством. В противном случае **_isatty** возвращает 0.
 
 ## <a name="remarks"></a>Примечания
 
-**_Isatty** функция определяет, является ли *fd* связан с устройством символьного ввода (терминал, консоль, принтер или последовательный порт).
+Функция **_isatty** определяет, связана ли *демон* установки с символьным устройством (терминалом, консолью, принтером или последовательным портом).
 
-Эта функция проверяет *fd* параметра. Если *fd* является недопустимым указателем файла, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 и устанавливает **errno** для **значение EBADF**.
+Эта функция проверяет параметр *демона* . Если « *демон* » является неверным указателем на файл, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 **и устанавливает для** **значение EBADF**значение.
 
 ## <a name="requirements"></a>Требования
 

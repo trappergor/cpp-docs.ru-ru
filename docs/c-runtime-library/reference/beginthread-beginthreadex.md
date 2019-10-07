@@ -1,10 +1,10 @@
 ---
 title: _beginthread, _beginthreadex
 ms.date: 02/27/2018
-apiname:
+api_name:
 - _beginthread
 - _beginthreadex
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - beginthread
 - _beginthread
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: 27bc850281f7591b4fa23a03e9adc3bc02bda87b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8714e945464dd98483f9347c4226321a96cda61c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500308"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943629"
 ---
 # <a name="_beginthread-_beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -93,9 +96,9 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха каждая из этих функций возвращает маркер вновь созданного потока. Однако если вновь созданный поток завершается слишком быстро, **_beginthread** может не возвращать допустимый маркер. (См. обсуждение в разделе "Заметки".) При возникновении ошибки **_beginthread** возвращает значение-1L, а для свойства "переводится" на " **еагаин** ", если слишком много потоков, в **еинвал** , если аргумент является недопустимым или размер стека неверен, или на **еакцес** , если недостаточно ресурсов ( например память). При возникновении ошибки **_beginthreadex** возвращает 0, а задаются значения "t0" и " **_doserrno** ".
+В случае успеха каждая из этих функций возвращает маркер вновь созданного потока. Однако если вновь созданный поток завершается слишком быстро, **_beginthread** может не возвращать допустимый маркер. (См. обсуждение в разделе "Заметки".) При возникновении ошибки **_beginthread** возвращает значение-1L, **а для** свойства "переводится" на " **еагаин** ", если слишком много потоков, в **еинвал** , если аргумент является недопустимым или размер стека неверен, или на **еакцес** , если недостаточно ресурсов ( например память). При возникновении ошибки **_beginthreadex** возвращает 0, а задаются значения "T0 **" и "** **_doserrno** ".
 
-Если *start_address* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают значение **еинвал** и возвращают-1.
+Если *start_address* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают-1.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

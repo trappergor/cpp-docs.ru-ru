@@ -1,9 +1,9 @@
 ---
 title: toascii, __toascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __toascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __toascii
 - toascii
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09df829511b38b87cb41e32a59bee9f38a9b8f32
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155527"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957464"
 ---
-# <a name="toascii-toascii"></a>toascii, __toascii
+# <a name="toascii-__toascii"></a>toascii, __toascii
 
 Преобразуют символы в 7-разрядный код ASCII методом усечения.
 
@@ -54,13 +57,13 @@ int __toascii(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**__toascii** преобразует значение *c* в 7-битной кодировке ASCII в диапазоне и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
+**__toascii** преобразует значение *c* в 7-разрядный диапазон ASCII и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
 
 ## <a name="remarks"></a>Примечания
 
-**__Toascii** подпрограмма Преобразует заданный символ в символ ASCII путем его усечения до 7 бит низкого порядка. Никакие другие преобразования не применяются.
+Подпрограммы **__toascii** преобразуют заданный символ в символ ASCII, округляя его до 7 битов нижнего порядка. Никакие другие преобразования не применяются.
 
-**__Toascii** подпрограмма определяется как макрос, если определен макрос препроцессора _CTYPE_DISABLE_MACROS. Для обеспечения обратной совместимости **toascii** определяется как макрос только тогда, когда [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0; в противном случае оно будет неопределенным.
+Подпрограммы **__toascii** определяются как макрос, если не определен макрос препроцессора _CTYPE_DISABLE_MACROS. В целях обратной совместимости **toascii** определяется как макрос, только если [ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0. в противном случае он не определен.
 
 ## <a name="requirements"></a>Требования
 
@@ -68,7 +71,7 @@ int __toascii(
 |-------------|---------------------|
 |**toascii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
 
-**Toascii** макрос является расширением POSIX, и **__toascii** является реализацией Майкрософт расширения POSIX. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Макрос **toascii** является расширением POSIX, а **__toascii** — реализацией модуля POSIX для Microsoft. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

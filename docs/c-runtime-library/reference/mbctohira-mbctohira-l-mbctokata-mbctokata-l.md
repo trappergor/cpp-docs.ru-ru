@@ -1,12 +1,12 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctokata
 - mbctohira
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 11b08449a7d27015c4ffe0ce398c471bbd6069f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285617"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952548"
 ---
-# <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
+# <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
 Преобразует символы хирагана в катакана и наоборот.
 
@@ -81,20 +84,20 @@ unsigned int _mbctokata_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае он возвращает символ *c* без изменений.
+Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbctohira** и **_mbctokata** функции проверяют символ *c* и, если это возможно, выполняют одно из следующих преобразований.
+Функции **_mbctohira** и **_mbctokata** проверяют символ *c* и, если это возможно, применяют одно из следующих преобразований.
 
 |Подпрограммы|Преобразования|
 |--------------|--------------|
 |**_mbctohira**, **_mbctohira_l**|Многобайтовые символы катакана в многобайтовые символы хирагана.|
 |**_mbctokata**, **_mbctokata_l**|Многобайтовые символы хирагана в многобайтовые символы катакана.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что без имеют **_l** суффикс используется текущий языковой стандарт для этого зависящего от языкового стандарта поведения, а также те, которые имеют **_l** вместо этого суффикс Используйте переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что не имеют суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта, и те, у которых есть суффикс **_l** , вместо этого используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbctohira** назывался **jtohira** и **_mbctokata** назывался **jtokata**. В новом коде используйте новые имена.
+В более ранних версиях **_mbctohira** назывался **жтохира** и **_mbctokata** назывался **жтоката**. В новом коде используйте новые имена.
 
 ## <a name="requirements"></a>Требования
 

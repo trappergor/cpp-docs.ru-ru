@@ -1,11 +1,11 @@
 ---
 title: nan, nanf, nanl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - nanf
 - nan
 - nanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nan
 - nanl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156270"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951423"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -48,22 +51,22 @@ long double nanl( const char* input );
 
 ### <a name="parameters"></a>Параметры
 
-*Входные данные*<br/>
+*входной*<br/>
 Строковое значение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Nan** функции возвращают несигнальное значение NaN.
+Функции **NaN** возвращают нетихом значение NaN.
 
 ## <a name="remarks"></a>Примечания
 
-**Nan** функции возвращают значение с плавающей запятой, которое соответствует на значение NaN скрытый (несигнальному). *Ввода* значение игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Функции **NaN** возвращают значение с плавающей запятой, соответствующее скрытому типу NaN (без сигнализации). *Входное* значение игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**NaN**, **nanf**, **nanl**|\<math.h>|\<cmath> или \<math.h>|
+|**NaN**, **nanf**, **нанл**|\<math.h>|\<cmath> или \<math.h>|
 
 ## <a name="see-also"></a>См. также
 

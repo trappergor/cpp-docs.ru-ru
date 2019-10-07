@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287945"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957064"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,7 +61,7 @@ int fpclassify(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице приведены возможные значения, возвращаемые **fpclassify**, определенный в \<math.h >.
+**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице показаны возможные значения, возвращаемые функцией **fpclassify**, \<определенной в Math. h >.
 
 |Значение|Описание|
 |-----------|-----------------|
@@ -72,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>Примечания
 
-В языке C **fpclassify** представляет собой макрос, а в C++, **fpclassify** — это функция, перегружаемая с использованием аргументов типа **float**, **двойные**, или **long** **двойные**. В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, обычный **двойные** или **long** **двойные** может становиться бесконечным, denormal или нулевым значением при преобразовании в значение **float**.
+В языке C **fpclassify** является макросом; в C++ **fpclassify** — это функция, перегруженная с помощью типов аргументов **float**, **Double**или **Long** **Double**. В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, стандартное **Двойное** или **длинное** **Двойное** значение может стать бесконечным, нормальным или нулевым значением при преобразовании в тип **float**.
 
 ## <a name="requirements"></a>Требования
 
@@ -80,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> или \<cmath>|
 
-**Fpclassify** макрос и **fpclassify** функции соответствуют стандарту ISO C99 и C ++ 11 спецификаций. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Макросы **fpclassify** и функции **fpclassify** соответствуют спецификациям ISO C99 и c++ 11. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

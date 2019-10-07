@@ -1,14 +1,14 @@
 ---
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbslen
 - _mbslen_l
 - _mbstrlen
 - wcslen
 - _mbstrlen_l
 - strlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstrlen
 - wcslen
@@ -49,12 +52,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5b1d3f7483ec96cbcda7c72178613d81747c8060
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500925"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947580"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -114,7 +117,7 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** и **_mbslen_l** возвращают количество многобайтовых символов в строке многобайтовых символов, но не проверяют допустимость многобайтовых символов. **_mbstrlen** и **_mbstrlen_l** проверяют допустимость многобайтовых символов и распознают последовательности многобайтовых символов. Если строка, передаваемая в **_mbstrlen** или **_mbstrlen_l** , содержит недопустимый многобайтовый символ для кодовой страницы, функция возвращает значение-1 и устанавливает для функции возврата в **еилсек**.
+**_mbslen** и **_mbslen_l** возвращают количество многобайтовых символов в строке многобайтовых символов, но не проверяют допустимость многобайтовых символов. **_mbstrlen** и **_mbstrlen_l** проверяют допустимость многобайтовых символов и распознают последовательности многобайтовых символов. Если строка, передаваемая в **_mbstrlen** или **_mbstrlen_l** , содержит недопустимый многобайтовый символ для кодовой страницы, функция возвращает **значение-1 и устанавливает для** функции возврата в **еилсек**.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

@@ -1,6 +1,6 @@
 ---
-title: CComModule-класс
-ms.date: 11/04/2016
+title: Класс CComModule
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,19 +31,19 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259278"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630659"
 ---
-# <a name="ccommodule-class"></a>CComModule-класс
+# <a name="ccommodule-class"></a>Класс CComModule
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` не рекомендуется. Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -57,73 +57,73 @@ class CComModule : public _ATL_MODULE
 
 |name|Описание|
 |----------|-----------------|
-|[CComModule::GetClassObject](#getclassobject)|Создает объект с заданным идентификатором CLSID. Для DLL.|
-|[CComModule::GetModuleInstance](#getmoduleinstance)|Возвращает `m_hInst`.|
-|[CComModule::GetResourceInstance](#getresourceinstance)|Возвращает `m_hInstResource`.|
+|[CComModule:: Жетклассобжект](#getclassobject)|Создает объект указанного идентификатора CLSID. Только для библиотек DLL.|
+|[CComModule:: Жетмодулеинстанце](#getmoduleinstance)|Возвращает `m_hInst`.|
+|[CComModule:: Жетресаурцеинстанце](#getresourceinstance)|Возвращает `m_hInstResource`.|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|Возвращает `m_hInstTypeLib`.|
-|[CComModule::Init](#init)|Инициализирует данные-члены.|
-|[CComModule::RegisterClassHelper](#registerclasshelper)|Вводит регистрации стандартный класс объекта в системном реестре.|
-|[CComModule::RegisterClassObjects](#registerclassobjects)|Регистрирует объект класса. EXE-файлами только.|
-|[CComModule::RegisterServer](#registerserver)|Обновляет системного реестра для каждого объекта в карте объектов.|
+|[CComModule:: init](#init)|Инициализирует элементы данных.|
+|[CComModule:: Регистеркласшелпер](#registerclasshelper)|Вводит в системный реестр регистрацию стандартного класса объекта.|
+|[CComModule:: Регистерклассобжектс](#registerclassobjects)|Регистрирует объект класса. Только для exe.|
+|[CComModule:: Регистерсервер](#registerserver)|Обновляет системный реестр для каждого объекта в сопоставлении объектов.|
 |[CComModule::RegisterTypeLib](#registertypelib)|Регистрирует библиотеку типов.|
-|[CComModule::RevokeClassObjects](#revokeclassobjects)|Отменяет объекта класса. EXE-файлами только.|
-|[CComModule::Term](#term)|Освобождает данные-члены.|
-|[CComModule::UnregisterClassHelper](#unregisterclasshelper)|Удаляет регистрацию стандартный класс объекта, из системного реестра.|
-|[CComModule::UnregisterServer](#unregisterserver)|Отменяет регистрацию каждого объекта в карте объектов.|
-|[CComModule::UpdateRegistryClass](#updateregistryclass)|Регистрирует или отменяет регистрацию объекта стандартный класс регистрации.|
-|[CComModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Выполняется скрипт, содержащийся в указанный ресурс, чтобы зарегистрировать или отменить регистрацию объекта.|
-|[CComModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|Статически ссылки на компонент реестра ATL. Выполняется скрипт, содержащийся в указанный ресурс, чтобы зарегистрировать или отменить регистрацию объекта.|
+|[CComModule:: Ревокеклассобжектс](#revokeclassobjects)|Отменяет объект класса. Только для exe.|
+|[CComModule:: Term](#term)|Освобождает элементы данных.|
+|[CComModule:: Унрегистеркласшелпер](#unregisterclasshelper)|Удаляет регистрацию стандартного класса объекта из системного реестра.|
+|[CComModule:: Унрегистерсервер](#unregisterserver)|Отменяет регистрацию каждого объекта в сопоставлении объектов.|
+|[CComModule:: Упдатерегистрикласс](#updateregistryclass)|Регистрирует или отменяет регистрацию стандартной регистрации класса объекта.|
+|[CComModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта.|
+|[CComModule:: Упдатерегистрифромресаурцес](#updateregistryfromresources)|Статические ссылки на компонент реестра ATL. Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |name|Описание|
 |----------|-----------------|
-|[CComModule::m_csObjMap](#m_csobjmap)|Гарантирует синхронизированного доступа к сведениям объекта карты.|
-|[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Гарантирует синхронизированного доступа к информации о библиотеке типов.|
-|[CComModule::m_csWindowCreate](#m_cswindowcreate)|Гарантирует синхронизированного доступа к сведениям о классе окна и статические данные, использованные при создании окна.|
-|[CComModule::m_hInst](#m_hinst)|Содержит дескриптор экземпляра модуля.|
-|[CComModule::m_hInstResource](#m_hinstresource)|По умолчанию содержит дескриптор экземпляра модуля.|
-|[CComModule::m_hInstTypeLib](#m_hinsttypelib)|По умолчанию содержит дескриптор экземпляра модуля.|
-|[CComModule::m_pObjMap](#m_pobjmap)|Указывает на карте объектов, поддерживаемых экземпляром модуля.|
+|[CComModule:: m_csObjMap](#m_csobjmap)|Обеспечивает синхронизированный доступ к сведениям о сопоставлении объектов.|
+|[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|Обеспечивает синхронизированный доступ к сведениям библиотеки типов.|
+|[CComModule::m_csWindowCreate](#m_cswindowcreate)|Обеспечивает синхронизированный доступ к сведениям о классе окна и статическим данным, используемым во время создания окна.|
+|[CComModule:: m_hInst](#m_hinst)|Содержит маркер для экземпляра модуля.|
+|[CComModule:: m_hInstResource](#m_hinstresource)|По умолчанию содержит описатель для экземпляра модуля.|
+|[CComModule::m_hInstTypeLib](#m_hinsttypelib)|По умолчанию содержит описатель для экземпляра модуля.|
+|[CComModule:: m_pObjMap](#m_pobjmap)|Указывает на карту объектов, поддерживаемую экземпляром модуля.|
 
 ## <a name="remarks"></a>Примечания
 
 > [!NOTE]
->  Этот класс является устаревшим, и теперь использование мастеров создания кода ATL [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) и [CAtlModule](../../atl/reference/catlmodule-class.md) производных классов. См. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) Дополнительные сведения. Приведенные далее сведения предназначен для использования с приложениями, созданных с помощью более старых версиях ATL. `CComModule` остается частью ATL для обеспечения обратной возможностей.
+>  Этот класс является устаревшим, и в мастерах создания кода ATL теперь используются производные классы [катлаутосреадмодуле](../../atl/reference/catlautothreadmodule-class.md) и [катлмодуле](../../atl/reference/catlmodule-class.md) . Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) . Приведенная ниже информация предназначена для использования с приложениями, созданными с помощью более старых версий ATL. `CComModule`по-прежнему является частью библиотеки ATL для обратной способности.
 
-`CComModule` реализует COM-модуля сервера, что позволяет клиенту получить доступ к компонентам модуля. `CComModule` поддерживает оба модуля (local) exe-файла, так и библиотеки DLL (внутрипроцессный).
+`CComModule`реализует модуль COM-сервера, позволяющий клиенту обращаться к компонентам модуля. `CComModule`поддерживает модули DLL (внутрипроцессный) и EXE (local).
 
-Объект `CComModule` экземпляр использует схему объекта набор определений классов объектов. Эта карта объект реализуется как массив `_ATL_OBJMAP_ENTRY` структуры, который содержит сведения для:
+`CComModule` Экземпляр использует карту объектов для обслуживания набора определений объектов класса. Эта схема объектов реализуется как массив `_ATL_OBJMAP_ENTRY` структур и содержит сведения для:
 
-- Ввод и удаление описания объектов в системном реестре.
+- Ввод и удаление описаний объектов в системном реестре.
 
-- Создание экземпляров объектов с помощью фабрики класса.
+- Создание экземпляров объектов с помощью фабрики классов.
 
-- Установка связи между клиентом и корневой объект в компоненте.
+- Установка связи между клиентом и корневым объектом в компоненте.
 
-- Выполнение управление временем существования объектов классов.
+- Выполнение управления жизненным циклом объектов класса.
 
-При запуске мастером приложений COM ATL, мастер автоматически создает `_Module`, глобальный экземпляр `CComModule` или класс, производный от него. Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
+При запуске ATL com помощью мастера мастер автоматически создает `_Module`глобальный `CComModule` экземпляр или производный от него класс. Дополнительные сведения о мастере проектов ATL см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
 
-В дополнение к `CComModule`, библиотека ATL предоставляет [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), который реализует модуль модель с подразделением служб exe- и Windows. Наследовать из модуля `CComAutoThreadModule` целесообразно создавать объекты в нескольких подразделениях.
+Кроме `CComModule`того, ATL предоставляет [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md), который реализует модуль апартаментной модели для exe-и служб Windows. Производные модули от `CComAutoThreadModule` , если требуется создавать объекты в нескольких подразделениях.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[CAtlModule](../../atl/reference/catlmodule-class.md)
+[катлмодуле](../../atl/reference/catlmodule-class.md)
 
-[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
+[катлмодулет](../../atl/reference/catlmodulet-class.md)
 
 `CComModule`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="getclassobject"></a>  CComModule::GetClassObject
+##  <a name="getclassobject"></a>CComModule:: Жетклассобжект
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT GetClassObject(
@@ -134,14 +134,14 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>Параметры
 
-*rclsid*<br/>
-[in] CLSID создаваемого объекта.
+*рклсид*<br/>
+окне Идентификатор CLSID создаваемого объекта.
 
 *riid*<br/>
-[in] Идентификатор IID запрошенного интерфейса.
+окне IID запрашиваемого интерфейса.
 
-*ppv*<br/>
-[out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppv* имеет значение NULL.
+*ппв*<br/>
+заполняет Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс, *ППВ* имеет значение null.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -149,13 +149,13 @@ HRESULT GetClassObject(
 
 ### <a name="remarks"></a>Примечания
 
-Создает объект для указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
+Создает объект указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
 
-`GetClassObject` доступна только на библиотеки DLL.
+`GetClassObject`доступно только для библиотек DLL.
 
-##  <a name="getmoduleinstance"></a>  CComModule::GetModuleInstance
+##  <a name="getmoduleinstance"></a>CComModule:: Жетмодулеинстанце
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -163,15 +163,15 @@ HINSTANCE GetModuleInstance() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-HINSTANCE, определяющий этот модуль.
+Значение HINSTANCE, идентифицирующее этот модуль.
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает [m_hInst](#m_hinst) данные-член.
+Возвращает элемент данных [m_hInst](#m_hinst) .
 
-##  <a name="getresourceinstance"></a>  CComModule::GetResourceInstance
+##  <a name="getresourceinstance"></a>CComModule:: Жетресаурцеинстанце
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -183,11 +183,11 @@ HINSTANCE.
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает [m_hInstResource](#m_hinstresource) данные-член.
+Возвращает элемент данных [m_hInstResource](#m_hinstresource) .
 
-##  <a name="gettypelibinstance"></a>  CComModule::GetTypeLibInstance
+##  <a name="gettypelibinstance"></a>CComModule:: Жеттипелибинстанце
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE GetTypeLibInstance() const throw();
@@ -199,11 +199,11 @@ HINSTANCE.
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает [m_hInstTypeLib](#m_hinsttypelib) данные-член.
+Возвращает элемент данных [m_hInstTypeLib](#m_hinsttypelib) .
 
-##  <a name="init"></a>  Выполнения
+##  <a name="init"></a>CComModule:: init
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT Init(
@@ -215,13 +215,13 @@ HRESULT Init(
 ### <a name="parameters"></a>Параметры
 
 *p*<br/>
-[in] Указатель на массив элементов объекта map.
+окне Указатель на массив записей сопоставлений объектов.
 
 *h*<br/>
-[in] Передаваемый объект HINSTANCE `DLLMain` или `WinMain`.
+окне Значение HINSTANCE, передаваемое `WinMain`в `DLLMain` или.
 
-*plibid*<br/>
-[in] Указатель на идентификатор LIBID библиотеки типов, связанных с проектом.
+*плибид*<br/>
+окне Указатель на идентификатор LIBID библиотеки типов, связанной с проектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -229,11 +229,11 @@ HRESULT Init(
 
 ### <a name="remarks"></a>Примечания
 
-Инициализирует все члены данных.
+Инициализирует все элементы данных.
 
-##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap
+##  <a name="m_csobjmap"></a>CComModule:: m_csObjMap
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -241,11 +241,11 @@ CRITICAL_SECTION m_csObjMap;
 
 ### <a name="remarks"></a>Примечания
 
-Гарантирует синхронизированного доступа к схеме объекта.
+Обеспечивает синхронизированный доступ к карте объектов.
 
-##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder
+##  <a name="m_cstypeinfoholder"></a>CComModule:: m_csTypeInfoHolder
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -253,11 +253,11 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 
 ### <a name="remarks"></a>Примечания
 
-Гарантирует синхронизированного доступа к библиотеке типов.
+Обеспечивает синхронизированный доступ к библиотеке типов.
 
-##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate
+##  <a name="m_cswindowcreate"></a>CComModule:: m_csWindowCreate
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -265,11 +265,11 @@ CRITICAL_SECTION m_csWindowCreate;
 
 ### <a name="remarks"></a>Примечания
 
-Гарантирует синхронизированного доступа к информации о классе окна и статические данные, использованные при создании окна.
+Обеспечивает синхронизированный доступ к сведениям о классе окна и статическим данным, используемым во время создания окна.
 
-##  <a name="m_hinst"></a>  CComModule::m_hInst
+##  <a name="m_hinst"></a>CComModule:: m_hInst
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInst;
@@ -277,13 +277,13 @@ HINSTANCE m_hInst;
 
 ### <a name="remarks"></a>Примечания
 
-Содержит дескриптор экземпляра модуля.
+Содержит маркер для экземпляра модуля.
 
-[Init](#init) метода задает `m_hInst` к дескриптору, передаваемое `DLLMain` или `WinMain`.
+Метод [init](#init) задает `m_hInst` для обработчика, передаваемого `DLLMain` в `WinMain`или.
 
-##  <a name="m_hinstresource"></a>  CComModule::m_hInstResource
+##  <a name="m_hinstresource"></a>CComModule:: m_hInstResource
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInstResource;
@@ -291,15 +291,15 @@ HINSTANCE m_hInstResource;
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию содержит дескриптор экземпляра модуля.
+По умолчанию содержит описатель для экземпляра модуля.
 
-[Init](#init) метода задает `m_hInstResource` к дескриптору, передаваемое `DLLMain` или `WinMain`. Можно явно задать `m_hInstResource` на дескриптор для ресурса.
+Метод [init](#init) задает `m_hInstResource` для обработчика, передаваемого `DLLMain` в `WinMain`или. Можно явно задать `m_hInstResource` для обработчика значение ресурса.
 
-[GetResourceInstance](#getresourceinstance) метод возвращает дескриптор, хранящиеся в `m_hInstResource`.
+Метод [жетресаурцеинстанце](#getresourceinstance) Возвращает обработчик, хранящийся в `m_hInstResource`.
 
-##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib
+##  <a name="m_hinsttypelib"></a>CComModule:: m_hInstTypeLib
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HINSTANCE m_hInstTypeLib;
@@ -307,15 +307,15 @@ HINSTANCE m_hInstTypeLib;
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию содержит дескриптор экземпляра модуля.
+По умолчанию содержит описатель для экземпляра модуля.
 
-[Init](#init) метода задает `m_hInstTypeLib` к дескриптору, передаваемое `DLLMain` или `WinMain`. Можно явно задать `m_hInstTypeLib` для обработки в библиотеку типов.
+Метод [init](#init) задает `m_hInstTypeLib` для обработчика, передаваемого `DLLMain` в `WinMain`или. Можно явно задать `m_hInstTypeLib` для обработчика библиотеку типов.
 
-[GetTypeLibInstance](#gettypelibinstance) метод возвращает дескриптор, хранящиеся в `m_hInstTypeLib`.
+Метод [жеттипелибинстанце](#gettypelibinstance) Возвращает обработчик, хранящийся в `m_hInstTypeLib`.
 
-##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap
+##  <a name="m_pobjmap"></a>CComModule:: m_pObjMap
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -323,11 +323,11 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 
 ### <a name="remarks"></a>Примечания
 
-Указывает на карте объектов, поддерживаемых экземпляром модуля.
+Указывает на карту объектов, поддерживаемую экземпляром модуля.
 
-##  <a name="registerclasshelper"></a>  CComModule::RegisterClassHelper
+##  <a name="registerclasshelper"></a>CComModule:: Регистеркласшелпер
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(
@@ -340,20 +340,20 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
-[in] CLSID объекта для регистрации.
+*этому*<br/>
+окне Идентификатор CLSID регистрируемого объекта.
 
-*lpszProgID*<br/>
-[in] Идентификатор ProgID, связанный с объектом.
+*лпсзпрогид*<br/>
+окне Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*<br/>
-[in] Идентификатор ProgID независящим от версии, связанный с объектом.
+*лпсзвериндпрогид*<br/>
+окне Независимый от версии идентификатор ProgID, связанный с объектом.
 
-*nDescID*<br/>
-[in] Идентификатор строкового ресурса описания объекта.
+*ндесЦид*<br/>
+окне Идентификатор строкового ресурса для описания объекта.
 
 *dwFlags*<br/>
-[in] Указывает потоковую модель, чтобы ввести в реестре. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
+окне Указывает потоковую модель для ввода в реестр. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или АУТПРКСФЛАГ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -361,13 +361,13 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="remarks"></a>Примечания
 
-Вводит регистрации стандартный класс объекта в системном реестре.
+Вводит в системный реестр регистрацию стандартного класса объекта.
 
-[UpdateRegistryClass](#updateregistryclass) вызовы методов `RegisterClassHelper`.
+Метод [упдатерегистрикласс](#updateregistryclass) вызывает `RegisterClassHelper`.
 
-##  <a name="registerclassobjects"></a>  CComModule::RegisterClassObjects
+##  <a name="registerclassobjects"></a>CComModule:: Регистерклассобжектс
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -375,11 +375,11 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dwClsContext*<br/>
-[in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) в пакете Windows SDK.
+*двклсконтекст*<br/>
+окне Задает контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений см. в разделе [клскткс](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) в Windows SDK.
 
 *dwFlags*<br/>
-[in] Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений, см. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) в пакете Windows SDK.
+окне Определяет типы соединения с объектом класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений см. в разделе [регклс](/windows/win32/api/combaseapi/ne-combaseapi-regcls) в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -387,11 +387,11 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Регистрирует объект класса exe-файла с OLE, поэтому другие приложения могли подключиться к нему. Этот метод доступен только для EXE-файлы.
+Регистрирует объект класса EXE в OLE, чтобы другие приложения могли подключаться к нему. Этот метод доступен только для exe.
 
-##  <a name="registerserver"></a>  CComModule::RegisterServer
+##  <a name="registerserver"></a>CComModule:: Регистерсервер
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterServer(
@@ -401,11 +401,11 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*<br/>
-[in] Указывает, будет ли зарегистрирована библиотека типов. Значение по умолчанию — FALSE.
+*брегтипелиб*<br/>
+окне Указывает, будет ли зарегистрирована библиотека типов. Значение по умолчанию — FALSE.
 
-*pCLSID*<br/>
-[in] Указывает идентификатор CLSID объекта для регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет зарегистрировано.
+*пклсид*<br/>
+окне Указывает на идентификатор CLSID регистрируемого объекта. При значении NULL (значение по умолчанию) будут зарегистрированы все объекты в сопоставлении объектов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -413,17 +413,17 @@ HRESULT RegisterServer(
 
 ### <a name="remarks"></a>Примечания
 
-В зависимости от *pCLSID* параметра, обновляет системного реестра для одного класса объекта или для всех объектов в карте объектов.
+В зависимости от параметра *пклсид* обновляет системный реестр для одного объекта класса или для всех объектов в сопоставлении объектов.
 
-Если *bRegTypeLib* имеет значение TRUE, также будут обновлены сведения о библиотеке типов.
+Если *брегтипелиб* имеет значение true, сведения о библиотеке типов также будут обновлены.
 
-См. в разделе [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) сведения о том, как добавить запись в карте объектов.
+Сведения о том, как добавить запись в карту объектов, см. в разделе [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
 
-`RegisterServer` будет вызван автоматически по `DLLRegisterServer` для библиотеки DLL или с помощью `WinMain` для запуска с помощью EXE `/RegServer` параметр командной строки.
+`RegisterServer`будет вызываться автоматически `DLLRegisterServer` для библиотеки DLL `WinMain` или для исполняемого файла с `/RegServer` параметром командной строки.
 
-##  <a name="registertypelib"></a>  CComModule::RegisterTypeLib
+##  <a name="registertypelib"></a>CComModule:: Регистертипелиб
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RegisterTypeLib() throw();
@@ -432,8 +432,8 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszIndex*<br/>
-[in] Строка в формате `"\\N"`, где `N` — это целочисленный индекс ресурса библиотеки ТИПОВ.
+*лпсзиндекс*<br/>
+окне Строка в формате `"\\N"`, где `N` — целочисленный индекс ресурса TypeLib.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -443,11 +443,11 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 Добавляет сведения о библиотеке типов в системный реестр.
 
-Если экземпляр модуля содержит несколько библиотек типов, позволяет указать, какие библиотеки типов следует использовать второй версии этого метода.
+Если экземпляр модуля содержит несколько библиотек типов, используйте вторую версию этого метода, чтобы указать, какую библиотеку типов следует использовать.
 
-##  <a name="revokeclassobjects"></a>  CComModule::RevokeClassObjects
+##  <a name="revokeclassobjects"></a>CComModule:: Ревокеклассобжектс
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -459,11 +459,11 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Удаляет объект класса. Этот метод доступен только для EXE-файлы.
+Удаляет объект класса. Этот метод доступен только для exe.
 
-##  <a name="term"></a>  CComModule::Term
+##  <a name="term"></a>CComModule:: Term
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 void Term() throw();
@@ -471,11 +471,11 @@ void Term() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Освобождает все члены данных.
+Освобождает все элементы данных.
 
-##  <a name="unregisterclasshelper"></a>  CComModule::UnregisterClassHelper
+##  <a name="unregisterclasshelper"></a>CComModule:: Унрегистеркласшелпер
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(
@@ -486,14 +486,14 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
-[in] CLSID объекта для отмены регистрации.
+*этому*<br/>
+окне Идентификатор CLSID объекта, регистрация которого будет отменена.
 
-*lpszProgID*<br/>
-[in] Идентификатор ProgID, связанный с объектом.
+*лпсзпрогид*<br/>
+окне Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*<br/>
-[in] Идентификатор ProgID независящим от версии, связанный с объектом.
+*лпсзвериндпрогид*<br/>
+окне Независимый от версии идентификатор ProgID, связанный с объектом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -501,13 +501,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="remarks"></a>Примечания
 
-Удаляет регистрацию стандартный класс объекта, из системного реестра.
+Удаляет регистрацию стандартного класса объекта из системного реестра.
 
-[UpdateRegistryClass](#updateregistryclass) вызовы методов `UnregisterClassHelper`.
+Метод [упдатерегистрикласс](#updateregistryclass) вызывает `UnregisterClassHelper`.
 
-##  <a name="unregisterserver"></a>  CComModule::UnregisterServer
+##  <a name="unregisterserver"></a>CComModule:: Унрегистерсервер
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -516,11 +516,11 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>Параметры
 
-*bUnRegTypeLib*<br/>
-Значение TRUE, если библиотека типов также отменяется.
+*бунрегтипелиб*<br/>
+Если значение — TRUE, то библиотека типов также не регистрируется.
 
-*pCLSID*<br/>
-Указывает идентификатор CLSID объекта для отмены регистрации. Если значение NULL (значение по умолчанию), все объекты в карте объектов будет отменена.
+*пклсид*<br/>
+Указывает на CLSID объекта, регистрация которого будет отменена. Если NULL (значение по умолчанию), регистрация всех объектов в сопоставлении объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -528,15 +528,15 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="remarks"></a>Примечания
 
-В зависимости от *pCLSID* параметра, отменяет регистрацию объекта класса одной или всех объектов в карте объектов.
+В зависимости от параметра *пклсид* отменяет регистрацию либо одного объекта класса, либо всех объектов в сопоставлении объектов.
 
-`UnregisterServer` будет вызван автоматически по `DLLUnregisterServer` для библиотеки DLL или с помощью `WinMain` для запуска с помощью EXE `/UnregServer` параметр командной строки.
+`UnregisterServer`будет вызываться автоматически `DLLUnregisterServer` для библиотеки DLL `WinMain` или для исполняемого файла с `/UnregServer` параметром командной строки.
 
-См. в разделе [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) сведения о том, как добавить запись в карте объектов.
+Сведения о том, как добавить запись в карту объектов, см. в разделе [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) .
 
-##  <a name="updateregistryclass"></a>  CComModule::UpdateRegistryClass
+##  <a name="updateregistryclass"></a>CComModule:: Упдатерегистрикласс
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(
@@ -558,26 +558,26 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
-CLSID объекта регистрировать или отменять регистрацию.
+*этому*<br/>
+Идентификатор CLSID регистрируемого или незарегистрированного объекта.
 
-*lpszProgID*<br/>
+*лпсзпрогид*<br/>
 Идентификатор ProgID, связанный с объектом.
 
-*lpszVerIndProgID*<br/>
-Идентификатор ProgID независящим от версии, связанный с объектом.
+*лпсзвериндпрогид*<br/>
+Независимый от версии идентификатор ProgID, связанный с объектом.
 
-*nDescID*<br/>
-Идентификатор строкового ресурса описания объекта.
+*ндесЦид*<br/>
+Идентификатор строкового ресурса для описания объекта.
 
-*szDesc*<br/>
+*сздеск*<br/>
 Строка, содержащая описание объекта.
 
 *dwFlags*<br/>
-Указывает потоковую модель, чтобы ввести в реестре. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или AUTPRXFLAG.
+Указывает потоковую модель для ввода в реестр. Возможные значения: THREADFLAGS_APARTMENT, THREADFLAGS_BOTH или АУТПРКСФЛАГ.
 
-*bЗарегистрируйтесь участия*<br/>
-Указывает, является ли объект должен быть зарегистрирован.
+*брегистер*<br/>
+Указывает, должен ли быть зарегистрирован объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -585,17 +585,17 @@ CLSID объекта регистрировать или отменять рег
 
 ### <a name="remarks"></a>Примечания
 
-Если *bЗарегистрируйтесь участия* имеет значение TRUE, этот метод вводит регистрации стандартный класс объекта в системном реестре.
+Если *брегистер* имеет значение true, этот метод вводит в системный реестр регистрацию стандартного класса объекта.
 
-Если *bЗарегистрируйтесь участия* имеет значение FALSE, он удаляет регистрацию объекта.
+Если *брегистер* имеет значение false, то удаляется регистрация объекта.
 
-В зависимости от значения *bЗарегистрируйтесь участия*, `UpdateRegistryClass` голосовой звонок [RegisterClassHelper](#registerclasshelper) или [UnregisterClassHelper](#unregisterclasshelper).
+В зависимости от значения *брегистер*вызывает либо `UpdateRegistryClass` [регистеркласшелпер](#registerclasshelper) , либо [унрегистеркласшелпер](#unregisterclasshelper).
 
-Путем указания [DECLARE_REGISTRY](registry-macros.md#declare_registry) макрос, `UpdateRegistryClass` будет вызываться автоматически, при обработке объекта карты.
+При указании макроса [DECLARE_REGISTRY](registry-macros.md#declare_registry) макро `UpdateRegistryClass` будет вызываться автоматически при обработке схемы объекта.
 
-##  <a name="updateregistryfromresourced"></a>  CComModule::UpdateRegistryFromResourceD
+##  <a name="updateregistryfromresourced"></a>CComModule:: Упдатерегистрифромресаурцед
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 virtual HRESULT UpdateRegistryFromResourceD(
@@ -611,17 +611,17 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*<br/>
-[in] Имя ресурса.
+*лпсзрес*<br/>
+окне Имя ресурса.
 
-*nResID*<br/>
-[in] Идентификатор ресурса.
+*нресид*<br/>
+окне Идентификатор ресурса.
 
-*bЗарегистрируйтесь участия*<br/>
-[in] Указывает, является ли объект должен быть зарегистрирован.
+*брегистер*<br/>
+окне Указывает, должен ли быть зарегистрирован объект.
 
-*pMapEntries*<br/>
-[in] Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные подстановочные параметры, см. в разделе "Примечания" Дополнительные сведения. В противном случае используйте значение по умолчанию NULL.
+*пмапентриес*<br/>
+окне Указатель на заменяющую карту, в которой хранятся значения, связанные с заменяемыми параметрами скрипта. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные заменяемые параметры, см. Дополнительные сведения в примечаниях. В противном случае используйте значение NULL по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -629,23 +629,23 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="remarks"></a>Примечания
 
-Выполняется скрипт, содержащийся в ресурс, заданный параметром *lpszRes* или *nResID*.
+Запускает скрипт, содержащийся в ресурсе, указанном параметром *лпсзрес* или *нресид*.
 
-Если *bЗарегистрируйтесь участия* имеет значение TRUE, этот метод регистрирует объект в системном реестре; в противном случае он отменяет регистрацию объекта.
+Если *брегистер* имеет значение true, этот метод регистрирует объект в системном реестре; в противном случае он отменяет регистрацию объекта.
 
-Путем указания [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) макрос, `UpdateRegistryFromResourceD` будет вызываться автоматически, при обработке объекта карты.
-
-> [!NOTE]
->  Чтобы заменить замены значения во время выполнения, не указывайте макрос DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите `UpdateRegistryFromResourceD`, передавая массив для *pMapEntries* параметра. Это добавляет все значения замены `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.
+При указании макроса [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) макро `UpdateRegistryFromResourceD`будет вызываться автоматически при обработке схемы объекта.
 
 > [!NOTE]
->  Статическое связывание компонент реестра ATL (регистратор), см. в разделе [UpdateRegistryFromResourceS](#updateregistryfromresources).
+>  Чтобы заменить значения замены во время выполнения, не указывайте макрос DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структур, где каждая запись содержит заполнитель переменной со значением для замены заполнителя во время выполнения. Затем вызовите `UpdateRegistryFromResourceD`, передав массив для параметра *пмапентриес* . При этом все значения замены в `_ATL_REGMAP_ENTRIES` структурах добавляются в карту замены регистратора.
 
-Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
+> [!NOTE]
+>  Статическую ссылку на компонент реестра ATL (регистратор) см. в разделе [упдатерегистрифромресаурцес](#updateregistryfromresources).
 
-##  <a name="updateregistryfromresources"></a>  CComModule::UpdateRegistryFromResourceS
+Дополнительные сведения о заменяемых параметрах и сценариях см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
-По состоянию на ATL 7.0 `CComModule` является устаревшим: см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.
+##  <a name="updateregistryfromresources"></a>CComModule:: Упдатерегистрифромресаурцес
+
+Начиная с ATL 7,0, `CComModule` является устаревшим: Дополнительные сведения см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md) .
 
 ```
 virtual HRESULT UpdateRegistryFromResourceS(
@@ -661,17 +661,17 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*<br/>
-[in] Имя ресурса.
+*лпсзрес*<br/>
+окне Имя ресурса.
 
-*nResID*<br/>
-[in] Идентификатор ресурса.
+*нресид*<br/>
+окне Идентификатор ресурса.
 
-*bЗарегистрируйтесь участия*<br/>
-[in] Указывает, является ли файл скрипта ресурсов должен быть зарегистрирован.
+*брегистер*<br/>
+окне Указывает, должен ли быть зарегистрирован скрипт ресурсов.
 
-*pMapEntries*<br/>
-[in] Указатель на карте замены хранения значений, связанных с подстановочных параметров сценария. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные подстановочные параметры, см. в разделе "Примечания" Дополнительные сведения. В противном случае используйте значение по умолчанию NULL.
+*пмапентриес*<br/>
+окне Указатель на заменяющую карту, в которой хранятся значения, связанные с заменяемыми параметрами скрипта. ATL автоматически использует `%MODULE%`. Чтобы использовать дополнительные заменяемые параметры, см. Дополнительные сведения в примечаниях. В противном случае используйте значение NULL по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -679,15 +679,15 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="remarks"></a>Примечания
 
-Аналогичную [UpdateRegistryFromResourceD](#updateregistryfromresourced) за исключением `UpdateRegistryFromResourceS` создает статическую ссылку компонент реестра ATL (регистратор).
+Аналогично [упдатерегистрифромресаурцед](#updateregistryfromresourced) , `UpdateRegistryFromResourceS` за исключением создания статической ссылки на компонент реестра ATL (регистратор).
 
-`UpdateRegistryFromResourceS` будет вызываться автоматически при обработке объекта карты условии добавления `#define _ATL_STATIC_REGISTRY` ваш файл stdafx.h.
+`UpdateRegistryFromResourceS`будет вызываться автоматически при обработке схемы объекта, при условии, что вы `#define _ATL_STATIC_REGISTRY` добавили в *PCH. h* (*stdafx. h* в Visual Studio 2017 и более ранних версиях).
 
 > [!NOTE]
->  Чтобы заменить значения замены во время выполнения, не указывайте [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите `UpdateRegistryFromResourceS`, передавая массив для *pMapEntries* параметра. Это добавляет все значения замены `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.
+>  Чтобы заменить значения замены во время выполнения, не указывайте макрос [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) . Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структур, где каждая запись содержит заполнитель переменной со значением для замены заполнителя во время выполнения. Затем вызовите `UpdateRegistryFromResourceS`, передав массив для параметра *пмапентриес* . При этом все значения замены в `_ATL_REGMAP_ENTRIES` структурах добавляются в карту замены регистратора.
 
-Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
+Дополнительные сведения о заменяемых параметрах и сценариях см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

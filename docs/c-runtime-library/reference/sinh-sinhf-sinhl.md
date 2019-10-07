@@ -1,11 +1,11 @@
 ---
-title: SINH, sinhf, sinhl
+title: sinh, sinhf, sinhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - sinhl
 - sinhf
 - sinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - sinh
 - sinhf
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356281"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948110"
 ---
-# <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
+# <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
 Вычисляет гиперболический синус.
 
@@ -62,18 +65,18 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Sinh** функции возвращают гиперболический синус *x*. По умолчанию, если результат слишком велик **sinh** задает **errno** для **ERANGE** и возвращает ±**HUGE_VAL**.
+Функции **sinh** возвращают гиперболический синус *x*. По умолчанию, если результат слишком велик, **sinh** устанавливает для **ERANGE** **значение,** а возвращает ±**HUGE_VAL**.
 
-|Входные данные|Исключение SEH|Исключение Matherr|
+|Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Нет|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|± КНАН, С|Отсутствуют|_DOMAIN|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **sinh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **sinh** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sinh** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **sinh** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 

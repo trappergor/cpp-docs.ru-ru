@@ -1,11 +1,11 @@
 ---
 title: fmin, fminf, fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333382"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957093"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -80,25 +83,25 @@ long double fminl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает меньшее из *x* или *y*.
+В случае успеха возвращает меньшее значение *x* или *y*.
 
-|Входные данные|Результат|
+|Ввод|Результат|
 |-----------|------------|
-|*x* имеет значение NaN|*y*|
-|*y* имеет значение NaN|*x*|
-|*x* и *y* имеют значения NaN|NaN|
+|*x* является NaN|*y*|
+|*y* — NaN|*x*|
+|*x* и *y* — это NaN|NaN|
 
-Функция не вызывает [_matherr](matherr.md) вызываемого, приводит к все исключения с плавающей запятой, или измените значение свойства **errno**.
+Функция не вызывает вызов [_matherr](matherr.md) , приводит к возникновению исключений с плавающей запятой или изменению значения «ошибка **».**
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **fmin** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **fmin** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **фмин** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **фмин** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**fmin**, **fminf**, **fminl**|C: \<math.h><br />C++: \<math.h> или \<cmath>|
+|**фмин**, **фминф**, **фминл**|C: \<math.h><br />C++: \<math.h> или \<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

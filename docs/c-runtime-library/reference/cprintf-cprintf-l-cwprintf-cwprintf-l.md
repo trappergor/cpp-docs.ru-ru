@@ -1,12 +1,12 @@
 ---
 title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335338"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942661"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
 Форматируют и выводят данные на консоль. Доступны более безопасные версии; см. раздел [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md).
 
@@ -95,13 +98,13 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль, используя **_putch** функция (**_putwch** для **_cwprintf**) для вывода символов . Каждый аргумент в *argument_list* (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в *формат*. *Формат* использует аргумент [синтаксис описания для функции printf и wprintf формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от **fprintf**, **printf**, и **sprintf** функции, ни **_cprintf** , ни **_cwprintf**преобразование символов перевода строки в сочетания символов возврата строки (CR-LF), веб-канал каретки при выводе.
+Эти функции отформатируют и печатают последовательность символов и значений непосредственно в консоли, используя функцию **_putch** ( **_putwch** для **_cwprintf**) для вывода символов. Каждый аргумент в *argument_list* (при его наличии) преобразуется и выводится в соответствии с соответствующей спецификацией формата в *формате*. Аргумент *Format* использует [синтаксис спецификации формата для функций printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от функций **fprintf**, **printf**и **sprintf** , ни **_cprintf** , ни **_cwprintf** преобразует символы перевода строки в сочетания символов возврата каретки (CR-LF) при выходе.
 
-Важное отличие заключается в том, что **_cwprintf** показывает символы Юникода при использовании в Windows. В отличие от **_cprintf**, **_cwprintf** использует текущие настройки языкового стандарта консоли.
+Важное отличие заключается в том, что при использовании в Windows **_cwprintf** отображает символы Юникода. В отличие от **_cprintf**, **_cwprintf** использует текущие параметры языкового стандарта консоли.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
+Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
-**_cprintf** проверяет *формат* параметра. Если *формат* является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает **errno** для **EINVAL**.
+**_cprintf** проверяет параметр *Format* . Если *Format* является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция **возвращает значение-1 и устанавливает** для **еинвал**.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.

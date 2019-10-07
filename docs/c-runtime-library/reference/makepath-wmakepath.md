@@ -1,10 +1,10 @@
 ---
 title: _makepath, _wmakepath
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _makepath
 - _wmakepath
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wmakepath
 - _tmakepath
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: fab53d70df1c5361bc56bc0df16d0d2171f07a94
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aafde0aeeebb7b773d3f96ca66ae65762dcdebdf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952925"
 ---
 # <a name="_makepath-_wmakepath"></a>_makepath, _wmakepath
 
@@ -94,7 +97,7 @@ void _wmakepath(
 
 Аргумент *path* должен указывать на пустой буфер, достаточно большой для хранения полного пути. Составной *путь* должен быть не больше константы **_MAX_PATH** , определенной в STDLIB. h.
 
-Если параметр path имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Кроме того, для параметра « **еинвал**» задано значение «нет». Значения **null** допускаются для всех остальных параметров.
+Если параметр path имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Кроме того, для параметра « **еинвал**» задано значение **«нет»** . Значения **null** допускаются для всех остальных параметров.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,14 +1,14 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289211"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937618"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -89,23 +92,23 @@ long double erfcl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Erf** функции возвращают Гаусса функция ошибок от *x*. **Erfc** функции возвращают взаимодополняющие Гаусса функция ошибок от *x*.
+Функции **Фош** возвращают функцию Гаусса Error типа *x*. Функции **ерфк** возвращают дополняющую функцию ошибки Гаусса *x*.
 
 ## <a name="remarks"></a>Примечания
 
-**Erf** функции вычисляют функцией ошибок Гаусса из *x*, который определен как:
+Функции **Фош** вычисляют функцию Гаусса Error *x*, которая определяется следующим образом:
 
-![Функция ошибок от x](media/crt_erf_formula.PNG "функция ошибок от x")
+![Функция Error объекта x](media/crt_erf_formula.PNG "Функция Error объекта x")
 
-Функция Гаусса ошибок определяется как 1 - erf(x). **Erf** функции возвращают значение в диапазоне от -1.0 до версии 1.0. Ошибка не возвращается. **Erfc** функции возвращают значение в диапазоне от 0 до 2. Если *x* слишком велик для **erfc**, **errno** переменной присваивается **ERANGE**.
+Функция дополнения Гаусса Error определяется как 1-Фош (x). Функции **Фош** возвращают значение в диапазоне от-1,0 до 1,0. Ошибка не возвращается. Функции **ерфк** возвращают значение в диапазоне от 0 до 2. Если *x* слишком велико для **ерфк**, то для переменной « **No** » задано значение **ERANGE**.
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **erf** и **erfc** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **erf** и **erfc** всегда принимают и возвращают **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Фош** и **ерфк** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **Фош** и **ерфк** всегда принимают и возвращают **Двойное**значение.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
+|**Фош**, **erff**, **ерфл**, **ерфк**, **ерфкф**, **ерфкл**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

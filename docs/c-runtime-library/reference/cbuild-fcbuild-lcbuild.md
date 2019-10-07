@@ -1,11 +1,11 @@
 ---
 title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cbuild
 - _FCbuild
 - _LCbuild
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cbuild
 - _FCbuild
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943217"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
+# <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
-Создает комплексное число из вещественной и мнимой частей.
+Конструирует комплексное число от реальных и мнимых частей.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,18 +54,18 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 ### <a name="parameters"></a>Параметры
 
 *real*<br/>
-Действительная часть комплексного числа, для построения.
+Вещественная часть комплексного числа для создания.
 
-*мнимая*<br/>
-Мнимая часть комплексного числа, для построения.
+*мнимой*<br/>
+Мнимая часть комплексного числа для создания.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект **_Dcomplex**, **_Fcomplex**, или **_Lcomplex** структуру, которая представляет комплексное число (*реальных*, *мнимой*  \* я) для значений указанного типа с плавающей запятой.
+Структура **_Dcomplex**, **_Fcomplex**или **_Lcomplex** , представляющая комплексное число \* (*вещественное*, *мнимое* i) для значений указанного типа с плавающей запятой.
 
 ## <a name="remarks"></a>Примечания
 
-**_Cbuild**, **_FCbuild**, и **_LCbuild** функции упрощают создание сложных типов. Используйте [creal, crealf, creall](creal-crealf-creall.md) и [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) функции извлечения и действительная и мнимая части представлен комплексных чисел.
+Функции **_Cbuild**, **_FCbuild**и **_LCbuild** упрощают создание сложных типов. Используйте функции [Креал, креалф, креалл](creal-crealf-creall.md) и [Цимаг, Цимагф, Цимагл,](cimag-cimagf-cimagl.md) чтобы получить действительные и мнимые части представленных комплексных чисел.
 
 ## <a name="requirements"></a>Требования
 
@@ -70,7 +73,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Эти функции зависят от Microsoft. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** характерные для Майкрософт эквивалентов в Нереализованная собственные типы C99 **double _Complex** , **float _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции относятся только к Microsoft. Типы **_Dcomplex**, **_Fcomplex**и **_Lcomplex** являются эквивалентами, специфичными для Microsoft, для нереализованных C99 машинных типов **Double _Complex**, **float _Complex**и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

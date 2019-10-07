@@ -1,10 +1,10 @@
 ---
 title: _getdcwd_nolock, _wgetdcwd_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wgetdcwd_nolock
 - tgetdcwd_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955192"
 ---
-# <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
+# <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
 Получает полный путь текущей рабочей папки на указанном диске.
 
@@ -65,13 +68,13 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*Диск*<br/>
+*диск*<br/>
 Дисковый накопитель.
 
 *buffer*<br/>
 Место хранения пути.
 
-*MaxLen*<br/>
+*maxlen*<br/>
 Максимальная длина пути в символах: **char** для **_getdcwd** и **wchar_t** для **_wgetdcwd**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -80,7 +83,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>Примечания
 
-**_getdcwd_nolock** и **_wgetdcwd_nolock** идентичны **_getdcwd** и **_wgetdcwd**, соответственно, за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+**_getdcwd_nolock** и **_wgetdcwd_nolock** идентичны **_getdcwd** и **_wgetdcwd**соответственно, за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

@@ -1,9 +1,9 @@
 ---
 title: clearerr_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342942"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939149"
 ---
-# <a name="clearerrs"></a>clearerr_s
+# <a name="clearerr_s"></a>clearerr_s
 
 Сбрасывает индикатор ошибки для потока. Это версия функции [clearerr](clearerr.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
@@ -44,18 +47,18 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
-Указатель на **ФАЙЛ** структуры
+*вышестоящий*<br/>
+Указатель на структуру **файла**
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Нуль в случае успеха; **EINVAL** Если *поток* — **NULL**.
+Нуль в случае успеха; **Еинвал** , если *Stream* имеет **значение NULL**.
 
 ## <a name="remarks"></a>Примечания
 
-**Clearerr_s** функция сбрасывает индикатор ошибки и индикатор окончания файла для *поток*. Индикаторы ошибок автоматически не удаляются; После как индикатор ошибки для указанного потока будет задан, операции в этом потоке будут возвращать значение ошибки до **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, или [rewind](rewind.md) вызывается.
+Функция **clearerr_s** сбрасывает индикатор ошибки и индикатор конца файла для *Stream*. Индикаторы ошибок не очищаются автоматически; После того как индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будет вызван **clearerr_s**, **клеарерр**, [fseek](fseek-fseeki64.md), **fsetpos**или [Rewind](rewind.md) .
 
-Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если *Stream* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
 ## <a name="requirements"></a>Требования
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="input"></a>Входные данные
+### <a name="input"></a>Ввод
 
 ```Input
 n

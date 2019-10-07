@@ -1,12 +1,12 @@
 ---
-title: ldexp, ldexpf, ldexpl
+title: ldexp, лдекспф, лдекспл
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ldexp
 - ldexpf
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286297"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953506"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, лдекспф, лдекспл
 
 Умножает число с плавающей запятой на целую степень числа два.
 
@@ -80,19 +83,19 @@ long double ldexpl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Ldexp** функции возвращают значение *x* \* 2<sup>*exp* </sup> при успешном выполнении. В случае переполнения и в зависимости от знака *x*, **ldexp** возвращает +/- **HUGE_VAL**; **errno** присваивается значение **ERANGE** .
+Функции **ldexp** возвращают значение<sup>*exp*</sup> *x* \* 2 в случае успеха. При переполнении и в зависимости от знака *x* **ldexp** возвращает +/- **HUGE_VAL**; значение перестройки передается в **ERANGE**.
 
-Дополнительные сведения о **errno** и возможных ошибок, которые возвращают значения, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения о параметрах **возврата и** возможностях, возвращающих ошибки, см. в разделе "_doserrno", " [_sys_errlist" и "_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)".
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , принимающих **float** или **long** **двойные** типов. В программе на языке C **ldexp** всегда принимает **двойные** и **int** и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **ldexp** всегда принимает **Double** и **int** и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **лдекспф**, **лдекспл**|\<math.h>|\<cmath>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

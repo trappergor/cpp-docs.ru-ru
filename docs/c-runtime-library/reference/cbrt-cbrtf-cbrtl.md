@@ -1,11 +1,11 @@
 ---
 title: cbrt, cbrtf, cbrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341100"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939293"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -65,21 +68,21 @@ long double cbrtl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Cbrt** функции возвращают кубический корень *x*.
+Функции **CBRT** возвращают корневой каталог Куба *x*.
 
-|Входные данные|Исключение SEH|**_matherr** исключение|
+|Ввод|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Нет|Нет|
+|± ∞, КНАН, ТО ЕСТЬ|none|none|
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **cbrt** , принимающих **float** или **long** **двойные** типов. В программе на языке C **cbrt** всегда принимает и возвращает **двойные**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CBRT** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **CBRT** всегда принимает и возвращает **Double**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**CBRT**, **cbrtf**, **кбртл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

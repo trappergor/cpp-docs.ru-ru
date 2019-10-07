@@ -1,9 +1,9 @@
 ---
 title: _fileno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fileno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fileno
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333772"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957205"
 ---
-# <a name="fileno"></a>_fileno
+# <a name="_fileno"></a>_fileno
 
 Получает дескриптор файла, связанного с потоком.
 
@@ -45,21 +48,21 @@ int _fileno(
 
 ### <a name="parameters"></a>Параметры
 
-*поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_fileno** возвращает дескриптор файла. Ошибка не возвращается. Результат не определен, если *поток* не содержит открытого файла. Если поток имеет **NULL**, **_fileno** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает -1 и задает **errno** для **EINVAL**.
+**_fileno** возвращает дескриптор файла. Ошибка не возвращается. Результат не определен, если *поток* не задает открытый файл. Если Stream имеет **значение NULL**, **_fileno** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для **errno** значение **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 > [!NOTE]
-> Если **stdout** или **stderr** не связан с потоком вывода (например, в приложении Windows без окна консоли), возвращается дескриптор файла — -2. В предыдущих версиях возвращался дескриптор файла -1. Это изменение позволяет приложениям отличить это условие от ошибки.
+> Если **stdout** или **stderr** не связаны с выходным потоком (например, в приложении Windows без окна консоли), возвращается дескриптор файла-2. В предыдущих версиях возвращался дескриптор файла -1. Это изменение позволяет приложениям отличить это условие от ошибки.
 
 ## <a name="remarks"></a>Примечания
 
-**_Fileno** процедура возвращает дескриптор файла, в настоящее время связанный с *поток*. Эта подпрограмма реализуется как функция и макрос. Дополнительные сведения о выборе любой реализации см. в разделе [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
+Подпрограммы **_fileno** возвращают дескриптор файла, который в настоящее время связан с *потоком*. Эта подпрограмма реализуется как функция и макрос. Дополнительные сведения о выборе любой реализации см. в разделе [Выбор между функциями и макросами](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md).
 
 ## <a name="requirements"></a>Требования
 

@@ -1,13 +1,13 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towupper
 - _toupper
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: 6dd564a27ee7f3c2bb095564e5c9423249d6babc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155502"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957909"
 ---
-# <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
+# <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
 Преобразуют символ в верхний регистр.
 
@@ -85,19 +88,19 @@ int _towupper_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм преобразует копию *c*, если это возможно и возвращает результат.
+Каждая из этих подпрограмм преобразует копию *c*, если это возможно, и возвращает результат.
 
-Если *c* представляет собой расширенный символ, для которого **iswlower** имеет ненулевое значение и существует соответствующий расширенный символ, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) не равно нулю, **towupper** возвращает соответствующий расширенный символ; в противном случае **towupper** возвращает *c* без изменений.
+Если *c* является расширенным символом, для которого **iswlower** не равен нулю и имеется соответствующий широкий символ, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) имеет ненулевое значение, **товуппер** возвращает соответствующий расширенный символ. в противном случае **товуппер** возвращает *c* без изменений.
 
 Возвращаемое значение для указания ошибки не зарезервировано.
 
-Чтобы **toupper** давала ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [islower](islower-iswlower-islower-l-iswlower-l.md) должны возвращать ненулевое значение.
+Чтобы обеспечить ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и " [Нижний](islower-iswlower-islower-l-iswlower-l.md) " должны возвращать ненулевое **значение.**
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование регистра **towupper** является языковым стандартом. Изменяются только символы, соответствующие текущему языковому стандарту. Функции, не имеющие **_l** суффикс используют текущий языковой языкового стандарта. Версии этих функций с **_l** суффикс, принимают языковой стандарт как параметр и использовать его вместо текущего языкового языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование регистра **товуппер** зависит от языкового стандарта. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без суффикса **_l** используют текущую национальную настройку. Версии этих функций с суффиксом **_l** принимают языковой стандарт в качестве параметра и используют его вместо текущего установленного языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Чтобы **toupper** давала ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [isupper](isupper-isupper-l-iswupper-iswupper-l.md) должны возвращать ненулевое значение.
+Чтобы дать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [Upper](isupper-isupper-l-iswupper-iswupper-l.md) должны возвращать ненулевое **значение.**
 
 [Процедуры преобразования данных](../../c-runtime-library/data-conversion.md)
 
@@ -109,7 +112,7 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** и **_towupper_l** не зависят от языкового стандарта и не предназначены для непосредственного вызова. Они предназначены для внутреннего использования **_totupper_l**.
+> **_toupper_l** и **_towupper_l** не имеют зависимости от языкового стандарта и не предназначены для непосредственного вызова. Они предоставляются для внутреннего использования **_totupper_l**.
 
 ## <a name="requirements"></a>Требования
 

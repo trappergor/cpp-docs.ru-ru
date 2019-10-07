@@ -1,11 +1,11 @@
 ---
 title: nearbyint, nearbyintf, nearbyintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - nearbyint
 - nearbyintf
 - nearbyintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nearbyint
 - nearbyintf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0a7d00c5019dd1e483d555df6db8d9770e61c1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156204"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951393"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -61,33 +64,33 @@ long double nearbyint( long double x ); //C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает *x*, округленное до ближайшего целого числа, с помощью текущего формата округления в соответствии с отчетом [fegetround](fegetround-fesetround2.md). В противном случае функция может вернуть одно из следующих значений:
+В случае успеха возвращает значение *x*, округленное до ближайшего целого числа, используя текущий формат округления, сообщаемый [fegetround](fegetround-fesetround2.md). В противном случае функция может вернуть одно из следующих значений:
 
 |Проблемы|Назад|
 |-----------|------------|
-|*x* = ±INFINITY|±INFINITY, без изменений|
-|*x* = ±0|±0, без изменений|
+|*x* = ± бесконечности|± Бесконечности, без изменений|
+|*x* = ± 0|± 0, без изменений|
 |*x* = NaN|NaN|
 
-Ошибки не выводятся в [_matherr](matherr.md); в частности, эта функция не сообщает о любой **FE_INEXACT** исключения.
+Сообщения об ошибках не передаются через [_matherr](matherr.md); в частности, эта функция не сообщает об исключениях **FE_INEXACT** .
 
 ## <a name="remarks"></a>Примечания
 
-Основное различие между этой функцией и [rint](rint-rintf-rintl.md) — это то, что эта функция не вызывает неточный точки исключения с плавающей запятой.
+Основное различие между этой функцией и [Печать](rint-rintf-rintl.md) заключается в том, что эта функция не вызывает неточного исключения с плавающей точкой.
 
 Так как максимальные значения с плавающей запятой являются точными целыми числами, эта функция никогда не будет переполняться сама по себе; вместо этого выходные данные могут привести к переполнению возвращаемого значения в зависимости от используемой функции.
 
-C++ допускает перегрузку, поэтому можно вызывать перегрузки **nearbyint** , принимающие и возвращающие **float** или **long** **двойные** параметров. В программе на языке C **nearbyint** всегда принимает два значения типа double и возвращает значение типа double.
+C++допускает перегрузку, поэтому можно вызывать перегрузки **неарбинт** , которые принимают и возвращают параметры с **плавающей запятой** или **длинные** **Double** . В программе на языке C **неарбинт** всегда принимает два значения типа Double и возвращает значение типа Double.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> или \<math.h>|
+|**неарбинт**, **неарбинтф**, **неарбинтл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
-[Математические и поддержка плавающей запятой](../floating-point-support.md)<br/>
+[Поддержка математических функций и чисел с плавающей запятой](../floating-point-support.md)<br/>

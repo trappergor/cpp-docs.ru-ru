@@ -1,9 +1,9 @@
 ---
 title: __security_init_cookie
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __security_init_cookie
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - security_init_cookie
 - __security_init_cookie
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - security_init_cookie function
 - global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
-ms.openlocfilehash: c7b25e05b4574a7b397cd07d55000a5e53db58f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f7e9924f4a96803749418d777e5ee2020f9df78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356840"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948720"
 ---
-# <a name="securityinitcookie"></a>__security_init_cookie
+# <a name="__security_init_cookie"></a>__security_init_cookie
 
 Инициализирует глобальный cookie-файл безопасности.
 
@@ -45,9 +48,9 @@ void __security_init_cookie(void);
 
 Глобальный cookie-файл безопасности используется для защиты от переполнения буфера в коде, скомпилированном с параметром [/GS (проверка безопасности буфера)](../../build/reference/gs-buffer-security-check.md), и в коде, в котором используется структурная обработка исключений. При входе в функцию с защитой от переполнения cookie-файл помещается в стек, а при выходе значение в стеке сравнивается с глобальным cookie-файлом. Любое различие между ними указывает, что произошло переполнение буфера, что приводит к немедленному завершению работы программы.
 
-Как правило **__security_init_cookie** вызывается средой CRT при его инициализации. Если пропустить инициализацию CRT, например, если вы используете [/Entry](../../build/reference/entry-entry-point-symbol.md) для указания точки ввода, то нужно вызвать **__security_init_cookie** самостоятельно. Если **__security_init_cookie** не вызывается, глобальный файл cookie безопасности присвоено значение по умолчанию и нарушается защита от переполнения буфера. Так как злоумышленник может использовать это значение по умолчанию файл cookie, чтобы обойти проверку переполнения буфера, рекомендуется всегда вызывать **__security_init_cookie** при определении собственной точки входа.
+Обычно **__security_init_cookie** вызывается CRT при инициализации. Если обойти инициализацию CRT — например, если вы используете [/entry](../../build/reference/entry-entry-point-symbol.md) для указания точки входа, то необходимо вызвать **__security_init_cookie** самостоятельно. Если **__security_init_cookie** не вызывается, для глобального файла cookie безопасности задается значение по умолчанию, и защита от переполнения буфера будет скомпрометирована. Так как злоумышленник может воспользоваться этим значением файла cookie по умолчанию, чтобы отменить проверку переполнения буфера, рекомендуется всегда вызывать **__security_init_cookie** при определении собственной точки входа.
 
-Вызов **__security_init_cookie** необходимо вызывать до любой защищенную от переполнения вводе функции; в противном случае будет обнаружено ложное переполнение буфера. Подробнее: [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
+Вызов **__security_init_cookie** должен быть выполнен до того, как будет указана любая функция, защищенная с помощью переполнения. в противном случае будет обнаружено ложное переполнение буфера. Подробнее: [Ошибка R6035 времени выполнения C](../../error-messages/tool-errors/c-runtime-error-r6035.md).
 
 ## <a name="example"></a>Пример
 
@@ -59,8 +62,8 @@ void __security_init_cookie(void);
 |-------------|---------------------|
 |**__security_init_cookie**|\<process.h>|
 
-**__security_init_cookie** является расширением Майкрософт для стандартной библиотеки C времени выполнения. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**__security_init_cookie** — это расширение Майкрософт для стандартной библиотеки времени выполнения C. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 
-[Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)
+[Центр Microsoft Security Response Center](https://www.microsoft.com/msrc?rtc=1)
