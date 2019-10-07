@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: f7c9d2b472a443d8bf556d0b12dfe202ea8607a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505056"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс Кмфкпропертишит
@@ -500,7 +500,7 @@ void SetLook(
 окне Одно из значений перечисления, определяющее внешний вид страницы свойств. Стилем по умолчанию для страницы свойств `CMFCPropertySheet::PropSheetLook_Tabs`является. Дополнительные сведения см. в таблице в подразделе «Примечания» этого раздела.
 
 *ннавконтролвидс*<br/>
-окне Ширина элемента управления навигацией в пикселях. По умолчанию используется значение 100.
+окне Ширина элемента управления навигацией в пикселях. Значение по умолчанию — 100.
 
 ### <a name="remarks"></a>Примечания
 

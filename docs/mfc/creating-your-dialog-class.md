@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: 424d18196063456245e2a4841b42e6e447bded17
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907329"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685651"
 ---
 # <a name="creating-your-dialog-class"></a>Создание классов диалоговых окон
 
@@ -36,4 +36,4 @@ ms.locfileid: "70907329"
 ## <a name="see-also"></a>См. также
 
 [Создание класса диалогового окна с помощью мастеров кода](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
+[Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)

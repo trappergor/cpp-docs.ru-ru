@@ -4,10 +4,10 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
 ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498633"
 ---
 # <a name="c-type-system-modern-c"></a>Тип системы C++ (современный C++)
@@ -63,9 +63,9 @@ int maxValue;                // Not recommended! maxValue contains
 
 В следующей таблице перечислены наиболее часто используемые базовые типы:
 
-|Тип|Size|Комментарий|
+|Тип|Размер|Комментарий|
 |----------|----------|-------------|
-|ssNoversion|4 байта|Выбор по умолчанию для целочисленных значений.|
+|int|4 байта|Выбор по умолчанию для целочисленных значений.|
 |double|8 байт|Выбор по умолчанию для значений с плавающей запятой.|
 |bool|1 байт|Представляет значения, которые могут быть или true, или false.|
 |char|1 байт|Используйте для символов ASCII в старых строках в стиле C или в объектах std::string, которые никогда не будут преобразовываться в Юникод.|

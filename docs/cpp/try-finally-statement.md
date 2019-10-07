@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69498605"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
@@ -68,7 +68,7 @@ ms.locfileid: "69498605"
 
 Например, предположим, ряд вызовов функций связывает функцию А с функцией D, как показано на следующем рисунке. Каждая функция имеет один обработчик завершения. Если исключение возникает в функции D и обрабатывается в, обработчики завершения вызываются в таком порядке, когда система очищает стек: D, C, B.
 
-![Порядок выполнения обработчика&#45;завершения]для(../cpp/media/vc38cx1.gif "выполнения обработчика завершения&#45;") <br/>
+![Порядок выполнения обработчика завершения&#45;]для(../cpp/media/vc38cx1.gif "выполнения обработчика завершения&#45;") <br/>
 Порядок выполнения обработчиков завершения
 
 > [!NOTE]

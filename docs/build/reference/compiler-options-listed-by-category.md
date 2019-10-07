@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273719"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685202"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -122,6 +122,7 @@ ms.locfileid: "70273719"
 |[/Zc](zc-conformance.md)|Задает стандартное поведение при использовании параметра [/Ze](za-ze-disable-language-extensions.md).|
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка C89.|
 |[/Zf](zf.md)|Улучшает время создания PDB в параллельных сборках.|
+|[/ZH](zh.md)|Указывает MD5, SHA-1 или SHA-256 для контрольных сумм в отладочной информации.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Включает отладочную информацию в базу данных программы, совместимую с функцией "Изменить и продолжить". (только x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Создает полную отладочную информацию.|
 |[/Zl](zl-omit-default-library-name.md)|Удаляет имя библиотеки по умолчанию из OBJ-файла.|

@@ -1,14 +1,14 @@
 ---
 title: Библиотека шаблонов C++ среды выполнения Windows (WRL)
 ms.date: 11/04/2016
-ms.topic: landing-page
+ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740833"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274671"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
 
@@ -85,7 +85,7 @@ C++/CX — это высокоуровневый, основанный на яз
 
 Библиотека C++ шаблонов среда выполнения Windows поддерживает функции COM, необходимые для приложений UWP. Поэтому она отличается от библиотеки ATL, поскольку в последней нет непосредственной поддержки таких функций модели COM, как:
 
-- агрегат
+- статистическая обработка
 
 - стандартные реализации
 

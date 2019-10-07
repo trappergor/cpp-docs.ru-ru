@@ -7,10 +7,10 @@ helpviewer_keywords:
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
 ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512136"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Пошаговое руководство. Подключение с помощью задач и HTTP-запросов XML
@@ -20,7 +20,7 @@ ms.locfileid: "69512136"
 > [!TIP]
 >  Для выполнения HTTP-запросов C++ из приложения UWP с помощью C++ приложения или из классического C++ приложения можно также использовать пакет SDK для RESTful. Дополнительные сведения см. в разделе [ C++ пакет SDK для RESTful (кодовое название "Касабланка")](https://github.com/Microsoft/cpprestsdk).
 
-Дополнительные сведения о задачах см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения об использовании задач в приложении UWP см. в статье асинхронное [программирование в C++ ](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) и [Создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
+Дополнительные сведения о задачах см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения об использовании задач в приложении UWP см. в статье [Асинхронное программирование в C++ ](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) и [Создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
 В этом документе сначала показаны способы создания `HttpRequest` и его вспомогательных классов. Затем показано, как использовать этот класс из приложения UWP, которое использует C++ и XAML.
 
@@ -31,7 +31,7 @@ ms.locfileid: "69512136"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Поддержка UWP является необязательной в Visual Studio 2017 и более поздних версиях. Чтобы установить его, откройте Visual Studio Installer в меню "Пуск" Windows и выберите версию Visual Studio, которую вы используете. Нажмите кнопку **изменить** и убедитесь, что установлен флажок **Разработка UWP** . В разделе необязательные **компоненты** убедитесь, что  **C++ установлены средства UWP** . Используйте v141 для Visual Studio 2017 или v142 для Visual Studio 2019.
+Поддержка UWP является необязательной в Visual Studio 2017 и более поздних версиях. Чтобы установить его, откройте Visual Studio Installer в меню "Пуск" Windows и выберите версию Visual Studio, которую вы используете. Нажмите кнопку **изменить** и убедитесь, что установлен флажок **Разработка UWP** . В разделе **необязательные компоненты** убедитесь, что  **C++ установлены средства UWP** . Используйте v141 для Visual Studio 2017 или v142 для Visual Studio 2019.
 
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>Определение классов HttpRequest, HttpRequestBuffersCallback и HttpRequestStringCallback
 
@@ -100,7 +100,7 @@ ms.locfileid: "69512136"
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. В свойствах проекта в разделе **Компоновщик** `shcore.lib` введите и. `msxml6.lib`
+8. В свойствах проекта в разделе **Компоновщик** `shcore.lib` `msxml6.lib`введите и.
 
 Здесь приводится работающее приложение:
 
@@ -116,6 +116,6 @@ ms.locfileid: "69512136"
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
 [Асинхронное программирование вC++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [Создание асинхронных операций на C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[Краткое руководство Подключение с помощью класса задачи «XML-](/previous-versions/windows/apps/hh770550\(v=win.10\))запрос HTTP» (IXMLHTTPRequest2
+[Краткое руководство. Подключение с помощью класса задачи «XML-](/previous-versions/windows/apps/hh770550\(v=win.10\))запрос HTTP» (IXMLHTTPRequest2
 )[(среда выполнения с параллелизмом)](../../parallel/concrt/reference/task-class.md)<br/>
 [Класс task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)

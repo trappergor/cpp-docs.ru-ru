@@ -1,6 +1,7 @@
 ---
-title: Параметры компоновщика MSVC
-ms.date: 08/20/2018
+title: Параметры компоновщика КОМПИЛЯТОРОМ MSVC
+description: Список параметров, поддерживаемых компоновщиком ссылок Microsoft.
+ms.date: 09/24/2019
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301764"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712698"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -30,9 +31,11 @@ LINK.exe связывает объектные файлы в формате COFF
 
 - [Зарезервированные слова](reserved-words.md)
 
-В командной строке параметры компоновщика указываются без учета регистра; Например / base и/Base идентичны. Дополнительные сведения о том, как указать каждый параметр в командной строке или в Visual Studio, см. в документации для этого параметра.
+В командной строке параметры компоновщика не учитывают регистр; Например,/Base и/BASE означают одно и то же. Дополнительные сведения о том, как указать каждый параметр в командной строке или в Visual Studio, см. в документации для этого параметра.
 
 Директиву pragma [comment](../../preprocessor/comment-c-cpp.md) можно использовать для задания некоторых параметров компоновщика.
+
+## <a name="linker-options-listed-alphabetically"></a>Параметры компоновщика перечислены в алфавитном порядке
 
 |Параметр|Цель|
 |------------|-------------|
@@ -58,14 +61,14 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/DELAY](delay-delay-load-import-settings.md)|Управляет отложенной загрузкой библиотек DLL.|
 |[/DELAYLOAD](delayload-delay-load-import.md)|Включает отложенную загрузку указанной библиотеки DLL.|
 |[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)|Частично подписывает сборку.|
-|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|Задает флаги по умолчанию для зависимой загрузки DLL.|
+|[/ДЕПЕНДЕНТЛОАДФЛАГ](dependentloadflag.md)|Устанавливает флаги по умолчанию для загрузок зависимых библиотек DLL.|
 |[/DLL](dll-build-a-dll.md)|Выполняет сборку библиотеки DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Создает драйвер режима ядра.|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Указывает, следует ли создавать исполняемый образ, базовый адрес которого может быть случайным образом изменен во время загрузки с помощью технологии ASLR.|
 |[/ENTRY](entry-entry-point-symbol.md)|Задает начальный адрес.|
 |[/errorReport](errorreport-report-internal-linker-errors.md)|Передает сведения о внутренних ошибках компоновщика в Майкрософт.|
 |[/EXPORT](export-exports-a-function.md)|Экспортирует функцию.|
-|[/ FILEALIGN](filealign.md)|Выравнивание разделов в выходном файле на кратные с указанным значением.|
+|[/FILEALIGN](filealign.md)|Совмещает разделы в выходном файле по кратным заданному значению.|
 |[/FIXED](fixed-fixed-base-address.md)|Создает программу, которая может загружаться только по предпочтительному базовому адресу.|
 |[/FORCE](force-force-file-output.md)|Принудительное завершение компоновки даже в случае наличия неразрешенных или многократно определенных символов.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Создает образ, для которого можно выполнять горячее обновление.|
@@ -84,10 +87,12 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|Задает ключ или пару ключей для подписи сборки.|
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|Указывает компилятору на то, что приложение поддерживает адреса, превышающие два гигабайта.|
 |[/LIBPATH](libpath-additional-libpath.md)|Указывает путь для поиска перед путем среды библиотеки.|
+|[/ЛИНКРЕПРО](linkrepro.md)|Указывает путь для создания артефактов воспроизведения ссылок в.|
+|[/ЛИНКРЕПРОТАРЖЕТ](linkreprotarget.md)|Создает ссылку для воспроизведения только при создании указанного целевого объекта. <sup>16,1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|Задает создание кода во время компоновки.|
 |[/MACHINE](machine-specify-target-platform.md)|Указывает целевую платформу.|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|Создает параллельный файл манифеста и при необходимости включает его в двоичный файл.|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Указывает \<dependentAssembly > раздела в файле манифеста.|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|Указывает раздел \<dependentAssembly > в файле манифеста.|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|Изменяет имя файла манифеста по умолчанию.|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|Задает входной файл манифеста для обработки и внедрения компоновщиком в двоичный файл. Этот параметр можно использовать несколько раз, чтобы указать несколько входных файлов манифеста.|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|Указывает, следует ли внедрять в манифест программы сведения о контроле учетных записей.|
@@ -95,7 +100,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Включает указанные сведения в файл сопоставления.|
 |[/MERGE](merge-combine-sections.md)|Объединяет разделы.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Задает параметры командной строки MIDL.|
-|[/ NATVIS](natvis-add-natvis-to-pdb.md)|Добавляет визуализаторы отладчика из файла Natvis в PDB-ФАЙЛ.|
+|[/НАТВИС](natvis-add-natvis-to-pdb.md)|Добавляет визуализаторы отладчика из Natvis-файла в PDB.|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Подавляет создание сборки .NET Framework.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Пропускает все (или только указанные) библиотеки по умолчанию при разрешении внешних ссылок.|
 |[/NOENTRY](noentry-no-entry-point.md)|Создает библиотеку DLL, содержащую только ресурсы.|
@@ -108,12 +113,12 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Использует альтернативное местоположение для сохранения файла PDB.|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Создает файл базы данных программы (PDB), не содержащий закрытых символов.|
 |[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Задает файл PGD для профильных оптимизаций.|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Устаревшие** создает сборку инструментирования профильной Оптимизации поточно ориентированными.|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Устарело** Создает поточно-ориентированную сборку с инструментированием профильной оптимизации.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Создает выходной файл, который может быть использован для профилировщика производительности инструментов.|
 |[/RELEASE](release-set-the-checksum.md)|Задает контрольную сумму в заголовке файла EXE.|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Указывает на то, что образ будет содержать таблицу безопасных обработчиков исключений.|
 |[/SECTION](section-specify-section-attributes.md)|Переопределяет атрибуты секции.|
-|[/ SOURCELINK](sourcelink.md)|Указывает файл SourceLink для добавления в PDB.|
+|[ПАРАМЕТР/SOURCELINK](sourcelink.md)|Указывает файл SourceLink для добавления в PDB.|
 |[/STACK](stack-stack-allocations.md)|Задает размер стека (в байтах).|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Присоединяет программу-заглушку MS-DOS к программе Win32.|
 |[/SUBSYSTEM](subsystem-specify-subsystem.md)|Указывает операционной системе, как запускать файл EXE.|
@@ -121,10 +126,10 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Указывает идентификатор ресурса библиотеки типов, создаваемой компоновщиком.|
 |[/TLBOUT](tlbout-name-dot-tlb-file.md)|Указывает имя файла TLB и имена других выходных файлов MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Создает приложение, специально рассчитанное на запуск под управлением сервера терминалов.|
-|[/USEPROFILE](useprofile.md)|Использует профильной оптимизации обучающих данных для создания оптимизированного образа.|
+|[/USEPROFILE](useprofile.md)|Для создания оптимизированного образа использует данные для обучения по оптимизации профиля.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Печатает сообщения хода выполнения компоновщика.|
 |[/VERSION](version-version-information.md)|Присваивает номер версии.|
-|[/ WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|Включает в себя каждого файла объект из указанного статических библиотек.|
+|[/ВХОЛЕАРЧИВЕ](wholearchive-include-all-library-object-files.md)|Включает каждый объектный файл из указанных статических библиотек.|
 |[/WINMD](winmd-generate-windows-metadata.md)|Включает создание файлов метаданных среды выполнения Windows.|
 |[/WINMDFILE](winmdfile-specify-winmd-file.md)|Задает имя файла для выходного файла метаданных среды выполнения Windows (winmd), создаваемого параметром компоновщика [/WINMD](winmd-generate-windows-metadata.md) .|
 |[/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md)|Задает ключ или пару ключей для подписи файла метаданных среды выполнения Windows.|
@@ -132,9 +137,9 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|Частично подписывает файл метаданных среды выполнения Windows (.winmd), установив открытый ключ в файле winmd.|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|Обрабатывает предупреждения компоновщика как ошибки.|
 
-Дополнительные сведения см. в разделе [Compiler-Controlled LINK Options](compiler-controlled-link-options.md).
+<sup>16,1</sup> . Этот параметр доступен начиная с Visual Studio 2019 версии 16,1.
 
 ## <a name="see-also"></a>См. также
 
-[Справочные сведения о сборке C/C++](c-cpp-building-reference.md)<br/>
+[Справочные сведения о построении C/C++](c-cpp-building-reference.md)\
 [Справочник по компоновщику MSVC](linking.md)
