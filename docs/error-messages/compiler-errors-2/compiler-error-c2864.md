@@ -1,27 +1,31 @@
 ---
 title: Ошибка компилятора C2864
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - C2864
 helpviewer_keywords:
 - C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
-ms.openlocfilehash: 9bfc18137df1a54530011a8ec3f7ea50b1d6c86a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 122e0455f84d8940eda04f3968e883dd1f0cd444
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227504"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998666"
 ---
 # <a name="compiler-error-c2864"></a>Ошибка компилятора C2864
 
-"переменная": статические данные-член с инициализатором в классе должен иметь целочисленный тип const без квалификатора volatile
+> "*member-Name*": статический элемент данных с инициализатором в классе должен иметь постоянный целочисленный тип const
 
-Чтобы инициализировать данные-член `static`, определенные как `volatile`, не имеющие квалификатора `const` или не имеющие целочисленный тип, используйте оператор определения членов. Их невозможно инициализировать в объявлении.
+## <a name="remarks"></a>Примечания
+
+Чтобы инициализировать элемент данных `static`, который определен как `volatile`, non-`const` или не является целочисленным типом, используйте оператор определения члена. Они не могут быть инициализированы в объявлении.
+
+## <a name="example"></a>Пример
 
 Этот пример приводит к возникновению ошибки C2864:
 
-```
+```cpp
 // C2864.cpp
 // compile with: /c
 class B  {
@@ -30,14 +34,14 @@ private:
    static int b = 3;   // C2864
    volatile static int c = 3;   // C2864
    volatile static const int d = 3;   // C2864
-   const static long long e = 3;   // OK
+   static const long long e = 3;   // OK
    static const double f = 3.33;   // C2864
 };
 ```
 
 В этом примере показано, как исправить ошибку C2864:
 
-```
+```cpp
 // C2864b.cpp
 // compile with: /c
 class C  {
