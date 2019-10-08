@@ -2,12 +2,12 @@
 title: Настройка проекта C++ для Linux в Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042631"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960682"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
 
@@ -90,15 +90,9 @@ ms.locfileid: "67042631"
 
 Так как вся компиляция происходит на удаленном компьютере (или в WSL), в раздел "События сборки" свойства проекта добавляются некоторые дополнительные события сборки. Это **удаленное событие перед сборкой**, **удаленное событие перед компоновкой** и **удаленное событие после сборки**, которые будут возникать на удаленном компьютере перед или после отдельных этапов процесса.
 
-![События сборки](media/settings_buildevents.png)
+![События построения](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> IntelliSense для заголовков в удаленных системах
-
-::: moniker range="vs-2019"
-
-При использовании WSL этот раздел можно пропустить.
-
-::: moniker-end
 
 При добавлении нового подключения в **диспетчере подключений** Visual Studio автоматически обнаруживает каталоги включения (include) для компилятора на удаленной системе. Затем Visual Studio архивирует с помощью zip и копирует эти файлы в каталог на локальном компьютере Windows. После этого при каждом использовании данного соединения в проекте Visual Studio или CMake заголовки в этих каталогах используются для обеспечения поддержки технологии IntelliSense.
 
