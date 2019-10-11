@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222481"
@@ -75,7 +75,7 @@ ms.locfileid: "65222481"
 Объявление событий и обработчиков событий.
 
 [Модификаторы, относящиеся только к системам Майкрософт](../cpp/microsoft-specific-modifiers.md)<br/>
-Модификаторы, относящиеся только к Microsoft C++. Адресация памяти, соглашения о вызовах, функции с атрибутом **naked**, расширенные атрибуты классов хранения (**__declspec**), **__w64**.
+Модификаторы, относящиеся только к Microsoft C++. Адресация памяти, соглашения о вызовах, функции с атрибутом **naked**, расширенные атрибуты классов хранения ( **__declspec**), **__w64**.
 
 [Встроенный ассемблер](../assembler/inline/inline-assembler.md)<br/>
 Использование языка ассемблера и C++ в блоках **__asm**.
