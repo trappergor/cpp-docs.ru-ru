@@ -3,12 +3,12 @@ title: Подключение к целевой системе Linux из Visual
 description: Подключение к удаленному компьютеру Linux или WSL из проекта C++ в Visual Studio.
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383403"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925561"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Подключение к целевой системе Linux из Visual Studio
 
@@ -38,7 +38,7 @@ ms.locfileid: "70383403"
 
 1. Введите следующую информацию.
 
-   | Ввод | ОПИСАНИЕ
+   | Запись | ОПИСАНИЕ
    | ----- | ---
    | **Имя узла**           | Имя или IP-адрес целевого устройства
    | **Порт**                | Порт, в котором работает служба SSH, обычно 22
@@ -94,11 +94,12 @@ ms.locfileid: "70383403"
 
 В Visual Studio 2019 версии 16.1 добавлена собственная поддержка для использования C++ с [подсистемой Windows для Linux (WSL)](https://docs.microsoft.com/windows/wsl/about).  Это значит, что для сборки и отладки локальной установки WSL больше не нужно добавлять удаленное подключение или настраивать SSH. Дополнительные сведения [об установке WSL](https://docs.microsoft.com/windows/wsl/install-win10) можно найти здесь.
 
-Чтобы настроить установку WSL для работы с Visual Studio, потребуется установить следующие средства: gcc, gdb, make, rsync и zip. Их можно установить из дистрибутивов, использующих APT, с помощью следующей команды: 
+Чтобы настроить установку WSL для работы с Visual Studio, потребуется установить следующие средства: gcc или clang, gdb, make, rsync и zip. Их можно установить на дистрибутивах, использующих apt, с помощью этой команды, которая также устанавливает компилятор g++: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+Ознакомьтесь с дополнительными сведениями о [скачивании, установке и настройке рабочей нагрузки для Linux](download-install-and-setup-the-linux-development-workload.md).
 
 Чтобы настроить проект для WSL, воспользуйтесь разделами [о настройке проекта Linux](configure-a-linux-project.md) или [проекта Linux CMake](cmake-linux-project.md) в зависимости от того, какой тип проекта вы используете. Пошаговые инструкции по созданию простого консольного приложения с помощью WSL приводятся в ознакомительной публикации блога о [C++ в Visual Studio 2019 и подсистеме Windows для Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 
