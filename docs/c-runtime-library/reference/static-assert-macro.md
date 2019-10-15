@@ -1,7 +1,7 @@
 ---
 title: Макрос _STATIC_ASSERT
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -12,22 +12,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _STATIC_ASSERT
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 5d3aa1d9665b48a0690d8eb62353fc98c5a550f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac609fc7af937b6f56cd5b310341409187df7de4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354703"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957931"
 ---
-# <a name="staticassert-macro"></a>Макрос _STATIC_ASSERT
+# <a name="_static_assert-macro"></a>Макрос _STATIC_ASSERT
 
-Вычисляет выражение во время компиляции и выдают ошибку при выполнении в результате **FALSE**.
+Вычисление выражения во время компиляции и создание ошибки, когда результат равен **false**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,16 +42,16 @@ _STATIC_ASSERT(
 
 ### <a name="parameters"></a>Параметры
 
-*booleanExpression*<br/>
-Выражение (включая указатели), которое возвращает ненулевое значение (**TRUE**) или 0 (**FALSE**).
+*булеанекспрессион*<br/>
+Выражение (включая указатели), результатом вычисления которого является ненулевое**значение (true**) или 0 (**false**).
 
 ## <a name="remarks"></a>Примечания
 
-Этот макрос напоминает [макросы _ASSERT и _ASSERTE](assert-asserte-assert-expr-macros.md), за исключением того, что *booleanExpression* вычисляется во время компиляции, а не во время выполнения. Если *booleanExpression* принимает значение **FALSE** (0), [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) создается.
+Этот макрос напоминает [макросы _ASSERT и _ASSERTE](assert-asserte-assert-expr-macros.md), за исключением того, что *булеанекспрессион* вычисляется во время компиляции, а не в среде выполнения. Если *булеанекспрессион* принимает **значение false** (0), создается [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) .
 
 ## <a name="example"></a>Пример
 
-В этом примере мы проверяем ли [sizeof](../../c-language/sizeof-operator-c.md) **int** больше или равно двум байтам и был ли [sizeof](../../c-language/sizeof-operator-c.md) **long** равен 1 байту. Программа не будет компилироваться и генерирует [Ошибка компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) поскольку **long** больше, чем 1 байт.
+В этом примере мы проверяем, является ли значение [sizeof](../../c-language/sizeof-operator-c.md) **int** большим или равным 2 байтами и является ли значение [sizeof](../../c-language/sizeof-operator-c.md) **длинным** 1 байтом. Программа не будет компилироваться, и она создаст [ошибку компилятора C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) , так как **длинное** значение превышает 1 байт.
 
 ```C
 // crt__static_assert.c
