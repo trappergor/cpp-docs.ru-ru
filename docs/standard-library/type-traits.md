@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455050"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684416"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 Определяет шаблоны для констант времени компиляции, которые предоставляют сведения о свойствах их аргументов типа или создают преобразованные типы.
 
@@ -24,24 +24,24 @@ ms.locfileid: "68455050"
 #include <type_traits>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Классы и шаблоны в \<type_traits > используются для поддержки определения типа, классификации и преобразования во время компиляции. Они также используются для обнаружения ошибок, связанных с типами, и для оптимизации универсального кода. Признаки унарного типа описывают свойство типа, признаки двоичного типа описывают связь между типами, а признаки преобразования изменяют свойство типа.
 
-Вспомогательный класс `integral_constant` и его `true_type` специализации шаблонов и `false_type` формируют базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является публично производным, прямым или косвенным, из [true_type](../standard-library/type-traits-typedefs.md#true_type). Если предикат типа *имеет значение false*, он является публично производным, прямым или косвенным, из [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Вспомогательный класс `integral_constant` и его специализации шаблонов `true_type` и `false_type` формируют базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является публично производным, прямым или косвенным, из [true_type](../standard-library/type-traits-typedefs.md#true_type). Если предикат типа *имеет значение false*, он является публично производным, прямым или косвенным, из [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 *Модификатор типа* или *признак преобразования* — это шаблон, принимающий один или несколько аргументов шаблона и имеющий один член (`type`), который является синонимом для измененного типа.
 
 ### <a name="alias-templates"></a>Шаблоны псевдонимов
 
-Чтобы упростить выражения признаков типов, предоставляются [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type` , где *some_trait* — это имя класса шаблона. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
+Чтобы упростить выражения признаков типов, предоставляются [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type`, где *some_trait* — это имя шаблона класса. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-Это указанные псевдонимы для `type` членов:
+Это указанные псевдонимы для членов `type`:
 
 ||||
 |-|-|-|
@@ -212,7 +212,7 @@ using add_const_t = typename add_const<T>::type;
 |[aligned_union](../standard-library/aligned-union-class.md)|Выделяет неинициализированную память для выровненного объединения с нетривиальным конструктором или деструктором.|
 |[common_type](../standard-library/common-type-class.md)|Создает общий тип для всех типов параметров пакета.|
 |[conditional](../standard-library/conditional-class.md)|Если условие имеет значение true, создает первый заданный тип; в противном случае — второй заданный тип.|
-|[decay](../standard-library/decay-class.md)|Создает тип в качестве передаваемого значения. Создает нессылочный, неконстантный или долговременный тип либо указатель на тип.|
+|[decay](../standard-library/decay-class.md)|Создает тип, как передано по значению. Создает нессылочный, неконстантный или долговременный тип либо указатель на тип.|
 |[enable_if](../standard-library/enable-if-class.md)|Если условие имеет значение true, создает заданный тип; в противном случае — не создает тип.|
 |[invoke_result](invoke-result-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлено в C++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлено в C++ 14, не рекомендуется в C++ 17. |

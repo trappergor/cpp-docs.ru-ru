@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449074"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687870"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-Объявляет прямые ссылки на несколько классов шаблонов, использующихся в iostreams. Все такие классы шаблонов определяются в других стандартных заголовках. Включать этот заголовок явно нужно только если требуется одно из его объявлений, но не его определение.
+Объявляет прямые ссылки на несколько шаблонов классов, используемых во время использования iostream. Все такие шаблоны классов определяются в других стандартных заголовках. Включать этот заголовок явно нужно только если требуется одно из его объявлений, но не его определение.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,7 +23,7 @@ ms.locfileid: "68449074"
 #include <iosfwd>
 ```
 
-## <a name="typedefs"></a>Определения типов
+## <a name="typedefs"></a>Typedefs
 
 ```cpp
 typedef T1 streamoff;
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>Классы опережающего объявления или шаблона
+## <a name="forward-declarations-and-class-templates"></a>Пересылка объявлений и шаблонов классов
 
 ```cpp
 template <class _Statetype>

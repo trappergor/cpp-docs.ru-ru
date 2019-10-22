@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8955669f4bc6fd7b3b373751e0e5134205dd1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453154"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689793"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -30,30 +30,30 @@ public:
 constexpr complex(const complex<double>& complexNum);
 
 constexpr explicit complex(const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*реалвал*\
+*Реалвал* \
 Значение типа **double** для вещественной части конструируемого комплексного числа.
 
-*имагвал*\
+*Имагвал* \
 Значение типа **double** для мнимой части конструируемого комплексного числа.
 
-*комплекснум*\
+*комплекснум* \
 Комплексное число типа **float** или **long double** , действительные и мнимые части которых используются для инициализации комплексного числа создаваемого типа **double** .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число типа **double**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Явная специализация комплексного класса шаблонов для комплексного класса типа **double** отличается от класса шаблона только определяемыми конструкторами. Преобразование из **float** в **Double** может быть неявным, но преобразование из длинного **double** в **Double** должно быть **явным**. Использование **явного** типа исключает инициацию преобразования типа при помощи синтаксиса назначения.
+Явная специализация шаблона класса Complex до сложного класса типа **Double** отличается от шаблона класса только в конструкторах, которые он определяет. Преобразование из **float** в **Double** может быть неявным, но преобразование из **длинного double** в **Double** должно быть **явным**. Использование **явного** типа исключает инициацию преобразования типа при помощи синтаксиса назначения.
 
-Дополнительные сведения о классе шаблона `complex` см. в разделе [Класс complex](../standard-library/complex-class.md). Список членов класса шаблона `complex` см. в разделе.
+Дополнительные сведения о шаблоне класса `complex` см. в разделе [сложный класс](../standard-library/complex-class.md). Список членов шаблона класса `complex` см. в разделе.
 
 ## <a name="example"></a>Пример
 

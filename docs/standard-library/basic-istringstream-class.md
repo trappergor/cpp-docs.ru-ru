@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452538"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689986"
 ---
-# <a name="basicistringstream-class"></a>Класс basic_istringstream
+# <a name="basic_istringstream-class"></a>Класс basic_istringstream
 
 Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -34,18 +34,18 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*Elem*\
+*Elem* \
 Тип основного элемента строки.
 
-*ТС*\
+*Tr* \
 Признаки символа, соответствующие основному элементу строки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **tr** `Alloc`> с элементами типа *elem*. , признаки символов которых определяются классом *tr*, элементы которого выделяются распределителем класса *Alloc*. Этот объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+Шаблон класса описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **tr**`Alloc` > с элементами типа *elem*, символом которых является признаки определяются классом *tr*, элементы которого выделяются распределителем класса *Alloc*. Объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -53,7 +53,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|
 |[basic_istringstream](#basic_istringstream)|Создает объект типа `basic_istringstream`.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
@@ -69,7 +69,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[оператор=](#op_eq)|Назначает значения этому объекту `basic_istringstream` из параметра объекта.|
 
@@ -105,18 +105,18 @@ basic_istringstream(
 
 ### <a name="parameters"></a>Параметры
 
-*_Mode*\
+*_Mode* \
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*\
+\ *str*
 Объект типа `basic_string`.
 
-*Правильно*\
+*справа* \
 Ссылка rvalue на объект `basic_istringstream`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Первый конструктор инициализирует базовый класс путем вызова [basic_istream](../standard-library/basic-istream-class.md)(`sb`), где `sb` — это `Alloc`сохраненный объект класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> . Он также инициализирует `sb` путем вызова `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
+Первый конструктор инициализирует базовый класс путем вызова [basic_istream](../standard-library/basic-istream-class.md)(`sb`), где `sb` является сохраненным объектом класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`, `Tr`, `Alloc` >. Он также инициализирует `sb` путем вызова `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`).
 
 Второй конструктор инициализирует базовый класс путем вызова `basic_istream(sb)`. Он также инициализирует `sb` путем вызова `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`).
 
@@ -132,16 +132,16 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Ссылка rvalue на объект `basic_istringstream`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор Member заменяет содержимое объекта содержимым *right*, которое рассматривается как присваивание перемещения ссылки rvalue.
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-`pointer` Возвращает адрес буфера сохраненного потока типа в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **tr** `Alloc`>.
+Возвращает адрес буфера сохраненного потока типа `pointer` в [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **tr**`Alloc` >.
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,7 +149,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Адрес буфера `pointer` сохраненного потока типа в basic_stringbuf < **elem**, **tr** `Alloc`>.
+Адрес буфера сохраненного потока типа `pointer` для basic_stringbuf < **elem**, **tr**`Alloc` >.
 
 ### <a name="example"></a>Пример
 
@@ -168,14 +168,14 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr*\
+*_Newstr* \
 Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, управляемая последовательность которого является копией последовательности, управляемой **\*this**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первая функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Вторая функция-член вызывает `rdbuf` -> **str**( `_Newstr`).
 
@@ -197,7 +197,7 @@ void swap(basic_istringstream& right);
 |---------------|-----------------|
 |*right*|Ссылка `lvalue` на объект `basic_istringstream`.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция элемента меняет местами значения этого объекта и значения *right*.
 

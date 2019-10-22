@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9577ce51d4b0773f7b309fe3dc6dcb5820693dcb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452044"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689534"
 ---
-# <a name="integralconstant-class-boolconstant-class"></a>Класс integral_constant, класс bool_constant
+# <a name="integral_constant-class-bool_constant-class"></a>Класс integral_constant, класс bool_constant
 
 Создает целочисленную константу из типа и значения.
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>Параметры
 
-*T*\
+*T* \
 Тип константы.
 
-*3,3*\
+*v* \
 Значение константы.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона `integral_constant`, если он специализирован с целочисленным типом *T* и значением *v* этого типа, представляет объект, который содержит константу этого целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для типа специализации созданного шаблона и член `value` хранит значение *v*, которое используется для создания специализации.
+Шаблон класса `integral_constant`, если он специализирован с целочисленным типом *t* и значением *v* этого типа, представляет объект, содержащий константу этого целочисленного типа с указанным значением. Член с именем `type` является псевдонимом для типа специализации созданного шаблона и член `value` хранит значение *v*, которое используется для создания специализации.
 
-Класс шаблона является явной частичной `integral_constant` специализацией, в которой в качестве аргумента *T* используется **bool.** `bool_constant`
+Шаблон класса `bool_constant` является явной частичной специализацией `integral_constant`, в которой в качестве аргумента *t* используется **bool** .
 
 ## <a name="example"></a>Пример
 
@@ -81,5 +81,5 @@ integral_constant<bool, false> == false
 ## <a name="see-also"></a>См. также
 
 [<type_traits>](../standard-library/type-traits.md)\
-[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type) \
 [true_type](../standard-library/type-traits-typedefs.md#true_type)
