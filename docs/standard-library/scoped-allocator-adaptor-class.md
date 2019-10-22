@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: 1fb2842df50b0e803419e3cccdeb921c9b4fa591
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6ba135d0c3a69293415d1c46d70679d9f8bc8a37
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458012"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686552"
 ---
-# <a name="scopedallocatoradaptor-class"></a>Класс scoped_allocator_adaptor
+# <a name="scoped_allocator_adaptor-class"></a>Класс scoped_allocator_adaptor
 
 Представляет вложенные распределители.
 
@@ -41,15 +41,15 @@ template <class Outer, class... Inner>
 class scoped_allocator_adaptor;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблонов инкапсулирует вложение одного или нескольких распределителей. Каждый из этих классов имеет внешний распределитель типа `outer_allocator_type`, синоним `Outer`, который представляет собой общедоступную базу объекта `scoped_allocator_adaptor`. `Outer` используется для выделения памяти, которая будет использоваться контейнером. Можно получить ссылку на этот базовый объект распределителя, вызвав метод `outer_allocator`.
+Шаблон класса инкапсулирует вложенный объект одного или нескольких распределительов. Каждый из этих классов имеет внешний распределитель типа `outer_allocator_type`, синоним `Outer`, который представляет собой общедоступную базу объекта `scoped_allocator_adaptor`. `Outer` используется для выделения памяти, которая будет использоваться контейнером. Можно получить ссылку на этот базовый объект распределителя, вызвав метод `outer_allocator`.
 
 Остальная часть вложения имеет тип `inner_allocator_type`. Внутренний распределитель используется для выделения памяти для элементов в контейнере. Для получения ссылки на сохраненный объект этого типа вызовите `inner_allocator`. Если `Inner...` не пустой, `inner_allocator_type` имеет тип `scoped_allocator_adaptor<Inner...>`, а `inner_allocator` назначает объект-член. В противном случае `inner_allocator_type` имеет тип `scoped_allocator_adaptor<Outer>`, а `inner_allocator` назначает целый объект.
 
 Вложение ведет себя так, как будто имеет произвольную глубину, реплицируя свой самый внутренний инкапсулированный распределитель так, как нужно.
 
-Некоторые понятия, которые не являются частью видимого интерфейса, облегчают описание поведения этого класса шаблонов. *Внешний распределитель* преобразует все вызовы, адресованные методам construct и destroy. Он эффективно определяется рекурсивной функцией `OUTERMOST(X)`, где `OUTERMOST(X)` — один из следующих объектов.
+Некоторые понятия, которые не являются частью видимого интерфейса, помогают описать поведение этого шаблона класса. *Внешний распределитель* преобразует все вызовы, адресованные методам construct и destroy. Он эффективно определяется рекурсивной функцией `OUTERMOST(X)`, где `OUTERMOST(X)` — один из следующих объектов.
 
 - Если `X.outer_allocator()` имеет правильный формат, `OUTERMOST(X)` равен `OUTERMOST(X.outer_allocator())`.
 
@@ -57,7 +57,7 @@ class scoped_allocator_adaptor;
 
 В целях демонстрации определено три типа:
 
-|Тип|Описание|
+|Type|Описание|
 |----------|-----------------|
 |`Outermost`|Тип параметра `OUTERMOST(*this)`.|
 |`Outermost_traits`|`allocator_traits<Outermost>`|
@@ -65,13 +65,13 @@ class scoped_allocator_adaptor;
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|Создает объект `scoped_allocator_adaptor`.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
-|name|Описание|
+|Название|Описание|
 |----------|-----------------|
 |`const_pointer`|Этот тип является синонимом `const_pointer`, связанного с распределителем `Outer`.|
 |`const_void_pointer`|Этот тип является синонимом `const_void_pointer`, связанного с распределителем `Outer`.|
@@ -86,15 +86,15 @@ class scoped_allocator_adaptor;
 |`value_type`|Этот тип является синонимом `value_type`, связанного с распределителем `Outer`.|
 |`void_pointer`|Этот тип является синонимом `void_pointer`, связанного с распределителем `Outer`.|
 
-### <a name="structs"></a>Структуры
+### <a name="structs"></a>структурам;
 
-|name|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[Структура scoped_allocator_adaptor::rebind](#rebind_struct)|Определяет тип `Outer::rebind\<Other>::other` как синоним для `scoped_allocator_adaptor\<Other, Inner...>`.|
 
 ### <a name="methods"></a>Методы
 
-|name|Описание|
+|Название|Описание|
 |----------|-----------------|
 |[allocate](#allocate)|Выделяет память, используя распределитель `Outer`.|
 |[construct](#construct)|Создает объект.|
@@ -107,11 +107,11 @@ class scoped_allocator_adaptor;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[оператор=](#op_as)||
-|[operator==](#op_eq_eq)||
-|[operator!=](#op_noeq)||
+|[оператор==](#op_eq_eq)||
+|[оператор!= ](#op_noeq)||
 
 ## <a name="requirements"></a>Требования
 
@@ -119,7 +119,7 @@ class scoped_allocator_adaptor;
 
 **Пространство имен:** std
 
-## <a name="allocate"></a>  scoped_allocator_adaptor::allocate
+## <a name="allocate"></a>scoped_allocator_adaptor:: allocate
 
 Выделяет память, используя распределитель `Outer`.
 
@@ -129,17 +129,17 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>Параметры
 
-*расчета*\
+*количество* \
 Количество элементов, для которых необходимо выделить достаточный объем памяти.
 
-*хинтинга*\
+*указание* \
 Указатель, который может помочь объекту распределителя, найдя адрес объекта, который был выделен до этого запроса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Первая функция-член возвращает значение `Outer_traits::allocate(outer_allocator(), count)`. Вторая функция-член возвращает значение `Outer_traits::allocate(outer_allocator(), count, hint)`.
 
-## <a name="construct"></a>  scoped_allocator_adaptor::construct
+## <a name="construct"></a>scoped_allocator_adaptor:: конструкция
 
 Создает объект.
 
@@ -168,22 +168,22 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*указатель*\
+\ *ptr*
 Указатель на место в памяти, где необходимо создать объект.
 
-*args*\
+*args* \
 Список аргументов.
 
-*началь*\
+*первый* \
 Объект первого типа в паре.
 
-*секунды*\
+*второй* \
 Объект второго типа в паре.
 
-*Правильно*\
+*справа* \
 Существующий объект, который необходимо переместить или копировать.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый метод конструирует объект в *ptr* , вызывая `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`, где `xargs...` является одним из следующих.
 
@@ -193,7 +193,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 - Если `uses_allocator<Ty, inner_allocator_type>` имеет значение true и `is_constructible<Ty, args..., inner_allocator()>` имеет значение true, то `xargs...` равно `args..., inner_allocator()`.
 
-Второй метод конструирует объект-пару в *ptr* , `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`вызывая, где `xargs...` `first...` изменяется, `second...` как в приведенном выше списке, и `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, где `xargs...` изменяется, как в приведенном выше списке.
+Второй метод конструирует объект-пару в *ptr* , вызывая `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`, где `xargs...` `first...` изменяется, как показано в приведенном выше списке, и `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)`, где `xargs...` — `second...` изменено, как в приведенном выше списке.
 
 Третий метод работает так же, как `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)`.
 
@@ -203,7 +203,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 Шестой метод работает так же, как `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`.
 
-## <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
+## <a name="deallocate"></a>scoped_allocator_adaptor::d еаллокате
 
 Освобождает объекты, используя внешний распределитель.
 
@@ -213,13 +213,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>Параметры
 
-*указатель*\
+\ *ptr*
 Указатель на начальное расположение освобождаемых объектов.
 
-*расчета*\
+*количество* \
 Количество освобождаемых объектов.
 
-## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
+## <a name="destroy"></a>scoped_allocator_adaptor::d естрой
 
 Удаляет указанный объект.
 
@@ -230,14 +230,14 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>Параметры
 
-*указатель*\
+\ *ptr*
 Указатель на уничтожаемый объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 `Outermost_traits::destroy(OUTERMOST(*this), ptr)`
 
-## <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
+## <a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
 
 Извлекает ссылку на сохраненный объект типа `inner_allocator_type`.
 
@@ -250,7 +250,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 
 Ссылка на сохраненный объект типа `inner_allocator_type`.
 
-## <a name="max_size"></a>  scoped_allocator_adaptor::max_size
+## <a name="max_size"></a>scoped_allocator_adaptor::max_size
 
 Определяет максимальное число объектов, которые могут быть распределены внешним распределителем.
 
@@ -262,14 +262,14 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
-## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">scoped_allocator_adaptor:: operator =
+## <a name="a-nameop_as--scoped_allocator_adaptoroperator"></a><a name="op_as"> scoped_allocator_adaptor:: operator =
 
 ```cpp
 scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
 scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
 ```
 
-## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">scoped_allocator_adaptor:: operator = =
+## <a name="a-nameop_eq_eq--scoped_allocator_adaptoroperator"></a><a name="op_eq_eq"> scoped_allocator_adaptor:: operator = =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -277,7 +277,7 @@ bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">scoped_allocator_adaptor:: operator! =
+## <a name="a-nameop_noeq--scoped_allocator_adaptoroperator"></a><a name="op_noeq"> scoped_allocator_adaptor:: operator! =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -285,7 +285,7 @@ bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
+## <a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
 
 Извлекает ссылку на сохраненный объект типа `outer_allocator_type`.
 
@@ -302,7 +302,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 Определяет тип `Outer::rebind\<Other>::other` как синоним для `scoped_allocator_adaptor\<Other, Inner...>`.
 
-Повторная привязка структуры {typedef Other_traits:: повторная привязка\<других > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner... > другой; };
+Повторная привязка структуры {typedef Other_traits:: Rebind \<Other > Other_alloc; typedef scoped_allocator_adaptor \<Other_alloc, внутренний... > другой; };
 
 ## <a name="scoped_allocator_adaptor"></a> Конструктор scoped_allocator_adaptor::scoped_allocator_adaptor
 
@@ -327,20 +327,20 @@ scoped_allocator_adaptor(Outer2&& al,
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Существующий `scoped_allocator_adaptor`.
 
-*Al*\
+*al* \
 Существующий распределитель, который следует использовать как внешний распределитель.
 
-*последующие*\
+\а *RESTful*
 Список распределителей, которые следует использовать как внутренние распределители.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый конструктор по умолчанию создает сохраненные объекты распределителя. Каждый из следующих трех конструкторов конструирует сохраненные объекты распределителя из соответствующих объектов в *правой части*. Последний конструктор создает сохраненные объекты распределителя из соответствующих аргументов в списке.
 
-## <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
+## <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
 
 Создает новый объект `scoped_allocator_adaptor` с каждым сохраненным объектом распределителя, который инициализируется вызовом метода `select_on_container_copy_construction` для каждого соответствующего распределителя.
 
@@ -350,7 +350,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Этот метод фактически возвращает `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Результатом является новый `scoped_allocator_adaptor` объект с каждым сохраненным объектом распределителя, инициализированный путем вызова `al.select_on_container_copy_construction()` для соответствующего распределителя *Al*.
+Этот метод фактически возвращает `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`. Результатом является новый объект `scoped_allocator_adaptor` с каждым сохраненным объектом распределителя, инициализированный путем вызова `al.select_on_container_copy_construction()` для соответствующего распределителя *Al*.
 
 ## <a name="see-also"></a>См. также
 

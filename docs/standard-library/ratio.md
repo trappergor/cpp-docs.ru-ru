@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458165"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687066"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-`ratio` Шаблон определяет статические константы `num` `den` и `den` `num` такие  /  `num` элементы = = числитель/знаменатель и не имеют общих факторов. `den` `num` / `den`значение, представленное классом шаблона. Таким образом `type` , обозначает `ratio<num, den>`создание экземпляра.
+Шаблон `ratio` определяет статические константы `num` и `den` таким, что `num`  /  `den` = = числитель/знаменатель и `num` и `den` не имеют общих факторов. `num`  /  `den` — это значение, представленное шаблоном класса. Таким образом, `type` обозначает `ratio<num, den>` создания экземпляра.
 
 ### <a name="specializations"></a>Специализации
 
@@ -70,7 +70,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 Каждая специализация принимает два параметра-шаблона, которые также должны быть специализациями `ratio`. Значение `type` определяется связанной логической операцией.
 
-|name|Значение `type`|
+|Название|Значение `type`|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

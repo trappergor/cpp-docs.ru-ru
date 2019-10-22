@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447588"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689439"
 ---
-# <a name="linearcongruentialengine-class"></a>Класс linear_congruential_engine
+# <a name="linear_congruential_engine-class"></a>Класс linear_congruential_engine
 
 Создает случайную последовательность, используя линейный конгруэнтный алгоритм.
 
@@ -45,19 +45,19 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>Параметры
 
-*уинттипе*\
+*Уинттипе* \
 Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*КОНКРЕТНОГО*\
-**Множитель**. **Предварительное условие**: См. раздел "Примечания".
+*@No__t_1*
+**Множитель**. **Предварительные условия** : см. раздел "Примечания".
 
-*Ц*\
-**Приращение**. **Предварительное условие**: См. раздел "Примечания".
+@No__t_1 *в C*
+**Приращение**. **Предварительные условия** : см. раздел "Примечания".
 
-*ПН*\
-**Остаток от деления**. **Предварительное условие**: См. раздел Примечания.
+*M* \
+**Остаток от деления**. **Предварительные условия** : см. раздел "Примечания".
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ||||
 |-|-|-|
@@ -68,19 +68,19 @@ class linear_congruential_engine{
 
 Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона `linear_congruential_engine` — это самый простой механизм генератора, но не самый быстрый или качественный. Улучшением этого механизма является [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+Шаблон класса `linear_congruential_engine` является простейшим механизмом генератора, но не самым быстрым или самым высоким качеством. Улучшением этого механизма является [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
 Этот механизм формирует значения указанного пользователем беззнакового целого типа, используя рекуррентное соотношение (*period*) `x(i) = (A * x(i-1) + C) mod M`.
 
-Если значение *M* равно нулю, то для операции `numeric_limits<result_type>::max() + 1`с этим модульным значением используется. Последним возвращается состояние механизма или начальное значение, если функция `operator()` не вызывалась.
+Если значение *M* равно нулю, то для этой операции модуля используется `numeric_limits<result_type>::max() + 1`. Последним возвращается состояние механизма или начальное значение, если функция `operator()` не вызывалась.
 
 Если *M* не равен нулю, значения аргументов шаблона *A* и *C* должны быть меньше *M*.
 
 Хотя можно создать генератор на основе этого механизма напрямую, также можно использовать одно из этих предварительно заданных определений типов.
 
-`minstd_rand0`: Минимальный стандартный механизм 1988 (Льюис, Гудмэн и Миллер, 1969).
+`minstd_rand0`: Минимальный стандартный механизм 1988 (Льюис, Гудман и Миллер, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;

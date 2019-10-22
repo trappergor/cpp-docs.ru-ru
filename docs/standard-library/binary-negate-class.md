@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243370"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688402"
 ---
-# <a name="binarynegate-class"></a>Класс binary_negate
+# <a name="binary_negate-class"></a>Класс binary_negate
 
-Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной бинарной функции. Рекомендуется использовать в C ++ 17 для [not_fn](functional-functions.md#not_fn).
+Шаблон класса, предоставляющий функцию-член, которая инвертирует возвращаемое значение заданной двоичной функции. Не рекомендуется использовать в C++ 17 в пользу [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,22 +33,22 @@ class binary_negate
 
 ### <a name="parameters"></a>Параметры
 
-*Func*\
+@No__t_1 *Func*
 Бинарная функция, которая должна быть инвертирована.
 
-*Слева*\
+*left* \
 Левый операнд бинарной функции, которая должна быть инвертирована.
 
-*Правильно*\
+*справа* \
 Правый операнд бинарной функции, которая должна быть инвертирована.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Отрицание бинарной функции.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона сохраняет копию объекта бинарной функции *Func*. Он определяет свою функцию-член `operator()` как возвращающий `!Func(left, right)`.
+Шаблон класса хранит копию объекта бинарной функции *Func*. Он определяет свою функцию члена `operator()` как возвращаемый `!Func(left, right)`.
 
 Конструктор `binary_negate` редко используется напрямую. Вспомогательная функция [not2](../standard-library/functional-functions.md#not2) обычно выбирается для объявления и использования предиката адаптера **binary_negator**.
 

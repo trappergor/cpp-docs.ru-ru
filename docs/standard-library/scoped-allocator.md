@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - scoped_allocator Header
 ms.assetid: d20175b8-96be-4896-8141-3faba45e0005
-ms.openlocfilehash: 8e1a51f1f9f5693b422ec1e680784a199541bb4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 403a05a75fe3ce7bc006c903af00e7536f4a6ea2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451799"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686480"
 ---
-# <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
+# <a name="ltscoped_allocatorgt"></a>&lt;scoped_allocator&gt;
 
-Определяет класс шаблона контейнера scoped_allocator.
+Определяет шаблон класса контейнера scoped_allocator.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,16 +25,16 @@ ms.locfileid: "68451799"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
-|[operator!=](../standard-library/scoped-allocator-operators.md#op_neq)|Проверяет неравенство объекта scoped_allocator слева от оператора объекту-списку справа от оператора.|
-|[operator==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Проверяет равенство объекта scoped_allocator слева от оператора объекту-списку справа от оператора.|
+|[оператор!= ](../standard-library/scoped-allocator-operators.md#op_neq)|Проверяет неравенство объекта scoped_allocator слева от оператора объекту-списку справа от оператора.|
+|[оператор==](../standard-library/scoped-allocator-operators.md#op_eq_eq)|Проверяет равенство объекта scoped_allocator слева от оператора объекту-списку справа от оператора.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Class|Описание|
 |-|-|
-|[Класс scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)|Класс шаблонов, инкапсулирующий гнездо, которое содержит один или несколько распределителей.|
+|[Класс scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)|Шаблон класса, инкапсулирующий вложенность одного или нескольких распределительов.|
 
 ## <a name="see-also"></a>См. также
 

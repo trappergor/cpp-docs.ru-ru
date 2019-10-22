@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460211"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687658"
 ---
-# <a name="moneypunctbyname-class"></a>Класс moneypunct_byname
+# <a name="moneypunct_byname-class"></a>Класс moneypunct_byname
 
-Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта `moneypunct` для заданного языкового стандарта, для возможности форматирования полей ввода или вывода денежной суммы.
+Шаблон производного класса, описывающий объект, который можно использовать в качестве `moneypunct` аспекта данного языкового стандарта, включая поля форматирования денежного ввода или денежного вывода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,7 +38,7 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Его поведение определяется именованным языковым стандартом `_Locname`. Каждый конструктор инициализирует свой базовый объект с [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`).
 

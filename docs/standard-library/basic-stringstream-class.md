@@ -12,14 +12,14 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-ms.openlocfilehash: 9278b6ce0fa23fa875f1af57ea15719111439372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447807"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688410"
 ---
-# <a name="basicstringstream-class"></a>Класс basic_stringstream
+# <a name="basic_stringstream-class"></a>Класс basic_stringstream
 
 Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.
 
@@ -32,18 +32,18 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*Elem*\
+*Elem* \
 Тип основного элемента строки.
 
-*ТС*\
+*Tr* \
 Признаки символа, соответствующие основному элементу строки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **tr** `Alloc`> с элементами типа .`Elem`, признаки символов которых определяются классом `Tr`, элементы которого выделяются распределителем класса `Alloc`. Этот объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
+Шаблон класса описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **tr**`Alloc` > с элементами типа `Elem`, для которых признаки символов определяются классом `Tr`, элементы которого выделяются распределителем класса `Alloc`. Объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -51,7 +51,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |-|-|
 |[basic_stringstream](#basic_stringstream)|Создает объект типа `basic_stringstream`.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
@@ -90,17 +90,17 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>Параметры
 
-*_Mode*\
+*_Mode* \
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*\
+\ *str*
 Объект типа `basic_string`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Первый конструктор инициализирует базовый класс путем вызова [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), где `sb` — это сохраненный объект `Alloc`класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **elem**, **tr**>. Он также инициализируется `sb` путем вызова basic_stringbuf < **elem**, **tr**, `Alloc`> ( `_Mode`).
+Первый конструктор инициализирует базовый класс путем вызова [basic_iostream](../standard-library/basic-iostream-class.md)( **SB**), где `sb` — это сохраненный объект класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **elem**, **tr**`Alloc` >. Он также инициализирует `sb`, вызывая basic_stringbuf < **elem**, **Tr**, `Alloc` > (`_Mode`).
 
-Второй конструктор инициализирует базовый класс путем вызова basic_iostream( **sb**). Он также инициализируется `sb` путем вызова basic_stringbuf < **elem**, **tr**, `Alloc`> (_ *str*, `_Mode`).
+Второй конструктор инициализирует базовый класс путем вызова basic_iostream( **sb**). Он также инициализирует `sb`, вызывая basic_stringbuf < **elem**, **Tr**, `Alloc` > (_ *str*, `_Mode`).
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -112,7 +112,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Адрес буфера `pointer` сохраненного потока типа в basic_stringbuf < **elem**, **tr** `Alloc`>.
+Адрес буфера сохраненного потока типа `pointer` для basic_stringbuf < **elem**, **tr**`Alloc` >.
 
 ### <a name="example"></a>Пример
 
@@ -131,14 +131,14 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr*\
+*_Newstr* \
 Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, управляемая последовательность которого является копией последовательности, управляемой **\*this**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первая функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Вторая функция-член вызывает `rdbuf` -> **str**( `_Newstr`).
 

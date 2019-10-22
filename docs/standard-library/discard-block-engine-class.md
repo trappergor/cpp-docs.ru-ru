@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454395"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688105"
 ---
-# <a name="discardblockengine-class"></a>Класс discard_block_engine
+# <a name="discard_block_engine-class"></a>Класс discard_block_engine
 
 Создает случайную последовательность, удаляя значения, возвращенные базовым механизмом.
 
@@ -26,16 +26,16 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*Ядре*\
+@No__t_1 *подсистемы*
 Тип базового механизма.
 
-*Ш*\
+*P* \
 **Размер блока**. Количество значений в каждом блоке.
 
 *R*\
-**Используемый блок**. Количество используемых значений в каждом блоке. Остальные отбрасываются (`P` - `R`). **Предварительные условия**: `0 < R ≤ P`
+**Используемый блок**. Количество используемых значений в каждом блоке. Остальные отбрасываются (`P`  -  `R`). **Предварительные условия**: `0 < R ≤ P`
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ||||
 |-|-|-|
@@ -44,9 +44,9 @@ class discard_block_engine;
 
 Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот класс шаблона описывает адаптер механизма, формирующий значения за счет удаления некоторых значений, возвращаемых базовым механизмом.
+Этот шаблон класса описывает адаптер подсистемы, создающий значения путем удаления некоторых значений, возвращенных базовым механизмом.
 
 ## <a name="requirements"></a>Требования
 

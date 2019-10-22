@@ -10,20 +10,20 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460124"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689073"
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[оператор!= ](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
+|[оператор==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=
 
@@ -66,22 +66,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон возвращает `!(left == right)`.
 
@@ -181,22 +181,22 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон преобразует свои аргументы в строковый тип и возвращает значение true, только если преобразованное значение *Left* сравнивается со значением *right*.
 
@@ -266,25 +266,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*\
+*Elem* \
 Тип элемента.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*эквивалент*\
+\ *ОС*
 Выходной поток.
 
-*Правильно*\
+*справа* \
 Вставляемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор-шаблон возвращает `os << right.str()`.
 
@@ -351,22 +351,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон возвращает `!(right < left)`.
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон преобразует каждый из своих аргументов в тип string и возвращает результат сравнения преобразованных объектов на равенство.
 
 При преобразовании аргументов в тип string оператор-шаблон использует первое из следующего списка преобразований, которое можно применить:
 
-аргументы, типы которых — специализация класса-шаблона `match_results` или `sub_match`, преобразуются вызовом функции-члена `str`;
+аргументы, типы которых являются специализацией шаблона класса `match_results` или `sub_match` преобразуются путем вызова `str` функции-члена.
 
-аргументы, типы которых — специализация класса-шаблона `basic_string`, остаются без изменений;
+аргументы, типы которых являются специализацией шаблона класса `basic_string`, не изменяются;
 
-все остальные типы аргументов преобразуются путем передачи значения аргумента в конструктор для подходящей специализации класса-шаблона `basic_string`.
+все остальные типы аргументов преобразуются путем передачи значения аргумента в конструктор для соответствующей специализации шаблона класса `basic_string`.
 
 ### <a name="example"></a>Пример
 
@@ -588,22 +588,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон возвращает `right < left`.
 
@@ -698,22 +698,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора.
 
-*иотраитс*\
+*Иотраитс* \
 Класс характеристик строки.
 
-*Идентификатор*\
+@No__t_1 *выделения*
 Класс распределителя.
 
-*слева*\
+*left* \
 Левый из сравниваемых объектов.
 
-*Правильно*\
+*справа* \
 Правый из сравниваемых объектов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор-шаблон возвращает `!(left < right)`.
 
@@ -774,10 +774,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>См. также
 
 [\<regex>](../standard-library/regex.md)\
-[Класс regex_constants](../standard-library/regex-constants-class.md)\
-[Класс regex_error](../standard-library/regex-error-class.md)\
-[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Класс regex_traits](../standard-library/regex-traits-class.md)\
+\ [класса regex_constants](../standard-library/regex-constants-class.md)
+\ [класса regex_error](../standard-library/regex-error-class.md)
+[функции > \<regex](../standard-library/regex-functions.md) \
+\ [класса regex_iterator](../standard-library/regex-iterator-class.md)
+\ [класса regex_token_iterator](../standard-library/regex-token-iterator-class.md)
+\ [класса regex_traits](../standard-library/regex-traits-class.md)
 [Определения типов \<regex>](../standard-library/regex-typedefs.md)

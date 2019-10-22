@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459853"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688293"
 ---
-# <a name="codecvtbyname-class"></a>Класс codecvt_byname
+# <a name="codecvt_byname-class"></a>Класс codecvt_byname
 
-Производный класс шаблона, описывающий объект, который можно использовать как аспект сортировки данного языкового стандарта, предоставляющий возможность извлечения данных касательно преобразований по соответствующему культурному региону.
+Шаблон производного класса, который описывает объект, который может служить в качестве аспекта сортировки для данного языкового стандарта, позволяя получать информацию, относящуюся к области культуры, в отношении преобразований.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*\
+*_Locname* \
 Именованный языковой стандарт.
 
-*_Refs*\
+*_Refs* \
 Начальное значение счетчика ссылок.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Аспекты Byname создаются автоматически при создании именованного языкового стандарта.
 

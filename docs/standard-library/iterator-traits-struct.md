@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455580"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689453"
 ---
-# <a name="iteratortraits-struct"></a>Структура iterator_traits
+# <a name="iterator_traits-struct"></a>Структура iterator_traits
 
 Вспомогательная структура-шаблон, используется для указания всех критических определений типов, которые должен иметь итератор.
 
@@ -31,7 +31,7 @@ struct iterator_traits {
    };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Структура-шаблон определяет типы элементов
 
@@ -41,13 +41,13 @@ struct iterator_traits {
 
 - `difference_type`: синоним для `Iterator::difference_type`.
 
-- `distance_type`: синоним для`Iterator::difference_type.`
+- `distance_type`: синоним для `Iterator::difference_type.`
 
 - `pointer`: синоним для `Iterator::pointer`.
 
 - `reference`: синоним для `Iterator::reference`.
 
-Частичные специализации определяют критические типы, связанные с указателем <strong>\*</strong> на объект **типа или типа** **const** <strong>\*</strong>.
+Частичные специализации определяют критические типы, связанные с указателем **объекта типа** <strong>\*</strong> или **типа const** <strong>\*</strong>.
 
 В этой реализации вы также можете применить несколько шаблонов функций, которые не используют частичную специализацию:
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-что определяет некоторые из тех же типов более косвенно. Используйте эти функции как аргументы для вызова функции. Их единственная цель — предоставить полезный параметр шаблона класса в вызываемую функцию.
+что определяет некоторые из тех же типов более косвенно. Используйте эти функции как аргументы для вызова функции. Их единственная цель — предоставить полезный параметр шаблона класса вызываемой функции.
 
 ## <a name="example"></a>Пример
 

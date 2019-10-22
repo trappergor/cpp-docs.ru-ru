@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: f6c51d85aa4a9f5516fe08dad163274051d94c13
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195828"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686085"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-Определяет стек классов шаблонов и двух вспомогательных шаблонов.
+Определяет стек шаблона класса и два поддерживающих шаблона.
 
 ## <a name="requirements"></a>Требования
 
@@ -25,18 +25,18 @@ ms.locfileid: "71195828"
 **Пространство имен:** std
 
 > [!NOTE]
-> `#include <initializer_list>` Библиотека > \<стека также использует инструкцию.
+> Библиотека \<stack > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[operator!=](../standard-library/stack-operators.md#op_neq)|Проверяет, не равен ли объект стека слева от оператора объекту стека справа от оператора.|
+|[оператор!= ](../standard-library/stack-operators.md#op_neq)|Проверяет, не равен ли объект стека слева от оператора объекту стека справа от оператора.|
 |[оператор<](../standard-library/stack-operators.md#op_lt)|Проверяет, меньше ли объект стека слева от оператора объекта стека справа от оператора.|
 |[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Проверяет, меньше или равен ли объект стека слева от оператора объекту стека справа от оператора.|
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Проверяет, равен ли объект стека слева от оператора объекту стека справа от оператора.|
+|[оператор==](../standard-library/stack-operators.md#op_eq_eq)|Проверяет, равен ли объект стека слева от оператора объекту стека справа от оператора.|
 |[оператор>](../standard-library/stack-operators.md#op_gt)|Проверяет, больше ли объект стека слева от оператора объекта стека справа от оператора.|
 |[оператор>=](../standard-library/stack-operators.md#op_gt_eq)|Проверяет, больше или равен ли объект стека слева от оператора объекту стека справа от оператора.|
 

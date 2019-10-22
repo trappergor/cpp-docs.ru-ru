@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 708e16cb4b8a1640f4978b806bc52beed24decd4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457014"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688064"
 ---
-# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+# <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
-Определяет прямой список классов шаблонов контейнеров и некоторые вспомогательные шаблоны.
+Определяет шаблон класса контейнера forward_list и несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,16 +24,16 @@ ms.locfileid: "68457014"
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` forward_list также использует инструкцию. \<
+> Библиотека \<forward_list > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
+|[оператор==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
+|[оператор!= ](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
 |[оператор<](../standard-library/forward-list-operators.md#op_lt)|Проверяет, меньше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|
 |[оператор<=](../standard-library/forward-list-operators.md#op_lt_eq)|Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.|
 |[оператор>](../standard-library/forward-list-operators.md#op_gt)|Проверяет, больше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|

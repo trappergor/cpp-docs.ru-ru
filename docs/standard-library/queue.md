@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956998"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689118"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
-Определяет классы шаблонов priority_queue и очереди, а также несколько вспомогательных шаблонов.
+Определяет шаблоны классов priority_queue и Queue и несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,18 +24,18 @@ ms.locfileid: "68956998"
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` очереди также использует инструкцию. \<
+> Библиотека \<queue > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[operator!=](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[оператор!= ](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
 |[оператор<](../standard-library/queue-operators.md#op_lt)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|
 |[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
-|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[оператор==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
 |[оператор>](../standard-library/queue-operators.md#op_gt)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|
 |[оператор>=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
 
