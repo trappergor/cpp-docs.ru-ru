@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449645"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688344"
 ---
-# <a name="cachesuballoc-class"></a>Класс cache_suballoc
+# <a name="cache_suballoc-class"></a>Класс cache_suballoc
 
 Задает [распределитель блоков](../standard-library/allocators-header.md), который выделяет и освобождает блоки памяти одного размера.
 
@@ -34,11 +34,11 @@ class cache_suballoc
 |---------------|-----------------|
 |*SZ*|Число элементов в массиве, которые нужно выделить.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона cache_suballoc сохраняет освобожденные блоки памяти в свободном списке с неограниченной длиной, используя `freelist<sizeof(Type), max_unbounded>`и подраспределяет блоки памяти из большего блока, выделенного с помощью **оператора New** , если свободный список пуст.
+Шаблон класса cache_suballoc сохраняет освобожденные блоки памяти в свободном списке с неограниченной длиной, используя `freelist<sizeof(Type), max_unbounded>` и подраспределяет блоки памяти из большего блока, выделенного с помощью **оператора New** , если свободный список пуст.
 
-Каждый блок содержит `Sz * Nelts` байты доступной памяти и данные, необходимые **операторам New** и **Delete** . Выделенные участки памяти никогда не будут освобождены.
+Каждый блок содержит `Sz * Nelts` байтов доступной памяти и данных, которые требуются **операторам New** и **Delete** . Выделенные участки памяти никогда не будут освобождены.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -77,7 +77,7 @@ void *allocate(std::size_t count);
 
 Указатель на выделяемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
 
@@ -87,7 +87,7 @@ void *allocate(std::size_t count);
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="deallocate"></a>  cache_suballoc::deallocate
 
@@ -104,7 +104,7 @@ void deallocate(void* ptr, std::size_t count);
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="see-also"></a>См. также
 

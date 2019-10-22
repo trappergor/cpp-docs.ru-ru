@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454676"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688790"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-Определяет классы шаблонов контейнеров [unordered_multiset](../standard-library/unordered-multiset-class.md) и [unordered_set](../standard-library/unordered-set-class.md) и их вспомогательные шаблоны.
+Определяет шаблоны классов контейнеров [unordered_multiset](../standard-library/unordered-multiset-class.md) и [unordered_set](../standard-library/unordered-set-class.md) и их вспомогательные шаблоны.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,9 +24,9 @@ ms.locfileid: "68454676"
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` unordered_set также использует инструкцию. \<
+> Библиотека \<unordered_set > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="classes"></a>Классы
 
@@ -39,11 +39,11 @@ ms.locfileid: "68454676"
 
 |||
 |-|-|
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
+|[оператор!= ](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
+|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
 |[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Меняет местами два объекта multiset.|
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
+|[оператор!= ](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
+|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
 |[swap](../standard-library/unordered-set-functions.md#swap)|Меняет местами два сопоставления.|
 
 ## <a name="see-also"></a>См. также
