@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456294"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687780"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-Определяет классы шаблонов контейнеров map и multimap и их вспомогательные шаблоны.
+Определяет шаблоны классов контейнеров Map и multimap и их вспомогательные шаблоны.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,9 +24,9 @@ ms.locfileid: "68456294"
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` Map также использует инструкцию. \<
+> Библиотека \<map > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 

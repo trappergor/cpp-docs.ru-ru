@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: a0fd73cc53c5d538469cb957b7b4c4ec56783ade
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245282"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687879"
 ---
 # <a name="ltiosgt-typedefs"></a>Определения типов &lt;ios&gt;
 
-## <a name="ios"></a> IOS
+## <a name="ios"></a>iOS
 
 Поддерживает класс ios из старой библиотеки iostream.
 
@@ -26,11 +26,11 @@ ms.locfileid: "68245282"
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
+Этот тип является синонимом для шаблона класса [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
 
-## <a name="streamoff"></a> streamoff
+## <a name="streamoff"></a>streamoff
 
 Поддерживает внутренние операции.
 
@@ -42,11 +42,11 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Тип — целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
+Этот тип представляет собой целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
 
-## <a name="streampos"></a> streampos
+## <a name="streampos"></a>streampos
 
 Содержит текущее положение указателя буфера или указателя файла.
 
@@ -54,7 +54,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Тип является синонимом для [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
@@ -93,7 +93,7 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Тип — целое число со знаком, описывающее объект, который может хранить количество элементов, участвующих в различных операциях размещения потока. Его представление имеет по крайней мере 16 битов значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока.
 
@@ -125,11 +125,11 @@ int main( )
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Тип является синонимом класса шаблона [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
+Этот тип является синонимом для шаблона класса [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
-## <a name="wstreampos"></a> wstreampos
+## <a name="wstreampos"></a>встреампос
 
 Содержит текущее положение указателя буфера или указателя файла.
 
@@ -137,7 +137,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Тип является синонимом для [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 

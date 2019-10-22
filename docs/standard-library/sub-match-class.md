@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447427"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685834"
 ---
-# <a name="submatch-class"></a>Класс sub_match
+# <a name="sub_match-class"></a>Класс sub_match
 
 Описывает подстроку соответствия.
 
@@ -41,22 +41,22 @@ class sub_match
 
 ## <a name="parameters"></a>Параметры
 
-*Двунаправленный*\
+@No__t_1 с *двунаправленным письмом*
 Тип итератора для подстрок соответствия.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает объект, который определяет последовательность символов, соответствующих группе записи в вызове [regex_match](../standard-library/regex-functions.md#regex_match) или [regex_search](../standard-library/regex-functions.md#regex_search). Объекты типа [Класс match_results](../standard-library/match-results-class.md) содержат массив таких объектов, по одному для каждой группы записи в регулярном выражении, которое использовалось при поиске.
+Шаблон класса описывает объект, обозначающий последовательность символов, соответствующих группе захвата в вызове [regex_match](../standard-library/regex-functions.md#regex_match) или [regex_search](../standard-library/regex-functions.md#regex_search). Объекты типа [Класс match_results](../standard-library/match-results-class.md) содержат массив таких объектов, по одному для каждой группы записи в регулярном выражении, которое использовалось при поиске.
 
 Если группа записи не соответствует члену данных объекта, `matched` содержит значение false, а два итератора `first` и `second` (наследуются от базового класса `std::pair`) равны. Если обнаружено соответствие группе записи, `matched` содержит значение true, итератор `first` указывает на первый символ в целевой последовательности, которая соответствует группе записи, а итератор `second` указывает на одну позицию после последнего символа в целевой последовательности, которая соответствует группе записи. Обратите внимание, что для соответствия нулевой длины член `matched` должен содержать значение true, два итератора быть эквиваленты и оба указывать на одну позицию соответствия.
 
-Соответствие нулевой длины может возникать, когда группа записи состоит только из утверждения или из повторения, допускающего нулевые повторы. Например:
+Соответствие нулевой длины может возникать, когда группа записи состоит только из утверждения или из повторения, допускающего нулевые повторы. Пример:
 
 "^" соответствует целевой последовательности "a"; объект `sub_match` , соответствующий группе записи 0, содержит два итератора, которые указывают на первый символ в последовательности.
 
 "b(a*)b" соответствует целевой последовательности "bb"; объект `sub_match` , соответствующий группе записи 1, содержит два итератора, которые указывают на второй символ в последовательности.
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
@@ -75,7 +75,7 @@ class sub_match
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[Оператор basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
 
@@ -149,16 +149,16 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Подстрока для сравнения.
 
-*str*\
+\ *str*
 Строка для сравнения.
 
-*указатель*\
+\ *ptr*
 Последовательность, оканчивающаяся нулевым символом, для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первая функция-член сравнивает совпадающую последовательность `[first, second)` с совпадающей последовательностью `[right.first, right.second)`. Вторая функция-член сравнивает совпадающую последовательность `[first, second)` с последовательностью символов `[right.begin(), right.end())`. Третья функция-член сравнивает совпадающую последовательность `[first, second)` с последовательностью символов `[right, right + std::char_traits<value_type>::length(right))`.
 
@@ -178,7 +178,7 @@ int compare(const value_type *ptr) const;
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Typedef является синонимом `iterator_traits<BidIt>::difference_type`.
 
@@ -190,7 +190,7 @@ Typedef является синонимом `iterator_traits<BidIt>::difference_
 typedef BidIt iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Typedef является синонимом параметра шаблона `Bidit`.
 
@@ -202,7 +202,7 @@ Typedef является синонимом параметра шаблона `B
 difference_type length() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция-член возвращает длину совпадающей последовательности либо нуль, если последовательность не совпадает.
 
@@ -214,9 +214,9 @@ difference_type length() const;
 bool matched;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Элемент имеет **значение true** , только если группа захвата, связанная с `*this` , является частью сопоставления регулярного выражения.
+Элемент имеет **значение true** , только если группа записи, связанная с `*this`, была частью сопоставления регулярного выражения.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -226,7 +226,7 @@ bool matched;
 operator basic_string<value_type>() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор-член возвращает `str()`.
 
@@ -238,7 +238,7 @@ operator basic_string<value_type>() const;
 basic_string<value_type> str() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция-член возвращает значение `basic_string<value_type>(first, second)`.
 
@@ -250,7 +250,7 @@ basic_string<value_type> str() const;
 typedef typename iterator_traits<BidIt>::value_type value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Typedef является синонимом `iterator_traits<BidIt>::value_type`.
 

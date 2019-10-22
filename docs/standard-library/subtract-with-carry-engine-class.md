@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447417"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685817"
 ---
-# <a name="subtractwithcarryengine-class"></a>Класс subtract_with_carry_engine
+# <a name="subtract_with_carry_engine-class"></a>Класс subtract_with_carry_engine
 
 Создает случайную последовательность, используя алгоритм вычитания с переносом (метод Фибоначчи с запаздываниями).
 
@@ -36,19 +36,19 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*уинттипе*\
+*Уинттипе* \
 Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*БЕЛАЯ*\
+*W* \
 **Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*#D0*\
+*S* \
 **Короткая задержка**. Количество целочисленных значений. **Предварительные условия**: `0 < S < R`
 
 *R*\
 **Длинная задержка**. Определяет повторения в созданном ряду.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ||||
 |-|-|-|
@@ -58,20 +58,20 @@ class subtract_with_carry_engine;
 
 Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона `substract_with_carry_engine` — это улучшение [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как механизм [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
+Шаблон `substract_with_carry_engine` класса является улучшением по сравнению с [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как механизм [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Этот механизм формирует значения указанного пользователем беззнакового целого типа, используя рекуррентное соотношение (*период*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, где `cy(i)` имеет значение `1`, если `x(i - S) - x(i - R) - cy(i - 1) < 0`; в противном случае — значение `0`, а `M` имеет значение `2`<sup>W</sup>. Состояние механизма — это индикатор переноса и значения *R* . Эти значения состоят из последних значений *r* , возвращаемых `operator()` , если вызывался по крайней мере `N` *R* раз, в противном случае возвращаемые значения `R - N` и последние значения начальных значений.
+Этот механизм создает значения заданного пользователем целочисленного типа без знака с помощью отношения повторения ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, где `cy(i)` имеет значение `1` если `x(i - S) - x(i - R) - cy(i - 1) < 0`, в противном случае `0` и `M` имеет значение `2`<sup>W</sup>. Состояние механизма — это индикатор переноса и значения *R* . Эти значения состоят из последних значений *r* , возвращаемых, если `operator()` вызывался по крайней мере *R* раз, в противном случае возвращаемые значения `N` и последние `R - N` начальные значения.
 
 Аргумент шаблона `UIntType` должен быть достаточно большим, чтобы хранить значения до `M - 1`.
 
 Хотя можно создать генератор на основе этого механизма напрямую, также можно использовать одно из этих предварительно заданных определений типов:
 
-`ranlux24_base`: Используется в качестве основания для `ranlux24`.
+`ranlux24_base`: используется в качестве основания для `ranlux24`.
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`: Используется в качестве основания для `ranlux48`.
+`ranlux48_base`: используется в качестве основания для `ranlux48`.
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 Дополнительные сведения об алгоритме вычитания с переносом см. в статье [Генератор Фибоначчи с запаздываниями](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator) на веб-сайте Википедии.

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459994"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685465"
 ---
-# <a name="timeputbyname-class"></a>Класс time_put_byname
+# <a name="time_put_byname-class"></a>Класс time_put_byname
 
-Производный класс шаблона, описывающий объект, который можно использовать в качестве локального аспекта типа `time_put`\< CharType, OutputIterator >.
+Шаблон производного класса описывает объект, который может служить в качестве аспекта языкового стандарта типа `time_put` \< CharType, OutputIterator >.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*\
+*_Locname* \
 Имя языкового стандарта.
 
-*_Refs*\
+*_Refs* \
 Начальное значение счетчика ссылок.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Его поведение определяется с помощью [именованного](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с помощью [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator >`_Refs`().
+Его поведение определяется с помощью [именованного](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с помощью [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`).
 
 ## <a name="requirements"></a>Требования
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240548"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684435"
 ---
-# <a name="unarynegate-class"></a>Класс unary_negate
+# <a name="unary_negate-class"></a>Класс unary_negate
 
-Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной унарной функции. Рекомендуется использовать в C ++ 17 для [not_fn](functional-functions.md#not_fn).
+Шаблон класса, предоставляющий функцию-член, которая инвертирует возвращаемое значение заданной унарной функции. Не рекомендуется использовать в C++ 17 в пользу [not_fn](functional-functions.md#not_fn).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,19 +31,19 @@ class unary_negate
 
 ### <a name="parameters"></a>Параметры
 
-*Func*\
+@No__t_1 *Func*
 Унарная функция, которая должна быть инвертирована.
 
-*Слева*\
+*left* \
 Операнд унарной функции, которая должна быть инвертирована.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Отрицание унарной функции.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона сохраняет копию объект унарной функции  *\_Func*. Он определяет свою функцию-член `operator()` как возвращающий `!_Func(left)`.
+Шаблон класса хранит копию объекта унарной функции *\_Func*. Он определяет свою функцию члена `operator()` как возвращаемый `!_Func(left)`.
 
 Конструктор `unary_negate` редко используется напрямую. Вспомогательная функция [not1](../standard-library/functional-functions.md#not1) позволяет удобно объявить и использовать предикат адаптера **unary_negator**.
 

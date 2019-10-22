@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460085"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690007"
 ---
-# <a name="basiciostream-class"></a>Класс basic_iostream
+# <a name="basic_iostream-class"></a>Класс basic_iostream
 
 Класс потока, поддерживающий ввод и вывод.
 
@@ -33,9 +33,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот класс шаблона описывает объект, управляющий вставками с помощью базового класса [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> и извлечениями с помощью базового класса [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. У этих двух объектов общий виртуальный базовый класс [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Они также управляют общим буфером потока с элементами типа `Elem`, признаки символов которых определяются классом `Tr`. Конструктор инициализирует базовые классы с помощью `basic_istream`( **strbuf**) и `basic_ostream`( **strbuf**).
+Шаблон класса описывает объект, управляющий вставками через его базовый класс [basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`, `Tr` > и извлечения, через его базовый класс [basic_istream](../standard-library/basic-istream-class.md) <  `Elem`, `Tr` >. У этих двух объектов общий виртуальный базовый класс [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. Они также управляют общим буфером потока с элементами типа `Elem`, признаки символов которых определяются классом `Tr`. Конструктор инициализирует базовые классы с помощью `basic_istream`( **strbuf**) и `basic_ostream`( **strbuf**).
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значение указанного объекта `basic_iostream` этому объекту. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>Параметры
 
-*strBuf*\
+*strbuf* \
 Существующий объект `basic_streambuf`.
 
-*Правильно*\
+*справа* \
 Существующий объект `basic_iostream`, который используется для создания нового объекта `basic_iostream`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый конструктор инициализирует базовые объекты посредством `basic_istream(strbuf)` и `basic_ostream(strbuf)`.
 
-Второй конструктор инициализирует базовые объекты путем вызова `move(right)`.
+Второй конструктор инициализирует базовые объекты, вызывая `move(right)`.
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -97,10 +97,10 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Ссылка `rvalue` на объект `basic_iostream`, на основе которого будет присвоено значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор члена вызывает `swap(right)`.
 
@@ -114,10 +114,10 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Объект `basic_iostream` для обмена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция члена вызывает `swap(right)`.
 
