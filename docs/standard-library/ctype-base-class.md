@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449349"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688196"
 ---
-# <a name="ctypebase-class"></a>Класс ctype_base
+# <a name="ctype_base-class"></a>Класс ctype_base
 
-Этот класс служит в качестве базового класса для аспектов класса шаблона [ctype](../standard-library/ctype-class.md). Базовый класс для класса ctype, используемый для определения типов перечисления, применяемых для классификации или тестирования символов по отдельности или целыми диапазонами.
+Класс выступает в качестве базового класса для аспектов шаблона класса [CType](../standard-library/ctype-class.md). Базовый класс для класса ctype, используемый для определения типов перечисления, применяемых для классификации или тестирования символов по отдельности или целыми диапазонами.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,7 +43,7 @@ struct ctype_base : public locale::facet
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Задает маску перечисления. Каждая константа перечисления характеризует другой способ классификации символов, в соответствии с определениями функций с подобными именами, объявленных в заголовке \<ctype.h>. Используются следующие константы:
 
@@ -69,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph** (функция [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, всегда истинно, что **алнум** = = ( **альфа** &#124; **-цифра** \) и **Graph** \=  &#124; \= \( алнум **punct**).
+Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, всегда верно, что **алнум** = = ( **альфа** &#124; **разряд** \) и **Graph** \= \= \( **алнум** &#124; **punct**).
 
 ## <a name="requirements"></a>Требования
 

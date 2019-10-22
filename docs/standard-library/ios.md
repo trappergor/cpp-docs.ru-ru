@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449136"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689510"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,18 +20,18 @@ ms.locfileid: "68449136"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**: \<> iOS
+**Заголовок**: \<ios >
 
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <iosfwd>` iOS использует инструкцию. \<
+> Библиотека \<ios > использует инструкцию `#include <iosfwd>`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг `ios_base::skipws` формата в объекте `str`, который может иметь один из этих типов.
+Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия с потоками, управляемыми объектами типа, производного от этого класса, например специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг формата `ios_base::skipws` в `str` объекта, который может иметь один из этих типов.
 
-Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Например:
+Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Пример:
 
 ```cpp
 istr>> noskipws;
@@ -39,9 +39,9 @@ istr>> noskipws;
 
 вызывает [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -95,8 +95,8 @@ istr>> noskipws;
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|Класс шаблона описывает хранилище и функции-члены, общие для обоих потоков (потока ввода — класс шаблона [basic_istream](../standard-library/basic-istream-class.md) и потока вывода — класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), зависящих от параметров шаблона.|
-|[fpos](../standard-library/fpos-class.md)|Класс шаблона описывает объект, который может хранить все сведения, необходимые для восстановления произвольного указателя позиции файла в любом потоке.|
+|[basic_ios](../standard-library/basic-ios-class.md)|Шаблон класса описывает хранилище и функции-члены, общие для входных потоков (класса Template [basic_istream](../standard-library/basic-istream-class.md)) и потоков вывода (класса Template [basic_ostream](../standard-library/basic-ostream-class.md)), которые зависят от параметров шаблона.|
+|[fpos](../standard-library/fpos-class.md)|Шаблон класса описывает объект, который может хранить всю информацию, необходимую для восстановления произвольного индикатора положения файла в любом потоке.|
 |[ios_base](../standard-library/ios-base-class.md)|Этот класс описывает хранилище и функции-члены общие для обоих потоков (ввода и вывода), не зависящих от параметров шаблона.|
 
 ## <a name="see-also"></a>См. также

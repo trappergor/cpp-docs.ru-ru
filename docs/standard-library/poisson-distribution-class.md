@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 180b84c6ac7bef94a93f73c0bdefc6a6f95164f0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458465"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689128"
 ---
-# <a name="poissondistribution-class"></a>Класс poisson_distribution
+# <a name="poisson_distribution-class"></a>Класс poisson_distribution
 
 Формирует распределение Пуассона.
 
@@ -67,12 +67,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*инттипе*\
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Инттипе* \
+Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, получающее значения указанного пользователем целочисленного типа с распределением Пуассона. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа с распределением Пуассона. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -89,7 +89,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Подробные сведения о распределении Пуассона см. в статье Wolfram MathWorld [Распределение Пуассона](https://go.microsoft.com/fwlink/p/?linkid=401112).
 
@@ -207,13 +207,13 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*приводит*\
+*среднее* \
 Параметр распределения `mean`.
 
-*ParM*\
+*parm* \
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < mean`
 
@@ -240,7 +240,7 @@ struct param_type {
 
 См. параметры конструктора для [poisson_distribution](#poisson_distribution).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < mean`
 
