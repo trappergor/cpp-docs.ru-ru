@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454483"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689725"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-Определяет двустороннюю очередь (deque) классов шаблонов контейнеров и некоторые вспомогательные шаблоны.
+Определяет шаблон класса контейнера deque и несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** \<deque>
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` deque также использует инструкцию. \<
+> Библиотека \<deque > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[operator!=](../standard-library/deque-operators.md#op_neq)|Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.|
+|[оператор!= ](../standard-library/deque-operators.md#op_neq)|Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.|
 |[оператор<](../standard-library/deque-operators.md#op_lt)|Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.|
 |[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.|
-|[operator==](../standard-library/deque-operators.md#op_eq_eq)|Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.|
+|[оператор==](../standard-library/deque-operators.md#op_eq_eq)|Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.|
 |[оператор>](../standard-library/deque-operators.md#op_gt)|Проверяет, больше ли объект deque слева от оператора объекта deque справа от оператора.|
 |[оператор>=](../standard-library/deque-operators.md#op_gt_eq)|Проверяет, больше или равен ли объект deque слева от оператора объекту deque справа от оператора.|
 
@@ -47,7 +47,7 @@ ms.locfileid: "68454483"
 
 |||
 |-|-|
-|[Класс deque](../standard-library/deque-class.md)|Класс шаблона контейнеров последовательности, которые упорядочивают элементы заданного типа в линейном порядке и, подобно векторам, обеспечивают быстрый произвольный доступ к любому элементу и эффективную вставку и удаление в конце контейнера.|
+|[Класс deque](../standard-library/deque-class.md)|Шаблон класса последовательностей контейнеров, который упорядочивает элементы заданного типа в линейном упорядочении и, как векторы, обеспечивает быстрый произвольный доступ к любому элементу и эффективную вставку и удаление в обратном направлении контейнера.|
 
 ## <a name="see-also"></a>См. также
 
