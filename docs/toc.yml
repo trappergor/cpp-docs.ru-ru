@@ -2969,7 +2969,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Целочисленные типы
                           href: c-language/integer-types.md
-                        - name: Пределы целых чисел в C++
+                        - name: Пределы целых чисел в C и C++
                           href: c-language/cpp-integer-limits.md
                     - name: Символьные константы в C
                       expanded: false
@@ -6057,7 +6057,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: String
+            - name: Строка
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
