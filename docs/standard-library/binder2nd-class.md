@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689935"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890092"
 ---
 # <a name="binder2nd-class"></a>Класс binder2nd
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 *Func*
+\ *Func*
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
 *справа* \
@@ -53,9 +53,9 @@ class binder2nd
 
 ## <a name="remarks"></a>Заметки
 
-Шаблон класса сохраняет копию объекта бинарной функции _ *Func* в `op` и копию *справа* в `value`. Он определяет свою функцию-член `operator()` как возвращаемую **Op**(`left`, **value**).
+Шаблон класса сохраняет копию объекта бинарной функции *Func* в `op`и копию *справа* в `value`. Он определяет свою функцию члена `operator()` как возвращаемый `op(left, value)`.
 
-Если `Func` является объектом типа `Operation` и c является константой, то [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) эквивалентен конструктору `binder2nd` `binder2nd` **операции**\< > (`Func`, 0) и более удобной.
+Если *Func* является объектом типа `Operation` и c является константой, то [bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` эквивалентен конструктору `binder2nd` класса `binder2nd<Operation>(func, c)`и более удобным.
 
 ## <a name="example"></a>Пример
 
