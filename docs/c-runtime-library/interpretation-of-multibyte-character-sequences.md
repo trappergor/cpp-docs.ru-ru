@@ -1,23 +1,23 @@
 ---
-title: Интерпретация последовательностей в многобайтной кодировке
-ms.date: 04/11/2018
+title: Интерпретация последовательностей многобайтовых символов
+ms.date: 10/22/2019
 f1_keywords:
 - c.character.multibyte
 helpviewer_keywords:
 - MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-ms.openlocfilehash: 68a0fdf0bdb573b40d347e05a7449affda55d8e5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 7431f0c63df60414af192ea38103318c775c430d
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738827"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811087"
 ---
-# <a name="interpretation-of-multibyte-character-sequences"></a>Интерпретация последовательностей в многобайтной кодировке
+# <a name="interpretation-of-multibyte-character-sequences"></a>Интерпретация последовательностей многобайтовых символов
 
-Большинство подпрограмм для многобайтовых символов в библиотеке времени выполнения Microsoft распознают последовательности многобайтовых символов, относящиеся к многобайтовой кодовой странице. Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта.
+Большинство подпрограмм для многобайтовых символов в библиотеке времени выполнения Microsoft распознают последовательности многобайтовых символов, относящиеся к многобайтовой кодовой странице. На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта. Дополнительные сведения см. в разделе [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Версии с суффиксом **_l** идентичны, за исключением того, что вместо текущего языкового стандарта используется параметр locale.
 
-## <a name="locale-dependent-multibyte-routines"></a>Подпрограммы для многобайтовых символов, зависящие от языкового стандарта
+## <a name="locale-dependent-multibyte-routines"></a>Подпрограммы, зависящие от языкового стандарта
 
 |Подпрограмма|Использовать|
 |-------------|---------|
@@ -27,10 +27,15 @@ ms.locfileid: "57738827"
 |[mbtowc, _mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|Преобразовать многобайтовый символ в соответствующий расширенный символ.|
 |[wcstombs, _wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md), [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|Преобразовать последовательность расширенных символов в соответствующую последовательность многобайтовых символов|
 |[wctomb, _wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md), [wctomb_s, _wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|Преобразовать расширенный символ в соответствующий многобайтовый символ|
-|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Преобразуют многобайтовый символ в эквивалентный символ UTF-16 или UTF-32|
-|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Преобразуют символ UTF-16 или UTF-32 в эквивалентный многобайтовый символ|
+
+## <a name="locale-independent-multibyte-routines"></a>Не зависящие от языкового стандарта подпрограммы
+
+|Подпрограмма|Использовать|
+|-------------|---------|
+|[mbrtoc16, mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|Преобразование многобайтового кодировки UTF-8 в эквивалентный символ UTF-16 или UTF-32|
+|[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|Преобразование символа UTF-16 или UTF-32 в эквивалентный многобайтовый символ UTF-8|
 
 ## <a name="see-also"></a>См. также
 
-[Интернационализация](../c-runtime-library/internationalization.md)<br/>
-[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Интернационализация](../c-runtime-library/internationalization.md)\
+[Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)
