@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689703"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890205"
 ---
 # <a name="forward_list-class"></a>Класс forward_list
 
@@ -678,7 +678,7 @@ template <class Predicate>
 
 ### <a name="remarks"></a>Заметки
 
-`forward_list::merge` удаляет элементы из `right` `forward_list` и вставляет их в этот `forward_list`. Обе последовательности должны быть упорядочены по одному и тому же предикату, описанному ниже. Объединенная последовательность также упорядочивается этим объектом функции сравнения.
+`forward_list::merge` удаляет элементы из `right``forward_list` и вставляет их в этот `forward_list`. Обе последовательности должны быть упорядочены по одному и тому же предикату, описанному ниже. Объединенная последовательность также упорядочивается этим объектом функции сравнения.
 
 Для итераторов `Pi` и `Pj`, обозначающих элементы в позициях `i` и `j`, первая функция-член упорядочивает `!(*Pj < *Pi)` каждый раз, когда `i < j`. (Элементы сортируются в порядке `ascending`.) Вторая функция члена накладывает порядок `! comp(*Pj, *Pi)`, когда `i < j`.
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*_Newsize* \
+*_Newsize*\
 Число элементов в прямом списке с измененным размером.
 
 *val* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Заметки
 
-Этот тип является синонимом для параметра-шаблона _ `Ty`.
+Этот тип является синонимом для параметра шаблона `Type`.

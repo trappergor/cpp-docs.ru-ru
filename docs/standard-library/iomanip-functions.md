@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449219"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890149"
 ---
 # <a name="ltiomanipgt-functions"></a>Функции &lt;iomanip&gt;
 
@@ -48,20 +48,20 @@ ms.locfileid: "68449219"
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Amount*\
+*количество*\
 Извлеченное денежное значение.
 
-*_Intl*\
+*use_intl*\
 Если **true**, используйте Международный формат. Значение по умолчанию — **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Манипулятор `str`возвращает объект, который при извлечении из потока ведет себя как объект, который вызывает функцию `get` - `formatted input function` член для аспекта `money_get` языкового стандарта, связанного с `str`, с помощью *_Intl* для Укажите Международный формат. В случае успеха вызов сохраняет в *_Amount* извлеченное денежное значение. Затем манипулятор возвращает `str`.
+Манипулятор возвращает объект, который при извлечении из потока `str`ведет себя как `formatted input function`, который вызывает функцию-член `get` для аспекта языкового стандарта `money_get` связанный с `str`, используя *use_intl* для обозначения международного формата . В случае успеха вызов сохраняет в *сумме* извлеченное денежное значение. Затем манипулятор возвращает `str`.
 
 `Money` должен иметь тип `long double` или быть экземпляром `basic_string` с теми же параметрами элемента и признаков, что и `str`.
 
@@ -71,18 +71,18 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Tptr*\
+*time_ptr*\
 Время в виде структуры времени.
 
-*_Fmt*\
+*time_format*\
 Требуемый формат для получения значения времени.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Манипулятор возвращает объект, который при извлечении из потока `str` ведет себя как `formatted input function`, вызывающий функцию-член `get` для ограничения языкового стандарта `time_get`, связанного с `str`, с использованием `tptr` для указания структуры времени и `fmt` для указания начала строки формата, завершающейся нулем. В случае успешного выполнения вызов хранит в структуре времени значения, связанные с полями извлеченного времени. Затем манипулятор возвращает `str`.
 
@@ -92,24 +92,24 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Amount*\
+*количество*\
 Денежная сумма для вставки в поток.
 
-*_Intl*\
+*use_intl*\
 Задайте значение **true** , если манипулятор должен использовать международный формат, и **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает `str`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как форматированная выходная функция, вызывающая функцию-член `put` для ограничения языкового стандарта `money_put`, связанного с `str`. В случае успеха вызов вставляется `amount` соответствующим образом с помощью * _Intl` to indicate international format and `str. Fill ()`, as the fill element. The manipulator then returns `str.
+Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как форматированная выходная функция, вызывающая функцию-член `put` для ограничения языкового стандарта `money_put`, связанного с `str`. В случае успеха вызов вставляет `amount` соответствующим образом отформатированным, используя *use_intl* для указания международного формата и `str.fill()`в качестве элемента Fill. Затем манипулятор возвращает `str`.
 
 `Money` должен иметь тип `long double` или быть экземпляром `basic_string` с теми же параметрами элемента и признаков, что и `str`.
 
@@ -119,20 +119,20 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Tptr*\
+*time_ptr*\
 Значение времени для записи в поток в виде структуры времени.
 
-*_Fmt*\
+*time_format*\
 Требуемый формат для записи значения времени.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как `formatted output function`. Функция вывода вызывает функцию-член `put` для ограничения языкового стандарта `time_put`, связанного с `str`. Функция Output использует *_Tptr* для указания структуры времени и *_Fmt* для указания начала строки формата, завершающейся нулем. В случае успешного выполнения вызов вставляет текст из строки формата и преобразованные значения из структуры времени. Затем манипулятор возвращает `str`.
+Манипулятор возвращает объект, который при вставке в поток `str` ведет себя как `formatted output function`. Функция вывода вызывает функцию-член `put` для ограничения языкового стандарта `time_put`, связанного с `str`. Функция Output использует *time_ptr* для указания структуры времени и *time_format* для указания начала строки формата, завершающейся нулем. В случае успешного выполнения вызов вставляет текст из строки формата и преобразованные значения из структуры времени. Затем манипулятор возвращает `str`.
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,16 +147,16 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Параметры
 
-*str*\
-Строковый литерал std:: string\*, char, String или необработанный строковый литерал или расширенная версия любого из них (например, std:: wstring\*, wchar_t).
+\ *str*
+Строка std:: String, char\*, строковый литерал или необработанный строковый литерал или расширенная версия любого из них (например, std:: wstring, wchar_t\*).
 
-*разделитель*\
+*разделитель* \
 Указанный пользователем символ или двухбайтовый символ для использования в качестве разделителя для начала и конца строки.
 
-*выполняет*\
+*escape* -\
 Указанный пользователем символ или двухбайтовый символ для использования в качестве escape-символа для escape-последовательностей в строке.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 См. раздел [Использование операторов вставки и управление форматом](../standard-library/using-insertion-operators-and-controlling-format.md).
 
@@ -306,17 +306,17 @@ Press Enter to exit
 Удаляет указанные флаги.
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Виде*\
+*маска*\
 Флажки, которые нужно очистить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. [setf](../standard-library/ios-base-class.md#setf) ( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), а затем возвращает `str`.
+Манипулятор возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, а затем возвращает `str`.
 
 ### <a name="example"></a>Пример
 
@@ -327,25 +327,25 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 Задает основание целых чисел.
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Base*\
+*base*\
 Основание числа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. `setf`( **Mask**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)), а затем возвращает `str`. `mask` Здесь определяется следующим образом:
+Манипулятор возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, а затем возвращает `str`. Здесь `mask` определяется следующим образом:
 
-- Если значение _ *base* равно 8, `mask` то `ios_base::`это [Oct](../standard-library/ios-functions.md#oct).
+- Если *основание* равно 8, то `mask` `ios_base::`[Oct](../standard-library/ios-functions.md#oct).
 
-- Если _ *Base* имеет значение 10, то mask будет иметь значение `ios_base::`[dec](../standard-library/ios-functions.md#dec).
+- Если значение *base* равно 10, то маска имеет значение `ios_base::`[Dec](../standard-library/ios-functions.md#dec).
 
-- Если значение _ *base* равно 16, `mask` то `ios_base::`оно имеет [шестнадцатеричное](../standard-library/ios-functions.md#hex)значение.
+- Если значение *base* равно 16, то `mask` `ios_base::`[Hex](../standard-library/ios-functions.md#hex).
 
-- Если _ *Base* имеет любое другое значение, то mask будет иметь значение `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).
+- Если *base* имеет любое другое значение, то Mask `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
 
 ### <a name="example"></a>Пример
 
@@ -362,12 +362,12 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>Параметры
 
-*Канал*\
+\ *CH*
 Задает символ, который будет использоваться для заполнения пробелов при показе с выравниванием по правому краю.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор шаблона возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. [заполнить](../standard-library/basic-ios-class.md#fill) (`Ch`), а затем возвращает `str`. Тип `Elem` должен совпадать с типом элемента для потока `str`.
+Манипулятор шаблона возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.``(Ch)`[Fill](../standard-library/basic-ios-class.md#fill) , а затем возвращает `str`. Тип `Elem` должен совпадать с типом элемента для потока `str`.
 
 ### <a name="example"></a>Пример
 
@@ -378,17 +378,17 @@ T4 setfill(Elem Ch);
 Задает указанные флаги.
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Виде*\
+*маска*\
 Флажки, которые нужно установить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. [setf](../standard-library/ios-base-class.md#setf) (_ *Mask*), а затем возвращает `str`.
+Манипулятор возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`, а затем возвращает `str`.
 
 ### <a name="example"></a>Пример
 
@@ -404,12 +404,12 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>Параметры
 
-*прек*\
+*Прек*\
 Точность для значений с плавающей запятой.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. [точность](../standard-library/ios-base-class.md#precision) (`Prec`), а затем возвращает `str`.
+Манипулятор возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.`[точность](../standard-library/ios-base-class.md#precision)`(Prec)`, а затем возвращает `str`.
 
 ### <a name="example"></a>Пример
 
@@ -425,14 +425,14 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>Параметры
 
-*Масштаба*\
+*Широкие*\
 Ширина поля отображения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Манипулятор возвращает объект, который при извлечении из потока или его вставке в поток `str`вызывает **str**. [Ширина](../standard-library/ios-base-class.md#width) (_ *Wide*), а затем `str`возвращает.
+Манипулятор возвращает объект, который при извлечении из или вставке в поток `str`вызывает `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, а затем возвращает `str`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Setw задает ширину только для следующего элемента в потоке и должен вставляться перед каждым элементом, ширину которого нужно задать.
 
