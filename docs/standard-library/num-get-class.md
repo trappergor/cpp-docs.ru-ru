@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689230"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889995"
 ---
 # <a name="num_get-class"></a>Класс num_get
 
@@ -90,78 +90,78 @@ typedef CharType char_type;
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned short& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned int& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
@@ -173,10 +173,10 @@ virtual iter_type do_get(
 *последние* \
 Конец диапазона символов для чтения числа.
 
-*_Iosbase* \
+*iosbase* \
 [Ios_base](../standard-library/ios-base-class.md), флаги которого используются для преобразования.
 
-*_State* \
+\ *состояния*
 Состояние, к которому при сбое добавляется failbit (см. [ios_base::iostate](../standard-library/ios-base-class.md#iostate)).
 
 *val* \
@@ -194,8 +194,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 ```
 
@@ -211,11 +211,11 @@ virtual iter_type do_get(
 
 В противном случае спецификация преобразования имеет значение `ld`.
 
-Формат целочисленного поля вывода далее определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class)`fac`, возвращаемым вызовом [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. В частности:
+Формат целочисленного поля ввода дополнительно определяется [аспектом локали](../standard-library/locale-class.md#facet_class)`fac`, возвращаемого вызовом [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. В частности:
 
-`fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` определяет, как группируются цифры слева от любого десятичного разделителя;
+`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` определяет, как группируются цифры слева от любой десятичной запятой
 
-`fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` определяет последовательность, которая разделяет группы цифр слева от любого десятичного разделителя.
+`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` определяет последовательность, разделяющую группы цифр слева от любой десятичной запятой.
 
 Если в числовом поле ввода нет экземпляров `fac.thousands_sep()`, то ограничения группировки не применяются. В противном случае применяются ограничения группировки, накладываемые `fac.grouping()`, и разделители удаляются перед выполнением преобразования сканирования.
 
@@ -225,8 +225,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 ```
 
@@ -238,8 +238,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 ```
 
@@ -251,8 +251,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 ```
 
@@ -264,8 +264,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 ```
 
@@ -277,8 +277,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 ```
 
@@ -290,8 +290,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 ```
 
@@ -303,8 +303,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -316,8 +316,8 @@ virtual iter_type do_get(
 virtual iter_type do_get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
@@ -337,78 +337,78 @@ virtual iter_type do_get(
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned short& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned int& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long long& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     float& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 
 iter_type get(
     iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -420,10 +420,10 @@ iter_type get(
 *последние* \
 Конец диапазона символов для чтения числа.
 
-*_Iosbase* \
+*iosbase* \
 [Ios_base](../standard-library/ios-base-class.md), флаги которого используются для преобразования.
 
-*_State* \
+\ *состояния*
 Состояние, к которому при сбое добавляется failbit (см. [ios_base::iostate](../standard-library/ios-base-class.md#iostate)).
 
 *val* \
@@ -435,35 +435,35 @@ iter_type get(
 
 ### <a name="remarks"></a>Заметки
 
-Все функции-члены возвращают [do_get](#do_get)(`first`, `last`, `_Iosbase`, `_State`, `val`).
+Все функции элементов возвращают [do_get](#do_get)`( first, last, iosbase, state, val)`.
 
-Первая защищенная виртуальная функция-член пытается сопоставить последовательные элементы, начиная с первого в последовательности [`first`, `last`), пока не распознает полное, непустое целочисленное поле ввода. В случае успешного выполнения он преобразует это поле в эквивалентное значение типа **Long** и сохраняет результат в *Val*. Она возвращает итератор, обозначающий первый элемент после числового поля ввода. В противном случае функция сохраняет ничего в *Val* и задает `ios_base::failbit` в _ *состоянии*. Она возвращает итератор, обозначающий первый элемент после любого префикса допустимого целочисленного поля ввода. В любом случае, если возвращаемое значение равно *Last*, функция устанавливает `ios_base::eofbit` в *_State*.
+Первая защищенная виртуальная функция-член пытается сопоставить последовательные элементы, начиная с первого в последовательности [`first`, `last`), пока не распознает полное, непустое целочисленное поле ввода. В случае успешного выполнения он преобразует это поле в эквивалентное значение типа **Long** и сохраняет результат в *Val*. Она возвращает итератор, обозначающий первый элемент после числового поля ввода. В противном случае функция сохраняет ничего в *Val* и задает `ios_base::failbit` в *состоянии*. Она возвращает итератор, обозначающий первый элемент после любого префикса допустимого целочисленного поля ввода. В любом случае, если возвращаемое значение равно *Last*, функция устанавливает `ios_base::eofbit` в *состоянии*.
 
 Целочисленное поле ввода преобразуется теми же правилами, которые используются функциями просмотра для сопоставления и преобразования последовательности элементов **char** из файла. Предполагается, что каждый такой элемент **char** сопоставлен с эквивалентным элементом типа `CharType` простым сопоставлением «один к одному». Эквивалентная спецификация преобразования сканирования определяется следующим образом:
 
-- Если `iosbase`. [Флаги](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования — .`lo`
+- Если `iosbase.`[флаги](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования `lo`.
 
-- Если **iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[Hex](../standard-library/ios-functions.md#hex), спецификация преобразования `lx`.
+- Если `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), спецификация преобразования имеет значение `lx`.
 
-- If **iosbase.flags** & **ios_base::basefield** == 0, спецификация преобразования будет иметь значение `li`.
+- Если `iosbase.flags & ios_base::basefield == 0`, спецификация преобразования имеет значение `li`.
 
 - В противном случае спецификация преобразования имеет значение `ld`.
 
-Формат целочисленного поля ввода далее определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class)**fac**, возвращаемым вызовом [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>(**iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). В частности:
+Формат целочисленного поля ввода дополнительно определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class) `fac`, возвращаемого вызовом [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. В частности:
 
-- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) определяет, как группируются цифры слева от любого десятичного разделителя.
+- `fac.`[группирование](../standard-library/numpunct-class.md#grouping) определяет, как группируются цифры слева от любой десятичной запятой.
 
-- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) определяет последовательность, которая разделяет группы цифр слева от любого десятичного разделителя.
+- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep) определяет последовательность, разделяющую группы цифр слева от любой десятичной запятой.
 
-Если в части значения числового поля ввода не появляется экземпляров **fac**. `thousands_sep`, то ограничения группировки не применяются. В противном случае применяются любые ограничения группировки, определяемые в **fac**. **grouping**, и разделители удаляются перед преобразованием сканирования.
+Если в числовом поле ввода нет экземпляров `fac.thousands_sep`, то ограничения группировки не применяются. В противном случае все ограничения на группирование, накладываемые `fac.grouping`, применяются принудительно, а разделители удаляются перед преобразованием сканирования.
 
 Вторая виртуальная защищенная функция-член:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     unsigned long& val) const;
 ```
 
@@ -474,20 +474,20 @@ virtual iter_type do_get(iter_type first,
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     double& val) const;
 ```
 
-ведет себя так же, как первая, за исключением того, что она пытается сопоставить полное, непустое вещественное поле ввода. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) определяет последовательность, которая отделяет цифры целой части от цифр дробной части. Эквивалентный спецификатор преобразования сканирования — `lf`.
+ведет себя так же, как первая, за исключением того, что она пытается сопоставить полное, непустое вещественное поле ввода. `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point) определяет последовательность, разделяющую цифры целой и дробной частей. Эквивалентный спецификатор преобразования сканирования — `lf`.
 
 Четвертая виртуальная защищенная функция-член:
 
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     long double& val) const;
 ```
 
@@ -498,8 +498,8 @@ virtual iter_type do_get(iter_type first,
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     void *& val) const;
 ```
 
@@ -510,14 +510,14 @@ virtual iter_type do_get(iter_type first,
 ```cpp
 virtual iter_type do_get(iter_type first,
     iter_type last,
-    ios_base& _Iosbase,
-    ios_base::iostate& _State,
+    ios_base& iosbase,
+    ios_base::iostate& state,
     bool& val) const;
 ```
 
 ведет себя так же, как первая, за исключением того, что она пытается сопоставить полное, непустое логическое поле ввода. При успешном выполнении он преобразует логическое поле ввода в значение типа **bool** и сохраняет это значение в *Val*.
 
-Логическое поле ввода может иметь одну из двух форм. Если **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) имеет значение **false** — это то же самое, что и целочисленное поле ввода, за исключением того, что преобразованное значение должно быть либо 0 (для **false**), либо 1 (для **true**). В противном случае последовательность должна соответствовать либо **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (для значения **false**), либо **fac**. [truename](../standard-library/numpunct-class.md#truename) (для значения **true**).
+Логическое поле ввода может иметь одну из двух форм. Если `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) имеет **значение false**, то это то же самое, что и целочисленное поле ввода, за исключением того, что преобразованное значение должно быть либо 0 (для **false**), либо 1 (для **true**). В противном случае последовательность должна соответствовать либо `fac.`[falsename](../standard-library/numpunct-class.md#falsename) (для **false**), либо `fac.`[truename](../standard-library/numpunct-class.md#truename) (для **true**).
 
 ### <a name="example"></a>Пример
 
@@ -568,17 +568,17 @@ typedef InputIterator iter_type;
 Конструктор для объектов типа `num_get`, используемых для извлечения числовых значений из последовательностей.
 
 ```cpp
-explicit num_get(size_t _Refs = 0);
+explicit num_get(size_t refs = 0);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* \
+\ *ReFS*
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Заметки
 
-Возможные значения для параметра *_Refs* и их значимость:
+Возможные значения для параметра *ReFS* и их значимости:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
@@ -588,7 +588,7 @@ explicit num_get(size_t _Refs = 0);
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 
-Конструктор инициализирует свой базовый объект с **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Конструктор инициализирует свой базовый объект с `locale::`[аспектом](../standard-library/locale-class.md#facet_class)`(refs)`.
 
 ## <a name="see-also"></a>См. также
 
