@@ -1157,34 +1157,7 @@
                     - name: Образец файла makefile
                       href: build/reference/sample-makefile.md
                 - name: Блоки описания
-                  expanded: false
-                  items:
-                    - name: Блоки описания
-                      href: build/reference/description-blocks.md
-                    - name: Целевые объекты
-                      expanded: false
-                      items:
-                        - name: Целевые объекты
-                          href: build/reference/targets.md
-                        - name: Псевдоцелевые объекты
-                          href: build/reference/pseudotargets.md
-                        - name: Несколько целевых объектов
-                          href: build/reference/multiple-targets.md
-                        - name: Кумулятивные зависимости
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Целевые объекты в нескольких блоках описания
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Побочные эффекты зависимостей
-                          href: build/reference/dependency-side-effects.md
-                    - name: Зависимые элементы
-                      expanded: false
-                      items:
-                        - name: Зависимые элементы
-                          href: build/reference/dependents.md
-                        - name: Выводимые зависимости
-                          href: build/reference/inferred-dependents.md
-                        - name: Пути поиска для зависимых элементов
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Команды в файле makefile
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -2899,7 +2874,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
       href: security/developer-guidance-speculative-execution.md
-- name: Справочник
+- name: Ссылка
   expanded: false
   items:
     - name: Язык C/C++ и стандартные библиотеки
@@ -10425,7 +10400,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: Класс SchedulerPolicy
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: simple_partitioner - класс
+                        - name: Класс simple_partitioner
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Класс single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
@@ -10447,7 +10422,7 @@
                           href: parallel/concrt/reference/task-canceled-class.md
                         - name: Класс task_completion_event
                           href: parallel/concrt/reference/task-completion-event-class.md
-                        - name: Класс task_continuation_context
+                        - name: task_continuation_context - класс
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: Класс task_group
                           href: parallel/concrt/reference/task-group-class.md
