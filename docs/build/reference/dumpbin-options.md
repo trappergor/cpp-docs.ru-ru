@@ -1,23 +1,25 @@
 ---
 title: Параметры DUMPBIN
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272745"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144555"
 ---
 # <a name="dumpbin-options"></a>Параметры DUMPBIN
 
-Параметр состоит из спецификатора, которое может быть дефисом (-) или косой черты (/), за которым следует имя параметра. Имена параметров не может быть сокращены. Некоторые параметры принимают аргументы, указанные после двоеточия (:). Внутри параметра допускаются пробелы или табуляцию. Используйте один или несколько пробелов или вкладки следует разделять в командной строке. Имена параметров, а также их аргументы имя ключевого слова или файл не учитывают регистр. Большинство параметров применимы для всех двоичных файлов; Некоторые применимы только к определенным типам файлов. По умолчанию (программа DUMPBIN) отправляет сведения в стандартный вывод. Используйте [/OUT](out-dumpbin.md) параметр для отправки выходных данных в файл.
+Параметр состоит из *спецификатора Option*, который является либо тире (`-`), либо косой чертой (`/`), за которой следует имя параметра. Имена параметров не могут быть сокращены. Некоторые параметры принимают аргументы, указанные после двоеточия (`:`). В спецификации параметров не допускаются пробелы и символы табуляции. Используйте один или несколько пробелов или символов табуляции для разделения спецификаций параметров в командной строке. Имена параметров и их ключевые слова или имена файлов не учитывают регистр. Большинство параметров применяются ко всем двоичным файлам, но несколько применимы только к определенным типам файлов. По умолчанию программа DUMPBIN отправляет сведения в стандартный вывод. Используйте параметр [/out](out-dumpbin.md) для отправки выходных данных в файл.
 
-(Программа DUMPBIN) имеет следующие параметры:
+## <a name="options-list"></a>Список параметров
+
+DUMPBIN имеет следующие параметры.
 
 - [/ALL](all.md)
 
@@ -29,9 +31,9 @@ ms.locfileid: "62272745"
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [/DISASM\[: {BYTEs\|BYTEs}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE | ЗАПРОС | ОЧЕРЕДЬ | ОБМЕНА](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ ms.locfileid: "62272745"
 
 - [/HEADERS](headers.md)
 
-- [/ IMPORTS](imports-dumpbin.md)
+- [/IMPORTS\[: имя файла\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [\[/ЛИНКЕРМЕМБЕР: {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](out-dumpbin.md)
+- [/нопдб](nopdb.md)
+
+- [/OUT: имя файла](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [/ПДБПАС\[: verbose\]](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/РАНЖЕЕ: Вамин\[, Вамакс\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/РАВДАТА\[: {NONE\|1\|2\|4\|8}\[, #\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/SECTION](section-dumpbin.md)
+- [/SECTION: имя](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ ms.locfileid: "62272745"
 
 - [/TLS](tls.md)
 
+Чтобы получить список параметров, поддерживаемых программой DUMPBIN в командной строке, используйте параметр **/?.** функцию.
+
 ## <a name="see-also"></a>См. также
 
-[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)<br/>
-[Справочник DUMPBIN](dumpbin-reference.md)
+[Дополнительные\ средств сборки компилятором MSVC](c-cpp-build-tools.md)
+\ [командной строки DUMPBIN](dumpbin-command-line.md)
+[Справочник по DUMPBIN](dumpbin-reference.md)
