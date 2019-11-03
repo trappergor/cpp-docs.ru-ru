@@ -1,4 +1,4 @@
-﻿- name: C++ в Visual Studio
+- name: C++ в Visual Studio
   items:
     - name: C++ в Visual Studio
       href: overview/visual-cpp-in-visual-studio.md
@@ -6859,7 +6859,7 @@
                   href: c-runtime-library/reference/alloca.md
                 - name: _amsg_exit
                   href: c-runtime-library/reference/amsg-exit.md
-                - name: и
+                - name: and
                   href: c-runtime-library/reference/and.md
                 - name: and_eq
                   href: c-runtime-library/reference/and-eq.md
@@ -6979,7 +6979,7 @@
                   href: c-runtime-library/reference/clearerr.md
                 - name: clearerr_s
                   href: c-runtime-library/reference/clearerr-s.md
-                - name: часы
+                - name: clock
                   href: c-runtime-library/reference/clock.md
                 - name: 'clog, clogf, clogl'
                   href: c-runtime-library/reference/clog-clogf-clogl.md
@@ -6987,7 +6987,7 @@
                   href: c-runtime-library/reference/clog10-clog10f-clog10l.md
                 - name: _close
                   href: c-runtime-library/reference/close.md
-                - name: закрыть
+                - name: close
                   href: c-runtime-library/reference/posix-close.md
                 - name: '_Cmulcc, _FCmulcc, _LCmulcc'
                   href: c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md
@@ -7759,7 +7759,7 @@
                   href: c-runtime-library/reference/open-osfhandle.md
                 - name: or_eq
                   href: c-runtime-library/reference/or-eq.md
-                - name: или
+                - name: or
                   href: c-runtime-library/reference/or.md
                 - name: _pclose
                   href: c-runtime-library/reference/pclose.md
@@ -7821,7 +7821,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: чтение
+                - name: read
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8297,7 +8297,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: запись
+                - name: write
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
