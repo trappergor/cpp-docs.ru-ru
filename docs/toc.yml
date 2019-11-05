@@ -3912,7 +3912,7 @@
                   href: cpp/logical-negation-operator-exclpt.md
                 - name: 'Оператор логического ИЛИ: ||'
                   href: cpp/logical-or-operator-pipe-pipe.md
-                - name: 'Операторы доступа к членам: . и ->'
+                - name: 'Операторы доступа к членам: . and ->'
                   href: cpp/member-access-operators-dot-and.md
                 - name: Операторы умножения и оператор модуля
                   href: cpp/multiplicative-operators-and-the-modulus-operator.md
