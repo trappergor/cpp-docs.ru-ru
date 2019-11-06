@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941359"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623837"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -99,7 +99,7 @@ errno_t _fcvt_s(
 
 **_fcvt_s** может вызвать нарушение прав доступа, если *буфер* не указывает на допустимый объем памяти и не равен **null**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция **_fcvt_s** преобразует число с плавающей запятой в строку символов, завершающуюся нулем. Параметр *value* — это преобразуемое число с плавающей запятой. **_fcvt_s** сохраняет цифры *значения* в виде строки и добавляет нуль-символ ("\ 0"). Параметр *Count* задает количество цифр, сохраняемых после десятичной запятой. Лишние цифры округляются в *число* разрядов. Если *число меньше числа разрядов* точности, строка дополняется нулями.
 
@@ -109,9 +109,9 @@ errno_t _fcvt_s(
 
 Разница между **_ecvt_s** и **_fcvt_s** заключается в интерпретации параметра *Count* . **_ecvt_s** интерпретирует *Count* как общее количество цифр в выходной строке, а **_fcvt_s** *интерпретирует как количество* цифр после десятичной запятой.
 
-В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-Отладочная версия этой функции сначала заполняет буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Отладочная версия этой функции сначала заполняет буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -119,9 +119,9 @@ errno_t _fcvt_s(
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-**Libraries** Все версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
+**Библиотеки:** все версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Пример
 

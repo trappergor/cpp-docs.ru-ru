@@ -1,12 +1,21 @@
 ---
 title: Функции &lt;numeric&gt;
-ms.date: 11/04/2016
+description: Описывает шаблоны функций, предоставляемые заголовком &lt;numeric&gt;в C++ стандартной библиотеке.
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -22,52 +31,55 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889971"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627450"
 ---
 # <a name="ltnumericgt-functions"></a>Функции &lt;numeric&gt;
 
 ## <a name="accumulate"></a>накапливаются
 
-Вычисляет сумму всех элементов в указанном диапазоне, включая некоторое начальное значение, путем вычисления последовательных частичных сумм или вычисляет результат последовательных частичных сумм, аналогичным образом полученных от использования указанной бинарной операции, отличной от суммы.
+Вычисляет сумму всех элементов в указанном диапазоне, включая начальное значение, путем вычисления последовательных частичных сумм. Или, вычисление результата последовательных частичных результатов указанной бинарной операции.
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *первый* \
-Входной итератор, адресующий первый элемент в диапазоне для суммирования или комбинирования в соответствии с указанной бинарной операцией.
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
 
 *последние* \
-Входной итератор, адресующий последний элемент в диапазоне для суммирования или комбинирования в соответствии с указанной бинарной операцией, который находится на одну позицию позади конечного элемента, фактически включенного в перебираемое накопление.
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
 
-*val* \
-Начальное значение, к которому каждый элемент по очереди прибавляется или с которым комбинируется в соответствии с указанной бинарной операцией.
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
 
 *binary_op*\
-Бинарная операция, которая будет применена к каждому элементу в указанном диапазоне, и результат ее предыдущих применений.
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сумма значения *Val* и всех элементов в указанном диапазоне для первой функции шаблона, или, для второй функции шаблона, результатом применения указанной бинарной операции вместо операции Sum к (*PartialResult, \*iter* ), где *PartialResult* является результатом предыдущих приложений операции, а `Iter` является итератором, указывающим на элемент в диапазоне.
+Сумма значений *init* и всех элементов в указанном диапазоне для первой функции шаблона, или для второй функции шаблона результат применения бинарной операции *Binary_Op* вместо операции Sum к (* PartialResult, *in_ iter*), где *PartialResult* является результатом предыдущих приложений операции, а *in_iter* — это итератор, указывающий на следующий элемент в диапазоне.
 
 ### <a name="remarks"></a>Заметки
 
-Начальное значение гарантирует, что результат будет точно определенным, если диапазон пуст, в этом случае возвращается значение *Val* . Бинарная операция не обязательно должна быть ассоциативной или коммутативной. Результат инициализируется начальным значением *Val* , а затем *результат* = `binary_op` (*result*, <strong>\*</strong>`Iter`) вычисляется итеративно через диапазон, где `Iter` — это итератор, указывающий на последовательный элемент в диапазоне. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
+Начальное значение обеспечивает правильность определенного результата, если диапазон пуст, в этом случае возвращается *init* . Бинарная операция не обязательно должна быть ассоциативной или коммутативной. Результат инициализируется начальным значением *init* , а затем *результат* = *Binary_Op*(*result*, *in_iter*) вычисляется итеративно через диапазон, где *in_iter* — это итератор, указывающий на каждый последовательный элемент в диапазоне. Диапазон должен быть допустимым, а сложность — линейной с размером диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
 
 ### <a name="example"></a>Пример
 
@@ -170,7 +182,7 @@ The vector of partial products is:
 
 ## <a name="adjacent_difference"></a>adjacent_difference
 
-Вычисляет последовательные различия между каждым элементом и его предшественником в диапазоне ввода и выводит результаты в диапазон назначения или вычисляет результат обобщенной процедуры, где операция разности заменена другой определенной бинарной операцией.
+Вычисление последовательных различий между каждым элементом и его предшественником в диапазоне ввода. Выводит результаты в диапазон назначения. Или вычисление результата обобщенной процедуры, в которой операция Difference заменяется другой, заданной бинарной операцией.
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -205,6 +217,9 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>Параметры
 
+*exec*\
+Политика выполнения.
+
 *первый* \
 Итератор ввода, обращающийся к первому элементу в диапазоне ввода, элементы которого необходимо отличить от соответствующих им предшественников или где с парой значений должна быть выполнена другая заданная бинарная операция.
 
@@ -215,7 +230,7 @@ ForwardIterator2 adjacent_difference(
 Итератор вывода, обращающийся к первому элементу в диапазоне назначения, где необходимо сохранить ряд различий или результаты определенной операции.
 
 *binary_op*\
-Бинарная операция, которую необходимо применить в обобщенной операции с заменой операции вычитания в процедуре дифференцирования.
+Бинарная операция, применяемая в обобщенной операции, которая заменяет операцию вычитания в разностной процедуре.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -225,11 +240,11 @@ ForwardIterator2 adjacent_difference(
 
 *Результат* итератора вывода может быть тем же итератором *, что и у итератора*ввода, чтобы `adjacent_difference` значения могли быть вычислены на месте.
 
-Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне первая функция-шаблон сохраняет последовательные *`partial_difference` значения 1*, *a*2 – *a*1, a3 *и 2 в*диапазоне назначения.
+Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне первая функция-шаблон сохраняет последовательные *`adjacent_difference` значения 1*, *a*2 – *a*1, a3 *и 2 в*диапазоне назначения.
 
-Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне Вторая функция *-* шаблон сохраняет последовательные `partial_difference` значения 1, 2 `binary_op` *1,* *3 `binary_op`* *a*2в месте назначения разнообраз.
+Для последовательности значений *a*(1 *, 2, a 3) во*входном диапазоне Вторая функция *-* шаблон сохраняет последовательные *`adjacent_difference` значения 1*, 2 *Binary_Op* *a*1, *a*3 *Binary_Op* *2 в* диапазон назначения.
 
-Бинарная операция `binary_op` не обязательно должна быть ассоциативной или коммутативной, так как указан порядок примененных операций.
+Бинарная операция *Binary_Op* не обязательно должна быть ассоциативной или коммутативной, так как указан порядок примененных операций.
 
 ### <a name="example"></a>Пример
 
@@ -294,66 +309,160 @@ int main( )
 
 ## <a name="exclusive_scan"></a>exclusive_scan
 
+Вычисляет монопольную операцию суммирования по префиксу, используя `std::plus<>()` или указанный бинарный оператор для диапазона с учетом начального значения. Записывает результаты в диапазон, начиная с указанного места назначения. *Исключающая сумма префикса* означает, что *n*-й элемент ввода не включается в сумму *n*-го. Перегрузки, включающие аргумент политики выполнения, выполняются в соответствии с указанной политикой.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init);
-template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init, BinaryOperation binary_op);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init, BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Выходной итератор, обращающийся к концу целевого диапазона: *result* + (*последний* - *First*).
+
 ## <a name="gcd"></a>GCD
+
+Вычисление наибольшего общего делителя целых чисел m и n.
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
+### <a name="parameters"></a>Параметры
+
+*m*, *n*\
+Значения целочисленного типа.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает наибольший общий делитель абсолютных значений *m* и *n*или нуль, если оба значения *m* и *n* равны нулю. Результаты не определены, если абсолютные значения *m* или *n* не могут быть представлены как значения типа `common_type_t<M,N>`.
+
 ## <a name="inclusive_scan"></a>inclusive_scan
+
+Вычисляет включающую операцию суммирования по префиксу с помощью `std::plus<>()` или указанного бинарного оператора для диапазона с учетом начального значения. Записывает результаты в диапазон, начиная с указанного места назначения. Сумма *включающего префикса* означает, что *n*-й элемент ввода включен в сумму *n*a. Перегрузки, включающие аргумент политики выполнения, выполняются в соответствии с указанной политикой.
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
 template<class InputIterator, class OutputIterator, class BinaryOperation>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op);
-template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op, T init);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryOperation>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class T>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op, T init);
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Выходной итератор, обращающийся к концу целевого диапазона: *result* + (*последний* - *First*).
 
 ## <a name="inner_product"></a>inner_product
 
@@ -365,16 +474,16 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -388,7 +497,7 @@ Type inner_product(
 *first2* \
 Входной итератор, адресующий первый элемент во втором диапазоне, для которого нужно вычислить внутреннее произведение или обобщенное внутреннее произведение с первым диапазоном.
 
-*val* \
+*инициализация*\
 Начальное значение, к которому прибавляется внутреннее произведение или обобщенное внутреннее произведение диапазонов.
 
 *binary_op1*\
@@ -401,19 +510,19 @@ Type inner_product(
 
 Первая функция-член возвращает сумму поэлементного произведения и добавляет к ней указанное начальное значение. Таким образом, для диапазонов значений *a*i и *b*i она возвращает:
 
-`val` + (*1 \** *b*1) + (*a*2 \* *b*2) +... + (*a*n \* *b*n)
+*init* + (*a*1 \* *б*1) + (*a*2 \* *б*2) +... + (*a*n \* *b*n)
 
-путем итеративной замены *Val* на `val` + (*а*я \* *b*i).
+путем итеративной замены *init* на *init* + (*a*i \* *b*i).
 
 Вторая функция-член возвращает:
 
-`val` *binary_op1* (*a*1 *binary_op2* *б*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *б*n)
+*init* *binary_op1* (*a*1 *binary_op2* *б*1) *binary_op1* (*a*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* (*a*n *binary_op2* *б*n)
 
-путем итеративной замены *Val* на `val` *binary_op1* (*a*i *binary_op2* *b*).
+путем итеративной замены *init* на *init* *binary_op1* (*a*i *binary_op2* *b*i).
 
 ### <a name="remarks"></a>Заметки
 
-Начальное значение гарантирует, что при пустом диапазоне будет определен точно определенный результат, в этом случае возвращается значение *Val* . Бинарные операции не должны быть ассоциативными или коммутативной. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
+Начальное значение обеспечивает правильность определенного результата, если диапазон пуст. В этом случае возвращается *init* . Бинарные операции не должны быть ассоциативными или коммутативной. Диапазон должен быть допустимым, а сложность — линейной с размером диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
 
 ### <a name="example"></a>Пример
 
@@ -507,7 +616,7 @@ int main()
 
 ## <a name="iota"></a>Йота
 
-Хранит начальное значение, начиная с первого элемента и заполняя последовательные приращения этого значения (` value++`) в каждом из элементов в интервале `[first,  last)`.
+Хранит начальное значение, начиная с первого элемента и заполняя последовательные приращения этого значения (`value++`) в каждом из элементов в интервале `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -576,7 +685,7 @@ constexpr common_type_t<M,N> lcm(M m, N n);
 
 ## <a name="partial_sum"></a>partial_sum
 
-Вычисляет ряд сумм во входном диапазоне от первого до *i*-го элемента и сохраняет результат каждого суммирования в *i*-м элементе диапазона назначения либо вычисляет результат обобщенной процедуры, где операция суммирования заменяется на другую указанную бинарную операцию.
+Вычисляет ряд сумм в диапазоне ввода из первого элемента через *n*-й элемент и сохраняет результат каждой такой суммы в *n*-й элемент диапазона назначения. Или вычисляет результат обобщенной процедуры, в которой операция Sum заменяется другой заданной бинарной операцией.
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -602,24 +711,24 @@ OutputIterator partial_sum(
 Итератор ввода, обращающийся к последнему элементу в диапазоне, который необходимо частично суммировать или объединить в соответствии с указанной бинарной операцией, который расположен на одну позицию далее за последним элементом, фактически включенным в совокупности, в которой проводятся итерации.
 
 \ *результатов*
-Итератор вывода, обращающийся к первому элементу в диапазоне назначения, где необходимо сохранить ряд частичных сумм или результаты определенной операции.
+Выходной итератор, обращающийся к первому элементу целевого диапазона для хранения ряда частичных сумм или последовательных результатов указанной бинарной операции.
 
 *binary_op*\
-Бинарная операция, которую необходимо применить в обобщенной операции с заменой операции суммирования в процедуре частичного суммирования.
+Бинарная операция, применяемая в обобщенной операции, заменяющая операцию Sum в процедуре частичной суммы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Выходной итератор, обращающийся к концу целевого диапазона: `result` + (`last` - `first`),
+Выходной итератор, обращающийся к концу целевого диапазона: *result* + (*последний* - *First*).
 
 ### <a name="remarks"></a>Заметки
 
 *Результатом* итератора вывода может быть тот же итератор, что и в *первом*итераторе ввода, чтобы можно было вычислить частичные суммы на месте.
 
-Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне первая функция шаблона сохраняет последовательные частичные суммы в диапазоне назначения, где *i*-й элемент дается (((*a*1 + *a*2) + *a* *3)* i).
+Для *последовательности значений 1*, *a*2,... *значение*x во входном диапазоне первая функция шаблона сохраняет последовательные частичные суммы в диапазоне назначения. *N*-й элемент предоставляется (*a*1 + *a*2 + *a*3 +... + *a*n).
 
-Для последовательности значений *a*1 *, 2,* *a*3 во входном диапазоне Вторая функция-шаблон сохраняет последовательные частичные суммы в диапазоне назначения, где элемент i имеет*значение ((1 `binary_op`* *a*2 *) `binary_op`* 3) *а*).
+Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне Вторая функция-шаблон сохраняет последовательные частичные результаты в диапазоне назначения. *N*-й элемент задается ((... ((*a*1 *Binary_Op* *a*2) *Binary_Op* *3)* *Binary_Op* ...) *Binary_Op* *a*n).
 
-Бинарная операция *Binary_Op* не обязательно должна быть ассоциативной или коммутативной, поскольку указан порядок операций.
+Бинарная операция *Binary_Op* не обязательно должна быть ассоциативной или коммутативной, так как указан порядок примененных операций.
 
 ### <a name="example"></a>Пример
 
@@ -683,123 +792,276 @@ int main( )
 
 ## <a name="reduce"></a>свести
 
+Сокращает все элементы в указанном диапазоне (возможно, включая начальное значение), вычисляя суммы в произвольном и, возможно переставляютсям заказе. Или уменьшается путем вычисления результатов указанной бинарной операции. Перегрузки, включающие аргумент политики выполнения, выполняются в соответствии с указанной политикой.
+
 ```cpp
 template<class InputIterator>
-typename iterator_traits<InputIterator>::value_type
-reduce(InputIterator first, InputIterator last);
-template<class InputIterator, class T>
-T reduce(InputIterator first, InputIterator last, T init);
-template<class InputIterator, class T, class BinaryOperation>
-T reduce(InputIterator first, InputIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator>
-typename iterator_traits<ForwardIterator>::value_type
-reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last);
-template<class ExecutionPolicy, class ForwardIterator, class T>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init);
-template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Результат применения *Binary_Op* или `std::plus<>()` к *init* и всем элементам в указанном диапазоне до (* PartialResult, *in_iter*), где *PartialResult* является результатом предыдущих приложений операции, и *in_iter* — это итератор, указывающий на некоторый элемент в диапазоне. В перегрузках, которые не задают *init*, используемое значение *init* эквивалентно `typename iterator_traits<InputIterator>::value_type{}`.
+
+### <a name="remarks"></a>Заметки
+
+`reduce` поведение является недетерминированным, если *Binary_Op* не является ассоциативным и коммутативной. Поведение не определено, если *Binary_Op* изменяет любой элемент или делает недействительным любой итератор в интервале \[*первый*, *последний*] включительно.
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
+Преобразует элементы диапазона с заданным унарным оператором, затем вычисляет операцию монопольной суммы по префиксу, используя `std::plus<>()` или указанный бинарный оператор для диапазона, учитывая начальное значение. Записывает результаты в диапазон, начиная с указанного места назначения. *Исключающая сумма префикса* означает, что *n*-й элемент ввода не включается в сумму *n*-го. Перегрузки, включающие аргумент политики выполнения, выполняются в соответствии с указанной политикой. Суммирование может выполняться в произвольном порядке.
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+*unary_op*\
+Унарная операция, применяемая к каждому элементу в указанном диапазоне.
 
 ## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
+Преобразует элементы диапазона с заданным унарным оператором, затем вычисляет операцию суммирования по префиксу с помощью `std::plus<>()` или указанного бинарного оператора для диапазона, учитывая начальное значение. Записывает результаты в диапазон, начиная с указанного места назначения. Сумма *включающего префикса* означает, что *n*-й элемент ввода включен в сумму *n*a. Перегрузки, включающие аргумент политики выполнения, выполняются в соответствии с указанной политикой. Суммирование может выполняться в произвольном порядке.
+
 ```cpp
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation, class T>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation, class T>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+*unary_op*\
+Унарная операция, применяемая к каждому элементу в указанном диапазоне.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
 
 ## <a name="transform_reduce"></a>transform_reduce
 
+Преобразует диапазон элементов, а затем применяет функтор, который сокращает преобразованные элементы в произвольном порядке. Фактически, `transform`, за которым следует `reduce`.
+
 ```cpp
-template<class InputIterator1, class InputIterator2, class T>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init);
-template<class InputIterator1, class InputIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class InputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(InputIterator first, InputIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class ExecutionPolicy,
-class ForwardIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>Параметры
+
+*exec*\
+Политика выполнения.
+
+*первый* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*.
+
+*first1* \
+Входной итератор, обращающийся к первому элементу в диапазоне для суммирования или объединения с помощью *binary_op1*.
+
+*последние* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *Binary_Op*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+*last1* \
+Входной итератор, обращающийся к последнему элементу в диапазоне для суммирования или объединения с помощью *binary_op1*, это одна из позиций за пределами окончательного элемента, фактически включаемого в итерационное накопление.
+
+\ *результатов*
+Выходной итератор, обращающийся к первому элементу в диапазоне назначения, где будут храниться ряд сумм или результаты указанной операции.
+
+*инициализация*\
+Начальное значение, к которому каждый элемент в свою очередь добавляется или объединяется с помощью *Binary_Op*.
+
+*binary_op*\
+Двоичная операция, применяемая к каждому элементу в указанном диапазоне и результату предыдущих приложений.
+
+*unary_op*\
+Унарная операция, применяемая к каждому элементу в указанном диапазоне.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Преобразованный и сокращенный результат.

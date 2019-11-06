@@ -1,27 +1,27 @@
 ---
-title: Компилятор предупреждение (уровень 1) C4154
+title: Предупреждение компилятора (уровень 1) C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f0d56f6ae4b4ca92bc330d72176266e3196ea6a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324562"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625014"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>Компилятор предупреждение (уровень 1) C4154
+# <a name="compiler-warning-level-1-c4154"></a>Предупреждение компилятора (уровень 1) C4154
 
-Удаление выражения массива; выполнено преобразование к указателю
+Удаление выражения массива; преобразование к переданному указателю
 
-Нельзя использовать `delete` для массива, поэтому компилятор преобразовывает массив указатель.
+Нельзя использовать `delete` в массиве, поэтому компилятор преобразует массив в указатель.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

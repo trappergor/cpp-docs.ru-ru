@@ -4,22 +4,22 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: a4d92984d9ecff5afb3c5df08df0933ef3be25e6
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 3988c5f062c1f30886dbaa4bca8502e2bd841dfc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042659"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624744"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Предопределенные конфигурации сборки CMake
 
 ::: moniker range="vs-2015"
 
-Проекты CMake, поддерживаются в Visual Studio 2017 и более поздних версий.
+Проекты CMak поддерживаются в Visual Studio 2017 и более поздних версиях.
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range=">=vs-2017"
 
 В проекте CMake конфигурации сборки хранятся в файле CMakeSettings.json. Если выбрать элемент **Управление конфигурациями** в раскрывающемся списке конфигураций сборки на главной панели инструментов, отображается диалоговое окно с конфигурациями CMake по умолчанию, доступными в Visual Studio:
 - x86 Debug
@@ -33,7 +33,7 @@ ms.locfileid: "67042659"
 - MinGW Debug
 - MinGW Release
 
-При выборе конфигурации она добавляется в файл CMakeSettings.json в корневой папке проекта. После этого ее можно использовать для сборки проекта.
+При выборе конфигурации она добавляется в файл *CMakeSettings. JSON* в корневой папке проекта. После этого ее можно использовать для сборки проекта. Дополнительные сведения о свойствах конфигурации см. в разделе [Справочник по CMakeSettings](cmakesettings-reference.md).
 
 
 ## <a name="linux-predefined-build-configurations"></a>Предопределенные конфигурации сборки Linux:
@@ -358,25 +358,25 @@ You can use these optional settings for more control:
 В проекте CMake конфигурации сборки хранятся в файле CMakeSettings.json. Если выбрать элемент **Управление конфигурациями** в раскрывающемся списке конфигураций сборки на главной панели инструментов, отображается диалоговое окно с конфигурациями CMake по умолчанию, доступными в Visual Studio:
 
 - x86 Debug
-- x86 clang отладки
+- Отладка Clang x86
 - x86 Release
-- x86 clang выпуска
+- Выпуск x86 Clang
 - x64 Debug
-- x64 clang отладки
+- Отладка Clang x64
 - x64 Release
-- x64 clang выпуска
+- Выпуск x64 Clang
 - Linux-Debug
 - Linux-Release
-- Clang-Linux-Debug
-- Linux, Clang, выпуск
-- Существующего кэша (удаленного)
-- Существующего кэша
+- Linux-Clang-Debug
+- Linux-Clang-Release
+- Существующий кэш (удаленный)
+- Существующий кэш
 - MinGW Debug
 - MinGW Release
-- WSL отладки
+- Отладка WSL
 - Выпуск WSL
-- WSL Clang отладки
-- Выпуск Clang WSL
+- Отладка WSL Clang
+- Выпуск WSL Clang
 - Clang
 
 При выборе конфигурации она добавляется в файл CMakeSettings.json в корневой папке проекта. После этого ее можно использовать для сборки проекта.

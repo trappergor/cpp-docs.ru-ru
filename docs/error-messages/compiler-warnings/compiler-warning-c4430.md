@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
-ms.openlocfilehash: fe765fa49b9aa11667e1eac4a9cfed54bb84fd8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 661b687373d6c72b9f40a05d1406bc89ce332133
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447862"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623706"
 ---
 # <a name="compiler-warning-c4430"></a>Предупреждение компилятора C4430
 
 отсутствует спецификатор типа — предполагается int. Примечание. C++ не поддерживает int по умолчанию
 
-Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: все объявления должны явно указывать тип; int больше не предполагается.
+Эта ошибка может быть вызвана работой по согласованности компилятора, выполненной для Visual Studio 2005: все объявления должны явно указывать тип. int больше не предполагается.
 
-C4430 всегда выдается как ошибка.  Вы можете отключить это предупреждение с помощью `#pragma warning` или **/wd**; см. в разделе [предупреждение](../../preprocessor/warning.md) или [/w, / W0, / W1, / w2, / w3, / W4, / W1, / w2, / w3, / W4, / Wall, / WD, / we, / WO, / wv, /WX (уровень предупреждений)](../../build/reference/compiler-option-warning-level.md)Дополнительные сведения.
+C4430 всегда выдается как ошибка.  Это предупреждение можно отключить с помощью `#pragma warning` или **/WD**; Дополнительные сведения см. в разделе [warning](../../preprocessor/warning.md) или [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/We,/WO,/WV,/WX (уровень предупреждений)](../../build/reference/compiler-option-warning-level.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4430.
 
-```
+```cpp
 // C4430.cpp
 // compile with: /c
 struct CMyClass {

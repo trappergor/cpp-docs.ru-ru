@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948111"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625857"
 ---
 # <a name="signal"></a>signal
 
@@ -57,17 +57,17 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция **сигнал** позволяет процессу выбрать один из нескольких способов обработки сигнала прерывания из операционной системы. Аргумент *SIG* — это прерывание, на которое реагирует **сигнал** ; Он должен быть одной из следующих констант манифеста, которые определены в СИГНАЛе. Высоты.
 
 |значение *SIG*|Описание|
 |-----------------|-----------------|
-|**СИГАБРТ**|Аварийное завершение|
-|**СИГФПЕ**|Ошибка с плавающей запятой|
-|**СИГИЛЛ**|Недопустимая инструкция|
+|**сигабрт**|Аварийное завершение|
+|**сигфпе**|Ошибка с плавающей запятой|
+|**сигилл**|Недопустимая инструкция|
 |**SIGINT**|Сигнал CTRL + C|
-|**СИГСЕГВ**|Недопустимый доступ к хранилищу|
+|**сигсегв**|Недопустимый доступ к хранилищу|
 |**SIGTERM**|Запрос на завершение|
 
 Если *SIG* не является одним из указанных выше значений, вызывается обработчик недопустимых параметров, как определено в [проверке параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **SIG_ERR**.
@@ -115,7 +115,7 @@ volatile double d = 0.0f;
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -127,7 +127,6 @@ volatile double d = 0.0f;
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+Выходные данные зависят от используемой версии среды выполнения, от того, является ли приложение консолью или приложением Windows, а также параметрами реестра Windows. Для консольного приложения в stderr может быть отправлено примерно следующее сообщение:
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>См. также
