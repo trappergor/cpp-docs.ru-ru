@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 896fca6c6b257c90ccdf813a9c6cb6bc27ad9e96
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311329"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623610"
 ---
 # <a name="compiler-warning-c4485"></a>Предупреждение компилятора C4485
 
-«переопределяющая_функция»: соответствует методу базового класса «базового класса», но не «new» или «override»; предполагается «new» (и «virtual»)
+"override_function": соответствует методу базового класса ссылки "base_class_function", но не помечен как "New" или "override"; предполагается "New" (и "Virtual")
 
-Переопределяет метод доступа, с или без `virtual` ключевое слово, функцию доступа базового класса, но `override` или `new` описатель не была частью переопределения сигнатуры функции. Добавить `new` или `override` описатель, чтобы устранить это предупреждение.
+Метод доступа переопределяет, с ключевым словом `virtual` или без него — функцией доступа базового класса, но спецификатор `override` или `new` не был частью переопределяющей сигнатуры функции. Добавьте спецификатор `new` или `override`, чтобы устранить это предупреждение.
 
-См. в разделе [переопределить](../../extensions/override-cpp-component-extensions.md) и [new (новый слот в vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) Дополнительные сведения.
+Дополнительные сведения см. в разделе [Переопределение](../../extensions/override-cpp-component-extensions.md) и [Создание нового слота в vtable](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) .
 
-C4485 всегда выдается как ошибка. Используйте [предупреждение](../../preprocessor/warning.md) директиву pragma, чтобы отключить предупреждение C4485.
+C4485 всегда выдается как ошибка. Чтобы отключить C4485, используйте директиву pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает предупреждение C4485
+Следующий пример приводит к возникновению ошибки C4485
 
-```
+```cpp
 // C4485.cpp
 // compile with: /clr
 delegate void Del();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4228
 ms.assetid: 9301d660-d601-464e-83f5-7ed844a3c6dc
-ms.openlocfilehash: c737a48883b97970af70014e2bda4bdc508ab471
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75bd34a4338db7a430c1951d5bc3bd61dbce4f64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207572"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627264"
 ---
 # <a name="compiler-warning-level-1-c4228"></a>Предупреждение компилятора (уровень 1) C4228
 
-использовано нестандартное расширение: квалификаторы после запятой в списке объявлений игнорируются
+нестандартное расширение: квалификаторы после запятой в списке деклараторов игнорируются
 
-Использование квалификаторы, такие как **const** или `volatile` после запятой при объявлении переменных является расширением Майкрософт ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Использование квалификаторов, таких как **const** или `volatile` после запятой при объявлении переменных, является расширением Microsoft ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // C4228.cpp
 // compile with: /W1
 int j, const i = 0;  // C4228

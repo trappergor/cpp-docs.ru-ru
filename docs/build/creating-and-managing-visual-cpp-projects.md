@@ -1,6 +1,6 @@
 ---
 title: Проекты Visual Studio — C++
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837052"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624468"
 ---
 # <a name="visual-studio-projects---c"></a>Проекты Visual Studio — C++
 
-*Проект Visual Studio* основан на системе сборки MSBuild. MSBuild — это собственная система сборки для Visual Studio, которая обычно лучше всего подходит для приложений UWP, а также классических приложений, использующих библиотеки MFC или ATL, компоненты COM и другие программы Windows. MSBuild тесно интегрирована с Visual Studio, но ее можно использовать и из командной строки. 
+*Проект Visual Studio* основан на системе сборки MSBuild. MSBuild — это собственная система сборки для Visual Studio и, как правило, лучшая система сборки, используемая для специальных программ Windows. MSBuild тесно интегрирована с Visual Studio, но ее можно использовать и из командной строки. Для межплатформенных проектов или проектов, использующих библиотеки с открытым исходным кодом, рекомендуется использовать [проекты CMAK в Visual](cmake-projects-in-visual-studio.md) Studio 2017 и более поздних версий. Дополнительные сведения об обновлении проектов MSBuild с более ранних версий Visual Studio см. [в C++ статье о переносе и обновлении программного кода Майкрософт](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Создание проекта
 
@@ -25,7 +25,7 @@ ms.locfileid: "65837052"
 
 Чтобы создать проект C++, выберите **Файл** > **Создать** > **Проект** и настройте **Язык** C++. В списке результатов появится список шаблонов проектов, которые можно фильтровать по **платформе** или **типу проекта** или введя ключевые слова в поле поиска. 
 
-   ![Шаблоны проектов Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Диалоговое окно создания проекта в Visual Studio 2019")
+   ![Шаблоны проектов Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Диалоговое окно создания проекта Visual Studio 2019")
 
 ::: moniker-end
 
@@ -33,11 +33,11 @@ ms.locfileid: "65837052"
 
 Чтобы создать проект C++, выберите **Файл** > **Создать** > **Проект** и выберите Visual C++ на панели слева. В центральной области появится список шаблонов проекта:
 
-   ![Шаблоны проектов](../overview/media/vs2017-new-project.png "Диалоговое окно создания проекта в Visual Studio 2017")
+   ![Шаблоны проектов](../overview/media/vs2017-new-project.png "Диалоговое окно создания проекта Visual Studio 2017")
 
 ::: moniker-end
 
-Дополнительные сведения о шаблонах проектов по умолчанию, которые входят в состав Visual Studio, см. в статье [Шаблоны проектов C++ в Visual Studio](reference/visual-cpp-project-types.md). Вы можете создавать собственные шаблоны проектов. Дополнительные сведения см. в разделе [Практическое руководство. Создание шаблонов проектов](/visualstudio/ide/how-to-create-project-templates).
+Дополнительные сведения о шаблонах проектов по умолчанию, которые входят в состав Visual Studio, см. в статье [Шаблоны проектов C++ в Visual Studio](reference/visual-cpp-project-types.md). Вы можете создавать собственные шаблоны проектов. Дополнительные сведения см. [в разделе инструкции. Создание шаблонов проектов](/visualstudio/ide/how-to-create-project-templates).
 
 После создания проект отображается в окне [обозревателя решений](/visualstudio/ide/solutions-and-projects-in-visual-studio):
 
@@ -67,7 +67,7 @@ ms.locfileid: "65837052"
 
 В списке ошибок можно нажать клавишу **F1** на выделенной ошибке, чтобы перейти в раздел документации о ней.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание
 
 [Настройка компилятора C++ и свойства сборки в Visual Studio](working-with-project-properties.md)<br/>
 Как использовать страницы свойств и листы свойств для указания параметров проекта.
@@ -87,3 +87,4 @@ ms.locfileid: "65837052"
 ## <a name="see-also"></a>См. также
 
 [Проекты и системы сборки](projects-and-build-systems-cpp.md)<br>
+[Пошаговое руководств по переносу и обновлению Майкрософт C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-ms.openlocfilehash: a93b7f225149f9b557ad6238376ffd1bafec82d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aea4d082b21d59aa430befd89d2032fb7ebc0e65
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207542"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627284"
 ---
 # <a name="compiler-warning-level-1-c4227"></a>Предупреждение компилятора (уровень 1) C4227
 
-устаревший элемент: игнорируются квалификаторов для ссылки
+устаревший элемент: пропуск квалификаторов для ссылки
 
-Использование квалификаторов, например `const` или `volatile` для ссылок C++ устарело.
+Использование квалификаторов, таких как `const` или C++ `volatile` со ссылками, является устаревшей практикой.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // C4227.cpp
 // compile with: /W1 /c
 int j = 0;
