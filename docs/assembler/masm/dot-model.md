@@ -1,21 +1,21 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934099"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703585"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>. МОДЕЛЬ (32-разрядный MASM)
 
-Инициализирует модель памяти программы.
+Инициализирует модель памяти программы. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,7 +36,7 @@ ms.locfileid: "65934099"
 
 Указание `NEARSTACK` группирует сегмент стека в один физический сегмент (`DGROUP`) наряду с данными. Предполагается, что в регистре сегмента стека (`SS`) хранится тот же адрес, что и в регистре сегмента данных (`DS`). `FARSTACK` не группирует стек с `DGROUP`; таким образом `SS` не равно `DS`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 .`MODEL` не используется в [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
