@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187222"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966562"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>Предупреждение компилятора (уровень 1) C4346
 
-«name»: зависимое имя не является типом
+"имя": зависимое имя не является типом
 
-[Typename](../../cpp/typename.md) ключевое слово является обязательным, если зависимое имя обрабатывается как тип. Код, который работает одинаково во всех версиях Visual C++, добавление `typename` к объявлению.
+Ключевое слово [TypeName](../../cpp/typename.md) требуется, если зависимое имя должно обрабатываться как тип. Для кода, который работает одинаково во всех версиях Visual C++, добавьте `typename` в объявление.
 
 Следующий пример приводит к возникновению ошибки C4346:
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-В следующем примере демонстрируются другие примеры где **typename** ключевое слово является обязательным:
+В следующих примерах показаны другие примеры, где требуется ключевое слово **TypeName** :
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -55,7 +55,7 @@ struct M : public L<typename T::Type, T::Value>
 
 и это,
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

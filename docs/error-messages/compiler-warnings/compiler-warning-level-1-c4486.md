@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: 402d5eefde6c2dfd5693e53c27edb00d1ac2e56c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c92c23af4aeb6a18c812517cfef9fa00d15dfcb
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404069"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965391"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>Предупреждение компилятора (уровень 1) C4486
 
-«функция»: закрытый виртуальный метод класса ref или класса значений должен быть помечен как «sealed»
+"функция": частный виртуальный метод класса ссылки или класса значения должен быть помечен как "Sealed"
 
-Так как нельзя обращаться или переопределении закрытый виртуальная функция-член управляемого класса или структуры, он должен быть помечен [запечатанный](../../extensions/sealed-cpp-component-extensions.md).
+Поскольку закрытая виртуальная функция-член управляемого класса или структуры не может быть доступна или переопределена, она должна быть помечена как [sealed](../../extensions/sealed-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4486.
 
-```
+```cpp
 // C4486.cpp
 // compile with: /clr /c /W1
 ref class B {
@@ -35,9 +35,9 @@ private:
 
 ## <a name="example"></a>Пример
 
-Следующий пример показывает один из возможных способов использования закрытой запечатан, виртуальные функции.
+В следующем примере показано одно возможное использование закрытой запечатанной виртуальной функции.
 
-```
+```cpp
 // C4486_b.cpp
 // compile with: /clr /c
 ref class B {};

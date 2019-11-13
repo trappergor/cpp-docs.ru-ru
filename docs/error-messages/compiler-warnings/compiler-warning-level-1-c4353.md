@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-ms.openlocfilehash: 305c1156ae8dc664edba17287786db50bfabbd18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f04bc78e1ff6183208f888d9072bfe90b3aca083
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384196"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966548"
 ---
 # <a name="compiler-warning-level-1-c4353"></a>Предупреждение компилятора (уровень 1) C4353
 
-использовано нестандартное расширение: константа 0 в качестве выражения функции. Вместо этого используйте функцию «__noop»
+использовано нестандартное расширение: константа 0 в качестве выражения функции. Вместо этого используйте встроенную функцию "__noop"
 
-Нельзя использовать константы нуль (0) как выражение функции. Дополнительные сведения см. в разделе [__noop](../../intrinsics/noop.md).
+Нельзя использовать константу нуль (0) в качестве выражения функции. Дополнительные сведения см. в разделе [__noop](../../intrinsics/noop.md).
 
 Следующий пример приводит к возникновению ошибки C4353:
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};

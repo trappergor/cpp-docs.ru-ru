@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: e471ca3e478d1166b150e49bf25efa4b9d5803cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36031aa9a831d4669d796d8a40292e2d6ba15a8
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402519"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964976"
 ---
 # <a name="compiler-warning-level-1-c4606"></a>Предупреждение компилятора (уровень 1) C4606
 
-\#в директиве pragma warning: «warning_number» игнорируется; Предупреждения анализа кода не связаны с уровнями предупреждений
+предупреждение \#pragma: "warning_number" игнорируется; Предупреждения анализа кода не связаны с уровнями предупреждений
 
-Для предупреждения модуля анализа кода, только `error`, `once`, и `default` поддерживаются с [предупреждение](../../preprocessor/warning.md) директивы pragma.
+Для предупреждений анализа кода поддерживаются только `error`, `once`и `default` с [предупреждением](../../preprocessor/warning.md) pragma.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4606.
 
-```
+```cpp
 // C4606.cpp
 // compile with: /c /W1
 #pragma warning(1: 6001)   // C4606
