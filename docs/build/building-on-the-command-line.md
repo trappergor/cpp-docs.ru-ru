@@ -2,7 +2,7 @@
 title: Использование набора инструментов C++ Microsoft из командной строки
 description: Используйте цепочку инструментов компилятора Microsoft C++ (MSVC) из командной строки вне интегрированной среды разработки Visual Studio.
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811156"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051490"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Использование набора инструментов C++ Microsoft из командной строки
 
-Вы можете выполнять сборку приложений на языках C и C++ из командной строки с помощью средств, включенных в Visual Studio. Набор средств C++ компилятора Microsoft (компилятором MSVC) также можно скачать как отдельный пакет со страницы [загрузки Visual Studio](https://visualstudio.microsoft.com/downloads/) . Он является частью пакета **средств сборки для Visual Studio** . Вы можете загрузить только те средства, которые необходимы для C++ разработки.
+Вы можете выполнять сборку приложений на языках C и C++ из командной строки с помощью средств, включенных в Visual Studio. Набор средств C++ компилятора Microsoft (компилятором MSVC) также можно скачать как отдельный пакет, который не включает интегрированную среду разработки Visual Studio.
+
+## <a name="download-and-install-the-tools"></a>Загрузка и установка средств
+
+Если вы установили Visual Studio и C++ рабочую нагрузку, у вас есть все программы командной строки. Сведения о том, как установить C++ и Visual Studio, см [. C++ в разделе Установка поддержки в Visual Studio](vscpp-step-0-installation.md). Если требуется только набор средств командной строки, скачайте [средства сборки для Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019). При запуске скачанного исполняемого файла он обновляет и запускает Visual Studio Installer. Чтобы установить только те средства, которые необходимы C++ для разработки, выберите рабочую нагрузку  **C++ средства сборки** . Можно выбрать дополнительные библиотеки и наборы инструментов для включения в раздел **сведения об установке**. Чтобы создать код с помощью набора инструментов Visual Studio 2015 или 2017, выберите необязательные средства сборки КОМПИЛЯТОРОМ MSVC V140 или КОМПИЛЯТОРОМ MSVC v141. Когда вы удовлетворены выбранными параметрами, нажмите кнопку **установить**.
 
 ## <a name="how-to-use-the-command-line-tools"></a>Практическое руководство. Использование программ командной строки
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-ms.openlocfilehash: a62b10ca96dc9c27e57eafdcc87cf0d5e0605b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ef1798cee93e0896000dd0187222cf675011af9
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380556"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050150"
 ---
 # <a name="compiler-warning-level-1-c4906"></a>Предупреждение компилятора (уровень 1) C4906
 
 строковой литерал приведен к "LPWSTR"
 
-Компилятор обнаружил небезопасное приведение. Приведение выполнено успешно, но следует использовать процедуру преобразования.
+Компилятор обнаружил ненадежное приведение. Приведение выполнено успешно, но следует использовать подпрограммы преобразования.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
@@ -25,7 +25,7 @@ ms.locfileid: "62380556"
 
 Следующий пример приводит к возникновению ошибки C4906:
 
-```
+```cpp
 // C4906.cpp
 // compile with: /W1
 #pragma warning(default : 4906)

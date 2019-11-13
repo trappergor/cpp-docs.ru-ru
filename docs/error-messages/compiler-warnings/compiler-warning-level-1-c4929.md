@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393432"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052274"
 ---
 # <a name="compiler-warning-level-1-c4929"></a>Предупреждение компилятора (уровень 1) C4929
 
-«файл»: библиотека типов содержит объединение; пропуск квалификатора «embedded_idl»
+"файл": библиотеку типов содержит объединение; пропуск квалификатора "embedded_idl"
 
-Атрибут embedded_idl [#import](../../preprocessor/hash-import-directive-cpp.md) не удалось применить к библиотеке типов, так как объединение присутствует в библиотеке типов. Чтобы устранить это предупреждение, не используйте embedded_idl.
+Атрибут embedded_idl [#import](../../preprocessor/hash-import-directive-cpp.md) не может быть применен к библиотеке типов, так как объединение имеется в библиотеке типов. Чтобы устранить это предупреждение, не используйте embedded_idl.
 
 ## <a name="example"></a>Пример
 
 В следующем примере определяется компонент.
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -57,7 +57,7 @@ struct C : I {
 
 Следующий пример приводит к возникновению ошибки C4929.
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

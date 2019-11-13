@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-ms.openlocfilehash: e08a8538c93681c59779f681812a9ba8f7e316a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed5cc87f1bc376526f5129aa157c38a3f034b20b
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402207"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051740"
 ---
 # <a name="compiler-warning-level-3-c4243"></a>Предупреждение компилятора (уровень 3) C4243
 
-Тип преобразования: преобразование из «тип1» в «тип2» существует, но недоступно
+Преобразование "тип преобразования" существует из "тип1" в "тип2", но недоступно
 
 Указатель на производный класс преобразуется в указатель на базовый класс, но производный класс наследует базовый класс с закрытым или защищенным доступом.
 
 Следующий пример приводит к возникновению ошибки C4243:
 
-```
+```cpp
 // C4243.cpp
 // compile with: /W3
 // C4243 expected
