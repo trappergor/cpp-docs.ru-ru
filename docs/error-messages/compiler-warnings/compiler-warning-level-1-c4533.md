@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 8ac7f00ad3401e88224c0150324822ce71e95018
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ee88af66238497216d7e5dab497394a58a55805
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160774"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965748"
 ---
 # <a name="compiler-warning-level-1-c4533"></a>Предупреждение компилятора (уровень 1) C4533
 
-Пропуск инициализации «переменной», «инструкции»
+Инициализация "Variable" пропускается "инструкцией"
 
-Инструкции в программе изменить поток управления, таким образом, что не была выполнена инструкция, инициализирующая переменную. Следующий пример приводит к возникновению ошибки C4533:
+Инструкция в программе изменила поток управления, таким, что инструкция, инициализирующая переменную, не была выполнена. Следующий пример приводит к возникновению ошибки C4533:
 
-```
+```cpp
 // C4533.cpp
 // compile with: /W1
 #include <stdio.h>

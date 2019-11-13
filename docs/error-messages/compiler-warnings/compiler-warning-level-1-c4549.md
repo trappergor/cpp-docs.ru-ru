@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4549
 ms.assetid: 81a07676-625b-4f58-9b0c-3ee22830b04a
-ms.openlocfilehash: 5732b2f963be52512d5d80f2552af4a80acb3372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 728c3040f383632f2b4990c2f1d44e500a040138
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226577"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966396"
 ---
 # <a name="compiler-warning-level-1-c4549"></a>Предупреждение компилятора (уровень 1) C4549
 
-«operator»: оператор перед запятой не имеет результата; вы планировали «operator»?
+"оператор": оператор перед запятой не имеет результата; Вы предполагали "operator"?
 
-Компилятор обнаружил некорректное разделителями выражения.
+Компилятор обнаружил неверно сформированное выражение с запятой.
 
 Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 Следующий пример приводит к возникновению ошибки C4549:
 
-```
+```cpp
 // C4549.cpp
 // compile with: /W1
 #pragma warning (default : 4549)

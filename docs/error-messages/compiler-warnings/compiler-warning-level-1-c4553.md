@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d5e52e565878011b2439792c721eeb57cdd20a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410347"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966329"
 ---
 # <a name="compiler-warning-level-1-c4553"></a>Предупреждение компилятора (уровень 1) C4553
 
-«operator»: оператор не имеет результата; вы планировали «operator»?
+"operator": оператор не имеет результата; Вы предполагали "operator"?
 
-Если выражение содержит оператор побочные эффекты отсутствуют в верхней части выражения, она, вероятно, является ошибкой.
+Если оператор выражения имеет оператор без побочных эффектов, как в верхней части выражения, это, вероятно, является ошибкой.
 
 Следующий пример приводит к возникновению ошибки C4553:
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

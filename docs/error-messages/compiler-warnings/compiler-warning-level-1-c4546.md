@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4546
 ms.assetid: 071e1709-3841-46c1-8e71-96109cd22041
-ms.openlocfilehash: 47dd30b3ce59254528f9500139310412393435d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c2e47b92050bb83b1f55836e633d9749bb5e309
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151881"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966416"
 ---
 # <a name="compiler-warning-level-1-c4546"></a>Предупреждение компилятора (уровень 1) C4546
 
 в вызове функции перед запятой отсутствует список аргументов
 
-Компилятор обнаружил некорректное разделителями выражения.
+Компилятор обнаружил неверно сформированное выражение с запятой.
 
 Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
@@ -25,7 +25,7 @@ ms.locfileid: "62151881"
 
 Следующий пример приводит к возникновению ошибки C4546:
 
-```
+```cpp
 // C4546.cpp
 // compile with: /W1
 #pragma warning (default : 4546)

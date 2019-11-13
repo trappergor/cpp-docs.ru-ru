@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: dd150621ad3474444861982c095ae8a6addb52fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78ceecb5918ccb74bd61afe62bbf8b542d585f81
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404043"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966197"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>Предупреждение компилятора (уровень 1) C4489
 
-«спецификатор»: не допускается в методе интерфейса «метод»; переопределить спецификаторы допустимы только в методы класса ref класса и значение
+"спецификатор": не допускается в методе интерфейса "метод"; Спецификаторы переопределения разрешены только для методов ссылочного класса и класса значений
 
-Ключевое слово спецификатора неправильно был использован для метода интерфейса.
+Ключевое слово описателя неправильно использовалось в методе интерфейса.
 
-Дополнительные сведения см. в разделе [спецификаторы переопределения](../../extensions/override-specifiers-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [Описатели переопределения](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4489.
 
-```
+```cpp
 // C4489.cpp
 // compile with: /clr /c /W1
 public interface class I {
