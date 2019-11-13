@@ -1,16 +1,16 @@
 ---
 title: Таблица соответствия Microsoft Visual C++ стандартам языка
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631649"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754075"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Таблица соответствия Microsoft Visual C++ стандартам языка
 
@@ -346,7 +346,7 @@ __VS 2019 16.1__ — функции, которые поддерживают�
 
 <a name="note_B"></a>__B__ Поддерживается в режиме [/permissive-](../build/reference/permissive-standards-conformance.md) в Visual Studio 2017 версии 15.7. Подробные сведения см. в записи блога [Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/) (В MSVC будет добавлена поддержка двухэтапного поиска имени).
 
-<a name="note_C"></a>__C__ Поддержка компилятора для правил препроцессора C99 является неполной в Visual Studio 2017. Поддерживаются макросы с переменным числом аргументов, но в поведении препроцессора существует множество ошибок. Мы тщательно перерабатываем препроцессор и скоро в качестве эксперимента добавим эти изменения в режим [/permissive-](../build/reference/permissive-standards-conformance.md).
+<a name="note_C"></a>__C__ Поддержка компилятора для правил препроцессора C99 является неполной в Visual Studio 2017. Мы переделываем препроцессор и начнем поставлять эти изменения в Visual Studio 2017 версии 15.8 с параметром [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) компилятора.
 
 <a name="note_D"></a>__D__ поддерживается в [/std: c++14](../build/reference/std-specify-language-standard-version.md) с отключаемым предупреждением [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 

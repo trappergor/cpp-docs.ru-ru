@@ -5,12 +5,12 @@ description: Microsoft C++ в Visual Studio развивается в сторо
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998886"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627090"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -810,7 +810,7 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a> Улучшения соответствия в Visual Studio 2017 RTW (версия 15.0)
 
-Благодаря поддержке обобщенного **constexpr** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
+Благодаря поддержке обобщенного **constexpr** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md).
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11 Поддержка выражения SFINAE в большем числе библиотек
 
@@ -2850,4 +2850,4 @@ note: see usage of 'g'.
 
 ## <a name="see-also"></a>См. также
 
-[Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md)
+[Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md)
