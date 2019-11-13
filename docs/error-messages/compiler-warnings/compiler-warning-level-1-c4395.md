@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182409"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964871"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>Предупреждение компилятора (уровень 1) C4395
 
-«функция»: функция-член будет вызываться для копии данных initonly «член»
+"функция": функция-член будет вызываться для копии элемента данных initonly "член"
 
-Функция-член был вызван для [initonly (C++выполняет)](../../dotnet/initonly-cpp-cli.md) данные-член.  C4395 предупреждение, что **initonly** член данных не может изменяться функцией.
+Функция-член была вызвана для элемента данных [initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md) .  C4395 предупреждает, что элемент данных **initonly** не может быть изменен функцией.
 
 Следующий пример приводит к возникновению ошибки C4395:
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

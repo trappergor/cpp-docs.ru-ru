@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 4226c8ecd41e890d70fa5741decae605d45b620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cb9a063a2f6e4660c3f84516527c1417c55e46
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386932"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966139"
 ---
 # <a name="compiler-warning-level-1-c4393"></a>Предупреждение компилятора (уровень 1) C4393
 
-«var»: const не влияет на данные-член литерала; игнорируется
+"var": константа не влияет на литеральный член данных; игнорируют
 
-Объект [литерала](../../extensions/literal-cpp-component-extensions.md) данные-член также был задан как const.  Так как данные-член литерала подразумевает const, вам не обязательно должны добавить к объявлению.
+[Литеральный](../../extensions/literal-cpp-component-extensions.md) элемент данных также указан как const.  Поскольку литеральный член данных подразумевает const, нет необходимости добавлять в объявление константу const.
 
 Следующий пример приводит к возникновению ошибки C4393:
 
-```
+```cpp
 // C4393.cpp
 // compile with: /clr /W1 /c
 ref struct Y1 {
