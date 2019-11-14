@@ -1,6 +1,6 @@
 ---
 title: Класс basic_string
-ms.date: 11/04/2016
+ms.date: 11/12/2019
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -116,16 +116,16 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
-ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
+ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842316"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051505"
 ---
 # <a name="basic_string-class"></a>Класс basic_string
 
-Последовательности, управляемые объектом типа `basic_string`, являются стандартным C++ строковым классом и обычно называются строками, но их не следует путать с завершающими нулем строками в стиле C, используемыми в C++ стандартной библиотеке. Стандартная строка C++ является контейнером, позволяющим использовать строки как обычные типы, например в операциях сравнения и сцепления, итераторах, алгоритмах библиотеки стандартных программ C++, а также копировать и назначать с помощью управляемой памяти распределителя класса. Если требуется преобразовать стандартную строку C++ в C-строку, завершающуюся символом NULL, используйте член [basic_string::c_str](#c_str).
+Последовательности, управляемые объектом типа `basic_string`, являются стандартным C++ строковым классом и обычно называются строками, но их не следует путать с завершающими нулем строками в стиле C, используемыми во всей C++ стандартной библиотеке. Стандартная строка C++ является контейнером, позволяющим использовать строки как обычные типы, например в операциях сравнения и сцепления, итераторах, алгоритмах библиотеки стандартных программ C++, а также копировать и назначать с помощью управляемой памяти распределителя класса. Если требуется преобразовать стандартную строку C++ в C-строку, завершающуюся символом NULL, используйте член [basic_string::c_str](#c_str).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -194,9 +194,9 @@ class basic_string;
 |[end](#end)|Возвращает итератор, адресующий расположение после последнего элемента в строке.|
 |[erase](#erase)|Удаляет элемент или диапазон элементов с указанного положения в строке.|
 |[find](#find)|Поиск по строке в прямом направлении до первого вхождения подстроки, совпадающей с заданной последовательностью символов.|
-|[find_first_not_of](#find_first_not_of)|Выполняет поиск первого символа в строке, не совпадающего ни с одним элементом заданной строки.|
+|[find_first_not_of](#find_first_not_of)|Выполняет поиск первого символа в строке, который не является ни одним элементом указанной строки.|
 |[find_first_of](#find_first_of)|Выполняет поиск первого символа в строке, совпадающего с любым элементом заданной строки.|
-|[find_last_not_of](#find_last_not_of)|Выполняет поиск последнего символа в строке, не совпадающего ни с одним элементом заданной строки.|
+|[find_last_not_of](#find_last_not_of)|Выполняет поиск по строке последнего символа, который не является ни одним элементом указанной строки.|
 |[find_last_of](#find_last_of)|Выполняет поиск последнего символа в строке, совпадающего с любым элементом заданной строки.|
 |[front](#front)|Возвращает ссылку на первый элемент в строке.|
 |[get_allocator](#get_allocator)|Возвращает копию объекта объекта `allocator`, использованного для создания строки.|
@@ -281,7 +281,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& append(
@@ -289,7 +289,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& append(
@@ -313,13 +313,13 @@ C-строка для добавления.
 \ *str*
 Строка, символы которой добавляются.
 
-*_Off*\
+*смещение*\
 Индекс части исходной строки, предоставляющей добавляемые знаки.
 
 *количество* \
 Максимальное число символов для добавления из исходной строки.
 
-*_Ch*\
+*char_value*\
 Символьное значение для добавления.
 
 *первый* \
@@ -450,7 +450,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 basic_string<CharType, Traits, Allocator>& assign(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InIt>
 basic_string<CharType, Traits, Allocator>& assign(
@@ -477,7 +477,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 \ *str*
 Исходная строка, символы которой присваиваются целевой строке.
 
-*_Ch*\
+*char_value*\
 Символьное значение для присваивания.
 
 *первый* \
@@ -594,14 +594,14 @@ The string str1 assigned a range of string str2f is: World.
 Предоставляет ссылку на символ с указанным индексом в строке.
 
 ```cpp
-const_reference at(size_type _Off) const;
+const_reference at(size_type offset) const;
 
-reference at(size_type _Off);
+reference at(size_type offset);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*\
+*смещение*\
 Индекс позиции элемента, на который должна быть ссылка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -681,7 +681,7 @@ reference back();
 basic_string();
 
 explicit basic_string(
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const basic_string& right);
@@ -691,14 +691,14 @@ basic_string(
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count = npos);
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr,
@@ -707,23 +707,23 @@ basic_string(
 basic_string(
     const value_type* ptr,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr);
 
 basic_string(
     const value_type* ptr,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string(
     size_type count,
-    value_type _Ch,
-    const allocator_type& _Al);
+    value_type char_value,
+    const allocator_type& alloc_type);
 
 template <class InputIterator>
 basic_string(
@@ -734,7 +734,7 @@ template <class InputIterator>
 basic_string(
     InputIterator first,
     InputIterator last,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const_pointer first,
@@ -750,7 +750,7 @@ basic_string(
 \ *ptr*
 C-строка, символы могут использоваться для инициализации создаваемой строки `string`. Это значение не может быть указателем null.
 
-*_Al*\
+*alloc_type*\
 Класс распределителя хранилища для создаваемого строкового объекта.
 
 *количество* \
@@ -759,10 +759,10 @@ C-строка, символы могут использоваться для и
 *справа* \
 Строка, инициализирующая создаваемую строку.
 
-*_Roff*\
+*right_offset*\
 Индекс символа в строке, который первым используется для инициализации значений символов создаваемой строки.
 
-*_Ch*\
+*char_value*\
 Значение символа, копируемое в создаваемую строку.
 
 *первый* \
@@ -777,9 +777,9 @@ C-строка, символы могут использоваться для и
 
 ### <a name="remarks"></a>Заметки
 
-Все конструкторы сохраняют [basic_string::allocator_type](#allocator_type) и инициализируют управляемую последовательность. Объектом распределителя является аргумент `al`, если он существует. Для конструктора копии это `right.`[basic_string::get_allocator](#get_allocator)`()`. В противном случае — `Alloc()`.
+Все конструкторы сохраняют [basic_string::allocator_type](#allocator_type) и инициализируют управляемую последовательность. Объектом распределителя является аргумент `al`, если он существует. Для конструктора копий это `right.`[basic_string:: get_allocator](#get_allocator)`()`. В противном случае распределитель будет `Alloc()`.
 
-Управляемая последовательность инициализируется для копии последовательности операндов, указанной оставшимися операндами. Конструктор без последовательности операндов указывает пустую начальную управляемую последовательность. Если `InputIterator` является целочисленным типом в конструкторе шаблона, то последовательность операндов _F `irst,  last` работает так же, как `(size_type) first, (value_type) last`.
+Управляемая последовательность инициализируется для копии последовательности операндов, указанной оставшимися операндами. Конструктор без последовательности операндов указывает пустую начальную управляемую последовательность. Если `InputIterator` является целочисленным типом в конструкторе шаблона, последовательность операндов `first,  last` ведет себя так же, как `(size_type) first, (value_type) last`.
 
 ### <a name="example"></a>Пример
 
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на версию вызываемой С-строки.  Значение указателя недопустимо после вызова неконстантной функции, включая деструктор в классе basic_string объекта.
+Указатель на версию вызываемой С-строки.  Значение указателя не является допустимым после вызова функции, не являющейся константой, включая деструктор, в классе basic_string объекта.
 
 ### <a name="remarks"></a>Заметки
 
 Объекты типа String, принадлежащие шаблону класса basic_string\<char >, не обязательно завершаются нулем. Символ NULL '\0' используется как специальный символ в C-строке для пометки ее конца, но не имеет специального значения в объекте типа String и может быть частью строки так же, как любой другой символ. Существует автоматическое преобразование из **const char** <strong>\*</strong> в строки, но класс String не обеспечивает автоматическое преобразование из строк в стиле C в объекты типа **basic_string\<char >** .
 
-Не следует изменять возвращенную С-строку, так как это может сделать недействительным указатель на эту строку, и не следует ее удалять, так как строка имеет ограниченное время существования и принадлежит классу string.
+Возвращенная строка в стиле C не должна изменяться, так как это может сделать недействительным указатель на строку или удалить, так как строка имеет ограниченное время существования и принадлежит строке класса.
 
 ### <a name="example"></a>Пример
 
@@ -1066,7 +1066,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
+Значение, возвращаемое `cend`, не должно быть разыменовано.
 
 ## <a name="clear"></a>  basic_string::clear
 
@@ -1128,30 +1128,30 @@ int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 int compare(
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr
-    size_type _Num2) const;
+    size_type number_2) const;
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -1159,16 +1159,16 @@ int compare(
 \ *str*
 Строка для сравнения со строкой операнда.
 
-*_Pos1*\
+*position_1*\
 Индекс строки операнда, с которого начинается сравнение.
 
-*_Num1*\
+*number_1*\
 Максимальное количество символов из строки операнда для сравнения.
 
-*_Num2*\
+*number_2*\
 Максимальное количество символов из строки параметра для сравнения.
 
-*_Off*\
+*смещение*\
 Индекс строки параметра, с которого начинается сравнение.
 
 *количество* \
@@ -1408,7 +1408,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 Тип является синонимом `allocator_type::const_pointer`.
 
-Для типа `string` он эквивалентен `char*`.
+Для типа `string`он эквивалентен `char*`.
 
 Указатели, объявляемые как const, должны инициализироваться при объявлении. Указатели const всегда указывают на один и тот же адрес памяти и могут указывать на константные и неконстантные данные.
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 Тип `const_reference`нельзя использовать для изменения значения элемента.
 
-Тип является синонимом `allocator_type::const_reference`. Для строковых `type` он эквивалентен `char&` const.
+Тип является синонимом `allocator_type::const_reference`. Для строковых `type`это эквивалентно `char&`const.
 
 ### <a name="example"></a>Пример
 
@@ -1480,7 +1480,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 size_type copy(
     value_type* ptr,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -1488,9 +1488,9 @@ size_type copy(
 \ *ptr*
 Целевой массив символов, в который должны быть скопированы элементы.
 
-_ *Подсчитайте* количество символов, которые будут копироваться не чаще, из исходной строки.
+*количество* Число символов, которые будут копироваться не более чем из исходной строки.
 
-*_Off*\
+*смещение*\
 Начальная позиция в исходной строке, из которой должны быть сделаны копии.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1585,7 +1585,7 @@ size_type _Copy_s(
     value_type* dest,
     size_type dest_size,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -1596,9 +1596,9 @@ size_type _Copy_s(
 *dest_size*\
 Размер *dest*.
 
-_ *Подсчитайте* количество символов, которые будут копироваться не чаще, из исходной строки.
+*количество* Число символов, которые будут копироваться не более чем из исходной строки.
 
-*_Off*\
+*смещение*\
 Начальная позиция в исходной строке, из которой должны быть сделаны копии.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1837,7 +1837,7 @@ iterator end();
 
 ### <a name="remarks"></a>Заметки
 
-`end` часто используется для проверки того, достиг ли итератор конца строки. Значение, возвращаемое `end`, не должно быть подвергнуто удалению ссылки.
+`end` часто используется для проверки того, достиг ли итератор конца строки. Значение, возвращаемое `end`, не должно быть разыменовано.
 
 Если возвращаемое значение `end` присваивается `const_iterator`, то объект string не может быть изменен. Если возвращаемое значение `end` присваивается `iterator`, то строковый объект можно изменить.
 
@@ -1904,10 +1904,10 @@ iterator erase(
     iterator last);
 
 iterator erase(
-    iterator _It);
+    iterator iter);
 
 basic_string<CharType, Traits, Allocator>& erase(
-    size_type _Pos = 0,
+    size_type offset = 0,
     size_type count = npos);
 ```
 
@@ -1919,14 +1919,14 @@ basic_string<CharType, Traits, Allocator>& erase(
 *последние* \
 Итератор, указывающий позицию первого, следующую за последним элементом в диапазоне для очистки.
 
-*_It*\
+*iter*\
 Итератор, указывающий позицию элемента в строке для очистки.
 
-*_Pos*\
+*смещение*\
 Индекс первого символа в строке для удаления.
 
 *количество* \
-Число элементов, которые будут удалены, если их столько же, сколько в диапазоне строки, начинающемся с *_Pos*.
+Число элементов, которые будут удалены, если в диапазоне строки, начинающейся с *offset*, находится столько же.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2003,29 +2003,29 @@ The modified string object str3m is: Hello .
 
 ```cpp
 size_type find(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует начать поиск.
 
 \ *ptr*
@@ -2174,33 +2174,33 @@ The index of the 1st element of 'clear' in str4 is: 0
 
 ## <a name="find_first_not_of"></a>  basic_string::find_first_not_of
 
-Выполняет поиск первого символа в строке, не совпадающего ни с одним из элементов заданной строки.
+Выполняет поиск первого символа в строке, который не является элементом указанной строки.
 
 ```cpp
 size_type find_first_not_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует начать поиск.
 
 \ *ptr*
@@ -2366,29 +2366,29 @@ the 0th position is: 2
 
 ```cpp
 size_type find_first_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует начать поиск.
 
 \ *ptr*
@@ -2549,33 +2549,33 @@ the 0th position is: 1
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
-Выполняет поиск последнего символа в строке, не совпадающего ни с одним элементом заданной строки.
+Выполняет поиск по строке последнего символа, который не является ни одним элементом указанной строки.
 
 ```cpp
 size_type find_last_not_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует завершить поиск.
 
 \ *ptr*
@@ -2742,29 +2742,29 @@ in str4 before the end position is: 10
 
 ```cpp
 size_type find_last_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует завершить поиск.
 
 \ *ptr*
@@ -2975,60 +2975,60 @@ int main( )
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 iterator insert(
-    iterator _It);
+    iterator iter);
 
 iterator insert(
-    iterator _It,
-    value_type _Ch)l
+    iterator iter,
+    value_type char_value)l
 template <class InputIterator>
 void insert(
-    iterator _It,
+    iterator iter,
     InputIterator first,
     InputIterator last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_pointer first,
     const_pointer last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_iterator first,
     const_iterator last);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_P0*\
+\ *расположения*
 Индекс позиции за точкой вставки новых символов.
 
 \ *ptr*
@@ -3040,13 +3040,13 @@ C-строка, которая полностью или частично вст
 \ *str*
 Строка, которая полностью или частично вставляется в целевую строку.
 
-*_Off*\
+*смещение*\
 Индекс части исходной строки, предоставляющей добавляемые знаки.
 
-*_Ch*\
+*char_value*\
 Символьное значение вставляемых элементов.
 
-*_It*\
+*iter*\
 Итератор, разрешающий положение, за которым вставляется знак.
 
 *первый* \
@@ -3322,7 +3322,7 @@ static const size_type npos = -1;
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator+=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator+=(
     const value_type* ptr);
@@ -3333,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Символ значение для добавления.
 
 \ *ptr*
@@ -3411,7 +3411,7 @@ The doubly appended strig str1 is: Hello Wide World.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator=(
     const value_type* ptr);
@@ -3425,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Символьное значение для присваивания.
 
 \ *ptr*
@@ -3504,13 +3504,13 @@ The string str1 reassigned with string str3c is: World.
 Предоставляет ссылку на символ с указанным индексом в строке.
 
 ```cpp
-const_reference operator[](size_type _Off) const;
-reference operator[](size_type _Off);
+const_reference operator[](size_type offset) const;
+reference operator[](size_type offset);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*\
+*смещение*\
 Индекс позиции элемента, на который должна быть ссылка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3580,7 +3580,7 @@ typedef typename allocator_type::pointer pointer;
 
 Тип является синонимом `allocator_type::pointer`.
 
-Для типа `string` он эквивалентен типу **char**  <strong>\*</strong>.
+Для типа `string`он эквивалентен типу **char** <strong>\*</strong>.
 
 ### <a name="example"></a>Пример
 
@@ -3622,17 +3622,17 @@ void pop_back();
 Добавляет элемент в конец строки.
 
 ```cpp
-void push_back(value_type _Ch);
+void push_back(value_type char_value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Символ, который нужно добавить в конец строки.
 
 ### <a name="remarks"></a>Заметки
 
-Эта функция-член эффективно вызывает [insert](#insert)([end](#end), _ *Ch*).
+Функция-член фактически вызывает инструкцию [INSERT](#insert)( [End](#end), *char_value* ).
 
 ### <a name="example"></a>Пример
 
@@ -3762,7 +3762,7 @@ typedef typename allocator_type::reference reference;
 
 Тип является синонимом `allocator_type::reference`.
 
-Для типа `string` он эквивалентен `chr&`.
+Для типа `string`он эквивалентен `chr&`.
 
 ### <a name="example"></a>Пример
 
@@ -3790,7 +3790,7 @@ reverse_iterator rend();
 
 `rend` можно использовать, чтобы проверить, достиг ли обратный итератор конца очереди.
 
-Значение, возвращаемое `rend`, не должно быть подвергнуто удалению ссылки.
+Значение, возвращаемое `rend`, не должно быть разыменовано.
 
 ### <a name="example"></a>Пример
 
@@ -3852,33 +3852,33 @@ The string str2 is empty.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Pos2,
-    size_type _Num2);
+    size_type position_2,
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
@@ -3894,13 +3894,13 @@ basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
-    size_type _Num2,
-    value_type _Ch);
+    size_type number_2,
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3927,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 \ *str*
 Строка, представляющая источник символов для строки операнда.
 
-*_Pos1*\
+*position_1*\
 Индекс строки операнда, в котором начинается замена.
 
-*_Num1*\
+*number_1*\
 Максимальное количество заменяемых символов в строке операнда.
 
-*_Pos2*\
+*position_2*\
 Индекс строки параметра, в котором начинается копирование.
 
-*_Num2*\
+*number_2*\
 Максимальное количество используемых символов из C-строки параметра.
 
 \ *ptr*
 C-строка, представляющая источник символов для строки операнда.
 
-*_Ch*\
+*char_value*\
 Символ, который должен копироваться в строку операнда.
 
 *first0* \
@@ -3958,7 +3958,7 @@ C-строка, представляющая источник символов �
 Итератор, const_pointer или const_iterator, указывающий последний символ, который должен копироваться в строку параметра.
 
 *количество* \
-Количество раз, *_Ch* копируется в строку операнда.
+Количество раз, *char_value* копируется в строку операнда.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4243,7 +4243,7 @@ void resize(
 
 void resize(
     size_type count,
-    _Elem _Ch);
+    value_type char_value);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -4251,7 +4251,7 @@ void resize(
 *количество* \
 Новый размер строки.
 
-*_Ch*\
+*char_value*\
 Значение, с которым инициализируются добавляемые символы, если требуются дополнительные элементы.
 
 ### <a name="remarks"></a>Заметки
@@ -4365,29 +4365,29 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ```cpp
 size_type rfind(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Ch*\
+*char_value*\
 Значение символа, для которого следует искать функцию-член.
 
-*_Off*\
+*смещение*\
 Индекс позиции, в которой следует начать поиск.
 
 \ *ptr*
@@ -4622,7 +4622,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Заметки
 
-Он эквивалентен `allocator_type::size_type`.
+Это эквивалентно `allocator_type::size_type`.
 
 Для типа `string`он эквивалентен `size_t`.
 
@@ -4661,13 +4661,13 @@ The capacity of string str1 is: 15.
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
-    size_type _Off = 0,
+    size_type offset = 0,
     size_type count = npos) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*\
+*смещение*\
 Индекс поиска элемента в позиции, от которой делается копия строки; значение по умолчанию — 0.
 
 *количество* \
