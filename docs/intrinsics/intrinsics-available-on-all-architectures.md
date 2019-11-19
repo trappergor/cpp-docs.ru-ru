@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012239"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163472"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>Встроенные объекты, доступные для всех архитектур
 
@@ -120,7 +120,7 @@ Microsoft C/C++ Compiler и универсальная библиотека вр
 |[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[logf](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[logl](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
+|[логл](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|string.h|
@@ -162,6 +162,7 @@ Microsoft C/C++ Compiler и универсальная библиотека вр
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты ARM](../intrinsics/arm-intrinsics.md)<br/>
-[Список встроенных объектов x86](../intrinsics/x86-intrinsics-list.md)<br/>
-[Список встроенных объектов x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[Встроенные функции ARM](../intrinsics/arm-intrinsics.md)\
+[Встроенные функции ARM64](../intrinsics/arm64-intrinsics.md)\
+[список встроенных компонентов x86](../intrinsics/x86-intrinsics-list.md)\
+[список встроенных компонентов x64 (AMD64)](../intrinsics/x64-amd64-intrinsics-list.md)

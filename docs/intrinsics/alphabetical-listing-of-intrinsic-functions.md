@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56aad4c0b39a7a4bd2d425907023cbc8c9b335c4
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220085"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163465"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Алфавитный список встроенных функций
 
-В следующих разделах описаны характерные для Майкрософт встроенные функции, доступные на некоторых или всех архитектурах. Другие поддерживаемые встроенные функции описаны производителями процессоров, в файлах заголовков или на веб-узлах. Ссылки на документацию по производителям см. в разделах встроенные функции [ARM](../intrinsics/arm-intrinsics.md), [встроенные функции x86](../intrinsics/x86-intrinsics-list.md)и [встроенные функции x64](../intrinsics/x64-amd64-intrinsics-list.md) . Функции библиотеки времени выполнения C (CRT), для которых реализованы встроенные объекты, здесь не описаны. Эти функции описаны в справочнике по [библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md).
+В следующих разделах описаны характерные для Майкрософт встроенные функции, доступные на некоторых или всех архитектурах. Другие поддерживаемые встроенные функции описаны производителями процессоров, в файлах заголовков или на веб-узлах. Ссылки на документацию по производителям см. в подразделах [ARM](../intrinsics/arm-intrinsics.md), [встроенные функции ARM64](../intrinsics/arm64-intrinsics.md), [встроенные функции x86](../intrinsics/x86-intrinsics-list.md)и [встроенные функции x64](../intrinsics/x64-amd64-intrinsics-list.md) . Функции библиотеки времени выполнения C (CRT), для которых реализованы встроенные объекты, здесь не описаны. Эти функции описаны в [справочнике по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md).
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
