@@ -1,24 +1,24 @@
 ---
 title: Контейнеры (современный C++)
-ms.date: 01/18/2018
+ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 37b540132fc9ddc03d5eaafd33c545b5db5e7935
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926256"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188905"
 ---
 # <a name="containers-modern-c"></a>Контейнеры (современный C++)
 
-По умолчанию используйте [vector](../standard-library/vector-class.md) в качестве предпочтительного последовательного контейнера в C++. Это эквивалентно `List<T>` языку .NET.
+By default, use [std::vector](../standard-library/vector-class.md) as the preferred sequential container in C++. The performance of **std::vector** is comparable to C-style arrays in most scenarios and is far safer. **std::vector** is equivalent to `List<T>` in .NET languages.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-Используйте [Map](../standard-library/map-class.md) (не `unordered_map`) в качестве ассоциативного контейнера по умолчанию. Используйте [Set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md)и [мультинабор](../standard-library/multiset-class.md) для создания & нескольких вариантов.
+Use [map](../standard-library/map-class.md) (not `unordered_map`) as the default associative container. Use [set](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), and [multiset](../standard-library/multiset-class.md) for degenerate & multi cases.
 
 ```cpp
 map<string, string> apple_color;
@@ -26,17 +26,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-При необходимости оптимизации производительности рассмотрите возможность использования следующих средств:
+When performance optimization is needed, consider using:
 
-- Тип [массива](../standard-library/array-class-stl.md) при внедрении важен, например, как член класса.
+- The [array](../standard-library/array-class-stl.md) type when embedding is important, for example, as a class member.
 
-- Неупорядоченные ассоциативные контейнеры, такие как [unordered_map](../standard-library/unordered-map-class.md). Они имеют меньшие издержки на элементы и уточняющие запросы во время поиска, но могут быть труднее и эффективно использовать их.
+- Unordered associative containers such as [unordered_map](../standard-library/unordered-map-class.md). These have lower per-element overhead and constant-time lookup, but they can be harder to use correctly and efficiently.
 
-- Отсортировано `vector`. Дополнительные сведения см. в разделе [Алгоритмы](../cpp/algorithms-modern-cpp.md).
+- Sorted `vector`. Дополнительные сведения см. в разделе [Алгоритмы](../cpp/algorithms-modern-cpp.md).
 
-Не используйте массивы в стиле языка C. Для более старых API, которым требуется прямой доступ к данным, используйте методы доступа, `f(vec.data(), vec.size());` такие как.
+Don’t use C-style arrays. For older APIs that need direct access to the data, use accessor methods such as `f(vec.data(), vec.size());` instead.
 
-Дополнительные сведения о контейнерах см. в разделе [ C++ стандартные библиотечные контейнеры](../standard-library/stl-containers.md).
+For more information about containers, see [C++ Standard Library Containers](../standard-library/stl-containers.md).
 
 ## <a name="see-also"></a>См. также
 

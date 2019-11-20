@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4645
 ms.assetid: fd7c1ddf-f0d0-4e10-bab9-ccb4c3476298
-ms.openlocfilehash: a3e5c834a3f14b9a125176dcddd5bcc355cf1faa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fa286f177284c03e5067b4af56f4e606b073653
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401648"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189378"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>Предупреждение компилятора (уровень 3) C4645
 
@@ -21,7 +21,7 @@ A [return](../../cpp/return-statement-in-program-termination-cpp.md) найде�
 
 Следующий пример приводит к возникновению ошибки C4645.
 
-```
+```cpp
 // C4645.cpp
 // compile with:  /W3
 void __declspec(noreturn) func() {

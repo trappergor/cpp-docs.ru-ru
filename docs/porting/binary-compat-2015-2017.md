@@ -1,40 +1,44 @@
 ---
-title: C++Двоичная совместимость между Visual Studio 2015, 2017 и 2019
-description: Описывает, как работает двоичная совместимость C++ между скомпилированными файлами в Visual Studio 2015, 2017 и 2019. Один распространяемый C++ пакет Microsoft Visual работает для всех трех версий.
-ms.date: 11/11/2019
+title: C++ binary compatibility 2015-2019
+description: Describes how binary compatibility works between compiled C++ files in Visual Studio 2015, 2017, and 2019. One Microsoft Visual C++ Redistributable package works for all three versions.
+ms.date: 11/18/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 118ad0a32d5dc8c344967f9a67f2d5b05aa806c0
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: b729cdcc4a494e60ec58314fe23b02c1816e8412
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965556"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188791"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++Двоичная совместимость между Visual Studio 2015, 2017 и 2019
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++ binary compatibility between Visual Studio 2015, 2017, and 2019
 
-Наборы инструментов C++ компилятора Microsoft (компилятором MSVC) в Visual Studio 2013 и более ранних версий не гарантируют двоичную совместимость между версиями. Нельзя связывать объекты, статические библиотеки, динамические библиотеки и исполняемые файлы, созданные разными версиями. ABI, форматы объектов и библиотеки времени выполнения несовместимы.
+The Microsoft C++ (MSVC) compiler toolsets in Visual Studio 2013 and earlier don't guarantee binary compatibility across versions. You can't link object files, static libraries, dynamic libraries, and executables built by different versions. The ABIs, object formats, and runtime libraries are incompatible.
 
-Мы изменили это поведение в Visual Studio 2015, 2017 и 2019. Библиотеки среды выполнения и приложения, компилируемые любой из этих версий компилятора, совместимы с двоичными. Он отражается в основном C++ номере набора инструментов, который равен 14 для всех трех версий. (Версия набора инструментов — V140 для Visual Studio 2015, v141 для 2017 и v142 для 2019). Предположим, у вас есть сторонние библиотеки, созданные Visual Studio 2015. Их все еще можно использовать в приложении, созданном с помощью Visual Studio 2017 или 2019. Нет необходимости выполнять повторную компиляцию с соответствующим набором инструментов. Последняя версия распространяемого пакета Microsoft Visual C++ (распространяемый пакет) работает для всех из них.
+We've changed this behavior in Visual Studio 2015, 2017, and 2019. The runtime libraries and apps compiled by any of these versions of the compiler are binary-compatible. It's reflected in the C++ toolset major number, which is 14 for all three versions. (The toolset version is v140 for Visual Studio 2015, v141 for 2017, and v142 for 2019). Say you have third-party libraries built by Visual Studio 2015. You can still use them in an application built by Visual Studio 2017 or 2019. There's no need to recompile with a matching toolset. The latest version of the Microsoft Visual C++ Redistributable package (the Redistributable) works for all of them.
 
-Существует исключение из этого правила: статические библиотеки или объектные файлы, скомпилированные с помощью параметра компилятора `/GL`, *не* совместимы с двоичными файлами в разных версиях.
+There are three important restrictions on binary compatibility:
 
-Распространяемое приложение использует важное ограничение на двоичную совместимость. Он применяется при смешении двоичных файлов, созданных с разными поддерживаемыми версиями набора инструментов. Распространяемая версия должна быть по крайней мере новым набором инструментов, используемых любым компонентом приложения.
+- You can mix binaries built by different versions of the toolset. However, you must use a toolset at least as recent as the most recent binary to link your app. Here's an example: you can link an app compiled using the 2017 toolset to a static library compiled using 2019, if they're linked using the 2019 toolset.
 
-## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Обновление распространяемого пакета C++ Microsoft визуального элемента с visual Studio 2015 или 2017 до visual Studio 2019
+- The Redistributable your app uses has a similar binary-compatibility restriction. When you mix binaries built by different supported versions of the toolset, the Redistributable version must be at least as new as the latest toolset used by any app component.
 
-Мы сохранили основной номер версии C++ распространяемого пакета Microsoft visual Studio 2015, 2017 и 2019. Это означает, что одновременно можно установить только один экземпляр распространяемого компонента. Более новая версия перезаписывает любую старую версию, которая уже установлена. Например, одно приложение может установить распространяемый пакет из Visual Studio 2015. Затем другое приложение устанавливает распространяемый пакет из Visual Studio 2019. Версия 2019 перезаписывает старую версию, но, поскольку они совместимы с двоичными, приложение по-прежнему работает нормально. Убедитесь, что последняя версия распространяемого пакета содержит все новейшие функции, обновления для системы безопасности и исправления ошибок. Поэтому мы всегда рекомендуем выполнить обновление до последней доступной версии.
+- Static libraries or object files compiled using the [/GL (Whole program optimization)](../build/reference/gl-whole-program-optimization.md) compiler switch *aren't* binary-compatible across versions. All object files and libraries compiled using `/GL` must use exactly the same toolset for the compile and the final link.
 
-Аналогичным образом, нельзя установить более старый распространяемый компонент, если уже установлена более новая версия. Установщик сообщает об ошибке при попытке. Если установить распространяемый пакет 2015 или 2017 на компьютере, на котором уже установлена версия 2019, вы увидите следующее сообщение об ошибке:
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Upgrade the Microsoft Visual C++ Redistributable from Visual Studio 2015 or 2017 to Visual Studio 2019
+
+We've kept the Microsoft Visual C++ Redistributable major version number the same for Visual Studio 2015, 2017, and 2019. That means only one instance of the Redistributable can be installed at a time. A newer version overwrites any older version that's already installed. For example, one app may install the Redistributable from Visual Studio 2015. Then, another app installs the Redistributable from Visual Studio 2019. The 2019 version overwrites the older version, but because they're binary-compatible, the earlier app still works fine. We make sure the latest version of the Redistributable has all the newest features, security updates, and bug fixes. That's why we always recommend you upgrade to the latest available version.
+
+Similarly, you can't install an older Redistributable when a newer version is already installed. The installer reports an error if you try. You'll see an error like this if you install the 2015 or 2017 Redistributable on a machine that already has the 2019 version:
 
 ```Output
 0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 ```
 
-Эта ошибка возникает при проектировании. Рекомендуется установить последнюю версию. Убедитесь, что установщик может автоматически восстановиться после этой ошибки.
+This error is by design. We recommend you keep the newest version installed. Make sure your installer can recover from this error silently.
 
 ## <a name="see-also"></a>См. также
 
-[\ C++ журнала изменений визуальных элементов](../porting/visual-cpp-change-history-2003-2015.md)
-[Последние поддерживаемые загружаемые C++ файлы для визуализации](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+[Visual C++ change history](../porting/visual-cpp-change-history-2003-2015.md)\
+[The latest supported Visual C++ Redistributable downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
