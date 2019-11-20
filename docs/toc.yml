@@ -4931,6 +4931,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Встроенные объекты ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Встроенные объекты ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Список встроенных объектов x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Список встроенных объектов x64 (amd64)
@@ -10419,9 +10421,9 @@
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Класс single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md
-                        - name: Класс single_link_registry
+                        - name: single_link_registry - класс
                           href: parallel/concrt/reference/single-link-registry-class.md
-                        - name: source_block - класс
+                        - name: Класс source_block
                           href: parallel/concrt/reference/source-block-class.md
                         - name: Класс source_link_manager
                           href: parallel/concrt/reference/source-link-manager-class.md
