@@ -20,81 +20,81 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 045d2bf5617c81bcc4d7a202f36b112d5f0142a6
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69498605"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246293"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 
 **Блок, относящийся только к системам Майкрософт**
 
-Следующий синтаксис описывает оператор **try-finally** :
+The following syntax describes the **try-finally** statement:
 
-> **\_ \_try**<br/>
+> **\_\_try**<br/>
 > {<br/>
-> &nbsp; &nbsp; &nbsp; &nbsp;//защищенный код<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
 > }<br/>
-> **\_ \_finally**<br/>
+> **\_\_finally**<br/>
 > {<br/>
-> &nbsp; &nbsp; &nbsp; &nbsp;//код завершения<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
 > }
 
 ## <a name="grammar"></a>Грамматика
 
 *try-finally-statement*:<br/>
-&nbsp; &nbsp; &nbsp; &nbsp; **\_** \_try *составного оператора* **\_ 0finally** *составного оператора*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
 
-Оператор **try-finally** — это расширение Майкрософт для C и C++ языков, которое позволяет целевым приложениям гарантировать выполнение кода очистки при прерывании выполнения блока кода. Очистка включает такие задачи, как отмена распределения памяти, закрытие файлов и освобождение их дескрипторов. Оператор **try-finally** особенно полезен для подпрограмм, в которых есть несколько мест, где выполняется проверка на наличие ошибки, которая может привести к преждевременному возврату из подпрограммы.
+The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. Очистка включает такие задачи, как отмена распределения памяти, закрытие файлов и освобождение их дескрипторов. The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
 
-Связанные сведения и пример кода см. в разделе [оператор try-except](../cpp/try-except-statement.md). Дополнительные сведения об структурированной обработке исключений в целом см. в разделе [структурированная обработка исключений](../cpp/structured-exception-handling-c-cpp.md). Дополнительные сведения об обработке исключений в управляемых приложениях с помощью C++/CLI см. [в разделе Обработка исключений в разделе/CLR](../extensions/exception-handling-cpp-component-extensions.md).
+For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
 
 > [!NOTE]
-> Структурированная обработка исключений поддерживается в Win32 для исходных файлов как на C, так и на C++. Однако она не предназначена специально для C++. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, этот механизм отличается большей гибкостью, поскольку может обрабатывать исключения любого типа. Для C++ программ рекомендуется использовать механизм обработки C++ исключений (операторы[try, catch и Throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
+> Структурированная обработка исключений поддерживается в Win32 для исходных файлов как на C, так и на C++. Однако она не предназначена специально для C++. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, этот механизм отличается большей гибкостью, поскольку может обрабатывать исключения любого типа. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
 
-Составной оператор после предложения **__try** является защищенным разделом. Составной оператор после предложения **__finally** является обработчиком завершения. Такой обработчик определяет набор действий, выполняемых при выходе из защищенного раздела независимо от того, происходит ли выход в результате исключения (ненормальное завершение) или в результате стандартной передачи управления дальше (нормальное завершение).
+The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. Такой обработчик определяет набор действий, выполняемых при выходе из защищенного раздела независимо от того, происходит ли выход в результате исключения (ненормальное завершение) или в результате стандартной передачи управления дальше (нормальное завершение).
 
-Элемент управления достигает оператора **__try** с помощью простого последовательного выполнения (с переходом). Когда элемент управления входит в **__try**, связанный с ним обработчик становится активным. Если поток элементов управления достигает конца блока try, выполнение продолжается следующим образом.
+Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. Если поток элементов управления достигает конца блока try, выполнение продолжается следующим образом.
 
 1. Вызывается обработчик завершения.
 
-1. После завершения обработчика завершения выполнение продолжится после оператора **__finally** . Независимо от того, как заканчивается защищенный раздел (например, с помощью инструкции **goto** из защищенного текста или оператора **return** ), обработчик завершения выполняется *до* того, как поток управления перемещается из защищенного раздела.
+1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
 
-   Оператор **__finally** не блокирует поиск соответствующего обработчика исключений.
+   A **__finally** statement does not block searching for an appropriate exception handler.
 
-Если в блоке **__try** возникает исключение, операционная система должна найти обработчик для исключения, иначе программа завершится ошибкой. Если обработчик найден, выполняются все и все блоки **__finally** , а выполнение возобновляется в обработчике.
+If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
 
 Например, предположим, ряд вызовов функций связывает функцию А с функцией D, как показано на следующем рисунке. Каждая функция имеет один обработчик завершения. Если исключение создается в функции D и обрабатывается в функции А, обработчики завершения вызываются в том порядке, в котором система освобождает стек: D, C и B.
 
-![Порядок выполнения обработчика завершения&#45;](../cpp/media/vc38cx1.gif "Порядок выполнения обработчика завершения&#45;") <br/>
+![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
 Порядок выполнения обработчиков завершения
 
 > [!NOTE]
-> Поведение try-finally отличается от некоторых других языков, которые поддерживают использование **и**, например, C#.  Один элемент **__try** может иметь либо, но не оба, для **__finally** и **__except**.  Если оба следует использовать одновременно, оператор try-except должен включать внутренней оператор try-finally.  Правила,задающие время выполнения каждого блока, также различаются.
+> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  Если оба следует использовать одновременно, оператор try-except должен включать внутренней оператор try-finally.  Правила,задающие время выполнения каждого блока, также различаются.
 
-Для совместимости с предыдущими версиями **_try**, **_finally**и **_leave** являются синонимами для **__try**, **__finally**и **__leave** , если только параметр компилятора [/Za \(Disable языковых расширений)](../build/reference/za-ze-disable-language-extensions.md) Данная.
+For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
 
 ## <a name="the-__leave-keyword"></a>Ключевое слово __leave
 
-Ключевое слово **__leave** допустимо только в защищенном разделе оператора **try-finally** , и его результат заключается в переходе к концу защищенного раздела. Выполнение продолжается с первого оператора в обработчике завершения.
+The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. Выполнение продолжается с первого оператора в обработчике завершения.
 
-Оператор **goto** также может перейти из защищенного раздела, но снижает производительность, так как вызывает очистку стека. Инструкция **__leave** более эффективна, так как она не приводит к очистке стека.
+A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
 
 ## <a name="abnormal-termination"></a>Аварийное завершение
 
-Выход из оператора **try-finally** с помощью функции времени выполнения [longjmp](../c-runtime-library/reference/longjmp.md) считается аномальным завершением. Переход к оператору **__try** недопустимым, но допустим, чтобы перейти из него. Необходимо запустить все операторы **__finally** , активные между точкой отправления (нормальное завершение блока **__try** ) и назначением (блок **__except** , обрабатывающий исключение). Это называется "локальной раскруткой".
+Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. Это называется "локальной раскруткой".
 
-Если блок **try** преждевременно завершается по какой-либо причине, включая переход за пределы блока, система выполняет связанный блок **finally** как часть процесса очистки стека. В таких случаях функция [абнормалтерминатион](/windows/win32/Debug/abnormaltermination) возвращает **значение true** , если вызывается из блока **finally** ; в противном случае возвращается **значение false**.
+If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
 
-Обработчик завершения не вызывается, если процесс завершается в процессе выполнения инструкции **try-finally** .
+The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
-[Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Синтаксис обработчика завершения](/windows/win32/Debug/termination-handler-syntax)
+[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)

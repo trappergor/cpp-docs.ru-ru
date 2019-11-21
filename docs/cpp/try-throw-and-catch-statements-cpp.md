@@ -19,24 +19,24 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266790"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245144"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Операторы try, throw и catch (C++)
 
-Чтобы реализовать обработку исключений в C++, используйте **попробуйте**, **throw**, и **catch** выражения.
+To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
 
-Во-первых, используйте **попробуйте** блок, чтобы вложить один или несколько операторов, которые могут создавать исключение.
+First, use a **try** block to enclose one or more statements that might throw an exception.
 
-Объект **throw** выражение означает, что исключительным условием — часто является ошибкой, произошло в **попробуйте** блока. Объект любого типа можно использовать как операнд **throw** выражение. Обычно этот объект используется для передачи информации об ошибке. В большинстве случаев мы рекомендуем использовать [std::exception](../standard-library/exception-class.md) класс или один из производных классов, которые определены в стандартной библиотеке. Если один из них не подходит, рекомендуется создать собственный производный класс исключений из `std::exception`.
+A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. Обычно этот объект используется для передачи информации об ошибке. In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. Если один из них не подходит, рекомендуется создать собственный производный класс исключений из `std::exception`.
 
-Для обработки исключений, которые могут произойти, реализует один или несколько **catch** блоки сразу после **попробуйте** блока. Каждый **catch** блока указывает тип исключения, он может обрабатывать.
+To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
 
-В этом примере показано **попробуйте** блока и его обработчики. Предположим, `GetNetworkResource()` получает данные через сетевое подключение, а 2 типа исключений являются определенными пользователем классами, производными от `std::exception`. Обратите внимание, что исключения перехватываются **const** в ссылку на **catch** инструкции. Рекомендуется создавать исключения по значению и захватывать их ссылкой константы.
+This example shows a **try** block and its handlers. Предположим, `GetNetworkResource()` получает данные через сетевое подключение, а 2 типа исключений являются определенными пользователем классами, производными от `std::exception`. Notice that the exceptions are caught by **const** reference in the **catch** statement. Рекомендуется создавать исключения по значению и захватывать их ссылкой константы.
 
 ## <a name="example"></a>Пример
 
@@ -72,11 +72,11 @@ MyData GetNetworkResource()
 }
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Код после **попробуйте** предложение находится защищенный раздел кода. **Throw** выражение *вызывает*— то есть вызывает — исключение. Блок кода после **catch** предложение является обработчиком исключения. Это обработчик, *перехватывает* исключение, которое возникает, если типы в **throw** и **catch** выражениях совместимы. Список правил, управляющих сопоставление типов в **catch** блоки, см. в разделе [оцениваются как блоки Catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Если **catch** инструкция задает многоточие (...) вместо типа **catch** блок обрабатывает все типы исключений. При выполнении компиляции с [/EHa](../build/reference/eh-exception-handling-model.md) параметр, они могут включать структурированные исключения C и создаваемые системой или приложением асинхронные исключения, например памяти нарушения защиты, деление на ноль и с плавающей запятой . Так как **catch** блоки обрабатываются в порядке программы для поиска подходящего типа, обработчик с многоточием должен быть последним обработчиком для соответствующего **попробуйте** блока. Используйте `catch(...)` осторожно, не позволяйте программе продолжать выполнение, если блоку catch не известно, как обработать конкретное перехваченное исключение. Как правило, блок `catch(...)` используется для ведения журнала ошибок и выполнения специальной очистки перед остановкой выполнения программы.
+The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. Используйте `catch(...)` осторожно, не позволяйте программе продолжать выполнение, если блоку catch не известно, как обработать конкретное перехваченное исключение. Как правило, блок `catch(...)` используется для ведения журнала ошибок и выполнения специальной очистки перед остановкой выполнения программы.
 
-Объект **throw** выражение без операндов повторно создает обрабатываемое в данный момент исключение. Рекомендуется использовать эту форму при повторном создании исключения, поскольку это позволяет сохранить исходные сведения полиморфного типа исключения. Такое выражение следует использовать только в **catch** обработчик или функцию, которая вызывается из **catch** обработчика. Вновь созданный объект исключения представляет собой исходный объект исключения, а не его копию.
+A **throw** expression that has no operand re-throws the exception currently being handled. Рекомендуется использовать эту форму при повторном создании исключения, поскольку это позволяет сохранить исходные сведения полиморфного типа исключения. Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. Вновь созданный объект исключения представляет собой исходный объект исключения, а не его копию.
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений С++](../cpp/cpp-exception-handling.md)<br/>
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Необработанные исключения C++](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

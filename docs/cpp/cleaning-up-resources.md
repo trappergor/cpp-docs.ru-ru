@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386126"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246635"
 ---
 # <a name="cleaning-up-resources"></a>Освобождение ресурсов
 
-Во время выполнения обработчика завершения не всегда известно, какие ресурсы фактически выделены, прежде чем не будет вызван обработчик завершения. Возможно, **__try** блока инструкций работа была прервана до распределения всех ресурсов, так что не все ресурсы были открыты.
+Во время выполнения обработчика завершения не всегда известно, какие ресурсы фактически выделены, прежде чем не будет вызван обработчик завершения. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
 Таким образом, в целях безопасности прежде чем продолжить очистку обработки завершения, необходимо проверить, какие ресурсы фактически открыты. Ниже описана рекомендованная процедура.
 
 1. Инициализируйте дескрипторы со значением null.
 
-1. В **__try** инструкции block, распределения ресурсов. Для дескрипторов устанавливается положительные значения по мере распределения ресурсов.
+1. In the **__try** statement block, allocate resources. Для дескрипторов устанавливается положительные значения по мере распределения ресурсов.
 
-1. В **__finally** блок операторов, освободите все ресурсы, соответствующий дескриптор или переменная флага которых не равно нулю или not NULL.
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>Пример
 
-Например, в следующем коде используется обработчик завершения, чтобы закрыть три файла и блок памяти, выделенных в **__try** блока инструкций. Перед очисткой ресурса код сначала проверяет, был ли ресурс распределен.
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Перед очисткой ресурса код сначала проверяет, был ли ресурс распределен.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

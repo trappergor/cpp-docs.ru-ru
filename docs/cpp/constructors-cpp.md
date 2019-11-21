@@ -1,23 +1,23 @@
 ---
 title: Конструкторы (C++)
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625087"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246616"
 ---
 # <a name="constructors-c"></a>Конструкторы (C++)
 
-Чтобы настроить способ инициализации элементов класса или вызвать функции при создании объекта класса, определите *конструктор*. Конструкторы имеют имена, совпадающие с именами классов, и не имеют возвращаемых значений. Можно определить столько перегруженных конструкторов, сколько необходимо для настройки инициализации различными способами. Как правило, конструкторы имеют открытый доступ, поэтому код за пределами определения класса или иерархии наследования может создавать объекты класса. Но можно также объявить конструктор как **защищенный** или **закрытый**.
+To customize how class members are initialized, or to invoke functions when an object of your class is created, define a *constructor*. Конструкторы имеют имена, совпадающие с именами классов, и не имеют возвращаемых значений. You can define as many overloaded constructors as needed to customize initialization in various ways. Typically, constructors have public accessibility so that code outside the class definition or inheritance hierarchy can create objects of the class. But you can also declare a constructor as **protected** or **private**.
 
-При необходимости конструкторы могут получить список инициализации элемента. Это более эффективный способ инициализации членов класса, чем назначение значений в теле конструктора. В следующем примере показан класс `Box` с тремя перегруженными конструкторами. Последние два списка инициализации элементов use:
+Constructors can optionally take a member init list. This is a more efficient way to initialize class members than assigning values in the constructor body. The following example shows a class `Box` with three overloaded constructors. The last two use member init lists:
 
 ```cpp
 class Box {
@@ -46,7 +46,7 @@ private:
 };
 ```
 
-При объявлении экземпляра класса компилятор выбирает конструктор для вызова на основе правил разрешения перегрузки:
+When you declare an instance of a class, the compiler chooses which constructor to invoke based on the rules of overload resolution:
 
 ```cpp
 int main()
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- Конструкторы могут быть объявлены как **inline**, [explicit](#explicit_constructors), **Friend** или [constexpr](#constexpr_constructors).
-- Конструктор может инициализировать объект, объявленный как **const**, **volatile** или **const volatile**. После завершения конструктора объект преобразуется в **константу** .
-- Чтобы определить конструктор в файле реализации, присвойте ему полное имя с любой другой функцией-членом: `Box::Box(){...}`.
+- Constructors may be declared as **inline**, [explicit](#explicit_constructors), **friend** or [constexpr](#constexpr_constructors).
+- A constructor can initialize an object that has been declared as **const**, **volatile** or **const volatile**. The object becomes **const** after the constructor completes.
+- To define a constructor in an implementation file, give it a qualified name as with any other member function: `Box::Box(){...}`.
 
-## <a name="member_init_list"></a>Списки инициализаторов членов
+## <a name="member_init_list"></a> Member initializer lists
 
-Конструктор может дополнительно иметь список инициализаторов членов, который инициализирует члены класса перед выполнением тела конструктора. (Обратите внимание, что список инициализаторов членов не то же самое, что *Список инициализаторов* типа [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).)
+A constructor can optionally have a member initializer list, which initializes class members prior to execution of the constructor body. (Note that a member initializer list is not the same thing as an *initializer list* of type [std::initializer_list\<T>](../standard-library/initializer-list-class.md).)
 
-Использование списка инициализаторов членов предпочтительнее, чем назначение значений в теле конструктора, так как он непосредственно Инициализирует элемент. В следующем примере показан список инициализаторов членов, состоящий из всех выражений **идентификаторов (аргументов)** после двоеточия:
+Using a member initializer list is preferred over assigning values in the body of the constructor because it directly initializes the member. In the following example shows the member initializer list consists of all the **identifier(argument)** expressions after the colon:
 
 ```cpp
     Box(int width, int length, int height)
@@ -78,15 +78,15 @@ int main()
     {}
 ```
 
-Идентификатор должен ссылаться на член класса; он инициализируется значением аргумента. Аргумент может быть одним из параметров конструктора, вызовом функции или [std:: initializer_list\<t >](../standard-library/initializer-list-class.md).
+The identifier must refer to a class member; it is initialized with the value of the argument. The argument can be one of the constructor parameters, a function call or a [std::initializer_list\<T>](../standard-library/initializer-list-class.md).
 
-**константные** элементы и члены ссылочного типа должны быть инициализированы в списке инициализаторов членов.
+**const** members and members of reference type must be initialized in the member initializer list.
 
-В списке инициализаторов должны быть сделаны вызовы для параметризованных конструкторов базового класса, чтобы гарантировать, что базовый класс полностью инициализирован до выполнения производного конструктора.
+Calls to parameterized base class constructors should be made in the initializer list to ensure the base class is fully initialized prior to execution of the derived constructor.
 
-## <a name="default_constructors"></a>Конструкторы по умолчанию
+## <a name="default_constructors"></a> Default constructors
 
-*Конструкторы по умолчанию* обычно не имеют параметров, но могут иметь параметры со значениями по умолчанию.
+*Default constructors* typically have no parameters, but they can have parameters with default values.
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-Конструкторы по умолчанию являются одной из [специальных функций элементов](special-member-functions.md). Если в классе не объявлен ни один конструктор, компилятор предоставляет неявный **встроенный** конструктор по умолчанию.
+Default constructors are one of the [special member functions](special-member-functions.md). If no constructors are declared in a class, the compiler provides an implicit **inline** default constructor.
 
 ```cpp
 #include <iostream>
@@ -120,18 +120,18 @@ int main() {
 }
 ```
 
-Если вы полагаетесь на неявный конструктор по умолчанию, обязательно инициализируйте элементы в определении класса, как показано в предыдущем примере. Без этих инициализаторов члены будут неинициализированы, а вызов Volume () создаст значение мусора. Как правило, рекомендуется инициализировать элементы таким образом, даже если не полагается на неявный конструктор по умолчанию.
+If you rely on an implicit default constructor, be sure to initialize members in the class definition, as shown in the previous example. Without those initializers, the members would be uninitialized and the Volume() call would produce a garbage value. In general, it is good practice to initialize members in this way even when not relying on an implicit default constructor.
 
-Можно запретить компилятору создавать неявный конструктор по умолчанию, определив его как [Удаленный](#explicitly_defaulted_and_deleted_constructors):
+You can prevent the compiler from generating an implicit default constructor by defining it as [deleted](#explicitly_defaulted_and_deleted_constructors):
 
 ```cpp
     // Default constructor
     Box() = delete;
 ```
 
-Созданный компилятором конструктор по умолчанию будет определен как удаленный, если какие-либо члены класса не являются конструируемым по умолчанию. Например, все члены типа класса и их члены типа класса должны иметь доступ к конструктору по умолчанию и деструкторам, которые доступны. Все элементы данных ссылочного типа, а также **константные** члены должны иметь инициализатор членов по умолчанию.
+A compiler-generated default constructor will be defined as deleted if any class members are not default-constructible. For example, all members of class type, and their class-type members, must have a default constructor and destructors that are accessible. All data members of reference type, as well as **const** members must have a default member initializer.
 
-При вызове конструктора, созданного компилятором по умолчанию, и попытке использовать круглые скобки выдается предупреждение:
+When you call a compiler-generated default constructor and try to use parentheses, a warning is issued:
 
 ```cpp
 class myclass{};
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-Это пример проблемы Most Vexing Parse (наиболее неоднозначного анализа). Поскольку выражение примера можно интерпретировать как объявление функции или как вызов конструктора по умолчанию и в связи с тем, что средства синтаксического анализа C++ отдают предпочтение объявлениям перед другими действиями, данное выражение обрабатывается как объявление функции. Дополнительные сведения см. в разделе [досадной Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
+Это пример проблемы Most Vexing Parse (наиболее неоднозначного анализа). Поскольку выражение примера можно интерпретировать как объявление функции или как вызов конструктора по умолчанию и в связи с тем, что средства синтаксического анализа C++ отдают предпочтение объявлениям перед другими действиями, данное выражение обрабатывается как объявление функции. For more information, see [Most Vexing Parse](https://en.wikipedia.org/wiki/Most_vexing_parse).
 
 В случае явного объявления конструкторов компилятор не предоставляет конструктор по умолчанию:
 
@@ -170,19 +170,19 @@ int main(){
 Box boxes[3]; // C2512: no appropriate default constructor available
 ```
 
-Однако можно использовать набор списков инициализаторов для инициализации массива объектов Box:
+However, you can use a set of initializer lists to initialize an array of Box objects:
 
 ```cpp
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-Дополнительные сведения см. в разделе [инициализаторы](initializers.md).
+For more information, see [Initializers](initializers.md).
 
-## <a name="copy_and_move_constructors"></a>Конструкторы копий
+## <a name="copy_and_move_constructors"></a> Copy constructors
 
-*Конструктор копии* Инициализирует объект, копируя значения элементов из объекта того же типа. Если все члены класса являются простыми типами, такими как скалярные значения, конструктор копий, созданный компилятором, достаточно, и вам не нужно определять собственный. Если для класса требуется более сложная инициализация, необходимо реализовать пользовательский конструктор копии. Например, если член класса является указателем, необходимо определить конструктор копии, чтобы выделить новую память и скопировать значения из объекта, указывающего на другой объект. Созданный компилятором конструктор копий просто копирует указатель, так что новый указатель по-прежнему указывает на расположение в памяти другого.
+A *copy constructor* initializes an object by copying the member values from an object of the same type. If your class members are all simple types such as scalar values, the compiler-generated copy constructor is sufficient and you do not need to define your own. If your class requires more complex initialization, then you need to implement a custom copy constructor. For example, if a class member is a pointer then you need to define a copy constructor to allocate new memory and copy the values from the other's pointed-to object. The compiler-generated copy constructor simply copies the pointer, so that the new pointer still points to the other's memory location.
 
-Конструктор копии может иметь одну из следующих сигнатур:
+A copy constructor may have one of these signatures:
 
 ```cpp
     Box(Box& other); // Avoid if possible--allows modification of other.
@@ -194,25 +194,25 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-При определении конструктора копии необходимо также определить оператор присваивания копирования (=). Дополнительные сведения см. в разделе конструкторы [присваивания](assignment.md) и [копирования и операторы присваивания копирования](copy-constructors-and-copy-assignment-operators-cpp.md).
+When you define a copy constructor, you should also define a copy assignment operator (=). For more information, see [Assignment](assignment.md) and [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md).
 
-Вы можете запретить копирование объекта, определив конструктор копии как удаленный:
+You can prevent your object from being copied by defining the copy constructor as deleted:
 
 ```cpp
     Box (const Box& other) = delete;
 ```
 
-Попытка копирования объекта приводит к ошибке *C2280: попытка ссылки на удаленную функцию*.
+Attempting to copy the object produces error *C2280: attempting to reference a deleted function*.
 
-## <a name="move_constructors"></a>Конструкторы перемещения
+## <a name="move_constructors"></a> Move constructors
 
-*Конструктор перемещения* — это специальная функция-член, которая перемещает владение данными существующего объекта в новую переменную без копирования исходных данных. Он принимает в качестве первого параметра ссылку rvalue, а все дополнительные параметры должны иметь значения по умолчанию. Конструкторы перемещения могут значительно повысить эффективность программы при передаче больших объектов.
+A *move constructor* is a special member function that moves ownership of an existing object's data to a new variable without copying the original data. It takes an rvalue reference as its first parameter, and any additional parameters must have default values. Move constructors can significantly increase your program's efficiency when passing around large objects.
 
 ```cpp
 Box(Box&& other);
 ```
 
-Компилятор выбирает конструктор перемещения в определенных ситуациях, где объект инициализируется другим объектом того же типа, который будет уничтожен и больше не нуждается в его ресурсах. В следующем примере показан один случай, когда конструктор перемещения выбирается с помощью разрешения перегрузки. В конструкторе, который вызывает `get_Box()`, возвращаемое значение является *xValue* (значение срока действия). Она не назначается какой-либо переменной, поэтому она собирается выйти из области. Чтобы создать мотивацию для этого примера, пусть Box имеет большой вектор строк, который представляет его содержимое. Вместо копирования вектора и его строк конструктор Move "украсть" из поля "Box Expires", чтобы вектор теперь принадлежал новому объекту. Вызов `std::move` является необходимым, так как классы `vector` и `string` реализуют собственные конструкторы перемещения.
+The compiler chooses a move constructor in certain situations where the object is being initialized by another object of the same type that is about to be destroyed and no longer needs its resources. The following example shows one case when a move constructor is selected by overload resolution. In the constructor that calls `get_Box()`, the returned value is an *xvalue* (eXpiring value). It is not assigned to any variable and is therefore about to go out of scope. To provide motivation for this example, let's give Box a large vector of strings that represent its contents. Rather than copying the vector and its strings, the move constructor "steals" it from the expiring value "box" so that the vector now belongs to the new object. The call to `std::move` is all that's needed because both `vector` and `string` classes implement their own move constructors.
 
 ```cpp
 #include <iostream>
@@ -279,15 +279,15 @@ int main()
 }
 ```
 
-Если класс не определяет конструктор перемещения, компилятор создает неявный экземпляр, если не существует объявленного пользователем конструктора копии, оператора присваивания копирования, оператора присваивания перемещения или деструктора. Если явный или неявный конструктор перемещения не определен, операции, в которых в противном случае использовался конструктор перемещения, используют вместо этого конструктор копий. Если класс объявляет конструктор перемещения или оператор присваивания перемещения, неявно объявленный конструктор копии определяется как удаленный.
+If a class does not define a move constructor, the compiler generates an implicit one if there is no user-declared copy constructor, copy assignment operator, move assignment operator, or destructor. If no explicit or implicit move constructor is defined, operations that would otherwise use a move constructor use the copy constructor instead. If a class declares a move constructor or move assignment operator, the implicitly declared copy constructor is defined as deleted.
 
-Неявно объявленный конструктор перемещения определяется как удаленный, если какие-либо члены, являющиеся типами классов, не имеют деструктора или компилятор не может определить, какой конструктор использовать для операции перемещения.
+An implicitly declared move constructor is defined as deleted if any members that are class types lack a destructor or the compiler cannot determine which constructor to use for the move operation.
 
-Дополнительные сведения о написании нетривиальных конструкторов перемещения см. в разделе [конструкторы перемещения и операторы присваивания перемещенияC++()](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
+For more information about how to write a non-trivial move constructor, see [Move Constructors and Move Assignment Operators (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md).
 
-## <a name="explicitly_defaulted_and_deleted_constructors"></a>Явно заданные по умолчанию и удаленные конструкторы
+## <a name="explicitly_defaulted_and_deleted_constructors"></a> Explicitly defaulted and deleted constructors
 
-Можно явно заключать конструкторы копирования, конструкторы *по умолчанию* , конструкторы перемещения, операторы присваивания копирования, операторы присваивания перемещения и деструкторы. Вы можете явно *Удалить* все специальные функции элементов.
+You can explicitly *default* copy constructors, default constructors, move constructors, copy assignment operators, move assignment operators, and destructors. You can explicitly *delete* all of the special member functions.
 
 ```cpp
 class Box
@@ -302,23 +302,23 @@ public:
 };
 ```
 
-Дополнительные сведения см. в разделе [явно заданные по умолчанию и удаленные функции](../cpp/explicitly-defaulted-and-deleted-functions.md).
+For more information, see [Explicitly Defaulted and Deleted Functions](../cpp/explicitly-defaulted-and-deleted-functions.md).
 
-## <a name="constexpr_constructors"></a>конструкторы constexpr
+## <a name="constexpr_constructors"></a> constexpr constructors
 
-Конструктор может быть объявлен как [constexpr](constexpr-cpp.md) , если
+A constructor may be declared as [constexpr](constexpr-cpp.md) if
 
-- Он либо объявляется по умолчанию, либо, в противном случае, удовлетворяет всем условиям для [функций constexpr](constexpr-cpp.md#constexpr_functions) в целом;
-- класс не имеет виртуальных базовых классов;
-- Каждый из параметров имеет [тип литерала](trivial-standard-layout-and-pod-types.md#literal_types);
-- тело не является блоком функции try;
-- все нестатические элементы данных и подобъекты базового класса инициализируются;
-- Если класс имеет (a) объединение с вариантными членами или (b) имеет анонимные объединения, то инициализируется только один из членов Union.
-- Каждый нестатический элемент данных типа класса, а все подобъекты базового класса имеют конструктор constexpr
+- it is either declared as defaulted or else it satisfies all the conditions for [constexpr functions](constexpr-cpp.md#constexpr_functions) in general;
+- the class has no virtual base classes;
+- each of the parameters is a [literal type](trivial-standard-layout-and-pod-types.md#literal_types);
+- the body is not a function try-block;
+- all non-static data members and base class sub-objects are initialized;
+- if the class is (a) a union having variant members, or (b) has anonymous unions, only one of the union members is initialized;
+- every non-static data member of class type, and all base-class sub-objects have a constexpr constructor
 
-## <a name="init_list_constructors"></a>Конструкторы списка инициализаторов
+## <a name="init_list_constructors"></a> Initializer list constructors
 
-Если конструктор принимает значение [std:: initializer_list\<t\>](../standard-library/initializer-list-class.md) в качестве параметра, а другие параметры имеют аргументы по умолчанию, этот конструктор будет выбран в разрешении перегрузки, если класс создается с помощью Direct инициализации. Можно использовать initializer_list для инициализации любого члена, который может принять его. Например, предположим, что класс Box (показан ранее) имеет `std::vector<string>` член `m_contents`. Вы можете предоставить конструктор следующим образом:
+If a constructor takes a [std::initializer_list\<T\>](../standard-library/initializer-list-class.md) as its parameter, and any other parameters have default arguments, that constructor will be selected in overload resolution when the class is instantiated through direct initialization. You can use the initializer_list to initialize any member that can accept it. For example, assume the Box class (shown previously) has a `std::vector<string>` member `m_contents`. You can provide a constructor like this:
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -326,14 +326,14 @@ public:
 {}
 ```
 
-Затем создайте объекты Box следующим образом:
+And then create Box objects like this:
 
 ```cpp
     Box b{ "apples", "oranges", "pears" }; // or ...
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit_constructors"></a>Явные конструкторы
+## <a name="explicit_constructors"></a> Explicit constructors
 
 Если у класса имеется конструктор с одним параметром, или у всех параметров, кроме одного, имеются значения по умолчанию, тип параметра можно неявно преобразовать в тип класса. Например, если у класса `Box` имеется конструктор, подобный следующему:
 
@@ -363,15 +363,15 @@ private:
     ShippingOrder so(42, 10.8);
 ```
 
-В некоторых случаях подобные преобразования могут быть полезны, однако чаще всего они могут привести к незаметным, но серьезным ошибкам в вашем коде. В качестве общего правила следует использовать ключевое слово **explicit** в конструкторе (и определяемых пользователем операторах) для предотвращения такого рода неявного преобразования типов:
+В некоторых случаях подобные преобразования могут быть полезны, однако чаще всего они могут привести к незаметным, но серьезным ошибкам в вашем коде. As a general rule, you should use the **explicit** keyword on a constructor (and user-defined operators) to prevent this kind of implicit type conversion:
 
 ```cpp
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-Когда конструктор является явным, эта строка вызывает ошибку компилятора: `ShippingOrder so(42, 10.8);`.  Дополнительные сведения см. в разделе [преобразования определяемого пользователем типа](../cpp/user-defined-type-conversions-cpp.md).
+Когда конструктор является явным, эта строка вызывает ошибку компилятора: `ShippingOrder so(42, 10.8);`.  For more information, see [User-Defined Type Conversions](../cpp/user-defined-type-conversions-cpp.md).
 
-## <a name="order_of_construction"></a>Порядок создания
+## <a name="order_of_construction"></a> Order of construction
 
 Конструктор выполняет свою работу в следующем порядке.
 
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-Конструктор производного класса всегда вызывает конструктор базового класса, чтобы перед выполнением любых дополнительных операций иметь в своем распоряжении полностью созданные базовые классы. Конструкторы базовых классов вызываются в порядке наследования — например, если `ClassA` производным от `ClassB`, который является производным от `ClassC`, сначала вызывается конструктор `ClassC`, затем — конструктор `ClassB`, а затем — конструктор `ClassA`.
+Конструктор производного класса всегда вызывает конструктор базового класса, чтобы перед выполнением любых дополнительных операций иметь в своем распоряжении полностью созданные базовые классы. The base class constructors are called in order of derivation—for example, if `ClassA` is derived from `ClassB`, which is derived from `ClassC`, the `ClassC` constructor is called first, then the `ClassB` constructor, then the `ClassA` constructor.
 
 Если базовый класс не имеет конструктор по умолчанию, в конструкторе производного класса необходимо указать параметры конструктора базового класса.
 
@@ -478,7 +478,7 @@ int main(){
 
 1. Если конструктор не является делегирующим, удаляются все полностью созданные объекты базовых классов и объекты-члены. Однако поскольку сам объект создан не полностью, деструктор не выполняется.
 
-### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Конструкторы для классов с несколькими наследованиями
+### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Constructors for classes that have multiple inheritance
 
 Если класс является производным от нескольких базовых классов, конструкторы базовых классов вызываются в том порядке, в котором они перечислены в объявлении производного класса.
 
@@ -520,9 +520,9 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating_constructors"></a>Делегирование конструкторов
+## <a name="delegating_constructors"></a> Delegating constructors
 
-*Делегирующий конструктор* вызывает другой конструктор в том же классе для выполнения некоторой работы по инициализации. Это полезно, если у вас есть несколько конструкторов, которые должны выполнять одинаковую работу. Можно написать основную логику в одном конструкторе и вызвать ее из других. В следующем тривиальном примере Box (int) делегирует свою работу Box (int, int, int):
+A *delegating constructor* calls a different constructor in the same class to do some of the work of initialization. This is useful when you have multiple constructors that all have to perform similar work. You can write the main logic in one constructor and invoke it from others. In the following trivial example, Box(int) delegates its work to Box(int,int,int):
 
 ```cpp
 class Box {
@@ -542,11 +542,11 @@ public:
 };
 ```
 
-Объект, созданный конструкторами, полностью инициализируется сразу после выполнения любого конструктора. Дополнительные сведения см. в разделе [унифицированная инициализация и делегирование конструкторов](../cpp/uniform-initialization-and-delegating-constructors.md).
+Объект, созданный конструкторами, полностью инициализируется сразу после выполнения любого конструктора. For more information, see [Delegating Constructors](../cpp/delegating-constructors.md).
 
-## <a name="inheriting_constructors"></a>Наследование конструкторов (C++ 11)
+## <a name="inheriting_constructors"></a> Inheriting constructors (C++11)
 
-Производный класс может наследовать конструкторы от прямого базового класса с помощью объявления **using** , как показано в следующем примере:
+A derived class can inherit the constructors from a direct base class by using a **using** declaration as shown in the following example:
 
 ```cpp
 #include <iostream>
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 версии 15,7 и более поздних версий**: оператор **using** в **/std: режим c++ 17** предоставляет в области все конструкторы из базового класса, за исключением тех, которые имеют идентичную сигнатуру для конструкторов в производном классе. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы. См. также [усовершенствования в Visual Studio 2017 версии 15,7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
+**Visual Studio 2017 and later**: The **using** statement in **/std:c++17** mode brings into scope all constructors from the base class except those that have an identical signature to constructors in the derived class. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы. See also [Improvements in Visual Studio 2017 version 15.7](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157).
 
 ::: moniker-end
 
@@ -613,9 +613,9 @@ class Derived : T {
 
 Производный класс не может наследовать от нескольких базовых классов, если у этих базовых классов есть конструкторы с идентичными сигнатурами.
 
-## <a name="constructors_in_composite_classes"></a>Конструкторы и составные классы
+## <a name="constructors_in_composite_classes"></a> Constructors and composite classes
 
-Классы, содержащие члены типа класса, называются *составными классами*. При создании члена типа класса составного класса конструктор вызывается перед собственным конструктором класса. Если у содержащегося класса нет конструктора по умолчанию, необходимо использовать список инициализации в конструкторе составного класса. В предыдущем примере `StorageBox` при присвоении типу переменной-члена `m_label` нового класса `Label` необходимо вызвать конструктор базового класса и инициализировать переменную `m_label` в конструкторе `StorageBox`:
+Classes that contain class-type members are known as *composite classes*. При создании члена типа класса составного класса конструктор вызывается перед собственным конструктором класса. Если у содержащегося класса нет конструктора по умолчанию, необходимо использовать список инициализации в конструкторе составного класса. В предыдущем примере `StorageBox` при присвоении типу переменной-члена `m_label` нового класса `Label` необходимо вызвать конструктор базового класса и инициализировать переменную `m_label` в конструкторе `StorageBox`:
 
 ```cpp
 class Label {
@@ -645,3 +645,13 @@ int main(){
     StorageBox sb3(1, 2, 3, {"myname", "myaddress"});
 }
 ```
+
+## <a name="in-this-section"></a>В данном разделе
+
+- [Copy constructors and copy assignment operators](copy-constructors-and-copy-assignment-operators-cpp.md)
+- [Move constructors and move assignment operators](move-constructors-and-move-assignment-operators-cpp.md)
+- [Delegating constructors](delegating-constructors.md)
+
+## <a name="see-also"></a>См. также
+
+[Classes and structs](classes-and-structs-cpp.md)

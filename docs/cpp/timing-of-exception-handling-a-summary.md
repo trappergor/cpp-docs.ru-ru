@@ -1,5 +1,5 @@
 ---
-title: 'Время обработки исключений: Сводка'
+title: 'Timing of exception handling: A summary'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221903"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246337"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Время обработки исключений: Сводка
+# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
 
-Обработчик завершения выполняется независимо от того, каким образом **__try** завершается блок инструкции. Причины включают выход из **__try** блока, `longjmp` инструкцию, которая передает контроль за пределы блока, а также освобождение стека из-за обработки исключения.
+A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
 
 > [!NOTE]
->  Microsoft C++ компилятор поддерживает два вида `setjmp` и `longjmp` инструкций. Быстрая версия обходит обработку завершения, однако является более эффективной. Для использования этой версии включите файл \<setjmp.h >. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. Для использования этой версии включите файл \<setjmpex.h >. Увеличение производительности быстрой версии зависит от конфигурации оборудования.
+>  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Быстрая версия обходит обработку завершения, однако является более эффективной. To use this version, include the file \<setjmp.h>. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. To use this version, include the file \<setjmpex.h>. Увеличение производительности быстрой версии зависит от конфигурации оборудования.
 
 Операционная система выполняет все обработчики завершения в нужном порядке, прежде чем сможет быть выполнен какой-либо другой код, включая тело обработчика исключений.
 
@@ -35,7 +35,7 @@ ms.locfileid: "65221903"
 
 1. Если этот фильтр передает контроль (возвращает 0), процесс продолжается до тех пор, пока не будет найден фильтр, который не передает контроль.
 
-1. Если этот фильтр возвращает значение -1, выполнение продолжается, где было создано исключение, а завершение не происходит.
+1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
 
 1. Если фильтр возвращает 1, возникают следующие события:
 
@@ -49,5 +49,5 @@ ms.locfileid: "65221903"
 
 ## <a name="see-also"></a>См. также
 
-[Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

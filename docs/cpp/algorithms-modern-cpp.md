@@ -3,24 +3,24 @@ title: Алгоритмы (современный C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ed3b364f3fab880273c19c99bbbc7425545aec2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345178"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246656"
 ---
 # <a name="algorithms-modern-c"></a>Алгоритмы (современный C++)
 
-Для современных особенностях программирования на C++, мы рекомендуем использовать алгоритмы в [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md). Вот несколько важных примеров:
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:
 
-- **for_each**, который представляет собой алгоритм обхода по умолчанию. (Также **преобразования** для семантики не на месте.)
+- **for_each**, which is the default traversal algorithm. (Also **transform** for not-in-place semantics.)
 
-- **find_if**, который представляет собой алгоритм поиска по умолчанию.
+- **find_if**, which is the default search algorithm.
 
-- **Сортировка**, **lower_bound**и другие сортировки по умолчанию и алгоритмы поиска.
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
-Чтобы написать оператор сравнения, используйте строгое **<** и использовать *именованные лямбда-выражения* следует.
+To write a comparator, use strict **<** and use *named lambdas* when you can.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -31,11 +31,11 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="loops"></a>Циклы
+## <a name="loops"></a>Loops
 
-По возможности используйте по диапазону **для** циклов или вызовы алгоритма или оба параметра, а не написанные вручную циклы. **Копировать**, **преобразования**, **count_if**, **remove_if**, и другие подобные им намного лучше, чем рукописные циклы, так как их целью является очевидным и они упростить написание кода без ошибок. Кроме того многие алгоритмы стандартной библиотеки C++ имеют оптимизации реализации, которые делают их более эффективными.
+When possible, use range-based **for** loops or algorithm calls, or both, instead of hand-written loops. **copy**, **transform**, **count_if**, **remove_if**, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.
 
-Вместо старого C++ следующим образом:
+Instead of old C++ like this:
 
 ```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
@@ -49,7 +49,7 @@ for ( ; i != v.end(); ++i ) {
 }
 ```
 
-Используйте современный язык C++ следующим образом:
+Use modern C++ like this:
 
 ```cpp
 for_each( begin(strings), end(strings), [](string& s) {
@@ -59,22 +59,22 @@ for_each( begin(strings), end(strings), [](string& s) {
 auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
-### <a name="range-based-for-loops"></a>На диапазоне циклы for
+### <a name="range-based-for-loops"></a>Range-based for loops
 
-На основе диапазона **для** цикла является функцией C ++ 11 языка, не алгоритм стандартной библиотеки C++. Но он заслуживает упоминания в этой дискуссии о циклах. На основе диапазона **для** циклы являются расширением **для** ключевое слово и предоставить удобным и эффективным способом записи циклов, выполняющих итерацию с диапазоном значений. Контейнеры стандартной библиотеки C++, строки и массивы готовы для основанных на диапазоне **для** циклы. Чтобы включить этот новый синтаксис итераций для определяемого пользователем типа, добавьте следующую поддержку:
+The range-based **for** loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based **for** loops are an extension of the **for** keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based **for** loops. To enable this new iteration syntax for your user-defined type, add the following support:
 
-- Объект `begin` метод, который возвращает итератор, указывающий на начало структуры и `end` метод, который возвращает итератор, указывающий конец структуры.
+- A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.
 
-- Поддержка в итераторе этих методов: **оператор**<strong>\*</strong>, **оператор! =**, и **operator ++** (версия префикса).
+- Support in the iterator for these methods: **operator**<strong>\*</strong>, **operator!=** , and **operator++** (prefix version).
 
-Эти методы могут быть члены или отдельные функции.
+These methods can be either members or stand-alone functions.
 
-## <a name="random-numbers"></a>Случайные числа
+## <a name="random-numbers"></a>Random Numbers
 
-Не секрет, старый CRT `rand()` функция имеет много изъянов, которые были подробно обсуждаются в сообществе с ++. В современном C++ нет необходимости иметь дело с этим недостатками, равно, и нет необходимости изобретать собственный равномерно распределенных генератора случайных чисел, так как средства для быстрого и простого создания доступны в стандартной библиотеке C++, как показано в [ \<случайных >](../standard-library/random.md).
+It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>См. также
 
-[Возвращение к C++ (современный C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
