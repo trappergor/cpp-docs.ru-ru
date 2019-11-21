@@ -1,5 +1,5 @@
 ---
-title: 'Исключения: Перехват и удаление исключений'
+title: Исключения. Перехват и удаление исключений
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173299"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246689"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>Исключения: Перехват и удаление исключений
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Исключения. Перехват и удаление исключений
 
-Следующие инструкции и примеры показывают, как для перехвата и удаление исключений. Дополнительные сведения о **попробуйте**, **catch**, и **throw** ключевые слова, см. в разделе [обработка исключений C++](../cpp/cpp-exception-handling.md).
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-Обработчиках исключений необходимо удалить объекты исключений, которые они обрабатывают, так как не удалось удалить исключение приводит к утечке памяти каждый раз, когда этот код перехватывает исключение.
+Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
 
-Ваш **catch** блок необходимо удалить исключение при:
+Your **catch** block must delete an exception when:
 
-- **Catch** блок вызывает исключение.
+- The **catch** block throws a new exception.
 
-   Конечно не удаляйте исключение при появлении этого исключения еще раз:
+   Of course, you must not delete the exception if you throw the same exception again:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- Выполнение возвращается изнутри **catch** блока.
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  При удалении `CException`, использовать `Delete` функция-член для удаления исключение. Не используйте **удалить** ключевое слово, так как он может завершиться ошибкой, если исключение не в куче.
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>Для перехвата и удаление исключений
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
 
-1. Используйте **попробуйте** ключевое слово для настройки **попробуйте** блока. Выполните все инструкции программы, которые могут создавать исключение в **попробуйте** блока.
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   Используйте **catch** ключевое слово для настройки **catch** блока. Поместите код обработки исключений в **catch** блока. Код в **catch** блок выполняется только в том случае, если код внутри **попробуйте** блок вызывает исключение типа, указанного в **catch** инструкции.
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   Скелет показано как **попробуйте** и **catch** блоки обычно упорядочиваются:
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   Когда создается исключение, управление передается первой **catch** блок, объявление которого исключение соответствует типу исключения. Можно выборочно обрабатывать различные типы исключений с последующими **catch** блокирует, как показано ниже:
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-Дополнительные сведения см. в разделе [исключения: Преобразование из макроса исключений MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>См. также
 

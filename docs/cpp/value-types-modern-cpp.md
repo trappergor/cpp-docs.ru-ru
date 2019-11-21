@@ -1,24 +1,20 @@
 ---
-title: Типы значений (современный C++)
-ms.date: 05/07/2019
+title: C++ classes as value types
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-ms.openlocfilehash: 204ea9f86377eb8a5796f01cb81a9161163d9649
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 1aabcad46e848e1a499a142adaba5002a829bbf5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221882"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246024"
 ---
-# <a name="value-types-modern-c"></a>Типы значений (современный C++)
+# <a name="c-classes-as-value-types"></a>C++ classes as value types
 
-Классы C++, типы значений по умолчанию. В этом разделе Вводный обзор типов значений и проблем, связанных с их использования.
+C++ classes are by default value types. They can be specified as reference types, which enable polymorphic behavior to support object-oriented programming. Value types are sometimes viewed from the perspective of memory and layout control, whereas reference types are about base classes and virtual functions for polymorphic purposes. By default, value types are copyable, which means there is always a copy constructor and a copy assignment operator. For reference types, you make the class non-copyable (disable the copy constructor and copy assignment operator) and use a virtual destructor, which supports their intended polymorphism. Value types are also about the contents, which, when they are copied, always give you two independent values that can be modified separately. Reference types are about identity - what kind of object is it? For this reason, "reference types" are also referred to as "polymorphic types".
 
-## <a name="value-vs-reference-types"></a>Значения и ссылочные типы
-
-Как указывалось ранее, являются классы C++, типы значений по умолчанию. Их можно указать как ссылочные типы, которые позволяют полиморфизма для поддержки объектно ориентированное программирование. Типы значений иногда просмотра с точки зрения памяти и макета элемента управления, тогда как ссылочные типы являются о базовых классов и виртуальных функций для полиморфного целей. По умолчанию типы значений являются копируемыми, означающее, что всегда существует конструктор копии и оператор присваивания копии. Для ссылочных типов, чтобы сделать класс некопируемых (отключить конструктор копии и оператор присваивания копии) и воспользовавшись виртуальным деструктором, которая поддерживает их предполагаемого полиморфизм. Типы значений также связаны с содержимым, то есть, когда они копируются, всегда дает два независимых значения, которые можно изменять отдельно. Ссылочные типы являются об удостоверении - тип объекта является его? По этой причине «ссылочные типы», также называются «полиморфных типов».
-
-При желании тип ссылки по принципу (базовый класс, виртуальные функции), необходимо явно отключить копирование, как показано в `MyRefType` класс в следующем коде.
+If you really want a reference-like type (base class, virtual functions), you need to explicitly disable copying, as shown in the `MyRefType` class in the following code.
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -39,7 +35,7 @@ int main()
 }
 ```
 
-Компиляции приведенного выше кода приведет к следующей ошибки:
+Compiling the above code will result in the following error:
 
 ```Output
 test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private member declared in class 'MyRefType'
@@ -47,13 +43,13 @@ test.cpp(15) : error C2248: 'MyRefType::operator =' : cannot access private memb
         meow.cpp(3) : see declaration of 'MyRefType'
 ```
 
-## <a name="value-types-and-move-efficiency"></a>Типы значений и переместить эффективность
+## <a name="value-types-and-move-efficiency"></a>Value types and move efficiency
 
-Издержки при распределении копирования исключается из-за новых способов оптимизации копирования. Например при вставке Строка посередине вектор строк, будет не копирования повторное выделение издержек только move - даже если он приводит увеличение самого вектора. Это также относится к другие операции, например выполняя операцию добавить два очень большие объекты. Как включить эти операции оптимизации значение? В некоторых компиляторах C++ компилятор будет использовать данную функцию для вы неявно, примерно так же, что конструкторы копии можно автоматически создается компилятором. Однако в C++, класс должен «согласиться» для перемещения присваивания и конструкторы, объявив ее в определении класса. Это достигается с помощью двойной амперсанд (& &) ссылку rvalue в соответствующий член функции, объявления и определяющего конструктор перемещения и перемещение методов назначения.  Также необходимо вставить правильный код для «кражи внутренностях» за пределы исходного объекта.
+Copy allocation overhead is avoided due to new copy optimizations. For example, when you insert a string in the middle of a vector of strings, there will be no copy re-allocation overhead, only a move- even if it results in a grow of the vector itself. This also applies to other operations, for instance performing an add operation on two very large objects. How do you enable these value operation optimizations? In some C++ compilers, the compiler will enable this for you implicitly, much like copy constructors can be automatically generated by the compiler. However, in C++, your class will need to "opt-in" to move assignment and constructors by declaring it in your class definition. This is accomplished by using the double ampersand (&&) rvalue reference in the appropriate member function declarations and defining move constructor and move assignment methods.  You also need to insert the correct code to "steal the guts" out of the source object.
 
-Как же решить, если требуется переместить включена? Если уже известно, что требуется скопировать конструкции включена, вероятно вы хотите переместить включена, если он может быть дешевле, чем глубокую копию. Тем не менее если вы знаете, что требуется переместить поддержки, его не обязательно означает, что требуется включить копии. Последний случай будет называться «тип только для перемещения». Пример уже в стандартной библиотеке — `unique_ptr`. Заметим, старый `auto_ptr` является устаревшим и было заменено `unique_ptr` именно из-за отсутствия поддержки семантики перемещения в предыдущей версии языка C++.
+How do you decide if you need move enabled? If you already know you need copy construction enabled, you probably want move enabled if it can be cheaper than a deep copy. However, if you know you need move support, it doesn't necessarily mean you want copy enabled. This latter case would be called a "move-only type". An example already in the standard library is `unique_ptr`. As a side note, the old `auto_ptr` is deprecated, and was replaced by `unique_ptr` precisely due to the lack of move semantics support in the previous version of C++.
 
-С помощью семантики перемещения можно возврата по значению или вставки в середине. Перемещение является оптимизацией копирования. Нет необходимости для выделения кучи в качестве обходного решения. Рассмотрим следующий псевдокод:
+By using move semantics you can return-by-value or insert-in-middle. Move is an optimization of copy. There is need for heap allocation as a workaround. Рассмотрим следующий псевдокод:
 
 ```cpp
 #include <set>
@@ -82,9 +78,9 @@ HugeMatrix operator+(      HugeMatrix&&,       HugeMatrix&&);
 hm5 = hm1+hm2+hm3+hm4+hm5;   // efficient, no extra copies
 ```
 
-### <a name="enabling-move-for-appropriate-value-types"></a>Включение перемещения для типов соответствующее значение
+### <a name="enabling-move-for-appropriate-value-types"></a>Enabling move for appropriate value types
 
-Для класса значение like, где перемещения может быть дешевле, чем глубокую копию включите конструкции перемещения и перемещение назначения для повышения эффективности. Рассмотрим следующий псевдокод:
+For a value-like class where move can be cheaper than a deep copy, enable move construction and move assignment for efficiency. Рассмотрим следующий псевдокод:
 
 ```cpp
 #include <memory>
@@ -106,17 +102,13 @@ public:
 };
 ```
 
-При включении конструкции копирования и присваивания, также включите конструкции перемещения и присваивания, если он может быть дешевле, чем глубокую копию.
+If you enable copy construction/assignment, also enable move construction/assignment if it can be cheaper than a deep copy.
 
-Некоторые *незначимый* типы перемещения только, например когда нельзя клонировать ресурс, только передать владение. Пример: `unique_ptr`.
-
-## <a name="section"></a>Раздел
-
-Content
+Some *non-value* types are move-only, such as when you can’t clone a resource, only transfer ownership. Пример: `unique_ptr`.
 
 ## <a name="see-also"></a>См. также
 
-[Тип системы C++ (современный C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[Возвращение к C++ (современный C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)

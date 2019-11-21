@@ -8,38 +8,38 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 7504439c565d4dfb720bc2fa7e097e3230733423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027dc87923a588ea891dbf6dd835e2baba75a1cb
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153688"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245856"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Проверка блоков Catch (C++)
 
-C++ позволяет создавать исключения любого типа, хотя обычно рекомендуется создавать типы, производные от std::exception. Может быть перехвачено исключение C++ **catch** обработчик, который указывает тот же тип, как исключение, или обработчиком, который способен перехватывать любой тип исключения.
+C++ позволяет создавать исключения любого типа, хотя обычно рекомендуется создавать типы, производные от std::exception. A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
 
 Если созданное исключение имеет тип класса, у которого имеется один или несколько базовых классов, то его могут перехватывать обработчики, которые принимают базовые классы (и ссылки на базовые классы) этого типа исключения. Обратите внимание, что если исключение перехватывается по ссылке, то оно привязывается к самому объекту исключения; в противном случае обрабатывается его копия (как и в случае с аргументами функции).
 
-Если создается исключение, он может перехватываться следующие виды **catch** обработчиков:
+When an exception is thrown, it may be caught by the following types of **catch** handlers:
 
 - Обработчик, который может принимать любой тип данных (синтаксис с многоточием).
 
-- Обработчик, который принимает тот же тип, что объект исключения; Поскольку это копия, **const** и **volatile** модификаторы учитываются.
+- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
 
 - Обработчик, который принимает ссылку на тот же тип, что и у объекта исключения.
 
-- Обработчик, который принимает ссылку на **const** или **volatile** форме тот же тип, что объект исключения.
+- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
 
-- Обработчик, который принимает базовый класс того же типа, что и объект исключения; Поскольку это копия, **const** и **volatile** модификаторы учитываются. **Catch** обработчик для базового класса не должен предшествовать **catch** обработчик для производного класса.
+- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
 
 - Обработчик, который принимает ссылку на базовый класс того же типа, что и у объекта исключения.
 
-- Обработчик, который принимает ссылку на **const** или **volatile** формы базового класса в тот же тип, что объект исключения.
+- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
 
 - Обработчик, который принимает указатель, в который можно преобразовать созданный объект указателя при помощи стандартных правил преобразования указателей.
 
-Порядок, в котором **catch** располагаются обработчики имеет большое значение, так как обработчики для заданного **попробуйте** блок проверяются в порядке их отображения. Например, ошибкой будет поместить обработчик для базового класса перед обработчиком для производного класса. После соответствующего **catch** обработчик найден, последующие обработчики не проверяются. В результате многоточие **catch** обработчик должен быть последним обработчиком для его **попробуйте** блока. Пример:
+The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. Например, ошибкой будет поместить обработчик для базового класса перед обработчиком для производного класса. After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. Пример:
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-В этом примере кнопку с многоточием **catch** это единственный обработчик, который проверяется.
+In this example, the ellipsis **catch** handler is the only handler that is examined.
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений С++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

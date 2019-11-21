@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
+title: 'How to: Create and use CComPtr and CComQIPtr instances'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498590"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246539"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
 
 В классическом программировании Windows библиотеки часто реализуются как COM-объекты (или, более точно, как COM-серверы). Многие компоненты операционной системы Windows реализованы в виде COM-серверов, и большинство разработчиков предоставляют библиотеки в этой форме. Сведения об основах COM см. в разделе [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
@@ -23,7 +23,7 @@ ms.locfileid: "69498590"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr`и родственники являются частью библиотеки ATL и определяются в \<> atlcomcli. h. `_com_ptr_t`объявляется в \<comip. h >. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.
+`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.
 
 ## <a name="example"></a>Пример
 

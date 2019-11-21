@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: cb4be000c3c41862d5b4df766d21ae1cddeb6838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243995"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245207"
 ---
 # <a name="void-c"></a>void (C++)
 
-При использовании в качестве возвращаемого типа функции, **void** ключевое слово указывает, что функция не возвращает значение. Если оно используется для списка параметров функции, оно означает, что функция не принимает никаких параметров. Если оно используется в объявлении указателя, оно означает, что указатель является "универсальным".
+When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
 
-Если указатель имеет тип `void *`, он может указывать на любую переменную, объявленную без **const** или **volatile** ключевое слово. Указатель с ключевым словом void не может быть разыменован, кроме как путем приведения к другому типу. Указатель с ключевым словом void может быть преобразован в любой другой тип указателя на данные.
+If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
 
-В C++ указатель с ключевым словом void может указывать на функцию, но не на класса.
+A **void** pointer can point to a function, but not to a class member in C++.
 
-Объявить переменную типа void невозможно.
+You cannot declare a variable of type **void**.
 
 ## <a name="example"></a>Пример
 

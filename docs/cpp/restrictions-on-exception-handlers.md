@@ -1,20 +1,20 @@
 ---
-title: Ограничения обработчиков исключений
+title: Ограничения, действующие в отношении обработчиков исключений
 ms.date: 11/04/2016
 helpviewer_keywords:
 - restrictions, exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 31d63524-0e8c-419f-b87c-061f4c0ea470
-ms.openlocfilehash: 7d5bf20da61f4b9f5012b7f2aab932dfc904c302
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030d444443b3a6e3e2e0ac0e015619046a76d562
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403364"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245147"
 ---
-# <a name="restrictions-on-exception-handlers"></a>Ограничения обработчиков исключений
+# <a name="restrictions-on-exception-handlers"></a>Ограничения, действующие в отношении обработчиков исключений
 
-Главное ограничение на использование обработчиков исключений в коде в том, что нельзя использовать **goto** инструкцию, чтобы перейти к **__try** блока инструкций. Входить в этот блок необходимо только через обычный поток управления. Вы можете переходить из **__try** инструкции блокировать и создавать вложенные обработчики исключений, как захотите.
+The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Входить в этот блок необходимо только через обычный поток управления. You can jump out of a **__try** statement block and nest exception handlers as you choose.
 
 ## <a name="see-also"></a>См. также
 

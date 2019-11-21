@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 7384394fb53c6aa4bc009a903ba0ed22bf0ed0d6
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 11b42c9e6210c2432563bba43c55517abd4265fe
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998773"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245958"
 ---
 # <a name="bad_cast-exception"></a>Исключение bad_cast
 
-Исключение **bad_cast** создается оператором **dynamic_cast** в качестве результата неудачного приведения к ссылочному типу.
+The **bad_cast** exception is thrown by the **dynamic_cast** operator as the result of a failed cast to a reference type.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,15 +26,15 @@ catch (bad_cast)
    statement
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Интерфейс для **bad_cast** :
+The interface for **bad_cast** is:
 
 ```cpp
 class bad_cast : public exception
 ```
 
-Следующий код содержит пример неудачного **dynamic_cast** , который вызывает исключение **bad_cast** .
+The following code contains an example of a failed **dynamic_cast** that throws the **bad_cast** exception.
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,20 +65,20 @@ int main() {
 }
 ```
 
-Исключение возникает, так как объект, который поддается (Shape), не является производным от указанного типа приведения (Circle). Чтобы исключение не создавалось, добавьте в функцию `main` следующие объявления:
+The exception is thrown because the object being cast (a Shape) isn't derived from the specified cast type (Circle). Чтобы исключение не создавалось, добавьте в функцию `main` следующие объявления:
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Затем измените смысл приведения в блоке **try** следующим образом:
+Then reverse the sense of the cast in the **try** block as follows:
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -90,15 +90,15 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Функция|Описание|
 |-|-|
-|[What](#what)|TBD|
+|[what](#what)|TBD|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
-|[оператор=](#op_eq)|Оператор присваивания, который присваивает один объект `bad_cast` другому.|
+|[оператор=](#op_eq)|An assignment operator that assigns one `bad_cast` object to another.|
 
-## <a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a> bad_cast
 
 Конструктор для объектов типа `bad_cast`.
 
@@ -107,15 +107,15 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a>Оператор =
+## <a name="op_eq"></a> operator=
 
-Оператор присваивания, который присваивает один объект `bad_cast` другому.
+An assignment operator that assigns one `bad_cast` object to another.
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a>What
+## <a name="what"></a> what
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>См. также
 
-[оператор dynamic_cast](../cpp/dynamic-cast-operator.md)\
+[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)\
-[Обработка исключений С++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

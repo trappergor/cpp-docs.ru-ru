@@ -1,49 +1,49 @@
 ---
 title: Указатели с ключевыми словами const и volatile
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0aafde9070275abcb270710e2d4a7a8d9806267
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399126"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246633"
 ---
 # <a name="const-and-volatile-pointers"></a>Указатели с ключевыми словами const и volatile
 
-[Const](../cpp/const-cpp.md) и [volatile](../cpp/volatile-cpp.md) ключевые слова изменить способы обработки указателей. **Const** ключевое слово указывает, что указатель невозможно изменить после инициализации; он защищен от последующих изменений.
+The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
 
-**Volatile** ключевое слово указывает, что значение, связанное с указанное после него имя можно изменить на действия, кроме тех, в приложении пользователя. Таким образом **volatile** ключевое слово используется для объявления объектов в общей памяти, может осуществляться несколькими процессами или областей глобальных данных, используемых для обмена данными с процедурами службы прерываний.
+The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
 
-Если имя объявляется как **volatile**, компилятор перезагружает его из памяти при каждом доступе с помощью программы. Это значительно сокращает возможности оптимизации. Однако если состояние объекта может неожиданно изменяться, то это единственный способ гарантировать предсказуемую производительность программы.
+When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. Это значительно сокращает возможности оптимизации. Однако если состояние объекта может неожиданно изменяться, то это единственный способ гарантировать предсказуемую производительность программы.
 
-Чтобы объявить объект, на которые указывает указатель в виде **const** или **volatile**, используйте объявление следующего вида:
+To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-Чтобы объявить значение указателя — то есть фактический адрес, сохраненное в указателе — как **const** или **volatile**, используйте объявление следующего вида:
+To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-Язык C++ предотвращает присваивания, которые могут допустить изменение объекта или указателя, объявленного как **const**. Такие присваивания могут удалить информацию, с которой был объявлен объект или указатель, и тем самым подменить смысл исходного объявления. Рассмотрим следующее объявление:
+The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. Такие присваивания могут удалить информацию, с которой был объявлен объект или указатель, и тем самым подменить смысл исходного объявления. Рассмотрим следующее объявление:
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Учитывая приведенные выше объявления двух объектов (`cch`, типа **const char**, и `ch`, типа **char)**, следующие объявления и инициализации являются допустимыми:
+Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-В объявлении `pch2` задается указатель, при помощи которого может быть изменен постоянный объект, поэтому это объявление запрещено. Объявление `pch3` указывает, что указатель является константой, не объект, объявление запрещено по той же причине `pch2` объявление запрещено.
+В объявлении `pch2` задается указатель, при помощи которого может быть изменен постоянный объект, поэтому это объявление запрещено. The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
 
 В следующих восьми примерах демонстрируется присваивание через указатель и изменение значения указателя для приведенных выше объявлений. Здесь мы предполагаем, что инициализация указателей `pch1`–`pch8` была выполнена без ошибок.
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Указатели, объявленные как **volatile**, или сочетанием **const** и **volatile**, подчиняются тем же правилам.
+Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
 
-Указатели на **const** объекты часто используются в объявлениях функций следующим образом:
+Pointers to **const** objects are often used in function declarations as follows:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-Предыдущая инструкция объявляет функцию, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), в которых два из трех аргументов являются типа pointer в **char**. Так как аргументы передаются по ссылке, а не по значению, функция могла бы свободно изменить и `strDestination` и `strSource` Если `strSource` не были объявлены как **const**. Объявление `strSource` как **const** вызывающий объект гарантирует, что `strSource` нельзя изменить вызываемой функцией.
+The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
 
 > [!NOTE]
-> Так как стандартное преобразование из *typename* <strong>\*</strong> для **const** *typename* <strong>\*</strong>, можно передать аргумент типа `char *` для [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Однако обратное неверно; неявные преобразования не существует для удаления **const** атрибут из объекта или указателя.
+> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
 
-Объект **const** указатель заданного типа могут быть назначены указатель того же типа. Тем не менее, указатель, не **const** не могут быть назначены **const** указатель. В следующем коде показано одно верное и одно неверное присваивание.
+A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. В следующем коде показано одно верное и одно неверное присваивание.
 
 ```cpp
 // const_pointer.cpp
@@ -126,4 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Pointers](../cpp/pointers-cpp.md)
+[Pointers](pointers-cpp.md)
+[Raw pointers](raw-pointers.md)

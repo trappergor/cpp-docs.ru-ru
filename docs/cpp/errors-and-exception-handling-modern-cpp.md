@@ -1,32 +1,32 @@
 ---
-title: Обработка ошибок и исключений (современный C++)
-ms.date: 05/07/2019
+title: Modern C++ best practices for exceptions and error handling
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 85a8bf0f64681387cbee63f273fda5ce93ab7ad5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222142"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245864"
 ---
-# <a name="errors-and-exception-handling-modern-c"></a>Обработка ошибок и исключений (современный C++)
+# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Modern C++ best practices for exceptions and error handling
 
-В современном C++, в большинстве случаев предпочтительный способ уведомления и обработки логических ошибок и ошибок среды выполнения — использование исключений. Это особенно важно в тех случаях, когда стек может содержать несколько вызовов функции между функцией, которая обнаруживает ошибку и функцией, которая содержит контекст о том, как обрабатывать его. Исключения предоставляют формальный, четко определенный способ для кода, который обнаруживает ошибки для передачи информации вверх по стеку вызовов.
+In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions. This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it. Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.
 
-Ошибки программы обычно делятся на две категории: логические ошибки, вызванные ошибками программирования к примеру, ошибка «индекс вне допустимого диапазона» и ошибки времени выполнения, которые не может контролировать программист, например, «сетевая служба недоступна» Ошибка. Управляется в стиле программирования C и в модели COM отчеты об ошибках, возвращая значение, представляющее код ошибки или код статуса для определенной функции, либо задав глобальной переменной, которая вызывающий объект может дополнительно извлекаться после каждого вызова функции, см. в разделе ли ошибки. К примеру программирование COM использует возвращаемое значение HRESULT для сообщения об ошибках вызывающему объекту, и в API Win32 есть функция GetLastError для извлечения последней ошибки, сообщил стек вызовов. В обоих случаях именно вызывающему объекту признать ли код и ответить на него соответственно. Если вызывающий объект не явным образом обрабатывает код ошибки, программа может сбой без предупреждения или продолжить выполнение с некорректными данными и привести к неверному результату.
+Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error. In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported. For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack. In both of these cases, it's up to the caller to recognize the code and respond to it appropriately. If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.
 
-Исключения являются предпочтительными в современном C++ по следующим причинам:
+Exceptions are preferred in modern C++ for the following reasons:
 
-- Исключение вынуждает вызывающий код признать состояние ошибки и обработать его. Необработанные исключения останавливают выполнение программы.
+- An exception forces calling code to recognize an error condition and handle it. Unhandled exceptions stop program execution.
 
-- Исключение перескакивает в точку в стеке вызовов, который может обработать ошибку. Промежуточные функции могут разрешить распространение исключения. У них нет в соответствии с другими уровнями.
+- An exception jumps to the point in the call stack that can handle the error. Intermediate functions can let the exception propagate. They do not have to coordinate with other layers.
 
-- Механизм освобождения стека исключения уничтожает все объекты в области в соответствии с правилами чётким после возникает исключение.
+- The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.
 
-- Исключение обеспечивает четкое разделение между кодом, который обнаруживает ошибку и код, который обрабатывает ошибку.
+- An exception enables a clean separation between the code that detects the error and the code that handles the error.
 
-Следующий упрощенный пример показывает синтаксис, необходимые для создания и перехвата исключений в C++.
+The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.
 
 ```cpp
 
@@ -60,47 +60,46 @@ int main()
 }
 ```
 
-Исключения в C++ аналогичны в таких языках, таких как C# и Java. В **попробуйте** заблокировать, если исключение *исключение* будет *перехвачено* связанным первым **catch** блок, тип которого соответствует исключение. Другими словами, выполнение переходит из **throw** инструкцию, чтобы **catch** инструкции. Если блок catch можно использовать не найден, `std::terminate` вызывается и программа завершает работу. В C++ может быть вызвано любой тип; Тем не менее, мы рекомендуем создать тип, производный прямо или косвенно от `std::exception`. В предыдущем примере, тип исключения, [invalid_argument](../standard-library/invalid-argument-class.md), определенные в стандартной библиотеке в [ \<stdexcept >](../standard-library/stdexcept.md) файл заголовка. C++ не предоставляет и не требуется, **наконец** блок, чтобы убедиться в том, что все ресурсы будут освобождены, если возникает исключение. Получение ресурса является идиомой инициализации (RAII), который использует интеллектуальные указатели, предоставляет необходимую функциональность для очистки ресурсов. Дополнительные сведения см. в разделе [Как Разработка с учетом безопасности исключений](../cpp/how-to-design-for-exception-safety.md). Сведения о механизме развертывания стека C++ см. в разделе [исключения и очистки стека](../cpp/exceptions-and-stack-unwinding-in-cpp.md).
+Exceptions in C++ resemble those in languages such as C# and Java. In the **try** block, if an exception is *thrown* it will be *caught* by the first associated **catch** block whose type matches that of the exception. In other words, execution jumps from the **throw** statement to the **catch** statement. If no usable catch block is found, `std::terminate` is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from `std::exception`. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a **finally** block to make sure that all resources are released if an exception is thrown. The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md).
 
-## <a name="basic-guidelines"></a>Основные рекомендации
+## <a name="basic-guidelines"></a>Basic guidelines
 
-Надежная обработка ошибок сложна на любом языке программирования. Несмотря на то, что исключения предоставляют несколько функций, которые поддерживают корректную обработку ошибок, они не могут делать всю работу автоматически. Чтобы реализовать преимущества механизма исключения, помните исключения при разработке кода.
+Robust error handling is challenging in any programming language. Although exceptions provide several features that support good error handling, they can't do all the work for you. To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.
 
-- Использование утверждений для проверки ошибок, которые не должны происходить. Используйте исключения для проверки ошибок, которые могут возникнуть, например, ошибки при проверке ввода параметров открытых функций. Дополнительные сведения см. в разделе **vs исключения. Утверждения**.
+- Use asserts to check for errors that should never occur. Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions. For more information, see the section titled **Exceptions vs. Assertions**.
 
-- Используйте исключения, если код, который обрабатывает ошибки может быть отделен от кода, который обнаруживает ошибку, не вызовы функций. Рассмотрите возможность использования коды ошибок вместо этого в циклах, важных для производительности, когда обрабатывающий ошибку код тесно связан код, который определяет его.
+- Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls. Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it.
 
-- Для каждой функции, которая может создавать и распространять исключение, предоставляют один из трех гарантий исключения: строгую гарантию, базовую гарантию или гарантию nothrow (noexcept). Дополнительные сведения см. в разделе [Как Разработка с учетом безопасности исключений](../cpp/how-to-design-for-exception-safety.md).
+- For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
-- Создает исключения по значению, перехватывает их по ссылке. Не перехватывайте исключения, которые невозможно обработать.
+- Throw exceptions by value, catch them by reference. Don’t catch what you can't handle.
 
-- Не используйте спецификации исключений, которые являются нерекомендуемыми в C ++ 11. Дополнительные сведения см. в разделе **спецификации исключений и noexcept**.
+- Don't use exception specifications, which are deprecated in C++11. For more information, see the section titled **Exception specifications and noexcept**.
 
-- Используйте стандартные библиотеки типов исключений, если они применяются. Наследование пользовательских типов исключений из [класс exception](../standard-library/exception-class.md) иерархии.
+- Use standard library exception types when they apply. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.
 
-- Не разрешайте исключениям уклоняться от обработки деструкторами или функциями освобождения памяти.
+- Don't allow exceptions to escape from destructors or memory-deallocation functions.
 
-## <a name="exceptions-and-performance"></a>Исключения и производительность
+## <a name="exceptions-and-performance"></a>Exceptions and performance
 
-Механизм исключения имеет очень минимальное снижение производительности, если исключение не создается. Если создается исключение, стоимость обхода стека и очистки мало сравнимы с затраты на вызов функции. Дополнительные структуры данных необходимые для отслеживания стека вызова после **попробуйте** введен блок и необходимы дополнительные инструкции для раскручивания стека в том случае, если создается исключение. Однако в большинстве случаев затраты на производительность и объем памяти не имеет значения. Скорее всего, будет значительным только при очень ограниченных в памяти системах неблагоприятное влияние на производительность исключений, или в важных для производительности циклы где ошибка вероятнее всего выполняются регулярно, и код для обработки, он тесно связан с код, который сообщает об этом. В любом случае невозможно знать фактические затраты исключений без профилирование и измерения. Даже в тех редких случаях, когда затраты существенны, вы уравновешиваются повышением корректности, упрощением сопровождения и другие преимущества, предоставляемые обеспечиваемыми продуманной политикой исключений.
+The exception mechanism has a very minimal performance cost if no exception is thrown. If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call. Additional data structures are required to track the call stack after a **try** block is entered, and additional instructions are required to unwind the stack if an exception is thrown. However, in most scenarios, the cost in performance and memory footprint is not significant. The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it. In any case, it's impossible to know the actual cost of exceptions without profiling and measuring. Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.
 
-## <a name="exceptions-vs-assertions"></a>Исключения и проверочные утверждения
+## <a name="exceptions-vs-assertions"></a>Exceptions vs. assertions
 
-Исключения и проверочные утверждения, два разных механизма для обнаружения ошибок времени выполнения в программе. Использование утверждений для проверки условий во время разработки, никогда не должно быть значение true, если ваш код является правильным. Нет смысла в обработке такой ошибки с помощью исключения, так как эта ошибка означает, что что-то в коде должно быть зафиксировано и не представляют собой условие, которое программе следует выйти из во время выполнения. Утверждение останавливает выполнение на операторе, таким образом, чтобы можно было проверить состояние программы в отладчике; исключение продолжает выполнение из первого соответствующий обработчика catch. Используйте исключения для проверки условия ошибок, которые могут возникнуть во время выполнения, даже если код является правильным, например, «файл не найден» или «нехватка памяти». Может потребоваться выйти из этих условий, даже в том случае, если восстановление только выводит сообщение в журнал и завершает выполнение программы. Всегда проверяйте аргументы открытых функций с помощью исключения. Даже если функции без ошибок, полный контроль над аргументами, которые пользователь может передать не возможно.
+Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program. Use asserts to test for conditions during development that should never be true if all your code is correct. There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time. An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler. Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory." You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program. Always check arguments to public functions by using exceptions. Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.
 
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Исключения C++ и исключениями Windows SEH
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ exceptions versus Windows SEH exceptions
 
-Программы на языках C и C++ могут использовать механизм структурированной обработки исключений (SEH) в операционной системе Windows. Основные понятия в SEH напоминают эти в C++ исключениями, за исключением того, что SEH использует **__try**, **__except**, и **__finally** вместо конструкции **попробуйте**  и **catch**. В Microsoft C++ компилятор (MSVC), C++ исключения реализованы для SEH. Тем не менее при написании кода C++, используйте синтаксис исключения C++.
+Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the **__try**, **__except**, and **__finally** constructs instead of **try** and **catch**. In the Microsoft C++ compiler (MSVC), C++ exceptions are implemented for SEH. However, when you write C++ code, use the C++ exception syntax.
 
-Дополнительные сведения о SEH см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
+For more information about SEH, see [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
 
-## <a name="exception-specifications-and-noexcept"></a>Спецификации исключений и noexcept
+## <a name="exception-specifications-and-noexcept"></a>Exception specifications and noexcept
 
-Спецификации исключений были введены в C++ как способ определения исключений, которые может создавать функция. Однако спецификации исключений оказался проблематичными на практике и являются устаревшими в стандарте C ++ 11 черновик. Мы рекомендуем не использовать спецификации исключений, за исключением `throw()`, что означает, что функция не позволяет исключений для выхода. Если необходимо использовать спецификации исключений типа `throw(` *тип*`)`, имейте в виду, что MSVC стандарту определенными способами. Дополнительные сведения см. в разделе [спецификации исключений (throw)](../cpp/exception-specifications-throw-cpp.md). `noexcept` Описатель представлена в C ++ 11 как основная альтернатива `throw()`.
+Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw. However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that MSVC departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](exception-specifications-throw-cpp.md). The `noexcept` specifier is introduced in C++11 as the preferred alternative to `throw()`.
 
 ## <a name="see-also"></a>См. также
 
 [Практическое руководство. Интерфейс между кодом с исключениями и без исключений](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[Возвращение к C++ (современный C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)
