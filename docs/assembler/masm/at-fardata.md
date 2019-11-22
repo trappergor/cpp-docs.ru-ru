@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@fardata symbol'
 ms.assetid: b1e096b3-54fc-44ef-bbe6-0c6d5f5d206d
-ms.openlocfilehash: 32accbf29779378c610ae375ff7faba858833c55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5a659c0592103ac5c52729c09d37cbe94d3bad2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179033"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302617"
 ---
-# <a name="fardata"></a>@fardata
+# <a name="fardata"></a>\@фардата
 
-Имя сегмента определяется [. FARDATA](../../assembler/masm/dot-fardata.md) директива (макрос text).
+Имя сегмента, определенного [. ](../../assembler/masm/dot-fardata.md)Директива фардата (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @fardata
+> **\@фардата**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](../../assembler/masm/symbols-reference.md)

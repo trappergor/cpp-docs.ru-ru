@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624415"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303243"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
@@ -71,9 +71,9 @@ ms.locfileid: "73624415"
 
 Так как генератор Ninja предназначен для ускорения сборки в ущерб гибкости и функциональности, он используется по умолчанию. Однако некоторые проекты CMake могут быть неспособны использовать Ninja правильно. В этом случае можно указать, что CMak должен создавать проекты Visual Studio.
 
-Чтобы указать генератор Visual Studio в Visual Studio 2017, откройте из главного меню пункт **CMAK | Измените параметры CMak**. Удалите слово Ninja и введите букву V. Это активирует IntelliSense, позволяя выбрать нужный генератор.
+Чтобы указать генератор Visual Studio в Visual Studio 2017, откройте из главного меню пункт **CMAK | Измените параметры CMak**. Удалите "Ninja" и введите "V". Это активирует IntelliSense, позволяя выбрать нужный генератор.
 
-Чтобы указать генератор Visual Studio в Visual Studio 2019, щелкните правой кнопкой мыши файл *CMakeLists. txt* в **Обозреватель решений** и выберите **Параметры CMAK для проекта** > **Показывать дополнительные параметры** > **CMAK. Генератор**.
+Чтобы указать генератор Visual Studio в Visual Studio 2019, щелкните правой кнопкой мыши файл *CMakeLists. txt* в **Обозреватель решений** и выберите **Параметры CMAK для проекта** > **Показывать дополнительные параметры** > **генератора подключений CMAK**.
 
 Когда для активной конфигурации выбран генератор Visual Studio, по умолчанию вызывается MSBuild.exe с аргументами `-m -v:minimal`. Чтобы настроить сборку в файле *CMakeSettings. JSON* , можно указать дополнительные [аргументы командной строки MSBuild](../build/reference/msbuild-visual-cpp-overview.md) для передачи в систему сборки с помощью свойства `buildCommandArgs`:
 
@@ -163,13 +163,13 @@ ms.locfileid: "73624415"
 
 *Среда* инкапсулирует переменные среды, заданные в процессе, который Visual Studio использует для вызова CMAK. exe. Для проектов КОМПИЛЯТОРОМ MSVC используются переменные, заданные в [командной строке разработчика](building-on-the-command-line.md) для конкретной платформы. Например, `msvc_x64_x64` среда аналогична запуску **Командная строка разработчика для vs 2017** или **Командная строка разработчика для VS 2019** с аргументами **-Arch = AMD64-host_arch = AMD64** . Можно использовать синтаксис `env.{<variable_name>}` в *CMakeSettings. JSON* для ссылки на отдельные переменные среды, например для создания путей к папкам.  Предоставляются следующие предопределенные среды:
 
-- linux_arm: удаленная версия ARM Linux.
+- linux_arm: Удаленная настройка ARM Linux.
 - linux_x64: Целевая версия x64 Linux удаленно.
-- linux_x86: target x86 Linux удаленно.
+- linux_x86: Целевая платформа x86 Linux удаленно.
 - msvc_arm: целевые окна ARM с компилятором КОМПИЛЯТОРОМ MSVC.
 - msvc_arm_x64: целевые окна ARM с 64-разрядным компилятором КОМПИЛЯТОРОМ MSVC.
-- msvc_arm64: target ARM64 Windows с компилятором КОМПИЛЯТОРОМ MSVC.
-- msvc_arm64_x64: target ARM64 Windows с 64-разрядным компилятором КОМПИЛЯТОРОМ MSVC.
+- msvc_arm64: целевые окна ARM64 с компилятором КОМПИЛЯТОРОМ MSVC.
+- msvc_arm64_x64: целевые окна ARM64 с 64-разрядным компилятором КОМПИЛЯТОРОМ MSVC.
 - msvc_x64: целевые окна x64 с компилятором КОМПИЛЯТОРОМ MSVC.
 - msvc_x64_x64: целевые окна x64 с 64-разрядным компилятором КОМПИЛЯТОРОМ MSVC.
 - msvc_x86: целевые окна x86 с компилятором КОМПИЛЯТОРОМ MSVC.
@@ -256,7 +256,7 @@ ms.locfileid: "73624415"
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

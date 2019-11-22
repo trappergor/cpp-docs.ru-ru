@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-ms.openlocfilehash: 07ef0a1383a24f8c63c7e005b6f4e2da80e1ad28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0a351b4305049ecaf6f72c3049ddb3f1f0ecd9d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179228"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301997"
 ---
-# <a name="stack"></a>@stack
+# <a name="stack"></a>стек \@
 
-DGROUP для рядом стеки или СТЕК для дальней стеки (макрос text).
+ДГРАУП для ближайших стеков или СТЕКа для дальнего времени (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @stack
+> **стек \@**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](../../assembler/masm/symbols-reference.md)
