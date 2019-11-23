@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: 0dcac81bcf7bcbc5fbb956195cf9645d8b59200b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f354a2ce3413976996f1e0bade1a5a706d4a3c54
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203108"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397530"
 ---
 # <a name="forc"></a>FORC
 
-Помечает блок, который повторяется один раз для каждого символа в *строка*, с помощью текущего символ замены *параметр* на каждом проходе.
+Marks a block that will be repeated once for each character in *string*, with the current character replacing *parameter* on each repetition.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Принудительное Включение *параметр*, \< *строки*><br/>
-> *Инструкции*<br/>
-> ENDM
+> **FORC** *parameter*, __\<__ *string* __>__ \
+> *statements*\
+> **ENDM**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Совпадение с кодом [IRPC](../../assembler/masm/irpc.md).
+Same as [IRPC](../../assembler/masm/irpc.md).
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

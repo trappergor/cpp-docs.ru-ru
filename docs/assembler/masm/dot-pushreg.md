@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 19e36f1c0b073c5b174ea9acb0f1eaac7d771c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2190bd05667de82dada34a63f11647c653f97247
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203984"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398026"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Создает `UWOP_PUSH_NONVOL` очистки записи кода для указанного зарегистрировать номер, с помощью текущего смещения в прологе.
+Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
 
 ## <a name="syntax"></a>Синтаксис
 
-> . Регистрация PUSHREG
+> .PUSHREG register
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-. PUSHREG позволяет ml64.exe пользователю указать, каким образом функция кадра освобождает и разрешен только в пределах пролога, начиная с позиции [PROC](../../assembler/masm/proc.md) объявление КАДРА [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) директива. Эти директивы не создают код; они создают только `.xdata` и `.pdata`. . PUSHREG должно предшествовать инструкции, которые на деле реализуют действия, чтобы быть развернут. Рекомендуется переносить директивы очистки и код, который они предназначены для очистки в макросе для обеспечения соглашения.
+**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-Дополнительные сведения см. в разделе [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Пример
 
 ### <a name="description"></a>Описание
 
-Следующий пример показано, как для принудительной отправки долговременного tegisters.
+The following sample shows how to push non-volatile registers.
 
 ### <a name="code"></a>Код
 
@@ -57,4 +57,4 @@ END
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)
