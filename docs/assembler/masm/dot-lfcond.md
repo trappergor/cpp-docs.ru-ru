@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .LFCOND directive
 ms.assetid: ed35590d-cc48-4de6-b775-b4f3434d08af
-ms.openlocfilehash: 68dce22f2040468dde1bfae88d1192c0d49900c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65d44a1815bb9ae0d95c5c70516dbe4c1350c66a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178760"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398205"
 ---
 # <a name="lfcond"></a>.LFCOND
 
 ## <a name="syntax"></a>Синтаксис
 
-> .LFCOND
+> **.LFCOND**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-См. в разделе [. LISTIF](../../assembler/masm/dot-listif.md).
+See [.LISTIF](../../assembler/masm/dot-listif.md).
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

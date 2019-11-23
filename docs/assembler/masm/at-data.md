@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 50c8128697ab9d488be013bed10d6875ce8bd33a
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 365fc0f0318ded7c3098551ab8c1010e9257ff2e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302727"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399190"
 ---
-# <a name="data"></a>\@данных
+# <a name="data"></a>\@data
 
-Имя группы данных по умолчанию. Возвращает значение ДГРАУП для всех моделей, кроме **плоского**. Вычисляется как **плоский** в модели **плоской** памяти (текстовый макрос).
+The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@данных**
+> **\@data**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

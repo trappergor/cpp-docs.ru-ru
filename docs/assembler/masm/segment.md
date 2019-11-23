@@ -6,62 +6,62 @@ f1_keywords:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210379"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393728"
 ---
 # <a name="segment"></a>SEGMENT
 
-Определяет сегмент программы вызывается *имя* атрибутами сегмента
+Defines a program segment called *name* having segment attributes
 
 ## <a name="syntax"></a>Синтаксис
 
-> *имя* СЕГМЕНТ [[только для чтения]] [[*выровнять*]] [[*объединить*]] [[*использовать*]] [[*характеристики*]] ПСЕВДОНИМ (*строка*) [["*класс*"]]<br/>
-> *Инструкции*<br/>
-> *имя* заканчивается
+> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
+> *statements*\
+> *name* **ENDS**
 
 #### <a name="parameters"></a>Параметры
 
 *align*<br/>
-Диапазон адресов памяти, из которых можно выбрать начальный адрес сегмента. Тип выравнивания может принимать любое из следующих:
+The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
 
-|Тип выравнивания|Начальный адрес|
+|Align Type|Starting Address|
 |----------------|----------------------|
-|**BYTE**|Адрес следующего доступных байтов.|
-|**WORD**|Адрес следующего доступных word (2 байта на word).|
-|**DWORD**|Адрес следующего доступных двойное слово (4 байта на двойное слово).|
-|**PARA**|Адрес следующего абзаца доступных (16 байт на абзаца).|
-|**PAGE**|Адрес следующего странице (256 байт на страницу).|
-|**ВЫРОВНЯТЬ**(*n*)|Далее доступных *n*адрес th байта. См. раздел "Примечания" Дополнительные сведения.|
+|**BYTE**|Next available byte address.|
+|**WORD**|Next available word address (2 bytes per word).|
+|**DWORD**|Next available double word address (4 bytes per double word).|
+|**PARA**|Next available paragraph address (16 bytes per paragraph).|
+|**PAGE**|Next available page address (256 bytes per page).|
+|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
 
-Если этот параметр не указан, **PARA** используется по умолчанию.
+If this parameter is not specified, **PARA** is used by default.
 
-*combine*<br/>
-**ОТКРЫТЫЙ**, **стека**, **РАСПРОСТРАНЕННЫХ**, **памяти**, **в**<em>адрес</em>, **ЗАКРЫТЫЙ**
+*combine*\
+**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
 
-*Используйте*<br/>
-**USE16**, **USE32**, **НЕСТРУКТУРИРОВАННЫЙ**
+*use*\
+**USE16**, **USE32**, **FLAT**
 
-*Характеристики*<br/>
-**Сведения о**, **чтение**, **записи**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, и **ОТМЕНИТЬ**
+*characteristics*\
+**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
 
-Они поддерживаются только для COFF и соответствуют характеристикам разделе COFF похожим именем (например, **SHARED** соответствует IMAGE_SCN_MEM_SHARED). ЧТЕНИЕ устанавливает флаг IMAGE_SCN_MEM_READ. Устаревший флаг READONLY вызвал разделе, чтобы удалить флаг IMG_SCN_MEM_WRITE. При наличии *характеристики* задаются, по умолчанию параметры не используются и действуют только флаги заданного программистом.
+These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
 
-`ALIAS(` *Строка* `)`<br/>
-Эта строка используется в качестве имени раздела в порожденный объект COFF.  Создает несколько разделов с внешних с одинаковым именем, уникальные имена сегмент MASM.
+_string_\
+This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
 
-Не поддерживается с **/OMF**.
+Not supported with **/omf**.
 
-*class*<br/>
-Определяет, как следует следует объединить и упорядочены в файле собранный сегментов. Обычно используются значения, `'DATA'`, `'CODE'`, `'CONST'` и `'STACK'`
+*class*\
+Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Для `ALIGN(n)`, *n* может стать любая степень 2 от 1 до 8192; не поддерживается с **/OMF**.
+For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

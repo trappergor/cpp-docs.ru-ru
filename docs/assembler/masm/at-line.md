@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Line symbol'
 ms.assetid: f879fda0-c046-478a-acbd-2e7ff7f7ddad
-ms.openlocfilehash: 1bb02778a1b6525a9844d2db47cf362f6793aff5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0b02c7f3ac0722ca9ad90d42acf08e93766e7922
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301923"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398970"
 ---
-# <a name="line"></a>Строка \@
+# <a name="line"></a>\@Line
 
-Номер исходной строки в текущем файле (число равно).
+The source line number in the current file (numeric equate).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **Строка \@**
+> **\@Line**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

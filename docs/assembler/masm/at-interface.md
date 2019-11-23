@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Interface symbol'
 ms.assetid: 266ecba9-9e96-4086-8ee4-a3d0161b6e29
-ms.openlocfilehash: ae07df9c72633034c481b27270b08488d1355322
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: e654f533c9e2f17b3c5d123997bb6260a855a4b7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398981"
 ---
-# <a name="interface"></a>Интерфейс \@
+# <a name="interface"></a>\@Interface
 
-Сведения о параметрах языка (числовой равенство).
+Information about the language parameters (numeric equate).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **Интерфейс \@**
+> **\@Interface**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)
