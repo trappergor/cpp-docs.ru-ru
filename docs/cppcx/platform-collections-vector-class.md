@@ -1,5 +1,5 @@
 ---
-title: Класс Platform::Collections::Vector
+title: 'Класс Platform::Collections:: Vector'
 ms.date: 10/01/2019
 ms.topic: reference
 f1_keywords:
@@ -28,7 +28,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 10/02/2019
 ms.locfileid: "71816580"
 ---
-# <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
+# <a name="platformcollectionsvector-class"></a>Класс Platform::Collections:: Vector
 
 Представляет упорядоченную коллекцию объектов с индивидуальным доступом, осуществляемым при помощи индекса. Реализует [Windows:: Foundation:: Collections:: иобсерваблевектор](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) для помощи с [привязкой данных](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
@@ -55,9 +55,9 @@ template <typename T, typename E>
 
 1. класс интерфейса ^
 
-1. открытый ссылочный класс ^
+1. открытый класс ссылки ^
 
-1. структура значений
+1. структура значения
 
 1. открытый класс перечисления
 
@@ -65,17 +65,17 @@ template <typename T, typename E>
 
 При попытке использовать тип **vector** в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Vector](#ctor)|Инициализирует новый экземпляр класса Vector.|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Append](#append)|Вставляет указанный элемент после последнего элемента текущего объекта Vector.|
 |[Vector::Clear](#clear)|Удаляет все элементы текущего объекта Vector.|
@@ -95,8 +95,8 @@ template <typename T, typename E>
 
 |||
 |-|-|
-|name|Описание|
-|события [Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ векторчанжед](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
+|Имя|Описание|
+|[Windows Event:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ векторчанжед](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>Параметры
 
-*value*<br/>
+*значение*<br/>
 Элемент, который нужно найти.
 
 *номер*<br/>
@@ -367,7 +367,7 @@ Vector(std::initializer_list<T> il);
 Тип коллекции объектов, используемой для инициализации текущего объекта Vector.
 
 *il*<br/>
-Объект [std:: initializer_list](../standard-library/initializer-list-class.md) объектов типа *T* , который будет использоваться для инициализации вектора.
+Объект [std:: initializer_list](../standard-library/initializer-list-class.md) объектов типа *T* , которые будут использоваться для инициализации вектора.
 
 *N*<br/>
 Количество элементов в коллекции объектов, используемой для инициализации текущего объекта Vector.
@@ -375,7 +375,7 @@ Vector(std::initializer_list<T> il);
 *size*<br/>
 Количество элементов в объекте Vector.
 
-*value*<br/>
+*значение*<br/>
 Значение, используемое для инициализации каждого элемента в текущем объекте Vector.
 
 *v*<br/>
@@ -390,7 +390,7 @@ Vector(std::initializer_list<T> il);
 *Последняя*<br/>
 Последний элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *Last* передается средствами *идеальной пересылки*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Коллекции (C++/CX)](collections-c-cx.md)<br/>
 [Пространство имен платформы](platform-namespace-c-cx.md)<br/>

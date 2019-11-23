@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: НеобработанныеC++указатели ()
+description: Использование необработанных указателей вC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250688"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>НеобработанныеC++указатели ()
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+Указатель — это тип переменной, которая хранит адрес объекта в памяти и используется для доступа к этому объекту. *Необработанный указатель* — это указатель, время существования которого не контролируется инкапсулированным объектом, например [интеллектуальным указателем](smart-pointers-modern-cpp.md). Необработанному указателю может быть присвоен адрес другой переменной, не являющейся указателем, или ему может быть присвоено значение [nullptr](nullptr.md). Указатель, которому не присвоено значение, содержит случайные данные.
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+Указатель может также быть *разыменован* для получения значения объекта, на который он указывает. *Оператор доступа к членам* предоставляет доступ к членам объекта.
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+Указатель может указывать на типизированный объект или на **void**. Когда программа выделяет новый объект в [куче](https://wikipedia.org/wiki/Heap) в памяти, он получает адрес этого объекта в виде указателя. Такие указатели называются *указателями-владельцами*; для явного удаления выделенного в куче объекта, когда он больше не нужен, необходимо использовать указатель-владелец (или его копию). Сбой при удалении памяти приводит к *утечке памяти* и отображению этого расположения памяти, недоступного для любой другой программы на компьютере. Дополнительные сведения см. в разделе [операторы new и DELETE](new-and-delete-operators.md).
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+Указатель (если он не объявлен как **const**) можно увеличить или уменьшить, чтобы он указывал на новое место в памяти. Это называется *арифметикой указателей* и используется в программировании в стиле C для итерации элементов в массивах или других структурах данных. Невозможно создать указатель **const** для указания на другое место в памяти, и в этом смысле очень похоже на [ссылку](references-cpp.md). Дополнительные сведения см. в разделе [указатели const и volatile](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+В 64-разрядных операционных системах указатель имеет размер 64 бит; размер указателя системы определяет, сколько памяти она может иметь. Все копии точки указателя на одно и то же место в памяти. Указатели (вместе со ссылками) широко используются C++ для передачи больших объектов в функции и из них, поскольку обычно гораздо эффективнее копировать 64-разрядный адрес объекта, чем копирование всего объекта. При определении функции указывайте параметры-указатели как **константы** , если только вы не хотите, чтобы функция изменила объект. Как правило, **константные** ссылки являются предпочтительным способом передачи объектов в функции, если только значение объекта не может быть **nullptr**.
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+[Указатели на функции](#pointers_to_functions) позволяют передавать функции другим функциям и использоваться для обратных вызовов в программировании в стиле C. В C++ современных для этой цели используются [лямбда-выражения](lambda-expressions-in-cpp.md) .
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>Доступ к инициализации и членам
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+В следующем примере показано, как объявить необработанный указатель и инициализировать его с помощью объекта, выделенного в куче, и как его использовать. В нем также показаны некоторые опасности, связанные с необработанными указателями. (Помните, что это программирование в стиле C и не современный C++!)
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>Арифметические и массивные указатели
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+Указатели и массивы тесно связаны друг с друга. Когда массив передается в функцию по значению, он передается в качестве указателя на первый элемент. В следующем примере показаны следующие важные свойства указателей и массивов.
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- Оператор `sizeof` возвращает общий размер массива в байтах
+- чтобы определить количество элементов, разделите общее число байтов на размер одного элемента.
+- когда массив передается в функцию, он *декайс* к типу указателя
+- Оператор `sizeof` при применении к указателю возвращает размер указателя, 4 байта на x86 или 8 байт в x64
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+Для указателей, не являющихся константами, можно выполнять определенные арифметические операции, чтобы они указывали на новое место в памяти. Указатель можно увеличить и уменьшить с помощью операторов **++** , **+=** , **-=** и **--** . Этот метод можно использовать в массивах и особенно полезен в буферах нетипизированных данных. Значение **void\*** увеличивается на размер типа **char** (1 байт). Типизированный указатель увеличивается по размеру типа, на который он указывает.
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+В следующем примере показано, как можно использовать арифметические действия с указателями для доступа к отдельным пикселям точечного рисунка в Windows. Обратите внимание на использование операторов **New** и **Delete**и оператор разыменования. 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>пустые * указатели
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+Указатель на **void** просто указывает на расположение необработанной памяти. Иногда необходимо использовать **пустые\*** указатели, например при передаче между C++ кодом и функциями C. 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+Если типизированный указатель приводится к указателю типа void, содержимое области памяти не изменяется, но сведения о типе теряются, поэтому нельзя выполнять операции увеличения или уменьшения. Расположение в памяти может быть приведено, например, от MyClass * к void * и обратно в MyClass *. Такие операции по сути подвержены ошибкам, и для их предотвращения необходимо иметь большое значение. Современная C++ не рекомендует использовать указатели void, если это не обязательно.
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>Указатели на функции
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+В программировании в стиле C указатели функций используются в основном для передачи функций другим функциям. В этом сценарии вызывающий объект может настроить поведение функции, не изменяя ее. В современных C++ [лямбда-выражения](lambda-expressions-in-cpp.md) обеспечивают те же возможности, что и более строгая типизация, и другие преимущества.
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+Объявление указателя на функцию указывает сигнатуру, которую должна иметь функция, на которую должен быть указан объект.
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+В следующем примере показана функция `combine`, которая принимает в качестве параметра любую функцию, которая принимает `std::string` и возвращает `std::string`. В зависимости от функции, которая передается в `combine`, она будет либо в начале, либо при добавлении строки.
 
 ```cpp
 #include <iostream>
@@ -342,9 +342,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[Смарт-указатели](smart-pointers-modern-cpp.md)
+[оператор косвенного обращения: *](indirection-operator-star.md)<br/>
 [Оператор address-of: &](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[Добро пожаловать обратно вC++](welcome-back-to-cpp-modern-cpp.md)
