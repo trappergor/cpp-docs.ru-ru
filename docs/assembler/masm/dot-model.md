@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703585"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398115"
 ---
-# <a name="model-32-bit-masm"></a>. МОДЕЛЬ (32-разрядный MASM)
+# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
 
-Инициализирует модель памяти программы. (только 32-разрядный MASM.)
+Инициализирует модель памяти программы. (32-bit MASM only.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
 
 ### <a name="parameters"></a>Параметры
 
-*memorymodel*<br/>
+*memory-model*\
 Обязательный параметр, который определяет размер кода и указателей данных.
 
-*langtype*<br/>
+*language-type*\
 Необязательный параметр, который задает соглашения о вызовах и именовании для процедур и открытых символов.
 
-*stackoption*<br/>
+*stack-option*\
 Необязательный параметр.
 
-*stackoption* не используется, если *memorymodel* имеет значение `FLAT`.
+*stack-option* is not used if *memory-model* is **FLAT**.
 
-Указание `NEARSTACK` группирует сегмент стека в один физический сегмент (`DGROUP`) наряду с данными. Предполагается, что в регистре сегмента стека (`SS`) хранится тот же адрес, что и в регистре сегмента данных (`DS`). `FARSTACK` не группирует стек с `DGROUP`; таким образом `SS` не равно `DS`.
+Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
 
 ## <a name="remarks"></a>Заметки
 
-.`MODEL` не используется в [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 В следующей таблице перечислены возможные значения для каждого параметра при нацеливании на 16-разрядные и 32-разрядные платформы:
 
 |Параметр|32-разрядные значения|16-разрядные значения (поддержка более ранней разработки 16-разрядных приложений)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|Не используется|`NEARSTACK`, `FARSTACK`|
+|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
+|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
+|*stack-option*|Не используется|**NEARSTACK**, **FARSTACK**|
 
 ## <a name="code"></a>Код
 
@@ -88,4 +88,4 @@ end
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

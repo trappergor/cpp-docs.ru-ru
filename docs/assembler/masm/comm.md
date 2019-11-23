@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179111"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398830"
 ---
 # <a name="comm"></a>COMM
 
-Создание общей переменной с атрибутами, заданными в *определение*.
+Creates a communal variable with the attributes specified in *definition*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **COMM** *определение* [, *определение*]...
+> **COMM** *definition* ⟦ __,__ *definition* ...⟧
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Общих переменных выделяются компоновщиком и не может быть инициализирован. Это означает, что вы не может зависеть от расположения или последовательности таких переменных.
+Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
 
-Каждый *определение* имеет следующий вид:
+Each *definition* has the following form:
 
-[*langtype*] [**NEAR** &#124; **FAR**] _метка_**:**_тип_[**:**_число_]
+⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-Необязательный *langtype* задает соглашения об именовании для него имя. Этот параметр переопределяет любой язык, заданный параметром **. МОДЕЛЬ** директива. Необязательный **NEAR** или **FAR** переопределить текущей модели памяти. *Метка* имя переменной. *Тип* может быть любым описателем типа ([БАЙТОВ](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), и так далее) или целое число, указывающее число байтов. Необязательный *число* указывает число элементов в объекте объявленный данных; значение по умолчанию — один.
+The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
 
 ## <a name="example"></a>Пример
 
-В этом примере создает массив из элементов 512 БАЙТ:
+This example creates an array of 512 BYTE elements:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)
