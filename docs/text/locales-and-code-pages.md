@@ -15,32 +15,32 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5821048363d92911f2902a580cb11f5b349f5e7c
+ms.sourcegitcommit: 4f15b69e35dd112001b24fe9dc836dd5d6902465
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410646"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74474070"
 ---
 # <a name="locales-and-code-pages"></a>Языковые стандарты и кодовые страницы
 
-КОД языка отражает региональные параметры и язык для конкретной географической области. Данного языка могут разговаривать в более чем одной страны (региона); например на португальском говорят в Бразилии, также как и в Португалии. И наоборот страны или региона может иметь более одного официальным языком. Например Канада имеет два языка: Английский и французский языки. Таким образом Канада имеет две различных национальных настройки: Канадский английский и французский (Канада). К некоторым категориям, зависящим от языкового стандарта, относится формат дат и отображения денежных значений.
+A locale ID reflects the local conventions and language for a particular geographical region. A given language might be spoken in more than one country/region; for example, Portuguese is spoken in Brazil as well as in Portugal. Conversely, a country/region might have more than one official language. For example, Canada has two languages: English and French. Thus, Canada has two distinct locales: Canadian-English and Canadian-French. К некоторым категориям, зависящим от языкового стандарта, относится формат дат и отображения денежных значений.
 
-Язык определяет текст и форматирование соглашения, а при страны или региона определяется локальными соглашениями данных. Каждый язык имеет уникальное сопоставление, представленный кодовые страницы, включая символы, отличные от тех, в алфавите (например, знаки препинания и цифры). Кодовая страница — это набор символов и связан с языком. Таким образом [языкового стандарта](../c-runtime-library/locale.md) представляет собой уникальное сочетание языка, страны или региона и кодовой страницы. Параметр языковой стандарт и кодовую страницу можно изменить во время выполнения путем вызова [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) функции.
+The language determines the text and data formatting conventions, while the country/region determines the local conventions. Every language has a unique mapping, represented by code pages, which includes characters other than those in the alphabet (such as punctuation marks and numbers). A code page is a character set and is related to the language. As such, a [locale](../c-runtime-library/locale.md) is a unique combination of language, country/region, and code page. The locale and code page setting can be changed at run time by calling the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) function.
 
-Различные языки могут использовать разные кодовые страницы. Например кодовая страница ANSI 1252 используется для английского и большинства европейских языков, а кодовая страница ANSI 932 используется для японского иероглифического письма Кандзи. Практически все кодовые страницы совместно используют набор символов ASCII для первых 128 символов (от 0x00 до 0x7F).
+Different languages might use different code pages. For example, the ANSI code page 1252 is used for English and most European languages, and the ANSI code page 932 is used for Japanese Kanji. Virtually all code pages share the ASCII character set for the lowest 128 characters (0x00 to 0x7F).
 
-Любой однобайтовые кодовые страницы могут быть представлены в таблице (с 256 записями) как сопоставление байтовых значений, которые символов (включая цифры и знаки препинания) или глифов. Многобайтовую кодовую страницу, также могут быть представлены как очень большой таблицы (с записями 64K) значений двухбайтовых символов. На практике Однако она обычно представляется как таблица для первых 256 (однобайтовые) символы и как диапазоны для двухбайтовых значений.
+Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it is usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
 
 Дополнительные сведения о кодовых страницах см. в разделе [Code Pages](../c-runtime-library/code-pages.md).
 
-Библиотеки времени выполнения C имеет два типа внутренних кодовых страниц: локальная и многобайтовая. Текущую кодовую страницу можно изменить во время выполнения программы (см. в документации [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) и [_setmbcp](../c-runtime-library/reference/setmbcp.md) функции). Кроме того библиотеки времени выполнения может получить и использовать значение кодовой страницы операционной системы, который является константой на время выполнения программы.
+The C run-time library has two types of internal code pages: locale and multibyte. You can change the current code page during program execution (see the documentation for the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) and [_setmbcp](../c-runtime-library/reference/setmbcp.md) functions). Also, the run-time library might obtain and use the value of the operating system code page, which is constant for the duration of the program's execution.
 
-При изменении кодовой страницей языкового стандарта поведения, зависящего от языкового стандарта набора функций изменяется в соответствии с выбранной кодовой страницей. По умолчанию все функции, зависящие от языкового стандарта начать выполнение с кодовой страницей языкового стандарта, уникальные для языковом стандарте «C». Можно изменить кодовую страницу языкового внутренней (а также другие свойства зависящих от языкового стандарта) путем вызова `setlocale` функции. Вызов `setlocale`(LC_ALL, «») устанавливает языковой стандарт, указанный пользователем национальная настройка пользователя операционной системы.
+When the locale code page changes, the behavior of the locale-dependent set of functions changes to that dictated by the chosen code page. By default, all locale-dependent functions begin execution with a locale code page unique to the "C" locale. You can change the internal locale code page (as well as other locale-specific properties) by calling the `setlocale` function. A call to `setlocale`(LC_ALL, "") sets the locale to that indicated by the operating system user locale.
 
-Аналогичным образом, когда многобайтовую кодовую страницу изменения, поведение многобайтовых функций изменяется в соответствии с выбранной кодовой страницей. По умолчанию все многобайтовых функций начать выполнение с многобайтовой кодовой странице, соответствующей кодовая страница операционной системы по умолчанию. Внутренняя многобайтовую кодовую страницу можно изменить, вызвав `_setmbcp` функции.
+Similarly, when the multibyte code page changes, the behavior of the multibyte functions changes to that dictated by the chosen code page. By default, all multibyte functions begin execution with a multibyte code page corresponding to the operating system's default code page. You can change the internal multibyte code page by calling the `_setmbcp` function.
 
-Функции времени выполнения C `setlocale` задает, изменяет или возвращает некоторые или все сведения о языковом стандарте текущей программы. [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) подпрограмма — это двухбайтовая версия `setlocale`; аргументы и возвращаемые значения `_wsetlocale` представляют собой строки расширенных символов.
+The C run-time function `setlocale` sets, changes, or queries some or all of the current program's locale information. The [_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine is a wide-character version of `setlocale`; the arguments and return values of `_wsetlocale` are wide-character strings.
 
 ## <a name="see-also"></a>См. также
 
