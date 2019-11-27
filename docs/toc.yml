@@ -1,4 +1,4 @@
-﻿- name: C++ в Visual Studio
+- name: C++ в Visual Studio
   items:
     - name: C++ в Visual Studio
       href: overview/visual-cpp-in-visual-studio.md
