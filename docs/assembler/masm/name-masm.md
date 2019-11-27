@@ -15,12 +15,12 @@ ms.locfileid: "74397150"
 ---
 # <a name="name-masm"></a>NAME (MASM)
 
-Не обрабатывается.
+Пропускается.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **NAME**
+> **БЕЗЫМЯН**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

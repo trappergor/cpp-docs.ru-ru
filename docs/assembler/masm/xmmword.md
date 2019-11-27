@@ -15,15 +15,15 @@ ms.locfileid: "74392794"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
+Используется для 128-разрядных операндов мультимедиа с инструкциями MMX и SSE (XMM).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **XMMWORD**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-**XMMWORD** is intended to represent the same type as [__m128](../../cpp/m128.md).
+**Ксммворд** предназначен для представления того же типа, что и [__m128](../../cpp/m128.md).
 
 ## <a name="example"></a>Пример
 

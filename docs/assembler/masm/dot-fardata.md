@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398267"
 ---
-# <a name="fardata-32-bit-masm"></a>.FARDATA (32-bit MASM)
+# <a name="fardata-32-bit-masm"></a>. ФАРДАТА (32-разрядный компилятор MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a far data segment for initialized data (segment name FAR_DATA or *name*). (32-bit MASM only.)
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает сегмент данных для инициализированных данных (имя сегмента FAR_DATA или *имя*). (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.FARDATA** ⟦*name*⟧
+> **. ФАРДАТА** ⟦*имя*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

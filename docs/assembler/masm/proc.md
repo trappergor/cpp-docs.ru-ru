@@ -15,22 +15,22 @@ ms.locfileid: "74395030"
 ---
 # <a name="proc"></a>PROC
 
-Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
+Помечает начало и конец блока процедуры *с именем Label*. Инструкции в блоке могут вызываться с помощью инструкции **Call** или [Invoke](../../assembler/masm/invoke.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
-> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
-> *statements*\
-> *label* **ENDP**
+> *Метка* **proc** ⟦*Distance*⟧ ⟦*язык — тип*⟧ ⟦*Visibility*⟧ ⟦ __\<__ *прологуеарг* __>__ ⟧ ⟦**использует** *реглист*⟧ ⟦ __,__ *параметр* ⟦ __:__ *Tag*⟧... ⟧\
+> ⟦**Frame** ⟦ __:__ *ехандлер-Address*⟧ ⟧ \
+> *инструкции*\
+> *Метка* **ЕНДП**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
+⟦**Frame** ⟦ __:__ *ехандлер-Address*⟧ ⟧ является допустимым только в ml64. exe и приводит к тому, что компилятор MASM создает запись таблицы функций в pData-файл и сведения о выводу в. XData для структурированной обработки исключений функции.
 
-When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
+При использовании атрибута **Frame** за ним должен следовать [. ](../../assembler/masm/dot-endprolog.md)Директива ендпролог.
 
-See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
+Дополнительные сведения об использовании ml64. exe см. в разделе [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) .
 
 ## <a name="example"></a>Пример
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-The above code will emit the following function table and unwind information:
+Приведенный выше код выдаст следующую таблицу функций и сведения о выпуске:
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

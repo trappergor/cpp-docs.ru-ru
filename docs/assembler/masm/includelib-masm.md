@@ -15,16 +15,16 @@ ms.locfileid: "74397328"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Informs the linker that the current module should be linked with *libraryname*.
+Информирует компоновщик о том, что текущий модуль должен быть связан с *ИмяБиблиотеки*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **INCLUDELIB** *libraryname*
+> **Инклуделиб** *ИмяБиблиотеки*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*ИмяБиблиотеки* должен быть заключен в угловые скобки, если он содержит обратную косую черту, точку с запятой, символ "больше чем", символ "меньше", одиночную кавычку или двойную кавычку.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

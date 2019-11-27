@@ -15,16 +15,16 @@ ms.locfileid: "74398082"
 ---
 # <a name="nolist"></a>.NOLIST
 
-Suppresses program listing.
+Подавляет список программ.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.NOLIST**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Same as [.XLIST](../../assembler/masm/dot-xlist.md).
+То же, что и [. КСЛИСТ](../../assembler/masm/dot-xlist.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

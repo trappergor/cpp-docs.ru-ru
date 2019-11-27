@@ -15,16 +15,16 @@ ms.locfileid: "74398160"
 ---
 # <a name="listif"></a>.LISTIF
 
-Starts listing of statements in false conditional blocks.
+Запускает список инструкций в ложных условных блоках.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.LISTIF**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Same as [.LFCOND](../../assembler/masm/dot-lfcond.md).
+То же, что и [. ЛФКОНД](../../assembler/masm/dot-lfcond.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

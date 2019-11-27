@@ -49,7 +49,7 @@ ms.locfileid: "74302965"
 
 Представления элементов управления отображают в качестве представления элемент управления.
 
-[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
+[кктрлвиев](../mfc/reference/cctrlview-class.md)<br/>
 Базовый класс для всех представлений, связанных с элементами управления Windows. Ниже описаны представления, основанные на элементах управления.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
@@ -71,7 +71,7 @@ ms.locfileid: "74302965"
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 Окно, которое пользователь может разделить на несколько областей. Размеры этих панелей могут изменяться пользователем или фиксированным размером.
 
-[CPrintDialog](../mfc/reference/cprintdialog-class.md)<br/>
+[кпринтдиалог](../mfc/reference/cprintdialog-class.md)<br/>
 Предоставляет стандартное диалоговое окно для печати файла.
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
@@ -80,9 +80,9 @@ ms.locfileid: "74302965"
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
 Поддерживает список элементов OLE-клиентов, которые находятся в `CRichEditView`.
 
-[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
+[кричедиткнтритем](../mfc/reference/cricheditcntritem-class.md)<br/>
 Обеспечивает доступ на стороне клиента к элементу OLE, хранящемуся в `CRichEditView`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обзор класса](../mfc/class-library-overview.md)

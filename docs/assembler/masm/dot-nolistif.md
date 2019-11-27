@@ -15,16 +15,16 @@ ms.locfileid: "74398070"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Suppresses listing of conditional blocks whose condition evaluates to false (0).
+Подавляет вывод списка условных блоков, условие которых имеет значение false (0).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.NOLISTIF**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Это значение по умолчанию. Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
+Это значение по умолчанию. То же, что и [. СФКОНД](../../assembler/masm/dot-sfcond.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

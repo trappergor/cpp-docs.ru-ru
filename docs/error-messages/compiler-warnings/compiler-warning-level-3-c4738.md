@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: Предупреждение компилятора (уровень 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189400"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>Предупреждение компилятора (уровень 3) C4738
 
 хранение результатов в памяти в 32-разрядном формате с плавающей запятой, возможно снижение производительности
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 предупреждает о том, что результат присваивания, приведения, переданного аргумента или другой операции может быть округлен или что при выполнении операции были исчерпаны регистры и требуется использовать память (Сброс). Это может привести к снижению производительности.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Чтобы устранить это предупреждение и избежать округления, Скомпилируйте с параметром [/FP: Fast](../../build/reference/fp-specify-floating-point-behavior.md) или используйте `double` вместо `float`.
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Чтобы устранить это предупреждение и избежать нехватки регистров, измените порядок вычислений и измените использование встраивания.
 
 Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Пример
 
-The following sample generates C4738:
+Следующий пример приводит к возникновению ошибки C4738:
 
 ```cpp
 // C4738.cpp

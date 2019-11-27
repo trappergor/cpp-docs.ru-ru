@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399239"
 ---
-# <a name="b"></a>\@B
+# <a name="b"></a>\@б
 
-The location of the previous [\@\@:](../../assembler/masm/at-at.md) label.
+Расположение предыдущей [\@\@:](../../assembler/masm/at-at.md) Label.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@B**
+> **\@б**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

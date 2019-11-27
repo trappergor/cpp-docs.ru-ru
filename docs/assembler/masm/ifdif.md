@@ -17,17 +17,17 @@ ms.locfileid: "74397412"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF, IFDIFI
 
-Grants assembly if the text items are different.
+Предоставляет сборку, если текстовые элементы различаются.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **IFDIF** *textitem1* __,__ *textitem2*\
-> **IFDIFI** *textitem1* __,__ *textitem2*
+> **Ифдиф** *textitem1* __,__ *textitem2*\
+> **Ифдифи** *textitem1* __,__ *textitem2*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If **IFDIFI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Если задано значение **ифдифи** , при сравнении регистр не учитывается. Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

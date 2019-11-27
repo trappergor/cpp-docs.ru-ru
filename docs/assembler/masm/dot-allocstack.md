@@ -15,25 +15,25 @@ ms.locfileid: "74398634"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
+Создает **UWOP_ALLOC_SMALL** или **UWOP_ALLOC_LARGE** с указанным размером для текущего смещения в прологе.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ALLOCSTACK** *size*
+> **.**  *Размер* аллокстакк
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-MASM will choose the most efficient encoding for a given size.
+MASM выберет наиболее эффективную кодировку для заданного размера.
 
-**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. АЛЛОКСТАКК** позволяет пользователям ml64. exe указывать, как кадрировать функцию Frame, и допускается только в прологе, который расширяется из объявления кадра [процесса](../../assembler/masm/proc.md) в [. ](../../assembler/masm/dot-endprolog.md)Директива ендпролог. Эти директивы не создают код. они создают только `.xdata` и `.pdata`. **. АЛЛОКСТАКК** должен предшествовать инструкциям, которые фактически реализуют действия, которые должны быть развернуты. Рекомендуется заключить в оболочку как директивы очистки, так и код, предназначенный для очистки макроса, чтобы обеспечить соблюдение соглашения.
 
-The *size* operand must be a multiple of 8.
+Операнд *размера* должен быть кратен 8.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Пример
 
-The following sample shows how to specify an unwind/exception handler:
+В следующем примере показано, как задать обработчик очистки и исключения.
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,6 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

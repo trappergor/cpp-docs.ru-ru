@@ -13,49 +13,49 @@ ms.locfileid: "74393560"
 ---
 # <a name="symbols-reference"></a>Справочник по символам
 
-## <a name="date-and-time-information"></a>Date and time information
+## <a name="date-and-time-information"></a>Сведения о дате и времени
 
 |||
 |-|-|
-|[\@Date](../../assembler/masm/at-date.md)|[\@Time](../../assembler/masm/at-time.md)|
+|[Дата \@](../../assembler/masm/at-date.md)|[Время \@](../../assembler/masm/at-time.md)|
 
-## <a name="environment-information"></a>Environment information
-
-|||
-|-|-|
-|[\@Cpu](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
-|[\@Interface](../../assembler/masm/at-interface.md)|[\@Version](../../assembler/masm/at-version.md)|
-
-## <a name="file-information"></a>File information
+## <a name="environment-information"></a>Сведения о среде
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
-|[\@Line](../../assembler/masm/at-line.md)||
+|[\@ЦП](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
+|[Интерфейс \@](../../assembler/masm/at-interface.md)|[Версия \@](../../assembler/masm/at-version.md)|
 
-## <a name="macro-functions"></a>Macro functions
+## <a name="file-information"></a>Сведения о файле
 
 |||
 |-|-|
-|[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
-|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
+|[\@Филекур](../../assembler/masm/at-filecur.md)|[Имя файла \@](../../assembler/masm/at-filename.md)|
+|[Строка \@](../../assembler/masm/at-line.md)||
+
+## <a name="macro-functions"></a>Функции макросов
+
+|||
+|-|-|
+|[\@Катстр](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
+|[\@Сизестр](../../assembler/masm/at-sizestr.md)|[\@ый substr](../../assembler/masm/at-substr.md)|
 
 ## <a name="miscellaneous"></a>Прочее
 
 ||||
 |-|-|-|
 |[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
-|[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
+|[\@б](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
 
-## <a name="segment-information"></a>Segment information
+## <a name="segment-information"></a>Сведения о сегменте
 
 ||||
 |-|-|-|
-|[\@code](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Model](../../assembler/masm/at-model.md)|[\@stack](../../assembler/masm/at-stack.md)|
-|[\@WordSize](../../assembler/masm/at-wordsize.md)|||
+|[код \@](../../assembler/masm/at-code.md)|[\@Кодесизе](../../assembler/masm/at-codesize.md)|[\@Курсег](../../assembler/masm/at-curseg.md)|
+|[\@данных](../../assembler/masm/at-data.md)|[Размер DataSize \@](../../assembler/masm/at-datasize.md)|[\@фардата](../../assembler/masm/at-fardata.md)|
+|[\@фардата?](../../assembler/masm/at-fardata-q.md)|[Модель \@](../../assembler/masm/at-model.md)|[стек \@](../../assembler/masm/at-stack.md)|
+|[\@Вордсизе](../../assembler/masm/at-wordsize.md)|||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)

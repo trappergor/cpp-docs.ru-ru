@@ -1,5 +1,5 @@
 ---
-title: operator &lt;= (MASM Run Time)
+title: Оператор &lt;= (время выполнения MASM)
 ms.date: 08/30/2018
 f1_keywords:
 - operator <=
@@ -14,14 +14,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396828"
 ---
-# <a name="operator-lt-masm-run-time"></a>operator &lt;= (MASM Run Time)
+# <a name="operator-lt-masm-run-time"></a>Оператор &lt;= (время выполнения MASM)
 
-Is less than or equal to. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Меньше или равно. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
 > *expression1* **<=** *expression2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

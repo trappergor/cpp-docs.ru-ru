@@ -15,16 +15,16 @@ ms.locfileid: "74397649"
 ---
 # <a name="endm"></a>ENDM
 
-Terminates a macro or repeat block.
+Завершает макрос или блок REPEAT.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **ENDM**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
+См. раздел [макрос](../../assembler/masm/macro.md), [для](../../assembler/masm/for-masm.md), [Форк](../../assembler/masm/forc.md), [Repeat](../../assembler/masm/repeat.md)или [while](while-masm.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74399123"
 ---
 # <a name="environ"></a>\@Environ
 
-Value of environment variable *envvar* (macro function).
+Значение переменной среды *envvar* (функция макроса).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Environ(** *envvar* **)**
+> **\@Environ (** *envvar* **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

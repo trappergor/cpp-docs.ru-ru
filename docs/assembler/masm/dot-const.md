@@ -15,16 +15,16 @@ ms.locfileid: "74398568"
 ---
 # <a name="const"></a>.CONST
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a constant data segment (with segment name **CONST**).
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает сегмент постоянных данных (с именем сегмента **const**).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.CONST**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-This segment has the read-only attribute.
+Этот сегмент имеет атрибут "только для чтения".
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

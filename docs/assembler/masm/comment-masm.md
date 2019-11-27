@@ -15,14 +15,14 @@ ms.locfileid: "74398837"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 
-Treats all *text* between or on the same line as the delimiters as a comment.
+Обрабатывает весь *текст* между или в той же строке, что и разделители, в качестве комментария.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **COMMENT** *delimiter* ⟦*text*⟧\
-> ⟦*text*⟧\
-> ⟦*text*⟧ *delimiter* ⟦*text*⟧
+> *Разделитель* комментариев ⟦*Text*⟧ \
+> ⟦*Text*⟧ \
+> ⟦*Text*⟧ *Разделитель* ⟦*Text*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\

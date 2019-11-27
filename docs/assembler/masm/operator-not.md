@@ -16,12 +16,12 @@ ms.locfileid: "74396582"
 ---
 # <a name="operator-not"></a>Оператор NOT
 
-Returns *expression* with all bits reversed.
+Возвращает *выражение* со всеми обратными битами.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **NOT** *expression*
+> *Выражение* not
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)
