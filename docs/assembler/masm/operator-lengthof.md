@@ -17,12 +17,12 @@ ms.locfileid: "74396829"
 ---
 # <a name="operator-lengthof"></a>Оператор LENGTHOF
 
-Returns the number of data objects in *variable*.
+Возвращает число объектов данных в *переменной*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **LENGTHOF** *variable*
+> *Переменная* LENGTHOF
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)
