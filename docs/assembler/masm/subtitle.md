@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - SUBTITLE directive
 ms.assetid: b882ae31-9998-46ed-bd88-6656263143e7
-ms.openlocfilehash: 8029e66b8a8c9c3b274c925c756ebca5a5ef0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28cb1bcafd95d83bbf008a2424ae030b328fce07
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210366"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393474"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
-Определяет список подзаголовок. Совпадение с кодом [SUBTTL](../../assembler/masm/subttl.md).
+Определяет подзаголовок списка. То же, что и [субттл](../../assembler/masm/subttl.md).
 
 ## <a name="syntax"></a>Синтаксис
 
-> Текст ПОДЗАГОЛОВКА
+> *Текст* **подзаголовка**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

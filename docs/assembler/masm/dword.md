@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - DWORD directive
 ms.assetid: 20efd7c6-1ee6-45a1-9feb-86ce7978142a
-ms.openlocfilehash: 0c1768197927cf5a87187a77b4ed6681422d869a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99232967e75d4e06cf7bce4be50f6c19e172672
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178128"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397738"
 ---
 # <a name="dword"></a>DWORD
 
-Выделяет и при необходимости инициализирует двойное слово (4 байта) хранилища для каждого `initializer`.
+Выделяет и при необходимости инициализирует двойное слово (4 байта) хранилища для каждого *инициализатора*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> [[имя]] Инициализатор DWORD [[, инициализатор]]...
+> ⟦*имя*⟧, инициализатор **DWORD** *⟦* __,__ *инициализатор* ... ⟧
 
 ## <a name="remarks"></a>Примечания
 
-Можно также использовать как спецификатор типа в любом является допустимым типом.
+Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
-[SDWORD](../../assembler/masm/sdword.md)<br/>
-[DD](../../assembler/masm/dd.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[Сдворд](../../assembler/masm/sdword.md)\
+[DD](../../assembler/masm/dd.md)

@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210538"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395030"
 ---
 # <a name="proc"></a>PROC
 
-Помечает начало и конец процедуры блок с именем *метка*. Операторы в блоке может вызываться с **вызвать** инструкции или [INVOKE](../../assembler/masm/invoke.md) директива.
+Помечает начало и конец блока процедуры *с именем Label*. Инструкции в блоке могут вызываться с помощью инструкции **Call** или [Invoke](../../assembler/masm/invoke.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
-> *Метка* PROC [[*расстояние*]] [[*langtype*]] [[*видимость*]] [[\<*prologuearg*>]] [[ ИСПОЛЬЗУЕТ *reglist*]] [[, *параметр* [[:*тега*]]]...<br/>
-> [[ФРЕЙМА [[:*адрес обработчика ошибок*]]]]<br/>
-> *Инструкции*<br/>
-> *Метка* ENDP
+> *Метка* **proc** ⟦*Distance*⟧ ⟦*язык — тип*⟧ ⟦*Visibility*⟧ ⟦ __\<__ *прологуеарг* __>__ ⟧ ⟦**использует** *реглист*⟧ ⟦ __,__ *параметр* ⟦ __:__ *Tag*⟧... ⟧\
+> ⟦**Frame** ⟦ __:__ *ехандлер-Address*⟧ ⟧ \
+> *инструкции*\
+> *Метка* **ЕНДП**
 
 ## <a name="remarks"></a>Примечания
 
-[[ФРЕЙМА [[:*адрес обработчика ошибок*]]]] допустим только для ml64.exe и вызывает MASM для создания записи в таблице функции в pdata и очистки информацию в XDATA для структурной функцию обработки исключений очистки поведение.
+⟦**Frame** ⟦ __:__ *ехандлер-Address*⟧ ⟧ является допустимым только в ml64. exe и приводит к тому, что компилятор MASM создает запись таблицы функций в pData-файл и сведения о выводу в. XData для структурированной обработки исключений функции.
 
-Когда **КАДРА** атрибут используется, он должен следовать [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) директива.
+При использовании атрибута **Frame** за ним должен следовать [. ](../../assembler/masm/dot-endprolog.md)Директива ендпролог.
 
-См. в разделе [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) Дополнительные сведения об использовании ml64.exe.
+Дополнительные сведения об использовании ml64. exe см. в разделе [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) .
 
 ## <a name="example"></a>Пример
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-Приведенный выше код будет выдавать в следующей таблице функции и информация для раскрутки:
+Приведенный выше код выдаст следующую таблицу функций и сведения о выпуске:
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

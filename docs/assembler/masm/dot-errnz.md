@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRNZ directive
 ms.assetid: 373a9222-140f-4505-8dec-ef370a069ebf
-ms.openlocfilehash: 8998f4609b2b8d8e15a31455ac342e7bd5c0a025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7367e614b46221b32efce35a92f83179d8e8bc54
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185204"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398308"
 ---
-# <a name="errnz"></a>.ERRNZ
+# <a name="errnz"></a>**.ERRNZ**
 
-Выдает ошибку, если *выражение* имеет значение true (ненулевое).
+Выдает ошибку, если *выражение* имеет значение true (отличное от нуля).
 
 ## <a name="syntax"></a>Синтаксис
 
-> . ERRNZ выражение [[, сообщение]]
+> **. Еррнз** *выражение* ⟦ __,__ *сообщение*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

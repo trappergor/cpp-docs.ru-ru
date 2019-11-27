@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use unique_ptr instances'
+title: Как создавать и использовать экземпляры unique_ptr
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
@@ -11,15 +11,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246527"
 ---
-# <a name="how-to-create-and-use-unique_ptr-instances"></a>How to: Create and use unique_ptr instances
+# <a name="how-to-create-and-use-unique_ptr-instances"></a>Как создавать и использовать экземпляры unique_ptr
 
-A [unique_ptr](../standard-library/unique-ptr-class.md) does not share its pointer. It cannot be copied to another `unique_ptr`, passed by value to a function, or used in any C++ Standard Library algorithm that requires copies to be made. `unique_ptr` можно только переместить. Это означает, что владение ресурсов памяти переносится в другое `unique_ptr` и оригинал `unique_ptr` больше им не владеет. Рекомендуется ограничить объект одним владельцем, поскольку множественное владение усложняет логику программы. Therefore, when you need a smart pointer for a plain C++ object, use `unique_ptr`, and when you construct a `unique_ptr`, use the [make_unique](../standard-library/memory-functions.md#make_unique) helper function.
+[Unique_ptr](../standard-library/unique-ptr-class.md) не имеет общего доступа к указателю. Его нельзя скопировать на другой `unique_ptr`, передать по значению в функцию или использовать в любом C++ алгоритме стандартной библиотеки, требующем копирования. `unique_ptr` можно только переместить. Это означает, что владение ресурсов памяти переносится в другое `unique_ptr` и оригинал `unique_ptr` больше им не владеет. Рекомендуется ограничить объект одним владельцем, поскольку множественное владение усложняет логику программы. Поэтому, если требуется интеллектуальный указатель для обычного C++ объекта, используйте `unique_ptr`, а при создании `unique_ptr`используйте вспомогательную функцию [make_unique](../standard-library/memory-functions.md#make_unique) .
 
 Следующая схема иллюстрирует передачу прав собственности между двумя экземплярами `unique_ptr`.
 
-![Moving the ownership of a unique&#95;ptr](media/unique_ptr.png "Moving the ownership of a unique&#95;ptr")
+![Перемещение владельца уникального&#95;PTR](media/unique_ptr.png "Перемещение владельца уникального&#95;PTR")
 
-`unique_ptr` is defined in the `<memory>` header in the C++ Standard Library. It is exactly as efficient as a raw pointer and can be used in C++ Standard Library containers. The addition of `unique_ptr` instances to C++ Standard Library containers is efficient because the move constructor of the `unique_ptr` eliminates the need for a copy operation.
+`unique_ptr` определяется в заголовке `<memory>` C++ стандартной библиотеки. Она точно так же эффективна, как необработанный указатель и может C++ использоваться в контейнерах стандартной библиотеки. Добавление `unique_ptr` экземпляров в C++ контейнеры стандартных библиотек является эффективным, так как конструктор перемещения `unique_ptr` устраняет необходимость в операции копирования.
 
 ## <a name="example-1"></a>Пример 1
 
@@ -45,13 +45,13 @@ A [unique_ptr](../standard-library/unique-ptr-class.md) does not share its point
 
 ## <a name="example-4"></a>Пример 4
 
-You can use [make_unique](../standard-library/memory-functions.md#make_unique) to create a `unique_ptr` to an array, but you cannot use `make_unique` to initialize the array elements.
+[Make_unique](../standard-library/memory-functions.md#make_unique) можно использовать для создания `unique_ptr` массива, но нельзя использовать `make_unique` для инициализации элементов массива.
 
 [!code-cpp[stl_smart_pointers#213](codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]
 
-For more examples, see [make_unique](../standard-library/memory-functions.md#make_unique).
+Дополнительные примеры см. в разделе [make_unique](../standard-library/memory-functions.md#make_unique).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Интеллектуальные указатели (современный C++)](smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)

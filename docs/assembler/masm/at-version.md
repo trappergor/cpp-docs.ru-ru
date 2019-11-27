@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Version symbol'
 ms.assetid: d7005811-de5c-4f8f-96e9-0e50d7ebca90
-ms.openlocfilehash: 3ad5b73f14bf158b47a802169ca26ade2ea54c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f98ce829aaf423e1d515f32a0fa9800c304bb4ad
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398893"
 ---
-# <a name="version"></a>@Version
+# <a name="version"></a>Версия \@
 
-615 в 6.15 MASM (макрос text).
+Основная и дополнительная версии MASM выводятся в командной строке как одно число (текстовый макрос). Например, компилятор MASM Version 14.23.28107.0 создает "1423".
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Version
+> **Версия \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

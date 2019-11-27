@@ -18,19 +18,19 @@ ms.locfileid: "74246635"
 ---
 # <a name="cleaning-up-resources"></a>Освобождение ресурсов
 
-Во время выполнения обработчика завершения не всегда известно, какие ресурсы фактически выделены, прежде чем не будет вызван обработчик завершения. It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+Во время выполнения обработчика завершения не всегда известно, какие ресурсы фактически выделены, прежде чем не будет вызван обработчик завершения. Возможно, блок оператора **__try** был прерван до выделения всех ресурсов, так что не все ресурсы были открыты.
 
 Таким образом, в целях безопасности прежде чем продолжить очистку обработки завершения, необходимо проверить, какие ресурсы фактически открыты. Ниже описана рекомендованная процедура.
 
 1. Инициализируйте дескрипторы со значением null.
 
-1. In the **__try** statement block, allocate resources. Для дескрипторов устанавливается положительные значения по мере распределения ресурсов.
+1. В блоке инструкций **__try** выделите ресурсы. Для дескрипторов устанавливается положительные значения по мере распределения ресурсов.
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. В блоке оператора **__finally** выпустите каждый ресурс, соответствующий маркер или переменная флага которого не равны нулю или не имеют значение null.
 
 ## <a name="example"></a>Пример
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. Перед очисткой ресурса код сначала проверяет, был ли ресурс распределен.
+Например, в следующем коде обработчик завершения используется для закрытия трех файлов и блока памяти, выделенного в блоке инструкций **__try** . Перед очисткой ресурса код сначала проверяет, был ли ресурс распределен.
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: Коды исключений загрузки библиотек DLL (CC++/)
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243854"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+При обнаружении сбоев могут возникать два кода исключений:
 
-- For a **LoadLibrary** failure
+- Для сбоя **LoadLibrary**
 
-- For a **GetProcAddress** failure
+- Для ошибки **GetProcAddress**
 
-Here is the exception information:
+Ниже приведены сведения об исключении:
 
 ```
 //
@@ -37,12 +37,12 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+Вызываемые коды исключений — это стандартные значения Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на структуру **делайлоадинфо** в значении лпдворд, которое может быть извлечено **жетексцептионинформатион** в поле структура [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) , матрице ExceptionInformation [0].
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+Кроме того, если в поле Граттрс заданы неверные биты, выдается исключение ERROR_INVALID_PARAMETER. Это исключение для всех целей и назначений, неустранимое.
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+Дополнительные сведения см. в разделе [определения структур и констант](structure-and-constant-definitions.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка ошибок и предупреждений](error-handling-and-notification.md)

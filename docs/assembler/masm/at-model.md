@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 806c631a18044b98af77ad55ec44a434b2617d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d62026b02f476a19defc9ae6c8e9c83500bfe067
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180301"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398959"
 ---
-# <a name="model"></a>@Model
+# <a name="model"></a>Модель \@
 
-1 для **КРОШЕЧНЫЕ** модели, 2 для **НЕБОЛЬШОЙ** модели, 3 для **COMPACT** модели, 4 для **Средний** модели, 5 для **крупный**модели, 6 для **БОЛЬШОЙ** модели и 7 для **НЕСТРУКТУРИРОВАННЫЙ** модели (уравнять числовые).
+1 для мелких моделей, 2 для **малых** **моделей,** 3 для **Compact** Model, 4 для **средней** модели, 5 для **больших** моделей, 6 для **огромной** модели и 7 для **плоской** модели (числовое равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Model
+> **Модель \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

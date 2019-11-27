@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: b657b6519fd9e4cbd367eaefc984fd959618c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d042ad50fef6d9834b35b66c88b3f83ec4995d4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217248"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395720"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-Сохранение всех или части текущего `context`: регистр предполагается значение основания системы счисления, флаги "список" и "cref или значения процессора/сопроцессора. `context` Может быть **ПРЕДПОЛАГАЕТСЯ, что**, `RADIX`, **ЛИСТИНГ**, **ЦП**, или **все**.
+Сохраняет часть или весь текущий *контекст*: регистр сегмента предполагает, значение основания, флаги перечисления и cref, а также значения процессора или сопроцессора. *Контекст* **может принимать значение**, **основание системы счисления**, **список**, **ЦП**или **все**.
 
 ## <a name="syntax"></a>Синтаксис
 
-> PUSHCONTEXT контекста
+> *Контекст* пушконтекст
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

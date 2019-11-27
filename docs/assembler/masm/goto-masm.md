@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 424ff295fe37e7c5ff02897a01b99a7c75876f85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397480"
 ---
 # <a name="goto-masm"></a>GOTO (MASM)
 
-Передает строку, помеченную сборки **:**_macrolabel_.
+Передает сборку в строку, помеченную **:** _макролабел_.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **GOTO** *macrolabel*
+> **Goto** *макролабел*
 
 ## <a name="remarks"></a>Примечания
 
-**GOTO** разрешены только в [МАКРОС](macro.md), [для](for-masm.md), [принудительное Включение](forc.md), [ПОВТОРИТЕ](repeat.md), и [при](while-masm.md)блоков. *Macrolabel* целевой объект должен быть единственным директивы в той строке и должен предшествовать начальное двоеточие.
+**Оператор goto** разрешен только внутри [макросов](macro.md), [для](for-masm.md), [Форк](forc.md), [Repeat](repeat.md)и [while](while-masm.md) . Целевой объект *макролабел* должен быть единственной директивой в строке и должен предшествовать начальному двоеточию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

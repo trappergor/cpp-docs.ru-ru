@@ -8,27 +8,27 @@ helpviewer_keywords:
 - operator IMAGEREL
 - IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-ms.openlocfilehash: 1363297cc1627775093f0f5e78937b981e41bdc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88501d007ece1e3b9f45620953a911d4a6aa66e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176880"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396890"
 ---
 # <a name="operator-imagerel"></a>Оператор IMAGEREL
 
-Возвращает изображение относительном смещении `expression`.
+Возвращает относительное смещение в изображении *выражения*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Выражение IMAGEREL
+> *Выражение* IMAGEREL
 
 ## <a name="remarks"></a>Примечания
 
-Результирующее значение часто называют RVA или относительный виртуальный адрес.
+Полученное значение часто называется RVA или относительным виртуальным адресом.
 
-IMAGEREL доступен только с помощью эмиссии объект COFF.
+IMAGEREL доступен только с эмиссией объектов COFF.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

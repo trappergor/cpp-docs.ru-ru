@@ -1,30 +1,48 @@
 ---
-title: IF2
-ms.date: 08/30/2018
+title: IF1 и IF2
+ms.date: 11/21/2019
 f1_keywords:
 - IF2
+- IF1
 helpviewer_keywords:
 - IF2 directive
+- IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: 04d6d83e0a06581234b242926299530183b61643
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184861"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397443"
 ---
-# <a name="if2"></a>IF2
+# <a name="if1-and-if2"></a>IF1 и IF2
 
-**Если** блок вычисляется при каждом проходе сборки, если **параметр: SETIF2** — **TRUE**.
+Блок **IF1** вычисляется на первом этапе сборки.
+
+Блок **If2** вычисляется на каждой сборке Pass, если **параметр: SETIF2** имеет **значение true**.
 
 ## <a name="syntax"></a>Синтаксис
 
-> IF2 *выражение*
+> **IF1;;**
+
+> **IF2;;**
 
 ## <a name="remarks"></a>Примечания
 
-См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+В отличие от версии 5,1, MASM 6,1 и выше выполняет большую часть работы по его первому проходу, а затем выполнит столько последующих проходов, сколько необходимо. Напротив, компилятор MASM 5,1 всегда собирается в двух исходных проходах. В результате может потребоваться изменить или удалить некоторые зависящие от передаваемых конструкций в MASM 6,1 и более поздних версиях.
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+### <a name="two-pass-directives"></a>Директивы с двумя проходами
+
+Для обеспечения совместимости компиляторы MASM 6,1 и выше поддерживают директивы 5,1, которые ссылаются на два прохода. К ним относятся **. ERR1**, **. ERR2**, **IF1**, **If2**, **ELSEIF1**и **ELSEIF2**. Для конструкций второго этапа необходимо указать [параметр SETIF2](option-masm.md). Без **параметра SETIF2 параметры** **If2** и **.** Директивы ERR2 вызывают ошибку:
+
+```output
+.ERR2 not allowed : single-pass assembler
+```
+
+Компилятор MASM 6,1 и более поздних версий обработают конструкции First-Pass иначе. Он обрабатывает **. ERR1** директиву AS **. ERR**, а директива **IF1** — как **If**.
+
+## <a name="see-also"></a>См. также:
+
+[Справочник по директивам](directives-reference.md)

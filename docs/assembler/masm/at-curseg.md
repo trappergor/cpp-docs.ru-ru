@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@CurSeg symbol'
 ms.assetid: 8fbf90c1-7734-4113-9ba2-6ec664b3b59f
-ms.openlocfilehash: c575c1c5f25e72f34525c0802483fdb61844293c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e0f31e5099bd549565c4985aef8feceea4a27e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166832"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399160"
 ---
-# <a name="curseg"></a>@CurSeg
+# <a name="curseg"></a>\@Курсег
 
-Имя текущего сегмента (макрос text).
+Имя текущего сегмента (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @CurSeg
+> **\@Курсег**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

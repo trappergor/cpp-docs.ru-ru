@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator NOT
 - NOT operator
 ms.assetid: d68d44fd-f92f-4b65-8d36-96de03e1b4e5
-ms.openlocfilehash: b864294fa5d01f5cb231e0d26ac8e49cd9340ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567165cdb481ab8081fe091d68cc3146a5f11dac
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176555"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396582"
 ---
 # <a name="operator-not"></a>Оператор NOT
 
-Возвращает *выражение* все биты в обратном порядке.
+Возвращает *выражение* со всеми обратными битами.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Выражение NOT
+> *Выражение* not
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

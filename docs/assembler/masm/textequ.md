@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - TEXTEQU directive
 ms.assetid: 7c01df77-10d6-4555-8fe0-c5f7762df86d
-ms.openlocfilehash: 34d408bbe4234e004df50905e2cf881616af719a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e58c98b07a26e4c65f2c8e4a1f664b5f5045595f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210083"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393185"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-Назначает *textitem* для *имя*. *Textitem* может быть строковый литерал, константа предшествует `%`, или строка, возвращаемая функцией макрос.
+Присваивает *текститем* *имя*. *Текститем* может быть строкой литерала, константой, предшествующей `%`, или строкой, возвращаемой функцией макроса.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Имя TEXTEQU [[textitem]]
+> *имя* **текстеку** ⟦*текститем*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

@@ -4,58 +4,58 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-ms.openlocfilehash: e57583ce2b4184120569be3a44d87ffc3f51586c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a07b7bcc46a27e019c53a2aafcd9529763ea61fd
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210220"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393560"
 ---
 # <a name="symbols-reference"></a>Справочник по символам
 
-## <a name="date-and-time-information"></a>Дата и время
+## <a name="date-and-time-information"></a>Сведения о дате и времени
 
 |||
 |-|-|
-|[\@Дата](../../assembler/masm/at-date.md)|[\@время](../../assembler/masm/at-time.md)|
+|[Дата \@](../../assembler/masm/at-date.md)|[Время \@](../../assembler/masm/at-time.md)|
 
 ## <a name="environment-information"></a>Сведения о среде
 
 |||
 |-|-|
-|[\@ЦП](../../assembler/masm/at-cpu.md)|[\@Environ-](../../assembler/masm/at-environ.md)|
-|[\@Интерфейс](../../assembler/masm/at-interface.md)|[\@Версия](../../assembler/masm/at-version.md)|
+|[\@ЦП](../../assembler/masm/at-cpu.md)|[\@Environ](../../assembler/masm/at-environ.md)|
+|[Интерфейс \@](../../assembler/masm/at-interface.md)|[Версия \@](../../assembler/masm/at-version.md)|
 
 ## <a name="file-information"></a>Сведения о файле
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@Имя файла](../../assembler/masm/at-filename.md)|
-|[\@Строки](../../assembler/masm/at-line.md)||
+|[\@Филекур](../../assembler/masm/at-filecur.md)|[Имя файла \@](../../assembler/masm/at-filename.md)|
+|[Строка \@](../../assembler/masm/at-line.md)||
 
-## <a name="macro-functions"></a>Макрос функции
+## <a name="macro-functions"></a>Функции макросов
 
 |||
 |-|-|
-|[\@CatStr](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
-|[\@SizeStr](../../assembler/masm/at-sizestr.md)|[\@SubStr](../../assembler/masm/at-substr.md)|
+|[\@Катстр](../../assembler/masm/at-catstr.md)|[\@InStr](../../assembler/masm/at-instr.md)|
+|[\@Сизестр](../../assembler/masm/at-sizestr.md)|[\@ый substr](../../assembler/masm/at-substr.md)|
 
 ## <a name="miscellaneous"></a>Прочее
 
 ||||
 |-|-|-|
 |[\$](../../assembler/masm/dollar.md)|[\?](../../assembler/masm/q.md)|[\@\@:](../../assembler/masm/at-at.md)|
-|[\@B](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
+|[\@б](../../assembler/masm/at-b.md)|[\@F](../../assembler/masm/at-f.md)||
 
 ## <a name="segment-information"></a>Сведения о сегменте
 
 ||||
 |-|-|-|
-|[\@Код](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@Данные](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
-|[\@fardata?](../../assembler/masm/at-fardata-q.md)|[\@Модель](../../assembler/masm/at-model.md)|[\@Стек](../../assembler/masm/at-stack.md)|
-|[\@WordSize](../../assembler/masm/at-wordsize.md)|||
+|[код \@](../../assembler/masm/at-code.md)|[\@Кодесизе](../../assembler/masm/at-codesize.md)|[\@Курсег](../../assembler/masm/at-curseg.md)|
+|[\@данных](../../assembler/masm/at-data.md)|[Размер DataSize \@](../../assembler/masm/at-datasize.md)|[\@фардата](../../assembler/masm/at-fardata.md)|
+|[\@фардата?](../../assembler/masm/at-fardata-q.md)|[Модель \@](../../assembler/masm/at-model.md)|[стек \@](../../assembler/masm/at-stack.md)|
+|[\@Вордсизе](../../assembler/masm/at-wordsize.md)|||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)

@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: Инициализация фигурных скобок для классов, структур и объединений
+description: Использовать инициализацию фигурных скобок с любым C++ классом, структурой или объединением
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,7 +10,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246504"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>Инициализация фигурных скобок
 
 Не всегда обязательно определять конструктор для класса (особенно для относительно простых классов). Пользователи могут использовать для объектов класса или структур унифицированную инициализацию, как показано в следующем примере:
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:
+Обратите внимание, что если класс или структура не имеет конструктора, вы предоставляете элементы списка в том порядке, в котором элементы объявляются в классе. Если у класса есть конструктор, укажите элементы в порядке параметров. Если у типа есть конструктор по умолчанию, явно или неявно объявленный, можно использовать инициализацию скобок по умолчанию (с пустыми фигурными скобками). Например, следующий класс можно инициализировать с помощью инициализации по умолчанию и стандартной фигурной скобки:
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:
+Если класс имеет конструкторы, отличные от конструктора по умолчанию, то порядок, в котором члены класса отображаются в инициализаторе фигурных скобок, является порядком, в котором соответствующие параметры отображаются в конструкторе, а не в том порядке, в котором объявляются элементы (как в предыдущем примере с `class_a`). В противном случае, если тип не имеет объявленного конструктора, порядок, в котором элементы отображаются в инициализаторе фигурных скобок, совпадает с порядком, в котором они объявляются. в этом случае можно инициализировать столько открытых членов, сколько нужно, но нельзя пропустить ни одного элемента. В следующем примере показан порядок, который используется в инициализации фигурных скобок при отсутствии объявленного конструктора:
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:
+Если конструктор по умолчанию объявлен явно, но помечен как удаленный, инициализацию по умолчанию нельзя использовать:
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+Можно использовать инициализацию фигурных скобок в любом месте, как обычно при инициализации, например в качестве параметра функции или возвращаемого значения или с помощью ключевого слова **New** :
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>конструкторы initializer_list
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:
+[Класс initializer_list](../standard-library/initializer-list-class.md) представляет список объектов указанного типа, которые могут использоваться в конструкторе и в других контекстах. Вы можете создать initializer_list с помощью инициализации фигурных скобок:
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  Чтобы использовать этот класс, необходимо включить заголовок [\<initializer_list >](../standard-library/initializer-list.md) .
 
-An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:
+Можно скопировать `initializer_list`. В этом случае члены нового списка являются ссылками на элементы исходного списка:
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -156,7 +156,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:
+Классы контейнеров стандартной библиотеки, а также `string`, `wstring`и `regex`, имеют `initializer_list` конструкторы. В следующих примерах показано, как выполнить инициализацию фигурных скобок с помощью этих конструкторов:
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };
@@ -166,7 +166,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)<br/>
 [Конструкторы](../cpp/constructors-cpp.md)

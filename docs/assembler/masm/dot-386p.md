@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .386P directive
 ms.assetid: 15199091-3bb7-4270-bb9b-878c1c2f2146
-ms.openlocfilehash: d4b969d509e18b53fa08c8329027dbd6b7a6a5b3
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 33ec3ddb52305b29afbacd3fd858018e6e0d9aed
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703002"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398723"
 ---
 # <a name="386p-32-bit-masm"></a>.386P (32-разрядный компилятор MASM)
 
@@ -19,12 +19,12 @@ ms.locfileid: "73703002"
 
 ## <a name="syntax"></a>Синтаксис
 
-> .386P
+> **.386P**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Также включает инструкции 80387.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

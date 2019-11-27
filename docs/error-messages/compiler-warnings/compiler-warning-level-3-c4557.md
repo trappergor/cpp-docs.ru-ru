@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4557
+title: Предупреждение компилятора (уровень 3) C4557
 ms.date: 11/04/2016
 f1_keywords:
 - C4557
@@ -13,15 +13,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188936"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>Compiler Warning (level 3) C4557
+# <a name="compiler-warning-level-3-c4557"></a>Предупреждение компилятора (уровень 3) C4557
 
 "__assume" содержит эффект "эффект"
 
-The value passed to an [__assume](../../intrinsics/assume.md) statement2 was modified.
+Значение, передаваемое [__assume](../../intrinsics/assume.md) оператор2, было изменено.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4557:
+Следующий пример приводит к возникновению ошибки C4557:
 
 ```cpp
 // C4557.cpp

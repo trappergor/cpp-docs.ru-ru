@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - MMWORD directive
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
-ms.openlocfilehash: e4ebaa9d47a569bc9cf7d843d3ddb54ca5d713a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4378c1435df09f249fe7f55dabd4bd0f43f6100
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176867"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397179"
 ---
 # <a name="mmword"></a>MMWORD
 
-Используется для 64-разрядные операнды мультимедиа с инструкциями MMX и SSE (XMM).
+Используется для 64-разрядных операндов мультимедиа с инструкциями MMX и SSE (XMM).
 
 ## <a name="syntax"></a>Синтаксис
 
-> MMWORD
+> **MMWORD**
 
 ## <a name="remarks"></a>Примечания
 
-`MMWORD` — Это тип.  До MMWORD, добавляемый MASM удалось добиться аналогичных функциональных возможностей с:
+**Ммворд** — это тип.  До **ммворд** , добавленного в MASM, эквивалентные функции могут быть достигнуты с помощью:
 
 ```asm
     mov mm0, qword ptr [ebx]
 ```
 
-Хотя обе инструкции работать на 64-разрядных операндов, `QWORD` является типом для 64-разрядных целых беззнаковых чисел и `MMWORD` является типом для 64-разрядное значение мультимедиа.
+Хотя обе инструкции работают с 64-разрядными операндами, **QWORD** является типом для 64-разрядных целых чисел без знака, а **ммворд** — типом для значения 64-bit.
 
-`MMWORD` представляет тот же тип, что [__m64](../../cpp/m64.md).
+**Ммворд** предназначен для представления того же типа, что и [__m64](../../cpp/m64.md).
 
 ## <a name="example"></a>Пример
 

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-ms.openlocfilehash: e6450ff0daaf679738cbbfe224002b01fe97b8ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2eb635264590d7323c67d69b56a539907fe2c25
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185333"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398455"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Сигнализирует об окончании объявлений пролога.
+Сообщает об окончании объявлений пролога.
 
 ## <a name="syntax"></a>Синтаксис
 
-> .ENDPROLOG
+> **.ENDPROLOG**
 
 ## <a name="remarks"></a>Примечания
 
-Это ошибка для использования любого из объявлений в прологе за пределами региона между [PROC](../../assembler/masm/proc.md) КАДРА и. ENDPROLOG.
+Использование любых объявлений пролога за пределами [области между](../../assembler/masm/proc.md) **кадрами** и не является ошибкой **. ЕНДПРОЛОГ**.
 
-Дополнительные сведения см. в разделе [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .DATA directive
 ms.assetid: 32797935-9c79-46e0-bf6f-07d0c2bf1dc1
-ms.openlocfilehash: 77c5327b5b6dc3fc93bec7181bb1cbf855d43fec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85aa334ef067705fd5befc95393e60490842fc79
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185385"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398514"
 ---
 # <a name="data"></a>.DATA
 
-При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), запускает практически сегмента данных для инициализированных данных (_DATA имя сегмента).
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает ближайший сегмент данных для инициализированных данных (имя сегмента _data).
 
 ## <a name="syntax"></a>Синтаксис
 
-> .DATA
+> **.DATA**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
-[.DATA?](../../assembler/masm/dot-data-q.md)<br/>
-[.CONST](../../assembler/masm/dot-const.md)<br/>
-[.FARDATA](../../assembler/masm/dot-fardata.md)<br/>
-[.FARDATA?](../../assembler/masm/dot-fardata-q.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[. ДАННЫЕ](../../assembler/masm/dot-data-q.md)\
+[. КОНСТАНТное](../../assembler/masm/dot-const.md)\
+[. ФАРДАТА](../../assembler/masm/dot-fardata.md)\
+[.FARDATA?](../../assembler/masm/dot-fardata-q.md)

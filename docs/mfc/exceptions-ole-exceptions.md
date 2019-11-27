@@ -17,30 +17,30 @@ ms.locfileid: "74246712"
 ---
 # <a name="exceptions-ole-exceptions"></a>Исключения. Исключения OLE
 
-The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+Методы и средства обработки исключений в OLE одинаковы для обработки других исключений. Дополнительные сведения об обработке исключений см. в статье [современные C++ рекомендации по исключениям и обработке ошибок](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:
+Все объекты исключений являются производными от абстрактного базового класса `CException`. MFC предоставляет два класса для обработки исключений OLE:
 
-- [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.
+- [COleException](../mfc/reference/coleexception-class.md) Для обработки общих исключений OLE.
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) Для создания и обработки исключений OLE-диспетчеризации (Automation).
 
-The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:
+Разница между этими двумя классами — это объем информации, которую они предоставляют и где они используются. `COleException` имеет открытый элемент данных, содержащий код состояния OLE для исключения. `COleDispatchException` предоставляет дополнительные сведения, включая следующие:
 
-- An application-specific error code
+- Код ошибки, относящийся к приложению
 
-- An error description, such as "Disk full"
+- Описание ошибки, например "диск полон"
 
-- A Help context that your application can use to provide additional information for the user
+- Контекст справки, который приложение может использовать для предоставления дополнительных сведений пользователю.
 
-- The name of your application's Help file
+- Имя файла справки приложения
 
-- The name of the application that generated the exception
+- Имя приложения, создавшего исключение
 
-`COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.
+`COleDispatchException` предоставляет дополнительные сведения, которые можно использовать с такими продуктами, как Microsoft Visual Basic. Описание ошибки текстовом можно использовать в окне сообщения или в другом уведомлении. Справочные сведения можно использовать, чтобы помочь пользователю реагировать на условия, вызвавшие исключение.
 
-Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.
+Две глобальные функции соответствуют двум классам исключений OLE: [афкссроволиксцептион](../mfc/reference/exception-processing.md#afxthrowoleexception) и [афкссроволедиспатчексцептион](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Используйте их для создания общих исключений OLE и исключений OLE диспетчеризации соответственно.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка исключений](../mfc/exception-handling-in-mfc.md)

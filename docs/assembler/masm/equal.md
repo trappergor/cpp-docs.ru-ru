@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - = directive
 ms.assetid: 285fa799-28d2-49f2-9a80-d701185f4f7b
-ms.openlocfilehash: c0698b1f41a51873a5ed143bdc86f2d85ac12f37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 244ac2eae6536e448057d03103737a507d9c8320
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185739"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397601"
 ---
 # <a name=""></a>=
 
-Числовое значение *выражение* для *имя*.
+Присваивает числовое значение *выражения* *Name*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *имя* = *выражение*
+> *имя* **=** *выражение*
 
 ## <a name="remarks"></a>Примечания
 
-Символ может быть переопределен более поздней версии.
+Символ можно переопределить позже.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

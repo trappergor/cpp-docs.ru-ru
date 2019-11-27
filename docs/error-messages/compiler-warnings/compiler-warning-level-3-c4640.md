@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4640
+title: Предупреждение компилятора (уровень 3) C4640
 ms.date: 11/04/2016
 f1_keywords:
 - C4640
@@ -13,15 +13,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189105"
 ---
-# <a name="compiler-warning-level-3-c4640"></a>Compiler Warning (level 3) C4640
+# <a name="compiler-warning-level-3-c4640"></a>Предупреждение компилятора (уровень 3) C4640
 
-'instance' : construction of local static object is not thread-safe
+"экземпляр": Создание локального статического объекта не является потокобезопасным
 
-A static instance of an object is not thread safe.
+Статический экземпляр объекта не является потокобезопасным.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4640:
+Следующий пример приводит к возникновению ошибки C4640:
 
 ```cpp
 // C4640.cpp

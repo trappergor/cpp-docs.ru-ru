@@ -2,29 +2,29 @@
 title: Руководства по программированию изготовителей процессоров
 ms.date: 08/30/2018
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: be650b0d19577b0a2191a6bf7d16063e720f3b0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210581"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394838"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Руководства по программированию изготовителей процессоров
 
-В этой статье ссылки на веб-сайты, могут содержать программирования сведения о процессорах, не производства, продаже или поддерживаемые корпорацией Майкрософт. Microsoft не владеете или управляете веб-сайты или содержимое на них.
+В этой статье содержатся ссылки на веб-сайты, которые могут содержать программные сведения о процессорах, которые не были изготовлены, проданы или не поддерживаются корпорацией Майкрософт. Корпорация Майкрософт не владеет веб-сайтами и не контролирует их содержимое.
 
-## <a name="processor-manufacturer-websites"></a>Веб-сайты производитель процессора
+## <a name="processor-manufacturer-websites"></a>Веб-сайты производителя процессора
 
-- [Руководства для разработчиков AMD, руководства и ISA документов](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Руководства для разработчиков AMD, руководства & документы по ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Руководства для разработчиков программного обеспечения для архитектур Intel 64 и IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Введение в Intel векторные инструкции AVX](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Знакомство с расширенными векторными расширениями Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>Примечания
 
-Microsoft Macro Assembler ни Visual Studio поддерживают все процессоры.
+Ни Visual Studio, ни ассемблер макросов Майкрософт не поддерживает все процессоры.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)

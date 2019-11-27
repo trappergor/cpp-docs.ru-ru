@@ -17,7 +17,7 @@ ms.locfileid: "74246067"
 ---
 # <a name="unhandled-c-exceptions"></a>Необработанные исключения C++
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. Если вам необходимо, чтобы перед выходом из приложения функция `terminate` в вашей программе вызывала какую-то другую функцию, вызовите функцию `set_terminate`, указав в качестве ее единственного аргумента ту функцию, которую нужно вызвать. Функцию `set_terminate` можно вызвать из любого места программы. The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+Если для текущего исключения не удается найти соответствующий обработчик (или обработчик **catch** с многоточием), то вызывается предопределенная `terminate` функция времени выполнения. (Можно также явно вызвать `terminate` в любом из обработчиков.) Действием `terminate` по умолчанию является вызов `abort`. Если вам необходимо, чтобы перед выходом из приложения функция `terminate` в вашей программе вызывала какую-то другую функцию, вызовите функцию `set_terminate`, указав в качестве ее единственного аргумента ту функцию, которую нужно вызвать. Функцию `set_terminate` можно вызвать из любого места программы. `terminate` подпрограммы всегда вызывает последнюю функцию, заданную в качестве аргумента для `set_terminate`.
 
 ## <a name="example"></a>Пример
 
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 Функция `term_func` должна завершать программу или текущий поток (желательно путем вызова функции `exit`). Если вместо этого она возвращает управление вызвавшему объекту, то вызывается функция `abort`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Современные C++ рекомендации по исключениям и обработке ошибок](../cpp/errors-and-exception-handling-modern-cpp.md)

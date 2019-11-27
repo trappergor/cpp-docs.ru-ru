@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: 23d34af470e825a8535de8cb28645a7bfb4c4d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 469b49832c171ee78336a0c457f0d269acd3b59d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203101"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397542"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Определяет один или несколько внешних переменных, меток или символов, которые называются *имя* типом `type`.
+Определяет одну или несколько внешних переменных, меток или символов *с именем, типом которых* является *Type*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Тип: имени EXTERNDEF [[langtype]] [[, [[langtype]] Имя: type]]...
+> **Екстерндеф** ⟦*Language — введите* *имя ⟧* __:__ *Type* ⟦ __,__ ⟦*Language-Type*⟧ *Name* __:__ *Type* ... ⟧
 
 ## <a name="remarks"></a>Примечания
 
-Если *имя* определяется в модуле, он рассматривается как [ОТКРЫТЫЙ](../../assembler/masm/public-masm.md). Если *имя* на который приведена ссылка в модуле, он рассматривается как [EXTERN](../../assembler/masm/extern-masm.md). Если *имя* является ссылки нет, он игнорируется. `type` Может быть [ABS](../../assembler/masm/operator-abs.md), которая импортирует *имя* как константа. Обычно используется в включаемых файлов.
+Если *имя* определено в модуле, оно считается [открытым](../../assembler/masm/public-masm.md). Если в модуле есть ссылка на *имя* , он рассматривается как [внешний](../../assembler/masm/extern-masm.md). Если ссылка на *имя* не указана, она игнорируется. *Тип* может быть [ABS](../../assembler/masm/operator-abs.md), который импортирует *имя* как константу. Обычно используется в включаемых файлах.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

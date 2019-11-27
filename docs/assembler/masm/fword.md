@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - FWORD directive
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
-ms.openlocfilehash: 85ea61b4d2d08e183663d4c0d1e15f998b49d3c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fd1c35ce5787b0fc0fa3ecb2cb5cb48050e28b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185536"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397499"
 ---
 # <a name="fword"></a>FWORD
 
-Выделяет и при необходимости инициализирует 6 байт для хранения для каждого `initializer`.
+Выделяет и при необходимости инициализирует 6 байтов хранилища для каждого *инициализатора*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> [[имя]] Инициализатор FWORD [[, инициализатор]]...
+> ⟦*имя*⟧ **фворд** *инициализатор* ⟦ __,__ *инициализатор* ... ⟧
 
 ## <a name="remarks"></a>Примечания
 
-Также можно использовать в качестве спецификатора типа в любом является допустимым типом.
+Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
-[DF](../../assembler/masm/df.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[DF](../../assembler/masm/df.md)

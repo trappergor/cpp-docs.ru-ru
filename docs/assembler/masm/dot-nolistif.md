@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 43cde027f5c909b13e90255efccee3c8dac080c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80a5231d72ba8fe1458aa14c6b555228f8fd968a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178687"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398070"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Подавляет список условных блоков, условие которого имеет значение false (0).
+Подавляет вывод списка условных блоков, условие которых имеет значение false (0).
 
 ## <a name="syntax"></a>Синтаксис
 
-> .NOLISTIF
+> **.NOLISTIF**
 
 ## <a name="remarks"></a>Примечания
 
-Это значение по умолчанию. Совпадение с кодом [. SFCOND](../../assembler/masm/dot-sfcond.md).
+Это значение по умолчанию. То же, что и [. СФКОНД](../../assembler/masm/dot-sfcond.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

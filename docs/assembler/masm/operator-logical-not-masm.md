@@ -1,5 +1,5 @@
 ---
-title: operator ! (MASM)
+title: operator ! MASM
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - '! operator'
 - operator !
 ms.assetid: 220bb468-7c88-4a5c-8303-2bd7f966fdeb
-ms.openlocfilehash: cf7346a861e38bdaaf2bcd7e90541b7dfa34e513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f7241943b201b36110cd5a943d36dcea74db72
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176698"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396739"
 ---
-# <a name="operator--masm"></a>operator ! (MASM)
+# <a name="operator--masm"></a>operator ! MASM
 
-Обрабатывает `character` как буквенный символ, а не как оператор "или" символов.
+Обрабатывает *символ* как литеральный символ, а не как оператор или символ.
 
 ## <a name="syntax"></a>Синтаксис
 
-> ! *Символ*
+> **!** *символов*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

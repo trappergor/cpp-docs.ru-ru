@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - INSTR directive
 ms.assetid: fc37f6a2-3c95-47b2-b6bb-1066edd25994
-ms.openlocfilehash: be3dda768d153e764242f16cd6500e39bdda7923
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23641e4f7a8bec9eddcfa0e26b8acfe50c760a1a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184558"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397317"
 ---
 # <a name="instr"></a>INSTR
 
@@ -19,12 +19,12 @@ ms.locfileid: "62184558"
 
 ## <a name="syntax"></a>Синтаксис
 
-> *имя* INSTR [[*позиции*,]] *textitem1*, *textitem2*
+> *имя* **InStr** ⟦ __,__ ⟧ *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Примечания
 
-Начальный *позиции* является необязательным. Каждый элемент текста может быть строковый литерал, константа предшествует `%`, или строка, возвращаемая функцией макрос.
+Начальное *Расположение* является необязательным. Каждый текстовый элемент может быть строкой литерала, константой, предшествующей **%** , или строкой, возвращаемой функцией макроса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

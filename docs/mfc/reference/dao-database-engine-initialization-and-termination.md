@@ -5,16 +5,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: ccdf2e7b0f31576dddccad016e6b32806cdb82bf
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 24a24d5a81da18d01472fc760c2adf96ee9868d5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095882"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303466"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>Инициализация и прекращение работы ядра базы данных DAO
 
-DAO используется с базами данных Access и поддерживается в Office 2013. 3,6 является окончательной версией и считается устаревшей. При использовании объектов MFC DAO необходимо сначала инициализировать ядро СУБД DAO, а затем завершить работу, прежде чем приложение или библиотека DLL завершит работу. Две функции, `AfxDaoInit` и `AfxDaoTerm`, выполняют эти задачи.
+DAO используется с базами данных Access и поддерживается в Office 2013. Версия DAO 3,6 является окончательной и считается устаревшей. При использовании объектов MFC DAO необходимо сначала инициализировать ядро СУБД DAO, а затем завершить работу, прежде чем приложение или библиотека DLL завершит работу. Эти задачи выполняют две функции: `AfxDaoInit` и `AfxDaoTerm`.
 
 ### <a name="dao-database-engine-initialization-and-termination"></a>Инициализация и прекращение работы ядра базы данных DAO
 
@@ -36,7 +36,7 @@ throw(CDaoException*);
 
 ### <a name="remarks"></a>Примечания
 
-В большинстве случаев вызывать `AfxDaoInit` не нужно, так как приложение автоматически вызывает его при необходимости.
+В большинстве случаев нет необходимости вызывать `AfxDaoInit`, так как приложение автоматически вызывает его при необходимости.
 
 Связанные сведения и пример вызова `AfxDaoInit`см. в [техническом примечании 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
@@ -55,9 +55,9 @@ void AfxDaoTerm();
 
 ### <a name="remarks"></a>Примечания
 
-Как правило, эта функция должна вызываться только в обычной библиотеке DLL MFC. приложение будет автоматически вызываться `AfxDaoTerm` при необходимости.
+Как правило, эта функция должна вызываться только в обычной библиотеке DLL MFC. приложение автоматически вызывает `AfxDaoTerm`, когда это необходимо.
 
-В обычных библиотеках DLL MFC `AfxDaoTerm` вызовите `ExitInstance` метод перед функцией, но после уничтожения всех объектов MFC DAO.
+В обычных библиотеках DLL MFC вызовите `AfxDaoTerm` перед функцией `ExitInstance`, но после уничтожения всех объектов MFC DAO.
 
 Связанные сведения см. в [техническом примечании 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
@@ -65,6 +65,6 @@ void AfxDaoTerm();
 
   **Заголовок** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4534
+title: Предупреждение компилятора (уровень 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
@@ -13,15 +13,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189092"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Предупреждение компилятора (уровень 3) C4534
 
-'constructor' will not be a default constructor for class 'class' due to the default argument
+"Конструктор" не будет конструктором по умолчанию для класса "класс" из-за аргумента по умолчанию
 
-An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
+Неуправляемый класс может иметь конструктор с параметрами, имеющими значения по умолчанию, и компилятор будет использовать его в качестве конструктора по умолчанию. Класс, помеченный ключевым словом `value`, не будет использовать конструктор со значениями по умолчанию для его параметров в качестве конструктора по умолчанию.
 
 Дополнительные сведения см. в статье [Классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-The following sample generates C4534:
+Следующий пример приводит к возникновению ошибки C4534:
 
 ```cpp
 // C4534.cpp

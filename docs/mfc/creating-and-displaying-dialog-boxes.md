@@ -23,11 +23,11 @@ ms.locfileid: "71685745"
 
 |Тип диалогового окна|Создание|
 |-----------------|----------------------|
-|[Модаль](../mfc/creating-modeless-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию-член @no__t – 1.|
-|[Косы](../mfc/creating-modal-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию-член @no__t – 1.|
+|[Модаль](../mfc/creating-modeless-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию `Create` члена.|
+|[Косы](../mfc/creating-modal-dialog-boxes.md)|Создайте `CDialog`, а затем вызовите функцию `DoModal` члена.|
 
 При необходимости можно создать диалоговое окно из созданного [шаблона диалогового окна в памяти](../mfc/using-a-dialog-template-in-memory.md) , а не из ресурса шаблона диалогового окна. Однако это дополнительная тема.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Работа с диалоговыми окнами в MFC](../mfc/life-cycle-of-a-dialog-box.md)

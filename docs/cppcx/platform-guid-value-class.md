@@ -24,16 +24,16 @@ ms.locfileid: "71816594"
 public value struct Guid
 ```
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Members
 
-`Platform::Guid` содержит методы `Equals()`, `GetHashCode()` и `ToString()`, производные от [класса Platform:: Object](../cppcx/platform-object-class.md), и метод `GetTypeCode()`, производный от [класса Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` также содержит следующие члены.
+`Platform::Guid` содержит методы `Equals()`, `GetHashCode()`и `ToString()`, производные от [класса Platform:: Object](../cppcx/platform-object-class.md), и метод `GetTypeCode()`, производный от [класса Platform:: Type](../cppcx/platform-type-class.md). `Platform::Guid` также содержит следующие члены.
 
 |Член|Описание|
 |------------|-----------------|
 |[Guid](#ctor)|Инициализирует новый экземпляр класса `Platform::Guid`.|
-|[operator==](#operator-equality)|Оператор равенства.|
-|[operator!=](#operator-inequality)|Оператор неравенства.|
-|[operator&lt;](#operator-less)|Оператор "меньше".|
+|[оператор==](#operator-equality)|Оператор равенства.|
+|[оператор!=](#operator-inequality)|Оператор неравенства.|
+|[оператор&lt;](#operator-less)|Оператор «меньше».|
 |[operator()](#operator-call)|Преобразует `Platform::Guid` в `GUID`.|
 
 ### <a name="remarks"></a>Примечания
@@ -46,7 +46,7 @@ public value struct Guid
 
 **Минимальный поддерживаемый сервер:** Windows Server 2012
 
-**Пространство имен:** Платформа
+**Пространство имен:** Platform
 
 **Метаданные:** platform.winmd
 
@@ -115,7 +115,7 @@ Guid(
 Следующий байт `GUID`.
 
 *m*<br/>
-Значение `GUID` в виде [структуры GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+`GUID` в виде [структуры GUID](/previous-versions/cc317743(v%3dmsdn.10)).
 
 *n*<br/>
 Оставшиеся 8 байт `GUID`.
@@ -168,7 +168,7 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 Значение true, если два экземпляра `Platform::Guid` не равны.
 
-## <a name="operator-less"></a>Оператор GUID:: operator @ no__t-1
+## <a name="operator-less"></a>Оператор GUID:: operator&lt;
 
 Сравнивает два экземпляра `Platform::Guid` для упорядочения.
 
@@ -188,9 +188,9 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение true, если *GUID1* упорядочивается до *GUID2*. Упорядочение лексикографическим порядком после обработки каждого `Platform::Guid`, как если бы это массив 4 32-разрядных значений без знака. Это не порядок, используемый SQL Server или .NET Framework, а также не совпадает с лексикографическом упорядочиванием по строковому представлению.
+Значение true, если *GUID1* упорядочивается до *GUID2*. Упорядочение лексикографическим порядком после обработки каждого `Platform::Guid`, как если бы он был массивом 4 32-разрядных значений без знака. Это не порядок, используемый SQL Server или .NET Framework, а также не совпадает с лексикографическом упорядочиванием по строковому представлению.
 
-Этот оператор предоставляется таким образом, чтобы объекты `Guid` могли быть более легко использованы C++ стандартной библиотекой.
+Этот оператор предоставляется таким образом, чтобы `Guid` объекты могли проще использовать C++ стандартную библиотеку.
 
 ## <a name="operator-call"></a>Оператор GUID:: operator ()
 
@@ -206,6 +206,6 @@ const GUID& Platform::Guid::operator();
 
 [Структура Guid](/previous-versions/cc317743(v%3dmsdn.10)).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

@@ -24,17 +24,17 @@ ms.locfileid: "74246407"
 
 Некоторые из самых распространенных источников ошибок программы не отмечены системой как исключения. Например, при попытке выделить блок памяти при недостаточной памяти среда выполнения или функция API не создает исключение, но возвращает код ошибки.
 
-However, you can treat any condition as an exception by detecting that condition in your code and then reporting it by calling the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function. Отмечая ошибки таким образом, можно использовать преимущества структурированной обработки исключений в любом типе ошибки времени выполнения.
+Тем не менее можно рассматривать любое условие как исключение, выявляя это условие в коде, а затем сообщая о нем, вызвав функцию [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) . Отмечая ошибки таким образом, можно использовать преимущества структурированной обработки исключений в любом типе ошибки времени выполнения.
 
 Чтобы использовать структурированную обработку исключений с ошибками, выполните следующие действия.
 
 - Определите собственный код исключения для события.
 
-- Call `RaiseException` when you detect a problem.
+- Вызовите `RaiseException` при обнаружении проблемы.
 
 - Используйте фильтры обработки исключений для проверки определенного кода исключения.
 
-The \<winerror.h> file shows the format for exception codes. Чтобы проверить, что определяемый код не будет конфликтовать с существующим кодом исключения, задайте для третьего наиболее значимого бита значение 1. Следует установить четыре наиболее значимых бита, как показано в следующей таблице.
+В файле \<Winerror. h > показан формат кодов исключений. Чтобы проверить, что определяемый код не будет конфликтовать с существующим кодом исключения, задайте для третьего наиболее значимого бита значение 1. Следует установить четыре наиболее значимых бита, как показано в следующей таблице.
 
 |Bits|Рекомендуемый двоичный параметр|Описание|
 |----------|--------------------------------|-----------------|
@@ -44,14 +44,14 @@ The \<winerror.h> file shows the format for exception codes. Чтобы пров
 
 При желании для первых двух битов можно задать параметр, отличный от двоичного параметра 11, хотя параметр "ошибка" подходит для большинства исключений. Помните, что биты 29 и 28 следует установить так, как показано в предыдущей таблице.
 
-The resulting error code should therefore have the highest four bits set to hexadecimal E. For example, the following definitions define exception codes that do not conflict with any Windows exception codes. (Хотя может потребоваться проверить, какие коды используются сторонними библиотеками DLL.)
+В результате код ошибки должен иметь старшие четыре бита, равные шестнадцатеричному E. Например, следующие определения определяют коды исключений, которые не конфликтуют с кодами исключений Windows. (Хотя может потребоваться проверить, какие коды используются сторонними библиотеками DLL.)
 
 ```cpp
 #define STATUS_INSUFFICIENT_MEM       0xE0000001
 #define STATUS_FILE_BAD_FORMAT        0xE0000002
 ```
 
-После определения кода исключения его можно использовать для создания исключения. For example, the following code raises the `STATUS_INSUFFICIENT_MEM` exception in response to a memory allocation problem:
+После определения кода исключения его можно использовать для создания исключения. Например, следующий код вызывает исключение `STATUS_INSUFFICIENT_MEM` в ответ на проблему выделения памяти:
 
 ```cpp
 lpstr = _malloc( nBufferSize );
@@ -59,9 +59,9 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-Если требуется просто создать исключение, можно установить для трех последних параметров значение 0. Три последних параметра полезны при передаче дополнительной информации и установке флага, который запрещает обработчикам продолжать выполнение. See the [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) function in the Windows SDK for more information.
+Если требуется просто создать исключение, можно установить для трех последних параметров значение 0. Три последних параметра полезны при передаче дополнительной информации и установке флага, который запрещает обработчикам продолжать выполнение. Дополнительные сведения см. в описании функции [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) в Windows SDK.
 
-Затем можно проверить определенные коды в фильтрах обработки исключений. Пример:
+Затем можно проверить определенные коды в фильтрах обработки исключений. Например:
 
 ```cpp
 __try {
@@ -71,7 +71,7 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[Structured exception handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
+[Структурированная обработка исключений (CC++/)](../cpp/structured-exception-handling-c-cpp.md)

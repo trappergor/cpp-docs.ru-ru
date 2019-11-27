@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Environ symbol'
 ms.assetid: 4b0b7e93-9ebe-413b-8196-1a504eb6d1d0
-ms.openlocfilehash: 2f4d5725d37a74ff0c9c19ad5206478196f28a13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9e31c91f42330c5173edaee1865a4f584ae572
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166312"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399123"
 ---
-# <a name="environ"></a>@Environ
+# <a name="environ"></a>\@Environ
 
-Значение переменной среды *envvar* (функция макрос).
+Значение переменной среды *envvar* (функция макроса).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Environ(envvar)
+> **\@Environ (** *envvar* **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

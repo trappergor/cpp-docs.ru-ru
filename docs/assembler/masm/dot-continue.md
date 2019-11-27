@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .CONTINUE directive
 ms.assetid: 60a6e46d-49e6-4d65-97d0-cbe8c47b3fab
-ms.openlocfilehash: a74fac7e00a801b0b58b8c49694da70f6f779fed
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 18032113bdba0c2ae5182cd2fc3cc3382a1914d5
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703474"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398557"
 ---
 # <a name="continue-32-bit-masm"></a>. ПРОДОЛЖИТЬ (32-разрядный компилятор MASM)
 
-Создает код для перехода к началу [. WHILE](../../assembler/masm/dot-while.md) или [. Повтор](../../assembler/masm/dot-repeat.md) блока, если `condition` имеет значение true. (только 32-разрядный MASM.)
+Создает код для перехода к началу [. WHILE](../../assembler/masm/dot-while.md) или [. Повтор](../../assembler/masm/dot-repeat.md) блока, если *условие* истинно. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> . ПРОДОЛЖИТЬ [[. IF условие]]
+> **. ПРОДОЛЖИТе** ⟦ **.**  *Условие*if ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

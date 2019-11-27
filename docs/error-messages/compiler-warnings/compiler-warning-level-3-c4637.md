@@ -15,9 +15,9 @@ ms.locfileid: "74189122"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>Предупреждение компилятора (уровень 3) C4637
 
-XML document comment target: \<include> tag discarded.  reason
+Целевой объект комментария XML-документа: \<включить тег >.  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+Неверный синтаксис [\<include](../../build/reference/include-visual-cpp.md) для тега >.
 
 В следующем примере возникает ошибка C4637.
 

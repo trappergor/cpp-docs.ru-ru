@@ -8,23 +8,23 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1f59985d4a11dd4ffd65c8ef1086826ade6ea3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199930"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396493"
 ---
 # <a name="operator-ptr"></a>Оператор PTR
 
-Первый оператор силы *выражение* будет считаться с указанным *тип*. Второй оператор устанавливает указатель на *тип*.
+Первый оператор заставляет *выражение* обрабатываться как имеющий указанный *тип*. Второй оператор задает указатель на *тип*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *Тип* PTR *выражение*
+> *выражение* *типа* **ptr**
 >
-> \[*расстояние*] PTR *типа*
+> \[ное *расстояние*] *тип* **ptr**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator LROFFSET
 - LROFFSET operator
 ms.assetid: 61ab45d4-7a30-440d-9c11-2a9dfa6ae565
-ms.openlocfilehash: 1ed1fc7c3a927dc7899804e697e948736afb1567
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 835849d0f534e67dbc7b08ee025d54c2faf4fe82
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199995"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396695"
 ---
 # <a name="operator-lroffset"></a>Оператор LROFFSET
 
-Возвращает смещение *выражение*. Совпадение с кодом **СМЕЩЕНИЕ**, но он создает устранения смещения загрузчика, что позволяет Windows переместить сегменты кода.
+Возвращает смещение *выражения*. То же, что и **offset**, но создает смещение, разрешенное загрузчиком, что позволяет Windows перемещать сегменты кода.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Выражение LROFFSET
+> *Выражение* лроффсет
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

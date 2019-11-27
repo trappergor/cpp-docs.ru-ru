@@ -12,19 +12,19 @@ ms.locfileid: "74245177"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>Pimpl для инкапсуляции времени компиляции (современный C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+*Идиома Пимпл* — это современный C++ метод скрытия реализации, для минимального связывания и разделения интерфейсов. Пимпл является коротким для "указателя на реализацию". Возможно, вы уже знакомы с концепцией, но знаете ее по другим именам, таким как Чешир Cat или идиома брандмауэра компилятора.
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Зачем использовать Пимпл?
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+Вот как пимплная идиома может улучшить жизненный цикл разработки программного обеспечения:
 
-- Minimization of compilation dependencies.
+- Минимизация зависимостей компиляции.
 
-- Separation of interface and implementation.
+- Разделение интерфейса и реализации.
 
-- Portability.
+- Компакт.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Заголовок Пимпл
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+Идиом Пимпл позволяет избежать перестроения каскадных и нестабильнымных макетов объектов. Он хорошо подходит для (транзитивно) популярных типов.
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Реализация Пимпл
 
-Define the `impl` class in the .cpp file.
+Определите класс `impl` в cpp – файле.
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>Рекомендации
 
-Consider whether to add support for non-throwing swap specialization.
+Рассмотрите возможность добавления поддержки для специализации, не создающей исключение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Добро пожаловать обратно вC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)

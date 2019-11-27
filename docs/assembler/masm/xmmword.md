@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - XMMWORD directive
 ms.assetid: 18026d32-5cab-403e-ad7e-382fb41aa9b8
-ms.openlocfilehash: 59d1ba71260ed08b761c332e887cf27517762303
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7783049a143b19295a67cd3e9e40afeab3c814f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210109"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392794"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Используется для 128-разрядные операнды мультимедиа с инструкциями MMX и SSE (XMM).
+Используется для 128-разрядных операндов мультимедиа с инструкциями MMX и SSE (XMM).
 
 ## <a name="syntax"></a>Синтаксис
 
-> XMMWORD
+> **XMMWORD**
 
 ## <a name="remarks"></a>Примечания
 
-`XMMWORD` представляет тот же тип, что [__m128](../../cpp/m128.md).
+**Ксммворд** предназначен для представления того же типа, что и [__m128](../../cpp/m128.md).
 
 ## <a name="example"></a>Пример
 

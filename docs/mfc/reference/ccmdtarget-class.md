@@ -63,21 +63,21 @@ ms.locfileid: "71816343"
 class CCmdTarget : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[От CCmdTarget:: от CCmdTarget](#ccmdtarget)|Создает объект `CCmdTarget`.|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[От CCmdTarget:: Бегинваиткурсор](#beginwaitcursor)|Отображает курсор в виде указателя песочных часов.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Вызывает выполнение действия, указанного в команде OLE.|
-|[От CCmdTarget:: Енаблеаутоматион](#enableautomation)|Разрешает автоматизацию OLE для объекта `CCmdTarget`.|
+|[От CCmdTarget:: Енаблеаутоматион](#enableautomation)|Разрешает OLE Automation для объекта `CCmdTarget`.|
 |[От CCmdTarget:: Енаблеконнектионс](#enableconnections)|Разрешает обработку событий через точки соединения.|
 |[От CCmdTarget:: Енаблетипелиб](#enabletypelib)|Включает библиотеку типов объекта.|
 |[От CCmdTarget:: Ендваиткурсор](#endwaitcursor)|Возвращает к предыдущему курсору.|
@@ -99,13 +99,13 @@ class CCmdTarget : public CObject
 
 Схема сообщений направляет команды или сообщения в функции-члены, которые вы пишете для обработки. (Команда является сообщением из пункта меню, кнопки или сочетания клавиш.)
 
-Ключевыми классами платформы, производными от `CCmdTarget`, являются [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)и [CFrameWnd](../../mfc/reference/cframewnd-class.md). Если предполагается, что новый класс будет работать с сообщениями, производные от одного из этих @no__t классов, производных от -0. Вы редко наследуете класс от `CCmdTarget` напрямую.
+Ключевыми классами платформы, производными от `CCmdTarget`, являются [CView](../../mfc/reference/cview-class.md), [CWinApp](../../mfc/reference/cwinapp-class.md), [CDocument](../../mfc/reference/cdocument-class.md), [CWnd](../../mfc/reference/cwnd-class.md)и [CFrameWnd](../../mfc/reference/cframewnd-class.md). Если требуется, чтобы новый класс обрабатывал сообщения, производные от одного из этих классов, производных от `CCmdTarget`, следует унаследовать класс. Вы редко будете наследовать класс от `CCmdTarget` напрямую.
 
-Общие сведения о целевых объектах команды и маршрутизации `OnCmdMsg` см. в разделе [цели команды](../../mfc/command-targets.md), [Маршрутизация команд](../../mfc/command-routing.md)и [сообщения о сопоставлении](../../mfc/mapping-messages.md).
+Общие сведения о целевых объектах команд и маршрутизации `OnCmdMsg` см. в разделе [цели команд](../../mfc/command-targets.md), [Маршрутизация команд](../../mfc/command-routing.md)и [сообщения о сопоставлении](../../mfc/mapping-messages.md).
 
-@no__t 0 включает функции-члены, которые обрабатывали отображение курсора песочных часов. Отображение курсора песочных часов, если предполагается, что команда займет заметный интервал времени для выполнения.
+`CCmdTarget` включает функции элементов, которые обрабатывали отображение курсора песочных часов. Отображение курсора песочных часов, если предполагается, что команда займет заметный интервал времени для выполнения.
 
-Карты диспетчеризации, аналогичные картам сообщений, используются для предоставления функциональных возможностей OLE-автоматизации @no__t – 0. Предоставляя этот интерфейс, другие приложения (такие как Visual Basic) могут вызываться в приложении.
+Карты диспетчеризации, аналогичные картам сообщений, используются для предоставления функциональных возможностей OLE Automation `IDispatch`. Предоставляя этот интерфейс, другие приложения (такие как Visual Basic) могут вызываться в приложении.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -213,11 +213,11 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите эту функцию-член в конструкторе @no__tного объекта, производного от -0, если он предоставляет сведения о типе.
+Вызовите эту функцию-член в конструкторе объекта, производного от `CCmdTarget`, если он предоставляет сведения о типе.
 
 ##  <a name="endwaitcursor"></a>От CCmdTarget:: Ендваиткурсор
 
-Вызовите эту функцию после вызова функции-члена @no__t – 0 для возврата от курсора песочных часов к предыдущему курсору.
+Вызовите эту функцию после вызова функции члена `BeginWaitCursor`, чтобы вернуться от курсора песочных часов к предыдущему курсору.
 
 ```
 void EndWaitCursor();
@@ -254,7 +254,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 
 ##  <a name="fromidispatch"></a>От CCmdTarget:: Фромидиспатч
 
-Вызовите эту функцию, чтобы соотнести указатель `IDispatch`, полученный от функций-членов автоматизации класса, в объект @no__t – 1, реализующий интерфейсы объекта `IDispatch`.
+Вызывайте эту функцию для отображения `IDispatch` указателя, полученного от функций-членов автоматизации класса, в объект `CCmdTarget`, реализующий интерфейсы объекта `IDispatch`.
 
 ```
 static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
@@ -267,11 +267,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CCmdTarget`, связанный с *лпдиспатч*. Эта функция возвращает значение NULL, если объект `IDispatch` не распознан как класс Microsoft Foundation `IDispatch` объект.
+Указатель на объект `CCmdTarget`, связанный с *лпдиспатч*. Эта функция возвращает значение NULL, если `IDispatch` объект не распознан как класс Microsoft Foundation `IDispatch` объект.
 
 ### <a name="remarks"></a>Примечания
 
-Результат этой функции является обратным вызовом функции-члена @no__t – 0.
+Результат этой функции является обратным вызовом функции-члена `GetIDispatch`.
 
 ##  <a name="getdispatchiid"></a>От CCmdTarget:: Жетдиспатчиид
 
@@ -288,7 +288,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если выполнено успешно; в противном случае — FALSE. В случае успешного выполнения \* *пиид* устанавливается в основной идентификатор интерфейса диспетчеризации.
+Значение TRUE, если выполнено успешно; в противном случае — FALSE. В случае успеха \* *пиид* задается идентификатор основного интерфейса диспетчеризации.
 
 ### <a name="remarks"></a>Примечания
 
@@ -296,7 +296,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 
 ##  <a name="getidispatch"></a>От CCmdTarget:: IDispatch
 
-Вызовите эту функцию-член, чтобы получить указатель @no__t – 0 из метода автоматизации, который возвращает указатель `IDispatch` или принимает указатель `IDispatch` по ссылке.
+Вызовите эту функцию члена, чтобы получить указатель `IDispatch` из метода автоматизации, который возвращает указатель `IDispatch` или принимает указатель `IDispatch` по ссылке.
 
 ```
 LPDISPATCH GetIDispatch(BOOL bAddRef);
@@ -313,7 +313,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 
 ### <a name="remarks"></a>Примечания
 
-Для объектов, которые вызывают `EnableAutomation` в своих конструкторах, делая их включенной, эта функция возвращает указатель на реализацию класса Foundation `IDispatch`, используемый клиентами, которые обмениваются данными через интерфейс `IDispatch`. При вызове этой функции автоматически добавляется ссылка на указатель, поэтому нет необходимости выполнять вызов [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref).
+Для объектов, которые вызывают `EnableAutomation` в своих конструкторах, делая их включенной, эта функция возвращает указатель на реализацию класса базовых классов `IDispatch`, который используется клиентами, взаимодействующими через интерфейс `IDispatch`. При вызове этой функции автоматически добавляется ссылка на указатель, поэтому нет необходимости выполнять вызов [IUnknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref).
 
 ##  <a name="gettypeinfocount"></a>От CCmdTarget:: Жеттипеинфокаунт
 
@@ -383,7 +383,7 @@ virtual HRESULT GetTypeLib(
 
 ### <a name="remarks"></a>Примечания
 
-Производные классы должны переопределять эту функцию-член (если она не была переопределена, `GetTypeLib` возвращает значение TYPE_E_CANTLOADLIBRARY). Используйте макрос [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , который также реализует `GetTypeInfoCount` и `GetTypeLibCache`.
+Производные классы должны переопределять эту функцию-член (если она не была переопределена, `GetTypeLib` возвращает TYPE_E_CANTLOADLIBRARY). Используйте макрос [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , который также реализует `GetTypeInfoCount` и `GetTypeLibCache`.
 
 ##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache
 
@@ -399,11 +399,11 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="remarks"></a>Примечания
 
-Производные классы должны переопределять эту функцию-член (если она не переопределена, `GetTypeLibCache` возвращает значение NULL). Используйте макрос [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , который также реализует `GetTypeInfoCount` и `GetTypeLib`.
+Производные классы должны переопределять эту функцию-член (если она не была переопределена, `GetTypeLibCache` возвращает значение NULL). Используйте макрос [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) , который также реализует `GetTypeInfoCount` и `GetTypeLib`.
 
 ##  <a name="isinvokeallowed"></a>От CCmdTarget:: Исинвокеалловед
 
-Эта функция вызывается реализацией `IDispatch::Invoke` в MFC, чтобы определить, может ли быть вызван данный метод автоматизации (идентифицируемый *DISPID*).
+Эта функция вызывается реализацией `IDispatch::Invoke` MFC, чтобы определить, может ли быть вызван данный метод автоматизации (идентифицируемый *DISPID*).
 
 ```
 virtual BOOL IsInvokeAllowed(DISPID dispid);
@@ -420,9 +420,9 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>Примечания
 
-Если `IsInvokeAllowed` возвращает значение TRUE, то `Invoke` переходит к вызову метода; в противном случае `Invoke` завершится ошибкой, возвращая E_UNEXPECTED.
+Если `IsInvokeAllowed` возвращает значение TRUE, `Invoke` продолжает вызывать метод. в противном случае `Invoke` завершится ошибкой, возвращая E_UNEXPECTED.
 
-Производные классы могут переопределять эту функцию для возврата соответствующих значений (если не переопределить, `IsInvokeAllowed` возвращает значение TRUE). См. раздел в определенных [COleControl:: исинвокеалловед](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
+Производные классы могут переопределить эту функцию для возврата соответствующих значений (если не переопределить, `IsInvokeAllowed` возвращает значение TRUE). См. раздел в определенных [COleControl:: исинвокеалловед](../../mfc/reference/colecontrol-class.md#isinvokeallowed).
 
 ##  <a name="isresultexpected"></a>От CCmdTarget:: Исресултекспектед
 
@@ -482,13 +482,13 @@ virtual BOOL OnCmdMsg(
 
 В редких случаях может потребоваться переопределить эту функцию-член, чтобы расширить стандартную маршрутизацию команд в платформе. Дополнительные сведения об архитектуре маршрутизации команд см. в [техническом примечании 21](../../mfc/tn021-command-and-message-routing.md) .
 
-При переопределении `OnCmdMsg` необходимо указать соответствующее значение для *нкоде*, код уведомления команды и *пекстра*, который зависит от значения *нкоде*. В следующей таблице перечислены соответствующие значения.
+При переопределении `OnCmdMsg`необходимо указать соответствующее значение для *нкоде*, код уведомления команды и *пекстра*, который зависит от значения *нкоде*. В следующей таблице перечислены соответствующие значения.
 
 |значение *нкоде*|значение *пекстра*|
 |-------------------|--------------------|
 |CN_COMMAND|[Поддержка ccmdui](../../mfc/reference/ccmdui-class.md)\*|
-|CN_EVENT|AFX_EVENT @ NO__T-0|
-|CN_UPDATE_COMMAND_UI|Поддержка CCmdUI @ no__t-0|
+|CN_EVENT|AFX_EVENT\*|
+|CN_UPDATE_COMMAND_UI|Поддержка CCmdUI\*|
 |CN_OLECOMMAND|[Колекмдуи](../../mfc/reference/colecmdui-class.md)\*|
 |CN_OLE_UNREGISTER|NULL|
 
@@ -522,7 +522,7 @@ void RestoreWaitCursor();
 
 [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пример ACDUAL библиотеки MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4522
+title: Предупреждение компилятора (уровень 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
@@ -13,17 +13,17 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188966"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
+# <a name="compiler-warning-level-3-c4522"></a>Предупреждение компилятора (уровень 3) C4522
 
-'class' : multiple assignment operators specified
+"класс": задано несколько операторов присваивания
 
-The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
+Класс имеет несколько операторов присваивания одного типа. Это предупреждение является информационным; конструкторы вызываемы в программе.
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+Чтобы отключить это предупреждение, используйте директиву pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Пример
 
-The following sample generates C4522.
+Следующий пример приводит к возникновению ошибки C4522.
 
 ```cpp
 // C4522.cpp

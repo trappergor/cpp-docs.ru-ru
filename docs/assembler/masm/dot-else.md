@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: a8143511be63031f5639e6f6014a82ef14fb0db9
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: f048901a3958066880665b76d865f926a26ffb24
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703122"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398497"
 ---
 # <a name="else-32-bit-masm"></a>. ELSE (32-разрядный MASM)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .ELSE
+> **.ELSE**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-(только 32-разрядный MASM.) См [. раздел. Если](../../assembler/masm/dot-if.md). 
+(только 32-разрядный MASM.) См [. раздел. Если](../../assembler/masm/dot-if.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

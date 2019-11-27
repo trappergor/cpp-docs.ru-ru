@@ -1,7 +1,7 @@
 ---
-title: Pointers (C++)
+title: УказателиC++()
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: Об необработанных указателях и смарт C++-указателях в Microsoft.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,28 +12,28 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246421"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>УказателиC++()
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+Указатель — это переменная, в которой хранится адрес памяти объекта. Указатели широко используются в C и C++ в следующих трех основных целях:
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- чтобы выделить новые объекты в куче,
+- передача функций в другие функции
+- для итерации элементов в массивах или других структурах данных.
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+В программировании в стиле C для всех этих сценариев используются *необработанные указатели* . Однако необработанные указатели являются источником многих серьезных ошибок программирования. Таким образом, их использование настоятельно не рекомендуется, за исключением случаев, когда они обеспечивают значительное преимущество в производительности, и неоднозначность, с которой указатель является *указателем-владельцем* , отвечающим за удаление объекта. Современная C++ обеспечивает *интеллектуальные указатели* для выделения объектов, *итераторов* для обхода структур данных и *лямбда-выражений* для передачи функций. Используя эти средства языка и библиотеки вместо необработанных указателей, вы сделаете программу более безопасной, более простой в отладке и более удобной для понимания и сопровождения. Дополнительные сведения см. в разделе [интеллектуальные указатели](smart-pointers-modern-cpp.md), [итераторы](../standard-library/iterators.md)и [лямбда-выражения](lambda-expressions-in-cpp.md) .
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Необработанные указатели](raw-pointers.md)
+- [Константные и переменные указатели](const-and-volatile-pointers.md)
+- [операторы создания и удаления](new-and-delete-operators.md)
+- [Интеллектуальные указатели](smart-pointers-modern-cpp.md)
+- [Как создавать и использовать экземпляры unique_ptr](how-to-create-and-use-unique-ptr-instances.md)
+- [Как создавать и использовать экземпляры shared_ptr](how-to-create-and-use-shared-ptr-instances.md)
+- [Как создавать и использовать экземпляры weak_ptr](how-to-create-and-use-weak-ptr-instances.md)
+- [Как создавать и использовать экземпляры CComPtr и CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Итераторы](../standard-library/iterators.md)</br>
 [Лямбда-выражения](lambda-expressions-in-cpp.md)

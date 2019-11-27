@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IFE directive
 ms.assetid: bac5659d-9d2e-406d-89b7-e05b335ab0fd
-ms.openlocfilehash: b623bc18634b040d928cade7a7529d08b49063a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca934671ed38abde1f188cf79f5e9074115de1d8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184627"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397398"
 ---
 # <a name="ife"></a>IFE
 
@@ -19,12 +19,12 @@ ms.locfileid: "62184627"
 
 ## <a name="syntax"></a>Синтаксис
 
-> IFE выражение
+> *Выражение* Ифе
 
 ## <a name="remarks"></a>Примечания
 
-См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

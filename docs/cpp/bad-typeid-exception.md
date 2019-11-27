@@ -17,7 +17,7 @@ ms.locfileid: "74245919"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid - исключение
 
-The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
+**Bad_typeid** исключение вызывается [оператором typeid](../cpp/typeid-operator.md) , если операндом для **typeid** является пустой указатель.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,9 +26,9 @@ catch (bad_typeid)
    statement
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The interface for **bad_typeid** is:
+Интерфейс для **bad_typeid** :
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-The following example shows the **typeid** operator throwing a **bad_typeid** exception.
+В следующем примере показано, как оператор **typeid** создает исключение **bad_typeid** .
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -78,7 +78,7 @@ catch (bad_typeid){
 Object is NULL
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сведения о типах среды выполнения](../cpp/run-time-type-information.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)

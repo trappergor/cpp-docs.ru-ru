@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - REAL10 directive
 ms.assetid: 6abe2c35-db96-45c7-82d7-ea6e2f92fbf9
-ms.openlocfilehash: 90a36a59f6702bf53be5f073ab979eedf56de52c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22ad35592b4c8a1fcc46f45fad19e42b62790b0b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210435"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394863"
 ---
 # <a name="real10"></a>REAL10
 
-Выделяет и при необходимости инициализирует 10-байтовое число с плавающей запятой для каждого *инициализатор*.
+Выделяет и при необходимости инициализирует 10-байтовое число с плавающей запятой для каждого *инициализатора*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Инициализатор REAL10 имя [[, инициализатор]]...
+> *Name* **REAL10** *инициализатор* ⟦ __,__ *initializer* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

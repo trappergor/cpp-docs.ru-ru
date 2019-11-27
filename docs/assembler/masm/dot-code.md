@@ -6,28 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 65d336d2829c97fdf21e6f4b0fcb3063cc7776ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b6608ca71a2b406c54a06cd44ac2865211a8ac
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204378"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398581"
 ---
 # <a name="code"></a>.CODE
 
-При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), указывает на начало сегмент кода.
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)указывает начало сегмента кода.
 
 ## <a name="syntax"></a>Синтаксис
 
-> . КОД [[имя]]
+> **. КОД** ⟦*имя*⟧
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|`name`|Необязательный параметр, который задает имя сегмента кода. Имя по умолчанию — _TEXT compact мало места, "мелкая", и плоский [моделей](../../assembler/masm/dot-model.md). Имя по умолчанию — *modulename*_TEXT для других моделей.|
+*имя*\
+Необязательный параметр, указывающий имя сегмента кода. Имя по умолчанию — **_TEXT** для мелких, небольших, сжатых и плоских [моделей](../../assembler/masm/dot-model.md). Имя по умолчанию — *modulename*_TEXT для других моделей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
-[.DATA](../../assembler/masm/dot-data.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[.DATA](../../assembler/masm/dot-data.md)

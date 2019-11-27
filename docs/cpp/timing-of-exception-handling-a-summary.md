@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 'Время обработки исключений: сводка'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246337"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>Время обработки исключений: сводка
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+Обработчик завершения выполняется независимо от того, как завершается блок оператора **__try** . Причины включают выход из блока **__try** , инструкцию `longjmp`, которая передает управление за пределы блока и раскрутку стека из-за обработки исключений.
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. Быстрая версия обходит обработку завершения, однако является более эффективной. To use this version, include the file \<setjmp.h>. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. To use this version, include the file \<setjmpex.h>. Увеличение производительности быстрой версии зависит от конфигурации оборудования.
+>  Компилятор Майкрософт C++ поддерживает две формы инструкций `setjmp` и `longjmp`. Быстрая версия обходит обработку завершения, однако является более эффективной. Чтобы использовать эту версию, включите файл \<setjmp. h >. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. Чтобы использовать эту версию, включите файл \<сетжмпекс. h >. Увеличение производительности быстрой версии зависит от конфигурации оборудования.
 
 Операционная система выполняет все обработчики завершения в нужном порядке, прежде чем сможет быть выполнен какой-либо другой код, включая тело обработчика исключений.
 
@@ -35,7 +35,7 @@ A termination handler is executed no matter how the **__try** statement block is
 
 1. Если этот фильтр передает контроль (возвращает 0), процесс продолжается до тех пор, пока не будет найден фильтр, который не передает контроль.
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. Если этот фильтр возвращает значение-1, выполнение продолжается там, где было вызвано исключение, и не происходит завершения.
 
 1. Если фильтр возвращает 1, возникают следующие события:
 
@@ -47,7 +47,7 @@ A termination handler is executed no matter how the **__try** statement block is
 
    - Контроль переходит к строке кода после окончания этого обработчика исключений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
+[Написание обработчика завершения](../cpp/writing-a-termination-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

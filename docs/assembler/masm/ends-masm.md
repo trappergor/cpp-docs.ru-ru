@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - ENDS directive
 ms.assetid: 30f68c58-de1f-4bdd-ac83-4658bdbaad65
-ms.openlocfilehash: a92b307e0d426afb4c74113de5738c15be064040
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ade586e1a2a422e7cfbc00fa9d92471d0f8bdf
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185165"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397632"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 
-Помечает конец сегмента, структуры или объединения *имя* ранее начавшиеся с [СЕГМЕНТ](../../assembler/masm/segment.md), [СТРУКТУРЫ](../../assembler/masm/struct-masm.md), [UNION](../../assembler/masm/union.md), или упрощенный сегмент директива.
+Помечает конец сегмента, структуры или *имени* объединения, ранее начатого [с помощью директивы сегмента,](../../assembler/masm/segment.md) [структуры](../../assembler/masm/struct-masm.md), [объединения](../../assembler/masm/union.md)или упрощенного сегмента.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Имя имеет РАСШИРЕНИЕ
+> *имя* **заканчивается**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

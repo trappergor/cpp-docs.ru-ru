@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@FileName symbol'
 ms.assetid: a713bf70-2abd-4953-b187-7875ded58e52
-ms.openlocfilehash: 86fe01e924f4bd8af4e15e4aab2d809ac78dae97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6967c2d6d8955cbde03f1b4698343b05b8d5c9e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180112"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399046"
 ---
-# <a name="filename"></a>@FileName
+# <a name="filename"></a>Имя файла \@
 
-Базовое имя главного файла производится сборка (макрос text).
+Базовое имя создаваемого главного файла (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @FileName
+> **Имя файла \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

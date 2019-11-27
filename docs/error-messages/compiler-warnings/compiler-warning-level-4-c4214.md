@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4214
 ms.assetid: 9b8db279-1f12-4a6b-a923-2db22acd1947
-ms.openlocfilehash: 31711d3709b7c2ae3658d760f538ea9e841d33a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85f37810708eff43574129f42dd8444fe7dc37c2
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401128"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541904"
 ---
 # <a name="compiler-warning-level-4-c4214"></a>Предупреждение компилятора (уровень 4) C4214
 
-использовано нестандартное расширение: типы битовых полей, отличные от int
+нестандартное расширение: типы битовых полей, отличные от int
 
-В расширениях Майкрософт по умолчанию (/Ze) члены битового поля структуры может быть любой целочисленный тип.
+С расширениями Майкрософт по умолчанию (/Ze) битовые элементы структуры могут иметь любой целочисленный тип.
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // C4214.c
 // compile with: /W4
 struct bitfields
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Такие битовые поля недопустимы в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Такие битовые поля недопустимы в режиме совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

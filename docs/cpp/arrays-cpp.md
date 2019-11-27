@@ -15,11 +15,11 @@ ms.locfileid: "74188993"
 ---
 # <a name="arrays-c"></a>Массивы (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+Массив — это последовательность объектов того же типа, которые занимают смежную область памяти. Традиционные массивы в стиле C являются источником многих ошибок, но по-прежнему являются общими, особенно в старых базах кода. В современных C++версиях мы настоятельно рекомендуем использовать [std:: Vector](../standard-library/vector-class.md) или [std:: Array](../standard-library/array-class-stl.md) вместо массивов в стиле C, описанных в этом разделе. Оба этих типа стандартных библиотек хранят свои элементы как непрерывный блок памяти, но обеспечивают гораздо большую безопасность типов вместе с итераторами, которые гарантированно указывают на допустимое расположение в последовательности. Дополнительные сведения см. в разделе [контейнеры C++(современный)](containers-modern-cpp.md).
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>Объявления стека
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+В объявлении C++ массива размер массива указывается после имени переменной, а не после имени типа, как в некоторых других языках. В следующем примере объявляется массив значений типа Double 1000, которые будут выделяться в стеке. Число элементов должно быть указано в виде целочисленного литерала или else в качестве константного выражения, поскольку компилятору необходимо выяснить, сколько пространства стека следует выделить; Он не может использовать значение, вычисленное во время выполнения. Каждому элементу массива присваивается значение по умолчанию 0. Если не назначить значение по умолчанию, то каждый элемент изначально будет содержать случайные значения, находящимся в этом расположении.
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+Первый элемент массива является 0-ом, а последний элемент — элементом (*n*– 1), где *n* — число элементов, которое может содержать массив. Число элементов в объявлении должно иметь целочисленный тип и должно быть больше 0. Вы обязаны убедиться, что программа никогда не передает значение оператору индекса, который больше `(size - 1)`.
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+Массив нулевого размера допустим только в том случае, если массив является последним полем в **структуре** или **объединении** и если включены расширения Microsoft (/Ze).
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+Массивы на основе стека быстрее выделяют и получают доступ, чем массивы на основе кучи, но количество элементов не может быть настолько большим, что оно использует слишком большой объем памяти стека. Насколько сильно зависит от программы. Для определения того, является ли массив слишком большим, можно использовать средства профилирования.
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>Объявления кучи
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+Если требуется, чтобы массив был слишком большим для выделения в стеке или его размер не мог быть известен во время компиляции, можно выделить его в куче с помощью [нового выражения\[\]](new-operator-cpp.md) . Оператор возвращает указатель на первый элемент. Оператор индекса можно использовать с переменной указателя точно так же, как с массивом на основе стека. Также можно использовать [арифметические операции с указателями](../c-language/pointer-arithmetic.md) для перемещения указателя на произвольные элементы в массиве. Вы обязаны убедиться в том, что:
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- всегда сохраняется копия адреса исходного указателя, чтобы можно было удалить память, когда массив больше не нужен.
+- Вы не увеличиваете или уменьшаете адрес указателя после границ массива.
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+В следующем примере показано, как определить массив в куче во время выполнения, а также как получить доступ к элементам массива с помощью оператора индекса или с помощью арифметики указателей:
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>Инициализация массивов
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+Можно инициализировать массив в цикле, по одному элементу за раз или в одной инструкции. Содержимое следующих двух массивов идентично:
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>Передача массивов в функции
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+Когда массив передается в функцию, он передается в качестве указателя на первый элемент. Это справедливо для массивов на основе стека и кучи. Указатель не содержит дополнительных сведений о размере или типе. Такое поведение называется *указателем Decay*. При передаче массива в функцию необходимо всегда указывать количество элементов в отдельном параметре. Такое поведение также подразумевает, что элементы массива не копируются при передаче массива в функцию. Чтобы функция не изменяла элементы, укажите параметр в качестве указателя на **константные** элементы.
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+В следующем примере показана функция, которая принимает массив и длину. Указатель указывает на исходный массив, а не на копию. Поскольку параметр не является **константой**, функция может изменять элементы массива.
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+Объявите массив как константу, чтобы сделать его только для чтения в блоке функции:
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+Одна и та же функция может также быть объявлена в таких случаях без изменения поведения. Массив по-прежнему передается в качестве указателя на первый элемент:
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>Многомерные массивы
 
 Массивы, созданные из других массивов, являются многомерными. Такие многомерные массивы определяются путем последовательного размещения нескольких константных выражений, заключенных в квадратные скобки. Рассмотрим, например, следующее объявление:
 
@@ -170,12 +170,12 @@ void process(const double p[1000], const size_t len);
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+Он задает массив типа **int**, концептуально упорядоченный по двухмерной матрице из пяти строк и семи столбцов, как показано на следующем рисунке.
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![Концептуальный макет многомерного&#45;массива](../cpp/media/vc38rc1.gif "Концептуальный макет многомерного&#45;массива") <br/>
 Концептуальная структура многомерного массива
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. Пример:
+В объявлениях многомерных массивов, имеющих список инициализаторов (как описано в разделе [инициализаторы](../cpp/initializers.md)), константное выражение, задающее границы для первого измерения, может быть опущено. Например:
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 В показанном выше объявлении определяется массив, состоящий из трех строк и четырех столбцов. Строки представляют фабрики, а столбцы — рынки, на которые фабрики поставляют свою продукцию. Значения — это стоимости транспортировки с фабрик на рынки. Первое измерение массива опущено, но компилятор заполняет его, проверяя инициализатор.
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+Использование оператора косвенного обращения (*) в n-мерном массиве приводит к получению n-1 многомерного массива. Если n равно 1, создается скаляр (или элемент массива).
 
 Массивы C++ размещаются в памяти по срокам. Построчный порядок означает, что быстрее всего изменяется последний индекс.
 
@@ -283,7 +283,7 @@ int main()
 
 Первый элемент `aPoint` создается с помощью конструктора `Point( int, int )`, а оставшиеся два элемента — с помощью конструктора по умолчанию.
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). Пример:
+Статические массивы членов ( **const** или NOT) могут быть инициализированы в своих определениях (вне объявления класса). Например:
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>Доступ к элементам массива
 
 К отдельным элементам массива можно обращаться при помощи оператора индекса массива (`[ ]`). Если в выражении используется одномерный массив, в котором нет индекса, то вычисление преобразует имя массива в указатель на первый элемент массива.
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. В этом примере массив используется с одним, двумя и тремя индексами. Хотя чаще всего определяют все индексы, в операторе `cout` иногда бывает удобнее выбирать определенное подмножество элементов массива, как показано в операторах, следующих за указанием объекта `cout`.
+В приведенном выше коде `multi` является трехмерным массивом типа **Double**. Указатель `p2multi` указывает на массив типа **Double** с размером 3. В этом примере массив используется с одним, двумя и тремя индексами. Хотя чаще всего определяют все индексы, в операторе `cout` иногда бывает удобнее выбирать определенное подмножество элементов массива, как показано в операторах, следующих за указанием объекта `cout`.
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>Перегрузка оператора индекса
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. Поведение оператора индекса по умолчанию, если он не перегружен, — совмещать имя массива и индекс с помощью следующего метода.
+Как и другие операторы, оператор индекса (`[]`) может быть переопределен пользователем. Поведение оператора индекса по умолчанию, если он не перегружен, — совмещать имя массива и индекс с помощью следующего метода.
 
 `*((array_name) + (subscript))`
 
-Как всегда в добавлениях, включающих типы указателей, масштабирование выполняется автоматически с учетом размера типа. Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+Как всегда в добавлениях, включающих типы указателей, масштабирование выполняется автоматически с учетом размера типа. Таким образом, результирующее значение не *n* байт из источника массива-имя; Вместо этого это *n*-й элемент массива. Дополнительные сведения об этом преобразовании см. в разделе [аддитивные операторы](additive-operators-plus-and.md).
 
 Аналогично, для многомерных массивов адрес извлекается с использованием следующего метода.
 
@@ -352,19 +352,19 @@ Like other operators, the subscript operator (`[]`) can be redefined by the user
 
 ## <a name="arrays-in-expressions"></a>Массивы в выражениях
 
-Если идентификатор типа массива отображается в выражении, отличном от `sizeof`, взятия адреса (`&`) или инициализации ссылки, оно преобразуется в указатель на первый элемент массива. Пример:
+Если идентификатор типа массива отображается в выражении, отличном от `sizeof`, адрес (`&`) или инициализации ссылки, он преобразуется в указатель на первый элемент массива. Например:
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-Указатель `psz` указывает на первый элемент массива `szError1`. Arrays, unlike pointers, are not modifiable l-values. Таким образом, следующее присвоение незаконно.
+Указатель `psz` указывает на первый элемент массива `szError1`. Массивы, в отличие от указателей, не являются изменяемыми l-значениями. Таким образом, следующее присвоение незаконно.
 
 ```cpp
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[std::array](../standard-library/array-class-stl.md)
+[std:: Array](../standard-library/array-class-stl.md)

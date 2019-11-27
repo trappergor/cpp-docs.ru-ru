@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator GT
 - GT operator
 ms.assetid: 48194297-7bf9-42f9-957a-e1a5b6d7be7c
-ms.openlocfilehash: 905db693b0ff4c8373cde9bd688b97c2f8f08dbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d740a37ebd7dd75ea7567b1f652cf1b22228a283
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200527"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396930"
 ---
 # <a name="operator-gt"></a>Оператор GT
 
-Возвращает значение true (-1) Если *expression1* больше, чем *expression2*, или значение false (0), если это не так.
+Возвращает значение true (-1), если *expression1* больше *Expression2*, или возвращает false (0), если нет.
 
 ## <a name="syntax"></a>Синтаксис
 
-> expression1 GT expression2
+> *Выражение1* **gt** *выражение2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

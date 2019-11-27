@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7b9e63bb19dcc16539dbdaaf1f6a7f16566b3c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203068"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397454"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Предоставляет сборку *ifstatements* Если *expression1* имеет значение true (ненулевое) или *elseifstatements* Если *expression1* имеет значение false (0) и *expression2* имеет значение true.
+Предоставляет сборку *ифстатементс* , если *expression1* имеет значение true (отличное от нуля) или *елсеифстатементс* , если *expression1* имеет значение false (0), а *Expression2* имеет значение true.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Если *expression1*<br/>
-> *ifstatements*<br/>
-> [[ELSEIF *expression2*<br/>
-> *elseifstatements*]]<br/>
-> [[ELSE<br/>
-> *elsestatements*]]<br/>
-> ENDIF
+> **Если** *expression1*\
+> *If-операторы*\
+> ⟦**ELSEIF**\ *выражение2*
+> *ElseIf-операторы*⟧ \
+> ⟦**ELSE**\
+> *else-Операторы*⟧ \
+> **ENDIF**
 
 ## <a name="remarks"></a>Примечания
 
-Может заменить следующие директивы [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, и **ELSEIFNDEF**. При необходимости собирает *elsestatements* Если предыдущее выражение имеет значение false. Обратите внимание на то, что выражения вычисляются во время сборки.
+Следующие директивы могут быть заменены на [ElseIf](../../assembler/masm/elseif-masm.md): **елсеифб**, **елсеифдеф**, **елсеифдиф**, **елсеифдифи**, **ELSEIF**, **елсеифидн**, **елсеифидни**, **елсеифнб**и **елсеифндеф**. При необходимости собирает *else-Операторы* , если предыдущее выражение имеет значение false. Обратите внимание, что выражения оцениваются во время сборки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)
