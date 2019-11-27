@@ -94,7 +94,7 @@ struct CDaoDatabaseInfo
 *m_strConnect*<br/>
 Предоставляет сведения об источнике открытой базы данных. Сведения о строках соединения и сведения о получении значения этого свойства напрямую см. в описании функции члена [CDaoDatabase::](../../mfc/reference/cdaodatabase-class.md#getconnect) . Дополнительные сведения см. в подразделе «свойство Connect» справки DAO.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 База данных — это объект DAO, лежащий в основе объекта MFC класса [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). Ссылки на первичный, вторичный и все вышеперечисленное указывают, как эта информация возвращается функцией-членом [кдаоворкспаце:: жетдатабасеинфо](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) .
 
@@ -104,7 +104,7 @@ struct CDaoDatabaseInfo
 
 **Заголовок:** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Класс CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)<br/>

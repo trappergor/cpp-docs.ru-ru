@@ -1,5 +1,5 @@
 ---
-title: Exception specifications (throw, noexcept) (C++)
+title: Спецификации исключений (throw, не Except) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -15,48 +15,48 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245880"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>Exception specifications (throw, noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>Спецификации исключений (throw, не Except) (C++)
 
-Exception specifications are a C++ language feature that indicate the programmer's intent about the exception types that can be propagated by a function. You can specify that a function may or may not exit by an exception by using an *exception specification*. The compiler can use this information to optimize calls to the function, and to terminate the program if an unexpected exception escapes the function.
+Спецификации исключений — это C++ функция языка, которая указывает намерение программиста о типах исключений, которые могут распространяться функцией. Можно указать, что функция может или не может выйти за исключением, используя *спецификацию исключения*. Компилятор может использовать эти сведения для оптимизации вызовов функции, а также для завершения программы, если непредвиденное исключение приводит к экранированию функции.
 
-Prior to C++17 there were two kinds of exception specification. The *noexcept specification* was new in C++11. It specifies whether the set of potential exceptions that can escape the function is empty. The *dynamic exception specification*, or `throw(optional_type_list)` specification, was deprecated in C++11 and removed in C++17, except for `throw()`, which is an alias for `noexcept(true)`. This exception specification was designed to provide summary information about what exceptions can be thrown out of a function, but in practice it was found to be problematic. The one dynamic exception specification that did prove to be somewhat useful was the unconditional `throw()` specification. For example, the function declaration:
+До C++ 17 существовали два типа спецификаций исключений. В C++ 11 была введена *только спецификация* . Он указывает, является ли набор возможных исключений, которые могут вызывать функцию, пустым. *Спецификация динамических исключений*или спецификация `throw(optional_type_list)` устарела в c++ 11 и удалена в c++ 17, за исключением `throw()`, который является псевдонимом для `noexcept(true)`. Эта спецификация исключений была разработана для предоставления сводных сведений о том, какие исключения могут быть вызваны из функции, но на практике обнаружены проблемы. Одна из динамических исключений, которая была бы довольно полезной, была неусловной `throw()` спецификации. Например, объявление функции:
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-сообщает компилятору, что функция не создает исключений. However, in **/std:c++14** mode this could lead to undefined behavior if the function does throw an exception. Therefore we recommend using the [noexcept](../cpp/noexcept-cpp.md) operator instead of the one above:
+сообщает компилятору, что функция не создает исключений. Однако в **/std: режим c++ 14** это может привести к неопределенному поведению, если функция создает исключение. Поэтому рекомендуется использовать оператор " [except](../cpp/noexcept-cpp.md) " вместо того, который приведен выше.
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-The following table summarizes the Microsoft C++ implementation of exception specifications:
+В следующей таблице перечислены реализации спецификаций C++ исключений Майкрософт.
 
-|Спецификация исключений|Смысл|
+|Спецификация исключений|Значение|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Функция не вызывает исключений. In [/std:c++14](../build/reference/std-specify-language-standard-version.md) mode (which is the default), `noexcept` and `noexcept(true)` are equivalent. When an exception is thrown from a function that is declared `noexcept` or `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked. When an exception is thrown from a function declared as `throw()` in **/std:c++14** mode, the result is undefined behavior. No specific function is invoked. This is a divergence from the C++14 standard, which required the compiler to invoke [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 version 15.5 and later**: In **/std:c++17** mode , `noexcept`, `noexcept(true)`, and `throw()` are all equivalent. In **/std:c++17** mode, `throw()` is an alias for `noexcept(true)`. In **/std:c++17** mode, when an exception is thrown from a function declared with any of these specifications, [std::terminate](../standard-library/exception-functions.md#terminate)  is invoked as required by the C++17 standard.|
-|`noexcept(false)`<br/>`throw(...)`<br/>No specification|The function can throw an exception of any type.|
-|`throw(type)`| (**C++14 and earlier**) The function can throw an exception of type `type`. The compiler accepts the syntax, but interprets it as `noexcept(false)`. In **/std:c++17** mode the compiler issues warning C5040.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|Функция не вызывает исключений. В [/std: режим c++ 14](../build/reference/std-specify-language-standard-version.md) (по умолчанию), `noexcept` и `noexcept(true)` эквивалентны. При возникновении исключения из функции, объявленной `noexcept` или `noexcept(true)`, вызывается [std:: Terminate](../standard-library/exception-functions.md#terminate) . При возникновении исключения из функции, объявленной как `throw()` в режиме **/std: c++ 14** , результат является неопределенным поведением. Никакая конкретная функция не вызывается. Это расхождение по стандарту C++ 14, которое требует, чтобы компилятор вызывал [std:: непредвиденный](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 версии 15,5 и более поздних**версий: в **/std: режим c++ 17** , `noexcept`, `noexcept(true)`и `throw()` являются эквивалентными. В **/std: режим c++ 17** `throw()` является псевдонимом для `noexcept(true)`. В режиме **/std: c++ 17** при возникновении исключения из функции, объявленной с любой из этих спецификаций, [std:: Terminate](../standard-library/exception-functions.md#terminate) вызывается согласно требованиям стандарта c++ 17.|
+|`noexcept(false)`<br/>`throw(...)`<br/>Нет спецификации|Функция может вызывать исключение любого типа.|
+|`throw(type)`| (**C++ 14 и более ранние версии**) Функция может вызвать исключение типа `type`. Компилятор принимает синтаксис, но интерпретирует его как `noexcept(false)`. В **/std: режим c++ 17** . компилятор выдает предупреждение C5040.|
 
-If exception handling is used in an application, there must be a function in the call stack that handles thrown exceptions before they exit the outer scope of a function marked `noexcept`, `noexcept(true)`, or `throw()`. If any functions called between the one that throws an exception and the one that handles the exception are specified as `noexcept`, `noexcept(true)` (or `throw()` in **/std:c++17** mode), the program is terminated when the noexcept function propagates the exception.
+Если в приложении используется обработка исключений, в стеке вызовов должна быть функция, которая обрабатывает созданные исключения до выхода из внешней области функции, помеченной `noexcept`, `noexcept(true)`или `throw()`. Если какая-либо из функций, вызываемых между исключением и обработчиком исключения, задается как `noexcept`, `noexcept(true)` (или `throw()` в режиме **/std: c++ 17** ), программа завершается, когда исключение распространяется функцией, кроме.
 
-The exception behavior of a function depends on the following factors:
+Поведение функции зависит от следующих факторов:
 
-- Which [language standard compilation mode](../build/reference/std-specify-language-standard-version.md) is set.
+- Установлен [режим компиляции стандартного языка](../build/reference/std-specify-language-standard-version.md) .
 - В какой среде выполняется компиляция функции — в C или C++.
 
-- Which [/EH](../build/reference/eh-exception-handling-model.md) compiler option you use.
+- Используемый параметр компилятора [/EH](../build/reference/eh-exception-handling-model.md) .
 
 - Задана ли явно спецификация исключений.
 
-Явные спецификации исключений не разрешено использовать для функций C. A C function is assumed not to throw exceptions under **/EHsc**, and may throw structured exceptions under **/EHs**, **/EHa**, or **/EHac**.
+Явные спецификации исключений не разрешено использовать для функций C. Предполагается, что функция C не создает исключения в **/EHsc**и может вызывать структурированные исключения в порядке **/EHs**, **/EHa**или **/ехак**.
 
-The following table summarizes whether a C++ function may potentially throw under various compiler exception handling options:
+В следующей таблице приведены сведения о том C++ , может ли функция вызываться в различных параметрах обработки исключений компилятора.
 
 |Функция|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |Функция C++ без спецификации исключений|Да|Да|Да|Да|
-|C++ function with `noexcept`, `noexcept(true)`, or `throw()` exception specification|Нет|Нет|Да|Да|
-|C++ function with `noexcept(false)`, `throw(...)`, or `throw(type)` exception specification|Да|Да|Да|Да|
+|C++функция с `noexcept`, `noexcept(true)`или спецификацией исключения `throw()`|Нет|Нет|Да|Да|
+|C++функция с `noexcept(false)`, `throw(...)`или спецификацией исключения `throw(type)`|Да|Да|Да|Да|
 
 ## <a name="example"></a>Пример
 
@@ -127,7 +127,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Операторы try, throw и catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
+[Современные C++ рекомендации по исключениям и обработке ошибок](errors-and-exception-handling-modern-cpp.md)

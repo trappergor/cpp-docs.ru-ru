@@ -15,12 +15,12 @@ ms.locfileid: "74397761"
 ---
 # <a name="dt"></a>DT
 
-Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal. **DT** is a synonym of [TBYTE](../../assembler/masm/tbyte.md).
+Выделяет и при необходимости инициализирует 10 байтов хранилища для каждого *инициализатора*. Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым. **DT** является синонимом [тбите](../../assembler/masm/tbyte.md).
 
 ## <a name="syntax"></a>Синтаксис
 
-> ⟦*name*⟧ **DT** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*имя*⟧ **DT** *инициализатор* ⟦ __,__ *инициализатор* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

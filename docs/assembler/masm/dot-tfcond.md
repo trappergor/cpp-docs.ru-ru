@@ -15,12 +15,12 @@ ms.locfileid: "74397876"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-Toggles listing of false conditional blocks.
+Переключает список ложных условных блоков.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.TFCOND**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -17,17 +17,17 @@ ms.locfileid: "74398374"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF, .ERRDIFI
 
-Generates an error if the text items are different.
+Выдает ошибку, если текстовые элементы различаются.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRDIF** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRDIFI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. Еррдиф** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
+> **. Еррдифи** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If **.ERRDIFI** is given, the comparison is case insensitive.
+Если **.** Задано значение еррдифи, при сравнении регистр не учитывается.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

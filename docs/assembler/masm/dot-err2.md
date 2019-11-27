@@ -15,16 +15,16 @@ ms.locfileid: "74398426"
 ---
 # <a name="err2"></a>.ERR2
 
-[.ERR](../../assembler/masm/dot-err.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE.**
+[. Блок ERR](../../assembler/masm/dot-err.md) , вычисленный при каждой сборке Pass, если **параметр: SETIF2** имеет **значение true.**
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERR2** ⟦*message*⟧
+> **. ERR2** ⟦*сообщение*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+Дополнительные сведения о 2-проходном поведении в MASM 5,1 vs MASM 6,1 см. в разделе [IF1 и If2](if2.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

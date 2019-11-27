@@ -15,20 +15,20 @@ ms.locfileid: "74397954"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-Generates either a `UWOP_SAVE_XMM128` or a `UWOP_SAVE_XMM128_FAR` unwind code entry for the specified XMM register and offset using the current prologue offset. MASM will choose the most efficient encoding.
+Создает `UWOP_SAVE_XMM128` или `UWOP_SAVE_XMM128_FAR` запись кода очистки для указанного регистра XMM и смещения с использованием текущего смещения пролога. MASM выберет наиболее эффективную кодировку.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.SAVEXMM128** *xmmreg* , *offset*
+> **. SAVEXMM128** *ксммрег* , *смещение*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-**.SAVEXMM128** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. .SAVEXMM128 should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. SAVEXMM128** позволяет пользователям ml64. exe указывать, как кадрировать функцию Frame, и может использоваться только в прологе, который расширяется из объявления кадра [процесса](../../assembler/masm/proc.md) в [. ](../../assembler/masm/dot-endprolog.md)Директива ендпролог. Эти директивы не создают код. они создают только `.xdata` и `.pdata`. . SAVEXMM128 должен предшествовать инструкциям, которые фактически реализуют действия, которые должны быть развернуты. Рекомендуется заключить в оболочку как директивы очистки, так и код, предназначенный для очистки макроса, чтобы обеспечить соблюдение соглашения.
 
-*offset* must be a multiple of 16.
+*смещение* должно быть кратным 16.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

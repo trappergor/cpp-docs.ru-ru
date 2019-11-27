@@ -15,12 +15,12 @@ ms.locfileid: "74397981"
 ---
 # <a name="sall"></a>.SALL
 
-See [.NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md).
+См [. раздел. НОЛИСТМАКРО](../../assembler/masm/dot-nolistmacro.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.SALL**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

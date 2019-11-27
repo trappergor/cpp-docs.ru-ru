@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: Как создавать и использовать экземпляры shared_ptr
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245829"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Как создавать и использовать экземпляры shared_ptr
 
 Тип `shared_ptr` — это смарт-указатель в стандартной библиотеке C++, который предназначен для ситуаций, когда управлять временем существования объекта в памяти требуется нескольким владельцам. После инициализации указателя `shared_ptr` его можно копировать, передавать по значению в аргументах функций и присваивать другим экземплярам `shared_ptr`. Все экземпляры указывают на один и тот же объект и имеют общий доступ к одному "блоку управления", который увеличивает и уменьшает счетчик ссылок, когда указатель `shared_ptr` добавляется, выходит из области действия или сбрасывается. Когда счетчик ссылок достигает нуля, блок управления удаляет ресурс в памяти и самого себя.
 
 На схеме ниже показано несколько экземпляров `shared_ptr`, указывающих на одно расположение в памяти.
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![Схема общих указателей](media/shared_ptr.png "Схема общих указателей")
 
 ## <a name="example-setup"></a>Пример конфигурации
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="example-4"></a>Пример 4
 
-Для приведения указателя `shared_ptr` можно использовать функции `dynamic_pointer_cast`, `static_pointer_cast` и `const_pointer_cast`. Они похожи на операторы `dynamic_cast`, `static_cast` и `const_cast`. В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
+Для приведения указателя `dynamic_pointer_cast` можно использовать функции `static_pointer_cast`, `const_pointer_cast` и `shared_ptr`. Они похожи на операторы `dynamic_cast`, `static_cast` и `const_cast`. В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
 
 [!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
@@ -110,12 +110,12 @@ int main()
 
 - Иногда, например в `std::vector<shared_ptr<T>>`, может быть необходимо передать каждый указатель `shared_ptr` в тело лямбда-выражения или в именованный объект функции. Если в лямбда-выражении или функции указатель не сохраняется, передайте `shared_ptr` по ссылке, чтобы не вызывать конструктор копий для каждого элемента.
 
-## <a name="example-6"></a>Пример 6
+## <a name="example-6"></a>Пример 6
 
 В приведенном ниже примере показано, как `shared_ptr` перегружает различные операторы сравнения, чтобы обеспечить сравнение указателей в памяти, принадлежащей экземплярам `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Интеллектуальные указатели (современный C++)](smart-pointers-modern-cpp.md)

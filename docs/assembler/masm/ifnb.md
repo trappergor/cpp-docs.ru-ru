@@ -15,16 +15,16 @@ ms.locfileid: "74397374"
 ---
 # <a name="ifnb"></a>IFNB
 
-Grants assembly if *textitem* is not blank.
+Предоставляет сборку, если *текститем* не пусто.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **IFNB** *textitem*
+> **Ифнб** *текститем*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

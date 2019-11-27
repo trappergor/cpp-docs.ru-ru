@@ -15,18 +15,18 @@ ms.locfileid: "74398455"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Signals the end of the prologue declarations.
+Сообщает об окончании объявлений пролога.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.ENDPROLOG**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
+Использование любых объявлений пролога за пределами [области между](../../assembler/masm/proc.md) **кадрами** и не является ошибкой **. ЕНДПРОЛОГ**.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

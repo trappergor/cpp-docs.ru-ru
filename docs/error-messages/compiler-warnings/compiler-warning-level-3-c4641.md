@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4641
+title: Предупреждение компилятора (уровень 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
@@ -13,17 +13,17 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189426"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>Предупреждение компилятора (уровень 3) C4641
 
 в документирующем комментарии XML присутствует неоднозначная перекрестная ссылка
 
-The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
+Компилятору не удалось однозначно разрешить ссылку. Чтобы устранить это предупреждение, укажите сведения о параметрах, необходимые для однозначного создания ссылки.
 
 Дополнительные сведения см. в разделе [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md).
 
 ## <a name="example"></a>Пример
 
-The following sample generates C4641.
+Следующий пример приводит к возникновению ошибки C4641.
 
 ```cpp
 // C4641.cpp

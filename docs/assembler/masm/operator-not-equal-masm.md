@@ -16,12 +16,12 @@ ms.locfileid: "74396602"
 ---
 # <a name="operator--masm"></a>Оператор != (MASM)
 
-Is not equal to. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Не равно. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* **!=** *expression2*
+> *expression1* **! =** *выражение2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

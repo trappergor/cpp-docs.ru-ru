@@ -15,12 +15,12 @@ ms.locfileid: "74397828"
 ---
 # <a name="xall"></a>.XALL
 
-See [.LISTMACRO](../../assembler/masm/dot-listmacro.md).
+См [. раздел. ЛИСТМАКРО](../../assembler/masm/dot-listmacro.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.XALL**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

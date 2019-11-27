@@ -25,7 +25,7 @@ ms.locfileid: "74305408"
 | [Алгоритмы](../cpp/algorithms-modern-cpp.md) | [> алгоритма\<](algorithm.md), [\<cstdlib >](cstdlib.md), [\<numeric >](numeric.md) |
 | Атомарные операции |  [\<atomic >](atomic.md)<sup>11</sup> |
 | Оболочки библиотек C | [\<кассерт >](cassert.md), [\<ccomplex >](ccomplex.md)<sup>11 a b</sup>, [\<cctype >](cctype.md), [\<cerrno >](cerrno.md), [\<cfenv >](cfenv.md)<sup>11</sup>, [\<cfloat >](cfloat.md), [\<cinttypes >](cinttypes.md)<sup>11</sup>, [\<ciso646 >](ciso646.md)<sup>b</sup>,\<климитс [>](climits.md), [\<CLocale >](clocale.md), [\<cmath >](cmath.md), [\<ксетжмп >](csetjmp.md), [\<ксигнал >](csignal.md), [\<cstdalign >](cstdalign.md)<sup>11 a b</sup>, [\<кстдарг >](cstdarg.md), [\<кстдбул >](cstdbool.md)<sup>11 а b</sup>, [\<кстддеф >](cstddef.md),\<cstdint [>](cstdint.md)<sup>11</sup>, [\<cstdio](cstdio.md)>, [\<cstdlib](cstdlib.md)>, [\<CString >](cstring.md), [\<ctgmath >](ctgmath.md)<sup>11 a b</sup>, [\<CTime >](ctime.md), [\<Кучар >](cuchar.md)<sup>11</sup> , [\<cwchar >](cwchar.md), [\<cwctype >](cwctype.md) |
-| Основные понятия | Основные понятия \<><sup>20</sup> |
+| Концепции | Основные понятия \<><sup>20</sup> |
 | [Контейнеры](../cpp/containers-modern-cpp.md) | |
 | Контейнеры последовательности | [\<массив >](array.md)<sup>11</sup>, [\<deque >](deque.md), [\<forward_list >](forward-list.md)<sup>11</sup>,\<[List >](list.md), [\<Vector >](vector.md) |
 | Упорядоченные ассоциативные контейнеры| [\<map>](map.md), [\<set>](set.md) |
@@ -79,7 +79,7 @@ ms.locfileid: "74305408"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование C++ заголовков библиотеки](using-cpp-library-headers.md)\
 [C++Стандартная библиотека](cpp-standard-library-reference.md)

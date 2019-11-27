@@ -20,12 +20,12 @@ ms.locfileid: "74395496"
 ---
 # <a name="operator-"></a>Оператор /
 
-Returns *expression1* divided by *expression2*.
+Возвращает значение *expression1* , деленное на *Expression2*.
 
 ## <a name="syntax"></a>Синтаксис
 
 > *expression1* __/__ *expression2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

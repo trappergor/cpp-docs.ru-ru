@@ -35,7 +35,7 @@ ms.locfileid: "74303404"
 
 [Мастера и редакторы ресурсов](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>В связанных разделах
+## <a name="in-related-sections"></a>Содержание смежных разделов
 
 [Сборка в платформе](../mfc/building-on-the-framework.md)
 
@@ -43,12 +43,12 @@ ms.locfileid: "74303404"
 
 [CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
 
-[Шаблоны документов и процесс создания документов и представлений](../mfc/document-templates-and-the-document-view-creation-process.md)
+[Шаблоны документов и процесс создания документа/представления](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
 
 [Объекты окон](../mfc/window-objects.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование классов для создания приложений для Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)

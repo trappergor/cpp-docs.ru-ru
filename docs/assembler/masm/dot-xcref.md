@@ -15,12 +15,12 @@ ms.locfileid: "74397801"
 ---
 # <a name="xcref"></a>.XCREF
 
-See [.NOCREF](../../assembler/masm/dot-nocref.md).
+См [. раздел. НОКРЕФ](../../assembler/masm/dot-nocref.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.XCREF**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

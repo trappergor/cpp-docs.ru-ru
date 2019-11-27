@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4619
+title: Предупреждение компилятора (уровень 3) C4619
 ms.date: 11/04/2016
 f1_keywords:
 - C4619
@@ -13,15 +13,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189169"
 ---
-# <a name="compiler-warning-level-3-c4619"></a>Compiler Warning (level 3) C4619
+# <a name="compiler-warning-level-3-c4619"></a>Предупреждение компилятора (уровень 3) C4619
 
-\#pragma warning : there is no warning number 'number'
+\#pragma warning: отсутствует предупреждение с номером "номер"
 
-An attempt was made to disable a warning that does not exist.
+Была предпринята попытка отключить предупреждение, которое не существует.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
-The following sample generates C4619:
+Следующий пример приводит к возникновению ошибки C4619:
 
 ```cpp
 // C4619.cpp

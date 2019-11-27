@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399160"
 ---
-# <a name="curseg"></a>\@CurSeg
+# <a name="curseg"></a>\@Курсег
 
-The name of the current segment (text macro).
+Имя текущего сегмента (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@CurSeg**
+> **\@Курсег**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

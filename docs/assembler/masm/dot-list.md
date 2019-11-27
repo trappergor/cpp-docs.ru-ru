@@ -15,16 +15,16 @@ ms.locfileid: "74398191"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+Запускает список инструкций.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.LIST**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Это значение по умолчанию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

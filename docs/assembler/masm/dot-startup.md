@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397889"
 ---
-# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>. Запуск (32-разрядный компилятор MASM)
 
-Generates program start-up code. (32-bit MASM only.)
+Создает код запуска программы. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.STARTUP**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

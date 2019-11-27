@@ -25,7 +25,7 @@ DAO используется с базами данных Access и поддер
 > [!NOTE]
 >  Визуальная C++ среда и мастера больше не поддерживают DAO (хотя классы DAO включены и их все еще можно использовать). Корпорация Майкрософт рекомендует использовать ODBC для новых проектов MFC. DAO следует использовать только для поддержки существующих приложений.
 
-[CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
+[кдаоворкспаце](../mfc/reference/cdaoworkspace-class.md)<br/>
 Управляет именованным сеансом базы данных, защищенным паролем, от имени входа для выхода из системы. Большинство программ используют рабочую область по умолчанию.
 
 [CDaoDatabase](../mfc/reference/cdaodatabase-class.md)<br/>
@@ -37,16 +37,16 @@ DAO используется с базами данных Access и поддер
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
 Представление, которое отображает записи базы данных в элементах управления.
 
-[CDaoQueryDef](../mfc/reference/cdaoquerydef-class.md)<br/>
+[кдаокуеридеф](../mfc/reference/cdaoquerydef-class.md)<br/>
 Представляет определение запроса (обычно оно сохраняется в базе данных).
 
-[CDaoTableDef](../mfc/reference/cdaotabledef-class.md)<br/>
+[кдаотабледеф](../mfc/reference/cdaotabledef-class.md)<br/>
 Представляет хранимое определение базовой или подключенной таблицы.
 
-[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
+[кдаоексцептион](../mfc/reference/cdaoexception-class.md)<br/>
 Представляет условие исключения, возникающее в классах DAO.
 
-[CDaoFieldExchange](../mfc/reference/cdaofieldexchange-class.md)<br/>
+[кдаофиелдексчанже](../mfc/reference/cdaofieldexchange-class.md)<br/>
 Поддерживает процедуры обмена полями записей (DAO DFX), используемые классами баз данных DAO. Как правило, этот класс не используется напрямую.
 
 ## <a name="related-classes"></a>Связанные классы
@@ -63,6 +63,6 @@ DAO используется с базами данных Access и поддер
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
 Оболочка для типа **Variant**OLE Automation Type. Данные в **варианте Variant**s могут храниться во многих форматах.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обзор класса](../mfc/class-library-overview.md)

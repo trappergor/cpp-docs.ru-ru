@@ -17,12 +17,12 @@ ms.locfileid: "74396644"
 ---
 # <a name="operator-mask"></a>Оператор MASK
 
-Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
+Возвращает битовую маску, в которой задаются биты в *рекордфиелднаме* или *записи* , а все остальные биты очищаются.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **MASK** {*recordfieldname* | *record*}
+> **Mask** {*рекордфиелднаме* | *запись*}
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

@@ -19,10 +19,10 @@ ms.locfileid: "74397295"
 
 > **IRP**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [FOR](../../assembler/masm/for-masm.md).
+См. раздел [для](../../assembler/masm/for-masm.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

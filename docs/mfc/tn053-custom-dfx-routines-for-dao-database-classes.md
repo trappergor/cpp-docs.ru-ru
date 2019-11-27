@@ -213,7 +213,7 @@ PopUpEmployeeData(emp.m_strFirstName,
 > [!TIP]
 > Моделирование пользовательских подпрограмм DFX для существующих подпрограмм с DFX для стандартных типов данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)

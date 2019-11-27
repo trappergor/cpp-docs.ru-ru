@@ -15,21 +15,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397986"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>. SAFESEH (32-разрядный MASM)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+Регистрирует функцию как структурированный обработчик исключений. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.SAFESEH** *identifier*
+> **.**  *Идентификатор* SAFESEH
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+*идентификатор* должен быть идентификатором для локально определенной процедуры [или](../../assembler/masm/proc.md) процедуры [екстрн](../../assembler/masm/extrn.md) . [Метка](../../assembler/masm/label-masm.md) не разрешена. Тот. Для директивы SAFESEH требуется параметр командной строки [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+Дополнительные сведения о структурированных обработчиках исключений см. в разделе параметр [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+Например, чтобы зарегистрировать защищенный обработчик исключений, создайте новый файл MASM (как показано ниже), соберите с параметром/SAFESEH и добавьте его в связанные объекты.
 
 ```asm
 .386
@@ -39,6 +39,6 @@ MyHandler   proto
 end
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

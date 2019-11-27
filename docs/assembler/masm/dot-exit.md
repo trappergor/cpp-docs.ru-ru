@@ -13,18 +13,18 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398286"
 ---
-# <a name="exit-32-bit-masm"></a>.EXIT (32-bit MASM)
+# <a name="exit-32-bit-masm"></a>. ВЫХОД (32-разрядный компилятор MASM)
 
-Generates termination code. (32-bit MASM only.)
+Создает код завершения. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.EXIT** ⟦*expression*⟧
+> **. EXIT** ⟦*выражение*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Returns optional *expression* to shell.
+Возвращает необязательное *выражение* для оболочки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

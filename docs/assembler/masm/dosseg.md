@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398746"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>ДОССЕГ (32-разрядный компилятор MASM)
 
-Identical to [.DOSSEG](../../assembler/masm/dot-dosseg.md), which is the preferred form. (32-bit MASM only.)
+Идентично [. ДОССЕГ](../../assembler/masm/dot-dosseg.md)— Предпочтительная форма. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **DOSSEG**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

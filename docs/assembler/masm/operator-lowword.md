@@ -17,12 +17,12 @@ ms.locfileid: "74396719"
 ---
 # <a name="operator-lowword"></a>Оператор LOWWORD
 
-Returns the low 16 bits of *expression*. MASM expressions are 64-bit values.
+Возвращает младшие 16 разрядов *выражения*. Выражения MASM — это 64-разрядные значения.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **LOWWORD** *expression*
+> *Выражение* LOWWORD
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

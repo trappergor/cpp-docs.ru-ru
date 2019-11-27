@@ -45,7 +45,7 @@ ms.locfileid: "74303346"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-|Название|Описание|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Обновление C++ проектов с более ранних версий Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Обновление базы кода до Visual Studio 2019 и v142 компилятора.|
 |[Средства IDE для обновления C++ кода](ide-tools-for-upgrading-code.md)|Полезные функции интегрированной среды разработки, помогающие в процессе обновления.|
@@ -58,7 +58,7 @@ ms.locfileid: "74303346"
 |[Знакомство с Visual C++ для пользователей UNIX](introduction-to-visual-cpp-for-unix-users.md)|Содержит сведения для пользователей UNIX, которые не знакомы с Visual C++ и хотят научиться работать с этой средой.|
 |[Запуск программ Linux в Windows](porting-from-unix-to-win32.md)|Здесь описываются параметры для переноса приложений из UNIX в Windows.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 [Новые возможности компилятора C++ в Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>

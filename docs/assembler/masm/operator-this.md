@@ -17,12 +17,12 @@ ms.locfileid: "74395469"
 ---
 # <a name="operator-this"></a>Оператор THIS
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+Возвращает операнд указанного *типа* , значения offset и Segment которого равны текущему значению счетчика расположения.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **THIS** *type*
+> **Этот** *тип*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

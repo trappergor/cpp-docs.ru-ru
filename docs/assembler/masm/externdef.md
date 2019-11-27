@@ -15,16 +15,16 @@ ms.locfileid: "74397542"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+Определяет одну или несколько внешних переменных, меток или символов *с именем, типом которых* является *Type*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
+> **Екстерндеф** ⟦*Language — введите* *имя ⟧* __:__ *Type* ⟦ __,__ ⟦*Language-Type*⟧ *Name* __:__ *Type* ... ⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
+Если *имя* определено в модуле, оно считается [открытым](../../assembler/masm/public-masm.md). Если в модуле есть ссылка на *имя* , он рассматривается как [внешний](../../assembler/masm/extern-masm.md). Если ссылка на *имя* не указана, она игнорируется. *Тип* может быть [ABS](../../assembler/masm/operator-abs.md), который импортирует *имя* как константу. Обычно используется в включаемых файлах.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

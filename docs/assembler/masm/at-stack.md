@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398925"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>стек \@
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+ДГРАУП для ближайших стеков или СТЕКа для дальнего времени (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@stack**
+> **стек \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

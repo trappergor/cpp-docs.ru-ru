@@ -15,12 +15,12 @@ ms.locfileid: "74394212"
 ---
 # <a name="rept"></a>REPT
 
-See [REPEAT](../../assembler/masm/repeat.md).
+См. раздел [повторение](../../assembler/masm/repeat.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **REPT**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -15,18 +15,18 @@ ms.locfileid: "74397232"
 ---
 # <a name="macro"></a>MACRO
 
-Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
+Помечает блок макроса *именем name* и устанавливает заполнители *параметров* для аргументов, передаваемых при вызове макроса.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
-> *statements*\
-> **ENDM** ⟦*value*⟧
+> *имя***макроса** ⟦*параметр* ⟦ **: req** | : =*default* |  **: VARARG**⟧... ⟧\
+> *инструкции*\
+> **Ендм** ⟦*значение*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-A macro function returns *value* to the calling statement.
+Функция-макрос возвращает *значение* в вызывающую инструкцию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

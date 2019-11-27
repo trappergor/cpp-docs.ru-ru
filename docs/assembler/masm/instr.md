@@ -15,16 +15,16 @@ ms.locfileid: "74397317"
 ---
 # <a name="instr"></a>INSTR
 
-Finds the first occurrence of *textitem2* in *textitem1*.
+Находит первое вхождение *textitem2* в *textitem1*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
+> *имя* **InStr** ⟦ __,__ ⟧ *textitem1* __,__ *textitem2*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
+Начальное *Расположение* является необязательным. Каждый текстовый элемент может быть строкой литерала, константой, предшествующей **%** , или строкой, возвращаемой функцией макроса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

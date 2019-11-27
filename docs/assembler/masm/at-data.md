@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399190"
 ---
-# <a name="data"></a>\@data
+# <a name="data"></a>\@данных
 
-The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
+Имя группы данных по умолчанию. Возвращает значение ДГРАУП для всех моделей, кроме **плоского**. Вычисляется как **плоский** в модели **плоской** памяти (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@data**
+> **\@данных**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

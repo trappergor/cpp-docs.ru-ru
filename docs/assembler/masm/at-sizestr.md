@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398945"
 ---
-# <a name="sizestr"></a>\@SizeStr
+# <a name="sizestr"></a>\@Сизестр
 
-A macro function that returns the length of the given string. Returns an integer.
+Функция-макрос, возвращающая длину заданной строки. Возвращает целое число.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@SizeStr(** *string* **)**
+> **\@сизестр (** *строка* **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

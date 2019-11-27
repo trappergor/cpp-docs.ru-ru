@@ -15,12 +15,12 @@ ms.locfileid: "74398537"
 ---
 # <a name="cref"></a>.CREF
 
-Enables listing of symbols in the symbol portion of the symbol table and browser file.
+Включает список символов в части символов таблицы символов и файла браузера.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.CREF**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

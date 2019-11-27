@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397898"
 ---
-# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
+# <a name="stack-32-bit-masm"></a>. СТЕК (32-разрядный MASM)
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)определяет сегмент стека (с **стеком**имен сегментов). Необязательный *Размер* определяет число байтов для стека (по умолчанию 1 024). Объект **.** Директива Stack автоматически закрывает оператор Stack. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.STACK** ⟦*size*⟧
+> **. СТЕК** ⟦*Размер*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

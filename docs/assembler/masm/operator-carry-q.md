@@ -17,12 +17,12 @@ ms.locfileid: "74397069"
 ---
 # <a name="operator-carry"></a>Оператор CARRY?
 
-Status of carry flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+Состояние флага выполнения. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **CARRY?**
+> **СОХРАНЯЯ?**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](../../assembler/masm/operators-reference.md)
+[Справочник по операторам](../../assembler/masm/operators-reference.md)

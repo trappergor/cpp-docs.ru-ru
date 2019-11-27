@@ -11,20 +11,20 @@ ms.locfileid: "74394838"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Руководства по программированию изготовителей процессоров
 
-This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
+В этой статье содержатся ссылки на веб-сайты, которые могут содержать программные сведения о процессорах, которые не были изготовлены, проданы или не поддерживаются корпорацией Майкрософт. Корпорация Майкрософт не владеет веб-сайтами и не контролирует их содержимое.
 
-## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
+## <a name="processor-manufacturer-websites"></a>Веб-сайты производителя процессора
 
-- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
+- [Руководства для разработчиков AMD, руководства & документы по ISA](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Руководства для разработчиков программного обеспечения для архитектур Intel 64 и IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Знакомство с расширенными векторными расширениями Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
+Ни Visual Studio, ни ассемблер макросов Майкрософт не поддерживает все процессоры.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)

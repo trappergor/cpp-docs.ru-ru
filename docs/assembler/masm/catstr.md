@@ -15,16 +15,16 @@ ms.locfileid: "74398850"
 ---
 # <a name="catstr"></a>CATSTR
 
-Concatenates text items.
+Сцепляет текстовые элементы.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **CATSTR** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
+> *имя* **катстр** ⟦*textitem1* ⟦ __,__ *textitem2* ... ⟧⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function. **CATSTR** is a synonym for [TEXTEQU](textequ.md).
+Каждый текстовый элемент может быть строкой литерала, константой, предшествующей **%** , или строкой, возвращаемой функцией макроса. **Катстр** является синонимом для [текстеку](textequ.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

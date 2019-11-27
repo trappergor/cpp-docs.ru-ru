@@ -3,12 +3,12 @@ title: Библиотека шаблонов C++ среды выполнения
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274671"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541205"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
 
@@ -43,19 +43,19 @@ C++/CX — это высокоуровневый, основанный на яз
 [Библиотека среда выполнения Windows (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 В этом видео Channel 9 вы узнаете о том, как C++ библиотека шаблонов среда выполнения Windows помогает создавать приложения универсальная платформа Windows (UWP), а также создавать и использовать компоненты Среда выполнения Windows.
 
-[Практическое руководство. Активация и использование компонента среда выполнения Windows](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
+[Как активировать и использовать компонент среда выполнения Windows](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Показывает, как использовать библиотеку шаблонов C++ среда выполнения Windows для инициализации среда выполнения Windows и активации и использования компонента Среда выполнения Windows.
 
-[Практическое руководство. Завершение асинхронных операций](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
+[Как выполнить асинхронные операции](how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Показывает, как использовать библиотеку шаблонов C++ среда выполнения Windows для запуска асинхронных операций и выполнения работы по завершении операций.
 
-[Практическое руководство. Обработчики событий](how-to-handle-events-using-wrl.md)<br/>
+[Как управлять событиями](how-to-handle-events-using-wrl.md)<br/>
 Показывает, как использовать библиотеку шаблонов C++ среда выполнения Windows для подписки на события объекта среда выполнения Windows и управления им.
 
-[Пошаговое руководство: Создание приложения UWP с использованием WRL и Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
+[Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 Узнайте, как создать приложение UWP, которое использует [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk).
 
-[Практическое руководство. Создание классического COM-компонента](how-to-create-a-classic-com-component-using-wrl.md)<br/>
+[Руководство. Создание классического COM-компонента](how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Демонстрирует использование библиотеки шаблонов среда выполнения Windows C++ для создания базового COM-компонента и базового способа регистрации и использования COM-компонента из классического приложения.
 
 [Практическое руководство. Непосредственное создание экземпляра компонентов WRL](how-to-instantiate-wrl-components-directly.md)<br/>
@@ -64,16 +64,16 @@ C++/CX — это высокоуровневый, основанный на яз
 [Практическое руководство. Использование winmdidl.exe и midlrt.exe для создания H-файлов из метаданных Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 Демонстрация использования пользовательских компонент среды выполнения Windows из WRL путем создания IDL-файла из метаданных WINMD.
 
-[Пошаговое руководство: Подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
+[Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 Показывает, как использовать интерфейсы [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) вместе с задачами для отправки запросов HTTP GET и POST к веб-службе в приложении UWP.
 
 [Пример оптимизатора пути к службе Bing Maps](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
-Использует класс, определенный в [пошаговом руководстве. `HttpRequest` Подключение с помощью задач и HTTP-](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) запросов XML в контексте полного приложения UWP.
+Использует класс `HttpRequest`, определенный в [пошаговом руководстве: подключение с помощью задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md) в контексте полного приложения UWP.
 
 [Создание среда выполнения Windows компонента DLL с C++ примером](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Показывает, как использовать библиотеку шаблонов C++ среда выполнения Windows, чтобы создать ВНУТРИПРОЦЕССНЫЙ компонент DLL и использовать его из C++кода/CX, JavaScript и. C#
 
-[Пример игры лабиринта в DirectX мрамор](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[Пример игры лабиринта в DirectX мрамор](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Демонстрирует использование библиотеки шаблонов среда выполнения Windows C++ для управления временем существования компонентов COM, таких как DirectX и Media Foundation в контексте полной трехмерной игры.
 
 [Отправка всплывающих уведомлений из примера классических приложений](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
@@ -103,19 +103,19 @@ C++/CX — это высокоуровневый, основанный на яз
 
 - COM+
 
-## <a name="concepts"></a>Основные понятия
+## <a name="concepts"></a>Концепции
 
 Библиотека C++ шаблонов среда выполнения Windows предоставляет типы, представляющие несколько основных понятий. Эти типы описаны в следующих разделах.
 
 ### <a name="comptr"></a>ComPtr
 
-тип[ComPtr](comptr-class.md) — тип *интеллектуального указателя* , который представляет интерфейс, определяемый параметром шаблона. Тип `ComPtr` используется для объявления переменной, которая может получить доступ к членам объекта, производного от интерфейса. `ComPtr` автоматически поддерживает счетчик ссылок для указателя базового интерфейса и освобождает интерфейс, когда счетчик ссылок становится равен нулю.
+тип[ComPtr](comptr-class.md) — тип *интеллектуального указателя* , который представляет интерфейс, определяемый параметром шаблона. Тип `ComPtr` используется для объявления переменной, которая может получить доступ к членам объекта, производного от интерфейса. `ComPtr` автоматически поддерживает счетчик ссылок для указателя на базовый интерфейс и освобождает интерфейс, когда число ссылок становится равным нулю.
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](runtimeclass-class.md) представляет собой экземпляр класса, который наследуется от набора указанных интерфейсов. `RuntimeClass` Объект может предоставить сочетание поддержки для одного или нескольких среда выполнения Windows COM-интерфейсов или слабой ссылки на компонент.
+[RuntimeClass](runtimeclass-class.md) представляет собой экземпляр класса, который наследуется от набора указанных интерфейсов. Объект `RuntimeClass` может предоставить сочетание поддержки для одного или нескольких среда выполнения Windows COM-интерфейсов или слабой ссылки на компонент.
 
-### <a name="module"></a>Module
+### <a name="module"></a>Модуль
 
 [Module](module-class.md) представляет коллекцию связанных объектов. Объект `Module` управляет фабриками класса, создающими объекты, и регистрацией, которая позволяет другим приложениям использовать объект.
 
@@ -125,7 +125,7 @@ C++/CX — это высокоуровневый, основанный на яз
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) используется для управления обработчиками событий *делегатов* . Используйте библиотеку C++ шаблонов среда выполнения Windows для реализации делегата и использования `EventSource` для добавления, удаления и вызова делегатов.
+[EventSource](eventsource-class.md) используется для управления обработчиками событий *делегатов* . Используйте библиотеку C++ шаблонов среда выполнения Windows, чтобы реализовать делегат и использовать `EventSource` для добавления, удаления и вызова делегатов.
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -133,15 +133,15 @@ C++/CX — это высокоуровневый, основанный на яз
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) представляет объект маршаллера в режиме свободного потока. `FtmBase` создает общую таблицу интерфейса (GIT) и помогает управлять маршалингом и прокси-объектами.
+[FtmBase](ftmbase-class.md) представляет объект маршаллера в режиме свободного потока. `FtmBase` создает таблицу глобальных интерфейсов (GIT) и помогает управлять упаковкой и прокси-объектами.
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) — тип интеллектуального указателя, представляющий *слабую ссылку*на объект, который может быть доступен или недоступен. `WeakRef` Объект может использоваться только среда выполнения Windows, а не классической моделью COM.
+[WeakRef](weakref-class.md) — тип интеллектуального указателя, представляющий *слабую ссылку*на объект, который может быть доступен или недоступен. Объект `WeakRef` может использоваться только среда выполнения Windows, а не классической моделью COM.
 
 Объект `WeakRef` обычно представляет объект, наличием которого управляет внешний поток или приложение. Например, объект `WeakRef` может ссылаться на объект файла. При открывании файла `WeakRef` является допустимым и файл, на который он ссылается, доступен. Однако после закрытия файла `WeakRef` перестает быть допустимым и файл становится недоступным.
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
 |||
 |-|-|

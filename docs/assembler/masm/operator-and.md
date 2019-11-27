@@ -17,12 +17,12 @@ ms.locfileid: "74397114"
 ---
 # <a name="operator-and"></a>AND - оператор
 
-Returns the result of a bitwise AND operation for *expression1* and *expression2*.
+Возвращает результат побитовой операции и для *expression1* и *Expression2*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* **AND** *expression2*
+> *expression1* **и** *Expression2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по операторам](../../assembler/masm/operators-reference.md)

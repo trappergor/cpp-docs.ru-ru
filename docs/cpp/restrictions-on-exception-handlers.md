@@ -14,9 +14,9 @@ ms.locfileid: "74245147"
 ---
 # <a name="restrictions-on-exception-handlers"></a>Ограничения, действующие в отношении обработчиков исключений
 
-The principal limitation to using exception handlers in code is that you cannot use a **goto** statement to jump into a **__try** statement block. Входить в этот блок необходимо только через обычный поток управления. You can jump out of a **__try** statement block and nest exception handlers as you choose.
+Основным ограничением использования обработчиков исключений в коде является то, что нельзя использовать оператор **goto** для перехода в блок инструкций **__try** . Входить в этот блок необходимо только через обычный поток управления. Можно выйти из блока инструкций **__try** и вложенных обработчиков исключений по мере выбора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

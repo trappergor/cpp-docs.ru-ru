@@ -15,12 +15,12 @@ ms.locfileid: "74398355"
 ---
 # <a name="erre"></a>.ERRE
 
-Generates an error if *expression* is false (0).
+Выдает ошибку, если *выражение* имеет значение false (0).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRE** *expression* ⟦ __,__ *message*⟧
+> **. Ерре** *выражение* ⟦ __,__ *сообщение*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

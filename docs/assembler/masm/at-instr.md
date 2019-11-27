@@ -15,12 +15,12 @@ ms.locfileid: "74399026"
 ---
 # <a name="instr"></a>\@InStr
 
-Macro function that finds the first occurrence of *string2* in *string1*, beginning at *position* within *string1*. If *position* does not appear, search begins at start of *string1*. Returns a position integer or 0 if *string2* is not found.
+Функция макроса, которая находит первое вхождение *строка_замены* в *строка1*, начиная с *позиции* в строке *строка1*. Если *Расположение* не отображается, поиск начинается в начале строки *строка1*. Возвращает значение целого числа или 0, если *строка string2* не найдена.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@InStr(** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
+> **\@InStr (** ⟦*положением*⟧ __,__ *строка1* __,__ *строка2* **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

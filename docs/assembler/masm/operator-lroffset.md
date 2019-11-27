@@ -17,12 +17,12 @@ ms.locfileid: "74396695"
 ---
 # <a name="operator-lroffset"></a>Оператор LROFFSET
 
-Returns the offset of *expression*. Same as **OFFSET**, but it generates a loader resolved offset, which allows Windows to relocate code segments.
+Возвращает смещение *выражения*. То же, что и **offset**, но создает смещение, разрешенное загрузчиком, что позволяет Windows перемещать сегменты кода.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **LROFFSET** *expression*
+> *Выражение* лроффсет
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

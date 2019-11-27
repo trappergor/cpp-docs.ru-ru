@@ -35,4 +35,4 @@ public ref class Test {};
 
 Обратите внимание, что в результате для данного примера говорится: **Закрывающий тег member не соответствует открывающему тегу summary.**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+Проблема в этом примере заключается в том, что закрывающий тег для \<сводки > неправильно сформирован, и компилятор не распознает его как \<сводку > закрывающим тегом.  Тег \<Member > внедряется в XDC-файл компилятором при каждой компиляции/doc.  Поэтому проблема заключается в том, что закрывающий тег \</Мембер > не соответствует предыдущему открывающему тегу, который обрабатывается компилятором (\<сводки >.

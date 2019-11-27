@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398879"
 ---
-# <a name="wordsize"></a>\@WordSize
+# <a name="wordsize"></a>\@Вордсизе
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+Два для 16-разрядного сегмента или четыре для 32-битного сегмента (число равно).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@WordSize**
+> **\@Вордсизе**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

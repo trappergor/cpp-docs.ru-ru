@@ -15,12 +15,12 @@ ms.locfileid: "74398381"
 ---
 # <a name="errdef"></a>.ERRDEF
 
-Generates an error if *name* is a previously defined label, variable, or symbol.
+Выдает ошибку, если *Name* — ранее определенная метка, переменная или символ.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRDEF** *name* ⟦ __,__ *message*⟧
+> **. Еррдеф** *имя* ⟦ __,__ *сообщение*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

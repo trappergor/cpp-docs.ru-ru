@@ -34,7 +34,7 @@ void AfxDaoInit();
 throw(CDaoException*);
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 В большинстве случаев нет необходимости вызывать `AfxDaoInit`, так как приложение автоматически вызывает его при необходимости.
 
@@ -53,7 +53,7 @@ throw(CDaoException*);
 void AfxDaoTerm();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 Как правило, эта функция должна вызываться только в обычной библиотеке DLL MFC. приложение автоматически вызывает `AfxDaoTerm`, когда это необходимо.
 
@@ -65,6 +65,6 @@ void AfxDaoTerm();
 
   **Заголовок** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

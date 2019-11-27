@@ -19,12 +19,12 @@ ms.locfileid: "74397137"
 ---
 # <a name="operator-"></a>operator +
 
-The first operator returns *expression1* plus *expression2*.
+Первый оператор возвращает *expression1* и *Expression2*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* + *expression2*
+> *expression1* + *выражение2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по операторам](../../assembler/masm/operators-reference.md)

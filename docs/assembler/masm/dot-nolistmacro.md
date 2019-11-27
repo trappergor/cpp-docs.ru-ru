@@ -15,16 +15,16 @@ ms.locfileid: "74398061"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Suppresses listing of macro expansions.
+Подавляет вывод списка расширений макросов.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.NOLISTMACRO**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Same as [.SALL](../../assembler/masm/dot-sall.md).
+То же, что и [. Салл](../../assembler/masm/dot-sall.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

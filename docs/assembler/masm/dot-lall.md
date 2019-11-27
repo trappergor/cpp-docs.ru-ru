@@ -19,10 +19,10 @@ ms.locfileid: "74398210"
 
 > **.LALL**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+См [. раздел. ЛИСТМАКРОАЛЛ](../../assembler/masm/dot-listmacroall.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

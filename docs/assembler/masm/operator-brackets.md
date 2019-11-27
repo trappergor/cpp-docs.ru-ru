@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: скобки оператора
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,12 +17,12 @@ ms.locfileid: "74397088"
 ---
 # <a name="operator-"></a>оператор \[\]
 
-Returns *expression1* plus \[*expression2*\].
+Возвращает значение *expression1* плюс \[*Expression2*\].
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* **[** expression2 **]**
+> *expression1* **[** выражение2 **]**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по операторам](../../assembler/masm/operators-reference.md)

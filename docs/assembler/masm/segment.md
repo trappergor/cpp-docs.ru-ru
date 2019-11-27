@@ -15,53 +15,53 @@ ms.locfileid: "74393728"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+Определяет сегмент программы *с именем, имеющим атрибуты* сегмента
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *имя* **сегмент** ⟦**ReadOnly**⟧ ⟦*aligned*⟧ ⟦*Combine*⟧ ⟦*использовать*⟧ ⟦*характеристики*⟧ **псевдоним (** _строка_ **)** ⟦ __"__ *класс* __"__ ⟧ \
+> *инструкции*\
+> *имя* **заканчивается**
 
 #### <a name="parameters"></a>Параметры
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+Диапазон адресов памяти, из которых можно выбрать начальный адрес для сегмента. Тип выравнивания может быть одним из следующих:
 
-|Align Type|Starting Address|
+|Тип выровняйте|Начальный адрес|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTE**|Следующий доступный байтовый адрес.|
+|**WORD**|Следующий доступный адрес слова (2 байта на слово).|
+|**DWORD**|Адрес следующего доступного двойного слова (4 байта на двойное слово).|
+|**СЛАБ**|Следующий доступный адрес абзаца (16 байт на абзац).|
+|**PAGE**|Следующий доступный адрес страницы (256 байт на страницу).|
+|**Выровняйте**(*n*)|Следующий доступный *n*-й байтовый адрес. Дополнительные сведения см. в разделе "Примечания".|
 
-If this parameter is not specified, **PARA** is used by default.
+Если этот параметр не указан, по умолчанию используется **para** .
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*объединить*\
+**Общедоступный**, **стек**, **Общий**, **память**, **по**<em>адресу</em>, **частный**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*использование*\
+**USE16**, **USE32**, **плоский**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+\ *характеристик*
+**Сведения**, **Чтение**, **запись**, **выполнение**, **Общий**, **страничный**, **некэш**и **Отмена**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+Они поддерживаются только для COFF и соответствуют характеристикам раздела COFF с аналогичным именем (например, **Shared** соответствует IMAGE_SCN_MEM_SHARED). READ устанавливает флаг IMAGE_SCN_MEM_READ. Флаг obsolete READONLY привел к очистке флага IMG_SCN_MEM_WRITE. Если заданы какие-либо *характеристики* , то характеристики по умолчанию не используются и действуют только флаги, указанные программистом.
 
 _string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+Эта строка используется в качестве имени раздела в выпущенном объекте COFF.  Создает несколько разделов с одинаковым внешним именем с разными именами сегментов MASM.
 
-Not supported with **/omf**.
+Не поддерживается с **/OMF**.
 
 *class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+Определяет, как сегменты должны объединяться и упорядочиваться в собранном файле. Типичные значения:, `'DATA'`, `'CODE'`, `'CONST'` и `'STACK'`
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+Для `ALIGN(n)`*n* может иметь любую степень числа 2 от 1 до 8192; не поддерживается с **/OMF**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

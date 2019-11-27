@@ -20,7 +20,7 @@ ms.locfileid: "74245090"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (включить обработку исключений)
 
-Не рекомендуется. Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
+Устаревшее. Включает синхронную обработку исключений с помощью предположения, что функции, объявленные с помощью `extern "C"` никогда не создают исключение.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,17 +28,17 @@ ms.locfileid: "74245090"
 /GX
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
+Функция **/GX** устарела. Вместо этого используйте эквивалентный параметр [/EHsc](eh-exception-handling-model.md) . Список устаревших параметров компилятора см. в разделе " **устаревшие и удаленные параметры компилятора** " раздела [параметры компилятора, упорядоченные по категориям](compiler-options-listed-by-category.md).
 
-By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
+По умолчанию параметр **/EHsc**, эквивалентный параметром **/GX**, действует при компиляции с помощью среды разработки Visual Studio. При использовании программ командной строки обработка исключений не указывается. Это эквивалентно **/ГКС-** .
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
+1. В области навигации выберите **Свойства конфигурации**, **C/C++** , **Командная строка**.
 
 1. Введите параметр компилятора в поле **Дополнительные параметры** .
 
@@ -46,7 +46,7 @@ By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile 
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>

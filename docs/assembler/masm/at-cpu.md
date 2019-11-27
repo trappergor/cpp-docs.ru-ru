@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399176"
 ---
-# <a name="cpu"></a>\@Cpu
+# <a name="cpu"></a>\@ЦП
 
-A bit mask specifying the processor mode (numeric equate).
+Битовая маска, указывающая режим процессора (число равно).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Cpu**
+> **\@ЦП**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

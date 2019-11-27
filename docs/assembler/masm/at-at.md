@@ -15,12 +15,12 @@ ms.locfileid: "74399252"
 ---
 # <a name=""></a>\@\@.
 
-Defines a code label recognizable only between *label1* and *label2*, where *label1* is either start of code or the previous `@@:` label, and *label2* is either end of code or the next `@@:` label. See [\@B](../../assembler/masm/at-b.md) and [\@F](../../assembler/masm/at-f.md).
+Определяет метку кода, которую можно распознать только между *Label1* и *ярлык2*, где *Label1* — это начало кода или Предыдущая метка `@@:`, а *ярлык2* — либо конец кода, либо Следующая `@@:` метка. См. [\@B](../../assembler/masm/at-b.md) и [\@F](../../assembler/masm/at-f.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **\@\@:**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

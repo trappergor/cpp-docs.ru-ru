@@ -15,12 +15,12 @@ ms.locfileid: "74398407"
 ---
 # <a name="err"></a>**.ERR**
 
-Generates an error.
+Создает ошибку.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERR** ⟦*message*⟧
+> **. ERR** ⟦*Message*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

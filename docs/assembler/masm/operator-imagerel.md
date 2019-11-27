@@ -17,18 +17,18 @@ ms.locfileid: "74396890"
 ---
 # <a name="operator-imagerel"></a>Оператор IMAGEREL
 
-Returns the image relative offset of *expression*.
+Возвращает относительное смещение в изображении *выражения*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **IMAGEREL** *expression*
+> *Выражение* IMAGEREL
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The resulting value is often referred to as an RVA or Relative Virtual Address.
+Полученное значение часто называется RVA или относительным виртуальным адресом.
 
-IMAGEREL is available only with COFF object emission.
+IMAGEREL доступен только с эмиссией объектов COFF.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

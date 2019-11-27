@@ -16,12 +16,12 @@ ms.locfileid: "74396175"
 ---
 # <a name="operator-short"></a>оператор SHORT
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+Задает короткий тип *метки* . Все переходы к *метке* должны быть короткими (в пределах от-128 до + 127 байт от инструкции перехода к *метке*).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **SHORT** *label*
+> **Короткая** *Метка*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74395112"
 ---
 # <a name="oword"></a>OWORD
 
-Used as a type specifier when an 16-byte data type is required.
+Используется в качестве описателя типа, если требуется 16-байтовый тип данных.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **OWORD**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

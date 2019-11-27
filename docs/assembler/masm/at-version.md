@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398893"
 ---
-# <a name="version"></a>\@Version
+# <a name="version"></a>Версия \@
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+Основная и дополнительная версии MASM выводятся в командной строке как одно число (текстовый макрос). Например, компилятор MASM Version 14.23.28107.0 создает "1423".
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Version**
+> **Версия \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

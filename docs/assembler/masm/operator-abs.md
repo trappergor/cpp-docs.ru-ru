@@ -16,12 +16,12 @@ ms.locfileid: "74397157"
 ---
 # <a name="operator-abs"></a>Оператор ABS
 
-See the [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+См. директиву [екстерндеф](../../assembler/masm/externdef.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
-> **ABS**
+> **ПРОСТО**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

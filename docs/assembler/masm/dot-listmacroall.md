@@ -15,16 +15,16 @@ ms.locfileid: "74398123"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Starts listing of all statements in macros.
+Запускает список всех инструкций в макросах.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.LISTMACROALL**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Same as [.LALL](../../assembler/masm/dot-lall.md).
+То же, что и [. ЛАЛЛ](../../assembler/masm/dot-lall.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

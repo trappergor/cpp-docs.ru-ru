@@ -15,12 +15,12 @@ ms.locfileid: "74395050"
 ---
 # <a name="out"></a>%OUT
 
-See [ECHO](../../assembler/masm/echo.md).
+См. раздел [echo](../../assembler/masm/echo.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **%OUT**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

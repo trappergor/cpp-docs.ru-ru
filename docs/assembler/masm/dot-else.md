@@ -13,16 +13,16 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398497"
 ---
-# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>. ELSE (32-разрядный MASM)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.ELSE**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+(только 32-разрядный MASM.) См [. раздел. Если](../../assembler/masm/dot-if.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

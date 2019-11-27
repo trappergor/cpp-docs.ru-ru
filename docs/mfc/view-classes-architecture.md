@@ -53,7 +53,7 @@ ms.locfileid: "74302974"
 
 Представления элементов управления отображают в качестве представления элемент управления.
 
-[CCtrlView](../mfc/reference/cctrlview-class.md)<br/>
+[кктрлвиев](../mfc/reference/cctrlview-class.md)<br/>
 Базовый класс для всех представлений, связанных с элементами управления Windows. Ниже описаны представления, основанные на элементах управления.
 
 [CEditView](../mfc/reference/ceditview-class.md)<br/>
@@ -68,6 +68,6 @@ ms.locfileid: "74302974"
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 Представление, содержащее элемент управления "дерево" Windows (см. [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Элемент управления "дерево" отображает значки и строки, расположенные в иерархии так же, как и левая панель проводника.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обзор класса](../mfc/class-library-overview.md)

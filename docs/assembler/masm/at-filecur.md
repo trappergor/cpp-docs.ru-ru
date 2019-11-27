@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399052"
 ---
-# <a name="filecur"></a>\@FileCur
+# <a name="filecur"></a>\@Филекур
 
-The name of the current file (text macro).
+Имя текущего файла (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@FileCur**
+> **\@Филекур**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

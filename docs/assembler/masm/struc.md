@@ -15,12 +15,12 @@ ms.locfileid: "74393678"
 ---
 # <a name="struc"></a>STRUC
 
-See [STRUCT](../../assembler/masm/struct-masm.md).
+См. раздел [STRUCT](../../assembler/masm/struct-masm.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **STRUC**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -40,7 +40,7 @@ struct CDaoParameterInfo
 *m_varValue*<br/>
 Значение параметра, хранящееся в объекте [COleVariant](../../mfc/reference/colevariant-class.md) .
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Ссылки на первичный и вторичный выше указывают, как эта информация возвращается функцией-членом [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) в классе `CDaoQueryDef`.
 
@@ -57,7 +57,7 @@ MFC не инкапсулирует объекты параметров DAO в �
 
 **Заголовок:** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [Класс CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398557"
 ---
-# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
+# <a name="continue-32-bit-masm"></a>. ПРОДОЛЖИТЬ (32-разрядный компилятор MASM)
 
-Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+Создает код для перехода к началу [. WHILE](../../assembler/masm/dot-while.md) или [. Повтор](../../assembler/masm/dot-repeat.md) блока, если *условие* истинно. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.CONTINUE** ⟦ **.IF** *condition*⟧
+> **. ПРОДОЛЖИТе** ⟦ **.**  *Условие*if ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

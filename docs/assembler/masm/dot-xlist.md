@@ -15,12 +15,12 @@ ms.locfileid: "74397809"
 ---
 # <a name="xlist"></a>.XLIST
 
-See [.NOLIST](../../assembler/masm/dot-nolist.md).
+См [. раздел. Список](../../assembler/masm/dot-nolist.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.XLIST**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

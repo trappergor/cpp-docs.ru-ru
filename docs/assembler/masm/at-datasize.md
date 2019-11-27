@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399152"
 ---
-# <a name="datasize"></a>\@DataSize
+# <a name="datasize"></a>Размер DataSize \@
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+0 для **мелких**, **малых**, **средних**и **плоских** моделей, 1 для **Compact** и **больших** моделей и 2 для **огромной** модели (числовой равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@DataSize**
+> **Размер DataSize \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

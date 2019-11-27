@@ -13,40 +13,40 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398115"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>. МОДЕЛЬ (32-разрядный MASM)
 
-Инициализирует модель памяти программы. (32-bit MASM only.)
+Инициализирует модель памяти программы. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **. Память модели** *— модель* ⟦ __,__ *язык — тип*⟧ ⟦ __,__ *Stack-Option*⟧
 
 ### <a name="parameters"></a>Параметры
 
-*memory-model*\
+*память —\ модели*
 Обязательный параметр, который определяет размер кода и указателей данных.
 
-*language-type*\
+*тип\ языка*
 Необязательный параметр, который задает соглашения о вызовах и именовании для процедур и открытых символов.
 
-*stack-option*\
+\ *параметров стека*
 Необязательный параметр.
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*параметр Stack-* не используется, если *модель памяти* **плоская**.
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+Указание **неарстакк** группирует сегмент стека в один физический сегмент (**дграуп**) вместе с данными. Предполагается, что регистр сегмента стека (**SS**) содержит тот же адрес, что и регистр сегмента данных (**DS**). **Фарстакк** не будет группировать стек с **дграуп**; таким, **SS** не равно **DS**.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. МОДЕЛЬ** не используется в [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 В следующей таблице перечислены возможные значения для каждого параметра при нацеливании на 16-разрядные и 32-разрядные платформы:
 
 |Параметр|32-разрядные значения|16-разрядные значения (поддержка более ранней разработки 16-разрядных приложений)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|Не используется|**NEARSTACK**, **FARSTACK**|
+|*память-модель*|**ВЫПУКЛАЯ**|**мелкий, Малый**, **компактный**, **средний**, **крупный**, **огромный**, **плоский**|
+|*Тип языка*|**C**, **STDCALL**|**C**, **Basic**, **Fortran**, **Pascal**, **syscall**, **STDCALL**|
+|*Stack-параметр*|Не используется|**неарстакк**, **фарстакк**|
 
 ## <a name="code"></a>Код
 
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

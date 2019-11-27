@@ -13,24 +13,24 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398222"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>. Если (32-разрядный MASM)
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+Создает код, который проверяет *condition1* (например, AX > 7) и выполняет *инструкции* , если это условие истинно. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **. Если** *condition1*\
+> *инструкции*\
+> ⟦ **.\ ELSEIF** *condition2*
+> *инструкции*⟧ \
+> ⟦ **. ELSE**\
+> *инструкции*⟧ \
 > **.ENDIF**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+Если [. В ПРОТИВном](../../assembler/masm/dot-else.md) случае его операторы выполняются, если исходное условие было ложным. Обратите внимание, что условия оцениваются во время выполнения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

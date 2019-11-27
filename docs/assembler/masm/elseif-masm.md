@@ -15,16 +15,16 @@ ms.locfileid: "74398433"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm/if-masm.md) into one statement.
+Объединяет [else](../../assembler/masm/else-masm.md) и [If](../../assembler/masm/if-masm.md) в одну инструкцию.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **ELSEIF**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [IF](../../assembler/masm/if-masm.md).
+См. раздел [If](../../assembler/masm/if-masm.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: '&period;ERRIDN, &period;ERRIDNI'
+title: '&period;ЕРРИДН, &period;ЕРРИДНИ'
 ms.date: 05/23/2019
 f1_keywords:
 - .ERRIDN
@@ -15,19 +15,19 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398345"
 ---
-# <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
+# <a name="perioderridn-perioderridni"></a>&period;ЕРРИДН, &period;ЕРРИДНИ
 
-Generates an error if the text items are identical.
+Выдает ошибку, если текстовые элементы идентичны.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **. Ерридн** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧ \
+> **. Ерридни** *textitem1* __,__ *textitem2* ⟦ __,__ *Message*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If **&period;ERRIDNI** is given, the comparison is case insensitive.
+Если задано **&period;ерридни** , при сравнении регистр не учитывается.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398830"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541035"
 ---
 # <a name="comm"></a>COMM
 
-Creates a communal variable with the attributes specified in *definition*.
+Создает переменную общего с атрибутами, указанными в *определении*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **COMM** *definition* ⟦ __,__ *definition* ...⟧
+> *Определение* связи ⟦ __,__ *Определение* ... ⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
+Переменные общего выделяются компоновщиком и не могут быть инициализированы. Это означает, что нельзя зависеть от расположения или последовательности таких переменных.
 
-Each *definition* has the following form:
+Каждое *Определение* имеет следующую форму:
 
-⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
+⟦*Language — введите*⟧ ⟦ | Near **⟧** _Метка_ **:** _введите_⟦ **:** _Count_⟧
 
-The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
+Необязательный *языковой тип* задает соглашения об именовании для имени, приведенного ниже. Он переопределяет любой язык, заданный параметром **.** Директива Model. Необязательный аргумент **NEAR** или **FAR** переопределяет текущую модель памяти. *Метка* — это имя переменной. *Тип* может быть любым описателем типа ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)и т. д.) или целым числом, определяющим количество байтов. *Необязательное число указывает* количество элементов в объявленном объекте данных. *Число* по умолчанию — 1.
 
 ## <a name="example"></a>Пример
 
-This example creates an array of 512 BYTE elements:
+В этом примере создается массив из 512 БАЙТовых элементов:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](directives-reference.md)

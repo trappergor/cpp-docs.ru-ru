@@ -15,12 +15,12 @@ ms.locfileid: "74393481"
 ---
 # <a name="subttl"></a>SUBTTL
 
-See [SUBTITLE](../../assembler/masm/subtitle.md).
+См. [подзаголовок](../../assembler/masm/subtitle.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **SUBTTL**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

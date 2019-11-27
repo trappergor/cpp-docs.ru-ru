@@ -17,12 +17,12 @@ ms.locfileid: "74396847"
 ---
 # <a name="operator-length"></a>Оператор LENGTH
 
-Returns the number of data items in *variable* created by the first initializer.
+Возвращает количество элементов данных в *переменной* , созданной первым инициализатором.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **LENGTH** *variable*
+> *Переменная* длины
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

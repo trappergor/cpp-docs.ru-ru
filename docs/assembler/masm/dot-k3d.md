@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398240"
 ---
-# <a name="k3d-32-bit-masm"></a>.K3D (32-bit MASM)
+# <a name="k3d-32-bit-masm"></a>. K3D (32-разрядный компилятор MASM)
 
-Enables assembly of **K3D** instructions. (32-bit MASM only.)
+Включает сборку инструкций **K3D** . (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.K3D**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

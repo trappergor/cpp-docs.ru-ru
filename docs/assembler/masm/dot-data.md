@@ -15,16 +15,16 @@ ms.locfileid: "74398514"
 ---
 # <a name="data"></a>.DATA
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data segment for initialized data (segment name _DATA).
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает ближайший сегмент данных для инициализированных данных (имя сегмента _data).
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.DATA**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[.DATA?](../../assembler/masm/dot-data-q.md)\
-[.CONST](../../assembler/masm/dot-const.md)\
-[.FARDATA](../../assembler/masm/dot-fardata.md)\
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[. ДАННЫЕ](../../assembler/masm/dot-data-q.md)\
+[. КОНСТАНТное](../../assembler/masm/dot-const.md)\
+[. ФАРДАТА](../../assembler/masm/dot-fardata.md)\
 [.FARDATA?](../../assembler/masm/dot-fardata-q.md)

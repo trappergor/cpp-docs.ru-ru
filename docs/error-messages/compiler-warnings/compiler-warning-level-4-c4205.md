@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4205
 ms.assetid: 39b5108c-7230-41b4-b2fe-2293eb6aae28
-ms.openlocfilehash: 1b165d2bdb2fb50df89fdd77c734c054a40b6e95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e46642494e55769a0676f0e33af0ca40c31939ad
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401232"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541805"
 ---
 # <a name="compiler-warning-level-4-c4205"></a>Предупреждение компилятора (уровень 4) C4205
 
 использовано нестандартное расширение: объявление статической функции в области видимости функции
 
-В расширениях Майкрософт (/Ze) **статический** функции могут быть объявлены внутри другой функции. Функция принимает глобальной области.
+При использовании расширений Майкрософт (/Ze) **статические** функции могут быть объявлены внутри другой функции. Функции предоставляется глобальная область.
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // C4205.c
 // compile with: /W4
 void func1()
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Подобная инициализация не допускается в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Такие инициализации недопустимы в режиме совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

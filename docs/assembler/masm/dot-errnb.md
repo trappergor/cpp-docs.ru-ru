@@ -15,12 +15,12 @@ ms.locfileid: "74398333"
 ---
 # <a name="errnb"></a>.ERRNB
 
-Generates an error if *textitem* is not blank.
+Выдает ошибку, если *текститем* не является пустым.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRNB** *textitem* ⟦ __,__ *message*⟧
+> **. Еррнб** *текститем* ⟦ __,__ *Message*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

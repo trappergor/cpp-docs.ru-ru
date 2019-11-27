@@ -17,12 +17,12 @@ ms.locfileid: "74395370"
 ---
 # <a name="operator-type"></a>Оператор TYPE
 
-Returns the type of *expression*.
+Возвращает тип *выражения*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **TYPE** *expression*
+> *Выражение* типа
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

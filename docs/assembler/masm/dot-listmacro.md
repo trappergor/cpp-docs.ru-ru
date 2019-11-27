@@ -15,16 +15,16 @@ ms.locfileid: "74398149"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-Starts listing of macro expansion statements that generate code or data.
+Запускает список операторов расширения макросов, создающих код или данные.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.LISTMACRO**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Это значение по умолчанию. Same as [.XALL](../../assembler/masm/dot-xall.md).
+Это значение по умолчанию. То же, что и [. КСАЛЛ](../../assembler/masm/dot-xall.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398903"
 ---
-# <a name="time"></a>\@Time
+# <a name="time"></a>Время \@
 
-The system time in 24-hour hh:mm:ss format (text macro).
+Системное время в 24-часовом формате чч: мм: СС (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Time**
+> **Время \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

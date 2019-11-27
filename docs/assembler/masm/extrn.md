@@ -19,10 +19,10 @@ ms.locfileid: "74397548"
 
 > **EXTRN**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [EXTERN](../../assembler/masm/extern-masm.md).
+См. раздел [extern](../../assembler/masm/extern-masm.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

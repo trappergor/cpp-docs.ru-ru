@@ -15,16 +15,16 @@ ms.locfileid: "74397601"
 ---
 # <a name=""></a>=
 
-Assigns the numeric value of *expression* to *name*.
+Присваивает числовое значение *выражения* *Name*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **=** *expression*
+> *имя* **=** *выражение*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The symbol can be redefined later.
+Символ можно переопределить позже.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

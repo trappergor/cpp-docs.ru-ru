@@ -16,12 +16,12 @@ ms.locfileid: "74397060"
 ---
 # <a name="operator-"></a>Оператор :
 
-Overrides the default segment of *expression* with *segment*. The *segment* can be a segment register, group name, segment name, or segment expression. The *expression* must be a constant.
+Переопределяет сегмент *выражения* по умолчанию с *сегментом*. *Сегмент* может быть регистром сегмента, именем группы, именем сегмента или выражением сегмента. *Выражение* должно быть константой.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *segment* **:** *expression*
+> *сегмент* **:** *выражение*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

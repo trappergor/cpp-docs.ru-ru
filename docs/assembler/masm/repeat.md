@@ -1,5 +1,5 @@
 ---
-title: REPEAT
+title: ПОВТОРИТЬ
 ms.date: 08/30/2018
 f1_keywords:
 - REPEAT
@@ -13,16 +13,16 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74394332"
 ---
-# <a name="repeat"></a>REPEAT
+# <a name="repeat"></a>ПОВТОРИТЬ
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+Помечает блок, который должен быть повторяемым временем *выражения* . То же [, что](../../assembler/masm/rept.md)и повтор.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **REPEAT** *expression*\
-> *statements*\
+> \ *выражения* **повтора**
+> *инструкции*\
 > **ENDM**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

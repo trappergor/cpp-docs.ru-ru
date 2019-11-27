@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399201"
 ---
-# <a name="codesize"></a>\@CodeSize
+# <a name="codesize"></a>\@Кодесизе
 
-0 for **TINY**, **SMALL**, **COMPACT**, and **FLAT** models, and 1 for **MEDIUM**, **LARGE**, and **HUGE** models (numeric equate).
+0 для **мелких**, **малых**, **компактных**и **плоских** моделей и 1 для **средних**, **крупных**и **огромных** моделей (числовой равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@CodeSize**
+> **\@Кодесизе**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

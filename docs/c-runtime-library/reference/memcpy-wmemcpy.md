@@ -68,7 +68,7 @@ wchar_t *wmemcpy(
 
 Значение *dest*.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 **memcpy** копирует *число* байтов из *src* в *dest*; **wmemcpy** копирует символы расширенного *числа* (2 байта). Если источник и назначение перекрываются, поведение **memcpy** не определено. Используйте **memmove** для управления перекрывающимися областями.
 
@@ -101,13 +101,13 @@ wchar_t *wmemcpy(
 |**memcpy**|\<memory.h> или \<string.h>|
 |**wmemcpy**|\<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 Пример использования **memcpy**см. в разделе [memmove](memmove-wmemmove.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

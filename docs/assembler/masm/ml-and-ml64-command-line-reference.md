@@ -63,92 +63,92 @@ ms.locfileid: "74397198"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Справочник по командной строке ML и ML64
 
-Assembles and links one or more assembly-language source files. The command-line options are case sensitive.
+Сборка и связывание одного или нескольких исходных файлов на языке ассемблера. Параметры командной строки чувствительны к регистру.
 
-For more information on ml64.exe, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения о ml64. exe см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="syntax"></a>Синтаксис
 
-> ML \[*options*] *filename* \[ \[*options*]  *filename*]
+> ML \[*Параметры*] *имя_файла* \[ \[*Параметры*] *имя файла*]
 >
-> ML64 \[*options*] *filename* \[ \[*options*]  *filename*] ... \[/link *linkoptions*]
+> ML64 \[*Параметры*] *имя_файла* \[ \[*Параметры*] *имя файла*].. \[/Link *линкоптионс*]
 
 ### <a name="parameters"></a>Параметры
 
-*options*\
-The options listed in the following table.
+\ *параметров*
+Параметры, перечисленные в следующей таблице.
 
 |Параметр|Действие|
 |------------|------------|
-|**/AT**|Enables tiny-memory-model support. Enables error messages for code constructs that violate the requirements for .com format files. Note that this is not equivalent to the [.MODEL](../../assembler/masm/dot-model.md) **TINY** directive.<br /><br /> Not available in ml64.exe.|
-|**/Bl** *filename*|Selects an alternate linker.|
-|**/c**|Assembles only. Does not link.|
-|**/coff**|Generates common object file format (COFF) type of object module. Generally required for Win32 assembly language development.<br /><br /> Not available in ml64.exe.|
-|**/Cp**|Preserves case of all user identifiers.|
-|**/Cu**|Maps all identifiers to upper case (default).<br /><br /> Not available in ml64.exe.|
-|**/Cx**|Preserves case in public and extern symbols.|
-|**/D** *symbol*⟦=*value*⟧|Defines a text macro with the given name. If *value* is missing, it is blank. Multiple tokens separated by spaces must be enclosed in quotation marks.|
-|**/EP**|Generates a preprocessed source listing (sent to STDOUT). See **/Sf**.|
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|If ml.exe or ml64.exe fails at runtime, you can use **/ERRORREPORT** to send information to Microsoft about these internal errors.<br /><br /> For more information about **/ERRORREPORT**, see [/errorReport (Report Internal Compiler Errors)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
-|**/F** *hexnum*|Sets stack size to *hexnum* bytes (this is the same as **/link/STACK**:*number*). The value must be expressed in hexadecimal notation. There must be a space between **/F** and *hexnum*.|
-|**/Fe** *filename*|Names the executable file.|
-|**/Fl**⟦*filename*⟧|Generates an assembled code listing. See **/Sf**.|
-|**/Fm**⟦*filename*⟧|Creates a linker map file.|
-|**/Fo** *filename*|Names an object file. See Remarks section for more information.|
-|**/FPi**|Generates emulator fix-ups for floating-point arithmetic (mixed language only).<br /><br /> Not available in ml64.exe.|
-|**/Fr**⟦*filename*⟧|Generates a source browser .sbr file.|
-|**/FR**⟦*filename*⟧|Generates an extended form of a source browser .sbr file.|
-|**/Gc**|Specifies use of FORTRAN- or Pascal-style function calling and naming conventions. Same as **OPTION LANGUAGE:PASCAL**.<br /><br /> Not available in ml64.exe.|
-|**/Gd**|Specifies use of C-style function calling and naming conventions. Same as **OPTION LANGUAGE:C**.<br /><br /> Not available in ml64.exe.|
-|**/GZ**|Specifies use of __stdcall function calling and naming conventions.  Same as **OPTION LANGUAGE:STCALL**.<br /><br /> Not available in ml64.exe.|
-|**/H** *number*|Restricts external names to number significant characters. The default is 31 characters.<br /><br /> Not available in ml64.exe.|
-|**/help**|Calls QuickHelp for help on ML.|
-|**/I** *pathname*|Sets path for include file. A maximum of 10 **/I** options is allowed.|
-|**/nologo**|Suppresses messages for successful assembly.|
-|**/omf**|Generates object module file format (OMF) type of object module.  **/omf** implies **/c**; ML.exe does not support linking OMF objects.<br /><br /> Not available in ml64.exe.|
-|**/Sa**|Turns on listing of all available information.|
-|**/safeseh**|Marks the object as either containing no exception handlers or containing exception handlers that are all declared with [.SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Not available in ml64.exe.|
-|**/Sf**|Adds first-pass listing to listing file.|
-|**/Sl** *width*|Sets the line width of source listing in characters per line. Range is 60 to 255 or 0. Default is 0. Same as [PAGE](../../assembler/masm/page.md) width.|
-|**/Sn**|Turns off symbol table when producing a listing.|
-|**/Sp** *length*|Sets the page length of source listing in lines per page. Range is 10 to 255 or 0. Default is 0. Same as [PAGE](../../assembler/masm/page.md) length.|
-|**/Ss** *text*|Specifies text for source listing. Same as [SUBTITLE](../../assembler/masm/subtitle.md) text.|
-|**/St** *text*|Specifies title for source listing. Same as [TITLE](../../assembler/masm/title.md) text.|
-|**/Sx**|Turns on false conditionals in listing.|
-|**/Ta** *filename*|Assembles source file whose name does not end with the .asm extension.|
-|**/w**|Same as **/W0/WX**.|
-|**/W** *level*|Sets the warning level, where *level* = 0, 1, 2, or 3.|
-|**/WX**|Returns an error code if warnings are generated.|
-|**/X**|Ignore INCLUDE environment path.|
-|**/Zd**|Generates line-number information in object file.|
-|**/Zf**|Makes all symbols public.|
-|**/Zi**|Generates CodeView information in object file.|
-|**/Zm**|Enables**M510** option for maximum compatibility with MASM 5.1.<br /><br /> Not available in ml64.exe.|
-|**/Zp**⟦*alignment*⟧|Packs structures on the specified byte boundary. The *alignment* can be 1, 2, or 4.|
-|**/Zs**|Performs a syntax check only.|
-|**/?**|Displays a summary of ML command-line syntax.|
+|**/AT.**|Включает незначительную поддержку модели памяти. Включает сообщения об ошибках для конструкций кода, которые нарушают требования к файлам формата. com. Обратите внимание, что это не эквивалентно [. ](../../assembler/masm/dot-model.md) **Немаленькая** директива Model.<br /><br /> Недоступно в ml64. exe.|
+|*Имя файла* /БЛ|Выбирает альтернативный компоновщик.|
+|**/c**|Только сборка. Не имеет связи.|
+|**/кофф**|Создает тип объекта Common Object File (COFF) для модуля объектов. Обычно требуется для разработки на языке сборок Win32.<br /><br /> Недоступно в ml64. exe.|
+|**/кп**|Сохраняет регистр всех идентификаторов пользователей.|
+|**/ку**|Сопоставляет все идентификаторы с верхним регистром (по умолчанию).<br /><br /> Недоступно в ml64. exe.|
+|**/CX**|Сохраняет регистр в общедоступных и внешних символах.|
+|**/D** *символ*⟦ =*значение*⟧|Определяет текстовый макрос с заданным именем. Если *значение* отсутствует, оно пустое. Несколько токенов, разделенных пробелами, должны быть заключены в кавычки.|
+|**/EP**|Создает предварительно обработанное исходное листинг (отправленное в STDOUT). См. **/СФ**.|
+|**/errorreport** [ **нет** &#124; &#124; **Отправка** **очереди** **запросов** &#124; ]|Если в среде выполнения происходит сбой машинного обучения ml. exe или ml64. exe, можно использовать **/errorreport** для отправки в корпорацию Майкрософт сведений об этих внутренних ошибках.<br /><br /> Дополнительные сведения о параметре **/errorreport**см. в разделе [/errorreport (отчет о внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
+|**/F** *хекснум*|Задает размер стека равным *хекснум* байт (это то же самое, что **/линк/стакк**:*Number*). Значение должно быть выражено в шестнадцатеричном формате. Между **/f** и *хекснум*должен быть пробел.|
+|*Имя файла* /Fe|Присваивает имя исполняемому файлу.|
+|**/ФЛ**⟦*имя файла*⟧|Создает листинг собранного кода. См. **/СФ**.|
+|**/FM**⟦*имя файла*⟧|Создает файл отображения компоновщика.|
+|**/FO** *имя_файла*|Называет объектный файл. Дополнительные сведения см. в разделе "Примечания".|
+|**/фпи**|Создает исправления эмулятора для арифметических операций с плавающей запятой (только для смешанного языка).<br /><br /> Недоступно в ml64. exe.|
+|**/Fr**⟦*имя файла*⟧|Создает SBR-файл с исходным кодом в браузере.|
+|**/Fr**⟦*имя файла*⟧|Формирует расширенную форму файла с расширением SBR.|
+|**/GC**|Задает использование соглашений о вызовах и именовании функций в стиле FORTRAN или Pascal. То же, что и **параметр Language: Pascal**.<br /><br /> Недоступно в ml64. exe.|
+|**/Gd**|Задает использование соглашений о вызовах и именовании функций в стиле языка C. То же, что и **параметр Language: C**.<br /><br /> Недоступно в ml64. exe.|
+|**/GZ**|Задает использование вызова функции __stdcall и соглашений об именовании.  То же, что и **параметр Language: сткалл**.<br /><br /> Недоступно в ml64. exe.|
+|*Число* /h|Применяет к внешним именам числовые значащие символы. Значение по умолчанию — 31 символ.<br /><br /> Недоступно в ml64. exe.|
+|**/help**|Вызывает QuickHelp для получения справки по ML.|
+|**/I** *путь*|Задает путь к включаемому файлу. Допускается не более 10 параметров **/i** .|
+|**/nologo**|Подавляет сообщения для успешной сборки.|
+|**/OMF**|Создает тип файла модуля объекта (OMF) модуля объекта.  **/OMF** подразумевает **/c**; Программа ML. exe не поддерживает связывание объектов OMF.<br /><br /> Недоступно в ml64. exe.|
+|**/SA**|Включает список всех доступных сведений.|
+|**/SafeSEH**|Помечает объект как либо не содержащий обработчиков исключений, либо содержащий обработчики исключений, объявленные с помощью [. SAFESEH](../../assembler/masm/dot-safeseh.md).<br /><br /> Недоступно в ml64. exe.|
+|**/сф**|Добавляет список First-Pass в файл листинга.|
+|*Ширина* /сл|Задает толщину строки исходного списка в символах в строке. Диапазон — от 60 до 255 или 0. Значение по умолчанию — 0. То же, что и ширина [страницы](../../assembler/masm/page.md) .|
+|**/SN**|Отключает таблицу символов при создании списка.|
+|*Длина* /SP|Задает длину страницы исходного списка в строках на страницу. Диапазон — от 10 до 255 или 0. Значение по умолчанию — 0. То же, что и длина [страницы](../../assembler/masm/page.md) .|
+|**/СС** *текст*|Задает текст для листинга источника. То же, что и текст [подзаголовка](../../assembler/masm/subtitle.md) .|
+|**/St** , *текст*|Указывает заголовок исходного списка. То же, что и текст [заголовка](../../assembler/masm/title.md) .|
+|**/скс**|Включает в листинге ложные условные выражения.|
+|*Имя файла* /та|Собирает исходный файл, имя которого не заканчивается расширением ASM.|
+|**/w**|То же, что и **/W0/WX**.|
+|*Уровень* /w|Задает уровень предупреждений, где *Level* = 0, 1, 2 или 3.|
+|**/WX**|Возвращает код ошибки, если создаются предупреждения.|
+|**/X**|Игнорировать путь к окружению INCLUDE.|
+|**/Zd**|Создает сведения о номере строки в объектном файле.|
+|**/ZF**|Делает все символы открытыми.|
+|**/Zi**|Создает сведения о Информация CodeView в объектном файле.|
+|**/Zm**|Включает параметр**M510** для максимальной СОВМЕСТИМОСТИ с MASM 5,1.<br /><br /> Недоступно в ml64. exe.|
+|**/Zp**⟦*Выравнивание*⟧|Упаковывает структуры на указанную границу байта. *Выравнивание* может быть равно 1, 2 или 4.|
+|**/Zs**|Выполняет только проверку синтаксиса.|
+|**/?**|Отображает сводку по синтаксису командной строки ML.|
 
-*filename*\
-Имя файла
+*имя файла*\
+Имя файла.
 
-*linkoptions*\
-The link options.  See [Linker Options](../../build/reference/linker-options.md) for more information.
+*линкоптионс*\
+Параметры ссылки.  Дополнительные сведения см. в разделе [Параметры компоновщика](../../build/reference/linker-options.md) .
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Some command-line options to ML and ML64 are placement-sensitive. For example, because ML and ML64 can accept several **/c** options, any corresponding **/Fo** options must be specified before **/c**. The following command-line example illustrates an object file specification for each assembly file specification:
+Некоторые параметры командной строки для машинного обучения ML и ML64 зависят от размещения. Например, поскольку ML и ML64 могут принимать несколько параметров **/c** , все соответствующие параметры **/FO** должны быть указаны до **/c**. Следующий пример командной строки иллюстрирует спецификацию объектного файла для каждой спецификации файла сборки:
 
-**ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
+**ML. exe/FO a1. obj/c a. ASM/FO B1. obj/c b. ASM**
 
 ## <a name="environment-variables"></a>Переменные среды
 
 |Переменная|Описание|
 |--------------|-----------------|
-|INCLUDE|Specifies search path for include files.|
-|ML|Specifies default command-line options.|
-|TMP|Specifies path for temporary files.|
+|INCLUDE|Задает путь поиска включаемых файлов.|
+|ML|Задает параметры командной строки по умолчанию.|
+|TMP|Указывает путь для временных файлов.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[ML Error Messages](../../assembler/masm/ml-error-messages.md)\
+[Сообщения об ошибках машинного обучения](../../assembler/masm/ml-error-messages.md)\
 [Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

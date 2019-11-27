@@ -17,17 +17,17 @@ ms.locfileid: "74397380"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN, IFIDNI
 
-Grants assembly if the text items are identical.
+Предоставляет сборку, если текстовые элементы идентичны.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **IFIDN** *textitem1* __,__ *textitem2*\
-> **IFIDNI** *textitem1* __,__ *textitem2*
+> **Ифидн** *textitem1* __,__ *textitem2*\
+> **Ифидни** *textitem1* __,__ *textitem2*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-If **IFIDNI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+Если задано значение **ифидни** , при сравнении регистр не учитывается. Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

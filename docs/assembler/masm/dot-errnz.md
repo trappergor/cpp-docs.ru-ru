@@ -15,12 +15,12 @@ ms.locfileid: "74398308"
 ---
 # <a name="errnz"></a>**.ERRNZ**
 
-Generates an error if *expression* is true (nonzero).
+Выдает ошибку, если *выражение* имеет значение true (отличное от нуля).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRNZ** *expression* ⟦ __,__ *message*⟧
+> **. Еррнз** *выражение* ⟦ __,__ *сообщение*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

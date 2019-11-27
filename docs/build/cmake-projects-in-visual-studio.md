@@ -299,7 +299,7 @@ Visual Studio использует файл с именем *CMakeSettings. JSON
 ::: moniker-end
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Учебник. Создание C++ кросс-платформенных проектов в Visual Studio](get-started-linux-cmake.md)<br/>
 [Настройка проекта Linux CMake](../linux/cmake-linux-project.md)<br/>

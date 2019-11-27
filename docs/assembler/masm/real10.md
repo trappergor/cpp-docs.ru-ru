@@ -15,12 +15,12 @@ ms.locfileid: "74394863"
 ---
 # <a name="real10"></a>REAL10
 
-Allocates and optionally initializes a 10-byte floating-point number for each *initializer*.
+Выделяет и при необходимости инициализирует 10-байтовое число с плавающей запятой для каждого *инициализатора*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **REAL10** *initializer* ⟦ __,__ *initializer* ...⟧
+> *Name* **REAL10** *инициализатор* ⟦ __,__ *initializer* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

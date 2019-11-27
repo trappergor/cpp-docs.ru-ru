@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398918"
 ---
-# <a name="substr"></a>\@SubStr
+# <a name="substr"></a>\@ый substr
 
-A macro function that returns a substring starting at *position*.
+Функция-макрос, возвращающая подстроку, начиная с *позиции*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@ый substr (** *строка* __,__ *Расположение* ⟦ __,__ *Длина*⟧ **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

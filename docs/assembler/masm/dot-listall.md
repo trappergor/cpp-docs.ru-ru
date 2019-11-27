@@ -15,16 +15,16 @@ ms.locfileid: "74398171"
 ---
 # <a name="listall"></a>.LISTALL
 
-Starts listing of all statements.
+Запускает список всех инструкций.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.LISTALL**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Equivalent to the combination of [.LIST](../../assembler/masm/dot-list.md), [.LISTIF](../../assembler/masm/dot-listif.md), and [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+Эквивалентно сочетанию [. Список](../../assembler/masm/dot-list.md), [. ЛИСТИФ](../../assembler/masm/dot-listif.md)и [. ЛИСТМАКРОАЛЛ](../../assembler/masm/dot-listmacroall.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

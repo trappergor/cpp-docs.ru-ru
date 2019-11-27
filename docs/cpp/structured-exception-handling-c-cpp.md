@@ -18,33 +18,33 @@ ms.locfileid: "74245129"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-Structured exception handling (SEH) is a Microsoft extension to C to handle certain exceptional code situations, such as hardware faults, gracefully. Although Windows and Microsoft C++ support SEH, we recommend that you use ISO-standard C++ exception handling because it makes your code more portable and flexible. Nevertheless, to maintain existing code or for particular kinds of programs, you still might have to use SEH.
+Структурированная обработка исключений (SEH) — это расширение Майкрософт для языка C для обработки определенных исключительных ситуаций кода, таких как ошибки оборудования, корректно. Несмотря на то что C++ Windows и Microsoft поддерживают SEH, рекомендуется использовать стандартную C++ обработку исключений ISO, так как это делает код более переносимым и гибким. Тем не менее, для поддержки существующего кода или определенных типов программ все равно может потребоваться использовать SEH.
 
-**Microsoft specific:**
+**Специально для Майкрософт:**
 
 ## <a name="grammar"></a>Грамматика
 
-*try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+*try-except-оператор* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составной* **оператор __except** **(** *выражение* **)** *составной оператор*
 
-*try-finally-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
+*try-finally-оператор* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составного оператора* **__finally** *составного оператора*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-With SEH, you can ensure that resources such as memory blocks and files are released correctly if execution unexpectedly terminates. You can also handle specific problems—for example, insufficient memory—by using concise structured code that does not rely on **goto** statements or elaborate testing of return codes.
+С помощью SEH можно убедиться, что ресурсы, такие как блоки памяти и файлы, освобождаются правильно, если выполнение неожиданно завершается. Можно также решить определенные проблемы (например, недостаток памяти) с помощью кратко структурированного кода, не зависящего от инструкций **goto** или тщательного тестирования кодов возврата.
 
-Операторы try-except и try-finally, которые упоминаются в этом разделе, являются расширениями языка C для систем Microsoft. Они поддерживают SEH, позволяя приложениям получать контроль над программой после событий, которые в иных ситуациях привели бы к завершению выполнения. Хотя обработка ошибок SEH работает с исходными файлами C++, она не была создана специально для этого языка. If you use SEH in a C++ program that you compile by using the [/EHa or /EHsc](../build/reference/eh-exception-handling-model.md) option, destructors for local objects are called but other execution behavior might not be what you expect. For an illustration, see the example later in this article. In most cases, instead of SEH we recommend that you use ISO-standard [C++ exception handling](../cpp/try-throw-and-catch-statements-cpp.md), which the Microsoft C++ compiler also supports. С помощью обработки исключений C++ можно повысить переносимость кода и обрабатывать исключения любого типа.
+Операторы try-except и try-finally, которые упоминаются в этом разделе, являются расширениями языка C для систем Microsoft. Они поддерживают SEH, позволяя приложениям получать контроль над программой после событий, которые в иных ситуациях привели бы к завершению выполнения. Хотя обработка ошибок SEH работает с исходными файлами C++, она не была создана специально для этого языка. Если SEH используется в C++ программе, компилируемой с параметром [/EHa или/EHsc](../build/reference/eh-exception-handling-model.md) , то деструкторы для локальных объектов вызываются, но другое поведение выполнения может отличаться от ожидаемого. Иллюстрации см. в примере далее в этой статье. В большинстве случаев вместо SEH рекомендуется использовать стандартную [ C++ обработку исключений](../cpp/try-throw-and-catch-statements-cpp.md)ISO, которую также поддерживает компилятор Майкрософт C++ . С помощью обработки исключений C++ можно повысить переносимость кода и обрабатывать исключения любого типа.
 
-If you have C code that uses SEH, you can mix it with C++ code that uses C++ exception handling. For information, see [Handle structured exceptions in C++](../cpp/exception-handling-differences.md).
+При наличии кода C, использующего SEH, можно смешивать его с C++ кодом, использующим C++ обработку исключений. Дополнительные сведения см. [в разделе Handle Structured Exceptions in C++ ](../cpp/exception-handling-differences.md).
 
 Существует два механизма SEH.
 
-- [Exception handlers](../cpp/writing-an-exception-handler.md), or **__except** blocks, which can respond to or dismiss the exception.
+- [Обработчики исключений](../cpp/writing-an-exception-handler.md)или блоки **__except** , которые могут реагировать на исключение или закрыть его.
 
-- [Termination handlers](../cpp/writing-a-termination-handler.md), or **__finally** blocks, which are always called, whether an exception causes termination or not.
+- [Обработчики завершения](../cpp/writing-a-termination-handler.md)или блоки **__finally** , которые вызываются всегда, являются ли исключение причиной завершения или нет.
 
-Эти два типа обработчиков различаются, однако тесно взаимодействию в процессе, который называется "развертыванием стека". When a structured exception occurs, Windows looks for the most recently installed exception handler that is currently active. Обработчик может выполнить одно из трех действий:
+Эти два типа обработчиков различаются, однако тесно взаимодействию в процессе, который называется "развертыванием стека". При возникновении структурированного исключения Windows ищет недавно установленный обработчик исключений, который сейчас является активным. Обработчик может выполнить одно из трех действий:
 
 - не распознать исключение и передать управление другим обработчикам;
 
@@ -52,21 +52,21 @@ If you have C code that uses SEH, you can mix it with C++ code that uses C++ exc
 
 - распознать исключение и обработать его.
 
-Обработчик исключений, распознавший исключение, может находиться за пределами функции, которая выполнялась, когда возникло исключение. В некоторых случаях он может находиться в функции, хранящейся гораздо выше по стеку. Выполняемая в настоящее время функция и все прочие функции в кадре стека завершаются. During this process, the stack is "unwound;" that is, local non-static variables of terminated functions are cleared from the stack.
+Обработчик исключений, распознавший исключение, может находиться за пределами функции, которая выполнялась, когда возникло исключение. В некоторых случаях он может находиться в функции, хранящейся гораздо выше по стеку. Выполняемая в настоящее время функция и все прочие функции в кадре стека завершаются. В ходе этого процесса стек будет "развернут;", т. е. локальные нестатические переменные завершенных функций удаляются из стека.
 
-По мере развертывания стека операционная система вызывает все обработчики завершения, которые были написаны для каждой функции. При помощи обработчиков завершения можно освободить ресурсы, которые в противном случае оставались бы открытыми ненормального завершения. If you've entered a critical section, you can exit it in the termination handler. Если ожидается завершение программы, можно выполнить другие задачи обслуживания, например закрыть и удалить временные файлы.
+По мере развертывания стека операционная система вызывает все обработчики завершения, которые были написаны для каждой функции. При помощи обработчиков завершения можно освободить ресурсы, которые в противном случае оставались бы открытыми ненормального завершения. Если вы ввели критическую секцию, вы можете выйти из него в обработчике завершения. Если ожидается завершение программы, можно выполнить другие задачи обслуживания, например закрыть и удалить временные файлы.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Writing an exception handler](../cpp/writing-an-exception-handler.md)
+- [Написание обработчика исключений](../cpp/writing-an-exception-handler.md)
 
-- [Writing a termination handler](../cpp/writing-a-termination-handler.md)
+- [Написание обработчика завершения](../cpp/writing-a-termination-handler.md)
 
 - [Обработка структурированных исключений в C++](../cpp/exception-handling-differences.md)
 
 ## <a name="example"></a>Пример
 
-As stated earlier, destructors for local objects are called if you use SEH in a C++ program and compile it by using the **/EHa** or **/EHsc** option. Однако если при этом используются исключения C++, то поведение во время выполнения может отличаться от ожидаемого. This example demonstrates these behavioral differences.
+Как упоминалось ранее, деструкторы для локальных объектов вызываются при использовании SEH в C++ программе и его компиляции с помощью параметра **/EHa** или **/EHsc** . Однако если при этом используются исключения C++, то поведение во время выполнения может отличаться от ожидаемого. В этом примере демонстрируются эти различия в поведении.
 
 ```cpp
 #include <stdio.h>
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-If you use **/EHsc** to compile this code but the local test control macro `CPPEX` is undefined, there is no execution of the `TestClass` destructor and the output looks like this:
+Если для компиляции этого кода используется параметр **/EHsc** , но локальный макрос элемента управления теста `CPPEX` не определен, то выполнение деструктора `TestClass` не выполняется, и выходные данные выглядят следующим образом:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-If you use **/EHsc** to compile the code and `CPPEX` is defined by using `/DCPPEX` (so that a C++ exception is thrown), the `TestClass` destructor executes and the output looks like this:
+Если для компиляции кода используется параметр **/EHsc** , а `CPPEX` определяется с помощью `/DCPPEX` (чтобы выдавалось C++ исключение), выполняется деструктор `TestClass` и выходные данные выглядят следующим образом:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-If you use **/EHa** to compile the code, the `TestClass` destructor executes regardless of whether the exception was thrown by using `std::throw` or by using SEH to trigger the exception, that is, whether `CPPEX` defined or not. Вывод выглядит следующим образом.
+При использовании параметра **/EHa** для компиляции кода деструктор `TestClass` выполняется независимо от того, было ли создано исключение с помощью `std::throw` или с помощью SEH для активации исключения, то есть независимо от того, определен ли `CPPEX` или нет. Вывод выглядит следующим образом.
 
 ```Output
 Throwing C++ exception
@@ -138,14 +138,14 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Дополнительные сведения см. в статье [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md).
+Дополнительные сведения см. в разделе [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [\<exception>](../standard-library/exception.md)<br/>
-[Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Structured Exception Handling (Windows)](/windows/win32/debug/structured-exception-handling)
+[Ошибки и обработка исключений](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[Структурированная обработка исключений (Windows)](/windows/win32/debug/structured-exception-handling)

@@ -38,7 +38,7 @@ struct CDaoIndexFieldInfo
 *m_bDescending*<br/>
 Указывает порядок индексов, определенный объектом index. Значение TRUE, если порядок сортировки по убыванию.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Объект индекса может иметь несколько полей, указывающих, в каких полях будет индексироваться объект tabledef (или набор записей, основанный на таблице). Ссылки на основные выше сведения указывают, как данные возвращаются в `m_pFieldInfos` члене объекта [кдаоиндексинфо](../../mfc/reference/cdaoindexinfo-structure.md) , полученного путем вызова функции-члена `GetIndexInfo` класса [кдаотабледеф](../../mfc/reference/cdaotabledef-class.md#getindexinfo) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo).
 
@@ -50,8 +50,8 @@ struct CDaoIndexFieldInfo
 
 **Заголовок:** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
+[Кдаотабледеф:: Жетиндексинфо](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>
 [CDaoRecordset:: Жетиндексинфо](../../mfc/reference/cdaorecordset-class.md#getindexinfo)

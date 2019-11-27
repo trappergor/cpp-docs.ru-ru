@@ -15,12 +15,12 @@ ms.locfileid: "74398753"
 ---
 # <a name=""></a>$
 
-The current value of the location counter.
+Текущее значение счетчика расположения.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **$**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по символам](../../assembler/masm/symbols-reference.md)

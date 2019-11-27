@@ -15,18 +15,18 @@ ms.locfileid: "74397738"
 ---
 # <a name="dword"></a>DWORD
 
-Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*.
+Выделяет и при необходимости инициализирует двойное слово (4 байта) хранилища для каждого *инициализатора*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> ⟦*name*⟧ **DWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*имя*⟧, инициализатор **DWORD** *⟦* __,__ *инициализатор* ... ⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Can also be used as a type specifier anywhere a type is legal.
+Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[SDWORD](../../assembler/masm/sdword.md)\
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[Сдворд](../../assembler/masm/sdword.md)\
 [DD](../../assembler/masm/dd.md)

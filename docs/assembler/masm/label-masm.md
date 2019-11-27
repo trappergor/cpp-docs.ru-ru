@@ -15,14 +15,14 @@ ms.locfileid: "74397260"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+Создает новую метку путем присвоения *имени*текущего значения счетчика расположения и заданного *типа* .
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **LABEL** *type*
+> *тип* метки имени
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> **Метка** имени ⟦**около** | **FAR** | **процедура**⟧ **ptr** ⟦*типа*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

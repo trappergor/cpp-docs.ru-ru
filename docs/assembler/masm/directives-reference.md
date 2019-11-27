@@ -15,7 +15,7 @@ ms.locfileid: "74398790"
 ---
 # <a name="directives-reference"></a>Справочник по директивам
 
-## <a name="x64"></a>X64
+## <a name="x64"></a>x64
 
 ||||
 |-|-|-|
@@ -23,57 +23,57 @@ ms.locfileid: "74398790"
 |[.PUSHFRAME](../../assembler/masm/dot-pushframe.md)|[.PUSHREG](../../assembler/masm/dot-pushreg.md)|[.SAVEREG](../../assembler/masm/dot-savereg.md)|
 |[.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)|[.SETFRAME](../../assembler/masm/dot-setframe.md)||
 
-### <a name="code-labels"></a>Code Labels
+### <a name="code-labels"></a>Метки кода
 
 |||
 |-|-|
-|[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
-|[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
+|[НИЖНЕМ](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
+|[ЗАГОЛОВКА](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
-### <a name="conditional-assembly"></a>Conditional Assembly
+### <a name="conditional-assembly"></a>Условная сборка
 
 ||||
 |-|-|-|
-|[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
-|[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
-|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
-|[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||
+|[Кроме](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
+|[НАЛИЧИИ](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[Ифб](../../assembler/masm/ifb.md)/[ифнб](../../assembler/masm/ifnb.md)|
+|[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[Ифдиф](../../assembler/masm/ifdif.md)/[ифдиф&#91;&#91;I&#93; ](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
+|[Ифидн](../../assembler/masm/ifidn.md)/[ифидн&#91;&#91;I&#93; ](../../assembler/masm/ifidn.md)|||
 
-### <a name="conditional-control-flow"></a>Conditional Control Flow
+### <a name="conditional-control-flow"></a>Условный поток управления
 
 ||||
 |-|-|-|
 |[.BREAK](../../assembler/masm/dot-break.md)|[.CONTINUE](../../assembler/masm/dot-continue.md)|[.ELSE](../../assembler/masm/dot-else.md)|
-|[.ELSEIF](../../assembler/masm/dot-if.md)|[.ENDIF](../../assembler/masm/dot-endif.md)|[.ENDW](../../assembler/masm/dot-endw.md)|
+|[. ELSEIF](../../assembler/masm/dot-if.md)|[.ENDIF](../../assembler/masm/dot-endif.md)|[.ENDW](../../assembler/masm/dot-endw.md)|
 |[.IF](../../assembler/masm/dot-if.md)|[.REPEAT](../../assembler/masm/dot-repeat.md)|[.UNTIL](../../assembler/masm/dot-until.md)|
 |[.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)|[.WHILE](../../assembler/masm/dot-while.md)||
 
-### <a name="conditional-error"></a>Conditional Error
+### <a name="conditional-error"></a>Условная ошибка
 
 ||||
 |-|-|-|
 |[.ERR](../../assembler/masm/dot-err.md)|[.ERR2](../../assembler/masm/dot-err2.md)|[.ERRB](../../assembler/masm/dot-errb.md)|
-|[.ERRDEF](../../assembler/masm/dot-errdef.md)|[.ERRDIF](../../assembler/masm/dot-errdif.md)/[.ERRDIF&#91;&#91;I&#93;&#93;&#93;](../../assembler/masm/dot-errdif.md)|[.ERRE](../../assembler/masm/dot-erre.md)|
-|[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
+|[.ERRDEF](../../assembler/masm/dot-errdef.md)|[. ](../../assembler/masm/dot-errdif.md)/еррдиф [. еррдиф&#91;I&#93; &#91;&#93; ](../../assembler/masm/dot-errdif.md)|[.ERRE](../../assembler/masm/dot-erre.md)|
+|[. ](../../assembler/masm/dot-erridn.md)/ерридн [. ерридн&#91;I&#91;&#93; ](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
 |[.ERRNZ](../../assembler/masm/dot-errnz.md)|||
 
-### <a name="data-allocation"></a>Data Allocation
+### <a name="data-allocation"></a>Распределение данных
 
 ||||
 |-|-|-|
-|[ALIGN](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[SDWORD](../../assembler/masm/sdword.md)|
-|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|
+|[НИЖНЕМ](../../assembler/masm/align-masm.md)|[BYTE](../../assembler/masm/byte-masm.md)/[SBYTE](../../assembler/masm/sbyte-masm.md)|[DWORD](../../assembler/masm/dword.md)/[сдворд](../../assembler/masm/sdword.md)|
+|[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[ЗАГОЛОВКА](../../assembler/masm/label-masm.md)|
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
-|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
+|[WORD](../../assembler/masm/word.md)/[технологий](../../assembler/masm/sword.md)|||
 
-### <a name="equates"></a>Equates
+### <a name="equates"></a>Соответствует
 
 ||||
 |-|-|-|
 |[=](../../assembler/masm/equal.md)|[EQU](../../assembler/masm/equ.md)|[TEXTEQU](../../assembler/masm/textequ.md)|
 
-### <a name="listing-control"></a>Listing Control
+### <a name="listing-control"></a>Элемент управления списка
 
 ||||
 |-|-|-|
@@ -88,16 +88,16 @@ ms.locfileid: "74398790"
 ||||
 |-|-|-|
 |[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[GOTO](../../assembler/masm/goto-masm.md)|
-|[LOCAL](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
+|[Языковые](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
 
 ### <a name="miscellaneous"></a>Прочее
 
 ||||
 |-|-|-|
-|[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENT](../../assembler/masm/comment-masm.md)|
-|[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
-|[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
-|[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
+|[ПСЕВДОНИМ](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[Метки](../../assembler/masm/comment-masm.md)|
+|[ECHO](../../assembler/masm/echo.md)|[КОНЦЕ](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
+|[ОТНОСИТСЯ](../../assembler/masm/include-masm.md)|[инклуделиб](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
+|[ФУНКЦИЮ](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
 |[.RADIX](../../assembler/masm/dot-radix.md)|[.SAFESEH](../../assembler/masm/dot-safeseh.md)|[XMMWORD](../../assembler/masm/xmmword.md)|
 |[YMMWORD](../../assembler/masm/ymmword.md)|||
 
@@ -117,29 +117,29 @@ ms.locfileid: "74398790"
 |[.586P](../../assembler/masm/dot-586p.md)|[.686](../../assembler/masm/dot-686.md)|[.686P](../../assembler/masm/dot-686p.md)|
 |[.K3D](../../assembler/masm/dot-k3d.md)|[.MMX](../../assembler/masm/dot-mmx.md)|[.XMM](../../assembler/masm/dot-xmm.md)|
 
-### <a name="repeat-blocks"></a>Repeat Blocks
+### <a name="repeat-blocks"></a>Повторяющиеся блоки
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
-|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
+|[ENDM](../../assembler/masm/endm.md)|[ПРЕДМЕТ](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
+|[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[При](../../assembler/masm/while-masm.md)|
 
-### <a name="scope"></a>Область
+### <a name="scope"></a>Область видимости
 
 ||||
 |-|-|-|
-|[COMM](../../assembler/masm/comm.md)|[EXTERN](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|
-|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[PUBLIC](../../assembler/masm/public-masm.md)||
+|[COMM](../../assembler/masm/comm.md)|[Название](../../assembler/masm/extern-masm.md)|[EXTERNDEF](../../assembler/masm/externdef.md)|
+|[инклуделиб](../../assembler/masm/includelib-masm.md)|[ЗАКРЫТЫЙ](../../assembler/masm/public-masm.md)||
 
-### <a name="segment"></a>Segment
+### <a name="segment"></a>Сегментаци
 
 ||||
 |-|-|-|
 |[.ALPHA](../../assembler/masm/dot-alpha.md)|[ASSUME](../../assembler/masm/assume.md)|[.DOSSEG](../../assembler/masm/dot-dosseg.md)|
-|[END](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
+|[КОНЦЕ](../../assembler/masm/end-masm.md)|[НАЧИНАЕТ](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||
 
-### <a name="simplified-segment"></a>Simplified Segment
+### <a name="simplified-segment"></a>Упрощенный сегмент
 
 ||||
 |-|-|-|
@@ -148,20 +148,20 @@ ms.locfileid: "74398790"
 |[.FARDATA](../../assembler/masm/dot-fardata.md)|[.FARDATA?](../../assembler/masm/dot-fardata-q.md)|[.MODEL](../../assembler/masm/dot-model.md)|
 |[.STACK](../../assembler/masm/dot-stack.md)|[.STARTUP](../../assembler/masm/dot-startup.md)||
 
-### <a name="string"></a>Строковое
+### <a name="string"></a>Строка
 
 |||
 |-|-|
 |[CATSTR](../../assembler/masm/catstr.md)|[INSTR](../../assembler/masm/instr.md)|
 |[SIZESTR](../../assembler/masm/sizestr.md)|[SUBSTR](../../assembler/masm/substr.md)|
 
-### <a name="structure-and-record"></a>Structure and Record
+### <a name="structure-and-record"></a>Структура и запись
 
 ||||
 |-|-|-|
-|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
-|[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
+|[НАЧИНАЕТ](../../assembler/masm/ends-masm.md)|[ЗАПИСАТЬ](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
+|[ОПРЕДЕЛЕНИЕ](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)

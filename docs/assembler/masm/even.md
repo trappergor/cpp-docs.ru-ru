@@ -15,12 +15,12 @@ ms.locfileid: "74397583"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+Выровнять следующую переменную или инструкцию на четном байте.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **EVEN**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

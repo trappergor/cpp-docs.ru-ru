@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398970"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>Строка \@
 
-The source line number in the current file (numeric equate).
+Номер исходной строки в текущем файле (число равно).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Line**
+> **Строка \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

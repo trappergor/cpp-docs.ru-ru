@@ -17,12 +17,12 @@ ms.locfileid: "74396654"
 ---
 # <a name="operator-mod"></a>Оператор MOD
 
-Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
+Возвращает целочисленное значение остатка (остаток от деления *expression1* на *Expression2*).
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* **MOD** *expression2*
+> *Выражение1* **Mod** *выражение2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

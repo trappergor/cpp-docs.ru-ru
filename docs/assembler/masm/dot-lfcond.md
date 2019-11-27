@@ -19,10 +19,10 @@ ms.locfileid: "74398205"
 
 > **.LFCOND**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [.LISTIF](../../assembler/masm/dot-listif.md).
+См [. раздел. ЛИСТИФ](../../assembler/masm/dot-listif.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

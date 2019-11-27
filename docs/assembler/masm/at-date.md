@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399130"
 ---
-# <a name="date"></a>\@Date
+# <a name="date"></a>Дата \@
 
-The system date in the format mm/dd/yy (text macro).
+Системная дата в формате mm/дд/гг (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Date**
+> **Дата \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

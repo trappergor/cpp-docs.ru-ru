@@ -15,12 +15,12 @@ ms.locfileid: "74398322"
 ---
 # <a name="errndef"></a>.ERRNDEF
 
-Generates an error if *name* has not been defined.
+Выдает ошибку, если *имя* не было определено.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.ERRNDEF** *name* ⟦ __,__ *message*⟧
+> **. Еррндеф** *имя* ⟦ __,__ *сообщение*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

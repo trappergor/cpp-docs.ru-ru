@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4570
+title: Предупреждение компилятора (уровень 3) C4570
 ms.date: 11/04/2016
 f1_keywords:
 - C4570
@@ -13,15 +13,15 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188879"
 ---
-# <a name="compiler-warning-level-3-c4570"></a>Compiler Warning (level 3) C4570
+# <a name="compiler-warning-level-3-c4570"></a>Предупреждение компилятора (уровень 3) C4570
 
-'type' : is not explicitly declared as abstract but has abstract functions
+"тип": не объявлен явно как абстрактный, но имеет абстрактные функции
 
-A type that contains [abstract](../../extensions/abstract-cpp-component-extensions.md) functions should itself be marked as abstract.
+Тип, содержащий [абстрактные](../../extensions/abstract-cpp-component-extensions.md) функции, должен быть помечен как abstract.
 
 ## <a name="example"></a>Пример
 
-The following sample generates C4570.
+Следующий пример приводит к возникновению ошибки C4570.
 
 ```cpp
 // C4570.cpp

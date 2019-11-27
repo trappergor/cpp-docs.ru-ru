@@ -1,5 +1,5 @@
 ---
-title: Exception handling in MSVC
+title: Обработка исключений в КОМПИЛЯТОРОМ MSVC
 ms.date: 11/19/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
@@ -11,41 +11,41 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246591"
 ---
-# <a name="exception-handling-in-msvc"></a>Exception handling in MSVC
+# <a name="exception-handling-in-msvc"></a>Обработка исключений в КОМПИЛЯТОРОМ MSVC
 
-Исключение — это условие ошибки, возможно вне элемента управления программы, которое не позволяет продолжать выполнение программы по обычному пути выполнения. Некоторые операции, включая создание объектов, ввод-вывод файлов и вызовы функций из других модулей, — это возможные источники исключений, даже если программа выполняется правильно. В надежном коде можно предвидеть и обработать исключения. To detect logic errors, use assertions rather than exceptions (see [Using Assertions](/visualstudio/debugger/c-cpp-assertions)).
+Исключение — это условие ошибки, возможно вне элемента управления программы, которое не позволяет продолжать выполнение программы по обычному пути выполнения. Некоторые операции, включая создание объектов, ввод-вывод файлов и вызовы функций из других модулей, — это возможные источники исключений, даже если программа выполняется правильно. В надежном коде можно предвидеть и обработать исключения. Для обнаружения логических ошибок используйте утверждения, а не исключения (см. раздел [использование утверждений](/visualstudio/debugger/c-cpp-assertions)).
 
-## <a name="kinds-of-exceptions"></a>Kinds of exceptions
+## <a name="kinds-of-exceptions"></a>Виды исключений
 
-The Microsoft C++ compiler (MSVC) supports three kinds of exception handling:
+Microsoft C++ COMPILER (компилятором MSVC) поддерживает три типа обработки исключений:
 
-- [C++ exception handling](errors-and-exception-handling-modern-cpp.md)
+- [C++Обработка исключений](errors-and-exception-handling-modern-cpp.md)
 
    В большинстве программ на языке C++ необходимо использовать обработку исключений C++, поскольку она является типобезопасной и гарантирует вызов деструкторов объектов во время очистки стека.
 
-- [Structured exception handling](structured-exception-handling-c-cpp.md)
+- [Структурированная обработка исключений](structured-exception-handling-c-cpp.md)
 
-   Windows предоставляет собственный механизм исключений — SEH. Его не рекомендуется использовать при программировании C++ или MFC. Use SEH only in non-MFC C programs.
+   Windows предоставляет собственный механизм исключений — SEH. Его не рекомендуется использовать при программировании C++ или MFC. SEH следует использовать только в программах C, не относящихся к MFC.
 
-- [MFC exceptions](../mfc/exception-handling-in-mfc.md)
+- [Исключения MFC](../mfc/exception-handling-in-mfc.md)
 
-Use the [/EH](../build/reference/eh-exception-handling-model.md) compiler option to specify the type of exception handling to use in a project; C++ exception handling is the default. Не следует комбинировать механизмы обработки ошибок, например не следует использовать исключения C++ со структурированной обработкой исключений. Использование механизма обработки исключений языка C++ позволяет написать более переносимый код и обрабатывать исключения любого типа. For more information about the drawbacks of structured exception handling, see [Structured Exception Handling](structured-exception-handling-c-cpp.md). For advice about mixing MFC macros and C++ exceptions, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
+Используйте параметр компилятора [/EH](../build/reference/eh-exception-handling-model.md) , чтобы указать тип обработки исключений для использования в проекте. C++ по умолчанию используется обработка исключений. Не следует комбинировать механизмы обработки ошибок, например не следует использовать исключения C++ со структурированной обработкой исключений. Использование механизма обработки исключений языка C++ позволяет написать более переносимый код и обрабатывать исключения любого типа. Дополнительные сведения о недостатках структурированной обработки исключений см. в разделе [структурированная обработка исключений](structured-exception-handling-c-cpp.md). Рекомендации по смешению макросов и C++ исключений MFC см. в разделе [исключения: использование C++ макросов и исключений MFC](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
-- [Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
+- [Современные C++ рекомендации по исключениям и обработке ошибок](errors-and-exception-handling-modern-cpp.md)
 
-- [How to design for exception safety](how-to-design-for-exception-safety.md)
+- [Разработка для обеспечения безопасности исключений](how-to-design-for-exception-safety.md)
 
-- [How to interface between exceptional and non-exceptional code](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+- [Как взаимодействовать между исключительным и неисключительным кодом](how-to-interface-between-exceptional-and-non-exceptional-code.md)
 
-- [The try, catch, and throw Statements](try-throw-and-catch-statements-cpp.md)
+- [Операторы Try, catch и Throw](try-throw-and-catch-statements-cpp.md)
 
 - [Проверка блоков Catch](how-catch-blocks-are-evaluated-cpp.md)
 
-- [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md)
+- [Исключения и очистка стека](exceptions-and-stack-unwinding-in-cpp.md)
 
-- [Exception Specifications](exception-specifications-throw-cpp.md)
+- [Спецификации исключений](exception-specifications-throw-cpp.md)
 
 - [noexcept](noexcept-cpp.md)
 
@@ -53,10 +53,10 @@ Use the [/EH](../build/reference/eh-exception-handling-model.md) compiler option
 
 - [Сочетание исключений C (структурированные) и C++](mixing-c-structured-and-cpp-exceptions.md)
 
-- [Structured Exception Handling (SEH) (C/C++)](structured-exception-handling-c-cpp.md)
+- [Структурированная обработка исключений (SEH) (CC++/)](structured-exception-handling-c-cpp.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по языку C++](cpp-language-reference.md)</br>
 [Обработки исключений в 64-разрядных системах](../build/exception-handling-x64.md)</br>
-[Exception Handling (C++/CLI and C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)
+[Обработка исключений (C++/CLI и C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)

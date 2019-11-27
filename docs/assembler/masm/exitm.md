@@ -15,16 +15,16 @@ ms.locfileid: "74397579"
 ---
 # <a name="exitm"></a>EXITM
 
-Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
+Завершает расширение текущего повторяющегося или блока макроса и начинает сборку следующего оператора за пределами блока.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **EXITM** ⟦*textitem*⟧
+> **Екситм** ⟦*текститем*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-In a macro function, *textitem* is the value returned.
+В функции-макросе *текститем* является возвращаемым значением.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

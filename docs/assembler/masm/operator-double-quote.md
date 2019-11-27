@@ -1,5 +1,5 @@
 ---
-title: operator &quot; &quot;
+title: '&quot; оператора &quot;'
 ms.date: 08/30/2018
 f1_keywords:
 - '&#34; &#34;'
@@ -15,14 +15,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397026"
 ---
-# <a name="operator-quot-quot"></a>operator &quot; &quot;
+# <a name="operator-quot-quot"></a>&quot; оператора &quot;
 
-Treats "*text*" as a string.
+Обрабатывает "*Text*" как строку.
 
 ## <a name="syntax"></a>Синтаксис
 
-> __"__ *text* __"__
+> __"__ *Text* __"__
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

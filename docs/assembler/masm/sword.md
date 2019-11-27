@@ -15,13 +15,13 @@ ms.locfileid: "74393585"
 ---
 # <a name="sword"></a>SWORD
 
-Allocates and optionally initializes a signed word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+Выделяет и при необходимости инициализирует подписанное слово (2 байта) хранилища для каждого *инициализатора*. Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* **SWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> *Name* **технологий** *инициализатор* ⟦ __,__ *initializer* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](../../assembler/masm/directives-reference.md)\
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
 [WORD](../../assembler/masm/word.md)

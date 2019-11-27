@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4254
 ms.assetid: c7dcef24-d535-4c98-bb41-fc3d2b88fd11
-ms.openlocfilehash: 925428cffae37ea26144e5b550cbc7988b33ef01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b3ba795acb8c72c7d1630071aa2884b6137464
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400985"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541945"
 ---
 # <a name="compiler-warning-level-4-c4254"></a>Предупреждение компилятора (уровень 4) C4254
 
-«operator»: преобразование из «тип1» в «тип2», возможна потеря данных
+"оператор": преобразование из "тип1" в "тип2", возможна утрата данных
 
-Крупное битовое поле было назначено меньшего размера битовое поле. Возможна потеря данных.
+Более крупное битовое поле было назначено меньшему битовому полю. Возможна утрата данных.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Следующий пример приводит к возникновению ошибки C4254:
 
-```
+```cpp
 // C4254.cpp
 // compile with: /W4
 #pragma warning(default: 4254)

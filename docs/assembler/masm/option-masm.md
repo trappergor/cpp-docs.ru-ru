@@ -15,28 +15,28 @@ ms.locfileid: "74395172"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Enables and disables features of the assembler.
+Включает и отключает функции ассемблера.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **OPTION** *optionlist*
+> **Параметр** *оптионлист*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Available options include:
+Доступные варианты:
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**касемап**|**дотнаме**|**нодотнаме**|**ЭМУЛЯТОР**|
+|**ЭМУЛЯТОР**|**ЭПИЛОГА**|**EXPR16**|**EXPR32**|
+|**ЯЗЫКЕ**|**лжмп**|**нолжмп**|**M510**|
+|**NOM510**|**Ключевое слово "ключевоеслово"**|**носигнекстенд**|**СОБОЙ**|
+|**олдмакрос**|**нулдмакрос**|**олдструктс**|**нулдструктс**|
+|**PROC**|**Пролог**|**ДОСТУПНО**|**READONLY**|
+|**ОБЛАСТИ**|**С неограниченной областью**|**SEGMENT**|**SETIF2**.|
 
-The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
+Синтаксис языка — **параметр Language:** <em>x</em>, где *x* — один из C, syscall, stdcall, Pascal, Fortran или Basic.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживаются при использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) плоской.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

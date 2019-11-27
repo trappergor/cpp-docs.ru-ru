@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397789"
 ---
-# <a name="xmm-32-bit-masm"></a>.XMM (32-bit MASM)
+# <a name="xmm-32-bit-masm"></a>. XMM (32-разрядный MASM)
 
-Enables assembly of Internet Streaming SIMD Extension instructions. (32-bit MASM only.)
+Включает сборку инструкций расширения SIMD для Internet Streaming. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.XMM**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

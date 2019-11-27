@@ -15,21 +15,21 @@ ms.locfileid: "74399273"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+Директива **aligned** выстраивает следующий элемент данных или инструкцию по адресу, который является кратным его параметру. Параметр должен быть степенью 2 (например, 1, 2, 4 и т. д.), которая меньше или равна выравниванию сегмента.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **ALIGN** ⟦*number*⟧
+> **Выровняйте** ⟦*Number*⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+Директива **aligned** позволяет указать начальное смещение элемента данных или инструкции. Согласованные данные могут повысить производительность за счет нерасходования пространства между элементами данных. Большие улучшения производительности могут возникать, если доступ к данным находится на границах, попадающие в строки кэша. Доступ к естественным границам для собственных типов означает меньше времени, затраченного на внутренний код аппаратного перевыравнивания оборудования.
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+Потребность в выровненных инструкциях очень мала на современных процессорах, использующих модель плоской адресации, но может потребоваться для целей перехода в более старом коде для других моделей адресации.
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+Если данные выровнены, пропущенное пространство дополняется нулями. При согласовании инструкций пропущенное пространство заполняется соответствующими инструкциями NOP.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[Даже](even.md)\
+[Справочник по директивам](directives-reference.md)

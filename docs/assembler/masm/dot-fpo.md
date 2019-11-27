@@ -13,34 +13,34 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398248"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>. FPO (32-разрядный MASM)
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+Объект **.** Директива FPO управляет эмиссией отладочных записей в сегмент. Debug $ F или раздел. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **. FPO** (*кдвлокалс*, *кдвпарамс*, *кбпролог*, *кбрегс*, *фусебп*, *кбфраме*)
 
 ### <a name="parameters"></a>Параметры
 
-*cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+*кдвлокалс*\
+Число локальных переменных — Неподписанное 32 разрядное значение.
 
-*cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+*кдвпарамс*\
+Размер параметров в DWORD, 16 разрядных значений без знака.
 
-*cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+*кбпролог*\
+Число байтов в коде пролога функции — 8 разрядное значение без знака.
 
-*cbRegs*\
-Number registers saved.
+*кбрегс*\
+Число сохраняемых регистров.
 
-*fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+*фусебп*\
+Указывает, выделен ли регистр EBP. значение 0 или 1.
 
-*cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+*кбфраме*\
+Указывает тип кадра.  Дополнительные сведения см. в разделе [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

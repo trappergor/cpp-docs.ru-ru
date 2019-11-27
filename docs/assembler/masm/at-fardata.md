@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399069"
 ---
-# <a name="fardata"></a>\@fardata
+# <a name="fardata"></a>\@фардата
 
-The name of the segment defined by the [.FARDATA](../../assembler/masm/dot-fardata.md) directive (text macro).
+Имя сегмента, определенного [. ](../../assembler/masm/dot-fardata.md)Директива фардата (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@fardata**
+> **\@фардата**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

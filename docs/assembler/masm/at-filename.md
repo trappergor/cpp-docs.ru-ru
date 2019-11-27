@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399046"
 ---
-# <a name="filename"></a>\@FileName
+# <a name="filename"></a>Имя файла \@
 
-The base name of the main file being assembled (text macro).
+Базовое имя создаваемого главного файла (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@FileName**
+> **Имя файла \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

@@ -16,12 +16,12 @@ ms.locfileid: "74395516"
 ---
 # <a name="operator-sizeof"></a>Оператор SIZEOF
 
-Returns the number of bytes in *variable* or *type*.
+Возвращает число байтов в *переменной* или *типе*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **SIZEOF** {*variable* | *type*}
+> **Sizeof** {*переменная* | *тип*}
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Operators reference](operators-reference.md)
+[Справочник по операторам](operators-reference.md)

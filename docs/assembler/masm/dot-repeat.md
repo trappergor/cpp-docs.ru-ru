@@ -13,16 +13,16 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398010"
 ---
-# <a name="repeat-32-bit-masm"></a>.REPEAT (32-bit MASM)
+# <a name="repeat-32-bit-masm"></a>. Повтор (32-разрядный MASM)
 
-Generates code that repeats execution of the block of *statements* until *condition* becomes true. [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md), which becomes true when CX is zero, may be substituted for [.UNTIL](../../assembler/masm/dot-until.md). The *condition* is optional with **.UNTILCXZ**. (32-bit MASM only.)
+Создает код, который повторяет выполнение блока *инструкций* до тех пор, пока *условие* не станет истинным. [. УНТИЛККСЗ](../../assembler/masm/dot-untilcxz.md), который становится истинным, когда CX равен нулю, может быть заменен на [. ДО](../../assembler/masm/dot-until.md). *Условие* является необязательным с **. УНТИЛККСЗ**. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.REPEAT**\
-> *statements*\
-> **.UNTIL** *condition*
+> **. ПОВТОРИТЬ**\
+> *инструкции*\
+> **.**  *Условие* Until
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

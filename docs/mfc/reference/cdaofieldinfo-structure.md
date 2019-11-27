@@ -80,7 +80,7 @@ struct CDaoFieldInfo
 *m_lSize*<br/>
 Значение, указывающее максимальный размер (в байтах) объекта поля DAO, содержащего текст, или фиксированный размер объекта поля, содержащего текстовые или числовые значения. Дополнительные сведения см. в разделе "свойство size" справки DAO. Размеры могут иметь одно из следующих значений:
 
-|Введите|Размер (байт)|Описание|
+|Тип|Размер (байт)|Описание|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 байт|Да/нет (то же, что и true/false)|
 |`dbByte`|1|Байт|
@@ -88,7 +88,7 @@ struct CDaoFieldInfo
 |`dbLong`|4|Long|
 |`dbCurrency`|8|Валюта ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|Single|
-|`dbDouble`|8|Double|
+|`dbDouble`|8|С двойной точностью|
 |`dbDate`|8|Дата и время ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|Text ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Long Binary (объект OLE; [CByteArray](../../mfc/reference/cbytearray-class.md); Используйте вместо `CLongBinary`)|
@@ -142,7 +142,7 @@ struct CDaoFieldInfo
 *m_strDefaultValue*<br/>
 Значение по умолчанию для объекта поля DAO. При создании новой записи значение свойства DefaultValue автоматически указывается в качестве значения для поля. Дополнительные сведения см. в разделе "свойство DefaultValue" справки DAO. Это свойство можно задать для tabledef с помощью [кдаотабледеф:: креатефиелд](../../mfc/reference/cdaotabledef-class.md#createfield).
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Ссылки на основные, вторичные и все приведенные выше сведения указывают, каким способом данные возвращаются функцией-членом `GetFieldInfo` в классах [кдаотабледеф](../../mfc/reference/cdaotabledef-class.md#getfieldinfo), [кдаокуеридеф](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)и [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo).
 
@@ -156,9 +156,9 @@ struct CDaoFieldInfo
 
 **Заголовок:** афксдао. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
+[Кдаотабледеф:: Жетфиелдинфо](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset:: Жетфиелдинфо](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [Кдаокуеридеф:: Жетфиелдинфо](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)

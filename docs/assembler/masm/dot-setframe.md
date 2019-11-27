@@ -15,23 +15,23 @@ ms.locfileid: "74397933"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+Заполняет поле регистра кадра и смещение в данных очистки, используя указанный регистр (*reg*) и смещение (*смещение*). Смещение должно быть кратным 16 и меньше или равно 240. Эта директива также создает `UWOP_SET_FPREG` запись кода очистки для указанного регистра, используя текущее смещение пролога.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **.SETFRAME** *reg*, *offset*
+> **. СЕТФРАМЕ** *reg*, *смещение*
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**. СЕТФРАМЕ** позволяет пользователям ml64. exe указывать, как кадрировать функцию Frame, и может использоваться только в прологе, который расширяется из объявления кадра [процесса](../../assembler/masm/proc.md) в [. ](../../assembler/masm/dot-endprolog.md)Директива ендпролог. Эти директивы не создают код. они создают только `.xdata` и `.pdata`. **. СЕТФРАМЕ** должен предшествовать инструкциям, которые фактически реализуют действия, которые должны быть развернуты. Рекомендуется заключить в оболочку как директивы очистки, так и код, предназначенный для очистки макроса, чтобы обеспечить соблюдение соглашения.
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+Дополнительные сведения см. в статье [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>Пример
 
 ### <a name="description"></a>Описание
 
-The following sample shows how to use a frame pointer:
+В следующем примере показано использование указателя фрейма:
 
 ### <a name="code"></a>Код
 
@@ -62,6 +62,6 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

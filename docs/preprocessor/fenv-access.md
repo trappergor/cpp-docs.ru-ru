@@ -1,5 +1,5 @@
 ---
-title: Прагма fenv_access
+title: fenv_access - прагма
 description: Описывает использование и влияние директивы pragma fenv_access. Директива fenv_access управляет доступом к среде с плавающей запятой во время выполнения.
 ms.date: 11/19/2019
 f1_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74305847"
 ---
-# <a name="fenv_access-pragma"></a>Прагма fenv_access
+# <a name="fenv_access-pragma"></a>fenv_access - прагма
 
 Отключает (**включено**) или включает (**выключенное**) оптимизацию, которая может изменить проверки флагов среды с плавающей точкой и изменения режима.
 
@@ -24,7 +24,7 @@ ms.locfileid: "74305847"
 
 > **fenv_access #pragma (** { **On** | **Off** } **)**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 По умолчанию **fenv_access** отключен **.** Компилятор предполагает, что ваш код не обращается к среде с плавающей запятой или не управляет ею. Если доступ к среде не требуется, компилятор может повысить эффективность кода с плавающей точкой.
 
@@ -111,6 +111,6 @@ int main() {
 out=1.000000000000000e-02
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Директивы pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

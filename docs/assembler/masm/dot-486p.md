@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398684"
 ---
-# <a name="486p-32-bit-masm"></a>.486P (32-bit MASM)
+# <a name="486p-32-bit-masm"></a>.486P (32-разрядный компилятор MASM)
 
-Enables assembly of all instructions (including privileged) for the 80486 processor. (32-bit MASM only.)
+Включает сборку всех инструкций (включая привилегированные) для процессора 80486. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.486P**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -13,21 +13,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399265"
 ---
-# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
+# <a name="assume-32-bit-masm"></a>ПРЕДПОЛАГАЕТся (32-разрядный MASM)
 
-Enables error checking for register values. (32-bit MASM only.)
+Включает проверку ошибок для значений регистров. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
-> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
-> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
-> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
+> **Предположим**  *, сегрегистер* __:__ *Name* ⟦ __,__ *сегрегистер* __:__ *Name*... ⟧\
+> **Предположим, что**  *регистр* __:__ *тип* ⟦ __,__ *регистр* __:__ *тип*... ⟧\
+> **Считать**  *регистр* __: ошибка__ ⟦ __,__ *регистр* __: ошибка__... ⟧\
+> **Предположим** , *⟦ регистр* __:__ ⟧**Nothing** ⟦ __,__ *Register* __: Nothing__... ⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
+После вступления **в действие** , ассемблер следит за изменениями значений заданных регистров. При использовании **регистра возникает ошибка** . **Ничто не** удаляет проверку регистрации ошибок. В одной инструкции можно сочетать различные виды допущений.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

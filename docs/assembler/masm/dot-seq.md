@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397945"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>. SEQ (32-разрядный MASM)
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+Упорядочивает сегменты последовательно (порядок по умолчанию). (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.SEQ**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

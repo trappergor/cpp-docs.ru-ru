@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: Как создавать и использовать экземпляры CComPtr и CComQIPtr
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246539"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Как создавать и использовать экземпляры CComPtr и CComQIPtr
 
 В классическом программировании Windows библиотеки часто реализуются как COM-объекты (или, более точно, как COM-серверы). Многие компоненты операционной системы Windows реализованы в виде COM-серверов, и большинство разработчиков предоставляют библиотеки в этой форме. Сведения об основах COM см. в разделе [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal).
 
@@ -23,7 +23,7 @@ ms.locfileid: "74246539"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.
+`CComPtr` и его родственники являются частью библиотеки ATL и определяются в \<atlcomcli. h >. `_com_ptr_t` объявляется в \<comip. h >. Компилятор создает специализации `_com_ptr_t` при создании классов-оболочек для библиотек типов.
 
 ## <a name="example"></a>Пример
 
@@ -37,6 +37,6 @@ ms.locfileid: "74246539"
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Интеллектуальные указатели (современный C++)](../cpp/smart-pointers-modern-cpp.md)

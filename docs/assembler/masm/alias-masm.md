@@ -15,20 +15,20 @@ ms.locfileid: "74399296"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
+Директива **Alias** создает альтернативное имя для функции.  Это позволяет создать несколько имен для функции или создать библиотеки, позволяющие компоновщику (LINK. exe) сопоставлять старую функцию с новой функцией.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
+> Псевдоним **\<** _псевдоним_ **> = \<** _фактическое имя_ **>**
 
 #### <a name="parameters"></a>Параметры
 
-*actual-name*\
-The actual name of the function or procedure.  The angle brackets are required.
+*фактическое имя*\
+Фактическое имя функции или процедуры.  Угловые скобки являются обязательными.
 
-*alias*\
-The alternate or alias name.  The angle brackets are required.
+*псевдоним*\
+Альтернативное или имя псевдонима.  Угловые скобки являются обязательными.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

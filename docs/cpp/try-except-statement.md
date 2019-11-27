@@ -37,65 +37,65 @@ ms.locfileid: "74245161"
 
 **Блок, относящийся только к системам Майкрософт**
 
-The **try-except** statement is a Microsoft extension to the C and C++ languages that supports structured exception handling.
+Оператор **try-except** — это расширение Майкрософт для C и C++ языков, поддерживающих структурированную обработку исключений.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\_\_try**<br/>
+> **\_\_попробуйте**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//защищенный код<br/>
 > }<br/>
-> **\_\_except** ( *expression* )<br/>
+> **\_\_except** ( *выражение* )<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// exception handler code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//код обработчика исключений<br/>
 > }
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-The **try-except** statement is a Microsoft extension to the C and C++ languages that enables target applications to gain control when events that normally terminate program execution occur. Such events are called *exceptions*, and the mechanism that deals with exceptions is called *structured exception handling* (SEH).
+Оператор **try-except** — это расширение Майкрософт для C и C++ языков, которое позволяет целевым приложениям получать контроль над событиями, которые обычно приводят к завершению выполнения программы. Такие события называются *исключениями*, а механизм, который обрабатывает исключения, называется *структурной обработкой исключений* (SEH).
 
-For related information, see the [try-finally statement](../cpp/try-finally-statement.md).
+Связанные сведения см. в описании [оператора try-finally](../cpp/try-finally-statement.md).
 
 Исключения могут быть аппаратными или программными. Даже если работа приложения после таких исключений и не может полностью восстановиться, структурированная обработка исключений позволяет отобразить информацию об ошибке и зафиксировать внутреннее состояние приложения, чтобы выполнить диагностику проблемы. Это особенно полезно для нерегулярно встречающихся неполадок, которые сложно воспроизвести.
 
 > [!NOTE]
-> Структурированная обработка исключений поддерживается в Win32 для исходных файлов как на C, так и на C++. Однако она не предназначена специально для C++. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, этот механизм отличается большей гибкостью, поскольку может обрабатывать исключения любого типа. For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
+> Структурированная обработка исключений поддерживается в Win32 для исходных файлов как на C, так и на C++. Однако она не предназначена специально для C++. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, этот механизм отличается большей гибкостью, поскольку может обрабатывать исключения любого типа. Для C++ программ рекомендуется использовать механизм обработки C++ исключений (операторы[try, catch и Throw](../cpp/try-throw-and-catch-statements-cpp.md) ).
 
-The compound statement after the **__try** clause is the body or guarded section. The compound statement after the **__except** clause is the exception handler. Он задает набор действий, выполняемых при возникновении исключения в теле защищенного раздела. Выполнение происходит следующим образом:
+Составной оператор после предложения **__try** — тело или защищенный раздел. Составной оператор после предложения **__except** является обработчиком исключений. Он задает набор действий, выполняемых при возникновении исключения в теле защищенного раздела. Выполнение происходит следующим образом:
 
 1. Сначала выполняется защищенный раздел.
 
-1. If no exception occurs during execution of the guarded section, execution continues at the statement after the **__except** clause.
+1. Если во время выполнения защищенного раздела исключение не возникает, выполнение продолжится в операторе после предложения **__except** .
 
-1. If an exception occurs during execution of the guarded section or in any routine the guarded section calls, the **__except** *expression* (called the *filter* expression) is evaluated and the value determines how the exception is handled. Есть три возможных значения:
+1. Если исключение возникает во время выполнения защищенного раздела или в любой подпрограмме, вызванном вызовом защищенного раздела, вычисляется **__except** *выражение* (называемое критерием *фильтра* ), а значение определяет, как обрабатываются исключения. Есть три возможных значения:
 
-   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. Выполнение продолжается в точке, в которой возникло исключение.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) исключение отклонено. Выполнение продолжается в точке, в которой возникло исключение.
 
-   - EXCEPTION_CONTINUE_SEARCH (0) Exception is not recognized. Программа переходит к поиску обработчика в стеке (сначала находятся выражения с оператором **try-except**, а затем обработчики со следующим наивысшим приоритетом).
+   - EXCEPTION_CONTINUE_SEARCH (0) исключение не распознано. Программа переходит к поиску обработчика в стеке (сначала находятся выражения с оператором **try-except**, а затем обработчики со следующим наивысшим приоритетом).
 
-   - EXCEPTION_EXECUTE_HANDLER (1) Exception is recognized. Transfer control to the exception handler by executing the **__except** compound statement, then continue execution after the **__except** block.
+   - Распознано исключение EXCEPTION_EXECUTE_HANDLER (1). Передайте управление обработчику исключений, выполнив составной оператор **__except** , а затем продолжайте выполнение после блока **__except** .
 
-Because the **__except** expression is evaluated as a C expression, it is limited to a single value, the conditional-expression operator, or the comma operator. Если требуется более сложная обработка, выражение может вызывать процедуру, которая возвращает одно из этих трех значений.
+Так как выражение **__except** вычисляется как выражение C, оно ограничено одним значением, оператором условного выражения или оператором-запятой. Если требуется более сложная обработка, выражение может вызывать процедуру, которая возвращает одно из этих трех значений.
 
 Каждое приложение может иметь свой собственный обработчик исключений.
 
-It is not valid to jump into a **__try** statement, but valid to jump out of one. The exception handler is not called if a process is terminated in the middle of executing a **try-except** statement.
+Переход к оператору **__try** невозможен, но он является допустимым для перехода из одной инструкции. Обработчик исключений не вызывается, если процесс завершается в процессе выполнения инструкции **try-except** .
 
-For compatibility with previous versions, **_try**, **_except**, and **_leave** are synonyms for **__try**, **__except**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+Для совместимости с предыдущими версиями **_try**, **_except**и **_leave** являются синонимами для **__try**, **__except**и **__leave** , если не задан параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) .
 
 ### <a name="the-__leave-keyword"></a>Ключевое слово __leave
 
-The **__leave** keyword is valid only within the guarded section of a **try-except** statement, and its effect is to jump to the end of the guarded section. Выполнение продолжается с первого оператора, следующего за обработчиком исключений.
+Ключевое слово **__leave** допустимо только в защищенном разделе оператора **try-except** , и его результат заключается в переходе к концу защищенного раздела. Выполнение продолжается с первого оператора, следующего за обработчиком исключений.
 
-A **goto** statement can also jump out of the guarded section, and it does not degrade performance as it does in a **try-finally** statement because stack unwinding does not occur. However, we recommend that you use the **__leave** keyword rather than a **goto** statement because you are less likely to make a programming mistake if the guarded section is large or complex.
+Оператор **goto** также может выйти из защищенного раздела и не ухудшит производительность, как это делается в операторе **try-finally** , так как очистка стека не выполняется. Однако рекомендуется использовать ключевое слово **__leave** , а не инструкцию **goto** , так как вероятность того, что вы менее вероятно, сделаете ошибку программирования, если защищенный раздел является большим или сложным.
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>Встроенные функции структурированной обработки исключений
 
-Structured exception handling provides two intrinsic functions that are available to use with the **try-except** statement: `GetExceptionCode` and `GetExceptionInformation`.
+Структурированная обработка исключений предоставляет две встроенные функции, которые можно использовать с оператором **try-except** : `GetExceptionCode` и `GetExceptionInformation`.
 
-`GetExceptionCode` returns the code (a 32-bit integer) of the exception.
+`GetExceptionCode` возвращает код (32-разрядное целое число) исключения.
 
-The intrinsic function `GetExceptionInformation` returns a pointer to a structure containing additional information about the exception. Через этот указатель можно обращаться к состоянию компьютера, которое существовало в момент возникновения аппаратного исключения. Эта структура выглядит следующим образом:
+Встроенная функция `GetExceptionInformation` возвращает указатель на структуру, содержащую дополнительные сведения об исключении. Через этот указатель можно обращаться к состоянию компьютера, которое существовало в момент возникновения аппаратного исключения. Эта структура выглядит следующим образом:
 
 ```cpp
 typedef struct _EXCEPTION_POINTERS {
@@ -104,13 +104,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS;
 ```
 
-The pointer types `PEXCEPTION_RECORD` and `PCONTEXT` are defined in the include file \<winnt.h>, and `_EXCEPTION_RECORD` and `_CONTEXT` are defined in the include file \<excpt.h>
+Типы указателей `PEXCEPTION_RECORD` и `PCONTEXT` определены во включаемом файле \<Winnt. h >, а `_EXCEPTION_RECORD` и `_CONTEXT` определяются в включаемом файле \<екскпт. h >
 
-You can use `GetExceptionCode` within the exception handler. However, you can use `GetExceptionInformation` only within the exception filter expression. Обычно она указывает на сведения, которые хранятся в стеке и уже недоступны в тот момент, когда управление передаются обработчику исключений.
+В обработчике исключений можно использовать `GetExceptionCode`. Однако `GetExceptionInformation` можно использовать только в выражении фильтра исключений. Обычно она указывает на сведения, которые хранятся в стеке и уже недоступны в тот момент, когда управление передаются обработчику исключений.
 
-The intrinsic function `AbnormalTermination` is available within a termination handler. It returns 0 if the body of the **try-finally** statement terminates sequentially. В остальных случаях функция возвращает 1.
+Встроенная функция `AbnormalTermination` доступна в обработчике завершения. Он возвращает 0, если тело оператора **try-finally** завершается последовательно. В остальных случаях функция возвращает 1.
 
-excpt.h defines some alternate names for these intrinsics:
+екскпт. h определяет некоторые альтернативные имена для этих встроенных функций:
 
 `GetExceptionCode` — это эквивалент `_exception_code`
 
@@ -184,8 +184,8 @@ world
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
+[Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

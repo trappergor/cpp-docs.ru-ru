@@ -15,18 +15,18 @@ ms.locfileid: "74398809"
 ---
 # <a name="db"></a>DB
 
-Allocates and optionally initializes a byte of storage for each *initializer*. **DB** is a synonym of [BYTE](../../assembler/masm/byte-masm.md).
+Выделяет и при необходимости инициализирует байты хранения для каждого *инициализатора*. **DB** — это синоним [Byte](../../assembler/masm/byte-masm.md).
 
 ## <a name="syntax"></a>Синтаксис
 
-> ⟦*name*⟧ **DB** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*имя*⟧ **DB** *инициализатор* ⟦ __,__ *инициализатор* ... ⟧
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Can also be used as a type specifier anywhere a type is legal.
+Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[DB](../../assembler/masm/db.md)\
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+\ [базы данных](../../assembler/masm/db.md)
 [SBYTE](../../assembler/masm/sbyte-masm.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398606"
 ---
-# <a name="alpha-32-bit-masm"></a>.ALPHA (32-bit MASM)
+# <a name="alpha-32-bit-masm"></a>. Альфа (32-разрядный MASM)
 
-Orders segments alphabetically. (32-bit MASM only.)
+Упорядочивает сегменты в алфавитном порядке. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
 > **.ALPHA**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](../../assembler/masm/directives-reference.md)

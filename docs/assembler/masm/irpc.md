@@ -19,10 +19,10 @@ ms.locfileid: "74397280"
 
 > **IRPC**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-See [FORC](../../assembler/masm/forc.md).
+См. [Форк](../../assembler/masm/forc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Directives reference](directives-reference.md)
+[Справочник по директивам](directives-reference.md)

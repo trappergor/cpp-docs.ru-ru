@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398959"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>Модель \@
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1 для мелких моделей, 2 для **малых** **моделей,** 3 для **Compact** Model, 4 для **средней** модели, 5 для **больших** моделей, 6 для **огромной** модели и 7 для **плоской** модели (числовое равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@Model**
+> **Модель \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)

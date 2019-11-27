@@ -13,14 +13,14 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399224"
 ---
-# <a name="catstr"></a>\@CatStr
+# <a name="catstr"></a>\@Катстр
 
-Macro function that concatenates one or more strings. Returns a string.
+Функция макроса, которая объединяет одну или несколько строк. Возвращает строку.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@катстр (** *строка1* ⟦ __,__ *строка2*... ⟧ **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Symbols reference](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)
