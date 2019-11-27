@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837516"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303139"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Структура файлов VCXPROJ и PROPS
 
@@ -33,7 +33,7 @@ ms.locfileid: "65837516"
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   "Не поддерживается" означает, что макросы, возможно, будут работать не для всех операций в IDE. Макросы, которые не предполагают изменения значений в различных конфигурациях, будут работать, но не будут сохраняться, если элемент перемещается в другой фильтр или проект. Макросы, значения которых будут меняться в различных конфигурациях проекта, приведут к проблемам, так как IDE не предполагает, что пути к элементам проекта будут другими.
+   "Не поддерживается" означает, что макросы, возможно, будут работать не для всех операций в IDE. Макросы, которые не изменяют свое значение в различных конфигурациях, должны работать, но могут не сохраняться при перемещении элемента в другой фильтр или проект. Макросы, значения которых будут меняться в различных конфигурациях проекта, приведут к проблемам, так как IDE не предполагает, что пути к элементам проекта будут другими.
 
 1. Чтобы обеспечить правильное добавление, удаление или изменение свойств проекта при редактировании в диалоговом окне **Свойства проекта**, этот файл должен содержать отдельные группы для каждой конфигурации проекта и эти условия должны иметь следующую форму:
 
@@ -55,7 +55,7 @@ ms.locfileid: "65837516"
 
 - Существует несколько групп свойств, каждая из которых имеет уникальную метку, и все они расположены в определенном порядке.
 
-Порядок элементов в файле проекта очень важен, так как система MSBuild основана на модели последовательной оценки.  Если файл проекта, включая все импортированные файлы PROPS и TARGETS, состоит из нескольких определений одного свойства, последнее определение переопределяет предыдущие. В примере ниже значение xyz задается во время компиляции, так как подсистема MSBUild обнаруживает его последним во время оценки.
+Порядок элементов в файле проекта очень важен, так как система MSBuild основана на модели последовательной оценки.  Если файл проекта, включая все импортированные файлы PROPS и TARGETS, состоит из нескольких определений одного свойства, последнее определение переопределяет предыдущие. В следующем примере значение "XYZ" будет задано во время компиляции, так как модуль MSBUild встречает его в последний раз во время его оценки.
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -153,7 +153,7 @@ ms.locfileid: "65837516"
 <PropertyGroup Label="Configuration" />
 ```
 
-Группа свойств `Configuration` имеет прикрепленное условие конфигурации (например, `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) и представлена несколькими копиями — по одной на конфигурации. Эта группа свойств содержит свойства, заданные для конкретной конфигурации. Свойства конфигурации включают PlatformToolset и управляют включением системных страниц свойств в **Microsoft.Cpp.props**. Например, если определено свойство `<CharacterSet>Unicode</CharacterSet>`, то системная страница свойств **microsoft.Cpp.unicodesupport.props** будет включена. Если вы просмотрите **Microsoft.Cpp.props**, то увидите строку: `<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`.
+Группа свойств `Configuration` имеет прикрепленное условие конфигурации (например, `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`) и представлена несколькими копиями — по одной на конфигурации. Эта группа свойств содержит свойства, заданные для конкретной конфигурации. Свойства конфигурации включают PlatformToolset и управляют включением системных страниц свойств в **Microsoft.Cpp.props**. Например, если определено свойство `<CharacterSet>Unicode</CharacterSet>`, то системная страница свойств **microsoft.Cpp.unicodesupport.props** будет включена. Если вы просмотрите **Microsoft.Cpp.props**, то увидите строку: `<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`.
 
 ### <a name="microsoftcppprops-import-element"></a>Элемент Microsoft.Cpp.props Import
 
@@ -195,7 +195,7 @@ ms.locfileid: "65837516"
 
 Существует несколько экземпляров этой группы свойств, по одному на конфигурацию для всех конфигураций проекта. Каждая группа свойств должна иметь одно прикрепленное условие конфигурации. Если отсутствуют какие-либо конфигурации, диалоговое окно **Свойства проекта** будет работать неправильно. В отличие от приведенных выше групп свойств у этой группы метки нет. Она содержит параметры на уровне конфигурации проекта. Эти параметры применяются ко всем файлам, входящим в указанную группу элементов. Здесь происходит инициализация метаданных для определения элемента настройки сборки.
 
-Этот элемент PropertyGroup должен находиться после `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />`, кроме того, перед ним не должно быть другого PropertyGroup без метки (в противном случае изменение свойств проекта будет работать неправильно).
+Этот элемент PropertyGroup должен следовать после `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` и не должен иметь других PropertyGroup без метки перед ним (в противном случае редактирование свойств проекта не будет работать правильно).
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>Элементы ItemDefinitionGroup для отдельных конфигураций
 
@@ -218,8 +218,8 @@ ms.locfileid: "65837516"
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```
@@ -290,7 +290,7 @@ ms.locfileid: "65837516"
 
 Чтобы создать собственную страницу свойств, скопируйте один из файлов PROPS в папке VCTargets и измените его необходимым образом. Для выпуска Visual Studio 2019 Enterprise путем VCTargets по умолчанию является `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md)<br/>
 [XML-файлы страницы свойств](property-page-xml-files.md)

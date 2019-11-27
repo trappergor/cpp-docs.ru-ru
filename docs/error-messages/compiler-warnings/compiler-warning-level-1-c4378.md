@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 6197bd66214785d515bb1b73ceaf5a68d6751e79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc5e5365ffb53125085ce7b374f1362e93f4bb03
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410412"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966495"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>Предупреждение компилятора (уровень 1) C4378
 
-Необходимо получить указатели функций для запуска инициализаторов; Рассмотрите вариант System::ModuleHandle::
+Для запуска инициализаторов необходимо получить указатели функций. Рассмотрим System:: ModuleHandle:: ResolveMethodHandle
 
-В разделе **/CLR**, символы инициализатора содержат маркеры функций, не указатели функций.  Необходимо преобразовать в указатели с помощью маркеров <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
+В **параметре/CLR**символы инициализатора содержат маркеры функций, а не указатели функций.  Необходимо преобразовать токены в указатели с помощью <xref:System.ModuleHandle.ResolveMethodHandle%2A>.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4378.
 
-```
+```cpp
 // C4378.cpp
 // compile with: /W1 /clr /c
 typedef void (__cdecl *PF)(void);
@@ -65,9 +65,9 @@ int main () {
 
 ## <a name="example"></a>Пример
 
-Следующий пример показано, как разрешить C4378.
+В следующем примере показано, как разрешить C4378.
 
-```
+```cpp
 // C4378_b.cpp
 // compile with: /clr
 #pragma warning(disable:4378)

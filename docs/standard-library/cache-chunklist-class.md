@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449665"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688362"
 ---
-# <a name="cachechunklist-class"></a>Класс cache_chunklist
+# <a name="cache_chunklist-class"></a>Класс cache_chunklist
 
 Задает [распределитель блоков](../standard-library/allocators-header.md), который выделяет и освобождает блоки памяти одного размера.
 
@@ -34,11 +34,11 @@ class cache_chunklist
 |---------------|-----------------|
 |*SZ*|Число элементов в массиве, которые нужно выделить.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот класс шаблона использует **оператор New** для выделения блоков необработанной памяти, блоков подвыделения для выделения хранилища для блока памяти, когда это необходимо. Он хранит освобожденные блоки памяти в отдельном свободном списке для каждого фрагмента и использует **оператор DELETE** для освобождения блока, если ни один из его блоков памяти не используется.
+Этот шаблон класса использует **оператор New** для выделения блоков необработанной памяти, блоков подвыделения для выделения хранилища для блока памяти, когда это необходимо. Он хранит освобожденные блоки памяти в отдельном свободном списке для каждого фрагмента и использует **оператор DELETE** для освобождения блока, если ни один из его блоков памяти не используется.
 
-Каждый блок памяти содержит *SZ* байты доступной памяти и указатель на блок, к которому он принадлежит. Каждый блок содержит `Nelts` блоки памяти, три указателя, int и данные, необходимые **операторам New** и **Delete** .
+Каждый блок памяти содержит *SZ* байты доступной памяти и указатель на блок, к которому он принадлежит. Каждый блок содержит `Nelts` блоки памяти, три указателя, тип int и данные, необходимые **операторам New** и **operator delete** .
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -77,7 +77,7 @@ void *allocate(std::size_t count);
 
 Указатель на выделяемый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
 
@@ -87,7 +87,7 @@ void *allocate(std::size_t count);
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="deallocate"></a>  cache_chunklist::deallocate
 
@@ -104,7 +104,7 @@ void deallocate(void* ptr, std::size_t count);
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 ## <a name="see-also"></a>См. также
 

@@ -1,26 +1,26 @@
 ---
 title: DOSSEG
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - DOSSEG
 helpviewer_keywords:
 - DOSSEG directive
 ms.assetid: 4312826a-1547-4d48-bfd7-cfaf6d037609
-ms.openlocfilehash: 889533a775829d8751e64ce38c712491df97e32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f91142f353af97e9bb972620ae6360ac6f1fa42
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178730"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398746"
 ---
-# <a name="dosseg"></a>DOSSEG
+# <a name="dosseg-32-bit-masm"></a>ДОССЕГ (32-разрядный компилятор MASM)
 
-Идентичен [. DOSSEG](../../assembler/masm/dot-dosseg.md), которая является основной формой.
+Идентично [. ДОССЕГ](../../assembler/masm/dot-dosseg.md)— Предпочтительная форма. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> DOSSEG
+> **DOSSEG**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

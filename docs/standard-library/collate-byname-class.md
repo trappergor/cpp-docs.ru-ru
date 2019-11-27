@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3e9a256ac7bdb5f6d077746fe2a08990ed41e931
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458622"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688275"
 ---
-# <a name="collatebyname-class"></a>Класс collate_byname
+# <a name="collate_byname-class"></a>Класс collate_byname
 
-Производный класс шаблона, описывающий объект, который можно использовать как аспект сортировки данного языкового стандарта, предоставляющий возможность извлечения данных касательно сортировки строк по соответствующему культурному региону.
+Шаблон производного класса, описывающий объект, который может служить в качестве аспекта сортировки для данного языкового стандарта, позволяя получать информацию, относящуюся к правилам сортировки строк в соответствии с культурной областью.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*\
+*_Locname* \
 Именованный языковой стандарт.
 
-*_Refs*\
+*_Refs* \
 Начальное значение счетчика ссылок.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется с помощью [именованного](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Шаблон класса описывает объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) для типа [COLLATE](../standard-library/collate-class.md#collate) \<CharType >. Его поведение определяется с помощью [именованного](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Требования
 

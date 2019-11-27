@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator OR
 - OR operator, bitwise
 ms.assetid: fab36ba6-8ee0-4778-beb9-21dce6d99db7
-ms.openlocfilehash: ded25f2e8732348485deabae73f4620a4e26918a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84724b47fd2f7f55e78b00eb37d6bdabb47e265e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198852"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396555"
 ---
 # <a name="operator-or"></a>Оператор OR
 
-Возвращает результат побитовой `OR` операции для *expression1* и *expression2*.
+Возвращает результат побитовой операции OR для *expression1* и *Expression2*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Выражение1 или Выражение2
+> *expression1* **или** *Expression2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

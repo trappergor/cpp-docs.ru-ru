@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457711"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303494"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
 
 ## <a name="file_type"></a>  file_type
 
-Перечисление для типов файлов. Поддерживаются значения Regular, Directory, not_found и Unknown.
+Перечисление для типов файлов. Поддерживаемые значения: Regular, Directory, not_found и Unknown.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-Включает значения `replace` `add` ,,и`nofollow`. `remove`
+Включает значения `replace`, `add`, `remove`и `nofollow`.
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>  perms
 
-Флаги разрешений файла. Поддерживаются значения: readonly (только для чтения) и all (все). Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
+Флаги разрешений файла. Поддерживаемые значения по сути — ReadOnly и ALL. Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

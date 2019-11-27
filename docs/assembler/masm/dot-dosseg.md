@@ -1,30 +1,30 @@
 ---
 title: .DOSSEG
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .DOSSEG
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17edea122afc03a8c3a2fdc86ee6c06c2ccf3c85
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204365"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398490"
 ---
-# <a name="dosseg"></a>.DOSSEG
+# <a name="dosseg-32-bit-masm"></a>. ДОССЕГ (32-разрядный компилятор MASM)
 
-Упорядочивает сегменты в соответствии с соглашением MS-DOS сегмент: Во-первых, код затем разделяет не в DGROUP и затем разделяет в DGROUP.
+Упорядочивает сегменты в соответствии с соглашением о сегментах MS-DOS: сначала код, затем сегменты не в ДГРАУП, а затем сегменты в ДГРАУП. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .DOSSEG
+> **.DOSSEG**
 
 ## <a name="remarks"></a>Примечания
 
-Сегменты в DGROUP выполняйте в указанном порядке: сегменты не в BSS или СТЕК, а затем BSS сегментов и, наконец, сегменты стека. В основном используется для обеспечения поддержки CodeView в изолированных программ MASM. Совпадение с кодом [DOSSEG](../../assembler/masm/dosseg.md).
+Сегменты в ДГРАУП следуют в следующем порядке: сегменты не в BSS или стек, затем сегменты BSS и, наконец, сегменты СТЕКа. В основном используется для обеспечения поддержки Информация CodeView в изолированных программах MASM. То же, что и [доссег](../../assembler/masm/dosseg.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: 1ff18d3a4e3e5c6141b12c269a7faac1ff0cdefa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec76b88134d2d9e4cfc3f18abf78f43007ef3806
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210650"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394741"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
-Делает каждой переменной, метки или абсолютный символ, заданный как *имя* доступны для всех других модулей в программе.
+Каждая переменная, метка или абсолютный символ, указанные в качестве *имени* , становятся доступными для всех остальных модулей программы.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Имя ОТКРЫТОГО [[langtype]] [[, [[langtype]] Имя]]...
+> **Общедоступный** язык ⟦. Введите ⟧ *Name* ⟦ __,__ ⟦ Language-Type ⟧ *Name* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

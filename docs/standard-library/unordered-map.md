@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454764"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688833"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-Определяет классы шаблонов контейнеров [unordered_map](../standard-library/unordered-map-class.md) и [unordered_multimap](../standard-library/unordered-multimap-class.md) и их вспомогательные шаблоны.
+Определяет шаблоны классов контейнеров [unordered_map](../standard-library/unordered-map-class.md) и [unordered_multimap](../standard-library/unordered-multimap-class.md) и их вспомогательные шаблоны.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,11 +24,11 @@ ms.locfileid: "68454764"
 ```
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` unordered_map также использует инструкцию. \<
+> Библиотека \<unordered_map > также использует инструкцию `#include <initializer_list>`.
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Class|Описание|
 |-|-|
 |[Класс unordered_map](../standard-library/unordered-map-class.md)|Содержит хэш-таблицу пар {ключ, соответствие}.|
 |[Класс unordered_multimap](../standard-library/unordered-multimap-class.md)|Содержит хэш-таблицу пар {ключ, соответствие}.|
@@ -37,11 +37,11 @@ ms.locfileid: "68454764"
 
 |Функция|Описание|
 |-|-|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Проверяет, не равен ли объект unordered_map в левой части объекту unordered_map в правой части.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_map в левой части объекту unordered_map в правой части.|
+|[оператор!= ](../standard-library/unordered-map-operators.md#op_neq)|Проверяет, не равен ли объект unordered_map в левой части объекту unordered_map в правой части.|
+|[оператор==](../standard-library/unordered-map-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_map в левой части объекту unordered_map в правой части.|
 |[Функция swap (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Меняет местами два сопоставления.|
-|[operator!=](../standard-library/unordered-map-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multimap в левой части объекту unordered_multimap в правой части.|
-|[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multimap в левой части объекту unordered_multimap в правой части.|
+|[оператор!= ](../standard-library/unordered-map-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multimap в левой части объекту unordered_multimap в правой части.|
+|[оператор==](../standard-library/unordered-map-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multimap в левой части объекту unordered_multimap в правой части.|
 |[Функция swap (unordered_map)](../standard-library/unordered-map-functions.md#swap)|Меняет местами два объекта multimap.|
 
 ## <a name="see-also"></a>См. также

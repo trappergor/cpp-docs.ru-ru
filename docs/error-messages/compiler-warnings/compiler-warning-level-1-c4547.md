@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4547
 ms.assetid: 3edf1c2e-c0d5-444d-ae83-44a7cce24bb2
-ms.openlocfilehash: 3293e07eb7c03c71d582d83e40bc011fa7c1eb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4425fea3bc22b1929127e2fa84baea8ce848578
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410373"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966155"
 ---
 # <a name="compiler-warning-level-1-c4547"></a>Предупреждение компилятора (уровень 1) C4547
 
-«operator»: оператор перед запятой не имеет результата; требуется оператор с побочным действием
+"оператор": оператор перед запятой не имеет результата; ожидаемый оператор с побочным действием
 
-Компилятор обнаружил некорректное разделителями выражения.
+Компилятор обнаружил неверно сформированное выражение с запятой.
 
 Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 Следующий пример приводит к возникновению ошибки C4547:
 
-```
+```cpp
 // C4547.cpp
 // compile with: /W1
 #pragma warning (default : 4547)

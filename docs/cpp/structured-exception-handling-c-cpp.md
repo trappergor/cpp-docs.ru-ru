@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 4555690476bc149687c680fc2baae53b96658a4e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498485"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245129"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -24,11 +24,11 @@ ms.locfileid: "69498485"
 
 ## <a name="grammar"></a>Грамматика
 
-*try-except-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+*try-except-оператор* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составной* **оператор __except** **(** *выражение* **)** *составной оператор*
 
 *try-finally-оператор* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составной оператор* **__finally** *составной оператор*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составного оператора* **__finally** *составного оператора*
 
 ## <a name="remarks"></a>Примечания
 
@@ -36,11 +36,11 @@ ms.locfileid: "69498485"
 
 Операторы try-except и try-finally, которые упоминаются в этом разделе, являются расширениями языка C для систем Microsoft. Они поддерживают SEH, позволяя приложениям получать контроль над программой после событий, которые в иных ситуациях привели бы к завершению выполнения. Хотя обработка ошибок SEH работает с исходными файлами C++, она не была создана специально для этого языка. Если SEH используется в C++ программе, компилируемой с параметром [/EHa или/EHsc](../build/reference/eh-exception-handling-model.md) , то деструкторы для локальных объектов вызываются, но другое поведение выполнения может отличаться от ожидаемого. Иллюстрации см. в примере далее в этой статье. В большинстве случаев вместо SEH рекомендуется использовать стандартную [ C++ обработку исключений](../cpp/try-throw-and-catch-statements-cpp.md)ISO, которую также поддерживает компилятор Майкрософт C++ . С помощью обработки исключений C++ можно повысить переносимость кода и обрабатывать исключения любого типа.
 
-При наличии кода C, использующего SEH, можно смешивать его с C++ кодом, использующим C++ обработку исключений. Дополнительные сведения см. [в разделе Handle Structured C++Exceptions in ](../cpp/exception-handling-differences.md).
+При наличии кода C, использующего SEH, можно смешивать его с C++ кодом, использующим C++ обработку исключений. Дополнительные сведения см. [в разделе Handle Structured Exceptions in C++ ](../cpp/exception-handling-differences.md).
 
 Существует два механизма SEH.
 
-- [Обработчики исключений](../cpp/writing-an-exception-handler.md)или блокировки **__except** , которые могут реагировать на исключение или закрыть его.
+- [Обработчики исключений](../cpp/writing-an-exception-handler.md)или блоки **__except** , которые могут реагировать на исключение или закрыть его.
 
 - [Обработчики завершения](../cpp/writing-a-termination-handler.md)или блоки **__finally** , которые вызываются всегда, являются ли исключение причиной завершения или нет.
 
@@ -115,14 +115,14 @@ int main()
 }
 ```
 
-Если для компиляции этого кода используется параметр **/EHsc** , но локальный макрос `CPPEX` элемента управления теста не определен, то выполнение `TestClass` деструктора не выполняется, и выходные данные выглядят следующим образом:
+Если для компиляции этого кода используется параметр **/EHsc** , но локальный макрос элемента управления теста `CPPEX` не определен, то выполнение деструктора `TestClass` не выполняется, и выходные данные выглядят следующим образом:
 
 ```Output
 Triggering SEH exception
 Executing SEH __except block
 ```
 
-Если для компиляции кода используется параметр **/EHsc** и `CPPEX` он определен с помощью `/DCPPEX` (так что создается C++ исключение), `TestClass` деструктор выполняется и выходные данные выглядят следующим образом:
+Если для компиляции кода используется параметр **/EHsc** , а `CPPEX` определяется с помощью `/DCPPEX` (чтобы выдавалось C++ исключение), выполняется деструктор `TestClass` и выходные данные выглядят следующим образом:
 
 ```Output
 Throwing C++ exception
@@ -130,7 +130,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Если для компиляции кода используется параметр **/EHa** `TestClass` , деструктор выполняется вне зависимости от того, было ли создано исключение с помощью `std::throw` или с помощью SEH для активации исключения, то есть независимо от того, определен `CPPEX` ли параметр или нет. Вывод выглядит следующим образом.
+При использовании параметра **/EHa** для компиляции кода деструктор `TestClass` выполняется независимо от того, было ли создано исключение с помощью `std::throw` или с помощью SEH для активации исключения, то есть независимо от того, определен ли `CPPEX` или нет. Вывод выглядит следующим образом.
 
 ```Output
 Throwing C++ exception
@@ -138,11 +138,11 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Дополнительные сведения см. в статье [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md).
+Дополнительные сведения см. в разделе [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка исключений](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>

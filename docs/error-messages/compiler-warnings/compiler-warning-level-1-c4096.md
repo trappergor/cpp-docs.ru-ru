@@ -1,29 +1,29 @@
 ---
-title: Компилятор предупреждение (уровень 1) C4096
+title: Предупреждение компилятора (уровень 1) C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280469"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627075"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>Компилятор предупреждение (уровень 1) C4096
+# <a name="compiler-warning-level-1-c4096"></a>Предупреждение компилятора (уровень 1) C4096
 
-«»: интерфейс не является COM-интерфейс; он не будет передан в IDL
+"a": интерфейс не является COM-интерфейсом; не будет выдаваться в IDL
 
-Определение интерфейса, предназначенное для использования в качестве COM-интерфейс не был определен как COM-интерфейс и поэтому он не будет передан в IDL-файл.
+Определение интерфейса, которое может быть предназначено в качестве COM-интерфейса, не было определено как COM-интерфейс, и поэтому не будет выдаваться в файл IDL.
 
-См. в разделе [атрибуты интерфейса](../../windows/attributes/interface-attributes.md) список атрибутов, определяющих интерфейс COM-интерфейса.
+Атрибуты списка, указывающие, что интерфейс является COM-интерфейсом, см. в разделе [атрибуты интерфейса](../../windows/attributes/interface-attributes.md) .
 
 Следующий пример приводит к возникновению ошибки C4096:
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

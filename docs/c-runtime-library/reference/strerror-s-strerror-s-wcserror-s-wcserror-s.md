@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958152"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625812"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -123,9 +123,9 @@ errno_t __wcserror_s(
 |**NULL**|Любое действие|Любое действие|Н/Д|
 |Любое действие|0|Любое действие|не изменено|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Функция **strerror_s** сопоставляет *errnum* со строкой сообщения об ошибке, возвращая строку в *буфере*. **_strerror_s** не принимает номер ошибки; для определения соответствующего сообщения используется текущее **значение параметра «** ошибка». Ни **strerror_s** , ни **_strerror_s** на самом деле не выводят сообщение: Для этого необходимо вызвать выходную функцию, например [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Функция **strerror_s** сопоставляет *errnum* со строкой сообщения об ошибке, возвращая строку в *буфере*. **_strerror_s** не принимает номер ошибки; для определения соответствующего сообщения используется текущее **значение параметра «** ошибка». Ни **strerror_s** , ни **_strerror_s** на самом деле не выводят сообщение: для этого необходимо вызвать выходную функцию, например [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ if (( _access( "datafile",2 )) == -1 )
 
 **_strerror_s**, **_wcserror_s**и **__WCSERROR_S** не являются частью определения ANSI, но вместо них являются расширениями Майкрософт. Не используйте их, когда требуется переносимость. для совместимости с ANSI используйте вместо него **strerror_s** .
 
-В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -164,7 +164,7 @@ if (( _access( "datafile",2 )) == -1 )
 |**strerror_s**, **_strerror_s**|\<string.h>|
 |**_wcserror_s**, **__wcserror_s**|\<string.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

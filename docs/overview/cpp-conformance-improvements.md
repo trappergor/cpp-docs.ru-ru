@@ -1,16 +1,16 @@
 ---
 title: Улучшение соответствия C++
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314477"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627090"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>Операторы извлечения потока для char* удалены
 
-Операторы извлечения потока для указателей на символы были удалены и заменены операторами извлечения для массивов символов (в соответствии с [P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 считает удаленные перегрузки небезопасными. В режиме [/std:c++latest](../build/reference/std-specify-language-standard-version.md) следующий пример теперь создает исключение *C2679: binary '>>': не найден оператор, принимающий правый операнд типа char\* (или нет допустимого преобразования)* :
+Операторы извлечения потока для указателей на символы были удалены и заменены операторами извлечения для массивов символов (в соответствии с [P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)). WG21 считает удаленные перегрузки небезопасными. В режиме [/std:c++latest](../build/reference/std-specify-language-standard-version.md) следующий пример теперь создает исключение *C2679: binary '>>': не найден оператор, принимающий правый операнд типа char\* (или нет допустимого преобразования)* :
 
 ```cpp
    char x[42];
@@ -456,6 +456,10 @@ extern "C" void f(int, int, int, BOOL){}
 ```
 
 Чтобы избежать ошибок в предыдущем примере, используйте **bool** вместо **BOOL** в обоих объявлениях `f`.
+
+### <a name="standard-library-improvements"></a>Улучшения стандартной библиотеки
+
+Нестандартные заголовки \<stdexcpt.h> и \<typeinfo.>h были удалены. Код, который содержит их, должен включать стандартные заголовки \<exception> и \<typeinfo> соответственно.
 
 ## <a name="update_160"></a> Исправления ошибок и изменения в поведении в Visual Studio 2019
 
@@ -722,7 +726,7 @@ int main()
 
 - Ранее некоторые значения времени, которые передавались в библиотеку параллелизма, вызывали переполнение, например `condition_variable::wait_for(seconds::max())`. Эти исправленные переполнения ранее изменяли поведение псевдослучайным образом в течение 29-дневного цикла (когда значение миллисекунд uint32_t принималось с переполнением в базовые API Win32).
 
-- Заголовок <ctime> теперь правильно объявляет `timespec` и `timespec_get` в пространстве имен `std`, а не только в глобальном пространстве имен.
+- Заголовок \<ctime> теперь правильно объявляет `timespec` и `timespec_get` в пространстве имен `std`, а не только в глобальном пространстве имен.
 
 ### <a name="various-fixes-for-containers"></a>Различные исправления для контейнеров
 
@@ -806,7 +810,7 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a> Улучшения соответствия в Visual Studio 2017 RTW (версия 15.0)
 
-Благодаря поддержке обобщенного **constexpr** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
+Благодаря поддержке обобщенного **constexpr** и NSDMI (нестатическая инициализация элементов данных) для статистических выражений компилятор Microsoft C++ в Visual Studio 2017 теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствуют несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md).
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11 Поддержка выражения SFINAE в большем числе библиотек
 
@@ -2846,4 +2850,4 @@ note: see usage of 'g'.
 
 ## <a name="see-also"></a>См. также
 
-[Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md)
+[Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md)

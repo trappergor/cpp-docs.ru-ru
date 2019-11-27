@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-ms.openlocfilehash: 887526810f7e65280adcde422ef871a67ccdde1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 362fd3c14037fa62ab73c928a45eaf7808de66bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401921"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189363"
 ---
 # <a name="compiler-warning-level-3-c4521"></a>Предупреждение компилятора (уровень 3) C4521
 
-«класс»: заданы несколько конструкторов копий
+"класс": задано несколько конструкторов копий
 
-Класс имеет несколько конструкторов копий одного типа. Это сообщение является информационным; конструкторы можно вызвать в приложении.
+Класс имеет несколько конструкторов копий одного типа. Это предупреждение является информационным; конструкторы вызываемы в программе.
 
-Используйте [предупреждение](../../preprocessor/warning.md) директиву pragma, чтобы отключить это предупреждение.
+Чтобы отключить это предупреждение, используйте директиву pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4521.
 
-```
+```cpp
 // C4521.cpp
 // compile with: /EHsc /W3
 #include <iostream>

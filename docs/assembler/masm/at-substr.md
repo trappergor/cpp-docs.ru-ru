@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@SubStr symbol'
 ms.assetid: f4b8fc6e-14a0-46fe-8c27-6b3347a08504
-ms.openlocfilehash: 566a39dff32a87d729efcb462c03fcacf55553e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ef706452318e99babc85dbc1547c67cc465e5c8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178851"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398918"
 ---
-# <a name="substr"></a>@SubStr
+# <a name="substr"></a>\@ый substr
 
-Макрос функцию, которая возвращает подстроку начиная с *позиции*.
+Функция-макрос, возвращающая подстроку, начиная с *позиции*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> @SubStr(string, позиции [[, длина]])
+> **\@ый substr (** *строка* __,__ *Расположение* ⟦ __,__ *Длина*⟧ **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Date symbol'
 ms.assetid: e5af496b-c5c8-4724-a54a-6880fcd67ee3
-ms.openlocfilehash: 3fe1b50243609a11b996ddb1569920967399f98a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9252618cef46d2aa6ca5f38d5092bf3c02cd8ff6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166403"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399130"
 ---
-# <a name="date"></a>@Date
+# <a name="date"></a>Дата \@
 
-Системную дату в формате мм/дд/гг (макрос text).
+Системная дата в формате mm/дд/гг (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Date
+> **Дата \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

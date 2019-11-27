@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 39c5321d5bc22e14ace3335e4a925bf7284d1cb0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457667"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689238"
 ---
-# <a name="normaldistribution-class"></a>Класс normal_distribution
+# <a name="normal_distribution-class"></a>Класс normal_distribution
 
 Формирует нормальное распределение.
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе* \
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-Функции `mean()` свойств и `stddev()` возвращают значения для хранимых параметров распределения, *означающие* и *StdDev* соответственно.
+Функции свойств `mean()` и `stddev()` возвращают значения для хранимых параметров распределения *Среднее* и *StdDev* соответственно.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -93,7 +93,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Подробные сведения о нормальном распределении см. статью в Wolfram MathWorld [Нормальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400924).
 
@@ -198,16 +198,16 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*приводит*\
+*среднее* \
 Параметр распределения `mean`.
 
-*StdDev*\
+*stddev* \
 Параметр распределения `stddev`.
 
-*ParM*\
+*parm* \
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < stddev`
 
@@ -233,16 +233,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*приводит*\
+*среднее* \
 Параметр распределения `mean`.
 
-*StdDev*\
+*stddev* \
 Параметр распределения `stddev`.
 
-*Правильно*\
+*справа* \
 Структура `param_type`, используемая для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < stddev`
 

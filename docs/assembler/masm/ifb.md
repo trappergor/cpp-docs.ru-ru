@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFB directive
 ms.assetid: 6395e313-e590-41b3-824c-577f200faf80
-ms.openlocfilehash: 815cb75e0d00cc660c8dfad896fbe0064881edd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f45ce4e50e8cc33dc060e8cc4a48626e677b3c2
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202934"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397433"
 ---
 # <a name="ifb"></a>IFB
 
-Предоставляет сборку, если *textitem* пуст.
+Предоставляет сборку, если *текститем* пуст.
 
 ## <a name="syntax"></a>Синтаксис
 
-> ДАННЫЙ *textitem*
+> **ИФБ** *текститем*
 
 ## <a name="remarks"></a>Примечания
 
-См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

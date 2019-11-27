@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .CONST directive
 ms.assetid: d5c1d795-174c-48d2-8359-92fbbd7d4c6c
-ms.openlocfilehash: 4b3cf5a4b65c0c51655ea8eaa56400b346f7b09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c360b8e7e008dec7ac50806b01ba3e26aa219f12
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185411"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398568"
 ---
 # <a name="const"></a>.CONST
 
-При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), начинается сегмент постоянные данные (с сегментом имен CONST).
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает сегмент постоянных данных (с именем сегмента **const**).
 
 ## <a name="syntax"></a>Синтаксис
 
-> .CONST
+> **.CONST**
 
 ## <a name="remarks"></a>Примечания
 
-Этот сегмент имеет атрибут только для чтения.
+Этот сегмент имеет атрибут "только для чтения".
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

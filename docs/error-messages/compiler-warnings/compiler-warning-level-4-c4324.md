@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4324
 ms.assetid: 420fa929-d9c0-40b4-8808-2d8ad3ca8090
-ms.openlocfilehash: 696f53dff6398555355ca3a58e25d2c6d64eaaab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02803e165255b563df5a8b6136198f1f49e9f65d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400868"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541088"
 ---
 # <a name="compiler-warning-level-4-c4324"></a>Предупреждение компилятора (уровень 4) C4324
 
-«имя_структуры»: структура была дополнена нулями из-за __declspec(align())
+"struct_name": структура дополнена из-за __declspec (Aligned ())
 
-Заполнение было добавлено в конце структуры, так как вы указали [__declspec(align)](../../cpp/align-cpp.md) значение.
+Заполнение было добавлено в конце структуры, так как указано значение [__declspec (выровняйте)](../../cpp/align-cpp.md) .
 
-Например следующий код создает C4324:
+Например, следующий код создает C4324:
 
-```
+```cpp
 // C4324.cpp
 // compile with: /W4
 struct __declspec(align(32)) A

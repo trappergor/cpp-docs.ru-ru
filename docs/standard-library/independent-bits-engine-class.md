@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28c9301d270ef516a1acc59f6ab06f0e61a1c9c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456346"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687930"
 ---
-# <a name="independentbitsengine-class"></a>Класс independent_bits_engine
+# <a name="independent_bits_engine-class"></a>Класс independent_bits_engine
 
 Создает случайную последовательность чисел с указанным числом разрядов, перемешивая разряды из значений, возвращенных базовым механизмом.
 
@@ -26,16 +26,16 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*Ядре*\
+@No__t_1 *подсистемы*
 Тип базового механизма.
 
-*БЕЛАЯ*\
+*W* \
 **Размер слова**. Размер каждого полученного числа в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*уинттипе*\
+*Уинттипе* \
 Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ||||
 |-|-|-|
@@ -44,9 +44,9 @@ class independent_bits_engine;
 
 Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Этот класс шаблона описывает *адаптер подсистемы* , создающий значения путем повторного упаковки битов из значений, возвращенных базовым механизмом, в результате чего используются значения *W*bit.
+Этот шаблон класса описывает *адаптер подсистемы* , создающий значения путем повторного упаковки битов из значений, возвращенных базовым механизмом, в результате чего используются значения *W*bit.
 
 ## <a name="requirements"></a>Требования
 

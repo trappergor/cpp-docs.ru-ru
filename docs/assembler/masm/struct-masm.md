@@ -6,23 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f3751f32d8cb2fc3f9daec1ac11c778ee33514
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210293"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393573"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-Объявляет тип структуры с указанным *объявления поля*. Каждое поле должен являться определением допустимые данные. Совпадение с кодом [МЕРОПРИЯТИЯХ](../../assembler/masm/struc.md).
+Объявляет тип структуры с указанными *объявлениями полей*. Каждое поле должно быть допустимым определением данных. То же, что и [струк](../../assembler/masm/struc.md).
 
 ## <a name="syntax"></a>Синтаксис
 
-> *имя* СТРУКТУРЫ [[*выравнивание*]] [[, НЕУНИКАЛЬНЫЙ]]<br/>
-> *объявления поля*<br/>
-> *имя* заканчивается
+> *имя* **структуры** ⟦*Выравнивание*⟧ ⟦ __,__ **неуникальное**⟧ *объявление поля*\
+> *имя* **заканчивается**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

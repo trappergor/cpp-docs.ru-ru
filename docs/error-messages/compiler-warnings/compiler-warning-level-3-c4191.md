@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402259"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051883"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>Предупреждение компилятора (уровень 3) C4191
 
@@ -27,7 +27,7 @@ ms.locfileid: "62402259"
 
 - Списки аргументов разной длины (в `__cdecl`, только при приведении длинного списка к более короткому списку, даже если более короткий список содержит аргументы переменной длины).
 
-- Указатель на данные (отличные от **void**<strong>\*</strong>), являющийся псевдонимом для указателя на функцию.
+- Указатель на данные (кроме **void** <strong>\*</strong>), являющийся псевдонимом для указателя на функцию.
 
 - Любые другие различия между типами, которые дадут ошибку или предупреждение в `reinterpret_cast`.
 
@@ -37,7 +37,7 @@ ms.locfileid: "62402259"
 
 Следующий пример приводит к возникновению ошибки C4191:
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

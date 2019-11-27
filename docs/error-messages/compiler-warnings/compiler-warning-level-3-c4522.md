@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f4785c670c4cc5c167c18b9f15c2417b61df34
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401908"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188966"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>Предупреждение компилятора (уровень 3) C4522
 
-«класс»: заданы несколько операторов присваивания
+"класс": задано несколько операторов присваивания
 
-Этот класс содержит несколько операторов присваивания одного типа. Это сообщение является информационным; конструкторы можно вызвать в приложении.
+Класс имеет несколько операторов присваивания одного типа. Это предупреждение является информационным; конструкторы вызываемы в программе.
 
-Используйте [предупреждение](../../preprocessor/warning.md) директиву pragma, чтобы отключить это предупреждение.
+Чтобы отключить это предупреждение, используйте директиву pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4522.
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>

@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Создание и использование экземпляров shared_ptr
+title: Как создавать и использовать экземпляры shared_ptr
 ms.custom: how-to
-ms.date: 05/22/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866139"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245829"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>Практическое руководство. Создание и использование экземпляров shared_ptr
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>Как создавать и использовать экземпляры shared_ptr
 
 Тип `shared_ptr` — это смарт-указатель в стандартной библиотеке C++, который предназначен для ситуаций, когда управлять временем существования объекта в памяти требуется нескольким владельцам. После инициализации указателя `shared_ptr` его можно копировать, передавать по значению в аргументах функций и присваивать другим экземплярам `shared_ptr`. Все экземпляры указывают на один и тот же объект и имеют общий доступ к одному "блоку управления", который увеличивает и уменьшает счетчик ссылок, когда указатель `shared_ptr` добавляется, выходит из области действия или сбрасывается. Когда счетчик ссылок достигает нуля, блок управления удаляет ресурс в памяти и самого себя.
 
 На схеме ниже показано несколько экземпляров `shared_ptr`, указывающих на одно расположение в памяти.
 
-![Схема общего указателя](../cpp/media/shared_ptr.png "Схема общего указателя")
+![Схема общих указателей](media/shared_ptr.png "Схема общих указателей")
 
 ## <a name="example-setup"></a>Пример конфигурации
 
@@ -74,25 +74,25 @@ int main()
 
 Когда ресурс в памяти создается впервые, по возможности используйте функцию [make_shared](../standard-library/memory-functions.md#make_shared) для создания указателя `shared_ptr`. Функция `make_shared` безопасна в отношении исключений. Для выделения памяти под блок управления и ресурс используется один вызов, что снижает накладные расходы. Если вы не используете функцию `make_shared`, то придется использовать явное выражение `new` для создания объекта, прежде чем передавать его в конструктор `shared_ptr`. В приведенном ниже примере представлены различные способы объявления и инициализации указателя `shared_ptr` вместе с новым объектом.
 
-[!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
+[!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
 ## <a name="example-2"></a>Пример 2
 
 В приведенном ниже примере показано, как объявить и инициализировать экземпляры `shared_ptr`, которые будут совместно владеть объектом, память для которого уже выделена с помощью другого экземпляра `shared_ptr`. Предполагается, что `sp2` — это инициализированный указатель `shared_ptr`.
 
-[!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
+[!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
 ## <a name="example-3"></a>Пример 3
 
 Указатели `shared_ptr` также полезны при использовании алгоритмов копирования элементов в контейнеры стандартной библиотеки C++. Элемент можно заключить в указатель `shared_ptr`, а затем копировать его в другие контейнеры, учитывая при этом, что выделенная область памяти доступна только до тех пор, пока она требуется. В приведенном ниже примере показано, как использовать алгоритм `remove_copy_if` применительно к экземплярам `shared_ptr` в векторе.
 
-[!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
+[!code-cpp[stl_smart_pointers#4](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
 ## <a name="example-4"></a>Пример 4
 
-Для приведения указателя `shared_ptr` можно использовать функции `dynamic_pointer_cast`, `static_pointer_cast` и `const_pointer_cast`. Они похожи на операторы `dynamic_cast`, `static_cast` и `const_cast`. В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
+Для приведения указателя `dynamic_pointer_cast` можно использовать функции `static_pointer_cast`, `const_pointer_cast` и `shared_ptr`. Они похожи на операторы `dynamic_cast`, `static_cast` и `const_cast`. В приведенном ниже примере показано, как протестировать производный тип каждого элемента в векторе, содержащем указатель `shared_ptr` базовых классов, а затем скопировать элементы и отобразить сведения о них.
 
-[!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
+[!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
 ## <a name="example-5"></a>Пример 5
 
@@ -110,12 +110,12 @@ int main()
 
 - Иногда, например в `std::vector<shared_ptr<T>>`, может быть необходимо передать каждый указатель `shared_ptr` в тело лямбда-выражения или в именованный объект функции. Если в лямбда-выражении или функции указатель не сохраняется, передайте `shared_ptr` по ссылке, чтобы не вызывать конструктор копий для каждого элемента.
 
-## <a name="example-6"></a>Пример 6
+## <a name="example-6"></a>Пример 6
 
 В приведенном ниже примере показано, как `shared_ptr` перегружает различные операторы сравнения, чтобы обеспечить сравнение указателей в памяти, принадлежащей экземплярам `shared_ptr`.
 
-[!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
+[!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Интеллектуальные указатели (современный C++)](../cpp/smart-pointers-modern-cpp.md)
+[Интеллектуальные указатели (современный C++)](smart-pointers-modern-cpp.md)

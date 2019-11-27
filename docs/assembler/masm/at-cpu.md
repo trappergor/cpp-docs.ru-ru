@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Cpu symbol'
 ms.assetid: 04f9fdf6-9772-407e-9c09-c12bed29087b
-ms.openlocfilehash: 022b8ae6a38026d360d0f553c6fa65a2430fe02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 528db8ce2a23cefaeef0b1e52f4a373b49d1cbeb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167067"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399176"
 ---
-# <a name="cpu"></a>@Cpu
+# <a name="cpu"></a>\@ЦП
 
-Немного маски, задающий режим процессора (уравнять числовые).
+Битовая маска, указывающая режим процессора (число равно).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Cpu
+> **\@ЦП**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

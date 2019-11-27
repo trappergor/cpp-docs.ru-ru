@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401115"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541921"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>Предупреждение компилятора (уровень 4) C4220
 
 varargs соответствует оставшимся параметрам
 
-При использовании расширений Майкрософт по умолчанию (/Ze) указатель на функцию соответствует указатель на функцию с аналогичными, но переменными, аргументы.
+В расширениях Майкрософт по умолчанию (/Ze) указатель на функцию соответствует указателю на функцию с аналогичным, но переменной, аргументами.
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-Такие указатели не совпадают в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
+Такие указатели не соответствуют по ANSI-совместимости ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).

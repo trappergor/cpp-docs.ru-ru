@@ -9,21 +9,21 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456766"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688459"
 ---
 # <a name="ltarraygt-operators"></a>Операторы &lt;array&gt;
 
-Заголовок \<массива > **содержит следующие функции** шаблона сравнения, не являющиеся элементами.
+Заголовок \<array > **содержит следующие функции** шаблона сравнения, не являющиеся элементами.
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[оператор!= ](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=
 
@@ -38,19 +38,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция шаблона возвращает `!(left == right)`.
 
@@ -111,21 +111,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Эта функция шаблона перегружает `operator<` для сравнения двух объектов класса шаблона [array](../standard-library/array-class-stl.md). Функция возвращает `lexicographical_compare(left.begin(), left.end(), right.begin())`.
+Функция шаблона перегружает `operator<` для сравнения двух объектов [класса массива](../standard-library/array-class-stl.md)шаблонов класса. Функция возвращает `lexicographical_compare(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Пример
 
@@ -184,19 +184,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция шаблона возвращает `!(right < left)`.
 
@@ -257,21 +257,21 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Эта функция шаблона перегружает `operator==` для сравнения двух объектов класса шаблона [array](../standard-library/array-class-stl.md). Функция возвращает `equal(left.begin(), left.end(), right.begin())`.
+Функция шаблона перегружает `operator==` для сравнения двух объектов [класса массива](../standard-library/array-class-stl.md)шаблонов класса. Функция возвращает `equal(left.begin(), left.end(), right.begin())`.
 
 ### <a name="example"></a>Пример
 
@@ -330,19 +330,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция шаблона возвращает `(right < left)`.
 
@@ -403,19 +403,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*\
+*Ty* \
 Тип элемента.
 
-*\N*\
+*N* \
 Размер массива.
 
-*слева*\
+*left* \
 Левый контейнер для сравнения.
 
-*Правильно*\
+*справа* \
 Правый контейнер для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция шаблона возвращает `!(left < right)`.
 

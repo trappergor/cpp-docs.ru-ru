@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459001"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685869"
 ---
-# <a name="studenttdistribution-class"></a>Класс student_t_distribution
+# <a name="student_t_distribution-class"></a>Класс student_t_distribution
 
 Формирует *t*-распределение Стьюдента.
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе* \
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с *t*-распределением учащегося. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с *t*-распределением учащегося. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -78,7 +78,7 @@ public:
 
 Функция свойства `n()` возвращает значение для хранимого параметра распределения `n`.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://mathworld.wolfram.com/Studentst-Distribution.html) на веб-сайте Wolfram MathWorld.
 
@@ -177,10 +177,10 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Параметр распределения `n`.
 
-*ParM*\
+*parm* \
 Пакет параметров, используемый для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < n`
 
@@ -208,10 +208,10 @@ struct param_type {
 *n*\
 Параметр распределения `n`.
 
-*Правильно*\
+*справа* \
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < n`
 

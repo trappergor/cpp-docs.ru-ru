@@ -1,26 +1,26 @@
 ---
 title: .MMX
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MMX
 helpviewer_keywords:
 - .MMX directive
 ms.assetid: 69d360cb-b530-46e3-9cfe-204d71baa38d
-ms.openlocfilehash: f9851ca0f778543c81948e65bcbb234adc22a198
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9385a66448f8e5896b34874b48fce9423579d006
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178492"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398134"
 ---
-# <a name="mmx"></a>.MMX
+# <a name="mmx-32-bit-masm"></a>. MMX (32-разрядный MASM)
 
-Включает сборку MMX или одной инструкцией, несколько инструкций данных (SIMD).
+Включает сборку MMX или одиночную инструкцию, несколько данных (SIMD). (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .MMX
+> **.MMX**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

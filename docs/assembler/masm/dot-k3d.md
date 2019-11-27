@@ -1,26 +1,26 @@
 ---
 title: .K3D
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .K3D
 helpviewer_keywords:
 - .K3D directive
 ms.assetid: b69757dc-64a5-4ead-85af-fa5abbbbfdb6
-ms.openlocfilehash: c8023b1f7f884c3bd041764a9daa52b4e9d3feb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5459bd6598285a72e9927efba6aa9551fd4211f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204075"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398240"
 ---
-# <a name="k3d"></a>.K3D
+# <a name="k3d-32-bit-masm"></a>. K3D (32-разрядный компилятор MASM)
 
-Включает сборку K3D инструкций.
+Включает сборку инструкций **K3D** . (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .K3D
+> **.K3D**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

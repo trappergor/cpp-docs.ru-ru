@@ -1,5 +1,5 @@
 ---
-title: Сочетание исключений C++ C (структурированные) и
+title: Mixing C (structured) and C++ exceptions
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - catch keyword [C++], mixed
 - try-catch keyword [C++], mixed-language
 ms.assetid: a149154e-36dd-4d1a-980b-efde2a563a56
-ms.openlocfilehash: 94d6dc249cb130aaf09d3202b9e8f437d00a9597
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e49731f1c81057002eaae2bef16cda4a5cf86f8d
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345954"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246463"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Сочетание исключений C++ C (структурированные) и
+# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
 
-Если вы хотите создать переносимый код, не рекомендуется использовать структурированную обработку исключений (SEH) в программе на языке C++. Тем не менее, иногда можно скомпилировать с помощью [/EHa](../build/reference/eh-exception-handling-model.md) и комбинирование структурированных исключений и исходного кода C++, а также потребуются некоторые средства для обработки обоих типов исключений. Поскольку обработчик структурированных исключений не различает объекты или типизированные исключения, он не может обработать исключения, создаваемые кодом C++. Однако C++ **catch** обработчики могут обрабатывать структурированные исключения. C++синтаксис обработки исключений (**попробуйте**, **throw**, **catch**) не принимается компилятор C, но синтаксис структурированной обработки исключений (**__try**, **__except**, **__finally**) поддерживается C++ компилятора.
+If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
 
-См. в разделе [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) сведения об обработке структурированных исключений как C++ исключения.
+See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
 
-Если смешать структурированных исключений и C++, следует учитывать следующие потенциальные проблемы:
+If you mix structured and C++ exceptions, be aware of these potential issues:
 
 - Исключения С++ и структурированные исключения невозможно комбинировать в одной функции.
 
-- Обработчики завершения (**__finally** блоках) всегда выполняются, даже во время очитки после возникает исключение.
+- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
 
-- Обработка исключений C++ может перехватываться и сохраняться семантика все модули, скомпилированные с помощью очистки [/EH](../build/reference/eh-exception-handling-model.md) параметры компилятора, какие включить семантику очистки.
+- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
 
-- Могут возникнуть ситуации, когда функции деструктора не вызываются для всех объектов. Например если структурированное исключение создается при попытке вызова функции с помощью неинициализированного указателя на функцию, и эта функция принимает в качестве параметров объекты, которые были созданы перед вызовом, этих объектов не вызываются деструкторы во время очистки стека.
+- Могут возникнуть ситуации, когда функции деструктора не вызываются для всех объектов. For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Использование setjmp или longjmp в программах на C++](../cpp/using-setjmp-longjmp.md)
+- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
 
-  Дополнительные сведения см. в разделе об использовании `setjmp` и `longjmp` в программах на C++.
+  See more information on the use of `setjmp` and `longjmp` in C++ programs.
 
 - [Обработка структурированных исключений в C++](../cpp/exception-handling-differences.md)
 
-  См. в разделе примеров того, можно использовать для структурированной обработки исключений C++.
+  See examples of the ways you can use C++ to handle structured exceptions.
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений С++](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

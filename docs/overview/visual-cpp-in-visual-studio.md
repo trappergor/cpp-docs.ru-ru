@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552378"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626214"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -36,7 +36,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 [Улучшения соответствия C++ в Visual Studio](cpp-conformance-improvements.md)<br/>
 Сведения об улучшениях соответствия C++ в Visual Studio.
 
-[Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)<br/>
+[Таблица соответствия Microsoft Visual C++ стандартам языка](visual-cpp-language-conformance.md)<br/>
 Список с данными о состоянии соответствия стандартам по каждой функции в компиляторе C++ MSVC.
 
 [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>

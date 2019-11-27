@@ -1,26 +1,26 @@
 ---
 title: '@CodeSize'
-ms.date: 08/30/2018
+ms.date: 11/21/2019
 f1_keywords:
 - '@CodeSize'
 helpviewer_keywords:
 - '@CodeSize symbol'
 ms.assetid: 6e18d99f-9999-41fe-9330-b80de8f735d5
-ms.openlocfilehash: 36befca435c6aedcad442711caaa8a884cc52394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc5da8ffbd4f58eca470e1c23321d104c2d9449d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166689"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399201"
 ---
-# <a name="codesize"></a>@CodeSize
+# <a name="codesize"></a>\@Кодесизе
 
-0 для **КРОШЕЧНЫЕ**, **НЕБОЛЬШОЙ**, **COMPACT**, и **НЕСТРУКТУРИРОВАННЫЙ** моделей и 1 для **Средний**,  **БОЛЬШОЙ**, и **БОЛЬШОЙ** моделей (уравнять числовые).
+0 для **мелких**, **малых**, **компактных**и **плоских** моделей и 1 для **средних**, **крупных**и **огромных** моделей (числовой равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @CodeSize
+> **\@Кодесизе**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

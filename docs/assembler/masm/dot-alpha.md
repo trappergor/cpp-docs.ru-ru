@@ -1,26 +1,26 @@
 ---
 title: .ALPHA
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ALPHA
 helpviewer_keywords:
 - .ALPHA directive
 ms.assetid: 3f9d1386-6367-4cd7-a37f-2cd1cd46f2d7
-ms.openlocfilehash: 31985d27f5e5941612ceda669ba20ff26352c180
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8af6309c00d1dfbbc33d9b672f90617fbec3867
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206415"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398606"
 ---
-# <a name="alpha"></a>.ALPHA
+# <a name="alpha-32-bit-masm"></a>. Альфа (32-разрядный MASM)
 
-Сегменты по алфавиту.
+Упорядочивает сегменты в алфавитном порядке. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .ALPHA
+> **.ALPHA**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

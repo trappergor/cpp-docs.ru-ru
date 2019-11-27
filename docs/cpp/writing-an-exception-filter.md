@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: f0234d36fb70c646e2d97540cbfa6ce5ae1e0ba9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aaf0dc77207399d7c6be86127d7decf03895ced5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498450"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245984"
 ---
 # <a name="writing-an-exception-filter"></a>Написание фильтра исключений
 
@@ -47,9 +47,9 @@ int Eval_Exception ( int n_except ) {
 
 Рекомендуется использовать вызов функции в выражении *фильтра* , когда *Фильтр* должен выполнить все сложнее. Вычисление выражения приводит к выполнению функции, в данном случае — `Eval_Exception`.
 
-Обратите внимание на использование [GetExceptionCode](/windows/win32/Debug/getexceptioncode) для определения исключения. Эту функцию необходимо вызывать внутри фильтра. `Eval_Exception`невозможно вызвать `GetExceptionCode`, но ему должен быть передан код исключения.
+Обратите внимание на использование [GetExceptionCode](/windows/win32/Debug/getexceptioncode) для определения исключения. Эту функцию необходимо вызывать внутри фильтра. `Eval_Exception` не может вызвать `GetExceptionCode`, но ему должен быть передан код исключения.
 
-Если исключение не вызвано переполнением при операции с целыми числами или числами с плавающей запятой, этот обработчик передает управление другому обработчику. В этом случае обработчик вызывает функцию (`ResetVars` — это только пример, а не функция API), чтобы сбросить некоторые глобальные переменные. *Инструкция-Block-2*, которая в этом примере пуста, не может быть выполнена, `Eval_Exception` так как никогда не возвращает EXCEPTION_EXECUTE_HANDLER (1).
+Если исключение не вызвано переполнением при операции с целыми числами или числами с плавающей запятой, этот обработчик передает управление другому обработчику. В этом случае обработчик вызывает функцию (`ResetVars` — это только пример, а не функция API), чтобы сбросить некоторые глобальные переменные. *Инструкция-Block-2*, которая в этом примере пуста, не может быть выполнена, так как `Eval_Exception` никогда не возвращает EXCEPTION_EXECUTE_HANDLER (1).
 
 Вызов функции — хороший способ работы со сложными выражениями фильтров. Удобны также две другие возможности языка C:
 
@@ -77,7 +77,7 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Написание обработчика исключений](../cpp/writing-an-exception-handler.md)<br/>
 [Структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

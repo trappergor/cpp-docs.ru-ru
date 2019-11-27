@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - EXITM directive
 ms.assetid: a3484d33-04a9-4791-8d53-3fc3bc7b417c
-ms.openlocfilehash: 8d9b1e118e8afd8e2f001d5b2afca5c3d449fa4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fc40b6dad2785c02f097910f26b7465ddf5dbcc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203150"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397579"
 ---
 # <a name="exitm"></a>EXITM
 
-Прекращает расширения макроса или повторите текущего блока и запускает сборку следующему оператору за пределами блока.
+Завершает расширение текущего повторяющегося или блока макроса и начинает сборку следующего оператора за пределами блока.
 
 ## <a name="syntax"></a>Синтаксис
 
-> EXITM [[textitem]]
+> **Екситм** ⟦*текститем*⟧
 
 ## <a name="remarks"></a>Примечания
 
-В функции макрос *textitem* возвращается значение.
+В функции-макросе *текститем* является возвращаемым значением.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

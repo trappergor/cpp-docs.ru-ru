@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Time symbol'
 ms.assetid: a9712e51-be60-4ac4-a497-54a1aa0a1acd
-ms.openlocfilehash: 36de4c0ee131231372bd004d8aec5691b6620adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dacb3be3e6c20ad30a955d383a561a5f0e0eca3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179182"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398903"
 ---
-# <a name="time"></a>@Time
+# <a name="time"></a>Время \@
 
-Системное время в формате чч: мм: 24-часовом (макрос text).
+Системное время в 24-часовом формате чч: мм: СС (текстовый макрос).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @Time
+> **Время \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

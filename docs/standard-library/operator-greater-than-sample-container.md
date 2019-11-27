@@ -10,19 +10,19 @@ helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-ms.openlocfilehash: e7da0250dc647d2d519b9c3d105fb942717c7a4c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80bcc6b81ec7d6771895f711d61a507f057eae2a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449746"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689190"
 ---
 # <a name="operatorgt-ltsample-containergt"></a>оператор&gt; (&lt;образец контейнера&gt;)
 
 > [!NOTE]
 > Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
-Перегружает **оператор>** для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
+Перегрузка **оператора >** для сравнения двух объектов [контейнера](../standard-library/sample-container-class.md)шаблона класса.
 
 ## <a name="syntax"></a>Синтаксис
 

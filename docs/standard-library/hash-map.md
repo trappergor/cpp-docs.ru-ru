@@ -6,19 +6,19 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448663"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689575"
 ---
-# <a name="lthashmapgt"></a>&lt;hash_map&gt;
+# <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> Этот заголовок устарел. Альтернативой является [ \<unordered_map >](unordered-map.md).
+> Этот заголовок устарел. Альтернативой является [\<unordered_map >](unordered-map.md).
 
-Определяет контейнер шаблонных классов hash_map и hash_multimap и их поддерживаемые шаблоны.
+Определяет шаблоны классов контейнеров hash_map и hash_multimap и их вспомогательные шаблоны.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,9 +41,9 @@ ms.locfileid: "68448663"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Class|Описание|
 |-|-|
-|[Класс hash_compare](hash-compare-class.md)|Описывает объект, который может использоваться любым из ассоциативных хэш-контейнеров — hash_map, hash_multimap, hash_set или hash_multiset — как объект параметра по умолчанию `Traits` для упорядочивания и хэширования содержащихся в них элементов.|
+|[Класс hash_compare](hash-compare-class.md)|Описывает объект, который может использоваться любым из ассоциативных хэш-контейнеров — hash_map, hash_multimap, hash_set или hash_multiset — как объект параметра `Traits` по умолчанию для упорядочивания и хэширования содержащихся в них элементов.|
 |[Класс value_compare](value-compare-class.md)|Предоставляет объект функции, который может сравнивать элементы hash_map путем сравнения значения ключей для определения относительного порядка в hash_map.|
 |[Класс hash_map](hash-map-class.md)|Используется для хранения и быстрого считывания данных из коллекции, в которой каждый элемент — это пара, которая имеет отсортированный уникальный ключ и связанное с ним значение.|
 |[Класс hash_multimap](hash-multimap-class.md)|Используется для хранения и быстрого считывания данных из коллекции, в которой каждый элемент — это пара, которая имеет ключ, значение которого не должно быть уникальным, и связанное с ним значение.|

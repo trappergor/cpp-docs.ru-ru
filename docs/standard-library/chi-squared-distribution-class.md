@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 2eac3324516cf88a114064cf0145593c7bf4806b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7f6f038c0e8bc922874388065ce06d76854bc1b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459470"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688310"
 ---
-# <a name="chisquareddistribution-class"></a>Класс chi_squared_distribution
+# <a name="chi_squared_distribution-class"></a>Класс chi_squared_distribution
 
 Формирует распределение хи-квадрат.
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе* \
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*\
+*Ргсч* \
 Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с распределением хи-квадрат. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с распределением хи-квадрат. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Распределение "хи-квадрат"](https://go.microsoft.com/fwlink/p/?linkid=400528).
 
@@ -238,10 +238,10 @@ explicit chi_squared_distribution(const param_type& parm);
 *n*\
 Параметр распределения `n`.
 
-*ParM*\
+*parm* \
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < n`
 
@@ -269,10 +269,10 @@ struct param_type {
 *n*\
 Параметр распределения `n`.
 
-*Правильно*\
+*справа* \
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < n`
 

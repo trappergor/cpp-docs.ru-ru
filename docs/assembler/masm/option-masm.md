@@ -6,37 +6,37 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217261"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395172"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Включает и выключает функции ассемблер.
+Включает и отключает функции ассемблера.
 
 ## <a name="syntax"></a>Синтаксис
 
-> ПАРАМЕТР *optionlist*
+> **Параметр** *оптионлист*
 
 ## <a name="remarks"></a>Примечания
 
-Доступны следующие параметры.
+Доступные варианты:
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**ЭМУЛЯТОР**|
-|**NOEMULATOR**|**ЭПИЛОГА**|**EXPR16**|**EXPR32**|
-|**ЯЗЫК**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**СМЕЩЕНИЕ**|
-|**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**ПРОЛОГ**|**ТОЛЬКО ДЛЯ ЧТЕНИЯ**|**NOREADONLY**|
-|**ОБЛАСТЬЮ ДЕЙСТВИЯ**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**касемап**|**дотнаме**|**нодотнаме**|**ЭМУЛЯТОР**|
+|**ЭМУЛЯТОР**|**ЭПИЛОГА**|**EXPR16**|**EXPR32**|
+|**ЯЗЫКЕ**|**лжмп**|**нолжмп**|**M510**|
+|**NOM510**|**Ключевое слово "ключевоеслово"**|**носигнекстенд**|**СОБОЙ**|
+|**олдмакрос**|**нулдмакрос**|**олдструктс**|**нулдструктс**|
+|**PROC**|**Пролог**|**ДОСТУПНО**|**READONLY**|
+|**ОБЛАСТИ**|**С неограниченной областью**|**SEGMENT**|**SETIF2**.|
 
-Синтаксис языка **параметр языка:**<em>x</em>, где *x* является одним из C, SYSCALL, STDCALL, PASCAL, FORTRAN или BASIC.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживает с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) ПЛОСКИМИ.
+Синтаксис языка — **параметр Language:** <em>x</em>, где *x* — один из C, syscall, stdcall, Pascal, Fortran или Basic.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживаются при использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) плоской.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

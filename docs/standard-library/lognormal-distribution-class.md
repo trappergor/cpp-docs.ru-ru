@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453812"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687783"
 ---
-# <a name="lognormaldistribution-class"></a>Класс lognormal_distribution
+# <a name="lognormal_distribution-class"></a>Класс lognormal_distribution
 
 Формирует логарифмически нормальное распределение.
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе* \
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое создает значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Подробные сведения о логарифмически нормальном распределении см. в статье Wolfram MathWorld [Логарифмически нормальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
@@ -195,16 +195,16 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*Пн*\
+*m* \
 Параметр распределения `m`.
 
-*#d0*\
+*s* \
 Параметр распределения `s`.
 
-*ParM*\
+*parm* \
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < s`
 
@@ -230,16 +230,16 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*Пн*\
+*m* \
 Параметр распределения `m`.
 
-*#d0*\
+*s* \
 Параметр распределения `s`.
 
-*Правильно*\
+*справа* \
 Структура `param_type`, используемая для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < s`
 

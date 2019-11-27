@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457883"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688090"
 ---
-# <a name="exponentialdistribution-class"></a>Класс exponential_distribution
+# <a name="exponential_distribution-class"></a>Класс exponential_distribution
 
 Формирует экспоненциальное распределение.
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе* \
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*\
+*Ргсч* \
 Модуль генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с экспоненциальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с экспоненциальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 Функция-член свойства `param()` устанавливает или возвращает пакет хранимого параметра распределения `param_type`.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Дополнительные сведения об экспоненциальном распределении см. в статье [Экспоненциальное распределение](https://go.microsoft.com/fwlink/p/?linkid=401098) на веб-сайте Wolfram MathWorld.
 
@@ -182,13 +182,13 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*даваемая*\
+*лямбда-* \
 Параметр распределения `lambda`.
 
-*ParM*\
+*parm* \
 Пакет параметров, используемый для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < lambda`
 
@@ -213,13 +213,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*даваемая*\
+*лямбда-* \
 Параметр распределения `lambda`.
 
-*Правильно*\
+*справа* \
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предусловие:** `0.0 < lambda`
 

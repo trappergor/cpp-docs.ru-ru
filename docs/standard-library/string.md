@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957136"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685895"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-Определяет класс шаблонов контейнеров `basic_string` и некоторые вспомогательные шаблоны.
+Определяет шаблон класса контейнера `basic_string` и различные вспомогательные шаблоны.
 
 Дополнительные сведения о классе `basic_string` см. в разделе [Класс basic_string](../standard-library/basic-string-class.md)
 
@@ -26,30 +26,30 @@ ms.locfileid: "68957136"
 #include <string>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Язык C++ и библиотека Standard C++ поддерживают два типа строк:
 
 - Массивы символов, оканчивающиеся нулевым символов, часто называют строками C.
 
-- Объекты класса шаблона типа `basic_string`, которые обрабатывали все аргументы шаблона, аналогичные **символам**.
+- объекты шаблона класса типа `basic_string`, которые обрабатывали все аргументы шаблона, аналогичные **символам**.
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа `string`char в виде.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа `wstring`wchar_t в виде.|
-|[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char16_t`.|
-|[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char32_t`.|
+|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию шаблона класса `basic_string` с элементами типа **char** в качестве `string`.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию шаблона класса `basic_string` с элементами типа **wchar_t** в качестве `wstring`.|
+|[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию шаблона класса `basic_string` на основе элементов типа `char16_t`.|
+|[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию шаблона класса `basic_string` на основе элементов типа `char32_t`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|
-|[operator!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора.|
-|[operator==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|
+|[оператор!= ](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора.|
+|[оператор==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|
 |[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|
 |[оператор<=](../standard-library/string-operators.md#op_lt_eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|
 |[оператор<\<](../standard-library/string-operators.md#op_lt_lt)|Функция шаблона, вставляющая строку в выходной поток.|
@@ -66,10 +66,10 @@ ms.locfileid: "68957136"
 |[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в значение **типа Double**.|
 |[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в тип **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Преобразует последовательность символов в целое число.|
-|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов в длинное **Двойное**значение.|
-|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов в длинную **длину**.|
+|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов в **длинное двойное**значение.|
+|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов в **длинную длину**.|
 |[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов в **длину без знака**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов в длинную длину **без знака**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов в **длинную длину без знака**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Преобразует значение в `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Преобразует значение в двухбайтовое `string`.|
 
@@ -81,10 +81,10 @@ ms.locfileid: "68957136"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Class|Описание|
 |-|-|
-|[Класс basic_string](../standard-library/basic-string-class.md)|Класс шаблона, описывающий объекты, которые могут хранить последовательность произвольных символьных объектов.|
-|[Структура char_traits](../standard-library/char-traits-struct.md)|Класс шаблона, описывающий атрибуты, связанные с символом типа CharType|
+|[Класс basic_string](../standard-library/basic-string-class.md)|Шаблон класса, описывающий объекты, которые могут хранить последовательность произвольных символьно-подобных объектов.|
+|[Структура char_traits](../standard-library/char-traits-struct.md)|Шаблон класса, описывающий атрибуты, связанные с символом типа CharType|
 
 ### <a name="specializations"></a>Специализации
 

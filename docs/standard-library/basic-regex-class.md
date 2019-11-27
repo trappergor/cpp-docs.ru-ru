@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 8df9e927c430f3b94f5857bf18f575e79d6b922a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45776754bd0854aeb85382eda95891a6832ca09e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453436"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689967"
 ---
 # <a name="basic_regex-class"></a>Класс basic_regex
 
@@ -26,21 +26,21 @@ class basic_regex
 
 ## <a name="parameters"></a>Параметры
 
-*Elem*\
+*Elem* \
 Тип элементов для обеспечения соответствия.
 
-*ркстраитс*\
+*Ркстраитс* \
 Класс характеристик для элементов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает объект, содержащий регулярное выражение. Объекты этого класса шаблона можно передать в функции шаблонов [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)и [regex_replace](../standard-library/regex-functions.md#regex_replace), а также подходящие аргументы текстовой строки, чтобы найти текст, соответствующий регулярному выражению. Существует две специализации этого класса шаблона с [регулярным выражением](../standard-library/regex-typedefs.md#regex) определений типов для элементов типа **char**и [wregex](../standard-library/regex-typedefs.md#wregex) для элементов типа **wchar_t**.
+Шаблон класса описывает объект, содержащий регулярное выражение. Объекты этого шаблона класса можно передать в функции шаблонов [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)и [regex_replace](../standard-library/regex-functions.md#regex_replace), а также подходящие аргументы текстовой строки, чтобы найти текст, соответствующий регулярному выражению. Существует две специализации этого шаблона класса с [регулярным выражением](../standard-library/regex-typedefs.md#regex) определений типов для элементов типа **char**и [wregex](../standard-library/regex-typedefs.md#wregex) для элементов типа **wchar_t**.
 
-Аргумент шаблона *ркстраитс* описывает различные важные свойства синтаксиса регулярных выражений, поддерживаемых классом шаблона. Класс, определяющий эти характеристики регулярного выражения, должен обладать таким же внешним интерфейсом, как и объект класса шаблона [regex_traits](../standard-library/regex-traits-class.md).
+Аргумент шаблона *ркстраитс* описывает различные важные свойства синтаксиса регулярных выражений, поддерживаемых шаблоном класса. Класс, указывающий эти признаки регулярных выражений, должен иметь тот же внешний интерфейс, что и объект типа [Regex_traits Class](../standard-library/regex-traits-class.md).
 
 Некоторые функции принимают последовательность операндов, определяющую регулярное выражение. Такую последовательность операндов можно задать несколькими способами:
 
-`ptr`--Завершающая последовательность, заканчивающаяся нулем (например, строка C для *elem* типа **char**), начиная с `ptr` (которая не должна быть пустым указателем), где завершающий элемент является значением `value_type()` и не является частью последовательности операндов
+`ptr`--завершающая последовательность, завершающаяся нулем (например, строка C для *elem* типа **char**), начиная с `ptr` (который не должен быть пустым указателем), где завершающий элемент является значением `value_type()` и не является частью последовательности операндов
 
 `ptr`, `count` -- последовательность элементов `count`, начиная с `ptr` (это должен быть не пустой указатель)
 
@@ -50,21 +50,21 @@ class basic_regex
 
 `right` -- объект `basic_regex` `right`
 
-Эти функции членов также принимают аргумент `flags` , который задает различные параметры интерпретации регулярного выражения в дополнение к описаниям, описанным типом *ркстраитс* .
+Эти функции членов также принимают аргумент `flags`, который задает различные параметры интерпретации регулярного выражения в дополнение к описанному типом *ркстраитс* .
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
-|Член|Default Value|
+|Член|Значение по умолчанию|
 |-|-|
-|public static const flag_type Икасе|regex_constants::icase|
-|открытые статические константы flag_type Sub|regex_constants::nosubs|
-|Общие статические константы flag_type OPTIMIZE|regex_constants::optimize|
+|public static const flag_type Икасе|regex_constants:: Икасе|
+|открытые статические константы flag_type Sub|regex_constants:: подпрограмм|
+|Общие статические константы flag_type OPTIMIZE|regex_constants:: OPTIMIZE|
 |Общая статическая константа flag_type COLLATE|regex_constants:: COLLATE|
-|public static const flag_type ECMAScript|regex_constants::ECMAScript|
-|public static const flag_type Basic|regex_constants::basic|
+|public static const flag_type ECMAScript|regex_constants:: ECMAScript|
+|public static const flag_type Basic|regex_constants:: Basic|
 |открытый статический const flag_type расширен|regex_constants:: Extended|
 |открытый статический const flag_type awk|regex_constants:: awk|
-|открытый статический const flag_type grep|regex_constants::grep|
+|открытый статический const flag_type grep|regex_constants:: grep|
 |public static const flag_type egrep|regex_constants:: egrep|
 |частные признаки Ркстраитс||
 
@@ -74,7 +74,7 @@ class basic_regex
 |-|-|
 |[basic_regex](#basic_regex)|Конструирует объект регулярного выражения.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
@@ -95,7 +95,7 @@ class basic_regex
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[оператор=](#op_eq)|Присваивает значение объекту регулярного выражения.|
 
@@ -230,40 +230,40 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>Параметры
 
-*сттраитс*\
+*Сттраитс* \
 Класс признаков для источника строки.
 
-*сталлок*\
+*Сталлок* \
 Класс распределителя для источника строки.
 
-*Ini*\
+*Инициализация* \
 Тип итератора ввода для источника диапазона.
 
-*Правильно*\
+*справа* \
 Копируемый источник регулярного выражения.
 
-*указатель*\
+\ *ptr*
 Копируемый указатель на начало последовательности.
 
-*Метки*\
+*флаги* \
 Добавляемые при копировании флаги вариантов синтаксиса.
 
-*> len/TD*\
+*> len/TD* \
 Копируемый конец последовательности.
 
-*str*\
+\ *str*
 Копируемая строка.
 
-*началь*\
+*первый* \
 Копируемое начало последовательности.
 
-*Последняя*\
+*последние* \
 Копируемый конец последовательности.
 
-*Интерфейс*\
+*IList* \
 Копируемый initializer_list.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждая функция-член заменяет регулярное выражение, хранящееся в `*this`, на регулярное выражение, описываемое последовательностью операндов, а затем возвращает `*this`.
 
@@ -304,46 +304,46 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>Параметры
 
-*сттраитс*\
+*Сттраитс* \
 Класс признаков для источника строки.
 
-*сталлок*\
+*Сталлок* \
 Класс распределителя для источника строки.
 
-*Ini*\
+*Инициализация* \
 Тип итератора ввода для источника диапазона.
 
-*Правильно*\
+*справа* \
 Копируемый источник регулярного выражения.
 
-*указатель*\
+\ *ptr*
 Копируемый указатель на начало последовательности.
 
-*Метки*\
+*флаги* \
 Добавляемые при копировании флаги вариантов синтаксиса.
 
-*> len/TD*\
+*> len/TD* \
 Копируемый конец последовательности.
 
-*str*\
+\ *str*
 Копируемая строка.
 
-*началь*\
+*первый* \
 Копируемое начало последовательности.
 
-*Последняя*\
+*последние* \
 Копируемый конец последовательности.
 
-*Интерфейс*\
+*IList* \
 Копируемый initializer_list.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Все последовательности хранят объект типа `RXtraits`, сконструированный по умолчанию.
 
 Первый конструктор создает пустой объект `basic_regex`. Другие конструкторы создают объект `basic_regex`, который содержит регулярное выражение, описанное последовательностью операндов.
 
-Пустой `basic_regex` объект не соответствует ни одной последовательности символов при передаче в [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)или [regex_replace](../standard-library/regex-functions.md#regex_replace).
+Пустой объект `basic_regex` не соответствует ни одной последовательности символов при передаче в [regex_match](../standard-library/regex-functions.md#regex_match), [regex_search](../standard-library/regex-functions.md#regex_search)или [regex_replace](../standard-library/regex-functions.md#regex_replace).
 
 ## <a name="flag_type"></a>  basic_regex::flag_type
 
@@ -353,9 +353,9 @@ explicit basic_regex(
 typedef regex_constants::syntax_option_type flag_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Этот тип является синонимом [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
+Тип является синонимом [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
 ## <a name="flags"></a>  basic_regex::flags
 
@@ -365,7 +365,7 @@ typedef regex_constants::syntax_option_type flag_type;
 flag_type flags() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция-член возвращает значение аргумента `flag_type`, переданного в последний вызов одной из функций-членов [basic_regex::assign](#assign), или, если вызовы не выполнялись, возвращает значение, переданное в конструктор.
 
@@ -377,7 +377,7 @@ flag_type flags() const;
 locale_type getloc() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция-член возвращает `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`.
 
@@ -391,10 +391,10 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc*\
+*loc* \
 Объект языкового стандарта, который необходимо сохранить.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция-член очищает `*this` и возвращает `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`.
 
@@ -406,9 +406,9 @@ locale_type imbue(locale_type loc);
 typedef typename RXtraits::locale_type locale_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Этот тип является синонимом [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
+Тип является синонимом [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type).
 
 ## <a name="mark_count"></a>  basic_regex::mark_count
 
@@ -418,7 +418,7 @@ typedef typename RXtraits::locale_type locale_type;
 unsigned mark_count() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция-член возвращает число групп записи в регулярном выражении.
 
@@ -437,19 +437,19 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>Параметры
 
-*сттраитс*\
+*Сттраитс* \
 Класс признаков для источника строки.
 
-*сталлок*\
+*Сталлок* \
 Класс распределителя для источника строки.
 
-*Правильно*\
+*справа* \
 Копируемый источник регулярного выражения.
 
-*str*\
+\ *str*
 Копируемая строка.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Каждый оператор заменяет регулярное выражение, хранящееся в `*this` , на регулярное выражение, описываемое последовательностью операндов, а затем возвращает `*this`.
 
@@ -463,10 +463,10 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Объект регулярного выражения для замены.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Функция – член меняет местами регулярные выражения между `*this` и *right*. Она делает это в константном времени и не создает исключений.
 
@@ -478,16 +478,16 @@ void swap(basic_regex& right) throw();
 typedef Elem value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Тип является синонимом для параметра-шаблона *elem*.
 
 ## <a name="see-also"></a>См. также
 
 [\<regex>](../standard-library/regex.md)\
-[regex_match](../standard-library/regex-functions.md#regex_match)\
-[regex_search](../standard-library/regex-functions.md#regex_search)\
-[regex_replace](../standard-library/regex-functions.md#regex_replace)\
+[regex_match](../standard-library/regex-functions.md#regex_match) \
+[regex_search](../standard-library/regex-functions.md#regex_search) \
+[regex_replace](../standard-library/regex-functions.md#regex_replace) \
 [regex](../standard-library/regex-typedefs.md#regex)\
 [wregex](../standard-library/regex-typedefs.md#wregex)\
 [Класс regex_traits](../standard-library/regex-traits-class.md)

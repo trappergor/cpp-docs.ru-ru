@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4619
 ms.assetid: 701fea21-01aa-4bea-93d4-1cb8824170b0
-ms.openlocfilehash: 00647e7dafe18ffad2a059b960ebed0a0f4a5d36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 982e7da5523f76a3ff205778318a75076a8c04d1
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401778"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189169"
 ---
 # <a name="compiler-warning-level-3-c4619"></a>Предупреждение компилятора (уровень 3) C4619
 
-\#в директиве pragma warning: нет предупреждения с номером «number»
+\#pragma warning: отсутствует предупреждение с номером "номер"
 
-Выполнена попытка отключить это предупреждение, которое не существует.
+Была предпринята попытка отключить предупреждение, которое не существует.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Следующий пример приводит к возникновению ошибки C4619:
 
-```
+```cpp
 // C4619.cpp
 // compile with: /W3 /c
 #pragma warning(default : 4619)

@@ -2,12 +2,12 @@
 title: Проблемы при миграции с плавающей запятой
 ms.date: 05/17/2017
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: HT
+ms.openlocfilehash: 0a84b764d395063f38cae299cff75437318b024e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332352"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626978"
 ---
 # <a name="floating-point-migration-issues"></a>Проблемы при миграции с плавающей запятой
 
@@ -31,6 +31,6 @@ ms.locfileid: "51332352"
 
 ## <a name="see-also"></a>См. также
 
-[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Обновление проектов с более ранних версий VisualC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)

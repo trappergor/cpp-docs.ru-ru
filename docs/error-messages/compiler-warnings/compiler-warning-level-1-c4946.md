@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280575"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050187"
 ---
 # <a name="compiler-warning-level-1-c4946"></a>Предупреждение компилятора (уровень 1) C4946
 
 использование reinterpret_cast между связанными классами: "класс 1" и "класс 2"
 
-Не используйте [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) для приведения между связанными типами. Используйте [static_cast](../../cpp/static-cast-operator.md) вместо и полиморфных типов, используйте [dynamic_cast](../../cpp/dynamic-cast-operator.md).
+Не используйте [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) для приведения между связанными типами. Вместо этого используйте [static_cast](../../cpp/static-cast-operator.md) или для типов в полиморфизме используйте [dynamic_cast](../../cpp/dynamic-cast-operator.md).
 
 По умолчанию это предупреждение отключено. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-В следующем примере кода приводит к возникновению ошибки C4946:
+Следующий пример кода приводит к возникновению ошибки C4946:
 
-```
+```cpp
 // C4946.cpp
 // compile with: /W1
 #pragma warning (default : 4946)

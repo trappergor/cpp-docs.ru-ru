@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LE operator
 - operator LE
 ms.assetid: 3192e7ac-7577-47bd-ae3e-2cdebcc4e568
-ms.openlocfilehash: f461117a3f47c90b9f1866743bca5419433ac82d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59f4e3117b3fe19e4902fc9a321dc08af0da70d8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200763"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396866"
 ---
 # <a name="operator-le"></a>Оператор LE
 
-Возвращает значение true (-1) Если *expression1* меньше или равно *expression2*, или значение false (0), если это не так.
+Возвращает значение true (-1), если *expression1* меньше или равно *Expression2*, или возвращает false (0), если нет.
 
 ## <a name="syntax"></a>Синтаксис
 
-> expression1 LE expression2
+> *Выражение1* **Le** *выражение2*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ': operator'
 - 'operator :'
 ms.assetid: 37c02c10-d3b0-44c2-bc69-3e8837991920
-ms.openlocfilehash: 8ba0593e9fcb35dc4a0268c2252ea38cac39d73a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 053267ee10d65a4e70fb24e3479d824f8c71d1aa
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397060"
 ---
 # <a name="operator-"></a>Оператор :
 
-Переопределяет значение по умолчанию сегмент *выражение* с *сегмент*. *Сегмент* может быть регистр, имя группы, имя сегмента или выражение сегмента. *Выражение* должно быть константой.
+Переопределяет сегмент *выражения* по умолчанию с *сегментом*. *Сегмент* может быть регистром сегмента, именем группы, именем сегмента или выражением сегмента. *Выражение* должно быть константой.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *Сегмент* : *выражение*
+> *сегмент* **:** *выражение*
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)<br/>
+[Справочник по операторам](operators-reference.md)

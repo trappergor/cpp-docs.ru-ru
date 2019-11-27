@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: ed1bda10d7797a2c1bba43a4824a331d196def4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b56c176fcbd9bd48e0d97f049d98c55cf5bedf3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179020"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399026"
 ---
-# <a name="instr"></a>@InStr
+# <a name="instr"></a>\@InStr
 
-Функция макрос, который находит первое вхождение *string2* в *string1*, начиная с *позиции* в *string1*. Если *позиции* не отображается, поиск начинается в начале *string1*. Возвращает в позиции целое число или значение 0, если *string2* не найден.
+Функция макроса, которая находит первое вхождение *строка_замены* в *строка1*, начиная с *позиции* в строке *строка1*. Если *Расположение* не отображается, поиск начинается в начале строки *строка1*. Возвращает значение целого числа или 0, если *строка string2* не найдена.
 
 ## <a name="syntax"></a>Синтаксис
 
-> @InStr([[положение]], строка1, строка2)
+> **\@InStr (** ⟦*положением*⟧ __,__ *строка1* __,__ *строка2* **)**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

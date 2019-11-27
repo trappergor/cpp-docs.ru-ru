@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4068
 ms.assetid: 96a7397a-4eab-44ab-b3bb-36747503f7e5
-ms.openlocfilehash: 1e0cb7229733e15afd87548a1b18b3f58a64c239
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba6e57fb954e0331e8eede5e7859fbeed5ce6424
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160864"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626933"
 ---
 # <a name="compiler-warning-level-1-c4068"></a>Предупреждение компилятора (уровень 1) C4068
 
@@ -19,7 +19,7 @@ ms.locfileid: "62160864"
 
 Компилятор проигнорировал нераспознанную директиву [pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md). Убедитесь, что директива **pragma** разрешена компилятором, который вы используете. При компиляции следующего примера будет выдано предупреждение C4068:
 
-```
+```cpp
 // C4068.cpp
 // compile with: /W1
 #pragma NotAValidPragmaName   // C4068, use valid name to resolve

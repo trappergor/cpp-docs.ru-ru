@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456961"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689258"
 ---
-# <a name="negativebinomialdistribution-class"></a>Класс negative_binomial_distribution
+# <a name="negative_binomial_distribution-class"></a>Класс negative_binomial_distribution
 
 Формирует отрицательное биномиальное распределение.
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*инттипе*\
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Инттипе* \
+Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает распределение, которое создает значения указанного пользователем целочисленного типа, или тип **int** , если он не указан, распределяется в соответствии с дискретной функцией вероятности неравномерного распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа, или тип **int** , если он не указан, распределяется в соответствии с дискретной функцией вероятности неравномерного распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Элементы `k()` свойств и `p()` возвращают текущие сохраненные значения параметров распределения *k* и *p* соответственно.
+Члены свойств `k()` и `p()` возвращают текущие сохраненные значения параметров распределения *k* и *p* соответственно.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -93,7 +93,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
 
 Подробные сведения о дискретной функции вероятности неравномерного распределения см. в статье Wolfram MathWorld ( [отрицательное биномиальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400516)).
 
@@ -232,16 +232,16 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*занят*\
+*k* \
 Параметр распределения `k`.
 
-*ш*\
+*p* \
 Параметр распределения `p`.
 
-*ParM*\
+*parm* \
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предварительные условия:** `0.0 < k` и `0.0 < p ≤ 1.0`
 
@@ -253,22 +253,22 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 Сохраняет параметры распределения.
 
-struct param_type { typedef negative_binomial_distribution`<`result_type> distribution_type; param_type(result_type k = 1, double p = 0.5); result_type k() const; double p() const;
+Структура param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; двойное p () const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Параметры
 
-*занят*\
+*k* \
 Параметр распределения `k`.
 
-*ш*\
+*p* \
 Параметр распределения `p`.
 
-*Правильно*\
+*справа* \
 Структура `param_type`, используемая для сравнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 **Предварительные условия:** `0.0 < k` и `0.0 < p ≤ 1.0`
 

@@ -1,5 +1,5 @@
 ---
-title: Класс Какцелератедецелератетранситион
+title: Класс CAccelerateDecelerateTransition
 ms.date: 11/04/2016
 f1_keywords:
 - CAccelerateDecelerateTransition
@@ -14,7 +14,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69507741"
 ---
-# <a name="cacceleratedeceleratetransition-class"></a>Класс Какцелератедецелератетранситион
+# <a name="cacceleratedeceleratetransition-class"></a>Класс CAccelerateDecelerateTransition
 
 Реализует переход между ускорением и замедлением.
 

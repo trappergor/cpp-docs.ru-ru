@@ -1,30 +1,30 @@
 ---
 title: .EXIT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .EXIT
 helpviewer_keywords:
 - .EXIT directive
 ms.assetid: 5f77c281-3d65-4174-83ea-34dcc7085ecf
-ms.openlocfilehash: 29af321582842a932f0788514f9ce12aa4c0ce53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c93265cad526ca3ce945c532f36113b57fcdae4a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398286"
 ---
-# <a name="exit"></a>.EXIT
+# <a name="exit-32-bit-masm"></a>. ВЫХОД (32-разрядный компилятор MASM)
 
-Создает код завершения.
+Создает код завершения. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> . EXIT [[выражение]]
+> **. EXIT** ⟦*выражение*⟧
 
 ## <a name="remarks"></a>Примечания
 
-Возвращает необязательные *выражение* оболочку.
+Возвращает необязательное *выражение* для оболочки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

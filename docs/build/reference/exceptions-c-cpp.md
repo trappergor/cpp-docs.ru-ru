@@ -1,6 +1,6 @@
 ---
-title: Исключения (C/C++)
-ms.date: 11/04/2016
+title: Коды исключений загрузки библиотек DLL (CC++/)
+ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f557fe736f45f8c3f5411d076a0be18f1d1b670e
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492922"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74243854"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
 
@@ -43,6 +43,6 @@ ms.locfileid: "69492922"
 
 Дополнительные сведения см. в разделе [определения структур и констант](structure-and-constant-definitions.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка ошибок и предупреждений](error-handling-and-notification.md)

@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SBYTE directive
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
-ms.openlocfilehash: e95da5c9567483597112bfde686fcfe451b67eb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a06f35d3a3c32ab9229b7a399552301b2219412
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217110"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394175"
 ---
 # <a name="sbyte-masm"></a>SBYTE (MASM)
 
-Выделяет и при необходимости инициализирует байт со знаком из хранилища для каждого `initializer`. Можно также использовать как спецификатор типа в любом является допустимым типом.
+Выделяет и при необходимости инициализирует для каждого *инициализатора*байт со знаком в хранилище. Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
 ## <a name="syntax"></a>Синтаксис
 
-> Имя SBYTEinitializer [[, инициализатор]]...
+> *имя*  **SBYTE** *инициализатор* ⟦ __,__ *initializer* ... ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
-[BYTE](../../assembler/masm/byte-masm.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)\
+[BYTE](../../assembler/masm/byte-masm.md)\
+[DB](../../assembler/masm/db.md)

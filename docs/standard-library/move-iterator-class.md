@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460220"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689285"
 ---
-# <a name="moveiterator-class"></a>Класс move_iterator
+# <a name="move_iterator-class"></a>Класс move_iterator
 
 Шаблон класса `move_iterator` является программой-оболочкой для итератора. Move_iterator предоставляет то же поведение, что и инкапсулируемый в него (хранящийся в нем) итератор, за исключением того, что оператор разыменования хранящегося итератора превращается в ссылку rvalue, что превращает копирование в перемещение. Дополнительные сведения о rvalues см. в разделе [Оператор объявления ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -37,9 +37,9 @@ ms.locfileid: "68460220"
 class move_iterator;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона описывает объект, поведение которого аналогично поведению итератора, кроме случаев, когда удаляется ссылка. Он хранит итератор произвольного доступа типа `Iterator`, доступный посредством функции-члена `base()`. Все операции с итератором `move_iterator` выполняются непосредственно в сохраненном итераторе, за исключением того, что результат `operator*` явным образом приводится к `value_type&&` для создания ссылки rvalue.
+Шаблон класса описывает объект, который ведет себя как итератор, за исключением случаев разыменования. Он хранит итератор произвольного доступа типа `Iterator`, доступный посредством функции-члена `base()`. Все операции с итератором `move_iterator` выполняются непосредственно в сохраненном итераторе, за исключением того, что результат `operator*` явным образом приводится к `value_type&&` для создания ссылки rvalue.
 
 Итератор `move_iterator` может выполнять операции, не определенные инкапсулированным итератором. Эти операции не следует использовать.
 
@@ -49,12 +49,12 @@ class move_iterator;
 |-|-|
 |[move_iterator](#move_iterator)|Конструктор для объектов типа `move_iterator`.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
 |[iterator_type](#iterator_type)|Синоним параметра шаблона `RandomIterator`.|
-|[iterator_category](#iterator_category)|Синоним более длинного выражения **TypeName** с тем же именем `iterator_category` определяет общие возможности итератора.|
+|[iterator_category](#iterator_category)|Синоним для более длинного выражения **TypeName** с тем же именем, `iterator_category` определяет общие возможности итератора.|
 |[value_type](#value_type)|Синоним для более длинного выражения **TypeName** с тем же именем, `value_type` описывает тип элементов итератора.|
 |[difference_type](#difference_type)|Синоним для более длинного выражения **TypeName** с тем же именем, `difference_type` описывает целочисленный тип, необходимый для выражения разности между элементами.|
 |[pointer](#pointer)|Синоним параметра шаблона `RandomIterator`.|
@@ -68,7 +68,7 @@ class move_iterator;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|оператора|Описание|
 |-|-|
 |[move_iterator::operator*](#op_star)|Возвращает `(reference)*base().`.|
 |[move_iterator::operator++](#op_add_add)|Увеличивает значение сохраненного итератора. Точное поведение определяется тем, является ли операция преинкрементной или постинкрементной.|
@@ -94,7 +94,7 @@ class move_iterator;
 RandomIterator base() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта функция-член возвращает сохраненный итератор.
 
@@ -106,7 +106,7 @@ RandomIterator base() const;
 typedef typename iterator_traits<RandomIterator>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот тип — синоним для признака итератора `typename iterator_traits<RandomIterator>::pointer`.
 
@@ -118,7 +118,7 @@ typedef typename iterator_traits<RandomIterator>::difference_type difference_typ
 typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_category;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот тип — синоним для признака итератора `typename iterator_traits<RandomIterator>::iterator_category`.
 
@@ -130,7 +130,7 @@ typedef typename iterator_traits<RandomIterator>::iterator_category  iterator_ca
 typedef RandomIterator iterator_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот тип является синонимом для параметра шаблона `RandomIterator`.
 
@@ -147,10 +147,10 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа* \
 Итератор, который требуется использовать в качестве сохраненного итератора.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый конструктор инициализирует сохраненный итератор с помощью его конструктора по умолчанию. Остальные конструкторы инициализируют сохраненный итератор с использованием `base.base()`.
 
@@ -164,14 +164,14 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*\
+*_Off* \
 Смещение, добавляемое к текущей позиции, для определения новой текущей позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает новый текущий элемент.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор добавляет *_Off* к сохраненному итератору. Затем возвращает `*this`.
 
@@ -185,7 +185,7 @@ move_iterator& operator-=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор вычисляет `*this += -_Off`. Затем возвращает `*this`.
 
@@ -200,7 +200,7 @@ move_iterator operator++(int);
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый (префиксный) оператор увеличивает сохраненный итератор. Затем возвращает `*this`.
 
@@ -216,7 +216,7 @@ move_iterator operator+(difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор возвращает `move_iterator(*this) +=` `_Off`.
 
@@ -230,7 +230,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор возвращает `(reference)*(*this + _Off)`.
 
@@ -245,7 +245,7 @@ move_iterator operator--();
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Первый оператор-член (предекрементный) уменьшает сохраненный итератор. Затем возвращает `*this`.
 
@@ -261,7 +261,7 @@ move_iterator operator-(difference_type _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор возвращает `move_iterator(*this) -= _Off`.
 
@@ -273,7 +273,7 @@ move_iterator operator-(difference_type _Off) const;
 reference operator*() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор возвращает `(reference)*base()`.
 
@@ -285,31 +285,31 @@ reference operator*() const;
 pointer operator->() const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Оператор возвращает `&**this`.
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Тип является `pointer` определением  типа, основанным на случайном `move_iterator`итераторе `RandomIterator` для, и может использоваться взаимозаменяемым.
+Тип `pointer` является **определением** типа, основанным на `RandomIterator` случайных итераторов для `move_iterator` и может использоваться взаимозаменяемым.
 
 ```cpp
 typedef RandomIterator  pointer;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Тип является синонимом `RandomIterator`.
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Тип является `reference` определением  типа, основанным `move_iterator`на `value_type&&` , и может использоваться в качестве взаимозаменяемого с `value_type&&`.
+Тип `reference` является **определением** типа, основанным на `value_type&&` для `move_iterator` и может использоваться взаимозаменяемым с `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот тип является синонимом `value_type&&`, который представляет собой ссылку rvalue.
 
@@ -321,7 +321,7 @@ typedef value_type&& reference;
 typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот тип — синоним для признака итератора `typename iterator_traits<RandomIterator>::value_type`.
 

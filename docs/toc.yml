@@ -111,6 +111,17 @@
           href: build/cmake-predefined-configuration-reference.md
     - name: "vcpkg: Диспетчер пакетов для\_C++"
       href: build/vcpkg.md
+    - name: Аналитика сборки C++
+      expanded: false
+      items:
+        - name: Начало работы с аналитикой сборки C++
+          href: build-insights/get-started-with-cpp-build-insights.md
+        - name: Основы Windows Performance Analyzer
+          href: build-insights/wpa-basics.md
+        - name: Справочник по vcperf.exe
+          href: build-insights/vcperf-reference.md
+        - name: Справочник по представлениям Windows Performance Analyzer
+          href: build-insights/wpa-views-reference.md
     - name: Файлы предкомпилированных заголовков
       href: build/creating-precompiled-header-files.md
     - name: Сборки выпуска C++
@@ -1104,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: Обработчики сбоев
                       href: build/reference/failure-hooks.md
-                    - name: Исключения (C/C++)
+                    - name: Коды исключений при загрузке библиотек DLL (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: Сохранение отложенно загружаемых импортированных элементов
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -1157,34 +1168,7 @@
                     - name: Образец файла makefile
                       href: build/reference/sample-makefile.md
                 - name: Блоки описания
-                  expanded: false
-                  items:
-                    - name: Блоки описания
-                      href: build/reference/description-blocks.md
-                    - name: Целевые объекты
-                      expanded: false
-                      items:
-                        - name: Целевые объекты
-                          href: build/reference/targets.md
-                        - name: Псевдоцелевые объекты
-                          href: build/reference/pseudotargets.md
-                        - name: Несколько целевых объектов
-                          href: build/reference/multiple-targets.md
-                        - name: Кумулятивные зависимости
-                          href: build/reference/cumulative-dependencies.md
-                        - name: Целевые объекты в нескольких блоках описания
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: Побочные эффекты зависимостей
-                          href: build/reference/dependency-side-effects.md
-                    - name: Зависимые элементы
-                      expanded: false
-                      items:
-                        - name: Зависимые элементы
-                          href: build/reference/dependents.md
-                        - name: Выводимые зависимости
-                          href: build/reference/inferred-dependents.md
-                        - name: Пути поиска для зависимых элементов
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Команды в файле makefile
                   expanded: false
                   items:
@@ -1410,6 +1394,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -2836,20 +2822,40 @@
 - name: Перенос и обновление кода C++
   expanded: false
   items:
-    - name: Руководство по переносу и обновлению Visual C++
+    - name: Руководство по переносу и обновлению Microsoft C++
       href: porting/visual-cpp-porting-and-upgrading-guide.md
+    - name: 'Обновление проектов, созданных в предыдущих версиях'
+      items:
+        - name: 'Обновление проектов, созданных в предыдущих версиях'
+          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+        - name: 'Общие сведения о возможных проблемах, возникающих при обновлении'
+          href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
+        - name: Обновление кода для универсальной среды выполнения
+          href: porting/upgrade-your-code-to-the-universal-crt.md
+        - name: Обновление WINVER и _WIN32_WINNT
+          href: porting/modifying-winver-and-win32-winnt.md
+        - name: Исправление зависимостей от внутренних компонентов библиотеки
+          href: porting/fix-your-dependencies-on-library-internals.md
+        - name: Проблемы при миграции с плавающей запятой
+          href: porting/floating-point-migration-issues.md
+        - name: Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов
+          href: porting/use-native-multi-targeting.md
+        - name: "Нерекомендуемые возможности C++ в Visual Studio\_2019"
+          href: porting/features-deprecated-in-visual-studio.md
+        - name: Сравнение VCBuild и MSBuild
+          href: porting/build-system-changes.md
+        - name: Перенос сторонних библиотек
+          href: porting/porting-third-party-libraries.md
+        - name: Перенос приложений для обработки данных
+          href: data/data-access-programming-mfc-atl.md
+    - name: Средства интегрированной среды разработки для обновления кода C++
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Журнал изменений Visual C++ 2003–2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: Новые возможности Visual C++ 2003–2015
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: "Совместимость на уровне двоичного кода на C++ между версиями\_2015 и 2017"
+    - name: Совместимость на уровне двоичного кода C++ 2015–2019
       href: porting/binary-compat-2015-2017.md
-    - name: 'Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)'
-      href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
-    - name: Перенос сторонних библиотек
-      href: porting/porting-third-party-libraries.md
-    - name: Перенос приложений для обработки данных
-      href: data/data-access-programming-mfc-atl.md
     - name: 'Перенос и обновление: примеры и конкретные случаи'
       items:
         - name: Примеры и конкретные случаи
@@ -2860,27 +2866,9 @@
           href: porting/porting-guide-com-spy.md
         - name: Руководство по переносу. Spy++
           href: porting/porting-guide-spy-increment.md
-    - name: 'Обновление проектов, созданных в предыдущих версиях'
-      items:
-        - name: 'Обновление проектов, созданных в предыдущих версиях'
-          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
-        - name: Обновление кода для универсальной среды выполнения
-          href: porting/upgrade-your-code-to-the-universal-crt.md
-        - name: Изменение WINVER и _WIN32_WINNT
-          href: porting/modifying-winver-and-win32-winnt.md
-        - name: Исправление зависимостей от внутренних компонентов библиотеки
-          href: porting/fix-your-dependencies-on-library-internals.md
-        - name: Проблемы при миграции с плавающей запятой
-          href: porting/floating-point-migration-issues.md
-        - name: Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов
-          href: porting/use-native-multi-targeting.md
-        - name: "Функции Visual C++, не рекомендуемые для использования в Visual Studio\_2019"
-          href: porting/features-deprecated-in-visual-studio.md
-        - name: Изменения системы сборки
-          href: porting/build-system-changes.md
-    - name: Знакомство с Visual C++ для пользователей UNIX
+    - name: Знакомство с Microsoft C++ для пользователей UNIX
       href: porting/introduction-to-visual-cpp-for-unix-users.md
-    - name: Перенос приложений из UNIX в Win32
+    - name: Запуск программ Linux в Windows
       href: porting/porting-from-unix-to-win32.md
     - name: Перенос на универсальную платформу Windows (C++)
       items:
@@ -2899,7 +2887,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
       href: security/developer-guidance-speculative-execution.md
-- name: Справочник
+- name: Ссылка
   expanded: false
   items:
     - name: Язык C/C++ и стандартные библиотеки
@@ -2969,7 +2957,7 @@
                           href: c-language/c-integer-constants.md
                         - name: Целочисленные типы
                           href: c-language/integer-types.md
-                        - name: Пределы целых чисел в C++
+                        - name: Пределы целых чисел в C и C++
                           href: c-language/cpp-integer-limits.md
                     - name: Символьные константы в C
                       expanded: false
@@ -3660,57 +3648,7 @@
             - name: Справочник по языку C++
               href: cpp/cpp-language-reference.md
             - name: Возвращение к C++ (современный C++)
-              expanded: false
-              items:
-                - name: Возвращение к C++ (современный C++)
-                  href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: "Система типов (современный\_C++)"
-                  expanded: false
-                  items:
-                    - name: "Система типов (современный\_C++)"
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Типы значений (современный C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Преобразования типов и безопасность типов (современный C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
-                - name: Единообразная инициализация и делегирование конструкторов
-                  href: cpp/uniform-initialization-and-delegating-constructors.md
-                - name: Управление временем существования и ресурсами объекта (современный C++)
-                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
-                - name: Собственные ресурсы объекта (RAII)
-                  href: cpp/objects-own-resources-raii.md
-                - name: Интеллектуальные указатели (современный C++)
-                  expanded: false
-                  items:
-                    - name: Интеллектуальные указатели (современный C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: Практическое руководство. Создание и использование экземпляров unique_ptr
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: Практическое руководство. Создание и использование экземпляров shared_ptr
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: Практическое руководство. Создание и использование экземпляров weak_ptr
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: Pimpl для инкапсуляции времени компиляции (современный C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-                - name: Контейнеры (современный C++)
-                  href: cpp/containers-modern-cpp.md
-                - name: Алгоритмы (современный C++)
-                  href: cpp/algorithms-modern-cpp.md
-                - name: Форматирование строк и ввода-вывода (современный C++)
-                  href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: Обработка ошибок и исключений (современный C++)
-                  expanded: false
-                  items:
-                    - name: Обработка ошибок и исключений (современный C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: Практическое руководство. Разработка с учетом безопасности исключений
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: Практическое руководство. Интерфейс между кодом с исключениями и без исключений
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-                - name: Переносимость на границах ABI (современный C++)
-                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
+              href: cpp/welcome-back-to-cpp-modern-cpp.md
             - name: Лексические соглашения
               expanded: false
               items:
@@ -3749,6 +3687,8 @@
                 - name: Объявления и определения
                   expanded: false
                   items:
+                    - name: Система типов C++
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: Объявления и определения
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: Общие сведения о деклараторах
@@ -3850,48 +3790,59 @@
                   href: cpp/alignof-and-alignas-cpp.md
                 - name: 'Тривиальные типы, стандартная раскладка и типы POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
-            - name: Фундаментальные типы
-              expanded: false
-              items:
-                - name: Фундаментальные типы
-                  href: cpp/fundamental-types-cpp.md
-                - name: Диапазоны типов данных
-                  href: cpp/data-type-ranges.md
-                - name: nullptr
-                  href: cpp/nullptr.md
-                - name: void
-                  href: cpp/void-cpp.md
-                - name: bool
-                  href: cpp/bool-cpp.md
-                - name: false
-                  href: cpp/false-cpp.md
-                - name: true
-                  href: cpp/true-cpp.md
-                - name: 'char, wchar_t, char16_t, char32_t'
-                  href: cpp/char-wchar-t-char16-t-char32-t.md
-                - name: '__int8, __int16, __int32, __int64'
-                  href: cpp/int8-int16-int32-int64.md
-                - name: __m64
-                  href: cpp/m64.md
-                - name: __m128
-                  href: cpp/m128.md
-                - name: __m128d
-                  href: cpp/m128d.md
-                - name: __m128i
-                  href: cpp/m128i.md
-                - name: '__ptr32, __ptr64'
-                  href: cpp/ptr32-ptr64.md
-                - name: Числовые пределы
+                - name: Система типов
                   expanded: false
                   items:
-                    - name: Числовые пределы
-                      href: cpp/numerical-limits-cpp.md
-                    - name: Пределы целых чисел
-                      href: cpp/integer-limits.md
-                    - name: Пределы значений с плавающей запятой
-                      href: cpp/floating-limits.md
+                    - name: Система типов
+                      href: cpp/cpp-type-system-modern-cpp.md
+                    - name: Типы значений
+                      href: cpp/value-types-modern-cpp.md
+                    - name: Преобразования типов и безопасность типов
+                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                    - name: Фундаментальные типы
+                      expanded: false
+                      items:
+                        - name: Фундаментальные типы
+                          href: cpp/fundamental-types-cpp.md
+                        - name: Диапазоны типов данных
+                          href: cpp/data-type-ranges.md
+                        - name: nullptr
+                          href: cpp/nullptr.md
+                        - name: void
+                          href: cpp/void-cpp.md
+                        - name: bool
+                          href: cpp/bool-cpp.md
+                        - name: false
+                          href: cpp/false-cpp.md
+                        - name: true
+                          href: cpp/true-cpp.md
+                        - name: 'char, wchar_t, char16_t, char32_t'
+                          href: cpp/char-wchar-t-char16-t-char32-t.md
+                        - name: '__int8, __int16, __int32, __int64'
+                          href: cpp/int8-int16-int32-int64.md
+                        - name: __m64
+                          href: cpp/m64.md
+                        - name: __m128
+                          href: cpp/m128.md
+                        - name: __m128d
+                          href: cpp/m128d.md
+                        - name: __m128i
+                          href: cpp/m128i.md
+                        - name: '__ptr32, __ptr64'
+                          href: cpp/ptr32-ptr64.md
+                        - name: Числовые пределы
+                          expanded: false
+                          items:
+                            - name: Числовые пределы
+                              href: cpp/numerical-limits-cpp.md
+                            - name: Пределы целых чисел
+                              href: cpp/integer-limits.md
+                            - name: Пределы значений с плавающей запятой
+                              href: cpp/floating-limits.md
                 - name: Стандартные преобразования
                   href: cpp/standard-conversions.md
+                - name: Преобразования типов и безопасность типов
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 'Встроенные операторы, приоритет и ассоциативность'
               expanded: false
               items:
@@ -3937,7 +3888,7 @@
                   href: cpp/logical-negation-operator-exclpt.md
                 - name: 'Оператор логического ИЛИ: ||'
                   href: cpp/logical-or-operator-pipe-pipe.md
-                - name: 'Операторы доступа к членам: . и ->'
+                - name: 'Операторы доступа к членам: . and ->'
                   href: cpp/member-access-operators-dot-and.md
                 - name: Операторы умножения и оператор модуля
                   href: cpp/multiplicative-operators-and-the-modulus-operator.md
@@ -4146,8 +4097,14 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: Инициализация классов и структур без конструкторов
+                - name: Инициализация фигурных скобок
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
+                - name: Управление временем жизни и ресурсами объекта (RAII)
+                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
+                - name: Идиома Pimpl для инкапсуляции времени компиляции
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+                - name: Переносимость на границах ABI
+                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
                 - name: Конструкторы
                   expanded: false
                   items:
@@ -4157,6 +4114,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: Конструкторы перемещения и операторы присваивания перемещением
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: Делегирующие конструкторы
+                      href: cpp/delegating-constructors.md
                 - name: Деструкторы
                   href: cpp/destructors-cpp.md
                 - name: Общие сведения о функциях-членах
@@ -4201,6 +4160,8 @@
                   href: cpp/special-member-functions.md
                 - name: Статические члены
                   href: cpp/static-members-cpp.md
+                - name: Классы C++ в качестве типов значений
+                  href: cpp/value-types-modern-cpp.md
                 - name: Пользовательские преобразования типов
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: Изменяемые элементы данных
@@ -4227,22 +4188,7 @@
                 - name: Лямбда-выражения constexpr
                   href: cpp/lambda-expressions-constexpr.md
             - name: Массивы
-              expanded: false
-              items:
-                - name: Массивы
-                  href: cpp/arrays-cpp.md
-                - name: Использование массивов
-                  href: cpp/using-arrays-cpp.md
-                - name: Инициализация массивов
-                  href: cpp/initializing-arrays.md
-                - name: Массивы в выражениях
-                  href: cpp/arrays-in-expressions.md
-                - name: Интерпретация оператора индекса
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: Косвенное обращение в типах массивов
-                  href: cpp/indirection-on-array-types.md
-                - name: Упорядочение массивов C++
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: Ссылки
               expanded: false
               items:
@@ -4263,41 +4209,56 @@
               items:
                 - name: Указатели
                   href: cpp/pointers-cpp.md
+                - name: Необработанные указатели
+                  href: cpp/raw-pointers.md
                 - name: Указатели с ключевыми словами const и volatile
                   href: cpp/const-and-volatile-pointers.md
                 - name: Операторы new и delete
                   href: cpp/new-and-delete-operators.md
+                - name: Смарт-указатели
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: Практическое руководство. Создание и использование экземпляров unique_ptr
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: Практическое руководство. Создание и использование экземпляров shared_ptr
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: Практическое руководство. Создание и использование экземпляров weak_ptr
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: Pimpl для инкапсуляции времени компиляции
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: Обработка исключений в С++
               expanded: false
               items:
                 - name: Обработка исключений в С++
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: Обработка исключений
+                - name: Современные рекомендации по C++
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: Практическое руководство. Разработка с учетом безопасности исключений
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: Практическое руководство. Интерфейс между кодом с исключениями и без исключений
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: 'Операторы try, throw и catch'
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Проверка блоков catch
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: Исключения и очистка стека
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: Спецификации исключений (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: Необработанные исключения C++
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: Сочетание исключений C (структурированные) и C++
                   expanded: false
                   items:
-                    - name: Обработка исключений
-                      href: cpp/cpp-exception-handling.md
-                    - name: 'Операторы try, throw и catch'
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Проверка блоков catch
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: Исключения и освобождение стека в C++
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: Спецификации исключений (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: Необработанные исключения C++
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: Сочетание исключений C (структурированные) и C++
-                      expanded: false
-                      items:
-                        - name: Сочетание исключений C (структурированные) и C++
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: Использование setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: Обработка структурированных исключений в C++
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: Использование setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: Обработка структурированных исключений в C++
+                      href: cpp/exception-handling-differences.md
                 - name: Обработка структурированных исключений (C/C++)
                   expanded: false
                   items:
@@ -4728,6 +4689,8 @@
               items:
                 - name: Препроцессор
                   href: preprocessor/preprocessor.md
+                - name: Обзор экспериментального препроцессора
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: Фазы трансляции
                   href: preprocessor/phases-of-translation.md
                 - name: Директивы препроцессора
@@ -4941,6 +4904,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: Встроенные объекты ARM
               href: intrinsics/arm-intrinsics.md
+            - name: Встроенные объекты ARM64
+              href: intrinsics/arm64-intrinsics.md
             - name: Список встроенных объектов x86
               href: intrinsics/x86-intrinsics-list.md
             - name: Список встроенных объектов x64 (amd64)
@@ -6057,7 +6022,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: String
+            - name: Строка
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6884,7 +6849,7 @@
                   href: c-runtime-library/reference/alloca.md
                 - name: _amsg_exit
                   href: c-runtime-library/reference/amsg-exit.md
-                - name: и
+                - name: and
                   href: c-runtime-library/reference/and.md
                 - name: and_eq
                   href: c-runtime-library/reference/and-eq.md
@@ -7004,7 +6969,7 @@
                   href: c-runtime-library/reference/clearerr.md
                 - name: clearerr_s
                   href: c-runtime-library/reference/clearerr-s.md
-                - name: часы
+                - name: clock
                   href: c-runtime-library/reference/clock.md
                 - name: 'clog, clogf, clogl'
                   href: c-runtime-library/reference/clog-clogf-clogl.md
@@ -7012,7 +6977,7 @@
                   href: c-runtime-library/reference/clog10-clog10f-clog10l.md
                 - name: _close
                   href: c-runtime-library/reference/close.md
-                - name: закрыть
+                - name: close
                   href: c-runtime-library/reference/posix-close.md
                 - name: '_Cmulcc, _FCmulcc, _LCmulcc'
                   href: c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md
@@ -7784,7 +7749,7 @@
                   href: c-runtime-library/reference/open-osfhandle.md
                 - name: or_eq
                   href: c-runtime-library/reference/or-eq.md
-                - name: или
+                - name: or
                   href: c-runtime-library/reference/or.md
                 - name: _pclose
                   href: c-runtime-library/reference/pclose.md
@@ -7846,7 +7811,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: чтение
+                - name: read
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8322,7 +8287,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: запись
+                - name: write
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -9821,8 +9786,10 @@
             - name: Программирование iostream
               expanded: false
               items:
-                - name: Программирование iostream
+                - name: iostream - программирование
                   href: standard-library/iostream-programming.md
+                - name: Форматирование строк и ввода-вывода
+                  href: text/string-and-i-o-formatting-modern-cpp.md
                 - name: Что такое поток
                   expanded: false
                   items:
@@ -10425,7 +10392,7 @@
                           href: parallel/concrt/reference/scheduler-worker-creation-error-class.md
                         - name: Класс SchedulerPolicy
                           href: parallel/concrt/reference/schedulerpolicy-class.md
-                        - name: simple_partitioner - класс
+                        - name: Класс simple_partitioner
                           href: parallel/concrt/reference/simple-partitioner-class.md
                         - name: Класс single_assignment
                           href: parallel/concrt/reference/single-assignment-class.md

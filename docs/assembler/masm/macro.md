@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860d538a2f461db1d5fd6bb24d078f644af2156f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202873"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397232"
 ---
 # <a name="macro"></a>MACRO
 
-Помечает блок макрос с именем *имя* и устанавливает *параметр* передается заполнители для аргументов, когда вызывается макрос.
+Помечает блок макроса *именем name* и устанавливает заполнители *параметров* для аргументов, передаваемых при вызове макроса.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *name* MACRO [[*parameter* [[:REQ | :=*default* | :VARARG]] ]] ...<br/>
-> *Инструкции*<br/>
-> ENDM [[*значение*]]
+> *имя***макроса** ⟦*параметр* ⟦ **: req** | : =*default* |  **: VARARG**⟧... ⟧\
+> *инструкции*\
+> **Ендм** ⟦*значение*⟧
 
 ## <a name="remarks"></a>Примечания
 
-Возвращает функцию макрос *значение* к вызывающей инструкции.
+Функция-макрос возвращает *значение* в вызывающую инструкцию.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

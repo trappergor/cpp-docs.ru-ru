@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@DataSize symbol'
 ms.assetid: c31dd6ab-0706-43ed-9a5d-024730f7931b
-ms.openlocfilehash: b2c300bf7c616184ae928b4d07d8ccb93d5d37bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18cafbe034dd34dde21871a6be7a75e54674b796
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166611"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399152"
 ---
-# <a name="datasize"></a>@DataSize
+# <a name="datasize"></a>Размер DataSize \@
 
-0 для **КРОШЕЧНЫЕ**, **НЕБОЛЬШОЙ**, **Средний**, и **НЕСТРУКТУРИРОВАННЫЙ** моделирует, 1 для **COMPACT** и  **БОЛЬШОЙ** моделей и 2 для **БОЛЬШОЙ** модели (уравнять числовые).
+0 для **мелких**, **малых**, **средних**и **плоских** моделей, 1 для **Compact** и **больших** моделей и 2 для **огромной** модели (числовой равенство).
 
 ## <a name="syntax"></a>Синтаксис
 
-> @DataSize
+> **Размер DataSize \@**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)<br/>
+[Справочник по символам](symbols-reference.md)

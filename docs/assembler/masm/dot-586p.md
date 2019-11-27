@@ -1,26 +1,26 @@
 ---
 title: .586P
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .586P
 helpviewer_keywords:
 - .586P directive
 ms.assetid: 90da2a7d-66f4-4073-b1a9-874de6e8f05d
-ms.openlocfilehash: 328610e93ec22f0dd93786ab8fd0028bf8eba938
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d12d180d43302044a9c3906ffd9b2d197b74b067
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204639"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398656"
 ---
-# <a name="586p"></a>.586P
+# <a name="586p-32-bit-masm"></a>.586P (32-разрядный компилятор MASM)
 
-Включает сборку всех инструкций (включая privileged) для процессора Pentium.
+Включает сборку всех инструкций (включая привилегированные) для процессора Pentium. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .586P
+> **.586P**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

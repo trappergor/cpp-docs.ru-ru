@@ -1,26 +1,26 @@
 ---
 title: .SEQ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .SEQ
 helpviewer_keywords:
 - .SEQ directive
 ms.assetid: 1f8bca31-e29d-4537-b9ca-f8463af75281
-ms.openlocfilehash: 790c7ee8eec300447caef96a8754ffc592422516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 545252885edef6ff83fca85366b2714211f96fc5
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178661"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397945"
 ---
-# <a name="seq"></a>.SEQ
+# <a name="seq-32-bit-masm"></a>. SEQ (32-разрядный MASM)
 
-Упорядочивает сегменты последовательно (по умолчанию порядок).
+Упорядочивает сегменты последовательно (порядок по умолчанию). (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .SEQ
+> **.SEQ**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452321"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687608"
 ---
-# <a name="numpunctbyname-class"></a>Класс numpunct_byname
+# <a name="numpunct_byname-class"></a>Класс numpunct_byname
 
-Производный класс шаблона, описывающий объект, который можно использовать в качестве аспекта `numpunct` для заданного языкового стандарта, для возможности форматирования и расстановки пунктуационных знаков в числовых и логических выражениях.
+Шаблон производного класса описывает объект, который можно использовать в качестве `numpunct` аспекта заданного языкового стандарта, который включает форматирование и пунктуацию числовых и логических выражений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Его поведение определяется [именованным](../standard-library/locale-class.md#name) языковым стандартом `_Locname`. Конструктор инициализирует свой базовый объект с [numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`).
 

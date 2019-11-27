@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4615
 ms.assetid: 7b107c01-0da2-4e01-8b40-93813e30b94c
-ms.openlocfilehash: 1032261c39e0a285ac686e09573161de3b46e0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c682b309cbabbaf97346e37038806d331f949ac
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324549"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052610"
 ---
 # <a name="compiler-warning-level-1-c4615"></a>Предупреждение компилятора (уровень 1) C4615
 
-\#в директиве pragma warning: неизвестный тип пользовательского предупреждения
+предупреждение \#pragma: неизвестный тип предупреждения пользователя
 
-Недопустимый спецификатор предупреждения использовался с **pragma** [предупреждение](../../preprocessor/warning.md). Чтобы устранить эту ошибку, используйте допустимый спецификатор предупреждения.
+В [предупреждении](../../preprocessor/warning.md) **pragma** использован недопустимый спецификатор предупреждения. Чтобы устранить эту ошибку, используйте допустимый спецификатор предупреждения.
 
 Следующий пример приводит к возникновению ошибки C4615:
 
-```
+```cpp
 // C4615.cpp
 // compile with: /W1 /LD
 #pragma warning(enable : 4401)   // C4615, 'enable' not valid specifier

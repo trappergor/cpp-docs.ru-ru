@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243358"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890092"
 ---
 # <a name="binder2nd-class"></a>Класс binder2nd
 
-Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
+Шаблон класса, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции путем привязки второго аргумента бинарной функции к заданному значению. Не рекомендуется использовать в C++ 11, удалено в C++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,24 +38,24 @@ class binder2nd
 
 ### <a name="parameters"></a>Параметры
 
-*Func*\
+\ *Func*
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
-*Правильно*\
+*справа* \
 Значение, к которому необходимо привязать второй аргумент объекта бинарной функции.
 
-*Слева*\
+*left* \
 Значение аргумента, которое адаптированный объект бинарной функции сравнивает с фиксированным значением второго аргумента.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект унарной функции, полученный в результате привязки второго аргумента объекта бинарной функции к значению *правой*.
+Объект унарной функции, полученный в результате привязки второго аргумента объекта бинарной функции к значению *right*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Класс шаблона сохраняет копию объекта бинарной функции _ *Func* в `op`и копия *правой* в `value`. Он определяет свою функцию-член `operator()` как возвращающий **op**(`left`, **значение**).
+Шаблон класса сохраняет копию объекта бинарной функции *Func* в `op`и копию *справа* в `value`. Он определяет свою функцию члена `operator()` как возвращаемый `op(left, value)`.
 
-Если `Func` — это объект типа `Operation` и c — константа, то [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) эквивалентен `binder2nd` конструктор класса `binder2nd` \<  **Операция**> (`Func`, `c`) и является более удобным.
+Если *Func* является объектом типа `Operation` и c является константой, то [bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` эквивалентен конструктору `binder2nd` класса `binder2nd<Operation>(func, c)`и более удобным.
 
 ## <a name="example"></a>Пример
 

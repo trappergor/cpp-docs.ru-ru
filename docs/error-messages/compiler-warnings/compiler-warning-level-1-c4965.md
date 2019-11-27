@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383862"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052236"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Предупреждение компилятора (уровень 1) C4965
 
-неявная упаковка целого числа 0; используйте nullptr или явное приведение
+Неявная рамка целого числа 0; Используйте nullptr или явное приведение
 
-Visual C++ поддерживает неявная упаковка-преобразование типов значений. Инструкцию, которая привела к нулевому назначению с помощью управляемых расширений для C++ теперь становится назначением с упакованным
+Визуальные C++ функции неявные упаковка-преобразование типов значений. Инструкция, которая привела к назначению NULL с помощью управляемых расширений C++ , теперь становится назначением в упакованное целое число.
 
 Дополнительные сведения см. в разделе [Упаковка](../../extensions/boxing-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ Visual C++ поддерживает неявная упаковка-преобр
 
 Следующий пример приводит к возникновению ошибки C4965.
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

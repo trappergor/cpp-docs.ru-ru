@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450527"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686461"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-Определяет классы шаблонов контейнеров set и multiset и их вспомогательные шаблоны.
+Определяет шаблоны классов контейнеров Set и мультинаборов и их вспомогательные шаблоны.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,9 +24,9 @@ ms.locfileid: "68450527"
 **Пространство имен:** std
 
 > [!NOTE]
-> Библиотека > `#include <initializer_list>` Set также использует инструкцию. \<
+> Библиотека \<set > также использует инструкцию `#include <initializer_list>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="operators"></a>Операторы
 

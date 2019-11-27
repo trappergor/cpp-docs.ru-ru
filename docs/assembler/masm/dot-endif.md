@@ -1,28 +1,28 @@
 ---
 title: .ENDIF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ENDIF
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: c80fca47b1168c63b40bbc47d410868820262645
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc09f72b272435b542ac7f6390a6b7ccf4d887c3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204352"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398467"
 ---
-# <a name="endif"></a>.ENDIF
+# <a name="endif-32-bit-masm"></a>. ENDIF (32-разрядный MASM)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .ENDIF
+> **.ENDIF**
 
 ## <a name="remarks"></a>Примечания
 
-См. в разделе [. Если](../../assembler/masm/dot-if.md).
+(только 32-разрядный MASM.) См [. раздел. Если](../../assembler/masm/dot-if.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

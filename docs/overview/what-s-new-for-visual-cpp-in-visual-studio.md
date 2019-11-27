@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552346"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754134"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Новые возможности C++ в Visual Studio
 
@@ -257,6 +257,10 @@ C++ для Android теперь по умолчанию равняется на 
 
 Набор инструментов компилятора MSVC в Visual Studio версии 15.7 теперь соответствует стандарту C++. Дополнительные сведения см. в статьях [Announcing: MSVC Conforms to the C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) (Объявление: MSVC соответствует стандарту C++) и [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
 
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 версии 15.8
+
+Параметр [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) компилятора позволяет включить новый экспериментальный препроцессор MSVC, который в конечном итоге будет соответствовать всем применимым стандартам C и C++. Дополнительные сведения см. в статье [MSVC experimental preprocessor overview](../preprocessor/preprocessor-experimental-overview.md) (Обзор экспериментального препроцессора MSVC).
+
 ### <a name="new-compiler-options"></a>Новые параметры компилятора
 
 - [/permissive-](../build/reference/permissive-standards-conformance.md): включение всех параметров компилятора, обеспечивающих строгое соответствие стандартам, и отключение большей части расширений от Майкрософт (но не `__declspec(dllimport)`, например). В Visual Studio 2017 версии 15.5 этот параметр включен по умолчанию.  Режим соответствия **/permissive-** включает поддержку двухфазного поиска имени. Дополнительные сведения см. в статье [Улучшения соответствия C++ в Visual Studio](cpp-conformance-improvements.md).
@@ -360,11 +364,11 @@ C++ для Android теперь по умолчанию равняется на 
 - Добавлены \<optional\>, \<variant\>, `shared_ptr::weak_type` и \<cstdalign\>.
 - Включено C++14 `constexpr` в `min(initializer_list)`, `max(initializer_list)`, и `minmax(initializer_list)`, и `min_element()`, `max_element()`, и `minmax_element()`.
 
-Дополнительные сведения см. в статье [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
+Дополнительные сведения см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md).
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 версия 15.3
 
-- Реализовано несколько дополнительных функций C++17. Дополнительные сведения см. в статье [Соответствие стандартам языка Visual C++](cpp-conformance-improvements.md#improvements_153).
+- Реализовано несколько дополнительных функций C++17. Дополнительные сведения см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](cpp-conformance-improvements.md#improvements_153).
 - Реализовано исправление P0602R0: variant и optional должны распространять тривиальность копирования и перемещения.
 - Стандартная библиотека теперь официально допускает отключение динамической RTTI с помощью параметра [/GR-](../build/reference/gr-enable-run-time-type-information.md). Для `dynamic_pointer_cast()` и `rethrow_if_nested()` изначально требуется `dynamic_cast`, поэтому стандартная библиотека теперь помечает их как `=delete` в параметре **/GR-** .
 - Даже если динамическая RTTI отключена через **/GR-** , статистическая RTTI (в форме `typeid(SomeType)`) все еще доступна и позволяет использовать несколько компонентов стандартной библиотеки. Стандартная библиотека теперь также поддерживает отключение этой возможности с использованием **/D\_HAS\_STATIC\_RTTI=0**. Этот флаг отключает также функции-члены `std::any`, `target()` и `target_type()` для `std::function` и дружественную функцию-член `get_deleter()` для `std::shared_ptr` и `std::weak_ptr`.
@@ -422,7 +426,7 @@ C++ для Android теперь по умолчанию равняется на 
 - `constexpr char_traits`
 - Рекомендации по удержанию для стандартной библиотеки
 
-Дополнительные сведения см. в статье [Соответствие стандартам языка Visual C++](../visual-cpp-language-conformance.md).
+Дополнительные сведения см. в статье [Таблица соответствия Microsoft Visual C++ стандартам языка](../visual-cpp-language-conformance.md).
 
 ### <a name="performance-and-throughput-fixes"></a>Повышение производительности и пропускной способности
 
@@ -570,7 +574,7 @@ C++ теперь поддерживает комбинацию клавиши CT
 
 - Дальнейшая настройка поддерживается посредством файла CMakeSettings.json, который находится в одной папке с файлом CMakeLists.txt.
 
-  ![Функция "Открыть папку" в Cmake](media/cmake-cpp.png "Функция \"Открыть папку\" в Cmake")
+  ![Функция "Открыть папку" в CMake](media/cmake-cpp.png "Функция "Открыть папку" в CMake")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 версия 15.3
 

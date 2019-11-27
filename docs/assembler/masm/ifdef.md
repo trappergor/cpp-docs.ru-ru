@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFDEF directive
 ms.assetid: d8fadaa9-2b9c-44d7-a9e9-b103d16904f7
-ms.openlocfilehash: 509bf82646e60aee1d3f7bd230c42c0ddf8f7116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f17812c36b8b6d208dd172dec2c288226b2ebbb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397423"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Предоставляет сборку, если *имя* ранее определенную метку, переменной или символ.
+Предоставляет сборку, если *имя* является ранее определенной меткой, переменной или символом.
 
 ## <a name="syntax"></a>Синтаксис
 
-> IFDEF-имя
+> *Имя* IFDEF
 
 ## <a name="remarks"></a>Примечания
 
-См. в разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.
+Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

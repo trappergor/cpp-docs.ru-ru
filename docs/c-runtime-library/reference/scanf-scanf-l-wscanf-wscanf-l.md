@@ -1,6 +1,6 @@
 ---
 title: scanf, _scanf_l, wscanf, _wscanf_l
-ms.date: 11/04/2016
+ms.date: 10/21/2019
 api_name:
 - _wscanf_l
 - scanf
@@ -43,16 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948835"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778322"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Считывает отформатированные данные из стандартного входного потока. Существуют более безопасные версии этих функций; см. раздел [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
+
+> [!NOTE] 
+> В Visual Studio 2015 семейство функций `printf` и `scanf` было объявлено как **встроенное** и перемещено в заголовки `<stdio.h>` и `<conio.h>`. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в [разделе C++ журнал изменений Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -96,12 +99,12 @@ int _wscanf_l(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция **scanf** считывает данные из стандартного входного потока **stdin** и записывает данные в расположение, заданное *аргументом*. Каждый *аргумент* должен быть указателем на переменную типа, которая соответствует спецификатору типа в *формате*. Если копирование производится между перекрывающимися строками, поведение не определено.
 
 > [!IMPORTANT]
-> При чтении строки с помощью **scanf**всегда указывайте ширину для формата **% s** (например, **"% 32"** вместо **"% s"** ); в противном случае входные данные неправильного формата могут легко вызвать переполнение буфера. Кроме того, рекомендуется использовать [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) или [fgets](fgets-fgetws.md).
+> При чтении строки с помощью **scanf**всегда указывайте ширину для формата **% s** (например, **"%32"** вместо **"% s"** ); в противном случае входные данные неправильного формата могут легко вызвать переполнение буфера. Кроме того, рекомендуется использовать [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) или [fgets](fgets-fgetws.md).
 
 **wscanf** — это версия **scanf**для расширенных символов; Аргумент *формата* для **wscanf** является строкой расширенных символов. поведение **wscanf** и **scanf** идентично, если поток открыт в режиме ANSI. **scanf** в настоящее время не поддерживает входные данные из потока Юникода.
 
@@ -123,7 +126,7 @@ int _wscanf_l(
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

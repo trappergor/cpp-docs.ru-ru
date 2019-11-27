@@ -1,26 +1,26 @@
 ---
 title: .486P
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .486P
 helpviewer_keywords:
 - .486P directive
 ms.assetid: ad1ff7a8-18e8-47cd-8e3b-dfd57a0ca370
-ms.openlocfilehash: f002afda9882b5c6e389dcd760bc7377861cbbcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5af95920e652bc48df7960dc2c1e984491f8151f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185644"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398684"
 ---
-# <a name="486p"></a>.486P
+# <a name="486p-32-bit-masm"></a>.486P (32-разрядный компилятор MASM)
 
-Включает сборку всех инструкций (включая privileged) 80486 процессора.
+Включает сборку всех инструкций (включая привилегированные) для процессора 80486. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .486P
+> **.486P**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

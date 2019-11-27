@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: e63d7cb85ad5379adcc1beea3c3c96eff0d91339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e04cd761a7456c7337669822be87e8e5da8e805b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184545"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397338"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-Операции вставки исходного кода из исходного файла, указанного *filename* в текущий файл исходного кода во время сборки.
+Вставляет исходный код из исходного файла, заданного параметром *filename* , в текущий исходный файл во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
-> ВКЛЮЧАЕМОГО файла
+> **Включить** *имя файла*
 
 ## <a name="remarks"></a>Примечания
 
-*Filename* должны заключаться в угловые скобки, если он включает обратную косую черту, точка с запятой, больше-символ, менее-чем символ, одинарной кавычки или двойные кавычки.
+*Имя файла* должно быть заключено в угловые скобки, если оно содержит обратную косую черту, точку с запятой, символ "больше чем", символ "меньше", одиночную кавычку или двойную кавычку.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

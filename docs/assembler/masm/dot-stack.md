@@ -1,26 +1,26 @@
 ---
 title: .STACK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STACK
 helpviewer_keywords:
 - .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-ms.openlocfilehash: f97f10155894a86c9ddcd4cf8633712c458be386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aabb2fc1267277aded4802fc8e1992f6a5c78ced
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178635"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397898"
 ---
-# <a name="stack"></a>.STACK
+# <a name="stack-32-bit-masm"></a>. СТЕК (32-разрядный MASM)
 
-При использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md), определяет сегмент стека (с именем сегмента стека). Необязательный `size` указывает число байтов для стека (по умолчанию 1024). `.STACK` Директива автоматически закрывает ее стека.
+При использовании с [. MODEL](../../assembler/masm/dot-model.md)определяет сегмент стека (с **стеком**имен сегментов). Необязательный *Размер* определяет число байтов для стека (по умолчанию 1 024). Объект **.** Директива Stack автоматически закрывает оператор Stack. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> . СТЕК [[размер]]
+> **. СТЕК** ⟦*Размер*⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](directives-reference.md)

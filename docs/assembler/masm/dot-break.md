@@ -1,26 +1,26 @@
 ---
 title: .BREAK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .BREAK
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: ebf5bc74eb8e639d97762b64a15d3049b898160b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4692e38cbbdda4ad09bdfa248c9bc386c27dd3d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185497"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398585"
 ---
-# <a name="break"></a>.BREAK
+# <a name="break-32-bit-masm"></a>. BREAK (32-разрядный MASM)
 
-Создает код для завершения [. ХОТЯ](../../assembler/masm/dot-while.md) или [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md) блокировать, если *условие* имеет значение true.
+Создает код для завершения [. WHILE](../../assembler/masm/dot-while.md) или [. Повтор](../../assembler/masm/dot-repeat.md) блока, если *условие* истинно. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> . ПРЕРВАТЬ [[. Условие IF]]
+> **. Прервать** ⟦ **.**  *Условие*if ⟧
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)

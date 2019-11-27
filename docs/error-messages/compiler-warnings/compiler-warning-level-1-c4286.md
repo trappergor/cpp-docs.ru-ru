@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4286
 ms.assetid: 93eadd6c-6f36-413b-ba91-c9aa2314685a
-ms.openlocfilehash: be02d330678eaab7f538ed092641f957bdcb01b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed2e6c10e35e53c6a67de9fecfce5da5ae429b93
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207073"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626674"
 ---
 # <a name="compiler-warning-level-1-c4286"></a>Предупреждение компилятора (уровень 1) C4286
 
-«тип1»: перехвачено базовым классом («тип2») в строке с номером
+"тип1": перехватывается базовым классом ("тип2") в номере строки
 
-Указанный тип исключения обрабатывается предыдущим обработчиком. Тип второго перехвата является производным от типа первого. Исключения для базового класса перехватывать исключения для производного класса.
+Указанный тип исключения обрабатывается предыдущим обработчиком. Тип второго перехвата является производным от типа первого. Исключения для базового класса перехватывают исключения для производного класса.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 //C4286.cpp
 // compile with: /W1
 #include <eh.h>

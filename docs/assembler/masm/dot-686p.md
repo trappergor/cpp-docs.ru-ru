@@ -1,26 +1,26 @@
 ---
 title: .686P
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .686P
 helpviewer_keywords:
 - .686P directive
 ms.assetid: 06d9a9bf-50b1-4eed-b4a3-86b256c71b48
-ms.openlocfilehash: 6e37107b76ef1cfea787147dc32725a36fee52f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77cb829df13dafebe6ad839b6af14c7c47870adb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206273"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398610"
 ---
-# <a name="686p"></a>.686P
+# <a name="686p-32-bit-masm"></a>.686P (32-разрядный компилятор MASM)
 
-Включает сборку всех инструкций (включая privileged) для процессора Pentium Pro.
+Включает сборку всех инструкций (включая привилегированные) для процессора Pentium Pro. (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
-> .686P
+> **.686P**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)<br/>
+[Справочник по директивам](../../assembler/masm/directives-reference.md)
