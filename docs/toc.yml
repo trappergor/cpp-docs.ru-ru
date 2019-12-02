@@ -2887,7 +2887,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
       href: security/developer-guidance-speculative-execution.md
-- name: Ссылка
+- name: Справочник
   expanded: false
   items:
     - name: Язык C/C++ и стандартные библиотеки
