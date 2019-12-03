@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400855"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683323"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>Предупреждение компилятора (уровень 4) C4336
 
-Импорт типов библиотеки «type_lib1» перед импортом «type_lib2»
+импортировать библиотеку типов "type_lib1" для перекрестных ссылок перед импортом "type_lib2"
 
-Ссылка на библиотеку типов с [#import](../../preprocessor/hash-import-directive-cpp.md) директива. Тем не менее, библиотека типов содержит ссылку на другую библиотеку типов, который не был указан с `#import`. TLB-файл другой найден компилятором.
+Ссылка на библиотеку типов была указана с помощью директивы [#import](../../preprocessor/hash-import-directive-cpp.md) . Однако библиотека типов содержала ссылку на другую библиотеку типов, на которую нет ссылок в `#import`. Этот файл TLB был найден компилятором.
 
-Две указанные библиотеки типов на диск, созданный из следующих двух файлах (скомпилированный с midl.exe):
+При наличии двух библиотек типов на диске, созданных из следующих двух файлов (скомпилированных с помощью MIDL. exe):
 
 ```
 // c4336a.idl
@@ -34,7 +34,7 @@ library c4336aLib
 };
 ```
 
-Второй библиотеки типов:
+Вторая библиотека типов:
 
 ```
 // c4336b.idl
@@ -52,7 +52,7 @@ library C4336bLib
 
 Следующий пример приводит к возникновению ошибки C4336:
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

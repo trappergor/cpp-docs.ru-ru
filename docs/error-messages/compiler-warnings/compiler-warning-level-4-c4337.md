@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400842"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683306"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>Предупреждение компилятора (уровень 4) C4337
 
-Библиотека типов «typelib1» в «typelib2» автоматически импортируется
+Библиотека типов "typelib1" с перекрестными ссылками в "typelib2" автоматически импортируется
 
-Атрибут auto_search [директиву #import](../../preprocessor/hash-import-directive-cpp.md) для неявно импорта библиотеки типов.
+Атрибут auto_search [директивы #import](../../preprocessor/hash-import-directive-cpp.md) вызывал неявное импортирование библиотеки типов.
 
-Две указанные библиотеки типов на диск, созданный из следующих двух файлах (скомпилированный с midl.exe):
+При наличии двух библиотек типов на диске, созданных из следующих двух файлов (скомпилированных с помощью MIDL. exe):
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-и затем второй IDL-файла,
+а второй IDL-файл —
 
 ```
 // C4337b.idl
@@ -60,7 +60,7 @@ library C4337bLib
 
 Следующий пример приводит к возникновению ошибки C4337:
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337
