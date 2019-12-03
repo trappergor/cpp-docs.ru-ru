@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220994"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683184"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>Предупреждение компилятора (уровень 4) C4512
 
@@ -29,15 +29,15 @@ ms.locfileid: "62220994"
 
 - Явным образом определить оператор назначения для класса.
 
-- Удалить **const** или ссылочный оператор из элемента данных в классе.
+- Удалите **const** или ссылочный оператор из элемента данных в классе.
 
-- Используйте директиву #pragma [предупреждение](../../preprocessor/warning.md) инструкцию, чтобы отключить предупреждение.
+- Для подавления предупреждения используйте инструкцию #pragma [warning](../../preprocessor/warning.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4512.
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

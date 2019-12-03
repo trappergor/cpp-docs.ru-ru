@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-ms.openlocfilehash: 61a6d3090355c9bda8aa11c041b302e4ec77ec8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc5127f8d7ef868903f8a26624f2d1dc54057a4c
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391547"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683252"
 ---
 # <a name="compiler-warning-level-4-c4400"></a>Предупреждение компилятора (уровень 4) C4400
 
-«Тип»: квалификаторы const или volatile для этого типа не поддерживаются.
+"тип": квалификаторы Const или volatile для этого типа не поддерживаются
 
-[Const](../../cpp/const-cpp.md)и [volatile](../../cpp/volatile-cpp.md)квалификаторы не будет работать с переменными типов среды выполнения.
+Квалификаторы [const](../../cpp/const-cpp.md)и [volatile](../../cpp/volatile-cpp.md)не будут работать с переменными типов среды CLR.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4400.
 
-```
+```cpp
 // C4400.cpp
 // compile with: /clr /W4
 // C4401 expected

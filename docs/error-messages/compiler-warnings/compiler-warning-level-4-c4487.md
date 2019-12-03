@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-ms.openlocfilehash: 231482547856fc07d43ecfb859b31c2ece49fc5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1583da44368225eabd8181be970f69f6582111e1
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207008"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682984"
 ---
 # <a name="compiler-warning-level-4-c4487"></a>Предупреждение компилятора (уровень 4) C4487
 
-«невиртуальному»: соответствует унаследованного невиртуальному методу «базового класса», но не помечен явно как «new»
+"derived_class_function": соответствует унаследованному невиртуальному методу "base_class_function", но не помечен явно как "New"
 
-Функция в производном классе имеет ту же сигнатуру, как функция невиртуальный базовый класс. C4487 напомнит о том, что функция производного класса не переопределяет функции базового класса. Явным образом пометить функция производного класса как `new` Чтобы устранить это предупреждение.
+Функция в производном классе имеет ту же сигнатуру, что и Невиртуальная функция базового класса. C4487 напоминает, что функция производного класса не переопределяет функцию базового класса. Чтобы устранить это предупреждение, явно пометьте функцию производного класса как `new`.
 
-Дополнительные сведения см. в разделе [new (новый слот в vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [New (новый слот в таблице vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C4487.
 
-```
+```cpp
 // C4487.cpp
 // compile with: /W4 /clr
 using namespace System;
