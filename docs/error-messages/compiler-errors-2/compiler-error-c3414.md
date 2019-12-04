@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3414
 ms.assetid: 715f5432-b509-4f8f-84f5-e1463bac490f
-ms.openlocfilehash: 86ed40f31ae17724700e9d2c68950027d0eefb69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1e6913d108d0e5519eac6399ed83ac057da9e2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173414"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742942"
 ---
 # <a name="compiler-error-c3414"></a>Ошибка компилятора C3414
 
-«член»: не удается определить импортированную функцию-член
+"член": не удается определить импортированную функцию элемента
 
-Член был определен в коде, который также определяется в сборке, на которую указывает ссылка.
+Элемент был определен в коде, который также определен в сборке, на которую указывает ссылка.
 
 Следующий пример приводит к возникновению ошибки C3414:
 
-```
+```cpp
 // C3414a2.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,7 +32,7 @@ public:
 
 затем:
 
-```
+```cpp
 // C3414b2.cpp
 // compile with: /clr
 #using <C3414a2.dll>
