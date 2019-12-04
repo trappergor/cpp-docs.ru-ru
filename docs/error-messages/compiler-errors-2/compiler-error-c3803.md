@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3803
 ms.assetid: bad5fb9a-ed9a-4c15-96e7-cf06e200a50d
-ms.openlocfilehash: f6c255ec18d6dcf94f3ec022f09b173c2c66a1dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771530c2d05d378b86732938aa7a2b7881608446
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400101"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755308"
 ---
 # <a name="compiler-error-c3803"></a>Ошибка компилятора C3803
 
-«свойство»: свойство имеет тип, который несовместим с одним из его методов доступа «метод_доступа»
+"свойство": свойство имеет тип, несовместимый с одним из его методов доступа
 
-Тип свойства, определенные с помощью [свойство](../../cpp/property-cpp.md) совпадает с типом возвращаемого значения для одного из ее функций метода доступа.
+Тип свойства, определенного [свойством](../../cpp/property-cpp.md) , не соответствует возвращаемому типу для одной из ее функций доступа.
 
 Следующий пример приводит к возникновению ошибки C3803:
 
-```
+```cpp
 // C3803.cpp
 struct A
 {

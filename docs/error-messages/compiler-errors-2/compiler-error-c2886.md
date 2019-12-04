@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-ms.openlocfilehash: 2fa7450f03505501c2c4a45023dbb6a86937bb9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a64457c84a48c73ad6714da01e48d41f3cc92efb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388817"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748727"
 ---
 # <a name="compiler-error-c2886"></a>Ошибка компилятора C2886
 
-«класс::идентификатор»: символ не может использоваться в с помощью объявление члена
+"класс:: идентификатор": символ не может использоваться в объявлении с помощью-объявлением члена
 
-Объект `using` объявлении используется символ, например имя пространства имен. Объект `using` объявления предназначены для объявления членов базового класса.
+В объявлении `using` используется символ, например имя пространства имен. Объявление `using` предназначено для объявления членов базового класса.
 
 Следующий пример приводит к возникновению ошибки C2886:
 
-```
+```cpp
 // C2886.cpp
 // compile with: /c
 namespace Z {

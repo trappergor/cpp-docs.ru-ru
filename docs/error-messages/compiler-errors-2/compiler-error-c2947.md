@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2947
 ms.assetid: 6c056f62-ec90-4883-8a67-aeeb6ec13546
-ms.openlocfilehash: 3738c257192134eedb8554b0d875023862441416
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7056c13edca534701ffe82f0169897ea804f40d7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227220"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755360"
 ---
 # <a name="compiler-error-c2947"></a>Ошибка компилятора C2947
 
-ожидается ">" для завершения конструкции, обнаружен «синтаксис»
+Ожидается ">" для завершения конструкции, обнаружен "синтаксис"
 
-Список аргументов универсального класса или шаблона могут не были завершены правильно.
+Возможно, список аргументов универсального типа или шаблона не был корректно завершен.
 
-C2947 также могут быть вызваны синтаксических ошибок.
+C2947 также может формироваться с помощью синтаксических ошибок.
 
 Следующий пример приводит к возникновению ошибки C2947:
 
-```
+```cpp
 // C2947.cpp
 // compile with: /c
 template <typename T>=   // C2947
