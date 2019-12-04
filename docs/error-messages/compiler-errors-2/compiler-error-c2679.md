@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
-ms.openlocfilehash: de5613c306eb12bc11d45e868f502ca04d0a62e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b9238493e7925f2786df2acb7ecad80eb6ca2eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386828"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760326"
 ---
 # <a name="compiler-error-c2679"></a>Ошибка компилятора C2679
 
-бинарный «оператор»: не найден оператор, принимающий правый операнд типа «type» (или отсутствует приемлемое преобразование отсутствует)
+binary "оператор": не найден оператор, принимающий правый операнд типа "тип" (или приемлемое преобразование отсутствует)
 
 Чтобы использовать этот оператор, необходимо перегрузить его для указанного типа или определить преобразование в тип, для которого определен оператор.
 
 Следующий пример приводит к возникновению ошибки C2679:
 
-```
+```cpp
 // C2679.cpp
 class C {
 public:

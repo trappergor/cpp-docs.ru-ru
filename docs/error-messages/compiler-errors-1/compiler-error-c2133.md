@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2133
 ms.assetid: 8942f9e8-9818-468f-97db-09dbd124fcae
-ms.openlocfilehash: 68672ae76024d3d09d738d997c485a3205c7dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b51b556ea576e02b85a5c2ee5032909af39c7b2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397579"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758441"
 ---
 # <a name="compiler-error-c2133"></a>Ошибка компилятора C2133
 
-«Идентификатор»: Неизвестный размер
+"идентификатор": неизвестный размер
 
-Безразмерный массив объявляется как член класса, структуры, объединения или перечисления. Параметр /Za (ANSI C) не поддерживает массивы без указанного размера элементов.
+Неразмерный массив объявляется как член класса, структуры, объединения или перечисления. Параметр/Za (ANSI C) не допускает неразмерных массивов элементов.
 
 Следующий пример приводит к возникновению ошибки C2133:
 
-```
+```cpp
 // C2133.cpp
 // compile with: /Za
 struct X {
@@ -31,7 +31,7 @@ struct X {
 
 Возможное решение
 
-```
+```cpp
 // C2133b.cpp
 // compile with: /c
 struct X {

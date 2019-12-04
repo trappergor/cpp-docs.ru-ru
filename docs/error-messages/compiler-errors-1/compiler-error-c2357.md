@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302037"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759923"
 ---
 # <a name="compiler-error-c2357"></a>Ошибка компилятора C2357
 
-«Идентификатор»: должна быть функцией типа «тип»
+"идентификатор": должен быть функцией типа "тип"
 
-Код объявляет версию `atexit` функцию, которая соответствует версии, объявленной внутренне компилятором. Объявите `atexit` следующим образом:
+Код объявляет версию функции `atexit`, которая не соответствует версии, объявленной внутри компилятора. Объявите `atexit` следующим образом:
 
 ```
 int __cdecl atexit(void (__cdecl *)());
@@ -27,7 +27,7 @@ int __cdecl atexit(void (__cdecl *)());
 
 Следующий пример приводит к возникновению ошибки C2357:
 
-```
+```cpp
 // C2357.cpp
 // compile with: /c
 // C2357 expected
