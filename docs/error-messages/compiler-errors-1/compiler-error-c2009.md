@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: d2216b3fe990109828492fb2b2055e9425c1e306
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361912"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752448"
 ---
 # <a name="compiler-error-c2009"></a>Ошибка компилятора C2009
 
 повторное использование формального параметра макроса "идентификатор"
 
-Список формальных параметров макроопределения использует идентификатор более одного раза. Идентификаторы в списке параметров макроса должны быть уникальными.
+Список формальных параметров в определении макроса использует идентификатор более одного раза. Идентификаторы в списке параметров макроса должны быть уникальными.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2009:
 
-```
+```cpp
 // C2009.cpp
 #include <stdio.h>
 
@@ -39,7 +39,7 @@ int main()
 
 Возможное решение
 
-```
+```cpp
 // C2009b.cpp
 #include <stdio.h>
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3113
 ms.assetid: 3afdc668-b29e-474e-9ea3-aa027d42db7c
-ms.openlocfilehash: b8edd31db87587887d9e96522802ee9091caab91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 067e8b14a0123691ee6368dccaa3ca3f5c763413
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404134"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760791"
 ---
 # <a name="compiler-error-c3113"></a>Ошибка компилятора C3113
 
-«structure» не может быть вложенных или универсальных
+"Structure" не может быть шаблоном или универсальным
 
-Была предпринята попытка создания шаблона класса или класса универсального интерфейса или перечисления.
+Предпринята попытка сделать шаблон класса или универсальный класс из интерфейса или перечисления.
 
 Следующий пример приводит к возникновению ошибки C3113:
 
-```
+```cpp
 // C3113.cpp
 // compile with: /c
 template <class T>

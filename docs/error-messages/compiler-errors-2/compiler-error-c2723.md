@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2723
 ms.assetid: 86925601-2297-4cfd-94e2-2caf27c474c4
-ms.openlocfilehash: bc07a99f12ed0e447427990969e54f7f3d3d3b7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9b169f856dba7a76e5f67e1980c4ca47ba912de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383026"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737456"
 ---
 # <a name="compiler-error-c2723"></a>Ошибка компилятора C2723
 
@@ -21,7 +21,7 @@ function: недопустимый описатель specifier в опреде�
 
 В следующем примере показано возникновение ошибки C2723 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C2723.cpp
 struct X {
    virtual void f();

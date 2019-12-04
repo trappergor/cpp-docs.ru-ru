@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3640
 ms.assetid: fcc56894-0f98-48af-8561-3bf7c7b2b93f
-ms.openlocfilehash: 5d9becbdfad2afc8940a9e1ded08a15842607e4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f353aff42afdee649104d9f578c9061d236d1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385931"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742487"
 ---
 # <a name="compiler-error-c3640"></a>Ошибка компилятора C3640
 
-«член»: член адресуемая или виртуальная функция локального класса должна быть определена
+"член": необходимо определить ссылочную или виртуальную функцию-член локального класса
 
-Для компилятора требуются определенные функции должны быть определены.
+Компилятор требует, чтобы были определены определенные функции.
 
-В следующем примере возникает ошибка C3640:
+Следующий пример приводит к возникновению ошибки C3640:
 
-```
+```cpp
 // C3640.cpp
 void f()
 {

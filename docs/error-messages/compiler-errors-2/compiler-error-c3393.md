@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f6952de20c27a811b85694ae13892eff9231f83
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328670"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757544"
 ---
 # <a name="compiler-error-c3393"></a>Ошибка компилятора C3393
 
 синтаксическая ошибка в предложении ограничения: "идентификатор" не является типом
 
-Идентификатор, переданный в ограничение, которое должно быть типом, не является типом.  Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Идентификатор, переданный в ограничение, которое должно быть типом, не является типом.  Дополнительные сведения см. в статье [Constraints on Generic Type Parameters (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) (Ограничения, применяемые к параметрам универсальных типов (C++/CLI)).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3393:
 
-```
+```cpp
 // C3393.cpp
 // compile with: /clr /c
 void MyInterface() {}

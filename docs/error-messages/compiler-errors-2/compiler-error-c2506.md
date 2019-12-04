@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
-ms.openlocfilehash: 02f0a81204c4bc1c41111d32bae1c6946dee09ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 593fbbc6b561e6390624aa79af14dc665a552990
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164869"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746842"
 ---
 # <a name="compiler-error-c2506"></a>Ошибка компилятора C2506
 
-«член»: «__declspec(модификатор)» не может применяться к этому символу
+"член": "__declspec (модификатор)" не может применяться к этому символу
 
-Для статических членов управляемого класса нельзя объявлять на уровне процесса или на уровне домена приложения.
+Для статических членов управляемого класса нельзя объявлять для каждого процесса или для AppDomain.
 
 Дополнительные сведения см. в разделе [appdomain](../../cpp/appdomain.md) .
 
@@ -25,7 +25,7 @@ ms.locfileid: "62164869"
 
 Следующий пример приводит к возникновению ошибки C2506.
 
-```
+```cpp
 // C2506.cpp
 // compile with: /clr /c
 ref struct R {

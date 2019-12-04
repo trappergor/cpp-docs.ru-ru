@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393601"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745009"
 ---
 # <a name="compiler-error-c2392"></a>Ошибка компилятора C2392
 
-«метод1»: ковариантные возвращаемые типы не поддерживаются в управляемых или WinRTtypes, в противном случае «метод2» был бы переопределен
+"Method1": типы ковариантных возвращаемых типов не поддерживаются в управляемых или Винрттипес, в противном случае "Method2" будет переопределен
 
-Ковариантные типы возвращаемого значения недопустимы для функций-членов среды выполнения Windows или при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) параметр.
+Ковариантные возвращаемые типы не допускаются для среда выполнения Windows функций-членов или при компиляции с параметром [/CLR (компиляция среды CLR)](../../build/reference/clr-common-language-runtime-compilation.md) .
 
 ## <a name="example"></a>Пример
 
 В следующем примере показано возникновение ошибки C2392 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

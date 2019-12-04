@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187910"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760001"
 ---
 # <a name="compiler-error-c2348"></a>Ошибка компилятора C2348
 
-«имя_типа»: не является агрегированным в стиле C, невозможно экспортировать во внедренный IDL
+"имя типа": не является статистическим выражением в стиле C, не может быть экспортировано во внедренный IDL
 
-Чтобы поместить `struct` в IDL-файл с [Экспорт](../../windows/export.md) атрибут, `struct` должен содержать только данные.
+Чтобы поместить `struct` в IDL-файл с атрибутом [Export](../../windows/export.md) , `struct` должны содержать только данные.
 
 Следующий пример приводит к возникновению ошибки C2348:
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

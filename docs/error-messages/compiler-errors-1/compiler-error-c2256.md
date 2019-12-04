@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2256
 ms.assetid: 171fa2bc-8c72-49cd-afe5-d723b7acd3c5
-ms.openlocfilehash: 56c4df338feb2c0f406835c1ef2ffeeb7caf8bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b362a236953701278c57d2b738a6303e83b7637c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758818"
 ---
 # <a name="compiler-error-c2256"></a>Ошибка компилятора C2256
 
-Недопустимое использование спецификатора friend для «function»
+Недопустимое использование спецификатора Friend в функции "Function"
 
-Деструктор или конструктор не может быть указан как [friend](../../cpp/friend-cpp.md).
+Деструктор или конструктор не может быть указан как [дружественный](../../cpp/friend-cpp.md).
 
 Следующий пример приводит к возникновению ошибки C2256:
 
-```
+```cpp
 // C2256.cpp
 // compile with: /c
 class C {

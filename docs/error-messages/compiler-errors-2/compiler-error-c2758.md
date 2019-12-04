@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2758
 ms.assetid: 1d273034-194c-4926-9869-142d1b219cbe
-ms.openlocfilehash: c3a86b8b8c7f122929a52221d4f01a17c50395be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c854aeff1c57b8be6b445bc3615008519ca00af7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257664"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759520"
 ---
 # <a name="compiler-error-c2758"></a>Ошибка компилятора C2758
 
@@ -21,7 +21,7 @@ member: требуется инициализация члена ссылочн�
 
 Следующий пример приводит к возникновению ошибки C2758:
 
-```
+```cpp
 // C2758.cpp
 // Compile by using: cl /W3 /c C2758.cpp
 struct A {

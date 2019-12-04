@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 2d96a0e4f5f0b34c76f41058316c7f158f1a939d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385710"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742630"
 ---
 # <a name="compiler-error-c3633"></a>Ошибка компилятора C3633
 
-Невозможно определить «член» в качестве члена управляемого «тип»
+невозможно определить "member" как член управляемого типа "тип"
 
-Члены данных среды CLR ссылочного класса не может иметь тип POD C++.  Можно создать только собственный тип POD в типе CLR.  Например тип POD не может содержать конструктор копии или оператор присваивания.
+Члены данных ссылочного класса CLR не могут принадлежать к типу C++ Pod.  Создать экземпляр собственного типа POD можно только в типе CLR.  Например, тип POD не может содержать конструктор копии или оператор присваивания.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3633.
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

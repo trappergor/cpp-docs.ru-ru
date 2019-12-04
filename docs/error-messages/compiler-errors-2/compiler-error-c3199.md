@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3199
 ms.assetid: e7a478d3-115a-40a3-991b-c7454fd2e28e
-ms.openlocfilehash: 934e980149ad893e6799b0ab119a148fc5652fdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f0ca98dc44a78adde378a0f80078ae30c590e11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738821"
 ---
 # <a name="compiler-error-c3199"></a>Ошибка компилятора C3199
 
-Недопустимое использование директив pragma с плавающей точкой: исключения поддерживаются только в точном режиме
+Недопустимое использование директив pragma с плавающей запятой: исключения не поддерживаются в режиме без точности
 
-[Float_control](../../preprocessor/float-control.md) pragma используется для указания модели исключения с плавающей запятой [/FP](../../build/reference/fp-specify-floating-point-behavior.md) параметров, отличных от **/fp: точное**.
+Директива pragma [float_control](../../preprocessor/float-control.md) использовалась для указания модели исключения с плавающей запятой в параметре [/FP](../../build/reference/fp-specify-floating-point-behavior.md) , отличном от **/FP: точнее**.
 
 Следующий пример приводит к возникновению ошибки C3199:
 
-```
+```cpp
 // C3199.cpp
 // compile with: /fp:fast
 #pragma float_control(except, on)   // C3199

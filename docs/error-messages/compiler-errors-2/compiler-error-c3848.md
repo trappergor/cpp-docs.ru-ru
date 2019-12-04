@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3848
 ms.assetid: 32d3ccef-01ec-4f8b-bbff-fb9b1a76b4c4
-ms.openlocfilehash: 1d738311ada14999a5345a4e2394631254dda00a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51a5cf6d866a5e5ee914a3d70365761749f79eea
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381004"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761950"
 ---
 # <a name="compiler-error-c3848"></a>Ошибка компилятора C3848
 
-выражение, имеющее тип «тип» потеряет некоторые квалификаторы const или volatile вызове «функции»
+выражение HAVING типа "тип" потеряет некоторые квалификаторы const-volatile для вызова "Function"
 
-Переменная с указанным типом const или volatile может вызывать только член функции, определенные с помощью одной или более поздней версии const и volatile.
+Переменная с указанным типом const константы может вызывать только функции-члены, определенные с теми же или большими квалификациями const-volatile.
 
-Следующий пример приводит к возникновению ошибки C3848:
+Следующие примеры создают C3848:
 
-```
+```cpp
 // C3848.cpp
 void glbFunc1()
 {

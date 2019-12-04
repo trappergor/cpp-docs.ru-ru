@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-ms.openlocfilehash: d9aa703f12fd175d9f7fc00eb76e76097a32e860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61ff2c7f7e99698ffbd521153663b1ab27bd6fde
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390559"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741603"
 ---
 # <a name="compiler-error-c3831"></a>Ошибка компилятора C3831
 
-«член»: «класс» не может иметь закрепленные данные-член или функция-член, возвращающую закрепляющий указатель
+"член": "класс" не может иметь закрепленный элемент данных или функцию-член, возвращающую закрепляющий указатель
 
-[pin_ptr (C++выполняет)](../../extensions/pin-ptr-cpp-cli.md) был использован неправильно.
+[pin_ptr (C++/CLI)](../../extensions/pin-ptr-cpp-cli.md) использовался неправильно.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3831:
 
-```
+```cpp
 // C3831a.cpp
 // compile with: /clr
 ref class Y

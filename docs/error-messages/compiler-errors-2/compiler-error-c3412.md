@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3412
 ms.assetid: aa4dd43b-54ce-4cda-85c1-1a77dd6e34fa
-ms.openlocfilehash: 7c16ffa37f4d7192956afae26c825b63add1bfdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad241b656464746333760cfcbc134c91e49bf44e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173461"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761420"
 ---
 # <a name="compiler-error-c3412"></a>Ошибка компилятора C3412
 
-«шаблон»: невозможно настроить шаблон в текущей области
+"шаблон": не удается заспециализациь шаблона в текущей области
 
-Шаблон не может быть настроен в только в глобальной области видимости класса или области видимости пространства имен.
+Шаблон не может быть специализированным в области видимости класса, только в области глобальных или пространств имен.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3412.
 
-```
+```cpp
 // C3412.cpp
 template <class T>
 struct S {
@@ -36,7 +36,7 @@ struct S {
 
 В следующем примере показано возможное решение.
 
-```
+```cpp
 // C3412b.cpp
 // compile with: /c
 template <class T>

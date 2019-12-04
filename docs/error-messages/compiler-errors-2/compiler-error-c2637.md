@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
-ms.openlocfilehash: 4231a811911fdf600b47962e929f6f3cff1f1bca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a17bd95cf1727d058e0cbd9e3dfb93c500da9fb5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395460"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758259"
 ---
 # <a name="compiler-error-c2637"></a>Ошибка компилятора C2637
 
-«Идентификатор»: невозможно изменить указатели на данные-члены
+"идентификатор": невозможно изменить указатели на элементы данных
 
-Указатель на данные-член не может иметь соглашение о вызовах. Чтобы устранить проблему, удалите соглашение о вызовах или объявить указатель на функцию-член.
+Указатель на элемент данных не может иметь соглашение о вызовах. Чтобы устранить эту проблему, удалите соглашение о вызовах или объявите указатель на функцию-член.
 
 Следующий пример приводит к возникновению ошибки C2637:
 
-```
+```cpp
 // C2637.cpp
 // compile with: /c
 struct S {};

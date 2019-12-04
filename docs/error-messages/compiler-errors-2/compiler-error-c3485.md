@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3485
 ms.assetid: d67536f9-67a1-4ad9-9a94-d8bbbca3d0dc
-ms.openlocfilehash: 2fcaecd6be35e2ae6822133930b48b6bbf02aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0eacb6ce6426674d23fc78596ead3730f46ae370
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381147"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743046"
 ---
 # <a name="compiler-error-c3485"></a>Ошибка компилятора C3485
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381147"
 
 Приведенный ниже пример приводит к возникновению ошибки C3485, так как в нем квалификатор `const` используется как часть определения лямбда-выражения.
 
-```
+```cpp
 // C3485.cpp
 
 int main()
@@ -36,6 +36,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

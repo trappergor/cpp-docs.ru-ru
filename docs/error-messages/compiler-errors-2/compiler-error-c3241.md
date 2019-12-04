@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173510"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754583"
 ---
 # <a name="compiler-error-c3241"></a>Ошибка компилятора C3241
 
-«метод»: этот метод не был создан «интерфейс»
+"метод": Этот метод не был введен с помощью "Interface"
 
-При явном переопределении функции, сигнатура функции должно совпадать объявление для переопределяемой функции.
+При явном переопределении функции сигнатура функции должна точно совпадать с объявлением переопределяемой функции.
 
 Следующий пример приводит к возникновению ошибки C3241:
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

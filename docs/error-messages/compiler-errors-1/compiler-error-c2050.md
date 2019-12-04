@@ -1,27 +1,27 @@
 ---
-title: Ошибка компилятора C2050
+title: Ошибка компилятора c2050
 ms.date: 11/04/2016
 f1_keywords:
 - C2050
 helpviewer_keywords:
 - C2050
 ms.assetid: 66aaed7d-00db-4ce1-a9d6-4447c1cf07ce
-ms.openlocfilehash: 99091452c2fc845ba396d7a8b290c2c857146257
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d100387264af4a3f9bba8b9934fc6ca1d0d5a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408905"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739184"
 ---
-# <a name="compiler-error-c2050"></a>Ошибка компилятора C2050
+# <a name="compiler-error-c2050"></a>Ошибка компилятора c2050
 
-выражения для выбора вариантов не является целым
+выражение switch не является целым
 
-`switch` Выражение Нецелочисленные значения. Чтобы устранить эту ошибку, используйте только целочисленные значения в операторах switch.
+Результатом выражения `switch` является нецелочисленное значение. Чтобы устранить эту ошибку, используйте только целочисленные значения в операторах switch.
 
-Следующий пример приводит к возникновению ошибки C2050:
+Следующий пример приводит к возникновению ошибки c2050:
 
-```
+```cpp
 // C2050.cpp
 int main() {
    int a = 1;
@@ -36,7 +36,7 @@ int main() {
 
 Возможное решение
 
-```
+```cpp
 // C2050b.cpp
 int main() {
    int a = 1;

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2694
 ms.assetid: 8dc2cec2-67ae-4e16-8c0c-374425aca8bc
-ms.openlocfilehash: 4897512f6bd27465b7281d7a27757918128202d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca378c3e0ce88b454cb89fc08470a277a7be6f47
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367750"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755230"
 ---
 # <a name="compiler-error-c2694"></a>Ошибка компилятора C2694
 
-«override»: переопределяющая виртуальная функция обладает менее ограниченной спецификацией исключений, чем базовый класс функции виртуального члена «base»
+"override": переопределяющая виртуальная функция имеет менее ограничиваемую спецификацию исключений, чем виртуальная функция члена базового класса "Base"
 
-Была переопределена виртуальная функция, но в разделе [/Za](../../build/reference/za-ze-disable-language-extensions.md), переопределение функции было менее строгий [спецификация исключений](../../cpp/exception-specifications-throw-cpp.md).
+Виртуальная функция была переопределена, но в параметре [/Za](../../build/reference/za-ze-disable-language-extensions.md)переопределяющая функция имела менее четкий [спецификацию исключений](../../cpp/exception-specifications-throw-cpp.md).
 
 Следующий пример приводит к возникновению ошибки C2694:
 
-```
+```cpp
 // C2694.cpp
 // compile with: /Za /c
 class MyBase {

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0329872ff0baee595bf32486a53d6abf91d208d4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345683"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756530"
 ---
 # <a name="compiler-error-c2140"></a>Ошибка компилятора C2140
 
-«Тип»: тип, зависящий от параметра универсального типа не допускается в качестве аргумента в характеристике внутреннего типа компилятора «характеристика»
+"тип": тип, зависящий от параметра универсального типа, не допускается в качестве аргумента для встроенной характеристики типа "характеристика" компилятора
 
-Признак типа передан недопустимый спецификатор типа.
+В характеристике типа передан недопустимый спецификатор типа.
 
-Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
+Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2140.
 
-```
+```cpp
 // C2140.cpp
 // compile with: /clr /c
 template <class T>

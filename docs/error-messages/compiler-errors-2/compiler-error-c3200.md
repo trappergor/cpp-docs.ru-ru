@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
-ms.openlocfilehash: 7eb0c00f4f4c5c59766bf305acfef89e12a6cfb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f6b514231bcda18404e891e0acbe457c8f95146
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402779"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738782"
 ---
 # <a name="compiler-error-c3200"></a>Ошибка компилятора C3200
 
-«шаблон»: недопустимый аргумент шаблона для параметра шаблона «параметр», требуется класс-шаблон
+"шаблон": недопустимый аргумент шаблона для параметра шаблона "параметр", требуется шаблон класса
 
-Передан недопустимый аргумент для шаблона класса. Шаблон класса ожидает в качестве параметра шаблона. В следующем примере вызов `Y<int, int> aY` создаст C3200. Первый параметр должен быть шаблоном, такой как `Y<X, int> aY`.
+Передан недопустимый аргумент в шаблон класса. Шаблон класса принимает шаблон в качестве параметра. В следующем примере вызов `Y<int, int> aY` создаст C3200. Первый параметр должен быть шаблоном, например `Y<X, int> aY`.
 
-```
+```cpp
 // C3200.cpp
 template<typename T>
 class X

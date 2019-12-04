@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3076
 ms.assetid: 8a87b3e4-2c17-4b87-9622-ef0962d6a34e
-ms.openlocfilehash: ac9afdfc11a13dd667b06289c73332593a4d884e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3ce849113b0fc21a192f748bc46fc35be48880d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406656"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749637"
 ---
 # <a name="compiler-error-c3076"></a>Ошибка компилятора C3076
 
-«instance»: нельзя внедрить экземпляр ссылочного типа «тип», в собственном типе
+"экземпляр": невозможно внедрить экземпляр ссылочного типа "тип" в собственный тип
 
-Неуправляемый тип не может содержать экземпляр типа данных CLR.
+Собственный тип не может содержать экземпляр типа CLR.
 
-Дополнительные сведения см. в разделе [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Дополнительные сведения см. в разделе [ C++ Семантика стека для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает ошибка C3076.
+Следующий пример приводит к возникновению ошибки C3076.
 
-```
+```cpp
 // C3076.cpp
 // compile with: /clr /c
 ref struct U {};

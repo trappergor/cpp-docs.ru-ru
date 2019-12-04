@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328262"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753202"
 ---
 # <a name="compiler-error-c3718"></a>Ошибка компилятора C3718
 
-«событие» можно вызывать только в контексте функции-члена принимающего класса
+вызов "Event" возможен только в контексте функции-члена принимающего класса
 
-`event` Может вызываться только из принимающего класса.
+`event` может быть вызван только из принимающего класса.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3718:
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

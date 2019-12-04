@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
-ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc30eea73140ea6f0f436339de249bb714a46c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222362"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756621"
 ---
 # <a name="compiler-error-c3460"></a>Ошибка компилятора C3460
 
 "тип": только пользовательские типы могут перенаправляться
 
-Дополнительные сведения см. в разделе [Переадресация типа (C++выполняет)](../../extensions/type-forwarding-cpp-cli.md).
+Дополнительные сведения см. в разделе [ПересылкаC++типов (/CLI)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере создается компонент.
+В приведенном ниже примере создается компонент.
 
-```
+```cpp
 // C3460.cpp
 // compile with: /LD /clr
 public ref class R {};
@@ -33,7 +33,7 @@ public ref class R {};
 
 В следующем примере возникает ошибка C3460.
 
-```
+```cpp
 // C3460_b.cpp
 // compile with: /clr /c
 #using "C3460.dll"

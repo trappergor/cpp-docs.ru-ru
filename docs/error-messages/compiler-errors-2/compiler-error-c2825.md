@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
-ms.openlocfilehash: 1e2f8e8cd38b90a698994743609892896ef0d1a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a51901477958056356a96d71adde4241d60a2ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406903"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750589"
 ---
 # <a name="compiler-error-c2825"></a>Ошибка компилятора C2825
 
-var: должен быть классом или пространство имен с последующим "::"
+var: должен быть классом или пространством имен, если за ним следует "::"
 
-Неудачная попытка была произведена для формирования полного имени.
+Выполнена неудачная попытка формирования полного имени.
 
-Например, убедитесь, что ваш код не содержит объявление функции, где имя функции начинается с::.
+Например, убедитесь, что код не содержит объявление функции, где имя функции начинается с::.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2825:
 
-```
+```cpp
 // C2825.cpp
 typedef int i;
 int main() {

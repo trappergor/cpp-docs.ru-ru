@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
-ms.openlocfilehash: 8af20c5172cddd0194ed018c13960bbed7859674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd62ea825e3ae7d9e4acc1cb6d93d4bc102be0eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386035"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737326"
 ---
 # <a name="compiler-error-c2064"></a>Ошибка компилятора C2064
 
@@ -21,7 +21,7 @@ ms.locfileid: "62386035"
 
 В этом примере код пытается вызвать не функции как функции. Следующий пример приводит к возникновению ошибки C2064.
 
-```
+```cpp
 // C2064.cpp
 int i, j;
 char* p;
@@ -33,7 +33,7 @@ void func() {
 
 Указатели на нестатические функции-члены необходимо вызывать из контекста экземпляра объекта. В следующем примере показано возникновение ошибки C2064 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C2064b.cpp
 struct C {
    void func1(){}
@@ -52,7 +52,7 @@ int main() {
 
 В классе указатели на функции-члены также должны указывать контекст вызывающего объекта. В следующем примере показано возникновение ошибки C2064 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C2064d.cpp
 // Compile by using: cl /c /W4 C2064d.cpp
 struct C {

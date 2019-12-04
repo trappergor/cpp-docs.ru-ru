@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447858"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756218"
 ---
 # <a name="compiler-error-c3451"></a>Ошибка компилятора C3451
 
-«атрибут»: невозможно применить неуправляемый атрибут в «тип»
+"атрибут": невозможно применить неуправляемый атрибут к "Type"
 
-Атрибут C++ не может применяться к типу CLR. См. в разделе [Справочник по атрибутам C++](../../windows/attributes/attributes-alphabetical-reference.md) Дополнительные сведения.
+C++ Атрибут не может быть применен к типу CLR. Дополнительные сведения см [ C++ . в справочнике по атрибутам](../../windows/attributes/attributes-alphabetical-reference.md) .
 
-Дополнительные сведения см. в разделе [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Для получения дополнительной информации см. [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: [uuid](../../windows/uuid-cpp-attributes.md) атрибут больше не разрешен в пользовательском атрибуте, с помощью программирования в среде CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.
+Эта ошибка может быть вызвана работой по согласованности компилятора, выполненной для Visual Studio 2005: атрибут [UUID](../../windows/uuid-cpp-attributes.md) больше не разрешается для определяемого пользователем атрибута с помощью программирования CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3451.
 
-```
+```cpp
 // C3451.cpp
 // compile with: /clr /c
 using namespace System;

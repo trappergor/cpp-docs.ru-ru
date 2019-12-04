@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2819
 ms.assetid: fcc7762d-cb82-4bb1-a715-0d82da832edf
-ms.openlocfilehash: 17b863d24d43f0dc7afb0fc4776953dcb41929e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a3768cb23c65eb3e2d818f81ff7c6a561c8d7ec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174943"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750654"
 ---
 # <a name="compiler-error-c2819"></a>Ошибка компилятора C2819
 
-Тип «тип» не имеет перегруженный «operator ->»
+тип "тип" не имеет перегруженного члена "operator->"
 
-Необходимо определить `operator->()` для использования этой операции над указателями.
+Чтобы использовать эту операцию с указателями, необходимо определить `operator->()`.
 
-В следующем примере возникает ошибка C2819:
+Следующий пример приводит к возникновению ошибки C2819:
 
-```
+```cpp
 // C2819.cpp
 // compile with: /c
 class A {
@@ -49,9 +49,9 @@ void F(D j) {
 }
 ```
 
-C2819 также может возникнуть при использовании [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md). В следующем примере возникает ошибка C2819:
+C2819 также может возникать при использовании [ C++ семантики стека для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md). Следующий пример приводит к возникновению ошибки C2819:
 
-```
+```cpp
 // C2819_b.cpp
 // compile with: /clr
 ref struct R {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69fc6fa9303b2256172dd079028050823f053246
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227517"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756338"
 ---
 # <a name="compiler-error-c3653"></a>Ошибка компилятора C3653
 
-«функция»: нельзя использовать в качестве именованного переопределения: переопределяемая функция не найдена; Возможно, вы забыли имя функции явно, используя:: оператор?
+"функция": не может использоваться в качестве именованного переопределения: переопределяемая функция не найдена; забыли явно задать имя функции с помощью оператора::?
 
-Явное переопределение указана функция, не найден ни в одном интерфейсе. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Явное переопределение указывает функцию, которая не была найдена ни в одном интерфейсе. Дополнительные сведения см. в разделе [явные переопределения](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3653:
 
-```
+```cpp
 // C3653.cpp
 // compile with: /clr
 public interface struct I {

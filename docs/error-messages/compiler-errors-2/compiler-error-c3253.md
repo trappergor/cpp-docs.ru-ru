@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173253"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754268"
 ---
 # <a name="compiler-error-c3253"></a>Ошибка компилятора C3253
 
-«функция»: ошибка при явном переопределении
+"функция": ошибка с явным переопределением
 
-Явное переопределение указан неправильно. Например нельзя указать реализацию для переопределения, которое вы указываете как чистое. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Явное переопределение указано неправильно. Например, нельзя указать реализацию для переопределения, которое также указывается как чистый. Дополнительные сведения см. в разделе [явные переопределения](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3253:
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

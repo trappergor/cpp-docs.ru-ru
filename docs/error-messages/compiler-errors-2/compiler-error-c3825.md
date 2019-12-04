@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
-ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d9dbee8b3d290af0ddd1851380758290a21d4a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390585"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741720"
 ---
 # <a name="compiler-error-c3825"></a>Ошибка компилятора C3825
 
-«класс»: управляемый или WinRTclass можно только поддерживает управляемые или WinRTevents
+"класс": управляемый или Винрткласс может поддерживать только управляемые или Винртевентс
 
 В управляемых классах поддерживаются только события .NET. В классах среды выполнения Windows поддерживаются только события среды выполнения Windows. Чтобы устранить эту ошибку в управляемом коде, измените параметр типа `event_source` и `event_receiver` с `native` на `managed`. Можно также удалить атрибут.
 
@@ -23,7 +23,7 @@ ms.locfileid: "62390585"
 
 В следующем примере показано возникновение ошибки C3825 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C3825a.cpp
 // compile with: /clr
 public delegate void del1();

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2569
 ms.assetid: 092bed1e-f631-436c-9586-7750629f6fac
-ms.openlocfilehash: 1344bd8bde532d2e813ca03e173b995e935c76b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7299fe8daa1fa0fc6e1291bf8c683b33235e8bbf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243765"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755529"
 ---
 # <a name="compiler-error-c2569"></a>Ошибка компилятора C2569
 
-«EnumOrUnion»: перечисление или объединение не может использоваться в качестве базового класса
+"Енуморунион": перечисление или объединение не может использоваться в качестве базового класса
 
-Если тип должен быть производным от указанного объединения или перечисления, измените объединения или перечисления класса или структуры.
+Если необходимо получить тип из указанного объединения или перечисления, измените объединение или перечисление на класс или структуру.
 
 Следующий пример приводит к возникновению ошибки C2569:
 
-```
+```cpp
 // C2569.cpp
 // compile with: /c
 union ubase {};

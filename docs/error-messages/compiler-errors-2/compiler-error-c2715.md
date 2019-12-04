@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 0f0df136952e09d26fbf43104bbf13b001c87255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386763"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760534"
 ---
 # <a name="compiler-error-c2715"></a>Ошибка компилятора C2715
 
-«Тип»: невозможно выдать или перехватить этот тип
+"тип": не удается выдать или перехватить этот тип
 
-Типы значений не являются допустимыми аргументами, обработка исключений в управляемом коде (см. в разделе [обработка исключений](../../extensions/exception-handling-cpp-component-extensions.md) Дополнительные сведения).
+Типы значений не являются допустимыми аргументами при использовании обработки исключений в управляемом коде (Дополнительные сведения см. в разделе [обработка исключений](../../extensions/exception-handling-cpp-component-extensions.md) ).
 
-```
+```cpp
 // C2715a.cpp
 // compile with: /clr
 using namespace System;

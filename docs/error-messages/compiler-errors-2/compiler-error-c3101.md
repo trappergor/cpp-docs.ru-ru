@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
-ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dca91b9359417b8c4cce9329e2aa25107016c086
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404199"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750004"
 ---
 # <a name="compiler-error-c3101"></a>Ошибка компилятора C3101
 
-Недопустимое выражение для аргумента атрибута с именем «field»
+Недопустимое выражение для именованного аргумента атрибута "поле"
 
-При инициализации является аргументом именованного атрибута, значение должно быть константой времени компиляции.
+При инициализации аргумента именованного атрибута значение должно быть константой времени компиляции.
 
 Дополнительные сведения об атрибутах см. в разделе [определяемые пользователем атрибуты](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
@@ -25,7 +25,7 @@ ms.locfileid: "62404199"
 
 Следующий пример приводит к возникновению ошибки C3101.
 
-```
+```cpp
 // C3101.cpp
 // compile with: /clr /c
 ref class AAttribute : System::Attribute {

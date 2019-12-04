@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165047"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746868"
 ---
 # <a name="compiler-error-c2505"></a>Ошибка компилятора C2505
 
-«символ»: параметр «__declspec(модификатор)» может применяться только в объявлениях или определениях глобальных объектов или статические данные-члены
+"символ": "__declspec (модификатор)" может применяться только к объявлениям или определениям глобальных объектов или статических данных-членов
 
-Объект `__declspec` модификатор, который должен использоваться только в глобальной области видимости был использован в функции.
+В функции использовался модификатор `__declspec`, предназначенный для использования только в глобальной области.
 
 Дополнительные сведения см. в разделах [appdomain](../../cpp/appdomain.md) и [process](../../cpp/process.md).
 
 Следующий пример приводит к возникновению ошибки C2505:
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

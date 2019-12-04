@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: eb1d15a12bfebbf44f7335a848d68c367c285586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300600"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753449"
 ---
 # <a name="compiler-error-c3345"></a>Ошибка компилятора C3345
 
@@ -27,7 +27,7 @@ ms.locfileid: "62300600"
 
 В следующем примере возникает ошибка C3345, поскольку параметр `name` атрибута `module` содержит пробел.
 
-```
+```cpp
 // cpp_attr_name_module.cpp
 // compile with: /LD /link /OPT:NOREF
 #include <atlbase.h>
@@ -52,7 +52,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>

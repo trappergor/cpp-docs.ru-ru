@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3218
 ms.assetid: 0eea19e0-503e-4e07-ae8b-2cb2e95922cd
-ms.openlocfilehash: 87084f9751b1593ec93a3062f23714bba403da9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386a0c180dd01161ebccdd2b04e899e0cc999614
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182526"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737989"
 ---
 # <a name="compiler-error-c3218"></a>Ошибка компилятора C3218
 
-«Тип»: не допускается в качестве ограничения типа
+"тип": тип не допускается в качестве ограничения
 
-Быть задано ограничение типа должен быть типом значения или ссылки на управляемый класс или интерфейс.
+Чтобы тип был ограничением, он должен быть либо типом значения, либо ссылкой на управляемый класс или интерфейс.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3218.
 
-```
+```cpp
 // C3218.cpp
 // compile with: /clr /c
 class A {};
