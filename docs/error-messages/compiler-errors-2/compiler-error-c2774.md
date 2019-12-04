@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2774
 ms.assetid: 10f428c6-7f49-489a-92ba-6ef978b7caaf
-ms.openlocfilehash: 6197e3da81a9f059c90d15608a939ad4887e526d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2630dba6a74bf6b31a5df7af57e42fd7c8fd4e09
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257144"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740108"
 ---
 # <a name="compiler-error-c2774"></a>Ошибка компилятора C2774
 
-«Идентификатор»: нет метода «put» связан с этим свойством
+"идентификатор": нет метода "Where", связанного с этим свойством
 
-Элемент данных объявлен с [свойство](../../cpp/property-cpp.md) не имеет `put` функция, но выражение пытается задать для него значение.
+Член данных, объявленный с помощью [Свойства](../../cpp/property-cpp.md) , не имеет `put` функции, но выражение пытается установить его значение.
 
 Следующий пример приводит к возникновению ошибки C2774:
 
-```
+```cpp
 // C2774.cpp
 struct A {
    __declspec(property(get=GetProp)) int prop;

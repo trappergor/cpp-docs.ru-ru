@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3737
 ms.assetid: ca2aeb23-2491-4ccb-8838-884abf7065c8
-ms.openlocfilehash: b6c2a85556e96ff6176e158b7d75a844bb5710d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25dbb8897db45cbddaaf7f0530bcb2a8653b03cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327890"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752799"
 ---
 # <a name="compiler-error-c3737"></a>Ошибка компилятора C3737
 
-«делегат»: делегат не может иметь явное соглашение о вызове
+"Delegate": делегат не может иметь явное соглашение о вызовах
 
 Нельзя указать [соглашение о вызовах](../../cpp/calling-conventions.md) для `delegate`.
 
@@ -23,7 +23,7 @@ ms.locfileid: "62327890"
 
 Следующий пример приводит к возникновению ошибки C3737:
 
-```
+```cpp
 // C3737a.cpp
 // compile with: /clr
 delegate void __stdcall MyFunc();   // C3737

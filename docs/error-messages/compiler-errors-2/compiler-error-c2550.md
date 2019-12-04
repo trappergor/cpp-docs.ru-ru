@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2550
 ms.assetid: 3293f53e-ee66-4035-920d-34e115c3a24c
-ms.openlocfilehash: 2df6ae70be31bc519e6cfd826646073becf1ad61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29e907e682e0caae86569fe8bd7c101b3e0b14a3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353356"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740823"
 ---
 # <a name="compiler-error-c2550"></a>Ошибка компилятора C2550
 
-«Идентификатор»: список инициализации конструктора допустимы только в месте определения конструктора
+"идентификатор": списки инициализаторов конструктора разрешены только в определениях конструктора
 
-Список инициализаторов базового класса используется в определении функции, которая не является конструктором.
+Список инициализации базового класса используется в определении функции, которая не является конструктором.
 
 Следующий пример приводит к возникновению ошибки C2550:
 
-```
+```cpp
 // C2550.cpp
 // compile with: /c
 class C {

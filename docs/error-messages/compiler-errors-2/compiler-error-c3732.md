@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3732
 ms.assetid: 2d55a7e1-9c39-4379-a093-2f7beb27e2ca
-ms.openlocfilehash: c71cca3643f6337060de6e4bb56ac64d8f0d6e4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30ade41ae463923cc5cc9911469e587decacbc64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752929"
 ---
 # <a name="compiler-error-c3732"></a>Ошибка компилятора C3732
 
-«интерфейс»: настраиваемый интерфейс, порождающий COM-события не может наследовать от интерфейса IDispatch
+"интерфейс": Пользовательский интерфейс, порождающий COM-события, не может наследовать от IDispatch
 
-Интерфейс, поддерживающий события COM не может наследовать от `IDispatch`. Дополнительные сведения см. в разделе [обработка событий в COM](../../cpp/event-handling-in-com.md).
+Интерфейс, поддерживающий события COM, не может наследовать от `IDispatch`. Дополнительные сведения см. [в разделе Обработка событий в com](../../cpp/event-handling-in-com.md).
 
-Следующая ошибка приводит к возникновению ошибки C3732:
+Следующая ошибка создает C3732:
 
-```
+```cpp
 // C3732.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

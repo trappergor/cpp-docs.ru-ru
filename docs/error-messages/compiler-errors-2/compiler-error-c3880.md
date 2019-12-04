@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3880
 ms.assetid: b0e05d1e-32d0-4034-9246-f37d23573ea9
-ms.openlocfilehash: 0b169309db88291f8a83b6d1192787b6396e84a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fd65fb4fe23a5c493a4e9ac83a5e44b0596362
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338471"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736676"
 ---
 # <a name="compiler-error-c3880"></a>Ошибка компилятора C3880
 
-«var»: не может быть данными-членом литерала
+var: не может быть литеральным элементом данных
 
-Тип [литерала](../../extensions/literal-cpp-component-extensions.md) должен быть атрибут, или во время компиляции можно преобразовать в один из следующих типов:
+Тип [литерального](../../extensions/literal-cpp-component-extensions.md) атрибута должен быть или преобразован во время компиляции в один из следующих типов:
 
 - целочисленный тип
 
 - string
 
-- Перечисление с целым или базовым типом
+- перечисление с целочисленным или базовым типом
 
 Следующий пример приводит к возникновению ошибки C3880:
 
-```
+```cpp
 // C3880.cpp
 // compile with: /clr /c
 ref struct Y1 {

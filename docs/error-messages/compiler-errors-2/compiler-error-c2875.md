@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2875
 ms.assetid: d589fc0c-08b2-4a79-bc0e-dca5eb80bdd5
-ms.openlocfilehash: 59df226e2740dbda3a67e0c3c49d688a3e564fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cefb2c0b138c0a6a6061e990e6bb79ce9b93f6b5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266027"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736338"
 ---
 # <a name="compiler-error-c2875"></a>Ошибка компилятора C2875
 
-с помощью объявление вызвало наличие нескольких объявлений для «класс::идентификатор»
+Использование объявления using приводит к множественному объявлению "класс:: идентификатор"
 
-Объявление вызывает один и тот же элемент определяется два раза.
+Объявление приводит к тому, что один и тот же элемент определяется дважды.
 
 Следующий пример приводит к возникновению ошибки C2875:
 
-```
+```cpp
 // C2875.cpp
 struct A {
    void f(int*);

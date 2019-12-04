@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3736
 ms.assetid: 579b773c-41e7-40ea-8382-2e3ce2667f4c
-ms.openlocfilehash: e31d68a13ebd9c5267fd285d43ebc66ae8b53182
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c4626164fe8fe3fb932fba3ae8e87c774f5aeec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752851"
 ---
 # <a name="compiler-error-c3736"></a>Ошибка компилятора C3736
 
-«событие»: должен быть методом или, в случае управляемых событий, при необходимости элемент данных
+"Event": должен быть методом или, в случае с управляемыми событиями, необязательный элемент данных
 
-Машинный код и COM-событий должны быть методами. События .NET также могут быть данные-члены.
+События native и COM должны быть методами. События .NET также могут быть членами данных.
 
 Следующий пример приводит к возникновению ошибки C3736:
 
-```
+```cpp
 // C3736.cpp
 struct A {
    __event int e();

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400088"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755295"
 ---
 # <a name="compiler-error-c3804"></a>Ошибка компилятора C3804
 
-«метод_доступа_свойства»: методы доступа для свойства должны либо быть статическими, либо не статическими
+"property_accessor": методы доступа для свойства должны быть либо статическими, либо не статическими
 
-При определении нетривиального свойства, функции доступа могут быть либо статическими или экземпляр, но не оба.
+При определении нетривиального свойства функции доступа могут быть либо статическими, либо экземплярами, но не оба.
 
 Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает ошибка C3804.
+Следующий пример приводит к возникновению ошибки C3804.
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

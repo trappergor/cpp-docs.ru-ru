@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f64b72fe5d546550c32f60a27360d8a77c8255bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344502"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736585"
 ---
 # <a name="compiler-error-c3887"></a>Ошибка компилятора C3887
 
-«var»: инициализатор данные-член литерала должно быть константным выражением
+"var": инициализатор для литерального элемента данных должен быть константным выражением
 
-Объект [литерала](../../extensions/literal-cpp-component-extensions.md) данные-член можно инициализировать только с помощью выражения константы.
+[Литеральный](../../extensions/literal-cpp-component-extensions.md) элемент данных может инициализироваться только константой выражение.
 
 Следующий пример приводит к возникновению ошибки C3887:
 
-```
+```cpp
 // C3887.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -33,7 +33,7 @@ ref struct Y1 {
 
 Возможное решение
 
-```
+```cpp
 // C3887b.cpp
 // compile with: /clr /c
 ref struct Y1 {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360051"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735884"
 ---
 # <a name="compiler-error-c3028"></a>Ошибка компилятора C3028
 
-«член»: только переменную или статические данные-член может использоваться в предложении совместного использования данных
+"член": в предложении совместного использования данных можно использовать только переменную или статические данные-член
 
-Символ, отличный от переменную или статические данные-член была передана предложение reduction.
+В предложение сокращения был передан символ, отличный от переменной или статического элемента данных.
 
 Следующий пример приводит к возникновению ошибки C3028:
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

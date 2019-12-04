@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2879
 ms.assetid: ac92b645-2394-49de-8632-43d44e0553ed
-ms.openlocfilehash: 9ac8f5e5edb1a6ed7314c5b5d125fcc9bfbe67de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7238faf94a2493894534ae5684634b65bb4342
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378925"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736299"
 ---
 # <a name="compiler-error-c2879"></a>Ошибка компилятора C2879
 
-«символ»: только для существующего пространства имен можно предоставить альтернативное имя, определение псевдонима пространства имен
+"символ": для определения псевдонима пространства имен альтернативное имя может быть задано только для существующего пространства имен
 
-Не удается создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) в символ, отличный от пространства имен.
+Нельзя создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) для символа, отличного от пространства имен.
 
 Следующий пример приводит к возникновению ошибки C2879:
 
-```
+```cpp
 // C2879.cpp
 int main() {
    int i;
