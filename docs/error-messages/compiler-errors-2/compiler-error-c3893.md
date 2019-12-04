@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385502"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749507"
 ---
 # <a name="compiler-error-c3893"></a>Ошибка компилятора C3893
 
-«var»: l значения можно использовать данные-член initonly допускается только в конструкторе экземпляра класса «имя_типа»
+"var": использование l-value элемента данных initonly допускается только в конструкторе экземпляра класса "type_name"
 
-Статические [initonly](../../dotnet/initonly-cpp-cli.md) данные-члены можно только получить свои адреса в статическом конструкторе.
+Статические члены данных [initonly](../../dotnet/initonly-cpp-cli.md) могут иметь только свои адреса, созданные в статическом конструкторе.
 
-Элементы данных initonly (не статического) экземпляра может иметь только адреса в конструкторы экземпляров (не статического).
+Элементы данных экземпляра (нестатические) initonly могут иметь только свои адреса в конструкторах экземпляров (не статических).
 
 Следующий пример приводит к возникновению ошибки C3893:
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

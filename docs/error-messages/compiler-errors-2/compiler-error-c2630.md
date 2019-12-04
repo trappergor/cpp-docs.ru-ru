@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
-ms.openlocfilehash: db4108961c940afe3333dc726a97a8ce6ae639a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5636b17573cd89c5a32e328aa3800d71136b84fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754710"
 ---
 # <a name="compiler-error-c2630"></a>Ошибка компилятора C2630
 
-Обнаружено: «символ» должен быть список с разделителями запятыми
+"Symbol", который должен быть списком с разделителями-запятыми
 
-В контексте, который требуется запятая отображается знак.
+Символ отображается в контексте, для которого требуется запятая.
 
-В следующем примере возникает ошибка C2630:
+Следующий пример приводит к возникновению ошибки C2630:
 
-```
+```cpp
 // C2630.cpp
 // compile with: /c
 struct D {

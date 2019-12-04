@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3626
 ms.assetid: 43926e2b-1ba9-4a43-9343-c58449cbb336
-ms.openlocfilehash: d0360b16c2e59bd01c3a5dd4be9c49b578b9c45b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d86f0f650f6a13ac764497d6d5b52f001f5c35d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221811"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757674"
 ---
 # <a name="compiler-error-c3626"></a>Ошибка компилятора C3626
 
-«ключевое_слово»: ключевое слово «__event» может использоваться только в интерфейсах COM, функции-члены и члены данных, которые являются указателями на делегаты
+"ключевое слово": ключевое слово "__event" можно использовать только в интерфейсах COM, функциях-членах и элементах данных, которые являются указателями на делегаты
 
-Ключевое слово был использован неправильно.
+Ключевое слово было использовано неправильно.
 
 Следующий пример приводит к возникновению ошибки C3626:
 
-```
+```cpp
 // C3626.cpp
 // compile with: /c
 struct A {

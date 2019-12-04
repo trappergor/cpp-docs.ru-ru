@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-ms.openlocfilehash: e7dde3eb27c018502225ea3bc45e4bee7c699379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1e1828583b3ac8342c12a62e6ba4c1694b5824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374967"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760573"
 ---
 # <a name="compiler-error-c3140"></a>Ошибка компилятора C3140
 
-в одном блоке компиляции не может быть несколько атрибутов «module»
+в одной единице компиляции не может быть несколько атрибутов "Module"
 
-[Модуль](../../windows/module-cpp.md) атрибута может быть определен для проекта только один раз.
+Атрибут [module](../../windows/module-cpp.md) может быть определен только один раз для каждого проекта.
 
 Следующий пример приводит к возникновению ошибки C3140:
 
-```
+```cpp
 // C3140.cpp
 // compile with: /c
 [emitidl];

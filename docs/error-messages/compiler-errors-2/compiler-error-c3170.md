@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-ms.openlocfilehash: 5ef39e4580601dd90b5695d9115902bb5b834409
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2d74a637e2902fcf636b49068882f32aa706f94
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174709"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761768"
 ---
 # <a name="compiler-error-c3170"></a>Ошибка компилятора C3170
 
-в проекте не может быть разных идентификаторов модулей
+в проекте не могут быть разные идентификаторы модулей
 
-[модуль](../../windows/module-cpp.md) атрибуты с разными именами были найдены в двух файлах в компиляции. Только один уникальный `module` атрибут может быть указан в одной компиляции.
+в двух файлах в компиляции обнаружены атрибуты [модуля](../../windows/module-cpp.md) с разными именами. Для каждой компиляции можно указать только один уникальный атрибут `module`.
 
-Идентичные `module` атрибуты могут быть заданы в более чем один файл исходного кода.
+Идентичные `module` атрибуты могут быть указаны в нескольких файлах исходного кода.
 
 Например, если найдены следующие атрибуты модуля:
 
-```
+```cpp
 // C3170.cpp
 [ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
 int main() {}
@@ -31,11 +31,11 @@ int main() {}
 
 Затем:
 
-```
+```cpp
 // C3170b.cpp
 // compile with: C3170.cpp
 // C3170 expected
 [ module(name="MyModule1", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f") ];
 ```
 
-компилятор выдаст ошибку C3170 (Обратите внимание, разные имена).
+компилятор создаст C3170 (Обратите внимание на различные имена).

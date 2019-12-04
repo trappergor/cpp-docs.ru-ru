@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2800
 ms.assetid: a2f1a590-9fe6-44cb-ad09-b4505ef47c6a
-ms.openlocfilehash: e893866a28c124e9e6cbc9663a488f89ac2d291b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c73ef05894f4f9e08c51ca074de40813ef35616
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739205"
 ---
 # <a name="compiler-error-c2800"></a>Ошибка компилятора C2800
 
-«оператор» не может быть перегружен
+"operator оператор" не может быть перегружен
 
-Следующие операторы не могут быть перегружены: доступ к члену класса (`.`), указатель на член (`.*`), разрешение области (`::`), условного выражения (`? :`), и `sizeof`.
+Следующие операторы не могут быть перегружены: доступ к членам класса (`.`), указатель на член (`.*`), разрешение области (`::`), условное выражение (`? :`) и `sizeof`.
 
 Следующий пример приводит к возникновению ошибки C2800:
 
-```
+```cpp
 // C2800.cpp
 // compile with: /c
 class C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2788
 ms.assetid: 8688fc5c-e652-43b4-b407-9c488c76f2db
-ms.openlocfilehash: 0025aa5211c2736860bdd30cad4315f63fba9337
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a708e711fd086d31ecd5e8cc9c35679571af48c4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256897"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739575"
 ---
 # <a name="compiler-error-c2788"></a>Ошибка компилятора C2788
 
-«Идентификатор»: более чем один идентификатор GUID, связанный с данным объектом
+"идентификатор": с этим объектом связано более одного GUID
 
-[__Uuidof](../../cpp/uuidof-operator.md) оператор принимает определяемого пользователем типа с присоединенным идентификатором GUID или объект такого типа определяемых пользователем. Эта ошибка возникает, если аргумент представляет собой объект с несколькими идентификаторами GUID.
+Оператор [__uuidof](../../cpp/uuidof-operator.md) принимает определяемый пользователем тип с ПРИСОЕДИНЕНным идентификатором GUID или объектом такого определяемого пользователем типа. Эта ошибка возникает, когда аргумент является объектом с несколькими идентификаторами GUID.
 
 Следующий пример приводит к возникновению ошибки C2788:
 
-```
+```cpp
 // C2788.cpp
 #include <windows.h>
 struct __declspec(uuid("00000001-0000-0000-0000-000000000000")) A {};

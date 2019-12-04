@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360714"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757063"
 ---
 # <a name="compiler-error-c2492"></a>Ошибка компилятора C2492
 
-"*переменной*": данные с длительностью хранилища потока не могут иметь интерфейс dll
+"*переменная*": данные с длительностью хранилища потоков могут не иметь интерфейс DLL
 
-Переменная объявлена с [поток](../../cpp/thread.md) атрибута и с библиотекой DLL интерфейса. Адрес `thread` переменной не известен до времени выполнения, поэтому его нельзя связать с импортом или экспортом DLL.
+Переменная объявляется с помощью атрибута [Thread](../../cpp/thread.md) и интерфейса DLL. Адрес переменной `thread` неизвестен до времени выполнения, поэтому он не может быть связан с импортом или экспортом DLL.
 
 Следующий пример приводит к возникновению ошибки C2492:
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

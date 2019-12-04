@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3996e8e8d40ca24bf54fdf5bbbfde90f3d609c9d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395330"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751562"
 ---
 # <a name="compiler-error-c2978"></a>Ошибка компилятора C2978
 
 синтаксическая ошибка: требуется "ключевое_слово1" или "ключевое_слово2"; обнаружен тип "ключевое_слово3"; параметры, не являющиеся параметрами типа, не поддерживаются в универсальных классах
 
-Универсальный класс был объявлен неправильно. См. в разделе [универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md)Дополнительные сведения.
+Универсальный класс был объявлен неправильно. Дополнительные сведения см. в разделе [универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2978:
 
-```
+```cpp
 // C2978.cpp
 // compile with: /clr /c
 generic <ref class T>   // C2978

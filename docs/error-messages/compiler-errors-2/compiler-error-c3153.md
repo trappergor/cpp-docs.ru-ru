@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3153
 ms.assetid: d775d97e-2480-484f-81f1-88406b10f947
-ms.openlocfilehash: 62b9e7499c52153183f14eae47c488da6a59b458
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54fa7de8eb3df8d4b3695544c5285cc202275492
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374876"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745921"
 ---
 # <a name="compiler-error-c3153"></a>Ошибка компилятора C3153
 
-«интерфейс»: не удается создать экземпляр интерфейса
+"интерфейс": невозможно создать экземпляр интерфейса
 
-Интерфейс не может быть создан. Чтобы использовать члены интерфейса, наследуйте класс от интерфейса, реализация членов интерфейса и затем использовать элементы.
+Невозможно создать экземпляр интерфейса. Чтобы использовать члены интерфейса, создайте класс из интерфейса, реализуйте члены интерфейса, а затем используйте элементы.
 
 Следующий пример приводит к возникновению ошибки C3153:
 
-```
+```cpp
 // C3153.cpp
 // compile with: /clr
 interface class A {

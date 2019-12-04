@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e40b0c2a56c36b92465fb3bb3451a48c88b5822e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745932"
 ---
 # <a name="compiler-error-c3154"></a>Ошибка компилятора C3154
 
-Ожидается «,» перед многоточием. Не разделенные запятой функциях массивов параметров не поддерживаются многоточия.
+Перед многоточием ожидалось ",". В функциях массива параметров не поддерживается многоточие, не разделенное запятыми.
 
-Переменный аргумент функции не был объявлен неправильно.
+Функция аргумента переменной не была объявлена правильно.
 
-Дополнительные сведения см. в разделе [списками аргументов переменных (...) (C++Выполняет) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Дополнительные сведения см. в разделе [списки аргументов переменных (...)C++(/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3154.
 
-```
+```cpp
 // C3154.cpp
 // compile with: /clr
 ref struct R {

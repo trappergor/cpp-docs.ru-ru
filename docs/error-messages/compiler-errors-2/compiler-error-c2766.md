@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2766
 ms.assetid: 8032f4ca-6827-4f04-9c61-c44643c85cc4
-ms.openlocfilehash: 87ea9f693265080d744746c6a8014b2b8b6db13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48faee02bba18754972954a2ca464417bd552758
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257560"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759806"
 ---
 # <a name="compiler-error-c2766"></a>Ошибка компилятора C2766
 
-явная специализация; «специализация» уже определен
+явная специализация; "специализация" уже определена
 
-Дублирование явной специализации не допускаются. Дополнительные сведения см. в разделе [явная специализация шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).
+Дублирование явных специализаций не допускается. Дополнительные сведения см. в разделе [явная специализация шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).
 
 Следующий пример приводит к возникновению ошибки C2766:
 
-```
+```cpp
 // C2766.cpp
 // compile with: /c
 template<class T>

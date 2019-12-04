@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2645
 ms.assetid: 6609c2fa-c3b2-4a6b-8e8d-58fb52f67175
-ms.openlocfilehash: 9df9f41da3d4cbef97511b979845c5a6b404614b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa50cf4105c6ceb4f1104e0625ec6492e2d0461a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152596"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758233"
 ---
 # <a name="compiler-error-c2645"></a>Ошибка компилятора C2645
 
-Нет полного имени для указателя на член (найдено ":: *")
+нет полного имени для указателя на член (найдено ":: *")
 
-Объявление указателя на член не содержит класс.
+В объявлении указателя на член не указан класс.
 
 Следующий пример приводит к возникновению ошибки C2645:
 
-```
+```cpp
 // C2645.cpp
 class A {};
 int main() {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2835
 ms.assetid: 41c70630-983f-4da2-8342-513cf48b0519
-ms.openlocfilehash: 069514d1a5d2b16e1175bbc1ce0c796bee64110a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17c0ecdb516b35cb0d00745a33704bae52350d57
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406838"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757869"
 ---
 # <a name="compiler-error-c2835"></a>Ошибка компилятора C2835
 
-определенное пользователем преобразование «тип» не имеет формальных параметров
+определяемое пользователем преобразование "тип" не принимает формальных параметров
 
-Заданные пользователем преобразования типов не могут принимать формальных параметров.
+Преобразования определяемого пользователем типа не могут принимать формальные параметры.
 
 Следующий пример приводит к возникновению ошибки C2835:
 
-```
+```cpp
 // C2835.cpp
 class A {
 public:

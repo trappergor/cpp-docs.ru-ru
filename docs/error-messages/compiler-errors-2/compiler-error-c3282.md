@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3282
 ms.assetid: bac2ac89-c360-4c24-bb81-c20c62ece9ba
-ms.openlocfilehash: 46be1f5250c1ca787909c48646d59180d62bd899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a119f8a9482d3f49c98873fee6f54b434416ee48
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381687"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757583"
 ---
 # <a name="compiler-error-c3282"></a>Ошибка компилятора C3282
 
-универсальный параметр, списки появляются только в управляемые или WinRTclasses, структурах или функциях
+Списки универсальных параметров могут использоваться только в управляемых или Винртклассес, структурах и функциях
 
 Список универсальных параметров был использован неправильно.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
 
@@ -23,7 +23,7 @@ ms.locfileid: "62381687"
 
 В следующем примере показано возникновение ошибки C3282 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C3282.cpp
 // compile with: /clr /c
 generic <typename T> int x;   // C3282

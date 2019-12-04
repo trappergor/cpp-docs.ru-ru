@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: 2df788efd93fb531822d858ea5aee1722487db81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387049"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758779"
 ---
 # <a name="compiler-error-c2261"></a>Ошибка компилятора C2261
 
-«Строка»: ссылка на сборку, является недопустимым и не может быть разрешена
+"строка": ссылка на сборку недопустима и не может быть разрешена
 
-Передано недопустимое значение.
+Недопустимое значение.
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется для указания дружественной сборки. Например если указать в качестве дружественной сборки b.dll a.dll, следует указать (в a.dll): InternalsVisibleTo("b"). Затем среда выполнения позволяет b.dll, доступ к a.dll (за исключением закрытые типы).
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется для указания дружественной сборки. Например, если DLL-файл хочет указать b. dll как дружественную сборку, следует указать (в DLL-библиотеке): InternalsVisibleTo ("b"). Затем среда выполнения предоставляет библиотеке b. dll доступ ко всем файлам в библиотеке DLL (за исключением закрытых типов).
 
-Дополнительные сведения об использовании правильного синтаксиса при указании дружественных сборок, см. в разделе [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).
+Дополнительные сведения о правильном синтаксисе при указании дружественных сборок см. в разделе [дружественные сборкиC++()](../../dotnet/friend-assemblies-cpp.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2261.
 
-```
+```cpp
 // C2261.cpp
 // compile with: /clr /c
 using namespace System::Runtime::CompilerServices;

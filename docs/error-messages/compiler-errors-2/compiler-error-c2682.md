@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2682
 ms.assetid: 30c6a7c4-f5f7-4fe8-81a8-c48938521ab4
-ms.openlocfilehash: 8a9ec2f59f362df284e9bd5cd8df6ae986d59d77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1ce0132ed0db418359effe60f59e1eb2d3cc221
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266274"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760287"
 ---
 # <a name="compiler-error-c2682"></a>Ошибка компилятора C2682
 
-нельзя использовать "оператор приведения" для преобразования из «тип1» в «тип2»
+невозможно использовать casting_operator для преобразования из "тип1" в "тип2"
 
-Оператор приведения предпринял попытку преобразования между двумя несовместимыми типами. Например, нельзя использовать [dynamic_cast](../../cpp/dynamic-cast-operator.md) оператор преобразования указатель на ссылку. `dynamic_cast` Оператор не может использоваться для снятия квалификаторов. Все квалификаторы типов должны совпадать.
+Оператор приведения попытался выполнить преобразование между несовместимыми типами. Например, оператор [dynamic_cast](../../cpp/dynamic-cast-operator.md) нельзя использовать для преобразования указателя в ссылку. Оператор `dynamic_cast` нельзя использовать для приведения квалификаторов. Все квалификаторы типов должны совпадать.
 
-Можно использовать `const_cast` оператор удаления атрибутов, таких как `const`, `volatile`, или `__unaligned`.
+Оператор `const_cast` можно использовать для удаления таких атрибутов, как `const`, `volatile`или `__unaligned`.
 
 Следующий пример приводит к возникновению ошибки C2682:
 
-```
+```cpp
 // C2682.cpp
 class A { virtual void f(); };
 class B: public A {};
@@ -35,7 +35,7 @@ void g(A* pa) {
 
 Следующий пример приводит к возникновению ошибки C2682:
 
-```
+```cpp
 // C2682b.cpp
 // compile with: /clr
 ref struct R{};

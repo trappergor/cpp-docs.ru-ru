@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
-ms.openlocfilehash: e9a998e1c3a6c2fb770fb9d26d97b8a24e5554d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e56ff814b1a2dd6ec3cb41db2cbcc21d7dcf2d9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750173"
 ---
 # <a name="compiler-error-c3519"></a>Ошибка компилятора C3519
 
-«недопустимый_параметр»: недопустимый параметр атрибута embedded_idl
+"invalid_param": недопустимый параметр для embedded_idl атрибута
 
-Параметр был передан `embedded_idl` атрибут [#import](../../preprocessor/hash-import-directive-cpp.md), но компилятор не распознал параметра.
+Параметр был передан атрибуту `embedded_idl` [#import](../../preprocessor/hash-import-directive-cpp.md), но компилятор не распознал параметр.
 
-Только параметры, которые разрешены для `embedded_idl` являются `emitidl` и `no_emitidl`.
+Единственными параметрами, разрешенными для `embedded_idl`, являются `emitidl` и `no_emitidl`.
 
 Следующий пример приводит к возникновению ошибки C3519:
 
-```
+```cpp
 // C3519.cpp
 // compile with: /LD
 [module(name="MyLib2")];

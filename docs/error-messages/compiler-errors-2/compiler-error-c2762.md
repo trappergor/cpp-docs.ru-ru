@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
-ms.openlocfilehash: 0cb05d0e111319ff135bdb48d51af6eb4a2f2353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f325fc9266321f224429afd3c295141627ecd6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257547"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759858"
 ---
 # <a name="compiler-error-c2762"></a>Ошибка компилятора C2762
 
-«класс»: Недопустимое выражение в качестве аргумента шаблона для «аргумент»
+"класс": недопустимое выражение в качестве аргумента шаблона для "Argument"
 
-При использовании [/Za](../../build/reference/za-ze-disable-language-extensions.md), компилятор не преобразует целочисленный указатель.
+При использовании [/Za](../../build/reference/za-ze-disable-language-extensions.md)компилятор не будет преобразовывать целочисленный объект в указатель.
 
 Следующий пример приводит к возникновению ошибки C2762:
 
-```
+```cpp
 // C2762.cpp
 // compile with: /Za
 template<typename T, T *pT>

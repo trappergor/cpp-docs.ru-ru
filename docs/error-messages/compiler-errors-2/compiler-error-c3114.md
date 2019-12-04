@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f548c72a0e95c533ed711fe9f2583a7abd6c500
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404121"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760765"
 ---
 # <a name="compiler-error-c3114"></a>Ошибка компилятора C3114
 
-«аргумент»: Недопустимый именованный аргумент атрибута
+"аргумент": недопустимый именованный аргумент атрибута
 
-Для элемента атрибута класса данных является допустимым именованный аргумент, он должен не быть помечен как `static`, `const`, или `literal`. Свойства, свойство не должно быть `static` и должен иметь get и set.
+Чтобы член данных класса атрибута был допустимым именованным аргументом, он не должен быть помечен как `static`, `const`или `literal`. Если свойство, свойство не должно быть `static` и должно иметь методы доступа get и Set.
 
-Дополнительные сведения см. в разделе [свойство](../../extensions/property-cpp-component-extensions.md) и [определяемые пользователем атрибуты](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [Свойства](../../extensions/property-cpp-component-extensions.md) и [определяемые пользователем атрибуты](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3114.
 
-```
+```cpp
 // C3114.cpp
 // compile with: /clr /c
 public ref class A : System::Attribute {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3386
 ms.assetid: 93fa8c33-0f10-402b-8eec-b0a217a1f8dc
-ms.openlocfilehash: a9183e1f62e7ebaf5db04a35a45806ec02169e69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca78433fcb835ad60b553be28ea746f0f880b315
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328813"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743254"
 ---
 # <a name="compiler-error-c3386"></a>Ошибка компилятора C3386
 
-«Тип»: __declspec(dllexport) /\__declspec(dllimport) не может использоваться для управляемого или WinRTtype
+"тип": __declspec (dllexport)/\__declspec (dllimport) не может применяться к управляемому или Винрттипе
 
-`dllimport` И [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` модификаторы недопустимы для управляемого или среды выполнения Windows тип.
+Модификаторы `dllimport` и [dllexport](../../cpp/dllexport-dllimport.md) `__declspec` недопустимы для управляемого или среда выполнения Windowsого типа.
 
 В следующем примере показано возникновение ошибки C3386 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C3386.cpp
 // compile with: /clr /c
 ref class __declspec(dllimport) X1 {   // C3386

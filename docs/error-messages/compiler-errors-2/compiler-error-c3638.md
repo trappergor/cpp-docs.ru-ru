@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: 33bb248faf946c39543de4a14a44e2ebbda49880
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385892"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742500"
 ---
 # <a name="compiler-error-c3638"></a>Ошибка компилятора C3638
 
-«operator»: стандартный упаковки-преобразования и распаковки-операторы преобразования не может быть переопределен
+"оператор": стандартные операторы преобразования упаковки и распаковки не могут быть переопределены
 
-Компилятор определяет оператор преобразования для каждого управляемого класса для поддержки неявная упаковка-преобразование. Этот оператор не может быть переопределен.
+Компилятор определяет оператор преобразования для каждого управляемого класса, поддерживающего неявную упаковку-преобразование. Этот оператор нельзя переопределить.
 
-Дополнительные сведения см. в разделе [неявная упаковка-преобразование](../../extensions/boxing-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [неявная упаковка](../../extensions/boxing-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3638:
 
-```
+```cpp
 // C3638.cpp
 // compile with: /clr
 value struct V {

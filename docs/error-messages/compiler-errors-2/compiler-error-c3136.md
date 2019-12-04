@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-ms.openlocfilehash: e32ffca067c3b25120301527e7a708d53001d541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75862f3b80d617b607a7b3e735cb3e16e9a40bb7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376254"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757388"
 ---
 # <a name="compiler-error-c3136"></a>Ошибка компилятора C3136
 
-«интерфейс»: COM-интерфейс может наследовать только от другого интерфейса COM, «интерфейс» не является COM-интерфейс
+"Interface": COM-интерфейс может наследовать только от другого COM-интерфейса, "Interface" не является COM-интерфейсом
 
-Интерфейс, к которому применен [атрибут интерфейса](../../windows/attributes/interface-attributes.md) наследует от интерфейса, который не является COM-интерфейса. COM-интерфейс наследует от `IUnknown`. Любому интерфейсу предшествует атрибут интерфейса — это COM-интерфейс.
+Интерфейс, к которому был применен [атрибут интерфейса](../../windows/attributes/interface-attributes.md) , наследуется от интерфейса, который не является COM-интерфейсом. В конечном итоге COM-интерфейс наследуется от `IUnknown`. Любой интерфейс, которому предшествует атрибут Interface, является COM-интерфейсом.
 
 Следующий пример приводит к возникновению ошибки C3136:
 
-```
+```cpp
 // C3136.cpp
 #include "unknwn.h"
 

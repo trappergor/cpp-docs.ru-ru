@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406448"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756283"
 ---
 # <a name="compiler-error-c3915"></a>Ошибка компилятора C3915
 
-«тип» имеет не индексированное свойство по умолчанию (индексатора класса)
+"тип" не имеет индексированного свойства по умолчанию (индексатора класса)
 
-Тип не имеет значение по умолчанию, индексированное свойство.
+У типа нет индексированного свойства по умолчанию.
 
-Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md).
+Для получения дополнительной информации см. [property](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3915.
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -48,11 +48,11 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-C3915 также может возникать при попытке использовать индексатор по умолчанию в одной единице компиляции, в котором он был определен с <xref:System.Reflection.DefaultMemberAttribute>.
+C3915 также может возникать при попытке использовать индексатор по умолчанию в том же компилируемого объекта, где он был определен с <xref:System.Reflection.DefaultMemberAttribute>.
 
 Следующий пример приводит к возникновению ошибки C3915.
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

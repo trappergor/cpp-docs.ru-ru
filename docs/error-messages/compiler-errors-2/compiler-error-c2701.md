@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
-ms.openlocfilehash: b16ddb16d98a81e53b29ff51e41d19073200a2e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aabb47d3e0e2f494b19205626861dea43ca87033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161294"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758337"
 ---
 # <a name="compiler-error-c2701"></a>Ошибка компилятора C2701
 
-«функция»: шаблон функции не может быть дружественным локального класса
+"функция": шаблон функции не может быть дружественным по отношению к локальному классу
 
-Функция шаблона не может быть дружественная функция локального класса.
+Локальный класс не может иметь функцию-шаблон в качестве дружественной функции.
 
 Следующий пример приводит к возникновению ошибки C2701:
 
-```
+```cpp
 // C2701.cpp
 // compile with: /c
 template<typename T>   // OK
