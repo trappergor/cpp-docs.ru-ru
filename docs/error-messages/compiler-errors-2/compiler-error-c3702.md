@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3702
 ms.assetid: 14fcc20e-4404-45d7-be54-e4f09332fa5a
-ms.openlocfilehash: 3a440703b2b17979dda0c00fb2ff87f2b0eb0ff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f9a3509dfe47f2d6d410a05409a28885983cd7a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324692"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758012"
 ---
 # <a name="compiler-error-c3702"></a>Ошибка компилятора C3702
 
-«функция»: Для событий COM требуется ATL
+"функция": ATL требуется для событий COM
 
-Вы попытались использовать COM-событий без включения необходимых ATL файлов заголовка.
+Предпринята попытка использования COM-событий без включения необходимых файлов заголовков ATL.
 
 Следующий пример приводит к возникновению ошибки C3702:
 
-```
+```cpp
 // C3702.cpp
 // uncomment the following line to resolve
 // #define _ATL_ATTRIBUTES 1

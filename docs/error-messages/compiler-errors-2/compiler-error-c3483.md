@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: acbe89b5183d0991fb8d4a571a9595d6f6bafc6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381360"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743098"
 ---
 # <a name="compiler-error-c3483"></a>Ошибка компилятора C3483
 
@@ -27,7 +27,7 @@ var уже является частью списка передаваемых �
 
 В следующем примере возникает ошибка C3483, так как в списке передаваемых параметров лямбда-выражения переменная `n` присутствует несколько раз.
 
-```
+```cpp
 // C3483.cpp
 
 int main()
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

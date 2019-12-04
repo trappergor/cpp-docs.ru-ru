@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7745258f1e1c17d2d88dbac88086ae9410b81605
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328748"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757531"
 ---
 # <a name="compiler-error-c3394"></a>Ошибка компилятора C3394
 
 синтаксическая ошибка в предложении ограничения: для найденного "идентификатор" требуется тип
 
-Ограничение было неправильно сформировано.  Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
+Ограничение было неправильно сформировано.  Дополнительные сведения см. в статье [Constraints on Generic Type Parameters (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) (Ограничения, применяемые к параметрам универсальных типов (C++/CLI)).
 
 ## <a name="example"></a>Пример
 
 В следующем примере возникает ошибка C3394:
 
-```
+```cpp
 // C3394.cpp
 // compile with: /clr /c
 ref class MyClass {};

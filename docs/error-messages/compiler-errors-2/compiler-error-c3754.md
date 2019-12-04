@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3754
 ms.assetid: 14b877bc-9277-40ec-af1c-196a58b45f10
-ms.openlocfilehash: e03ac39213429fbbb9f289be3514718985c04b4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65b6a24c47df5fc40f0305de4890c2ef2bc3c28b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386646"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757297"
 ---
 # <a name="compiler-error-c3754"></a>Ошибка компилятора C3754
 
-конструктор делегата: функцию-член «функция» не может вызываться для экземпляра типа «тип»
+конструктор делегата: функцию члена "Function" нельзя вызывать для экземпляра типа "тип"
 
-Выполнен вызов функции через указатель на тип, который не содержит функцию.
+Выполнен вызов функции с помощью указателя на тип, который не содержит функцию.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3754:
 
-```
+```cpp
 // C3754a.cpp
 // compile with: /clr
 using namespace System;

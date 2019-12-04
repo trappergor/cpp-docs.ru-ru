@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3075
 ms.assetid: f431daa9-e0fa-48f0-a5c3-f99be96b55e3
-ms.openlocfilehash: 0494961b47e99ce1f3e559302aff56278098a912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345cdd17b9da0be8f8d6e9f7b5f48624ade412bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406721"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761586"
 ---
 # <a name="compiler-error-c3075"></a>Ошибка компилятора C3075
 
@@ -19,13 +19,13 @@ ms.locfileid: "62406721"
 
 Тип значения не может содержать экземпляр ссылочного типа.
 
-Дополнительные сведения см. в разделе [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+Дополнительные сведения см. в разделе [ C++ Семантика стека для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3075:
 
-```
+```cpp
 // C3075.cpp
 // compile with: /clr /c
 ref struct U {};

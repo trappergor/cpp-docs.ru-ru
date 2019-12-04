@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2351
 ms.assetid: 5439ccf6-66f6-4859-964c-c73f5eddfc1b
-ms.openlocfilehash: 2d93902ee0008a54da1b2ecf165e0a829362511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6839d0c44efa10ba9507389fea35964fa748d646
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759975"
 ---
 # <a name="compiler-error-c2351"></a>Ошибка компилятора C2351
 
-устаревший синтаксис инициализации конструктора C++
+устаревший C++ синтаксис инициализации конструктора
 
-В списке инициализации нового стиля для конструктора необходимо явно задать имена каждой прямой базовый класс, даже если это только базовый класс.
+В списке инициализации нового стиля для конструктора необходимо явно присвоить имя каждому прямому базовому классу, даже если он является единственным базовым классом.
 
-В следующем примере возникает в C2351:
+Следующий пример приводит к возникновению ошибки C2351:
 
-```
+```cpp
 // C2351.cpp
 // compile with: /c
 class B {

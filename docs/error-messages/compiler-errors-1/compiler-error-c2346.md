@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc2aeac02ecc3f29406c2288051ca6cd9d3a4923
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188095"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760014"
 ---
 # <a name="compiler-error-c2346"></a>Ошибка компилятора C2346
 
-«функция» не может компилироваться как машинный код: причина
+"функция" не может быть скомпилирована как собственная: причина
 
-Компилятору не удалось скомпилировать функцию в код MSIL.
+Компилятору не удалось скомпилировать функцию в MSIL.
 
-Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md) и [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).
+Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md) и [/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-1. Удалите код в функции, которая не может компилироваться в MSIL.
+1. Удалите код в функции, которая не может быть скомпилирована в MSIL.
 
-1. Либо не компилируйте модуль с помощью **/CLR**, или пометьте ее как неуправляемые и неуправляемая прагма.
+1. Либо не компилируйте модуль с помощью **параметра/clr**, либо пометьте функцию как неуправляемую с помощью неуправляемой директивы pragma.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2346.
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr

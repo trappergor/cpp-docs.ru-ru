@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754866"
 ---
 # <a name="compiler-error-c3853"></a>Ошибка компилятора C3853
 
-«=»: повторная инициализация ссылки или присвоение через ссылку на функцию не допускается
+"=": повторная инициализация ссылки или присваивания через ссылку на функцию недопустима
 
-Невозможно присвоить ссылке через функцию, поскольку функции не являются значениями.
+Невозможно присвоить ссылку через функцию, так как функции не значения lvalue.
 
-Приведенные ниже примеры создания C3853:
+Следующие примеры создают C3853:
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3645
 ms.assetid: 346da528-ae86-4cd0-9654-f41bee26ac0d
-ms.openlocfilehash: f733de6920e00f1f53c87884a7a334e575bceb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504b13aeb37fae0c350ef88798fefaec6f26c8e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385788"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757830"
 ---
 # <a name="compiler-error-c3645"></a>Ошибка компилятора C3645
 
-«функция»: __clrcall невозможно использовать с функциями, скомпилированными в машинный код
+"функция": __clrcall нельзя использовать для функций, скомпилированных в машинный код
 
-Наличие некоторые ключевые слова в функции вызовет функцию для компиляции в машинный код.
+Наличие некоторых ключевых слов в функции приведет к компиляции функции в машинный код.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3645.
 
-```
+```cpp
 // C3645.cpp
 // compile with: /clr /c
 #pragma unmanaged

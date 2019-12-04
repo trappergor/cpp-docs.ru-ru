@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2658
 ms.assetid: 638368e8-7893-4a14-abec-13c768a9543a
-ms.openlocfilehash: 792fd497ad7cdb98ae72f3e6451780dad487624d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77a9122d20561ceee4f211394b3b81900d5580ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360415"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756088"
 ---
 # <a name="compiler-error-c2658"></a>Ошибка компилятора C2658
 
-«член»: переопределение в анонимной структуре или объединении
+"член": переопределение в анонимной структуре или объединении
 
-Две анонимные структуры или объединения содержали объявления членов с тем же идентификатором, но с разными типами. В разделе [/Za](../../build/reference/za-ze-disable-language-extensions.md), вы также получите эту ошибку для членов с тем же идентификатором и типом.
+Две Анонимные структуры или объединения содержат объявления элементов с одинаковым идентификатором, но с разными типами. В режиме [/Za](../../build/reference/za-ze-disable-language-extensions.md)эта ошибка также возникает для членов с одинаковым идентификатором и типом.
 
 Следующий пример приводит к возникновению ошибки C2658:
 
-```
+```cpp
 // C2658.cpp
 // compile with: /c
 struct X {

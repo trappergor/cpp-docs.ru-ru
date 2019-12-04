@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3896
 ms.assetid: eb8be0f6-5b4e-4d71-8285-8a2a94f8ba29
-ms.openlocfilehash: 00e103720dc666b17566b67da19d4e908bb3addd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f15cd73465f4210ed5e5e34bebe2122c0b88f722
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385528"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749273"
 ---
 # <a name="compiler-error-c3896"></a>Ошибка компилятора C3896
 
-«член»: недопустимый инициализатор: этот член данных литерала можно инициализировать только с «nullptr»
+"член": недопустимый инициализатор: этот элемент данных литерала можно инициализировать только с помощью nullptr
 
-Объект [литерала](../../extensions/literal-cpp-component-extensions.md) член данных инициализирован неправильно.  См. в разделе [nullptr](../../extensions/nullptr-cpp-component-extensions.md) Дополнительные сведения.
+[Литеральный](../../extensions/literal-cpp-component-extensions.md) элемент данных инициализирован неправильно.  Дополнительные сведения см. в разделе [nullptr](../../extensions/nullptr-cpp-component-extensions.md) .
 
 Следующий пример приводит к возникновению ошибки C3896:
 
-```
+```cpp
 // C3896.cpp
 // compile with: /clr /c
 ref class R{};

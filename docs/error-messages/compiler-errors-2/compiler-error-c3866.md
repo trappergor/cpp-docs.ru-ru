@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3866
 ms.assetid: 685870af-2440-4cdf-a6cb-284a5b96ef9d
-ms.openlocfilehash: 98014fec77ce47fa4c484645f401e615f1470e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907e435b31a825021b03946f08f7307c5e1ed708
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302304"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761461"
 ---
 # <a name="compiler-error-c3866"></a>Ошибка компилятора C3866
 
-отсутствует список аргументов функции вызова
+в вызове функции отсутствует список аргументов
 
-Внутри нестатической функцией-членом вызов деструктора или метода завершения не имеет список аргументов.
+В нестатической функции-члене вызов деструктора или метода завершения не имеет списка аргументов.
 
 Следующий пример приводит к возникновению ошибки C3866:
 
-```
+```cpp
 // C3866.cpp
 // compile with: /c
 class C {

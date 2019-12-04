@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3914
 ms.assetid: 8f3190e6-ee50-4916-9ecc-3b8748b2e1e7
-ms.openlocfilehash: e7c04da2b7574d3af0e1c05ae4adc3ad513faa0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f7da67871b5e6b9d7da9a9aa4eebeb761f8cc50
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738002"
 ---
 # <a name="compiler-error-c3914"></a>Ошибка компилятора C3914
 
 свойство по умолчанию не может быть статическим
 
-Свойство по умолчанию был объявлен неправильно.  Дополнительные сведения см. в разделе [Как Использование свойств C++выполняет](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Свойство по умолчанию было объявлено неправильно.  Дополнительные сведения см. в разделе [инструкции. Использование свойств в C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает ошибка C3914 и показано, как ее исправить.
+Следующий пример приводит к возникновению ошибки C3914 и показывает, как ее исправить.
 
-```
+```cpp
 // C3914.cpp
 // compile with: /clr /c
 ref struct X {

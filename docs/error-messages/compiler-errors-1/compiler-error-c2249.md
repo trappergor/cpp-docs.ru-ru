@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f3f82549cf5d9230adfee7e83248e92f8e93e769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24db84c9205173f098e493c4ea6393fb96592276
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301348"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758896"
 ---
 # <a name="compiler-error-c2249"></a>Ошибка компилятора C2249
 
-«член»: нет доступного пути к члену, объявленному в виртуальном базовом «class»
+"член": нет доступного пути к члену, объявленному в виртуальном базовом классе "класс"
 
-`member` Наследуется из закрытого `virtual` базового класса или структуры.
+`member` наследуется от общедоступного `virtual` базового класса или структуры.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2249.
 
-```
+```cpp
 // C2249.cpp
 class A {
 private:
@@ -42,9 +42,9 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-C2249 также может возникать при попытке назначить поток из стандартной библиотеки C++ в другой поток.  Следующий пример приводит к возникновению ошибки C2249.
+C2249 также может возникать при попытке назначить поток из C++ стандартной библиотеки в другой поток.  Следующий пример приводит к возникновению ошибки C2249.
 
-```
+```cpp
 // C2249_2.cpp
 #include <iostream>
 using namespace std;

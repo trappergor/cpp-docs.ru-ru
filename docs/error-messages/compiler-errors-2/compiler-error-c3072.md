@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406734"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756764"
 ---
 # <a name="compiler-error-c3072"></a>Ошибка компилятора C3072
 
-оператор «оператор» не может применяться к экземпляру класса ref
+оператор "operator" не может применяться к экземпляру класса ссылки
 
-использовать унарный "`operator` " оператор преобразования экземпляра класса ref в тип дескриптора
+Используйте унарный оператор "`operator`" для преобразования экземпляра ссылочного класса в тип Handle
 
-Тип CLR требуется операторы среды CLR, не операторы собственные (или standard).  Дополнительные сведения см. в разделе [оператор отслеживания ссылок](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
+Для типа CLR требуются операторы CLR, а не машинные (или стандартные) операторы.  Дополнительные сведения см. в разделе [Отслеживание ссылочного оператора](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3072.
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365849"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754164"
 ---
 # <a name="compiler-error-c3265"></a>Ошибка компилятора C3265
 
-нельзя объявлять управляемый «управляемых конструкцию» в неуправляемых «неуправляемые конструкции»
+Невозможно объявить управляемую "управляемую конструкцию" в неуправляемой "неуправляемой конструкции"
 
-Нельзя включать управляемого объекта в неуправляемый контекст.
+Нельзя включить управляемый объект в неуправляемый контекст.
 
 В следующем примере воспроизводится C3265:
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

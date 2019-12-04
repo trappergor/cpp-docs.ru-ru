@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
-ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a42b264129ee365e664b1242c8aa58dd1244bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386581"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758480"
 ---
 # <a name="compiler-error-c3919"></a>Ошибка компилятора C3919
 
-«метод_события»: функция должна иметь тип «тип»
+"event_method": функция должна иметь тип "тип"
 
-В методе доступа события не был объявлен неправильно.
+Метод доступа к событию был объявлен неправильно.
 
-Дополнительные сведения о событиях см. в разделе [событий](../../extensions/event-cpp-component-extensions.md).
+Дополнительные сведения о событиях см. в разделе [event](../../extensions/event-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3919:
 
-```
+```cpp
 // C3919.cpp
 // compile with: /clr /c
 using namespace System;

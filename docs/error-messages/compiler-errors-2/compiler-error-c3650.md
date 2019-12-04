@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 54543225144ed0187f6c1e68e7236d886c026860
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385606"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756361"
 ---
 # <a name="compiler-error-c3650"></a>Ошибка компилятора C3650
 
-«интерфейса»: не может использоваться как явное переопределение, должен быть виртуальная функция-член базового класса
+"interface_method": не может использоваться как явное переопределение, должно быть виртуальной функцией-членом базового класса
 
-Чтобы выполнить явное переопределение элемента, который не был виртуальный была предпринята.
+Предпринята попытка выполнить явное переопределение для элемента, который не является виртуальным.
 
-Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [явные переопределения](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3650:
 
-```
+```cpp
 // C3650.cpp
 // compile with: /clr
 public interface struct I {

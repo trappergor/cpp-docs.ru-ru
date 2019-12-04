@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3132
 ms.assetid: d54a3d12-336a-4ed0-ad4e-43cddac33b5e
-ms.openlocfilehash: 1a97e04747cb92909380e66d1f4ea8ca62183054
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ef68e693b77b72c1e4cc2590a404b09b38ab04
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760209"
 ---
 # <a name="compiler-error-c3132"></a>Ошибка компилятора C3132
 
-«параметр функции»: массивы параметров может применяться только к формальному аргументу с типом «одномерный управляемый массив»
+"функция-параметр": массивы параметров могут применяться только к формальному аргументу типа "одномерный управляемый массив"
 
-<xref:System.ParamArrayAttribute> Атрибут был применен к параметру, который не является одномерным массивом.
+Атрибут <xref:System.ParamArrayAttribute> был применен к параметру, который не был массивом с одним измерением.
 
 Следующий пример приводит к возникновению ошибки C3132:
 
-```
+```cpp
 // C3132.cpp
 // compile with: /clr /c
 using namespace System;

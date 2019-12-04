@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2360
 ms.assetid: 51bfd2ee-8108-4777-aa93-148b9cebfa83
-ms.openlocfilehash: 6e956ccb021dc3bce4d107e4aa6e0bbe4356283b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226fcd8a27c9abdb789b8191a5cf4e59cc4a66cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364731"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759910"
 ---
 # <a name="compiler-error-c2360"></a>Ошибка компилятора C2360
 
-Пропуск инициализации «идентификатор» метки «case»
+Инициализация "идентификатор" пропускается меткой "Case"
 
-Инициализация `identifier` может быть пропущено в `switch` инструкции. Нельзя перейти назад объявление с помощью инициализатора, только если объявление в блоке. (Если она не объявлена в блоке, переменная находится в пределах области до конца `switch` инструкции.)
+Инициализацию `identifier` можно пропустить в инструкции `switch`. Нельзя перейти к предшествующему объявлению с инициализатором, если объявление не заключено в блок. (Если только он не объявлен в блоке, переменная находится в пределах области до конца оператора `switch`.)
 
 Следующий пример приводит к возникновению ошибки C2360:
 
-```
+```cpp
 // C2360.cpp
 int main() {
    int x = 0;
@@ -37,7 +37,7 @@ int main() {
 
 Возможное решение
 
-```
+```cpp
 // C2360b.cpp
 int main() {
    int x = 0;

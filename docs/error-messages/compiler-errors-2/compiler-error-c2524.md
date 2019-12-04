@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
-ms.openlocfilehash: 369aa5f21c072472808ffba06c3bc5c5e608ac22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e53a0c08f07bf69378fbb7603f63c596f641355
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282187"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758662"
 ---
 # <a name="compiler-error-c2524"></a>Ошибка компилятора C2524
 
-«деструктор»: метод завершения или деструктор должен иметь список параметров «void»
+"деструктор": деструктор или метод завершения должен иметь список параметров "void"
 
-Деструктор или метод завершения бы список параметров, не [void](../../cpp/void-cpp.md). Другие типы параметров не разрешены.
+Деструктор или метод завершения имел список параметров, который не является [void](../../cpp/void-cpp.md). Другие типы параметров не допускаются.
 
 ## <a name="example"></a>Пример
 
-Следующий код приводит к возникновению C2524.
+Следующий код воспроизводит C2524.
 
-```
+```cpp
 // C2524.cpp
 // compile with: /c
 class A {
@@ -36,9 +36,9 @@ class A {
 
 ## <a name="example"></a>Пример
 
-Следующий код приводит к возникновению C2524.
+Следующий код воспроизводит C2524.
 
-```
+```cpp
 // C2524_b.cpp
 // compile with: /clr /c
 ref struct I1 {

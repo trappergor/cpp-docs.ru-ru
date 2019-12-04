@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3748
 ms.assetid: 6fe71a0a-dd93-4ce6-9729-b9616360cf34
-ms.openlocfilehash: ef1c446f9feb3d40add62513a31fc81a382b98e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7da734b72acfda4efd55c518b1cc356ff49cce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761859"
 ---
 # <a name="compiler-error-c3748"></a>Ошибка компилятора C3748
 
-«интерфейс»: управляемые интерфейсы не могут порождать события
+"интерфейс": управляемые интерфейсы не могут порождать события
 
-[__Event](../../cpp/event.md) ключевое слово не может использоваться в интерфейсе.
+Ключевое слово [__event](../../cpp/event.md) не может появляться внутри интерфейса.
 
 Следующий пример приводит к возникновению ошибки C3748:
 
-```
+```cpp
 // C3748.cpp
 __interface I {
 // try the following line instead

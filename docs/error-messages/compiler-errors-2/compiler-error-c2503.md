@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2503
 ms.assetid: da86cc89-fd04-400b-aa8d-a5ffaf7e3918
-ms.openlocfilehash: c481a27f19a92f47a19f0cfaa7b59cd509bb3c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfe574f79eae2e45dc62315245a1b8b773d04df
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164947"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746907"
 ---
 # <a name="compiler-error-c2503"></a>Ошибка компилятора C2503
 
-«класс»: базовые классы не могут содержать массивы нулевого размера
+"класс": базовые классы не могут содержать массивы нулевого размера
 
-Базовый класс или структура содержит массив нулевого размера. Массив, в классе должен иметь по крайней мере один элемент.
+Базовый класс или структура содержит массив нулевого размера. Массив в классе должен содержать по крайней мере один элемент.
 
 Следующий пример приводит к возникновению ошибки C2503:
 
-```
+```cpp
 // C2503.cpp
 // compile with: /c
 class A {

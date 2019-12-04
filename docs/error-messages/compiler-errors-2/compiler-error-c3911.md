@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
-ms.openlocfilehash: 25bf8def4e0a8085e20dc6ba9a04dc7f27cee651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f803d6f575d78fd7a9a9157f06b3f64c4eeb3d77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406585"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748792"
 ---
 # <a name="compiler-error-c3911"></a>Ошибка компилятора C3911
 
-«event_accessor_method»: функция должна иметь тип «подпись»
+"event_accessor_method": функция должна иметь тип "Signature"
 
-Неправильно объявлен метод доступа события.
+Метод доступа события не был правильно объявлен.
 
-Дополнительные сведения см. в разделе [событий](../../extensions/event-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [event](../../extensions/event-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3911:
 
-```
+```cpp
 // C3911.cpp
 // compile with: /clr
 using namespace System;

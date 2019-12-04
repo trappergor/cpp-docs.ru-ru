@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
-ms.openlocfilehash: 73d8daa9576e4edc29958918c107e9edf18cc579
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: aa276ea839f11574609b183d78b46e08581a1b51
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447968"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743657"
 ---
 # <a name="compiler-error-c2477"></a>Ошибка компилятора C2477
 
-«член»: статические данные-член не могут быть инициализированы в производном классе
+"член": статические данные не могут быть инициализированы через производный класс
 
-Статические данные-член шаблона класса был инициализирован неправильно. Это критическое изменение в версиях Microsoft C++ компилятора до Visual Studio .NET 2003, чтобы соответствовать ISO C++ standard.
+Статические данные-член класса шаблона инициализирован неправильно. Это критическое изменение в версиях компилятора Майкрософт C++ до Visual Studio .NET 2003, чтобы соответствовать стандарту ISO. C++
 
 Следующий пример приводит к возникновению ошибки C2477:
 
-```
+```cpp
 // C2477.cpp
 // compile with: /Za /c
 template <class T>

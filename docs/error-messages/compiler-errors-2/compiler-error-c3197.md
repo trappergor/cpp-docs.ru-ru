@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3197
 ms.assetid: 4e385c3b-222e-425c-9612-46e83ed41650
-ms.openlocfilehash: be9b7dadb4f67a6392cd7a2c46caf61d983e79eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519daf906485f78fe155d0f67e63d8e8e97ae29
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329040"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739224"
 ---
 # <a name="compiler-error-c3197"></a>Ошибка компилятора C3197
 
-«ключевое_слово»: может использоваться только в определениях
+"ключевое слово": может использоваться только в определениях
 
-Ключевое слово был использован в объявлении, но допустим только в определении.
+В объявлении использовалось ключевое слово, но оно допустимо только в определении.
 
 Следующий пример приводит к возникновению ошибки C3197:
 
-```
+```cpp
 // C3197.cpp
 // compile with: /clr /c
 ref struct R abstract;   // C3197

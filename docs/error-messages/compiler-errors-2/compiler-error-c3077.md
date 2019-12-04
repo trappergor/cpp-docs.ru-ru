@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3077
 ms.assetid: d9f3c619-d1e2-4656-81a5-a35a9586a7d4
-ms.openlocfilehash: d59859b82c1a8d506bb793a2c4dcd887b0898d85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfe4c17ee122baa8f648669f9080b28584a66f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756738"
 ---
 # <a name="compiler-error-c3077"></a>Ошибка компилятора C3077
 
@@ -19,13 +19,13 @@ ms.locfileid: "62406695"
 
 Нельзя объявлять метод завершения с собственным типом или типом значения.
 
-Дополнительные сведения см. в разделе [деструкторы и методы завершения в разделе: Определение и использование классов и структур (C++выполняет)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Дополнительные сведения см. [в разделе Деструкторы и методы завершения в статье инструкции: определение и использование классов и структур (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3077.
 
-```
+```cpp
 // C3077.cpp
 // compile with: /clr /c
 value struct vs {

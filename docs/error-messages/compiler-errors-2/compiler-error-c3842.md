@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3842
 ms.assetid: 41a1a44a-c618-40a2-8d26-7da27d14095d
-ms.openlocfilehash: a61a69aca53f7f8996d0261a57b749930ecc01cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 881165a1100d1c8791ecd5f50eda6a2e9f1650eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385515"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754918"
 ---
 # <a name="compiler-error-c3842"></a>Ошибка компилятора C3842
 
 function: квалификаторы const и volatile для функций-членов управляемых типов или типов WinRT не поддерживаются
 
-[const](../../cpp/const-cpp.md) и [volatile](../../cpp/volatile-cpp.md) не поддерживаются для функций-членов управляемых типов или типов среды выполнения Windows.
+[const](../../cpp/const-cpp.md) и [volatile](../../cpp/volatile-cpp.md) не поддерживаются для функций членов среда выполнения Windows или управляемых типов.
 
 Следующий пример приводит к возникновению ошибки C3842:
 
-```
+```cpp
 // C3842a.cpp
 // compile with: /clr /c
 public ref struct A {

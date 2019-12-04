@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: f2b1fb0590b8fd72b0365185b245d7b16566d11d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182721"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759091"
 ---
 # <a name="compiler-error-c2297"></a>Ошибка компилятора C2297
 
-«operator»: неправильный правый операнд
+"оператор": неправильный правый операнд
 
-Правый операнд, используемый с `operator` является недопустимым.
+Правый операнд, используемый с `operator`, является недопустимым.
 
-Например компилятор может обнаружить объявление там, где запланирован вызов функции.
+Например, компилятор может увидеть объявление, в котором вы предполагали вызов функции.
 
 Следующий пример приводит к возникновению ошибки C2297:
 
-```
+```cpp
 // C2297.cpp
 struct MyStruct {
    struct Help {

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3634
 ms.assetid: fd09f10c-f863-483b-9756-71c16b760b02
-ms.openlocfilehash: 2acd76fee5e7ca309991e639044a45ea83ed112b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2abf5191035e450dca72777cdc2b2675ac9b90de
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385671"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742591"
 ---
 # <a name="compiler-error-c3634"></a>Ошибка компилятора C3634
 
-«функция»: невозможно определить абстрактный метод управляемого или WinRTclass
+"функция": невозможно определить абстрактный метод управляемого или Винрткласс
 
 Абстрактный метод может быть объявлен в управляемом классе или классе WinRT, но он не может быть определен.
 
@@ -23,7 +23,7 @@ ms.locfileid: "62385671"
 
 Следующий пример приводит к возникновению ошибки C3634:
 
-```
+```cpp
 // C3634.cpp
 // compile with: /clr
 ref class C {

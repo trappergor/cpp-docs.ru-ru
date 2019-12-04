@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256871"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739601"
 ---
 # <a name="compiler-error-c2787"></a>Ошибка компилятора C2787
 
-«Идентификатор»: идентификатор GUID не была связана с этим объектом
+"идентификатор": с этим объектом не связан ни один GUID
 
-[__Uuidof](../../cpp/uuidof-operator.md) оператор принимает определяемого пользователем типа с присоединенным идентификатором GUID или объект такого типа определяемых пользователем. Эта ошибка возникает, если аргумент является определяемый пользователем тип не сопоставлен идентификатор GUID.
+Оператор [__uuidof](../../cpp/uuidof-operator.md) принимает определяемый пользователем тип с ПРИСОЕДИНЕНным идентификатором GUID или объектом такого определяемого пользователем типа. Эта ошибка возникает, когда аргумент является определяемым пользователем типом без GUID.
 
 Следующий пример приводит к возникновению ошибки C2787:
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

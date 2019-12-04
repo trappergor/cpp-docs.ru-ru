@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2614
 ms.assetid: a550c1d5-8718-4e17-a888-b2619e00fe11
-ms.openlocfilehash: 71f0fe3211ce253bcf30347658692651e84ab608
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 202d7f4caec3aabfde5d69adeaafa3da5dd67623
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344750"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737677"
 ---
 # <a name="compiler-error-c2614"></a>Ошибка компилятора C2614
 
-«класс1»: недопустимая инициализация члена: «класс2» не является основание или член
+"Class1": недопустимая инициализация члена: "class2" не является базовым или членом
 
-Только члены или базовые классы могут отображаться в списке инициализации для класса или структуры.
+В списке инициализации класса или структуры могут присутствовать только члены или базовые классы.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2614.
 
-```
+```cpp
 // C2614.cpp
 // compile with: /c
 struct A {

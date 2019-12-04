@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328293"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753189"
 ---
 # <a name="compiler-error-c3719"></a>Ошибка компилятора C3719
 
-«интерфейс»: источник событий на основе интерфейса может использоваться только для COM-событий
+"Interface": источник событий на основе интерфейса может использоваться только для событий COM
 
-Объявлен в контексте, отличном от COM интерфейс.
+Вы объявили интерфейс в контексте, не являющемся контекстом COM.
 
 Следующий пример приводит к возникновению ошибки C3719:
 
-```
+```cpp
 // C3719a.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"
@@ -46,9 +46,9 @@ int main() {
 }
 ```
 
-Чтобы устранить эту ошибку, примените [объект](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md), и [event_receiver](../../windows/event-receiver.md) атрибутов соответствующим образом, чтобы сделать классы, в которых используются классы интерфейс COM. Пример:
+Чтобы устранить эту ошибку, примените атрибуты [Object](../../windows/object-cpp.md), [coclass](../../windows/coclass.md), [event_source](../../windows/event-source.md)и [event_receiver](../../windows/event-receiver.md) соответствующим образом, чтобы сделать классы, в которых используются классы COM интерфейса. Например:
 
-```
+```cpp
 // C3719b.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

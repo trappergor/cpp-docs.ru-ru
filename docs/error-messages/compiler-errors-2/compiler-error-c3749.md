@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3749
 ms.assetid: 3d26b468-4757-41b8-b5a2-78022a5295fb
-ms.openlocfilehash: 7535f82a392f3d54b265ada2bd40a8d433838f4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75138bf8b090b7770d5bee918790efc095d76627
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227277"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761846"
 ---
 # <a name="compiler-error-c3749"></a>Ошибка компилятора C3749
 
-«атрибут»: настраиваемый атрибут не может использоваться внутри функции
+"атрибут": настраиваемый атрибут не может использоваться внутри функции
 
-Настраиваемый атрибут не может использоваться внутри функции. Дополнительные сведения о настраиваемых атрибутах см. в разделе [атрибут](../../windows/attributes/attribute.md).
+В функции нельзя использовать настраиваемый атрибут. Дополнительные сведения о настраиваемых атрибутах см. в разделе [атрибут](../../windows/attributes/attribute.md)раздела.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3749:
 
-```
+```cpp
 // C3749a.cpp
 // compile with: /clr /c
 using namespace System;

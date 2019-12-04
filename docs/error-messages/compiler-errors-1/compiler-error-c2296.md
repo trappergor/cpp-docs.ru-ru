@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182682"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759078"
 ---
 # <a name="compiler-error-c2296"></a>Ошибка компилятора C2296
 
-«operator»: недопустимый левый операнд
+"оператор": неправильный левый операнд
 
-Левый операнд, используемый с `operator` является недопустимым.
+Левый операнд, используемый с `operator`, является недопустимым.
 
-Например компилятор может обнаружить объявление там, где запланирован вызов функции.
+Например, компилятор может увидеть объявление, в котором вы предполагали вызов функции.
 
 Следующий пример приводит к возникновению ошибки C2296:
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

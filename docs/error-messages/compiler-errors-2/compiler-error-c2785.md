@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-ms.openlocfilehash: fcf2bbb01f2aac668ff52884a6ccfb36c66aa89d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aff2e5c96e3c79fc748d8a95779d6a08647ab03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395382"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739627"
 ---
 # <a name="compiler-error-c2785"></a>Ошибка компилятора C2785
 
-«объявление1» и «объявление2» имеют различные возвращаемые типы
+"объявление1" и "объявление2" имеют различные возвращаемые типы
 
-Тип возвращаемого значения специализации шаблона функции отличается от тип возвращаемого значения шаблона основной функции.
+Тип возвращаемого значения специализации шаблона функции отличается от типа возвращаемого значения шаблона основной функции.
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-1. Проверьте все специализации шаблона функции для обеспечения согласованности.
+1. Проверьте все специализации шаблона функции на согласованность.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2785:
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

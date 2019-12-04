@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 01e229fe0ae5bf9e04c577bb653ff1ed7fdb33bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 337cd7f37bf94c7a3d5cffe6b167d4661e3b0a81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74751460"
 ---
 # <a name="compiler-error-c3084"></a>Ошибка компилятора C3084
 
@@ -19,13 +19,13 @@ ms.locfileid: "62243288"
 
 Метод завершения или деструктор был объявлен неправильно.
 
-Например, деструктор не следует помечать как запечатанный.  Деструктор будет недоступен для производных типов.  Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md) и [деструкторы и методы завершения в разделе: Определение и использование классов и структур (C++выполняет)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+Например, деструктор не следует помечать как запечатанный.  Деструктор будет недоступен для производных типов.  Дополнительные сведения см. в разделе [явные переопределения](../../extensions/explicit-overrides-cpp-component-extensions.md) и [деструкторы и методы завершения в статье как определить и использовать классы и структуры (C++/CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
 
 ## <a name="example"></a>Пример
 
 При компиляции следующего примера возникнет ошибка C3084.
 
-```
+```cpp
 // C3084.cpp
 // compile with: /clr /c
 ref struct R {

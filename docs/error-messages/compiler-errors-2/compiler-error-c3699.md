@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324770"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758038"
 ---
 # <a name="compiler-error-c3699"></a>Ошибка компилятора C3699
 
-«operator»: нельзя использовать перенаправление для типа «тип»
+"оператор": невозможно использовать это косвенное обращение для типа "тип"
 
-Была предпринята попытка использовать косвенного обращения, не разрешена для `type`.
+Предпринята попытка использовать косвенное обращение, которое не разрешено в `type`.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3699.
 
-```
+```cpp
 // C3699.cpp
 // compile with: /clr /c
 using namespace System;
@@ -38,7 +38,7 @@ int main() {
 
 Тривиальное свойство не может иметь ссылочный тип. Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md) . Следующий пример приводит к возникновению ошибки C3699.
 
-```
+```cpp
 // C3699_b.cpp
 // compile with: /clr /c
 ref struct C {
@@ -49,9 +49,9 @@ ref struct C {
 
 ## <a name="example"></a>Пример
 
-Эквивалент синтаксиса «указатель на указатель» является дескриптором для отслеживания ссылок. Следующий пример приводит к возникновению ошибки C3699.
+Эквивалентом синтаксиса "указатель на указатель" является обработчик для отслеживаемой ссылки. Следующий пример приводит к возникновению ошибки C3699.
 
-```
+```cpp
 // C3699_c.cpp
 // compile with: /clr /c
 using namespace System;

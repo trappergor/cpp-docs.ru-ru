@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
-ms.openlocfilehash: 58d56ad834b34425cda4ac7ba081eabd2424e451
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0061a7171dd08440ec5d8c8b8cadb77303ff8f41
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408359"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761119"
 ---
 # <a name="compiler-error-c2910"></a>Ошибка компилятора C2910
 
-«функция»: явная специализация невозможна
+"функция": не может быть явно специализированной
 
-Компилятор обнаружил попытку явно специализации функции.
+Компилятор обнаружил попытку выполнить явную специализацию функции дважды.
 
 Следующий пример приводит к возникновению ошибки C2910:
 
-```
+```cpp
 // C2910.cpp
 // compile with: /c
 template <class T>
@@ -31,11 +31,11 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization
 ```
 
-C2910 также может возникать при попытке явная специализация члена нешаблонных. То есть можно только явно специализировать шаблон функции.
+C2910 также можно создать, если вы попытаетесь явно настроить член, не являющийся шаблоном. То есть можно явно настроить только шаблон функции.
 
 Следующий пример приводит к возникновению ошибки C2910:
 
-```
+```cpp
 // C2910b.cpp
 // compile with: /c
 template <class T> struct A {
@@ -54,13 +54,13 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}
 ```
 
-Эта ошибка может также возникать в результате изменений работы компилятора в Visual Studio .NET 2003:.
+Эта ошибка также будет сформирована в результате действий по согласованности компилятора, выполненных в Visual Studio .NET 2003:.
 
-Код будет допустимым в версии Visual C++ в Visual Studio .NET 2003 и Visual Studio .NET, удалите `template <>`.
+Для кода будет допустимым в версиях Visual Studio .NET 2003 и Visual Studio .NET визуального элемента C++, удалите `template <>`.
 
 Следующий пример приводит к возникновению ошибки C2910:
 
-```
+```cpp
 // C2910c.cpp
 // compile with: /c
 template <class T> class A {

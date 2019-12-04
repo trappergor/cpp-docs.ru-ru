@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2388
 ms.assetid: 764ad2d7-cb04-425f-ba30-70989488c4a4
-ms.openlocfilehash: 62afcb1fafc19d3d61a86f2fbc10cb99e095afc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21658a659468a6e2a0d911af70eefdaed320446c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393666"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745061"
 ---
 # <a name="compiler-error-c2388"></a>Ошибка компилятора C2388
 
-«символ»: символ не может объявляться с обоих параметрами __declspec(appdomain) и \__declspec(process)
+"символ": символ нельзя объявить одновременно с __declspec (AppDomain) и \__declspec (Process)
 
 Одновременное использование модификаторов `appdomain` и `process` `__declspec` для одного символа не допускается. Память для хранения переменной выделяется для каждого процесса или каждого домена приложений.
 
@@ -23,7 +23,7 @@ ms.locfileid: "62393666"
 
 При компиляции следующего примера возникнет ошибка C2388:
 
-```
+```cpp
 // C2388.cpp
 // compile with: /clr /c
 __declspec(process) __declspec(appdomain) int i;   // C2388

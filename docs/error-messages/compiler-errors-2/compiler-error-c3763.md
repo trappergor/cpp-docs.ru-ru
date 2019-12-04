@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: e7dc73334cedda27b82f79b1d2b7a8fc38a8098d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400270"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757258"
 ---
 # <a name="compiler-error-c3763"></a>Ошибка компилятора C3763
 
-«Тип»: «retval» и «out» могут использоваться только в тип данных указателя
+"тип": "retval" и "out" могут использоваться только в типе указателя данных
 
-[Out](../../windows/out-cpp.md) или [retval](../../windows/retval.md) атрибуты могут появляться только в параметрах типа указателя. Удалите атрибут или использовать параметр типа указателя.
+Атрибуты [out](../../windows/out-cpp.md) и [retval](../../windows/retval.md) могут присутствовать только в параметрах типа pointer. Удалите атрибут или установите параметр указателя типа.
 
 Следующий пример приводит к возникновению ошибки C3763:
 
-```
+```cpp
 // C3763.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759897"
 ---
 # <a name="compiler-error-c2361"></a>Ошибка компилятора C2361
 
-Пропуск инициализации «идентификатор» метки «default»
+Инициализация "идентификатор" пропускается меткой "default"
 
-Инициализация `identifier` может быть пропущено в `switch` инструкции. Нельзя перейти назад объявление с помощью инициализатора, только если объявление в блоке. (Если она не объявлена в блоке, переменная находится в пределах области до конца `switch` инструкции.)
+Инициализацию `identifier` можно пропустить в инструкции `switch`. Нельзя перейти к предшествующему объявлению с инициализатором, если объявление не заключено в блок. (Если только он не объявлен в блоке, переменная находится в пределах области до конца оператора `switch`.)
 
 Следующий пример приводит к возникновению ошибки C2361:
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -37,7 +37,7 @@ void func( void ) {
 
 Возможное решение
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3194
 ms.assetid: 49d3ffc6-eff6-4b46-865b-18811692a8bb
-ms.openlocfilehash: 181a18dde45c3363f1f77bc0cbbd5b0ffca3e898
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83c07da5383740ca14c9b9de6224f47cf844d5fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397462"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757648"
 ---
 # <a name="compiler-error-c3194"></a>Ошибка компилятора C3194
 
-«член»: тип значения не может иметь оператор присваивания
+"член": тип значения не может иметь оператор присваивания
 
-Специальные функции-члены, которые требуют автоматического вызова компилятора, например конструктор копии или оператор присваивания копии не поддерживаются в классе значений.
+Специальные функции-члены, требующие автоматического вызова компилятором, такие как конструктор копий или оператор присваивания копий, не поддерживаются в классе значений.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3194.
 
-```
+```cpp
 // C3194.cpp
 // compile with: /clr /c
 value struct MyStruct {

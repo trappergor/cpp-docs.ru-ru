@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3174
 ms.assetid: fe6b3b5a-8196-485f-a45f-0b2e51df4086
-ms.openlocfilehash: 32f39eb1d808ccedd27ae3e4d343b87ddfde1862
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 868d43e0796b7a6ab7398573e8b61efcb627d8a5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174124"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761729"
 ---
 # <a name="compiler-error-c3174"></a>Ошибка компилятора C3174
 
-Атрибут модуля не указан
+атрибут module не указан
 
-Программы, использующей атрибуты Visual C++, не был использован [модуль](../../windows/module-cpp.md) атрибут, который требуется в любой программе, использующей атрибуты.
+Программа, использующая C++ визуальные атрибуты, не также использовала атрибут [module](../../windows/module-cpp.md) , который необходим в любой программе, использующей атрибуты.
 
 Следующий пример приводит к возникновению ошибки C3174:
 
-```
+```cpp
 // C3174.cpp
 // C3174 expected
 // uncomment the following line to resolve this C3174

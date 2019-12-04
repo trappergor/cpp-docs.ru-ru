@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: d812c14c2f364681fe28a58bdaed68fe3ed8ad30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374993"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761259"
 ---
 # <a name="compiler-error-c3138"></a>Ошибка компилятора C3138
 
-«интерфейс»: интерфейс «атрибут» должен наследовать от интерфейса IDispatch или другого интерфейса, производного от IDispatch
+"Interface": интерфейс "Attribute" должен наследовать от IDispatch или от интерфейса, который наследуется от IDispatch
 
-Интерфейс с [двойного](../../windows/dual.md) или [disp-интерфейс](../../windows/dispinterface.md) имеет атрибуты `IDispatch` как прямой или косвенный базовый интерфейс.
+Интерфейс с атрибутами [Dual](../../windows/dual.md) или [disp](../../windows/dispinterface.md) не имеет `IDispatch` в качестве прямого или косвенного базового интерфейса.
 
 Следующий пример приводит к возникновению ошибки C3138:
 
-```
+```cpp
 // C3138.cpp
 #include <unknwn.h>
 

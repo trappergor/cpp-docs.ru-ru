@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3195
 ms.assetid: 97e4f681-812b-49e8-ba57-24b7817e3cd8
-ms.openlocfilehash: 4a54a9c629a1abaa4f1c5d15d06448e82cf25561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8274e121e953c3e51a0f2ff8c68c315759ce3e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329105"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760430"
 ---
 # <a name="compiler-error-c3195"></a>Ошибка компилятора C3195
 
 operator: зарезервирован и не может использоваться как элемент ссылочного класса или типа значения. Операторы среды CLR или WinRT должны быть определены с помощью ключевого слова operator
 
-Компилятор обнаружил определение оператора с использованием синтаксиса управляемых расширений для C++. Для операторов, необходимо использовать синтаксис C++.
+Компилятор обнаружил определение оператора с использованием синтаксиса управляемых расширений для C++. Для операторов необходимо использовать C++ синтаксис.
 
 В следующем примере показано возникновение ошибки C3195 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C3195.cpp
 // compile with: /clr /LD
 #using <mscorlib.dll>

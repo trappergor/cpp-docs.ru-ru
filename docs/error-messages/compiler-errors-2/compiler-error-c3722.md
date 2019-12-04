@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08087b9cec0a48f0e439d6a2ff9fbe5f4e58d709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328270"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753098"
 ---
 # <a name="compiler-error-c3722"></a>Ошибка компилятора C3722
 
-Универсальное событие не допускается
+универсальное событие не разрешено
 
-Компилятор разрешает только универсальные классы, структуры и функции.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
+Компилятор допускает только универсальные классы, структуры и функции.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3722:
 
-```
+```cpp
 // C3722.cpp
 // compile with: /clr
 generic <typename T>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386815"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760313"
 ---
 # <a name="compiler-error-c2680"></a>Ошибка компилятора C2680
 
-«Тип»: недопустимый тип для имени
+"тип": недопустимый тип целевого объекта для имени
 
-Оператор приведения попытался преобразовать к типу, который не является указателя или ссылки. [Dynamic_cast](../../cpp/dynamic-cast-operator.md) оператор может использоваться только для указателей и ссылок.
+Оператор приведения попытался преобразовать в тип, который не является указателем или ссылкой. Оператор [dynamic_cast](../../cpp/dynamic-cast-operator.md) может использоваться только для указателей или ссылок.
 
 Следующий пример приводит к возникновению ошибки C2680:
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -34,9 +34,9 @@ void g(B b) {
 }
 ```
 
-C2680 также может возникнуть, если целевой объект не определен.
+C2680 также может возникать, если целевой объект не определен:
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

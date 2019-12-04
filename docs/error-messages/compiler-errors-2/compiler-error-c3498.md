@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 463e210e5a1ac5eb6d197062ed8921f9bbae4ad2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381011"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738106"
 ---
 # <a name="compiler-error-c3498"></a>Ошибка компилятора C3498
 
-«var»: нельзя записать переменную, имеющую управляемый или WinRTtype
+"var": невозможно записать переменную с управляемым или Винрттипе
 
 Нельзя записать переменную, имеющую управляемый тип или тип среды выполнения Windows в лямбда-выражении.
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381011"
 
 Следующий пример приводит к возникновению ошибки C3498, так как переменная, имеющая управляемый тип, присутствует в списке записи лямбда-выражения:
 
-```
+```cpp
 // C3498a.cpp
 // compile with: /clr
 using namespace System;
@@ -44,7 +44,7 @@ int main()
 
 Следующий пример разрешает C3498, передав управляемую переменную `s` в список параметров лямбда-выражения:
 
-```
+```cpp
 // C3498b.cpp
 // compile with: /clr
 using namespace System;
@@ -57,6 +57,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)

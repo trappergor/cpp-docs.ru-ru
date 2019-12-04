@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
-ms.openlocfilehash: 258012fdefed877558f122790954d830095d5026
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9236876e636e88f193d32ef2e33a817fa52e1bd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360585"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757011"
 ---
 # <a name="compiler-error-c2496"></a>Ошибка компилятора C2496
 
-«Идентификатор»: «selectany» может применяться только к элементам данных с внешней компоновкой
+"идентификатор": "selectany" можно применять только к элементам данных с внешней компоновкой
 
-[Selectany](../../cpp/selectany.md) атрибут может применяться только к элементам извне видимым и глобальных данных.
+Атрибут [selectany](../../cpp/selectany.md) можно применять только к внешним видимым и глобальным элементам данных.
 
 Следующий пример приводит к возникновению ошибки C2496:
 
-```
+```cpp
 // C2496.cpp
 // compile with: /c
 __declspec(selectany) int x1 = 1;

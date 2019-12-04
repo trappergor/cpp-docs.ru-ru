@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2010
 ms.assetid: 5795ed1d-e206-410b-b7b4-528d125c67b4
-ms.openlocfilehash: 71cb0012f5e7bda3a0f1409fe71649a5bd0944b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7341c77ecf2863431fa3e5c0a454077c89601b6b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362040"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752435"
 ---
 # <a name="compiler-error-c2010"></a>Ошибка компилятора C2010
 
-«символ»: непредвиденная в списке формальных параметров макроса
+"символ": не предусмотрено в списке формальных параметров макроса
 
-Этот символ используется неправильно в списке формальных параметров макроопределения. Удалите символ для устранения этой ошибки.
+Этот символ используется неправильно в списке формальных параметров макроопределения. Удалите символ, чтобы устранить ошибку.
 
 Следующий пример приводит к возникновению ошибки C2010:
 
-```
+```cpp
 // C2010.cpp
 // compile with: /c
 #define mymacro(a|) (2*a)   // C2010

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
-ms.openlocfilehash: 80015118bf9e8bc8d8c4fba578f4ff1fa4651034
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 461492946271a141cbdb563b34769e69e9cf75e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397644"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755178"
 ---
 # <a name="compiler-error-c2128"></a>Ошибка компилятора C2128
 
-«функция»: alloc_text и same_seg применимы только к функциям с компоновкой C
+"функция": alloc_text/same_seg применимо только к функциям с компоновкой C
 
-`pragma` `alloc_text` может использоваться только с функциями, которые объявлены с компоновкой.
+`pragma` `alloc_text` можно использовать только с функциями, объявленными для использования компоновки C.
 
 Следующий пример приводит к возникновению ошибки C2128:
 
-```
+```cpp
 // C2128.cpp
 // compile with: /c
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3628
 ms.assetid: 0ff5a4a4-fcc9-47a0-a4d8-8af9cf2815f6
-ms.openlocfilehash: 581aae7e1f979b3dd39caf2ce3d263fdb856c56a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9976cb2425f8f855ffb2903c07de22822c781e20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755828"
 ---
 # <a name="compiler-error-c3628"></a>Ошибка компилятора C3628
 
-«базовый класс»: управляемый или WinRTclasses поддерживают только открытое наследование
+"базовый класс": Managed или Винртклассес поддерживают только открытое наследование
 
-Была предпринята попытка использовать управляемый или WinRT классов как [частного](../../cpp/private-cpp.md) или [защищенные](../../cpp/protected-cpp.md) базового класса. Управляемого массива или класса WinRT может использоваться только как базовый класс с [открытый](../../cpp/public-cpp.md) доступа.
+Предпринята попытка использовать класс Managed или WinRT в качестве [закрытого](../../cpp/private-cpp.md) или [защищенного](../../cpp/protected-cpp.md) базового класса. Класс Managed или WinRT можно использовать только в качестве базового класса с [открытым](../../cpp/public-cpp.md) доступом.
 
 В следующем примере показано возникновение ошибки C3628 и приводятся сведения по ее устранению.
 
-```
+```cpp
 // C3628a.cpp
 // compile with: /clr
 ref class B {

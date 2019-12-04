@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404095"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760743"
 ---
 # <a name="compiler-error-c3115"></a>Ошибка компилятора C3115
 
-«атрибут»: этот атрибут не допускается в «конструкция»
+"атрибут": этот атрибут не допускается для "конструкции"
 
-Атрибут был применен к конструкции, для которого не предполагалось.  См. в разделе [атрибутов по использованию](../../windows/attributes/attributes-by-usage.md) Дополнительные сведения.
+К конструкции, для которой он не предназначался, был применен атрибут.  Дополнительные сведения см. [в разделе атрибуты по использованию](../../windows/attributes/attributes-by-usage.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3115.
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

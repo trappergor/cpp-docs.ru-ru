@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7a16c81cf2b9c2a815d2e35d10ae82d5a75547b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386724"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742201"
 ---
 # <a name="compiler-error-c3018"></a>Ошибка компилятора C3018
 
-«переменная1»: OpenMP «for» проверке или в приращении необходимо использовать переменную индекса «переменная2»
+"переменная1": в проверке или в приращении в операторе For директивы OpenMP должна использоваться переменная индекса "переменная2"
 
 Цикл `for` в операторе OpenMP должен использовать ту же переменную для проверки и увеличения, которую он использует для индекса.
 
 При компиляции следующего примера возникнет ошибка C3018:
 
-```
+```cpp
 // C3018.cpp
 // compile with: /openmp
 int main()

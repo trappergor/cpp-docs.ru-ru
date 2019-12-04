@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
-ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ede846c9068978ad5d283e97b1c96d3527bf67c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400257"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757242"
 ---
 # <a name="compiler-error-c3764"></a>Ошибка компилятора C3764
 
-«переопределяющая_функция»: невозможно переопределить метод базового класса «базового класса»
+"override_function": невозможно переопределить метод базового класса "base_class_function"
 
-Компилятор обнаружил переопределение неправильный формат. Например, функция базового класса не `virtual`. Дополнительные сведения см. в разделе [переопределить](../../extensions/override-cpp-component-extensions.md).
+Компилятор обнаружил неправильно сформированное переопределение. Например, функция базового класса не `virtual`. Дополнительные сведения см. в разделе [override](../../extensions/override-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3764.
 
-```
+```cpp
 // C3764.cpp
 // compile with: /clr /c
 public ref struct A {
@@ -39,9 +39,9 @@ public ref struct B : A {
 
 ## <a name="example"></a>Пример
 
-C3764 также может возникнуть, когда метод базового класса — это явно и с именем переопределении. Следующий пример приводит к возникновению ошибки C3764.
+C3764 также может возникать, когда метод базового класса явно и имеет имя reпереопределен. Следующий пример приводит к возникновению ошибки C3764.
 
-```
+```cpp
 // C3764_b.cpp
 // compile with: /clr /c
 ref struct A {

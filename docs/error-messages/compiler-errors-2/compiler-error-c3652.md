@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: 350edcf409cf2a890a8f83147ce0ae13e9992694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3290b1e4b40a63a69911452b845bf1ea0ddf3223
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385567"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756348"
 ---
 # <a name="compiler-error-c3652"></a>Ошибка компилятора C3652
 
-«override»: явно переопределяющая функция должна быть виртуальной
+"override": функция, явно переопределяющая, должна быть виртуальной
 
-Функция, которая явно переопределяет должна быть виртуальной. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
+Функция, которая выполняет явное переопределение, должна быть виртуальной. Дополнительные сведения см. в разделе [явные переопределения](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3652:
 
-```
+```cpp
 // C3652.cpp
 // compile with: /clr /c
 public interface class I {

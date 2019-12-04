@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2272
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
-ms.openlocfilehash: 1a5a1e47a721cb6edd795012cc45943e63708936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd6fdecd3a491ce5f068f4d51d413e6767aabe2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758701"
 ---
 # <a name="compiler-error-c2272"></a>Ошибка компилятора C2272
 
-«функция»: модификаторы недопустимы для статических функций-членов
+"функция": модификаторы недопустимы для статических функций члена
 
-Объект `static` функция-член объявлен с описателем модели памяти, таких как [const](../../cpp/const-cpp.md) или [volatile](../../cpp/volatile-cpp.md), и такие модификаторы недопустимы для `static` функций-членов.
+Функция-член `static` объявлена с описателем модели памяти, например [const](../../cpp/const-cpp.md) или [volatile](../../cpp/volatile-cpp.md), и такие модификаторы не допускаются в функциях-членах `static`.
 
 Следующий пример приводит к возникновению ошибки C2272:
 
-```
+```cpp
 // C2272.cpp
 // compile with: /c
 class CMyClass {
