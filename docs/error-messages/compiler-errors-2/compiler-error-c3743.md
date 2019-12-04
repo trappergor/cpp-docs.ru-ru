@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-ms.openlocfilehash: 137913e0c6909712cbb6745666112d315925ab0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0e2082dc87c6236aa11dd3094d056b0024dfc2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226860"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752474"
 ---
 # <a name="compiler-error-c3743"></a>Ошибка компилятора C3743
 
-можно только обработчик/откреплять весь интерфейс при «layout_dependent» для event_receiver имеет значение true
+можно только подключить или отсоединить весь интерфейс, если параметр "layout_dependent" event_receiver имеет значение true
 
-[__Unhook](../../cpp/unhook.md) в число параметров, принимаемых на значение, передаваемое изменяется функция `layout_dependent` параметр в [event_receiver](../../windows/event-receiver.md) класса.
+Функция [__unhook](../../cpp/unhook.md) зависит от числа параметров, которые она принимает, в зависимости от значения, переданного в параметр `layout_dependent` в классе [event_receiver](../../windows/event-receiver.md) .
 
 Следующий пример приводит к возникновению ошибки C3743:
 
-```
+```cpp
 // C3743.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>
