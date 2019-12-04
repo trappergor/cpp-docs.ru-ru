@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
-ms.openlocfilehash: 1a3d0d754557bbc811d1017ed1491181333e82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae8931d3b139e0e7e7aa947ffea16700e2f12302
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242972"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736715"
 ---
 # <a name="compiler-error-c3869"></a>Ошибка компилятора C3869
 
-в ограничении gcnew отсутствует пустой параметр list «()»
+в ограничении gcnew отсутствует пустой список параметров "()"
 
-`gcnew` Особых ограничений указан без с пустым списком параметров. См. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Дополнительные сведения.
+Специальное ограничение `gcnew` было указано без пустого списка параметров. Дополнительные сведения см. [в разделе ограниченияC++для параметров универсального типа (/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) .
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C3869.
 
-```
+```cpp
 // C3869.cpp
 // compile with: /c /clr
 using namespace System;

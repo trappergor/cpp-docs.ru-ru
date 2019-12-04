@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: b0f04a64354f549115c8636cf6130d6e96470016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257196"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740056"
 ---
 # <a name="compiler-error-c2775"></a>Ошибка компилятора C2775
 
-«Идентификатор»: нет метода «get» связан с этим свойством
+"идентификатор": нет метода "Get", связанного с этим свойством
 
-Элемент данных объявлен с [свойство](../../cpp/property-cpp.md) имеет расширенный атрибут `get` функции указано, но выражение пытается извлечь его значение.
+Для элемента данных, объявленного с помощью расширенного атрибута [Свойства](../../cpp/property-cpp.md) , не указана функция `get`, но выражение пытается извлечь его значение.
 
 Следующий пример приводит к возникновению ошибки C2775:
 
-```
+```cpp
 // C2775.cpp
 struct A {
    __declspec(property(put=PutProp2, get=GetProp2)) int prop2;

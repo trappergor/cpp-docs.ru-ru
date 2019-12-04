@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: cfbe2c729141108565f00b7b5a7fd581b49e516d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740017"
 ---
 # <a name="compiler-error-c2777"></a>Ошибка компилятора C2777
 
-только один метод «put» может быть задан для свойства
+для каждого свойства можно указать только один метод "помещает"
 
-Объект [свойство](../../cpp/property-cpp.md) модификатор declspec имеет несколько `put` свойство.
+Модификатор [Свойства](../../cpp/property-cpp.md) declspec имеет более одного свойства `put`.
 
 Следующий пример приводит к возникновению ошибки C2777:
 
-```
+```cpp
 // C2777.cpp
 struct A {
    __declspec(property(put=PutProp,put=PutPropToo))   // C2777

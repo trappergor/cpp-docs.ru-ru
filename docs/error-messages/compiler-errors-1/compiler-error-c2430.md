@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2430
 ms.assetid: 07c20f76-63e1-4d22-b2a9-98b0d45c5cac
-ms.openlocfilehash: 754758e652539e4f2d9b12e568b8ef5ccf41d8db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f82eb4914ec36aa513822964f551a05fbb77aa97
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165701"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744580"
 ---
 # <a name="compiler-error-c2430"></a>Ошибка компилятора C2430
 
-несколько индексных регистров в «идентификатор»
+более одного регистра индекса в "идентификаторе"
 
-Масштабируется несколько регистров. Компилятор поддерживает масштабированную индексацию, но можно масштабировать только одного регистра.
+Масштабируется более одного регистра. Компилятор поддерживает масштабированное индексирование, но можно масштабировать только один регистр.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2430.
 
-```
+```cpp
 // C2430.cpp
 // processor: x86
 int main() {

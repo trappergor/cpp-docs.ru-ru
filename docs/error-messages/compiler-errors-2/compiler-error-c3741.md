@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-ms.openlocfilehash: d207c87c7b3f75ac939c155da127720562973160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2be5c0a4f85448f41f865bdde79d56998fbcf16a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752604"
 ---
 # <a name="compiler-error-c3741"></a>Ошибка компилятора C3741
 
-«класс»: должен быть компонентным классом при «layout_dependent» для event_receiver = true
+"класс": должен быть коклассом, если параметр "layout_dependent" event_receiver = true
 
-Когда `layout_dependent=true` для [event_receiver](../../windows/event-receiver.md) класса, то класс также должен иметь [coclass](../../windows/coclass.md) атрибута.
+При `layout_dependent=true` для класса [event_receiver](../../windows/event-receiver.md) класс также должен иметь атрибут [coclass](../../windows/coclass.md) .
 
 Следующий пример приводит к возникновению ошибки C3741
 
-```
+```cpp
 // C3741.cpp
 // compile with: /c
 // C3741 expected
