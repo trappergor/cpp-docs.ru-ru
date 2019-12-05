@@ -1,39 +1,39 @@
 ---
 title: Некритичная ошибка ML A2006
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202327"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856787"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>Некритичная ошибка ML A2006
 
-**Неопределенный символ: идентификатор**
+**неопределенный символ: идентификатор**
 
-Была предпринята попытка использовать символ, который не был определен.
+Предпринята попытка использовать символ, который не был определен.
 
-Мог произойти одно из следующих:
+Возможно, возникла одна из следующих ошибок:
 
-- Символ не определен.
+- Символ не был определен.
 
-- Поле не является членом указанной структуры.
+- Поле не было членом указанной структуры.
 
 - Символ был определен во включаемом файле, который не был включен.
 
-- Внешний символ был использован без [EXTERN](../../assembler/masm/extern-masm.md) или [EXTERNDEF](../../assembler/masm/externdef.md) директива.
+- Внешний символ использовался без директивы [extern](../../assembler/masm/extern-masm.md) или [екстерндеф](../../assembler/masm/externdef.md) .
 
-- Было неправильно указано имя символа.
+- Имя символа написано неправильно.
 
-- Ссылка на метку локальный код за пределами его области.
+- На метку локального кода имеется ссылка за пределами области.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

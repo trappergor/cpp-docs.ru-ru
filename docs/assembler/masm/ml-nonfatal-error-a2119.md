@@ -1,27 +1,27 @@
 ---
 title: Некритичная ошибка ML A2119
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2119
 helpviewer_keywords:
 - A2119
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
-ms.openlocfilehash: 6905f02369c9063d35c93ba9a30ffc2f394d23ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ba4ea07fab3c448f4511c4af2689a0517481651
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176919"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854580"
 ---
 # <a name="ml-nonfatal-error-a2119"></a>Некритичная ошибка ML A2119
 
 **необходимо указать тип языка**
 
-Определение процедуры или прототипа не указан тип языка.
+Определению или прототипу процедуры не был предоставлен тип языка.
 
-Тип языка должен быть объявлен в каждом определении процедуры или прототип, если не указан тип языка по умолчанию. Тип языка по умолчанию задается с помощью либо [. МОДЕЛЬ](../../assembler/masm/dot-model.md) директивы, **параметр LANG**, параметры командной строки машинного Обучения или **/Gc** или **/Gd**.
+Тип языка должен быть объявлен в каждом определении или прототипе процедуры, если не указан тип языка по умолчанию. Тип языка по умолчанию задается с помощью [. ](../../assembler/masm/dot-model.md)Директива Model **, параметр lang**или параметры командной строки ML **/GC** или **/GD**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

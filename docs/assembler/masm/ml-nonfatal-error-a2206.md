@@ -1,31 +1,31 @@
 ---
 title: Некритичная ошибка ML A2206
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2206
 helpviewer_keywords:
 - A2206
 ms.assetid: 711846d0-5a09-4353-8857-60588c25526a
-ms.openlocfilehash: 1ef796fcb55f098932beb66eb7cd2083d65e5144
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd24e32dc000b63a6d70520250e5a792cdbc455
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177011"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854645"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>Некритичная ошибка ML A2206
 
 **отсутствует оператор в выражении**
 
-Не удается вычислить выражение, так как отсутствует оператор. Это сообщение об ошибке также может быть побочным результатом ошибки выше в программе.
+Выражение не может быть вычислено, поскольку в нем отсутствует оператор. Это сообщение об ошибке также может быть побочным действием предыдущей ошибки программы.
 
-Следующая строка будет вызывать такую ошибку:
+Следующая строка приведет к возникновению этой ошибки:
 
 ```asm
 value1 = ( 1 + 2 ) 3
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

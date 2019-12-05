@@ -1,25 +1,25 @@
 ---
 title: Некритичная ошибка ML A2060
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2060
 helpviewer_keywords:
 - A2060
 ms.assetid: 435d5b32-9b4f-4f4e-8142-af0ce7676e89
-ms.openlocfilehash: dc36b22dc664314086a7c70059a87a4b7f0763bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c2664ea9ab9d421352bcd0ee5589fc16a0a08f3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201888"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856504"
 ---
 # <a name="ml-nonfatal-error-a2060"></a>Некритичная ошибка ML A2060
 
-**принудительно ошибка: строки не равно**
+**Принудительная ошибка: строки не равны**
 
-Conditional-error-директива [. ERRDIF](../../assembler/masm/dot-errdif.md) или **. ERRDIFI** использовался для создания этой ошибки.
+Директива Conditional-Error [. ЕРРДИФ](../../assembler/masm/dot-errdif.md) или **.** Для создания этой ошибки использовался еррдифи.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

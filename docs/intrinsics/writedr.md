@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219227"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858065"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Блок, относящийся только к системам Майкрософт**
 
 Записывает указанное значение в указанный регистр отладки.
 
@@ -26,13 +28,13 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 
 ### <a name="parameters"></a>Параметры
 
-*дебугрегистер*\
+*Дебугрегистер*\
 окне Число от 0 до 7, идентифицирующее регистр отладки.
 
-*дебугвалуе*\
+*Дебугвалуе*\
 окне Значение, записываемое в регистр отладки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эти встроенные функции доступны только в режиме ядра, а подпрограммы доступны только в виде встроенных функций.
 
@@ -42,11 +44,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 |---------------|------------------|
 |`__writedr`|x86, x64|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<Intrin. h >
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

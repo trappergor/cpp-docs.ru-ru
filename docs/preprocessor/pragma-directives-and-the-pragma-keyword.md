@@ -13,12 +13,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222302"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858078"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Директивы pragma и ключевое слово __pragma
 
@@ -26,16 +26,16 @@ ms.locfileid: "70222302"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **#pragma** *Строка токена*\
+> \ *строки токена* **#pragma**
 > **__pragma (** *Строка токена* **)**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Каждая реализация C и C++ поддерживает некоторые возможности, уникальные для хост-компьютера или операционной системы. Некоторые программы, например, должны выполнять точный контроль над расположением данных в памяти или управлять способом получения параметров определенными функциями. Директивы **#pragma** предлагают каждому компилятору возможность предоставлять функции для конкретного компьютера и операционной системы, сохраняя общую совместимость с языками C и C++ .
 
 Директивы pragma являются специфическими для компьютера или операционной системы по определению и обычно отличаются для каждого компилятора. Прагмы можно использовать в условных директивах для предоставления новых функций препроцессора или для предоставления компилятору сведений, определяемых реализацией.
 
-*Строка токена* — это последовательность символов, которая предоставляет определенную инструкцию компилятора и аргументы, если таковые имеются. Знак решетки ( **#** ) должен быть первым символом, не являющимся пробелом, в строке, содержащей директиву pragma. Символы пробела могут отделять знак числа и слово "pragma". После **#pragma**Запишите любой текст, который переводчик может проанализировать в виде токенов предварительной обработки. Аргумент для **#pragma** подлежит раскрытию макросов.
+*Строка токена* — это последовательность символов, которая предоставляет определенную инструкцию компилятора и аргументы, если таковые имеются. Знак номера ( **#** ) должен быть первым символом, не являющимся пробелом, в строке, содержащей директиву pragma. Символы пробела могут отделять знак числа и слово "pragma". После **#pragma**Запишите любой текст, который переводчик может проанализировать в виде токенов предварительной обработки. Аргумент для **#pragma** подлежит раскрытию макросов.
 
 Компилятор выдает предупреждение при обнаружении директивы pragma, которая не распознается, и возобновляет компиляцию.
 
@@ -50,7 +50,7 @@ ms.locfileid: "70222302"
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
-|[intrinsic](../preprocessor/intrinsic.md)|[циклическая зависимость](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
+|[intrinsic](../preprocessor/intrinsic.md)|[цикл](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
 |[управляемых](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)|[omp](../preprocessor/omp.md)|
 |[once](../preprocessor/once.md)|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|
 |[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|
@@ -79,11 +79,9 @@ cl /Zp8 some_file.cpp
 
 ## <a name="the-__pragma-keyword"></a>Ключевое слово __pragma ()
 
-**Специально для Майкрософт**
+Компилятор также поддерживает ключевое слово **__pragma** , зависящее от корпорации Майкрософт, которое имеет те же функциональные возможности, что и директива **#pragma** . Разница заключается в том, что ключевое слово **__pragma** можно использовать встроенным в определении макроса. Директива **#pragma** не может использоваться в определении макроса, так как компилятор интерпретирует символ решетки (#) в директиве как [оператор строковый (#)](../preprocessor/stringizing-operator-hash.md).
 
-Компилятор также поддерживает ключевое слово **__pragma** , имеющее те же функциональные возможности, что и директива **#pragma** . Разница заключается в том, что ключевое слово **__pragma** можно использовать встроенным в определении макроса. Директива **#pragma** не может использоваться в определении макроса, так как компилятор интерпретирует символ решетки (#) в директиве как [оператор строковый (#)](../preprocessor/stringizing-operator-hash.md).
-
-В следующем примере кода показано, как ключевое слово **__pragma** можно использовать в макросе. Этот код — отрывок из заголовка mfcdual.h в образце ACDUAL, представленном в разделе "Примеры поддержки COM компилятором".
+В следующем примере кода показано, как ключевое слово **__pragma** может использоваться в макросе. Этот код — отрывок из заголовка mfcdual.h в образце ACDUAL, представленном в разделе "Примеры поддержки COM компилятором".
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Завершение Microsoft для конкретных**
+## <a name="see-also"></a>См. также:
 
-## <a name="see-also"></a>См. также
-
-[Справочник поC++ C/препроцессору](../preprocessor/c-cpp-preprocessor-reference.md)\
-[Директивы pragma](../c-language/c-pragmas.md)\
+[Справочник поC++\ C/препроцессор](../preprocessor/c-cpp-preprocessor-reference.md)
+[Директивы pragma в](../c-language/c-pragmas.md)\
 [Ключевые слова](../cpp/keywords-cpp.md)
