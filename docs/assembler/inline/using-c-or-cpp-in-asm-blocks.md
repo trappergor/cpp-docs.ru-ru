@@ -14,16 +14,16 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 0949eba769bed33da8fe39bb41500a2ba02af224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16b298b92a4ba40d9091499a1821ad4f3c413d6c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166559"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854528"
 ---
-# <a name="using-c-or-c-in-asm-blocks"></a>Использование C или C++ в блоках __asm
+# <a name="using-c-or-c-in-__asm-blocks"></a>Использование C или C++ в блоках __asm
 
-** Системам Microsoft **
+**Блок, относящийся только к системам Майкрософт**
 
 Поскольку инструкции встроенного кода на языке ассемблера можно комбинировать с операторами C или C++, они могут ссылаться на переменные C или C++ по имени и использовать множество других элементов этих языков.
 
@@ -35,11 +35,11 @@ ms.locfileid: "62166559"
 
 - Макросы и директивы препроцессора.
 
-- Комментарии (оба __/ \* \* /__ и __//__ )
+- Комментарии ( __/\* \*/__ и __//__ )
 
 - Имена типов (если тип MASM допустим).
 
-- `typedef` имена, обычно используемые с операторами например **PTR** и **тип** или указывать элементы для структуры или объединения
+- `typedef` имена, обычно используемые с такими операторами, как **ptr** и **Type** , или для указания структуры или членов объединения.
 
 В блоке `__asm` можно указать целочисленные константы с помощью нотации C или нотации основания системы счисления ассемблера (например, 0x100 и 100h эквивалентны). Это позволяет определить (с помощью `#define`) константу в C, а затем использовать ее в C и C++, а также частях сборки программы. Можно также указать константы в восьмеричной системе счисления, поместив перед ними 0. Например, 0777 указывает восьмеричную константу.
 
@@ -47,7 +47,7 @@ ms.locfileid: "62166559"
 
 - [Использование операторов в блоках __asm](../../assembler/inline/using-operators-in-asm-blocks.md)
 
-- [С помощью c# или C++ блоках __asm символов](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
+- [Использование блоков C C++ или Symbols_in __asm](../../assembler/inline/using-c-or-cpp-symbols-in-asm-blocks.md)
 
 - [Доступ к данным C или C++ в блоках __asm](../../assembler/inline/accessing-c-or-cpp-data-in-asm-blocks.md)
 
@@ -55,6 +55,6 @@ ms.locfileid: "62166559"
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Встроенный сборщик](../../assembler/inline/inline-assembler.md)<br/>

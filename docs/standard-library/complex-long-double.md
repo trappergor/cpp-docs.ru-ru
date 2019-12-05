@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688235"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857974"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -38,13 +38,13 @@ complex(
 
 ### <a name="parameters"></a>Параметры
 
-*_RealVal* \
+*_RealVal*\
 Значение типа **long double** для вещественной части конструируемого комплексного числа.
 
-*_ImagVal* \
+*_ImagVal*\
 Значение типа **long double** для мнимой части комплексного числа.
 
-*комплекснум* \
+*комплекснум*\
 Комплексное число типа **Double** или типа **float** , реальные и мнимые части которого используются для инициализации комплексного числа типа Double с типом **Long** .
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -57,7 +57,7 @@ complex(
 
 Дополнительные сведения о шаблоне класса `complex` и его членах см. в разделе [сложный класс](../standard-library/complex-class.md).
 
-**Конкретно для Майкрософт**: типы **long double** и **double** имеют одно и то же представление, но являются отдельными типами. Дополнительные сведения см. в разделе [фундаментальные типы](../cpp/fundamental-types-cpp.md).
+**Специфично для Microsoft**: типы **long double** и **double** имеют одно и то же представление, но являются отдельными типами. Дополнительные сведения см. в разделе [фундаментальные типы](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Пример
 
@@ -121,7 +121,7 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Класс complex](../standard-library/complex-class.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

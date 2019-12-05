@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 646330ca92af08903485fd4583eb2c217fe3e023
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fbaf9e761f9f1450ccd12dc378ab6e498aa0df08
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216676"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857883"
 ---
 # <a name="__readdr"></a>__readdr
+
+**Блок, относящийся только к системам Майкрософт**
 
 Считывает значение указанного регистра отладки.
 
@@ -26,14 +28,14 @@ unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 
 ### <a name="parameters"></a>Параметры
 
-*дебугрегистер*\
+*Дебугрегистер*\
 окне Константа от 0 до 7, определяющая регистр отладки.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Значение указанного регистра отладки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эти встроенные функции доступны только в режиме ядра, а подпрограммы доступны только в виде встроенных функций.
 
@@ -43,11 +45,11 @@ unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 |---------------|------------------|
 |`__readdr`|x86, x64|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<Intrin. h >
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Встроенные функции компилятора](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

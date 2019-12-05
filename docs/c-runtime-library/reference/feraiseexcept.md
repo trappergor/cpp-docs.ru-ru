@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941131"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857831"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -50,9 +50,9 @@ int feraiseexcept(
 
 Если все заданные исключения вызваны успешно, возвращается 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Функция **фераисиксцепт** пытается вызвать исключения с плавающей запятой, заданные параметром *except*.   Функция **фераисиксцепт** поддерживает эти макросы исключений, определенные в \<fenv. h >:
+Функция **фераисиксцепт** пытается вызвать исключения с плавающей запятой, заданные параметром *except*.   Функция **фераисиксцепт** поддерживает эти макросы исключений, определенные в > \<fenv. h:
 
 |Макрос исключения|Описание|
 |---------------------|-----------------|
@@ -67,7 +67,7 @@ int feraiseexcept(
 
 Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
 
-**Специально для Майкрософт:** Исключения, указанные в *except* , вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Однако FE_INEXACT может возникать при возникновении FE_OVERFLOW или FE_UNDERFLOW, даже если не указано в *except*. **Завершение блока, относящегося только к системам Майкрософт**
+**Зависит от корпорации Майкрософт:** Исключения, указанные в *except* , вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Однако FE_INEXACT могут возникать при возникновении FE_OVERFLOW или FE_UNDERFLOW, даже если они не указаны в *except*.
 
 ## <a name="requirements"></a>Требования
 
@@ -75,9 +75,9 @@ int feraiseexcept(
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>
