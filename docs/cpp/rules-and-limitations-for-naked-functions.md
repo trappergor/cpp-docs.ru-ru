@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267381"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857311"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Правила и ограничения для функций с атрибутом naked
 
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+**Блок, относящийся только к системам Майкрософт**
 
 Для функций с атрибутом naked действуют следующие правила и ограничения:
 
-- **Возвращают** инструкции не допускается.
+- Оператор **return** не разрешен.
 
 - Конструкции структурированной обработки исключений и обработки исключений C++ не допускаются, потому что они должны выполнять очистку в кадре стека.
 
@@ -31,9 +31,9 @@ ms.locfileid: "62267381"
 
 - Не допускается объявление объектов класса C++ в лексической области функции. Однако можно объявлять объекты во вложенном блоке.
 
-- **С атрибутом naked** ключевого слова пропускается при компиляции с параметром [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+- При компиляции с [параметром/CLR](../build/reference/clr-common-language-runtime-compilation.md)ключевое слово **naked** игнорируется.
 
-- Для [__fastcall](../cpp/fastcall.md) функции с атрибутом naked, при наличии ссылки на C /C++ кода на один из регистровых аргументов, код пролога должен сохранять значения этого регистра в расположении стека для этой переменной. Пример:
+- Для функций [__fastcall](../cpp/fastcall.md) с атрибутом naked каждый раз, когда в CC++ /Code имеется ссылка на один из аргументов регистра, в коде пролога должны храниться значения этого регистра в расположении стека для этой переменной. Например:
 
 ```cpp
 // nkdfastcl.cpp
@@ -72,6 +72,6 @@ __declspec(naked) int __fastcall  power(int i, int j) {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Вызовы функций с атрибутом naked](../cpp/naked-function-calls.md)

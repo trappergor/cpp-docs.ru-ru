@@ -1,28 +1,28 @@
 ---
 title: Неустранимая ошибка ML A1007
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177907"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856921"
 ---
 # <a name="ml-fatal-error-a1007"></a>Неустранимая ошибка ML A1007
 
-**слишком глубокий уровень вложенности**
+**уровень вложенности слишком глубокий**
 
-Ассемблер достигнут предел вложенности. Это значение равно 20 уровни, за исключением оговоренных.
+Для ассемблера достигнуто ограничение вложенности. Ограничение составляет 20 уровней, за исключением случаев, где указано иное.
 
-Одно из следующих были вложены слишком глубоко:
+Один из следующих элементов был вложен слишком глубоким:
 
-- Директиву высокого уровня, такие как [. Если](../../assembler/masm/dot-if.md), [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md), или [. ХОТЯ](../../assembler/masm/dot-while.md).
+- Общая директива, например [. Если](../../assembler/masm/dot-if.md), [. Повторите](../../assembler/masm/dot-repeat.md)или [. WHILE](../../assembler/masm/dot-while.md).
 
 - Определение структуры.
 
@@ -30,7 +30,7 @@ ms.locfileid: "62177907"
 
 - Определение процедуры.
 
-- Объект [PUSHCONTEXT](../../assembler/masm/pushcontext.md) директива (предел — 10).
+- Директива [пушконтекст](../../assembler/masm/pushcontext.md) (ограничение — 10).
 
 - Определение сегмента.
 
@@ -38,6 +38,6 @@ ms.locfileid: "62177907"
 
 - Макрос.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>

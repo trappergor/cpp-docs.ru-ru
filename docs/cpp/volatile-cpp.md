@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221873"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857207"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65221873"
 volatile declarator ;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Можно использовать параметр компилятора [/volatile](../build/reference/volatile-volatile-keyword-interpretation.md) для изменения интерпретации этого ключевого слова компилятором.
 
@@ -50,11 +50,11 @@ Visual Studio интерпретирует ключевое слово **volatil
 
 ## <a name="iso-compliant"></a>Блок, относящийся к стандарту ISO
 
-Если вы знакомы с ключевым словом volatile в C# или с поведением **volatile** в более ранних версиях компилятора Microsoft C++ (MSVC), имейте в виду, что ключевое слово **volatile** в стандарте C++11 ISO отличается и поддерживается в MSVC при указании параметра компилятора [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) (для архитектуры ARM он установлен по умолчанию). Ключевое слово **volatile** в коде по стандарту C++11 ISO используется только для аппаратного доступа; не используйте его для взаимодействия между потоками. Для взаимодействия между потоками используйте такие механизмы, как [std::atomic\<T >](../standard-library/atomic.md) из [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md).
+Если вы знакомы с ключевым словом volatile в C# или с поведением **volatile** в более ранних версиях компилятора Microsoft C++ (MSVC), имейте в виду, что ключевое слово **volatile** в стандарте C++11 ISO отличается и поддерживается в MSVC при указании параметра компилятора [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) (Для архитектуры ARM он установлен по умолчанию). Ключевое слово **volatile** в коде по стандарту C++11 ISO используется только для аппаратного доступа; не используйте его для взаимодействия между потоками. Для взаимодействия между потоками используйте такие механизмы, как [std::atomic\<T >](../standard-library/atomic.md) из [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Конец блока, относящегося к стандарту ISO
 
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+**Блок, относящийся только к системам Майкрософт**
 
 Когда используется параметр компилятора **/volatile:ms** (по умолчанию для целевых архитектур, отличных от ARM), компилятор создает дополнительный код для сохранения порядка между ссылками к объектам volatile наряду с сохранением порядка ссылок на другие глобальные объекты. В частности:
 
@@ -69,7 +69,7 @@ Visual Studio интерпретирует ключевое слово **volatil
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [const](../cpp/const-cpp.md)<br/>

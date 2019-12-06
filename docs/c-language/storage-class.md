@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: d5664634687c689316427c8652865ba9423e24f4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: aa6e977b3aa03b5f08901cfa8b0abe1b4046e72d
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147819"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857012"
 ---
 # <a name="storage-class"></a>Класс хранения
 
@@ -26,7 +26,7 @@ ms.locfileid: "56147819"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* Поддерживается только компилятором Microsoft \*/
+/\* *attribute-seq* — это \*, зависящее от Майкрософт /
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -45,7 +45,7 @@ ms.locfileid: "56147819"
 
 Функция с классом хранения **static** видна только в исходном файле, в котором она определена. Все остальные функции видны во всех исходных файлах программы независимо от того, явно или неявно им предоставлен класс хранения `extern`. Если требуется класс хранения **static**, он должен быть объявлен в первом экземпляре объявления функции (при его наличии) и в определении функции.
 
-**Блок, относящийся только к системам Microsoft**
+**Блок, относящийся только к системам Майкрософт**
 
 При включенных расширениях Майкрософт функции, первоначально объявленной без класса хранения (или с классом хранения `extern`), предоставляется класс хранения **static**, если определение этой функции находится в том же исходном файле и в нем явно указан класс хранения **static**.
 
@@ -53,6 +53,6 @@ ms.locfileid: "56147819"
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Определения функций в C](../c-language/c-function-definitions.md)
