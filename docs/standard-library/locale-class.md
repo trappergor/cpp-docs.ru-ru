@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890158"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898839"
 ---
 # <a name="locale-class"></a>Класс locale
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-(Последняя категория необходима Posix для, но не стандартной библиотеке C).
+(Последняя категория необходима для POSIX, но не для стандарта C.)
 
 Некоторые из этих предопределенных аспектов используются `iostream` классами для управления преобразованием числовых значений в текстовые последовательности и из них.
 
@@ -120,7 +120,7 @@ messages<wchar_t>
 static locale empty();
 ```
 
-создать объект языкового стандарта без аспектов. Это также прозрачный языковой стандарт. Если шаблон функций [has_facet](../standard-library/locale-functions.md#has_facet) и [use_facet](../standard-library/locale-functions.md#use_facet) не может найти запрошенный аспект в прозрачном языковом стандарте, он сначала обращается к глобальному языковому стандарту, а затем, если он является прозрачным, классический языковой стандарт. Таким образом, можно написать:
+создать объект языкового стандарта без аспектов. Это также прозрачный языковой стандарт. Если функции шаблона [has_facet](../standard-library/locale-functions.md#has_facet) и [use_facet](../standard-library/locale-functions.md#use_facet) не могут найти требуемый аспект в прозрачном языковом стандарте, они обращаются к первому глобальному языковому стандарту, а затем, если они прозрачны, классический языковой стандарт. Таким образом, можно написать:
 
 ```cpp
 cout.imbue(locale::empty());
@@ -152,7 +152,7 @@ cout.imbue(loc);
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
 |[combine](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|
 |[name](#name)|Возвращает имя сохраненного языкового стандарта.|
@@ -175,7 +175,7 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>Классы
 
-|Class|Описание|
+|Класс|Описание|
 |-|-|
 |[facet](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|
 |[`id`](#id_class)|Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.|
@@ -216,7 +216,7 @@ static const int none = 0;
 
 - `time`, соответствующий категории C LC_TIME
 
-- `messages`, соответствующий категории POSIX LC_MESSAGES
+- `messages`, соответствующее категории POSIX LC_MESSAGES
 
 Два более полезных значения:
 
@@ -224,7 +224,7 @@ static const int none = 0;
 
 - `all`, соответствующее объединению C всех категорий LC_ALL
 
-Можно представить произвольную группу категорий с помощью `OR` с этими константами, как в `monetary` &#124;`time`.
+Можно представить произвольную группу категорий с помощью `OR` с этими константами, как в `monetary` &#124; `time`.
 
 ## <a name="classic"></a>  locale::classic
 
@@ -443,7 +443,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 *from_locale*\
 Языковой стандарт, который будет копироваться при создании нового языкового стандарта.
 
-*Другие* \
+*Другие*\
 Языковой стандарт, из которого будет выбираться категория.
 
 *new_category*\
@@ -454,7 +454,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>Заметки
 
-Первый конструктор инициализирует объект для соответствия глобальному языковому стандарту. Второй и третий конструкторы инициализируют все категории языкового стандарта, чтобы их поведение соответствовало имени локали *locale_name*. Оставшиеся конструкторы копируют *from_locale*, за исключением указанных ниже исключений.
+Первый конструктор инициализирует объект для соответствия глобальному языковому стандарту. Второй и третий конструкторы инициализируют все категории языкового стандарта, чтобы их поведение соответствовало имени локали *locale_name*. Остальные конструкторы копируют *from_locale*, за исключением указанных ниже.
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
@@ -464,7 +464,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-заменяет `locale(locale_name, all)` этих аспектов, соответствующих категории *replace_category* , для которых `replace_category & new_category` не равно нулю.
+заменяет `locale(locale_name, all)` эти аспекты, соответствующие категории *replace_category* , для которых `replace_category & new_category` не равно нулю.
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*справа* \
+*справа*\
 Один из языковых стандартов для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -633,10 +633,10 @@ bool operator()(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Левая строка.
 
-*справа* \
+*справа*\
 Правая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*справа* \
+*справа*\
 Один из языковых стандартов для проверки на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [\<locale>](../standard-library/locale.md)\
 [Кодовые страницы](../c-runtime-library/code-pages.md)\

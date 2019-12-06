@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457020"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898817"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,7 +29,7 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> На момент выпуска Visual Studio 2017 \<заголовок FileSystem > не является C++ стандартным. C++в Visual Studio 2017 (КОМПИЛЯТОРОМ MSVC v141) реализует окончательный вариант черновика, который находится в стандарте [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> На момент выпуска Visual Studio 2017 заголовок > \<FileSystem еще не является C++ стандартным. C++в Visual Studio 2017 (КОМПИЛЯТОРОМ MSVC v141) реализует окончательный вариант черновика, который находится в стандарте [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
 Этот заголовок поддерживает файловые системы для одного из двух основных классов операционных систем размещения: Microsoft Windows и POSIX.
 
@@ -37,13 +37,13 @@ using namespace std::experimental::filesystem::v1;
 
 - Windows поддерживает несколько корневых имен, таких как c: или \\\network_name. Поэтому файловая система состоит из леса деревьев, где каждое дерево имеет свой собственный корневой каталог (например, c:\ или \\\network_name\\) и свой собственный текущий каталог для завершения относительного пути (который не является абсолютным путем).
 
-- Posix поддерживает одно дерево без корневого имени, единый корневой каталог/ и один текущий каталог.
+- POSIX поддерживает одно дерево без корневого имени, единственного корневого каталога/и одного текущего каталога.
 
 Другое важное отличие состоит в представлении путей:
 
 - Windows использует завершающуюся нулем последовательность символов wchar_t в кодировке UTF-16 (один или два элемента для каждого символа).
 
-- Posix использует завершающуюся нулем последовательность символов char в кодировке UTF-8 (один или несколько элементов для каждого символа).
+- POSIX использует последовательность символов, завершающуюся нулем, в кодировке UTF-8 (один или несколько элементов для каждого символа).
 
 - В объекте класса path хранится путь в собственном формате, однако поддерживается простое преобразование между этим хранимым форматом и различными внешними:
 
@@ -63,7 +63,7 @@ using namespace std::experimental::filesystem::v1;
 
 1. Windows регистрирует сведения о том, доступен ли файл только для чтения или для записи, — атрибут, который не имеет смысла для каталогов.
 
-1. Posix регистрирует сведения о том, доступен ли файл для чтения, записи или выполнения (просмотра, если это каталог) владельцем, группой владельцев или любым пользователем (плюс несколько других разрешений).
+1. POSIX записывает, может ли файл быть прочитан, записан или выполнен (просматривается ли каталог), владельцем, группой владельца или всеми другими разрешениями.
 
 Общей характеристикой обеих систем является структура, применяемая к пути после корневого имени. Для пути c:/abc/xyz/def.ext
 
@@ -89,7 +89,7 @@ using namespace std::experimental::filesystem::v1;
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="classes"></a>Классы
 
@@ -102,7 +102,7 @@ using namespace std::experimental::filesystem::v1;
 |[Класс recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы. Итератор может также просматривать подкаталоги.|
 |[Класс file_status](../standard-library/file-status-class.md)|Создает оболочку для `file_type`.|
 
-### <a name="structs"></a>Структуры
+### <a name="structs"></a>структурам;
 
 |||
 |-|-|
@@ -120,13 +120,13 @@ using namespace std::experimental::filesystem::v1;
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file) , которое определяет действия в случае, если целевой файл уже существует.|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file) , которое определяет действия в случае, если целевой файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

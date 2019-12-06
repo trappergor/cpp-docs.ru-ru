@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449752"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898856"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-Включите заголовок \<system_error >, чтобы определить класс `system_error` исключения и связанные шаблоны для обработки низкоуровневых системных ошибок.
+Включите заголовок \<system_error >, чтобы определить класс исключений `system_error` и связанные шаблоны для обработки низкоуровневых системных ошибок.
 
 ## <a name="requirements"></a>Требования
 
@@ -24,7 +24,7 @@ ms.locfileid: "68449752"
 
 **Пространство имен:** std
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="objects"></a>Объекты
 
@@ -46,8 +46,8 @@ ms.locfileid: "68449752"
 
 |||
 |-|-|
-|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
-|[operator!=](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|
+|[оператор==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
+|[оператор!= ](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|
 |[оператор<](../standard-library/system-error-operators.md#op_lt)|Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.|
 |[оператор<<](../standard-library/system-error-operators.md#op_ostream)||
 
@@ -55,7 +55,7 @@ ms.locfileid: "68449752"
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|Предоставляет символьные имена для всех макросов кода ошибки, определенных Posix в `<errno.h>`.|
+|[errc](../standard-library/system-error-enums.md#errc)|Предоставляет символьные имена для всех макросов кода ошибки, определенных POSIX в `<errno.h>`.|
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
@@ -69,6 +69,6 @@ ms.locfileid: "68449752"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|Представляет тип предиката, проверяющий перечисление [Класс error_condition](../standard-library/error-condition-class.md).|
 |[system_error](../standard-library/system-error-class.md)|Представляет базовый класс для всех исключений, создаваемых для отчета о переполнении системы низкого уровня.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
