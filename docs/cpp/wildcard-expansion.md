@@ -11,23 +11,23 @@ helpviewer_keywords:
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
-ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fdea297bb45a06a08bde4f63f90eabef6ddb539
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209519"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857181"
 ---
 # <a name="wildcard-expansion"></a>Развертывание знаков подстановки
 
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+**Блок, относящийся только к системам Майкрософт**
 
 Задавать имена файлов и пути к ним в аргументах командной строки можно при помощи знаков подстановки — вопросительного знака (?) и звездочки (*).
 
-Аргументы командной строки обрабатываются процедурой `_setargv` (или `_wsetargv` в среде Юникода), который по умолчанию не разворачивает подстановочные знаки, в отдельные строки в `argv` массив строк. Дополнительные сведения о включении развертывание знаков подстановки, см. [расширение аргументов заполнителей](../c-language/expanding-wildcard-arguments.md).
+Аргументы командной строки обрабатываются с помощью подпрограммы, именуемой `_setargv` (или `_wsetargv` в среде расширенных символов), которая по умолчанию не расширяет подстановочные знаки в отдельные строки в `argv` массиве строк. Дополнительные сведения о включении расширения с подстановочными знаками см. в разделе [расширение аргументов-шаблонов](../c-language/expanding-wildcard-arguments.md).
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[main: запуск программы](../cpp/main-program-startup.md)
+[Функция main: запуск программы](../cpp/main-program-startup.md)

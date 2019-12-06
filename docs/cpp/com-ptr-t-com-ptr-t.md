@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c169e454029a28f644a2aabc8d3089bf3069c8c5
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498713"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857597"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
-**Блок, относящийся только к системам Microsoft**
+**Блок, относящийся только к системам Майкрософт**
 
 Конструирует объект **_com_ptr_t** .
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 // Default constructor.
 // Constructs a NULL smart pointer.
 _com_ptr_t() throw();
@@ -133,35 +133,37 @@ explicit _com_ptr_t(
 );
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *пинтерфаце*<br/>
 Необработанный указатель на интерфейс.
 
 *фаддреф*<br/>
-Если значение — `AddRef` true, вызывается для увеличения числа ссылок на указатель инкапсулированного интерфейса.
+Если значение — TRUE, вызывается `AddRef`, чтобы увеличить число ссылок для указателя инкапсулированного интерфейса.
 
-*CP*<br/>
+*cp*<br/>
 Объект **_com_ptr_t** .
 
 *p*<br/>
-Необработанный указатель интерфейса, его тип отличается от типа интеллектуального указателя этого объекта **_com_ptr_t** .
+Необработанный указатель интерфейса, его тип отличается от типа интеллектуального указателя данного объекта **_com_ptr_t** .
 
 *варсрк*<br/>
 Объект `_variant_t`.
 
 *этому*<br/>
-Объект `CLSID` coclass.
+`CLSID` компонентного класса.
 
 *двклсконтекст*<br/>
 Контекст для выполняющегося исполняемого кода.
 
 *lpcStr*<br/>
-Многобайтовая строка, содержащая либо `CLSID` (начиная с " **{** `ProgID`"), либо.
+Многобайтовая строка, содержащая либо `CLSID` (начиная с " **{** "), либо `ProgID`.
 
 *паутер*<br/>
 Внешняя неизвестная для [агрегирования](/windows/win32/com/aggregation).
 
-## <a name="see-also"></a>См. также
+**Завершение блока, относящегося только к системам Майкрософт**
+
+## <a name="see-also"></a>См. также:
 
 [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

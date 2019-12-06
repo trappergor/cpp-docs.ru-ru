@@ -9,28 +9,28 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245129"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857272"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
 Структурированная обработка исключений (SEH) — это расширение Майкрософт для языка C для обработки определенных исключительных ситуаций кода, таких как ошибки оборудования, корректно. Несмотря на то что C++ Windows и Microsoft поддерживают SEH, рекомендуется использовать стандартную C++ обработку исключений ISO, так как это делает код более переносимым и гибким. Тем не менее, для поддержки существующего кода или определенных типов программ все равно может потребоваться использовать SEH.
 
-**Специально для Майкрософт:**
+**Зависит от корпорации Майкрософт:**
 
 ## <a name="grammar"></a>Грамматика
 
-*try-except-оператор* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *составной* **оператор __except** **(** *выражение* **)** *составной оператор*
+*try-except-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally-оператор* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *составного оператора* **__finally** *составного оператора*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 С помощью SEH можно убедиться, что ресурсы, такие как блоки памяти и файлы, освобождаются правильно, если выполнение неожиданно завершается. Можно также решить определенные проблемы (например, недостаток памяти) с помощью кратко структурированного кода, не зависящего от инструкций **goto** или тщательного тестирования кодов возврата.
 
@@ -138,9 +138,9 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-Дополнительные сведения см. в разделе [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md).
+Дополнительные сведения см. в статье [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md).
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**Завершение для конкретной корпорации Майкрософт**
 
 ## <a name="see-also"></a>См. также:
 

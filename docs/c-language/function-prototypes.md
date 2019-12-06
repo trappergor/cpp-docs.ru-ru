@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148808"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857090"
 ---
 # <a name="function-prototypes"></a>Прототипы функций
 
@@ -24,7 +24,7 @@ ms.locfileid: "56148808"
 *declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> поддерживается только компилятором Microsoft\*/
+/\* *атрибут-seq*<sub>opt</sub> — это \*, специфичное для Майкрософт /
 
 *declaration-specifiers*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ ms.locfileid: "56148808"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Декларатор функции \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Декларатор нового стиля \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Декларатор устаревшего стиля \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Декларатор нового стиля \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Декларатор устаревшего стиля \*/
 
 Прототип имеет ту же форму, что и определение функции, но завершается точкой с запятой сразу после закрывающей круглой скобки и поэтому не имеет тела. В любом случае возвращаемый тип должен соответствовать возвращаемому типу, указанному в определении функции.
 
 Ниже перечислены важные случаи применения прототипов функций:
 
-- Они указывают тип возвращаемого значения для функций, которые возвращают значения с типом, отличным от **int**. Хотя для функций, которые возвращают значения с типом **int**, прототипы не обязательны, рекомендуется их использовать.
+- Они устанавливают тип возвращаемого значения для функций, возвращающих типы, отличные от **int**. Несмотря на то, что функции, возвращающие значения **типа int** , не нуждаются в прототипах, рекомендуется использовать прототипы.
 
 - Без полных прототипов выполняются стандартные преобразования, но не производится попытка сравнения типа или количества аргументов с количеством параметров.
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 При использовании параметра **/Ze** этот тег будет по-прежнему находиться в глобальной области.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Функции](../c-language/functions-c.md)
