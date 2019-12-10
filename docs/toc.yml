@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: Файлы и потоки
+                      href: c-runtime-library/files-and-streams.md
+                    - name: Текстовые и двоичные потоки
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: Байтовые и широкие потоки
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10418,7 +10420,7 @@
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: Класс task_group
                           href: parallel/concrt/reference/task-group-class.md
-                        - name: Класс task_handle
+                        - name: task_handle - класс
                           href: parallel/concrt/reference/task-handle-class.md
                         - name: Класс task_options (среда выполнения с параллелизмом)
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md
