@@ -3,12 +3,12 @@ title: Подключение к целевой системе Linux из Visual
 description: Подключение к удаленному компьютеру Linux или подсистеме Windows для Linux из проекта C++ в Visual Studio.
 ms.date: 11/09/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 6f7116ab5dc6c77f88d0787beac32d1c1e0a4716
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966572"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755282"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Подключение к целевой системе Linux из Visual Studio
 
@@ -82,7 +82,7 @@ ms.locfileid: "73966572"
 
 ## <a name="tcp-port-forwarding"></a>Перенаправление TCP-портов
 
-Поддержка Linux в Visual Studio зависит от перенаправления TCP-портов. Если в удаленной системе отключено перенаправление TCP-портов, это повлияет на **rsync** и **gdbserver**. 
+Поддержка Linux в Visual Studio зависит от перенаправления TCP-портов. Если в удаленной системе отключено перенаправление TCP-портов, это повлияет на **rsync** и **gdbserver**. Если эта зависимость влияет на вас, вы можете оставить свое [предложение](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html) на сайте Сообщества разработчиков.
 
 С помощью rsync в проектах Linux на основе MSBuild и проектах CMake можно [копировать заголовки, которые будут использоваться в IntelliSense, из удаленной системы в Windows](configure-a-linux-project.md#remote_intellisense). Если вы не можете включить перенаправление TCP-портов, отключите автоматическое скачивание удаленных заголовков. Для этого последовательно выберите **Сервис > Параметры > Кроссплатформенный > Диспетчер подключений > Диспетчер удаленных заголовков IntelliSense**. Если для удаленной системы не включено перенаправление TCP-портов, то при скачивании удаленных заголовков для IntelliSense будет отображаться приведенное ниже сообщение об ошибке.
 
