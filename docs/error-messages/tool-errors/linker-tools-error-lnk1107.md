@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1107
 ms.assetid: a37a893d-5efa-4eba-8f40-6c5518b4b9d0
-ms.openlocfilehash: 68048d9f824283d002a4ea8b64d88f37bbeefc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75966d9c6c22f1bd2123fb30282bb2bed467130
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255396"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991026"
 ---
 # <a name="linker-tools-error-lnk1107"></a>Ошибка средств компоновщика LNK1107
 
 Недопустимый или поврежденный файл: не удается прочитать в расположении
 
-Средство не удалось прочитать файл. Повторно создайте файл.
+Средству не удалось прочитать файл. Повторно создайте файл.
 
-LNK1107 также может возникать при попытке передать модуль (расширение DLL или .netmodule, созданных с помощью [/clr:noAssembly](../../build/reference/clr-common-language-runtime-compilation.md) или [/NOASSEMBLY предписывает](../../build/reference/noassembly-create-a-msil-module.md)) в компоновщик; передать OBJ-файле, вместо этого.
+LNK1107 также может возникнуть при попытке передать компоновщику модуль (DLL или. netmodule, созданный с [параметром/clr: Assembly](../../build/reference/clr-common-language-runtime-compilation.md) или [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)); Вместо этого передайте OBJ-файл.
 
-При компиляции следующего примера:
+При компиляции следующего образца:
 
-```
+```cpp
 // LNK1107.cpp
 // compile with: /clr /LD
 public ref class MyClass {
@@ -32,4 +32,4 @@ public:
 };
 ```
 
-а затем укажите **связать LNK1107.dll** в командной строке, вы получите LNK1107.  Чтобы устранить эту ошибку, укажите **связать LNK1107.obj** вместо этого.
+а затем указать **link LNK1107. dll** в командной строке, вы получите LNK1107.  Чтобы устранить эту ошибку, укажите **link LNK1107. obj** .

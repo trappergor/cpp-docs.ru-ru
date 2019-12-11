@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-ms.openlocfilehash: 6566c27999f218b7a214e32dde96bd1cf96fbb12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6af1bf2d27c04efb58e7f1af0439ed3d16b7491a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395278"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990125"
 ---
 # <a name="compiler-warning-level-4-c4682"></a>Предупреждение компилятора (уровень 4) C4682
 
 "параметр": не указан атрибут параметра направления, по умолчанию принимается [in]
 
-Метод параметра в интерфейсе с атрибутами не содержит атрибута направления [in](../../windows/in-cpp.md) или [out](../../windows/out-cpp.md). По умолчанию принимается атрибут in.
+Метод для параметра в интерфейсе с атрибутом не имеет одного из атрибутов направления: [in](../../windows/in-cpp.md) или [out](../../windows/out-cpp.md). Параметр по умолчанию имеет значение в.
 
 Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
 
 Следующий пример приводит к возникновению предупреждения C4682:
 
-```
+```cpp
 // C4682.cpp
 // compile with: /W4
 #pragma warning(default : 4682)

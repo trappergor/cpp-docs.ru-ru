@@ -1,5 +1,5 @@
 ---
-title: '&lt;Сводка > (C++ комментариев документации)'
+title: '> сводки &lt;(C++ комментарии к документации)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 68bb8b7c269b3406438e5cf21dde7179f7e67646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318190"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988584"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -30,7 +30,7 @@ ms.locfileid: "62318190"
 *description*<br/>
 Сводка объекта.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Текст в теге \<summary> является единственным источником сведений о типе для технологии IntelliSense, а также отображается в [обозревателе объектов](/visualstudio/ide/viewing-the-structure-of-code) и веб-отчете комментариев кода.
 
@@ -38,7 +38,7 @@ ms.locfileid: "62318190"
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // xml_summary_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_summary_tag.dll
@@ -57,6 +57,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Документация XML](xml-documentation-visual-cpp.md)
