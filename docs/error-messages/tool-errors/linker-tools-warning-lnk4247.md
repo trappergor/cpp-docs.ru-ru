@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346964"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991154"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>Предупреждение средств компоновщика LNK4247
 
-точка входа «декорированное_имя_функции» уже есть атрибут потока; «атрибут» игнорируется
+точка входа "decorated_function_name" уже имеет атрибут потока; атрибут "Attribute" проигнорирован
 
-Точки входа, указанный с помощью [/Entry (символ точки входа)](../../build/reference/entry-entry-point-symbol.md), имели атрибут потока, но [/CLRTHREADATTRIBUTE (значение атрибута потока среды CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) также указано, с другой моделью потоков.
+Также указана точка входа, указанная с параметром [/Entry (символ точки входа)](../../build/reference/entry-entry-point-symbol.md), но [/CLRTHREADATTRIBUTE (Установка атрибута потока CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) и с другой потоковой моделью.
 
-Компоновщик игнорирует значение, указанное с помощью /CLRTHREADATTRIBUTE.
+Компоновщик проигнорировал значение, указанное с помощью/КЛРСРЕАДАТТРИБУТЕ.
 
-Чтобы устранить это предупреждение:
+Чтобы устранить это предупреждение, сделайте следующее:
 
-- Удалите /CLRTHREADATTRIBUTE из сборки.
+- Удалите/CLRTHREADATTRIBUTE из сборки.
 
 - Удалите атрибут из файла исходного кода.
 
-- Удалите атрибут из источника и параметр/CLRTHREADATTRIBUTE из сборки и примите потоковой моделью среды CLR по умолчанию.
+- Удалите атрибут из Source и/CLRTHREADATTRIBUTE из сборки и примите модель потоков CLR по умолчанию.
 
-- Измените значение, передаваемое /CLRTHREADATTRIBUTE, таким образом, что оно согласуется с атрибутом в источнике.
+- Измените значение, передаваемое в/CLRTHREADATTRIBUTE, таким, что оно соглашается с атрибутом в источнике.
 
-- Измените атрибут в источнике, таким образом, что оно согласуется со значением, передаваемым в /CLRTHREADATTRIBUTE.
+- Измените атрибут в источнике, так что он соглашается со значением, переданным в/КЛРСРЕАДАТТРИБУТЕ.
 
 Следующий пример приводит к возникновению ошибки LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

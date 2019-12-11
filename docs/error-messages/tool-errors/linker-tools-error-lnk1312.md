@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160475"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990906"
 ---
 # <a name="linker-tools-error-lnk1312"></a>Ошибка средств компоновщика LNK1312
 
-Недопустимый или поврежденный файл: не удается импортировать сборку
+Недопустимый или поврежденный файл: не удалось импортировать сборку
 
-При построении сборки в файл, модуля или сборки, скомпилированной с **/CLR** передан **добавившей** параметр компоновщика.  При передаче в объектный файл для **добавившей**, просто передайте объект непосредственно компоновщику, а не к **добавившей**.
+При построении сборки файл, отличный от модуля или сборки, скомпилированного с **параметром/CLR** , был передан параметру компоновщика **/ASSEMBLYMODULE** .  Если объектный файл был передан в **/ASSEMBLYMODULE**, просто передайте объект непосредственно в компоновщик, а не в **/ASSEMBLYMODULE**.
 
 ## <a name="example"></a>Пример
 
-Следующий пример создан OBJ-файле.
+В следующем примере создается OBJ-файл.
 
-```
+```cpp
 // LNK1312.cpp
 // compile with: /clr /LD
 public ref class A {
@@ -36,7 +36,7 @@ public:
 
 Следующий пример приводит к возникновению ошибки LNK1312.
 
-```
+```cpp
 // LNK1312_b.cpp
 // compile with: /clr /LD /link /assemblymodule:LNK1312.obj
 // LNK1312 error expected

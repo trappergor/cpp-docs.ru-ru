@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160611"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990936"
 ---
 # <a name="linker-tools-error-lnk1301"></a>Ошибка средств компоновщика LNK1301
 
-Найден, несовместимые с /LTCG:parameter модули среды LTCG clr
+Найдены модули CLR LTCG, несовместимые с/LTCG: Parameter
 
-Модуле, скомпилированном с параметром/CLR и /GL передан компоновщику вместе с одной из профильной оптимизации (PGO) параметров/LTCG.
+Модуль, скомпилированный с параметрами/CLR и/GL, передан компоновщику вместе с одним из параметров профильной оптимизации (PGO)/ЛТКГ.
 
-Оптимизация, управляемая профилями, не поддерживаются для модулей/CLR.
+Оптимизированные для профилирования оптимизации не поддерживаются для модулей/CLR.
 
-Дополнительные сведения:
+Дополнительные сведения см. в следующих разделах.
 
 - [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -33,13 +33,13 @@ ms.locfileid: "62160611"
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-1. Не компилировать с параметром/CLR или не создавать связь с одним из параметров профильной Оптимизации/LTCG.
+1. Не компилируйте с параметром/CLR или не используйте компоновку с одним из параметров PGO в/ЛТКГ.
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает ошибка LNK1301:
+Следующий пример приводит к возникновению ошибки LNK1301:
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

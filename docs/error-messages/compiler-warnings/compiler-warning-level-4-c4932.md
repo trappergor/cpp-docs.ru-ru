@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4932
 ms.assetid: 0b8d88cc-21f6-45cb-a9f5-1795b7db0dfa
-ms.openlocfilehash: cd37ee67545918991b286d16d0fe27b47414b3c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd1db3cccf9f1b24f82ddddf10fcf35f39a9251a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280284"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988788"
 ---
 # <a name="compiler-warning-level-4-c4932"></a>Предупреждение компилятора (уровень 4) C4932
 
-__identifier(идентификатор) не и \__identifier(identifier) неразличимы.
+__identifier (идентификатор) и \__identifier (идентификатор) неразличимы
 
 Компилятору не удается различить **_finally** и `__finally` или `__try` и **_try** в качестве параметра, переданного [__identifier](../../extensions/identifier-cpp-cli.md). Не следует пытаться использовать оба этих слова в качестве идентификаторов в одной и той же программе, так как это вызовет ошибку [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) .
 
 Следующий пример приводит к возникновению предупреждения C4932:
 
-```
+```cpp
 // C4932.cpp
 // compile with: /clr /W4 /WX
 int main() {

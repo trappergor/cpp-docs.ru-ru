@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4937
 ms.assetid: 2bb9f0e7-bbd6-4697-84de-95955e32ae29
-ms.openlocfilehash: 64565ad37c965aa0af3b912988586b37270be6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd7a7f9ac3d0ce0798a88f753cb0ccb4addbd5bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280274"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988755"
 ---
 # <a name="compiler-warning-level-4-c4937"></a>Предупреждение компилятора (уровень 4) C4937
 
@@ -19,11 +19,11 @@ ms.locfileid: "62280274"
 
 Из-за способа обработки компилятором аргументов директив имена, которые имеют смысл для компилятора, такие как ключевые слова с несколькими текстовыми представлениями (формы с одинарным и двойным подчеркиванием), неразличимы.
 
-Примеры таких строк: __cdecl и \__forceinline.  Обратите внимание: при использовании параметра /Za разрешены только формы с двойным подчеркиванием.
+Примерами таких строк являются __cdecl и \__forceinline.  Обратите внимание: при использовании параметра /Za разрешены только формы с двойным подчеркиванием.
 
 В следующем примере возникает ошибка C4937:
 
-```
+```cpp
 // C4937.cpp
 // compile with: /openmp /W4
 #include "omp.h"

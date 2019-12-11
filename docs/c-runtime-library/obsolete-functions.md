@@ -1,6 +1,7 @@
 ---
 title: Устаревшие функции
-ms.date: 01/22/2019
+description: Список устаревших функций, которые устарели и удалены из библиотеки времени выполнения Microsoft C (CRT).
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,25 +54,25 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940142"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988782"
 ---
 # <a name="obsolete-functions"></a>Устаревшие функции
 
-Некоторые функции библиотеки устарели и имеют более новые эквиваленты. Мы рекомендуем изменить эти функции на обновленные версии. Другие устаревшие функции были удалены из CRT. В этом разделе перечислены функции, не рекомендуемые к использованию как устаревшие, и функции, удаленные в определенных версиях Visual Studio.
+Некоторые функции библиотеки устарели и имеют более новые эквиваленты. Мы рекомендуем изменить эти функции на обновленные версии. Другие устаревшие функции были удалены из CRT. В этой статье перечислены устаревшие функции, а также функции, удаленные в определенной версии Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Не рекомендуемые к использованию как устаревшие в Visual Studio 2015
 
 |Устаревшая функция|Альтернатива|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) или [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)или [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
 |`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
-|`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
+|`_getdllprocaddr`|[Функция GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
 |`_beep`|[Beep](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
 |`_sleep`|[Sleep](/windows/win32/api/synchapi/nf-synchapi-sleep)|
@@ -87,10 +88,8 @@ ms.locfileid: "70940142"
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Нет|
 |[_heapadd](../c-runtime-library/heapadd.md)|Нет|
 |[_heapset](../c-runtime-library/heapset.md)|Нет|
-|[inp, inpw](../c-runtime-library/inp-inpw.md)|Нет|
-|[_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Нет|
-|[outp, outpw](../c-runtime-library/outp-outpw.md)|Нет|
-|[_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Нет|
+|[InP, инпв, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Нет|
+|[ыходной, аутпв, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Нет|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Нет|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Удаленные из CRT в более ранних версиях Visual Studio

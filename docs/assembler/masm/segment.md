@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393728"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988014"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -39,10 +39,10 @@ ms.locfileid: "74393728"
 
 Если этот параметр не указан, по умолчанию используется **para** .
 
-*объединить*\
+*Combine* (только 32-разрядный MASM) \
 **Общедоступный**, **стек**, **Общий**, **память**, **по**<em>адресу</em>, **частный**
 
-*использование*\
+*Используйте* (только 32-разрядный MASM) \
 **USE16**, **USE32**, **плоский**
 
 \ *характеристик*
@@ -58,7 +58,7 @@ _string_\
 *class*\
 Определяет, как сегменты должны объединяться и упорядочиваться в собранном файле. Типичные значения:, `'DATA'`, `'CODE'`, `'CONST'` и `'STACK'`
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Для `ALIGN(n)`*n* может иметь любую степень числа 2 от 1 до 8192; не поддерживается с **/OMF**.
 

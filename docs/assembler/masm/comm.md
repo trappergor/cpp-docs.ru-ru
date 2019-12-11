@@ -1,21 +1,21 @@
 ---
 title: COMM
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - COMM
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 93e7c891b1c964eca5b3ff7fd15956ef25ea05e6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541035"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987944"
 ---
 # <a name="comm"></a>COMM
 
-Создает переменную общего с атрибутами, указанными в *определении*.
+Создание общей переменной с атрибутами, заданными в *определение*.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,6 +28,8 @@ ms.locfileid: "74541035"
 Каждое *Определение* имеет следующую форму:
 
 ⟦*Language — введите*⟧ ⟦ | Near **⟧** _Метка_ **:** _введите_⟦ **:** _Count_⟧
+
+Аргументы *Language-Type*, **NEAR**и **FAR** допустимы только в 32-разрядном MASM.
 
 Необязательный *языковой тип* задает соглашения об именовании для имени, приведенного ниже. Он переопределяет любой язык, заданный параметром **.** Директива Model. Необязательный аргумент **NEAR** или **FAR** переопределяет текущую модель памяти. *Метка* — это имя переменной. *Тип* может быть любым описателем типа ([Byte](../../assembler/masm/byte-masm.md), [Word](../../assembler/masm/word.md)и т. д.) или целым числом, определяющим количество байтов. *Необязательное число указывает* количество элементов в объявленном объекте данных. *Число* по умолчанию — 1.
 

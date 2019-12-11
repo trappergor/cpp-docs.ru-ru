@@ -1,17 +1,17 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395030"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987930"
 ---
 # <a name="proc"></a>PROC
 
@@ -24,7 +24,9 @@ ms.locfileid: "74395030"
 > *инструкции*\
 > *Метка* **ЕНДП**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
+
+Аргументы ⟦*Distance*⟧ и ⟦*Language-Type*допустимы только в 32-разрядном MASM.
 
 ⟦**Frame** ⟦ __:__ *ехандлер-Address*⟧ ⟧ является допустимым только в ml64. exe и приводит к тому, что компилятор MASM создает запись таблицы функций в pData-файл и сведения о выводу в. XData для структурированной обработки исключений функции.
 

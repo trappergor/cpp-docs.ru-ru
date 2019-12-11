@@ -1,5 +1,5 @@
 ---
-title: '&lt;разрешение > (C++ комментариев документации)'
+title: '> разрешений &lt;(C++ комментарии к документации)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319945"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988676"
 ---
-# <a name="ltpermissiongt"></a>&lt;Разрешение&gt;
+# <a name="ltpermissiongt"></a>&lt;permission&gt;
 
 Тег \<permission> tag позволяет документировать уровень доступа для члена. <xref:System.Security.PermissionSet> позволяет задать уровень доступа для члена.
 
@@ -37,15 +37,15 @@ ms.locfileid: "62319945"
 *description*<br/>
 Описание уровня доступа для члена.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](doc-process-documentation-comments-c-cpp.md).
 
-Компилятор MSVC будет пытаться разрешить ссылки cref за один проход комментарии к документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. Дополнительные сведения см. в описании [\<seealso>](seealso-visual-cpp.md).
+Компилятор КОМПИЛЯТОРОМ MSVC будет пытаться разрешить ссылки cref в одном проходе через комментарии к документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. Дополнительные сведения см. в описании [\<seealso>](seealso-visual-cpp.md).
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll
@@ -57,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Документация XML](xml-documentation-visual-cpp.md)

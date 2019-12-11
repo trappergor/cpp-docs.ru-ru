@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226873"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990456"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>Предупреждение компилятора (уровень 4) C4680
 
-«класс»: компонентный класс не указывает интерфейс по умолчанию
+"класс": coclass не указывает интерфейс по умолчанию
 
-Объект [по умолчанию](../../windows/default-cpp.md) интерфейс не существует для класса, который был отмечен атрибутом [coclass](../../windows/coclass.md) атрибута. Чтобы объект быть полезным он должен реализовать интерфейс.
+Интерфейс [по умолчанию](../../windows/default-cpp.md) не был указан для класса, помеченного атрибутом [coclass](../../windows/coclass.md) . Чтобы объект был полезен, он должен реализовать интерфейс.
 
 Следующий пример приводит к возникновению ошибки C4680:
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>
