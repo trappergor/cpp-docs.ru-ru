@@ -1,6 +1,6 @@
 ---
 title: Поддерживаемые платформы (Visual C++)
-ms.date: 05/14/2019
+ms.date: 12/02/2019
 ms.technology: cpp-tools
 helpviewer_keywords:
 - Visual C++, platforms supported
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 950f62b4cbf1255af97f1f4950bab03c58c2ceba
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: eb2a258a73e69ef032576f5b42e8071fd27439a1
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174852"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810598"
 ---
 # <a name="supported-platforms-visual-c"></a>Поддерживаемые платформы (Visual C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "66174852"
 |iOS \*\*|X|X|X|X|
 |Linux \*\*\*|X|X|X|X|
 
-\* Вы можете использовать набор инструментов платформы Windows XP, включенный в Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 и Visual Studio 2012 с обновлением 1 или более позднюю версию для создания проектов Windows XP и Windows Server 2003. Сведения об использовании этого набора инструментов платформы см. в разделе [Настройка программ для Windows XP](../build/configuring-programs-for-windows-xp.md). Дополнительные сведения о смене набора инструментов платформы: [Практическое руководство. Изменение требуемой версии .NET Framework и набора средств платформы](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\* Вы можете использовать набор инструментов платформы Windows XP, включенный в Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 и Visual Studio 2012 с обновлением 1 для создания проектов Windows XP и Windows Server 2003. Сведения об использовании этого набора инструментов платформы см. в разделе [Настройка программ для Windows XP](../build/configuring-programs-for-windows-xp.md). Дополнительные сведения о смене набора инструментов платформы: [Практическое руководство. Изменение требуемой версии .NET Framework и набора средств платформы](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 \*\* Вы можете установить рабочую нагрузку **Разработка мобильных приложений на языке C++** в установщике для Visual Studio 2017 и более поздних версий. При настройке Visual Studio 2015 выберите дополнительный компонент **Visual C++ для кроссплатформенной мобильной разработки**, чтобы выбрать целевую платформу iOS или Android. Инструкции см. в разделе [Установка Visual C++ для разработки кроссплатформенных мобильных приложений](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Для создания кода iOS необходимо иметь компьютер Mac и выполнить другие требованиям. Список необходимых условий и инструкции для установки см. в разделе [Установка и настройка средств для разработки с помощью iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Вы можете создавать код x86 или ARM для соответствия целевому оборудованию. Используйте конфигурацию x86 для создания кода для имитатора iOS, Microsoft Visual Studio Emulator для Android и некоторых устройств Android. Используйте конфигурацию ARM для создания кода для устройств iOS и большинства устройств Android.
 

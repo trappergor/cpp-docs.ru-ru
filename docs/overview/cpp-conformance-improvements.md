@@ -1,16 +1,16 @@
 ---
 title: Улучшение соответствия C++
-ms.date: 10/04/2019
+ms.date: 12/04/2019
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627090"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858039"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -460,6 +460,245 @@ extern "C" void f(int, int, int, BOOL){}
 ### <a name="standard-library-improvements"></a>Улучшения стандартной библиотеки
 
 Нестандартные заголовки \<stdexcpt.h> и \<typeinfo.>h были удалены. Код, который содержит их, должен включать стандартные заголовки \<exception> и \<typeinfo> соответственно.
+
+## <a name="improvements_164"></a> Улучшения соответствия в Visual Studio 2019 версии 16.4
+
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>Улучшенное принудительное применение двухфакторной проверки имени для qualified-id в /permissive-
+
+Для двухэтапного поиска имен нужно, чтобы независимые имена, используемые в тексте шаблона, отображались в шаблоне во время определения. Ранее такие имена можно было встретить при создании экземпляра шаблона. Это изменение упрощает написание переносимого согласованного кода в MSVC с флагом [/permissive-](../build/reference/permissive-standards-conformance.md).
+
+В Visual Studio 2019 версии 16.4 с установленным флагом **/permissive-** в следующем примере поступает сообщение об ошибке, так как при определении шаблона `f<T>` `N::f` не отображается:
+
+```cpp
+template <class T>
+int f() {
+    return N::f() + T{}; // error C2039: 'f': is not a member of 'N'
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+Как правило, это можно исправить, включив недостающие заголовки или функции либо переменные с опережающим объявлением, как показано в следующем примере:
+
+```cpp
+namespace N {
+    int f();
+}
+
+template <class T>
+int f() {
+    return N::f() + T{};
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>Неявное преобразование целочисленных константных выражений в пустой указатель
+
+Компилятор MSVC теперь реализует [проблему CWG 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903) в режиме соответствия (/permissive-). Это правило запрещает неявное преобразование целочисленных константных выражений (за исключением целочисленного литерала 0) в константы пустого указателя. В следующем примере поступает сообщение об ошибке C2440 в режиме соответствия:
+
+```cpp
+int* f(bool* p) {
+    p = false; // error C2440: '=': cannot convert from 'bool' to 'bool *'
+    p = 0; // OK
+    return false; // error C2440: 'return': cannot convert from 'bool' to 'int *'
+}
+```
+
+Чтобы устранить эту ошибку, используйте **nullptr** вместо **false**. Обратите внимание, что литерал 0 по-прежнему можно использовать:
+
+```cpp
+int* f(bool* p) {
+    p = nullptr; // OK
+    p = 0; // OK
+    return nullptr; // OK
+}
+```
+
+### <a name="standard-rules-for-types-of-integer-literals"></a>Стандартные правила для типов целочисленных литералов
+
+В режиме соответствия ([/permissive-](../build/reference/permissive-standards-conformance.md)) MSVC использует стандартные правила для типов целочисленных литералов. Ранее десятичным литералам, которые были слишком велики для типа int, присваивался тип unsigned int. Теперь таким литералам присваивается следующий самый большой целочисленный тип long long. Кроме того, литералы с суффиксом ll, которые слишком велики для размещения для подписанного типа, имеют тип unsigned long long.
+
+Это может привести к возникновению разных предупреждений системы диагностики и нестандартному поведению при выполнении арифметических операций над литералами.
+
+В приведенном ниже примере показано новое поведение в Visual Studio 2019 версии 16.4. Используется переменная `i` типа **unsigned int**. Поэтому поступает предупреждение. Старшие разряды переменной `j` имеют значение 0.
+
+```cpp
+void f(int r) {
+    int i = 2964557531; // warning C4309: truncation of constant value
+    long long j = 0x8000000000000000ll >> r; // literal is now unsigned, shift will fill high-order bits with 0
+}
+```
+
+В следующем примере показано, как сохранить прежнее поведение и таким образом избежать появления предупреждений и изменений в поведении во время выполнения:
+
+```cpp
+void f(int r) {
+int i = 2964557531u; // OK
+long long j = (long long)0x8000000000000000ll >> r; // shift will keep high-order bits
+}
+```
+
+### <a name="function-parameters-that-shadow-template-parameters"></a>Параметры функции, которые затемняют параметры шаблона
+
+При использовании компилятора MSVC теперь происходит ошибка, когда параметр функции затемняет параметр шаблона:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T(&buffer)[Size], int& Size) // error C7576: declaration of 'Size' shadows a template parameter
+{
+    return f(buffer, Size, Size);
+}
+```
+
+Чтобы устранить эту ошибку, измените имя одного из параметров:
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T (&buffer)[Size], int& size_read)
+{
+    return f(buffer, Size, size_read);
+}
+```
+
+### <a name="user-provided-specializations-of-type-traits"></a>Определяемые пользователем специализации признаков типов
+
+В соответствии с подпунктом *meta.rqmts* стандартного определения при использовании компилятора MSVC теперь поступает сообщение об ошибке при обнаружении пользовательской специализации одного из указанных шаблонов type_traits в пространстве имен `std`. Если не указано иное, такие специализации приводят к неопределенному поведению. В следующем примере наблюдается неопределенное поведение, так как нарушено правило. Поэтому выполнение `static_assert` завершается с ошибкой **C2338**.
+
+```cpp
+#include <type_traits>
+struct S;
+
+template<>
+struct std::is_fundamental<S> : std::true_type {};
+
+static_assert(std::is_fundamental<S>::value, "fail");
+```
+
+Чтобы избежать этой ошибки, определите структуру, которая наследуется от type_trait, и используйте специализацию:
+
+```cpp
+#include <type_traits>
+
+struct S;
+
+template<typename T>
+struct my_is_fundamental : std::is_fundamental<T> {};
+
+template<>
+struct my_is_fundamental<S> : std::true_type { };
+
+static_assert(my_is_fundamental<S>::value, "fail");
+```
+
+### <a name="changes-to-compiler-provided-comparison-operators"></a>Изменения в предоставленных компилятором операторах сравнения
+
+Компилятор MSVC теперь реализует следующие изменения для операторов сравнения ([P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html)), когда включен параметр [/std:c++latest](../build/reference/std-specify-language-standard-version.md):
+
+Компилятор больше не будет перезаписывать выражения с `operator==`, если они относятся к возвращаемому типу, который не является **bool**. Следующий код приводит к возникновению ошибки *C2088: '!=': illegal for struct*:
+
+```cpp
+struct U {
+  operator bool() const;
+};
+
+struct S {
+  U operator==(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+  return lhs != rhs;
+}
+```
+
+Чтобы избежать этой ошибки, необходимо явно определить необходимый оператор:
+
+```cpp
+struct U {
+    operator bool() const;
+};
+
+struct S {
+    U operator==(const S&) const;
+    U operator!=(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+Компилятор больше не будет определять оператор сравнения по умолчанию, если он является членом класса, подобного union. Код в следующем примере приводит к возникновению ошибки *C2120: 'void' illegal with all types*:
+
+```cpp
+#include <compare>
+
+union S {
+    int a;
+    char b;
+    auto operator<=>(const S&) const = default;
+};
+
+bool lt(const S& lhs, const S& rhs) {
+    return lhs < rhs;
+}
+```
+
+Чтобы избежать этой ошибки, определите текст для оператора:
+
+```cpp
+#include <compare>
+
+union S {
+  int a;
+  char b;
+  auto operator<=>(const S&) const { ... }
+}; 
+
+bool lt(const S& lhs, const S& rhs) {
+  return lhs < rhs;
+}
+```
+
+Компилятор больше не будет определять оператор сравнения по умолчанию, если класс содержит ссылочный элемент. Следующий код приводит к возникновению ошибки *C2120: 'void' illegal with all types*:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const = default;
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
+Чтобы избежать этой ошибки, определите текст для оператора:
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const { ... };
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
 
 ## <a name="update_160"></a> Исправления ошибок и изменения в поведении в Visual Studio 2019
 
@@ -2820,7 +3059,7 @@ struct S
 {
     constexpr void f();
 };
- 
+
 template<>
 constexpr void S<int>::f()
 {
