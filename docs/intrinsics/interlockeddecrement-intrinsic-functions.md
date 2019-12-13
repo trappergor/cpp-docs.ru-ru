@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f7d46cc90c9925a49948da488c2ed7ede7bdee8f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217675"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857922"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
 
@@ -115,7 +115,7 @@ __int64 _InterlockedDecrement64_nf(
 |`_InterlockedDecrement64`|ARM, x64, ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM, ARM64|
 
-**Заголовочный файл** \<> Intrin. h
+**Файл заголовка** \<Intrin. h >
 
 ## <a name="remarks"></a>Примечания
 
@@ -123,7 +123,7 @@ __int64 _InterlockedDecrement64_nf(
 
 Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedDecrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedDecrement64`работает с 64-разрядными целыми значениями.
 
-На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с `_nf` суффиксом ("без ограждения") не действуют как барьер памяти.
+На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с суффиксом `_nf` ("без ограждения") не являются барьером памяти.
 
 Переменная, на который указывает параметр `lpAddend`, должна быть выровнена по границе 32 разрядов; в противном случае эта функция не выполняется на многопроцессорных системах x86 и любой системе не-x86. Дополнительные сведения см. в разделе [выровняйте](../cpp/align-cpp.md).
 
@@ -196,6 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
    printf_s("Thread %d complete: %d\n", threadNum, data);
 }
 ```
+
+**Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="see-also"></a>См. также
 
