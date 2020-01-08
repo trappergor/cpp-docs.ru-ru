@@ -3,12 +3,12 @@ title: Возвращение к C++ (современный C++)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303337"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301747"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Возвращение к C++ (современный C++)
 
@@ -47,7 +47,7 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std:: String и std:: string_view
 
-Строки в стиле C — это еще один основной источник ошибок. С помощью [std:: String и std:: wstring](../standard-library/basic-string-class.md) можно устранить практически все ошибки, связанные с строками в стиле C, и воспользоваться преимуществами функций-членов для поиска, добавления, ожидания и т. д. Оба они оптимизированы для ускорения. При передаче строки в функцию, для которой требуется только доступ только для чтения, в (C++ 17) можно использовать [std:: string_view](../standard-library/basic-string-view-class.md) для еще большего выигрыша в производительности.
+Строки в стиле C — это еще один основной источник ошибок. С помощью [std:: String и std:: wstring](../standard-library/basic-string-class.md) можно устранить практически все ошибки, связанные с строками в стиле C, и воспользоваться преимуществами функций-членов для поиска, добавления, ожидания и т. д. Оба они оптимизированы для ускорения. При передаче строки в функцию, для которой требуется только доступ только для чтения, в C++ 17 можно использовать [std:: string_view](../standard-library/basic-string-view-class.md) для еще большего выигрыша в производительности.
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std:: Vector и другие контейнеры стандартной библиотеки
 
@@ -211,9 +211,9 @@ int main()
 
 Объединения обычно используются в программировании в стиле C для экономии памяти, позволяя членам разных типов занимать одно и то же расположение в памяти. Однако объединения не являются строго типизированными и могут быть подвержены ошибкам программирования. В c++ 17 появился класс [std:: Variant](../standard-library/variant-class.md) в качестве более надежной и надежной альтернативы объединениям. Функцию [std:: Visit](../standard-library/variant-functions.md#visit) можно использовать для доступа к членам типа `variant` строго типизированным способом.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
+[C++ Language Reference](../cpp/cpp-language-reference.md) (Справочник по языку C++)<br/>
 [Лямбда-выражения](../cpp/lambda-expressions-in-cpp.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Таблица соответствия Microsoft Visual C++ стандартам языка](../overview/visual-cpp-language-conformance.md)
