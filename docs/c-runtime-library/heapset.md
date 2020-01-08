@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944311"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300265"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -54,7 +54,7 @@ int _heapset(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функция `_heapset` возвращает одну из следующих целочисленных констант манифеста, определенных в файле Malloc.h.
+Функция`_heapset` возвращает одну из следующих целочисленных констант манифеста, определенных в файле Malloc.h.
 
 |||
 |-|-|
@@ -65,7 +65,7 @@ int _heapset(
 
 Кроме того, при возникновении ошибки функция `_heapset` устанавливает для параметра `errno` значение `ENOSYS`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция `_heapset` показывает расположения свободной памяти или узлы, которые были непреднамеренно перезаписаны.
 
@@ -77,11 +77,11 @@ int _heapset(
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md) во введении.
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../c-runtime-library/compatibility.md) во введении.
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.
@@ -121,7 +121,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Выделение памяти](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

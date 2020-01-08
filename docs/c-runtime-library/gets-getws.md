@@ -31,12 +31,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 722d67336e11250f6a5459078dcea173f69bc2af
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944341"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300278"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
@@ -76,16 +76,16 @@ wchar_t *_getws(
 
 В случае успеха возвращает свой аргумент. Указатель **NULL** указывает на ошибку или конец файла. Используйте [ferror](../c-runtime-library/reference/ferror.md) или [feof](../c-runtime-library/reference/feof.md) для определения того, что именно произошло. Если параметр `buffer` имеет значение **NULL**, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **NULL** и устанавливают параметр errno в значение `EINVAL`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция `gets` считывает строку из стандартного потока ввода `stdin` и сохраняет ее в буфере `buffer`. Строка состоит из всех символов до первого символа новой строки ("\n"). Затем перед возвратом строки функция`gets` заменяет символ новой строки нуль-символом ("\0"). Напротив, функция `fgets` сохраняет символ новой строки. `_getws` — это версия функции `gets`для расширенных символов; ее аргумент и возвращаемое значение являются строками расширенных символов.
 
 > [!IMPORTANT]
 >  Поскольку нет возможности ограничить количество символов, считываемых функцией gets, недоверенный ввод может легко привести к переполнению буфера. Взамен рекомендуется использовать `fgets` .
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -102,7 +102,7 @@ wchar_t *_getws(
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_gets.c
 // compile with: /WX /W3
 
@@ -125,7 +125,7 @@ int main( void )
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Потоковый ввод-вывод](../c-runtime-library/stream-i-o.md)<br/>
 [fgets, fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>
