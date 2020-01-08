@@ -1,18 +1,18 @@
 ---
 title: Сообщения об ошибках ML
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - vc.errors.ml
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: 2db928d22219d33f89396bb29530680d4b3c8dba
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1b065433a1a6baf9bf2631aeb2f53421f8efb83b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856947"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312629"
 ---
 # <a name="ml-error-messages"></a>Сообщения об ошибках ML
 
@@ -50,4 +50,4 @@ ms.locfileid: "74856947"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт)](microsoft-macro-assembler-reference.md)

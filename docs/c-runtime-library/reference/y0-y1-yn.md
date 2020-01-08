@@ -1,6 +1,6 @@
 ---
 title: y0, y1, yn
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - y1
 - yn
@@ -29,13 +29,15 @@ helpviewer_keywords:
 - y1 function
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
-ms.openlocfilehash: 3a5aef282d6ec774b7d20135b759f5d98733cd69
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ade2978d9a052b481c8250933257cfa33493860f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957765"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301721"
 ---
 # <a name="y0-y1-yn"></a>y0, y1, yn
 
-Эти функции POSIX устарели. Используйте вместо них соответствующие стандарту ISO C++ [функции Бесселя: _j0, _j1, _jn, _y0, _y1, _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md).
+Имена функций POSIX, реализованные корпорацией Майкрософт `y0`, `y1`и `yn` являются устаревшими псевдонимами для функций [_y0, _y1 и _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . По умолчанию они генерируют [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имена являются устаревшими, так как они не соответствуют стандартным правилам C для имен, зависящих от реализации. Однако функции по-прежнему поддерживаются.
+
+Вместо этого рекомендуется использовать [_y0, _y1 и _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) . Вы также можете продолжать использовать эти имена функций и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

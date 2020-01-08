@@ -23,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944813"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301695"
 ---
 # <a name="to-functions"></a>Функции to
 
@@ -39,11 +39,11 @@ ms.locfileid: "70944813"
 |[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
 |[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функции **to** и макросы преобразования выглядят следующим образом.
 
-|Подпрограмма|Макрос|ОПИСАНИЕ|
+|Подпрограмма|Макрос|Описание|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Преобразует `c` в ASCII символ|
 |`tolower`|`tolower`|Преобразует `c` в нижний регистр при необходимости|
@@ -79,7 +79,7 @@ ms.locfileid: "70944813"
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also
@@ -115,7 +115,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Преобразование данных](../c-runtime-library/data-conversion.md)<br/>
 [Языковой стандарт](../c-runtime-library/locale.md)<br/>

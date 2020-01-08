@@ -1,17 +1,17 @@
 ---
 title: IFNB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFNB
 helpviewer_keywords:
 - IFNB directive
 ms.assetid: 9d161ddb-75b7-4cfe-92ef-370c6ef0af62
-ms.openlocfilehash: 9a1fae4c0165321db6bf5980249b5125d7c5e044
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1bff02e3ac4f59872d259c76d2d524f224139473
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397374"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313058"
 ---
 # <a name="ifnb"></a>IFNB
 
@@ -21,10 +21,11 @@ ms.locfileid: "74397374"
 
 > **Ифнб** *текститем*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
+Полный [Синтаксис см.](if-masm.md) в разделе.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

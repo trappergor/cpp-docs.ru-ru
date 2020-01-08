@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944687"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299004"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -75,15 +75,15 @@ wchar_t *_cgetws(
 
 `_cgets` и `_cgetws` возвращают указатель на начало строки, `buffer[2]`. Если параметр `buffer` имеет значение **NULL**, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **NULL** и устанавливают для `errno` значение `EINVAL`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Эти функции считывают строку символов из консоли и хранят строку и ее длину в расположении, указанном `buffer`. Параметр `buffer` должен указывать на массив символов. Первый элемент массива, `buffer[0]`, должен содержать максимальную длину (в символах) строки для считывания. Массив должен содержать достаточно элементов для хранения строки, завершающий нуль-символ ("\0") и 2 дополнительных байта. Функция читает символы до считывания сочетания возврата каретки и перевода строки (CR-LF) или до считывания указанного числа символов. Строка сохраняется начиная с `buffer[2]`. Когда функция считывает CR-LF, они сохраняет нуль-символ ("\0"). Затем функция сохраняет фактическую длину строки во втором элементе массива, `buffer[1]`.
 
 Так как все клавиши редактирования активны при вызове `_cgets` или `_cgetws` в окне консоли, нажатие клавиши F3 повторяет последнюю введенную запись.
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -96,11 +96,11 @@ wchar_t *_cgetws(
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes
@@ -142,7 +142,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Ввод-вывод на консоль и порт](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)

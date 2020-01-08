@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .FARDATA? directive
 ms.assetid: 3b416313-44b7-4724-a2cf-69d73871a10c
-ms.openlocfilehash: d32a742a26fff8e2cfb72269b010340e12ecfa13
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d1eef53f15400eaf3f9094eaf01b5c3a5169da66
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398275"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317777"
 ---
 # <a name="fardata-32-bit-masm"></a>.FARDATA? (32-разрядный компилятор MASM)
 
-При использовании с [. MODEL](../../assembler/masm/dot-model.md)запускает сегмент данных для неинициализированных данных (имя сегмента FAR_BSS или *имя*). (только 32-разрядный MASM.)
+При использовании с [. MODEL](dot-model.md)запускает сегмент данных для неинициализированных данных (имя сегмента FAR_BSS или *имя*). (только 32-разрядный MASM.)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398275"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

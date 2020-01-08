@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 689221ec77b21fc8bfaed2e929aee5402a4bc676
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496976"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298619"
 ---
 # <a name="ccomptrbase-class"></a>Класс Ккомптрбасе
 
@@ -44,43 +44,43 @@ class CComPtrBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
 |[Ккомптрбасе:: ~ Ккомптрбасе](#dtor)|Деструктор|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
-|[Ккомптрбасе:: Advise](#advise)|Вызовите этот метод, чтобы создать соединение между `CComPtrBase`точкой подключения и приемником клиента.|
+|[Ккомптрбасе:: Advise](#advise)|Вызовите этот метод, чтобы создать соединение между точкой подключения `CComPtrBase`и приемником клиента.|
 |[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
 |[Ккомптрбасе:: CoCreateInstance](#cocreateinstance)|Вызовите этот метод, чтобы создать объект класса, связанный с указанным ИДЕНТИФИКАТОРом класса или ИДЕНТИФИКАТОРом программы.|
-|[Ккомптрбасе:: CopyTo](#copyto)|Вызовите этот метод, чтобы `CComPtrBase` скопировать указатель на другую переменную указателя.|
+|[Ккомптрбасе:: CopyTo](#copyto)|Вызовите этот метод, чтобы скопировать указатель `CComPtrBase` в другую переменную указателя.|
 |[Ккомптрбасе::D етач](#detach)|Вызовите этот метод, чтобы освободить владение указателем.|
-|[Ккомптрбасе:: Исекуалобжект](#isequalobject)|Вызовите этот метод, чтобы проверить, `IUnknown` указывают ли указанные точки на один и тот `CComPtrBase` же объект, связанный с объектом.|
+|[Ккомптрбасе:: Исекуалобжект](#isequalobject)|Вызовите этот метод, чтобы проверить, указывает ли указанный `IUnknown` на тот же объект, связанный с объектом `CComPtrBase`.|
 |[Ккомптрбасе:: QueryInterface](#queryinterface)|Вызовите этот метод, чтобы вернуть указатель на указанный интерфейс.|
 |[CComPtrBase::Release](#release)|Вызовите этот метод, чтобы освободить интерфейс.|
-|[Ккомптрбасе:: SetSite](#setsite)|Вызовите этот метод, чтобы задать сайт `CComPtrBase` объекта `IUnknown` для родительского объекта.|
+|[Ккомптрбасе:: SetSite](#setsite)|Вызовите этот метод, чтобы задать сайт `CComPtrBase` объекта для `IUnknown` родительского объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
 |[Ккомптрбасе:: operator T *](#operator_t_star)|Оператор CAST.|
 |[Ккомптрбасе:: operator!](#operator_not)|Оператор NOT.|
-|[Ккомптрбасе:: operator &](#operator_amp)|Оператор &.|
+|[Ккомптрбасе:: operator &](#operator_amp)|Оператора &.|
 |[Ккомптрбасе:: operator *](#operator_star)|Оператор \*.|
-|[Ккомптрбасе:: operator <](#ccomptrbase__operator lt)|Оператор "меньше чем".|
+|[Ккомптрбасе:: operator <](#ccomptrbase__operator lt)|Оператор «меньше».|
 |[Ккомптрбасе:: operator = =](#operator_eq_eq)|Оператор равенства.|
 |[Ккомптрбасе:: operator — >](#operator_ptr)|Оператор указателя на члены.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
 |[Ккомптрбасе::p](#p)|Переменная члена данных указателя.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Этот класс предоставляет базу для других смарт-указателей, использующих подпрограммы управления памятью COM, такие как [CComQIPtr](../../atl/reference/ccomqiptr-class.md) и [CComPtr](../../atl/reference/ccomptr-class.md). Производные классы добавляют собственные конструкторы и операторы, но используют методы, предоставляемые `CComPtrBase`.
 
@@ -90,7 +90,7 @@ class CComPtrBase
 
 ##  <a name="advise"></a>Ккомптрбасе:: Advise
 
-Вызовите этот метод, чтобы создать соединение между `CComPtrBase`точкой подключения и приемником клиента.
+Вызовите этот метод, чтобы создать соединение между точкой подключения `CComPtrBase`и приемником клиента.
 
 ```
 HRESULT Advise(
@@ -102,7 +102,7 @@ HRESULT Advise(
 ### <a name="parameters"></a>Параметры
 
 *pUnk*<br/>
-Указатель на клиентский `IUnknown`объект.
+Указатель на `IUnknown`клиента.
 
 *IID*<br/>
 Идентификатор GUID точки подключения. Как правило, это то же самое, что и исходящий интерфейс, управляемый точкой подключения.
@@ -112,9 +112,9 @@ HRESULT Advise(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Дополнительные сведения см. в разделе [атладвисе](connection-point-global-functions.md#atladvise) .
 
@@ -129,11 +129,11 @@ void Attach(T* p2) throw();
 ### <a name="parameters"></a>Параметры
 
 *–*<br/>
-`CComPtrBase` Объект будет становиться владельцем этого указателя.
+Объект `CComPtrBase` будет становиться владельцем этого указателя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-`Attach`вызывает [ккомптрбасе:: Release](#release) для существующей переменной члена [ккомптрбасе::p](#p) , а затем присваивает *P2* значение `CComPtrBase::p`. Когда объект становится владельцем указателя, он автоматически вызывается `Release` по указателю, который удаляет указатель и все выделенные данные, если счетчик ссылок на объект переходит в 0. `CComPtrBase`
+`Attach` вызывает [ккомптрбасе:: Release](#release) для существующей переменной члена [ккомптрбасе::p](#p) , а затем присваивает *P2* значение `CComPtrBase::p`. Когда объект `CComPtrBase` берет на себя владение указателем, он автоматически вызывает `Release` на указателе, который удаляет указатель и все выделенные данные, если счетчик ссылок на объект переходит в 0.
 
 ##  <a name="dtor"></a>Ккомптрбасе:: ~ Ккомптрбасе
 
@@ -143,9 +143,9 @@ void Attach(T* p2) throw();
 ~CComPtrBase() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Освобождает интерфейс, `CComPtrBase`на который указывает.
+Освобождает интерфейс, на который указывает `CComPtrBase`.
 
 ##  <a name="cocreateinstance"></a>Ккомптрбасе:: CoCreateInstance
 
@@ -169,7 +169,7 @@ HRESULT CoCreateInstance(
 Указатель на идентификатор ProgID, используемый для восстановления идентификатора CLSID.
 
 *пункаутер*<br/>
-Если значение — NULL, указывает, что объект не создается как часть агрегатной функции. Если значение не равно null, то является указателем на `IUnknown` интерфейс агрегатного объекта (Управление `IUnknown`).
+Если значение — NULL, указывает, что объект не создается как часть агрегатной функции. Если значение не равно NULL, то является указателем на интерфейс `IUnknown` статистического объекта (управляющий `IUnknown`).
 
 *двклсконтекст*<br/>
 Контекст, в котором будет выполняться код, управляющий только что созданным объектом.
@@ -179,9 +179,9 @@ CLSID, связанный с данными и кодом, который буд
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, или REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE при сбое. Описание этих ошибок см. в разделе [кокреатеклассинстанце](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) и [клсидфромпрогид](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) .
+Возвращает S_OK при успешном выполнении или REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE при сбое. Описание этих ошибок см. в разделе [кокреатеклассинстанце](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) и [клсидфромпрогид](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Если вызывается первая форма метода, [клсидфромпрогид](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) используется для восстановления идентификатора CLSID. Затем обе формы вызывают [кокреатеклассинстанце](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
@@ -189,7 +189,7 @@ CLSID, связанный с данными и кодом, который буд
 
 ##  <a name="copyto"></a>Ккомптрбасе:: CopyTo
 
-Вызовите этот метод, чтобы `CComPtrBase` скопировать указатель на другую переменную указателя.
+Вызовите этот метод, чтобы скопировать указатель `CComPtrBase` в другую переменную указателя.
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -198,15 +198,15 @@ HRESULT CopyTo(T** ppT) throw();
 ### <a name="parameters"></a>Параметры
 
 *PowerPoint*<br/>
-Адрес переменной, которая получит `CComPtrBase` указатель.
+Адрес переменной, которая получит указатель `CComPtrBase`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, E_POINTER при сбое.
+Возвращает S_OK при успешном выполнении E_POINTER при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Копирует указатель на *PPT.* `CComPtrBase` Счетчик ссылок на переменную-член [ккомптрбасе::p](#p) увеличивается.
+Копирует указатель `CComPtrBase` в *PPT*. Счетчик ссылок на переменную-член [ккомптрбасе::p](#p) увеличивается.
 
 Если *PPT* имеет значение null, будет возвращено сообщение об ошибке HRESULT. В отладочных сборках возникнет ошибка утверждения, если *PPT* имеет значение null.
 
@@ -222,13 +222,13 @@ T* Detach() throw();
 
 Возвращает копию указателя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Освобождает владение указателем, задает для переменной-члена [ккомптрбасе::p](#p) данных значение NULL и возвращает копию указателя.
 
 ##  <a name="isequalobject"></a>Ккомптрбасе:: Исекуалобжект
 
-Вызовите этот метод, чтобы проверить, `IUnknown` указывают ли указанные точки на один и тот `CComPtrBase` же объект, связанный с объектом.
+Вызовите этот метод, чтобы проверить, указывает ли указанный `IUnknown` на тот же объект, связанный с объектом `CComPtrBase`.
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -253,11 +253,11 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, `CComHeapPtr` если указатель равен null, и false в противном случае.
+Возвращает значение true, если `CComHeapPtr` указатель равен NULL, и false в противном случае.
 
-##  <a name="operator_amp"></a>Ккомптрбасе:: operator&amp;
+##  <a name="operator_amp"></a>Ккомптрбасе:: operator &amp;
 
-Оператор &.
+Оператора &.
 
 ```
 T** operator&() throw();
@@ -265,9 +265,9 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает адрес объекта, `CComPtrBase` на который указывает объект.
+Возвращает адрес объекта, на который указывает объект `CComPtrBase`.
 
-##  <a name="operator_star"></a>Ккомптрбасе:: operator\*
+##  <a name="operator_star"></a>Ккомптрбасе:: operator \*
 
 Оператор \*.
 
@@ -277,7 +277,7 @@ T& operator*() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение [ккомптрбасе::p](#p); то есть указатель на объект, на который ссылается `CComPtrBase` объект.
+Возвращает значение [ккомптрбасе::p](#p); то есть указатель на объект, на который ссылается объект `CComPtrBase`.
 
 При отладочной сборке возникнет ошибка утверждения, если [ккомптрбасе::p](#p) не равно null.
 
@@ -296,7 +296,7 @@ bool operator== (T* pT) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает true, `CComPtrBase` если и *PT* указывают на один и тот же объект; в противном случае — значение false.
+Возвращает значение true, если `CComPtrBase` и *PT* указывают на один и тот же объект; в противном случае — значение false.
 
 ##  <a name="operator_ptr"></a>Ккомптрбасе:: operator —&gt;
 
@@ -310,13 +310,13 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 Возвращает значение переменной элемента данных [ккомптрбасе::p](#p) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Этот оператор используется для вызова метода в классе, на `CComPtrBase` который указывает объект. В отладочных сборках произойдет сбой утверждения, если `CComPtrBase` элемент данных указывает на значение null.
+Этот оператор используется для вызова метода в классе, на который указывает объект `CComPtrBase`. В отладочных сборках возникнет ошибка утверждения, если элемент данных `CComPtrBase` указывает на значение NULL.
 
-##  <a name="operator_lt"></a>Ккомптрбасе:: operator&lt;
+##  <a name="operator_lt"></a>Ккомптрбасе:: operator &lt;
 
-Оператор "меньше чем".
+Оператор «меньше».
 
 ```
 bool operator<(T* pT) const throw();
@@ -339,7 +339,7 @@ bool operator<(T* pT) const throw();
 operator T*() const throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Возвращает указатель на тип данных Object, определенный в шаблоне класса.
 
@@ -351,7 +351,7 @@ operator T*() const throw();
 T* p;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Эта переменная члена содержит сведения об указателе.
 
@@ -374,11 +374,11 @@ template <class Q> HRESULT QueryInterface(Q
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или E_NOINTERFACE при сбое.
+Возвращает S_OK при успешном выполнении или E_NOINTERFACE при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Этот метод вызывает [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_)).
+Этот метод вызывает [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)).
 
 В отладочных сборках возникнет ошибка утверждения, если *PP* не равно null.
 
@@ -390,13 +390,13 @@ template <class Q> HRESULT QueryInterface(Q
 void Release() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Интерфейс освобожден, и [ккомптрбасе::p](#p) имеет значение null.
 
 ##  <a name="setsite"></a>Ккомптрбасе:: SetSite
 
-Вызовите этот метод, чтобы задать сайт `CComPtrBase` объекта `IUnknown` для родительского объекта.
+Вызовите этот метод, чтобы задать сайт `CComPtrBase` объекта для `IUnknown` родительского объекта.
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -405,16 +405,16 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="parameters"></a>Параметры
 
 *пункпарент*<br/>
-Указатель на `IUnknown` интерфейс родителя.
+Указатель на интерфейс `IUnknown` родителя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Этот метод вызывает [атлсетчилдсите](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обзор класса](../../atl/atl-class-overview.md)

@@ -1,19 +1,19 @@
 ---
 title: FOR (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - for
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 75e27948a523cb23c42df6f7691d54c3170c656e
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c92e909b62331a630a9a09be6193f400ad32dc30
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397511"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318087"
 ---
-# <a name="for-masm"></a>FOR (MASM)
+# <a name="for"></a>FOR
 
 Помечает блок, который будет повторяться один раз для каждого *аргумента*, с текущим *аргументом* , заменив *параметр* при каждом повторении.
 
@@ -23,10 +23,11 @@ ms.locfileid: "74397511"
 > *инструкции*\
 > **ENDM**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-То же, что и [IRP](../../assembler/masm/irp.md).
+То же, что и [IRP](irp.md).
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

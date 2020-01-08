@@ -1,17 +1,17 @@
 ---
 title: Конструкторы (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246616"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546397"
 ---
 # <a name="constructors-c"></a>Конструкторы (C++)
 
@@ -478,6 +478,52 @@ int main(){
 
 1. Если конструктор не является делегирующим, удаляются все полностью созданные объекты базовых классов и объекты-члены. Однако поскольку сам объект создан не полностью, деструктор не выполняется.
 
+## <a name="extended_aggregate"></a>Производные конструкторы и расширенная агрегатная инициализация
+
+Если конструктор базового класса не является открытым, но доступен для производного класса, то в режиме **/std: c++ 17** в Visual Studio 2017 и более поздних версиях нельзя использовать пустые фигурные скобки для инициализации объекта производного типа.
+
+В следующем примере показана соответствующая реакция на событие в C++14:
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+В C++17 `Derived` теперь считается агрегатным типом. Это означает, что инициализация `Base` через закрытый конструктор по умолчанию происходит непосредственно как часть расширенного правила агрегатной инициализации. Закрытый конструктор `Base` ранее вызывался через конструктор `Derived`, и это работало успешно благодаря объявлению дружественных отношений.
+
+В следующем примере показано поведение C++ 17 в Visual Studio 2017 и более поздних версиях в **/std: режим c++ 17** :
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
+
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>Конструкторы для классов с несколькими наследованиями
 
 Если класс является производным от нескольких базовых классов, конструкторы базовых классов вызываются в том порядке, в котором они перечислены в объявлении производного класса.
@@ -646,7 +692,7 @@ int main(){
 }
 ```
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>В данном разделе
 
 - [Конструкторы копий и операторы присваивания копирования](copy-constructors-and-copy-assignment-operators-cpp.md)
 - [Конструкторы перемещения и операторы присваивания перемещения](move-constructors-and-move-assignment-operators-cpp.md)

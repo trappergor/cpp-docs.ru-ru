@@ -1,27 +1,28 @@
 ---
 title: Оператор == (среда выполнения MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator ==
 helpviewer_keywords:
 - operator ==
 - == operator
 ms.assetid: 5412dfa7-8cec-4853-a641-5c9550098b19
-ms.openlocfilehash: d5883357c8b6fe8a6012e7d05bf364b24ba70d1c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 941331f0ff789845954cd189ad93b3707af609f9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316659"
 ---
 # <a name="operator--masm-run-time"></a>Оператор == (среда выполнения MASM)
 
-Равно. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
+Равно. Используется только в [. Если](dot-if.md), [. WHILE](dot-while.md)или [. ПОВТОРЯЮЩИеся](dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *expression1* **==** *expression2*
+> *expression1* **==** *выражение2*
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](operators-reference.md)
+[Справочник по операторам](operators-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

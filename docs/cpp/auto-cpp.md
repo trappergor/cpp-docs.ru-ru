@@ -1,22 +1,25 @@
 ---
 title: Auto (C++)
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303388"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301656"
 ---
 # <a name="auto-c"></a>Auto (C++)
 
 Выводит тип объявленной переменной из выражения инициализации.
+
+> [!NOTE]
+> C++ Стандарт определяет исходное и измененное значение для этого ключевого слова. До Visual Studio 2010 ключевое слово **Auto** объявляет переменную в *автоматическом* классе хранения. то есть переменная с локальным временем существования. Начиная с Visual Studio 2010, ключевое слово **Auto** объявляет переменную, тип которой выведен из выражения инициализации в его объявлении. Параметр [/Zc: Auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) Compiler определяет значение ключевого слова **Auto** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,7 +31,7 @@ auto declarator initializer;
 [](auto param1, auto param2) {};
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Ключевое слово **Auto** направляет компилятору использование выражения инициализации объявленной переменной или параметра лямбда-выражения, чтобы вывести его тип.
 
@@ -62,7 +65,7 @@ auto declarator initializer;
 
 ## <a name="trailing-return-types"></a>Отслеживание возвращаемых типов
 
-Для создания библиотек шаблонов можно использовать **Auto**вместе с описателем типа **decltype** . Используйте **Auto** и **decltype** для объявления функции шаблона, тип возвращаемого значения которого зависит от типов своих аргументов шаблона. Или используйте **Auto** и **decltype** для объявления функции-шаблона, которая создает оболочку для вызова другой функции, а затем возвращает все, что является типом возвращаемого значения этой функции. Дополнительные сведения см. в разделе [decltype](../cpp/decltype-cpp.md).
+Для создания библиотек шаблонов можно использовать **Auto**вместе с описателем типа **decltype** . Используйте **auto** и **decltype** для объявления функции-шаблона, тип возвращаемого значения которой зависит от типов ее шаблонных аргументов. Или используйте **Auto** и **decltype** для объявления функции-шаблона, которая создает оболочку для вызова другой функции, а затем возвращает все, что является типом возвращаемого значения этой функции. Дополнительные сведения см. в разделе [decltype](../cpp/decltype-cpp.md).
 
 ## <a name="references-and-cv-qualifiers"></a>Ссылки и cv-квалификаторы
 
@@ -226,7 +229,7 @@ int main()
 [/Zc:auto (выведение типа переменной)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [Оператор sizeof](../cpp/sizeof-operator.md)<br/>
 [typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
-[оператор new](new-operator-cpp.md)<br/>
+[Оператор new](new-operator-cpp.md)<br/>
 [Объявления и определения](declarations-and-definitions-cpp.md)<br/>
 [Примеры лямбда-выражений](../cpp/examples-of-lambda-expressions.md)<br/>
 [Инициализаторы](../cpp/initializers.md)<br/>

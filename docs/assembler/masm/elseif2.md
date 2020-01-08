@@ -1,30 +1,31 @@
 ---
 title: ELSEIF2
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ELSEIF2
 helpviewer_keywords:
 - ELSEIF2 directive
 ms.assetid: 6e6a1020-1dc2-45a9-a42c-e08442fb4071
-ms.openlocfilehash: 7ba3708cf06d3511fc34bac2b6c3e235b08770f2
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 65bb02bd65531ab0d4f591ca9435c3f3aa6d6bae
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397683"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318141"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
-Блок [ELSEIF](../../assembler/masm/elseif-masm.md) вычисляется для каждой сборки Pass, если **параметр: SETIF2** имеет **значение true**.
+Блок [ELSEIF](elseif-masm.md) вычисляется для каждой сборки Pass, если **параметр: SETIF2** имеет **значение true**.
 
 ## <a name="syntax"></a>Синтаксис
 
 > **ELSEIF2**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Дополнительные сведения о 2-проходном поведении в MASM 5,1 vs MASM 6,1 см. в разделе [IF1 и If2](if2.md).
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: FORC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - FORC
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: f354a2ce3413976996f1e0bade1a5a706d4a3c54
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397530"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313318"
 ---
 # <a name="forc"></a>FORC
 
@@ -23,10 +23,11 @@ ms.locfileid: "74397530"
 > *инструкции*\
 > **ENDM**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-То же, что и [ирпк](../../assembler/masm/irpc.md).
+То же, что и [ирпк](irpc.md).
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)
