@@ -1229,7 +1229,7 @@
                           href: build/reference/command-macros-and-options-macros.md
                         - name: Макросы переменных среды
                           href: build/reference/environment-variable-macros.md
-                - name: Правила зависимости
+                - name: Правила вывода
                   expanded: false
                   items:
                     - name: Правила зависимости
@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: Поддержка Юникода и многобайтовой кодировки
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: Справочники
+        - name: Справочник
           expanded: false
           items:
             - name: Класс CSize
@@ -1805,7 +1805,7 @@
           items:
             - name: Редакторы ресурсов
               href: windows/resource-editors.md
-            - name: Редактор сочетаний клавиш
+            - name: редактор сочетаний клавиш
               expanded: false
               items:
                 - name: Редактор сочетаний клавиш
@@ -1850,7 +1850,7 @@
             - name: Редактор меню
               expanded: false
               items:
-                - name: Редактор меню
+                - name: редактор меню
                   href: windows/menu-editor.md
                 - name: Команды меню
                   href: windows/menu-command-properties.md
@@ -1964,7 +1964,7 @@
               href: cppcx/attributes-c-cx.md
             - name: Перевод типов и членов в разряд нерекомендуемых
               href: cppcx/deprecating-types-and-members-c-cx.md
-        - name: Сборка приложений и библиотек
+        - name: Построение приложений и библиотек
           expanded: false
           items:
             - name: Сборка приложений и библиотек
@@ -2269,7 +2269,7 @@
                 - name: Класс Module
                   expanded: false
                   items:
-                    - name: Класс Module
+                    - name: Module - класс
                       href: cppcx/wrl/module-class.md
                     - name: 'Класс Module::GenericReleaseNotifier'
                       href: cppcx/wrl/module-genericreleasenotifier-class.md
@@ -2992,7 +2992,7 @@
               items:
                 - name: Структура программы
                   href: c-language/program-structure.md
-                - name: Файлы с исходным кодом и исходные программы
+                - name: Исходные файлы и исходные программы
                   expanded: false
                   items:
                     - name: Файлы с исходным кодом и исходные программы
@@ -3058,7 +3058,7 @@
                 - name: Классы хранения в C
                   expanded: false
                   items:
-                    - name: Классы хранения в C
+                    - name: C - классы хранения
                       href: c-language/c-storage-classes.md
                     - name: Описатели классов хранения для объявлений внешнего уровня
                       href: c-language/storage-class-specifiers-for-external-level-declarations.md
@@ -3145,7 +3145,7 @@
                 - name: Хранение базовых типов
                   expanded: false
                   items:
-                    - name: Хранение базовых типов
+                    - name: Хранилище базовых типов
                       href: c-language/storage-of-basic-types.md
                     - name: Тип char
                       href: c-language/type-char.md
@@ -3654,23 +3654,14 @@
               items:
                 - name: Лексические соглашения
                   href: cpp/lexical-conventions.md
-                - name: Общие сведения о трансляции файлов
-                  href: cpp/overview-of-file-translation.md
-                - name: Кодировки
+                - name: Токены и кодировки
                   href: cpp/character-sets.md
-                - name: лексемы
-                  href: cpp/tokens-cpp.md
                 - name: Комментарии
                   href: cpp/comments-cpp.md
                 - name: Идентификаторы
                   href: cpp/identifiers-cpp.md
                 - name: Ключевые слова
-                  expanded: false
-                  items:
-                    - name: Ключевые слова
-                      href: cpp/keywords-cpp.md
-                    - name: Ключевое слово auto
-                      href: cpp/auto-keyword.md
+                  href: cpp/keywords-cpp.md
                 - name: Символы пунктуации
                   href: cpp/punctuators-cpp.md
                 - name: 'Числовые, логические литералы и литералы-указатели'
@@ -3684,165 +3675,99 @@
               items:
                 - name: Основные понятия
                   href: cpp/basic-concepts-cpp.md
-                - name: Объявления и определения
-                  expanded: false
-                  items:
-                    - name: Система типов C++
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Объявления и определения
-                      href: cpp/declarations-and-definitions-cpp.md
-                    - name: Общие сведения о деклараторах
-                      href: cpp/overview-of-declarators.md
-                    - name: Спецификаторы
-                      href: cpp/specifiers.md
-                    - name: extern
-                      href: cpp/extern-cpp.md
-                    - name: Файлы заголовков
-                      href: cpp/header-files-cpp.md
-                    - name: Точка объявления в C++
-                      href: cpp/point-of-declaration-in-cpp.md
-                    - name: Инициализаторы
-                      href: cpp/initializers.md
-                    - name: Псевдонимы и определения типов
-                      href: cpp/aliases-and-typedefs-cpp.md
-                    - name: Объявление using
-                      href: cpp/using-declaration.md
-                    - name: Разрешение неоднозначных объявлений
-                      href: cpp/resolving-ambiguous-declarations-cpp.md
-                    - name: Классы хранения
-                      href: cpp/storage-classes-cpp.md
-                    - name: const
-                      href: cpp/const-cpp.md
-                    - name: constexpr
-                      href: cpp/constexpr-cpp.md
-                    - name: volatile
-                      href: cpp/volatile-cpp.md
-                    - name: auto
-                      href: cpp/auto-cpp.md
-                    - name: decltype
-                      href: cpp/decltype-cpp.md
-                    - name: Атрибуты
-                      href: cpp/attributes.md
+                - name: Система типов C++
+                  href: cpp/cpp-type-system-modern-cpp.md
                 - name: Область
                   href: cpp/scope-visual-cpp.md
                 - name: Файлы заголовков
                   href: cpp/header-files-cpp.md
-                - name: Программа и компоновка
-                  expanded: false
-                  items:
-                    - name: Программа и компоновка
-                      href: cpp/program-and-linkage-cpp.md
-                    - name: extern
-                      href: cpp/using-extern-to-specify-linkage.md
-                - name: Запуск и завершение
-                  expanded: false
-                  items:
-                    - name: Запуск и завершение
-                      href: cpp/startup-and-termination-cpp.md
-                    - name: Функция main. Запуск программы
-                      expanded: false
-                      items:
-                        - name: Функция main. Запуск программы
-                          href: cpp/main-program-startup.md
-                        - name: Использование wmain вместо main
-                          href: cpp/using-wmain-instead-of-main.md
-                        - name: Определения аргументов
-                          href: cpp/argument-definitions.md
-                        - name: Развертывание подстановочных знаков
-                          href: cpp/wildcard-expansion.md
-                        - name: Анализ аргументов командной строки C++
-                          href: cpp/parsing-cpp-command-line-arguments.md
-                        - name: Настройка обработки командной строки C++
-                          href: cpp/customizing-cpp-command-line-processing.md
-                        - name: Ограничения функции main
-                          href: cpp/main-function-restrictions.md
-                    - name: Завершение программы
-                      expanded: false
-                      items:
-                        - name: Завершение программы
-                          href: cpp/program-termination.md
-                        - name: Функция exit
-                          href: cpp/exit-function.md
-                        - name: Функция abort
-                          href: cpp/abort-function.md
-                        - name: Оператор return в завершении программы
-                          href: cpp/return-statement-in-program-termination-cpp.md
-                    - name: Дополнительные сведения о запуске
-                      href: cpp/additional-startup-considerations.md
-                    - name: Дополнительные сведения о завершении
-                      expanded: false
-                      items:
-                        - name: Дополнительные сведения о завершении
-                          href: cpp/additional-termination-considerations.md
-                        - name: Использование операторов exit и return
-                          href: cpp/using-exit-or-return.md
-                        - name: Использование atexit
-                          href: cpp/using-atexit.md
-                        - name: Использование функции abort
-                          href: cpp/using-abort.md
+                - name: Единицы трансляции и компоновка
+                  href: cpp/program-and-linkage-cpp.md
+                - name: Функция main и аргументы командной строки
+                  href: cpp/main-function-command-line-args.md
+                - name: Завершение программы
+                  href: cpp/program-termination.md
                 - name: Значения Lvalue и Rvalue
                   href: cpp/lvalues-and-rvalues-visual-cpp.md
                 - name: Временные объекты
                   href: cpp/temporary-objects.md
-                - name: Выравнивание (объявления C++)
+                - name: Выравнивание
                   href: cpp/alignment-cpp-declarations.md
-                - name: alignof и alignas
-                  href: cpp/alignof-and-alignas-cpp.md
                 - name: 'Тривиальные типы, стандартная раскладка и типы POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
-                - name: Система типов
-                  expanded: false
-                  items:
-                    - name: Система типов
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: Типы значений
-                      href: cpp/value-types-modern-cpp.md
-                    - name: Преобразования типов и безопасность типов
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
-                    - name: Фундаментальные типы
-                      expanded: false
-                      items:
-                        - name: Фундаментальные типы
-                          href: cpp/fundamental-types-cpp.md
-                        - name: Диапазоны типов данных
-                          href: cpp/data-type-ranges.md
-                        - name: nullptr
-                          href: cpp/nullptr.md
-                        - name: void
-                          href: cpp/void-cpp.md
-                        - name: bool
-                          href: cpp/bool-cpp.md
-                        - name: false
-                          href: cpp/false-cpp.md
-                        - name: true
-                          href: cpp/true-cpp.md
-                        - name: 'char, wchar_t, char16_t, char32_t'
-                          href: cpp/char-wchar-t-char16-t-char32-t.md
-                        - name: '__int8, __int16, __int32, __int64'
-                          href: cpp/int8-int16-int32-int64.md
-                        - name: __m64
-                          href: cpp/m64.md
-                        - name: __m128
-                          href: cpp/m128.md
-                        - name: __m128d
-                          href: cpp/m128d.md
-                        - name: __m128i
-                          href: cpp/m128i.md
-                        - name: '__ptr32, __ptr64'
-                          href: cpp/ptr32-ptr64.md
-                        - name: Числовые пределы
-                          expanded: false
-                          items:
-                            - name: Числовые пределы
-                              href: cpp/numerical-limits-cpp.md
-                            - name: Пределы целых чисел
-                              href: cpp/integer-limits.md
-                            - name: Пределы значений с плавающей запятой
-                              href: cpp/floating-limits.md
-                - name: Стандартные преобразования
-                  href: cpp/standard-conversions.md
+                - name: Типы значений
+                  href: cpp/value-types-modern-cpp.md
                 - name: Преобразования типов и безопасность типов
                   href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                - name: Стандартные преобразования
+                  href: cpp/standard-conversions.md
+            - name: Встроенные типы
+              expanded: false
+              items:
+                - name: Встроенные типы
+                  href: cpp/fundamental-types-cpp.md
+                - name: Диапазоны типов данных
+                  href: cpp/data-type-ranges.md
+                - name: nullptr
+                  href: cpp/nullptr.md
+                - name: void
+                  href: cpp/void-cpp.md
+                - name: bool
+                  href: cpp/bool-cpp.md
+                - name: false
+                  href: cpp/false-cpp.md
+                - name: true
+                  href: cpp/true-cpp.md
+                - name: 'char, wchar_t, char16_t, char32_t'
+                  href: cpp/char-wchar-t-char16-t-char32-t.md
+                - name: '__int8, __int16, __int32, __int64'
+                  href: cpp/int8-int16-int32-int64.md
+                - name: __m64
+                  href: cpp/m64.md
+                - name: __m128
+                  href: cpp/m128.md
+                - name: __m128d
+                  href: cpp/m128d.md
+                - name: __m128i
+                  href: cpp/m128i.md
+                - name: '__ptr32, __ptr64'
+                  href: cpp/ptr32-ptr64.md
+                - name: Числовые пределы
+                  expanded: false
+                  items:
+                    - name: Числовые ограничения
+                      href: cpp/numerical-limits-cpp.md
+                    - name: Пределы целых чисел
+                      href: cpp/integer-limits.md
+                    - name: Пределы значений с плавающей запятой
+                      href: cpp/floating-limits.md
+            - name: Объявления и определения
+              expanded: false
+              items:
+                - name: Объявления и определения
+                  href: cpp/declarations-and-definitions-cpp.md
+                - name: Классы хранения
+                  href: cpp/storage-classes-cpp.md
+                - name: auto
+                  href: cpp/auto-cpp.md
+                - name: const
+                  href: cpp/const-cpp.md
+                - name: constexpr
+                  href: cpp/constexpr-cpp.md
+                - name: extern
+                  href: cpp/extern-cpp.md
+                - name: Инициализаторы
+                  href: cpp/initializers.md
+                - name: Псевдонимы и определения типов
+                  href: cpp/aliases-and-typedefs-cpp.md
+                - name: using - объявление
+                  href: cpp/using-declaration.md
+                - name: volatile
+                  href: cpp/volatile-cpp.md
+                - name: decltype
+                  href: cpp/decltype-cpp.md
+                - name: Атрибуты
+                  href: cpp/attributes.md
             - name: 'Встроенные операторы, приоритет и ассоциативность'
               expanded: false
               items:
@@ -4142,7 +4067,7 @@
                       href: cpp/base-classes.md
                     - name: Несколько базовых классов
                       href: cpp/multiple-base-classes.md
-                    - name: Явные переопределения
+                    - name: Явное переопределение
                       href: cpp/explicit-overrides-cpp.md
                     - name: Абстрактные классы
                       href: cpp/abstract-classes-cpp.md
@@ -4520,7 +4445,7 @@
                     - name: Класс _bstr_t
                       expanded: false
                       items:
-                        - name: Класс _bstr_t
+                        - name: _bstr_t - класс
                           href: cpp/bstr-t-class.md
                         - name: Функции-члены _bstr_t
                           expanded: false
@@ -4561,7 +4486,7 @@
                     - name: Класс _com_error
                       expanded: false
                       items:
-                        - name: Класс _com_error
+                        - name: _com_error - класс
                           href: cpp/com-error-class.md
                         - name: Функции-члены _com_error
                           expanded: false
@@ -4602,7 +4527,7 @@
                     - name: _com_ptr_t class
                       expanded: false
                       items:
-                        - name: _com_ptr_t class
+                        - name: _com_ptr_t - класс
                           href: cpp/com-ptr-t-class.md
                         - name: Функции-члены _com_ptr_t
                           expanded: false
@@ -4643,7 +4568,7 @@
                     - name: Класс _variant_t
                       expanded: false
                       items:
-                        - name: Класс _variant_t
+                        - name: _variant_t - класс
                           href: cpp/variant-t-class.md
                         - name: Функции-члены _variant_t
                           expanded: false
@@ -4797,17 +4722,8 @@
                       href: preprocessor/variadic-macros.md
                     - name: Предопределенные макросы препроцессора
                       href: preprocessor/predefined-macros.md
-            - name: Общие сведения о грамматике (C/C++)
-              expanded: false
-              items:
-                - name: Общие сведения о грамматике (C/C++)
-                  href: preprocessor/grammar-summary-c-cpp.md
-                - name: Общие сведения об определениях для грамматики
-                  href: preprocessor/definitions-for-the-grammar-summary.md
-                - name: Соглашения о грамматике
-                  href: preprocessor/conventions.md
-                - name: Грамматика препроцессора
-                  href: preprocessor/preprocessor-grammar.md
+            - name: Общие сведения о грамматике препроцессора (C/C++)
+              href: preprocessor/grammar-summary-c-cpp.md
             - name: Директивы pragma и ключевое слово __pragma
               expanded: false
               items:
@@ -5264,10 +5180,10 @@
               href: assembler/masm/masm-for-x64-ml64-exe.md
             - name: Справочник по командной строке ML и ML64
               href: assembler/masm/ml-and-ml64-command-line-reference.md
-            - name: Справочник по директивам
+            - name: Справочник по директивам (MASM)
               expanded: false
               items:
-                - name: Справочник по директивам
+                - name: Справочник по директивам (MASM)
                   href: assembler/masm/directives-reference.md
                 - name: =
                   href: assembler/masm/equal.md
@@ -5289,9 +5205,9 @@
                   href: assembler/masm/dot-686.md
                 - name: .686P
                   href: assembler/masm/dot-686p.md
-                - name: ALIAS (MASM)
+                - name: ALIAS
                   href: assembler/masm/alias-masm.md
-                - name: ALIGN (MASM)
+                - name: ALIGN
                   href: assembler/masm/align-masm.md
                 - name: .ALLOCSTACK
                   href: assembler/masm/dot-allocstack.md
@@ -5301,7 +5217,7 @@
                   href: assembler/masm/assume.md
                 - name: .BREAK
                   href: assembler/masm/dot-break.md
-                - name: BYTE (MASM)
+                - name: BYTE
                   href: assembler/masm/byte-masm.md
                 - name: CATSTR
                   href: assembler/masm/catstr.md
@@ -5309,7 +5225,7 @@
                   href: assembler/masm/dot-code.md
                 - name: COMM
                   href: assembler/masm/comm.md
-                - name: COMMENT (MASM)
+                - name: COMMENT
                   href: assembler/masm/comment-masm.md
                 - name: .CONST
                   href: assembler/masm/dot-const.md
@@ -5343,13 +5259,13 @@
                   href: assembler/masm/echo.md
                 - name: .ELSE
                   href: assembler/masm/dot-else.md
-                - name: ELSE (MASM)
+                - name: ELSE
                   href: assembler/masm/else-masm.md
-                - name: ELSEIF (MASM)
+                - name: ELSEIF
                   href: assembler/masm/elseif-masm.md
                 - name: ELSEIF2
                   href: assembler/masm/elseif2.md
-                - name: END (MASM)
+                - name: END
                   href: assembler/masm/end-masm.md
                 - name: .ENDIF
                   href: assembler/masm/dot-endif.md
@@ -5359,7 +5275,7 @@
                   href: assembler/masm/endp.md
                 - name: .ENDPROLOG
                   href: assembler/masm/dot-endprolog.md
-                - name: ENDS (MASM)
+                - name: ENDS
                   href: assembler/masm/ends-masm.md
                 - name: .ENDW
                   href: assembler/masm/dot-endw.md
@@ -5391,7 +5307,7 @@
                   href: assembler/masm/dot-exit.md
                 - name: EXITM
                   href: assembler/masm/exitm.md
-                - name: EXTERN (MASM)
+                - name: EXTERN
                   href: assembler/masm/extern-masm.md
                 - name: EXTERNDEF
                   href: assembler/masm/externdef.md
@@ -5401,7 +5317,7 @@
                   href: assembler/masm/dot-fardata.md
                 - name: .FARDATA?
                   href: assembler/masm/dot-fardata-q.md
-                - name: FOR (MASM)
+                - name: FOR
                   href: assembler/masm/for-masm.md
                 - name: FORC
                   href: assembler/masm/forc.md
@@ -5409,13 +5325,13 @@
                   href: assembler/masm/dot-fpo.md
                 - name: FWORD
                   href: assembler/masm/fword.md
-                - name: GOTO (MASM)
+                - name: GOTO
                   href: assembler/masm/goto-masm.md
                 - name: GROUP
                   href: assembler/masm/group.md
                 - name: .IF
                   href: assembler/masm/dot-if.md
-                - name: IF (MASM)
+                - name: IF
                   href: assembler/masm/if-masm.md
                 - name: IF2
                   href: assembler/masm/if2.md
@@ -5433,9 +5349,9 @@
                   href: assembler/masm/ifnb.md
                 - name: IFNDEF
                   href: assembler/masm/ifndef.md
-                - name: INCLUDE (MASM)
+                - name: INCLUDE
                   href: assembler/masm/include-masm.md
-                - name: INCLUDELIB (MASM)
+                - name: INCLUDELIB
                   href: assembler/masm/includelib-masm.md
                 - name: INSTR
                   href: assembler/masm/instr.md
@@ -5447,7 +5363,7 @@
                   href: assembler/masm/irpc.md
                 - name: .K3D
                   href: assembler/masm/dot-k3d.md
-                - name: LABEL (MASM)
+                - name: LABEL
                   href: assembler/masm/label-masm.md
                 - name: .LALL
                   href: assembler/masm/dot-lall.md
@@ -5463,7 +5379,7 @@
                   href: assembler/masm/dot-listmacro.md
                 - name: .LISTMACROALL
                   href: assembler/masm/dot-listmacroall.md
-                - name: LOCAL (MASM)
+                - name: LOCAL
                   href: assembler/masm/local-masm.md
                 - name: MACRO
                   href: assembler/masm/macro.md
@@ -5473,7 +5389,7 @@
                   href: assembler/masm/dot-mmx.md
                 - name: .MODEL
                   href: assembler/masm/dot-model.md
-                - name: NAME (MASM)
+                - name: NAME
                   href: assembler/masm/name-masm.md
                 - name: .NOCREF
                   href: assembler/masm/dot-nocref.md
@@ -5483,7 +5399,7 @@
                   href: assembler/masm/dot-nolistif.md
                 - name: .NOLISTMACRO
                   href: assembler/masm/dot-nolistmacro.md
-                - name: OPTION (MASM)
+                - name: OPTION
                   href: assembler/masm/option-masm.md
                 - name: ORG
                   href: assembler/masm/org.md
@@ -5499,7 +5415,7 @@
                   href: assembler/masm/proc.md
                 - name: PROTO
                   href: assembler/masm/proto.md
-                - name: PUBLIC (MASM)
+                - name: PUBLIC
                   href: assembler/masm/public-masm.md
                 - name: PURGE
                   href: assembler/masm/purge.md
@@ -5519,7 +5435,7 @@
                   href: assembler/masm/real4.md
                 - name: REAL8
                   href: assembler/masm/real8.md
-                - name: RECORD (MASM)
+                - name: RECORD
                   href: assembler/masm/record-masm.md
                 - name: .REPEAT
                   href: assembler/masm/dot-repeat.md
@@ -5535,7 +5451,7 @@
                   href: assembler/masm/dot-savereg.md
                 - name: .SAVEXMM128
                   href: assembler/masm/dot-savexmm128.md
-                - name: SBYTE (MASM)
+                - name: SBYTE
                   href: assembler/masm/sbyte-masm.md
                 - name: SDWORD
                   href: assembler/masm/sdword.md
@@ -5557,7 +5473,7 @@
                   href: assembler/masm/dot-startup.md
                 - name: STRUC
                   href: assembler/masm/struc.md
-                - name: STRUCT (MASM)
+                - name: STRUCT
                   href: assembler/masm/struct-masm.md
                 - name: SUBSTR
                   href: assembler/masm/substr.md
@@ -5575,7 +5491,7 @@
                   href: assembler/masm/dot-tfcond.md
                 - name: TITLE
                   href: assembler/masm/title.md
-                - name: TYPEDEF (MASM)
+                - name: TYPEDEF
                   href: assembler/masm/typedef-masm.md
                 - name: UNION
                   href: assembler/masm/union.md
@@ -5585,7 +5501,7 @@
                   href: assembler/masm/dot-untilcxz.md
                 - name: .WHILE
                   href: assembler/masm/dot-while.md
-                - name: WHILE (MASM)
+                - name: WHILE
                   href: assembler/masm/while-masm.md
                 - name: WORD
                   href: assembler/masm/word.md
@@ -5944,6 +5860,8 @@
                       href: assembler/masm/ml-warning-a4012.md
                     - name: Предупреждение ML A4014
                       href: assembler/masm/ml-warning-a4014.md
+            - name: Грамматика MASM BNF
+              href: assembler/masm/masm-bnf-grammar.md
         - name: Расширения компонентов для .NET и UWP
           expanded: false
           items:
@@ -9627,7 +9545,7 @@
                       href: standard-library/vector.md
                     - name: vector - класс
                       href: standard-library/vector-class.md
-                    - name: Класс vector<bool>
+                    - name: vector<bool> - класс
                       expanded: false
                       items:
                         - name: Класс vector<bool>
@@ -10420,7 +10338,7 @@
                           href: parallel/concrt/reference/task-continuation-context-class.md
                         - name: Класс task_group
                           href: parallel/concrt/reference/task-group-class.md
-                        - name: task_handle - класс
+                        - name: Класс task_handle
                           href: parallel/concrt/reference/task-handle-class.md
                         - name: Класс task_options (среда выполнения с параллелизмом)
                           href: parallel/concrt/reference/task-options-class-concurrency-runtime.md
@@ -10543,7 +10461,7 @@
                 - name: Классы баз данных MFC
                   expanded: false
                   items:
-                    - name: Классы баз данных MFC
+                    - name: MFC-классы баз данных
                       href: data/mfc-database-classes-odbc-and-dao.md
                     - name: MFC. Использование классов базы данных с документами и представлениями
                       href: data/mfc-using-database-classes-with-documents-and-views.md

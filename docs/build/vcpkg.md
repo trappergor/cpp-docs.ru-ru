@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837019"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676955"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -81,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Например:
+Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Пример:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -111,7 +111,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 Теперь вы можете добавлять файлы заголовков в #include, используя автозавершение, для этого достаточно ввести папку или заголовок. Для связывания с библиотеками или добавления ссылок на проект выполнять какие-либо другие действия не требуется. На рисунке ниже показано, как Visual Studio находит файлы заголовков azure-storage-cpp. Средство vcpkg помещает файлы заголовков во вложенную папку **\installed** и распределяет их по целевым платформам. На следующей схеме показан список включаемых файлов во вложенной папке **\was** для библиотеки.
 
-![vcpkg IntelliSense integration](media/vcpkg-intellisense.png "vcpkg and IntelliSense")
+![Интеграция с IntelliSense vcpkg](media/vcpkg-intellisense.png "vcpkg и IntelliSense")
 
 ### <a name="per-project"></a>Для каждого проекта
 
@@ -182,7 +182,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="uninstall-vcpkg"></a>Удаление vcpkg
 
-Просто удалите каталог.
+Просто удалите каталог vcpkg. При удалении этого каталога удаляется дистрибутив vcpkg и все библиотеки, установленные vcpkg.
 
 ## <a name="send-feedback-about-vcpkg"></a>Отправка отзыва о vcpkg
 
