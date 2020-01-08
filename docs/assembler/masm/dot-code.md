@@ -1,32 +1,36 @@
 ---
 title: .CODE
-ms.date: 12/06/2019
+ms.date: 12/17/2019
 f1_keywords:
 - .CODE
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 36d9c01d2a24b446ddc91fe73f3cb677067b3e4c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987919"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314150"
 ---
-# <a name="code-32-bit-masm"></a>. КОД (32-разрядный компилятор MASM)
+# <a name="code"></a>.CODE
 
-При использовании с [. MODEL](../../assembler/masm/dot-model.md)указывает начало сегмента кода.
+(только 32-разрядный MASM.) При использовании с [. MODEL](dot-model.md)указывает начало сегмента кода.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **. КОД** ⟦*имя*⟧
+> **. КОД** ⟦*имя*⟧ \
+> ⟦ *сегментитем* ⟧... \
+> ⟦ *кодесегментнамеид* **заканчивается**;; ⟧\
 
 ### <a name="parameters"></a>Параметры
 
 *имя*\
-Необязательный параметр, указывающий имя сегмента кода. Имя по умолчанию — **_TEXT** для мелких, небольших, сжатых и плоских [моделей](../../assembler/masm/dot-model.md). Имя по умолчанию — *modulename*_TEXT для других моделей.
+Необязательный параметр, указывающий имя сегмента кода. Имя по умолчанию — **_TEXT** для мелких, небольших, сжатых и плоских [моделей](dot-model.md). Имя по умолчанию — *modulename*_TEXT для других моделей.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)\
-[.DATA](../../assembler/masm/dot-data.md)
+[Справочник по директивам](directives-reference.md)\
+[.\ данных](dot-data.md)
+[Грамматика MASM BNF](masm-bnf-grammar.md)
+

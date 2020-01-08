@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988014"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318466"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ ms.locfileid: "74988014"
 
 #### <a name="parameters"></a>Параметры
 
-*align*<br/>
+*выровняйте*\
 Диапазон адресов памяти, из которых можно выбрать начальный адрес для сегмента. Тип выравнивания может быть одним из следующих:
 
 |Тип выровняйте|Начальный адрес|
@@ -64,4 +64,5 @@ _string_\
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

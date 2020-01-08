@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: a5175252364918ca218e81536b29f084f7fd19cc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7a005e5e70a2696ca89fb0ad1a3ff02aab8ffe5a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397297"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317192"
 ---
-# <a name="invoke-32-bit-masm"></a>INVOKE (32-разрядный MASM)
+# <a name="invoke"></a>INVOKE
 
-Вызывает процедуру по адресу, заданному *выражением*, передавая аргументы в стеке или в регистрах в соответствии со стандартными соглашениями о вызовах типа языка. (только 32-разрядный MASM.)
+(только 32-разрядный MASM.) Вызывает процедуру по адресу, заданному *выражением*, передавая аргументы в стеке или в регистрах в соответствии со стандартными соглашениями о вызовах типа языка.     
 
 ## <a name="syntax"></a>Синтаксис
 
 > **Вызвать** *выражение* ⟦ __,__ *аргумент* ... ⟧
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Каждый аргумент, передаваемый в процедуру, может быть выражением, парой регистров или выражением адреса (выражением с префиксом **addr**).
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

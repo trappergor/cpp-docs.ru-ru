@@ -1,18 +1,18 @@
 ---
 title: Неустранимая ошибка ML A1007
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856921"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317127"
 ---
 # <a name="ml-fatal-error-a1007"></a>Неустранимая ошибка ML A1007
 
@@ -22,7 +22,7 @@ ms.locfileid: "74856921"
 
 Один из следующих элементов был вложен слишком глубоким:
 
-- Общая директива, например [. Если](../../assembler/masm/dot-if.md), [. Повторите](../../assembler/masm/dot-repeat.md)или [. WHILE](../../assembler/masm/dot-while.md).
+- Общая директива, например [. Если](dot-if.md), [. Повторите](dot-repeat.md)или [. WHILE](dot-while.md).
 
 - Определение структуры.
 
@@ -30,7 +30,7 @@ ms.locfileid: "74856921"
 
 - Определение процедуры.
 
-- Директива [пушконтекст](../../assembler/masm/pushcontext.md) (ограничение — 10).
+- Директива [пушконтекст](pushcontext.md) (ограничение — 10).
 
 - Определение сегмента.
 
@@ -40,4 +40,4 @@ ms.locfileid: "74856921"
 
 ## <a name="see-also"></a>См. также:
 
-[Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)<br/>
+[Сообщения об ошибках ML](ml-error-messages.md)

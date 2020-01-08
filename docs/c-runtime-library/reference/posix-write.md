@@ -1,6 +1,6 @@
 ---
-title: запись
-ms.date: 11/04/2016
+title: write (запись)
+ms.date: 12/16/2019
 api_name:
 - write
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-ms.openlocfilehash: 509c973fd999fb041838c2ca7908387fc687a665
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2892bb5f342f3bec26e82da069d013e76f877b03
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950304"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300785"
 ---
-# <a name="write"></a>запись
+# <a name="write"></a>write (запись)
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_write](write.md).
+Имя функции POSIX, реализуемой корпорацией Майкрософт `write` является устаревшим псевдонимом для функции [_write](write.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_write](write.md) . Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

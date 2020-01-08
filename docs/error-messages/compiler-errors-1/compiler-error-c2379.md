@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2379
 ms.assetid: 37dc3015-a4af-4341-bbf3-da6150df7e51
-ms.openlocfilehash: 1b3256efb6c0ff8236ba80a9ac681780f34fa8dd
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f096791a6120023e079b93452a4b35c669db2139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345649"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302111"
 ---
 # <a name="compiler-error-c2379"></a>Ошибка компилятора C2379
 
-число формальных параметров имеет другой тип после расширения
+номер формального параметра имеет другой тип при повышении уровня
 
-Тип указанного параметра несовместим, по умолчанию повышениями с типом в предыдущем объявлении. Это ошибка в ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждение в расширениях Майкрософт (**/Ze**).
+Тип указанного параметра несовместим с использованием специальных предложений по умолчанию с типом в предыдущем объявлении. Это ошибка в ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и предупреждение с расширениями Майкрософт ( **/Ze**).
 
 Следующий пример приводит к возникновению ошибки C2379:
 
-```
+```c
 // C2379.c
 // compile with: /Za
 void func();

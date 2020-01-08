@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: dbaa9948f598f894e5dedbe04fd975936c34590b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5386a38df6a561f23d0a10ca32c4d39ff8f4576f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987969"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317400"
 ---
-# <a name="end-masm"></a>END (MASM)
+# <a name="end"></a>END
 
-Помечает конец модуля и, при необходимости, задает *адрес*для точки входа программы.
+Помечает конец модуля и при необходимости устанавливает точку входа программы в *procId*.
 
 ## <a name="syntax"></a>Синтаксис
 
-> **Конец** ⟦*адреса*⟧
+> **End** ⟦*procId*⟧
 
 ## <a name="remarks"></a>Заметки
 
-Аргумент *Address* допустим только в 32-разрядном MASM.
+Аргумент *procId* допустим только в 32-разрядном MASM.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

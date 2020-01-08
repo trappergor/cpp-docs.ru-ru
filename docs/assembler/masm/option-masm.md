@@ -1,19 +1,19 @@
 ---
 title: OPTION (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - option
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bd50ac2e051db7f02ac077054e5856524745df54
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395172"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318752"
 ---
-# <a name="option-masm"></a>OPTION (MASM)
+# <a name="option"></a>OPTION
 
 Включает и отключает функции ассемблера.
 
@@ -21,22 +21,23 @@ ms.locfileid: "74395172"
 
 > **Параметр** *оптионлист*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Доступные варианты:
+Доступны следующие варианты:
 
 |||||
 |-|-|-|-|
 |**касемап**|**дотнаме**|**нодотнаме**|**ЭМУЛЯТОР**|
 |**ЭМУЛЯТОР**|**ЭПИЛОГА**|**EXPR16**|**EXPR32**|
-|**ЯЗЫКЕ**|**лжмп**|**нолжмп**|**M510**|
+|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
 |**NOM510**|**Ключевое слово "ключевоеслово"**|**носигнекстенд**|**СОБОЙ**|
 |**олдмакрос**|**нулдмакрос**|**олдструктс**|**нулдструктс**|
 |**PROC**|**Пролог**|**ДОСТУПНО**|**READONLY**|
 |**ОБЛАСТИ**|**С неограниченной областью**|**SEGMENT**|**SETIF2**.|
 
-Синтаксис языка — **параметр Language:** <em>x</em>, где *x* — один из C, syscall, stdcall, Pascal, Fortran или Basic.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживаются при использовании с [. МОДЕЛЬ](../../assembler/masm/dot-model.md) плоской.
+Синтаксис языка — **параметр Language:** <em>x</em>, где *x* — один из C, syscall, stdcall, Pascal, Fortran или Basic.  SYSCALL, PASCAL, FORTRAN и BASIC не поддерживаются с [. МОДЕЛЬ](dot-model.md) плоской.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)
