@@ -1,6 +1,6 @@
 ---
 title: lfind
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - lfind
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-ms.openlocfilehash: 7e2b79b67e14421e03fe8761a412de9ad4a5e1cc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7a1ac69bbebfea45345c7dae17b18f02b84228cd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950539"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300916"
 ---
 # <a name="lfind"></a>lfind
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_lfind](lfind.md) или ее аналог с улучшенной безопасностью [_lfind_s](lfind-s.md).
+Имя функции POSIX, реализуемой корпорацией Майкрософт `lfind` является устаревшим псевдонимом для функции [_lfind](lfind.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_lfind](lfind.md) или расширенную безопасность [_lfind_s](lfind-s.md) функции. Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

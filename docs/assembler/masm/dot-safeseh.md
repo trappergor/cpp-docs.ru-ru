@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397986"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317569"
 ---
 # <a name="safeseh-32-bit-masm"></a>. SAFESEH (32-разрядный MASM)
 
@@ -23,9 +23,9 @@ ms.locfileid: "74397986"
 
 > **.**  *Идентификатор* SAFESEH
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-*идентификатор* должен быть идентификатором для локально определенной процедуры [или](../../assembler/masm/proc.md) процедуры [екстрн](../../assembler/masm/extrn.md) . [Метка](../../assembler/masm/label-masm.md) не разрешена. Тот. Для директивы SAFESEH требуется параметр командной строки [/SAFESEH](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml. exe.
+*идентификатор* должен быть идентификатором для локально определенной процедуры [или](proc.md) процедуры [екстрн](extrn.md) . [Метка](label-masm.md) не разрешена. Тот. Для директивы SAFESEH требуется параметр командной строки [/SAFESEH](ml-and-ml64-command-line-reference.md) ml. exe.
 
 Дополнительные сведения о структурированных обработчиках исключений см. в разделе параметр [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

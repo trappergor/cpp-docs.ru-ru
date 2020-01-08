@@ -1,6 +1,6 @@
 ---
 title: flushall
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - flushall
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-ms.openlocfilehash: f601929ddbce2a1beeaab13a6d564e4c8966c22d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68e09a02bdf098bdefe61779293864a3fa68a70f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950744"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301136"
 ---
 # <a name="flushall"></a>flushall
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_flushall](flushall.md).
+Имя функции, определяемой корпорацией Майкрософт `flushall`, является устаревшим псевдонимом для функции [_flushall](flushall.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_flushall](flushall.md) . Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

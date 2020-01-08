@@ -1,32 +1,33 @@
 ---
 title: DB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DB
 helpviewer_keywords:
 - DB directive
 ms.assetid: 0c69ccaa-043f-46e1-9f95-dc76d9bc87c8
-ms.openlocfilehash: cc67cd01990f541e6d2590a08c988476324c297f
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 55d7643f1505b937f237022157ddc987e66cf6e8
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398809"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314995"
 ---
 # <a name="db"></a>DB
 
-Выделяет и при необходимости инициализирует байты хранения для каждого *инициализатора*. **DB** — это синоним [Byte](../../assembler/masm/byte-masm.md).
+Выделяет и при необходимости инициализирует байты хранения для каждого *инициализатора*. **DB** — это синоним [Byte](byte-masm.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 > ⟦*имя*⟧ **DB** *инициализатор* ⟦ __,__ *инициализатор* ... ⟧
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)\
-\ [базы данных](../../assembler/masm/db.md)
-[SBYTE](../../assembler/masm/sbyte-masm.md)
+[Справочник по директивам](directives-reference.md)\
+[DB](db.md)\
+[SBYTE](sbyte-masm.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

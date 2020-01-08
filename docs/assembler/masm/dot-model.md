@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398115"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317634"
 ---
 # <a name="model-32-bit-masm"></a>. МОДЕЛЬ (32-разрядный MASM)
 
@@ -36,9 +36,9 @@ ms.locfileid: "74398115"
 
 Указание **неарстакк** группирует сегмент стека в один физический сегмент (**дграуп**) вместе с данными. Предполагается, что регистр сегмента стека (**SS**) содержит тот же адрес, что и регистр сегмента данных (**DS**). **Фарстакк** не будет группировать стек с **дграуп**; таким, **SS** не равно **DS**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-**. МОДЕЛЬ** не используется в [MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**. МОДЕЛЬ** не используется в [MASM для x64 (ml64. exe)](masm-for-x64-ml64-exe.md).
 
 В следующей таблице перечислены возможные значения для каждого параметра при нацеливании на 16-разрядные и 32-разрядные платформы:
 
@@ -88,4 +88,5 @@ end
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)
