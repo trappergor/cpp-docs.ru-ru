@@ -1,6 +1,6 @@
 ---
 title: cscanf
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - cscanf
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - cscanf function
 ms.assetid: 51aa2da2-0d53-4272-b510-f3eabf049ea7
-ms.openlocfilehash: 6b0a564c1c3b04e2bebc8e193e154bdf64b5873a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dac19465145b2cae6c5c46327a3946a62ec58eae
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938477"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300148"
 ---
 # <a name="cscanf"></a>cscanf
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md).
+Имя функции, определяемой корпорацией Майкрософт `cscanf`, является устаревшим псевдонимом для функции [_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_cscanf](cscanf-cscanf-l-cwscanf-cwscanf-l.md) . Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.
 
 > [!IMPORTANT]
 > Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).

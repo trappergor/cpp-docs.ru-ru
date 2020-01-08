@@ -1,19 +1,19 @@
 ---
 title: INCLUDE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - include
 helpviewer_keywords:
 - INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-ms.openlocfilehash: e04cd761a7456c7337669822be87e8e5da8e805b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 41d2af2c047b6c90e2971d4b8611141d9a9ef57f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397338"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313071"
 ---
-# <a name="include-masm"></a>INCLUDE (MASM)
+# <a name="include"></a>INCLUDE
 
 Вставляет исходный код из исходного файла, заданного параметром *filename* , в текущий исходный файл во время сборки.
 
@@ -21,10 +21,11 @@ ms.locfileid: "74397338"
 
 > **Включить** *имя файла*
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 *Имя файла* должно быть заключено в угловые скобки, если оно содержит обратную косую черту, точку с запятой, символ "больше чем", символ "меньше", одиночную кавычку или двойную кавычку.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

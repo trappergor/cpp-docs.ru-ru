@@ -1,22 +1,22 @@
 ---
 title: Оператор != (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator !=
 helpviewer_keywords:
 - '!= operator'
 - operator !=
 ms.assetid: 8d48f40b-28d4-4996-ae1a-576478fd9c32
-ms.openlocfilehash: 4150e95befa77e42af76f68986d0eca1e59d13bf
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7d4968ebe22af8f9b0536ca93f7473699956e119
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396602"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317816"
 ---
 # <a name="operator--masm"></a>Оператор != (MASM)
 
-Не равно. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
+Не равно. Используется только в [. Если](dot-if.md), [. WHILE](dot-while.md)или [. ПОВТОРЯЮЩИеся](dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,4 +24,5 @@ ms.locfileid: "74396602"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](operators-reference.md)
+[Справочник по операторам](operators-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

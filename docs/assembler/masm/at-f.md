@@ -1,21 +1,21 @@
 ---
 title: '@F'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@F'
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 82195c216552302f4f0a2a237ce95440249e9854
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 80f75fe9b191db48fd68e7c926b94cb0b9126d20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399112"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315905"
 ---
 # <a name="f"></a>\@F
 
-Расположение следующего [\@\@:](../../assembler/masm/at-at.md) Label.
+Расположение следующего [\@\@:](at-at.md) Label.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,4 +23,5 @@ ms.locfileid: "74399112"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по символам](symbols-reference.md)
+[Справочник по символам](symbols-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

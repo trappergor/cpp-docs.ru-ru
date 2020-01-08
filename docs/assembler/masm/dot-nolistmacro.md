@@ -1,17 +1,17 @@
 ---
 title: .NOLISTMACRO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .NOLISTMACRO
 helpviewer_keywords:
 - .NOLISTMACRO directive
 ms.assetid: 52ea451a-fe18-4b90-b662-91e177011c2e
-ms.openlocfilehash: 829aa73eaab2b7a08d351dd4f24dba97a09e1a47
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a8f46dff62f30495d5e57ddcf76aa92b9c981734
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398061"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318310"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
@@ -21,10 +21,11 @@ ms.locfileid: "74398061"
 
 > **.NOLISTMACRO**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-То же, что и [. Салл](../../assembler/masm/dot-sall.md).
+То же, что и [. Салл](dot-sall.md).
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

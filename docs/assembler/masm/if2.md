@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397443"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317322"
 ---
 # <a name="if1-and-if2"></a>IF1 и IF2
 
@@ -27,9 +27,9 @@ ms.locfileid: "74397443"
 
 > **IF2;;**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Полный [Синтаксис см.](../../assembler/masm/if-masm.md) в разделе.
+Полный [Синтаксис см.](if-masm.md) в разделе.
 
 В отличие от версии 5,1, MASM 6,1 и выше выполняет большую часть работы по его первому проходу, а затем выполнит столько последующих проходов, сколько необходимо. Напротив, компилятор MASM 5,1 всегда собирается в двух исходных проходах. В результате может потребоваться изменить или удалить некоторые зависящие от передаваемых конструкций в MASM 6,1 и более поздних версиях.
 
@@ -45,4 +45,5 @@ ms.locfileid: "74397443"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

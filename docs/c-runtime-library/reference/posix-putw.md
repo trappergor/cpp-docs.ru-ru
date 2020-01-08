@@ -1,6 +1,6 @@
 ---
 title: putw
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - putw
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - putw function
 ms.assetid: a004fbb6-7643-4f3f-9ee1-87a23154d49a
-ms.openlocfilehash: f8ab564c3a342487fbc924c9e5680219217c4630
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5a704f458036f6fee87cf9932a4d7be1b6e7efd8
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950490"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300876"
 ---
 # <a name="putw"></a>putw
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_putw](putw.md).
+Имя функции, определяемой корпорацией Майкрософт `putw`, является устаревшим псевдонимом для функции [_putw](putw.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_putw](putw.md) . Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

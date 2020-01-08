@@ -1,17 +1,17 @@
 ---
 title: MASM для x64 (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397228"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312746"
 ---
 # <a name="masm-for-x64-ml64exe"></a>MASM для x64 (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio включает в себя как 32-разрядную, так 
 
 Чтобы использовать MASM для построения кода для платформ x64 в командной строке, необходимо использовать командную строку разработчика для целевых платформ x64, которые задают требуемый путь и другие переменные среды. Сведения о запуске командной строки разработчика см. в разделе [сборка C/C++ Code в командной строке](../../build/building-on-the-command-line.md).
 
-Сведения о параметрах командной строки ml64. exe см. в разделе [Справочник по командной строке ML и ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md).
+Сведения о параметрах командной строки ml64. exe см. в разделе [Справочник по командной строке ML и ML64](ml-and-ml64-command-line-reference.md).
 
 Встроенный ассемблер или использование ключевого слова ASM не поддерживается для целевых объектов x64 и ARM. Чтобы перенести код x86, использующий встроенный ассемблер для x64 или ARM, можно преобразовать код в C++, использовать встроенные функции компилятора или создать файлы исходного кода на языке ассемблера. Компилятор Майкрософт C++ поддерживает встроенные функции, позволяющие использовать специальные инструкции, например привилегированные, битовые проверки и тестирования, взаимоблокировки и т. д., в качестве максимально близкого к кросс-платформенному способу. Сведения о доступных встроенных функциях см. в разделе [встроенные функции компилятора](../../intrinsics/compiler-intrinsics.md).
 
@@ -43,21 +43,21 @@ Visual Studio включает в себя как 32-разрядную, так 
 
 В исходном коде на языке ассемблера, предназначенном для x64, можно использовать следующие директивы ml64:
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-Кроме того, Директива [proc](../../assembler/masm/proc.md) была обновлена для использования с ml64. exe.
+Кроме того, Директива [proc](proc.md) была обновлена для использования с ml64. exe.
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32-разрядный режим адреса (переопределение размера адреса)
 
@@ -82,4 +82,4 @@ mov eax, DWORD PTR [ecx*2+r10+0100h]
 
 ## <a name="see-also"></a>См. также:
 
-[Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочные материалы по ассемблеру Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)

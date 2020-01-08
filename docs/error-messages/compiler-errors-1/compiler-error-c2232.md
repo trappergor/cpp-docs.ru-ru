@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2232
 ms.assetid: 76f302b7-30a7-4a81-9a39-b4edde33b54c
-ms.openlocfilehash: f1478c2d06ab535a532b1be45c2db69050afe7b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78ed8970b29126bceb06ff89d12c83cb98c4b5fd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376644"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301812"
 ---
 # <a name="compiler-error-c2232"></a>Ошибка компилятора C2232
 
-«->»: левый операнд имеет ключ класса «тип «, используйте».»
+"->": левый операнд имеет тип "Class-Key", используйте "."
 
-Операнд в левой части оператора `->` не является указателем. Оператор точки (.) для класса, структуры или объединения.
+Операнд в левой части оператора `->` не является указателем. Используйте оператор period (.) для класса, структуры или объединения.
 
 При компиляции следующего примера возникнет ошибка C2232:
 
-```
+```c
 // C2232.c
 struct X {
     int member;

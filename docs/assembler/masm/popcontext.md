@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - POPCONTEXT directive
 ms.assetid: 19f59290-a54d-477d-88d8-97d3f63ed417
-ms.openlocfilehash: a1d4106c8f627698fa1df8f810f7c8689c0f5e39
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 31c9bf4b6bb77adecc7a3475d72725617427a0b9
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988156"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318687"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Восстанавливает часть или весь текущий *контекст* (сохраняется с помощью директивы [пушконтекст](../../assembler/masm/pushcontext.md) ). *Контекст* **может принимать значение** (только 32-разрядный массм), **основание системы счисления**, **список**, **ЦП** (32-бит массм) или **все**.
+Восстанавливает часть или весь текущий *контекст* (сохраняется с помощью директивы [пушконтекст](pushcontext.md) ). *Контекст* **может принимать значение** (только 32-разрядный массм), **основание системы счисления**, **список**, **ЦП** (32-бит массм) или **все**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,4 +23,5 @@ ms.locfileid: "74988156"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

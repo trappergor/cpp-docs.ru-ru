@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743198"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301682"
 ---
-# <a name="truncate"></a>_TRUNCATE
+# <a name="_truncate"></a>_TRUNCATE
 
 Определяет поведение усечения строки.
 
@@ -25,7 +25,7 @@ ms.locfileid: "57743198"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 `_TRUNCATE` разрешает усечение, если передается в качестве параметра `count` этим функциям:
 
@@ -65,7 +65,7 @@ ms.locfileid: "57743198"
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_truncate.c
 #include <stdlib.h>
 #include <errno.h>
@@ -86,6 +86,6 @@ truncation occurred!
 '1234'
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Глобальные константы](../c-runtime-library/global-constants.md)

@@ -1,21 +1,21 @@
 ---
 title: DQ
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DQ
 helpviewer_keywords:
 - DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-ms.openlocfilehash: e81ce4a970c99f69d526871b02120c4a75ccf552
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 32cd0bdd0935e5306ff8cc1b5904c283dbc92c40
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397776"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317439"
 ---
 # <a name="dq"></a>DQ
 
-Выделяет и при необходимости инициализирует 8 байтов хранилища для каждого *инициализатора*. Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым. **DQ** — это синоним [QWORD](../../assembler/masm/qword.md).
+Выделяет и при необходимости инициализирует 8 байтов хранилища для каждого *инициализатора*. Также можно использовать в качестве спецификатора типа в любом месте, где тип является допустимым. **DQ** — это синоним [QWORD](qword.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,5 +23,6 @@ ms.locfileid: "74397776"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)\
-[QWORD](../../assembler/masm/qword.md)
+[Справочник по директивам](directives-reference.md)\
+[QWORD](qword.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

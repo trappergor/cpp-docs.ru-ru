@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2191
 ms.assetid: 051b8350-e5de-4f51-ab6e-96d32366bcef
-ms.openlocfilehash: 23dfe1d95ab75f253fc2a7b4b00dfcd1aaaa3bbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7d70b9010855ada7b9d24fba80915450a685b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301877"
 ---
 # <a name="compiler-error-c2191"></a>Ошибка компилятора C2191
 
 второй список параметров длиннее первого
 
-Функция C была объявлена во второй раз с более длинный список параметров. C не поддерживает перегруженные функции.
+Функция C была объявлена второй раз с более длинным списком параметров. C не поддерживает перегруженные функции.
 
 ## <a name="example"></a>Пример
 
 Следующий пример приводит к возникновению ошибки C2191:
 
-```
+```c
 // C2191.c
 // compile with: /Za /c
 void func( int );

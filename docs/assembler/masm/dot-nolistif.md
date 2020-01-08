@@ -1,17 +1,17 @@
 ---
 title: .NOLISTIF
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .NOLISTIF
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: 80a5231d72ba8fe1458aa14c6b555228f8fd968a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c3f474528bee5b8838dedef4717295a1cbf82695
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398070"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317595"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
@@ -21,10 +21,11 @@ ms.locfileid: "74398070"
 
 > **.NOLISTIF**
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Это значение по умолчанию. То же, что и [. СФКОНД](../../assembler/masm/dot-sfcond.md).
+Это значение по умолчанию. То же, что и [. СФКОНД](dot-sfcond.md).
 
 ## <a name="see-also"></a>См. также:
 
 [Справочник по директивам](directives-reference.md)
+[ГРАММАТИКи MASM BNF](masm-bnf-grammar.md)

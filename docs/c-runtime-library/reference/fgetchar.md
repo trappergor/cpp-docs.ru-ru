@@ -1,6 +1,6 @@
 ---
 title: fgetchar
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fgetchar
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fgetchar function
 ms.assetid: 2b27a6f2-d973-4d12-a66d-7e6b01e84470
-ms.openlocfilehash: 91ac70da8eb4e1beca844453eaee8ef57759e85a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 66cd0747205402073ef276df7fa39eeaa9900c1e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940856"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299485"
 ---
 # <a name="fgetchar"></a>fgetchar
 
-Эта функция POSIX устарела. Используйте вместо нее соответствующую стандарту ISO C++ функцию [_fgetchar](fgetchar-fgetwchar.md).
+Имя функции, определяемой корпорацией Майкрософт `fgetchar`, является устаревшим псевдонимом для функции [_fgetchar](fgetchar-fgetwchar.md) . По умолчанию он создает [Предупреждение компилятора (уровень 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Имя является устаревшим, так как оно не соответствует стандартным правилам C для имен, зависящих от реализации. Однако функция по-прежнему поддерживается.
+
+Вместо этого рекомендуется использовать [_fgetchar](fgetchar-fgetwchar.md) . Вы также можете продолжить использовать это имя функции и отключить предупреждение. Дополнительные сведения см. [в разделе Отключение](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning) [имен функций](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)Warning и POSIX.

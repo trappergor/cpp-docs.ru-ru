@@ -1,20 +1,20 @@
 ---
 title: Справочник по операторам MASM
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395212"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318765"
 ---
 # <a name="masm-operators-reference"></a>Справочник по операторам MASM
 
-## <a name="arithmetic"></a>Вычисления
+## <a name="arithmetic"></a>Арифметические
 
 ||||
 |-|-|-|
@@ -68,7 +68,7 @@ ms.locfileid: "74395212"
 |[EQ (равно)](operator-eq.md)|[GE (больше или равно)](operator-ge.md)|[GT (больше)](operator-gt.md)|
 |[LE (меньше или равно)](operator-le.md)|[LT (меньше)](operator-lt.md)|[NE (не равно)](operator-ne.md)|
 
-## <a name="segment"></a>Сегментаци
+## <a name="segment"></a>Сегмент
 
 |||
 |-|-|
@@ -90,4 +90,5 @@ ms.locfileid: "74395212"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочные материалы по ассемблеру Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)<br/>
+[Справочник по ассемблеру макросов (Майкрософт](microsoft-macro-assembler-reference.md) )\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

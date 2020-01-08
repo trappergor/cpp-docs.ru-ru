@@ -1,18 +1,18 @@
 ---
 title: Справочник по ассемблеру макросов (Майкрософт)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), reference
 - MASM (Microsoft Macro Assembler), overview
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: ffd885115448a822131f01c4d27197ab735b238c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a9804d3212c6b4d24167478d9a9a12168c3677d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397215"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312655"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Справочник по ассемблеру макросов (Майкрософт)
 
@@ -20,26 +20,30 @@ ms.locfileid: "74397215"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-\ [параметров командной строки ML и ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)
+\ [параметров командной строки ML и ML64](ml-and-ml64-command-line-reference.md)
 Описание параметров командной строки ML.exe и ML64.exe.
 
-[Сообщения об ошибках машинного обучения](../../assembler/masm/ml-error-messages.md)\
+[Сообщения об ошибках машинного обучения](ml-error-messages.md)\
 Описание неустранимых и других ошибок и предупреждений, связанных с ML.exe.
 
 [Справочник по директивам](directives-reference.md)\
 Ссылки на статьи, посвященные использованию директив в MASM.
 
-[Справочник по символам](../../assembler/masm/symbols-reference.md)\
+[Справочник по символам](symbols-reference.md)\
 Ссылки на статьи, посвященные использованию символов в MASM.
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)\
+[Справочник по операторам](operators-reference.md)\
 Ссылки на статьи, посвященные использованию операторов в MASM.
 
-[Руководства по программированию для производителей процессоров](../../assembler/masm/processor-manufacturer-programming-manuals.md)\
+[Руководства по программированию для производителей процессоров](processor-manufacturer-programming-manuals.md)\
 Ссылки на веб-сайты, которые могут содержать полезную информацию по программированию для процессоров, производимых, продаваемых или поддерживаемых не корпорацией Майкрософт.
 
-[MASM для x64 (ml64. exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)\
+[MASM для x64 (ml64. exe)](masm-for-x64-ml64-exe.md)\
 Сведения о способах создания выходных файлов для процессоров с архитектурой x64.
+
+[Грамматика MASM BNF](masm-bnf-grammar.md)
+
+Формальное описание BNF для MASM для x64.
 
 ## <a name="related-sections"></a>Связанные разделы
 

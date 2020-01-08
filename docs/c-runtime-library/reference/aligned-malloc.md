@@ -1,6 +1,6 @@
 ---
 title: _aligned_malloc
-ms.date: 11/04/2016
+ms.date: 12/11/2019
 api_name:
 - _aligned_malloc
 api_location:
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b4a2b35e5344757a1269ccb781a0524383a4f792
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943873"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300135"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -49,7 +49,7 @@ void * _aligned_malloc(
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Размер запрошенного размещения памяти.
+Размер запрошенного выделения памяти.
 
 *Выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
@@ -58,13 +58,15 @@ void * _aligned_malloc(
 
 Указатель на блок памяти, который был выделен, или значение NULL, если операция завершилась ошибкой. Указатель является кратным для *выравнивания*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 **_aligned_malloc** основан на [malloc](malloc.md).
 
-**_aligned_malloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_malloc** помечается `__declspec(noalias)` и `__declspec(restrict)`, то есть гарантируется, что функция не будет изменять глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_malloc** проверяет свои параметры. Если значение *alignment* не равно 2 или *size* равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает значение NULL `errno` и `EINVAL`задает для значение.
+Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_malloc** проверяет свои параметры. Если значение *alignment* не равно 2 или *size* равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает значение NULL и задает `errno` для `EINVAL`.
+
+Используйте [_aligned_free](aligned-free.md) , чтобы освободить память, полученную как **_aligned_malloc** , так и `_aligned_offset_malloc`. Не используйте `free`, что не приводит к правильному освобождению выделенной памяти и может привести к устранению неполадок.
 
 ## <a name="requirements"></a>Требования
 
@@ -154,6 +156,6 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 This pointer, 3280891, is offset by 5 on alignment of 16
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Выравнивание данных](../../c-runtime-library/data-alignment.md)

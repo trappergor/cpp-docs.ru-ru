@@ -1,6 +1,6 @@
 ---
 title: Оператор CARRY?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CARRY?
 - operator CARRY?
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-ms.openlocfilehash: 297e4501d87217d112a3163efc76368571c41d6d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 51d74e28e176a4e7cd84ba817183d420100365ac
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397069"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311745"
 ---
 # <a name="operator-carry"></a>Оператор CARRY?
 
-Состояние флага выполнения. Используется только в [. Если](../../assembler/masm/dot-if.md), [. WHILE](../../assembler/masm/dot-while.md)или [. ПОВТОРЯЮЩИеся](../../assembler/masm/dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
+Состояние флага выполнения. Используется только в [. Если](dot-if.md), [. WHILE](dot-while.md)или [. ПОВТОРЯЮЩИеся](dot-repeat.md) блоки и оцениваются во время выполнения, а не во время сборки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,4 +25,5 @@ ms.locfileid: "74397069"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по операторам](../../assembler/masm/operators-reference.md)
+[Справочник по операторам](operators-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

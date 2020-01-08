@@ -3,12 +3,12 @@ title: Библиотека шаблонов C++ среды выполнения
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541205"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676942"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Библиотека шаблонов C++ среды выполнения Windows (WRL)
 
@@ -141,11 +141,11 @@ C++/CX — это высокоуровневый, основанный на яз
 
 Объект `WeakRef` обычно представляет объект, наличием которого управляет внешний поток или приложение. Например, объект `WeakRef` может ссылаться на объект файла. При открывании файла `WeakRef` является допустимым и файл, на который он ссылается, доступен. Однако после закрытия файла `WeakRef` перестает быть допустимым и файл становится недоступным.
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
 |||
 |-|-|
 |[Ключевые API по категориям](key-wrl-apis-by-category.md)|Выделение основных типов, C++ функций и макросов библиотеки шаблонов среда выполнения Windows.|
-|[Ссылка](wrl-reference.md)|Содержит справочные сведения по библиотеке C++ шаблонов среда выполнения Windows.|
-|[Краткий C++Справочник/CX)](../../cppcx/quick-reference-c-cx.md)|Краткое описание функций C++/CX, поддерживающих среда выполнения Windows.|
+|[Ссылки](wrl-reference.md)|Содержит справочные сведения по библиотеке C++ шаблонов среда выполнения Windows.|
+|[Краткий справочник (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Краткое описание функций C++/CX, поддерживающих среда выполнения Windows.|
 |[Использование компонентов среда выполнения Windows в VisualC++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|Показывает, как использовать C++/CX для создания базового среда выполнения Windows компонента.|

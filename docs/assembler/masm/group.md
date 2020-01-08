@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GROUP directive
 ms.assetid: 55dc9548-154e-486d-849a-135e4631eca9
-ms.openlocfilehash: 1465d114bc2ea060e8cc8d1dd0aa3484b2f6c10d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: dbf152b85db6d2c492b429190b8a6cd761b8e9d1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397477"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317309"
 ---
-# <a name="group-32-bit-masm"></a>Группа (32-разрядный компилятор MASM)
+# <a name="group"></a>ГРУППА
 
-Добавьте указанные *сегменты* в группу с *именем.* (только 32-разрядный MASM.)
+(только 32-разрядный MASM.) Добавьте указанные *сегменты* в группу с *именем.*
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,4 +23,5 @@ ms.locfileid: "74397477"
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по директивам](../../assembler/masm/directives-reference.md)
+[Справочник по директивам](directives-reference.md)\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3010
 ms.assetid: e959d038-bba6-432a-9c0a-0470474de7d9
-ms.openlocfilehash: c5f0d33632cb155b8365c8de421fa5eaf91421c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cbce65840280d3171ea84638b968686fa65633be
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350339"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302254"
 ---
 # <a name="compiler-error-c3010"></a>Ошибка компилятора C3010
 
@@ -21,7 +21,7 @@ ms.locfileid: "62350339"
 
 Следующий пример приводит к возникновению ошибки C3010.
 
-```
+```c
 // C3010.c
 // compile with: /openmp
 int main() {

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302345"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,7 +57,7 @@ complex(
 
 Дополнительные сведения о шаблоне класса `complex` и его членах см. в разделе [сложный класс](../standard-library/complex-class.md).
 
-**Специфично для Microsoft**: типы **long double** и **double** имеют одно и то же представление, но являются отдельными типами. Дополнительные сведения см. в разделе [фундаментальные типы](../cpp/fundamental-types-cpp.md).
+**Специфично для Microsoft**: типы **long double** и **double** имеют одно и то же представление, но являются отдельными типами. Дополнительные сведения см. [в разделе Встроенные типы](../cpp/fundamental-types-cpp.md).
 
 ## <a name="example"></a>Пример
 

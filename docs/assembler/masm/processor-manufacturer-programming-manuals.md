@@ -1,13 +1,13 @@
 ---
 title: Руководства по программированию изготовителей процессоров
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: bd1cba8378a8b173d36e9cc8975b171cd58d388c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3e1f1d32c50d86ac1df271add10936f572a59c20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394838"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318661"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>Руководства по программированию изготовителей процессоров
 
@@ -21,10 +21,11 @@ ms.locfileid: "74394838"
 
 - [Знакомство с расширенными векторными расширениями Intel](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Ни Visual Studio, ни ассемблер макросов Майкрософт не поддерживает все процессоры.
 
 ## <a name="see-also"></a>См. также:
 
-[Справочник по ассемблеру макросов (Майкрософт)](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Справочник по ассемблеру макросов (Майкрософт](microsoft-macro-assembler-reference.md) )\
+[Грамматика MASM BNF](masm-bnf-grammar.md)

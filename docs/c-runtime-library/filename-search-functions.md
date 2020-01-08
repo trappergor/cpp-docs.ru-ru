@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940368"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300316"
 ---
 # <a name="filename-search-functions"></a>Функции поиска имени файла
 
@@ -37,7 +37,7 @@ ms.locfileid: "70940368"
 
 - [_findclose](../c-runtime-library/reference/findclose.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функция `_findfirst` предоставляет сведения о первом экземпляре имени файла, соответствующем файлу, указанному в аргументе `filespec` . В `filespec` можно использовать любые комбинации подстановочных знаков, которые поддерживаются операционной системой.
 
@@ -67,7 +67,7 @@ ms.locfileid: "70940368"
 Задание целевых атрибутов (например `_A_RDONLY`) для ограничения операции поиска невозможно. Эти атрибуты возвращаются в поле `attrib` структуры `_finddata_t` и могут иметь следующие значения (определенные в IO.h). Пользователи не должны считать эти значения единственно возможными для поля `attrib` .
 
 `_A_ARCH`<br/>
-Архив. Устанавливается при изменении файла и очищается командой **BACKUP** . Значение: 0x20.
+Архивация. Устанавливается при изменении файла и очищается командой **BACKUP** . Значение: 0x20.
 
 `_A_HIDDEN`<br/>
 Скрытый файл. Обычно не виден команде DIR, если не используется параметр **/AH** . Возвращает сведения об обычных файлах и файлах, имеющих этот атрибут. Значение: 0x02.
@@ -96,7 +96,7 @@ ms.locfileid: "70940368"
 
 `_finddata_t` фактически представляет собой макрос, который преобразуется в `_finddata64i32_t` (или `_finddata32_t` , если определена константа `_USE_32BIT_TIME_T` ). В следующей таблице приведены сводные сведения об этих вариантах `_finddata_t`:
 
-|Структура|Тип времени|Тип размера файла|
+|structure|Тип времени|Тип размера файла|
 |---------------|---------------|--------------------|
 |`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
 |`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
@@ -108,7 +108,7 @@ ms.locfileid: "70940368"
 
 ## <a name="example"></a>Пример
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Системные вызовы](../c-runtime-library/system-calls.md)

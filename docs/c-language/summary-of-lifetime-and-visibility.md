@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151784"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299082"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Сводка времени существования и видимости
 
@@ -18,15 +18,15 @@ ms.locfileid: "56151784"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Сводка времени существования и видимости
 
-|Атрибуты:<br /><br /> Уровень|Элемент|Спецификатор<br /><br /> класса хранения|Результат: ;<br /><br /> Время существования|Видимость|
+|Атрибуты:<br /><br /> Уровень|Элемент|Спецификатор<br /><br /> Описатель|Результат<br /><br /> Время существования|Видимость|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |Область видимости файла|Определение переменной|**static**|Global|Оставшаяся часть файла исходного кода, в котором встречается|
 ||Объявление переменной|**extern**|Global|Оставшаяся часть файла исходного кода, в котором встречается|
 ||Прототип или определение функции|**static**|Global|Один файл исходного кода|
 ||Прототип функции|**extern**|Global|Оставшаяся часть файла исходного кода|
-|Область действия блока|Объявление переменной|**extern**|Global|Block|
-||Определение переменной|**static**|Global|Block|
-||Определение переменной|**auto** или **register**|Локальная|Block|
+|Область действия блока|Объявление переменной|**extern**|Global|Блокировать|
+||Определение переменной|**static**|Global|Блокировать|
+||Определение переменной|**auto** или **register**|Локально|Блокировать|
 
 ## <a name="example"></a>Пример
 
@@ -36,7 +36,7 @@ ms.locfileid: "56151784"
 
 ### <a name="code"></a>Код
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>
@@ -62,10 +62,10 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Комментарии
+### <a name="comments"></a>Comments
 
 В этом примере имеется 4 уровня видимости: внешний уровень и 3 уровня блоков. Значения выводятся на экран, как указано в комментариях после каждого оператора.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Время жизни, область, видимость и компоновка](../c-language/lifetime-scope-visibility-and-linkage.md)
