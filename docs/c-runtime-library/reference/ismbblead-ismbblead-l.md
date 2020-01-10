@@ -1,6 +1,7 @@
 ---
 title: _ismbblead, _ismbblead_l
-ms.date: 11/04/2016
+description: Содержит описание библиотеки времени выполнения Microsoft C (CRT) _ismbblead и _ismbblead_l функций.
+ms.date: 01/08/2020
 api_name:
 - _ismbblead_l
 - _ismbblead
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6a7bb992eeeb9c66a7cbdea0ed34cf797d374617
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954064"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755029"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
@@ -60,23 +61,27 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+\ *в c*
 Целое число, которое требуется проверить.
 
-*locale*<br/>
+\ *языкового стандарта*
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Функция возвращает ненулевое значение, если целое число *c* является первым байтом многобайтового символа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Многобайтовые символы состоят из старшего байта, за которым следует конечный байт. Старшие байты относятся к определенному диапазону данной кодировки. Например, только в кодовой странице 932, это диапазон из 0x81-0x9F и 0xE0-0xFC.
 
-**_ismbblead** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. **_ismbblead_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. **_ismbblead_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+Если языковой стандарт — UTF-8, **_ismbblead** и **_ismbblead_l** всегда возвращают значение 0 (false), независимо от того, является ли *c* старшим байтом.
+
+**_ismbblead** и **_ismbblead_l** являются специфичными для Майкрософт, а не частью стандартной библиотеки C. Мы не рекомендуем использовать их в том месте, где нужен переносимый код. Для стандартной совместимости C используйте вместо него **мбрлен** .
+
+### <a name="generic-text-routine-mappings"></a>Сопоставления универсальных текстовых подпрограмм
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -91,9 +96,10 @@ int _ismbblead_l(
 
 \* Для констант манифестов, используемых в условиях проверки.
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+\ [классификации байт](../../c-runtime-library/byte-classification.md)
+[_ismbb подпрограммы](../../c-runtime-library/ismbb-routines.md)\
+[mbrlen](mbrlen.md)
