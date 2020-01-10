@@ -5,12 +5,12 @@ description: Microsoft C++ в Visual Studio развивается в сторо
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858039"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546436"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -467,7 +467,7 @@ extern "C" void f(int, int, int, BOOL){}
 
 Для двухэтапного поиска имен нужно, чтобы независимые имена, используемые в тексте шаблона, отображались в шаблоне во время определения. Ранее такие имена можно было встретить при создании экземпляра шаблона. Это изменение упрощает написание переносимого согласованного кода в MSVC с флагом [/permissive-](../build/reference/permissive-standards-conformance.md).
 
-В Visual Studio 2019 версии 16.4 с установленным флагом **/permissive-** в следующем примере поступает сообщение об ошибке, так как при определении шаблона `f<T>` `N::f` не отображается:
+В Visual Studio 2019 версии 16.4 с установленным флагом **/permissive-** в следующем примере поступает сообщение об ошибке, так как при определении шаблона `f<T>``N::f` не отображается:
 
 ```cpp
 template <class T>
@@ -1241,13 +1241,11 @@ B b(42L); // now calls B(int)
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-Если конструктор базового класса не является открытым, но доступен производному классу, то в режиме **/std:c ++17** в Visual Studio версии 15.7 больше нельзя использовать пустые фигурные скобки для инициализации объекта производного типа.
-
+Если конструктор базового класса не является открытым, но доступен производному классу, то в режиме **/std:c ++17** в Visual Studio 2017 версии 15.7 больше нельзя использовать пустые фигурные скобки для инициализации объекта производного типа.
 В следующем примере показана соответствующая реакция на событие в C++14:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 В C++17 `Derived` теперь считается агрегатным типом. Это означает, что инициализация `Base` через закрытый конструктор по умолчанию происходит непосредственно как часть расширенного правила агрегатной инициализации. Закрытый конструктор `Base` ранее вызывался через конструктор `Derived`, и это работало успешно благодаря объявлению дружественных отношений.
-
 В следующем примере показано поведение C++17 в Visual Studio версии 15.7 в режиме **/std:c++17**:
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
