@@ -1,6 +1,7 @@
 ---
 title: strerror, _strerror, _wcserror, __wcserror
-ms.date: 11/04/2016
+description: Описывает функции библиотеки времени выполнения Microsoft C (CRT) strerror, _strerror, _wcserror и __wcserror.
+ms.date: 01/07/2020
 api_name:
 - strerror
 - _strerror
@@ -46,66 +47,65 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-ms.openlocfilehash: 0b4d70687bc2f428162d035c80d6bc8525a8fb9e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8c9c6850d6620407897b2a3a1dbf32e61f6719c0
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958148"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755039"
 ---
 # <a name="strerror-_strerror-_wcserror-__wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
-Возвращает строку сообщения о системной ошибке (**strerror**, **_wcserror**) или формат пользовательской строки сообщения об ошибке ( **_strerror**, **__wcserror**). Существуют более безопасные версии этих функций; см. раздел [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
+Возвращает строку сообщения системной ошибки (**strerror**, **_wcserror**) или формат пользовательской строки сообщения об ошибке ( **_strerror**, **__wcserror**). Существуют более безопасные версии этих функций; см. раздел [strerror_s, _strerror_s, _wcserror_s, \__wcserror_s](strerror-s-strerror-s-wcserror-s-wcserror-s.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 ```C
-char *strerror(
-   int errnum
-);
-char *_strerror(
-   const char *strErrMsg
-);
+char * strerror(
+   int errnum );
+
+char * _strerror(
+   const char *strErrMsg );
+
 wchar_t * _wcserror(
-   int errnum
-);
+   int errnum );
+
 wchar_t * __wcserror(
-   const wchar_t *strErrMsg
-);
+   const wchar_t *strErrMsg );
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*errnum*<br/>
+*errnum*\
 Номер ошибки.
 
-*стреррмсг*<br/>
+*стреррмсг*\
 Пользовательское сообщение.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Все эти функции возвращают указатель на строку сообщения об ошибке. Последующие вызовы могут перезаписать строку.
+Все эти функции возвращают указатель на строку сообщения об ошибке в локальном буфере хранилища потока, принадлежащем среде выполнения. Последующие вызовы в том же потоке могут перезаписать эту строку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-Функция **strerror** сопоставляет *errnum* со строкой сообщения об ошибке и возвращает указатель на строку. Ни **strerror** , ни **_strerror** на самом деле не выводят сообщение: Для этого необходимо вызвать выходную функцию, например [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+Функция **strerror** сопоставляет *errnum* со строкой сообщения об ошибке и возвращает указатель на строку. Функции **strerror** и **_strerror** на самом деле не напечатали сообщение. Для печати вызовите выходную функцию, например [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
-if (( _access( "datafile",2 )) == -1 )
+if (( _access( "datafile", 2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Если *стреррмсг* передается как **null**, **_strerror** возвращает указатель на строку, содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *стреррмсг* не равно **null**, то **_strerror** возвращает указатель на строку, содержащую (по порядку) строковое сообщение, двоеточие, пробел, системное сообщение об ошибке для последнего вызова библиотеки, который создает ошибку, и строку символов. Длина сообщения строки не должна превышать 94 символа.
+Если *стреррмсг* передается как **null**, **_strerror** возвращает указатель на строку. Он содержит системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если значение *стреррмсг* не **равно NULL**, строка содержит, по порядку: строку *стреррмсг* , двоеточие, пробел, системное сообщение об ошибке и символ новой строки. Строковое сообщение может содержать не более 94 символов и содержать либо узкие ( **_strerror**), либо широкие ( **__wcserror**) символы.
 
-Фактический номер ошибки для **_strerror** хранится в [переменной.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Чтобы получить точные результаты, вызовите **_strerror** сразу после возврата библиотечной программы с ошибкой. В противном случае последующие вызовы **strerror** или **_strerror** могут перезаписать **значение** перезаписи.
+Фактический номер ошибки для **_strerror** хранится в [переменной.](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) Чтобы получить точные результаты, вызовите **_strerror** сразу после того, как подпрограммы библиотеки возвращают ошибку. В противном случае последующие вызовы подпрограмм библиотек могут перезаписать значение перезаписи.
 
 **_wcserror** и **__wcserror** — это версии **strerror** и **_strerror**для расширенных символов соответственно.
 
-**_strerror**, **_wcserror**и **__WCSERROR** не являются частью определения ANSI; они являются расширениями Майкрософт и не рекомендуют использовать их там, где нужен переносимый код. Для совместимости с ANSI используйте вместо него **strerror** .
+**_strerror**, **_wcserror**и **__Wcserror** являются специфичными для Майкрософт, а не частью стандартной библиотеки C. Мы не рекомендуем использовать их в том месте, где нужен переносимый код. Для стандартной совместимости C используйте вместо него **strerror** .
 
-Для получения строк ошибок рекомендуется использовать **strerror** или **_wcserror** вместо устаревших макросов [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и устаревших внутренних функций **__sys_errlist** и **__sys_nerr**.
+Для получения строк ошибок рекомендуется использовать **strerror** или **_wcserror** вместо устаревших макросов [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) , а также устаревшие внутренние функции **__sys_errlist** и **__sys_nerr**.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Сопоставления универсальных текстовых подпрограмм
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -125,9 +125,9 @@ if (( _access( "datafile",2 )) == -1 )
 
 См. пример для [perror](perror-wperror.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror, _wperror](perror-wperror.md)<br/>
+\ [операций со строками](../../c-runtime-library/string-manipulation-crt.md)
+[clearerr](clearerr.md)\
+[ferror](ferror.md)\
+[perror, _wperror](perror-wperror.md)
