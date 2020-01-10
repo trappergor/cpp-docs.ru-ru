@@ -1,15 +1,14 @@
 ---
 title: Создание кроссплатформенных проектов C++ в Visual Studio
 description: Как настроить, скомпилировать и отладить проект CMak с C++ открытым исходным кодом в Visual Studio, предназначенный для Linux и Windows.
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303257"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791767"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>Учебник. Создание C++ кросс-платформенных проектов в Visual Studio
 
@@ -24,7 +23,7 @@ ms.locfileid: "74303257"
 > * Добавлять подключение к компьютеру Linux.
 > * Собирать и отлаживать тот же целевой объект в Linux.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Prerequisites
 
 * Настройка Visual Studio для кроссплатформенной разработки на C++
   * Сначала [установите Visual Studio](https://visualstudio.microsoft.com/vs/) и выберите разработку **классических приложений с C++**  и **Linux с C++ рабочими нагрузками**. Минимальная установка составляет всего 3 ГБ. В зависимости от скорости загрузки установка не должна занять более 10 минут.
@@ -44,10 +43,10 @@ ms.locfileid: "74303257"
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * Вы увидите параметры для запуска скрипта с `-–help`. Рекомендуется использовать параметр `–prefix`, чтобы указать установку в пути **/usr/local** , так как это расположение по умолчанию, в котором Visual Studio ищет CMAK. В следующем примере показан скрипт Linux x86_64. При необходимости измените его, если вы используете другую целевую платформу.
+  * Вы увидите параметры для запуска скрипта с `-–help`. Рекомендуется использовать параметр `–prefix`, чтобы указать установку в пути **/usr** , так как **/УСР/бин** является расположением по умолчанию, в котором Visual Studio ищет CMAK. В следующем примере показан скрипт Linux x86_64. При необходимости измените его, если вы используете другую целевую платформу.
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Git для Windows, установленный на компьютере Windows.
