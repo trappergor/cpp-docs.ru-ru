@@ -1,6 +1,7 @@
 ---
 title: Класс CFileTimeSpan
-ms.date: 01/06/2020
+description: Класс Кфилетимеспан библиотеки ATL и Microsoft Foundation Classes (MFC) управляет интервалами времени в единицах FILETIME.
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755062"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914381"
 ---
 # <a name="cfiletimespan-class"></a>Класс CFileTimeSpan
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>Заметки
 
-Этот класс предоставляет методы для управления относительными периодами времени в единицах, используемых в файловой системе. Эти единицы часто используются в операциях, касающихся создания, последнего доступа или последнего изменения файла. Методы этого класса часто используются в сочетании с объектами [класса кфилетиме](../../atl-mfc-shared/reference/cfiletime-class.md) .
+Класс `CFileTimeSpan` предоставляет методы для управления относительными периодами времени в единицах, используемых в файловой системе. Эти единицы часто используются в операциях с файлами, например при создании файла, последнем доступе или при последнем изменении. Методы этого класса часто используются в сочетании с объектами [класса кфилетиме](../../atl-mfc-shared/reference/cfiletime-class.md) .
 
 ## <a name="example"></a>Пример
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 Существующий объект `CFileTimeSpan`.
 
 *нспан*\
-Период времени в миллисекундах.
+Период времени в единицах FILETIME.
 
 ### <a name="remarks"></a>Заметки
 
-Объект `CFileTimeSpan` можно создать с помощью существующего объекта `CFileTimeSpan` или выражается как 64-разрядное значение. Конструктор по умолчанию задает интервал времени равным 0.
+Объект `CFileTimeSpan` можно создать с помощью существующего объекта `CFileTimeSpan` или в виде 64-разрядного значения в единицах FILETIME в 100-наносекундных. Дополнительные сведения см. в разделе [кфилетиме](cfiletime-class.md). Конструктор по умолчанию задает интервал времени равным 0.
 
 ## <a name="gettimespan"></a>Кфилетимеспан:: TimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает интервал времени в миллисекундах.
+Возвращает интервал времени в 100-наносекундных единицах FILETIME. Дополнительные сведения см. в разделе [кфилетиме](cfiletime-class.md).
 
 ## <a name="operator_-"></a>Кфилетимеспан:: operator —
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>Параметры
 
 *нспан*\
-Новое значение интервала времени в единицах измерения 100-наносекундных. Дополнительные сведения см. в разделе [кфилетиме](cfiletime-class.md).
+Новое значение для интервала времени в 100-наносекундных единицах FILETIME. Дополнительные сведения см. в разделе [кфилетиме](cfiletime-class.md).
 
 ## <a name="see-also"></a>См. также:
 
