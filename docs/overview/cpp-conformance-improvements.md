@@ -3,14 +3,12 @@ title: Улучшение соответствия C++
 ms.date: 12/04/2019
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546436"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793847"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -2591,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 версии 15.7 в режиме **/std:c++17** требует указать ключевое слово **typename** в инструкции **using** из D. Без **typename** компилятор вызывает предупреждение C4346: *"B<T\*>::type": зависимое имя не является типом*, а также ошибку C2061, *Синтаксическая ошибка: идентификатор type*.
+Visual Studio 2017 версии 15.7 в режиме **/std:c++17** требует указать ключевое слово **typename** в инструкции **using** из D. Без **typename** компилятор вызывает предупреждение C4346: "B<T>::type": зависимое имя не является типом*, а также ошибку C2061, *Синтаксическая ошибка: идентификатор type*.
 
 ```cpp
 template<typename T>
