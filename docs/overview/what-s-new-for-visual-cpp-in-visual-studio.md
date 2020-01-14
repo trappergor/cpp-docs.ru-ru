@@ -3,14 +3,12 @@ title: Новые возможности C++ в Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754134"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793975"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Новые возможности C++ в Visual Studio
 
@@ -312,7 +310,7 @@ C++ для Android теперь по умолчанию равняется на 
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (версия 15.0)
 
-- Незначительные усовершенствования диагностики `basic_string` `_ITERATOR_DEBUG_LEVEL != 0`. При активации проверки IDL в механизме обработки строк теперь указывается конкретное поведение, которое стало причиной этого. Например, вместо "string iterator not dereferencable" (итератор строки не является разыменуемым) вы получите сообщение "cannot dereference string iterator because it is out of range (e.g. an end iterator)" (не удается разыменовать итератор строки, так как он выходит за пределы диапазона, например конечный итератор).
+- Незначительные усовершенствования диагностики `basic_string``_ITERATOR_DEBUG_LEVEL != 0`. При активации проверки IDL в механизме обработки строк теперь указывается конкретное поведение, которое стало причиной этого. Например, вместо "string iterator not dereferencable" (итератор строки не является разыменуемым) вы получите сообщение "cannot dereference string iterator because it is out of range (e.g. an end iterator)" (не удается разыменовать итератор строки, так как он выходит за пределы диапазона, например конечный итератор).
 - Исправлен оператор присваивания перемещением `std::promise`, из-за которого раньше в коде могла возникнуть вечная блокировка.
 - Устранены ошибки в компиляторе, связанные с неявным преобразованием `atomic<T*>` в `T*`.
 - `pointer_traits<Ptr>` теперь корректно обнаруживает `Ptr::rebind<U>`.
