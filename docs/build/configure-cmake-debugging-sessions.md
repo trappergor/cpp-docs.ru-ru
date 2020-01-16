@@ -4,12 +4,12 @@ description: Описание использования Visual Studio для н
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946812"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031336"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Настройка сеансов отладки CMake
 
@@ -73,7 +73,7 @@ ms.locfileid: "75946812"
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>Справочник по Launch. vs. JSON для удаленных проектов Linux
 
-Следующие свойства относятся к **конфигурациям удаленной отладки**. Вы также можете [отправить команды непосредственно в gdb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) и [включить ведение журнала миенгине](https://github.com/microsoft/MIEngine/wiki/Logging). Эти свойства позволяют увидеть, какие команды отправляются в gdb, какие выходные gdb будут возвращены и сколько времени занимает каждая команда.
+Следующие свойства относятся к **конфигурациям удаленной отладки**. Вы также можете [выполнить пользовательские команды gdb](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands) для отправки команд непосредственно в базовый отладчик и [включить ведение журнала миенгине](https://github.com/microsoft/MIEngine/wiki/Logging) , чтобы узнать, какие команды будут отправлены в gdb, какие выходные данные gdb возвращаются и сколько времени занимает каждая команда.
 
 - `cwd`: текущий рабочий каталог для поиска зависимостей и других файлов на удаленном компьютере. Можно использовать макрос `${debugInfo.defaultWorkingDirectory}`. Значение по умолчанию — это корневой каталог удаленной рабочей области, если он не переопределен в *CMakeLists. txt*. Это свойство используется только для удаленных конфигураций. `currentDir` используется для задания текущего каталога запуска приложения для локального проекта.
 
