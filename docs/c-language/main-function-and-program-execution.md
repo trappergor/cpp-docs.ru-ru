@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151044"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123946"
 ---
 # <a name="main-function-and-program-execution"></a>Функция main и выполнение программ
 
@@ -26,7 +26,7 @@ ms.locfileid: "56151044"
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Функции в исходном коде программы выполняют одну или несколько конкретных задач. Функция **main** может вызывать эти функции для выполнения соответствующих задач. Когда функция **main** вызывает другую функцию, она передает ей управление выполнением, и работа программы продолжается с первого оператора вызываемой функции. Вызываемая функция возвращает управление функции **main**, когда выполняется оператор `return` или достигается конец этой функции.
 
@@ -36,7 +36,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 Описание версии [main](../c-language/using-wmain.md) для расширенных символов см. в статье **Использование wmain**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[main: запуск программы](../cpp/main-program-startup.md)<br/>
+[функция Main и аргументы командной строкиC++()](../cpp/main-function-command-line-args.md)\
 [Анализ аргументов командной строки C](../c-language/parsing-c-command-line-arguments.md)
