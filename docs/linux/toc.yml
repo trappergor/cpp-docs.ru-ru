@@ -3,7 +3,14 @@
 - name: 'Скачивание, установка и настройка рабочей нагрузки разработки Linux'
   href: download-install-and-setup-the-linux-development-workload.md
 - name: Подключение к удаленному компьютеру Linux
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: Подключение к удаленному компьютеру Linux
+      href: connect-to-your-remote-linux-computer.md
+    - name: Настраивает совместимую с FIPS безопасную удаленную разработку для Linux
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: Справка по ConnectionManager
+      href: connectionmanager-reference.md
 - name: Создание проекта Linux
   href: create-a-new-linux-project.md
 - name: Настройка проекта Linux
