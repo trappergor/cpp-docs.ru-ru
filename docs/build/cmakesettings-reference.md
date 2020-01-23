@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556738"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518209"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
@@ -146,6 +146,7 @@ ms.locfileid: "75556738"
 ```
 
 Обратите внимание, что если не определить `"type"`, по умолчанию будет использоваться тип `"STRING"`.
+- `remoteCopyOptimizations`: свойства **Visual Studio 2019 версии 16,5 и более поздних** версий для управления копированием источника на удаленный целевой объект. Оптимизация включена по умолчанию. Включает `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs` и `remoteCopySourcesMaxSmallChange`.
 
 ## <a name="environments"></a>Возможным
 
