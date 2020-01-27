@@ -1,7 +1,7 @@
 ---
 title: /DEPENDENTLOADFLAG (установка флагов зависимой загрузки по умолчанию)
-description: Параметр/ДЕПЕНДЕНТЛОАДФЛАГ устанавливает флаги по умолчанию для библиотек DLL, загруженных с помощью LoadLibrary
-ms.date: 12/22/2018
+description: Параметр/ДЕПЕНДЕНТЛОАДФЛАГ устанавливает зависимые по умолчанию флаги загрузки для библиотек DLL, загруженных этим модулем.
+ms.date: 01/22/2020
 f1_keywords:
 - dependentloadflag
 helpviewer_keywords:
@@ -10,16 +10,24 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 3a403f22c88ccd3e25ba95c183656ad2ffafd05a
-ms.sourcegitcommit: ef34a11cb04511221bf5c7b9f4f55ad91a7a603f
+ms.openlocfilehash: 5e31a0d747e7186814cba3ae1c4cf243569d87a8
+ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75330002"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76725712"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (установка флагов зависимой загрузки по умолчанию)
 
-Задает флаги загрузки по умолчанию, используемые, когда `LoadLibrary` используется для загрузки библиотек DLL.
+::: moniker range="vs-2015"
+
+Для использования параметра **/депендентлоадфлаг** требуется Visual Studio 2017 или более поздней версии.
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+Задает флаги загрузки по умолчанию, используемые, когда операционная система разрешает статически связанные импорты модуля.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,23 +36,29 @@ ms.locfileid: "75330002"
 ### <a name="arguments"></a>Arguments
 
 *load_flags*<br/>
-Необязательное 16-разрядное целое число в стиле C в десятичном, восьмеричное с нулем в начале или в шестнадцатеричном виде с ведущим `0x`, которое указывает зависимые флаги нагрузки, применяемые ко всем вызовам [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) . По умолчанию используется значение 0.
+Необязательное целочисленное значение, указывающее флаги нагрузки, применяемые при разрешении статически связанных зависимостей импорта модуля. По умолчанию используется значение 0. Список поддерживаемых значений флагов см. в `LOAD_LIBRARY_SEARCH_*` записей в [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw).
 
 ## <a name="remarks"></a>Заметки
 
-Этот вариант является новым в Visual Studio 2017. Он применяется только к приложениям, работающим в Windows 10 RS1 и более поздних версий. Этот параметр игнорируется другими операционными системами, на которых выполняется приложение.
+Когда операционная система разрешает статически связанные импорты модуля, он использует [Порядок поиска по умолчанию](/windows/win32/dlls/dynamic-link-library-search-order). Используйте параметр **/депендентлоадфлаг** , чтобы указать значение *load_flags* , которое изменяет путь поиска, используемый для разрешения этих импортов. В поддерживаемых операционных системах он изменяет порядок поиска статического разрешения импорта, аналогично тому, что делает [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) при использовании параметров `LOAD_LIBRARY_SEARCH`. Сведения о порядке поиска, заданном *load_flags*, см. в разделе [Порядок поиска с помощью флагов LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
 
-В поддерживаемых операционных системах этот параметр влияет на изменение вызовов в `LoadLibrary("dependent.dll")` эквивалентом `LoadLibraryEx("dependent.dll", 0, load_flags)`. Вызовы к [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) не затрагиваются. Этот параметр не применяется рекурсивно к библиотекам DLL, загруженным приложением.
+Этот флаг можно использовать для того, чтобы одна [Библиотека DLL не плантинг атаки](/windows/win32/dlls/dynamic-link-library-security) вектором. Например, рассмотрим приложение со статическим связыванием библиотеки DLL:
 
-Этот флаг можно использовать, чтобы сделать [плантинг атаки DLL](/windows/win32/dlls/dynamic-link-library-security) более сложной. Например, если приложение использует `LoadLibrary` для загрузки зависимой библиотеки DLL, злоумышленник может подставлять библиотеку DLL с тем же именем в пути поиска, используемом `LoadLibrary`, например текущим каталогом, который может быть проверен перед системными каталогами, если защищенный режим поиска DLL отключен. Режим поиска в защищенных библиотеках DLL помещает текущий каталог пользователя в порядок поиска и включается по умолчанию в Windows XP с пакетом обновления 2 (SP2) и более поздних версиях. Дополнительные сведения см. в статье [Порядок поиска библиотек динамической компоновки](/windows/win32/Dlls/dynamic-link-library-search-order).
+- Злоумышленник может растенить библиотеку DLL с тем же именем ранее в пути поиска для разрешения импорта, например в каталоге приложения. Защищенные каталоги сложнее, но не могут быть изменены злоумышленником.
 
-Если указать параметр ссылки `/DEPENDENTLOADFLAG:0xA00` (значение Объединенных флагов `LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`), то даже если на компьютере пользователя отключен режим поиска с помощью безопасного DLL-файла, путь поиска DLL будет ограничен каталогом приложения, за которым следует каталог%Windows%\System32. Параметр `/DEPENDENTLOADFLAG:0x800` является еще более ограничивающим, ограничивая Поиск в каталоге%Windows%\System32. Защищенные каталоги сложнее, но не могут быть изменены злоумышленником. Сведения о доступных флагах и их символьных и числовых значениях см. в описании параметра *dwFlags* в [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw). Сведения о порядке поиска, используемом при использовании различных зависимых флагов нагрузки, см. в разделе [Порядок поиска с использованием флагов LOAD_LIBRARY_SEARCH](/windows/win32/dlls/dynamic-link-library-search-order#search-order-using-load_library_search-flags).
+- Если библиотека DLL отсутствует в каталогах Application,%Windows%\System32 и% Windows%, то разрешение импорта попадает в текущий каталог. Злоумышленник может растенить библиотеку DLL.
+
+В обоих случаях, если указать параметр Link `/DEPENDENTLOADFLAG:0x800` (значение флага `LOAD_LIBRARY_SEARCH_SYSTEM32`), путь поиска модуля будет ограничен каталогом%Windows%\System32. Она обеспечивает некоторую защиту от атак плантинг на другие каталоги. Дополнительные сведения см. в статье [безопасность библиотеки динамической компоновки](/windows/win32/dlls/dynamic-link-library-security).
+
+Чтобы просмотреть значение, заданное параметром **/депендентлоадфлаг** в любой библиотеке DLL, используйте команду [dumpbin](dumpbin-reference.md) с параметром [/лоадконфиг](loadconfig.md) .
+
+Параметр **/депендентлоадфлаг** является новым в Visual Studio 2017. Он применяется только к приложениям, работающим в Windows 10 RS1 и более поздних версий. Этот параметр игнорируется другими операционными системами, на которых выполняется приложение.
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Установка параметра компоновщика ДЕПЕНДЕНТЛОАДФЛАГ в среде разработки Visual Studio
 
 1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Перейдите на страницу свойств **Свойства конфигурации** > **Компоновщик** > **Командная строка**.
+1. Выберите **Свойства конфигурации** > **Компоновщик** > страницу свойств **Командная строка** .
 
 1. Введите параметр в поле **Дополнительные параметры**.
 
@@ -55,8 +69,11 @@ ms.locfileid: "75330002"
 ## <a name="see-also"></a>См. также:
 
 - [Справочник по компоновщику MSVC](linking.md)
-- [Параметры компоновщика MSVC](linker-options.md)
-- [Связывание исполняемого файла с библиотекой DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Связывание исполняемого файла с библиотекой DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Параметры компоновщика КОМПИЛЯТОРОМ MSVC](linker-options.md)
+- [Неявное связывание исполняемого файла с библиотекой DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Определение используемого метода связывания](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)
 - [Порядок поиска библиотек динамической компоновки](/windows/win32/Dlls/dynamic-link-library-search-order)
+- [Безопасность библиотеки динамической компоновки](/windows/win32/dlls/dynamic-link-library-security)
+
+::: moniker-end
