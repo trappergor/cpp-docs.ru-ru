@@ -1,6 +1,7 @@
 ---
 title: Класс initializer_list
-ms.date: 11/04/2016
+description: Ссылка на класс initializer_list в C++ стандартной библиотеке, реализованная корпорацией Майкрософт в Visual Studio.
+ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
 - initializer_list/std::initializer_list::begin
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be51835958a07162ce22ff9d619fb793102669f
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455362"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894337"
 ---
-# <a name="initializerlist-class"></a>Класс initializer_list
+# <a name="initializer_list-class"></a>Класс initializer_list
 
 Предоставляет доступ к массиву элементов, в котором каждый элемент имеет указанный тип.
 
@@ -32,11 +33,10 @@ class initializer_list
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Type*|Тип данных элемента для сохранения в `initializer_list`.|
+*Тип*\
+Тип данных элемента для сохранения в `initializer_list`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 `initializer_list` можно создать при помощи списка заключенного в фигурные скобки инициализатора:
 
@@ -44,24 +44,24 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-компилятор преобразует списки заключенного в фигурные скобки инициализатора с однородными элементами в `initializer_list` каждый раз, когда сигнатуре функции требуется `initializer_list`. Дополнительные сведения об использовании `initializer_list` см. в разделе [Единообразная инициализация и делегирование конструкторов](../cpp/uniform-initialization-and-delegating-constructors.md)
+компилятор преобразует списки заключенного в фигурные скобки инициализатора с однородными элементами в `initializer_list` каждый раз, когда сигнатуре функции требуется `initializer_list`. Дополнительные сведения об использовании `initializer_list`см. в разделе [унифицированная инициализация и делегирование конструкторов](../cpp/uniform-initialization-and-delegating-constructors.md) .
 
 ### <a name="constructors"></a>Конструкторы
 
 |Конструктор|Описание|
 |-|-|
-|[initializer_list](../standard-library/forward-list-class.md#forward_list)|Создает объект типа `initializer_list`.|
+|[initializer_list](#initializer_list)|Создает объект типа `initializer_list`.|
 
-### <a name="typedefs"></a>Определения типов
+### <a name="typedefs"></a>Typedefs
 
 |Имя типа|Описание|
 |-|-|
-|value_type|Тип элементов в `initializer_list`.|
-|ссылка|Тип, предоставляющий ссылку на элемент в `initializer_list`.|
-|const_reference|Тип, предоставляющий постоянную ссылку на элемент в `initializer_list`.|
-|size_type|Тип, представляющий количество элементов в `initializer_list`.|
-|iterator|Тип, предоставляющий итератор для `initializer_list`.|
-|const_iterator|Тип, предоставляющий постоянный итератор для `initializer_list`.|
+|`value_type`|Тип элементов в `initializer_list`.|
+|`reference`|Тип, предоставляющий ссылку на элемент в `initializer_list`.|
+|`const_reference`|Тип, предоставляющий постоянную ссылку на элемент в `initializer_list`.|
+|`size_type`|Тип, представляющий количество элементов в `initializer_list`.|
+|`iterator`|Тип, предоставляющий итератор для `initializer_list`.|
+|`const_iterator`|Тип, предоставляющий постоянный итератор для `initializer_list`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
@@ -73,7 +73,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<initializer_list>
+**Заголовок:** \<initializer_list >
 
 **Пространство имен:** std
 
@@ -89,8 +89,6 @@ constexpr const InputIterator* begin() const noexcept;
 
 Указатель на первый элемент `initializer_list`. Если список пуст, указателем будет одинаковым для начала и конца списка.
 
-### <a name="remarks"></a>Примечания
-
 ## <a name="end"></a>  initializer_list::end
 
 Возвращает указатель на позицию, следующую за последним элементом в `initializer list`.
@@ -101,7 +99,7 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на позицию, следующую за последним элементом в списке. Если список пуст, он идентичен указателю на первый элемент в списке.
+Указатель на позицию, следующую за последним элементом в списке. Если список пуст, то он совпадает с указателем на первый элемент в списке.
 
 ## <a name="initializer_list"></a>  initializer_list::initializer_list
 
@@ -114,14 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*Началь*|Положение первого элемента в диапазоне копируемых элементов.|
-|*Последняя*|Положение первого элемента после диапазона копируемых элементов.|
+*Первый*\
+Положение первого элемента в диапазоне копируемых элементов.
 
-### <a name="remarks"></a>Примечания
+*Последние*\
+Положение первого элемента после диапазона копируемых элементов.
 
-Объект `initializer_list` основан на массиве объектов указанного типа. При копировании `initializer_list` создается второй экземпляр списка, указывающий на те же объекты; базовые объекты не копируются.
+### <a name="remarks"></a>Заметки
+
+Объект `initializer_list` основан на массиве объектов указанного типа. При копировании `initializer_list` создается второй экземпляр списка, указывающий на те же объекты. базовые объекты не копируются.
 
 ### <a name="example"></a>Пример
 
@@ -170,11 +169,6 @@ int main()
         cout << " " << c;
     cout << endl;
 
-    cout << "c4 =";
-    for (auto c : c4)
-        cout << " " << c;
-    cout << endl;
-
     cout << "c5 =";
     for (auto c : c5)
         cout << " " << c;
@@ -183,7 +177,10 @@ int main()
 ```
 
 ```Output
-c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4
+c1 = 3
+c2 = 5 4 3 2 1
+c3 = 5 4 3 2 1
+c5 = 5 4
 ```
 
 ## <a name="size"></a>  initializer_list::size
@@ -198,8 +195,6 @@ constexpr size_t size() const noexcept;
 
 Количество элементов в списке.
 
-### <a name="remarks"></a>Примечания
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [<forward_list>](../standard-library/forward-list.md)
