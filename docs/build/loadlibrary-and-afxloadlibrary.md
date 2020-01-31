@@ -1,6 +1,7 @@
 ---
 title: Функции LoadLibrary и AfxLoadLibrary
-ms.date: 05/24/2018
+description: Использование LoadLibrary и Афкслоадлибрари для явной загрузки библиотек DLL в КОМПИЛЯТОРОМ MSVC.
+ms.date: 01/28/2020
 f1_keywords:
 - LoadLibrary
 helpviewer_keywords:
@@ -10,29 +11,29 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f803212c4485f7517dc42802f1ff581ffa4e609d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493207"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821542"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
 
-Процессы вызывают [лоадлибрарекса](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa) или [Лоадлибрарексв](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (или [афкслоадлибрари](../mfc/reference/application-information-and-management.md#afxloadlibrary)) для явного связывания с библиотекой DLL. Если функция выполнена, она сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает в нее маркер, который можно использовать с другими функциями в явной компоновке, например `GetProcAddress` и. `FreeLibrary`
+Обрабатывает вызов [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) или [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) для явного связывания с библиотекой DLL. (Приложения MFC используют [афкслоадлибрари](../mfc/reference/application-information-and-management.md#afxloadlibrary) или [афкслоадлибрарекс](../mfc/reference/application-information-and-management.md#afxloadlibraryex).) Если функция выполнена, она сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает маркер в библиотеку DLL. Этот обработчик необходим в других функциях, используемых для явной компоновки, например `GetProcAddress` и `FreeLibrary`. Дополнительные сведения см. в разделе [явная компоновка](linking-an-executable-to-a-dll.md#linking-explicitly).
 
-`LoadLibrary`пытается найти библиотеку DLL с помощью той же последовательности поиска, которая используется для неявной компоновки. Если системе не удается найти библиотеку DLL или если функция точки входа возвращает значение false, `LoadLibrary` возвращает значение null. Если при вызове `LoadLibrary` метода указан модуль DLL, который уже сопоставлен с адресным пространством вызывающего процесса, функция возвращает маркер библиотеки DLL и увеличивает счетчик ссылок модуля.
+`LoadLibrary` пытается найти библиотеку DLL с помощью той же последовательности поиска, которая используется для неявной компоновки. `LoadLibraryEx` предоставляет больший контроль над порядком пути поиска. Дополнительные сведения см. в статье [Порядок поиска библиотек динамической компоновки](/windows/win32/dlls/dynamic-link-library-search-order). Если системе не удается найти библиотеку DLL или если функция точки входа возвращает значение FALSE, `LoadLibrary` возвращает значение NULL. Если в вызове `LoadLibrary` указан модуль DLL, который уже сопоставлен с адресным пространством вызывающего процесса, функция возвращает маркер библиотеки DLL и увеличивает счетчик ссылок модуля.
 
-Если библиотека DLL имеет функцию точки входа, операционная система вызывает функцию в контексте потока, вызвавшего `LoadLibrary`. Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу из-за предыдущего вызова `LoadLibrary` , не имеющего соответствующего вызова `FreeLibrary` функции.
+Если библиотека DLL имеет функцию точки входа, операционная система вызывает функцию в контексте потока, который вызывал `LoadLibrary` или `LoadLibraryEx`. Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу. Это происходит, если предыдущий вызов `LoadLibrary` или `LoadLibraryEx` для библиотеки DLL не имел соответствующего вызова функции `FreeLibrary`.
 
-Для приложений MFC, которые загружают библиотеки DLL расширения MFC, рекомендуется использовать `AfxLoadLibrary` `LoadLibrary`вместо. `AfxLoadLibrary`обрабатывает синхронизацию потоков перед вызовом `LoadLibrary`. Интерфейс (прототип функции) `AfxLoadLibrary` `LoadLibrary`совпадает с.
+Для приложений MFC, которые загружают библиотеки DLL расширения MFC, рекомендуется использовать `AfxLoadLibrary` или `AfxLoadLibraryEx` вместо `LoadLibrary` или `LoadLibraryEx`. Функции MFC обработают синхронизацию потоков перед явной загрузкой библиотеки DLL. Интерфейсы (прототипы функций) для `AfxLoadLibrary` и `AfxLoadLibraryEx` совпадают с `LoadLibrary` и `LoadLibraryEx`.
 
-Если Windows не удается загрузить библиотеку DLL, процесс может попытаться выполнить восстановление после ошибки. Например, процесс может уведомить пользователя об ошибке и попросить пользователя указать другой путь к библиотеке DLL.
+Если Windows не удается загрузить библиотеку DLL, процесс может попытаться выполнить восстановление после ошибки. Например, он может уведомить пользователя об ошибке, а затем запросить другой путь к библиотеке DLL.
 
 > [!IMPORTANT]
-> Обязательно укажите полный путь к любым библиотекам DLL. Текущий каталог сначала ищется при загрузке файлов. Если путь к файлу не указан, может быть загружен файл, который не является необходимым для загрузки. Другой способ избежать этого — использовать параметр компоновщика [/депендентлоадфлаг](reference/dependentloadflag.md) .
+> Обязательно укажите полный путь к любым библиотекам DLL. Текущий каталог может быть просмотрен первым при загрузке файлов с `LoadLibrary`. Если вы не полностью уточняете путь к файлу, может быть загружен файл, отличный от предполагаемого. При создании библиотеки DLL используйте параметр компоновщика [/депендентлоадфлаг](reference/dependentloadflag.md) , чтобы указать порядок поиска для статически связанных зависимостей DLL. В библиотеках DLL используйте оба полных пути для явно загруженных зависимостей, а `LoadLibraryEx` или `AfxLoadLibraryEx` вызвать параметры, чтобы указать порядок поиска модулей. Дополнительные сведения см. в статьях [безопасность библиотеки динамической компоновки](/windows/win32/dlls/dynamic-link-library-security) и [Порядок поиска библиотек динамической компоновки](/windows/win32/dlls/dynamic-link-library-search-order).
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Что необходимо сделать?
 
 - [Связывание исполняемого файла с библиотекой DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
@@ -44,8 +45,8 @@ ms.locfileid: "69493207"
 
 - [Функции FreeLibrary и AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
-- [Функция GetProcAddress](getprocaddress.md)
+- [GetProcAddress](getprocaddress.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Создание библиотек DLL C/C++ в Visual Studio](dlls-in-visual-cpp.md)

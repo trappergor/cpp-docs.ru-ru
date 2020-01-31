@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: 6e5824da03fb85e52f413f5678ea6e0fd6c77ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398411"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821822"
 ---
 # <a name="handlet-class"></a>HandleT - класс
 
@@ -47,51 +47,51 @@ class HandleT;
 
 ### <a name="parameters"></a>Параметры
 
-*HandleTraits*<br/>
-Экземпляр [HandleTraits](handletraits-structure.md) структура, которая определяет общие характеристики дескриптора.
+*Метод HandleTraits*<br/>
+Экземпляр структуры [метод HandleTraits](handletraits-structure.md) , определяющей общие характеристики маркера.
 
 ## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
-name     | Описание
+Name     | Описание
 -------- | -----------------------------
 `Traits` | Синоним для `HandleTraits`.
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                                | Описание
+Name                                | Описание
 ----------------------------------- | --------------------------------------------------
-[HandleT::HandleT](#handlet)        | Инициализирует новый экземпляр класса `HandleT`.
-[HandleT:: ~ HandleT](#tilde-handlet) | Отменяет инициализацию экземпляра `HandleT` класса.
+[Handleing:: Handle](#handlet)        | Инициализация нового экземпляра класса `HandleT`.
+[Handleing:: ~ Handle](#tilde-handlet) | Выполняет деинициализацию экземпляра класса `HandleT`.
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-name                         | Описание
+Name                         | Описание
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT::Attach](#attach)   | Связывает указанный дескриптор с текущим `HandleT` объекта.
-[HandleT::Close](#close)     | Закрывает текущий `HandleT` объекта.
-[HandleT::Detach](#detach)   | Отсоединяет текущий `HandleT` объект из его базовый дескриптор.
-[HandleT::Get](#get)         | Возвращает значение базового дескриптора.
-[HandleT::IsValid](#isvalid) | Указывает, является ли текущий `HandleT` представляет дескриптор.
+[Handle:: Attach](#attach)   | Связывает указанный маркер с текущим объектом `HandleT`.
+[Handle:: Close](#close)     | Закрывает текущий объект `HandleT`.
+[Handle::D етач](#detach)   | Отменяет связь текущего объекта `HandleT` с его базовым маркером.
+[Handle:: Get](#get)         | Возвращает значение базового маркера.
+[Handle:: IsValid](#isvalid) | Указывает, представляет ли текущий объект `HandleT` маркер.
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-name                                     | Описание
+Name                                     | Описание
 ---------------------------------------- | ------------------------------------
-[HandleT::InternalClose](#internalclose) | Закрывает текущий `HandleT` объекта.
+[Handle:: InternalClose](#internalclose) | Закрывает текущий объект `HandleT`.
 
 ### <a name="public-operators"></a>Открытые операторы
 
-name                                   | Описание
+Name                                   | Описание
 -------------------------------------- | ----------------------------------------------------------------------------------
-[HandleT::operator =](#operator-assign) | Перемещает значение указанного `HandleT` объект с текущим `HandleT` объекта.
+[Handle:: operator =](#operator-assign) | Перемещает значение указанного объекта `HandleT` в текущий объект `HandleT`.
 
-### <a name="protected-data-members"></a>Защищенные члены данных
+### <a name="protected-data-members"></a>Защищенные элементы данных
 
-name                        | Описание
+Name                        | Описание
 --------------------------- | ----------------------------------------------------------------
-[HandleT::handle_](#handle) | Содержит дескриптор, представленного `HandleT` объекта.
+[Handle:: handle_](#handle) | Содержит маркер, представленный объектом `HandleT`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -99,21 +99,21 @@ name                        | Описание
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** corewrappers.h
+**Заголовок:** кореврапперс. h
 
-**Пространство имен:** Microsoft::WRL::Wrappers
+**Пространство имен:** Программы Microsoft:: WRL:: оболочки
 
-## <a name="tilde-handlet"></a>HandleT:: ~ HandleT
+## <a name="tilde-handlet"></a>Handleing:: ~ Handle
 
-Отменяет инициализацию экземпляра `HandleT` класса.
+Выполняет деинициализацию экземпляра класса `HandleT`.
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>HandleT::Attach
+## <a name="attach"></a>Handle:: Attach
 
-Связывает указанный дескриптор с текущим `HandleT` объекта.
+Связывает указанный маркер с текущим объектом `HandleT`.
 
 ```cpp
 void Attach(
@@ -124,25 +124,25 @@ void Attach(
 ### <a name="parameters"></a>Параметры
 
 *h*<br/>
-Дескриптор.
+Маркер.
 
-## <a name="close"></a>HandleT::Close
+## <a name="close"></a>Handle:: Close
 
-Закрывает текущий `HandleT` объекта.
+Закрывает текущий объект `HandleT`.
 
 ```cpp
 void Close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Дескриптор, лежащий в основе текущего `HandleT` закрывается и `HandleT` присваивается недопустимое состояние.
+Маркер, лежащий в текущей `HandleT`, закрывается, а `HandleT` задается в недопустимом состоянии.
 
 Если дескриптор не закрывается правильно, возникает исключение в вызывающем потоке.
 
-## <a name="detach"></a>HandleT::Detach
+## <a name="detach"></a>Handle::D етач
 
-Отсоединяет текущий `HandleT` объект из его базовый дескриптор.
+Отменяет связь текущего объекта `HandleT` с его базовым маркером.
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -150,15 +150,15 @@ typename HandleTraits::Type Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовый дескриптор.
+Базовый маркер.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-После завершения операции текущего `HandleT` присваивается недопустимое состояние.
+По завершении этой операции текущей `HandleT` присваивается недопустимое состояние.
 
-## <a name="get"></a>HandleT::Get
+## <a name="get"></a>Handle:: Get
 
-Возвращает значение базового дескриптора.
+Возвращает значение базового маркера.
 
 ```cpp
 typename HandleTraits::Type Get() const;
@@ -166,19 +166,19 @@ typename HandleTraits::Type Get() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор.
+Маркер.
 
-## <a name="handle"></a>HandleT::handle_
+## <a name="handle"></a>Handle:: handle_
 
-Содержит дескриптор, представленного `HandleT` объекта.
+Содержит маркер, представленный объектом `HandleT`.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>HandleT::HandleT
+## <a name="handlet"></a>Handleing:: Handle
 
-Инициализирует новый экземпляр класса `HandleT`.
+Инициализация нового экземпляра класса `HandleT`.
 
 ```cpp
 explicit HandleT(
@@ -194,15 +194,15 @@ HandleT(
 ### <a name="parameters"></a>Параметры
 
 *h*<br/>
-Дескриптор.
+Маркер.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Первый конструктор инициализирует `HandleT` объект, который не является допустимым дескриптором для объекта. Второй конструктор создает новый `HandleT` объект из параметра *h*.
+Первый конструктор инициализирует объект `HandleT`, который не является допустимым маркером для объекта. Второй конструктор создает новый объект `HandleT` из параметра *h*.
 
-## <a name="internalclose"></a>HandleT::InternalClose
+## <a name="internalclose"></a>Handle:: InternalClose
 
-Закрывает текущий `HandleT` объекта.
+Закрывает текущий объект `HandleT`.
 
 ```cpp
 virtual bool InternalClose();
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если текущий `HandleT` Закрыто успешно; в противном случае — значение **false**.
+**значение true** , если текущий `HandleT` успешно закрыт; в противном случае — **значение false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Свойство `InternalClose()` имеет значение `protected`.
+Параметр `InternalClose()` имеет значение `protected`.
 
-## <a name="isvalid"></a>HandleT::IsValid
+## <a name="isvalid"></a>Handle:: IsValid
 
-Указывает, является ли текущий `HandleT` представляет дескриптор.
+Указывает, представляет ли текущий объект `HandleT` маркер.
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если `HandleT` представляет дескриптор; в противном случае **false**.
+**значение true** , если `HandleT` представляет маркер; в противном случае — **значение false**.
 
-## <a name="operator-assign"></a>HandleT::operator =
+## <a name="operator-assign"></a>Handle:: operator =
 
-Перемещает значение указанного `HandleT` объект с текущим `HandleT` объекта.
+Перемещает значение указанного объекта `HandleT` в текущий объект `HandleT`.
 
 ```cpp
 HandleT& operator=(
@@ -241,12 +241,12 @@ HandleT& operator=(
 ### <a name="parameters"></a>Параметры
 
 *h*<br/>
-Ссылка rvalue на дескриптор.
+Ссылка rvalue на Handle.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылку на текущий `HandleT` объекта.
+Ссылка на текущий объект `HandleT`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Эта операция делает недействительным `HandleT` объекта, указанного параметром *h*.
+Эта операция делает недействительным объект `HandleT`, указанный параметром *h*.

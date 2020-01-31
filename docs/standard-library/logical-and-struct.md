@@ -1,5 +1,5 @@
 ---
-title: logical_and - структура
+title: Структура logical_and
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::logical_and
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243277"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821620"
 ---
-# <a name="logicaland-struct"></a>logical_and - структура
+# <a name="logical_and-struct"></a>Структура logical_and
 
-Стандартный объект функции, выполняет операцию логического умножения (`operator&&`) к своим аргументам.
+Стандартный объект функции, выполняющий операцию логического умножения (`operator&&`) в своих аргументах.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,17 +42,17 @@ struct logical_and<void>
 *Тип*, *T*, *U*\
 Любой тип, поддерживающий `operator&&`, принимающий операнды указанного или выводимого типа.
 
-*Слева*\
+*Left*\
 Левый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Правильно*\
-Правый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+*Справа*\
+Правый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue для выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Результат `Left && Right`. Специализированный шаблон выполняет точную передачу результата типа, возвращаемого `operator&&`.
+Результат `Left && Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator&&`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Для определяемых пользователем типов нет сокращенного вычисления операнда. Оба аргумента вычисляются `operator&&`.
 
@@ -112,7 +112,7 @@ int main( )
    // of d1 & d2, use the logical_and function object
    transform( d1.begin( ), d1.end( ), d2.begin( ),
       d3.begin( ), logical_and<bool>( ) );
-   cout << "The deque which is the conjuction of d1 & d2 is:\n d3 = ( " ;
+   cout << "The deque which is the conjunction of d1 & d2 is:\n d3 = ( " ;
    for ( iter3 = d3.begin( ) ; iter3 != d3.end( ) ; iter3++ )
       cout << *iter3 << " ";
    cout << ")" << endl;
@@ -124,6 +124,6 @@ Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
-The deque which is the conjuction of d1 & d2 is:
+The deque which is the conjunction of d1 & d2 is:
 d3 = ( true false true true false false false )
 ```

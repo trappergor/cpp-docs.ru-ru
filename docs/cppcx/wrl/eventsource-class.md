@@ -1,5 +1,5 @@
 ---
-title: EventSource - класс
+title: Класс EventSource
 ms.date: 09/12/2018
 ms.topic: reference
 f1_keywords:
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398515"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821835"
 ---
-# <a name="eventsource-class"></a>EventSource - класс
+# <a name="eventsource-class"></a>Класс EventSource
 
-Представляет событие, отличный от agile. Функции-члены `EventSource` добавляют, удаляют и вызывают обработчики событий. Для гибкого событий использовать [AgileEventSource](agileeventsource-class.md).
+Представляет событие, не являющееся гибким. Функции-члены `EventSource` добавляют, удаляют и вызывают обработчики событий. Для гибких событий используйте [агиливентсаурце](agileeventsource-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,33 +43,33 @@ class EventSource;
 
 ### <a name="parameters"></a>Параметры
 
-*TDelegateInterface*<br/>
-Интерфейс делегат, представляющий обработчик событий.
+*тделегатеинтерфаце*<br/>
+Интерфейс к делегату, который представляет обработчик событий.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-| name                                     | Описание                                            |
+| Name                                     | Описание                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource::EventSource](#eventsource) | Инициализирует новый экземпляр класса `EventSource`. |
+| [EventSource:: EventSource](#eventsource) | Инициализация нового экземпляра класса `EventSource`. |
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-| name                                 | Описание                                                                                                                                                      |
+| Name                                 | Описание                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | Добавляет обработчик событий, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего `EventSource` объекта.                     |
-| [EventSource::GetSize](#getsize)     | Возвращает число обработчиков событий, связанных с текущим `EventSource` объекта.                                                                         |
-| [EventSource::InvokeAll](#invokeall) | Вызывает каждый обработчик событий, связанных с текущим `EventSource` объекта, используя указанным типам аргументов и аргументы.                                      |
-| [EventSource::Remove](#remove)       | Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим `EventSource` объекта. |
+| [EventSource:: Add](#add)             | Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта `EventSource`.                     |
+| [EventSource:: DataSize](#getsize)     | Возвращает число обработчиков событий, связанных с текущим объектом `EventSource`.                                                                         |
+| [EventSource:: InvokeAll](#invokeall) | Вызывает каждый обработчик событий, связанный с текущим объектом `EventSource`, используя указанные типы аргументов и аргументы.                                      |
+| [EventSource:: Remove](#remove)       | Удаляет обработчик событий, представленный указанным токеном регистрации событий, из набора обработчиков событий, связанного с текущим объектом `EventSource`. |
 
-### <a name="protected-data-members"></a>Защищенные члены данных
+### <a name="protected-data-members"></a>Защищенные элементы данных
 
-| name                                                    | Описание                                                                                                                       |
+| Name                                                    | Описание                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | Синхронизирует доступ к [targets_](#targets) массива, при добавлении, удалении или вызов обработчиков событий.                          |
-| [EventSource::targets_](#targets)                       | Массив из одного или нескольких обработчиков событий.                                                                                           |
-| [EventSource::targetsPointerLock_](#targetspointerlock) | Синхронизирует доступ к членам внутренних данных даже в том случае, когда добавляются обработчики событий для этого EventSource, удалены или вызове. |
+| [EventSource:: addRemoveLock_](#addremovelock)           | Синхронизирует доступ к [targets_](#targets) массиву при добавлении, удалении или вызове обработчиков событий.                          |
+| [EventSource:: targets_](#targets)                       | Массив из одного или нескольких обработчиков событий.                                                                                           |
+| [EventSource:: targetsPointerLock_](#targetspointerlock) | Синхронизирует доступ к внутренним элементам данных, даже пока обработчики событий для этой EventSource добавляются, удаляются или вызываются. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -77,13 +77,13 @@ class EventSource;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** event.h
+**Заголовок:** Event. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="add"></a>EventSource::Add
+## <a name="add"></a>EventSource:: Add
 
-Добавляет обработчик событий, представленный указанным интерфейсом делегата к набору обработчиков событий для текущего `EventSource` объекта.
+Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта `EventSource`.
 
 ```cpp
 HRESULT Add(
@@ -97,32 +97,32 @@ HRESULT Add(
 *delegateInterface*<br/>
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
-*Маркер*<br/>
-После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра для [Remove()](#remove) метод для удаления обработчика событий.
+*Лекс*<br/>
+После завершения операции представляет дескриптор события. Используйте этот токен в качестве параметра метода [Remove ()](#remove) для отмены обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
-Синхронизирует доступ к [targets_](#targets) массива, при добавлении, удалении или вызов обработчиков событий.
+Синхронизирует доступ к [targets_](#targets) массиву при добавлении, удалении или вызове обработчиков событий.
 
 ```cpp
 Wrappers::SRWLock addRemoveLock_;
 ```
 
-## <a name="eventsource"></a>EventSource::EventSource
+## <a name="eventsource"></a>EventSource:: EventSource
 
-Инициализирует новый экземпляр класса `EventSource`.
+Инициализация нового экземпляра класса `EventSource`.
 
 ```cpp
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource::GetSize
+## <a name="getsize"></a>EventSource:: DataSize
 
-Возвращает число обработчиков событий, связанных с текущим `EventSource` объекта.
+Возвращает число обработчиков событий, связанных с текущим объектом `EventSource`.
 
 ```cpp
 size_t GetSize() const;
@@ -130,11 +130,11 @@ size_t GetSize() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество обработчиков событий в [targets_](#targets).
+Число обработчиков событий в [targets_](#targets).
 
-## <a name="invokeall"></a>EventSource::InvokeAll
+## <a name="invokeall"></a>EventSource:: InvokeAll
 
-Вызывает каждый обработчик событий, связанных с текущим `EventSource` объекта, используя указанным типам аргументов и аргументы.
+Вызывает каждый обработчик событий, связанный с текущим объектом `EventSource`, используя указанные типы аргументов и аргументы.
 
 ```cpp
 void InvokeAll();
@@ -317,18 +317,18 @@ void InvokeAll(
 Тип седьмого аргумента обработчика событий.
 
 *T8*<br/>
-Тип восьмого аргумента обработчика событий.
+Тип аргумента восьмого обработчика событий.
 
 *T9*<br/>
 Тип девятого аргумента обработчика событий.
 
-*заполнитель с номером 0*<br/>
+*arg0*<br/>
 Нулевой аргумент обработчика событий.
 
 *arg1*<br/>
 Первый аргумент обработчика событий.
 
-*Arg2*<br/>
+*arg2*<br/>
 Второй аргумент обработчика событий.
 
 *arg3*<br/>
@@ -352,9 +352,9 @@ void InvokeAll(
 *arg9*<br/>
 Девятый аргумент обработчика событий.
 
-## <a name="remove"></a>EventSource::Remove
+## <a name="remove"></a>EventSource:: Remove
 
-Удаляет обработчик событий, представленного маркером регистрации указанное событие из набора обработчиков событий, связанных с текущим `EventSource` объекта.
+Удаляет обработчик событий, представленный указанным токеном регистрации событий, из набора обработчиков событий, связанного с текущим объектом `EventSource`.
 
 ```cpp
 HRESULT Remove(
@@ -364,18 +364,18 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Параметры
 
-*Маркер*<br/>
-Дескриптор, который представляет обработчик событий. Этот токен был возвращен при регистрации обработчика событий с [Add()](#add) метод.
+*Лекс*<br/>
+Дескриптор, представляющий обработчик событий. Этот токен был возвращен, когда обработчик событий был зарегистрирован методом [Add ()](#add) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Дополнительные сведения о `EventRegistrationToken` структуры, см. в разделе **структуры Windows::Foundation:: eventregistrationtoken** подразделы **среды выполнения Windows** справочной документации.
+Дополнительные сведения о структуре `EventRegistrationToken` см. в разделе **Windows:: Foundation:: EventRegistrationToken Structure** в справочной документации по **Среда выполнения Windows** .
 
-## <a name="targets"></a>EventSource::targets_
+## <a name="targets"></a>EventSource:: targets_
 
 Массив из одного или нескольких обработчиков событий.
 
@@ -383,13 +383,13 @@ HRESULT Remove(
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Когда события, представленного текущим `EventSource` объект встречается, обработчики событий вызываются.
+При возникновении события, представленного текущим объектом `EventSource`, вызываются обработчики событий.
 
-## <a name="targetspointerlock"></a>EventSource::targetsPointerLock_
+## <a name="targetspointerlock"></a>EventSource:: targetsPointerLock_
 
-Синхронизирует доступ к членам внутренние данные, даже когда обработчики событий для данного `EventSource` был добавлен, удален или вызванный.
+Синхронизирует доступ к внутренним элементам данных даже при добавлении, удалении или вызове обработчиков событий для этого `EventSource`.
 
 ```cpp
 Wrappers::SRWLock targetsPointerLock_;
