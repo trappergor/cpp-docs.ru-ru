@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703133"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821516"
 ---
 # <a name="math-and-floating-point-support"></a>Поддержка математических функций для чисел с плавающей запятой
 
@@ -25,7 +25,7 @@ ms.locfileid: "55703133"
 
 ## <a name="supported-math-and-floating-point-routines"></a>Поддерживаемые математические функции для чисел с плавающей запятой
 
-|Подпрограмма|Использовать|
+|Подпрограмма|Использование|
 |-|-|
 [abs, labs, llabs, _abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|Вычисляет абсолютное значение целого числа
 [acos, acosf, acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|Вычисляет арккосинус
@@ -72,7 +72,7 @@ ms.locfileid: "55703133"
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Вычисляет с округлением вниз
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Вычисляет склеенную операцию умножения-сложения
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Вычисляет максимальное значение аргументов
-[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Вычисляет минимальное значение аргументов
+[fmin, fminf, fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|Вычисление минимума аргументов
 [fmod, fmodf, fmodl](../c-runtime-library/reference/fmod-fmodf.md)|Вычисляет остаток с плавающей запятой
 [_fpclass, _fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|Возвращает классификацию значения с плавающей запятой
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|Возвращает классификацию значения с плавающей запятой
@@ -127,7 +127,7 @@ ms.locfileid: "55703133"
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Вычисляет квадратный корень
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|Получает слово состояния модуля операций с плавающей запятой
 [strtof, _strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|Преобразуют строку в тип **float**
-[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Преобразует строку в тип **long** **double**
+[strtold, _strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|Преобразует строку в **длинное** **Двойное** значение
 [tan, tanf, tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|Вычисляет тангенс
 [tanh, tanhf, tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|Вычисляет гиперболический тангенс
 [tgamma, tgammaf, tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|Вычисляет гамма-функцию
@@ -135,7 +135,7 @@ ms.locfileid: "55703133"
 [_wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразует двухбайтовую строку в **double**
 [_y0, _y1, _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Вычисляет функцию Бесселя
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [Примитивы с плавающей запятой](../c-runtime-library/reference/floating-point-primitives.md)<br/>

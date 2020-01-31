@@ -1,5 +1,5 @@
 ---
-title: Implements - структура
+title: Структура Implements
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 63cac6931428644cc5ddec7d87e49007e95e039d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ce6e9193107cbd0d033d99b257e41004b4343a8
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398255"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821861"
 ---
-# <a name="implements-structure"></a>Implements - структура
+# <a name="implements-structure"></a>Структура Implements
 
 Реализует `QueryInterface` и `GetIid` для указанных интерфейсов.
 
@@ -77,65 +77,65 @@ struct __declspec(novtable) Implements<
 ### <a name="parameters"></a>Параметры
 
 *I0*<br/>
-Идентификатор нулевого интерфейса. (Обязательный)
+Идентификатор интерфейса начальном. Заполнен
 
 *I1*<br/>
-Идентификатор первого интерфейса. (Необязательный параметр).
+Первый идентификатор интерфейса. (необязательный)
 
 *I2*<br/>
-Идентификатор второго интерфейса. (Необязательный параметр).
+Второй идентификатор интерфейса. (необязательный)
 
 *I3*<br/>
-Идентификатор третьего интерфейса. (Необязательный параметр).
+Третий идентификатор интерфейса. (необязательный)
 
 *I4*<br/>
-Идентификатор четвертого интерфейса. (Необязательный параметр).
+Четвертый идентификатор интерфейса. (необязательный)
 
 *I5*<br/>
-Идентификатор пятого интерфейса. (Необязательный параметр).
+Пятый идентификатор интерфейса. (необязательный)
 
 *I6*<br/>
-Идентификатор шестого интерфейса. (Необязательный параметр).
+Шестой идентификатор интерфейса. (необязательный)
 
 *I7*<br/>
-Идентификатор седьмого интерфейса. (Необязательный параметр).
+Седьмой идентификатор интерфейса. (необязательный)
 
 *I8*<br/>
-Идентификатор восьмого интерфейса. (Необязательный параметр).
+Восьмой идентификатор интерфейса. (необязательный)
 
 *I9*<br/>
-Идентификатор девятого интерфейса. (Необязательный параметр).
+Девятый идентификатор интерфейса. (необязательный)
 
 *flags*<br/>
-Флаги конфигурации для класса. Один или несколько [RuntimeClassType](runtimeclasstype-enumeration.md) перечисления, которые указаны в [RuntimeClassFlags](runtimeclassflags-structure.md) структуры.
+Флаги конфигурации для класса. Одно или несколько перечислений [RuntimeClassType](runtimeclasstype-enumeration.md) , указанных в структуре [RuntimeClassFlags](runtimeclassflags-structure.md) .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
 Является производным от списка указанных интерфейсов и реализует вспомогательные шаблоны для `QueryInterface` и `GetIid`.
 
-Каждый *I0* через *I9* параметр интерфейса должен быть производным от `IUnknown`, `IInspectable`, или [ChainInterfaces](chaininterfaces-structure.md) шаблона. *Флаги* параметр определяет, создается ли поддержка для `IUnknown` или `IInspectable`.
+Каждый параметр *I0* через интерфейс *i9* должен быть производным от `IUnknown`, `IInspectable`или шаблона [метод ChainInterfaces](chaininterfaces-structure.md) . Параметр *flags* определяет, будет ли создана поддержка для `IUnknown` или `IInspectable`.
 
 ## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
-| name        | Описание                               |
+| Name        | Описание                               |
 | ----------- | ----------------------------------------- |
 | `ClassFlags`| Синоним для `RuntimeClassFlags<WinRt>`. |
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-| name                                              | Описание                                                                                                   |
+| Name                                              | Описание                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [Implements::CanCastTo](#cancastto)               | Возвращает указатель на указанный интерфейс.                                                                    |
-| [Implements::CastToUnknown](#casttounknown)       | Возвращает указатель на базовый `IUnknown` интерфейс.                                                        |
-| [Implements::FillArrayWithIid](#fillarraywithiid) | Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива. |
+| [Implements:: CanCastTo](#cancastto)               | Возвращает указатель на указанный интерфейс.                                                                    |
+| [Implements:: CastToUnknown](#casttounknown)       | Возвращает указатель на базовый интерфейс `IUnknown`.                                                        |
+| [Implements:: FillArrayWithIid](#fillarraywithiid) | Вставляет идентификатор интерфейса, указанный текущим параметром шаблона начальном, в указанный элемент массива. |
 
 ### <a name="protected-constants"></a>Защищенные константы
 
-| name                              | Описание                                    |
+| Name                              | Описание                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [Implements::IidCount](#iidcount) | Содержит число идентификаторов реализованного интерфейса. |
+| [Implements:: IidCount](#iidcount) | Содержит число реализованных идентификаторов интерфейсов. |
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -153,11 +153,11 @@ struct __declspec(novtable) Implements<
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="cancastto"></a>Implements::CanCastTo
+## <a name="cancastto"></a>Implements:: CanCastTo
 
 Возвращает указатель на указанный интерфейс.
 
@@ -171,22 +171,22 @@ __forceinline HRESULT CanCastTo(
 ### <a name="parameters"></a>Параметры
 
 *riid*<br/>
-Ссылку на идентификатор интерфейса.
+Ссылка на идентификатор интерфейса.
 
-*ppv*<br/>
-Если в случае успешного выполнения указатель на интерфейс, заданный *riid*.
+*ппв*<br/>
+В случае успеха указатель на интерфейс, указанный параметром *riid*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если выполнение прошло успешно; в противном случае — значение HRESULT, указывающее ошибку, например E_NOINTERFACE.
+S_OK в случае успеха; в противном случае возвращается значение HRESULT, указывающее на ошибку, например E_NOINTERFACE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Это внутренняя вспомогательная функция, которая выполняет операцию QueryInterface.
 
-## <a name="casttounknown"></a>Implements::CastToUnknown
+## <a name="casttounknown"></a>Implements:: CastToUnknown
 
-Возвращает указатель на базовый `IUnknown` интерфейс.
+Возвращает указатель на базовый интерфейс `IUnknown`.
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +194,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Эта операция выполняется успешно и всегда возвращает `IUnknown` указатель.
+Эта операция всегда завершается с ошибкой и возвращает указатель `IUnknown`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Внутренняя вспомогательная функция.
 
-## <a name="fillarraywithiid"></a>Implements::FillArrayWithIid
+## <a name="fillarraywithiid"></a>Implements:: FillArrayWithIid
 
-Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.
+Вставляет идентификатор интерфейса, указанный текущим параметром шаблона начальном, в указанный элемент массива.
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -213,19 +213,19 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>Параметры
 
-*Индекс*<br/>
-Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
+*номер*<br/>
+Отсчитываемый от нуля индекс, указывающий начальный элемент массива для данной операции. По завершении этой операции *индекс* увеличивается на 1.
 
-*идентификаторы IID*<br/>
+*идентификаторов IID*<br/>
 Массив типа IID.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
 Внутренняя вспомогательная функция.
 
-## <a name="iidcount"></a>Implements::IidCount
+## <a name="iidcount"></a>Implements:: IidCount
 
-Содержит число идентификаторов реализованного интерфейса.
+Содержит число реализованных идентификаторов интерфейсов.
 
 ```cpp
 static const unsigned long IidCount;

@@ -1,5 +1,5 @@
 ---
-title: Класс CComApartment
+title: Класс Ккомапартмент
 ms.date: 11/04/2016
 f1_keywords:
 - CComApartment
@@ -16,19 +16,19 @@ helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-ms.openlocfilehash: 92db42a45a0863f8b43f7c46da9624e424d1e488
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f4c7fc356e61210e9b99bf9989b1bb3f0abc98a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246782"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821679"
 ---
-# <a name="ccomapartment-class"></a>Класс CComApartment
+# <a name="ccomapartment-class"></a>Класс Ккомапартмент
 
-Этот класс предоставляет поддержку для управления помещения в модуле EXE потоков в составе пула.
+Этот класс обеспечивает поддержку управления апартаментом в модуле EXE в пуле потоков.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,38 +40,38 @@ class CComApartment
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
-|[CComApartment::CComApartment](#ccomapartment)|Конструктор.|
+|[Ккомапартмент:: Ккомапартмент](#ccomapartment)|Конструктор.|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
-|[CComApartment::Apartment](#apartment)|Отмечает начальный адрес потока.|
-|[CComApartment::GetLockCount](#getlockcount)|Возвращает текущий счетчик блокировок.|
-|[CComApartment::Lock](#lock)|Увеличивает счетчик блокировки потока.|
-|[CComApartment::Unlock](#unlock)|Уменьшает счетчик блокировки потока.|
+|[Ккомапартмент:: апартамент](#apartment)|Помечает начальный адрес потока.|
+|[Ккомапартмент:: Жетлокккаунт](#getlockcount)|Возвращает текущее число блокировок потока.|
+|[Ккомапартмент:: Lock](#lock)|Увеличивает число блокировок потока.|
+|[Ккомапартмент:: Unlock](#unlock)|Уменьшает счетчик блокировок потока.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
-|name|Описание|
+|Name|Описание|
 |----------|-----------------|
-|[CComApartment::m_dwThreadID](#m_dwthreadid)|Содержит идентификатор потока.|
-|[CComApartment::m_hThread](#m_hthread)|Содержит дескриптор потока.|
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Содержит текущий счетчик блокировок.|
+|[Ккомапартмент:: m_dwThreadID](#m_dwthreadid)|Содержит идентификатор потока.|
+|[Ккомапартмент:: m_hThread](#m_hthread)|Содержит маркер потока.|
+|[Ккомапартмент:: m_nLockCnt](#m_nlockcnt)|Содержит текущее число блокировок потока.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Заметки
 
-`CComApartment` используется [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) для управления подразделение в модуле EXE потоков в составе пула. `CComApartment` Предоставляет методы для увеличение и уменьшение блокировки подсчета в потоке.
+`CComApartment` используется [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md) для управления апартаментом в модуле exe в пуле потоков. `CComApartment` предоставляет методы для увеличения и уменьшения числа блокировок в потоке.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="apartment"></a>  CComApartment::Apartment
+##  <a name="apartment"></a>Ккомапартмент:: апартамент
 
-Отмечает начальный адрес потока.
+Помечает начальный адрес потока.
 
 ```
 DWORD Apartment();
@@ -81,11 +81,11 @@ DWORD Apartment();
 
 Всегда равно 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Автоматически устанавливается во время [CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init).
+Автоматически задается во время [ккомаутосреадмодуле:: init](../../atl/reference/ccomautothreadmodule-class.md#init).
 
-##  <a name="ccomapartment"></a>  CComApartment::CComApartment
+##  <a name="ccomapartment"></a>Ккомапартмент:: Ккомапартмент
 
 Конструктор.
 
@@ -93,13 +93,13 @@ DWORD Apartment();
 CComApartment();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Инициализирует `CComApartment` данные-члены [m_nLockCnt](#m_nlockcnt) и [m_hThread](#m_hthread).
+Инициализирует `CComApartment`ные члены данных [m_nLockCnt](#m_nlockcnt) и [m_hThread](#m_hthread).
 
-##  <a name="getlockcount"></a>  CComApartment::GetLockCount
+##  <a name="getlockcount"></a>Ккомапартмент:: Жетлокккаунт
 
-Возвращает текущий счетчик блокировок.
+Возвращает текущее число блокировок потока.
 
 ```
 LONG GetLockCount();
@@ -109,9 +109,9 @@ LONG GetLockCount();
 
 Число блокировок в потоке.
 
-##  <a name="lock"></a>  CComApartment::Lock
+##  <a name="lock"></a>Ккомапартмент:: Lock
 
-Увеличивает счетчик блокировки потока.
+Увеличивает число блокировок потока.
 
 ```
 LONG Lock();
@@ -121,13 +121,13 @@ LONG Lock();
 
 Значение, которое может быть полезно для диагностики или тестирования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Вызывается средой [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Вызывается функцией [ккомаутосреадмодуле:: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
-Число блокировок в потоке используется для статистических целей.
+Счетчик блокировок в потоке используется для статистических целей.
 
-##  <a name="m_dwthreadid"></a>  CComApartment::m_dwThreadID
+##  <a name="m_dwthreadid"></a>Ккомапартмент:: m_dwThreadID
 
 Содержит идентификатор потока.
 
@@ -135,25 +135,25 @@ LONG Lock();
 DWORD m_dwThreadID;
 ```
 
-##  <a name="m_hthread"></a>  CComApartment::m_hThread
+##  <a name="m_hthread"></a>Ккомапартмент:: m_hThread
 
-Содержит дескриптор потока.
+Содержит маркер потока.
 
 ```
 HANDLE m_hThread;
 ```
 
-##  <a name="m_nlockcnt"></a>  CComApartment::m_nLockCnt
+##  <a name="m_nlockcnt"></a>Ккомапартмент:: m_nLockCnt
 
-Содержит текущий счетчик блокировок.
+Содержит текущее число блокировок потока.
 
 ```
 LONG m_nLockCnt;
 ```
 
-##  <a name="unlock"></a>  CComApartment::Unlock
+##  <a name="unlock"></a>Ккомапартмент:: Unlock
 
-Уменьшает счетчик блокировки потока.
+Уменьшает счетчик блокировок потока.
 
 ```
 LONG Unlock();
@@ -163,12 +163,12 @@ LONG Unlock();
 
 Значение, которое может быть полезно для диагностики или тестирования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Заметки
 
-Вызывается средой [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
+Вызывается методом [ккомаутосреадмодуле:: Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).
 
-Число блокировок в потоке используется для статистических целей.
+Счетчик блокировок в потоке используется для статистических целей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)
