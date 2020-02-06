@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518181"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034523"
 ---
 # <a name="q-options-low-level-operations"></a>Параметры /Q (низкоуровневые операции)
 
@@ -34,9 +34,13 @@ ms.locfileid: "76518181"
 
 - [/Qspectre](qspectre.md): создает инструкции по устранению некоторых уязвимостей системы безопасности устранением рисков Spectre.
 
+- [/Кспектре-лоад](qspectre-load.md): создает инструкции по устранению уязвимостей безопасности устранением рисков Spectre, основанных на нагрузках.
+
+- [/Кспектре-лоад-КФ](qspectre-load-cf.md): создает инструкции по устранению уязвимостей безопасности устранением рисков Spectre на основе инструкций потока управления, которые загружаются.
+
 - [/Qvec-report (Auto-векторизатора Report Level)](qvec-report-auto-vectorizer-reporting-level.md): включает уровни отчетов для автоматической обработки векторов.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
