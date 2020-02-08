@@ -702,6 +702,10 @@
                           href: build/reference/qsafe-fp-loads.md
                         - name: /Qspectre
                           href: build/reference/qspectre.md
+                        - name: /Qspectre-load
+                          href: build/reference/qspectre-load.md
+                        - name: /Qspectre-load-cf
+                          href: build/reference/qspectre-load-cf.md
                         - name: /Qvec-report (уровень отчетности автоматического векторизатора)
                           href: build/reference/qvec-report-auto-vectorizer-reporting-level.md
                     - name: /RTC (проверки ошибок во время выполнения)
@@ -2391,7 +2395,7 @@
                   href: cppcx/wrl/hstring-class.md
                 - name: Класс HStringReference
                   href: cppcx/wrl/hstringreference-class.md
-                - name: Mutex - класс
+                - name: Mutex класс
                   href: cppcx/wrl/mutex-class.md
                 - name: Класс RoInitializeWrapper
                   href: cppcx/wrl/roinitializewrapper-class.md
