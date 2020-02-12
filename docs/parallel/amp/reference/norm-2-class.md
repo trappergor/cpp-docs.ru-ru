@@ -28,85 +28,85 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353057"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126504"
 ---
-# <a name="norm2-class"></a>Класс norm_2
+# <a name="norm_2-class"></a>Класс norm_2
 
-Представляет короткий вектор из двух чисел normal.
+Представляет короткий вектор из двух обычных чисел.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class norm_2;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор norm_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор norm_2](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
 |norm_2::get_y||
 |norm_2::get_yx||
 |norm_2::ref_g||
-|norm_2::ref_r||
+|norm_2:: ref_r||
 |norm_2::ref_x||
-|norm_2::ref_y||
+|norm_2:: ref_y||
 |norm_2::set_x||
 |norm_2::set_xy||
-|norm_2::set_y||
+|norm_2:: set_y||
 |norm_2::set_yx||
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_2::operator-||
-|norm_2::operator--||
-|norm_2::operator*=||
-|norm_2::operator/=||
-|norm_2::operator ++||
-|norm_2::operator +=||
-|norm_2::operator =||
-|norm_2::operator-=||
+|norm_2:: operator —||
+|norm_2:: operator--||
+|norm_2:: operator * =||
+|norm_2:: operator/=||
+|norm_2:: operator + +||
+|norm_2:: operator + =||
+|norm_2:: operator =||
+|norm_2:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#norm_2__size)||
+|[Константа размера](#norm_2__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_2::g||
-|norm_2::gr||
-|norm_2::r||
+|norm_2:: g||
+|norm_2:: GR||
+|norm_2:: r||
 |norm_2::rg||
-|norm_2::x||
-|norm_2::xy||
-|norm_2::y||
-|norm_2::yx||
+|norm_2:: x||
+|norm_2:: XY||
+|norm_2:: y||
+|norm_2:: Икс||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -114,15 +114,15 @@ class norm_2;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm_2
+## <a name="ctor"></a>norm_2
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 norm_2() restrict(amp,
     cpu);
 
@@ -185,15 +185,15 @@ explicit inline norm_2(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="norm_2__size"></a> Размер
+## <a name="norm_2__size"></a>изменять
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

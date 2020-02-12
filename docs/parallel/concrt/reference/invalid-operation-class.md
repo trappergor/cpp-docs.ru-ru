@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: 8b971a12ff83753546cfea7b90288d1bc43400c0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341036"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140870"
 ---
-# <a name="invalidoperation-class"></a>Класс invalid_operation
+# <a name="invalid_operation-class"></a>Класс invalid_operation
 
 Данный класс описывает исключение, возникающее при выполнении недопустимой операции, которая не описывается более точно другим типом исключения, создаваемым средой выполнения с параллелизмом.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class invalid_operation : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[invalid_operation](#ctor)|Перегружен. Создает объект `invalid_operation`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Различные методы, создающие это исключение, обычно документируют, в каких обстоятельствах они создают его.
 
@@ -45,15 +45,15 @@ class invalid_operation : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> invalid_operation
+## <a name="ctor"></a>invalid_operation
 
 Создает объект `invalid_operation`.
 
-```
+```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();
@@ -64,6 +64,6 @@ invalid_operation() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

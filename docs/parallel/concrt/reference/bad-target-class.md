@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337769"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142846"
 ---
-# <a name="badtarget-class"></a>Класс bad_target
+# <a name="bad_target-class"></a>Класс bad_target
 
 Этот класс описывает исключение, которое создается, если блок обмена сообщениями получает указатель на целевой объект, который неверен для выполняемой операции.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[bad_target](#ctor)|Перегружен. Создает объект `bad_target`.|
+|[bad_target](#ctor)|Перегружен. Формирует объект `bad_target`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Это исключение обычно вызывается по причинам, например попытка получить сообщение, которое зарезервировано для другой целевой объект или освобождение резервирование, которое не содержит целевого объекта.
+Это исключение обычно вызывается по таким причинам, как цель пытается использовать сообщение, которое зарезервировано для другого целевого объекта или освобождения резервирования, которое не удерживается.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -45,15 +45,15 @@ class bad_target : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a>bad_target
 
-Создает объект `bad_target`.
+Формирует объект `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();
@@ -64,7 +64,7 @@ bad_target() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md)

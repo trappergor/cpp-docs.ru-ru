@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351723"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126465"
 ---
-# <a name="invalidcomputedomain-class"></a>invalid_compute_domain - класс
+# <a name="invalid_compute_domain-class"></a>invalid_compute_domain - класс
 
-Исключение, возникающее, когда среда выполнения не может запустить ядро с помощью вычислительного домена, указанного в [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) место вызова.
+Исключение, возникающее, когда среда выполнения не может запустить ядро с помощью домена вычислений, указанного в [parallel_for_eachном](concurrency-namespace-functions-amp.md#parallel_for_each) месте вызова.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[invalid_compute_domain конструктор](#ctor)|Инициализирует новый экземпляр класса `invalid_compute_domain`.|
+|[Конструктор invalid_compute_domain](#ctor)|Инициализирует новый экземпляр класса `invalid_compute_domain`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -43,17 +43,17 @@ class invalid_compute_domain : public runtime_exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** параллелизм
+**Пространство имен** : Concurrency
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
 Инициализирует новый экземпляр класса.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -63,12 +63,12 @@ invalid_compute_domain() throw();
 ### <a name="parameters"></a>Параметры
 
 *_Message*<br/>
-Описание ошибки.
+Текстовое описание ошибки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Экземпляр `invalid_compute_domain` класса
+Экземпляр класса `invalid_compute_domain`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

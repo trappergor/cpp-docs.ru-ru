@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975160"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127703"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object - класс
+# <a name="uninitialized_object-class"></a>uninitialized_object - класс
 
-Исключение, возникающее, когда используется неинициализированный объект.
+Исключение, возникающее при использовании неинициализированного объекта.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[uninitialized_object, конструктор](#uninitialized_object)|Инициализирует новый экземпляр класса `uninitialized_object`.|
+|[Конструктор uninitialized_object](#uninitialized_object)|Инициализирует новый экземпляр класса `uninitialized_object`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -43,17 +43,17 @@ class uninitialized_object : public runtime_exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** параллелизм
+**Пространство имен** : Concurrency
 
-## <a name="uninitialized_object"></a> uninitialized_object
+## <a name="uninitialized_object"></a>uninitialized_object
 
-Создает новый экземпляр класса `uninitialized_object` исключение.
+Конструирует новый экземпляр исключения `uninitialized_object`.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -63,12 +63,12 @@ uninitialized_object() throw();
 ### <a name="parameters"></a>Параметры
 
 *_Message*<br/>
-Описание ошибки.
+Текстовое описание ошибки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`uninitialized_object` Объект исключения.
+Объект исключения `uninitialized_object`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

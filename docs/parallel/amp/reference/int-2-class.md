@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180262"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126647"
 ---
-# <a name="int2-class"></a>Класс int_2
+# <a name="int_2-class"></a>Класс int_2
 
 Представляет короткий вектор из двух целых чисел.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class int_2;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор int_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор int_2](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |int_2::get_x||
 |int_2::get_xy||
@@ -78,33 +78,33 @@ class int_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|int_2::operator-||
-|int_2::operator--||
-|int_2::operator%=||
-|int_2::operator&=||
-|int_2::operator*=||
-|int_2::operator/=||
-|int_2::operator ^ =||
-|int_2::operator&#124;=||
-|int_2::operator ~||
-|int_2::operator ++||
-|int_2::operator+=||
-|int_2::operator<\<=||
-|int_2::operator =||
-|int_2::operator-=||
-|int_2::operator >> =||
+|int_2:: operator —||
+|int_2:: operator--||
+|int_2:: operator% =||
+|int_2:: operator & =||
+|int_2:: operator * =||
+|int_2:: operator/=||
+|int_2:: operator ^ =||
+|int_2:: operator&#124;=||
+|int_2:: operator ~||
+|int_2:: operator + +||
+|int_2:: operator + =||
+|int_2:: operator <\<=||
+|int_2:: operator =||
+|int_2:: operator-=||
+|int_2:: operator > > =||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#int_2__size)||
+|[Константа размера](#int_2__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |int_2::g||
 |int_2::gr||
@@ -121,15 +121,15 @@ class int_2;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -178,15 +178,15 @@ explicit inline int_2(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="int_2__size"></a> Размер
+## <a name="int_2__size"></a>изменять
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

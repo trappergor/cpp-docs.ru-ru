@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: ab498935039fad584220a84c388e337ee090c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4edc1db3c1a70a41f9a0493bd3dc484e27f99b44
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351187"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126452"
 ---
-# <a name="outofmemory-class"></a>out_of_memory - класс
+# <a name="out_of_memory-class"></a>out_of_memory - класс
 
 Исключение, возникающее при сбое метода из-за нехватки памяти системы или устройства.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class out_of_memory : public runtime_exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[out_of_memory конструктор](#ctor)|Инициализирует новый экземпляр класса `out_of_memory`.|
+|[Конструктор out_of_memory](#ctor)|Инициализирует новый экземпляр класса `out_of_memory`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -43,16 +43,16 @@ class out_of_memory : public runtime_exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** параллелизм
-## <a name="ctor"></a> out_of_memory
+**Пространство имен** : Concurrency
+## <a name="ctor"></a>out_of_memory
 
 Инициализирует новый экземпляр класса.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 explicit out_of_memory(
     const char * _Message ) throw();
 
@@ -62,12 +62,12 @@ out_of_memory () throw();
 ### <a name="parameters"></a>Параметры
 
 *_Message*<br/>
-Описание ошибки.
+Текстовое описание ошибки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Новый экземпляр класса `out_of_memory`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

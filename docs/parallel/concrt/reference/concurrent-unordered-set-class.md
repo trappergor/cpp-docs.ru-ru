@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: 9dc5b37730742e7deec20b12232de672679e956f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 0671a3c1996ca85a9c2cf5a386821c3d52c1bf50
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75297483"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143156"
 ---
 # <a name="concurrent_unordered_set-class"></a>Класс concurrent_unordered_set
 
@@ -26,7 +26,7 @@ ms.locfileid: "75297483"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <typename K,
     typename _Hasher = std::hash<K>,
     typename key_equality = std::equal_to<K>,
@@ -41,7 +41,7 @@ _Allocator_type,
     false>>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *K*<br/>
 Тип ключа.
@@ -55,11 +55,11 @@ _Allocator_type,
 *_Allocator_type*<br/>
 Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для параллельного неупорядоченного набора. Этот аргумент является необязательным, и значением по умолчанию является `std::allocator<K>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Открытые определения типов
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -79,13 +79,13 @@ _Allocator_type,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[concurrent_unordered_set](#ctor)|Перегружен. Конструирует параллельный неупорядоченный набор.|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|
 |[insert](#insert)|Перегружен. Добавляет элементы в объект `concurrent_unordered_set`.|
@@ -95,11 +95,11 @@ _Allocator_type,
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Перегружен. Присваивает этому элементу содержимое другого объекта `concurrent_unordered_set`. Этот метод не является типобезопасным в режиме параллелизма.|
+|[оператор=](#operator_eq)|Перегружен. Присваивает этому элементу содержимое другого объекта `concurrent_unordered_set`. Этот метод не является типобезопасным в режиме параллелизма.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Подробные сведения о классе `concurrent_unordered_set` см. в разделе [Parallel Containers and Objects](../../../parallel/concrt/parallel-containers-and-objects.md).
 
@@ -117,11 +117,11 @@ _Allocator_type,
 
 **Пространство имен:** concurrency
 
-##  <a name="begin"></a>начале
+## <a name="begin"></a>начале
 
 Возвращает итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -131,11 +131,11 @@ const_iterator begin() const;
 
 Итератор на первый элемент в параллельном контейнере.
 
-##  <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a>cbegin
 
 Возвращает константный итератор, указывающий на первый элемент в параллельном контейнере. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
@@ -143,11 +143,11 @@ const_iterator cbegin() const;
 
 Константный итератор для первого элемента в параллельном контейнере.
 
-##  <a name="cend"></a>cend
+## <a name="cend"></a>cend
 
 Возвращает константный итератор, указывающий на расположение, следующее за последним элементом в параллельном контейнере. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
@@ -155,19 +155,19 @@ const_iterator cend() const;
 
 Константный итератор к расположению, следующему за последним элементом в параллельном контейнере.
 
-##  <a name="clear"></a>открытым
+## <a name="clear"></a>открытым
 
 Стирает все элементы в параллельном контейнере. Эта функция не является типобезопасным.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a>concurrent_unordered_set
+## <a name="ctor"></a>concurrent_unordered_set
 
 Конструирует параллельный неупорядоченный набор.
 
-```
+```cpp
 explicit concurrent_unordered_set(
     size_type _Number_of_buckets = 8,
     const hasher& _Hasher = hasher(),
@@ -218,7 +218,7 @@ concurrent_unordered_set(
 *_Uset*<br/>
 Исходный объект `concurrent_unordered_set` для копирования или перемещения элементов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Все конструкторы хранят объект распределителя `_Allocator` и инициализируют неупорядоченный набор.
 
@@ -232,28 +232,28 @@ concurrent_unordered_set(
 
 Последний конструктор задает перемещение параллельного неупорядоченного набора `_Uset`.
 
-##  <a name="count"></a>расчета
+## <a name="count"></a>расчета
 
 Подсчитывает количество элементов, соответствующих указанному ключу. Эта функция является потенциальной в режиме параллелизма.
 
-```
+```cpp
 size_type count(const key_type& KVal) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *квал*<br/>
-Искомый ключ.
+Ключ, который нужно найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Количество раз, когда ключ отображается в контейнере.
 
-##  <a name="empty"></a>указано
+## <a name="empty"></a>указано
 
 Проверяет отсутствие элементов. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -261,15 +261,15 @@ bool empty() const;
 
 **значение true** , если параллельный контейнер пуст; в противном случае — **значение false** .
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При наличии параллельных вставок независимо от того, является ли параллельный контейнер пустым, может измениться сразу после вызова этой функции, прежде чем возвращаемое значение будет считаться четным.
 
-##  <a name="end"></a>конце
+## <a name="end"></a>конце
 
 Возвращает итератор, указывающий на расположение, следующее за последним элементом в параллельном контейнере. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -279,11 +279,11 @@ const_iterator end() const;
 
 Итератор на расположение, на котором заканчивается последний элемент в параллельном контейнере.
 
-##  <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a>equal_range
 
 Находит диапазон, соответствующий указанному ключу. Эта функция является потенциальной в режиме параллелизма.
 
-```
+```cpp
 std::pair<iterator,
     iterator> equal_range(
     const key_type& KVal);
@@ -302,15 +302,15 @@ std::pair<const_iterator,
 
 [Пара](../../../standard-library/pair-structure.md) , в которой первый элемент является итератором на начало, а второй элемент — итератором на конец диапазона.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Одновременные вставки могут привести к вставке дополнительных ключей после итератора begin и перед конечным итератором.
 
-##  <a name="find"></a>Найдено
+## <a name="find"></a>Найдено
 
 Определяет элемент, соответствующий указанному ключу. Эта функция является потенциальной в режиме параллелизма.
 
-```
+```cpp
 iterator find(const key_type& KVal);
 
 const_iterator find(const key_type& KVal) const;
@@ -325,11 +325,11 @@ const_iterator find(const key_type& KVal) const;
 
 Итератор, указывающий на расположение первого элемента, совпадающего с предоставленным ключом, или итератор, `end()`, если такой элемент не существует.
 
-##  <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Возвращает сохраненный объект распределителя для этого параллельного контейнера. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -337,11 +337,11 @@ allocator_type get_allocator() const;
 
 Сохраненный объект распределителя для этого параллельного контейнера.
 
-##  <a name="hash_function"></a>hash_function
+## <a name="hash_function"></a>hash_function
 
 Возвращает сохраненный объект хэш-функции.
 
-```
+```cpp
 hasher hash_function() const;
 ```
 
@@ -349,11 +349,11 @@ hasher hash_function() const;
 
 Сохраненный объект хэш-функции.
 
-##  <a name="insert"></a>Вставляет
+## <a name="insert"></a>Вставляет
 
 Добавляет элементы в объект `concurrent_unordered_set`.
 
-```
+```cpp
 std::pair<iterator,
     bool> insert(
     const value_type& value);
@@ -387,7 +387,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 Тип значения, вставляемого в набор.
 
-*значение*<br/>
+*value*<br/>
 Вставляемое значение.
 
 *_Where*<br/>
@@ -403,9 +403,9 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 Пара, содержащая итератор и логическое значение. Дополнительные сведения см. в разделе "Примечания".
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Первая функция – член определяет, существует ли элемент X в последовательности, ключ которой имеет эквивалентное упорядочение для `value`. В противном случае он создает такой элемент X и инициализирует его с помощью `value`. Затем функция определяет `where` итератора, который обозначает X. Если произошла Вставка, функция возвращает `std::pair(where, true)`. В противном случае она возвращает `std::pair(where, false)`.
+Первая функция – член определяет, существует ли элемент X в последовательности, ключ которой имеет эквивалентное упорядочение для `value`. В противном случае он создает такой элемент X и инициализирует его с помощью `value`. Затем функция определяет `where` итератора, который обозначает X. Если произошла Вставка, функция возвращает `std::pair(where, true)`. В противном случае возвращается значение `std::pair(where, false)`.
 
 Вторая функция-член возвращает инструкцию INSERT (`value`), используя `_Where` как начальную точку в управляемой последовательности для поиска точки вставки.
 
@@ -413,11 +413,11 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 Последние две функции-члена ведут себя так же, как первые два, за исключением того, что `value` используется для создания вставленного значения.
 
-##  <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a>key_eq
 
 Возвращает сохраненный объект функции сравнения равенства.
 
-```
+```cpp
 key_equal key_eq() const;
 ```
 
@@ -425,11 +425,11 @@ key_equal key_eq() const;
 
 Сохраненный объект функции сравнения равенства.
 
-##  <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a>load_factor
 
 Выполняет вычисление и возвращает текущий коэффициент загрузки контейнера. Коэффициент загрузки — это количество элементов в контейнере, деленное на количество сегментов.
 
-```
+```cpp
 float load_factor() const;
 ```
 
@@ -437,11 +437,11 @@ float load_factor() const;
 
 Коэффициент загрузки для контейнера.
 
-##  <a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a>max_load_factor
 
 Возвращает или задает максимальный коэффициент загрузки контейнера. Максимальный коэффициент загрузки — это наибольшее число элементов, чем может быть в любом контейнере, прежде чем контейнер будет расти до размера внутренней таблицы.
 
-```
+```cpp
 float max_load_factor() const;
 
 void max_load_factor(float _Newmax);
@@ -455,11 +455,11 @@ void max_load_factor(float _Newmax);
 
 Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция-член не возвращает значение, но вызывает исключение [out_of_range](../../../standard-library/out-of-range-class.md) , если указанный коэффициент загрузки является недопустимым.
 
-##  <a name="max_size"></a>max_size
+## <a name="max_size"></a>max_size
 
 Возвращает максимальный размер параллельного контейнера, определяемого распределителем. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -467,15 +467,15 @@ size_type max_size() const;
 
 Максимальное число элементов, которые могут быть вставлены в этот параллельный контейнер.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Это значение верхней границы может быть выше, чем на самом деле может храниться в контейнере.
 
-##  <a name="operator_eq"></a>Оператор =
+## <a name="operator_eq"></a>Оператор =
 
 Присваивает этому элементу содержимое другого объекта `concurrent_unordered_set`. Этот метод не является типобезопасным в режиме параллелизма.
 
-```
+```cpp
 concurrent_unordered_set& operator= (const concurrent_unordered_set& _Uset);
 
 concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
@@ -490,15 +490,15 @@ concurrent_unordered_set& operator= (concurrent_unordered_set&& _Uset);
 
 Ссылка на этот объект `concurrent_unordered_set`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 После удаления любых существующих элементов из параллельного неупорядоченного множества `operator=` копирует или перемещает содержимое `_Uset` в параллельное неупорядоченное множество.
 
-##  <a name="rehash"></a>rehash
+## <a name="rehash"></a>rehash
 
 Повторно создает хэш-таблицу.
 
-```
+```cpp
 void rehash(size_type _Buckets);
 ```
 
@@ -507,17 +507,17 @@ void rehash(size_type _Buckets);
 *_Buckets*<br/>
 Необходимое количество сегментов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член устанавливает число сегментов не менее `_Buckets` и при необходимости перестраивает хэш-таблицу. Число сегментов должно быть степенью числа 2. Если не является степенью числа 2, она будет округляться до следующей самой крупной степени 2.
 
 Он вызывает исключение [out_of_range](../../../standard-library/out-of-range-class.md) , если количество сегментов недопустимо (0 или больше максимального количества сегментов).
 
-##  <a name="size"></a>изменять
+## <a name="size"></a>изменять
 
 Возвращает число элементов в этом параллельном контейнере. Данный метод безопасен в режиме параллелизма.
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -525,15 +525,15 @@ size_type size() const;
 
 Число элементов в контейнере.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При наличии параллельных вставок число элементов в параллельном контейнере может измениться сразу после вызова этой функции даже до чтения возвращаемого значения.
 
-##  <a name="swap"></a>позиции
+## <a name="swap"></a>позиции
 
 Меняет местами содержимое двух объектов `concurrent_unordered_set`. Этот метод не является типобезопасным в режиме параллелизма.
 
-```
+```cpp
 void swap(concurrent_unordered_set& _Uset);
 ```
 
@@ -542,11 +542,11 @@ void swap(concurrent_unordered_set& _Uset);
 *_Uset*<br/>
 Объект `concurrent_unordered_set` для обмена.
 
-##  <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 Возвращает итератор, который является первым элементом в этом контейнере для определенного контейнера.
 
-```
+```cpp
 local_iterator unsafe_begin(size_type _Bucket);
 
 const_local_iterator unsafe_begin(size_type _Bucket) const;
@@ -561,11 +561,11 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 Итератор, указывающий на начало контейнера.
 
-##  <a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a>unsafe_bucket
 
 Возвращает индекс контейнера, сопоставляемый с указанным ключом в этом контейнере.
 
-```
+```cpp
 size_type unsafe_bucket(const key_type& KVal) const;
 ```
 
@@ -578,11 +578,11 @@ size_type unsafe_bucket(const key_type& KVal) const;
 
 Индекс контейнера для ключа в этом контейнере.
 
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 Возвращает текущее количество контейнеров в этом контейнере.
 
-```
+```cpp
 size_type unsafe_bucket_count() const;
 ```
 
@@ -590,11 +590,11 @@ size_type unsafe_bucket_count() const;
 
 Текущее число контейнеров в этом контейнере.
 
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
 Возвращает количество элементов в определенном контейнере этого контейнера.
 
-```
+```cpp
 size_type unsafe_bucket_size(size_type _Bucket);
 ```
 
@@ -607,11 +607,11 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 Текущее число контейнеров в этом контейнере.
 
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Возвращает итератор, который является первым элементом в этом контейнере для определенного контейнера.
 
-```
+```cpp
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```
 
@@ -624,11 +624,11 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 Итератор, указывающий на начало контейнера.
 
-##  <a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a>unsafe_cend
 
 Возвращает итератор в позицию, которая завершилась после последнего элемента в определенном контейнере.
 
-```
+```cpp
 const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```
 
@@ -641,11 +641,11 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 Итератор, указывающий на начало контейнера.
 
-##  <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 Возвращает итератор, который является последним элементом в этом контейнере для определенного контейнера.
 
-```
+```cpp
 local_iterator unsafe_end(size_type _Bucket);
 
 const_local_iterator unsafe_end(size_type _Bucket) const;
@@ -660,11 +660,11 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 Итератор, указывающий на конец контейнера.
 
-##  <a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a>unsafe_erase
 
 Удаляет элементы из `concurrent_unordered_set` в указанных позициях. Этот метод не является типобезопасным в режиме параллелизма.
 
-```
+```cpp
 iterator unsafe_erase(
     const_iterator _Where);
 
@@ -692,17 +692,17 @@ iterator unsafe_erase(
 
 Первые две функции-члена возвращают итератор, который обозначает первый элемент, оставшийся после удаления элементов, или [End](#end)(), если такого элемента не существует. Третья функция-член возвращает число элементов, которые она удаляет.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Первая функция члена удаляет элемент, на который указывает `_Where`. Вторая функция-член удаляет элементы в диапазоне [`_Begin`, `_End`).
 
 Третья функция-член удаляет элементы в диапазоне, разделенном [equal_range](#equal_range)(квал).
 
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 Возвращает максимальное число контейнеров в этом контейнере.
 
-```
+```cpp
 size_type unsafe_max_bucket_count() const;
 ```
 
@@ -710,7 +710,7 @@ size_type unsafe_max_bucket_count() const;
 
 Максимальное число контейнеров в этом контейнере.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)

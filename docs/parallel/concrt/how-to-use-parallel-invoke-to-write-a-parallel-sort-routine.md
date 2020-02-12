@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование функции parallel_invoke для написания параллельной сортировки
+title: Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -8,71 +8,69 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252936"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141930"
 ---
-# <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Практическое руководство. Использование функции parallel_invoke для написания параллельной сортировки
+# <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки
 
-В этом документе описывается использование [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) алгоритм для повышения производительности алгоритма битонной сортировки. Алгоритм битонной сортировки рекурсивно делит входной последовательности на сортированные разделы меньшего размера. Алгоритма битонной сортировки могут выполняться параллельно, так как каждая операция разделения не зависит от любых других операций.
+В этом документе описывается использование алгоритма [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) для повышения производительности алгоритма битонной сортировки. Алгоритм битонной сортировки рекурсивно разделяет входную последовательность на меньшие отсортированные секции. Алгоритм битонной сортировки может выполняться параллельно, так как каждая операция секционирования не зависит от других операций.
 
-Несмотря на то, что битонной сортировки является примером *сети сортировки* , сортирует все сочетания входных последовательностей, в этом примере выполняется сортировка последовательностей, длина которых представляет собой степень числа два.
+Хотя битонной сортировка является примером *сети сортировки* , которая сортирует все сочетания входных последовательностей, в этом примере сортируются последовательности, длина которых равна двум.
 
 > [!NOTE]
->  В этом примере для демонстрации используется параллельная подпрограмма сортировки. Можно также использовать встроенные алгоритмы сортировки, предоставляемые PPL: [concurrency::parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), и [concurrency::parallel_ radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Дополнительные сведения см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
+> В этом примере для демонстрации используется параллельная подпрограмма сортировки. Можно также использовать встроенные алгоритмы сортировки, предоставляемые PPL: [Concurrency::p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency::p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)и [Concurrency::p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort). Дополнительные сведения см. в разделе [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
 
-##  <a name="top"></a> Разделы
+## <a name="top"></a> Разделы
 
-В этом документе описаны следующие задачи:
+В этом документе описаны следующие задачи.
 
-- [Выполнение битонной сортировки](#serial)
+- [Последовательный порядок выполнения битонной сортировки](#serial)
 
-- [Использование функции parallel_invoke для выполнения битонной сортировки в параллельном режиме](#parallel)
+- [Использование parallel_invoke для выполнения битонной сортировки в параллельном режиме](#parallel)
 
-##  <a name="serial"></a> Выполнение битонной сортировки
+## <a name="serial"></a>Последовательный порядок выполнения битонной сортировки
 
-В следующем примере последовательной версии алгоритма битонной сортировки. `bitonic_sort` Функция разделяет последовательность на два раздела, сортирует эти разделы в противоположных направлениях и объединяет результаты. Эта функция вызывает саму себя два раза рекурсивно для сортировки каждой секции.
+В следующем примере показана последовательная версия алгоритма битонной сортировки. Функция `bitonic_sort` разделяет последовательность на две секции, сортирует эти секции в противоположных направлениях, а затем объединяет результаты. Эта функция вызывает два раза рекурсивно для сортировки каждой секции.
 
 [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]
 
 [[В начало](#top)]
 
-##  <a name="parallel"></a> Использование функции parallel_invoke для выполнения битонной сортировки в параллельном режиме
+## <a name="parallel"></a>Использование parallel_invoke для выполнения битонной сортировки в параллельном режиме
 
-В этом разделе описывается использование `parallel_invoke` алгоритм для параллельного выполнения алгоритма битонной сортировки.
+В этом разделе описывается использование алгоритма `parallel_invoke` для параллельного выполнения алгоритма битонной сортировки.
 
-### <a name="procedures"></a>Процедуры
+### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Параллельное выполнение алгоритма битонной сортировки
 
-##### <a name="to-perform-the-bitonic-sort-algorithm-in-parallel"></a>Для параллельного выполнения алгоритма битонной сортировки
-
-1. Добавление `#include` директив для файла заголовка ppl.h.
+1. Добавьте директиву `#include` для файла заголовка PPL. h.
 
 [!code-cpp[concrt-parallel-bitonic-sort#10](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_2.cpp)]
 
-1. Добавить `using` директив для `concurrency` пространства имен.
+1. Добавьте директиву `using` для пространства имен `concurrency`.
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. Создайте новую функцию с именем `parallel_bitonic_mege`, которая использует `parallel_invoke` алгоритм слияния параллельно, если имеется достаточное количество работы. В противном случае вызовите `bitonic_merge` Чтобы объединить последовательности последовательно.
+1. Создайте новую функцию с именем `parallel_bitonic_mege`, которая использует алгоритм `parallel_invoke` для параллельного слияния последовательностей при наличии достаточного объема работы. В противном случае вызовите `bitonic_merge` для последовательного слияния последовательностей.
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 
-1. Выполняет процесс, отвечающий на предыдущем шаге, но для `bitonic_sort` функции.
+1. Выполните процесс, похожий на предыдущий шаг, но для функции `bitonic_sort`.
 
 [!code-cpp[concrt-parallel-bitonic-sort#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_5.cpp)]
 
-1. Создать перегруженную версию `parallel_bitonic_sort` функцию, которая сортирует массива в порядке возрастания.
+1. Создайте перегруженную версию функции `parallel_bitonic_sort`, которая сортирует массив по возрастанию.
 
 [!code-cpp[concrt-parallel-bitonic-sort#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_6.cpp)]
 
-`parallel_invoke` Алгоритм снижает нагрузку, выполняя последний ряд задач в вызывающем контексте. Например, в `parallel_bitonic_sort` функции, первая задача выполняется в отдельном контексте, а вторая задача выполняется в контексте вызова.
+Алгоритм `parallel_invoke` сокращает затраты, выполняя последнюю последовательность задач в вызывающем контексте. Например, в функции `parallel_bitonic_sort` первая задача выполняется в отдельном контексте, а вторая задача выполняется в вызывающем контексте.
 
 [!code-cpp[concrt-parallel-bitonic-sort#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_7.cpp)]
 
-Приведенный ниже полный пример выполняет последовательных и параллельных версии алгоритма битонной сортировки. В примере также выводится на консоль время, необходимое для выполнения каждого вычисления.
+Следующий полный пример выполняет как последовательную, так и параллельную версии алгоритма битонной сортировки. Пример также выводит на консоль время, необходимое для выполнения каждого вычисления.
 
 [!code-cpp[concrt-parallel-bitonic-sort#8](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_8.cpp)]
 
@@ -85,23 +83,23 @@ parallel time: 1248
 
 [[В начало](#top)]
 
-## <a name="compiling-the-code"></a>Компиляция кода
+### <a name="compiling-the-code"></a>Компиляция кода
 
-Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `parallel-bitonic-sort.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Чтобы скомпилировать код, скопируйте его и вставьте в проект Visual Studio или вставьте в файл с именем `parallel-bitonic-sort.cpp` а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe параллельного bitonic-sort.cpp**
+> **CL. exe/EHsc Параллел-битоник-сорт. cpp**
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-В этом примере используется `parallel_invoke` алгоритм вместо [concurrency::task_group](reference/task-group-class.md) класса, так как время существования каждая группа задач не выходит за пределы функции. Мы рекомендуем использовать `parallel_invoke` при вы можете, поскольку в нем выполнении меньше ресурсов, чем `task group` объектов и поэтому позволяет написать более производительный код.
+В этом примере используется алгоритм `parallel_invoke` вместо класса [Concurrency:: task_group](reference/task-group-class.md) , так как время существования каждой группы задач не выходит за пределы функции. Рекомендуется использовать `parallel_invoke`, если это возможно, так как в нем меньше издержек на выполнение, чем `task group` объектов, и поэтому вы можете написать более эффективный код.
 
-Параллельные версии некоторые алгоритмы работают лучше, только в том случае, если имеется достаточный объем работы для выполнения. Например `parallel_bitonic_merge` функция вызывает последовательную версию, `bitonic_merge`, если в последовательности более 500 элементов. Можно также запланировать общую стратегию сортировки на основании объема работы. Например может оказаться эффективнее использовать последовательной версии алгоритма быстрой сортировки, если массив содержит менее 500 элементов, как показано в следующем примере:
+Параллельные версии некоторых алгоритмов работают лучше, только если достаточно работы. Например, функция `parallel_bitonic_merge` вызывает последовательную версию, `bitonic_merge`, если в последовательности 500 или меньше элементов. Вы также можете спланировать общую стратегию сортировки на основе объема работы. Например, использование последовательной версии алгоритма быстрой сортировки может оказаться более эффективным, если массив содержит менее 500 элементов, как показано в следующем примере:
 
 [!code-cpp[concrt-parallel-bitonic-sort#9](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_9.cpp)]
 
-Как и в случае с другими параллельными алгоритмами, мы рекомендуем профилирования и оптимизации кода соответствующим образом.
+Как и в случае с любым параллельным алгоритмом, рекомендуется пропрофилировать и настроить код соответствующим образом.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Функция parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)

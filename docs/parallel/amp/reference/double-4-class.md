@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180327"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139358"
 ---
-# <a name="double4-class"></a>Класс double_4
+# <a name="double_4-class"></a>Класс double_4
 
-Представляет короткий вектор из четырех значений Double.
+Представляет короткий вектор из четырех значений типа Double.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class double_4;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор double_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор double_4](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -335,7 +335,7 @@ class double_4;
 |double_4::get_xzwy||
 |double_4::get_xzy||
 |double_4::get_xzyw||
-|double_4::get_y||
+|double_4:: get_y||
 |double_4::get_yw||
 |double_4::get_ywx||
 |double_4::get_ywxz||
@@ -368,12 +368,12 @@ class double_4;
 |double_4::get_zyx||
 |double_4::get_zyxw||
 |double_4::ref_a||
-|double_4::ref_b||
+|double_4:: ref_b||
 |double_4::ref_g||
-|double_4::ref_r||
+|double_4:: ref_r||
 |double_4::ref_w||
 |double_4::ref_x||
-|double_4::ref_y||
+|double_4:: ref_y||
 |double_4::ref_z||
 |double_4::set_w||
 |double_4::set_wx||
@@ -442,151 +442,151 @@ class double_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_4::operator-||
-|double_4::operator--||
-|double_4::operator*=||
-|double_4::operator/=||
-|double_4::operator ++||
-|double_4::operator+=||
-|double_4::operator=||
-|double_4::operator-=||
+|double_4:: operator —||
+|double_4:: operator--||
+|double_4:: operator * =||
+|double_4:: operator/=||
+|double_4:: operator + +||
+|double_4:: operator + =||
+|double_4:: operator =||
+|double_4:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#double_4__size)||
+|[Константа размера](#double_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_4::a||
-|double_4::ab||
-|double_4::abg||
-|double_4::abgr||
-|double_4::abr||
-|double_4::abrg||
-|double_4::ag||
-|double_4::agb||
+|double_4:: a||
+|double_4:: AB||
+|double_4:: ABG||
+|double_4:: абгр||
+|double_4:: Граничный маршрутизатор||
+|double_4:: абрг||
+|double_4:: AG||
+|double_4:: АГБ||
 |double_4::agbr||
-|double_4::agr||
-|double_4::agrb||
-|double_4::ar||
-|double_4::arb||
-|double_4::arbg||
-|double_4::arg||
-|double_4::argb||
-|double_4::b||
-|double_4::ba||
-|double_4::bag||
-|double_4::bagr||
-|double_4::Bar||
-|double_4::barg||
-|double_4::bg||
-|double_4::bga||
-|double_4::bgar||
-|double_4::bgr||
-|double_4::bgra||
-|double_4::br||
-|double_4::bra||
-|double_4::brag||
-|double_4::brg||
-|double_4::brga||
-|double_4::g||
-|double_4::ga||
-|double_4::gab||
+|double_4:: принимаю||
+|double_4:: агрб||
+|double_4:: AR||
+|double_4:: АРБ||
+|double_4:: арбг||
+|double_4:: ARG||
+|double_4:: ARGB||
+|double_4:: b||
+|double_4:: BA||
+|double_4:: сумка||
+|double_4:: БАГР||
+|double_4:: линейчатая||
+|double_4:: Барг||
+|double_4:: BG||
+|double_4:: BGA||
+|double_4:: бгар||
+|double_4:: BGR||
+|double_4:: BGRA||
+|double_4:: BR||
+|double_4:: неверное||
+|double_4:: похвастать||
+|double_4:: БРГ||
+|double_4:: брга||
+|double_4:: g||
+|double_4:: GA||
+|double_4:: ГАБ||
 |double_4::gabr||
-|double_4::gar||
-|double_4::garb||
-|double_4::gb||
-|double_4::gba||
-|double_4::gbar||
+|double_4:: Гар||
+|double_4:: нечитаемость||
+|double_4:: ГБ||
+|double_4:: Гба||
+|double_4:: ГБАР||
 |double_4::gbr||
-|double_4::gbra||
-|double_4::gr||
-|double_4::gra||
-|double_4::grab||
-|double_4::grb||
-|double_4::grba||
-|double_4::r||
-|double_4::ra||
-|double_4::rab||
-|double_4::rabg||
-|double_4::rag||
-|double_4::ragb||
-|double_4::rb||
-|double_4::rba||
-|double_4::rbag||
-|double_4::rbg||
-|double_4::rbga||
-|double_4::rg||
-|double_4::rga||
-|double_4::rgab||
-|double_4::rgb||
+|double_4:: гбра||
+|double_4:: GR||
+|double_4:: гра||
+|double_4:: захватить||
+|double_4:: ГРБ||
+|double_4:: ГРБА||
+|double_4:: r||
+|double_4:: RA||
+|double_4:: раб||
+|double_4:: рабг||
+|double_4:: перетаскивание||
+|double_4:: рагб||
+|double_4:: RB||
+|double_4:: роль||
+|double_4:: РБАГ||
+|double_4:: РБГ||
+|double_4:: рбга||
+|double_4:: RG||
+|double_4:: РГА||
+|double_4:: ргаб||
+|double_4:: RGB||
 |double_4::rgba||
-|double_4::w||
+|double_4:: w||
 |double_4::wx||
-|double_4::wxy||
+|double_4:: вкси||
 |double_4::wxyz||
 |double_4::wxz||
 |double_4::wxzy||
-|double_4::wy||
-|double_4::wyx||
+|double_4:: WY||
+|double_4:: Викс||
 |double_4::wyxz||
-|double_4::wyz||
+|double_4:: виз||
 |double_4::wyzx||
 |double_4::wz||
 |double_4::wzx||
 |double_4::wzxy||
 |double_4::wzy||
 |double_4::wzyx||
-|double_4::x||
-|double_4::xw||
-|double_4::xwy||
+|double_4:: x||
+|double_4:: КСВ||
+|double_4:: ксви||
 |double_4::xwyz||
 |double_4::xwz||
 |double_4::xwzy||
-|double_4::xy||
-|double_4::xyw||
+|double_4:: XY||
+|double_4:: ксив||
 |double_4::xywz||
 |double_4::xyz||
-|double_4::xyzw||
+|double_4:: ксизв||
 |double_4::xz||
 |double_4::xzw||
 |double_4::xzwy||
-|double_4::xzy||
+|double_4:: XZY||
 |double_4::xzyw||
-|double_4::y||
+|double_4:: y||
 |double_4::yw||
 |double_4::ywx||
 |double_4::ywxz||
 |double_4::ywz||
 |double_4::ywzx||
-|double_4::yx||
-|double_4::yxw||
+|double_4:: Икс||
+|double_4:: ИКСВ||
 |double_4::yxwz||
 |double_4::yxz||
 |double_4::yxzw||
-|double_4::yz||
-|double_4::yzw||
+|double_4:: из||
+|double_4:: ИЗВ||
 |double_4::yzwx||
 |double_4::yzx||
-|double_4::yzxw||
-|double_4::z||
-|double_4::zw||
+|double_4:: изксв||
+|double_4:: z||
+|double_4:: ZW||
 |double_4::zwx||
 |double_4::zwxy||
 |double_4::zwy||
 |double_4::zwyx||
-|double_4::zx||
-|double_4::zxw||
-|double_4::zxwy||
+|double_4:: ЗКС||
+|double_4:: зксв||
+|double_4:: зксви||
 |double_4::zxy||
-|double_4::zxyw||
-|double_4::zy||
+|double_4:: зксив||
+|double_4:: зи||
 |double_4::zyw||
 |double_4::zywx||
 |double_4::zyx||
@@ -598,15 +598,15 @@ class double_4;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -663,15 +663,15 @@ explicit inline double_4(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="double_4__size"></a> Размер
+## <a name="double_4__size"></a>изменять
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

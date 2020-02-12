@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: 26d09610c6bb9e0c87852c9804e094617b021273
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341086"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143039"
 ---
-# <a name="invalidschedulerpolicythreadspecification-class"></a>Класс invalid_scheduler_policy_thread_specification
+# <a name="invalid_scheduler_policy_thread_specification-class"></a>Класс invalid_scheduler_policy_thread_specification
 
 Данный класс описывает исключение, создаваемое при попытке установить ограничения параллельности объекта `SchedulerPolicy` таким образом, чтобы значение ключа `MinConcurrency` было меньше, чем значение ключа `MaxConcurrency`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|
+|[invalid_scheduler_policy_thread_specification] (недопустимый-Scheduler-Policy-значение-Class. md # ctor|Перегружен. Создает объект `invalid_scheduler_policy_value`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -39,14 +39,15 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
-##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification
+
+## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
 
 Создает объект `invalid_scheduler_policy_value`.
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_thread_specification() throw();
@@ -57,7 +58,7 @@ invalid_scheduler_policy_thread_specification() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс SchedulerPolicy](schedulerpolicy-class.md)

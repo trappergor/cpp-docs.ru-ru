@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296220"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143100"
 ---
-# <a name="contextunblockunbalanced-class"></a>Класс context_unblock_unbalanced
+# <a name="context_unblock_unbalanced-class"></a>Класс context_unblock_unbalanced
 
 Данный класс описывает исключение, создаваемое, если вызовы методов `Block` и `Unblock` объекта `Context` объединены неправильно.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[context_unblock_unbalanced](#ctor)|Перегружен. Создает объект `context_unblock_unbalanced`.|
+|[context_unblock_unbalanced](#ctor)|Перегружен. Формирует объект `context_unblock_unbalanced`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Вызовы `Block` и `Unblock` методы `Context` объект должен всегда быть правильно пару. Среда выполнения с параллелизмом позволяет операциям происходить в любом порядке. Например, за вызовом `Block` может следовать вызов `Unblock`, или наоборот. Это исключение выдается, если, например, два вызова к `Unblock` метод были сделаны в строке, на `Context` объект, который не был заблокирован.
+Вызовы методов `Block` и `Unblock` объекта `Context` должны всегда быть парными. Среда выполнения с параллелизмом позволяет операциям выполняться в любом порядке. Например, за вызовом `Block` может следовать вызов `Unblock`, или наоборот. Это исключение возникает, если, например, два вызова метода `Unblock` были внесены в строку на `Context` объекте, который не был заблокирован.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -45,15 +45,15 @@ class context_unblock_unbalanced : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a>context_unblock_unbalanced
 
-Создает объект `context_unblock_unbalanced`.
+Формирует объект `context_unblock_unbalanced`.
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();
@@ -64,6 +64,6 @@ context_unblock_unbalanced() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

@@ -28,40 +28,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182336"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126712"
 ---
-# <a name="double2-class"></a>Класс double_2
+# <a name="double_2-class"></a>Класс double_2
 
-Представляет короткий вектор из 2 double.
+Представляет короткий вектор в 2 Double.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class double_2;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор double_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор double_2](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |double_2::get_x||
 |double_2::get_xy||
@@ -78,35 +78,35 @@ class double_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_2::operator-||
-|double_2::operator--||
-|double_2::operator*=||
-|double_2::operator/=||
-|double_2::operator ++||
-|double_2::operator+=||
-|double_2::operator=||
-|double_2::operator-=||
+|double_2:: operator —||
+|double_2:: operator--||
+|double_2:: operator * =||
+|double_2:: operator/=||
+|double_2:: operator + +||
+|double_2:: operator + =||
+|double_2:: operator =||
+|double_2:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |Константа double_2::size||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_2::g||
-|double_2::GR||
-|double_2::r||
+|double_2:: g||
+|double_2:: GR||
+|double_2:: r||
 |double_2::rg||
-|double_2::x||
-|double_2::XY||
-|double_2::y||
-|double_2::yx||
+|double_2:: x||
+|double_2:: XY||
+|double_2:: y||
+|double_2:: Икс||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -114,15 +114,15 @@ class double_2;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_2
+## <a name="ctor"></a>double_2
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 double_2() restrict(amp,
     cpu);
 
@@ -171,15 +171,15 @@ explicit inline double_2(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="double_2__size"></a> Размер
+## <a name="double_2__size"></a>изменять
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

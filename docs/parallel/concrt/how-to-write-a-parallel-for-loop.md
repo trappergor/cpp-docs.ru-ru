@@ -5,34 +5,34 @@ helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5903114a12de46dc06929c83e9995b39d0136810
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346363"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141863"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>Практическое руководство. Написание цикла parallel_for
+# <a name="how-to-write-a-parallel_for-loop"></a>Практическое руководство. Написание цикла parallel_for
 
-В этом примере демонстрируется использование [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) вычисляет произведение двух матриц.
+В этом примере показано, как использовать метод [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) , чтобы вычислить произведение двух матриц.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан `matrix_multiply` функцию, которая вычисляет произведение двух матриц квадрат.
+В следующем примере показана функция `matrix_multiply`, которая вычисляет произведение двух квадратных матриц.
 
 [!code-cpp[concrt-parallel-matrix-multiply#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_1.cpp)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан `parallel_matrix_multiply` функцию, которая использует `parallel_for` алгоритм для параллельного выполнения внешнего цикла.
+В следующем примере показана функция `parallel_matrix_multiply`, которая использует алгоритм `parallel_for` для параллельного выполнения внешнего цикла.
 
 [!code-cpp[concrt-parallel-matrix-multiply#2](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_2.cpp)]
 
-В этом примере параллелизуются внешний цикл, только в том случае, поскольку он выполняет мало работы, чтобы почувствовать преимущества параллельной обработки. Если распараллелить внутренний цикл не возникнет выигрыш в производительности так как небольшой объем работы, выполняемой во внутреннем цикле не позволяет компенсировать затраты на параллельную обработку. Таким образом, параллелизация только внешнего цикла является лучшим способом обеспечить максимальную выгоду от параллелизма в большинстве систем.
+В этом примере внешний цикл параллелизуются только потому, что он выполняет достаточную работу, чтобы воспользоваться преимуществами дополнительных затрат на параллельную обработку. При параллелизации внутреннего цикла вы не получаете выигрыш в производительности, так как небольшой объем работы, выполняемый внутренним циклом, не позволяет преодолеть издержки при параллельной обработке. Таким образом, параллелизация только внешнего цикла является лучшим способом обеспечить максимальную выгоду от параллелизма в большинстве систем.
 
 ## <a name="example"></a>Пример
 
-Следующие более полный пример сравнивает производительность `matrix_multiply` функции и `parallel_matrix_multiply` функции.
+Следующий более полный пример сравнивает производительность функции `matrix_multiply` и функции `parallel_matrix_multiply`.
 
 [!code-cpp[concrt-parallel-matrix-multiply#3](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-loop_3.cpp)]
 
@@ -45,11 +45,11 @@ parallel: 1311
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или вставьте его в файл с именем `parallel-matrix-multiply.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Чтобы скомпилировать код, скопируйте его и вставьте в проект Visual Studio или вставьте в файл с именем `parallel-matrix-multiply.cpp` а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**cl.exe /EHsc parallel-matrix-multiply.cpp**
+> **CL. exe/EHsc Параллел-Матрикс-мултипли. cpp**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Функция parallel_for](reference/concurrency-namespace-functions.md#parallel_for)

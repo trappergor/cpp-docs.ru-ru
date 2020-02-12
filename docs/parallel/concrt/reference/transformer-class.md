@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75c7697087b8b3ad8ff15ae4d08f2b4701aaa36a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408073"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142359"
 ---
 # <a name="transformer-class"></a>Класс transformer
 
@@ -31,45 +31,45 @@ ms.locfileid: "62408073"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<class _Input, class _Output>
 class transformer : public propagator_block<single_link_registry<ITarget<_Output>>,
     multi_link_registry<ISource<_Input>>>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_Input*<br/>
-Тип полезных данных сообщений, принятых в буфер.
+Тип полезных данных сообщений, принимаемых буфером.
 
 *_Output*<br/>
-Тип полезных данных сообщения хранятся и распространенных из буфера.
+Тип полезных данных сообщений, хранимых и распространяемых буфером.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[transformer](#ctor)|Перегружен. Создает блок обмена сообщениями `transformer` .|
-|[~ transformer деструктор](#dtor)|Уничтожает `transformer` блок обмена сообщениями.|
+|[образователь](#ctor)|Перегружен. Создает блок обмена сообщениями `transformer` .|
+|[~ трансформатор деструктора](#dtor)|Уничтожает блок сообщений `transformer`.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[accept_message](#accept_message)|Принимает сообщение, предложенное это `transformer` блок обмена сообщениями, передача вызывающему объекту.|
-|[consume_message](#consume_message)|Получает сообщение, было предложено `transformer` и зарезервированного целевым объектом, передавая владение вызывающему объекту.|
-|[link_target_notification](#link_target_notification)|Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `transformer` блок обмена сообщениями.|
-|[propagate_message](#propagate_message)|Асинхронно передает сообщение от `ISource` блока к этому `transformer` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.|
+|[accept_message](#accept_message)|Принимает сообщение, которое было предложено этим блоком `transformer` сообщений, передавая владение вызывающему объекту.|
+|[consume_message](#consume_message)|Использует сообщение, которое было ранее предложено `transformer` и зарезервировано целевым объектом, передавая владение вызывающему объекту.|
+|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `transformer`.|
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение из блока `ISource` в этот `transformer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.|
 |[propagate_to_any_targets](#propagate_to_any_targets)|Выполняет функцию преобразователя для входящих сообщений.|
-|[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block::release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Резервирует сообщение, ранее предложенного этим объектом `transformer` блок обмена сообщениями. (Переопределяет [source_block::reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Возобновляет распространение после выпуска резервирования. (Переопределяет [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `transformer` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.|
-|[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Резервирует сообщение, которое было предложено этим блоком `transformer` Messaging. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Возобновляет распространение после освобождения резервирования. (Переопределяет [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Синхронно передает сообщение из блока `ISource` в этот `transformer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.|
+|[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет метод [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -91,57 +91,57 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 **Пространство имен:** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Принимает сообщение, предложенное это `transformer` блок обмена сообщениями, передача вызывающему объекту.
+Принимает сообщение, которое было предложено этим блоком `transformer` сообщений, передавая владение вызывающему объекту.
 
-```
+```cpp
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из предложенные `message` объекта.
+`runtime_object_identity` предлагаемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Получает сообщение, было предложено `transformer` и зарезервированного целевым объектом, передавая владение вызывающему объекту.
+Использует сообщение, которое было ранее предложено `transformer` и зарезервировано целевым объектом, передавая владение вызывающему объекту.
 
-```
+```cpp
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта использованное.
+`runtime_object_identity` используемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Аналогичную `accept`, но всегда предшествует вызов `reserve`.
+Аналогично `accept`, но всегда предшествует вызов `reserve`.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `transformer` блок обмена сообщениями.
+Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `transformer`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Асинхронно передает сообщение от `ISource` блока к этому `transformer` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.
+Асинхронно передает сообщение из блока `ISource` в этот `transformer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -153,67 +153,67 @@ virtual message_status propagate_message(
 Указатель на объект `message`.
 
 *_PSource*<br/>
-Указатель на блок источника, предлагающий сообщение.
+Указатель на исходный блок, предлагающий сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.
+[Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
 Выполняет функцию преобразователя для входящих сообщений.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
 Освобождает предыдущее резервирование сообщения.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта освобождение.
+`runtime_object_identity` освобожденного объекта `message`.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Резервирует сообщение, ранее предложенного этим объектом `transformer` блок обмена сообщениями.
+Резервирует сообщение, которое было предложено этим блоком `transformer` Messaging.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта резервируются.
+`runtime_object_identity` резервируемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
+**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После вызова `reserve`, если он возвращает **значение true**, необходимо вызвать метод `consume` или `release`, чтобы получить или освободить владение сообщением.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Возобновляет распространение после выпуска резервирования.
+Возобновляет распространение после освобождения резервирования.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Синхронно передает сообщение от `ISource` блока к этому `transformer` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.
+Синхронно передает сообщение из блока `ISource` в этот `transformer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -225,29 +225,29 @@ virtual message_status send_message(
 Указатель на объект `message`.
 
 *_PSource*<br/>
-Указатель на блок источника, предлагающий сообщение.
+Указатель на исходный блок, предлагающий сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.
+[Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** поскольку блок не откладывает предоставляемые сообщения.
+**значение true** , поскольку блок не откладывает предлагаемые сообщения.
 
-##  <a name="ctor"></a> transformer
+## <a name="ctor"></a>образователь
 
 Создает блок обмена сообщениями `transformer` .
 
-```
+```cpp
 transformer(
     _Transform_method const& _Func,
     _Inout_opt_ ITarget<_Output>* _PTarget = NULL);
@@ -286,10 +286,10 @@ transformer(
 Функция, которая будет вызываться для каждого принятого сообщения.
 
 *_PTarget*<br/>
-Указатель на целевой блок для связи с преобразователем.
+Указатель на целевой блок, связываемый с преобразователем.
 
-*_Фильтр*<br/>
-Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
+*_Filter*<br/>
+Функция фильтра, которая определяет, следует ли принимать предлагаемые сообщения.
 
 *_PScheduler*<br/>
 Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `transformer` .
@@ -297,23 +297,23 @@ transformer(
 *_PScheduleGroup*<br/>
 Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `transformer` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_PScheduler` или `_PScheduleGroup` .
 
-Тип `_Transform_method` является функтор с сигнатурой `_Output (_Input const &)` которого вызывается этим `transformer` блок обмена сообщениями для обработки сообщения.
+Тип `_Transform_method` — это функтор с сигнатурой, `_Output (_Input const &)` которая вызывается этим блоком `transformer` сообщений для обработки сообщения.
 
-Тип `filter_method` является функтор с сигнатурой `bool (_Input const &)` которого вызывается этим `transformer` блок обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.
+Тип `filter_method` — это функтор с сигнатурой `bool (_Input const &)` который вызывается этим блоком `transformer` обмена сообщениями, чтобы определить, должно ли оно принимать предложенное сообщение.
 
-##  <a name="dtor"></a> ~ transformer
+## <a name="dtor"></a>~ трансформатор
 
-Уничтожает `transformer` блок обмена сообщениями.
+Уничтожает блок сообщений `transformer`.
 
-```
+```cpp
 ~transformer();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс call](call-class.md)

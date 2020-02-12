@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351580"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126478"
 ---
-# <a name="norm4-class"></a>Класс norm_4
+# <a name="norm_4-class"></a>Класс norm_4
 
-Представляет короткий вектор из четырех чисел normal.
+Представляет короткий вектор из четырех обычных чисел.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class norm_4;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор norm_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор norm_4](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -335,13 +335,13 @@ class norm_4;
 |norm_4::get_xzwy||
 |norm_4::get_xzy||
 |norm_4::get_xzyw||
-|norm_4::get_y||
+|norm_4:: get_y||
 |norm_4::get_yw||
 |norm_4::get_ywx||
 |norm_4::get_ywxz||
 |norm_4::get_ywz||
 |norm_4::get_ywzx||
-|norm_4::get_yx||
+|norm_4:: get_yx||
 |norm_4::get_yxw||
 |norm_4::get_yxwz||
 |norm_4::get_yxz||
@@ -359,7 +359,7 @@ class norm_4;
 |norm_4::get_zwyx||
 |norm_4::get_zx||
 |norm_4::get_zxw||
-|norm_4::get_zxwy||
+|norm_4:: get_zxwy||
 |norm_4::get_zxy||
 |norm_4::get_zxyw||
 |norm_4::get_zy||
@@ -368,12 +368,12 @@ class norm_4;
 |norm_4::get_zyx||
 |norm_4::get_zyxw||
 |norm_4::ref_a||
-|norm_4::ref_b||
-|norm_4::ref_g||
-|norm_4::ref_r||
+|norm_4:: ref_b||
+|norm_4:: ref_g||
+|norm_4:: ref_r||
 |norm_4::ref_w||
-|norm_4::ref_x||
-|norm_4::ref_y||
+|norm_4:: ref_x||
+|norm_4:: ref_y||
 |norm_4::ref_z||
 |norm_4::set_w||
 |norm_4::set_wx||
@@ -407,14 +407,14 @@ class norm_4;
 |norm_4::set_xzwy||
 |norm_4::set_xzy||
 |norm_4::set_xzyw||
-|norm_4::set_y||
+|norm_4:: set_y||
 |norm_4::set_yw||
 |norm_4::set_ywx||
 |norm_4::set_ywxz||
 |norm_4::set_ywz||
 |norm_4::set_ywzx||
 |norm_4::set_yx||
-|norm_4::set_yxw||
+|norm_4:: set_yxw||
 |norm_4::set_yxwz||
 |norm_4::set_yxz||
 |norm_4::set_yxzw||
@@ -431,10 +431,10 @@ class norm_4;
 |norm_4::set_zwyx||
 |norm_4::set_zx||
 |norm_4::set_zxw||
-|norm_4::set_zxwy||
+|norm_4:: set_zxwy||
 |norm_4::set_zxy||
 |norm_4::set_zxyw||
-|norm_4::set_zy||
+|norm_4:: set_zy||
 |norm_4::set_zyw||
 |norm_4::set_zywx||
 |norm_4::set_zyx||
@@ -442,155 +442,155 @@ class norm_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_4::operator-||
-|norm_4::operator--||
-|norm_4::operator*=||
-|norm_4::operator/=||
-|norm_4::operator ++||
-|norm_4::operator+=||
-|norm_4::operator=||
-|norm_4::operator-=||
+|norm_4:: operator —||
+|norm_4:: operator--||
+|norm_4:: operator * =||
+|norm_4:: operator/=||
+|norm_4:: operator + +||
+|norm_4:: operator + =||
+|norm_4:: operator =||
+|norm_4:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#norm_4__size)||
+|[Константа размера](#norm_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_4::a||
-|norm_4::ab||
-|norm_4::abg||
-|norm_4::abgr||
-|norm_4::abr||
-|norm_4::abrg||
-|norm_4::ag||
-|norm_4::agb||
-|norm_4::agbr||
-|norm_4::agr||
-|norm_4::agrb||
-|norm_4::ar||
-|norm_4::arb||
-|norm_4::arbg||
-|norm_4::arg||
-|norm_4::argb||
-|norm_4::b||
-|norm_4::ba||
-|norm_4::bag||
-|norm_4::bagr||
-|norm_4::bar||
-|norm_4::barg||
-|norm_4::bg||
-|norm_4::bga||
-|norm_4::bgar||
-|norm_4::bgr||
-|norm_4::bgra||
-|norm_4::br||
-|norm_4::bra||
-|norm_4::brag||
-|norm_4::brg||
-|norm_4::brga||
-|norm_4::g||
-|norm_4::ga||
-|norm_4::gab||
+|norm_4:: a||
+|norm_4:: AB||
+|norm_4:: ABG||
+|norm_4:: абгр||
+|norm_4:: Граничный маршрутизатор||
+|norm_4:: абрг||
+|norm_4:: AG||
+|norm_4:: АГБ||
+|norm_4:: агбр||
+|norm_4:: принимаю||
+|norm_4:: агрб||
+|norm_4:: AR||
+|norm_4:: АРБ||
+|norm_4:: арбг||
+|norm_4:: ARG||
+|norm_4:: ARGB||
+|norm_4:: b||
+|norm_4:: BA||
+|norm_4:: сумка||
+|norm_4:: БАГР||
+|norm_4:: линейчатая||
+|norm_4:: Барг||
+|norm_4:: BG||
+|norm_4:: BGA||
+|norm_4:: бгар||
+|norm_4:: BGR||
+|norm_4:: BGRA||
+|norm_4:: BR||
+|norm_4:: неверное||
+|norm_4:: похвастать||
+|norm_4:: БРГ||
+|norm_4:: брга||
+|norm_4:: g||
+|norm_4:: GA||
+|norm_4:: ГАБ||
 |norm_4::gabr||
-|norm_4::gar||
-|norm_4::garb||
-|norm_4::gb||
-|norm_4::gba||
-|norm_4::gbar||
-|norm_4::gbr||
-|norm_4::gbra||
-|norm_4::gr||
-|norm_4::gra||
-|norm_4::grab||
-|norm_4::grb||
-|norm_4::grba||
-|norm_4::r||
-|norm_4::ra||
-|norm_4::rab||
-|norm_4::rabg||
-|norm_4::rag||
-|norm_4::ragb||
-|norm_4::rb||
-|norm_4::rba||
-|norm_4::rbag||
-|norm_4::rbg||
-|norm_4::rbga||
-|norm_4::rg||
-|norm_4::rga||
-|norm_4::rgab||
-|norm_4::rgb||
-|norm_4::rgba||
-|norm_4::w||
-|norm_4::wx||
-|norm_4::wxy||
-|norm_4::wxyz||
-|norm_4::wxz||
-|norm_4::wxzy||
+|norm_4:: Гар||
+|norm_4:: нечитаемость||
+|norm_4:: ГБ||
+|norm_4:: Гба||
+|norm_4:: ГБАР||
+|norm_4:: ГБР||
+|norm_4:: гбра||
+|norm_4:: GR||
+|norm_4:: гра||
+|norm_4:: захватить||
+|norm_4:: ГРБ||
+|norm_4:: ГРБА||
+|norm_4:: r||
+|norm_4:: RA||
+|norm_4:: раб||
+|norm_4:: рабг||
+|norm_4:: перетаскивание||
+|norm_4:: рагб||
+|norm_4:: RB||
+|norm_4:: роль||
+|norm_4:: РБАГ||
+|norm_4:: РБГ||
+|norm_4:: рбга||
+|norm_4:: RG||
+|norm_4:: РГА||
+|norm_4:: ргаб||
+|norm_4:: RGB||
+|norm_4:: RGBA||
+|norm_4:: w||
+|norm_4:: WX||
+|norm_4:: вкси||
+|norm_4:: вксиз||
+|norm_4:: вксз||
+|norm_4:: вксзи||
 |norm_4::wy||
-|norm_4::wyx||
-|norm_4::wyxz||
-|norm_4::wyz||
-|norm_4::wyzx||
-|norm_4::wz||
-|norm_4::wzx||
-|norm_4::wzxy||
-|norm_4::wzy||
-|norm_4::wzyx||
-|norm_4::x||
-|norm_4::xw||
-|norm_4::xwy||
-|norm_4::xwyz||
+|norm_4:: Викс||
+|norm_4:: виксз||
+|norm_4:: виз||
+|norm_4:: визкс||
+|norm_4:: WZ||
+|norm_4:: взкс||
+|norm_4:: взкси||
+|norm_4:: ВЗИ||
+|norm_4:: взикс||
+|norm_4:: x||
+|norm_4:: КСВ||
+|norm_4:: ксви||
+|norm_4:: ксвиз||
 |norm_4::xwz||
-|norm_4::xwzy||
-|norm_4::xy||
-|norm_4::xyw||
-|norm_4::xywz||
-|norm_4::xyz||
-|norm_4::xyzw||
-|norm_4::xz||
-|norm_4::xzw||
-|norm_4::xzwy||
-|norm_4::xzy||
-|norm_4::xzyw||
-|norm_4::y||
+|norm_4:: ксвзи||
+|norm_4:: XY||
+|norm_4:: ксив||
+|norm_4:: ксивз||
+|norm_4:: XYZ||
+|norm_4:: ксизв||
+|norm_4:: КСЗ||
+|norm_4:: ксзв||
+|norm_4:: ксзви||
+|norm_4:: XZY||
+|norm_4:: ксзив||
+|norm_4:: y||
 |norm_4::yw||
 |norm_4::ywx||
-|norm_4::ywxz||
+|norm_4:: ивксз||
 |norm_4::ywz||
 |norm_4::ywzx||
-|norm_4::yx||
-|norm_4::yxw||
-|norm_4::yxwz||
-|norm_4::yxz||
-|norm_4::yxzw||
-|norm_4::yz||
+|norm_4:: Икс||
+|norm_4:: ИКСВ||
+|norm_4:: иксвз||
+|norm_4:: иксз||
+|norm_4:: иксзв||
+|norm_4:: из||
 |norm_4::yzw||
 |norm_4::yzwx||
-|norm_4::yzx||
-|norm_4::yzxw||
-|norm_4::z||
-|norm_4::zw||
-|norm_4::zwx||
-|norm_4::zwxy||
+|norm_4:: изкс||
+|norm_4:: изксв||
+|norm_4:: z||
+|norm_4:: ZW||
+|norm_4:: звкс||
+|norm_4:: звкси||
 |norm_4::zwy||
-|norm_4::zwyx||
-|norm_4::zx||
-|norm_4::zxw||
-|norm_4::zxwy||
-|norm_4::zxy||
-|norm_4::zxyw||
-|norm_4::zy||
+|norm_4:: звикс||
+|norm_4:: ЗКС||
+|norm_4:: зксв||
+|norm_4:: зксви||
+|norm_4:: зкси||
+|norm_4:: зксив||
+|norm_4:: зи||
 |norm_4::zyw||
 |norm_4::zywx||
-|norm_4::zyx||
-|norm_4::zyxw||
+|norm_4:: зикс||
+|norm_4:: зиксв||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -598,15 +598,15 @@ class norm_4;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -681,15 +681,15 @@ explicit inline norm_4(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="norm_4__size"></a> Размер
+## <a name="norm_4__size"></a>изменять
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

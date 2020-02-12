@@ -6,37 +6,37 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: e36c3c2cfa9d1b617e377a7e340f98875457bdf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a2d9dab9cba7b19fa0d0b1627f653f2c7fdc57
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352875"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126400"
 ---
-# <a name="scopedd3daccesslock-class"></a>Класс scoped_d3d_access_lock
+# <a name="scoped_d3d_access_lock-class"></a>Класс scoped_d3d_access_lock
 
-Программа-оболочка RAII для блокирования доступа D3D объекта accelerator_view.
+Оболочка RAII для блокировки доступа D3D на объекте accelerator_view.
 
-### <a name="syntax"></a>Синтаксис
+## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class scoped_d3d_access_lock;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор scoped_d3d_access_lock](#ctor)|Перегружен. Создает объект `scoped_d3d_access_lock`. Блокировка снимается, когда этот объект выходит из области.|
-|[~ Деструктор scoped_d3d_access_lock](#dtor)|Освобождает блокировку доступа D3D в связанном `accelerator_view` объект.|
+|[Конструктор scoped_d3d_access_lock](#ctor)|Перегружен. Формирует объект `scoped_d3d_access_lock`. Блокировка освобождается, когда объект выходит из области действия.|
+|[Деструктор ~ scoped_d3d_access_lock](#dtor)|Освобождает блокировку доступа D3D для связанного объекта `accelerator_view`.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[оператор=](#operator_eq)|Принимает владельца блокировки из другого `scoped_d3d_access_lock`.|
+|[оператор=](#operator_eq)|Получает владение блокировкой от другого `scoped_d3d_access_lock`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -44,15 +44,15 @@ class scoped_d3d_access_lock;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** concurrency::direct3d
+**Пространство имен:** concurrency::d irect3d
 
-##  <a name="ctor"></a> scoped_d3d_access_lock
+## <a name="ctor"></a>scoped_d3d_access_lock
 
-Создает объект `scoped_d3d_access_lock`. Блокировка снимается, когда этот объект выходит из области.
+Формирует объект `scoped_d3d_access_lock`. Блокировка освобождается, когда объект выходит из области действия.
 
-```
+```cpp
 explicit scoped_d3d_access_lock(// [1] constructor
     accelerator_view& _Av);
 
@@ -67,47 +67,47 @@ scoped_d3d_access_lock(// [3] move constructor
 ### <a name="parameters"></a>Параметры
 
 *_Av*<br/>
-`accelerator_view` Блокировки внедрить.
+`accelerator_view` для принятия блокировки.
 
 *_T*<br/>
 Объект `adopt_d3d_access_lock_t`.
 
-*_Другое*<br/>
-`scoped_d3d_access_lock` Объект, из которого нужно переместить существующую блокировку.
+*_Other*<br/>
+Объект `scoped_d3d_access_lock`, из которого будет перемещена существующая блокировка.
 
 ## <a name="construction"></a>Создание экземпляра
 
-[1] конструктор получает блокировку доступа D3D для заданного [accelerator_view](accelerator-view-class.md) объекта. Создание блокируется до получения блокировки.
+[1] конструктор получает блокировку на доступ D3D для заданного объекта [accelerator_view](accelerator-view-class.md) . Создание блоков до тех пор, пока блокировка не будет получена.
 
-[2] конструктор применять блокировку доступа D3D от заданного [accelerator_view](accelerator-view-class.md) объекта.
+[2] конструктор применяет блокировку к D3D из заданного объекта [accelerator_view](accelerator-view-class.md) .
 
-[3] перемещение конструктор принимает существующую блокировку доступа D3D из другого `scoped_d3d_access_lock` объекта. Создание не блокируется.
+[3] конструктор перемещения принимает существующую блокировку доступа D3D из другого объекта `scoped_d3d_access_lock`. Конструкция не блокируется.
 
-##  <a name="dtor"></a> ~scoped_d3d_access_lock
+## <a name="dtor"></a>~ scoped_d3d_access_lock
 
-Освобождает блокировку доступа D3D в связанном `accelerator_view` объект.
+Освобождает блокировку доступа D3D для связанного объекта `accelerator_view`.
 
-```
+```cpp
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a> оператор =
+## <a name="operator_eq"></a>Оператор =
 
-Принимает владельца блокировки доступа D3D из другого `scoped_d3d_access_lock` объекта, освобождая предыдущую блокировку.
+Принимает владение блокировкой доступа к D3D из другого объекта `scoped_d3d_access_lock`, освобождая предыдущую блокировку.
 
-```
+```cpp
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Другое*<br/>
-Accelerator_view, из которого нужно переместить блокировку доступа D3D.
+*_Other*<br/>
+Accelerator_view, из которого будет перемещена блокировка доступа D3D.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на этот `scoped_accelerator_view_lock`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::direct3d](concurrency-direct3d-namespace.md)

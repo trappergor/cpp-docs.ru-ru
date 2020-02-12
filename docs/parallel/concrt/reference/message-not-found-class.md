@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: da0a44b90346959756c1ef7c685bef234fe6e46a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394420"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139576"
 ---
-# <a name="messagenotfound-class"></a>Класс message_not_found
+# <a name="message_not_found-class"></a>Класс message_not_found
 
 Этот класс описывает исключение, создаваемое, когда блок обмена сообщениями не может найти запрошенное сообщение.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class message_not_found : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[message_not_found](#ctor)|Перегружен. Создает объект `message_not_found`.|
+|[message_not_found](#ctor)|Перегружен. Формирует объект `message_not_found`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -41,15 +41,15 @@ class message_not_found : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> message_not_found
+## <a name="ctor"></a>message_not_found
 
-Создает объект `message_not_found`.
+Формирует объект `message_not_found`.
 
-```
+```cpp
 explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 
 message_not_found() throw();
@@ -60,7 +60,7 @@ message_not_found() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md)

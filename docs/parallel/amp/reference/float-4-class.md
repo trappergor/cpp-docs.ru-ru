@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180288"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142178"
 ---
-# <a name="float4-class"></a>Класс float_4
+# <a name="float_4-class"></a>Класс float_4
 
-Представляет короткий вектор из четырех значений с плавающей запятой.
+Представляет короткий вектор из четырех элементов с плавающей запятой.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class float_4;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор float_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор float_4](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -335,8 +335,8 @@ class float_4;
 |float_4::get_xzwy||
 |float_4::get_xzy||
 |float_4::get_xzyw||
-|float_4::get_y||
-|float_4::get_yw||
+|float_4:: get_y||
+|float_4:: get_yw||
 |float_4::get_ywx||
 |float_4::get_ywxz||
 |float_4::get_ywz||
@@ -407,7 +407,7 @@ class float_4;
 |float_4::set_xzwy||
 |float_4::set_xzy||
 |float_4::set_xzyw||
-|float_4::set_y||
+|float_4:: set_y||
 |float_4::set_yw||
 |float_4::set_ywx||
 |float_4::set_ywxz||
@@ -442,84 +442,84 @@ class float_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|float_4::operator-||
-|float_4::operator--||
+|float_4:: operator —||
+|float_4:: operator--||
 |float_4::operator*=||
-|float_4::operator/=||
-|float_4::operator++||
-|float_4::operator+=||
-|float_4::operator=||
-|float_4::operator-=||
+|float_4:: operator/=||
+|float_4:: operator + +||
+|float_4:: operator + =||
+|float_4:: operator =||
+|float_4:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#float_4__size)||
+|[Константа размера](#float_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|float_4::a||
-|float_4::ab||
+|float_4:: a||
+|float_4:: AB||
 |float_4::abg||
 |float_4::abgr||
-|float_4::abr||
-|float_4::abrg||
-|float_4::ag||
+|float_4:: Граничный маршрутизатор||
+|float_4:: абрг||
+|float_4:: AG||
 |float_4::agb||
 |float_4::agbr||
-|float_4::agr||
-|float_4::agrb||
-|float_4::ar||
-|float_4::arb||
-|float_4::arbg||
-|float_4::arg||
-|float_4::argb||
-|float_4::b||
+|float_4:: принимаю||
+|float_4:: агрб||
+|float_4:: AR||
+|float_4:: АРБ||
+|float_4:: арбг||
+|float_4:: ARG||
+|float_4:: ARGB||
+|float_4:: b||
 |float_4::ba||
-|float_4::bag||
-|float_4::bagr||
-|float_4::bar||
-|float_4::barg||
+|float_4:: сумка||
+|float_4:: БАГР||
+|float_4:: линейчатая||
+|float_4:: Барг||
 |float_4::bg||
 |float_4::bga||
-|float_4::bgar||
+|float_4:: бгар||
 |float_4::bgr||
 |float_4::bgra||
 |float_4::br||
 |float_4::bra||
-|float_4::brag||
+|float_4:: похвастать||
 |float_4::brg||
 |float_4::brga||
-|float_4::g||
-|float_4::ga||
-|float_4::gab||
+|float_4:: g||
+|float_4:: GA||
+|float_4:: ГАБ||
 |float_4::gabr||
-|float_4::gar||
+|float_4:: Гар||
 |float_4::garb||
-|float_4::gb||
+|float_4:: ГБ||
 |float_4::gba||
-|float_4::gbar||
+|float_4:: ГБАР||
 |float_4::gbr||
 |float_4::gbra||
-|float_4::gr||
+|float_4:: GR||
 |float_4::gra||
-|float_4::grab||
-|float_4::grb||
+|float_4:: захватить||
+|float_4:: ГРБ||
 |float_4::grba||
-|float_4::r||
+|float_4:: r||
 |float_4::ra||
-|float_4::rab||
+|float_4:: раб||
 |float_4::rabg||
-|float_4::rag||
-|float_4::ragb||
-|float_4::rb||
+|float_4:: перетаскивание||
+|float_4:: рагб||
+|float_4:: RB||
 |float_4::rba||
-|float_4::rbag||
+|float_4:: РБАГ||
 |float_4::rbg||
 |float_4::rbga||
 |float_4::rg||
@@ -527,7 +527,7 @@ class float_4;
 |float_4::rgab||
 |float_4::rgb||
 |float_4::rgba||
-|float_4::w||
+|float_4:: w||
 |float_4::wx||
 |float_4::wxy||
 |float_4::wxyz||
@@ -536,46 +536,46 @@ class float_4;
 |float_4::wy||
 |float_4::wyx||
 |float_4::wyxz||
-|float_4::wyz||
+|float_4:: виз||
 |float_4::wyzx||
 |float_4::wz||
 |float_4::wzx||
 |float_4::wzxy||
 |float_4::wzy||
 |float_4::wzyx||
-|float_4::x||
-|float_4::xw||
-|float_4::xwy||
+|float_4:: x||
+|float_4:: КСВ||
+|float_4:: ксви||
 |float_4::xwyz||
 |float_4::xwz||
 |float_4::xwzy||
-|float_4::xy||
+|float_4:: XY||
 |float_4::xyw||
 |float_4::xywz||
 |float_4::xyz||
-|float_4::xyzw||
+|float_4:: ксизв||
 |float_4::xz||
 |float_4::xzw||
-|float_4::xzwy||
-|float_4::xzy||
+|float_4:: ксзви||
+|float_4:: XZY||
 |float_4::xzyw||
-|float_4::y||
+|float_4:: y||
 |float_4::yw||
 |float_4::ywx||
 |float_4::ywxz||
 |float_4::ywz||
 |float_4::ywzx||
-|float_4::yx||
-|float_4::yxw||
+|float_4:: Икс||
+|float_4:: ИКСВ||
 |float_4::yxwz||
 |float_4::yxz||
 |float_4::yxzw||
-|float_4::yz||
+|float_4:: из||
 |float_4::yzw||
 |float_4::yzwx||
 |float_4::yzx||
 |float_4::yzxw||
-|float_4::z||
+|float_4:: z||
 |float_4::zw||
 |float_4::zwx||
 |float_4::zwxy||
@@ -583,7 +583,7 @@ class float_4;
 |float_4::zwyx||
 |float_4::zx||
 |float_4::zxw||
-|float_4::zxwy||
+|float_4:: зксви||
 |float_4::zxy||
 |float_4::zxyw||
 |float_4::zy||
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -663,15 +663,15 @@ explicit inline float_4(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="float_4__size"></a> Размер
+## <a name="float_4__size"></a>изменять
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8dae7b76ea2efc852486a19f5d298cda477012
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181948"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126725"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 
-Представляет вектор из *N* целочисленных значений, которые определяют границы *N*-мерного пространства с началом координат в 0. Значения в векторе упорядочены от наиболее важных до наименее важных.
+Представляет вектор из *n* целочисленных значений, задающих границы *n*-мерного пространства с источником 0. Значения в векторе упорядочиваются от наиболее значимых к минимально значимым.
 
-### <a name="syntax"></a>Синтаксис
+## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <int _Rank>
 class extent;
 ```
@@ -33,82 +33,82 @@ class extent;
 ### <a name="parameters"></a>Параметры
 
 *_Rank*<br/>
-Ранг `extent` объекта.
+Ранг объекта `extent`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок** : amp.h
 
-**Пространство имен:** параллелизм
+**Пространство имен** : Concurrency
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[область конструктора](#ctor)|Инициализирует новый экземпляр класса `extent`.|
+|[Конструктор экстента](#ctor)|Инициализирует новый экземпляр класса `extent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Содержит](#contains)|Проверяет, что указанный `extent` объект с указанным рангом.|
-|[size](#size)|Возвращает полный линейный размер области памяти (в единицах элементов).|
-|[Плитка](#tile)|Создает `tiled_extent` объект с размерами плитки указанными с помощью измерений.|
+|[contains](#contains)|Проверяет, имеет ли указанный объект `extent` указанный ранг.|
+|[size](#size)|Возвращает общий линейный размер экстента (в единицах элементов).|
+|[Tile](#tile)|Создает объект `tiled_extent` с экстентами мозаики, заданными заданными измерениями.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[operator-](#operator_min)|Возвращает новый `extent` объект, созданный путем вычитания `index` элементы из соответствующих `extent` элементов.|
-|[оператор--](#operator_min_min)|Уменьшает каждый элемент `extent` объекта.|
-|[оператор%=](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `extent` объекта при делении этого элемента на число.|
+|[operator-](#operator_min)|Возвращает новый объект `extent`, созданный путем вычитания элементов `index` из соответствующих элементов `extent`.|
+|[оператор--](#operator_min_min)|Уменьшает каждый элемент объекта `extent`.|
+|[оператор%=](#operator_mod_eq)|Вычисляет остаток от деления каждого элемента в объекте `extent`, если этот элемент делится на число.|
 |[оператор*=](#operator_star_eq)|Умножает каждый элемент объекта `extent` на число.|
 |[оператор/=](#operator_min_eq)|Делит каждый элемент объекта `extent` на число.|
-|[extent::operator\[\]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
-|[operator+](#operator_add)|Возвращает новый `extent` объект, созданный путем добавления соответствующих `index` и `extent` элементы.|
-|[оператор++](#operator_add_add)|Увеличивает на единицу каждый элемент из `extent` объекта.|
-|[оператор+=](#operator_add_eq)|Добавляет указанное число к каждому элементу `extent` объекта.|
-|[оператор=](#operator_eq)|Копирует содержимое другого объекта `extent` в данный объект.|
-|[оператор-=](#operator_min_eq)|Вычитает указанное число из каждого элемента объекта `extent` объекта.|
+|[\[пространства:: operator \]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|
+|[operator+](#operator_add)|Возвращает новый объект `extent`, созданный путем добавления соответствующих элементов `index` и `extent`.|
+|[оператор++](#operator_add_add)|Увеличивает каждый элемент `extent` объекта.|
+|[оператор+=](#operator_add_eq)|Добавляет указанный номер в каждый элемент объекта `extent`.|
+|[оператор=](#operator_eq)|Копирует содержимое другого объекта `extent` в этот объект.|
+|[оператор-=](#operator_min_eq)|Вычитает указанное число из каждого элемента объекта `extent`.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Ранг константа](#rank_constant)|Получает ранг объекта `extent` объекта.|
+|[Константа Rank](#rank_constant)|Возвращает ранг объекта `extent`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 `extent`
 
-## <a name="contains"></a> Содержит
+## <a name="contains"></a>содержащих
 
-Указывает ли указанный [индекс](index-class.md) значение содержится в объекте «область».
+Указывает, содержится ли указанное значение [индекса](index-class.md) в объекте "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Index*<br/>
-`index` Значение для проверки.
+Проверяемое значение `index`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если указанного *индекс* значение содержится в `extent` объекта; в противном случае **false**.
+значение **true** , если указанное значение *индекса* содержится в объекте `extent`; в противном случае — **значение false**.
 
-##  <a name="ctor"></a> экстент
+## <a name="ctor"></a>экстент
 
-Инициализирует новый экземпляр класса «область».
+Инициализирует новый экземпляр класса "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent() restrict(amp,cpu);
 extent(const extent<_Rank>& _Other) restrict(amp,cpu);
 explicit extent(int _I) restrict(amp,cpu);
@@ -120,108 +120,108 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 ### <a name="parameters"></a>Параметры
 
 *_Array*<br/>
-Массив `_Rank` целых чисел, который используется для создания нового `extent` объекта.
+Массив `_Rank` целых чисел, который используется для создания нового объекта `extent`.
 
 *_I*<br/>
-Размер области памяти.
+Длина экстента.
 
 *_I0*<br/>
-Длина самого значительного измерения.
+Длина наиболее значимого измерения.
 
 *_I1*<br/>
-Длина следующего к наиболее значительное измерение.
+Длина измерения "следующий к значимости".
 
 *_I2*<br/>
-Длина наименее значительного измерения.
+Длина наименее значимого измерения.
 
-*_Другое*<br/>
-`extent` Объект, для которого новый `extent` основан объект.
+*_Other*<br/>
+Объект `extent`, на котором основан новый объект `extent`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот конструктор инициализирует `extent` объект, имеющий ранг равный трем.
+Конструктор по умолчанию инициализирует объект `extent` с рангом 3.
 
-Если массив используется для создания `extent` объект, длина массива должна соответствовать рангу объекта `extent` объекта.
+Если массив используется для создания объекта `extent`, длина массива должна совпадать с рангом объекта `extent`.
 
-##  <a name="operator_mod_eq"></a> оператор % =
+## <a name="operator_mod_eq"></a>Оператор% =
 
-Вычисляет модуль (остаток от деления) каждого элемента в области «», при делении этого элемента на число.
+Вычисляет остаток от деления каждого элемента в экстенте, если этот элемент делится на число.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-Номер, чтобы найти модуль.
+Число для поиска модуля.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Объект `extent`.
 
-##  <a name="operator_star_eq"></a> оператор * =
+## <a name="operator_star_eq"></a>operator * =
 
-Умножает каждый элемент в объекте «область» на заданную величину.
+Умножает каждый элемент в объекте "экстент" на указанное число.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-Число для перемножения.
+Число для умножения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Объект `extent`.
 
-## <a name="operator_add"></a> оператор +
+## <a name="operator_add"></a>operator +
 
-Возвращает новый `extent` объект, созданный путем добавления соответствующих `index` и `extent` элементы.
+Возвращает новый объект `extent`, созданный путем добавления соответствующих элементов `index` и `extent`.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-`index` , Содержащий добавляемые элементы.
+Объект `index`, содержащий добавляемые элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Новый объект `extent`.
 
-##  <a name="operator_add_add"></a> Operator ++
+## <a name="operator_add_add"></a>operator + +
 
-Увеличивает на единицу каждый элемент объекта «область».
+Увеличивает каждый элемент объекта "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator++() restrict(amp,cpu);
 extent<_Rank> operator++(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Для префиксной формы оператора `extent` объекта (`*this`). Для суффиксной формы оператора новый `extent` объекта.
+Для оператора префикса — объект `extent` (`*this`). Для оператора суффикса — новый объект `extent`.
 
-##  <a name="operator_add_eq"></a> оператор +=
+## <a name="operator_add_eq"></a>operator + =
 
-Добавляет указанное число к каждому элементу «границы».
+Добавляет указанный номер к каждому элементу объекта "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator+=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
@@ -230,72 +230,72 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-Номер, индекс или экстент для добавления.
+Добавляемое число, индекс или экстент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Результирующий объект `extent`.
 
-##  <a name="operator_min"></a> оператор-
+## <a name="operator_min"></a>станции
 
-Создает новый `extent` объекта путем вычитания каждого элемента в указанном `index` объект из соответствующего элемента в этом `extent` объекта.
+Создает новый объект `extent` путем вычитания каждого элемента в заданном `index` объекте из соответствующего элемента в данном `extent` объекте.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-`index` , Содержащий элементы для вычитания.
+Объект `index`, содержащий элементы для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Новый объект `extent`.
 
-##  <a name="operator_min_min"></a> оператор--
+## <a name="operator_min_min"></a>Оператор--
 
-Уменьшает каждый элемент в объекте «область».
+Уменьшает каждый элемент в объекте "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator--() restrict(amp,cpu);
 extent<_Rank> operator--(int)restrict(amp,cpu);
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Для префиксной формы оператора `extent` объекта (`*this`). Для суффиксной формы оператора новый `extent` объекта.
+Для оператора префикса — объект `extent` (`*this`). Для оператора суффикса — новый объект `extent`.
 
-##  <a name="operator_div_eq"></a> оператор / =
+## <a name="operator_div_eq"></a>Оператор/=
 
-Делит каждый элемент в объекте «область» на заданную величину.
+Делит каждый элемент в объекте "экстент" на указанное число.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-Число-знаменатель.
+Число, на которое производится деление.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Объект `extent`.
 
-##  <a name="operator_min_eq"></a> оператор-=
+## <a name="operator_min_eq"></a>Оператор-=
 
-Вычитает указанное число из каждого элемента объекта «область».
+Вычитает указанное число из каждого элемента объекта "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator-=(const extent<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(const index<_Rank>& _Rhs) restrict(amp,cpu);
 extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
@@ -304,38 +304,38 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="parameters"></a>Параметры
 
 *_Rhs*<br/>
-Число для вычитания.
+Вычитаемое число.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Результирующий объект `extent`.
 
-##  <a name="operator_eq"></a> оператор =
+## <a name="operator_eq"></a>Оператор =
 
-Копирует содержимое другого объекта «область» в другой.
+Копирует содержимое другого объекта "расширение" в этот объект.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Другое*<br/>
-`extent` Для копирования.
+*_Other*<br/>
+Объект `extent`, из которого производится копирование.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на этот `extent` объекта.
+Ссылка на этот объект `extent`.
 
-##  <a name="operator_at"></a> Extent::operator \[\]
+## <a name="operator_at"></a>\[пространства:: operator \]
 
-Возвращает элемент, находящийся по указанному индексу.
+Возвращает элемент, расположенный по указанному индексу.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 int operator[](unsigned int _Index) const restrict(amp,cpu);
 int& operator[](unsigned int _Index) restrict(amp,cpu);
 ```
@@ -347,33 +347,33 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент, находящийся по указанному индексу.
+Элемент, расположенный по указанному индексу.
 
-##  <a name="rank_constant"></a> Ранг
+## <a name="rank_constant"></a>Рейтинг
 
-Хранит ранг объекта «область».
+Хранит ранг объекта "экстент".
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-##  <a name="size"></a> Размер
+## <a name="size"></a>изменять
 
-Возвращает полный линейный размер `extent` объекта (в единицах элементов).
+Возвращает общий линейный размер объекта `extent` (в единицах элементов).
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 unsigned int size() const restrict(amp,cpu);
 ```
 
-## <a name="tile"></a> Плитка
+## <a name="tile"></a>Tile
 
-Создает объект tiled_extent с заданными размерами плитки.
+Создает объект tiled_extent с указанными измерениями плитки.
 
-```
+```cpp
 template <int _Dim0>
 tiled_extent<_Dim0> tile() const ;
 
@@ -387,12 +387,12 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ### <a name="parameters"></a>Параметры
 
 *_Dim0*<br/>
-Наиболее значимый компонент замощенной области памяти.
+Наиболее важный компонент мозаичного экстента.
 *_Dim1*<br/>
-Далее к наиболее значимый компонент замощенной области памяти.
+Наиболее важный компонент мозаичного экстента.
 *_Dim2*<br/>
-Наименее значимый компонент замощенной области памяти.
+Наименее важный компонент мозаичного экстента.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

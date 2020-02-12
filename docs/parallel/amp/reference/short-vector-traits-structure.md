@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351148"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126383"
 ---
-# <a name="shortvectortraits-structure"></a>Структура short_vector_traits
+# <a name="short_vector_traits-structure"></a>Структура short_vector_traits
 
-Получение базовых Длина вектора и скалярный тип типа короткого вектора или скалярного типа позволяет short_vector_traits
+short_vector_traits позволяет получать базовую длину вектора и скалярный тип для короткого векторного типа или скалярного типа.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,29 +75,29 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 `T`
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор short_vector_traits::short_vector_traits](#ctor)||
+|[Конструктор short_vector_traits:: short_vector_traits](#ctor)||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Константа short_vector_traits::size](#size)||
+|[Константа short_vector_traits:: size](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -105,22 +105,22 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  Конструктор short_vector_traits::short_vector_traits
+## <a name="ctor"></a>Конструктор short_vector_traits:: short_vector_traits
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  Константа short_vector_traits::size
+## <a name="size"></a>Константа short_vector_traits:: size
 
-```
+```cpp
 static int const size = 1;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

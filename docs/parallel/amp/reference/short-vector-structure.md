@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351551"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126439"
 ---
-# <a name="shortvector-structure"></a>Структура short_vector
+# <a name="short_vector-structure"></a>Структура short_vector
 
-short_vector предоставляет метапрограммирование определений, которые можно использовать для программирования короткими векторами универсальной.
+short_vector предоставляет определения метапрограммирование, которые полезны для универсального программирования коротких векторов.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,25 +75,25 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_Scalar_type*<br/>
 
-*_Размер*<br/>
+*_Size*<br/>
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор short_vector::short_vector](#ctor)||
+|[Конструктор short_vector:: short_vector](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -101,16 +101,16 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a>  Конструктор short_vector::short_vector
+## <a name="ctor"></a>Конструктор short_vector:: short_vector
 
-```
+```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

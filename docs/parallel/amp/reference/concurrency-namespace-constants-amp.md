@@ -5,12 +5,12 @@ f1_keywords:
 - amp/Concurrency::HLSL_MAX_NUM_BUFFERS
 - amp/Concurrency::MODULENAME_MAX_LENGTH
 ms.assetid: 13a8e8cd-2eec-4e60-a91d-5d271072747b
-ms.openlocfilehash: c6cdaa36f481bd4a703981bfa1bc0617860b0917
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d304728f5bdca8f4bfb39cdb26baad984e63097
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348553"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126933"
 ---
 # <a name="concurrency-namespace-constants-amp"></a>Константы пространства имен Concurrency (AMP)
 
@@ -18,22 +18,22 @@ ms.locfileid: "62348553"
 |-|-|
 |[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|
 
-##  <a name="hlsl_max_num_buffers"></a>  Константа HLSL_MAX_NUM_BUFFERS
+## <a name="hlsl_max_num_buffers"></a>Константа HLSL_MAX_NUM_BUFFERS
 
-Максимальное количество буферов, допускаемое DirectX.
+Максимальное число буферов, разрешенных DirectX.
 
-```
+```cpp
 static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;
 ```
 
-##  <a name="modulename_max_length"></a>  Modulename_max_length-константа
+## <a name="modulename_max_length"></a>Константа MODULENAME_MAX_LENGTH
 
-Хранит максимальную длину имени модуля. Это значение должно быть одинаковым на компилятор и среда выполнения.
+Сохраняет максимальную длину имени модуля. Это значение должно быть одинаковым в компиляторе и во время выполнения.
 
-```
+```cpp
 static const UINT MODULENAME_MAX_LENGTH = 1024;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -5,51 +5,51 @@ helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 00ad8bbe6f950ad531bad751686393dce66643bb
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 2b9d889dac195bb60651cbb76110d54b6231a5fd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857069"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141978"
 ---
 # <a name="walkthrough-implementing-futures"></a>Пошаговое руководство. Реализация фьючерсов
 
-В этом разделе показано, как реализовывать futures в приложении. Разделе показано, как объединить существующие функциональные возможности в среде выполнения с параллелизмом в нечто, что делает больше.
+В этом разделе показано, как реализовать фьючерсы в приложении. В этом разделе показано, как объединить существующие функции в среда выполнения с параллелизмом в что-то, которое делает больше.
 
 > [!IMPORTANT]
->  В этом разделе рассматривается понятие фьючерсов для демонстрационных целей. Мы рекомендуем использовать [std::future следует](../../standard-library/future-class.md) или [concurrency::task](../../parallel/concrt/reference/task-class.md) , если необходимо асинхронная задача, которая вычисляет значение для последующего использования.
+> В этом разделе рассматривается понятие фьючерсов для демонстрационных целей. Рекомендуется использовать [std:: future](../../standard-library/future-class.md) или [Concurrency:: Task](../../parallel/concrt/reference/task-class.md) , если требуется асинхронная задача, которая выполняет вычисление значения для последующего использования.
 
-Объект *задачи* — это вычисление, которое можно разложить на дополнительные, более мелкие вычислений. Объект *будущих* — это асинхронная задача, которая вычисляет значение для последующего использования.
+*Задача* — это вычисление, которое можно разложить на дополнительные, более детализированные вычисления. *Будущее* — это асинхронная задача, которая выполняет вычисление значения для последующего использования.
 
-Чтобы реализовать futures, в этом разделе описываются `async_future` класса. `async_future` Класса используются следующие компоненты среды выполнения с параллелизмом: [concurrency::task_group](reference/task-group-class.md) класс и [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md) класса. `async_future` Класс использует `task_group` класс для вычисления значения асинхронно и `single_assignment` класса для хранения результата вычисления. Конструктор `async_future` класс не принимает рабочую функцию, которая вычисляет результат, и `get` метод позволяет получить результат.
+Для реализации фьючерсов в этом разделе определяется класс `async_future`. Класс `async_future` использует следующие компоненты среда выполнения с параллелизмом: класс [Concurrency:: task_group](reference/task-group-class.md) и класс [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) . Класс `async_future` использует класс `task_group` для асинхронного вычисления значения и класс `single_assignment` для хранения результата вычисления. Конструктор класса `async_future` принимает рабочую функцию, которая вычисляет результат, а метод `get` извлекает результат.
 
-### <a name="to-implement-the-asyncfuture-class"></a>Реализация класса async_future
+### <a name="to-implement-the-async_future-class"></a>Реализация класса async_future
 
-1. Объявите класс с именем шаблона `async_future` , параметризован на типе результирующего вычисления. Добавить `public` и `private` разделы для этого класса.
+1. Объявите класс шаблона с именем `async_future`, параметризованный для типа результирующего вычисления. Добавьте `public` и `private` разделы в этот класс.
 
 [!code-cpp[concrt-futures#2](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_1.cpp)]
 
-1. В `private` раздел `async_future` объявите `task_group` и `single_assignment` данные-член.
+1. В разделе `private` класса `async_future` объявите `task_group` и элемент данных `single_assignment`.
 
 [!code-cpp[concrt-futures#3](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_2.cpp)]
 
-1. В `public` раздел `async_future` , следует реализовать конструктор. Конструктор — это шаблон, который параметризуется по рабочей функции, вычисляющей результат. Конструктор асинхронно выполняет рабочую функцию в `task_group` данных и использует [concurrency::send](reference/concurrency-namespace-functions.md#send) функцию для записи результата `single_assignment` элемент данных.
+1. В разделе `public` класса `async_future` реализуйте конструктор. Конструктор является шаблоном, параметризованным в рабочей функции, которая выполняет вычисление результата. Конструктор асинхронно выполняет рабочую функцию в элементе данных `task_group` и использует функцию [Concurrency:: send](reference/concurrency-namespace-functions.md#send) для записи результата в `single_assignment`ный элемент данных.
 
 [!code-cpp[concrt-futures#4](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_3.cpp)]
 
-1. В `public` раздел `async_future` , следует реализовать деструктор. Деструктор ожидает завершения задачи.
+1. В разделе `public` класса `async_future` реализуйте деструктор. Деструктор ожидает завершения задачи.
 
 [!code-cpp[concrt-futures#5](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_4.cpp)]
 
-1. В `public` раздел `async_future` , следует реализовать `get` метод. Этот метод использует [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функции для извлечения результата рабочей функции.
+1. В разделе `public` класса `async_future` реализуйте метод `get`. Этот метод использует функцию [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) для получения результата работы функции.
 
 [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
-В следующем примере показан полный `async_future` класс и пример его использования. `wmain` Функция создает объект std::[вектор](../../standard-library/vector-class.md) , содержащий 10 000 случайных целых чисел. Затем он использует `async_future` объектов, чтобы найти наименьшее и наибольшее значения, содержащиеся в `vector` объекта.
+В следующем примере показан полный класс `async_future` и пример его использования. Функция `wmain` создает объект std::[vector](../../standard-library/vector-class.md) , содержащий 10 000 случайных целочисленных значений. Затем он использует `async_future` объекты для поиска наименьшего и самого крупного значения, содержащегося в объекте `vector`.
 
 ### <a name="code"></a>Код
 
@@ -57,7 +57,7 @@ ms.locfileid: "64857069"
 
 ### <a name="comments"></a>Комментарии
 
-В этом примере выводятся следующие данные:
+В примере получается следующий вывод.
 
 ```Output
 smallest: 0
@@ -65,31 +65,31 @@ largest:  9999
 average:  4981
 ```
 
-В примере используется `async_future::get` метод для получения результатов вычисления. `async_future::get` Метод ожидает завершения, если вычисление по-прежнему активна вычисления.
+В примере используется метод `async_future::get` для получения результатов вычисления. Метод `async_future::get` ожидает завершения вычислений, если вычисления все еще активны.
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-Чтобы расширить `async_future` класса, чтобы обрабатывать исключения, вызываемые рабочей функцией, измените `async_future::get` метод для вызова [Concurrency::task_group:: wait](reference/task-group-class.md#wait) метод. `task_group::wait` Метод создает все исключения, которые были созданы в рабочей функции.
+Чтобы расширить класс `async_future` для обработки исключений, вызываемых рабочей функцией, измените метод `async_future::get`, чтобы вызвать метод [Concurrency:: task_group:: wait](reference/task-group-class.md#wait) . Метод `task_group::wait` создает исключения, созданные рабочей функцией.
 
-В следующем примере показано измененную версию `async_future` класса. `wmain` Функция использует `try` - `catch` блока для печати результата `async_future` объекта или для вывода значения исключения, созданного рабочей функции.
+В следующем примере показана измененная версия класса `async_future`. Функция `wmain` использует блок `try`-`catch` для вывода результата объекта `async_future` или для вывода значения исключения, созданного рабочей функцией.
 
 [!code-cpp[concrt-futures-with-eh#1](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_7.cpp)]
 
-В этом примере выводятся следующие данные:
+В примере получается следующий вывод.
 
 ```Output
 caught exception: error
 ```
 
-Дополнительные сведения о модели обработки исключений в среде выполнения с параллелизмом, см. в разделе [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
+Дополнительные сведения о модели обработки исключений в среда выполнения с параллелизмом см. в разделе [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `futures.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем `futures.cpp`, а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**CL.exe futures.cpp/EHsc**
+**CL. exe/EHsc Futures. cpp**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пошаговые руководства по среде выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

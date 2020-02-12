@@ -20,63 +20,63 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b222170112f43ae9700054f42e1368545612d00
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394355"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138797"
 ---
-# <a name="overwritebuffer-class"></a>Класс overwrite_buffer
+# <a name="overwrite_buffer-class"></a>Класс overwrite_buffer
 
 Блок обмена сообщениями `overwrite_buffer` — это упорядоченный блок `propagator_block` с несколькими источниками и несколькими целями, который может хранить одно сообщение в один момент времени. Новые сообщения перезаписывают предыдущие.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<class T>
 class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>, multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип полезных данных сообщений, сохраненных и распространенных буфером.
+Тип полезных данных сообщений, хранимых и распространяемых буфером.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[overwrite_buffer](#ctor)|Перегружен. Создает `overwrite_buffer` блок обмена сообщениями.|
-|[~ overwrite_buffer деструктор](#dtor)|Уничтожает `overwrite_buffer` блок обмена сообщениями.|
+|[overwrite_buffer](#ctor)|Перегружен. Конструирует блок сообщений `overwrite_buffer`.|
+|[Деструктор ~ overwrite_buffer](#dtor)|Уничтожает блок сообщений `overwrite_buffer`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[has_value](#has_value)|Проверяет, является ли это `overwrite_buffer` блок обмена сообщениями еще имеет значение.|
-|[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `overwrite_buffer` блок обмена сообщениями.|
+|[has_value](#has_value)|Проверяет, имеет ли этот блок сообщений `overwrite_buffer` значение.|
+|[value](#value)|Возвращает ссылку на текущие полезные данные сообщения, хранящегося в блоке сообщений `overwrite_buffer`.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[accept_message](#accept_message)|Принимает сообщение, предложенное это `overwrite_buffer` блок обмена сообщениями, возвращая копию сообщения вызывающему объекту.|
-|[consume_message](#consume_message)|Получает сообщение, было предложено `overwrite_buffer` блоке сообщений и зарезервированных целевым объектом, возвращая копию сообщения вызывающему объекту.|
-|[link_target_notification](#link_target_notification)|Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `overwrite_buffer` блок обмена сообщениями.|
-|[propagate_message](#propagate_message)|Асинхронно передает сообщение от `ISource` блока к этому `overwrite_buffer` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Окружение `message _PMessage` в этом `overwrite_buffer` блоке сообщений и предлагает его ко всем связанным целевым объектам.|
-|[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block::release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Резервирует сообщение, ранее предложенного этим объектом `overwrite_buffer` блок обмена сообщениями. (Переопределяет [source_block::reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Возобновляет распространение после выпуска резервирования. (Переопределяет [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Синхронно передает сообщение от `ISource` блока к этому `overwrite_buffer` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.|
-|[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Принимает сообщение, предложенное этим блоком сообщений `overwrite_buffer`, возвращая копию сообщения вызывающему.|
+|[consume_message](#consume_message)|Использует сообщение, которое было ранее предложено блоком `overwrite_buffer` Messaging, и зарезервировано целевым объектом, возвращая копию сообщения вызывающему объекту.|
+|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `overwrite_buffer`.|
+|[propagate_message](#propagate_message)|Асинхронно передает сообщение из блока `ISource` в этот `overwrite_buffer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Помещает `message _PMessage` в этом `overwrite_buffer` блоке обмена сообщениями и предлагает его всем связанным целевым объектам.|
+|[release_message](#release_message)|Освобождает предыдущее резервирование сообщения. (Переопределяет [source_block:: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Резервирует сообщение, которое было предложено этим блоком `overwrite_buffer` Messaging. (Переопределяет [source_block:: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Возобновляет распространение после освобождения резервирования. (Переопределяет [source_block:: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Синхронно передает сообщение из блока `ISource` в этот `overwrite_buffer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.|
+|[supports_anonymous_source](#supports_anonymous_source)|Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником. (Переопределяет метод [ITarget:: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`overwrite_buffer` Блок обмена сообщениями распространяет копии своего сохраненного сообщения для каждого из его целевых объектов.
+Блок обмена сообщениями `overwrite_buffer` распространяет копии сохраненного сообщения каждому из его целевых объектов.
 
 Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -98,86 +98,86 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 
 **Пространство имен:** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Принимает сообщение, предложенное это `overwrite_buffer` блок обмена сообщениями, возвращая копию сообщения вызывающему объекту.
+Принимает сообщение, предложенное этим блоком сообщений `overwrite_buffer`, возвращая копию сообщения вызывающему.
 
-```
+```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из предложенные `message` объекта.
+`runtime_object_identity` предлагаемого `message` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`overwrite_buffer` Обмена сообщениями блок возвращает копии сообщения целевым, а не передача текущего удержания сообщения.
+Блок обмена сообщениями `overwrite_buffer` возвращает копии сообщения в целевые объекты, вместо того чтобы передавать владение текущим сообщением.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Получает сообщение, было предложено `overwrite_buffer` блоке сообщений и зарезервированных целевым объектом, возвращая копию сообщения вызывающему объекту.
+Использует сообщение, которое было ранее предложено блоком `overwrite_buffer` Messaging, и зарезервировано целевым объектом, возвращая копию сообщения вызывающему объекту.
 
-```
+```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта использованное.
+`runtime_object_identity` используемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Аналогичную `accept`, но всегда предшествует вызов `reserve`.
+Аналогично `accept`, но всегда предшествует вызов `reserve`.
 
-##  <a name="has_value"></a> has_value
+## <a name="has_value"></a>has_value
 
-Проверяет, является ли это `overwrite_buffer` блок обмена сообщениями еще имеет значение.
+Проверяет, имеет ли этот блок сообщений `overwrite_buffer` значение.
 
-```
+```cpp
 bool has_value() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если блок получил значение, **false** в противном случае.
+**значение true** , если блок получил значение; в противном случае — значение **false** .
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `overwrite_buffer` блок обмена сообщениями.
+Обратный вызов, уведомляющий о том, что новый целевой объект связан с этим блоком сообщений `overwrite_buffer`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-Указатель на только что привязанный целевой объект.
+Указатель на вновь связанный целевой объект.
 
-##  <a name="dtor"></a> ~ overwrite_buffer
+## <a name="dtor"></a>~ overwrite_buffer
 
-Уничтожает `overwrite_buffer` блок обмена сообщениями.
+Уничтожает блок сообщений `overwrite_buffer`.
 
-```
+```cpp
 ~overwrite_buffer();
 ```
 
-##  <a name="ctor"></a> overwrite_buffer
+## <a name="ctor"></a>overwrite_buffer
 
-Создает `overwrite_buffer` блок обмена сообщениями.
+Конструирует блок сообщений `overwrite_buffer`.
 
-```
+```cpp
 overwrite_buffer();
 
 overwrite_buffer(
@@ -200,8 +200,8 @@ overwrite_buffer(
 
 ### <a name="parameters"></a>Параметры
 
-*_Фильтр*<br/>
-Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
+*_Filter*<br/>
+Функция фильтра, которая определяет, следует ли принимать предлагаемые сообщения.
 
 *_PScheduler*<br/>
 Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `overwrite_buffer` .
@@ -209,17 +209,17 @@ overwrite_buffer(
 *_PScheduleGroup*<br/>
 Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `overwrite_buffer` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_PScheduler` или `_PScheduleGroup` .
 
-Тип `filter_method` является функтор с сигнатурой `bool (T const &)` которого вызывается этим `overwrite_buffer` блок обмена сообщениями, чтобы определить ли он должен принять предложенное сообщение.
+Тип `filter_method` — это функтор с сигнатурой `bool (T const &)` который вызывается этим блоком `overwrite_buffer` обмена сообщениями, чтобы определить, должно ли оно принимать предложенное сообщение.
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Асинхронно передает сообщение от `ISource` блока к этому `overwrite_buffer` блок обмена сообщениями. Он вызывается по `propagate` метод, при вызове исходного блока.
+Асинхронно передает сообщение из блока `ISource` в этот `overwrite_buffer` блок сообщений. Вызывается методом `propagate` при вызове из исходного блока.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -231,34 +231,34 @@ virtual message_status propagate_message(
 Указатель на объект `message`.
 
 *_PSource*<br/>
-Указатель на блок источника, предлагающий сообщение.
+Указатель на исходный блок, предлагающий сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.
+[Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Окружение `message _PMessage` в этом `overwrite_buffer` блоке сообщений и предлагает его ко всем связанным целевым объектам.
+Помещает `message _PMessage` в этом `overwrite_buffer` блоке обмена сообщениями и предлагает его всем связанным целевым объектам.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_ message<T>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PMessage*<br/>
-Указатель на `message` объекта, `overwrite_buffer` стал владельцем.
+Указатель на объект `message`, владельцем которого является этот `overwrite_buffer`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод переписывает текущее сообщение в `overwrite_buffer` принятое сообщение `_PMessage`.
+Этот метод перезаписывает текущее сообщение в `overwrite_buffer` с вновь принятым сообщением `_PMessage`.
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Синхронно передает сообщение от `ISource` блока к этому `overwrite_buffer` блок обмена сообщениями. Он вызывается по `send` метод, при вызове исходного блока.
+Синхронно передает сообщение из блока `ISource` в этот `overwrite_buffer` блок сообщений. Вызывается методом `send` при вызове из исходного блока.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -270,83 +270,83 @@ virtual message_status send_message(
 Указатель на объект `message`.
 
 *_PSource*<br/>
-Указатель на блок источника, предлагающий сообщение.
+Указатель на исходный блок, предлагающий сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [message_status](concurrency-namespace-enums.md) указывает, что целевой объект решил сделать с сообщением.
+[Message_status](concurrency-namespace-enums.md) указывает, что цель решила делать с сообщением.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
 Переопределяет метод `supports_anonymous_source`, чтобы указать, что данный блок может принимать сообщения, предоставляемые ему несвязанным источником.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** поскольку блок не откладывает предоставляемые сообщения.
+**значение true** , поскольку блок не откладывает предлагаемые сообщения.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
 Освобождает предыдущее резервирование сообщения.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта освобождение.
+`runtime_object_identity` освобожденного объекта `message`.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Резервирует сообщение, ранее предложенного этим объектом `overwrite_buffer` блок обмена сообщениями.
+Резервирует сообщение, которое было предложено этим блоком `overwrite_buffer` Messaging.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта резервируются.
+`runtime_object_identity` резервируемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
+**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После вызова `reserve`, если он возвращает **значение true**, необходимо вызвать метод `consume` или `release`, чтобы получить или освободить владение сообщением.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Возобновляет распространение после выпуска резервирования.
+Возобновляет распространение после освобождения резервирования.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="value"></a> Значение
+## <a name="value"></a>значений
 
-Получает ссылку на текущий полезные данные сообщения, хранящуюся в `overwrite_buffer` блок обмена сообщениями.
+Возвращает ссылку на текущие полезные данные сообщения, хранящегося в блоке сообщений `overwrite_buffer`.
 
-```
+```cpp
 T value();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Полезные данные в данный момент сохраненного сообщения.
+Полезные данные текущего сохраненного сообщения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение, хранящееся в `overwrite_buffer` изменить сразу же после возврата этого метода. Этот метод будет ожидать до получения сообщения, если не сохраненных в `overwrite_buffer`.
+Значение, хранящееся в `overwrite_buffer`, может измениться сразу после возврата этим методом. Этот метод будет ожидать, пока не будет получено сообщение, если в `overwrite_buffer`в данный момент не хранится ни одно сообщение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс unbounded_buffer](unbounded-buffer-class.md)<br/>

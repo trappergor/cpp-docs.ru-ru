@@ -9,40 +9,40 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160056"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143339"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>Класс scheduler_resource_allocation_error
+# <a name="scheduler_resource_allocation_error-class"></a>Класс scheduler_resource_allocation_error
 
 Этот класс описывает исключение, возникающее из-за сбоя получения критического ресурса в исполняющей среде с параллелизмом.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[scheduler_resource_allocation_error](#ctor)|Перегружен. Создает объект `scheduler_resource_allocation_error`.|
+|[scheduler_resource_allocation_error](#ctor)|Перегружен. Формирует объект `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[get_error_code](#get_error_code)|Возвращает код ошибки, вызвавшей исключение.|
+|[get_error_code](#get_error_code)|Возвращает код ошибки, вызвавший исключение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Это исключение обычно возникает при сбое вызова операционной системы в среде выполнения с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода `get_error_code`.
+Это исключение обычно возникает при сбое вызова операционной системы из среда выполнения с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -52,27 +52,27 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
-Возвращает код ошибки, вызвавшей исключение.
+Возвращает код ошибки, вызвавший исключение.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`HRESULT` Значение ошибки, вызвавшей исключение.
+`HRESULT` значение ошибки, вызвавшей исключение.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
-Создает объект `scheduler_resource_allocation_error`.
+Формирует объект `scheduler_resource_allocation_error`.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -87,8 +87,8 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Описательное сообщение об ошибке.
 
 *_Hresult*<br/>
-`HRESULT` Значение ошибки, вызвавшей исключение.
+`HRESULT` значение ошибки, вызвавшей исключение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

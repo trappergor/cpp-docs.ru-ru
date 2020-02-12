@@ -9,36 +9,36 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: eddcf44966d197068113c5e7817dad37841261a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524843"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127128"
 ---
-# <a name="acceleratorviewremoved-class"></a>Класс accelerator_view_removed
+# <a name="accelerator_view_removed-class"></a>Класс accelerator_view_removed
 
-Исключение, возникающее при сбое основного вызова DirectX из-за механизм обнаружения и восстановления времени ожидания Windows.
+Исключение, возникающее при сбое базового вызова DirectX из-за обнаружения времени ожидания Windows и механизма восстановления.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class accelerator_view_removed : public runtime_exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Конструктор accelerator_view_removed](#ctor)|Инициализирует новый экземпляр класса `accelerator_view_removed`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|Возвращает код ошибки HRESULT, указывающее причину `accelerator_view` удаления объекта.|
+|[get_view_removed_reason](#get_view_removed_reason)|Возвращает код ошибки HRESULT, указывающий на причину удаления объекта `accelerator_view`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,17 +50,17 @@ class accelerator_view_removed : public runtime_exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** параллелизм
+**Пространство имен** : Concurrency
 
-## <a name="ctor"></a> accelerator_view_removed
+## <a name="ctor"></a>accelerator_view_removed
 
-Инициализирует новый экземпляр класса [accelerator_view_removed](accelerator-view-removed-class.md) класса.
+Инициализирует новый экземпляр класса [accelerator_view_removed](accelerator-view-removed-class.md) .
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 explicit accelerator_view_removed(
     const char * message,
     HRESULT view_removed_reason ) throw();
@@ -72,25 +72,25 @@ explicit accelerator_view_removed(
 ### <a name="parameters"></a>Параметры
 
 *message*<br/>
-Описание ошибки.
+Текстовое описание ошибки.
 
 *view_removed_reason*<br/>
-Код ошибки HRESULT, указывающее причину удаления `accelerator_view` объекта.
+Код ошибки HRESULT, указывающий причину удаления объекта `accelerator_view`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Новый экземпляр класса `accelerator_view_removed`.
 
-## <a name="get_view_removed_reason"></a> get_view_removed_reason
+## <a name="get_view_removed_reason"></a>get_view_removed_reason
 
-Возвращает код ошибки HRESULT, указывающее причину `accelerator_view` удаления объекта.
+Возвращает код ошибки HRESULT, указывающий на причину удаления объекта `accelerator_view`.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 HRESULT get_view_removed_reason() const throw();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -8,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409971"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142379"
 ---
-# <a name="missingwait-class"></a>Класс missing_wait
+# <a name="missing_wait-class"></a>Класс missing_wait
 
 Этот класс описывает исключение, возникающее при наличии задач, для которых по-прежнему запланирован объект `task_group` или `structured_task_group` на момент выполнения деструктора объекта. Это исключение не создается, если деструктор достигается из-за освобождения стека в результате исключения.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[missing_wait](#ctor)|Перегружен. Создает объект `missing_wait`.|
+|[missing_wait](#ctor)|Перегружен. Формирует объект `missing_wait`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Отсутствует поток исключений, вы несете ответственность за вызов либо `wait` или `run_and_wait` метод `task_group` или `structured_task_group` объект, прежде чем разрешить этот объект для уничтожения. Среда выполнения создает это исключение, как это означает, что вы забыли вызвать `wait` или `run_and_wait` метод.
+Отсутствие потока исключений. Вы несете ответственность за вызов метода `wait` или `run_and_wait` объекта `task_group` или `structured_task_group`, прежде чем разрешить этому объекту уничтожения. Среда выполнения создает это исключение в качестве свидетельства о том, что вы забыли вызвать метод `wait` или `run_and_wait`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -45,15 +45,15 @@ class missing_wait : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> missing_wait
+## <a name="ctor"></a>missing_wait
 
-Создает объект `missing_wait`.
+Формирует объект `missing_wait`.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -64,10 +64,10 @@ missing_wait() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс task_group](task-group-class.md)<br/>
-[wait](task-group-class.md)<br/>
+[ожидания](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [Класс structured_task_group](structured-task-group-class.md)

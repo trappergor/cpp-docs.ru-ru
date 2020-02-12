@@ -17,64 +17,64 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35c7cc72520cdb0675abf9c15574a49e33741d0b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337587"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142701"
 ---
-# <a name="sourcelinkmanager-class"></a>Класс source_link_manager
+# <a name="source_link_manager-class"></a>Класс source_link_manager
 
 Объект `source_link_manager` управляет сетевыми соединениями блоков обмена сообщениями с блоками `ISource`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<class _LinkRegistry>
 class source_link_manager;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_LinkRegistry*<br/>
-Реестр сетевых ссылок.
+Реестр сетевых связей.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`const_pointer`|Тип, предоставляющий указатель на `const` элемент `source_link_manager` объекта.|
-|`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `source_link_manager` объект для чтения и выполнения операций const.|
-|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в `source_link_manager` объекта.|
-|`type`|Тип реестра ссылку под ее управлением `source_link_manager` объекта.|
+|`const_pointer`|Тип, предоставляющий указатель на элемент `const` в объекте `source_link_manager`.|
+|`const_reference`|Тип, предоставляющий ссылку на элемент `const`, хранящийся в объекте `source_link_manager`, для чтения и выполнения операций const.|
+|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в объекте `source_link_manager`.|
+|`type`|Тип реестра ссылок, управляемого объектом `source_link_manager`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[source_link_manager](#ctor)|Создает объект `source_link_manager`.|
-|[~ source_link_manager деструктор](#dtor)|Уничтожает `source_link_manager` объекта.|
+|[source_link_manager](#ctor)|Формирует объект `source_link_manager`.|
+|[Деструктор ~ source_link_manager](#dtor)|Уничтожает объект `source_link_manager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[add](#add)|Добавляет ссылку на источник `source_link_manager` объекта.|
-|[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `source_link_manager` объекта.|
-|[Содержит](#contains)|Поиск `network_link_registry` в рамках этого `source_link_manager` объекта для указанного блока.|
-|[count](#count)|Подсчитывает количество связанных блоков в `source_link_manager` объекта.|
-|[reference](#reference)|Получает ссылку на `source_link_manager` объекта.|
-|[register_target_block](#register_target_block)|Регистрирует целевой блок, который содержит эту коллекцию `source_link_manager` объекта.|
-|[release](#release)|Освобождает ссылку на `source_link_manager` объекта.|
-|[remove](#remove)|Удаляет ссылку из `source_link_manager` объекта.|
-|[set_bound](#set_bound)|Задает максимальное число ссылок источника, который может быть добавлен к этому `source_link_manager` объекта.|
+|[добавление](#add)|Добавляет ссылку на объект `source_link_manager`.|
+|[begin](#begin)|Возвращает итератор, который является первым элементом в объекте `source_link_manager`.|
+|[contains](#contains)|Выполняет поиск указанного блока в `network_link_registry` в этом `source_link_manager` объекте.|
+|[count](#count)|Подсчитывает количество связанных блоков в объекте `source_link_manager`.|
+|[reference](#reference)|Получает ссылку на объект `source_link_manager`.|
+|[register_target_block](#register_target_block)|Регистрирует целевой блок, содержащий этот объект `source_link_manager`.|
+|[release](#release)|Освобождает ссылку на объект `source_link_manager`.|
+|[remove](#remove)|Удаляет ссылку из объекта `source_link_manager`.|
+|[set_bound](#set_bound)|Задает максимальное число ссылок на источники, которые могут быть добавлены к этому объекту `source_link_manager`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-В настоящее время блоки источника имеется счетчик ссылок. Это оболочка на `network_link_registry` объект, который допускает параллельный доступ к ссылкам и предоставляет возможность обращаться через обратные вызовы ссылки. Блоки сообщений ( `target_block`s или `propagator_block`s) следует использовать этот класс для источника ссылки.
+Сейчас блоки исходного кода подсчитываются. Это оболочка для объекта `network_link_registry`, который разрешает одновременный доступ к ссылкам и предоставляет возможность ссылаться на ссылки через обратные вызовы. Блоки сообщений (`target_block`s или `propagator_block`s) должны использовать этот класс для своих исходных ссылок.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -86,115 +86,115 @@ class source_link_manager;
 
 **Пространство имен:** concurrency
 
-##  <a name="add"></a> Добавить
+## <a name="add"></a>включить
 
-Добавляет ссылку на источник `source_link_manager` объекта.
+Добавляет ссылку на объект `source_link_manager`.
 
-```
+```cpp
 void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок для добавления.
+Указатель на добавляемый блок.
 
-##  <a name="begin"></a> начать
+## <a name="begin"></a>начале
 
-Возвращает итератор, указывающий на первый элемент в `source_link_manager` объекта.
+Возвращает итератор, который является первым элементом в объекте `source_link_manager`.
 
-```
+```cpp
 iterator begin();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор, адресующий первый элемент в `source_link_manager` объекта.
+Итератор, обращающийся к первому элементу в объекте `source_link_manager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Конечное состояние итератора обозначается `NULL` ссылку.
+Конечное состояние итератора обозначается ссылкой на `NULL`.
 
-##  <a name="contains"></a> Содержит
+## <a name="contains"></a>содержащих
 
-Поиск `network_link_registry` в рамках этого `source_link_manager` объекта для указанного блока.
+Выполняет поиск указанного блока в `network_link_registry` в этом `source_link_manager` объекте.
 
-```
+```cpp
 bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок, который необходимо найти в `source_link_manager` объекта.
+Указатель на блок, который необходимо найти в объекте `source_link_manager`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** указанного блока, если было обнаружено **false** в противном случае.
+**значение true** , если указанный блок найден; в противном случае — **значение false** .
 
-##  <a name="count"></a> число
+## <a name="count"></a>расчета
 
-Подсчитывает количество связанных блоков в `source_link_manager` объекта.
+Подсчитывает количество связанных блоков в объекте `source_link_manager`.
 
-```
+```cpp
 size_t count();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число связанных блоков в `source_link_manager` объекта.
+Число связанных блоков в объекте `source_link_manager`.
 
-##  <a name="reference"></a> Справочник по
+## <a name="reference"></a>IsReference
 
-Получает ссылку на `source_link_manager` объекта.
+Получает ссылку на объект `source_link_manager`.
 
-```
+```cpp
 void reference();
 ```
 
-##  <a name="register_target_block"></a> register_target_block
+## <a name="register_target_block"></a>register_target_block
 
-Регистрирует целевой блок, который содержит эту коллекцию `source_link_manager` объекта.
+Регистрирует целевой блок, содержащий этот объект `source_link_manager`.
 
-```
+```cpp
 void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-Целевой блок, содержащий это `source_link_manager` объекта.
+Целевой блок, содержащий этот объект `source_link_manager`.
 
-##  <a name="release"></a> выпуск
+## <a name="release"></a>отпускании
 
-Освобождает ссылку на `source_link_manager` объекта.
+Освобождает ссылку на объект `source_link_manager`.
 
-```
+```cpp
 void release();
 ```
 
-##  <a name="remove"></a> удалить
+## <a name="remove"></a>отменит
 
-Удаляет ссылку из `source_link_manager` объекта.
+Удаляет ссылку из объекта `source_link_manager`.
 
-```
+```cpp
 bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Link*<br/>
-Указатель на блок удалены, если найден.
+Указатель на удаляемый блок, если он найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если ссылки был найден и удален, **false** в противном случае.
+**значение true** , если ссылка была найдена и удалена; в противном случае — **значение false** .
 
-##  <a name="set_bound"></a> set_bound
+## <a name="set_bound"></a>set_bound
 
-Задает максимальное число ссылок источника, который может быть добавлен к этому `source_link_manager` объекта.
+Задает максимальное число ссылок на источники, которые могут быть добавлены к этому объекту `source_link_manager`.
 
-```
+```cpp
 void set_bound(size_t _MaxLinks);
 ```
 
@@ -203,23 +203,23 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 Максимальное число ссылок.
 
-##  <a name="ctor"></a> source_link_manager
+## <a name="ctor"></a>source_link_manager
 
-Создает объект `source_link_manager`.
+Формирует объект `source_link_manager`.
 
-```
+```cpp
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~source_link_manager
+## <a name="dtor"></a>~ source_link_manager
 
-Уничтожает `source_link_manager` объекта.
+Уничтожает объект `source_link_manager`.
 
-```
+```cpp
 ~source_link_manager();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс single_link_registry](single-link-registry-class.md)<br/>

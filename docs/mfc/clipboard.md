@@ -1,5 +1,5 @@
 ---
-title: буфер обмена
+title: Буфер обмена
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cutting and copying data
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508927"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127911"
 ---
-# <a name="clipboard"></a>буфер обмена
+# <a name="clipboard"></a>Буфер обмена
 
 В этом семействе статей объясняется, как реализовать поддержку буфера обмена Windows в приложениях MFC. Буфер обмена Windows используется двумя способами:
 
 - Реализация стандартных команд меню "Правка", таких как вырезание, копирование и вставка.
 
-- Реализация равномерной переноса данных с помощью перетаскивания (OLE).
+- Реализация равномерной переноса данных с помощью перетаскивания OLE.
 
 Буфер обмена — это стандартный способ передачи данных между источником и назначением Windows. Он также может быть очень полезен в операциях OLE. С появлением OLE в Windows есть два механизма обмена. Стандартный интерфейс API буфера обмена Windows по-прежнему доступен, но был дополнен механизмом преобразования данных OLE. Универсальная OLE-обмен данными (UDT) поддерживает вырезание, копирование и вставку в буфер обмена и перетаскивание.
 
@@ -41,8 +41,8 @@ ms.locfileid: "69508927"
 
 - [Буфер обмена Windows](/windows/win32/dataxchg/clipboard)
 
-- [Реализация перетаскивания (OLE)](../mfc/drag-and-drop-ole.md)
+- [Перетаскивание OLE](../mfc/drag-and-drop-ole.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)

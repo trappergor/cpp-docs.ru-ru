@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405447"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142416"
 ---
-# <a name="uint4-class"></a>Класс uint_4
+# <a name="uint_4-class"></a>Класс uint_4
 
 Представляет короткий вектор из четырех целых чисел без знака.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class uint_4;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор uint_4](#uint_4__ctor) |Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор uint_4](#uint_4__ctor) |Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,26 +442,26 @@ class uint_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
-|uint_4::operator*=||
-|uint_4::operator/=||
-|uint_4::operator ++||
-|uint_4::operator+=||
-|uint_4::operator=||
-|uint_4::operator-=||
+|uint_4:: operator * =||
+|uint_4:: operator/=||
+|uint_4:: operator + +||
+|uint_4:: operator + =||
+|uint_4:: operator =||
+|uint_4:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#size)||
+|[Константа размера](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -499,7 +499,7 @@ class uint_4;
 |uint_4::ga||
 |uint_4::gab||
 |uint_4::gabr||
-|uint_4::gar||
+|uint_4:: Гар||
 |uint_4::garb||
 |uint_4::gb||
 |uint_4::gba||
@@ -598,17 +598,17 @@ class uint_4;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,7 +639,7 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_V0*<br/>
 Значение для инициализации элемента 0.
@@ -656,17 +656,17 @@ explicit inline uint_4(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
 ## <a name="size"></a>size
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

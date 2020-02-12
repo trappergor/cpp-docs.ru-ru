@@ -8,43 +8,43 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 2373fe3bc8cac501d1b6b32ca66996eff47ba6f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd044a6255a17882c26183223f71564f98c9f7b2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180737"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142768"
 ---
-# <a name="schedulerptr-structure"></a>Структура scheduler_ptr
+# <a name="scheduler_ptr-structure"></a>Структура scheduler_ptr
 
-Представляет указатель на планировщик. Этот класс существует в том, чтобы разрешить в спецификации общего времени жизни путем применения shared_ptr или простой ссылки с помощью необработанного указателя.
+Представляет указатель на планировщик. Этот класс существует, чтобы разрешить спецификацию общего времени существования с помощью shared_ptr или просто простой ссылки с помощью необработанного указателя.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 struct scheduler_ptr;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[scheduler_ptr::scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|
+|[scheduler_ptr:: scheduler_ptr](#ctor)|Перегружен. Создает указатель планировщика из shared_ptr планировщику|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[scheduler_ptr::get](#get)|Возвращает необработанный указатель планировщику|
+|[scheduler_ptr:: Get](#get)|Возвращает необработанный указатель планировщику|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[scheduler_ptr::operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|
-|[scheduler_ptr::operator-&gt;](#operator_ptr)|Поведение, как у указателя|
+|[scheduler_ptr:: operator bool](#operator_bool)|Проверьте, является ли указатель планировщика отличным от null|
+|[scheduler_ptr:: operator —&gt;](#operator_ptr)|Поведение, как у указателя|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -52,55 +52,55 @@ struct scheduler_ptr;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** pplinterface.h
+**Заголовок:** пплинтерфаце. h
 
 **Пространство имен:** concurrency
 
-##  <a name="get"></a>  Метод scheduler_ptr::Get
+## <a name="get"></a>Метод scheduler_ptr:: Get
 
-Возвращает необработанный указатель планировщику.
+Возвращает необработанный указатель на планировщик.
 
-```
+```cpp
 scheduler_interface* get() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_bool"></a>  scheduler_ptr::operator bool
+## <a name="operator_bool"></a>scheduler_ptr:: operator bool
 
-Проверяет, является ли указатель планировщика, отличных от null.
+Проверяет, имеет ли указатель планировщика значение, отличное от NULL.
 
-```
+```cpp
 operator bool() const;
 ```
 
-##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
+## <a name="operator_ptr"></a>scheduler_ptr:: operator —&gt;
 
-Действует как указатель.
+Ведет себя как указатель.
 
-```
+```cpp
 scheduler_interface* operator->() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+## <a name="ctor"></a>Конструктор scheduler_ptr:: scheduler_ptr
 
-Создает указатель планировщика из shared_ptr планировщику.
+Создает указатель планировщика из shared_ptr в планировщик.
 
-```
+```cpp
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*scheduler*<br/>
+*планировщика*<br/>
 Планировщик для преобразования.
 
-*pScheduler*<br/>
+*псчедулер*<br/>
 Указатель планировщика для преобразования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

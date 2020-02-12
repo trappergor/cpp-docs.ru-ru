@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296180"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143110"
 ---
-# <a name="contextselfunblock-class"></a>Класс context_self_unblock
+# <a name="context_self_unblock-class"></a>Класс context_self_unblock
 
 Этот класс описывает исключение, которое создается при вызове метода `Unblock` объекта `Context` из того же контекста. Это означает попытку данного контекста разблокировать самого себя.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[context_self_unblock](#ctor)|Перегружен. Создает объект `context_self_unblock`.|
+|[context_self_unblock](#ctor)|Перегружен. Формирует объект `context_self_unblock`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -41,15 +41,15 @@ class context_self_unblock : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
-Создает объект `context_self_unblock`.
+Формирует объект `context_self_unblock`.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();
@@ -60,6 +60,6 @@ context_self_unblock() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

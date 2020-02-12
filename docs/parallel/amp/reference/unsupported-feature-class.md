@@ -8,30 +8,30 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525414"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127716"
 ---
-# <a name="unsupportedfeature-class"></a>Класс unsupported_feature
+# <a name="unsupported_feature-class"></a>Класс unsupported_feature
 
-Исключение, возникающее, когда используется неподдерживаемое свойство.
+Исключение, возникающее при использовании неподдерживаемой функции.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[unsupported_feature конструктор](#unsupported_feature)|Создает новый экземпляр класса `unsupported_feature` исключение.|
+|[Конструктор unsupported_feature](#unsupported_feature)|Конструирует новый экземпляр исключения `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Создает новый экземпляр класса `unsupported_feature` исключение.
+  Конструирует новый экземпляр исключения `unsupported_feature`.
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -57,7 +57,7 @@ unsupported_feature() throw();
 ### <a name="parameters"></a>Параметры
 
 *_Message*<br/>
-Описание ошибки.
+Текстовое описание ошибки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -65,10 +65,10 @@ unsupported_feature() throw();
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** параллелизм
+**Пространство имен** : Concurrency
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)

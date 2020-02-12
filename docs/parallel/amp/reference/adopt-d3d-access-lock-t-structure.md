@@ -4,24 +4,24 @@ ms.date: 11/04/2016
 f1_keywords:
 - amprt/concurrency::direct3d::adopt_d3d_access_lock_t
 ms.assetid: ef10bb06-88d6-420b-bb81-35895b2e02e6
-ms.openlocfilehash: 7d72902a0a11ff7e9c76db2b8b6a8a76199a40dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a52632134a8e386390a88a326d4ca870951a8288
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405623"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127154"
 ---
-# <a name="adoptd3daccesslockt-structure"></a>Структура adopt_d3d_access_lock_t
+# <a name="adopt_d3d_access_lock_t-structure"></a>Структура adopt_d3d_access_lock_t
 
-Тип тега, чтобы указать блокировку доступа D3D должны соблюдать, а не получена.
+Тип тега, указывающий, что блокировка доступа D3D должна быть принята, а не получена.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 struct adopt_d3d_access_lock_t;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -29,10 +29,10 @@ struct adopt_d3d_access_lock_t;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amprt.h
+**Заголовок:** ампрт. h
 
-**Пространство имен:** concurrency::direct3d
+**Пространство имен:** concurrency::d irect3d
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::direct3d](concurrency-direct3d-namespace.md)

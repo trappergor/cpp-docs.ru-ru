@@ -8,28 +8,28 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f5ad16893a898d4258762b25fea3d557607a3f8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262350"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141155"
 ---
-# <a name="improperschedulerdetach-class"></a>Класс improper_scheduler_detach
+# <a name="improper_scheduler_detach-class"></a>Класс improper_scheduler_detach
 
 Этот класс описывает исключение, создаваемое при вызове метода `CurrentScheduler::Detach` в контексте, который не присоединен ни к одному планировщику с помощью метода `Attach` объекта `Scheduler`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class improper_scheduler_detach : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[improper_scheduler_detach](#ctor)|Перегружен. Создает объект `improper_scheduler_detach`.|
 
@@ -41,15 +41,15 @@ class improper_scheduler_detach : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_detach
+## <a name="ctor"></a>improper_scheduler_detach
 
 Создает объект `improper_scheduler_detach`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_detach() throw();
@@ -60,7 +60,7 @@ improper_scheduler_detach() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс Scheduler](scheduler-class.md)

@@ -1,28 +1,28 @@
 ---
-title: Функции пространства имен Concurrency::Graphics
+title: Функции пространства имен Concurrency::graphics
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: 7ef181da43bb947230aaafe82b178938c85b9a8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46b8a171acd3b125749b4e2c519909b82c76dc39
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375643"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126985"
 ---
-# <a name="concurrencygraphics-namespace-functions"></a>Функции пространства имен Concurrency::Graphics
+# <a name="concurrencygraphics-namespace-functions"></a>Функции пространства имен Concurrency::graphics
 
 |||
 |-|-|
 |[copy](#copy)|[copy_async](#copy_async)|
 
-##  <a name="copy"></a>  Скопируйте функцию (пространство имен Concurrency::graphics)
+## <a name="copy"></a>Функция Copy (Concurrency:: Graphics пространство имен)
 
-Копирует исходную текстуру в буфер назначения, либо копирует буфер источника в буфер назначения. Эта функция выглядит `copy(src, dest)`.
+Копирует текстуру источника в целевой буфер или копирует исходный буфер в целевой буфер. Общая форма этой функции — `copy(src, dest)`.
 
-```
+```cpp
 template <
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type>
@@ -119,19 +119,19 @@ void copy (
 ### <a name="parameters"></a>Параметры
 
 *_Copy_extent*<br/>
-Экстент раздела текстуры для копирования.
+Экстент копируемого раздела текстуры.
 
 *_Dst*<br/>
 Объект для копирования.
 
 *_Dst_byte_size*<br/>
-Число байтов в месте назначения.
+Число байтов в назначении.
 
 *_Dst_type*<br/>
 Тип целевого объекта.
 
 *_Dst_offset*<br/>
-Смещение в объекте назначения, начиная с которого начинается копирование.
+Смещение в месте назначения, с которого начинается копирование.
 
 *InputIterator*<br/>
 Тип итератора ввода.
@@ -140,7 +140,7 @@ void copy (
 Тип итератора вывода.
 
 *_Src*<br/>
-Объект, который требуется скопировать.
+В объект для копирования.
 
 *_Src_byte_size*<br/>
 Число байтов в источнике.
@@ -149,19 +149,19 @@ void copy (
 Тип исходного объекта.
 
 *_Src_offset*<br/>
-Смещение в источник, из которого следует начать копирование.
+Смещение в источнике, с которого начинается копирование.
 
-*Первый*<br/>
-Итератор с начала в исходном контейнере.
+*first*<br/>
+Начальный итератор в исходный контейнер.
 
-*последний*<br/>
-Итератор конца в исходном контейнере.
+*last*<br/>
+Конечный итератор в исходный контейнер.
 
-##  <a name="copy_async"></a>  copy_async функцию (пространство имен Concurrency::graphics)
+## <a name="copy_async"></a>Функция copy_async (Concurrency:: Graphics пространство имен)
 
-Асинхронно копирует исходную текстуру в буфер назначения, или копирует исходный буфер в буфер назначения, а затем возвращает [completion_future](completion-future-class.md) объект, который можно использовать для ожидания. Не удается скопировать данные, когда код выполняется на ускорителе. Эта функция выглядит `copy(src, dest)`.
+Асинхронно копирует текстуру источника в целевой буфер или копирует исходный буфер в целевой буфер, а затем возвращает объект [completion_future](completion-future-class.md) , который можно ожидать. Копирование данных невозможно, если код работает на ускорителе. Общая форма этой функции — `copy(src, dest)`.
 
-```
+```cpp
 template<
     typename _Src_type,
     typename = typename std::enable_if<details::texture_traits<_Src_type>::is_texture, void>::type
@@ -254,19 +254,19 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 ### <a name="parameters"></a>Параметры
 
 *_Copy_extent*<br/>
-Экстент раздела текстуры для копирования.
+Экстент копируемого раздела текстуры.
 
 *_Dst*<br/>
 Объект для копирования.
 
 *_Dst_byte_size*<br/>
-Число байтов в месте назначения.
+Число байтов в назначении.
 
 *_Dst_type*<br/>
 Тип целевого объекта.
 
 *_Dst_offset*<br/>
-Смещение в объекте назначения, начиная с которого начинается копирование.
+Смещение в месте назначения, с которого начинается копирование.
 
 *InputIterator*<br/>
 Тип итератора ввода.
@@ -275,7 +275,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 Тип итератора вывода.
 
 *_Src*<br/>
-Объект, который требуется скопировать.
+В объект для копирования.
 
 *_Src_byte_size*<br/>
 Число байтов в источнике.
@@ -284,20 +284,20 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 Тип исходного объекта.
 
 *_Src_offset*<br/>
-Смещение в источник, из которого следует начать копирование.
+Смещение в источнике, с которого начинается копирование.
 
-*Первый*<br/>
-Итератор с начала в исходном контейнере.
+*first*<br/>
+Начальный итератор в исходный контейнер.
 
-*последний*<br/>
-Итератор конца в исходном контейнере.
+*last*<br/>
+Конечный итератор в исходный контейнер.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_graphics.h
+**Заголовок:** amp_graphics. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

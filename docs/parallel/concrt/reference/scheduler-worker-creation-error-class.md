@@ -8,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337366"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142757"
 ---
-# <a name="schedulerworkercreationerror-class"></a>Класс scheduler_worker_creation_error
+# <a name="scheduler_worker_creation_error-class"></a>Класс scheduler_worker_creation_error
 
 Этот класс описывает исключение, которое создается из-за сбоя создания рабочего контекста выполнения в исполняющей среде с параллелизмом.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[scheduler_worker_creation_error](#ctor)|Перегружен. Создает объект `scheduler_worker_creation_error`.|
+|[scheduler_worker_creation_error](#ctor)|Перегружен. Формирует объект `scheduler_worker_creation_error`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Это исключение обычно создается при сбое вызова, адресованного операционной системе, для создания контекста выполнения из исполняющей среды с параллелизмом. Контексты выполнения — это потоки, которые выполняют задачи исполняющей среды с параллелизмом. Код ошибки, который обычно возвращается из вызова метода Win32 `GetLastError`, преобразуется в значение типа `HRESULT` и может быть получен посредством метода базового класса `get_error_code`.
 
@@ -47,15 +47,15 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
-Создает объект `scheduler_worker_creation_error`.
+Формирует объект `scheduler_worker_creation_error`.
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -70,8 +70,8 @@ explicit _CRTIMP scheduler_worker_creation_error(
 Описательное сообщение об ошибке.
 
 *_Hresult*<br/>
-`HRESULT` Значение ошибки, вызвавшей исключение.
+`HRESULT` значение ошибки, вызвавшей исключение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

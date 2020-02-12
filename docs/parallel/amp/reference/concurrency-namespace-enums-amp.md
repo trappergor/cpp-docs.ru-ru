@@ -5,12 +5,12 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180457"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126959"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Перечисления пространства имен Concurrency (AMP)
 
@@ -18,39 +18,39 @@ ms.locfileid: "62180457"
 |-|-|
 |[Перечисление access_type](#access_type)|[Перечисление queuing_mode](#queuing_mode)|
 
-##  <a name="access_type"></a>  Перечисление access_type
+## <a name="access_type"></a>Перечисление access_type
 
 Тип перечисления, используемый для обозначения различных типов доступа к данным.
 
-```
+```cpp
 enum access_type;
 ```
 
 ### <a name="values"></a>Значения
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`access_type_auto`|Автоматически выбирает наилучший `access_type` для сочетания клавиш.|
-|`access_type_none`|Выделенные. Выделение доступно только в сочетании клавиш и недоступно на ЦП.|
-|`access_type_read`|Общий доступ. Выделение доступно в сочетании клавиш и читаемо на ЦП.|
-|`access_type_read_write`|Общий доступ. Выделение доступно в сочетании клавиш и записать на ЦП.|
-|`access_type_write`|Общий доступ. Выделение доступно в сочетании клавиш и для чтения и на ЦП.|
+|`access_type_auto`|Автоматический выбор лучшего `access_type` для ускорителя.|
+|`access_type_none`|Специальное. Выделение доступно только в ускорителе, а не на ЦП.|
+|`access_type_read`|Используемый. Выделение доступно для ускорителя и доступно для чтения на ЦП.|
+|`access_type_read_write`|Используемый. Выделение доступно для ускорителя и доступно для записи в ЦП.|
+|`access_type_write`|Используемый. Выделение доступно для ускорителя и доступно для чтения и записи в ЦП.|
 
-##  <a name="queuing_mode"></a>  Перечисление queuing_mode
+## <a name="queuing_mode"></a>Перечисление queuing_mode
 
-Определяет режимы организации очереди, которые поддерживаются в сочетании клавиш.
+Указывает режимы работы в очереди, которые поддерживаются ускорителем.
 
-```
+```cpp
 enum queuing_mode;
 ```
 
 ### <a name="values"></a>Значения
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`queuing_mode_immediate`|Режим организации очереди, указывающий, что любые команды, например, [функция parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), отправляемые в соответствующий ускоритель, как только они возвращаются вызывающему объекту.|
-|`queuing_mode_automatic`|Режим организации очереди, которое указывает, что команды будут ставиться в очередь, которая соответствует [accelerator_view](accelerator-view-class.md) объекта. Команды отправляются на устройство при [accelerator_view::flush](accelerator-view-class.md#flush) вызывается.|
+|`queuing_mode_immediate`|Режим очереди, указывающий, что любые команды, например [Parallel_for_each функции (C++ amp)](concurrency-namespace-functions-amp.md#parallel_for_each), отправляются соответствующему устройству ускорителя, как только они возвращаются вызывающему.|
+|`queuing_mode_automatic`|Режим очереди, указывающий, что команды ставятся в очередь в очереди команд, соответствующей объекту [accelerator_view](accelerator-view-class.md) . Команды отправляются на устройство при вызове [accelerator_view:: Flush](accelerator-view-class.md#flush) .|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
