@@ -323,7 +323,7 @@
           items:
             - name: автоматизация
               href: automation.md
-            - name: Клиенты службы автоматизации
+            - name: Клиенты автоматизации
               expanded: false
               items:
                 - name: Клиенты службы автоматизации
@@ -333,7 +333,7 @@
             - name: Серверы службы автоматизации
               expanded: false
               items:
-                - name: Серверы службы автоматизации
+                - name: Серверы автоматизации
                   href: automation-servers.md
                 - name: Серверы службы автоматизации. Проблемы с временем существования объектов
                   href: automation-servers-object-lifetime-issues.md
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: Объекты и источники данных. Управление
               href: data-objects-and-data-sources-manipulation.md
-        - name: Перетаскивание (OLE)
-          expanded: false
-          items:
-            - name: Перетаскивание (OLE)
-              href: drag-and-drop-ole.md
-            - name: Перетаскивание. Реализация источника перетаскивания
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: Перетаскивание. Реализация цели перетаскивания
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: Перетаскивание. Настройка
-              href: drag-and-drop-customizing.md
+        - name: Перетаскивание OLE
+          href: drag-and-drop-ole.md
         - name: Меню и ресурсы (OLE)
           expanded: false
           items:
@@ -523,7 +514,7 @@
             - name: Элементы ActiveX MFC
               expanded: false
               items:
-                - name: Элементы ActiveX MFC
+                - name: MFC ActiveX - элементы управления
                   href: mfc-activex-controls.md
                 - name: Элементы ActiveX MFC. Оптимизация
                   expanded: false
@@ -1001,7 +992,7 @@
           items:
             - name: Диалоговые окна
               href: dialog-boxes.md
-            - name: 'Пример: Отображение диалогового окна через команду меню'
+            - name: Пример. Отображение диалогового окна через команду меню
               href: example-displaying-a-dialog-box-via-a-menu-command.md
             - name: Список примеров диалоговых окон
               href: dialog-sample-list.md
@@ -1666,7 +1657,7 @@
     - name: Классы OLE
       expanded: false
       items:
-        - name: Классы OLE
+        - name: OLE - классы
           href: ole-classes.md
         - name: Классы контейнера OLE
           href: ole-container-classes.md
@@ -1708,7 +1699,7 @@
       href: walkthrough-adding-animation-to-an-mfc-project.md
 - name: Справочник по API WIF
   items:
-    - name: Классы MFC
+    - name: MFC - классы
       expanded: false
       items:
         - name: Классы MFC
@@ -2749,7 +2740,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: Структура CDaoRelationInfo
               href: reference/cdaorelationinfo-structure.md
-            - name: CDaoRelationFieldInfo - структура
+            - name: Структура CDaoRelationFieldInfo
               href: reference/cdaorelationfieldinfo-structure.md
             - name: Структура CDaoTableDefInfo
               href: reference/cdaotabledefinfo-structure.md

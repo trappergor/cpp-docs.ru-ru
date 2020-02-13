@@ -6,43 +6,43 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405434"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126309"
 ---
 # <a name="unorm-class"></a>Класс unorm
 
-Представляет число unorm. Каждый элемент — это число с плавающей запятой в диапазоне [0, 0f, 1.0f].
+Представляет unorm число. Каждый элемент является числом с плавающей запятой в диапазоне [0,0 f, 1,0 f].
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class unorm;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор unorm](#ctor)|Перегружен. Конструктор по умолчанию. Инициализируйте 0, 0f.|
+|[Конструктор unorm](#ctor)|Перегружен. Конструктор по умолчанию. Инициализируйте до 0,0 f.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|unorm::operator--||
-|unorm::operator число с плавающей запятой|Оператор преобразования. Преобразуйте unorm число с плавающей запятой.|
-|unorm::operator*=||
-|unorm::operator/=||
-|unorm::operator ++||
-|unorm::operator +=||
-|unorm::operator =||
-|unorm::operator-=||
+|unorm:: operator--||
+|unorm:: operator float|Оператор преобразования. Преобразуйте номер unorm в значение с плавающей запятой.|
+|unorm:: operator * =||
+|unorm:: operator/=||
+|unorm:: operator + +||
+|unorm:: operator + =||
+|unorm:: operator =||
+|unorm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,15 +50,15 @@ class unorm;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-Конструктор по умолчанию. Инициализируйте 0, 0f.
+Конструктор по умолчанию. Инициализируйте до 0,0 f.
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -93,9 +93,9 @@ inline explicit unorm(
 *_V*<br/>
 Значение, используемое для инициализации.
 
-*_Другое*<br/>
-Норма объект, используемый для инициализации.
+*_Other*<br/>
+Объект нормы, используемый для инициализации.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

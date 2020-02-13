@@ -72,131 +72,131 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351658"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142165"
 ---
-# <a name="norm3-class"></a>Класс norm_3
+# <a name="norm_3-class"></a>Класс norm_3
 
-Представляет короткий вектор из трех чисел normal.
+Представляет короткий вектор из трех обычных чисел.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class norm_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор norm_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор norm_3](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
 |norm_3::get_xyz||
 |norm_3::get_xz||
 |norm_3::get_xzy||
-|norm_3::get_y||
-|norm_3::get_yx||
+|norm_3:: get_y||
+|norm_3:: get_yx||
 |norm_3::get_yxz||
-|norm_3::get_yz||
+|norm_3:: get_yz||
 |norm_3::get_yzx||
 |norm_3::get_z||
 |norm_3::get_zx||
-|norm_3::get_zxy||
-|norm_3::get_zy||
+|norm_3:: get_zxy||
+|norm_3:: get_zy||
 |norm_3::get_zyx||
-|norm_3::ref_b||
-|norm_3::ref_g||
-|norm_3::ref_r||
-|norm_3::ref_x||
-|norm_3::ref_y||
-|norm_3::ref_z||
+|norm_3:: ref_b||
+|norm_3:: ref_g||
+|norm_3:: ref_r||
+|norm_3:: ref_x||
+|norm_3:: ref_y||
+|norm_3:: ref_z||
 |norm_3::set_x||
 |norm_3::set_xy||
 |norm_3::set_xyz||
 |norm_3::set_xz||
 |norm_3::set_xzy||
-|norm_3::set_y||
-|norm_3::set_yx||
+|norm_3:: set_y||
+|norm_3:: set_yx||
 |norm_3::set_yxz||
 |norm_3::set_yz||
 |norm_3::set_yzx||
 |norm_3::set_z||
 |norm_3::set_zx||
 |norm_3::set_zxy||
-|norm_3::set_zy||
+|norm_3:: set_zy||
 |norm_3::set_zyx||
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_3::operator-||
-|norm_3::operator--||
-|norm_3::operator*=||
-|norm_3::operator/=||
-|norm_3::operator ++||
-|norm_3::operator +=||
-|norm_3::operator =||
-|norm_3::operator-=||
+|norm_3:: operator —||
+|norm_3:: operator--||
+|norm_3:: operator * =||
+|norm_3:: operator/=||
+|norm_3:: operator + +||
+|norm_3:: operator + =||
+|norm_3:: operator =||
+|norm_3:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#size)||
+|[Константа размера](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|norm_3::b||
-|norm_3::bg||
-|norm_3::bgr||
-|norm_3::br||
-|norm_3::brg||
-|norm_3::g||
-|norm_3::gb||
-|norm_3::gbr||
-|norm_3::gr||
-|norm_3::grb||
-|norm_3::r||
-|norm_3::rb||
-|norm_3::rbg||
-|norm_3::rg||
-|norm_3::rgb||
-|norm_3::x||
-|norm_3::xy||
-|norm_3::xyz||
-|norm_3::xz||
-|norm_3::xzy||
-|norm_3::y||
-|norm_3::yx||
-|norm_3::yxz||
-|norm_3::yz||
-|norm_3::yzx||
-|norm_3::z||
-|norm_3::zx||
-|norm_3::zxy||
-|norm_3::zy||
-|norm_3::zyx||
+|norm_3:: b||
+|norm_3:: BG||
+|norm_3:: BGR||
+|norm_3:: BR||
+|norm_3:: БРГ||
+|norm_3:: g||
+|norm_3:: ГБ||
+|norm_3:: ГБР||
+|norm_3:: GR||
+|norm_3:: ГРБ||
+|norm_3:: r||
+|norm_3:: RB||
+|norm_3:: РБГ||
+|norm_3:: RG||
+|norm_3:: RGB||
+|norm_3:: x||
+|norm_3:: XY||
+|norm_3:: XYZ||
+|norm_3:: КСЗ||
+|norm_3:: XZY||
+|norm_3:: y||
+|norm_3:: Икс||
+|norm_3:: иксз||
+|norm_3:: из||
+|norm_3:: изкс||
+|norm_3:: z||
+|norm_3:: ЗКС||
+|norm_3:: зкси||
+|norm_3:: зи||
+|norm_3:: зикс||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-## <a name="ctor"></a> Конструктор norm_3
+## <a name="ctor"></a>Конструктор norm_3
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,7 +257,7 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_V0*<br/>
 Значение для инициализации элемента 0.
@@ -271,17 +271,17 @@ explicit inline norm_3(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> размер константа
+## <a name="a-namesize-size-constant"></a>Константа размера <a name="size">
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

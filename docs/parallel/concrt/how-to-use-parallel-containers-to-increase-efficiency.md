@@ -6,56 +6,56 @@ helpviewer_keywords:
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd120d1fbe0f73ed0974efda5a1aa643a1afde9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394446"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143010"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Практическое руководство. Использование параллельных контейнеров для повышения эффективности
 
-В этом разделе показано, как использование параллельных контейнеров для эффективного хранения и доступа к данным в параллельном режиме.
+В этом разделе показано, как использовать параллельные контейнеры для эффективного хранения и доступа к данным в параллельном режиме.
 
-В примере кода вычисляет набор простых чисел и чисел Кармайкла в параллельном режиме. Затем для каждого числа Кармайкла код вычисляет простых множителей этого числа.
+В примере кода выполняется параллельное вычисление набора простых и Кармичаел чисел. Затем для каждого числа Кармичаел код вычислит простые коэффициенты этого числа.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан `is_prime` функцию, которая определяет, является ли входное значение простое число, и `is_carmichael` функцию, которая определяет, является ли входное значение числа Кармайкла.
+В следующем примере показана функция `is_prime`, которая определяет, является ли входное значение простым числом, и функцией `is_carmichael`, которая определяет, является ли входное значение Кармичаел числом.
 
 [!code-cpp[concrt-carmichael-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_1.cpp)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере используется `is_prime` и `is_carmichael` функции для вычисления наборов простых чисел и чисел Кармайкла. В примере используется [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) и [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритмы для вычисления каждой наборе в параллельном режиме. Дополнительные сведения об алгоритмах параллельных операций, см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
+В следующем примере используются функции `is_prime` и `is_carmichael` для расчета наборов простых и Кармичаел чисел. В примере используются алгоритмы [параллелизма::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) и [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) для параллельного расчета каждого набора. Дополнительные сведения о параллельных алгоритмах см. в разделе [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
 
-В этом примере используется [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) объекта, содержащего набор Кармайкла номера, так как он будет использоваться этот объект как рабочей очереди. Она использует [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) объекта, содержащего набор простых чисел, так как она будет позже перебора этого набора для поиска простых множителей.
+В этом примере используется объект [Concurrency:: concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md) для хранения набора чисел кармичаел, так как он впоследствии будет использовать этот объект в качестве рабочей очереди. Он использует объект [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) для хранения набора простых чисел, так как впоследствии он будет выполнять итерацию по этому набору для поиска простых факторов.
 
 [!code-cpp[concrt-carmichael-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_2.cpp)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан `prime_factors_of` функцию, которая используется для поиска всех простых множителей заданного значения пробное деление.
+В следующем примере показана функция `prime_factors_of`, которая использует пробное деление для поиска всех простых факторов заданного значения.
 
-Эта функция использует [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм для прохода по коллекции простых чисел. `concurrent_vector` Объект обеспечивает параллельного цикла одновременно добавлять простых множителей к результату.
+Эта функция использует алгоритм [arallel_for_each Concurrency::p](reference/concurrency-namespace-functions.md#parallel_for_each) для прохода по коллекции простых чисел. Объект `concurrent_vector` позволяет параллельному циклу одновременно добавлять в результат простые факторы.
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
 ## <a name="example"></a>Пример
 
-Этот пример обрабатывает каждый элемент в очереди чисел Кармайкла путем вызова `prime_factors_of` функции для вычисления простых множителей. Он использует группу задач для выполнения этой работы в параллельном режиме. Дополнительные сведения о группах задач см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
+В этом примере каждый элемент в очереди чисел Кармичаел обрабатывается путем вызова функции `prime_factors_of` для расчета своих простых факторов. Она использует группу задач для параллельного выполнения этой операции. Дополнительные сведения о группах задач см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
-Этот пример выводит простых множителей для каждого числа Кармайкла, если это число имеет более четырех простых множителей.
+В этом примере выводятся простые факторы для каждого Кармичаел числа, если это число имеет более четырех простых факторов.
 
 [!code-cpp[concrt-carmichael-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_4.cpp)]
 
 ## <a name="example"></a>Пример
 
-Ниже приведен полный пример, в котором для вычисления простых множителей чисел Кармайкла используются параллельные контейнеры.
+В следующем коде показан полный пример, в котором используются параллельные контейнеры для расчета простых факторов чисел Кармичаел.
 
 [!code-cpp[concrt-carmichael-primes#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_5.cpp)]
 
-В этом примере получается следующий результат.
+В этом примере выводится следующий пример выходных данных.
 
 ```Output
 Prime factors of 9890881 are: 7 11 13 41 241.
@@ -65,11 +65,11 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `carmichael-primes.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем `carmichael-primes.cpp`, а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe Кармайкла primes.cpp**
+> **CL. exe/EHsc кармичаел-примес. cpp**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

@@ -1,6 +1,7 @@
 ---
-title: Класс vector
-ms.date: 01/04/2020
+title: vector - класс
+description: Справочник по реализации C++ класса Vector в стандартной библиотеке Майкрософт.
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,14 +87,14 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676968"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126231"
 ---
-# <a name="vector-class"></a>Класс vector
+# <a name="vector-class"></a>vector - класс
 
 Класс C++ вектора стандартной библиотеки — это шаблон класса для контейнеров последовательности. Вектор хранит элементы заданного типа в линейном упорядочении и обеспечивает быстрый произвольный доступ к любому элементу. Вектор является предпочтительным контейнером для последовательности, когда производительность произвольного доступа имеет уровень "Премиум".
 
@@ -112,7 +113,7 @@ class vector
 *Распределитель*\
 Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для вектора. Этот аргумент является необязательным, и значением по умолчанию является `allocator<Type>`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Для векторов время выполнения вставок и удалений элементов в конце последовательности является постоянной величиной. Время вставки и удаления элементов в середине вектора меняется линейно. Контейнер [класса deque](../standard-library/deque-class.md) быстрее при вставке и удалении в начале и в конце последовательности. Контейнер [класса списка](../standard-library/list-class.md) выполняется быстрее при вставке и удалении в любом месте в последовательности.
 
@@ -122,7 +123,7 @@ class vector
 
 [Логический\<bool > ссылочный класс](../standard-library/vector-bool-class.md#reference_class) является вложенным классом, объекты которого могут предоставлять ссылки на элементы (одиночные биты) в объекте Vector\<bool >.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -130,7 +131,7 @@ class vector
 |-|-|
 |[vector](#vector)|Создает вектор определенного размера, вектор с элементами определенного значения, вектор с определенным `allocator`, или вектор как копию какого-либо другого вектора.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
 |||
 |-|-|
@@ -155,12 +156,12 @@ class vector
 |[at](#at)|Возвращает ссылку на элемент в заданном положении в векторе.|
 |[back](#back)|Возвращает ссылку на последний элемент вектора.|
 |[begin](#begin)|Возвращает итератор произвольного доступа, указывающий на первый элемент в векторе.|
-|[capacity](#capacity)|Возвращает число элементов, которое вектор может содержать без выделения дополнительного пространства.|
+|[емкость](#capacity)|Возвращает число элементов, которое вектор может содержать без выделения дополнительного пространства.|
 |[cbegin](#cbegin)|Возвращает постоянный итератор произвольного доступа, указывающий на первый элемент в векторе.|
 |[cend](#cend)|Возвращает константный итератор произвольного доступа, указывающий на позицию, следующую за концом вектора.|
 |[crbegin](#crbegin)|Возвращает константный итератор, который указывает на первый элемент в обратном векторе.|
 |[crend](#crend)|Возвращает константный итератор, который указывает на последний элемент в обратном векторе.|
-|[clear](#clear)|Очищает элементы вектора.|
+|[пусто](#clear)|Очищает элементы вектора.|
 |[data](#data)|Возвращает указатель на первый элемент в векторе.|
 |[emplace](#emplace)|Вставляет элемент, созданный на месте, в указанное положение в векторе.|
 |[emplace_back](#emplace_back)|Добавляет элемент, созданный на месте, в конец вектора.|
@@ -185,8 +186,8 @@ class vector
 
 |||
 |-|-|
-|[оператор&#91;&#93;](#op_at)|Возвращает ссылку на элемент вектора в указанной позиции.|
-|[operator=](#op_eq)|Заменяет элементы вектора копией другого вектора.|
+|[operator&#91;&#93;](#op_at)|Возвращает ссылку на элемент вектора в указанной позиции.|
+|[оператор=](#op_eq)|Заменяет элементы вектора копией другого вектора.|
 
 ## <a name="allocator_type"></a>allocator_type
 
@@ -196,13 +197,13 @@ class vector
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-`allocator_type` является синонимом для параметра-шаблона `Allocator`.
+`allocator_type` является синонимом параметра-шаблона `Allocator`.
 
 ### <a name="example"></a>Пример
 
-Пример использования `allocator_type` см. в разделе [get_allocator](#get_allocator).
+Пример использования [ см. в примере ](#get_allocator)get_allocator`allocator_type`.
 
 ## <a name="assign"></a>назначать
 
@@ -233,7 +234,7 @@ void assign(InputIterator first, InputIterator last);
 *init_list*\
 Объект initializer_list, содержащий вставляемые элементы.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Во-первых, `assign` удаляет все существующие элементы в векторе. Затем `assign` либо Вставляет указанный диапазон элементов из исходного вектора в вектор, либо вставляет копии нового указанного элемента value в вектор.
 
@@ -303,7 +304,7 @@ const_reference at(size_type position) const;
 
 Ссылка на элемент, индекс которого указан в аргументе. Если значение параметра " *Расположение* " больше размера вектора, `at` создает исключение.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `at` присваивается `const_reference`, то объект Vector изменить нельзя. Если возвращаемое значение `at` присвоено `reference`, то объект вектора можно изменить.
 
@@ -349,7 +350,7 @@ const_reference back() const;
 
 Последний элемент вектора. Если вектор пуст, возвращаемое значение не определено.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `back` присваивается `const_reference`, то объект Vector изменить нельзя. Если возвращаемое значение `back` присвоено `reference`, то объект вектора можно изменить.
 
@@ -393,7 +394,7 @@ iterator begin();
 
 Итератор произвольного доступа, который указывает на первый элемент в `vector` или на элемент, следующий за пустым `vector`. Всегда сравнивайте значение, возвращаемое [vector:: end](#end) , чтобы убедиться в его допустимости.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `begin` присваивается [vector:: const_iterator](#const_iterator), то объект `vector` нельзя изменить. Если возвращаемое значение `begin` назначается [vector::iterator](#iterator), то объект `vector` можно изменить.
 
@@ -454,7 +455,7 @@ size_type capacity() const;
 
 Текущая длина хранилища, выделенного вектору.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член [resize](#resize) будет работать эффективнее, если для нее выделено достаточно памяти. Чтобы указать объем выделяемой памяти, используйте функцию-член [reserve](#reserve).
 
@@ -498,7 +499,7 @@ const_iterator cbegin() const;
 
 **Константный** итератор произвольного доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При возвращении значения `cbegin`элементы в диапазоне нельзя изменить.
 
@@ -524,7 +525,7 @@ const_iterator cend() const;
 
 **Константный** итератор произвольного доступа, указывающий на место сразу за концом диапазона.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -584,7 +585,7 @@ The size of v1 after clearing is 0
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип `const_iterator` нельзя использовать для изменения значения элемента.
 
@@ -600,7 +601,7 @@ typedef implementation-defined const_iterator;
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип `const_pointer` нельзя использовать для изменения значения элемента.
 
@@ -614,7 +615,7 @@ typedef typename Allocator::const_pointer const_pointer;
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип `const_reference` нельзя использовать для изменения значения элемента.
 
@@ -658,7 +659,7 @@ The second element is 20
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип `const_reverse_iterator` не может изменять значение элемента и используется для перебора вектора в обратную.
 
@@ -678,7 +679,7 @@ const_reverse_iterator crbegin() const;
 
 Обратный итератор const произвольного доступа, указывающий на первый элемент в обратном [векторе](../standard-library/vector-class.md) или на последний элемент в исходном векторе `vector`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При возвращении значения `crbegin`объект `vector` изменить нельзя.
 
@@ -727,7 +728,7 @@ const_reverse_iterator crend() const;
 
 Обратный итератор const произвольного доступа, который обращается к месту, следующему за последним элементом в обратном [векторе](../standard-library/vector-class.md) (перед первым элементом в исходном векторе `vector`).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `crend` используется с обратным `vector` точно так же, как [vector::cend](#cend) используется с `vector`.
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -828,7 +829,7 @@ The vector c1 now contains elements: 20 2
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `difference_type` также можно описать как число элементов между двумя указателями, так как указатель на элемент содержит его адрес.
 
@@ -900,7 +901,7 @@ iterator emplace(
 
 Функция возвращают итератор, указывающий на положение вставки нового элемента в `vector`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Любая операция вставки может быть дорогостоящей. Дополнительные сведения о `vector` производительности см. в статье [класс Vector](../standard-library/vector-class.md) .
 
@@ -1028,7 +1029,7 @@ const_iterator end() const;
 
 Итератор после конца для вектора. Если Vector пуст, то `vector::end() == vector::begin()`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `end` присваивается переменной типа `const_iterator`, объект Vector изменить нельзя. Если возвращаемое значение `end` присваивается переменной типа `iterator`, то объект Vector можно изменить.
 
@@ -1145,7 +1146,7 @@ const_reference front() const;
 
 Ссылка на первый элемент в объекте вектора. Если вектор пуст, возвращаемое значение не определено.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `front` присваивается `const_reference`, то объект Vector изменить нельзя. Если возвращаемое значение `front` присвоено **ссылке**, то объект вектора можно изменить.
 
@@ -1189,9 +1190,9 @@ Allocator get_allocator() const;
 
 Распределитель, используемый вектором.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Распределители для класса вектора определяют, как этот класс управляет хранилищем. Для большинства задач программирования достаточно иметь распределители по умолчанию, поставляемые вместе с классами контейнеров стандартной библиотеки C++. Написание и использование собственного класса распределителя является дополнительным C++ компонентом.
+Распределители для класса вектора определяют, как этот класс управляет хранилищем. Распределители по умолчанию для классов контейнеров из стандартной библиотеки C++ достаточны для большинства задач программирования. Написание и использование собственного класса распределителя является дополнительным C++ компонентом.
 
 ### <a name="example"></a>Пример
 
@@ -1262,7 +1263,7 @@ void insert(
 
 Две первые функции `insert` возвращают итератор, указывающий на положение вставки нового элемента в вектор.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Как предусловие, *First* и *Last* не должны быть итераторами в вектор или поведение не определено. Любая операция вставки может быть дорогостоящей. Дополнительные сведения о `vector` производительности см. в статье [класс Vector](../standard-library/vector-class.md) .
 
@@ -1338,9 +1339,9 @@ vv1[0] = 10 50 50 40 50 50 50 50 20 30
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Тип **iterator** можно использовать для изменения значения элемента.
+Тип **итератор** можно использовать для изменения значения элемента.
 
 ### <a name="example"></a>Пример
 
@@ -1396,7 +1397,7 @@ const_reference operator[](size_type position) const;
 
 Если заданная позиция больше или равна размеру контейнера, результат не определен.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `operator[]` присваивается `const_reference`, то объект Vector изменить нельзя. Если возвращаемое значение `operator[]` присвоено ссылке, то объект вектора можно изменить.
 
@@ -1438,7 +1439,7 @@ vector& operator=(vector&& right);
 *справа*\
 [Вектор](../standard-library/vector-class.md) копируется в `vector`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 После удаления существующих элементов в `vector``operator=` копирует или перемещает содержимое *непосредственно* в `vector`.
 
@@ -1491,9 +1492,9 @@ int main( )
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Тип **pointer** можно использовать для изменения значения элемента.
+Тип **pointer** может использоваться для изменения значения элемента.
 
 ### <a name="example"></a>Пример
 
@@ -1533,7 +1534,7 @@ int main( )
 void pop_back();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Пример кода см. в разделе [vector::push_back()](#push_back).
 
@@ -1605,7 +1606,7 @@ const_reverse_iterator rbegin() const;
 
 Обратный итератор произвольного доступа, указывающий на первый элемент в обратном векторе или на последний элемент в исходном векторе.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `rbegin` присваивается `const_reverse_iterator`, то объект Vector изменить нельзя. Если возвращаемое значение `rbegin` присвоено `reverse_iterator`, то объект вектора можно изменить.
 
@@ -1652,7 +1653,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>Пример
 
-Пример использования **ссылки** в классе vector см. в разделе [at](#at).
+Пример использования [ссылки](#at) в классе vector см. в разделе **at**.
 
 ## <a name="rend"></a>rend
 
@@ -1667,7 +1668,7 @@ reverse_iterator rend();
 
 Обратный итератор произвольного доступа, адресующий расположение после последнего элемента в обратном векторе (перед первым элементом в исходном векторе).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `rend` используется с обратным вектором точно так же, как [end](#end) используется с обычным вектором.
 
@@ -1762,7 +1763,7 @@ void resize(size_type new_size, Type value);
 *value*\
 Значение инициализации новых элементов, добавленных в вектор, если новый размер больше исходного. Если значение опущено, новые объекты используют конструктор по умолчанию.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если размер контейнера меньше запрошенного размера, *new_size*`resize` добавляет элементы в вектор до тех пор, пока не достигнет запрошенного размера. Если размер контейнера больше запрошенного размера, `resize` удаляет элементы, ближайшие к концу контейнера, пока не достигнет размера *new_size*. Если текущий размер контейнера совпадает с запрошенным размером, никакие действия не выполняются.
 
@@ -1882,7 +1883,7 @@ int main()
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип `reverse_iterator` используется для последовательного прохождения через вектор в обратную сторону.
 
@@ -2051,9 +2052,9 @@ The number of elements in v2 = 3
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-`value_type` является синонимом для параметра-шаблона `Type`.
+`value_type` является синонимом параметра-шаблона `Type`.
 
 ### <a name="example"></a>Пример
 
@@ -2120,7 +2121,7 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 *init_list*\
 `initializer_list`, содержащий копируемые элементы.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Все конструкторы хранят объект распределителя (*распределитель*) и инициализируют вектор.
 
@@ -2233,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

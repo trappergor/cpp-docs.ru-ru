@@ -1,30 +1,30 @@
 ---
-title: 'Функции пространства имен Concurrency::Graphics:: Direct3D'
+title: Функции пространства имен Concurrency::graphics::direct3d
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405551"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126972"
 ---
-# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Функции пространства имен Concurrency::Graphics:: Direct3D
+# <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Функции пространства имен Concurrency::graphics::direct3d
 
 ||||
 |-|-|-|
 |[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
 |[make_texture](#make_texture)|[msad4](#msad4)|
 
-##  <a name="get_sampler"></a>  get_sampler
+## <a name="get_sampler"></a>get_sampler
 
-Получите интерфейс состояния дискретизатора D3D на ускорителе данного представления, представляющее указанный объект дискретизатора.
+Получение интерфейса состояния D3D образца для данного представления ускорителя, представляющего указанный объект образца.
 
-```
+```cpp
 IUnknown* get_sampler(
     const Concurrency::accelerator_view& _Av,
     const sampler& _Sampler) restrict(amp);
@@ -33,20 +33,20 @@ IUnknown* get_sampler(
 ### <a name="parameters"></a>Параметры
 
 *_Av*<br/>
-Представление ускорителя D3D, на котором будет создано состояние дискретизатора D3D.
+Представление D3D-ускорителя, на котором должно быть создано состояние образца D3D.
 
 *_Sampler*<br/>
-Объект дискретизатора, для которого создается основной интерфейс состояния дискретизатора D3D.
+Объект образца, для которого создается базовый интерфейс состояния D3D-образца.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IUnknown, соответствующий состоянию дискретизатора D3D, который представляет данный дискретизатор.
+Указатель интерфейса IUnknown, соответствующий состоянию D3D, представляющему данный образец.
 
-##  <a name="get_texture"></a>  get_texture
+## <a name="get_texture"></a>get_texture
 
-Получает интерфейс текстуры Direct3D, основе заданного [текстуры](texture-class.md) объекта.
+Возвращает интерфейс текстуры Direct3D, лежащий в основе указанного объекта [текстуры](texture-class.md) .
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -72,40 +72,40 @@ _Ret_ IUnknown *get_texture(
 ### <a name="parameters"></a>Параметры
 
 *value_type*<br/>
-Тип элементов текстуры.
+Тип элемента текстуры.
 
 *_Rank*<br/>
 Ранг текстуры.
 
 *_Texture*<br/>
-Текстура или texture_view, связанные с accelerator_view, для которого возвращается базовый интерфейс Direct3D текстуры.
+Представление текстуры или текстуры, связанное с accelerator_view, для которого возвращается базовый интерфейс текстуры Direct3D.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IUnknown, соответствующий Direct3D-текстуре, лежащей в основе текстуры.
+Указатель интерфейса IUnknown, соответствующий текстуре Direct3D, лежащей в основе текстуры.
 
-##  <a name="make_sampler"></a>  make_sampler
+## <a name="make_sampler"></a>make_sampler
 
-Создайте дискретизатор из указателя интерфейса состояния дискретизатора D3D.
+Создание образца с помощью указателя интерфейса состояния D3D-образца.
 
-```
+```cpp
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_D3D_sampler*<br/>
-Указатель на интерфейс IUnknown состояния дискретизатора D3D для создания дискретизатора.
+Указатель интерфейса IUnknown состояния образца D3D для создания образца.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дискретизатор представляет предоставленное состояние дискретизатора D3D.
+Образец представляет указанное состояние образца D3D.
 
-##  <a name="make_texture"></a>  make_texture
+## <a name="make_texture"></a>make_texture
 
-Создает [текстуры](texture-class.md) с использованием указанных параметров.
+Создает объект [текстуры](texture-class.md) , используя указанные параметры.
 
-```
+```cpp
 template<
     typename value_type,
     int _Rank
@@ -119,29 +119,29 @@ texture<value_type, _Rank> make_texture(
 ### <a name="parameters"></a>Параметры
 
 *value_type*<br/>
-Тип элементов в текстуре.
+Тип элементов текстуры.
 
 *_Rank*<br/>
 Ранг текстуры.
 
 *_Av*<br/>
-Представление ускорителя D3D, на которой будет создаваться текстуры.
+Представление D3D Accelerator, на котором должна быть создана текстура.
 
 *_D3D_texture*<br/>
-Указатель на интерфейс IUnknown текстуры D3D для создания текстуры.
+Указатель интерфейса IUnknown текстуры D3D, из которой создается текстура.
 
 *_View_format*<br/>
-Формат DXGI, используемый для представлений, созданных из этой текстуры. Передайте DXGI_FORMAT_UNKNOWN (по умолчанию) для получения формат от основного формата _d3d_texture и value_type этого шаблона. Предоставленный формат должен быть совместим с базовым форматом _d3d_texture.
+Формат DXGI, используемый для представлений, созданных из этой текстуры. Передайте DXGI_FORMAT_UNKNOWN (по умолчанию), чтобы получить формат из базового формата _D3D_texture и value_type этого шаблона. Указанный формат должен быть совместим с базовым форматом _D3D_texture.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текстуры, используя предоставленную текстуру D3D.
+Текстура, использующая предоставленную текстуру D3D.
 
-##  <a name="msad4"></a>  msad4
+## <a name="msad4"></a>msad4
 
-Сравнивает 4-байтное ссылочное значение и 8-байтное исходное значение и накапливает вектор 4 сумм. Каждая сумма соответствует замаскированной сумме абсолютных различий различных выравниваний байтов между контрольным значением и исходным значением.
+Сравнивает 4-байтное ссылочное значение и 8-байтовое исходное значение и накапливает вектор с 4 суммами. Каждая сумма соответствует маскированной сумме абсолютных различий между значением ссылки и исходным значением.
 
-```
+```cpp
 inline uint4 msad4(
     uint _Reference,
     uint2 _Source,
@@ -150,25 +150,25 @@ inline uint4 msad4(
 
 ### <a name="parameters"></a>Параметры
 
-*_Эталонных*<br/>
-Массив ссылок из 4 байта в одном значении uint
+*_Reference*<br/>
+Массив ссылок 4 байта в одном значении uint
 
 *_Source*<br/>
-Исходный массив из 8 байтов в векторе из двух значений uint.
+Исходный массив из 8 байтов в векторе двух значений uint.
 
 *_Accum*<br/>
-Вектор из 4 значений, добавляемых к замаскированной сумме абсолютных различий различных выравниваний байтов между контрольным значением и исходным значением.
+Вектор из 4 значений, добавляемых к маскированной сумме абсолютных различий между значением ссылки и исходным значением.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает вектор 4 сумм. Каждая сумма соответствует замаскированной сумме абсолютных различий различных выравниваний байтов между контрольным значением и исходным значением.
+Возвращает вектор из 4 сумм. Каждая сумма соответствует маскированной сумме абсолютных различий между значением ссылки и исходным значением.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_graphics.h
+**Заголовок:** amp_graphics. h
 
-**Пространство имен:** Concurrency::Graphics:: Direct3D
+**Пространство имен:** Concurrency:: Graphics::d irect3d
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)

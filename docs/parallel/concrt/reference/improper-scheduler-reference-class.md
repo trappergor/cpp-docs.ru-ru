@@ -8,28 +8,28 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18536043b0d46a6f27f1e5c60778a22af82ad2d3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262909"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141112"
 ---
-# <a name="improperschedulerreference-class"></a>Класс improper_scheduler_reference
+# <a name="improper_scheduler_reference-class"></a>Класс improper_scheduler_reference
 
 Данный класс описывает исключение, которое создается при вызове метода `Reference` на объекте `Scheduler`, который завершает работу, из контекста, который не является частью этого планировщика.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class improper_scheduler_reference : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[improper_scheduler_reference](#ctor)|Перегружен. Создает объект `improper_scheduler_reference`.|
 
@@ -41,15 +41,15 @@ class improper_scheduler_reference : public std::exception;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h
+**Заголовок:** ConcRT. h
 
 **Пространство имен:** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_reference
+## <a name="ctor"></a>improper_scheduler_reference
 
 Создает объект `improper_scheduler_reference`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();
@@ -60,7 +60,7 @@ improper_scheduler_reference() throw();
 *_Message*<br/>
 Описательное сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс Scheduler](scheduler-class.md)

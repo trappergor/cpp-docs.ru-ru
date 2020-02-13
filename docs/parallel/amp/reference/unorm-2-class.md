@@ -28,47 +28,47 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405499"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126218"
 ---
-# <a name="unorm2-class"></a>Класс unorm_2
+# <a name="unorm_2-class"></a>Класс unorm_2
 
-Представляет короткий вектор из двух чисел без знака normal.
+Представляет короткий вектор двух беззнаковых обычных чисел без знака.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class unorm_2;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор unorm_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор unorm_2](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
 |unorm_2::get_y||
 |unorm_2::get_yx||
 |unorm_2::ref_g||
-|unorm_2::ref_r||
+|unorm_2:: ref_r||
 |unorm_2::ref_x||
 |unorm_2::ref_y||
 |unorm_2::set_x||
@@ -78,34 +78,34 @@ class unorm_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator*=||
-|unorm_2::operator/=||
-|unorm_2::operator ++||
-|unorm_2::operator +=||
-|unorm_2::operator=||
-|unorm_2::operator-=||
+|unorm_2:: operator--||
+|unorm_2:: operator * =||
+|unorm_2:: operator/=||
+|unorm_2:: operator + +||
+|unorm_2:: operator + =||
+|unorm_2:: operator =||
+|unorm_2:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |Константа unorm_2::size||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::gr||
-|unorm_2::r||
+|unorm_2:: g||
+|unorm_2:: GR||
+|unorm_2:: r||
 |unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2:: x||
+|unorm_2:: XY||
+|unorm_2:: y||
+|unorm_2:: Икс||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -113,15 +113,15 @@ class unorm_2;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -179,15 +179,15 @@ explicit inline unorm_2(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="unorm_2__size"></a> Размер
+## <a name="unorm_2__size"></a>изменять
 
-```
+```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

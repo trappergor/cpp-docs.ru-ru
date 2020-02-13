@@ -72,48 +72,48 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180366"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126699"
 ---
-# <a name="double3-class"></a>Класс double_3
+# <a name="double_3-class"></a>Класс double_3
 
-Представляет короткий вектор из три типа Double.
+Представляет короткий вектор из трех значений Double.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class double_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор double_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор double_3](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
 |double_3::get_xyz||
 |double_3::get_xz||
 |double_3::get_xzy||
-|double_3::get_y||
-|double_3::get_yx||
+|double_3:: get_y||
+|double_3:: get_yx||
 |double_3::get_yxz||
 |double_3::get_yz||
 |double_3::get_yzx||
@@ -122,18 +122,18 @@ class double_3;
 |double_3::get_zxy||
 |double_3::get_zy||
 |double_3::get_zyx||
-|double_3::ref_b||
-|double_3::ref_g||
-|double_3::ref_r||
-|double_3::ref_x||
-|double_3::ref_y||
+|double_3:: ref_b||
+|double_3:: ref_g||
+|double_3:: ref_r||
+|double_3:: ref_x||
+|double_3:: ref_y||
 |double_3::ref_z||
 |double_3::set_x||
 |double_3::set_xy||
 |double_3::set_xyz||
 |double_3::set_xz||
 |double_3::set_xzy||
-|double_3::set_y||
+|double_3:: set_y||
 |double_3::set_yx||
 |double_3::set_yxz||
 |double_3::set_yz||
@@ -146,57 +146,57 @@ class double_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_3::operator-||
-|double_3::operator--||
-|double_3::operator*=||
-|double_3::operator/=||
-|double_3::operator ++||
-|double_3::operator+=||
-|double_3::operator=||
-|double_3::operator-=||
+|double_3:: operator —||
+|double_3:: operator--||
+|double_3:: operator * =||
+|double_3:: operator/=||
+|double_3:: operator + +||
+|double_3:: operator + =||
+|double_3:: operator =||
+|double_3:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#double_3__size)||
+|[Константа размера](#double_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|double_3::b||
-|double_3::BG||
-|double_3::bgr||
-|double_3::br||
-|double_3::brg||
-|double_3::g||
-|double_3::gb||
-|double_3::gbr||
-|double_3::gr||
-|double_3::grb||
-|double_3::r||
-|double_3::RB||
-|double_3::rbg||
-|double_3::RG||
-|double_3::rgb||
-|double_3::x||
-|double_3::xy||
-|double_3::xyz||
-|double_3::xz||
-|double_3::xzy||
-|double_3::y||
-|double_3::yx||
-|double_3::yxz||
-|double_3::yz||
-|double_3::yzx||
-|double_3::z||
-|double_3::zx||
-|double_3::zxy||
-|double_3::zy||
-|double_3::zyx||
+|double_3:: b||
+|double_3:: BG||
+|double_3:: BGR||
+|double_3:: BR||
+|double_3:: БРГ||
+|double_3:: g||
+|double_3:: ГБ||
+|double_3:: ГБР||
+|double_3:: GR||
+|double_3:: ГРБ||
+|double_3:: r||
+|double_3:: RB||
+|double_3:: РБГ||
+|double_3:: RG||
+|double_3:: RGB||
+|double_3:: x||
+|double_3:: XY||
+|double_3:: XYZ||
+|double_3:: КСЗ||
+|double_3:: XZY||
+|double_3:: y||
+|double_3:: Икс||
+|double_3:: иксз||
+|double_3:: из||
+|double_3:: изкс||
+|double_3:: z||
+|double_3:: ЗКС||
+|double_3:: зкси||
+|double_3:: зи||
+|double_3:: зикс||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -265,15 +265,15 @@ explicit inline double_3(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="double_3__size"></a> Размер
+## <a name="double_3__size"></a>изменять
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

@@ -13,45 +13,45 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34743ce48510eec9d8f7862e5ed951a722932962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337522"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142249"
 ---
-# <a name="cancellationtoken-class"></a>Класс cancellation_token
+# <a name="cancellation_token-class"></a>Класс cancellation_token
 
 Класс `cancellation_token` представляет возможность определить, получала ли некоторая операция запрос на отмену. Заданный токен можно связать с `task_group`, `structured_task_group` или `task` для предоставления неявной отмены. Его также можно опрашивать на предмет отмены или зарегистрировать обратный вызов для той ситуации, когда отменяется связанный `cancellation_token_source`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class cancellation_token;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[cancellation_token](#ctor)||
-|[~ cancellation_token деструктор](#dtor)||
+|[Деструктор ~ cancellation_token](#dtor)||
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Удаляет обратный вызов, ранее зарегистрированный с помощью метода `register` на основании объекта `cancellation_token_registration`, возвращенного во время регистрации.|
 |[is_cancelable](#is_cancelable)|Возвращает значение, указывающее, может ли этот токен быть отменен или нет.|
-|[is_canceled](#is_canceled)|Возвращает **true** Если токен был отменен.|
-|[none](#none)|Возвращает токен отмены, который никогда не может подвергаться отмене.|
+|[is_canceled](#is_canceled)|Возвращает **значение true** , если токен был отменен.|
+|[Нет](#none)|Возвращает токен отмены, который никогда не может подвергаться отмене.|
 |[register_callback](#register_callback)|Регистрирует функцию обратного вызова в токене. Если и когда токен отменяется, выполняется обратный вызов. Обратите внимание, что если токен уже отменен в той точке, где вызывается этот метод, обратный вызов будет выполнен немедленно и синхронно.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[operator!=](#operator_neq)||
 |[оператор=](#operator_eq)||
@@ -63,19 +63,19 @@ class cancellation_token;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** pplcancellation_token.h
+**Заголовок:** pplcancellation_token. h
 
 **Пространство имен:** concurrency
 
-##  <a name="dtor"></a> ~cancellation_token
+## <a name="dtor"></a>~ cancellation_token
 
-```
+```cpp
 ~cancellation_token();
 ```
 
-##  <a name="ctor"></a> cancellation_token
+## <a name="ctor"></a>cancellation_token
 
-```
+```cpp
 cancellation_token(const cancellation_token& _Src);
 
 cancellation_token(cancellation_token&& _Src);
@@ -84,13 +84,13 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>Параметры
 
 *_Src*<br/>
-Cancellation_token к подлежащей копированию или перемещению.
+Копируемый или перемещаемый cancellation_token.
 
-##  <a name="deregister_callback"></a> deregister_callback
+## <a name="deregister_callback"></a>deregister_callback
 
 Удаляет обратный вызов, ранее зарегистрированный с помощью метода `register` на основании объекта `cancellation_token_registration`, возвращенного во время регистрации.
 
-```
+```cpp
 void deregister_callback(const cancellation_token_registration& _Registration) const;
 ```
 
@@ -99,11 +99,11 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 *_Registration*<br/>
 Объект `cancellation_token_registration`, соответствующий обратному вызову, регистрацию которого требуется отменить. Этот токен должен быть предварительно возвращен из вызова метода `register`.
 
-##  <a name="is_cancelable"></a> is_cancelable
+## <a name="is_cancelable"></a>is_cancelable
 
 Возвращает значение, указывающее, может ли этот токен быть отменен или нет.
 
-```
+```cpp
 bool is_cancelable() const;
 ```
 
@@ -111,23 +111,23 @@ bool is_cancelable() const;
 
 Индикация того, может ли этот токен быть отменен.
 
-##  <a name="is_canceled"></a> is_canceled
+## <a name="is_canceled"></a>is_canceled
 
-Возвращает **true** Если токен был отменен.
+Возвращает **значение true** , если токен был отменен.
 
-```
+```cpp
 bool is_canceled() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение **true** Если токен был отменен, в противном случае — значение **false**.
+Значение **true** , если токен был отменен; в противном случае — значение **false**.
 
-##  <a name="none"></a> Нет
+## <a name="none"></a>None
 
 Возвращает токен отмены, который никогда не может подвергаться отмене.
 
-```
+```cpp
 static cancellation_token none();
 ```
 
@@ -135,22 +135,22 @@ static cancellation_token none();
 
 Токен отмены, который невозможно отменить.
 
-##  <a name="operator_neq"></a> оператор! =
+## <a name="operator_neq"></a>operator! =
 
-```
+```cpp
 bool operator!= (const cancellation_token& _Src) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Src*<br/>
-Сравниваемый шаблон `cancellation_token`.
+Объект `cancellation_token` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_eq"></a> оператор =
+## <a name="operator_eq"></a>Оператор =
 
-```
+```cpp
 cancellation_token& operator= (const cancellation_token& _Src);
 
 cancellation_token& operator= (cancellation_token&& _Src);
@@ -159,28 +159,28 @@ cancellation_token& operator= (cancellation_token&& _Src);
 ### <a name="parameters"></a>Параметры
 
 *_Src*<br/>
-`cancellation_token` Для назначения.
+`cancellation_token` для назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_eq_eq"></a> оператор ==
+## <a name="operator_eq_eq"></a>Оператор = =
 
-```
+```cpp
 bool operator== (const cancellation_token& _Src) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Src*<br/>
-Сравниваемый шаблон `cancellation_token`.
+Объект `cancellation_token` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="register_callback"></a> register_callback
+## <a name="register_callback"></a>register_callback
 
 Регистрирует функцию обратного вызова в токене. Если и когда токен отменяется, выполняется обратный вызов. Обратите внимание, что если токен уже отменен в той точке, где вызывается этот метод, обратный вызов будет выполнен немедленно и синхронно.
 
-```
+```cpp
 template<typename _Function>
 ::Concurrency::cancellation_token_registration register_callback(const _Function& _Func) const;
 ```
@@ -195,8 +195,8 @@ template<typename _Function>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод вызовет [invalid_operation](invalid-operation-class.md) исключение, если он вызывается для `cancellation_token` объект, который был создан с помощью [cancellation_token::none](#none) метод.
+Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод вызовет исключение [invalid_operation](invalid-operation-class.md) , если оно вызывается для объекта `cancellation_token`, созданного с помощью метода [cancellation_token:: None](#none) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

@@ -20,28 +20,28 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 06134838494e38c182d7c8328497666862f40fd6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821848"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143228"
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 
-Пространство имен `Concurrency` предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, которая является платформой параллельного программирования для C++. Для получения дополнительной информации см. [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md).
+Пространство имен `Concurrency` предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, которая является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Среда выполнения с параллелизмом).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 namespace concurrency;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`runtime_object_identity`|Каждый экземпляр сообщения имеет идентификатор, который сопутствует ему при клонировании и передаче между компонентами обмена сообщениями. Он не может быть адресом объекта сообщения.|
 |`task_status`|Тип, который представляет конечное состояние задачи. Допустимые значения: `completed` и `canceled`.|
@@ -50,11 +50,11 @@ namespace concurrency;
 
 ### <a name="classes"></a>Классы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Класс affinity_partitioner](affinity-partitioner-class.md)|Класс `affinity_partitioner` аналогичен классу `static_partitioner`, но он повышает сходство кэша путем подбора поддиапазонов сопоставления для потоков рабочего процесса. Он может значительно повысить производительность, если цикл повторно выполняется в одном и том же наборе данных и данные помещаются в кэш. Обратите внимание, что один и тот же объект `affinity_partitioner` должен использоваться с последующими итерациями параллельного цикла, выполняемого в указанном наборе данных, чтобы воспользоваться преимуществом локальности данных.|
 |[Класс agent](agent-class.md)|Класс, предназначенный для использования в качестве базового класса для всех независимых агентов. Он используется для скрытия состояния от других агентов и взаимодействия посредством передачи сообщений.|
-|[Класс auto_partitioner](auto-partitioner-class.md)|Класс `auto_partitioner` представляет метод, который алгоритмы `parallel_for`, `parallel_for_each` и `parallel_transform` используют по умолчанию для разделения обрабатываемого диапазона. Этот метод разделения использует как перенос диапазона для распределения нагрузки, так и отмену по итерациям.|
+|[Класс auto_partitioner](auto-partitioner-class.md)|Класс `auto_partitioner` представляет метод, который алгоритмы `parallel_for`, `parallel_for_each` и `parallel_transform` используют по умолчанию для разделения обрабатываемого диапазона. Этот метод секционирования использует перенос диапазона для балансировки нагрузки, а также для отмены при переборе.|
 |[Класс bad_target](bad-target-class.md)|Этот класс описывает исключение, которое создается, если блок обмена сообщениями получает указатель на целевой объект, который неверен для выполняемой операции.|
 |[Класс call](call-class.md)|Блок обмена сообщениями `call` — это упорядоченный блок `target_block` с несколькими источниками, который вызывает заданную функцию при получении сообщения.|
 |[Класс cancellation_token](cancellation-token-class.md)|Класс `cancellation_token` представляет возможность определить, получала ли некоторая операция запрос на отмену. Заданный токен можно связать с `task_group`, `structured_task_group` или `task` для предоставления неявной отмены. Его также можно опрашивать на предмет отмены или зарегистрировать обратный вызов для той ситуации, когда отменяется связанный `cancellation_token_source`.|
@@ -116,7 +116,7 @@ namespace concurrency;
 |[Класс single_link_registry](single-link-registry-class.md)|Объект `single_link_registry` представляет собой `network_link_registry`, управляющий только одним блоком источника или целевым блоком.|
 |[Класс source_block](source-block-class.md)|Класс `source_block` — это абстрактный базовый класс только для блоков источника. Класс предоставляет основные функции управления соединениями, а также проверки распространенных ошибок.|
 |[Класс source_link_manager](source-link-manager-class.md)|Объект `source_link_manager` управляет сетевыми соединениями блоков обмена сообщениями с блоками `ISource`.|
-|[Класс static_partitioner](static-partitioner-class.md)|Класс `static_partitioner` представляет статическое разделение диапазона, в котором итерации выполняются с помощью `parallel_for`. Разделитель делит диапазон на количество блоков, соответствующее количеству работников, доступных базовому планировщику.|
+|[Класс static_partitioner](static-partitioner-class.md)|Класс `static_partitioner` представляет статическое разделение диапазона, в котором итерации выполняются с помощью `parallel_for`. Модуль разделения разделяет диапазон на количество фрагментов, доступных для базового планировщика.|
 |[Класс structured_task_group](structured-task-group-class.md)|Класс `structured_task_group` представляет коллекцию параллельной работы со сложной структурой. Можно поместить в очередь `structured_task_group` отдельные параллельные задачи с помощью объектов `task_handle` и ожидать их выполнения или отменить группу задач до завершения выполнения, что приведет к отмене всех задач, которые не начали выполнение.|
 |[Класс target_block](target-block-class.md)|Класс `target_block` — это абстрактный базовый класс, который предоставляет основные функции управления соединениями и проверку ошибок только для целевых блоков.|
 |[Класс task (среда выполнения с параллелизмом)](task-class.md)|Класс `task` библиотеки параллельных шаблонов (PPL). Объект `task` представляет работу, которая может быть выполнена асинхронно и параллельно с другими задачами и параллельной работой, созданной параллельными алгоритмами в среде выполнения с параллелизмом. При успешном завершении он выводи результат типа `_ResultType`. Задачи типа `task<void>` никакого результата не дают. Задачи можно ожидать и отменять независимо от других задач. Также возможно сочетание с другими задачами с помощью шаблонов продолжений (`then`), присоединений (`when_all`) и выбора (`when_any`).|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Структуры
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Структура DispatchState](dispatchstate-structure.md)|Структура `DispatchState` используется для передачи состояния в метод `IExecutionContext::Dispatch`. Она описывает обстоятельства, при которых метод `Dispatch` вызывается для интерфейса `IExecutionContext`.|
 |[Структура IExecutionContext](iexecutioncontext-structure.md)|Интерфейс для контекста выполнения, который может выполняться на данном виртуальном процессоре и к которому может применяться совместное переключение контекста.|
@@ -154,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Допустимые состояния для объекта `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.|
@@ -173,7 +173,7 @@ namespace concurrency;
 
 ### <a name="functions"></a>Функции
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Alloc, функция](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|
@@ -196,19 +196,19 @@ namespace concurrency;
 |[Функция make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Перегружен. Конструирует блок сообщений `greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
 |[Функция make_join](concurrency-namespace-functions.md#make_join)|Перегружен. Конструирует блок сообщений `non_greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
 |[Функция make_task](concurrency-namespace-functions.md#make_task)|Метод фабрики для создания объекта `task_handle`.|
-|[Функция parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Перегружен. В параллельном режиме упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом. Эта функция семантически аналогична `std::sort` в том, что она является нестабильной сортировкой на месте на основе сравнения, за исключением того, что ей требуется `O(n)` дополнительного пространства и инициализация по умолчанию для сортируемых элементов.|
+|[Функция parallel_buffered_sort](concurrency-namespace-functions.md#parallel_buffered_sort)|Перегружен. Упорядочивает элементы в указанном диапазоне в порядке убывания или в соответствии с критерием упорядочивания, заданным бинарным предикатом, в Parallel. Эта функция семантически аналогична `std::sort` в том, что она является нестабильной сортировкой на месте на основе сравнения, за исключением того, что ей требуется `O(n)` дополнительного пространства и инициализация по умолчанию для сортируемых элементов.|
 |[Функция parallel_for](concurrency-namespace-functions.md#parallel_for)|Перегружен. `parallel_for` выполняет итерацию по диапазону индексов и выполняет предоставленную пользователем функцию в каждой итерации параллельно.|
 |[Функция parallel_for_each](concurrency-namespace-functions.md#parallel_for_each)|Перегружен. `parallel_for_each` применяет указанную функцию к каждому элементу в диапазоне параллельно. Эта функция семантически эквивалентна функции `for_each` в пространстве имен `std`, за исключением того, что итерация по элементам выполняется параллельно и порядок итерации не определен. Аргумент `_Func` должен поддерживать оператор вызова функции формы `operator()(T)`, где параметр `T` является типом элемента контейнера, для которого выполняется итерация.|
 |[Функция parallel_invoke](concurrency-namespace-functions.md#parallel_invoke)|Перегружен. Выполняет объекты функции, предоставленные в виде параметров, в параллельном режиме и блокирует их до завершения выполнения. Каждый объект функции может быть лямбда-выражением, указателем на функцию или любым объектом, который поддерживает оператор вызова функции с подписью `void operator()()`.|
 |[Функция parallel_radixsort](concurrency-namespace-functions.md#parallel_radixsort)|Перегружен. Располагает элементы в указанном диапазоне в неубывающем порядке, используя алгоритм сортировки основания системы счисления. Это стабильная функция сортировки, для которой требуется функция проекции, способная проецировать сортируемые элементы в неподписанные ключи целочисленного типа. Для сортируемых элементов требуется инициализация по умолчанию.|
 |[Функция parallel_reduce](concurrency-namespace-functions.md#parallel_reduce)|Перегружен. Параллельно вычисляет сумму всех элементов в указанном диапазоне путем вычисления последовательных частичных сумм или вычисляет результаты последовательных частичных сумм, полученных сходным образом с использованием указанной бинарной операции, отличной от суммирования. `parallel_reduce` семантически аналогичен `std::accumulate`, но требует, чтобы бинарная операция была ассоциативна, а также значение идентификатора вместо начального значения.|
-|[Функция parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Перегружен. В параллельном режиме упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом. Эта функция семантически схожа с `std::sort`, так как она основана на сравнении, неустойчива, сортирует на месте.|
+|[Функция parallel_sort](concurrency-namespace-functions.md#parallel_sort)|Перегружен. Упорядочивает элементы в указанном диапазоне в порядке убывания или в соответствии с критерием упорядочивания, заданным бинарным предикатом, в Parallel. Эта функция семантически схожа с `std::sort`, так как она основана на сравнении, неустойчива, сортирует на месте.|
 |[Функция parallel_transform](concurrency-namespace-functions.md#parallel_transform)|Перегружен. Применяет заданный объект функции к каждому элементу в исходном диапазоне или к паре элементов из двух исходных диапазонов и параллельно копирует возвращаемые значения объекта функции в диапазон назначения. Эта функция семантически эквивалентна `std::transform`.|
 |[Функция Receive](concurrency-namespace-functions.md#receive)|Перегружен. Общая реализация получения, позволяющая контексту ожидать данные строго из одного источника и фильтровать значения, которые принимаются.|
 |[Функция run_with_cancellation_token](concurrency-namespace-functions.md#run_with_cancellation_token)|Немедленно и синхронно выполняет объект функции в контексте заданного токена отмены.|
 |[Функция send](concurrency-namespace-functions.md#send)|Перегружен. Синхронная операции отправки, которая ожидает принятия или отклонения сообщения целевым объектом.|
 |[Функция set_ambient_scheduler (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#set_ambient_scheduler)||
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|Перегружен. Ограничивает ресурсы выполнения, используемые внутренними рабочими потоками среды выполнения с параллелизмом, определенным набором сходства.<br /><br /> Этот метод можно вызывать только до создания диспетчера ресурсов или между двумя периодами существования диспетчера ресурсов. Его можно вызывать несколько раз при условии, что в момент вызова диспетчер ресурсов не существует. После задания ограничения сходства оно будет оставаться действительным до следующего допустимого вызова метода `set_task_execution_resources`.<br /><br /> Предоставленная маска сходства не обязана быть подмножеством маски сходства процесса. Сходство процесса обновляется при необходимости.|
+|[Функция set_task_execution_resources](concurrency-namespace-functions.md#set_task_execution_resources)|Перегружен. Ограничивает ресурсы выполнения, используемые внутренними рабочими потоками среды выполнения с параллелизмом, определенным набором сходства.<br /><br /> Этот метод можно вызывать только до создания диспетчера ресурсов или между двумя периодами существования диспетчера ресурсов. Его можно вызывать несколько раз при условии, что в момент вызова диспетчер ресурсов не существует. После задания ограничения сходства оно будет оставаться действительным до следующего допустимого вызова метода `set_task_execution_resources`.<br /><br /> Предоставленная маска сходства не обязана быть подмножеством маски сходства процесса. Сходство процесса обновляется при необходимости.|
 |[Функция swap](concurrency-namespace-functions.md#swap)|Меняет местами элементы двух объектов `concurrent_vector`.|
 |[Функция task_from_exception (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#task_from_exception)||
 |[Функция task_from_result (среда выполнения с параллелизмом)](concurrency-namespace-functions.md#task_from_result)||
@@ -220,27 +220,27 @@ namespace concurrency;
 
 ### <a name="operators"></a>Операторы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[оператор!= ](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая будет успешно выполнена при успешном завершении обеих задач в качестве аргументов.|
 |[оператор||](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
 |[оператор<](concurrency-namespace-operators.md#operator_lt)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
-|[оператор<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
-|[оператор==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
-|[оператор>](concurrency-namespace-operators.md#operator_gt)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
-|[оператор>=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
+|[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
+|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
+|[operator>](concurrency-namespace-operators.md#operator_gt)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
+|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
 
 ### <a name="constants"></a>Константы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|
-|[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|
+|[ажентевентгуид](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|
+|[чоривентгуид](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|
 |[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|GUID поставщика трассировки событий Windows для среды выполнения с параллелизмом.|
 |[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|Указывает на поддержку интерфейса диспетчера ресурсов, определенного в Visual Studio 2010.|
 |[конкртевентгуид](concurrency-namespace-constants1.md#concrteventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые не описаны подробнее другой категорией.|
-|[ContextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с контекстами.|
+|[контекстевентгуид](concurrency-namespace-constants1.md#contexteventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с контекстами.|
 |[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|
 |[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|Значение, указывающее, что время ожидания истекло.|
 |[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|Специальное значение для ключа политики `ContextPriority`, указывающее, что приоритет потока всех контекстов в планировщике должен быть таким же, как приоритет потока, создавшего планировщик.|
@@ -250,7 +250,7 @@ namespace concurrency;
 |[пплпараллелфоревентгуид](concurrency-namespace-constants1.md#pplparallelforeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с использованием функции `parallel_for`.|
 |[пплпараллелинвокивентгуид](concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с использованием функции `parallel_invoke`.|
 |[ресаурцеманажеревентгуид](concurrency-namespace-constants1.md#resourcemanagereventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с диспетчером ресурсов.|
-|[ScheduleGroupEventGuid](concurrency-namespace-constants1.md#schedulegroupeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с группами расписаний.|
+|[счедулеграупевентгуид](concurrency-namespace-constants1.md#schedulegroupeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с группами расписаний.|
 |[счедулеревентгуид](concurrency-namespace-constants1.md#schedulereventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с действиями планировщика.|
 |[виртуалпроцессоревентгуид](concurrency-namespace-constants1.md#virtualprocessoreventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с виртуальными процессорами.|
 
@@ -258,6 +258,6 @@ namespace concurrency;
 
 **Header:** Agents. h, ConcRT. h, concrtrm. h, concurrent_priority_queue. h, concurrent_queue. h, concurrent_unordered_map. h, concurrent_unordered_set. h, concurrent_vector. h, internal_concurrent_hash. h, internal_split_ordered_list. h, PPL. h, pplcancellation_token. h, пплконкрт. h, пплинтерфаце. h, из ppltasks. h
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Ссылки](reference-concurrency-runtime.md)
+[Справочные материалы](reference-concurrency-runtime.md)

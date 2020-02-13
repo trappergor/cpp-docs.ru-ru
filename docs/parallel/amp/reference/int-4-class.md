@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180217"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126673"
 ---
-# <a name="int4-class"></a>Класс int_4
+# <a name="int_4-class"></a>Класс int_4
 
 Представляет короткий вектор из четырех целых чисел.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class int_4;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор int_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор int_4](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -442,33 +442,33 @@ class int_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
-|int_4::operator%=||
-|int_4::operator&=||
-|int_4::operator*=||
-|int_4::operator/=||
-|int_4::operator ^ =||
-|int_4::operator&#124;=||
+|int_4:: operator% =||
+|int_4:: operator & =||
+|int_4:: operator * =||
+|int_4:: operator/=||
+|int_4:: operator ^ =||
+|int_4:: operator&#124;=||
 |int_4::operator~||
-|int_4::operator ++||
-|int_4::operator+=||
-|int_4::operator<\<=||
-|int_4::operator=||
-|int_4::operator-=||
-|int_4::operator>>=||
+|int_4:: operator + +||
+|int_4:: operator + =||
+|int_4:: operator <\<=||
+|int_4:: operator =||
+|int_4:: operator-=||
+|int_4:: operator > > =||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#int_4__size)||
+|[Константа размера](#int_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -605,15 +605,15 @@ class int_4;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -670,15 +670,15 @@ explicit inline int_4(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="int_4__size"></a> Размер
+## <a name="int_4__size"></a>изменять
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

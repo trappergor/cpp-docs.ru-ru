@@ -14,153 +14,153 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362638"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143277"
 ---
 # <a name="openmp-environment-variables"></a>Переменные среды OpenMP
 
-Ссылки на переменные среды, используемые в OpenMP API.
+Предоставляет ссылки на переменные среды, используемые в API OpenMP.
 
-Реализация Visual C++ OpenMP standard включает следующие переменные среды. Эти переменные среды считываются при запуске программы и изменения их значения игнорируются во время выполнения (например, с помощью [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
+Визуальная C++ реализация стандарта OpenMP включает следующие переменные среды. Эти переменные среды считываются при запуске программы, и изменения их значений игнорируются во время выполнения (например, с помощью [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).
 
-|переменная среды;|Описание|
+|Переменная среды|Description|
 |--------------------|-----------|
-|[OMP_SCHEDULE](#omp-schedule)|Изменяет поведение [расписание](openmp-clauses.md#schedule) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директива.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Задает максимальное число потоков в параллельной области, если не переопределено [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_DYNAMIC](#omp-dynamic)|Указывает, может ли изменять количество потоков в параллельной области OpenMP, время выполнения.|
-|[OMP_NESTED](#omp-nested)|Указывает, включен ли вложенный параллелизм, если не включена или отключена с помощью вложенных параллелизма `omp_set_nested`.|
+|[OMP_SCHEDULE](#omp-schedule)|Изменяет поведение предложения [Schedule](openmp-clauses.md#schedule) , если `schedule(runtime)` указана в директиве `for` или `parallel for`.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Задает максимальное число потоков в параллельной области, если оно не переопределено с помощью [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).|
+|[OMP_DYNAMIC](#omp-dynamic)|Указывает, может ли время выполнения OpenMP настраивать количество потоков в параллельной области.|
+|[OMP_NESTED](#omp-nested)|Указывает, включен ли вложенный параллелизм, если только не включен или отключен вложенный параллелизм с `omp_set_nested`.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
-Указывает, может ли изменять количество потоков в параллельной области OpenMP, время выполнения.
+Указывает, может ли время выполнения OpenMP настраивать количество потоков в параллельной области.
 
-```
+```cmd
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`OMP_DYNAMIC` Переменной среды могут быть переопределены [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) функции.
+Переменная среды `OMP_DYNAMIC` может быть переопределена функцией [omp_set_dynamic](openmp-functions.md#omp-set-dynamic) .
 
-Значение по умолчанию в Visual C++ реализации стандарта OpenMP — `OMP_DYNAMIC=FALSE`.
+Значение по умолчанию в визуальной C++ реализации стандарта OpenMP — `OMP_DYNAMIC=FALSE`.
 
-Дополнительные сведения см. в разделе [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
+Дополнительные сведения см. в статье [4,3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md).
 
 ### <a name="example"></a>Пример
 
-Следующая команда задает `OMP_DYNAMIC` переменной среды в значение TRUE:
+Следующая команда задает для переменной среды `OMP_DYNAMIC` значение TRUE:
 
-```
+```cmd
 set OMP_DYNAMIC=TRUE
 ```
 
-Следующая команда отображает текущее значение параметра `OMP_DYNAMIC` переменной среды:
+Следующая команда отображает текущее значение переменной среды `OMP_DYNAMIC`:
 
-```
+```cmd
 set OMP_DYNAMIC
 ```
 
 ## <a name="omp-nested"></a>OMP_NESTED
 
-Указывает, включен ли вложенный параллелизм, если не включена или отключена с помощью вложенных параллелизма `omp_set_nested`.
+Указывает, включен ли вложенный параллелизм, если только не включен или отключен вложенный параллелизм с `omp_set_nested`.
 
-```
+```cmd
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`OMP_NESTED` Переменной среды могут быть переопределены [omp_set_nested](openmp-functions.md#omp-set-nested) функции.
+Переменная среды `OMP_NESTED` может быть переопределена функцией [omp_set_nested](openmp-functions.md#omp-set-nested) .
 
-Значение по умолчанию в Visual C++ реализации стандарта OpenMP — `OMP_DYNAMIC=FALSE`.
+Значение по умолчанию в визуальной C++ реализации стандарта OpenMP — `OMP_DYNAMIC=FALSE`.
 
-Дополнительные сведения см. в разделе [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md).
+Дополнительные сведения см. в статье [4,4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md).
 
 ### <a name="example"></a>Пример
 
-Следующая команда задает `OMP_NESTED` переменной среды в значение TRUE:
+Следующая команда задает для переменной среды `OMP_NESTED` значение TRUE:
 
-```
+```cmd
 set OMP_NESTED=TRUE
 ```
 
-Следующая команда отображает текущее значение параметра `OMP_NESTED` переменной среды:
+Следующая команда отображает текущее значение переменной среды `OMP_NESTED`:
 
-```
+```cmd
 set OMP_NESTED
 ```
 
 ## <a name="omp-num-threads"></a>OMP_NUM_THREADS
 
-Задает максимальное число потоков в параллельной области, если не переопределено [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).
+Задает максимальное число потоков в параллельной области, если оно не переопределено с помощью [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).
 
-```
+```cmd
 set OMP_NUM_THREADS[=num]
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *num*<br/>
-Максимальное количество потоков в параллельной области, не более 64-разрядная реализация Visual C++.
+Максимальное число потоков в параллельной области до 64 в реализации визуального C++ элемента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`OMP_NUM_THREADS` Переменной среды могут быть переопределены [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) функции или [num_threads](openmp-clauses.md#num-threads).
+Переменная среды `OMP_NUM_THREADS` может быть переопределена функцией [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).
 
-Значение по умолчанию `num` в Visual C++ реализация стандарта OpenMP — это количество виртуальных процессоров, включая процессоры с технологией Hyper-Threading.
+Значением по умолчанию для `num` в C++ реализации стандарта OpenMP является число виртуальных процессоров, включая процессоры Hyper-Threading.
 
-Дополнительные сведения см. в разделе [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).
+Дополнительные сведения см. в статье [4,2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).
 
 ### <a name="example"></a>Пример
 
-Следующая команда задает `OMP_NUM_THREADS` переменную среды, чтобы `16`:
+Следующая команда задает для переменной среды `OMP_NUM_THREADS` значение `16`:
 
-```
+```cmd
 set OMP_NUM_THREADS=16
 ```
 
-Следующая команда отображает текущее значение параметра `OMP_NUM_THREADS` переменной среды:
+Следующая команда отображает текущее значение переменной среды `OMP_NUM_THREADS`:
 
-```
+```cmd
 set OMP_NUM_THREADS
 ```
 
 ## <a name="omp-schedule"></a>OMP_SCHEDULE
 
-Изменяет поведение [расписание](openmp-clauses.md#schedule) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директива.
+Изменяет поведение предложения [Schedule](openmp-clauses.md#schedule) , если `schedule(runtime)` указана в директиве `for` или `parallel for`.
 
-```
+```cmd
 set OMP_SCHEDULE[=type[,size]]
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-(Необязательно) Указывает размер итераций. *размер* должно быть положительным целым числом. По умолчанию используется `1`, кроме случая, когда *типа* является статическим. Не является допустимым, если *тип* является `runtime`.
+Используемых Задает размер итераций. *Размер* должен быть положительным целым числом. Значение по умолчанию — `1`, за исключением случаев, когда *тип* является статическим. Недопустимо, если *тип* — `runtime`.
 
 *type*<br/>
-Тип планирования, либо `dynamic`, `guided`, `runtime`, или `static`.
+Тип расписания: `dynamic`, `guided`, `runtime`или `static`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение по умолчанию в Visual C++ реализации стандарта OpenMP — `OMP_SCHEDULE=static,0`.
+Значение по умолчанию в визуальной C++ реализации стандарта OpenMP — `OMP_SCHEDULE=static,0`.
 
-Дополнительные сведения см. в разделе [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).
+Дополнительные сведения см. в статье [4,1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md).
 
 ### <a name="example"></a>Пример
 
-Следующая команда задает `OMP_SCHEDULE` переменной среды:
+Следующая команда задает переменную среды `OMP_SCHEDULE`:
 
-```
+```cmd
 set OMP_SCHEDULE="guided,2"
 ```
 
-Следующая команда отображает текущее значение параметра `OMP_SCHEDULE` переменной среды:
+Следующая команда отображает текущее значение переменной среды `OMP_SCHEDULE`:
 
-```
+```cmd
 set OMP_SCHEDULE
 ```

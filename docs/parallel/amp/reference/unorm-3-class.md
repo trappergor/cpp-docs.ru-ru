@@ -72,68 +72,68 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405525"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126192"
 ---
-# <a name="unorm3-class"></a>Класс unorm_3
+# <a name="unorm_3-class"></a>Класс unorm_3
 
-Представляет короткий вектор из трех чисел без знака normal.
+Представляет короткий вектор из трех беззнаковых обычных чисел без знака.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class unorm_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор unorm_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор unorm_3](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |unorm_3::get_x||
 |unorm_3::get_xy||
 |unorm_3::get_xyz||
 |unorm_3::get_xz||
 |unorm_3::get_xzy||
-|unorm_3::get_y||
-|unorm_3::get_yx||
+|unorm_3:: get_y||
+|unorm_3:: get_yx||
 |unorm_3::get_yxz||
 |unorm_3::get_yz||
 |unorm_3::get_yzx||
 |unorm_3::get_z||
 |unorm_3::get_zx||
-|unorm_3::get_zxy||
+|unorm_3:: get_zxy||
 |unorm_3::get_zy||
 |unorm_3::get_zyx||
-|Unorm_3::ref_b||
-|Unorm_3::ref_g||
-|Unorm_3::ref_r||
-|Unorm_3::ref_x||
-|Unorm_3::ref_y||
-|Unorm_3::ref_z||
+|Unorm_3:: ref_b||
+|Unorm_3:: ref_g||
+|Unorm_3:: ref_r||
+|Unorm_3:: ref_x||
+|Unorm_3:: ref_y||
+|Unorm_3:: ref_z||
 |unorm_3::set_x||
 |unorm_3::set_xy||
 |unorm_3::set_xyz||
 |unorm_3::set_xz||
 |unorm_3::set_xzy||
-|unorm_3::set_y||
+|unorm_3:: set_y||
 |unorm_3::set_yx||
 |unorm_3::set_yxz||
 |unorm_3::set_yz||
@@ -141,59 +141,59 @@ class unorm_3;
 |unorm_3::set_z||
 |unorm_3::set_zx||
 |unorm_3::set_zxy||
-|unorm_3::set_zy||
+|unorm_3:: set_zy||
 |unorm_3::set_zyx||
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|unorm_3::operator--||
-|unorm_3::operator*=||
-|unorm_3::operator/=||
-|unorm_3::operator ++||
-|unorm_3::operator +=||
-|unorm_3::operator=||
-|unorm_3::operator-=||
+|unorm_3:: operator--||
+|unorm_3:: operator * =||
+|unorm_3:: operator/=||
+|unorm_3:: operator + +||
+|unorm_3:: operator + =||
+|unorm_3:: operator =||
+|unorm_3:: operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#unorm_3__size)||
+|[Константа размера](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|unorm_3::b||
-|unorm_3::bg||
-|unorm_3::bgr||
-|unorm_3::br||
-|unorm_3::brg||
-|unorm_3::g||
-|unorm_3::gb||
+|unorm_3:: b||
+|unorm_3:: BG||
+|unorm_3:: BGR||
+|unorm_3:: BR||
+|unorm_3:: БРГ||
+|unorm_3:: g||
+|unorm_3:: ГБ||
 |unorm_3::gbr||
-|unorm_3::gr||
-|unorm_3::grb||
-|unorm_3::r||
-|unorm_3::rb||
-|unorm_3::rbg||
-|unorm_3::rg||
-|unorm_3::rgb||
-|unorm_3::x||
-|unorm_3::xy||
-|unorm_3::xyz||
-|unorm_3::xz||
-|unorm_3::xzy||
-|unorm_3::y||
-|unorm_3::yx||
-|unorm_3::yxz||
-|unorm_3::yz||
-|unorm_3::yzx||
-|unorm_3::z||
-|unorm_3::zx||
-|unorm_3::zxy||
+|unorm_3:: GR||
+|unorm_3:: ГРБ||
+|unorm_3:: r||
+|unorm_3:: RB||
+|unorm_3:: РБГ||
+|unorm_3:: RG||
+|unorm_3:: RGB||
+|unorm_3:: x||
+|unorm_3:: XY||
+|unorm_3:: XYZ||
+|unorm_3:: КСЗ||
+|unorm_3:: XZY||
+|unorm_3:: y||
+|unorm_3:: Икс||
+|unorm_3:: иксз||
+|unorm_3:: из||
+|unorm_3:: изкс||
+|unorm_3:: z||
+|unorm_3:: ЗКС||
+|unorm_3:: зкси||
 |unorm_3::zy||
 |unorm_3::zyx||
 
@@ -203,15 +203,15 @@ class unorm_3;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> unorm_3
+## <a name="ctor"></a>unorm_3
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -274,15 +274,15 @@ explicit inline unorm_3(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="unorm_3__size"></a> Размер
+## <a name="unorm_3__size"></a>изменять
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

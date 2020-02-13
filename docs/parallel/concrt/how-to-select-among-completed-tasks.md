@@ -5,32 +5,32 @@ helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75ecac8dd0e8845401e3e287e8c95ea614055970
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205646"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142473"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>Практическое руководство. Выбор среди завершенных задач
 
-В этом примере показано, как использовать [concurrency::choice](../../parallel/concrt/reference/choice-class.md) и [concurrency::join](../../parallel/concrt/reference/join-class.md) классы, чтобы выбрать первую задачу для завершения алгоритма поиска.
+В этом примере показано, как использовать классы [Concurrency:: Choice](../../parallel/concrt/reference/choice-class.md) и [Concurrency:: Join](../../parallel/concrt/reference/join-class.md) , чтобы выбрать первую задачу для завершения алгоритма поиска.
 
 ## <a name="example"></a>Пример
 
-В следующем примере выполняются два алгоритма поиска в параллельном режиме и выбирает первый алгоритм для завершения. В этом примере определяется `employee` тип, который содержит числовой идентификатор и зарплату сотрудника. `find_employee` Функция находит первый сотрудник, имеющий указанный идентификатор или зарплату. `find_employee` Функция также обрабатывает, если ни один из сотрудников есть предоставленный идентификатор или заработной платы. `wmain` Функция создает массив `employee` объектов и выполняет поиск нескольких значений идентификатора и зарплаты.
+В следующем примере параллельно выполняются два алгоритма поиска и выбирается первый алгоритм для завершения. В этом примере определяется тип `employee`, содержащий числовой идентификатор и зарплату для сотрудника. Функция `find_employee` находит первого сотрудника с указанным идентификатором или заработной платой. Функция `find_employee` также обрабатывает случай, когда ни один из сотрудников не имеет указанного идентификатора или зарплаты. Функция `wmain` создает массив объектов `employee` и ищет несколько значений идентификатора и оклада.
 
-В примере используется `choice` объекта можно выбрать один из следующих случаев:
+В примере используется объект `choice` для выбора из следующих вариантов:
 
-1. Сотрудник с предоставленным идентификатором существует.
+1. Сотрудник с указанным идентификатором существует.
 
-1. Сотрудник, у кого есть зарплату существует.
+1. Сотрудник, имеющий указанную зарплату, существует.
 
-1. Существует сотрудника с предоставленным идентификатором или заработной платы.
+1. Не существует сотрудника с указанным идентификатором или зарплатой.
 
-Для первых двух случаях, в примере используется [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md) объекта, содержащего идентификатор, а другой `single_assignment` объекта, содержащего заработной платы. В примере используется `join` объекта в третьем случае. `join` Объект состоит из двух дополнительных `single_assignment` объектов, один для сотрудника с предоставленным идентификатором существует и один для сотрудника с зарплату существует. `join` Объект отправляет сообщение, когда каждый из его членов получает сообщение. В этом примере `join` объект отправляет сообщение, если сотрудника с предоставленным идентификатором, или существует заработной платы.
+В первых двух случаях в примере используется объект [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) для хранения идентификатора и другой объект `single_assignment` для хранения зарплаты. В примере используется объект `join` для третьего случая. Объект `join` состоит из двух дополнительных `single_assignment` объектов: один для случая, когда не существует сотрудника с указанным идентификатором, и один для случая, когда сотрудник с указанной зарплатой не существует. Объект `join` отправляет сообщение, когда каждый из его членов получает сообщение. В этом примере объект `join` отправляет сообщение, когда не существует сотрудника с указанным идентификатором или зарплатой.
 
-В примере используется [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) объекта для параллельного выполнения обоих алгоритмов поиска. Каждая задача поиска запись в один из `single_assignment` объектов, чтобы указать, существует ли заданный сотрудник. В примере используется [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функцию для получения индекса первого буфера, который содержит сообщение и `switch` блок для вывода результата.
+В примере используется объект [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) для параллельного выполнения обоих алгоритмов поиска. Каждая задача поиска записывает в один из объектов `single_assignment`, чтобы указать, существует ли данный сотрудник. В примере используется функция [Concurrency:: Receive](reference/concurrency-namespace-functions.md#receive) , чтобы получить индекс первого буфера, содержащего сообщение, и блок `switch` для вывода результата.
 
 [!code-cpp[concrt-find-employee#1](../../parallel/concrt/codesnippet/cpp/how-to-select-among-completed-tasks_1.cpp)]
 
@@ -43,15 +43,15 @@ Employee with id 61935 has salary 29905.00.
 No employee has id 899 or salary 31223.00.
 ```
 
-В этом примере используется [concurrency::make_choice](reference/concurrency-namespace-functions.md#make_choice) вспомогательная функция для создания `choice` объектов и [concurrency::make_join](reference/concurrency-namespace-functions.md#make_join) вспомогательная функция для создания `join` объектов.
+В этом примере используется вспомогательная функция [Concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice) для создания `choice` объектов и вспомогательная функция [concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join) для создания объектов `join`.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `find-employee.cpp` и выполните следующую команду в окне командной строки Visual Studio.
+Скопируйте пример кода и вставьте его в проект Visual Studio или вставьте в файл с именем `find-employee.cpp`, а затем выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe find-employee.cpp**
+> **CL. exe/EHsc ФИНД-емплойи. cpp**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

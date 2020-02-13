@@ -1,20 +1,20 @@
 ---
-title: хэш&lt;string_view&gt; специализации
+title: string_view&gt;&lt;хэширования
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346962"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126179"
 ---
-# <a name="hashltstringviewgt-specialization"></a>хэш&lt;string_view&gt; специализации
+# <a name="hashltstring_viewgt-specialization"></a>string_view&gt;&lt;хэширования
 
-Специализация шаблона, которое формирует значение хэша, учитывая string_view.
+Специализация шаблона, создающая хэш-значение с учетом string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -27,9 +27,9 @@ struct hash<basic_string_view<CharType, Traits>>
         noexcept;
 };
 ```
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Хэш string_view равно хэш базового объекта строки.
+Хэш string_view равен хэшу базового строкового объекта.
 
 ### <a name="example"></a>Пример
 

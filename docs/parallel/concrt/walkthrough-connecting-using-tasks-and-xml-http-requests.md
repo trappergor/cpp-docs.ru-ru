@@ -6,19 +6,19 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: f1d91e4d203e17242bcf6e784d1ef70a03a9bc33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69512136"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142062"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML
 
 В этом примере показано, как использовать интерфейсы [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback) вместе с задачами для отправки запросов HTTP GET и POST к веб-службе в приложении универсальная платформа Windows (UWP). Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.
 
 > [!TIP]
->  Для выполнения HTTP-запросов C++ из приложения UWP с помощью C++ приложения или из классического C++ приложения можно также использовать пакет SDK для RESTful. Дополнительные сведения см. в разделе [ C++ пакет SDK для RESTful (кодовое название "Касабланка")](https://github.com/Microsoft/cpprestsdk).
+> Для выполнения HTTP-запросов C++ из приложения UWP с помощью C++ приложения или из классического C++ приложения можно также использовать пакет SDK для RESTful. Дополнительные сведения см. в разделе [ C++ пакет SDK для RESTful (кодовое название "Касабланка")](https://github.com/Microsoft/cpprestsdk).
 
 Дополнительные сведения о задачах см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения об использовании задач в приложении UWP см. в статье [Асинхронное программирование в C++ ](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps) и [Создание асинхронных операций в C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md).
 
@@ -27,9 +27,9 @@ ms.locfileid: "69512136"
 Пример, использующий `IXMLHTTPRequest2`, но не использующий задачи, см. в разделе [Краткое руководство. подключение с помощью XML-запроса HTTP (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\)).
 
 > [!TIP]
->  `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` — это интерфейсы, которые рекомендуется использовать в приложении UWP. Можно также адаптировать этот пример для использования в приложении для настольных систем.
+> `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` — это интерфейсы, которые рекомендуется использовать в приложении UWP. Можно также адаптировать этот пример для использования в приложении для настольных систем.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Поддержка UWP является необязательной в Visual Studio 2017 и более поздних версиях. Чтобы установить его, откройте Visual Studio Installer в меню "Пуск" Windows и выберите версию Visual Studio, которую вы используете. Нажмите кнопку **изменить** и убедитесь, что установлен флажок **Разработка UWP** . В разделе **необязательные компоненты** убедитесь, что  **C++ установлены средства UWP** . Используйте v141 для Visual Studio 2017 или v142 для Visual Studio 2019.
 
@@ -43,9 +43,9 @@ ms.locfileid: "69512136"
 
 Чтобы поддерживать отмену, классы `HttpRequest`, `HttpRequestBuffersCallback` и `HttpRequestStringCallback` используют токены отмены. Классы `HttpRequestBuffersCallback` и `HttpRequestStringCallback` используют метод [Concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) , который позволяет событию завершения задачи реагировать на отмену. Этот обратный вызов отмены прерывает загрузку. Дополнительные сведения об отмене см. в разделе [Отмена](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-#### <a name="to-define-the-httprequest-class"></a>Определение класса HttpRequest
+### <a name="to-define-the-httprequest-class"></a>Определение класса HttpRequest
 
-1. В главном меню выберите **файл** > **Новый** > **проект**. 
+1. В главном меню выберите **файл** > **Новый** > **проект**.
 
 1. C++ Используйте шаблон **пустое приложение (универсальные приложения Windows)** для создания пустого проекта приложения XAML. В этом примере проект называется `UsingIXMLHTTPRequest2`.
 
@@ -67,29 +67,29 @@ ms.locfileid: "69512136"
 
 В этом разделе показано, как использовать класс `HttpRequest` в приложении UWP. Приложение предоставляет окно ввода, определяющее ресурс URL-адреса, и кнопки команд, которые выполняют операции GET и POST, и команду кнопки, которая отменяет текущую операцию.
 
-#### <a name="to-use-the-httprequest-class"></a>Использование класса HttpRequest
+### <a name="to-use-the-httprequest-class"></a>Использование класса HttpRequest
 
 1. В MainPage. XAML определите элемент [StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel) следующим образом.
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. В MainPage.xaml.h добавьте эту директиву `#include`:
+1. В MainPage.xaml.h добавьте эту директиву `#include`:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. В MainPage.xaml.h добавьте следующие переменные-члены `private` в класс `MainPage`:
+1. В MainPage.xaml.h добавьте следующие переменные-члены `private` в класс `MainPage`:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. В MainPage.xaml.h объявите `private` метод `ProcessHttpRequest`:
+1. В MainPage.xaml.h объявите `private` метод `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-5. В MainPage.xaml.cpp добавьте эти операторы `using`:
+1. В MainPage.xaml.cpp добавьте эти операторы `using`:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. В MainPage.xaml.cpp реализуйте методы `GetButton_Click`, `PostButton_Click` и `CancelButton_Click` класса `MainPage`.
+1. В MainPage.xaml.cpp реализуйте методы `GetButton_Click`, `PostButton_Click` и `CancelButton_Click` класса `MainPage`.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
@@ -100,17 +100,17 @@ ms.locfileid: "69512136"
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. В свойствах проекта в разделе **Компоновщик** **введите `shcore.lib`** и `msxml6.lib`.
+1. В свойствах проекта в разделе **Компоновщик** **введите `shcore.lib`** и `msxml6.lib`.
 
 Здесь приводится работающее приложение:
 
-![Выполняющееся приложение среда выполнения Windows](../../parallel/concrt/media/concrt_usingixhr2.png ", выполняющееся приложение среда выполнения Windows")
+![Выполняемое приложение среда выполнения Windows](../../parallel/concrt/media/concrt_usingixhr2.png "Выполняемое приложение среда выполнения Windows")
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Next Steps
 
 [Пошаговые руководства по среде выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>

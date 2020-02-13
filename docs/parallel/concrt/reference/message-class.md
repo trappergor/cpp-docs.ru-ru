@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343856"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139531"
 ---
 # <a name="message-class"></a>Класс message
 
@@ -25,46 +25,46 @@ ms.locfileid: "64343856"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<class T>
 class message : public ::Concurrency::details::_Runtime_object;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип данных полезных данных в сообщении.
+Тип данных полезной нагрузки в сообщении.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`type`|Псевдоним для `T`.|
+|`type`|Псевдоним типа для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[message](#ctor)|Перегружен. Создает объект `message`.|
-|[~ сообщений деструктор](#dtor)|Уничтожает `message` объекта.|
+|[message](#ctor)|Перегружен. Формирует объект `message`.|
+|[Деструктор сообщений ~](#dtor)|Уничтожает объект `message`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[add_ref](#add_ref)|Добавляет счетчик ссылок для `message` объекта. Используется для блоков сообщений, которые должны подсчет ссылок, чтобы определить время жизни сообщения.|
-|[msg_id](#msg_id)|Возвращает идентификатор `message` объекта.|
-|[remove_ref](#remove_ref)|Вычитает из счетчика ссылок для `message` объекта. Используется для блоков сообщений, которые должны подсчет ссылок, чтобы определить время жизни сообщения.|
+|[add_ref](#add_ref)|Добавляет к счетчику ссылок для объекта `message`. Используется для блоков сообщений, требующих подсчета ссылок для определения времени существования сообщений.|
+|[msg_id](#msg_id)|Возвращает идентификатор объекта `message`.|
+|[remove_ref](#remove_ref)|Вычитает из счетчика ссылок для объекта `message`. Используется для блоков сообщений, требующих подсчета ссылок для определения времени существования сообщений.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[полезные данные](#payload)|Полезные данные `message` объекта.|
+|[payload](#payload)|Полезная нагрузка объекта `message`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).
 
@@ -78,11 +78,11 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 **Пространство имен:** concurrency
 
-##  <a name="add_ref"></a> add_ref
+## <a name="add_ref"></a>add_ref
 
-Добавляет счетчик ссылок для `message` объекта. Используется для блоков сообщений, которые должны подсчет ссылок, чтобы определить время жизни сообщения.
+Добавляет к счетчику ссылок для объекта `message`. Используется для блоков сообщений, требующих подсчета ссылок для определения времени существования сообщений.
 
-```
+```cpp
 long add_ref();
 ```
 
@@ -90,11 +90,11 @@ long add_ref();
 
 Новое значение счетчика ссылок.
 
-##  <a name="ctor"></a> Сообщение
+## <a name="ctor"></a>Сообщение
 
-Создает объект `message`.
+Формирует объект `message`.
 
-```
+```cpp
 message(
     T const& _P);
 
@@ -112,51 +112,51 @@ message(
 ### <a name="parameters"></a>Параметры
 
 *_P*<br/>
-Полезные данные сообщения.
+Полезная нагрузка этого сообщения.
 
 *_Id*<br/>
 Уникальный идентификатор этого сообщения.
 
 *_Msg*<br/>
-Ссылка или указатель на `message` объект.
+Ссылка или указатель на объект `message`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Конструктор, который принимает указатель на `message` как аргумент, создает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_Msg` является `NULL`.
+Конструктор, принимающий указатель на `message` объект в качестве аргумента, выдает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если параметр `_Msg` `NULL`.
 
-##  <a name="dtor"></a> ~ сообщения
+## <a name="dtor"></a>сообщение ~
 
-Уничтожает `message` объекта.
+Уничтожает объект `message`.
 
-```
+```cpp
 virtual ~message();
 ```
 
-##  <a name="msg_id"></a> msg_id
+## <a name="msg_id"></a>msg_id
 
-Возвращает идентификатор `message` объекта.
+Возвращает идентификатор объекта `message`.
 
-```
+```cpp
 runtime_object_identity msg_id() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`runtime_object_identity` Из `message` объекта.
+Свойство `runtime_object_identity` объекта `message`.
 
-##  <a name="payload"></a> полезные данные
+## <a name="payload"></a>полезных данных
 
-Полезные данные `message` объекта.
+Полезная нагрузка объекта `message`.
 
-```
+```cpp
 T const payload;
 ```
 
-##  <a name="remove_ref"></a> remove_ref
+## <a name="remove_ref"></a>remove_ref
 
-Вычитает из счетчика ссылок для `message` объекта. Используется для блоков сообщений, которые должны подсчет ссылок, чтобы определить время жизни сообщения.
+Вычитает из счетчика ссылок для объекта `message`. Используется для блоков сообщений, требующих подсчета ссылок для определения времени существования сообщений.
 
-```
+```cpp
 long remove_ref();
 ```
 
@@ -164,6 +164,6 @@ long remove_ref();
 
 Новое значение счетчика ссылок.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)

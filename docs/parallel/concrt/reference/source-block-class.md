@@ -33,85 +33,85 @@ f1_keywords:
 helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-ms.openlocfilehash: 5ddfd5e139171c7097a793f12ac82767b8773107
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160095"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142708"
 ---
-# <a name="sourceblock-class"></a>Класс source_block
+# <a name="source_block-class"></a>Класс source_block
 
 Класс `source_block` — это абстрактный базовый класс только для блоков источника. Класс предоставляет основные функции управления соединениями, а также проверки распространенных ошибок.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<class _TargetLinkRegistry, class _MessageProcessorType = ordered_message_processor<typename _TargetLinkRegistry::type::type>>
 class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *_TargetLinkRegistry*<br/>
-Реестр ссылок для использования для хранения целевых ссылок.
+Свяжите реестр, который будет использоваться для хранения целевых ссылок.
 
 *_MessageProcessorType*<br/>
 Тип процессора для обработки сообщений.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`target_iterator`|Итератор для прохода подключенных целевых объектов.|
+|`target_iterator`|Итератор для прохода по подключенным целевым объектам.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[source_block](#ctor)|Создает объект `source_block`.|
-|[~ source_block деструктор](#dtor)|Уничтожает `source_block` объекта.|
+|[source_block](#ctor)|Формирует объект `source_block`.|
+|[Деструктор ~ source_block](#dtor)|Уничтожает объект `source_block`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Принять](#accept)|Принимает сообщение, предложенное это `source_block` объекта, передавая владение вызывающему объекту.|
-|[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `source_block` объекта, чтобы предотвратить удаление данных.|
-|[Использование](#consume)|Получает сообщение, ранее предложенного этим объектом `source_block` объекта и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|
-|[link_target](#link_target)|Это связывает целевой блок `source_block` объекта.|
-|[release](#release)|Освобождает предыдущее резервирование сообщение об успешной.|
-|[release_ref](#release_ref)|Освобождает значение счетчика ссылок на это `source_block` объекта.|
-|[reserve](#reserve)|Резервирует сообщение, ранее предложенного этим объектом `source_block` объекта.|
-|[unlink_target](#unlink_target)|Удаляет связь с целевым блоком и это `source_block` объекта.|
-|[unlink_targets](#unlink_targets)|Удаляет связь всех целевых блоков из этого `source_block` объекта. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|
+|[гласит](#accept)|Принимает сообщение, предложенное этим `source_block` объектом, передавая владение вызывающему объекту.|
+|[acquire_ref](#acquire_ref)|Получает счетчик ссылок на этот объект `source_block`, чтобы предотвратить удаление.|
+|[consume](#consume)|Использует сообщение, которое было ранее предложено этим `source_block` объектом и успешно зарезервировано целевым объектом, передавая владение вызывающему объекту.|
+|[link_target](#link_target)|Связывает целевой блок с этим `source_block` объектом.|
+|[release](#release)|Освобождает предыдущее успешное резервирование сообщения.|
+|[release_ref](#release_ref)|Освобождает счетчик ссылок на этот объект `source_block`.|
+|[reserve](#reserve)|Резервирует сообщение, которое было ранее предложено этим объектом `source_block`.|
+|[unlink_target](#unlink_target)|Отменяет связь с целевым блоком из этого `source_block` объекта.|
+|[unlink_targets](#unlink_targets)|Отменяет связь всех целевых блоков с этим `source_block` объектом. (Переопределяет метод [ISource:: unlink_targets](isource-class.md#unlink_targets).)|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[accept_message](#accept_message)|При переопределении в производном классе, принимает сообщение, предложенное источником. Блоки сообщений должны переопределять этот метод для проверки `_MsgId` и вернуть сообщение.|
-|[async_send](#async_send)|Асинхронно добавляет сообщения в очередь и запускает задачу распространения, в том случае, если это еще не сделано|
-|[consume_message](#consume_message)|При переопределении в производном классе, получает сообщение, которое было ранее зарезервировано.|
+|[accept_message](#accept_message)|При переопределении в производном классе принимает предлагаемое сообщение источником. Блоки сообщений должны переопределять этот метод для проверки `_MsgId` и возврата сообщения.|
+|[async_send](#async_send)|Асинхронно ставит в очередь сообщения и запускает задачу распространения, если это еще не сделано.|
+|[consume_message](#consume_message)|При переопределении в производном классе использует ранее зарезервированное сообщение.|
 |[enable_batched_processing](#enable_batched_processing)|Активирует пакетную обработку для этого блока.|
-|[initialize_source](#initialize_source)|Инициализирует `message_propagator` в рамках этого `source_block`.|
-|[link_target_notification](#link_target_notification)|Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `source_block` объекта.|
+|[initialize_source](#initialize_source)|Инициализирует `message_propagator` в этом `source_block`.|
+|[link_target_notification](#link_target_notification)|Обратный вызов, уведомляющий о том, что новый целевой объект связан с данным объектом `source_block`.|
 |[process_input_messages](#process_input_messages)|Обработка входных сообщений. Подходит только для блоков распространения, производных от source_block.|
 |[propagate_output_messages](#propagate_output_messages)|Распространение сообщений в целевые объекты.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|При переопределении в производном классе, передает заданное сообщение или на все связанные целевые объекты. Это является основной способ распространения для блоков сообщений.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|При переопределении в производном классе распространяет данное сообщение на все или все связанные целевые объекты. Это основная подпрограммы распространения для блоков сообщений.|
 |[release_message](#release_message)|При переопределении в производном классе освобождает предыдущее резервирование сообщения.|
-|[remove_targets](#remove_targets)|Удаляет все целевые ссылки для этого исходного блока. Должен быть вызван из деструктора.|
-|[reserve_message](#reserve_message)|При переопределении в производном классе резервирует сообщение, ранее предложенного этим объектом `source_block` объекта.|
-|[resume_propagation](#resume_propagation)|При переопределении в производном классе возобновляет распространение после выпуска резервирования.|
-|[sync_send](#sync_send)|Синхронно ставит в очередь сообщения и запускает задачу распространения, в том случае, если это еще не сделано.|
-|[unlink_target_notification](#unlink_target_notification)|Обратный вызов, который уведомляет о том, что целевой объект была удалена из этого `source_block` объекта.|
-|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Ожидает завершения всех асинхронных операций распространения. Этот тип ожидания Ожидание прокрутки определенного используется в деструкторах блоков сообщений, чтобы убедиться в том, что для всех асинхронных операций распространения достаточное время для завершения перед удалением блока.|
+|[remove_targets](#remove_targets)|Удаляет все целевые ссылки для этого исходного блока. Его следует вызывать из деструктора.|
+|[reserve_message](#reserve_message)|При переопределении в производном классе резервирует сообщение, которое ранее было предложено этим объектом `source_block`.|
+|[resume_propagation](#resume_propagation)|При переопределении в производном классе возобновляет распространение после освобождения резервирования.|
+|[sync_send](#sync_send)|Синхронно ставит в очередь сообщения и запускает задачу распространения, если это еще не сделано.|
+|[unlink_target_notification](#unlink_target_notification)|Обратный вызов, уведомляющий об отсутствии связи цели с данным объектом `source_block`.|
+|[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|Ожидает завершения всех асинхронных распространителей. Это время ожидания для этого распространителя используется в деструкторах блоков сообщений, чтобы убедиться в том, что все асинхронные распространители имеют достаточно времени для завершения перед уничтожением блока.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Блоки сообщений должен быть производным от этого блока, чтобы воспользоваться преимуществами управление ссылками и синхронизации, предоставляемые этим классом.
+Блоки сообщений должны быть производными от этого блока, чтобы воспользоваться преимуществами управления ссылками и синхронизации, предоставляемыми этим классом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -125,11 +125,11 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 **Пространство имен:** concurrency
 
-##  <a name="accept"></a> Принять
+## <a name="accept"></a>гласит
 
-Принимает сообщение, предложенное это `source_block` объекта, передавая владение вызывающему объекту.
+Принимает сообщение, предложенное этим `source_block` объектом, передавая владение вызывающему объекту.
 
-```
+```cpp
 virtual message<_Target_type>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -138,72 +138,72 @@ virtual message<_Target_type>* accept(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из предложенные `message` объекта.
+`runtime_object_identity` предлагаемого `message` объекта.
 
 *_PTarget*<br/>
-Указатель на целевой блок, который вызывает `accept` метод.
+Указатель на целевой блок, вызывающий метод `accept`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-`accept` Метод вызывается целевого объекта, пока сообщение предлагается это `ISource` блока. Для сообщения возвращаемого указателя может отличаться от тот, который передается в `propagate` метод `ITarget` заблокировать, если этот источник решает создать копию сообщения.
+Метод `accept` вызывается целевым объектом, в то время как сообщение предлагается этим блоком `ISource`. Возвращаемый указатель на сообщение может отличаться от переданного в метод `propagate` блока `ITarget`, если этот источник решит создать копию сообщения.
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-При переопределении в производном классе, принимает сообщение, предложенное источником. Блоки сообщений должны переопределять этот метод для проверки `_MsgId` и вернуть сообщение.
+При переопределении в производном классе принимает предлагаемое сообщение источником. Блоки сообщений должны переопределять этот метод для проверки `_MsgId` и возврата сообщения.
 
-```
+```cpp
 virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-Идентификатор объекта среды выполнения `message` объекта.
+Удостоверение объекта среды выполнения объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на сообщение, которое теперь принадлежит вызывающий объект.
+Указатель на сообщение о том, что вызывающий объект теперь является владельцем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для передачи владения исходный указатель сообщения должно быть возвращено. Для поддержания владения копию полезных данных сообщения должен быть выполнено и возвращено.
+Чтобы передавать владение, должен быть возвращен указатель на исходный текст. Чтобы обеспечить владение, необходимо выполнить и вернуть копию полезных данных сообщения.
 
-##  <a name="acquire_ref"></a> acquire_ref
+## <a name="acquire_ref"></a>acquire_ref
 
-Получает значение счетчика ссылок на это `source_block` объекта, чтобы предотвратить удаление данных.
+Получает счетчик ссылок на этот объект `source_block`, чтобы предотвратить удаление.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается `ITarget` объект, который, связанным с данного источника во время `link_target` метод.
+Этот метод вызывается объектом `ITarget`, который связан с этим источником во время выполнения метода `link_target`.
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-Асинхронно добавляет сообщения в очередь и запускает задачу распространения, в том случае, если это еще не сделано
+Асинхронно ставит в очередь сообщения и запускает задачу распространения, если это еще не сделано.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Msg*<br/>
-Указатель на `message` объект для асинхронной передачи.
+Указатель на объект `message` для асинхронной отправки.
 
-##  <a name="consume"></a> Использование
+## <a name="consume"></a>потребляющие
 
-Получает сообщение, ранее предложенного этим объектом `source_block` объекта и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.
+Использует сообщение, которое было ранее предложено этим `source_block` объектом и успешно зарезервировано целевым объектом, передавая владение вызывающему объекту.
 
-```
+```cpp
 virtual message<_Target_type>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -212,57 +212,57 @@ virtual message<_Target_type>* consume(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Зарезервированных `message` объекта.
+`runtime_object_identity` зарезервированного объекта `message`.
 
 *_PTarget*<br/>
-Указатель на целевой блок, который вызывает `consume` метод.
+Указатель на целевой блок, вызывающий метод `consume`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `message` объекта, что вызывающий объект теперь принадлежит.
+Указатель на объект `message`, владельцем которого стал вызывающий объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-Метод вызывает [bad_target](bad-target-class.md) исключения Если параметр `_PTarget` не представляет целевой объект, который вызывается `reserve`.
+Метод вызывает исключение [bad_target](bad-target-class.md) , если параметр `_PTarget` не представляет целевой объект, вызвавший `reserve`.
 
-`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` которые вернули **true**.
+Метод `consume` аналогичен `accept`, но перед ним всегда должен предшествовать вызов `reserve`, возвращающий **значение true**.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-При переопределении в производном классе, получает сообщение, которое было ранее зарезервировано.
+При переопределении в производном классе использует ранее зарезервированное сообщение.
 
-```
+```cpp
 virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта использованное.
+`runtime_object_identity` используемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на сообщение, которое теперь принадлежит вызывающий объект.
+Указатель на сообщение о том, что вызывающий объект теперь является владельцем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Аналогичную `accept`, но всегда предшествует вызов `reserve`.
+Аналогично `accept`, но всегда предшествует вызов `reserve`.
 
-##  <a name="enable_batched_processing"></a> enable_batched_processing
+## <a name="enable_batched_processing"></a>enable_batched_processing
 
 Активирует пакетную обработку для этого блока.
 
-```
+```cpp
 void enable_batched_processing();
 ```
 
-##  <a name="initialize_source"></a> initialize_source
+## <a name="initialize_source"></a>initialize_source
 
-Инициализирует `message_propagator` в рамках этого `source_block`.
+Инициализирует `message_propagator` в этом `source_block`.
 
-```
+```cpp
 void initialize_source(
     _Inout_opt_ Scheduler* _PScheduler = NULL,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
@@ -271,75 +271,75 @@ void initialize_source(
 ### <a name="parameters"></a>Параметры
 
 *_PScheduler*<br/>
-Планировщик для планирования задач.
+Планировщик, который будет использоваться для планирования задач.
 
 *_PScheduleGroup*<br/>
 Группа расписаний, которая будет использоваться для планирования задач.
 
-##  <a name="link_target"></a> link_target
+## <a name="link_target"></a>link_target
 
-Это связывает целевой блок `source_block` объекта.
+Связывает целевой блок с этим `source_block` объектом.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-Указатель на `ITarget` блок, чтобы связать это `source_block` объекта.
+Указатель на блок `ITarget`, связываемый с этим `source_block` объектом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Обратный вызов, который уведомляет о том, что новый целевой объект была связана с это `source_block` объекта.
+Обратный вызов, уведомляющий о том, что новый целевой объект связан с данным объектом `source_block`.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 ```
 
-##  <a name="process_input_messages"></a> process_input_messages
+## <a name="process_input_messages"></a>process_input_messages
 
 Обработка входных сообщений. Подходит только для блоков распространения, производных от source_block.
 
-```
+```cpp
 virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PMessage*<br/>
-Указатель на сообщение, которое должен обрабатываться.
+Указатель на сообщение, которое должно быть обработано.
 
-##  <a name="propagate_output_messages"></a> propagate_output_messages
+## <a name="propagate_output_messages"></a>propagate_output_messages
 
 Распространение сообщений в целевые объекты.
 
-```
+```cpp
 virtual void propagate_output_messages();
 ```
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-При переопределении в производном классе, передает заданное сообщение или на все связанные целевые объекты. Это является основной способ распространения для блоков сообщений.
+При переопределении в производном классе распространяет данное сообщение на все или все связанные целевые объекты. Это основная подпрограммы распространения для блоков сообщений.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessage);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PMessage*<br/>
-Указатель на сообщение, распространяемое.
+Указатель на сообщение, которое должно быть распространено.
 
-##  <a name="release"></a> выпуск
+## <a name="release"></a>отпускании
 
-Освобождает предыдущее резервирование сообщение об успешной.
+Освобождает предыдущее успешное резервирование сообщения.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -348,60 +348,60 @@ virtual void release(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Зарезервированных `message` объекта.
+`runtime_object_identity` зарезервированного объекта `message`.
 
 *_PTarget*<br/>
-Указатель на целевой блок, который вызывает `release` метод.
+Указатель на целевой блок, вызывающий метод `release`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-Метод вызывает [bad_target](bad-target-class.md) исключения Если параметр `_PTarget` не представляет целевой объект, который вызывается `reserve`.
+Метод вызывает исключение [bad_target](bad-target-class.md) , если параметр `_PTarget` не представляет целевой объект, вызвавший `reserve`.
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
 При переопределении в производном классе освобождает предыдущее резервирование сообщения.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта освобождение.
+`runtime_object_identity` освобожденного объекта `message`.
 
-##  <a name="release_ref"></a> release_ref
+## <a name="release_ref"></a>release_ref
 
-Освобождает значение счетчика ссылок на это `source_block` объекта.
+Освобождает счетчик ссылок на этот объект `source_block`.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-Указатель на целевой блок, который вызывает этот метод.
+Указатель на целевой блок, вызывающий этот метод.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается `ITarget` объект, который является, связь которого с данного источника. Блок источника может освободить все ресурсы, зарезервированные для целевой блок.
+Этот метод вызывается объектом `ITarget`, связь с которым удаляется из этого источника. Блоку источника разрешено освобождать все ресурсы, зарезервированные для целевого блока.
 
-##  <a name="remove_targets"></a> remove_targets
+## <a name="remove_targets"></a>remove_targets
 
-Удаляет все целевые ссылки для этого исходного блока. Должен быть вызван из деструктора.
+Удаляет все целевые ссылки для этого исходного блока. Его следует вызывать из деструктора.
 
-```
+```cpp
 void remove_targets();
 ```
 
-##  <a name="reserve"></a> Резерв
+## <a name="reserve"></a>предназначен
 
-Резервирует сообщение, ранее предложенного этим объектом `source_block` объекта.
+Резервирует сообщение, которое было ранее предложено этим объектом `source_block`.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<_Target_type>* _PTarget);
@@ -410,126 +410,126 @@ virtual bool reserve(
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из предложенные `message` объекта.
+`runtime_object_identity` предлагаемого `message` объекта.
 
 *_PTarget*<br/>
-Указатель на целевой блок, который вызывает `reserve` метод.
+Указатель на целевой блок, вызывающий метод `reserve`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
+**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** . Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-После вызова метода `reserve`, если он завершается успешно, следует вызвать `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.
+После вызова `reserve`, если он выполняется, необходимо вызвать метод `consume` или `release`, чтобы получить или предоставить право на владение сообщениями соответственно.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-При переопределении в производном классе резервирует сообщение, ранее предложенного этим объектом `source_block` объекта.
+При переопределении в производном классе резервирует сообщение, которое ранее было предложено этим объектом `source_block`.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_MsgId*<br/>
-`runtime_object_identity` Из `message` объекта резервируются.
+`runtime_object_identity` резервируемого объекта `message`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
+**значение true** , если сообщение было успешно зарезервировано; в противном случае — **значение false** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После вызова `reserve`, если он возвращает **значение true**, необходимо вызвать метод `consume` или `release`, чтобы получить или освободить владение сообщением.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-При переопределении в производном классе возобновляет распространение после выпуска резервирования.
+При переопределении в производном классе возобновляет распространение после освобождения резервирования.
 
-```
+```cpp
 virtual void resume_propagation() = 0;
 ```
 
-##  <a name="ctor"></a> source_block
+## <a name="ctor"></a>source_block
 
-Создает объект `source_block`.
+Формирует объект `source_block`.
 
-```
+```cpp
 source_block();
 ```
 
-##  <a name="dtor"></a> ~source_block
+## <a name="dtor"></a>~ source_block
 
-Уничтожает `source_block` объекта.
+Уничтожает объект `source_block`.
 
-```
+```cpp
 virtual ~source_block();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-Синхронно ставит в очередь сообщения и запускает задачу распространения, в том случае, если это еще не сделано.
+Синхронно ставит в очередь сообщения и запускает задачу распространения, если это еще не сделано.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_Msg*<br/>
-Указатель на `message` объект для синхронной отправки.
+Указатель на объект `message` для синхронной отправки.
 
-##  <a name="unlink_target"></a> unlink_target
+## <a name="unlink_target"></a>unlink_target
 
-Удаляет связь с целевым блоком и это `source_block` объекта.
+Отменяет связь с целевым блоком из этого `source_block` объекта.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-Указатель на `ITarget` блок, чтобы удалить связь из этого `source_block` объекта.
+Указатель на блок `ITarget`, который нужно удалить из этого `source_block` объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызывает [invalid_argument](../../../standard-library/invalid-argument-class.md) исключения Если параметр `_PTarget` является `NULL`.
+Метод вызывает исключение [invalid_argument](../../../standard-library/invalid-argument-class.md) , если `_PTarget` параметра имеет значение `NULL`.
 
-##  <a name="unlink_target_notification"></a> unlink_target_notification
+## <a name="unlink_target_notification"></a>unlink_target_notification
 
-Обратный вызов, который уведомляет о том, что целевой объект была удалена из этого `source_block` объекта.
+Обратный вызов, уведомляющий об отсутствии связи цели с данным объектом `source_block`.
 
-```
+```cpp
 virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_PTarget*<br/>
-`ITarget` Блок, была удалена.
+Несвязанный блок `ITarget`.
 
-##  <a name="unlink_targets"></a> unlink_targets
+## <a name="unlink_targets"></a>unlink_targets
 
-Удаляет связь всех целевых блоков из этого `source_block` объекта.
+Отменяет связь всех целевых блоков с этим `source_block` объектом.
 
-```
+```cpp
 virtual void unlink_targets();
 ```
 
-##  <a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends
+## <a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends
 
-Ожидает завершения всех асинхронных операций распространения. Этот тип ожидания Ожидание прокрутки определенного используется в деструкторах блоков сообщений, чтобы убедиться в том, что для всех асинхронных операций распространения достаточное время для завершения перед удалением блока.
+Ожидает завершения всех асинхронных распространителей. Это время ожидания для этого распространителя используется в деструкторах блоков сообщений, чтобы убедиться в том, что все асинхронные распространители имеют достаточно времени для завершения перед уничтожением блока.
 
-```
+```cpp
 void wait_for_outstanding_async_sends();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс ISource](isource-class.md)

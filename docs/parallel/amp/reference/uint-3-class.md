@@ -72,40 +72,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396162"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127729"
 ---
-# <a name="uint3-class"></a>Класс uint_3
+# <a name="uint_3-class"></a>Класс uint_3
 
 Представляет короткий вектор из трех целых чисел без знака.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class uint_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Конструктор uint_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
+|[Конструктор uint_3](#ctor)|Перегружен. Конструктор по умолчанию инициализирует все элементы значением 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
@@ -146,32 +146,32 @@ class uint_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|uint_3::operator--||
-|uint_3::operator%=||
-|uint_3::operator&=||
-|uint_3::operator*=||
-|uint_3::operator/=||
-|uint_3::operator ^ =||
-|uint_3::operator&#124;=||
-|uint_3::operator ~||
-|uint_3::operator ++||
-|uint_3::operator+=||
-|uint_3::operator<\<=||
-|uint_3::operator=||
-|uint_3::operator-=||
-|uint_3::operator>>=||
+|uint_3:: operator--||
+|uint_3:: operator% =||
+|uint_3:: operator & =||
+|uint_3:: operator * =||
+|uint_3:: operator/=||
+|uint_3:: operator ^ =||
+|uint_3:: operator&#124;=||
+|uint_3:: operator ~||
+|uint_3:: operator + +||
+|uint_3:: operator + =||
+|uint_3:: operator <\<=||
+|uint_3:: operator =||
+|uint_3:: operator-=||
+|uint_3:: operator > > =||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[размер константа](#uint_3__size)||
+|[Константа размера](#uint_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |uint_3::b||
 |uint_3::bg||
@@ -210,15 +210,15 @@ class uint_3;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors.h
+**Заголовок:** amp_short_vectors. h
 
-**Пространство имен:** Concurrency::Graphics
+**Пространство имен:** Concurrency:: Graphics
 
-##  <a name="ctor"></a> uint_3
+## <a name="ctor"></a>uint_3
 
-По умолчанию конструктор инициализирует все элементы с 0.
+Конструктор по умолчанию инициализирует все элементы значением 0.
 
-```
+```cpp
 uint_3() restrict(amp,
     cpu);
 
@@ -271,15 +271,15 @@ explicit inline uint_3(
 *_V*<br/>
 Значение для инициализации.
 
-*_Другое*<br/>
+*_Other*<br/>
 Объект, используемый для инициализации.
 
-##  <a name="uint_3__size"></a> Размер
+## <a name="uint_3__size"></a>изменять
 
-```
+```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)

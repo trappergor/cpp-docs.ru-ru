@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337333"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142751"
 ---
 # <a name="schedulerpolicy-class"></a>Класс SchedulerPolicy
 
@@ -24,36 +24,36 @@ ms.locfileid: "62337333"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class SchedulerPolicy;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[SchedulerPolicy](#ctor)|Перегружен. Создает новую политику планировщик и заполняет его значения для [ключи политики](concurrency-namespace-enums.md) поддерживаемых планировщиков исполняющей среды с параллелизмом и Resource Manager.|
-|[~ Деструктор SchedulerPolicy](#dtor)|Уничтожает политики планировщика.|
+|[SchedulerPolicy](#ctor)|Перегружен. Конструирует новую политику планировщика и заполняет ее значениями для [ключей политик](concurrency-namespace-enums.md) , поддерживаемых планировщиками среда выполнения с параллелизмом и диспетчер ресурсов.|
+|[Деструктор ~ SchedulerPolicy](#dtor)|Уничтожает политику планировщика.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[GetPolicyValue](#getpolicyvalue)|Извлекает значение ключа политики передано в качестве `key` параметра.|
-|[SetConcurrencyLimits](#setconcurrencylimits)|Одновременно задает `MinConcurrency` и `MaxConcurrency` политики на `SchedulerPolicy` объекта.|
-|[SetPolicyValue](#setpolicyvalue)|Задает значение ключа политики передано в качестве `key` параметр и возвращает старое значение.|
+|[жетполицивалуе](#getpolicyvalue)|Возвращает значение ключа политики, передаваемое в качестве параметра `key`.|
+|[сетконкурренцилимитс](#setconcurrencylimits)|Одновременно задает политики `MinConcurrency` и `MaxConcurrency` для объекта `SchedulerPolicy`.|
+|[сетполицивалуе](#setpolicyvalue)|Задает значение ключа политики, предоставляемое в качестве параметра `key`, и возвращает старое значение.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[оператор=](#operator_eq)|Назначает политики планировщика из другой политики планировщика.|
+|[оператор=](#operator_eq)|Назначает политику планировщика из другой политики планировщика.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Дополнительные сведения о политиках, которыми можно управлять с помощью `SchedulerPolicy` , представлена в разделе [PolicyElementKey](concurrency-namespace-enums.md).
+Дополнительные сведения о политиках, которые можно контролировать с помощью класса `SchedulerPolicy`, см. в разделе [полициелементкэй](concurrency-namespace-enums.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -61,57 +61,57 @@ class SchedulerPolicy;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrt.h, concrtrm.h
+**Заголовок:** ConcRT. h, concrtrm. h
 
 **Пространство имен:** concurrency
 
-##  <a name="getpolicyvalue"></a> GetPolicyValue
+## <a name="getpolicyvalue"></a>жетполицивалуе
 
-Извлекает значение ключа политики передано в качестве `key` параметра.
+Возвращает значение ключа политики, передаваемое в качестве параметра `key`.
 
-```
+```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ политики для получения значений.
+Ключ политики для получения значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если ключ, указанный параметром `key` параметр поддерживается, значение политики для ключа приводит к `unsigned int`.
+Если ключ, заданный параметром `key`, поддерживается, то значение политики для приведения ключа к `unsigned int`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызовет [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) для ключа Недопустимая политика.
+Метод вызовет исключение [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) для недопустимого ключа политики.
 
-##  <a name="operator_eq"></a> оператор =
+## <a name="operator_eq"></a>Оператор =
 
-Назначает политики планировщика из другой политики планировщика.
+Назначает политику планировщика из другой политики планировщика.
 
-```
+```cpp
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *_RhsPolicy*<br/>
-Политики, чтобы назначить эту политику.
+Политика, назначаемая этой политике.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на политику планировщика.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Часто наиболее удобным способом для определения новой политики планировщика является копирование существующей политики и изменение ее методами `SetPolicyValue` или `SetConcurrencyLimits`.
 
-##  <a name="ctor"></a> SchedulerPolicy
+## <a name="ctor"></a>SchedulerPolicy
 
-Создает новую политику планировщик и заполняет его значения для [ключи политики](concurrency-namespace-enums.md) поддерживаемых планировщиков исполняющей среды с параллелизмом и Resource Manager.
+Конструирует новую политику планировщика и заполняет ее значениями для [ключей политик](concurrency-namespace-enums.md) , поддерживаемых планировщиками среда выполнения с параллелизмом и диспетчер ресурсов.
 
-```
+```cpp
 SchedulerPolicy();
 
 SchedulerPolicy(
@@ -125,32 +125,32 @@ SchedulerPolicy(
 ### <a name="parameters"></a>Параметры
 
 *_PolicyKeyCount*<br/>
-Число ключей и значений в виде пары ниже `_PolicyKeyCount` параметра.
+Число пар "ключ-значение", которые следуют за параметром `_PolicyKeyCount`.
 
 *_SrcPolicy*<br/>
 Исходная политика для копирования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый конструктор создает новую политику планировщика, где все политики будут инициализированы значениями по умолчанию.
 
-Второй конструктор создает новую политику планировщика, использующий стиль с именем параметра инициализации. Значения после `_PolicyKeyCount` параметра передаются в виде пар "ключ значение". Любой ключ политики, который не указан в этом конструкторе будет иметь значение по умолчанию. Этот конструктор может вызывать исключения [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) или [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
+Второй конструктор создает новую политику планировщика, в которой используется стиль инициализации с именованными параметрами. Значения после параметра `_PolicyKeyCount` предоставляются в виде пар "ключ-значение". Любой ключ политики, который не указан в этом конструкторе, будет иметь значение по умолчанию. Этот конструктор может вызывать исключения [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md), [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) или [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
 
 Третий конструктор является конструктором копии. Часто наиболее удобным способом для определения новой политики планировщика является копирование существующей политики и изменение ее методами `SetPolicyValue` или `SetConcurrencyLimits`.
 
-##  <a name="dtor"></a> ~ SchedulerPolicy
+## <a name="dtor"></a>~ SchedulerPolicy
 
-Уничтожает политики планировщика.
+Уничтожает политику планировщика.
 
-```
+```cpp
 ~SchedulerPolicy();
 ```
 
-##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a>сетконкурренцилимитс
 
-Одновременно задает `MinConcurrency` и `MaxConcurrency` политики на `SchedulerPolicy` объекта.
+Одновременно задает политики `MinConcurrency` и `MaxConcurrency` для объекта `SchedulerPolicy`.
 
-```
+```cpp
 void SetConcurrencyLimits(
     unsigned int _MinConcurrency,
     unsigned int _MaxConcurrency = MaxExecutionResources);
@@ -159,22 +159,22 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>Параметры
 
 *_MinConcurrency*<br/>
-Значение для `MinConcurrency` ключ политики.
+Значение ключа политики `MinConcurrency`.
 
 *_MaxConcurrency*<br/>
-Значение для `MaxConcurrency` ключ политики.
+Значение ключа политики `MaxConcurrency`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызовет [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) Если значение, заданное для `MinConcurrency` политики больше, чем указано для `MaxConcurrency` политики.
+Метод вызовет исключение [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) , если значение, указанное для политики `MinConcurrency`, больше, чем указано для политики `MaxConcurrency`.
 
-Метод также может породить [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) для других недопустимых значений.
+Метод также может создавать [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) для других недопустимых значений.
 
-##  <a name="setpolicyvalue"></a> SetPolicyValue
+## <a name="setpolicyvalue"></a>сетполицивалуе
 
-Задает значение ключа политики передано в качестве `key` параметр и возвращает старое значение.
+Задает значение ключа политики, предоставляемое в качестве параметра `key`, и возвращает старое значение.
 
-```
+```cpp
 unsigned int SetPolicyValue(
     PolicyElementKey key,
     unsigned int value);
@@ -183,27 +183,27 @@ unsigned int SetPolicyValue(
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ политики, чтобы задать значение для.
+Ключ политики для задания значения.
 
 *value*<br/>
-Задаваемое значение ключа политики.
+Значение, для которого необходимо задать ключ политики.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если ключ, указанный параметром `key` параметр поддерживается, старое значение политики для ключа приводит к `unsigned int`.
+Если ключ, заданный параметром `key`, поддерживается, старое значение политики для этого ключа приводятся к `unsigned int`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Метод вызовет [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) ключ Недопустимая политика или любой ключ политики, значение которого не может задать `SetPolicyValue` метод.
+Метод вызовет исключение [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) для недопустимого ключа политики или любого ключа политики, значение которого не может быть задано методом `SetPolicyValue`.
 
-Метод вызовет [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) значения, которое не поддерживается для ключа, заданного параметром `key` параметр.
+Метод вызывает [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) для значения, которое не поддерживается для ключа, указанного параметром `key`.
 
-Обратите внимание, что этот метод не разрешен для задания `MinConcurrency` или `MaxConcurrency` политики. Чтобы задать эти значения, используйте [SetConcurrencyLimits](#setconcurrencylimits) метод.
+Обратите внимание, что этот метод не может устанавливать политики `MinConcurrency` или `MaxConcurrency`. Чтобы задать эти значения, используйте метод [сетконкурренцилимитс](#setconcurrencylimits) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[полициелементкэй](concurrency-namespace-enums.md)<br/>
 [Класс CurrentScheduler](currentscheduler-class.md)<br/>
 [Класс Scheduler](scheduler-class.md)<br/>
-[Планировщик задач](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
+[Планировщик заданий](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
