@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - size_type typedef
 ms.assetid: e02de8af-e175-45a2-b006-835814a40e68
-ms.openlocfilehash: 8c9319e94d1f01eb066280a69971eef5d900384f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8ef4f426289ba709f2e6fd3788880f878b9de260
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454504"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258163"
 ---
-# <a name="container-classsizetype"></a>Класс контейнера::size_type
+# <a name="container-classsize_type"></a>Класс контейнера::size_type
 
 > [!NOTE]
 > Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
@@ -20,8 +20,7 @@ ms.locfileid: "68454504"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-
+```cpp
 typedef T0 size_type;
 ```
 
@@ -29,6 +28,6 @@ typedef T0 size_type;
 
 Он описан здесь как синоним для неопределенного типа `T0` (обычно `Alloc::size_type`).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пример класса контейнера](../standard-library/sample-container-class.md)

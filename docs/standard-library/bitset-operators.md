@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890128"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257992"
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 
@@ -35,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.
 
-*справа* \
+*справа*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -73,11 +73,11 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>&lt;оператора&lt;
+## <a name="op_lt_lt"></a>&lt;оператора &lt;
 
 Вставляет текстовое представление битовой последовательности в поток вывода.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -86,14 +86,14 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*справа* \
+*справа*\
 Объект типа **bitset\<N>** , который будет вставлен в выходной поток в виде строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Текстовое представление последовательности битов в `ostr`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 Функция шаблона перегружает `operator<<`, позволяя записывать битовом массиве без предварительного преобразования в строку. Шаблонная функция фактически выполняется.
 
@@ -130,11 +130,11 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>&gt;оператора&gt;
+## <a name="op_gt_gt"></a>&gt;оператора &gt;
 
 Считывает строку битовых символов в битовый массив.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -146,18 +146,18 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 Строка, которая вводится во входной поток для вставки в битовый массив.
 
-*справа* \
+*справа*\
 Битовый массив, получающий биты из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Функция шаблона возвращает строку *i_str*.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 Функция шаблона перегружает `operator>>` для хранения в битовом массиве *справа* `bitset(str)`значение, где `str` является объектом типа [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` извлечен из *i_str*.
 
-Функция шаблона извлекает элементы из *i_str* и вставляет их в битовом массиве до:
+Функция шаблона извлекает элементы из *i_str* и вставляет их в битовом массиве до тех пор, пока:
 
 - все битовые элементы будут извлечены из входного потока и сохранены в битовый массив;
 
@@ -228,10 +228,10 @@ operator^(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.
 
-*справа* \
+*справа*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -280,10 +280,10 @@ operator|(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.
 
-*справа* \
+*справа*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.
 
 ### <a name="return-value"></a>Возвращаемое значение
