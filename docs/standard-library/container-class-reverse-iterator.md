@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reverse_iterator method
 ms.assetid: 1d190c41-56b1-462e-b564-793b2a883c26
-ms.openlocfilehash: ab5aeacdf9f7499876a53d3e0bedf7589ff1eb0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f65713050ec6c8c9675ce95b9affb7c7af533ec
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450798"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257862"
 ---
 # <a name="container-classreverse_iterator"></a>Класс контейнера::reverse_iterator
 
@@ -20,15 +20,14 @@ ms.locfileid: "68450798"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-
+```cpp
 typedef T7 reverse_iterator;
 ```
 
 ## <a name="remarks"></a>Примечания
 
-Он описан здесь как синоним `T7` для неопределенного типа (обычно **>** `reverse_iterator` **\<** [итератор](../standard-library/container-class-iterator.md)).
+Он описан здесь как синоним неопределенного типа `T7` (обычно `reverse_iterator` **\<** [итератор](../standard-library/container-class-iterator.md) **>** ).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пример класса контейнера](../standard-library/sample-container-class.md)

@@ -1,17 +1,18 @@
 ---
 title: Параметры DUMPBIN
-ms.date: 10/24/2019
+description: Справочное руководство по параметрам командной строки программы Microsoft DUMPBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144555"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257732"
 ---
 # <a name="dumpbin-options"></a>Параметры DUMPBIN
 
@@ -33,7 +34,7 @@ DUMPBIN имеет следующие параметры.
 
 - [/DISASM\[: {BYTEs\|BYTEs}\]](disasm.md)
 
-- [/ERRORREPORT: {NONE | ЗАПРОС | ОЧЕРЕДЬ | ОБМЕНА](errorreport-dumpbin-exe.md)
+- [/errorreport: {None | ЗАПРОС | ОЧЕРЕДЬ | SEND}](errorreport-dumpbin-exe.md) (не рекомендуется)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -71,9 +72,9 @@ DUMPBIN имеет следующие параметры.
 
 - [/TLS](tls.md)
 
-Чтобы получить список параметров, поддерживаемых программой DUMPBIN в командной строке, используйте параметр **/?.** функцию.
+Чтобы получить список параметров, поддерживаемых программой DUMPBIN в командной строке, используйте параметр **/?.** предложения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Дополнительные\ средств сборки компилятором MSVC](c-cpp-build-tools.md)
 \ [командной строки DUMPBIN](dumpbin-command-line.md)
