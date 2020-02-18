@@ -3,12 +3,12 @@ title: Создание и настройка проекта Linux CMake в Visu
 description: Создание, настройка, изменение и компиляция проекта Linux CMake в Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625952"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416090"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Создание и настройка проекта Linux CMake
 
@@ -175,7 +175,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
- Конфигурация Linux-Debug по умолчанию в Visual Studio 2019 версии 16.1 и более поздних версиях представлена ниже:
+Конфигурация Linux-Debug по умолчанию в Visual Studio 2019 версии 16.1 и более поздних версиях представлена ниже:
 
 ```json
 {
