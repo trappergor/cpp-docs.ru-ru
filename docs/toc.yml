@@ -375,6 +375,8 @@
           href: build/arm64-exception-handling.md
     - name: Настройка программ для Windows XP
       href: build/configuring-programs-for-windows-xp.md
+    - name: "Анализ кода для\_C/C++"
+      href: code-quality/
     - name: Справочник по компилятору и средствам сборки
       expanded: false
       items:
