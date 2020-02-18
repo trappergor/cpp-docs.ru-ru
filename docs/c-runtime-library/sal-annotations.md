@@ -47,19 +47,19 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: a50e37b41c6e90428bed5ae113d2d9f064e042d0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 77b934010b7f76b556a4c7ba9826fbedfc36b95e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741754"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415842"
 ---
 # <a name="sal-annotations"></a>Примечания SAL
 
 При просмотре библиотечных заголовочных файлов вы можете обратить внимание на некоторые непривычные заметки, например `_In_z` и `_Out_z_cap_(_Size)`. Это примеры языка заметок для исходного кода Microsoft (SAL), который предоставляет набор заметок, позволяющих описывать, как функция использует свои параметры, например, предположения о параметрах и гарантии при завершении. Заметки определяются в файле заголовка \<sal.h>.
 
-Дополнительные сведения об использовании аннотаций SAL в Visual Studio см. в разделе [Использование аннотаций SAL для сокращения количества дефектов в коде C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
+Дополнительные сведения об использовании аннотаций SAL в Visual Studio см. в разделе [Использование аннотаций SAL для сокращения количества дефектов в коде C/C++](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md)

@@ -2,18 +2,18 @@
 title: Атрибуты вC++
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 5967974d419299778e4aadaa235ee21c62e16d34
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: b3ed21b033c0e606d02d3aa845f09f72118a3c5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518300"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416077"
 ---
 # <a name="attributes-in-c"></a>Атрибуты вC++
 
 C++ Стандарт определяет набор атрибутов, а также позволяет поставщикам компиляторов определять собственные атрибуты (в пространстве имен, зависящем от поставщика), но компиляторы должны распознать только те атрибуты, которые определены в стандарте.
 
-В некоторых случаях стандартные атрибуты перекрываются с параметрами declspec, зависящими от компилятора. В визуальном C++элементе вместо `declspec(deprecated)` можно использовать атрибут `[[deprecated]]`, и атрибут будет распознан любым согласованным компилятором. Для всех остальных параметров declspec, таких как dllimport и dllexport, существует хотя бы один эквивалент атрибута, поэтому необходимо продолжить использовать синтаксис declspec. Атрибуты не влияют на систему типов и не изменяют значение программы. Компиляторы не учитывают значения атрибутов, которые они не распознают.
+В некоторых случаях стандартные атрибуты перекрываются с параметрами declspec, зависящими от компилятора. В визуальном C++элементе вместо `declspec(deprecated)` можно использовать атрибут `[[deprecated]]`, и атрибут будет распознан любым компилятором. Для всех остальных параметров declspec, таких как dllimport и dllexport, существует хотя бы один эквивалент атрибута, поэтому необходимо продолжить использовать синтаксис declspec. Атрибуты не влияют на систему типов и не изменяют значение программы. Компиляторы не учитывают значения атрибутов, которые они не распознают.
 
 **Visual Studio 2017 версии 15,3 и более поздних версий** (доступно в [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): в области списка атрибутов можно указать пространство имен для всех имен с **помощью одного средства** .
 
@@ -65,12 +65,12 @@ void Foo(int);
     ```cpp
     int main()
     {
-        int arr[10]; // GSL warning 26494 will be fired
-        int* p = arr; // GSL warning 26485 will be fired
+        int arr[10]; // GSL warning C26494 will be fired
+        int* p = arr; // GSL warning C26485 will be fired
         [[gsl::suppress(bounds.1)]] // This attribute suppresses Bounds rule #1
         {
-            int* q = p + 1; // GSL warning 26481 suppressed
-            p = q--; // GSL warning 26481 suppressed
+            int* q = p + 1; // GSL warning C26481 suppressed
+            p = q--; // GSL warning C26481 suppressed
         }
     }
     ```

@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556725"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416026"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Поддержка Clang/LLVM в проектах Visual Studio CMak
 
@@ -41,7 +41,7 @@ Visual Studio с Clang можно использовать для изменен
 
 1. В разделе **конфигурации**нажмите кнопку **Добавить конфигурацию** :
 
-   ![Добавление конфигурации](media/cmake-add-config-icon.png)
+   ![Добавить конфигурацию](media/cmake-add-config-icon.png)
 
 1. Выберите нужную конфигурацию Clang (Обратите внимание, что для Windows и Linux предоставляются отдельные конфигурации Clang), а затем нажмите кнопку **выбрать**.
 
@@ -74,7 +74,7 @@ Visual Studio с Clang можно использовать для изменен
 
 Для конфигураций Windows Пакет адменистрирования диспетчера подключений (CMak) по умолчанию вызывает Clang в режиме [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) и ссылается на реализацию Microsoft стандартной библиотеки. По умолчанию **Кланг-кл. exe** находится в `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
 
- Эти значения можно изменить в **параметрах CMAK** в разделе **переменные и кэш CMAK**. Щелкните **Показывать дополнительные переменные**. Прокрутите вниз, чтобы найти **CMAKE_CXX_COMPILER**, а затем нажмите кнопку **обзора** , чтобы указать другой путь компилятора.
+Эти значения можно изменить в **параметрах CMAK** в разделе **переменные и кэш CMAK**. Щелкните **Показывать дополнительные переменные**. Прокрутите вниз, чтобы найти **CMAKE_CXX_COMPILER**, а затем нажмите кнопку **обзора** , чтобы указать другой путь компилятора.
 
 ## <a name="edit-build-and-debug"></a>Изменение, сборка и отладка
 
