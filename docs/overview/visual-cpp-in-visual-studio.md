@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793795"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416105"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -82,7 +82,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 [Отладка машинного кода](/visualstudio/debugger/debugging-native-code)<br/>
 Сведения об использовании отладчика Visual Studio с проектами C++.
 
-[Общие сведения об анализе кода на C и C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Общие сведения об анализе кода на C и C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Используйте заметки SAL или средства проверки C++ Core Guidelines для выполнения статического анализа.
 
 [Написание модульных тестов для C/C++ в Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>

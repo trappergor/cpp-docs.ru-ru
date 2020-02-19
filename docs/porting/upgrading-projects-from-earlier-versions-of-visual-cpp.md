@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725725"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416111"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Обновление C++ проектов с более ранних версий Visual Studio
 
@@ -47,7 +47,7 @@ ms.locfileid: "76725725"
 
 1. Задайте предпочтительные версии набора инструментов C++ платформы, стандартного языка и Windows SDK версии (если применимо). ( **Свойства > ** **проекта** > **Свойства конфигурации** > **Общие**)
 
-1. При наличии большого количества ошибок можно временно отключить некоторые параметры, пока вы их исправите. Чтобы отключить параметр [/permissive-](../build/reference/permissive-standards-conformance.md) , используйте **Свойства** > **проекта** > **Свойства конфигурации** > **языке** **C++ C/**  > . Чтобы отключить параметр [анализа кода](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) , используйте **свойства** > **проекта** > **Свойства конфигурации** > **анализа кода**.
+1. При наличии большого количества ошибок можно временно отключить некоторые параметры, пока вы их исправите. Чтобы отключить параметр [/permissive-](../build/reference/permissive-standards-conformance.md) , используйте **Свойства** > **проекта** > **Свойства конфигурации** > **языке** **C++ C/**  > . Чтобы отключить параметр [анализа кода](/cpp/code-quality/code-analysis-for-c-cpp-overview) , используйте **свойства** > **проекта** > **Свойства конфигурации** > **анализа кода**.
 
 1. Убедитесь, что все зависимости существуют и что пути к включаемым файлам или папкам библиотеки указаны правильно. ( **Свойства** > **проекта** > **Свойства конфигурации** > **каталоги VC + +** )
 
@@ -63,7 +63,7 @@ ms.locfileid: "76725725"
 
 Чтобы устранить ошибки, попробуйте найти или опубликовать вопрос в Stack overflow или [ C++ сообществе разработчиков](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Обзор возможных проблем с обновлением](overview-of-potential-upgrade-issues-visual-cpp.md)\
 [Обновление кода до универсальной CRT](upgrade-your-code-to-the-universal-crt.md)\

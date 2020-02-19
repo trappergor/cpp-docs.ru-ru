@@ -5,12 +5,12 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2b01bfbcd81984e7ddf32cd5ab0485fff17b3d2b
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520471"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258037"
 ---
 # <a name="connectionmanager-reference"></a>Справка по ConnectionManager
 
@@ -22,7 +22,7 @@ ms.locfileid: "76520471"
 
 ::: moniker range="vs-2019"
 
-ConnectionManager.exe — это программа командной строки для управления подключениями удаленной разработки вне Visual Studio. Ее удобно использовать для выполнения таких задач, как подготовка нового компьютера разработчика. Кроме того, с ее помощью можно настроить Visual Studio для непрерывной интеграции. Она работает в окне "Командная строка разработчика". Дополнительные сведения о командной строке разработчика см. в статье [Использование набора инструментов C++ Microsoft из командной строки](..\build\building-on-the-command-line.md).
+ConnectionManager.exe — это программа командной строки для управления подключениями удаленной разработки вне Visual Studio. Ее удобно использовать для выполнения таких задач, как подготовка нового компьютера разработчика. Кроме того, с ее помощью можно настроить Visual Studio для непрерывной интеграции. Она работает в окне "Командная строка разработчика". Дополнительные сведения о командной строке разработчика см. в статье [Использование набора инструментов C++ Microsoft из командной строки](../build/building-on-the-command-line.md).
 
 Программа ConnectionManager.exe доступна в Visual Studio 2019 версии 16.5 и более поздних версиях. Она входит в состав рабочей нагрузки **Разработка для Linux на C++** в Visual Studio Installer. Программа также устанавливается автоматически при выборе компонента **Диспетчер подключений** в установщике. Расположение установки: *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe*.
 
