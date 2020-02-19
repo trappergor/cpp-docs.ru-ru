@@ -1,0 +1,25 @@
+### YamlMime:Landing
+title: Анализ кода C++ в Visual Studio
+summary: Visual Studio содержит инструменты для анализа и улучшения качества кода C++.
+metadata:
+  title: Анализаторы кода C/C++
+  description: Научитесь анализировать качество кода C/C++ в Visual Studio.
+  ms.topic: landing-page
+  ms.date: 02/12/2020
+  ms.openlocfilehash: 62416d462cc6da3bf28da2a7a825b6702c512385
+  ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 02/17/2020
+  ms.locfileid: "77429489"
+landingContent:
+- title: Анализ кода C и C++
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Анализ кода C и C++
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: reference
+    links:
+    - text: Предупреждения анализа кода C++
+      url: code-analysis-for-c-cpp-warnings.md
