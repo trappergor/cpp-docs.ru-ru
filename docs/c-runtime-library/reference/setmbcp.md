@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-ms.openlocfilehash: 1db6a83bd864180d513f61cf255bd862283a6cd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3408f04eb60a33a84c628c989ebc9c4c4a261df
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948215"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473874"
 ---
 # <a name="_setmbcp"></a>_setmbcp
 
@@ -48,7 +48,7 @@ int _setmbcp(
 
 ### <a name="parameters"></a>Параметры
 
-*страница*<br/>
+*codepage*<br/>
 Новая кодовая страница для независимых от языкового стандарта многобайтовых подпрограмм.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -77,9 +77,11 @@ int _setmbcp(
 
 - **_MB_CP_OEM** Используйте кодовую страницу OEM, полученную из операционной системы при запуске программы.
 
-- **_MB_CP_SBCS** Использовать однобайтовую кодовую страницу. Если кодовая страница имеет значение **_MB_CP_SBCS**, то подпрограмма, например [_ismbblead](ismbblead-ismbblead-l.md) , всегда возвращает значение false.
+- **_MB_CP_SBCS** Использовать однобайтовую кодовую страницу. Если кодовая страница имеет значение **_MB_CP_SBCS**, то такая подпрограмма, как [_ismbblead](ismbblead-ismbblead-l.md) , всегда возвращает значение false.
 
-- Любая другая допустимая кодовая страница, независимо от того, является ли значение ANSI, OEM или другой поддерживаемой операционной системой кодовой страницей (за исключением UTF-7 и UTF-8, которые не поддерживаются).
+- **_MB_CP_UTF8** Используйте UTF-8.  Если кодовая страница имеет значение **_MB_CP_UTF8**, то такая подпрограмма, как [_ismbblead](ismbblead-ismbblead-l.md) , всегда возвращает значение false.
+
+- Любое другое допустимое значение кодовой страницы, независимо от того, является ли значение ANSI, OEM или другой поддерживаемой операционной системой кодовой страницей (кроме UTF-7, которая не поддерживается).
 
 ## <a name="requirements"></a>Требования
 
@@ -87,9 +89,9 @@ int _setmbcp(
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [_getmbcp](getmbcp.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
