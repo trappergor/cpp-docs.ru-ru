@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
 ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69500076"
@@ -32,7 +32,7 @@ ms.locfileid: "69500076"
 |chh|zh-HK|
 |chi|zh-SG|
 |китайский|zh|
-|китайский — Гонконг|zh-HK|
+|китайский — Гонконг, САР|zh-HK|
 |китайский — упрощенное письмо|zh-CN|
 |китайский — Сингапур|zh-SG|
 |китайский — традиционный|zh-TW|
