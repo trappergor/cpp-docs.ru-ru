@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518209"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600036"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
@@ -31,7 +31,7 @@ ms.locfileid: "76518209"
 
 `configuration` имеет следующие свойства:
 
-- `addressSDanitizerEnabled`: Если `true` компилирует программу с помощью программы очистки адреса (экспериментально в Windows). В Linux Скомпилируйте с параметром-ФНО-опускать-Frame-указатель и уровень оптимизации компилятора — OS или-ОО для получения наилучших результатов.
+- `addressSanitizerEnabled`: Если `true` компилирует программу с помощью программы очистки адреса (экспериментально в Windows). В Linux Скомпилируйте с параметром-ФНО-опускать-Frame-указатель и уровень оптимизации компилятора — OS или-ОО для получения наилучших результатов.
 - `addressSanitizerRuntimeFlags`: флаги среды выполнения передаются в Аддресссанитизер через переменную среды ASAN_OPTIONS. Формат: flag1 = значение: flag2 = значение2.
 - `buildCommandArgs`: задает собственные параметры сборки, передаваемые CMake после --build --. Например, передача -v при использовании генератора Ninja приводит к тому, что Ninja выдает командные строки. Дополнительные сведения о командах Ninja см. в статье [Аргументы командной строки Ninja](#ninja).
 - `buildRoot`: определяет каталог, в котором CMake создает скрипты сборки для выбранного генератора.  Сопоставляется с параметром **-DCMAKE_BINARY_DIR** и указывает, где будет создан *CMakeCache. txt* . Если папка не существует, она будет создана. Поддерживаемые макросы: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -44,7 +44,7 @@ ms.locfileid: "76518209"
 - `configurationType`; указывает конфигурацию типа сборки для выбранного генератора. Может быть одним из вариантов:
 
   - Отладка
-  - Выпуск
+  - Release
   - MinSizeRel
   - RelWithDebInfo
   
