@@ -2455,7 +2455,7 @@
 - name: Разработка для Linux
   href: linux/
 - name: Разработка кроссплатформенных мобильных приложений
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: Разработка на .NET с использованием C++ и CLI
   expanded: false
   items:
