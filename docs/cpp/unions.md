@@ -8,11 +8,11 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062059"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875738"
 ---
 # <a name="unions"></a>Объединения
 
@@ -37,7 +37,7 @@ union [name]  { member-list };
 *Список участников*<br/>
 Члены, которые могут входить в объединение. См. заметки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 ## <a name="declaring-a-union"></a>Объявление объединения
 
@@ -633,7 +633,7 @@ int main()
 
 На следующем рисунке показана общая съема размещения объединения `NumericType` в памяти.
 
-![Хранение данных в объединении числовых типов](../cpp/media/vc38ul1.png "Хранение данных в нумериктипе-объединении") <br/>
+![Хранение данных в объединении числовых типов](../cpp/media/vc38ul1.png "Хранение данных в Нумериктипе-объединении") <br/>
 Хранение данных в объединении NumericType
 
 ## <a name="anonymous_unions"></a>Анонимные объединения
@@ -654,7 +654,7 @@ union  {  member-list  }
 
 - Они не могут иметь функций-членов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>

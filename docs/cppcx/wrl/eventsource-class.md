@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821835"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865734"
 ---
 # <a name="eventsource-class"></a>Класс EventSource
 
@@ -46,17 +46,17 @@ class EventSource;
 *тделегатеинтерфаце*<br/>
 Интерфейс к делегату, который представляет обработчик событий.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-| Name                                     | Описание                                            |
+| Имя                                     | Description                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource:: EventSource](#eventsource) | Инициализация нового экземпляра класса `EventSource`. |
+| [EventSource:: EventSource](#eventsource) | Инициализирует новый экземпляр класса `EventSource`. |
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-| Name                                 | Описание                                                                                                                                                      |
+| Имя                                 | Description                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: Add](#add)             | Добавляет обработчик событий, представленный указанным интерфейсом делегата, к набору обработчиков событий для текущего объекта `EventSource`.                     |
 | [EventSource:: DataSize](#getsize)     | Возвращает число обработчиков событий, связанных с текущим объектом `EventSource`.                                                                         |
@@ -65,7 +65,7 @@ class EventSource;
 
 ### <a name="protected-data-members"></a>Защищенные элементы данных
 
-| Name                                                    | Описание                                                                                                                       |
+| Имя                                                    | Description                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: addRemoveLock_](#addremovelock)           | Синхронизирует доступ к [targets_](#targets) массиву при добавлении, удалении или вызове обработчиков событий.                          |
 | [EventSource:: targets_](#targets)                       | Массив из одного или нескольких обработчиков событий.                                                                                           |
@@ -94,10 +94,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Параметры
 
-*delegateInterface*<br/>
+*делегатеинтерфаце*<br/>
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
-*Лекс*<br/>
+*token*<br/>
 После завершения операции представляет дескриптор события. Используйте этот токен в качестве параметра метода [Remove ()](#remove) для отмены обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -114,7 +114,7 @@ Wrappers::SRWLock addRemoveLock_;
 
 ## <a name="eventsource"></a>EventSource:: EventSource
 
-Инициализация нового экземпляра класса `EventSource`.
+Инициализирует новый экземпляр класса `EventSource`.
 
 ```cpp
 EventSource();
@@ -364,14 +364,14 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>Параметры
 
-*Лекс*<br/>
+*token*<br/>
 Дескриптор, представляющий обработчик событий. Этот токен был возвращен, когда обработчик событий был зарегистрирован методом [Add ()](#add) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения о структуре `EventRegistrationToken` см. в разделе **Windows:: Foundation:: EventRegistrationToken Structure** в справочной документации по **Среда выполнения Windows** .
 
@@ -383,7 +383,7 @@ HRESULT Remove(
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При возникновении события, представленного текущим объектом `EventSource`, вызываются обработчики событий.
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9fcbc002913cc6cce86276796a371231ef0f32e1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501997"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856382"
 ---
 # <a name="registering-ole-controls"></a>Регистрация элементов управления OLE
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501997"
 |[афксолеунрегистеркласс](#afxoleunregisterclass)|Удаляет из базы данных регистрации класс элемента управления или класс страницы свойств.|
 |[афксолеунрегистертипелиб](#afxoleunregistertypelib)|Удаляет библиотеку типов элемента управления из базы данных регистрации.|
 
-`AfxOleRegisterTypeLib`обычно вызывается в реализации `DllRegisterServer`библиотеки DLL элемента управления. Аналогичным образом метод вызывается методом `DllUnregisterServer`. `AfxOleUnregisterTypeLib` `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass` `UpdateRegistry` и `AfxOleUnregisterClass` обычно вызываются функцией-членом фабрики класса элемента управления или страницы свойств.
+`AfxOleRegisterTypeLib` обычно вызывается в реализации `DllRegisterServer`в управляющей библиотеке. Аналогичным образом `AfxOleUnregisterTypeLib` вызывается `DllUnregisterServer`. `AfxOleRegisterControlClass`, `AfxOleRegisterPropertyPageClass`и `AfxOleUnregisterClass` обычно вызываются с помощью функции-члена `UpdateRegistry` в фабрике класса элемента управления или на странице свойств.
 
 ##  <a name="afxoleregistercontrolclass"></a>афксолерегистерконтролкласс
 
@@ -68,13 +68,13 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *нрегфлагс*<br/>
 Содержит один или несколько следующих флагов:
 
-- `afxRegInsertable`Разрешает отображение элемента управления в диалоговом окне «Вставка объекта» для объектов OLE.
+- `afxRegInsertable` позволяет элементу управления отображаться в диалоговом окне «Вставка объекта» для объектов OLE.
 
-- `afxRegApartmentThreading`Задает для потоковой модели в реестре значение ThreadingModel = апартамент.
+- `afxRegApartmentThreading` задает для потоковой модели в реестре значение ThreadingModel = апартамент.
 
-- `afxRegFreeThreading`Задает для потоковой модели в реестре значение ThreadingModel = Free.
+- `afxRegFreeThreading` задает для модели потоков в реестре значение ThreadingModel = Free.
 
-   Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` задать ThreadingModel = оба. Дополнительные сведения о регистрации модели потоков см. в разделе [InprocServer32](/windows/win32/com/inprocserver32) в Windows SDK.
+   Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading`, чтобы задать ThreadingModel = оба. Дополнительные сведения о регистрации модели потоков см. в разделе [InprocServer32](/windows/win32/com/inprocserver32) в Windows SDK.
 
 > [!NOTE]
 >  В версиях MFC до MFC 4,2 параметр **int** *нрегфлагс* был параметром bool, *бинсертабле*, который позволял или не допускал вставку элемента управления из диалогового окна «Вставка объекта».
@@ -133,15 +133,15 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 Ненулевое значение, если класс элемента управления был зарегистрирован; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это позволяет использовать элемент управления в контейнерах, поддерживающих технологию OLE-управления. `AfxOleRegisterControlClass`обновляет реестр, используя имя и расположение элемента управления в системе, а также задает модель потоков, которую элемент управления поддерживает в реестре. Дополнительные сведения см. в [техническом примечании 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «потоковая модель потоков в элементах управления OLE» и [о процессах и потоках](/windows/win32/ProcThread/about-processes-and-threads) в Windows SDK.
+Это позволяет использовать элемент управления в контейнерах, поддерживающих технологию OLE-управления. `AfxOleRegisterControlClass` обновляет реестр, используя имя и расположение элемента управления в системе, а также задает модель потоков, которую элемент управления поддерживает в реестре. Дополнительные сведения см. в [техническом примечании 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «потоковая модель потоков в элементах управления OLE» и [о процессах и потоках](/windows/win32/ProcThread/about-processes-and-threads) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]
 
-В приведенном выше примере `AfxOleRegisterControlClass` показано, как вызывается с флагом для inserted и флагом для модели подразделения ORed вместе для создания шестого параметра:
+В приведенном выше примере демонстрируется вызов `AfxOleRegisterControlClass` с флагом для вставки и флагом для модели подразделений, ORed вместе для создания шестого параметра:
 
 [!code-cpp[NVC_MFCAxCtl#12](../../mfc/reference/codesnippet/cpp/registering-ole-controls_2.cpp)]
 
@@ -177,18 +177,18 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *нрегфлагс*<br/>
 Может содержать флаг:
 
-- `afxRegApartmentThreading`Задает для потоковой модели в реестре значение ThreadingModel = апартамент.
+- `afxRegApartmentThreading` задает для потоковой модели в реестре значение ThreadingModel = апартамент.
 
 > [!NOTE]
->  В версиях MFC, предшествовавших версии MFC 4,2, параметр **int** *нрегфлагс* недоступен. Обратите внимание, `afxRegInsertable` что флаг не является допустимым параметром для страниц свойств и вызовет утверждение в MFC, если оно задано
+>  В версиях MFC, предшествовавших версии MFC 4,2, параметр **int** *нрегфлагс* недоступен. Обратите внимание, что флаг `afxRegInsertable` не является допустимым параметром для страниц свойств и вызывает утверждение в MFC, если оно задано
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение, если класс элемента управления был зарегистрирован; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это позволяет использовать страницу свойств в контейнерах, поддерживающих технологию OLE-управления. `AfxOleRegisterPropertyPageClass`обновляет реестр, используя имя страницы свойств и ее расположение в системе, а также задает модель потоков, которую элемент управления поддерживает в реестре. Дополнительные сведения см. в [техническом примечании 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «потоковая модель потоков в элементах управления OLE» и [о процессах и потоках](/windows/win32/ProcThread/about-processes-and-threads) в Windows SDK.
+Это позволяет использовать страницу свойств в контейнерах, поддерживающих технологию OLE-управления. `AfxOleRegisterPropertyPageClass` обновляет реестр, используя имя страницы свойств и ее расположение в системе, а также задает модель потоков, которую элемент управления поддерживает в реестре. Дополнительные сведения см. в [техническом примечании 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md), «потоковая модель потоков в элементах управления OLE» и [о процессах и потоках](/windows/win32/ProcThread/about-processes-and-threads) в Windows SDK.
 
 ### <a name="requirements"></a>Требования
 
@@ -224,7 +224,7 @@ BOOL AfxOleRegisterTypeLib(
 
 Ненулевое значение, если библиотека типов была зарегистрирована; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция обновляет реестр, используя имя библиотеки типов и ее расположение в системе.
 
@@ -287,6 +287,6 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
   **Заголовок** афксдисп. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

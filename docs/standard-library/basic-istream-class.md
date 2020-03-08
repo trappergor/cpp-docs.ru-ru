@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778522"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874844"
 ---
 # <a name="basic_istream-class"></a>Класс basic_istream
 
@@ -52,7 +52,7 @@ template <class Char_T, class Tr = char_traits<Char_T>>
 class basic_istream : virtual public basic_ios<Char_T, Tr>
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Большинство функций-членов, которые перегружают [оператор>>](#op_gt_gt), — это форматированные входные функции. Они следуют этому шаблону:
 
@@ -119,11 +119,11 @@ if (ok)
 setstate(state);
 ```
 
-Обе группы функций вызывают [`setstate`](../standard-library/basic-ios-class.md#setstate) `(eofbit)`, если они обнаруживают конец файла при извлечении элементов.
+Обе группы функций вызывают [`setstate`](../standard-library/basic-ios-class.md#setstate)`(eofbit)`, если они обнаруживают конец файла при извлечении элементов.
 
 Объект класса `basic_istream<Char_T, Tr>` хранит:
 
-- Виртуальный открытый базовый объект класса [`basic_ios`](../standard-library/basic-ios-class.md) `<Char_T, Tr>`.
+- Виртуальный открытый базовый объект класса [`basic_ios`](../standard-library/basic-ios-class.md)`<Char_T, Tr>`.
 
 - Счетчик извлечений для последней неформатированной операции ввода (с именем `count` в предыдущем коде).
 
@@ -133,13 +133,13 @@ setstate(state);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[basic_istream](#basic_istream)|Создает объект типа `basic_istream`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[gcount](#gcount)|Возвращает число символов, считанных во время последнего неформатированного ввода.|
 |[get](#get)|Считывает один или несколько символов из входного потока.|
@@ -158,14 +158,14 @@ setstate(state);
 
 ### <a name="operators"></a>Операторы
 
-|оператора|Описание|
+|Оператор|Description|
 |-|-|
 |[оператор>>](#op_gt_gt)|Вызывает функцию для входного потока или считывает форматированные данные из входного потока.|
 |[оператор=](#op_eq)|Назначает `basic_istream` справа от оператора этому объекту. Это назначение перемещения, включающее ссылку на `rvalue`, которая не оставляет копию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<istream>
+**Заголовок:** \<IStream >
 
 **Пространство имен:** std
 
@@ -183,18 +183,18 @@ basic_istream(basic_istream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf* \
+*strbuf*\
 Объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* \
+*_Isstd*\
 **значение true** , если это стандартный поток; в противном случае — **значение false**.
 
-*справа* \
+*справа*\
 Объект `basic_istream` для копирования.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Первый конструктор инициализирует базовый класс путем вызова [`init`](../standard-library/basic-ios-class.md#init) `(strbuf)`. Он также хранит нуль в счетчике извлечений. Дополнительные сведения об этом счетчике извлечения см. в разделе "Примечания" в обзоре [класса basic_istream](../standard-library/basic-istream-class.md) .
+Первый конструктор инициализирует базовый класс путем вызова [`init`](../standard-library/basic-ios-class.md#init)`(strbuf)`. Он также хранит нуль в счетчике извлечений. Дополнительные сведения об этом счетчике извлечений см. в подразделе "Примечания" раздела Общие сведения о [классе basic_istream](../standard-library/basic-istream-class.md) .
 
 Второй конструктор инициализирует базовый класс путем вызова `move(right)`. Он также хранит `right.gcount()` в числе извлечений и сохраняет ноль в числе извлечений для * *.
 
@@ -214,7 +214,7 @@ streamsize gcount() const;
 
 Счетчик извлечений.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Используйте [basic_istream::get](#get) для чтения символов без форматирования.
 
@@ -266,36 +266,36 @@ basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delim
 
 ### <a name="parameters"></a>Параметры
 
-*количество* \
+*количество*\
 Число символов для чтения из *strbuf*.
 
-*разделитель* \
+*разделитель*\
 Символ, который должен завершать чтение, если он встретился до *Count*.
 
 \ *str*
 Строка, в которую должна выполняться запись.
 
-@No__t_1 *CH*
+\ *CH*
 Символ для получения.
 
-*strbuf* \
+*strbuf*\
 Буфер, в который должна выполняться запись.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Форма get без параметров возвращает чтение элементов как целое число либо конец файла. Прочие формы возвращают поток (* `this`).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Первая неформатированная входная функция извлекает элемент, если это возможно, как если бы возвратить `rdbuf->sbumpc`. В противном случае возвращается `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof). Если функция не извлекает элемент, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`.
+Первая неформатированная входная функция извлекает элемент, если это возможно, как если бы возвратить `rdbuf->sbumpc`. В противном случае возвращается `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof). Если функция не извлекает элемент, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`.
 
-Вторая функция извлекает элемент [int_type](../standard-library/basic-ios-class.md#int_type) `meta` таким же образом. Если `meta` сравнивается со значением `traits_type::eof`, функция вызывает `setstate(failbit)`. В противном случае он сохраняет `traits_type::`[ `to_char_type`](../standard-library/char-traits-struct.md#to_char_type) `(meta)` в *CH*. Функция возвращает __* this__.
+Вторая функция извлекает элемент [int_type](../standard-library/basic-ios-class.md#int_type)`meta` таким же образом. Если `meta` сравнивается со значением `traits_type::eof`, функция вызывает `setstate(failbit)`. В противном случае он сохраняет `traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(meta)` в *CH*. Функция возвращает __* this__.
 
 Третья функция возвращает `get(str, count, widen('\n'))`.
 
 Четвертая функция извлекает до `count - 1` элементов и сохраняет их в массиве, начиная с *str*. Она всегда сохраняет `char_type` после сохранения всех извлеченных элементов. В целях тестирования извлечение останавливается:
 
-- в конце файла;
+- Конец файла.
 
 - После извлечения из функции элемента, который сравнивается с *разделителем*. В этом случае элемент помещается обратно в управляемую последовательность.
 
@@ -349,10 +349,10 @@ basic_istream<Char_T, Tr>& getline(
 
 ### <a name="parameters"></a>Параметры
 
-*количество* \
+*количество*\
 Число символов для чтения из *strbuf*.
 
-*разделитель* \
+*разделитель*\
 Символ, который должен завершать чтение, если он встретился до *Count*.
 
 \ *str*
@@ -362,19 +362,19 @@ basic_istream<Char_T, Tr>& getline(
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Первая из этих неформатированных входных функций возвращает `getline(str, count, widen('\n'))`.
 
 Вторая функция извлекает до `count - 1` элементов и сохраняет их в массиве, начиная с *str*. Она всегда сохраняет символ окончания строки после сохранения всех извлеченных элементов. В целях тестирования извлечение останавливается:
 
-- в конце файла;
+- Конец файла.
 
 - После извлечения из функции элемента, который сравнивается с *разделителем*. В этом случае элемент не помещается обратно и не добавляется в управляемую последовательность.
 
 - После извлечения функцией `count - 1` элементов.
 
-Если функция не извлекает элементы или `count - 1` элементы, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае возвращается __* this__.
+Если функция не извлекает элементы или `count - 1` элементы, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае возвращается __* this__.
 
 ### <a name="example"></a>Пример
 
@@ -409,19 +409,19 @@ basic_istream<Char_T, Tr>& ignore(
 
 ### <a name="parameters"></a>Параметры
 
-*количество* \
+*количество*\
 Количество пропускаемых элементов от текущей позиции чтения.
 
-*разделитель* \
+*разделитель*\
 Элемент, который, если он встретился до Count, приводит к тому, что `ignore` возвращают и разрешает чтение всех элементов после *разделителя* .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Неформатированная входная функция извлекает до *подсчета* элементов и отклоняет их. Однако если значение *Count* равно `numeric_limits<int>::max`, то оно принимается как угодно много. Извлечение останавливается на раннем конце файла или на элементе `Ch` таким `traits_type::`[ `to_int_type`](../standard-library/char-traits-struct.md#to_int_type) `(Ch)` сравнивается с *разделителем* (который также извлекается). Функция возвращает __* this__.
+Неформатированная входная функция извлекает до *подсчета* элементов и отклоняет их. Однако если значение *Count* равно `numeric_limits<int>::max`, то оно принимается как угодно много. Извлечение останавливается на раннем конце файла или на элементе `Ch` таким `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(Ch)` сравнивается с *разделителем* (который также извлекается). Функция возвращает __* this__.
 
 ### <a name="example"></a>Пример
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>Базовый \_istream:: operator > >
+## <a name="op_gt_gt"></a>Базовый\_IStream:: operator > >
 
 Вызывает функцию для входного потока или считывает форматированные данные из входного потока.
 
@@ -471,24 +471,24 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Pfn* \
+*Pfn*\
 Указатель функции.
 
-*strbuf* \
+*strbuf*\
 Объект типа `stream_buf`.
 
-*val* \
+*val*\
 Значение для чтения из потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Заголовок \<istream > также определяет несколько глобальных операторов извлечения. Дополнительные сведения см. в разделе [оператор>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).
+Заголовок \<IStream > также определяет несколько глобальных операторов извлечения. Дополнительные сведения см. в разделе [оператор>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).
 
-Первая функция – член гарантирует, что выражение формы `istr >> ws` вызывает [`ws`](../standard-library/istream-functions.md#ws) `(istr)`, а затем возвращает __* this__. Вторая и третья функции гарантируют, что другие манипуляторы, такие как [`hex`](../standard-library/ios-functions.md#hex), ведут себя аналогичным образом. Остальные функции — это форматированные входные функции.
+Первая функция – член гарантирует, что выражение формы `istr >> ws` вызывает [`ws`](../standard-library/istream-functions.md#ws)`(istr)`, а затем возвращает __* this__. Вторая и третья функции гарантируют, что другие манипуляторы, такие как [`hex`](../standard-library/ios-functions.md#hex), ведут себя аналогичным образом. Остальные функции — это форматированные входные функции.
 
 Функция:
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Char_T, Tr>* strbuf);
 ```
 
-Извлекает элементы, если *strBuf* не является пустым указателем, и вставляет их в *strBuf*. Извлечение останавливается в конце файла. Оно также останавливается без извлечения соответствующего элемента, если вставка завершается неудачно, или создает исключение (которое перехватывается, но не создается повторно). Если функция не извлекает элементы, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае функция возвращает __* this__.
+Извлекает элементы, если *strBuf* не является пустым указателем, и вставляет их в *strBuf*. Извлечение останавливается в конце файла. Оно также останавливается без извлечения соответствующего элемента, если вставка завершается неудачно, или создает исключение (которое перехватывается, но не создается повторно). Если функция не извлекает элементы, она вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае функция возвращает __* this__.
 
 Функция:
 
@@ -505,7 +505,7 @@ basic_istream& operator>>(
 basic_istream& operator>>(bool& val);
 ```
 
-Извлекает поле и преобразует его в логическое значение путем вызова [`use_facet`](../standard-library/basic-filebuf-class.md#open) `< num_get<Char_T, InIt>(`[ `getloc`](../standard-library/ios-base-class.md#getloc) `).`[ `get`](../standard-library/ios-base-class.md#getloc) [ `( InIt(` 0](../standard-library/basic-ios-class.md#rdbuf) 1. Здесь `InIt` определяется как [`istreambuf_iterator`](../standard-library/istreambuf-iterator-class.md) `<Char_T, Tr>`. Функция возвращает __* this__.
+Извлекает поле и преобразует его в логическое значение путем вызова [`use_facet`](../standard-library/basic-filebuf-class.md#open)`< num_get<Char_T, InIt>(`[`getloc`](../standard-library/ios-base-class.md#getloc)`).`[`get`](../standard-library/ios-base-class.md#getloc) [`( InIt(``rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`), Init(0), *this, getloc, val)`. Здесь `InIt` определяется как [`istreambuf_iterator`](../standard-library/istreambuf-iterator-class.md)`<Char_T, Tr>`. Функция возвращает __* this__.
 
 Каждая из функций:
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-Извлеките поле и преобразуйте его в числовое значение, вызвав `use_facet<num_get<Char_T, InIt>(getloc).`[ `get`](#get) `(InIt(rdbuf), Init(0), *this, getloc, val)`. Здесь `InIt` определяется как `istreambuf_iterator<Char_T, Tr>`, а при необходимости значение *Val* имеет тип **Long**, **без знака Long**или **void** <strong>\*</strong> .
+Извлеките поле и преобразуйте его в числовое значение, вызвав `use_facet<num_get<Char_T, InIt>(getloc).`[`get`](#get)`(InIt(rdbuf), Init(0), *this, getloc, val)`. Здесь `InIt` определяется как `istreambuf_iterator<Char_T, Tr>`, а при необходимости значение *Val* имеет тип **Long**, **без знака Long**или **void** <strong>\*</strong> .
 
-Если преобразованное значение не может быть представлено в качестве типа *Val*, функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае функция возвращает __* this__.
+Если преобразованное значение не может быть представлено в качестве типа *Val*, функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае функция возвращает __* this__.
 
 Каждая из функций:
 
@@ -584,14 +584,14 @@ basic_istream& operator=(basic_istream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*справа* \
+*справа*\
 Ссылка `rvalue` на объект `basic_ifstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает __* this__.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Оператор члена вызывает `swap(right)`.
 
@@ -607,9 +607,9 @@ int_type peek();
 
 Следующий символ для чтения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Неформатированная входная функция извлекает элемент, если это возможно, как при возврате `rdbuf->`[ `sgetc`](../standard-library/basic-streambuf-class.md#sgetc). В противном случае возвращается `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof).
+Неформатированная входная функция извлекает элемент, если это возможно, как при возврате `rdbuf->`[`sgetc`](../standard-library/basic-streambuf-class.md#sgetc). В противном случае возвращается `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="example"></a>Пример
 
@@ -651,16 +651,16 @@ basic_istream<Char_T, Tr>& putback(
 
 ### <a name="parameters"></a>Параметры
 
-@No__t_1 *CH*
+\ *CH*
 Символ для помещения обратно в поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-[Неформатированная входная функция](../standard-library/basic-istream-class.md) по возможности возвращает *канал, как*если бы это можно было сделать, вызвав [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc). Если `rdbuf` является пустым указателем или вызов метода `sputbackc` возвращает `traits_type::`[ `eof`](../standard-library/char-traits-struct.md#eof), то функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`. В любом случае возвращается __* this__.
+[Неформатированная входная функция](../standard-library/basic-istream-class.md) по возможности возвращает *канал, как*если бы это можно было сделать, вызвав [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc). Если `rdbuf` является пустым указателем или вызов метода `sputbackc` возвращает `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), то функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)`. В любом случае возвращается __* this__.
 
 ### <a name="example"></a>Пример
 
@@ -703,16 +703,16 @@ basic_istream<Char_T, Tr>& read(
 \ *str*
 Массив, из которого должны считываться символы.
 
-*количество* \
+*количество*\
 Число символов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток ( `*this`).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Неформатированная входная функция извлекает до *подсчета* элементов и сохраняет их в массиве, начиная с *str*. Извлечение останавливается на раннем конце файла, в этом случае функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае возвращается __* this__.
+Неформатированная входная функция извлекает до *подсчета* элементов и сохраняет их в массиве, начиная с *str*. Извлечение останавливается на раннем конце файла, в этом случае функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае возвращается __* this__.
 
 ### <a name="example"></a>Пример
 
@@ -764,14 +764,14 @@ streamsize readsome(
 \ *str*
 Массив, в котором `readsome` сохраняет символы, которые считывает.
 
-*количество* \
+*количество*\
 Число символов для чтения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Число фактически считанных символов [`gcount`](#gcount).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта неформатированная входная функция извлекается до *подсчета* элементов из входного потока и сохраняет их в *str*массива.
 
@@ -821,24 +821,24 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 \ *POS*
 Абсолютное положение, в которое следует переместить указатель чтения.
 
-*выкл* \
+*выкл*\
 Смещение для перемещения указателя чтения относительно *пути*.
 
-*способ* \
+*способ*\
 Одно из перечислений [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Первая функция-член выполняет как абсолютный поиск, вторая функция-член выполняет относительный поиск.
 
 > [!NOTE]
 > Не используйте вторую функцию-член с текстовыми файлами, так как стандартный C++ не поддерживает относительный поиск в текстовых файлах.
 
-Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, первая функция-член вызывает `newpos = `[ `rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos) `(pos)`, для некоторых `pos_type` временных объектов 0. Если `fail` имеет значение false, вторая функция вызывает `newpos = rdbuf->`[ `pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `( off, way)`. В любом случае, если `(off_type)newpos == (off_type)(-1)` (операция позиционирования завершается ошибкой), функция вызывает `istr.`[ `setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. Обе функции возвращают __* this__.
+Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, первая функция-член вызывает `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, для некоторых `pos_type` временных объектов `newpos`. Если `fail` имеет значение false, вторая функция вызывает `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. В любом случае, если `(off_type)newpos == (off_type)(-1)` (операция позиционирования завершается ошибкой), функция вызывает `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Обе функции возвращают __* this__.
 
 Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение true, функции-члены не выполняют никаких действий.
 
@@ -877,15 +877,15 @@ class sentry {
    };
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Если `_Istr.`[ `good`](../standard-library/basic-ios-class.md#good) имеет значение true, конструктор:
+Если `_Istr.`[`good`](../standard-library/basic-ios-class.md#good) имеет значение true, конструктор:
 
-- Вызывает `_Istr.`[ `tie`](../standard-library/basic-ios-class.md#tie) `->`[ `flush`](../standard-library/basic-ostream-class.md#flush) , если `_Istr.tie` не является пустым указателем.
+- Вызывает `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) , если `_Istr.tie` не является пустым указателем.
 
-- Фактически вызывает [`ws`](../standard-library/istream-functions.md#ws) `(_Istr)`, если `_Istr.`[ `flags`](../standard-library/ios-base-class.md#flags) ` & `[ `skipws`](../standard-library/ios-functions.md#skipws) не равны нулю.
+- Фактически вызывает [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`, если `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`](../standard-library/ios-functions.md#skipws) не равны нулю.
 
-Если после любой такой подготовки `_Istr.good` имеет значение false, конструктор вызывает `_Istr.`[ `setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае конструктор сохраняет значение, возвращаемое `_Istr.good`, в `status`. Последующий вызов `operator bool` доставляет это сохраненное значение.
+Если после любой такой подготовки `_Istr.good` имеет значение false, конструктор вызывает `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае конструктор сохраняет значение, возвращаемое `_Istr.good`, в `status`. Последующий вызов `operator bool` доставляет это сохраненное значение.
 
 ## <a name="swap"></a>  basic_istream::swap
 
@@ -897,12 +897,12 @@ void swap(basic_istream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*справа* \
+*справа*\
 Ссылка lvalue на объект `basic_istream`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Функция члена вызывает [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap) `(right)`. Он также обменивается счетчиком извлечения с числом извлечений *справа*.
+Функция члена вызывает [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`. Он также обменивается счетчиком извлечения с числом извлечений *справа*.
 
 ## <a name="sync"></a>  basic_istream::sync
 
@@ -914,7 +914,7 @@ int sync();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) является пустым указателем, функция возвращает значение-1. В противном случае он вызывает `rdbuf->`[ `pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Если этот вызов возвращает значение-1, функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)` и возвращает-1. В противном случае функция возвращает нуль.
+Если [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) является пустым указателем, функция возвращает значение-1. В противном случае он вызывает `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Если этот вызов возвращает значение-1, функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` и возвращает-1. В противном случае функция возвращает нуль.
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
@@ -928,9 +928,9 @@ pos_type tellg();
 
 Текущая позиция в потоке.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, функция-член возвращает [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) `->`[ `pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff) `(0, cur, in)`. В противном случае возвращает значение `pos_type(-1)`.
+Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, функция-член возвращает [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`(0, cur, in)`. В противном случае возвращается значение `pos_type(-1)`.
 
 ### <a name="example"></a>Пример
 
@@ -970,9 +970,9 @@ basic_istream<Char_T, Tr>& unget();
 
 Поток ( __* this__).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-[Неформатированная входная функция](../standard-library/basic-istream-class.md) возвращает предыдущий элемент в потоке, если это возможно, как при вызове `rdbuf->`[ `sungetc`](../standard-library/basic-streambuf-class.md#sungetc). Если [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) является пустым указателем или вызов метода `sungetc` возвращает `traits_type::`[ `eof`](../standard-library/basic-ios-class.md#eof), то функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate) `(badbit)`. В любом случае возвращается __* this__.
+[Неформатированная входная функция](../standard-library/basic-istream-class.md) возвращает предыдущий элемент в потоке, если это возможно, как при вызове `rdbuf->`[`sungetc`](../standard-library/basic-streambuf-class.md#sungetc). Если [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) является пустым указателем или вызов метода `sungetc` возвращает `traits_type::`[`eof`](../standard-library/basic-ios-class.md#eof), то функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)`. В любом случае возвращается __* this__.
 
 Сведения о том, как может произойти сбой `unget`, см. в разделе [`basic_streambuf::sungetc`](../standard-library/basic-streambuf-class.md#sungetc).
 
@@ -1005,7 +1005,7 @@ Type 'abc': abc
 abc
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Программирование iostream](../standard-library/iostream-programming.md)\

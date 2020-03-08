@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244918"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865207"
 ---
 # <a name="ltchronogt-functions"></a>Функции &lt;chrono&gt;
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 Приводит объект `duration` к указанному типу.
 
@@ -34,11 +34,11 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 Объект `duration` типа `To`, представляющий интервал времени `Dur`, который усекается, если должен соответствовать целевому типу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если `To` является экземпляром `duration`, эта функция не участвует в разрешении перегрузки.
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 Приводит объект [time_point](../standard-library/time-point-class.md) к указанному типу.
 
@@ -61,6 +61,6 @@ round(const time_point<Clock, Duration>& tp);
 
 Объект `time_point`, который имеет длительность типа `To`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если `To` не является экземпляром [duration](../standard-library/duration-class.md), эта функция не участвует в разрешении перегрузки.

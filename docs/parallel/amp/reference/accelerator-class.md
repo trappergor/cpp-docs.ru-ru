@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127167"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855926"
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 
@@ -96,7 +96,7 @@ class accelerator;
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator` в этот объект.|
 |[operator==](#operator_eq_eq)|Сравнивает этот объект `accelerator` с другим и возвращает **значение true** , если они одинаковы; в противном случае возвращает **значение false**.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|

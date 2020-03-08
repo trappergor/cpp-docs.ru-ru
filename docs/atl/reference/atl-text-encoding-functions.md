@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375894"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865043"
 ---
 # <a name="atl-text-encoding-functions"></a>Функции кодировки текста ATL
 
@@ -187,7 +187,7 @@ int * pnDestLen) throw();
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Каждый байт исходных данных кодируется в виде двух шестнадцатеричных символов.
 
@@ -255,7 +255,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 
 Возвращает число символов для преобразованной строки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы определить размер буфера, необходимого для преобразованной строки, вызовите эту функцию, передав 0 для *сздест* и *NDES*.
 
@@ -293,9 +293,9 @@ inline BOOL BEncode(
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодировки "B" описана в документе RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)().
+Схема кодировки "B" описана в RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="bencodegetrequiredlength"></a>бенкодежетрекуиредленгс
 
@@ -317,9 +317,9 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 Количество символов, необходимых для буфера, который может содержать закодированные данные *нсрклен* байт.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодировки "B" описана в документе RFC 2047[https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)().
+Схема кодировки "B" описана в RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
 ## <a name="escapexml"></a>EscapeXML
 
@@ -349,20 +349,20 @@ inline int EscapeXML(
 Длина выделенного вызывающим объектом буфера в символах.
 
 *dwFlags*<br/>
-Флаги ATL_ESC, описывающие способ выполнения преобразования.
+ATL_ESC флаги, описывающие способ выполнения преобразования.
 
-- Поведение ATL_ESC_FLAG_NONE по умолчанию. Кавычки и апострофы не преобразуются.
-- ATL_ESC_FLAG_ATTR кавычки и апострофы преобразуются `&quot;` в `&apos;` и соответственно.
+- ATL_ESC_FLAG_NONE поведение по умолчанию. Кавычки и апострофы не преобразуются.
+- ATL_ESC_FLAG_ATTR кавычки и апострофы преобразуются в `&quot;` и `&apos;` соответственно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Длина преобразованной строки в символах.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возможные преобразования, выполняемые этой функцией, показаны в таблице:
 
-|Source|Назначение|
+|Источник|Назначение|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -400,7 +400,7 @@ inline int IsExtendedChar(char ch) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ch*<br/>
+*канал*<br/>
 Проверяемый символ
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -445,7 +445,7 @@ inline BOOL QEncode(
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Схема кодировки "Q" описана в RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
@@ -469,7 +469,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 Количество символов, необходимых для буфера, который может содержать закодированные данные *нсрклен* байт.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Схема кодировки "Q" описана в RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)).
 
@@ -501,15 +501,15 @@ inline BOOL QPDecode(
 заполняет Указатель на переменную, которая содержит длину *сздест*в байтах. Если функция выполнена, переменная получает число байтов, записанных в буфер. Если функция завершается с ошибкой, переменная получает необходимую длину буфера в байтах.
 
 *dwFlags*<br/>
-окне Флаги ATLSMTP_QPENCODE, описывающие способ выполнения преобразования.
+окне ATLSMTP_QPENCODE флаги, описывающие способ выполнения преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодирования, ориентированная на кавычки, описана в документе RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Схема кодирования, поддерживающая кавычки, описана в документе RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpdecodegetrequiredlength"></a>кпдекодежетрекуиредленгс
 
@@ -528,9 +528,9 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 
 Число байтов, необходимое для буфера, который может содержать декодированную строку *нсрклен* символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодирования, ориентированная на кавычки, описана в документе RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Схема кодирования, поддерживающая кавычки, описана в документе RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencode"></a>кпенкоде
 
@@ -560,11 +560,11 @@ inline BOOL QPEncode(
 Указатель на переменную, которая содержит длину в символах *сздест*. Если функция выполнена, переменная получает число символов, записанных в буфер. Если функция завершается с ошибкой, переменная получает необходимую длину в символах буфера.
 
 *dwFlags*<br/>
-Флаги ATLSMTP_QPENCODE, описывающие способ выполнения преобразования.
+ATLSMTP_QPENCODE флаги, описывающие способ выполнения преобразования.
 
 - ATLSMTP_QPENCODE_DOT если точка находится в начале строки, она добавляется в выходные данные и кодируется.
 
-- ATLSMTP_QPENCODE_TRAILING_SOFT добавляет `=\r\n` к закодированной строке.
+- ATLSMTP_QPENCODE_TRAILING_SOFT добавляет `=\r\n` в закодированную строку.
 
 Схема кодировки для печати в соответствии с кавычками описана в [документе RFC 2045](https://www.ietf.org/rfc/rfc2045.txt).
 
@@ -572,9 +572,9 @@ inline BOOL QPEncode(
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодирования, ориентированная на кавычки, описана в документе RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Схема кодирования, поддерживающая кавычки, описана в документе RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="qpencodegetrequiredlength"></a>кпенкодежетрекуиредленгс
 
@@ -593,9 +593,9 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 Количество символов, необходимых для буфера, который может содержать закодированные данные *нсрклен* байт.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Схема кодирования, ориентированная на кавычки, описана в документе RFC[https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)2045 ().
+Схема кодирования, поддерживающая кавычки, описана в документе RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)).
 
 ## <a name="uudecode"></a>уудекоде
 
@@ -627,7 +627,7 @@ inline BOOL UUDecode(
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация ууенкодинг соответствует спецификации POSIX P 1003.2 b/D11.
 
@@ -648,7 +648,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 
 Число байтов, необходимое для буфера, который может содержать декодированную строку *нсрклен* символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация ууенкодинг соответствует спецификации POSIX P 1003.2 b/D11.
 
@@ -681,22 +681,22 @@ inline BOOL UUEncode(
 Указатель на переменную, которая содержит длину в символах *сздест*. Если функция выполнена, переменная получает число символов, записанных в буфер. Если функция завершается с ошибкой, переменная получает необходимую длину в символах буфера.
 
 *лпсзфиле*<br/>
-Файл, добавляемый в заголовок при указании ATLSMTP_UUENCODE_HEADER в *dwFlags*.
+Файл, добавляемый в заголовок, если ATLSMTP_UUENCODE_HEADER указан в *dwFlags*.
 
 *dwFlags*<br/>
 Флаги, управляющие поведением этой функции.
 
-- ATLSMTP_UUENCODE_HEADE. заголовок будет закодирован.
+- ATLSMTP_UUENCODE_HEADE заголовок будет закодирован.
 
 - ATLSMTP_UUENCODE_END конец будет закодирован.
 
-- Будут выполнены ATLSMTP_UUENCODE_DOT данные.
+- ATLSMTP_UUENCODE_DOT данные будут выполняться.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация ууенкодинг соответствует спецификации POSIX P 1003.2 b/D11.
 
@@ -717,11 +717,11 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 Количество символов, необходимых для буфера, который может содержать закодированные данные *нсрклен* байт.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация ууенкодинг соответствует спецификации POSIX P 1003.2 b/D11.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Основные понятия](../active-template-library-atl-concepts.md)<br/>
 [Компоненты ATL COM Desktop](../atl-com-desktop-components.md)

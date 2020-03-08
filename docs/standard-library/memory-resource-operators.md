@@ -1,5 +1,5 @@
 ---
-title: '&lt;memory_resource&gt; операторы'
+title: операторы&gt; memory_resource &lt;
 ms.date: 11/04/2016
 f1_keywords:
 - memory_resource/std::operator!=
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - std::operator!= (memory_resource)
 - std::operator== (memory_resource)
 ms.openlocfilehash: dd7dc3e65fe58663285433f9cbc9b64cf2b81cda
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268906"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884054"
 ---
-# <a name="ltmemoryresourcegt-operators"></a>&lt;memory_resource&gt; операторы
+# <a name="ltmemory_resourcegt-operators"></a>операторы&gt; memory_resource &lt;
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
-Проверяет объект memory_resource слева от оператора не равен объекту memory_resource справа от оператора.
+Проверяет, не равен ли объект memory_resource в левой части оператора memory_resource объекту справа.
 
 ```cpp
 template <class T1, class T2>
     bool operator!=(const polymorphic_allocator<T1>& a, const polymorphic_allocator<T2>& b) noexcept;
 ```
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
-Проверяет объект memory_resource слева от оператора равен объекту memory_resource справа от оператора.
+Проверяет, равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.
 
 ```cpp
 template <class T1, class T2>

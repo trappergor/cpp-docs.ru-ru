@@ -8,17 +8,17 @@ helpviewer_keywords:
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 ms.openlocfilehash: 9e51774b2158a81fce05dc0bd27e296e4ad94faa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507701"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855529"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Функции обратного вызова, используемые MFC
 
 В библиотека Microsoft Foundation Class появляются три функции обратного вызова. Эти функции обратного вызова передаются в [CDC:: енумобжектс](../../mfc/reference/cdc-class.md#enumobjects), [CDC:: грайстринг](../../mfc/reference/cdc-class.md#graystring)и [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Обратите внимание, что все функции обратного вызова должны перехватывать исключения MFC перед возвратом в Windows, так как исключения не могут быть вызваны через границы обратного вызова. Дополнительные сведения об исключениях см. в статье [исключения](../../mfc/exception-handling-in-mfc.md).
 
-|name||
+|Имя||
 |----------|-----------------|
 |[Функция обратного вызова для CDC::EnumObjects](#enum_objects)||
 |[Функция обратного вызова для CDC::GrayString](#graystring)||
@@ -46,13 +46,13 @@ int CALLBACK EXPORT ObjectFunc(
 Указывает на структуру данных [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) или [логбруш](/windows/win32/api/wingdi/ns-wingdi-logbrush) , содержащую сведения об логических атрибутах объекта.
 
 *лпдата*<br/>
-Указывает на предоставляемые приложением данные, передаваемые `EnumObjects` в функцию.
+Указывает на данные, предоставляемые приложением, передаваемые в функцию `EnumObjects`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция обратного вызова возвращает значение **типа int**. Значение этого возврата определяется пользователем. Если функция обратного вызова возвращает значение `EnumObjects` 0, то останавливает перечисление в начале.
+Функция обратного вызова возвращает значение **типа int**. Значение этого возврата определяется пользователем. Если функция обратного вызова возвращает значение 0, `EnumObjects` останавливает перечисление в начале.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Действительное имя должно быть экспортировано.
 
@@ -72,7 +72,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="parameters"></a>Параметры
 
 *hDC*<br/>
-Определяет контекст устройства памяти с точечным рисунком по ширине и высоте, указанным в `nWidth` параметре `GrayString`и `nHeight` .
+Определяет контекст устройства памяти с растровым изображением по крайней мере ширины и высоты, заданными `nWidth` и `nHeight` для `GrayString`.
 
 *лпдата*<br/>
 Указывает на строку символов, которую необходимо нарисовать.
@@ -84,7 +84,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 Возвращаемое значение функции обратного вызова должно быть TRUE, чтобы обозначать успешность. в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция обратного вызова (*аутпутфунк*) должна рисовать изображение относительно координат (0, 0), а не (*x*, *y*).
 
@@ -105,20 +105,20 @@ BOOL CALLBACK EXPORT AbortFunc(
 *хпр*<br/>
 Определяет контекст устройства.
 
-*код*<br/>
-Указывает, произошла ли ошибка. Значение 0, если ошибка не возникла. Это SP_OUTOFDISK, если в диспетчере печати недостаточно места на диске, и в случае ожидания приложения становится доступным дополнительное дисковое пространство. Если *код* — SP_OUTOFDISK, приложению не придется прерывать задание печати. В противном случае он должен дать диспетчеру печати вызов `PeekMessage` функции или `GetMessage` Windows.
+*code*<br/>
+Указывает, произошла ли ошибка. Значение 0, если ошибка не возникла. Это SP_OUTOFDISK в том случае, если в диспетчере печати недостаточно места на диске, а в случае ожидания приложения будет доступно дополнительное дисковое пространство. Если *код* SP_OUTOFDISK, приложению не придется прерывать задание печати. В противном случае он должен передаваться диспетчеру печати путем вызова функции `PeekMessage` или `GetMessage` Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращаемое значение функции прерывания-обработчика не равно нулю, если задание печати должно быть продолжено, и 0, если оно отменено.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Фактическое имя должно быть экспортировано, как описано в разделе "Примечания" [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Структуры, стили, обратные вызовы и схемы сообщений](structures-styles-callbacks-and-message-maps.md)<br/>
-[CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
-[CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
-[CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
+[CDC:: Енумобжектс](../../mfc/reference/cdc-class.md#enumobjects)<br/>
+[CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
+[CDC:: Грайстринг](../../mfc/reference/cdc-class.md#graystring)

@@ -8,13 +8,13 @@ f1_keywords:
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
 ms.openlocfilehash: eff1a99fb95f15c6377e8a74cca36e718cbd6fd9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455085"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867222"
 ---
-# <a name="lttypetraitsgt-typedefs"></a>Определения типов &lt;type_traits&gt;
+# <a name="lttype_traitsgt-typedefs"></a>Определения типов &lt;type_traits&gt;
 
 |||
 |-|-|
@@ -28,7 +28,7 @@ ms.locfileid: "68455085"
 typedef integral_constant<bool, false> false_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом для специализации шаблона `integral_constant`.
 
@@ -61,7 +61,7 @@ true_type == true
 typedef integral_constant<bool, true> true_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом для специализации шаблона `integral_constant`.
 
@@ -88,6 +88,6 @@ false_type == false
 true_type == true
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<type_traits>](../standard-library/type-traits.md)
