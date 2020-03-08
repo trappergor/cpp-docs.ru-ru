@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689295"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884010"
 ---
 # <a name="moneypunct-class"></a>Класс moneypunct
 
@@ -66,13 +66,13 @@ class moneypunct;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* \
+*CharType*\
 Тип, используемый внутри программы для кодирования символов.
 
-*Международные* \
+*Международные*\
 Флаг, указывающий, должны ли соблюдаться международные конвенции.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**
 
@@ -80,20 +80,20 @@ class moneypunct;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[moneypunct](#moneypunct)|Конструктор объектов типа `moneypunct`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Description|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[curr_symbol](#curr_symbol)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа валюты.|
 |[decimal_point](#decimal_point)|Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.|
@@ -116,7 +116,7 @@ class moneypunct;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<locale>
+**Заголовок:** \<языковой стандарт >
 
 **Пространство имен:** std
 
@@ -128,9 +128,9 @@ class moneypunct;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Тип является синонимом параметра-шаблона **CharType**.
+Этот тип является синонимом для параметра-шаблона **CharType**.
 
 ## <a name="curr_symbol"></a>  moneypunct::curr_symbol
 
@@ -144,7 +144,7 @@ string_type curr_symbol() const;
 
 Строка, содержащая символ валюты.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_curr_symbol](#do_curr_symbol).
 
@@ -181,7 +181,7 @@ CharType decimal_point() const;
 
 Последовательность элементов определенного языкового стандарта для использования в качестве символа десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_decimal_point](#do_decimal_point).
 
@@ -301,9 +301,9 @@ virtual pattern do_neg_format() const;
 
 - `value` для сопоставления или создания денежного значения.
 
-Генерируются компоненты поля денежного вывода, а компоненты денежного поля ввода сопоставляются в том порядке, в котором эти элементы отображаются в `pattern::field`. Каждое из значений `sign`, `symbol`, `value` и либо `none`, либо `space` должны быть ровно один раз. Значение `none` не должно быть первым. Значение space **не должно** быть первым или последним. Если `Intl` имеет значение true, порядок `symbol`, `sign`, `none`, а затем `value`.
+Генерируются компоненты поля денежного вывода, а компоненты денежного поля ввода сопоставляются в том порядке, в котором эти элементы отображаются в `pattern::field`. Каждое из значений `sign`, `symbol`, `value`и либо `none`, либо `space` должны быть ровно один раз. Значение `none` не должно быть первым. Значение space **не должно** быть первым или последним. Если `Intl` имеет значение true, порядок `symbol`, `sign`, `none`, а затем `value`.
 
-Версия-шаблон `moneypunct`\< **CharType**, **Intl**> возвращает `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+Версия шаблона `moneypunct`\< **CharType**, **Intl**> Возвращает `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Пример
 
@@ -337,7 +337,7 @@ virtual pattern do_pos_format() const;
 
 Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило формирования денежного поля вывода для положительного значения. (Он также определяет, как сопоставлять компоненты поля денежного ввода.) Кодировка такая же, как и для [do_neg_format](#do_neg_format).
 
-Версия-шаблон moneypunct\< **CharType**, **Inputlterator**> возвращает `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+Версия шаблона moneypunct\< **CharType**, **инпутлтератор**> Возвращает `{`**money_base:: symbol**, **money_base:: sign**, **money_base:: value**, **money_base:: None**`}`.
 
 ### <a name="example"></a>Пример
 
@@ -387,7 +387,7 @@ int frac_digits() const;
 
 Определенное языковым стандартом количество цифр, которое будет отображаться справа от любого десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_frac_digits](#do_frac_digits).
 
@@ -456,7 +456,7 @@ string grouping() const;
 
 Определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_grouping](#do_grouping).
 
@@ -523,12 +523,12 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* \
+*_Refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Возможные значения для параметра *_Refs* и их значимость:
+Возможные значения параметра *_Refs* и их значимость:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
@@ -552,7 +552,7 @@ pattern neg_format() const;
 
 Определенное языковым стандартом правило форматирования выходных значений с отрицательными числами.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_neg_format](#do_neg_format).
 
@@ -600,7 +600,7 @@ string_type negative_sign() const;
 
 Возвращает последовательность элементов определенного языкового стандарта для использования в качестве символа отрицательного числа.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_negative_sign](#do_negative_sign).
 
@@ -662,7 +662,7 @@ pattern pos_format() const;
 
 Определенное языковым стандартом правило форматирования выходных значений с положительными числами.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_pos_format](#do_pos_format).
 
@@ -710,7 +710,7 @@ string_type positive_sign() const;
 
 Последовательность элементов определенного языкового стандарта для использования в качестве символа положительного числа.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_positive_sign](#do_positive_sign).
 
@@ -768,7 +768,7 @@ French_France.1252 domestic positive sign:
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) , объекты которой могут хранить копии последовательностей пунктуации.
 
@@ -784,7 +784,7 @@ CharType thousands_sep() const;
 
 Последовательность элементов определенного языкового стандарта для использования в качестве символа разделителя тысяч.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_thousands_sep](#do_thousands_sep).
 
@@ -833,7 +833,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<locale>](../standard-library/locale.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

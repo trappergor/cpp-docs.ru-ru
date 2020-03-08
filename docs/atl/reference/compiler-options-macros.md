@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630642"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857175"
 ---
 # <a name="compiler-options-macros"></a>Макросы параметров компилятора
 
@@ -31,7 +31,7 @@ ms.locfileid: "69630642"
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Символ, который включает ошибки в проектах, преобразованных из предыдущих версий ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Определите, использует ли один или несколько объектов потоковое подразделение.|
-|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Делает определенные `CString` конструкторы явными, предотвращая непреднамеренное преобразование.|
+|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Делает определенные конструкторы `CString` явными, предотвращая непреднамеренное преобразование.|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Определите этот макрос, чтобы использовать C++ Стандартный совместимый синтаксис, который создает ошибку компилятора C4867, когда нестандартный синтаксис используется для инициализации указателя на функцию-член.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Определите, используется ли для одного или нескольких объектов свободная или нейтральная организация.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Символ, указывающий, что проект будет иметь объекты, которые помечены как, свободные или нейтральные. Вместо этого следует использовать макрос [_ATL_FREE_THREADED](#_atl_free_threaded) .|
@@ -49,7 +49,7 @@ ms.locfileid: "69630642"
 #define _ATL_ALL_WARNINGS
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 До выхода C++ Visual .NET 2002 ATL отключило много предупреждений и отключил их, чтобы они никогда не отображались в пользовательском коде. В частности:
 
@@ -73,9 +73,9 @@ ms.locfileid: "69630642"
 
 [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]
 
-`#define` Если он добавлен, заголовки ATL должны быть аккуратными для сохранения состояния этих предупреждений, чтобы они не были глобально отключены (или если пользователь явно отключает отдельные предупреждения, а не включает их).
+Если добавляется `#define`, заголовки ATL должны быть внимательны для сохранения состояния этих предупреждений, чтобы они не были глобально отключены (или если пользователь явно отключает отдельные предупреждения, а не включает их).
 
-В новых проектах этот `#define` набор задается в файле *PCH. h* (*stdafx. h* в Visual Studio 2017 и более ранних версиях) по умолчанию.
+В новых проектах этот `#define` задан в *PCH. h* (*stdafx. h* в Visual Studio 2017 и более ранних версиях) по умолчанию.
 
 ##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
 
@@ -85,25 +85,25 @@ ms.locfileid: "69630642"
 _ATL_APARTMENT_THREADED
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указывает потоковое подразделение. Описание моделей потоков, доступных для объекта ATL, см. [в разделе Указание модели потоков проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для других параметров работы с потоками, а также [Параметры мастера простых объектов ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
-##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
+##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
-Делает определенные `CString` конструкторы явными, предотвращая непреднамеренное преобразование.
+Делает определенные конструкторы `CString` явными, предотвращая непреднамеренное преобразование.
 
 ```
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если этот конструктор определен, все конструкторы CString, принимающие один параметр, компилируются с ключевым словом explicit, которое предотвращает неявное преобразование входных аргументов. Это означает, например, что когда определяется _UNICODE, при попытке использовать строку char * в качестве аргумента конструктора CString возникнет ошибка компилятора. Этот макрос следует использовать в ситуациях, когда необходимо предотвратить неявные преобразования между узким и расширенным строковыми типами.
+Если этот конструктор определен, все конструкторы CString, принимающие один параметр, компилируются с ключевым словом explicit, которое предотвращает неявное преобразование входных аргументов. Это означает, например, что при определении _UNICODE при попытке использовать строку char * в качестве аргумента конструктора CString возникнет ошибка компилятора. Этот макрос следует использовать в ситуациях, когда необходимо предотвратить неявные преобразования между узким и расширенным строковыми типами.
 
 С помощью макроса _T для всех строковых аргументов конструктора можно определить _ATL_CSTRING_EXPLICIT_CONSTRUCTORS и избежать ошибок компиляции независимо от того, определен ли _UNICODE.
 
-##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING
+##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
 
 Определите этот макрос, чтобы принудительно использовать стандартный синтаксис ANSI C++ для указателей на функции-члены. Использование этого макроса приведет к формированию ошибки компилятора C4867 при использовании нестандартного синтаксиса для инициализации указателя на функцию-член.
 
@@ -111,7 +111,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 #define _ATL_ENABLE_PTM_WARNING
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Библиотеки ATL и MFC были изменены в соответствии с улучшенным стандартным C++ C++ соответствием в компиляторе Майкрософт. Согласно стандарту ANSI C++ , синтаксис указателя на функцию-член класса должен быть `&CMyClass::MyFunc`.
 
@@ -121,7 +121,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]
 
-Необходимо изменить на:
+следует изменить на
 
 [!code-cpp[NVC_MFCListView#11](../../atl/reference/codesnippet/cpp/compiler-options-macros_3.cpp)]
 
@@ -135,7 +135,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 _ATL_FREE_THREADED
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указывает свободную потоковое взаимодействие. Свободная многопоточность эквивалентна модели многопоточного контейнера. Описание моделей потоков, доступных для объекта ATL, см. [в разделе Указание модели потоков проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для других параметров работы с потоками, а также [Параметры мастера простых объектов ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
@@ -147,11 +147,11 @@ _ATL_FREE_THREADED
 _ATL_MULTI_THREADED
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если этот символ определен, ATL будет запрашивать код, который будет правильно синхронизировать доступ к глобальным данным. Новый код должен использовать эквивалентный макрос [_ATL_FREE_THREADED](#_atl_free_threaded) .
 
-##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
+##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE
 
 Символ, который не позволяет использовать пространство имен по умолчанию в качестве ATL.
 
@@ -159,11 +159,11 @@ _ATL_MULTI_THREADED
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если этот символ не определен, в том числе atlbase. h будет выполняться по умолчанию **с помощью пространства имен ATL** , что может привести к конфликтам имен. Чтобы избежать этого, определите этот символ.
 
-##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT
+##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT
 
 Символ, который предотвращает компиляцию кода, связанного с COM, в проект.
 
@@ -179,9 +179,9 @@ _ATL_NO_COM_SUPPORT
 ATL_NO_VTABLE
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если не удается инициализировать указатель vtable в конструкторе и деструкторе класса, компоновщик может исключить таблицу vtable и все функции, на которые он указывает. Разворачивается до **__declspec (vtable)** .
+Если не удается инициализировать указатель vtable в конструкторе и деструкторе класса, компоновщик может исключить таблицу vtable и все функции, на которые он указывает. Разворачивается в **__declspec (vtable)** .
 
 ### <a name="example"></a>Пример
 
@@ -204,9 +204,9 @@ ATL_NO_VTABLE
 *myFunction*<br/>
 Функция, которая не должна быть встроенной.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте этот символ, если нужно убедиться, что функция не встроена компилятором, даже если она должна быть объявлена как встроенная, чтобы ее можно было поместить в файл заголовка. Разворачивается до **__declspec (noinline)** .
+Используйте этот символ, если нужно убедиться, что функция не встроена компилятором, даже если она должна быть объявлена как встроенная, чтобы ее можно было поместить в файл заголовка. Разворачивается в **__declspec (noinline)** .
 
 ##  <a name="_atl_single_threaded"></a>_ATL_SINGLE_THREADED
 
@@ -216,10 +216,10 @@ ATL_NO_VTABLE
 _ATL_SINGLE_THREADED
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указывает, что объект всегда выполняется в основном потоке COM. Описание моделей потоков, доступных для объекта ATL, см. [в разделе Указание модели потоков проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) для других параметров работы с потоками, а также [Параметры мастера простых объектов ATL](../../atl/reference/options-atl-simple-object-wizard.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)

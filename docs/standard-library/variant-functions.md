@@ -1,5 +1,5 @@
 ---
-title: '&lt;Variant&gt; функции'
+title: '&lt;функции типа Variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
@@ -7,17 +7,17 @@ f1_keywords:
 - variant/std::holds_alternative
 - variant/std::visit
 ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268386"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865760"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;Variant&gt; функции
+# <a name="ltvariantgt-functions"></a>&lt;функции типа Variant&gt;
 
-## <a name="get"></a> Получить
+## <a name="get"></a>Получить
 
-Возвращает разновидность объекта.
+Возвращает вариант объекта.
 
 ```cpp
 template <size_t I, class... Types>
@@ -38,9 +38,9 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a> get_if
+## <a name="get_if"></a>get_if
 
-Получает тип variant объекта, если он существует.
+Возвращает вариант объекта, если он существует.
 
 ```cpp
 template <size_t I, class... Types>
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a> holds_alternative
+## <a name="holds_alternative"></a>holds_alternative
 
-Вернуть **true** Если существует variant.
+Возвращает **значение true** , если вариант существует.
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a>позиции
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a> variant_npos
+## <a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +77,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a> посетите
+## <a name="visit"></a>перехода
 
-Переходит к следующему **variant**.
+Переходит к следующему **варианту**.
 
 ```cpp
 template <class Visitor, class... Variants>
