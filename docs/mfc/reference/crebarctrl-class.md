@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: 14befb819a30238abb5780b1bdcc6d74402e8976
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741192"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875751"
 ---
 # <a name="crebarctrl-class"></a>Класс CReBarCtrl
 
@@ -115,23 +115,23 @@ ms.locfileid: "70741192"
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CReBarCtrl:: CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|
+|[CReBarCtrl:: CReBarCtrl](#crebarctrl)|Формирует объект `CReBarCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[CReBarCtrl:: Бегиндраг](#begindrag)|Помещает элемент управления главной панели в режим перетаскивания.|
-|[CReBarCtrl:: Create](#create)|Создает элемент управления "Главная панель" и прикрепляет `CReBarCtrl` его к объекту.|
-|[CReBarCtrl:: Креатикс](#createex)|Создает элемент управления "Главная панель" с указанными расширенными стилями Windows и `CReBarCtrl` прикрепляет его к объекту.|
+|[CReBarCtrl:: Create](#create)|Создает элемент управления "Главная панель" и прикрепляет его к объекту `CReBarCtrl`.|
+|[CReBarCtrl:: Креатикс](#createex)|Создает элемент управления "Главная панель" с указанными расширенными стилями Windows и прикрепляет его к объекту `CReBarCtrl`.|
 |[CReBarCtrl::D Елетебанд](#deleteband)|Удаляет полосу из элемента управления главной панели.|
-|[CReBarCtrl::D Рагмове](#dragmove)|Обновляет точку перетаскивания в элементе управления "Главная панель" после `BeginDrag`вызова.|
+|[CReBarCtrl::D Рагмове](#dragmove)|Обновляет расположение перетаскивания в элементе управления "Главная панель" после вызова `BeginDrag`.|
 |[CReBarCtrl:: Енддраг](#enddrag)|Прерывает операцию перетаскивания элемента управления главной панели.|
 |[CReBarCtrl:: Жетбандбордерс](#getbandborders)|Извлекает границы полосы.|
 |[CReBarCtrl:: Жетбандкаунт](#getbandcount)|Возвращает число диапазонов, находящихся в данный момент в элементе управления "Главная панель".|
@@ -141,7 +141,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl:: Жетбаринфо](#getbarinfo)|Извлекает сведения об элементе управления "Главная панель" и используемом в нем списке изображений.|
 |[CReBarCtrl:: Жетбкколор](#getbkcolor)|Возвращает цвет фона элемента управления главной панели по умолчанию.|
 |[CReBarCtrl:: Жетколорсчеме](#getcolorscheme)|Извлекает структуру [колорсчеме](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , связанную с элементом управления главной панели.|
-|[CReBarCtrl:: Жетдроптаржет](#getdroptarget)|Извлекает указатель `IDropTarget` интерфейса элемента управления главной панели.|
+|[CReBarCtrl:: Жетдроптаржет](#getdroptarget)|Извлекает указатель интерфейса `IDropTarget` элемента управления "Главная панель".|
 |[CReBarCtrl:: Жетекстендедстиле](#getextendedstyle)|Возвращает расширенный стиль текущего элемента управления главной панели.|
 |[CReBarCtrl::/ImageList](#getimagelist)|Извлекает список изображений, связанных с элементом управления главной панели.|
 |[CReBarCtrl:: "Palette"](#getpalette)|Извлекает текущую палитру элемента управления "Главная панель".|
@@ -173,7 +173,7 @@ class CReBarCtrl : public CWnd
 |[CReBarCtrl:: Шовбанд](#showband)|Показывает или скрывает заданную полосу в элементе управления "Главная панель".|
 |[CReBarCtrl:: Сизеторект](#sizetorect)|Подмещает элемент управления "Главная панель" к указанному прямоугольнику.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Приложение, в котором находится элемент управления "Главная панель", назначает дочернее окно, содержащееся в элементе управления "Главная панель", в полосу главной панели. Дочернее окно обычно является еще одним распространенным элементом управления.
 
@@ -189,7 +189,7 @@ class CReBarCtrl : public CWnd
 
 - Полоса 2 содержит поле со списком и четыре стандартные кнопки.
 
-   ![Пример меню панели элементов](../../mfc/reference/media/vc4scc1.gif "Пример меню панели элементов")
+   ![Пример меню панели элементов](../../mfc/reference/media/vc4scc1.gif "Пример меню "Главная панель"")
 
 ## <a name="rebar-control"></a>Элемент управления главной панели
 
@@ -221,7 +221,7 @@ class CReBarCtrl : public CWnd
 
 ##  <a name="begindrag"></a>CReBarCtrl:: Бегиндраг
 
-Реализует поведение сообщения Win32 [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag), как описано в Windows SDK.
+Реализует поведение [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag)сообщения Win32, как описано в Windows SDK.
 
 ```
 void BeginDrag(
@@ -235,11 +235,11 @@ void BeginDrag(
 Отсчитываемый от нуля индекс диапазона, на который будет влиять операция перетаскивания.
 
 *двпос*<br/>
-Значение типа DWORD, содержащее начальные координаты мыши. Горизонтальная координата содержится в ЛОВОРД, а вертикальная координата содержится в HIWORD. Если передать (DWORD) значение 1, элемент управления "Главная панель" будет использовать расположение мыши во время последнего вызова `GetMessage` потока элемента управления или. `PeekMessage`
+Значение типа DWORD, содержащее начальные координаты мыши. Горизонтальная координата содержится в ЛОВОРД, а вертикальная координата содержится в HIWORD. Если передать (DWORD) значение 1, элемент управления "Главная панель" будет использовать расположение мыши в последний раз, когда поток элемента управления вызывал `GetMessage` или `PeekMessage`.
 
 ##  <a name="create"></a>CReBarCtrl:: Create
 
-Создает элемент управления "Главная панель" и прикрепляет `CReBarCtrl` его к объекту.
+Создает элемент управления "Главная панель" и прикрепляет его к объекту `CReBarCtrl`.
 
 ```
 virtual BOOL Create(
@@ -267,15 +267,15 @@ virtual BOOL Create(
 
 Ненулевое значение, если объект успешно создан; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Создайте элемент управления "Главная панель" в два этапа:
 
-1. Вызовите [CReBarCtrl](#crebarctrl) для создания `CReBarCtrl` объекта.
+1. Вызовите [CReBarCtrl](#crebarctrl) для создания объекта `CReBarCtrl`.
 
-1. Вызовите эту функцию члена, которая создает элемент управления "Главная панель Windows" и присоединяет ее к `CReBarCtrl` объекту.
+1. Вызовите эту функцию члена, которая создает элемент управления "Главная панель Windows" и присоединяет ее к объекту `CReBarCtrl`.
 
-При вызове `Create`метода инициализируются стандартные элементы управления.
+При вызове `Create`инициализируются стандартные элементы управления.
 
 ### <a name="example"></a>Пример
 
@@ -283,7 +283,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CReBarCtrl:: Креатикс
 
-Создает элемент управления (дочернее окно) и связывает его с `CReBarCtrl` объектом.
+Создает элемент управления (дочернее окно) и связывает его с объектом `CReBarCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -315,9 +315,9 @@ virtual BOOL CreateEx(
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте `CreateEx` вместо [CREATE](#create) , чтобы применить расширенные стили Windows, заданные в расширенном стиле Windows в качестве префикса **WS_EX_** .
+Используйте `CreateEx` вместо [CREATE](#create) для применения расширенных стилей Windows, заданных в **WS_EX_е**расширенного стиля Windows.
 
 ##  <a name="crebarctrl"></a>CReBarCtrl:: CReBarCtrl
 
@@ -333,7 +333,7 @@ CReBarCtrl();
 
 ##  <a name="deleteband"></a>CReBarCtrl::D Елетебанд
 
-Реализует поведение сообщения Win32 [RB_DELETEBAND](/windows/win32/Controls/rb-deleteband), как описано в Windows SDK.
+Реализует поведение [RB_DELETEBAND](/windows/win32/Controls/rb-deleteband)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL DeleteBand(UINT uBand);
@@ -354,7 +354,7 @@ BOOL DeleteBand(UINT uBand);
 
 ##  <a name="dragmove"></a>CReBarCtrl::D Рагмове
 
-Реализует поведение сообщения Win32 [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), как описано в Windows SDK.
+Реализует поведение [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove)сообщения Win32, как описано в Windows SDK.
 
 ```
 void DragMove(DWORD dwPos = (DWORD)-1);
@@ -363,11 +363,11 @@ void DragMove(DWORD dwPos = (DWORD)-1);
 ### <a name="parameters"></a>Параметры
 
 *двпос*<br/>
-Значение типа DWORD, содержащее новые координаты мыши. Горизонтальная координата содержится в ЛОВОРД, а вертикальная координата содержится в HIWORD. Если передать (DWORD) значение 1, элемент управления "Главная панель" будет использовать расположение мыши во время последнего вызова `GetMessage` потока элемента управления или. `PeekMessage`
+Значение типа DWORD, содержащее новые координаты мыши. Горизонтальная координата содержится в ЛОВОРД, а вертикальная координата содержится в HIWORD. Если передать (DWORD) значение 1, элемент управления "Главная панель" будет использовать расположение мыши в последний раз, когда поток элемента управления вызывал `GetMessage` или `PeekMessage`.
 
 ##  <a name="enddrag"></a>CReBarCtrl:: Енддраг
 
-Реализует поведение сообщения Win32 [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag), как описано в Windows SDK.
+Реализует поведение [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag)сообщения Win32, как описано в Windows SDK.
 
 ```
 void EndDrag();
@@ -375,7 +375,7 @@ void EndDrag();
 
 ##  <a name="getbandborders"></a>CReBarCtrl:: Жетбандбордерс
 
-Реализует поведение сообщения Win32 [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders), как описано в Windows SDK.
+Реализует поведение [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders)сообщения Win32, как описано в Windows SDK.
 
 ```
 void GetBandBorders(
@@ -393,7 +393,7 @@ void GetBandBorders(
 
 ##  <a name="getbandcount"></a>CReBarCtrl:: Жетбандкаунт
 
-Реализует поведение сообщения Win32 [RB_GETBANDCOUNT](/windows/win32/Controls/rb-getbandcount), как описано в Windows SDK.
+Реализует поведение [RB_GETBANDCOUNT](/windows/win32/Controls/rb-getbandcount)сообщения Win32, как описано в Windows SDK.
 
 ```
 UINT GetBandCount() const;
@@ -419,7 +419,7 @@ BOOL GetBandInfo(
 Отсчитываемый от нуля индекс диапазона, для которого будут извлечены сведения.
 
 *прбби*<br/>
-Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) для получения сведений о диапазоне. Необходимо установить `cbSize` член этой структуры в `sizeof(REBARBANDINFO)` значение и задать `fMask` элементы, которые необходимо получить, перед отправкой этого сообщения.
+Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) для получения сведений о диапазоне. Необходимо присвоить элементу `cbSize` этой структуры значение `sizeof(REBARBANDINFO)` и задать для элемента `fMask` элементы, которые необходимо получить перед отправкой этого сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -438,9 +438,9 @@ void GetBandMargins(PMARGINS pMargins);
 *пмаргинс*<br/>
 Указатель на структуру [полей](/windows/win32/api/uxtheme/ns-uxtheme-margins), которая будет принимать информацию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность сообщения [RB_GETBANDMARGINS](/windows/win32/Controls/rb-getbandmargins) , как описано в Windows SDK.
+Эта функция члена эмулирует функциональность [RB_GETBANDMARGINS](/windows/win32/Controls/rb-getbandmargins) сообщения, как описано в Windows SDK.
 
 ##  <a name="getbarheight"></a>CReBarCtrl:: Жетбархеигхт
 
@@ -456,7 +456,7 @@ UINT GetBarHeight() const;
 
 ##  <a name="getbarinfo"></a>CReBarCtrl:: Жетбаринфо
 
-Реализует поведение сообщения Win32 [RB_GETBARINFO](/windows/win32/Controls/rb-getbarinfo), как описано в Windows SDK.
+Реализует поведение [RB_GETBARINFO](/windows/win32/Controls/rb-getbarinfo)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL GetBarInfo(REBARINFO* prbi) const;
@@ -465,7 +465,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 ### <a name="parameters"></a>Параметры
 
 *прби*<br/>
-Указатель на структуру [ребаринфо](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , которая будет принимать сведения об элементе управления главной панели. Перед отправкой этого сообщения необходимо задать для `sizeof(REBARINFO)` элемента кбсизе этой структуры значение.
+Указатель на структуру [ребаринфо](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , которая будет принимать сведения об элементе управления главной панели. Необходимо задать для элемента *кбсизе* этой структуры значение `sizeof(REBARINFO)` перед отправкой этого сообщения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -473,7 +473,7 @@ BOOL GetBarInfo(REBARINFO* prbi) const;
 
 ##  <a name="getbkcolor"></a>CReBarCtrl:: Жетбкколор
 
-Реализует поведение сообщения Win32 [RB_GETBKCOLOR](/windows/win32/Controls/rb-getbkcolor), как описано в Windows SDK.
+Реализует поведение [RB_GETBKCOLOR](/windows/win32/Controls/rb-getbkcolor)сообщения Win32, как описано в Windows SDK.
 
 ```
 COLORREF GetBkColor() const;
@@ -500,13 +500,13 @@ BOOL GetColorScheme(COLORSCHEME* lpcs);
 
 Ненулевое значение в случае успеха, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`COLORSCHEME` Структура включает цвет выделения кнопки и цвет тени для кнопки.
+Структура `COLORSCHEME` включает цвет выделения кнопки и цвет тени кнопки.
 
 ##  <a name="getdroptarget"></a>CReBarCtrl:: Жетдроптаржет
 
-Реализует поведение сообщения Win32 [RB_GETDROPTARGET](/windows/win32/Controls/rb-getdroptarget), как описано в Windows SDK.
+Реализует поведение [RB_GETDROPTARGET](/windows/win32/Controls/rb-getdroptarget)сообщения Win32, как описано в Windows SDK.
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -528,13 +528,13 @@ DWORD GetExtendedStyle() const;
 
 Побитовое сочетание (или) флагов, указывающих на расширенные стили. Возможные флаги: RBS_EX_SPLITTER и RBS_EX_TRANSPARENT. Дополнительные сведения см. в описании параметра *двмаск* метода [CReBarCtrl:: сетекстендедстиле](#setextendedstyle) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove) , описанное в Windows SDK.
+Этот метод отправляет [RB_GETEXTENDEDSTYLE](/windows/win32/Controls/rb-dragmove) сообщение, описанное в Windows SDK.
 
 ##  <a name="getimagelist"></a>CReBarCtrl::/ImageList
 
-`CImageList` Возвращает объект, связанный с элементом управления "Главная панель".
+Возвращает объект `CImageList`, связанный с элементом управления главной панели.
 
 ```
 CImageList* GetImageList() const;
@@ -544,7 +544,7 @@ CImageList* GetImageList() const;
 
 Указатель на объект [CImageList](../../mfc/reference/cimagelist-class.md) . Возвращает значение NULL, если для элемента управления не задан список изображений.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция члена использует сведения о размере и маске, хранящиеся в структуре [ребаринфо](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , как описано в Windows SDK.
 
@@ -560,9 +560,9 @@ CPalette* GetPalette() const;
 
 Указатель на объект [кпалетте](../../mfc/reference/cpalette-class.md) , указывающий текущую палитру элемента управления главной панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что эта функция `CPalette` -член использует объект в качестве возвращаемого значения, а не хпалетте.
+Обратите внимание, что эта функция-член использует объект `CPalette` в качестве возвращаемого значения, а не ХПАЛЕТТЕ.
 
 ### <a name="example"></a>Пример
 
@@ -570,7 +570,7 @@ CPalette* GetPalette() const;
 
 ##  <a name="getrect"></a>CReBarCtrl:: коrect
 
-Реализует поведение сообщения Win32 [RB_GETRECT](/windows/win32/Controls/rb-getrect), как описано в Windows SDK.
+Реализует поведение [RB_GETRECT](/windows/win32/Controls/rb-getrect)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL GetRect(
@@ -596,7 +596,7 @@ BOOL GetRect(
 
 ##  <a name="getrowcount"></a>CReBarCtrl:: RowCount
 
-Реализует поведение сообщения Win32 [RB_GETROWCOUNT](/windows/win32/Controls/rb-getrowcount), как описано в Windows SDK.
+Реализует поведение [RB_GETROWCOUNT](/windows/win32/Controls/rb-getrowcount)сообщения Win32, как описано в Windows SDK.
 
 ```
 UINT GetRowCount() const;
@@ -612,7 +612,7 @@ UINT GetRowCount() const;
 
 ##  <a name="getrowheight"></a>CReBarCtrl:: Жетровхеигхт
 
-Реализует поведение сообщения Win32 [RB_GETROWHEIGHT](/windows/win32/Controls/rb-getrowheight), как описано в Windows SDK.
+Реализует поведение [RB_GETROWHEIGHT](/windows/win32/Controls/rb-getrowheight)сообщения Win32, как описано в Windows SDK.
 
 ```
 UINT GetRowHeight(UINT uRow) const;
@@ -633,7 +633,7 @@ UINT GetRowHeight(UINT uRow) const;
 
 ##  <a name="gettextcolor"></a>CReBarCtrl:: Жеттекстколор
 
-Реализует поведение сообщения Win32 [RB_GETTEXTCOLOR](/windows/win32/Controls/rb-gettextcolor), как описано в Windows SDK.
+Реализует поведение [RB_GETTEXTCOLOR](/windows/win32/Controls/rb-gettextcolor)сообщения Win32, как описано в Windows SDK.
 
 ```
 COLORREF GetTextColor() const;
@@ -645,7 +645,7 @@ COLORREF GetTextColor() const;
 
 ##  <a name="gettooltips"></a>CReBarCtrl:: подсказки
 
-Реализует поведение сообщения Win32 [RB_GETTOOLTIPS](/windows/win32/Controls/rb-gettooltips), как описано в Windows SDK.
+Реализует поведение [RB_GETTOOLTIPS](/windows/win32/Controls/rb-gettooltips)сообщения Win32, как описано в Windows SDK.
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -655,13 +655,13 @@ CToolTipCtrl* GetToolTips() const;
 
 Указатель на объект [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что реализация `GetToolTips` MFC возвращает указатель `CToolTipCtrl`на, а не на HWND.
+Обратите внимание, что реализация `GetToolTips` MFC возвращает указатель на `CToolTipCtrl`, а не на HWND.
 
 ##  <a name="hittest"></a>CReBarCtrl:: HitTest
 
-Реализует поведение сообщения Win32 [RB_HITTEST](/windows/win32/Controls/rb-hittest), как описано в Windows SDK.
+Реализует поведение [RB_HITTEST](/windows/win32/Controls/rb-hittest)сообщения Win32, как описано в Windows SDK.
 
 ```
 int HitTest(RBHITTESTINFO* prbht);
@@ -670,7 +670,7 @@ int HitTest(RBHITTESTINFO* prbht);
 ### <a name="parameters"></a>Параметры
 
 *прбхт*<br/>
-Указатель на структуру [рбхиттестинфо](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Перед отправкой сообщения `pt` член этой структуры должен быть инициализирован в точке, которая будет протестирована в клиентских координатах.
+Указатель на структуру [рбхиттестинфо](/windows/win32/api/commctrl/ns-commctrl-rbhittestinfo) . Перед отправкой сообщения `pt` член этой структуры должен быть инициализирован в точке, которая будет протестирована, в клиентских координатах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -678,7 +678,7 @@ int HitTest(RBHITTESTINFO* prbht);
 
 ##  <a name="idtoindex"></a>CReBarCtrl:: Идтоиндекс
 
-Реализует поведение сообщения Win32 [RB_IDTOINDEX](/windows/win32/controls/rb-idtoindex), как описано в Windows SDK.
+Реализует поведение [RB_IDTOINDEX](/windows/win32/controls/rb-idtoindex)сообщения Win32, как описано в Windows SDK.
 
 ```
 int IDToIndex(UINT uBandID) const;
@@ -695,7 +695,7 @@ int IDToIndex(UINT uBandID) const;
 
 ##  <a name="insertband"></a>CReBarCtrl:: Инсертбанд
 
-Реализует поведение сообщения Win32 [RB_INSERTBAND](/windows/win32/Controls/rb-insertband), как описано в Windows SDK.
+Реализует поведение [RB_INSERTBAND](/windows/win32/Controls/rb-insertband)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL InsertBand(
@@ -709,7 +709,7 @@ BOOL InsertBand(
 Отсчитываемый от нуля индекс расположения, в которое будет вставлен полоса. Если задать для этого параметра значение-1, элемент управления добавит новую полосу в последнее расположение.
 
 *прбби*<br/>
-Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , определяющую полосу для вставки. Перед вызовом этой функции необходимо задать для `sizeof(REBARBANDINFO)` элемента кбсизе этой структуры значение.
+Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , определяющую полосу для вставки. Необходимо задать для элемента *кбсизе* этой структуры значение `sizeof(REBARBANDINFO)` перед вызовом этой функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -732,9 +732,9 @@ void MaximizeBand(UINT uBand);
 *убанд*<br/>
 Отсчитываемый от нуля индекс диапазона, который необходимо развернуть.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализует поведение сообщения Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) с `fIdeal` параметром 0, как описано в Windows SDK.
+Реализует поведение сообщения Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) с `fIdeal` задано значение 0, как описано в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -753,9 +753,9 @@ void MinimizeBand(UINT uBand);
 *убанд*<br/>
 Отсчитываемый от нуля индекс полосы, которая должна быть уменьшена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализует поведение сообщения Win32 [RB_MINIMIZEBAND](/windows/win32/Controls/rb-minimizeband), как описано в Windows SDK.
+Реализует поведение [RB_MINIMIZEBAND](/windows/win32/Controls/rb-minimizeband)сообщения Win32, как описано в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -763,7 +763,7 @@ void MinimizeBand(UINT uBand);
 
 ##  <a name="moveband"></a>CReBarCtrl:: Мовебанд
 
-Реализует поведение сообщения Win32 [RB_MOVEBAND](/windows/win32/Controls/rb-moveband), как описано в Windows SDK.
+Реализует поведение [RB_MOVEBAND](/windows/win32/Controls/rb-moveband)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL MoveBand(
@@ -785,7 +785,7 @@ BOOL MoveBand(
 
 ##  <a name="pushchevron"></a>CReBarCtrl::P Ушчеврон
 
-Реализует поведение сообщения Win32 [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron), как описано в Windows SDK.
+Реализует поведение [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)сообщения Win32, как описано в Windows SDK.
 
 ```
 void PushChevron(
@@ -814,9 +814,9 @@ void RestoreBand(UINT uBand);
 *убанд*<br/>
 Отсчитываемый от нуля индекс диапазона, который необходимо развернуть.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализует поведение сообщения Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) с `fIdeal` параметром, равным 1, как описано в Windows SDK.
+Реализует поведение сообщения Win32 [RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) с `fIdeal` задано значение 1, как описано в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -824,7 +824,7 @@ void RestoreBand(UINT uBand);
 
 ##  <a name="setbandinfo"></a>CReBarCtrl:: Сетбандинфо
 
-Реализует поведение сообщения Win32 [RB_SETBANDINFO](/windows/win32/Controls/rb-setbandinfo), как описано в Windows SDK.
+Реализует поведение [RB_SETBANDINFO](/windows/win32/Controls/rb-setbandinfo)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL SetBandInfo(
@@ -838,7 +838,7 @@ BOOL SetBandInfo(
 Отсчитываемый от нуля индекс диапазона для получения новых параметров.
 
 *прбби*<br/>
-Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , определяющую полосу для вставки. Перед отправкой `cbSize` этого сообщения необходимо задать член этой структуры. `sizeof(REBARBANDINFO)`
+Указатель на структуру [ребарбандинфо](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow) , определяющую полосу для вставки. Перед отправкой этого сообщения необходимо задать для элемента `cbSize` этой структуры значение `sizeof(REBARBANDINFO)`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -860,7 +860,7 @@ BOOL SetBandWidth(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Description|
 |---------------|-----------------|
 |*убанд*|окне Отсчитываемый от нуля индекс полосы главной панели.|
 |*кксвидс*|окне Новая ширина панели элементов управления (в пикселях).|
@@ -869,13 +869,13 @@ BOOL SetBandWidth(
 
 Значение TRUE, если метод успешно выполнен; в противном случае — значение FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth) , описанное в Windows SDK.
+Этот метод отправляет [RB_SETBANDWIDTH](/windows/win32/Controls/rb-setbandwidth) сообщение, описанное в Windows SDK.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода определяется переменная, `m_rebar`которая используется для доступа к текущему элементу управления главной панели. Эта переменная используется в следующем примере.
+В следующем примере кода определяется переменная `m_rebar`, которая используется для доступа к текущему элементу управления главной панели. Эта переменная используется в следующем примере.
 
 [!code-cpp[NVC_MFC_CReBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/crebarctrl-class_12.h)]
 
@@ -887,7 +887,7 @@ BOOL SetBandWidth(
 
 ##  <a name="setbarinfo"></a>CReBarCtrl:: Сетбаринфо
 
-Реализует поведение сообщения Win32 [RB_SETBARINFO](/windows/win32/Controls/rb-setbarinfo), как описано в Windows SDK.
+Реализует поведение [RB_SETBARINFO](/windows/win32/Controls/rb-setbarinfo)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL SetBarInfo(REBARINFO* prbi);
@@ -896,7 +896,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 ### <a name="parameters"></a>Параметры
 
 *прби*<br/>
-Указатель на структуру [ребаринфо](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , содержащую данные, которые необходимо задать. Перед отправкой `cbSize` этого сообщения необходимо задать член этой структуры `sizeof(REBARINFO)`
+Указатель на структуру [ребаринфо](/windows/win32/api/commctrl/ns-commctrl-rebarinfo) , содержащую данные, которые необходимо задать. Необходимо задать `cbSize` члена этой структуры, чтобы `sizeof(REBARINFO)` перед отправкой этого сообщения
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -908,7 +908,7 @@ BOOL SetBarInfo(REBARINFO* prbi);
 
 ##  <a name="setbkcolor"></a>CReBarCtrl:: Сетбкколор
 
-Реализует поведение сообщения Win32 [RB_SETBKCOLOR](/windows/win32/Controls/rb-setbkcolor), как описано в Windows SDK.
+Реализует поведение [RB_SETBKCOLOR](/windows/win32/Controls/rb-setbkcolor)сообщения Win32, как описано в Windows SDK.
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -923,7 +923,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 Значение [COLORREF](/windows/win32/gdi/colorref) , представляющее предыдущий цвет фона по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения о том, когда следует задавать цвет фона, и о том, как задать значение по умолчанию, см. в этом разделе.
 
@@ -940,9 +940,9 @@ void SetColorScheme(const COLORSCHEME* lpcs);
 *LPC*<br/>
 Указатель на структуру [колорсчеме](/windows/win32/api/commctrl/ns-commctrl-colorscheme) , как описано в Windows SDK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`COLORSCHEME` Структура включает как цвет выделения кнопки, так и цвет тени кнопки.
+Структура `COLORSCHEME` включает как цвет выделения кнопки, так и цвет тени кнопки.
 
 ##  <a name="setextendedstyle"></a>CReBarCtrl:: Сетекстендедстиле
 
@@ -956,18 +956,18 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Description|
 |---------------|-----------------|
-|*двмаск*|окне Побитовое сочетание (или) флагов, указывающих, какие флаги в параметре *двстиликс* применяются. Используйте одно или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображение разделителя в нижней части в горизонтальном режиме и справа в вертикальном режиме.<br /><br /> RBS_EX_TRANSPARENT: Пересылка сообщения [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) в родительское окно.|
+|*двмаск*|окне Побитовое сочетание (или) флагов, указывающих, какие флаги в параметре *двстиликс* применяются. Используйте одно или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: по умолчанию отображение разделителя в нижней части в горизонтальном режиме и справа в вертикальном режиме.<br /><br /> RBS_EX_TRANSPARENT: пересылка [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd) сообщения родительскому окну.|
 |*двстиликс*|окне Побитовое сочетание (или) флагов, определяющих применяемые стили. Чтобы задать стиль, укажите тот же флаг, который используется в параметре *двмаск* . Чтобы сбросить стиль, укажите двоичный нуль.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Предыдущий расширенный стиль.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle) , описанное в Windows SDK.
+Этот метод отправляет [RB_SETEXTENDEDSTYLE](/windows/win32/Controls/rb-setextendedstyle) сообщение, описанное в Windows SDK.
 
 ##  <a name="setimagelist"></a>CReBarCtrl:: Сетимажелист
 
@@ -988,7 +988,7 @@ BOOL SetImageList(CImageList* pImageList);
 
 ##  <a name="setowner"></a>CReBarCtrl:: Сетовнер
 
-Реализует поведение сообщения Win32 [RB_SETPARENT](/windows/win32/Controls/rb-setparent), как описано в Windows SDK.
+Реализует поведение [RB_SETPARENT](/windows/win32/Controls/rb-setparent)сообщения Win32, как описано в Windows SDK.
 
 ```
 CWnd* SetOwner(CWnd* pWnd);
@@ -997,22 +997,22 @@ CWnd* SetOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Параметры
 
 *Приводится*<br/>
-Указатель на `CWnd` объект, заданный в качестве владельца элемента управления главной панели.
+Указатель на объект `CWnd`, который необходимо задать в качестве владельца элемента управления главной панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на объект [CWnd](../../mfc/reference/cwnd-class.md) , который является текущим владельцем элемента управления "Главная панель".
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что эта функция члена `CWnd` использует указатели на объекты как для текущего, так и для выбранного владельца элемента управления главной панели, а не для обработки в Windows.
+Обратите внимание, что эта функция члена использует указатели для `CWnd` объектов как для текущего, так и для выбранного владельца элемента управления "Главная панель", а не для обработки в Windows.
 
 > [!NOTE]
 >  Эта функция члена не изменяет фактический родительский элемент, заданный при создании элемента управления; Вместо этого он отправляет сообщения уведомления в указанное вами окно.
 
 ##  <a name="setpalette"></a>CReBarCtrl:: Сетпалетте
 
-Реализует поведение сообщения Win32 [RB_SETPALETTE](/windows/win32/Controls/rb-setpalette), как описано в Windows SDK.
+Реализует поведение [RB_SETPALETTE](/windows/win32/Controls/rb-setpalette)сообщения Win32, как описано в Windows SDK.
 
 ```
 CPalette* SetPalette(HPALETTE hPal);
@@ -1027,13 +1027,13 @@ CPalette* SetPalette(HPALETTE hPal);
 
 Указатель на объект [кпалетте](../../mfc/reference/cpalette-class.md) , указывающий предыдущую палитру элемента управления главной панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что эта функция `CPalette` -член использует объект в качестве возвращаемого значения, а не хпалетте.
+Обратите внимание, что эта функция-член использует объект `CPalette` в качестве возвращаемого значения, а не ХПАЛЕТТЕ.
 
 ##  <a name="settextcolor"></a>CReBarCtrl:: Сеттекстколор
 
-Реализует поведение сообщения Win32 [RB_SETTEXTCOLOR](/windows/win32/Controls/rb-settextcolor), как описано в Windows SDK.
+Реализует поведение [RB_SETTEXTCOLOR](/windows/win32/Controls/rb-settextcolor)сообщения Win32, как описано в Windows SDK.
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -1042,13 +1042,13 @@ COLORREF SetTextColor(COLORREF clr);
 ### <a name="parameters"></a>Параметры
 
 *clr*<br/>
-Значение COLORREF, представляющее новый цвет текста в `CReBarCtrl` объекте.
+Значение COLORREF, представляющее новый цвет текста в объекте `CReBarCtrl`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [COLORREF](/windows/win32/gdi/colorref) , представляющее предыдущий цвет текста, связанный с `CReBarCtrl` объектом.
+Значение [COLORREF](/windows/win32/gdi/colorref) , представляющее предыдущий цвет текста, связанный с объектом `CReBarCtrl`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Он предоставляется для поддержки гибкости цвета текста в элементе управления "Главная панель".
 
@@ -1065,9 +1065,9 @@ void SetToolTips(CToolTipCtrl* pToolTip);
 *птултип*<br/>
 Указатель на объект [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-После завершения этого действия `CToolTipCtrl` объект необходимо уничтожить.
+По завершении с ним необходимо уничтожить объект `CToolTipCtrl`.
 
 ##  <a name="setwindowtheme"></a>CReBarCtrl:: SetWindowTheme
 
@@ -1086,13 +1086,13 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 Возвращаемое значение не используется.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция члена эмулирует функциональность сообщения [RB_SETWINDOWTHEME](/windows/win32/Controls/rb-setwindowtheme) , как описано в Windows SDK.
+Эта функция члена эмулирует функциональность [RB_SETWINDOWTHEME](/windows/win32/Controls/rb-setwindowtheme) сообщения, как описано в Windows SDK.
 
 ##  <a name="showband"></a>CReBarCtrl:: Шовбанд
 
-Реализует поведение сообщения Win32 [RB_SHOWBAND](/windows/win32/Controls/rb-showband), как описано в Windows SDK.
+Реализует поведение [RB_SHOWBAND](/windows/win32/Controls/rb-showband)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL ShowBand(
@@ -1114,7 +1114,7 @@ BOOL ShowBand(
 
 ##  <a name="sizetorect"></a>CReBarCtrl:: Сизеторект
 
-Реализует поведение сообщения Win32 [RB_SIZETORECT](/windows/win32/Controls/rb-sizetorect), как описано в Windows SDK.
+Реализует поведение [RB_SIZETORECT](/windows/win32/Controls/rb-sizetorect)сообщения Win32, как описано в Windows SDK.
 
 ```
 BOOL SizeToRect(CRect& rect);
@@ -1129,11 +1129,11 @@ BOOL SizeToRect(CRect& rect);
 
 Ненулевое значение в случае успеха, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что эта функция `CRect` -член использует в качестве параметра объект, `RECT` а не структуру.
+Обратите внимание, что эта функция-член использует `CRect` объект в качестве параметра, а не структуру `RECT`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

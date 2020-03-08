@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260032"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864758"
 ---
 # <a name="caxwindow2t-class"></a>Класс CAxWindow2T
 
-Этот класс содержит методы для работы окно, которое размещает элемент ActiveX, а также имеет поддержку размещения Лицензированные элементы управления ActiveX.
+Этот класс предоставляет методы для управления окном, в котором размещается элемент управления ActiveX, а также поддерживает размещение лицензированных элементов управления ActiveX.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,44 +36,44 @@ template <class TBase = CWindow>
 
 #### <a name="parameters"></a>Параметры
 
-*TBase*<br/>
-Класс, от которого `CAxWindowT` является производным.
+*тбасе*<br/>
+Класс, от которого наследуется `CAxWindowT`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Создает объект `CAxWindow2T`.|
+|[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Формирует объект `CAxWindow2T`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CAxWindow2T::Create](#create)|Создает главное окно.|
-|[CAxWindow2T::CreateControlLic](#createcontrollic)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.|
-|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|Создает лицензированный элемент управления ActiveX, инициализирует его, на котором она размещена в указанном окне и возвращает указатель интерфейса (или указателей) из элемента управления.|
-|[CAxWindow2T::GetWndClassName](#getwndclassname)|Статический метод, который извлекает имя класса окна.|
+|[CAxWindow2T:: Create](#create)|Создает главное окно.|
+|[CAxWindow2T:: Креатеконтроллик](#createcontrollic)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.|
+|[CAxWindow2T:: Креатеконтроллицекс](#createcontrollicex)|Создает лицензированный элемент управления ActiveX, инициализирует его, размещает его в указанном окне и получает указатель интерфейса (или указатели) из элемента управления.|
+|[CAxWindow2T:: Жетвндкласснаме](#getwndclassname)|Статический метод, который получает имя класса окна.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CAxWindow2T::operator =](#operator_eq)|Назначает HWND в существующий `CAxWindow2T` объекта.|
+|[CAxWindow2T:: operator =](#operator_eq)|Присваивает HWND существующему объекту `CAxWindow2T`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CAxWindow2T` Предоставляет методы для работы с окном, на котором размещается элемент управления ActiveX. `CAxWindow2T` также имеет поддержку размещения Лицензированные элементы управления ActiveX. Размещение обеспечивается " **AtlAxWinLic80**«, который инкапсулируется `CAxWindow2T`.
+`CAxWindow2T` предоставляет методы для манипулирования окном, в котором размещается элемент управления ActiveX. `CAxWindow2T` также поддерживает размещение лицензированных элементов управления ActiveX. Размещение обеспечивается " **AtlAxWinLic80**", который упаковывается `CAxWindow2T`.
 
-Класс `CAxWindow2` реализуется как специализация `CAxWindow2T` класса. Такая специализация объявляется как:
+Класс `CAxWindow2` реализован как специализация класса `CAxWindow2T`. Эта специализация объявляется следующим образом:
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT` в разделе документированы элементы [CAxWindow](../../atl/reference/caxwindow-class.md).
+> `CAxWindowT` члены описаны в разделе [каксвиндов](../../atl/reference/caxwindow-class.md).
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, в котором используются члены этого класса.
+Пример, в котором используются члены этого класса, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,11 +85,11 @@ template <class TBase = CWindow>
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin.h
+**Заголовок:** atlwin. h
 
-##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T
+##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
 
-Создает объект `CAxWindow2T`.
+Формирует объект `CAxWindow2T`.
 
 ```
 CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
@@ -98,9 +98,9 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 ### <a name="parameters"></a>Параметры
 
 *hWnd*<br/>
-Дескриптор существующего окна.
+Маркер существующего окна.
 
-##  <a name="create"></a>  CAxWindow2T::Create
+##  <a name="create"></a>CAxWindow2T:: Create
 
 Создает главное окно.
 
@@ -115,19 +115,19 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CAxWindow2T::Create` вызовы [CWindow::Create](../../atl/reference/cwindow-class.md#create) с LPCTSTR *lpstrWndClass* параметру присвоить класс окна, который обеспечивает размещение элементов управления (`AtlAxWinLic80`).
+`CAxWindow2T::Create` вызывает [CWindow:: Create](../../atl/reference/cwindow-class.md#create) с параметром LPCTSTR *лпстрвндкласс* , установленным в класс Window, который обеспечивает размещение элементов управления (`AtlAxWinLic80`).
 
-См. в разделе `CWindow::Create` описание параметров и возвращаемого значения.
+Описание параметров и возвращаемое значение см. в разделе `CWindow::Create`.
 
-**Примечание** Если 0 используется как значение для *MenuOrID* параметр, он должен быть указан как 0U (значение по умолчанию) для предотвращения ошибок компилятора.
+**Примечание** . Если значение 0 используется в качестве значения параметра *менуорид* , его необходимо указать как 0U (значение по умолчанию), чтобы избежать ошибки компилятора.
 
 ### <a name="example"></a>Пример
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `CAxWindow2T::Create`.
+Пример, в котором используется `CAxWindow2T::Create`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic
+##  <a name="createcontrollic"></a>CAxWindow2T:: Креатеконтроллик
 
 Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.
 
@@ -147,20 +147,20 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLicKey*<br/>
-Лицензионный ключ для элемента управления; Значение NULL, если создание nonlicensed элемента управления.
+*бстрликкэй*<br/>
+Лицензионный ключ для элемента управления; Значение NULL при создании нелицензированного элемента управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе [CAxWindow::CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) описание оставшихся параметров и возвращаемого значения.
+Описание оставшихся параметров и возвращаемого значения см. в разделе [каксвиндов:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) .
 
 ### <a name="example"></a>Пример
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `CAxWindow2T::CreateControlLic`.
+Пример, в котором используется `CAxWindow2T::CreateControlLic`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx
+##  <a name="createcontrollicex"></a>CAxWindow2T:: Креатеконтроллицекс
 
-Создает лицензированный элемент управления ActiveX, инициализирует его, на котором она размещена в указанном окне и возвращает указатель интерфейса (или указателей) из элемента управления.
+Создает лицензированный элемент управления ActiveX, инициализирует его, размещает его в указанном окне и получает указатель интерфейса (или указатели) из элемента управления.
 
 ```
 HRESULT CreateControlLicEx(
@@ -184,18 +184,18 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>Параметры
 
-*bstrLicKey*<br/>
-Лицензионный ключ для элемента управления; Значение NULL, если создание nonlicensed элемента управления.
+*бстрликкэй*<br/>
+Лицензионный ключ для элемента управления; Значение NULL при создании нелицензированного элемента управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе [CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) описание оставшихся параметров и возвращаемого значения.
+Описание оставшихся параметров и возвращаемого значения см. в разделе [каксвиндов:: креатеконтролекс](../../atl/reference/caxwindow-class.md#createcontrolex) .
 
 ### <a name="example"></a>Пример
 
-См. в разделе [размещения ActiveX элементов управления с помощью ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `CAxWindow2T::CreateControlLicEx`.
+Пример, в котором используется `CAxWindow2T::CreateControlLicEx`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName
+##  <a name="getwndclassname"></a>CAxWindow2T:: Жетвндкласснаме
 
 Извлекает имя класса окна.
 
@@ -205,11 +205,11 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строку, содержащую имя класса окна (`AtlAxWinLic80`), в котором можно лицензиями и nonlicensed элементы управления ActiveX.
+Указатель на строку, содержащую имя класса окна (`AtlAxWinLic80`), в котором могут размещаться лицензированные и нелицензированные элементы управления ActiveX.
 
-##  <a name="operator_eq"></a>  CAxWindow2T::operator =
+##  <a name="operator_eq"></a>CAxWindow2T:: operator =
 
-Назначает HWND в существующий `CAxWindow2T` объекта.
+Присваивает HWND существующему объекту `CAxWindow2T`.
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
@@ -218,9 +218,9 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 ### <a name="parameters"></a>Параметры
 
 *hWnd*<br/>
-Дескриптор существующего окна.
+Маркер существующего окна.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
-[Часто задаваемые вопросы о вложении элементов управления](../../atl/atl-control-containment-faq.md)
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
+[Контрольное вложение вопросов и ответов](../../atl/atl-control-containment-faq.md)
