@@ -5,15 +5,15 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245164"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854950"
 ---
 # <a name="ltnewgt-typedefs"></a>Определения типов &lt;new&gt;
 
-## <a name="hardware_constructive_interference_size"></a> hardware_constructive_interference_size
+## <a name="hardware_constructive_interference_size"></a>hardware_constructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
@@ -21,7 +21,7 @@ inline constexpr size_t hardware_constructive_interference_size = implementation
 
 ### <a name="remarks"></a>Примечания
 
-Это число является максимальным значением, рекомендуемым размером непрерывной памяти, занятых объектами два, получить temporal locality путем параллельных потоков. Он должен существовать по крайней мере `alignof(max_align_t)`.
+Это число является максимальным рекомендуемым размером непрерывной памяти, занимаемой двумя объектами, к которым осуществляется доступ с использованием временных расположений параллельных потоков. Он должен быть не менее `alignof(max_align_t)`.
 
 ### <a name="example"></a>Пример
 
@@ -40,7 +40,7 @@ struct kennel {
 static_assert(sizeof(together) <= hardware_constructive_interference_size);
 ```
 
-## <a name="hardware_destructive_interference_size"></a> hardware_destructive_interference_size
+## <a name="hardware_destructive_interference_size"></a>hardware_destructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
@@ -48,7 +48,7 @@ inline constexpr size_t hardware_destructive_interference_size = implementation-
 
 ### <a name="remarks"></a>Примечания
 
-Это число является минимальный рекомендуемый смещение между двумя объектами, одновременно получить доступ, чтобы избежать снижения производительности из-за состязания, вызванные реализации. Он должен существовать по крайней мере `alignof(max_align_t)`.
+Это число является минимальным рекомендуемым смещением между двумя параллельно доступными объектами во избежание дополнительного снижения производительности из-за конкуренции, представленной реализацией. Он должен быть не менее `alignof(max_align_t)`.
 
 ### <a name="example"></a>Пример
 
@@ -59,7 +59,7 @@ struct keep_apart {
 };
 ```
 
-## <a name="new_handler"></a> new_handler
+## <a name="new_handler"></a>new_handler
 
 Тип указывает на функцию, подходящую для использования в качестве нового обработчика.
 
@@ -69,7 +69,7 @@ typedef void (*new_handler)();
 
 ### <a name="remarks"></a>Примечания
 
-Этот тип функции обработчика вызывается **оператор new** или `operator new[]` когда они не могут удовлетворить запрос на дополнительное хранилище.
+Этот тип функции обработчика вызывается **оператором new** или `operator new[]`, когда они не могут удовлетворить запрос на дополнительное хранилище.
 
 ### <a name="example"></a>Пример
 

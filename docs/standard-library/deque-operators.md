@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245658"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883821"
 ---
 # <a name="ltdequegt-operators"></a>Операторы &lt;deque&gt;
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.
 
@@ -35,10 +35,10 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -76,7 +76,7 @@ int main( )
 The deques are not equal.
 ```
 
-## <a name="op_lt"></a> Оператор&lt;
+## <a name="op_lt">Оператор </a>&lt;
 
 Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.
 
@@ -86,10 +86,10 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a> Оператор&lt;=
+## <a name="op_lt_eq"></a>&lt;оператора =
 
 Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.
 
@@ -141,10 +141,10 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.
 
@@ -196,10 +196,10 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -244,7 +244,7 @@ The deques are equal.
 The deques are not equal.
 ```
 
-## <a name="op_gt"></a> Оператор&gt;
+## <a name="op_gt">Оператор </a>&gt;
 
 Проверяет, больше ли объект deque слева от оператора объекта deque справа от оператора.
 
@@ -254,10 +254,10 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a> Оператор&gt;=
+## <a name="op_gt_eq"></a>&gt;оператора =
 
 Проверяет, больше или равен ли объект deque слева от оператора объекту deque справа от оператора.
 
@@ -310,10 +310,10 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `deque`.
 
-*Правильно*\
+*справа*\
 Объект типа `deque`.
 
 ### <a name="return-value"></a>Возвращаемое значение

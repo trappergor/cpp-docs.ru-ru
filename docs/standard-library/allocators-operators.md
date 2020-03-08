@@ -6,21 +6,21 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377901"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875962"
 ---
 # <a name="ltallocatorsgt-operators"></a>Операторы &lt;allocator&gt;
 
-Ниже приведены функции оператор глобального шаблона, определенные в &lt;Распределители&gt;. Оператор функции-члены класса см. в документации по классу.
+Это функции операторов глобального шаблона, определенные в &lt;распределителя&gt;. Функции оператора члена класса см. в документации по классу.
 
 |||
 |-|-|
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 Проверяет на неравенство между объектами распределителя указанного класса.
 
@@ -46,7 +46,7 @@ bool operator!=(
 
 Оператор шаблона возвращает `!(left == right)`.
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> operator==
 
 Проверяет на равенство объекты распределителя указанного класса.
 
@@ -72,6 +72,6 @@ bool operator==(
 
 Этот оператор шаблона возвращает `left.equals(right)`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [\<allocators>](../standard-library/allocators-header.md)

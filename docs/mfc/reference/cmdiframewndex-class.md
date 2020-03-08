@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741597"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866715"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 
@@ -173,11 +173,11 @@ ms.locfileid: "70741597"
 class CMDIFrameWndEx : public CMDIFrameWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CMDIFrameWndEx:: Активеитемрекалклайаут](#activeitemrecalclayout)|Повторно вычисляет макет активного элемента.|
 |`CMDIFrameWndEx::AddDockSite`|Этот метод не используется.|
@@ -230,9 +230,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx:: Онклосепопупмену](#onclosepopupmenu)|Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.|
 |[CMDIFrameWndEx:: OnCmdMsg](#oncmdmsg)|Вызывается платформой для маршрутизации и диспетчеризации командных сообщений, а также для обновления объектов пользовательского интерфейса команды.|
 |[CMDIFrameWndEx:: Ондравменуимаже](#ondrawmenuimage)|Вызывается платформой при отрисовке изображения, связанного с пунктом меню.|
-|[CMDIFrameWndEx:: Ондравменулого](#ondrawmenulogo)|Вызывается платформой, когда [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)ОБРАБАТЫВАЕТ сообщение WM_PAINT.|
-|[CMDIFrameWndEx:: Онерасемдиклиентбаккграунд](#onerasemdiclientbackground)|Вызывается структурой, когда окно фрейма MDI обрабатывает сообщение WM_ERASEBKGND.|
-|[CMDIFrameWndEx:: Онменубуттонтулхиттест](#onmenubuttontoolhittest)|Вызывается платформой, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)ОБРАБАТЫВАЕТ сообщение WM_NCHITTEST.|
+|[CMDIFrameWndEx:: Ондравменулого](#ondrawmenulogo)|Вызывается платформой, когда [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)обрабатывает сообщение WM_PAINT.|
+|[CMDIFrameWndEx:: Онерасемдиклиентбаккграунд](#onerasemdiclientbackground)|Вызывается структурой, когда окно фрейма MDI обрабатывает WM_ERASEBKGND сообщение.|
+|[CMDIFrameWndEx:: Онменубуттонтулхиттест](#onmenubuttontoolhittest)|Вызывается платформой, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)обрабатывает сообщение WM_NCHITTEST.|
 |[CMDIFrameWndEx:: Онмовеминифраме](#onmoveminiframe)|Вызывается структурой для перемещения окна мини-кадра.|
 |[CMDIFrameWndEx:: Онсетпревиевмоде](#onsetpreviewmode)|Задает режим основного окна фрейма приложения в режиме предварительного просмотра. (Переопределяет [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|
 |[CMDIFrameWndEx:: Оншовкустомизепане](#onshowcustomizepane)|Вызывается структурой при активации панели быстрой настройки.|
@@ -259,18 +259,18 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Определяет, можно ли преобразовать закрепляемые области в дочерние окна MDI.|
 |[CMDIFrameWndEx:: m_bDisableSetRedraw](#m_bdisablesetredraw)|Включает или отключает оптимизацию перерисовки для дочерних окон MDI.|
 
 ## <a name="remarks"></a>Примечания
 
-Чтобы воспользоваться преимуществами расширенных функций настройки в приложении MDI, создайте производный класс окна фрейма MDI приложения от `CMDIFrameWndEx` `CMDIFrameWnd`вместо.
+Чтобы воспользоваться преимуществами расширенных функций настройки в приложении MDI, создайте класс окна фрейма MDI приложения из `CMDIFrameWndEx` вместо `CMDIFrameWnd`.
 
 ## <a name="example"></a>Пример
 
-Следующий пример является производным от класса `CMDIFrameWndEx`. Этот фрагмент кода взят из [примера дравклиент: Приложение](../../overview/visual-cpp-samples.md)для рисования объектов OLE на основе ленты MFC.
+В следующем примере класс является производным от `CMDIFrameWndEx`. Этот фрагмент кода взят из [примера дравклиент: приложение для рисования OLE-объектов на основе ленты MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -345,7 +345,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>Параметры
 
 *хдвп*<br/>
-окне Определяет структуру с несколькими окнами. Это значение можно получить, вызвав `BeginDeferWindowPos`метод.
+окне Определяет структуру с несколькими окнами. Это значение можно получить, вызвав `BeginDeferWindowPos`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *пнмдитабстипе*<br/>
 заполняет Указатель на целочисленную переменную, которая указывает, какие функции включены:
 
-- 0,0 Все компоненты отключены.
+- 0: все компоненты отключены.
 
-- 1: Вкладки MDI включены.
+- 1: вкладки MDI включены.
 
-- 2: Группы с вкладками MDI включены.
+- 2: группы с вкладками MDI включены.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -439,7 +439,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `CMDIChildWndEx`.
+Указатель на объект `CMDIChildWndEx`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -449,7 +449,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `CreateDocumentWindow` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `CreateDocumentWindow` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 В этом примере `g_strStartViewName` может быть именем "виртуального документа" (например, "Начальная страница"), которое фактически не загружается из дискового файла. Поэтому для обработки этого случая требуется специальная обработка.
 
@@ -471,7 +471,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 окне Имя документа.
 
 *побж*<br/>
-окне Зарезервировано для будущего использования.
+[in] Зарезервирован для будущего использования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -497,7 +497,7 @@ void DockPane(
 окне Указывает, на каких сторонах окна фрейма закрепляется.
 
 *лпрект*<br/>
-окне Не используется.
+[in] Не используется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -505,7 +505,7 @@ void DockPane(
 
 ### <a name="example"></a>Пример
 
-В следующем примере иллюстрируется использование метода `DockPane`. Этот фрагмент кода взят из [примера висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере иллюстрируется использование метода `DockPane`. Этот фрагмент кода взят из [примера висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как `DockPaneLeftOf` метод используется [в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано использование метода `DockPaneLeftOf` в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как `EnableAutoHidePanes` метод используется [в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано использование метода `EnableAutoHidePanes` в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -591,11 +591,11 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите эту функцию, чтобы включить закрепление панелей, принадлежащих `CMDIFrameWndEx` объекту.
+Вызовите эту функцию, чтобы включить закрепление панелей, принадлежащих объекту `CMDIFrameWndEx`.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как `EnableDocking` метод используется [в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано использование метода `EnableDocking` в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -629,7 +629,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 ### <a name="remarks"></a>Примечания
 
-В полноэкранном режиме все закрепленные панели управления, панели инструментов и меню скрыты, и размер активного представления изменяется, чтобы занимать весь экран. При включении полноэкранного режима необходимо указать идентификатор команды, которая включает или отключает его. Можно вызвать `EnableFullScreenMode` из `OnCreate` функции основного фрейма. Когда окно фрейма переключается на полноэкранный режим, платформа создает плавающую панель инструментов с одной кнопкой, имеющей указанный идентификатор команды. Если вы хотите, чтобы главное меню оставалось на экране, вызовите метод [CMDIFrameWndEx:: енаблефуллскринмаинмену](#enablefullscreenmainmenu).
+В полноэкранном режиме все закрепленные панели управления, панели инструментов и меню скрыты, и размер активного представления изменяется, чтобы занимать весь экран. При включении полноэкранного режима необходимо указать идентификатор команды, которая включает или отключает его. Можно вызвать `EnableFullScreenMode` из функции `OnCreate` главного фрейма. Когда окно фрейма переключается на полноэкранный режим, платформа создает плавающую панель инструментов с одной кнопкой, имеющей указанный идентификатор команды. Если вы хотите, чтобы главное меню оставалось на экране, вызовите метод [CMDIFrameWndEx:: енаблефуллскринмаинмену](#enablefullscreenmainmenu).
 
 ##  <a name="enableloaddockstate"></a>CMDIFrameWndEx:: Енаблелоаддоккстате
 
@@ -680,13 +680,13 @@ void EnableMDITabbedGroups(
 
 При вызове этого метода с параметром *бенабле* , равным false, *Параметры* игнорируются.
 
-Даже если группы с вкладками MDI уже включены, вы можете вызвать этот метод еще раз, чтобы изменить параметры дочерних окон. Вызовите метод с параметром *бенабле* , для которого задано значение true `CMDITabInfo` , и измените члены объекта, заданные с помощью параметра *params* .
+Даже если группы с вкладками MDI уже включены, вы можете вызвать этот метод еще раз, чтобы изменить параметры дочерних окон. Вызовите метод с параметром *бенабле* , ИМЕЮЩИМ значение true, и измените члены объекта `CMDITabInfo`, которые указаны с помощью параметра *params* .
 
 Дополнительные сведения об использовании групп с вкладками MDI см. в разделе [группы MDI с вкладками](../../mfc/mdi-tabbed-groups.md).
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `EnableMDITabbedGroups` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `EnableMDITabbedGroups` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -719,8 +719,8 @@ void EnableMDITabs(
 *бтабклосебуттон*<br/>
 Указывает, следует ли отображать кнопки закрытия вкладки.
 
-*стиль*<br/>
-Задает стиль вкладок. Используйте STYLE_3D_SCROLLED для обычных вкладок или STYLE_3D_ONENOTE для вкладок Microsoft OneNote.
+*style*<br/>
+Задает стиль вкладок. Используйте STYLE_3D_SCROLLED для обычных вкладок или STYLE_3D_ONENOTE на вкладках Microsoft OneNote.
 
 *бтабкустомтултипс*<br/>
 Указывает, включены ли пользовательские подсказки.
@@ -732,13 +732,13 @@ void EnableMDITabs(
 
 Вызовите этот метод, чтобы включить или отключить функцию табуляции MDI для окна фрейма MDI. Если этот флажок установлен, все дочерние окна отображаются как вкладки.
 
-Метки вкладок могут находиться в верхней или нижней части рамки, в зависимости от значения параметра *таблокатион*. Можно указать либо `CMFCTabCtrl::LOCATION_BOTTOM` (значение по умолчанию), `CMFCTabCtrl::LOCATION_TOP`либо.
+Метки вкладок могут находиться в верхней или нижней части рамки, в зависимости от значения параметра *таблокатион*. Вы можете указать либо `CMFCTabCtrl::LOCATION_BOTTOM` (значение по умолчанию), либо `CMFCTabCtrl::LOCATION_TOP`.
 
 Если *бтабкустомтултипс* имеет значение true, в главное окно фрейма будет отправлено сообщение AFX_WM_ON_GET_TAB_TOOLTIP. Код может справиться с этим сообщением и предоставить платформу с пользовательскими подсказками для вкладок MDI.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `EnableMDITabs` [как используется в образце мдитабсдемо: Приложение](../../overview/visual-cpp-samples.md)MDI с вкладками MFC.
+В следующем примере показано, как `EnableMDITabs` используется в [образце мдитабсдемо: приложение для MDI с ВКЛАДКАМИ MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -765,7 +765,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 Реализация по умолчанию использует первый способ.
 
-Используйте `EnableMDITabsLastActiveActivation` , чтобы включить второй способ активации по клавише TAB. Он эмулирует способ открытия дочерних окон MDI в Windows.
+Используйте `EnableMDITabsLastActiveActivation`, чтобы включить второй способ активации по клавише TAB. Он эмулирует способ открытия дочерних окон MDI в Windows.
 
 ##  <a name="enablepanemenu"></a>CMDIFrameWndEx:: Енаблепанемену
 
@@ -807,7 +807,7 @@ void EnablePaneMenu(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `EnablePaneMenu` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `EnablePaneMenu` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -845,11 +845,11 @@ void EnableWindowsDialog(
 
 ### <a name="remarks"></a>Примечания
 
-Используйте этот метод, чтобы вставить элемент меню, команда которого вызывает диалоговое окно управления дочерним окном MDI ( [класс кмфквиндовсманажердиалог](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Новый элемент вставляется в меню, заданное параметром *уименуид*. Вызов `EnableWindowsDialog` при обработке сообщения WM_CREATE.
+Используйте этот метод, чтобы вставить элемент меню, команда которого вызывает диалоговое окно управления дочерним окном MDI ( [класс кмфквиндовсманажердиалог](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). Новый элемент вставляется в меню, заданное параметром *уименуид*. Вызовите `EnableWindowsDialog` при обработке сообщения WM_CREATE.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `EnableWindowsDialog` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `EnableWindowsDialog` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -925,13 +925,13 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 Побитовое или приведенное сочетание следующих флагов:
 
-- BCGP_MDI_CREATE_VERT_GROUP — может создать группу вертикальных вкладок.
+- BCGP_MDI_CREATE_VERT_GROUP — может создавать группу вертикальных вкладок.
 
-- BCGP_MDI_CREATE_HORZ_GROUP — может создать группу горизонтальных вкладок.
+- BCGP_MDI_CREATE_HORZ_GROUP — может создавать группу горизонтальных вкладок.
 
-- BCGP_MDI_CAN_MOVE_PREV — позволяет переместить вкладку в предыдущую группу вкладок.
+- BCGP_MDI_CAN_MOVE_PREV — можно переместить вкладку в предыдущую группу вкладок.
 
-- BCGP_MDI_CAN_MOVE_NEXT — позволяет переместить вкладку в следующую группу вкладок.
+- BCGP_MDI_CAN_MOVE_NEXT — можно переместить вкладку в следующую группу вкладок.
 
 ### <a name="remarks"></a>Примечания
 
@@ -972,7 +972,7 @@ CBasePane* GetPane(UINT nID);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на область с указанным ИДЕНТИФИКАТОРом элемента управления, если он существует. В противном случае значение NULL.
+Указатель на область с указанным ИДЕНТИФИКАТОРом элемента управления, если он существует. В противном случае — значение NULL.
 
 ##  <a name="getribbonbar"></a>CMDIFrameWndEx:: Жетриббонбар
 
@@ -998,11 +998,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект [класса коблист](../../mfc/reference/coblist-class.md) , содержащий коллекцию указателей на `CPane`производные объекты, которые находятся в состоянии разрыва.
+Ссылка на объект [класса коблист](../../mfc/reference/coblist-class.md) , содержащий коллекцию указателей на объекты, производные от `CPane`, которые находятся в состоянии разрыва.
 
 ### <a name="remarks"></a>Примечания
 
-`CMDIFrameWndEx`поддерживает коллекцию неразрывных меню. Используйте этот метод для получения ссылки на этот список.
+`CMDIFrameWndEx` поддерживает коллекцию неразрывных меню. Используйте этот метод для получения ссылки на этот список.
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx:: Жеттулбарбуттонтултиптекст
 
@@ -1216,15 +1216,15 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 - Вызов [CMDIFrameWndEx:: савемдистате](#savemdistate) при закрытии главного фрейма
 
-- При создании главного фрейма вызовите метод [CMDIFrameWndEx:: лоадмдистате](#loadmdistate) . Рекомендуемое место для этого вызова — перед первым отображением основного кадра. Добавьте `CWinAppEx::EnableLoadWindowPlacement` перед`(FALSE);` добавлением`CBCGPWorkspace::ReloadWindowPlacement` после вызова ,чтобыотобразитьосновнойкадрвтойпозиции,котораябыласохраненавреестре`LoadMDIState`. `pMainFrame->LoadFrame (IDR_MAINFRAME);.` `(pMainFrame);`
+- При создании главного фрейма вызовите метод [CMDIFrameWndEx:: лоадмдистате](#loadmdistate) . Рекомендуемое место для этого вызова — перед первым отображением основного кадра. Добавьте `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` перед `pMainFrame->LoadFrame (IDR_MAINFRAME);.` добавления `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` после вызова `LoadMDIState`, чтобы отобразить основной кадр в той позиции, которая была сохранена в реестре.
 
-- Переопределите `GetDocumentName` в `CMDIChildWndEx`классе, производном от, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранена в реестре как идентификатор документа. Базовая реализация [CMDIChildWndEx:: жетдокументнаме](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) возвращает значение, полученное из [CDocument::-PathName](../../mfc/reference/cdocument-class.md#getpathname).
+- Переопределите `GetDocumentName` в классе, производном от `CMDIChildWndEx`, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранена в реестре как идентификатор документа. Базовая реализация [CMDIChildWndEx:: жетдокументнаме](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) возвращает значение, полученное из [CDocument::-PathName](../../mfc/reference/cdocument-class.md#getpathname).
 
-- Переопределите [CMDIFrameWndEx:: креатедокументвиндов](#createdocumentwindow) , чтобы правильно создавать документы, когда они загружаются из реестра. Первый параметр — это `GetDocumentName` возвращаемая строка.
+- Переопределите [CMDIFrameWndEx:: креатедокументвиндов](#createdocumentwindow) , чтобы правильно создавать документы, когда они загружаются из реестра. Первый параметр — это строка, которая `GetDocumentName` возвращается.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `LoadMDIState` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `LoadMDIState` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `MDITabNewGroup` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `MDITabNewGroup` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1274,13 +1274,13 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="remarks"></a>Примечания
 
-Указывает, можно ли преобразовать закрепляемые панели элементов управления в дочерние окна MDI. Если этот флаг имеет значение TRUE, инфраструктура обрабатывает преобразование автоматически, когда пользователь выбирает команду « **документ с вкладками** ». Флаг защищен, поэтому необходимо явно включить этот параметр, установив `m_bCanCovertControlBarToMDIChild` в конструкторе `CMDIFrameWndEx`производного класса или переопределив `CanConvertControlBarToMDIChild`.
+Указывает, можно ли преобразовать закрепляемые панели элементов управления в дочерние окна MDI. Если этот флаг имеет значение TRUE, инфраструктура обрабатывает преобразование автоматически, когда пользователь выбирает команду « **документ с вкладками** ». Флаг защищен, поэтому необходимо явно включить этот параметр, установив `m_bCanCovertControlBarToMDIChild` в конструкторе класса, производного от `CMDIFrameWndEx`, или переопределив `CanConvertControlBarToMDIChild`.
 
-Значение по умолчанию — `FALSE`.
+Значение по умолчанию — `FALSE`.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `m_bCanCovertControlBarToMDIChild` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `m_bCanCovertControlBarToMDIChild` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1296,7 +1296,7 @@ AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
 
 Значение по умолчанию — TRUE.
 
-Установите этот флаг в значение FALSE, если требуется оптимизировать перерисовки дочерних элементов MDI. В этом случае платформа будет вызывать `SetRedraw (FALSE)` основной кадр, когда приложение изменит активную вкладку.
+Установите этот флаг в значение FALSE, если требуется оптимизировать перерисовки дочерних элементов MDI. В этом случае платформа будет вызывать `SetRedraw (FALSE)` для основного фрейма, когда приложение изменяет активную вкладку.
 
 Этот флаг может вызвать нежелательные эффекты (например, фоновые приложения, которые становятся видимыми). Поэтому рекомендуется изменить значение по умолчанию, только если возникает заметная мерцание при активации на вкладке MDI.
 
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>Параметры
 
 *нбордеркмд*<br/>
-окне Содержит одно из следующих значений перечисления `CFrameWnd::BorderCmd`:
+окне Содержит одно из следующих значений `CFrameWnd::BorderCmd`перечисления:
 
 - `borderGet` = 1
 
@@ -1393,7 +1393,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод, если требуется обрабатывать уведомления от объектов [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , принадлежащих окну фрейма MDI, когда эти объекты обрабатывают сообщения WM_DESTROY.
+Переопределите этот метод, если требуется обрабатывать уведомления от объектов [класса CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) , принадлежащих окну фрейма MDI, когда эти объекты обрабатывают WM_DESTROY сообщения.
 
 ##  <a name="oncmdmsg"></a>CMDIFrameWndEx:: OnCmdMsg
 
@@ -1419,7 +1419,7 @@ virtual BOOL OnCmdMsg(
 окне Используется в соответствии со значением *нкоде*. Дополнительные сведения о *пекстра*см. в разделе [от CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) .
 
 *фандлеринфо*<br/>
-[вход, выход] Как правило, этот параметр должен иметь значение NULL. Если значение не равно `OnCmdMsg` null, заполнит `pmf` `pTarget` элементы и структуры *фандлеринфо* вместо диспетчеризации команды.
+[вход, выход] Как правило, этот параметр должен иметь значение NULL. Если значение не равно NULL, `OnCmdMsg` заполнит `pTarget` и `pmf` элементы структуры *фандлеринфо* вместо диспетчеризации команды.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1453,11 +1453,11 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод, если требуется настроить отрисовку изображения для пунктов меню, принадлежащих строке меню, принадлежащей `CMDIFrameWndEx`объекту, производному от. Реализация по умолчанию не выполняет никаких действий.
+Переопределите этот метод, если требуется настроить отрисовку изображения для пунктов меню, принадлежащих строке меню, принадлежащей объекту, производным `CMDIFrameWndEx`. Реализация по умолчанию не выполняет никаких действий.
 
 ##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx:: Ондравменулого
 
-Вызывается платформой, когда [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)ОБРАБАТЫВАЕТ сообщение WM_PAINT.
+Вызывается платформой, когда [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)обрабатывает сообщение WM_PAINT.
 
 ```
 virtual void OnDrawMenuLogo(
@@ -1468,11 +1468,11 @@ virtual void OnDrawMenuLogo(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите эту функцию, чтобы отобразить эмблему во всплывающем меню, принадлежащем строке меню, принадлежащей объекту, `CMDIFrameWndEx`производному от. Реализация по умолчанию не выполняет никаких действий.
+Переопределите эту функцию, чтобы отобразить эмблему во всплывающем меню, принадлежащем строке меню, принадлежащей объекту, производному `CMDIFrameWndEx`. Реализация по умолчанию не выполняет никаких действий.
 
 ##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx:: Онерасемдиклиентбаккграунд
 
-Вызывается структурой, когда окно фрейма MDI обрабатывает сообщение WM_ERASEBKGND.
+Вызывается структурой, когда окно фрейма MDI обрабатывает WM_ERASEBKGND сообщение.
 
 ```
 virtual BOOL OnEraseMDIClientBackground(CDC*);
@@ -1484,11 +1484,11 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите эту функцию-член, если хотите обработать сообщение WM_ERASEBKGND в `CMDIFrameWndEx`производном классе.
+Переопределите эту функцию-член, если требуется обработать сообщение WM_ERASEBKGND в классе, производном от `CMDIFrameWndEx`.
 
 ##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx:: Онменубуттонтулхиттест
 
-Вызывается платформой, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)ОБРАБАТЫВАЕТ сообщение WM_NCHITTEST.
+Вызывается платформой, когда объект [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)обрабатывает сообщение WM_NCHITTEST.
 
 ```
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1545,7 +1545,7 @@ virtual void OnSetPreviewMode(
 окне Если значение — TRUE, задает режим предварительного просмотра. Если значение равно FALSE, отменяет режим предварительного просмотра.
 
 *пстате*<br/>
-окне Указатель на `CPrintPreviewState` структуру.
+окне Указатель на структуру `CPrintPreviewState`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1598,15 +1598,15 @@ virtual BOOL OnShowMDITabContextMenu(
 *двалловедитемс*<br/>
 окне Побитовое или сочетание флагов, которое указывает, какие действия разрешены для текущей вкладки:
 
-- BCGP_MDI_CREATE_VERT_GROUP — может создать группу вертикальных вкладок.
+- BCGP_MDI_CREATE_VERT_GROUP — может создавать группу вертикальных вкладок.
 
-- BCGP_MDI_CREATE_HORZ_GROUP — может создать группу горизонтальных вкладок.
+- BCGP_MDI_CREATE_HORZ_GROUP — может создавать группу горизонтальных вкладок.
 
-- BCGP_MDI_CAN_MOVE_PREV — позволяет переместить вкладку в предыдущую группу вкладок.
+- BCGP_MDI_CAN_MOVE_PREV — можно переместить вкладку в предыдущую группу вкладок.
 
-- BCGP_MDI_CAN_MOVE_NEXT — позволяет переместить вкладку в следующую группу вкладок.
+- BCGP_MDI_CAN_MOVE_NEXT — можно переместить вкладку в следующую группу вкладок.
 
-- BCGP_MDI_CAN_BE_DOCKED — переключить документ с вкладками на закрепленное состояние (относится только к документам с вкладками).
+- BCGP_MDI_CAN_BE_DOCKED-переключить документ с вкладками на закрепленное состояние (только для документов с вкладками).
 
 *бтабдроп*<br/>
 окне Значение TRUE, чтобы отобразить меню в результате перетаскивания вкладки на другую группу с вкладками. FALSE для вывода меню в виде контекстного меню на текущей активной вкладке.
@@ -1617,11 +1617,11 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="remarks"></a>Примечания
 
-Если не выполнить обработку `OnShowMDITabContextMenu`, контекстное меню отображаться не будет. Эта функция создается **мастером приложений MFC** при включении функции групп вкладок MDI.
+Если не обработать `OnShowMDITabContextMenu`, контекстное меню отображаться не будет. Эта функция создается **мастером приложений MFC** при включении функции групп вкладок MDI.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `OnShowMDITabContextMenu` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `OnShowMDITabContextMenu` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1846,17 +1846,17 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 - При создании главного фрейма вызовите метод [CMDIFrameWndEx:: лоадмдистате](#loadmdistate) . Рекомендуемое расположение для этого вызова — перед первым отображением основного кадра.
 
-- Вызвать `CWinAppEx::EnableLoadWindowPlacement(FALSE);` до`pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- Вызовите `CWinAppEx::EnableLoadWindowPlacement(FALSE);` перед `pMainFrame->LoadFrame (IDR_MAINFRAME);`
 
-- `CWinAppEx::ReloadWindowPlacement(pMainFrame)` Вызовите `LoadMDIState` после, чтобы отобразить основной кадр в той позиции, которая была сохранена в реестре.
+- Вызовите `CWinAppEx::ReloadWindowPlacement(pMainFrame)` после `LoadMDIState`, чтобы отобразить основной кадр в той позиции, которая была сохранена в реестре.
 
-- Переопределите `GetDocumentName` в `CMDIChildWndEx`классе, производном от, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранена в реестре как идентификатор документа. Дополнительные сведения см. в разделе [CMDIChildWndEx:: жетдокументнаме](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
+- Переопределите `GetDocumentName` в классе, производном от `CMDIChildWndEx`, если приложение отображает документы, которые не хранятся в виде файлов. Возвращаемая строка будет сохранена в реестре как идентификатор документа. Дополнительные сведения см. в разделе [CMDIChildWndEx:: жетдокументнаме](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).
 
-- Переопределите [CMDIFrameWndEx:: креатедокументвиндов](#createdocumentwindow) , чтобы правильно создавать документы, когда они загружаются из реестра. Параметр для `CreateDocumentWindow` — строка, которая `GetDocumentName` была возвращена ранее.
+- Переопределите [CMDIFrameWndEx:: креатедокументвиндов](#createdocumentwindow) , чтобы правильно создавать документы, когда они загружаются из реестра. Параметр для `CreateDocumentWindow` — строка, которая `GetDocumentName`, возвращаемая ранее.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `SaveMDIState` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `SaveMDIState` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ void ShowPane(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `ShowPane` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `ShowPane` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `ShowWindowsDialog` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `ShowWindowsDialog` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, `TabbedDocumentToControlBar` [как используется в образце висуалстудиодемо: Приложение](../../overview/visual-cpp-samples.md)MFC в Visual Studio.
+В следующем примере показано, как `TabbedDocumentToControlBar` используется в [примере висуалстудиодемо: приложение MFC Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
@@ -2024,7 +2024,7 @@ virtual void WinHelp(
 
 Этот метод переопределяет [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
