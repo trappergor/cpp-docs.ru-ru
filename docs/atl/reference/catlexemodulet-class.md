@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497841"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863227"
 ---
 # <a name="catlexemodulet-class"></a>Класс CAtlExeModuleT
 
@@ -43,20 +43,20 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный `CAtlExeModuleT`от.
+Класс, производный от `CAtlExeModuleT`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: CAtlExeModuleT](#catlexemodulet)|Конструктор.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Деструктор|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: Инитиализеком](#initializecom)|Инициализирует COM.|
 |[CAtlExeModuleT::P Арсекоммандлине](#parsecommandline)|Анализирует командную строку и при необходимости выполняет регистрацию.|
@@ -70,9 +70,9 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |[CAtlExeModuleT:: Unlock](#unlock)|Уменьшает счетчик блокировок модуля.|
 |[CAtlExeModuleT:: WinMain](#winmain)|Этот метод реализует код, необходимый для запуска EXE.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)|Флаг, указывающий на задержку завершения работы модуля.|
 |[CAtlExeModuleT:: m_dwPause](#m_dwpause)|Значение паузы, используемое для обеспечения освобождения всех объектов до завершения работы.|
@@ -80,7 +80,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="remarks"></a>Примечания
 
-`CAtlExeModuleT`представляет модуль для приложения (EXE) и содержит код, который поддерживает создание EXE-файла, обработку командной строки, регистрацию объектов класса, выполнение цикла обработки сообщений и очистку при выходе.
+`CAtlExeModuleT` представляет модуль для приложения (EXE) и содержит код, который поддерживает создание EXE-файла, обработку командной строки, регистрацию объектов класса, выполнение цикла сообщений и очистку при выходе.
 
 Этот класс предназначен для повышения производительности при постоянном создании и удалении COM-объектов на сервере EXE. После освобождения последнего объекта COM EXE-файл ожидает длительности, заданной элементом данных [CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout) . Если в течение этого периода действия не выполняются (то есть объекты COM не создаются), инициируется процесс завершения работы.
 
@@ -136,11 +136,11 @@ static HRESULT InitializeCom() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается из конструктора и может быть переопределен для инициализации COM способом, отличным от реализации по умолчанию. Реализация по умолчанию либо `CoInitializeEx(NULL, COINIT_MULTITHREADED)` вызывает `CoInitialize(NULL)` , либо в зависимости от конфигурации проекта.
+Этот метод вызывается из конструктора и может быть переопределен для инициализации COM способом, отличным от реализации по умолчанию. Реализация по умолчанию либо вызывает `CoInitializeEx(NULL, COINIT_MULTITHREADED)`, либо `CoInitialize(NULL)` в зависимости от конфигурации проекта.
 
 Для переопределения этого метода обычно требуется переопределение [CAtlExeModuleT:: унинитиализеком](#uninitializecom).
 
@@ -214,7 +214,7 @@ HRESULT PostMessageLoop() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
@@ -235,7 +235,7 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
@@ -259,7 +259,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, S_FALSE, если нет классов для регистрации, или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении, S_FALSE, если отсутствуют классы для регистрации, или ошибку HRESULT при сбое.
 
 ##  <a name="revokeclassobjects"></a>CAtlExeModuleT:: Ревокеклассобжектс
 
@@ -271,7 +271,7 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении, S_FALSE, если нет классов для регистрации, или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении, S_FALSE, если отсутствуют классы для регистрации, или ошибку HRESULT при сбое.
 
 ##  <a name="run"></a>CAtlExeModuleT:: Run
 
@@ -284,11 +284,11 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Параметры
 
 *ншовкмд*<br/>
-Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . По умолчанию используется SW_HIDE.
+Указывает способ отображения окна. Этот параметр может принимать одно из значений, описанных в разделе [WinMain](/windows/win32/api/winbase/nf-winbase-winmain) . Значение по умолчанию — SW_HIDE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
@@ -349,9 +349,9 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод можно переопределить. Если переопределение [CAtlExeModuleT::P ремессажелуп](#premessageloop), [CAtlExeModuleT::P остмессажелуп](#postmessageloop)или [CAtlExeModuleT:: рунмессажелуп](#runmessageloop) не предоставляет достаточно гибкости, можно переопределить `WinMain` функцию с помощью этого Method.
+Этот метод можно переопределить. Если переопределение [CAtlExeModuleT::P ремессажелуп](#premessageloop), [CAtlExeModuleT::P остмессажелуп](#postmessageloop)или [CAtlExeModuleT:: рунмессажелуп](#runmessageloop) не предоставляет достаточно гибкости, можно переопределить функцию `WinMain` с помощью этого метода.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пример ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>

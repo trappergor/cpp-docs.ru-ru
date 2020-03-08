@@ -7,11 +7,11 @@ ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
 ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457598"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867090"
 ---
 # <a name="ltatomicgt-enums"></a>Перечисления &lt;atomic&gt;
 
@@ -41,6 +41,6 @@ typedef enum memory_order {
 |`memory_order_acq_rel`|Объединяет `memory_order_acquire` и `memory_order_release`.|
 |`memory_order_seq_cst`|Объединяет `memory_order_acquire` и `memory_order_release`. Обращения к памяти, которые помечены как `memory_order_seq_cst`, должны быть последовательно согласованными.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [\<atomic>](../standard-library/atomic.md)

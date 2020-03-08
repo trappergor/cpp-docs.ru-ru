@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243655"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865903"
 ---
 # <a name="ltstackgt-operators"></a>Операторы &lt;stack&gt;
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
 Проверяет, не равен ли объект стека слева от оператора объекту стека справа от оператора.
 
@@ -35,10 +35,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -90,7 +90,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_lt"></a> Оператор&lt;
+## <a name="op_lt">Оператор </a>&lt;
 
 Проверяет, меньше ли объект стека слева от оператора объекта стека справа от оператора.
 
@@ -100,10 +100,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> Оператор&lt;=
+## <a name="op_lt_eq"></a>&lt;оператора =
 
 Проверяет, меньше или равен ли объект стека слева от оператора объекту стека справа от оператора.
 
@@ -184,10 +184,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
 Проверяет, равен ли объект стека слева от оператора объекту стека справа от оператора.
 
@@ -251,10 +251,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -306,7 +306,7 @@ The stacks s1 and s2 are not equal.
 The stacks s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> Оператор&gt;
+## <a name="op_gt">Оператор </a>&gt;
 
 Проверяет, больше ли объект стека слева от оператора объекта стека справа от оператора.
 
@@ -316,10 +316,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> Оператор&gt;=
+## <a name="op_gt_eq"></a>&gt;оператора =
 
 Проверяет, больше или равен ли объект стека слева от оператора объекту стека справа от оператора.
 
@@ -385,10 +385,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `stack`.
 
-*Правильно*\
+*справа*\
 Объект типа `stack`.
 
 ### <a name="return-value"></a>Возвращаемое значение

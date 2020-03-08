@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447199"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874840"
 ---
 # <a name="ltostreamgt-functions"></a>Функции &lt;ostream&gt;
 
-Это глобальные функции шаблонов, определенные в &lt;ostream.&gt; Сведения о функциях элементов см. в документации по [классу basic_ostream](basic-ostream-class.md) .
+Это глобальные функции шаблонов, определенные в &lt;ostream&gt;. Сведения о функциях элементов см. в документации по [классу basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
@@ -43,10 +43,10 @@ basic_ostream<Elem, Tr>& endl(
 *Elem*\
 Тип элемента.
 
-*OSTR*\
+*Ostr*\
 Объект типа **basic_ostream**.
 
-*ТС*\
+*Tr*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put) (*OSTR*. [расширить](../standard-library/basic-ios-class.md#widen) (' \n ')), а затем вызывает *OSTR*. [Сброс](../standard-library/basic-ostream-class.md#flush). Он возвращает *OSTR*.
+Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put)(*OSTR*.[ Расширьте](../standard-library/basic-ios-class.md#widen)(' \n ')), а затем вызывает *OSTR*. [Сброс](../standard-library/basic-ostream-class.md#flush). Он возвращает *OSTR*.
 
 ### <a name="example"></a>Пример
 
@@ -90,10 +90,10 @@ basic_ostream<Elem, Tr>& ends(
 *Elem*\
 Тип элемента.
 
-*OSTR*\
+*Ostr*\
 Объект типа `basic_ostream`.
 
-*ТС*\
+*Tr*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put) (*Elem*(' \ 0 ')). Он возвращает *OSTR*.
+Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put)(*elem*(' \ 0 ')). Он возвращает *OSTR*.
 
 ### <a name="example"></a>Пример
 
@@ -139,10 +139,10 @@ basic_ostream<Elem, Tr>& flush(
 *Elem*\
 Тип элемента.
 
-*OSTR*\
+*Ostr*\
 Объект типа `basic_ostream`.
 
-*ТС*\
+*Tr*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -187,19 +187,19 @@ void swap(
 *Elem*\
 Тип элемента.
 
-*ТС*\
+*Tr*\
 Признаки символа.
 
-*слева*\
+*left*\
 Ссылка lvalue на объект `basic_ostream`.
 
-*Правильно*\
+*справа*\
 Ссылка lvalue на объект `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания
 
 Функция шаблона `swap` выполняет `left.swap(right)`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [\<ostream>](../standard-library/ostream.md)
