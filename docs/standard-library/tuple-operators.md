@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241662"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866201"
 ---
 # <a name="lttuplegt-operators"></a>Операторы &lt;tuple&gt;
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
 Сравнивает объекты `tuple` на неравенство.
 
@@ -31,10 +31,10 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает значение false, если `N` равно 0; в противном случае — значение `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -83,7 +83,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> Оператор&lt;
+## <a name="op_lt">Оператор </a>&lt;
 
 Сравнение объектов `tuple` на предмет меньшинства.
 
@@ -96,10 +96,10 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает значение true, если `N` больше 0, а первое отличающееся значение в `tpl1` при сравнении оказывается меньше, чем соответствующее значение `tpl2`; в противном случае возвращается значение false.
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> Оператор&lt;=
+## <a name="op_lt_eq"></a>&lt;оператора =
 
 Сравнение объектов `tuple` на предмет отношения меньше или равно.
 
@@ -161,10 +161,10 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает `!(tpl2 < tpl1)`.
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
 Сравнение объектов `tuple` на равенство.
 
@@ -226,10 +226,10 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает значение true, если `N` равно 0; в противном случае — значение `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.
 
@@ -278,7 +278,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> Оператор&gt;
+## <a name="op_gt">Оператор </a>&gt;
 
 Сравнение объектов `tuple` на предмет большинства.
 
@@ -291,10 +291,10 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает `tpl2 < tpl1`.
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> Оператор&gt;=
+## <a name="op_gt_eq"></a>&gt;оператора =
 
 Сравнение объектов `tuple` на предмет большинства или равенства.
 
@@ -356,10 +356,10 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>Параметры
 
-*TN*\
+\ *тн*
 Тип N-го элемента кортежа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция возвращает `!(tpl1 < tpl2)`.
 
