@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687879"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856405"
 ---
 # <a name="ltiosgt-typedefs"></a>Определения типов &lt;ios&gt;
 
@@ -26,9 +26,9 @@ ms.locfileid: "72687879"
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Этот тип является синонимом для шаблона класса [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **char** с признаками символа по умолчанию.
+Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **char** с признаками символа по умолчанию.
 
 ## <a name="streamoff"></a>streamoff
 
@@ -42,7 +42,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот тип представляет собой целое число со знаком, описывающее объект, который может хранить смещение в байтах, участвующее в различных операциях размещения потока. Его представление имеет по крайней мере 32 бита значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока. Значение `streamoff(-1)` обычно указывает на ошибочное смещение.
 
@@ -54,7 +54,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом для [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 
@@ -93,7 +93,7 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип — целое число со знаком, описывающее объект, который может хранить количество элементов, участвующих в различных операциях размещения потока. Его представление имеет по крайней мере 16 битов значения. Оно не обязательно достаточно велико для представления произвольных позиций внутри потока.
 
@@ -125,9 +125,9 @@ int main( )
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Этот тип является синонимом для шаблона класса [basic_ios](../standard-library/basic-ios-class.md), специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
+Тип является синонимом [basic_ios](../standard-library/basic-ios-class.md)шаблона класса, специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
 ## <a name="wstreampos"></a>встреампос
 
@@ -137,7 +137,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом для [fpos](../standard-library/fpos-class.md)< `mbstate_t`>.
 

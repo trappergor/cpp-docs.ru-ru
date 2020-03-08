@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303881"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872478"
 ---
 # <a name="cdaofieldexchange-class"></a>Класс Кдаофиелдексчанже
 
@@ -35,21 +35,21 @@ class CDaoFieldExchange
 
 ## <a name="members"></a>Члены
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Кдаофиелдексчанже:: Исвалидоператион](#isvalidoperation)|Возвращает ненулевое значение, если текущая операция подходит для типа обновляемого поля.|
 |[Кдаофиелдексчанже:: Сетфиелдтипе](#setfieldtype)|Указывает тип элемента данных набора записей — столбец или параметр, представленный всеми последовательными вызовами функций DFX до следующего вызова `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Открытые элементы данных
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Кдаофиелдексчанже:: m_nOperation](#m_noperation)|Операция DFX, выполняемая текущим вызовом функции члена `DoFieldExchange` набора записей.|
 |[Кдаофиелдексчанже:: m_prs](#m_prs)|Указатель на набор записей, для которого выполняются операции DFX.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CDaoFieldExchange` не имеет базового класса.
 
@@ -89,7 +89,7 @@ BOOL IsValidOperation();
 
 Ненулевое значение, если текущая операция подходит для типа обновляемого поля.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Некоторые операции, выполняемые методом DFX, применяются только к одному из возможных типов полей. Используйте модель существующих функций DFX.
 
@@ -99,7 +99,7 @@ BOOL IsValidOperation();
 
 Определяет операцию, которая должна быть выполнена с объектом [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , связанным с объектом поля обмена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Объект `CDaoFieldExchange` предоставляет контекст для нескольких различных операций DFX в наборе записей.
 
@@ -108,7 +108,7 @@ BOOL IsValidOperation();
 
 Возможные значения `m_nOperation`:
 
-|Операция|Описание|
+|Операция|Description|
 |---------------|-----------------|
 |`AddToParameterList`|Выполняет построение предложения **Parameters** инструкции SQL.|
 |`AddToSelectList`|Выполняет сборку предложения **SELECT** инструкции SQL.|
@@ -130,7 +130,7 @@ BOOL IsValidOperation();
 
 Содержит указатель на объект [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) , связанный с объектом `CDaoFieldExchange`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 ##  <a name="setfieldtype"></a>Кдаофиелдексчанже:: Сетфиелдтипе
 
@@ -149,7 +149,7 @@ void SetFieldType(UINT nFieldType);
 
 - `CDaoFieldExchange::param`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Обычно ClassWizard записывает этот вызов. Если вы напишете собственную функцию и используете мастер для написания функции `DoFieldExchange`, добавьте вызовы собственной функции за пределами таблицы полей. Если мастер не используется, таблица полей не будет сопоставлена. Вызов предшествует вызовам DFX функций, по одному для каждого элемента данных поля класса, и определяет тип поля как `CDaoFieldExchange::outputColumn`.
 
@@ -157,7 +157,7 @@ void SetFieldType(UINT nFieldType);
 
 Обычно перед каждой группой вызовов DFX, связанных с элементами данных поля или элементами данных параметров, должен предшествовать вызов `SetFieldType`. Параметр *нфиелдтипе* каждого вызова `SetFieldType` идентифицирует тип элементов данных, представленных вызовами функции DFX, которые следуют за вызовом `SetFieldType`.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)

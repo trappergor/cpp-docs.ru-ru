@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927861"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864759"
 ---
 # <a name="caxwindow-class"></a>Класс Каксвиндов
 
@@ -36,33 +36,33 @@ ms.locfileid: "70927861"
 class CAxWindow : public CWindow
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[аттачконтрол](#attachcontrol)|Присоединяет существующий элемент управления ActiveX к `CAxWindow` объекту.|
-|[каксвиндов](#caxwindow)|Создает объект `CAxWindow`.|
-|[CreateControl](#createcontrol)|Создает элемент управления ActiveX, инициализирует его и размещает его в `CAxWindow` окне.|
+|[аттачконтрол](#attachcontrol)|Присоединяет существующий элемент управления ActiveX к объекту `CAxWindow`.|
+|[каксвиндов](#caxwindow)|Формирует объект `CAxWindow`.|
+|[CreateControl](#createcontrol)|Создает элемент управления ActiveX, инициализирует его и размещает в окне `CAxWindow`.|
 |[креатеконтролекс](#createcontrolex)|Создает элемент управления ActiveX и получает указатель интерфейса (или указатели) из элемента управления.|
-|[жетвндкласснаме](#getwndclassname)|Статически Извлекает предопределенное имя `CAxWindow` класса объекта.|
-|[куериконтрол](#querycontrol)|`IUnknown` Извлекает из размещенного элемента управления ActiveX.|
-|[куерихост](#queryhost)|`IUnknown` Извлекает указатель`CAxWindow` объекта.|
-|[сетекстерналдиспатч](#setexternaldispatch)|Задает внешний интерфейс диспетчеризации, используемый `CAxWindow` объектом.|
-|[сетекстерналуихандлер](#setexternaluihandler)|Задает внешний `IDocHostUIHandler` интерфейс, используемый `CAxWindow` объектом.|
+|[жетвндкласснаме](#getwndclassname)|Статически Извлекает предопределенное имя класса `CAxWindow` объекта.|
+|[куериконтрол](#querycontrol)|Извлекает `IUnknown` размещенного элемента управления ActiveX.|
+|[куерихост](#queryhost)|Возвращает указатель `IUnknown` объекта `CAxWindow`.|
+|[сетекстерналдиспатч](#setexternaldispatch)|Задает внешний интерфейс диспетчеризации, используемый объектом `CAxWindow`.|
+|[сетекстерналуихандлер](#setexternaluihandler)|Задает внешний интерфейс `IDocHostUIHandler`, используемый объектом `CAxWindow`.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[Оператор =](#operator_eq)|Присваивает HWND существующему `CAxWindow` объекту.|
+|[Оператор =](#operator_eq)|Присваивает HWND существующему объекту `CAxWindow`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет методы для манипуляций с окном, в котором размещается элемент управления ActiveX. Размещение обеспечивается " **AtlAxWin80"** , заключенного `CAxWindow`в.
+Этот класс предоставляет методы для манипуляций с окном, в котором размещается элемент управления ActiveX. Размещение обеспечивается " **AtlAxWin80"** , который упаковывается `CAxWindow`.
 
-Класс `CAxWindow` реализуется как специализация `CAxWindowT` класса. Эта специализация объявляется следующим образом:
+Класс `CAxWindow` реализован как специализация класса `CAxWindowT`. Эта специализация объявляется следующим образом:
 
 `typedef CAxWindowT<CWindow> CAxWindow;`
 
@@ -85,22 +85,22 @@ HRESULT AttachControl(
 ### <a name="parameters"></a>Параметры
 
 *пконтрол*<br/>
-окне Указатель на `IUnknown` элемент управления.
+окне Указатель на `IUnknown` элемента управления.
 
 *ппункконтаинер*<br/>
-заполняет Указатель `IUnknown` на узел `AxWin` (объект).
+заполняет Указатель на `IUnknown` узла (объект `AxWin`).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Присоединяемый объект элемента управления должен быть правильно инициализирован перед вызовом `AttachControl`.
 
 ##  <a name="caxwindow"></a>Каксвиндов:: Каксвиндов
 
-`CAxWindow` Конструирует объект, используя существующий обработчик объекта окна.
+Конструирует объект `CAxWindow` с помощью существующего обработчика объекта окна.
 
 ```
 CAxWindow(HWND hWnd = NULL);
@@ -132,24 +132,24 @@ HRESULT CreateControl(
 *лпсзнаме*<br/>
 Указатель на строку для создания элемента управления. Должен быть отформатирован одним из следующих способов:
 
-- Идентификатор ProgID, например`"MSCAL.Calendar.7"`
+- ProgID, например `"MSCAL.Calendar.7"`
 
-- CLSID, например`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID, например `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL-адрес, например`"<https://www.microsoft.com>"`
+- URL-адрес, например `"<https://www.microsoft.com>"`
 
-- Ссылка на активный документ, например`"file://\\\Documents\MyDoc.doc"`
+- Ссылка на активный документ, например `"file://\\\Documents\MyDoc.doc"`
 
-- Фрагмент HTML-кода, например`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Фрагмент HTML-кода, например `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`должен предшествовать фрагменту HTML, чтобы он был обозначен как поток MSHTML. На платформах Windows Mobile поддерживаются только идентификаторы ProgID и CLSID. Windows CE Embedded Platforms, кроме Windows Mobile с поддержкой CE IE, поддерживают все типы, включая ProgID, CLSID, URL-адрес, ссылку на активный документ и фрагмент кода HTML.
+   > `"MSHTML:"` должен предшествовать фрагменту HTML, чтобы он был обозначен как поток MSHTML. На платформах Windows Mobile поддерживаются только идентификаторы ProgID и CLSID. Windows CE Embedded Platforms, кроме Windows Mobile с поддержкой CE IE, поддерживают все типы, включая ProgID, CLSID, URL-адрес, ссылку на активный документ и фрагмент кода HTML.
 
 *пстреам*<br/>
 окне Указатель на поток, используемый для инициализации свойств элемента управления. Может иметь значение NULL.
 
 *ппункконтаинер*<br/>
-заполняет Адрес указателя, который получит `IUnknown` контейнер. Может иметь значение NULL.
+заполняет Адрес указателя, который получит `IUnknown` контейнера. Может иметь значение NULL.
 
 *двресид*<br/>
 Идентификатор ресурса HTML-ресурса. Элемент управления WebBrowser будет создан и загружен с указанным ресурсом.
@@ -158,7 +158,7 @@ HRESULT CreateControl(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если используется вторая версия этого метода, создается HTML-элемент управления и связывается с ресурсом, идентифицируемым *двресид*.
 
@@ -199,33 +199,33 @@ HRESULT CreateControlEx(
 *лпсзнаме*<br/>
 Указатель на строку для создания элемента управления. Должен быть отформатирован одним из следующих способов:
 
-- Идентификатор ProgID, например`"MSCAL.Calendar.7"`
+- ProgID, например `"MSCAL.Calendar.7"`
 
-- CLSID, например`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- CLSID, например `"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- URL-адрес, например`"<https://www.microsoft.com>"`
+- URL-адрес, например `"<https://www.microsoft.com>"`
 
-- Ссылка на активный документ, например`"file://\\\Documents\MyDoc.doc"`
+- Ссылка на активный документ, например `"file://\\\Documents\MyDoc.doc"`
 
-- Фрагмент HTML-кода, например`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- Фрагмент HTML-кода, например `"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > `"MSHTML:"`должен предшествовать фрагменту HTML, чтобы он был обозначен как поток MSHTML. На платформах Windows Mobile поддерживаются только идентификаторы ProgID и CLSID. Windows CE Embedded Platforms, кроме Windows Mobile с поддержкой CE IE, поддерживают все типы, включая ProgID, CLSID, URL-адрес, ссылку на активный документ и фрагмент кода HTML.
+   > `"MSHTML:"` должен предшествовать фрагменту HTML, чтобы он был обозначен как поток MSHTML. На платформах Windows Mobile поддерживаются только идентификаторы ProgID и CLSID. Windows CE Embedded Platforms, кроме Windows Mobile с поддержкой CE IE, поддерживают все типы, включая ProgID, CLSID, URL-адрес, ссылку на активный документ и фрагмент кода HTML.
 
 *пстреам*<br/>
 окне Указатель на поток, используемый для инициализации свойств элемента управления. Может иметь значение NULL.
 
 *ппункконтаинер*<br/>
-заполняет Адрес указателя, который получит `IUnknown` контейнер. Может иметь значение NULL.
+заполняет Адрес указателя, который получит `IUnknown` контейнера. Может иметь значение NULL.
 
 *ппункконтрол*<br/>
-заполняет Адрес указателя, который получит `IUnknown` элемент управления. Может иметь значение NULL.
+заполняет Адрес указателя, который получит `IUnknown` элемента управления. Может иметь значение NULL.
 
 *иидсинк*<br/>
-окне Идентификатор интерфейса для исходящего интерфейса в автономном объекте. Может быть IID_NULL.
+окне Идентификатор интерфейса для исходящего интерфейса в автономном объекте. Можно IID_NULL.
 
 *пунксинк*<br/>
-окне Указатель на `IUnknown` интерфейс объекта приемника, который должен быть подключен к точке подключения в содержащемся объекте, указанном параметром *иидсинк*.
+окне Указатель на интерфейс `IUnknown` объекта приемника, который подключается к точке подключения в содержащемся объекте, указанном параметром *иидсинк*.
 
 *двресид*<br/>
 окне Идентификатор ресурса HTML-ресурса. Элемент управления WebBrowser будет создан и загружен с указанным ресурсом.
@@ -234,7 +234,7 @@ HRESULT CreateControlEx(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод аналогичен [каксвиндов:: CreateControl](#createcontrol), но в отличие от этого метода, `CreateControlEx` также позволяет получить указатель интерфейса на только что созданном элементе управления и настроить приемник событий для получения событий, инициированных элементом управления.
 
@@ -258,7 +258,7 @@ static LPCTSTR GetWndClassName();
 
 ##  <a name="operator_eq"></a>Каксвиндов:: operator =
 
-Присваивает HWND существующему `CAxWindow` объекту.
+Присваивает HWND существующему объекту `CAxWindow`.
 
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -323,13 +323,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Интерфейс узла предоставляет доступ к базовым функциональным возможностям кода, реализованного `AxWin`в.
+Интерфейс узла обеспечивает доступ к базовой функциональности кода, который размещается в окне, реализуемого `AxWin`.
 
 ##  <a name="setexternaldispatch"></a>Каксвиндов:: Сетекстерналдиспатч
 
-Задает внешний интерфейс диспетчеризации для `CAxWindow` объекта.
+Задает внешний интерфейс диспетчеризации для объекта `CAxWindow`.
 
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -338,7 +338,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="parameters"></a>Параметры
 
 *пдисп*<br/>
-окне Указатель на `IDispatch` интерфейс.
+окне Указатель на интерфейс `IDispatch`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -346,7 +346,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ##  <a name="setexternaluihandler"></a>Каксвиндов:: Сетекстерналуихандлер
 
-Задает внешний интерфейс [идочостуихандлердиспатч](../../atl/reference/idochostuihandlerdispatch-interface.md) для `CAxWindow` объекта.
+Задает внешний интерфейс [идочостуихандлердиспатч](../../atl/reference/idochostuihandlerdispatch-interface.md) для объекта `CAxWindow`.
 
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -355,17 +355,17 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="parameters"></a>Параметры
 
 *пуихандлер*<br/>
-окне Указатель на `IDocHostUIHandlerDispatch` интерфейс.
+окне Указатель на интерфейс `IDocHostUIHandlerDispatch`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Внешний `IDocHostUIHandlerDispatch` интерфейс используется элементами управления, которые запрашивают `IDocHostUIHandlerDispatch` интерфейс узла узла. Элемент управления WebBrowser — это один из элементов управления, который делает это.
+Внешний интерфейс `IDocHostUIHandlerDispatch` используется элементами управления, которые запрашивают узел узла для интерфейса `IDocHostUIHandlerDispatch`. Элемент управления WebBrowser — это один из элементов управления, который делает это.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример АТЛКОН](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWindow](../../atl/reference/cwindow-class.md)<br/>

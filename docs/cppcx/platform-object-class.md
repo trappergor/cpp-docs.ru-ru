@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183213"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865747"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 
-Определяет общее поведение для классов ссылок и структур ссылок в приложениях среды выполнения Windows. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.
+Предоставляет общее поведение для ссылочных классов и структур ссылок в среда выполнения Windows приложениях. Все экземпляры классов ссылок и структур ссылок могут неявно преобразовываться в Platform::Object^ и переопределять его виртуальный метод ToString.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,21 +29,21 @@ ms.locfileid: "62183213"
 public ref class Object : Object
 ```
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|
+|[Объект:: Object](#ctor)|Инициализирует новый экземпляр класса Object.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
-|[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
-|[Object::ReferenceEquals](#referenceequals)|Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.|
+|[Object:: Equals](#equals)|Определяет, равен ли указанный объект текущему объекту.|
+|[Object:: GetHashCode](#gethashcode)|Возвращает хэш-код для этого экземпляра.|
+|[Объект:: ReferenceEquals](#referenceequals)|Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.|
 |[ToString](#tostring)|Возвращает строку, представляющую текущий объект. Может быть переопределен.|
 |[GetType](#gettype)|Получает объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий текущий экземпляр.|
 
@@ -59,9 +59,9 @@ public ref class Object : Object
 
 **Пространство имен:** Platform
 
-## <a name="equals"></a> Метод Object::Equals
+## <a name="equals"></a>Метод Object:: Equals
 
-Определяет, равен ли заданный объект текущему объекту.
+Определяет, равен ли указанный объект текущему объекту.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -78,9 +78,9 @@ bool Equals(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты равны; в противном случае **false**.
+**значение true** , если объекты равны; в противном случае — **значение false**.
 
-## <a name="gethashcode"></a>  Метод Object::GetHashCode
+## <a name="gethashcode"></a>Метод Object:: GetHashCode
 
 Возвращает значение идентификатора `IUnknown`* для этого экземпляра, если это COM-объект, или вычисляемое хэш-значение, если это не COM-объект.
 
@@ -94,13 +94,13 @@ public:int GetHashCode();
 
 Числовое значение, которое однозначно идентифицирует этот объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Можно сравнить хэш-кодов с помощью [Object::Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.
+Можно использовать GetHashCode для создание ключей объектов в сопоставлениях. Сравнить хэш-коды можно с помощью [Object:: Equals](#equals). Если эта ветвь выполнения кода очень важна, а `GetHashCode` и `Equals` работают недостаточно быстро, можно перейти вниз на соответствующий уровень COM и выполнять сравнение указателей `IUnknown` в неуправляемом коде.
 
-## <a name="gettype"></a>  Метод Object::GetType
+## <a name="gettype"></a>Метод Object:: GetType
 
-Возвращает [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.
+Возвращает объект [Platform:: Type](../cppcx/platform-type-class.md) , описывающий тип объекта во время выполнения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -108,23 +108,23 @@ public:int GetHashCode();
 Object::GetType();
 ```
 
-### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
+### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
-Объект [Platform::Type](../cppcx/platform-type-class.md) , описывающий тип среды выполнения объекта.
+Объект [Platform:: Type](../cppcx/platform-type-class.md) , описывающий тип объекта во время выполнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) может использоваться для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).
+Статический [Тип:: GetTypeCode](../cppcx/platform-type-class.md#gettypecode) можно использовать для получения значения [перечисления Platform:: TypeCode](../cppcx/platform-typecode-enumeration.md) , представляющего текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылки помимо [Platform:: String](../cppcx/platform-string-class.md) — Object (1).
 
-[Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
+Класс [Windows:: UI:: XAML:: Interop:: TypeName](/uwp/api/windows.ui.xaml.interop.typename) используется в интерфейсах API Windows как независимый от языка способ передачи сведений о типах между компонентами Windows и приложениями. Класс T[Platform:: Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
 
-Используйте [typeid](../extensions/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:
+Используйте оператор [typeid](../extensions/typeid-cpp-component-extensions.md) , чтобы получить объект `Platform::Type` для имени класса, например при переходе между страницами XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="ctor"></a>  Конструктор Object::Object
+## <a name="ctor"></a>Конструктор объекта:: Object
 
 Инициализирует новый экземпляр класса Object.
 
@@ -134,7 +134,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 public:Object();
 ```
 
-## <a name="referenceequals"></a>  Метод Object::ReferenceEquals
+## <a name="referenceequals"></a>Метод Object:: ReferenceEquals
 
 Определяет, являются ли указанные экземпляры класса Object одним и тем же экземпляром.
 
@@ -146,17 +146,17 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="parameters"></a>Параметры
 
-*объекты Obj1*<br/>
-Первый из сравниваемых объектов.
+*obj1*<br/>
+Первый объект для сравнения.
 
 *obj2*<br/>
-Второй из сравниваемых объектов.
+Второй объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если два объекта одинаковы; в противном случае **false**.
+**значение true** , если два объекта одинаковы; в противном случае — **значение false**.
 
-## <a name="tostring"></a>  Метод Object::ToString (C++/CX)
+## <a name="tostring"></a>Метод Object:: ToString (C++/CX)
 
 Возвращает строку, представляющую текущий объект.
 
@@ -183,8 +183,8 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Пространство имен платформы](platform-namespace-c-cx.md)<br/>
 [Класс Platform::Type](platform-type-class.md)<br/>
 [Система типов](type-system-c-cx.md)

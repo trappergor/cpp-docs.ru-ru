@@ -1,5 +1,5 @@
 ---
-title: Отладка и глобальные функции отчетов об ошибках
+title: Глобальные функции отладки и отчетов об ошибках
 ms.date: 11/04/2016
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276670"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864893"
 ---
-# <a name="debugging-and-error-reporting-global-functions"></a>Отладка и глобальные функции отчетов об ошибках
+# <a name="debugging-and-error-reporting-global-functions"></a>Глобальные функции отладки и отчетов об ошибках
 
 Эти функции предоставляют полезные средства отладки и трассировки.
 
 |||
 |-|-|
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Возвращает `GetLastError` код ошибки в форме HRESULT.|
+|[атлхресултфромластеррор](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Возвращает `GetLastError` код ошибки в виде HRESULT.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Преобразует код ошибки Win32 в HRESULT.|
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Настраивает `IErrorInfo` для предоставления клиенту сведения об ошибке.|
-|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Создает исключение `CAtlException`.|
+|[атлрепортеррор](debugging-and-error-reporting-global-functions.md#atlreporterror)|Настраивает `IErrorInfo` для предоставления клиенту сведений об ошибке.|
+|[атлсров](debugging-and-error-reporting-global-functions.md#atlthrow)|Формирует исключение `CAtlException`.|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Вызывайте эту функцию для сообщения об ошибке на основе результата функции Windows `GetLastError`.|
 
-##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
+##  <a name="atlhresultfromlasterror"></a>атлхресултфромластеррор
 
 Возвращает значение кода последней ошибки в вызывающем потоке в форме HRESULT.
 
@@ -35,15 +35,15 @@ ms.locfileid: "62276670"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`AtlHresultFromLastError` вызовы `GetLastError` для получения последней ошибки и возвращает ошибку после его преобразования в значение HRESULT, с помощью макроса HRESULT_FROM_WIN32.
+`AtlHresultFromLastError` вызывает `GetLastError` для получения последней ошибки и возвращает ошибку после ее преобразования в значение HRESULT с помощью макроса HRESULT_FROM_WIN32.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlcomcli.h
+**Заголовок:** atlcomcli. h
 
-##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
+##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32
 
 Преобразует код ошибки Win32 в HRESULT.
 
@@ -53,23 +53,23 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="parameters"></a>Параметры
 
-*Ошибка*<br/>
-Значение ошибки, которое необходимо преобразовать.
+*error*<br/>
+Значение ошибки для преобразования.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Преобразует код ошибки Win32 в HRESULT, с помощью макроса HRESULT_FROM_WIN32.
+Преобразует код ошибки Win32 в значение HRESULT с помощью макроса HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Вместо использования `HRESULT_FROM_WIN32(GetLastError())`, используйте функцию [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
+>  Вместо использования `HRESULT_FROM_WIN32(GetLastError())`используйте функцию [атлхресултфромластеррор](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlcomcli.h
+**Заголовок:** atlcomcli. h
 
-##  <a name="atlreporterror"></a>  AtlReportError
+##  <a name="atlreporterror"></a>атлрепортеррор
 
-Настраивает `IErrorInfo` интерфейс для предоставления клиенту объекта сведений об ошибке.
+Устанавливает интерфейс `IErrorInfo`, чтобы предоставить сведения об ошибке клиентам объекта.
 
 ```
 HRESULT WINAPI AtlReportError(
@@ -119,52 +119,52 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*<br/>
-[in] CLSID объекта с сообщением об ошибке.
+*этому*<br/>
+окне Идентификатор CLSID объекта, сообщающего об ошибке.
 
-*lpszDesc*<br/>
-[in] Строка, описывающая ошибку. Указать, что версии Юникода *lpszDesc* имеет тип LPCOLESTR; версия ANSI указывает тип LPCSTR.
+*лпсздеск*<br/>
+окне Строка, описывающая ошибку. Версии Юникода указывают, что *лпсздеск* имеет тип лпколестр; версия ANSI указывает тип LPCSTR.
 
 *IID*<br/>
-[in] Идентификатор IID интерфейса, определяющего ошибку или GUID_NULL, если ошибки определяется операционной системой.
+окне Идентификатор IID интерфейса, определяющего ошибку, или GUID_NULL, если ошибка определяется операционной системой.
 
-*hRes*<br/>
-[in] Значение HRESULT, который вы хотите возвращается вызывающей стороне.
+*хрес*<br/>
+окне Значение HRESULT, которое требуется вернуть вызывающему объекту.
 
 *nID*<br/>
-[in] Идентификатор ресурса, где хранится строка описания ошибки. Это значение должно лежать между 0x0200 и 0xFFFF, включительно. В отладочных сборках **ASSERT** Если *nID* индекса не является допустимой строкой. Строка описания ошибки в сборках выпуска будет указано значение «Unknown Error».
+окне Идентификатор ресурса, в котором хранится строка описания ошибки. Это значение должно находиться в диапазоне от 0x0200 до 0xFFFF включительно. В отладочных сборках оператор **Assert** приведет к тому, что *NID* не индексирует допустимую строку. В сборках выпуска для строки описания ошибки будет задано значение "Неизвестная ошибка".
 
-*dwHelpID*<br/>
-[in] Идентификатор контекста справки для ошибки.
+*двхелпид*<br/>
+окне Идентификатор контекста справки для ошибки.
 
-*lpszHelpFile*<br/>
-[in] Путь и имя файла справки, описывающий ошибку.
+*лпсзелпфиле*<br/>
+окне Путь и имя файла справки, описывающего ошибку.
 
-*hInst*<br/>
-[in] Дескриптор для ресурса. По умолчанию этот параметр является `__AtlBaseModuleModule::GetResourceInstance`, где `__AtlBaseModuleModule` — это глобальный экземпляр [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) или класс, производный от него.
+*хинст*<br/>
+окне Маркер ресурса. По умолчанию этот параметр имеет значение `__AtlBaseModuleModule::GetResourceInstance`, где `__AtlBaseModuleModule` является глобальным экземпляром [катлбасемодуле](../../atl/reference/catlbasemodule-class.md) или производным от него классом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если *hRes* параметр имеет ненулевое значение, возвращает значение *hRes*. Если *hRes* равно нулю, то в первых четырех версиях `AtlReportError` возвращает DISP_E_EXCEPTION. Две последние версии возвращают результат этого макроса **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.
+Если параметр *хрес* не равен нулю, возвращает значение *хрес*. Если *хрес* равен нулю, то первые четыре версии `AtlReportError` возвращают DISP_E_EXCEPTION. Последние две версии возвращают результат макроса **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Строка *lpszDesc* используется в качестве текстовое описание ошибки. Когда клиент получает *hRes* после возврата из `AtlReportError`, клиент может получить доступ к `IErrorInfo` структуру для получения сведений об ошибке.
+Строка *лпсздеск* используется в качестве текстового описания ошибки. Когда клиент получает *хрес* , возвращаемый из `AtlReportError`, клиент может получить доступ к структуре `IErrorInfo` для получения сведений об ошибке.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Не используйте `AtlReportError` обработчики catch C++. Некоторые переопределения метода этих функций использовать макросы преобразования строк ATL, который в свою очередь, используют `_alloca` внутри функции. С помощью `AtlReportError` в блоке catch C++ обработчик может привести к исключениям в обработчики catch C++.
+>  Не используйте `AtlReportError` в C++ обработчиках catch. Некоторые переопределения этих функций используют встроенные макросы преобразования строк ATL, которые, в свою очередь, используют функцию `_alloca` внутренне. Использование `AtlReportError` в обработчике C++ catch может вызвать исключения в C++ обработчиках catch.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-##  <a name="atlthrow"></a>  AtlThrow
+##  <a name="atlthrow"></a>атлсров
 
-Вызывайте эту функцию для сообщения об ошибке, на основе кода состояния HRESULT.
+Вызовите эту функцию, чтобы сообщить об ошибке на основе кода состояния HRESULT.
 
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
@@ -172,24 +172,24 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Параметры
 
-*hr*<br/>
+*кадров*<br/>
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется кодом библиотеки ATL и MFC, в случае ошибки. Он также может вызываться из кода. Реализация по умолчанию эта функция зависит от определения _ATL_NO_EXCEPTIONS символов и типа проекта, MFC или ATL.
+Эта функция используется в коде ATL и MFC в случае возникновения ошибки. Его также можно вызывать из собственного кода. Реализация по умолчанию этой функции зависит от определения символа _ATL_NO_EXCEPTIONS и от типа проекта, MFC или ATL.
 
-В любом случае эта функция выполняет трассировку HRESULT к отладчику.
+Во всех случаях эта функция выполняет трассировку HRESULT с отладчиком.
 
-В Visual Studio 2015 с обновлением 3 и более поздних версиях эта функция используется с атрибутом __declspec(noreturn) во избежание ложных предупреждений SAL.
+В Visual Studio 2015 с обновлением 3 и более поздних версий эта функция имеет атрибут __declspec (noreturn), чтобы избежать ложных предупреждений SAL.
 
-Если _ATL_NO_EXCEPTIONS не определен в проекте MFC, эта функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md) на основе значения HRESULT.
+Если _ATL_NO_EXCEPTIONS не определен в проекте MFC, эта функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md) на основе значения HRESULT.
 
-Если _ATL_NO_EXCEPTIONS не определен в проекте ATL, функция создает [CAtlException](../../atl/reference/catlexception-class.md).
+Если _ATL_NO_EXCEPTIONS не определен в проекте ATL, функция создает исключение [катлексцептион](../../atl/reference/catlexception-class.md).
 
-Если определен _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения вместо выдачи исключения.
+Если определено _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения, а не создает исключение.
 
-Для проектов ATL можно предоставить собственную реализацию этой функции для использования библиотеки ATL в случае сбоя. Чтобы сделать это, определить собственную функцию с сигнатурой `AtlThrow` и #define `AtlThrow` на имя функции. Это необходимо сделать перед включением atlexcept.h (что означает, что должна быть выполнена прежде чем включать какие-либо заголовки ATL, поскольку atlbase.h включает atlexcept.h). Атрибут функции `__declspec(noreturn)` во избежание ложных предупреждений SAL.
+Для проектов ATL можно предоставить собственную реализацию этой функции, которая будет использоваться библиотекой ATL в случае сбоя. Для этого определите собственную функцию с той же сигнатурой, что и `AtlThrow`, а #define `AtlThrow` в качестве имени функции. Это необходимо сделать перед включением атлексцепт. h (это означает, что перед включением всех заголовков ATL необходимо выполнить его, так как atlbase. h содержит атлексцепт. h). Атрибут `__declspec(noreturn)` функции во избежание ложных предупреждений SAL.
 
 ### <a name="example"></a>Пример
 
@@ -197,9 +197,9 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldef.h
+**Заголовок:** атлдеф. h
 
-##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
+##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32
 
 Вызывайте эту функцию для сообщения об ошибке на основе результата функции Windows `GetLastError`.
 
@@ -207,21 +207,21 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция выполняет трассировку результат `GetLastError` к отладчику.
+Эта функция отслеживает результат `GetLastError` отладчику.
 
-Если _ATL_NO_EXCEPTIONS не определен в проекте MFC, эта функция создает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md) на основе значения, возвращаемые `GetLastError`.
+Если _ATL_NO_EXCEPTIONS не определен в проекте MFC, эта функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md) на основе значения, возвращаемого `GetLastError`.
 
-Если _ATL_NO_EXCEPTIONS не определен в проекте ATL, функция создает [CAtlException](../../atl/reference/catlexception-class.md).
+Если _ATL_NO_EXCEPTIONS не определен в проекте ATL, функция создает исключение [катлексцептион](../../atl/reference/catlexception-class.md).
 
-Если определен _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения вместо выдачи исключения.
+Если определено _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения, а не создает исключение.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldef.h
+**Заголовок:** атлдеф. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции](../../atl/reference/atl-functions.md)<br/>
 [Макросы для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-macros.md)

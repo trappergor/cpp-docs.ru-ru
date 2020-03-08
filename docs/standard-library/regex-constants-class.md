@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451671"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876151"
 ---
-# <a name="regexconstants-namespace"></a>Пространство имен regex_constants
+# <a name="regex_constants-namespace"></a>Пространство имен regex_constants
 
 Пространство имен для флажков регулярных выражений.
 
@@ -103,7 +103,7 @@ namespace regex_constants {
 }
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Пространство имен `regex_constants` инкапсулирует несколько типов флажков и соответствующих им значений флажков.
 
@@ -115,7 +115,7 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<regex>
+**Заголовок:** \<Regex >
 
 **Пространство имен:** std
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип представляет собой перечисляемый тип, описывающий объект, который может содержать флаги ошибок. Ниже перечислены значения различных флагов.
 
@@ -204,7 +204,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип является типом битовой маски, описывающим параметры для использования при сопоставлении текстовой последовательности с регулярным выражением и флаги формата для использования при замене текста. Параметры можно использовать вместе с `|`.
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип — это тип битовой маски, описывающий описатели языка и модификаторы синтаксиса, используемые при компиляции регулярного выражения. Параметры можно использовать вместе с `|`. Одновременно можно использовать только один описатель языка.
 
@@ -288,13 +288,13 @@ enum syntax_option_type
 
 `collate` -- учитывать регистр при сопоставлении
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<regex>](../standard-library/regex.md)\
-[Класс regex_error](../standard-library/regex-error-class.md)\
-[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[\<>ные операторы Regex](../standard-library/regex-operators.md)\
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
-[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[класс regex_error](../standard-library/regex-error-class.md)\
+[функции >\<regex](../standard-library/regex-functions.md)\
+[класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[операторы\<regex >](../standard-library/regex-operators.md)\
+[класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[класс regex_traits](../standard-library/regex-traits-class.md)\
 [Определения типов \<regex>](../standard-library/regex-typedefs.md)

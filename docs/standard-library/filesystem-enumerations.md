@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303494"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875834"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "74303494"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<experimental/filesystem>
+**Заголовок:** \<экспериментальная или файловая система >
 
 **Пространство имен:** std::experimental::filesystem
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Значения
 
-|`Name`|Описание|
+|`Name`|Description|
 |------------|-----------------|
 |`none`|Выполнять поведение по умолчанию для операции.|
 |`skip_existing`|Не копировать, если файл уже существует, не сообщать об ошибке.|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Значения
 
-|Имя|Значение|Описание|
+|Имя|Значение|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Представляет несуществующий файл.|
 |`none`|0|Представляет файл, у которого нет атрибута типа. (Не поддерживается.)|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

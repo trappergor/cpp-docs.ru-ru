@@ -11,11 +11,11 @@ helpviewer_keywords:
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257979"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876208"
 ---
 # <a name="complex-class"></a>Класс complex
 
@@ -28,7 +28,7 @@ template <class Type>
 class complex
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Объект класса `Type`:
 
@@ -98,7 +98,7 @@ constexpr complex(
 *комплекснум*\
 Комплексное число, вещественная и мнимая части которого используются для инициализации конструируемого комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый конструктор инициализирует хранимую реальную часть, чтобы *\_реалвал* и хранимую мнимую часть *\_имагвал*. Второй конструктор инициализирует хранимую реальную часть `complexNum.real()` и хранимую мнимую часть для `complexNum.imag()`.
 
@@ -176,7 +176,7 @@ T imag(const T& right);
 
 Мнимая часть комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для комплексного числа *a + bi*мнимая часть или компонент — это *IM (a + BI) = b*.
 
@@ -233,7 +233,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 Комплексное число, умноженное на число, указанное в качестве параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.
 
@@ -318,7 +318,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 Комплексное число, к которому добавлено число, указанное в качестве параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.
 
@@ -424,7 +424,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 Комплексное число, из которого вычтено число, указанное в качестве параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.
 
@@ -532,7 +532,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 Комплексное число, деленное на число, указанное в качестве параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.
 
@@ -631,7 +631,7 @@ complex<Type>& operator=(const Type& right);
 
 Комплексное число, которому присвоено число, указанное в качестве параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта операция является перегруженной, так что простые арифметические операции могут выполняться без преобразования данных в определенный формат.
 
@@ -708,7 +708,7 @@ T real(const T& right);
 
 Действительная часть комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для комплексного числа *a + bi*действительная часть или компонент перемещается *(а + BI) = a*.
 
@@ -751,7 +751,7 @@ The imaginary part of c1 is c1.imag() = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `value_type` является синонимом для параметра шаблона сложного `Type` класса.
 
@@ -780,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
