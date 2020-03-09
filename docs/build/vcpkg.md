@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869711"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857031"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -25,7 +25,7 @@ vcpkg — это диспетчер пакетов на базе командн
 
 Можно также создать клон vcpkg с закрытыми библиотеками в коллекции портов. Добавьте порт, который скачивает готовые двоичные файлы и файлы заголовков. Затем создайте файл portfile.cmake, который просто копирует эти файлы в нужное расположение.
 
-<sup>1</sup> *Примечание. Для некоторых частных библиотек исходные файлы недоступны. В этих случаях vcpkg скачает готовые совместимые двоичные файлы.*
+<sup>1</sup> *Примечание. источники недоступны для некоторых специализированных библиотек. В этих случаях vcpkg скачивает совместимые готовые двоичные файлы.*
 
 ## <a name="installation"></a>Установка
 
@@ -204,7 +204,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="command-line-reference"></a>Справочник по командной строке
 
-|Команда|Описание|
+|Get-Help|Description|
 |---------|---------|
 |**vcpkg search \[путь]**|Поиск пакетов, доступных для установки|
 |**vcpkg install \<пакет>...**|Установка пакета|
@@ -226,7 +226,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ### <a name="options"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Description|
 |---------|---------|
 |**--triplet \<t>**|Указание триады значений для целевой архитектуры (по умолчанию: `%VCPKG_DEFAULT_TRIPLET%`, см. также **vcpkg help triplet**)|
 |**--vcpkg-root \<путь>**|Указание корневого каталога vcpkg (по умолчанию: `%VCPKG_ROOT%`)|
