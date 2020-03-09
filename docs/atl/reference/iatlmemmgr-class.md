@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496070"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865079"
 ---
 # <a name="iatlmemmgr-class"></a>Класс Иатлмеммгр
 
@@ -30,18 +30,18 @@ ms.locfileid: "69496070"
 __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[Памяти](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
-|[Свободный](#free)|Вызовите этот метод, чтобы освободить блок памяти.|
+|[Бесплатный](#free)|Вызовите этот метод, чтобы освободить блок памяти.|
 |[GetSize](#getsize)|Вызовите этот метод, чтобы получить размер выделенного блока памяти.|
 |[Перераспределения](#reallocate)|Вызовите этот метод, чтобы перераспределить блок памяти.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Этот интерфейс реализуется с помощью [ккомхеап](../../atl/reference/ccomheap-class.md), [ккрсеап](../../atl/reference/ccrtheap-class.md), [CLocalHeap](../../atl/reference/clocalheap-class.md), [CCRTHeap](../../atl/reference/cglobalheap-class.md)или [CWin32Heap](../../atl/reference/cwin32heap-class.md).
 
@@ -73,7 +73,7 @@ void* Allocate(size_t nBytes) throw();
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
@@ -94,7 +94,7 @@ void Free(void* p) throw();
 *p*<br/>
 Указатель на область памяти, выделенную ранее данным диспетчером памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте этот метод для освобождения памяти, полученной с помощью [иатлмеммгр:: allocate](#allocate) или [иатлмеммгр:: reallocate](#reallocate).
 
@@ -143,7 +143,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 Возвращает указатель на начало выделенного блока памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызовите метод [иатлмеммгр:: Free](#free) или [иатлмеммгр:: reallocate](#reallocate) , чтобы освободить память, выделенную этим методом.
 
@@ -155,7 +155,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ##  <a name="get_allowcontextmenu"></a>Иаксвинамбиентдиспатч:: get_AllowContextMenu
 
-`AllowContextMenu` Свойство указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
+Свойство `AllowContextMenu` указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
 
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -170,13 +170,13 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_allowshowui"></a>Иаксвинамбиентдиспатч:: get_AllowShowUI
 
-`AllowShowUI` Свойство указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
+Свойство `AllowShowUI` указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
 
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -191,13 +191,13 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_allowwindowlessactivation"></a>Иаксвинамбиентдиспатч:: get_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Свойство указывает, будет ли контейнер разрешать активацию без окон.
+Свойство `AllowWindowlessActivation` указывает, будет ли контейнер разрешать активацию без окон.
 
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -212,13 +212,13 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_backcolor"></a>Иаксвинамбиентдиспатч:: get_BackColor
 
-`BackColor` Свойство задает цвет фона окружения для контейнера.
+Свойство `BackColor` задает цвет фона окружения для контейнера.
 
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -233,13 +233,13 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW в качестве значения по умолчанию для этого свойства (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
+Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение этого свойства по умолчанию (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
 ##  <a name="get_displayasdefault"></a>Иаксвинамбиентдиспатч:: get_DisplayAsDefault
 
-`DisplayAsDefault`— Это внешнее свойство, которое позволяет элементу управления определить, является ли он элементом управления по умолчанию.
+`DisplayAsDefault` — это внешнее свойство, позволяющее элементу управления определить, является ли он элементом управления по умолчанию.
 
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -254,13 +254,13 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_dochostdoubleclickflags"></a>Иаксвинамбиентдиспатч:: get_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Свойство указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
+Свойство `DocHostDoubleClickFlags` указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
 
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -275,13 +275,13 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_dochostflags"></a>Иаксвинамбиентдиспатч:: get_DocHostFlags
 
-`DocHostFlags` Свойство определяет возможности пользовательского интерфейса объекта узла.
+Свойство `DocHostFlags` указывает возможности пользовательского интерфейса для объекта узла.
 
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -296,13 +296,13 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_font"></a>Иаксвинамбиентдиспатч:: get_Font
 
-`Font` Свойство задает шрифт окружения контейнера.
+Свойство `Font` задает внешний шрифт контейнера.
 
 ```
 STDMETHOD(get_Font)(IFontDisp** pFont);
@@ -311,19 +311,19 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="parameters"></a>Параметры
 
 *пфонт*<br/>
-заполняет Адрес `IFontDisp` указателя интерфейса, используемого для получения текущего значения этого свойства.
+заполняет Адрес указателя интерфейса `IFontDisp`, используемого для получения текущего значения этого свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
 ##  <a name="get_forecolor"></a>Иаксвинамбиентдиспатч:: get_ForeColor
 
-`ForeColor` Свойство задает цвет переднего плана окружения.
+Свойство `ForeColor` задает цвет переднего плана окружения.
 
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -338,13 +338,13 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
 ##  <a name="get_localeid"></a>Иаксвинамбиентдиспатч:: get_LocaleID
 
-`LocaleID` Свойство определяет идентификатор локали контейнера.
+Свойство `LocaleID` указывает идентификатор локали для контейнера.
 
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -359,7 +359,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
@@ -367,7 +367,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 ##  <a name="get_messagereflect"></a>Иаксвинамбиентдиспатч:: get_MessageReflect
 
-Свойство `MessageReflect` окружения указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
+Свойство внешнего `MessageReflect` указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
 
 ```
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
@@ -382,13 +382,13 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="get_optionkeypath"></a>Иаксвинамбиентдиспатч:: get_OptionKeyPath
 
-`OptionKeyPath` Свойство указывает путь к разделу реестра для параметров пользователя.
+Свойство `OptionKeyPath` указывает путь к разделу реестра для параметров пользователя.
 
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -405,7 +405,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 ##  <a name="get_showgrabhandles"></a>Иаксвинамбиентдиспатч:: get_ShowGrabHandles
 
-Свойство `ShowGrabHandles` окружения позволяет элементу управления определить, должен ли он рисовать себя с маркерами захвата.
+Свойство окружения `ShowGrabHandles` позволяет элементу управления определить, должен ли он рисовать себя с маркерами захвата.
 
 ```
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
@@ -420,13 +420,13 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
+Реализация объекта узла ATL всегда возвращает VARIANT_FALSE в качестве значения этого свойства.
 
 ##  <a name="get_showhatching"></a>Иаксвинамбиентдиспатч:: get_ShowHatching
 
-`ShowHatching` Внешнее свойство позволяет элементу управления определить, будет ли он нарисован штриховой.
+`ShowHatching` свойство окружения позволяет элементу управления определить, должен ли он рисовать штриховой.
 
 ```
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
@@ -441,13 +441,13 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL всегда возвращает значение VARIANT_FALSE в качестве значения этого свойства.
+Реализация объекта узла ATL всегда возвращает VARIANT_FALSE в качестве значения этого свойства.
 
 ##  <a name="get_usermode"></a>Иаксвинамбиентдиспатч:: get_UserMode
 
-`UserMode` Свойство указывает внешний пользовательский режим контейнера.
+Свойство `UserMode` указывает внешний пользовательский режим контейнера.
 
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -462,13 +462,13 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_allowcontextmenu"></a>Иаксвинамбиентдиспатч::p ut_AllowContextMenu
 
-`AllowContextMenu` Свойство указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
+Свойство `AllowContextMenu` указывает, разрешено ли размещенному элементу управления отображать собственное контекстное меню.
 
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -483,13 +483,13 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_allowshowui"></a>Иаксвинамбиентдиспатч::p ut_AllowShowUI
 
-`AllowShowUI` Свойство указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
+Свойство `AllowShowUI` указывает, разрешено ли размещенному элементу управления отображать собственный пользовательский интерфейс.
 
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -504,13 +504,13 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_allowwindowlessactivation"></a>Иаксвинамбиентдиспатч::p ut_AllowWindowlessActivation
 
-`AllowWindowlessActivation` Свойство указывает, будет ли контейнер разрешать активацию без окон.
+Свойство `AllowWindowlessActivation` указывает, будет ли контейнер разрешать активацию без окон.
 
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -525,13 +525,13 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_backcolor"></a>Иаксвинамбиентдиспатч::p ut_BackColor
 
-`BackColor` Свойство задает цвет фона окружения для контейнера.
+Свойство `BackColor` задает цвет фона окружения для контейнера.
 
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -546,13 +546,13 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW в качестве значения по умолчанию для этого свойства (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
+Реализация объекта узла ATL использует COLOR_BTNFACE или COLOR_WINDOW как значение этого свойства по умолчанию (в зависимости от того, является ли родительский элемент главного окна диалоговым окном или нет).
 
 ##  <a name="put_displayasdefault"></a>Иаксвинамбиентдиспатч::p ut_DisplayAsDefault
 
-`DisplayAsDefault`— Это внешнее свойство, которое позволяет элементу управления определить, является ли он элементом управления по умолчанию.
+`DisplayAsDefault` — это внешнее свойство, позволяющее элементу управления определить, является ли он элементом управления по умолчанию.
 
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -567,13 +567,13 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует VARIANT_FALSE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_dochostdoubleclickflags"></a>Иаксвинамбиентдиспатч::p ut_DocHostDoubleClickFlags
 
-`DocHostDoubleClickFlags` Свойство указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
+Свойство `DocHostDoubleClickFlags` указывает операцию, которая должна быть выполнена в ответ на двойной щелчок.
 
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -588,13 +588,13 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIDBLCLK_DEFAULT в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_dochostflags"></a>Иаксвинамбиентдиспатч::p ut_DocHostFlags
 
-`DocHostFlags` Свойство определяет возможности пользовательского интерфейса объекта узла.
+Свойство `DocHostFlags` указывает возможности пользовательского интерфейса для объекта узла.
 
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -609,13 +609,13 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения по умолчанию для этого свойства.
+Реализация объекта узла ATL использует DOCHOSTUIFLAG_NO3DBORDER в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_font"></a>Иаксвинамбиентдиспатч::p ut_Font
 
-`Font` Свойство задает шрифт окружения контейнера.
+Свойство `Font` задает внешний шрифт контейнера.
 
 ```
 STDMETHOD(put_Font)(IFontDisp* pFont);
@@ -630,13 +630,13 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует шрифт графического пользовательского интерфейса по умолчанию или системный шрифт в качестве значения по умолчанию для этого свойства.
 
 ##  <a name="put_forecolor"></a>Иаксвинамбиентдиспатч::p ut_ForeColor
 
-`ForeColor` Свойство задает цвет переднего плана окружения.
+Свойство `ForeColor` задает цвет переднего плана окружения.
 
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -651,13 +651,13 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует цвет текста системного окна в качестве значения по умолчанию для этого свойства.
 
 ##  <a name="put_localeid"></a>Иаксвинамбиентдиспатч::p ut_LocaleID
 
-`LocaleID` Свойство определяет идентификатор локали контейнера.
+Свойство `LocaleID` указывает идентификатор локали для контейнера.
 
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -672,13 +672,13 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Реализация объекта узла ATL использует языковой стандарт по умолчанию пользователя в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_messagereflect"></a>Иаксвинамбиентдиспатч::p ut_MessageReflect
 
-Свойство `MessageReflect` окружения указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
+Свойство внешнего `MessageReflect` указывает, будет ли контейнер отражать сообщения размещаемому элементу управления.
 
 ```
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
@@ -693,13 +693,13 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="put_optionkeypath"></a>Иаксвинамбиентдиспатч::p ut_OptionKeyPath
 
-`OptionKeyPath` Свойство указывает путь к разделу реестра для параметров пользователя.
+Свойство `OptionKeyPath` указывает путь к разделу реестра для параметров пользователя.
 
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -716,7 +716,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 
 ##  <a name="put_usermode"></a>Иаксвинамбиентдиспатч::p ut_UserMode
 
-`UserMode` Свойство указывает внешний пользовательский режим контейнера.
+Свойство `UserMode` указывает внешний пользовательский режим контейнера.
 
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
@@ -731,9 +731,9 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В реализации объекта узла ATL в качестве значения по умолчанию для этого свойства используется VARIANT_TRUE.
+Реализация объекта узла ATL использует VARIANT_TRUE в качестве значения этого свойства по умолчанию.
 
 ##  <a name="setambientdispatch"></a>Иаксвинамбиентдиспатчекс:: Сетамбиентдиспатч
 
@@ -750,11 +750,11 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если метод `SetAmbientDispatch` вызывается с указателем на новый интерфейс, этот новый интерфейс будет использоваться для вызова свойств или методов, запрашиваемых размещенным элементом управления, если эти свойства еще не предоставлены [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+При вызове `SetAmbientDispatch` с указателем на новый интерфейс этот новый интерфейс будет использоваться для вызова свойств или методов, запрашиваемых размещенным элементом управления, если эти свойства еще не предоставлены [иаксвинамбиентдиспатч](../../atl/reference/iaxwinambientdispatch-interface.md).
 
 ##  <a name="attachcontrol"></a>Иаксвинхоствиндов:: Аттачконтрол
 
@@ -767,7 +767,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="parameters"></a>Параметры
 
 *пункконтрол*<br/>
-окне Указатель на `IUnknown` интерфейс элемента управления, который должен быть присоединен к объекту узла.
+окне Указатель на интерфейс `IUnknown` элемента управления, который должен быть присоединен к объекту узла.
 
 *hWnd*<br/>
 окне Маркер окна, который будет использоваться для размещения.
@@ -802,7 +802,7 @@ STDMETHOD(CreateControl)(
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Это окно будет подклассировать объектом размещения, который предоставляет этот интерфейс, чтобы сообщения могли быть отражены в элементе управления, а другие функции контейнера будут работать.
 
@@ -836,21 +836,21 @@ STDMETHOD(CreateControlEx)(
 окне Указатель интерфейса для потока, содержащего данные инициализации для элемента управления. Может иметь значение NULL.
 
 *ппунк*<br/>
-заполняет Адрес указателя, который получит `IUnknown` интерфейс созданного элемента управления. Может иметь значение NULL.
+заполняет Адрес указателя, который получит интерфейс `IUnknown` созданного элемента управления. Может иметь значение NULL.
 
 *риидадвисе*<br/>
-окне Идентификатор интерфейса для исходящего интерфейса в автономном объекте. Может быть IID_NULL.
+окне Идентификатор интерфейса для исходящего интерфейса в автономном объекте. Можно IID_NULL.
 
 *пункадвисе*<br/>
-окне Указатель на `IUnknown` интерфейс объекта приемника, который должен быть подключен к точке подключения в содержащемся объекте, указанном параметром `iidSink`.
+окне Указатель на интерфейс `IUnknown` объекта приемника, который подключается к точке подключения на содержащемся объекте, указанном `iidSink`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В отличие от `CreateControl` метода, `CreateControlEx` также позволяет получить указатель интерфейса на только что созданном элементе управления и настроить приемник событий для получения событий, инициированных элементом управления.
+В отличие от метода `CreateControl` `CreateControlEx` также позволяет получить указатель интерфейса на вновь созданный элемент управления и настроить приемник событий для получения событий, инициированных элементом управления.
 
 Сведения о создании лицензированного элемента управления ActiveX см. в разделе [иаксвинхоствиндовлик:: креатеконтроллицекс](#createcontrollicex).
 
@@ -885,7 +885,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>Параметры
 
 *пдисп*<br/>
-окне Указатель на `IDispatch` интерфейс.
+окне Указатель на интерфейс `IDispatch`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -893,7 +893,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 
 ##  <a name="setexternaluihandler"></a>Иаксвинхоствиндов:: Сетекстерналуихандлер
 
-Вызовите эту функцию, чтобы задать внешний интерфейс [идочостуихандлердиспатч](../../atl/reference/idochostuihandlerdispatch-interface.md) для `CAxWindow` объекта.
+Вызовите эту функцию, чтобы задать внешний интерфейс [идочостуихандлердиспатч](../../atl/reference/idochostuihandlerdispatch-interface.md) для объекта `CAxWindow`.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -902,19 +902,19 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>Параметры
 
 *пдисп*<br/>
-окне Указатель на `IDocHostUIHandlerDispatch` интерфейс.
+окне Указатель на интерфейс `IDocHostUIHandlerDispatch`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется элементами управления (например, элементом управления веб-браузера), которые запрашивают `IDocHostUIHandlerDispatch` интерфейс узла узла.
+Эта функция используется элементами управления (например, элементом управления веб-браузера), которые запрашивают у узла узла интерфейс `IDocHostUIHandlerDispatch`.
 
 ##  <a name="createcontrollic"></a>Иаксвинхоствиндовлик:: Креатеконтроллик
 
-Создает лицензированный элемент управления, инициализирует его и размещает его в окне, определяемом параметром `hWnd`.
+Создает лицензированный элемент управления, инициализирует его и размещает его в окне, определяемом `hWnd`.
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -929,7 +929,7 @@ STDMETHOD(CreateControlLic)(
 *бстрлик*<br/>
 окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: CreateControl](#createcontrol) .
 
@@ -959,7 +959,7 @@ STDMETHOD(CreateControlLicEx)(
 *бстрлик*<br/>
 окне Значение BSTR, содержащее лицензионный ключ для элемента управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Описание оставшихся параметров и возвращаемого значения см. в разделе [иаксвинхоствиндов:: креатеконтролекс](#createcontrolex) .
 
@@ -967,6 +967,6 @@ STDMETHOD(CreateControlLicEx)(
 
 Пример, в котором используется `IAxWinHostWindowLic::CreateControlLicEx`, см. в разделе [Размещение элементов управления ActiveX с помощью библиотеки ATL](../../atl/hosting-activex-controls-using-atl-axhost.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обзор класса](../../atl/atl-class-overview.md)

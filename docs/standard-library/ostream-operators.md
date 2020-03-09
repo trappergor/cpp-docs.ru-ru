@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453521"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874841"
 ---
 # <a name="ltostreamgt-operators"></a>Операторы &lt;ostream&gt;
 
@@ -17,7 +17,7 @@ ms.locfileid: "68453521"
 |-|
 |[operator&lt;&lt;](#op_lt_lt)|
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
 Записывает в поток различные типы.
 
@@ -87,22 +87,22 @@ basic_ostream <_Elem, _Tr>& operator<<(
 Тип элемента.
 
 *_Ostr*\
-Объект `basic_ostream`.
+Объект `basic_ostream` .
 
-*str*\
+\ *str*
 Строка символов.
 
 *_Tr*\
 Признаки символа.
 
-*Val*\
+*val*\
 Тип.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Поток.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Класс `basic_ostream` также определяет несколько операторов вставки. Дополнительные сведения см. в разделе [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Определяет длину последовательности N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)(`str`), начиная с *str*, и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), то функция также вставляет повторение из `_Ostr.width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает *_Ostr*.
+Определяет [длину N = `traits_type::`(](../standard-library/char-traits-struct.md#length)`str`) последовательности, начиная с *str*, и вставляет последовательность. Если N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), то функция также вставляет повторение из `_Ostr.width` – N символов заполнения. Повторение предшествует последовательности, если (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). В противном случае повторение следует за последовательностью. Функция возвращает *_Ostr*.
 
 Функция-шаблон
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-за исключением того, что каждый элемент, *_Ch* последовательности, начинающейся с *str* , преобразуется в `_Ostr.`объект типа`_Ostr.` `Elem` `_Ch`путем вызова метода [помещает](../standard-library/basic-ostream-class.md#put)([Widening](../standard-library/basic-ios-class.md#widen)()).
+за исключением того, что каждый элемент, *_Ch* последовательности, начинающейся с *str* , преобразуется в объект типа `Elem` путем вызова `_Ostr.`[помещается](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[Widening](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 Функция-шаблон
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-за исключением того, что *_Ch* преобразуется в `Elem` объект типа `_Ostr.put`путем `_Ostr.widen`вызова `_Ch`(()).
+за исключением того, что *_Ch* преобразуется в объект типа `Elem` путем вызова `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
 
 Функция-шаблон
 
@@ -261,12 +261,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-возвращает `_Ostr` `<<` `val` (и в процессе преобразует [ссылку RValue](../cpp/rvalue-reference-declarator-amp-amp.md) в `_Ostr` на lvalue).
+Возвращает `_Ostr` `<<` `val` (и преобразует [ссылку rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) в `_Ostr` со значением lvalue в процессе).
 
 ### <a name="example"></a>Пример
 
 См. раздел [flush](../standard-library/ostream-functions.md#flush) с примером использования `operator<<`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<ostream>](../standard-library/ostream.md)

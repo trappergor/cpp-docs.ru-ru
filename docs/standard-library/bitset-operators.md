@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
 ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257992"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865838"
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 
@@ -93,7 +93,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 Текстовое представление последовательности битов в `ostr`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция шаблона перегружает `operator<<`, позволяя записывать битовом массиве без предварительного преобразования в строку. Шаблонная функция фактически выполняется.
 
@@ -153,7 +153,7 @@ basic_istream<CharType, Traits>& operator>> (
 
 Функция шаблона возвращает строку *i_str*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция шаблона перегружает `operator>>` для хранения в битовом массиве *справа* `bitset(str)`значение, где `str` является объектом типа [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` извлечен из *i_str*.
 

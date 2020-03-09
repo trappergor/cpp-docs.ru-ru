@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141930"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855410"
 ---
 # <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки
 
@@ -89,7 +89,7 @@ parallel time: 1248
 
 > **CL. exe/EHsc Параллел-битоник-сорт. cpp**
 
-## <a name="robust-programming"></a>Отказоустойчивость
+## <a name="robust-programming"></a>Надежное программирование
 
 В этом примере используется алгоритм `parallel_invoke` вместо класса [Concurrency:: task_group](reference/task-group-class.md) , так как время существования каждой группы задач не выходит за пределы функции. Рекомендуется использовать `parallel_invoke`, если это возможно, так как в нем меньше издержек на выполнение, чем `task group` объектов, и поэтому вы можете написать более эффективный код.
 
