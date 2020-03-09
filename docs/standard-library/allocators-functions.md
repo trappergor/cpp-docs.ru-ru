@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690052"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875927"
 ---
 # <a name="ltallocatorsgt-macros"></a>Макросы &lt;распределителей&gt;
 
@@ -36,7 +36,7 @@ ms.locfileid: "72690052"
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Макрос создает определение шаблона `template <class Type> class name {.....}` и специализацию `template <> class name<void> {.....}`, которые вместе определяют шаблон класса распределителя, использующий фильтр синхронизации `sync` и кэш типа `cache`.
 
@@ -76,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -86,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -106,10 +106,10 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если компилятор поддерживает компиляцию как однопоточных, так и многопоточных приложений, для однопоточных приложений макрос создает `stdext::allocators::sync_none`; для всех остальных случаев он создает `stdext::allocators::sync_shared`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<allocators>](../standard-library/allocators-header.md)

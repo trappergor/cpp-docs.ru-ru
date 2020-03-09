@@ -1,5 +1,5 @@
 ---
-title: Класс CFileException
+title: Класс Кфиликсцептион
 ms.date: 11/04/2016
 f1_keywords:
 - CFileException
@@ -25,13 +25,13 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205940"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855380"
 ---
-# <a name="cfileexception-class"></a>Класс CFileException
+# <a name="cfileexception-class"></a>Класс Кфиликсцептион
 
 Представляет состояние, связанное с файлом исключения.
 
@@ -41,37 +41,37 @@ ms.locfileid: "62205940"
 class CFileException : public CException
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CFileException::CFileException](#cfileexception)|Создает объект `CFileException`.|
+|[Кфиликсцептион:: Кфиликсцептион](#cfileexception)|Формирует объект `CFileException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CFileException::ErrnoToException](#errnotoexception)|Возвращает вызвать код, соответствующий номеру ошибки времени выполнения.|
-|[CFileException::GetErrorMessage](#geterrormessage)|Получает сообщение, описывающее исключение.|
-|[CFileException::OsErrorToException](#oserrortoexception)|Возвращает причину код, соответствующий код ошибки операционной системы.|
-|[CFileException::ThrowErrno](#throwerrno)|Исключение файла по номеру ошибки среды выполнения.|
-|[CFileException::ThrowOsError](#throwoserror)|Исключение файла на основе номера ошибки операционной системы.|
+|[Кфиликсцептион:: Еррнотоексцептион](#errnotoexception)|Возвращает код, соответствующий номеру ошибки времени выполнения.|
+|[Кфиликсцептион:: Жетеррормессаже](#geterrormessage)|Получает сообщение, описывающее исключение.|
+|[Кфиликсцептион:: Осеррортоексцептион](#oserrortoexception)|Возвращает код причины, соответствующий коду ошибки операционной системы.|
+|[Кфиликсцептион:: Сроверрно](#throwerrno)|Создает исключение файла на основе номера ошибки времени выполнения.|
+|[Кфиликсцептион:: Сровосеррор](#throwoserror)|Создает исключение файла на основе номера ошибки операционной системы.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CFileException::m_cause](#m_cause)|Содержит переносимого кода, соответствующий причине исключения.|
-|[CFileException::m_lOsError](#m_loserror)|Содержит число ошибок, связанных с операционной системы.|
-|[CFileException::m_strFileName](#m_strfilename)|Содержит имя файла для этого исключения.|
+|[Кфиликсцептион:: m_cause](#m_cause)|Содержит переносимый код, соответствующий причине исключения.|
+|[Кфиликсцептион:: m_lOsError](#m_loserror)|Содержит номер связанной ошибки операционной системы.|
+|[Кфиликсцептион:: m_strFileName](#m_strfilename)|Содержит имя файла для этого исключения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CFileException` Класс содержит открытые члены данных, которые содержат код переносимой причина и номер ошибки операционной системы — конкретных. Класс также предоставляет статические функции-члены для исключения файлов и возвращающие коды причины ошибки операционной системы и ошибки времени выполнения C.
+Класс `CFileException` содержит открытые члены данных, которые содержат переносимый код причины и номер ошибки, зависящий от операционной системы. Класс также предоставляет статические функции-члены для генерации исключений файлов и для возврата кодов причин ошибок операционной системы и ошибок времени выполнения C.
 
-`CFileException` объекты конструирования и исключение `CFile` функции-члены и функции-члены из производных классов. Эти объекты в пределах доступны **CATCH** выражение. Для переносимости используйте только код причины, чтобы получить причину исключения. Дополнительные сведения об исключениях см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).
+`CFileException` объекты создаются и создаются в `CFile` функциях элементов и в функциях членов производных классов. Доступ к этим объектам можно получить в области выражения **catch** . Для обеспечения переносимости используйте только код причины, чтобы получить причину исключения. Дополнительные сведения об исключениях см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,9 +85,9 @@ class CFileException : public CException
 
 **Заголовок:** afx.h
 
-##  <a name="cfileexception"></a>  CFileException::CFileException
+##  <a name="cfileexception"></a>Кфиликсцептион:: Кфиликсцептион
 
-Создает `CFileException` объект, который хранит код причину и код операционной системы в объекте.
+Конструирует объект `CFileException`, в котором хранится код причины и код операционной системы в объекте.
 
 ```
 CFileException(
@@ -98,25 +98,25 @@ CFileException(
 
 ### <a name="parameters"></a>Параметры
 
-*Причина*<br/>
-Переменной перечисляемого типа, указывающее причину возникновения исключения. См. в разделе [CFileException::m_cause](#m_cause) список возможных значений.
+*cause*<br/>
+Переменная перечислимого типа, указывающая причину исключения. Список возможных значений см. в разделе [кфиликсцептион:: m_cause](#m_cause) .
 
-*lOsError*<br/>
-Операционной системе конкретного причину возникновения исключения, если он доступен. *LOsError* параметр предоставляет больше информации, чем *вызвать* does.
+*лосеррор*<br/>
+Причина исключения, зависящая от операционной системы, если она доступна. Параметр *лосеррор* предоставляет больше информации, чем *Причина* .
 
-*lpszArchiveName*<br/>
-Указывает на строку, содержащую имя `CFile` объекта, вызвавшего исключение.
+*лпсзарчивенаме*<br/>
+Указывает на строку, содержащую имя объекта `CFile`, вызвавшего исключение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Не используйте этот конструктор напрямую, но вместо этого вызовите глобальную функцию [AfxThrowFileException](exception-processing.md#afxthrowfileexception).
+Не используйте этот конструктор напрямую, а вызовите глобальную функцию [афкссровфиликсцептион](exception-processing.md#afxthrowfileexception).
 
 > [!NOTE]
->  Переменная *lOsError* применяется только к `CFile` и `CStdioFile` объектов. `CMemFile` Класс не обрабатывает этот код ошибки.
+>  Переменная *лосеррор* применяется только к `CFile` и `CStdioFile` объектам. Класс `CMemFile` не обрабатывает этот код ошибки.
 
-##  <a name="errnotoexception"></a>  CFileException::ErrnoToException
+##  <a name="errnotoexception"></a>Кфиликсцептион:: Еррнотоексцептион
 
-Преобразует значение заданного библиотеки времени выполнения ошибка `CFileException` перечисленное значение ошибки.
+Преобразует заданное значение ошибки библиотеки времени выполнения в `CFileException` перечислимое значение ошибки.
 
 ```
 static int PASCAL ErrnoToException(int nErrno);
@@ -124,24 +124,24 @@ static int PASCAL ErrnoToException(int nErrno);
 
 ### <a name="parameters"></a>Параметры
 
-*nErrno*<br/>
-Целочисленный код ошибки как определено во время выполнения включаемом файле ERRNO. З.
+*неррно*<br/>
+Целочисленный код ошибки, как определено в файле времени выполнения. Высоты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение перечисления, которое соответствует значению ошибки данной библиотеки времени выполнения.
+Перечислимое значение, соответствующее указанному значению ошибки библиотеки времени выполнения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе [CFileException::m_cause](#m_cause) список возможных значений перечисления.
+Список возможных перечислимых значений см. в разделе [кфиликсцептион:: m_cause](#m_cause) .
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]
 
-##  <a name="geterrormessage"></a>  CFileException::GetErrorMessage
+##  <a name="geterrormessage"></a>Кфиликсцептион:: Жетеррормессаже
 
-Извлекает текст с описанием исключения.
+Извлекает текст, описывающий исключение.
 
 ```
 virtual BOOL GetErrorMessage(
@@ -152,30 +152,30 @@ virtual BOOL GetErrorMessage(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszError*<br/>
-[in, out] Указатель на буфер, получающий сообщение об ошибке.
+*лпсзеррор*<br/>
+[вход, выход] Указатель на буфер, который получает сообщение об ошибке.
 
-*nMaxError*<br/>
-[in] Максимальное количество символов, которое может содержать указанного буфера. Это включает завершающий нуль-символ.
+*нмаксеррор*<br/>
+окне Максимальное число символов, которое может хранить указанный буфер. Сюда входит завершающий нуль символ.
 
-*pnHelpContext*<br/>
-[in, out] Указатель на целое число без знака, получающий идентификатор контекста справки. Если `NULL`, возвращается идентификатор отсутствует.
+*пнхелпконтекст*<br/>
+[вход, выход] Указатель на целое число без знака, которое получает идентификатор контекста справки. Если `NULL`, идентификатор не возвращается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если метод выполнен успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если указанный буфер слишком мал, сообщение об ошибке будет усечен.
+Если указанный буфер слишком мал, сообщение об ошибке усекается.
 
 ### <a name="example"></a>Пример
 
-В следующем примере используется `CFileException::GetErrorMessage`.
+В следующем примере используется функция `CFileException::GetErrorMessage`.
 
 [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]
 
-##  <a name="m_cause"></a>  CFileException::m_cause
+##  <a name="m_cause"></a>Кфиликсцептион:: m_cause
 
 Содержит значения, заданные перечисляемым типом `CFileException`.
 
@@ -183,51 +183,51 @@ virtual BOOL GetErrorMessage(
 int m_cause;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот элемент данных — это открытая переменная типа **int**. Перечислители и их значение представлено далее.
+Этот элемент данных является открытой переменной типа **int**. Ниже перечислены перечислители и их значения.
 
-- `CFileException::none` 0: Ошибки не обнаружены.
+- `CFileException::none` 0: не произошла ошибка.
 
-- `CFileException::genericException` 1: Произошла неизвестная ошибка.
+- `CFileException::genericException` 1: Произошла неопределенная ошибка.
 
-- `CFileException::fileNotFound` 2: Не удалось найти файл.
+- `CFileException::fileNotFound` 2: файл не найден.
 
-- `CFileException::badPath` 3: Все или часть пути является недопустимым.
+- `CFileException::badPath` 3: недопустимый полный или часть пути.
 
-- `CFileException::tooManyOpenFiles` 4: Превышено разрешенное число открытых файлов.
+- `CFileException::tooManyOpenFiles` 4: превышено допустимое число открытых файлов.
 
-- `CFileException::accessDenied` 5: Файл недоступен.
+- `CFileException::accessDenied` 5: файл недоступен.
 
-- `CFileException::invalidFile` 6: Попытка использовать недопустимый дескриптор файла.
+- `CFileException::invalidFile` 6: предпринята попытка использовать Недопустимый файловый обработчик.
 
-- `CFileException::removeCurrentDir` 7: Невозможно удалить текущий рабочий каталог.
+- `CFileException::removeCurrentDir` 7: невозможно удалить текущий рабочий каталог.
 
-- `CFileException::directoryFull` 8: Существует несколько записей каталога нет.
+- `CFileException::directoryFull` 8: больше нет записей каталога.
 
-- `CFileException::badSeek` 9: Произошла ошибка при попытке задания указателя файла.
+- `CFileException::badSeek` 9: произошла ошибка при попытке установить указатель на файл.
 
-- `CFileException::hardIO` 10: Произошла аппаратная ошибка.
+- `CFileException::hardIO` 10: произошла аппаратная ошибка.
 
-- `CFileException::sharingViolation` 11: Предоставить общий доступ. Exe-ФАЙЛ не был загружен или общий регион заблокирован.
+- `CFileException::sharingViolation` 11: общий доступ. EXE-файл не был загружен, или общий регион заблокирован.
 
-- `CFileException::lockViolation` 12: Попытка заблокировать регион, который уже заблокирован.
+- `CFileException::lockViolation` 12: предпринята попытка заблокировать уже заблокированный регион.
 
-- `CFileException::diskFull` 14: Диск заполнен.
+- `CFileException::diskFull` 14: диск заполнен.
 
-- `CFileException::endOfFile` 15: Достигнут конец файла.
+- `CFileException::endOfFile` 15: достигнут конец файла.
 
     > [!NOTE]
     >  Перечислители причины `CFileException` отличаются от перечислителей причины `CArchiveException`.
 
     > [!NOTE]
-    > `CArchiveException::generic` не рекомендуется к использованию. Взамен рекомендуется использовать `genericException`. Если **универсального** приложения и построения с/CLR, итоговые синтаксические ошибки не может быть нелегко расшифровать.
+    > `CArchiveException::generic` не рекомендуется к использованию. Используйте вместо этого `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]
 
-##  <a name="m_loserror"></a>  CFileException::m_lOsError
+##  <a name="m_loserror"></a>Кфиликсцептион:: m_lOsError
 
 Содержит код ошибки операционной системы для этого исключения.
 
@@ -235,21 +235,21 @@ int m_cause;
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. в разделе технической документации операционной системы список кодов ошибок. Этот член данных — это открытая переменная типа LONG.
+Список кодов ошибок см. в техническом руководстве по операционной системе. Этот элемент данных является открытой переменной типа LONG.
 
-##  <a name="m_strfilename"></a>  CFileException::m_strFileName
+##  <a name="m_strfilename"></a>Кфиликсцептион:: m_strFileName
 
-Содержит имя файла для данного условия исключения.
+Содержит имя файла для этого условия исключения.
 
 ```
 CString m_strFileName;
 ```
 
-##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException
+##  <a name="oserrortoexception"></a>Кфиликсцептион:: Осеррортоексцептион
 
-Возвращает перечислитель, соответствующий заданной *lOsError* значение. Если код ошибки неизвестен, то функция возвращает `CFileException::generic`.
+Возвращает перечислитель, соответствующий заданному значению *лосеррор* . Если код ошибки неизвестен, функция возвращает `CFileException::generic`.
 
 ```
 static int PASCAL OsErrorToException(LONG lOsError);
@@ -257,20 +257,20 @@ static int PASCAL OsErrorToException(LONG lOsError);
 
 ### <a name="parameters"></a>Параметры
 
-*lOsError*<br/>
-Код ошибки операционной системы уровне.
+*лосеррор*<br/>
+Код ошибки, относящийся к операционной системе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Перечислимое значение, соответствующее значению данной ошибки операционной системы.
+Перечислимое значение, соответствующее заданному значению ошибки операционной системы.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]
 
-##  <a name="throwerrno"></a>  CFileException::ThrowErrno
+##  <a name="throwerrno"></a>Кфиликсцептион:: Сроверрно
 
-Создает `CFileException` объект, соответствующий заданной *nErrno* значение, а затем создает исключение.
+Создает объект `CFileException`, соответствующий заданному значению *неррно* , а затем создает исключение.
 
 ```
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
@@ -278,19 +278,19 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*nErrno*<br/>
-Целочисленный код ошибки как определено во время выполнения включаемом файле ERRNO. З.
+*неррно*<br/>
+Целочисленный код ошибки, как определено в файле времени выполнения. Высоты.
 
-*lpszFileName*<br/>
-Указатель на строку, содержащую имя файла, которая вызвала исключение, если он доступен.
+*лпсзфиленаме*<br/>
+Указатель на строку, содержащую имя файла, вызвавшего исключение, если он есть.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]
 
-##  <a name="throwoserror"></a>  CFileException::ThrowOsError
+##  <a name="throwoserror"></a>Кфиликсцептион:: Сровосеррор
 
-Создает `CFileException` соответствующий заданного *lOsError* значение. Если код ошибки неизвестен, то функция создает исключение, закодировано как `CFileException::generic`.
+Создает `CFileException`, соответствующий заданному значению *лосеррор* . Если код ошибки неизвестен, функция создает исключение, закодированное как `CFileException::generic`.
 
 ```
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
@@ -298,17 +298,17 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*lOsError*<br/>
-Код ошибки операционной системы уровне.
+*лосеррор*<br/>
+Код ошибки, относящийся к операционной системе.
 
-*lpszFileName*<br/>
-Указатель на строку, содержащую имя файла, которая вызвала исключение, если он доступен.
+*лпсзфиленаме*<br/>
+Указатель на строку, содержащую имя файла, вызвавшего исключение, если он есть.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
