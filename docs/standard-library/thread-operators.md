@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458440"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876179"
 ---
 # <a name="ltthreadgt-operators"></a>Операторы &lt;thread&gt;
 
@@ -33,7 +33,7 @@ ms.locfileid: "68458440"
 |[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>  operator&gt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.
 
@@ -45,17 +45,17 @@ bool operator>= (
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
@@ -71,21 +71,21 @@ bool operator> (
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 `Right < Left`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>  operator&lt;=
 
 Определяет, справедливо ли, что один из объектов `thread::id` меньше другого или равен ему.
 
@@ -97,21 +97,21 @@ bool operator<= (
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> operator&lt;
 
 Определяет, справедливо ли, что один объект `thread::id` меньше другого.
 
@@ -123,17 +123,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если *Left* находится перед *справа* в общем порядке; в противном случае — **значение false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оператор определяет общий порядок всех объектов `thread::id`. Эти объекты могут использоваться в качестве ключей в ассоциативных контейнерах.
 
@@ -151,17 +151,17 @@ bool operator!= (
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
@@ -177,21 +177,21 @@ bool operator== (
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект `thread::id`.
 
-*Правильно*\
+*Справа*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если два объекта представляют один и тот же поток выполнения, или если ни один из объектов не представляет поток выполнения; в противном случае — **значение false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
 Вставляет текстовое представление объекта `thread::id` в поток.
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*OSTR*\
+*Ostr*\
 Объект [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Удостоверения*\
-Объект `thread::id`.
+*Идентификатор*\
+Объект `thread::id` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 *OSTR*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция вставляет *идентификатор* в *OSTR*.
 
 Если два объекта `thread::id` равны, вставленные текстовые представления этих объектов совпадают.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<thread>](../standard-library/thread.md)
