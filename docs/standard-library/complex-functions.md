@@ -43,15 +43,15 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244715"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876101"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;Комплексные&gt; функции
 
-## <a name="abs"></a> ABS
+## <a name="abs"></a>просто
 
 Вычисляет модуль комплексного числа.
 
@@ -62,14 +62,14 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, модуль которого нужно определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Модуль комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 *Модуль* комплексного числа — это мера длины вектора, представляющего комплексное число. Модуль комплексного числа a + bi — это sqrt (a<sup>2</sup> + b<sup>2</sup>), пишется как &#124;a + bi&#124;. *Норма* комплексного числа a + bi — это (a<sup>2</sup> + b<sup>2</sup>), так что модуль комплексного числа — это квадратный корень из его нормы.
 
@@ -138,19 +138,19 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="acos"></a> ACOS
+## <a name="acos"></a>ACOS
 
 ```cpp
 template<class T> complex<T> acos(const complex<T>&);
 ```
 
-## <a name="acosh"></a> ACOSH
+## <a name="acosh"></a>ACOSH
 
 ```cpp
 template<class T> complex<T> acosh(const complex<T>&);
 ```
 
-## <a name="arg"></a> Arg
+## <a name="arg"></a>АРГ
 
 Извлекает аргумент из комплексного числа.
 
@@ -161,16 +161,16 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, аргумент которого нужно определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Аргумент комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*Аргумент* — это угол, который образует вектор комплексного числа с положительной осью на комплексной плоскости. Для комплексного числа *a + bi*, аргумент равен arctan (*b / a*). Угол имеет положительное направление при измерении против часовой стрелки от положительной оси и отрицательное направление при измерении по часовой стрелке. Главные значения больше - pi и меньше чем или равны + пи.
+*Аргумент* — это угол, который сложный вектор делает с положительной реальной осью в сложной плоскости. Для комплексного числа *a + bi*аргумент равен arctan (*b/a*). Угол имеет положительное направление при измерении против часовой стрелки от положительной оси и отрицательное направление при измерении по часовой стрелке. Основные значения больше-PI и меньше или равны + PI.
 
 ### <a name="example"></a>Пример
 
@@ -237,25 +237,25 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="asin"></a> ASIN
+## <a name="asin"></a>ASIN
 
 ```cpp
 template<class T> complex<T> asin(const complex<T>&);
 ```
 
-## <a name="asinh"></a> ASINH
+## <a name="asinh"></a>ASINH
 
 ```cpp
 template<class T> complex<T> asinh(const complex<T>&);
 ```
 
-## <a name="atan"></a> ATAN
+## <a name="atan"></a>Atan
 
 ```cpp
 template<class T> complex<T> atan(const complex<T>&);
 ```
 
-## <a name="atanh"></a> ATANH
+## <a name="atanh"></a>atanh
 
 ```cpp
 template<class T> complex<T> atanh(const complex<T>&);
@@ -272,16 +272,16 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, комплексно-сопряженная величина которого возвращается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексно-сопряженная величина входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Сопряженную величину комплексного числа *a + bi* — *bi*. Произведение комплексного числа и его сопряженной величины является нормой числа *a*2 + *b*2.
+Комплексное сопряжение комплексного числа *a + bi* — *это — бизнес-аналитика*. Произведение комплексного числа и его сопряженной величины является нормой числа *a*2 + *b*2.
 
 ### <a name="example"></a>Пример
 
@@ -336,7 +336,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a> cos
+## <a name="cos"></a>COS
 
 Возвращает косинус комплексного числа.
 
@@ -347,20 +347,20 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, косинус которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является косинусом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие косинусы комплексных чисел:
 
-cos (*z*) = (1/2)\*(exp (*iz*) + exp (- *iz*))
+COS (*z*) = (1/2)\*(exp (*iz*) + EXP (- *iz*))
 
-cos (*z*) = cos (*a* + *bi*) = cos (*a*) cosh (*b*) – isin (*a*) sinh (*b*)
+COS (*z*) = cos ( * + * *BI*) = cos (*a*) cosh ( *b*) — ISIN (*a*) SINH (*b*)
 
 ### <a name="example"></a>Пример
 
@@ -427,7 +427,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)
 ```
 
-## <a name="cosh"></a> COSH
+## <a name="cosh"></a>cosh
 
 Возвращает гиперболический косинус комплексного числа.
 
@@ -438,20 +438,20 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, гиперболический косинус которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является гиперболическим косинусом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие гиперболические косинусы комплексных чисел:
 
-cos (*z*) = (1/2)\*(exp (*z*) + exp (- *z*))
+COS (*z*) = (1/2)\*(exp (*z*) + EXP (- *z*))
 
-cos (*z*) = cosh (*a + bi*) = cosh (*a*) cos (*b*) + isinh (*a*) sin (*b*)
+COS (*z*) = cosh (*a + bi*) = cosh (*а*) cos (*b*) + исинх (*a*) sin (*b*)
 
 ### <a name="example"></a>Пример
 
@@ -518,7 +518,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)
 ```
 
-## <a name="exp"></a> EXP
+## <a name="exp"></a>расширением
 
 Возвращает экспоненциальную функцию комплексного числа.
 
@@ -529,7 +529,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, экспоненту которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -589,7 +589,7 @@ int main() {
 }
 ```
 
-## <a name="imag"></a> imag
+## <a name="imag"></a>ин
 
 Извлекает мнимую часть комплексного числа.
 
@@ -600,14 +600,14 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, вещественная часть которого извлекается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Мнимая часть комплексного числа как глобальная функция.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-шаблон не может использоваться для изменения вещественной части комплексного числа. Чтобы изменить вещественную часть, значению компонента следует назначить новое комплексное число.
 
@@ -641,7 +641,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="log"></a> журнал
+## <a name="log"></a>Журналь
 
 Возвращает натуральный логарифм комплексного числа.
 
@@ -652,14 +652,14 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, натуральный логарифм которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является натуральным логарифмом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Узловые точки находятся вдоль отрицательной оси.
 
@@ -711,7 +711,7 @@ int main() {
 }
 ```
 
-## <a name="log10"></a> LOG10
+## <a name="log10"></a>LOG10
 
 Возвращает десятичный логарифм комплексного числа.
 
@@ -722,14 +722,14 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, десятичный логарифм которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является десятичным логарифмом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Узловые точки находятся вдоль отрицательной оси.
 
@@ -781,7 +781,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a> Норма
+## <a name="norm"></a>норма
 
 Извлекает норму комплексного числа.
 
@@ -792,16 +792,16 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, норму которого нужно определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Норма комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Норма комплексного числа *a + bi* — это *(a*<sup>2</sup> *+ b*<sup>2</sup> *).* Норма комплексного числа представляет собой квадрат его модуля. Модуль комплексного числа — это мера длины вектора, представляющего комплексное число. Модуль комплексного числа *a + bi* — это `sqrt` *(a*<sup>2</sup> *+ b*<sup>2</sup> *),* пишется как *&#124;a + bi&#124;.*
+Норма комплексного числа *a + bi* — *(a*<sup>2</sup> *+ b*<sup>2</sup> *).* Норма комплексного числа представляет собой квадрат его модуля. Модуль комплексного числа — это мера длины вектора, представляющего комплексное число. Модуль комплексного числа *a + bi* `sqrt` *(* <sup>2</sup> *+ b*<sup>2</sup> *),* написанный  *&#124;+ BI&#124;.*
 
 ### <a name="example"></a>Пример
 
@@ -864,7 +864,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a> Полярная диаграмма
+## <a name="polar"></a>соответствующие
 
 Возвращает комплексное число, соответствующее указанному модулю и аргументу, в декартовой форме.
 
@@ -885,9 +885,9 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 Алгебраическая форма комплексного числа, указанного в тригонометрической форме.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Тригонометрическая форма комплексного числа предоставляет модуль *r* и аргумент *p*, где эти параметры связаны с вещественной и мнимой декартовых компонентов *a* и *b* по уравнениях *a* = r \* cos *p* и *b* = *r* \* sin *p*.
+Полярная форма комплексного числа предоставляет модуль *r* и аргумент *p*, где эти параметры связаны с реальными и мнимыми декартыми компонентами *a* и *b* уравнениями *a* = r \* COS *p* и *b* = *r* \* Sin *p*.
 
 ### <a name="example"></a>Пример
 
@@ -941,7 +941,7 @@ Argument of c2 is recovered from c2 using:
 arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="pow"></a> pow
+## <a name="pow"></a>Pow
 
 Вычисляет комплексное число, получаемое в результате возведения основания (комплексное число) в степень другого комплексного числа.
 
@@ -961,7 +961,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>Параметры
 
-*_Базовому*\
+*_Base*\
 Комплексное число или число с типом параметра для комплексного числа, которое будет возводиться в степень функцией-членом.
 
 *_Power*\
@@ -971,7 +971,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 Комплексное число, полученное путем возведения указанного базового комплексного числа в указанную степень.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Каждая функция эффективно преобразует оба операнда в тип возвращаемого значения, а затем возвращает **левый** операнд, возведенный в степень **правого** операнда.
 
@@ -1086,13 +1086,13 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
 
-## <a name="proj"></a> proj
+## <a name="proj"></a>proj
 
 ```cpp
 template<class T> complex<T> proj(const complex<T>&);
 ```
 
-## <a name="real"></a> real
+## <a name="real"></a>Real
 
 Извлекает вещественную часть комплексного числа.
 
@@ -1103,14 +1103,14 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, вещественная часть которого извлекается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Вещественная часть комплексного числа как глобальная функция.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-шаблон не может использоваться для изменения вещественной части комплексного числа. Чтобы изменить вещественную часть, значению компонента следует назначить новое комплексное число.
 
@@ -1144,7 +1144,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="sin"></a> sin
+## <a name="sin"></a>Sin
 
 Возвращает синус комплексного числа.
 
@@ -1155,20 +1155,20 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, синус которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является синусом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие синусы комплексных чисел:
 
-sin (*z*) = (1/2 *я*)\*(exp (*iz*)-exp (- *iz*))
+Sin (*z*) = (1/2 *i*)\*(exp (*iz*)-EXP (- *iz*))
 
-sin (*z*) = sin (*a + bi*) = sin (*a*) cosh (*b*) + icos (*a*) sinh (*b*)
+Sin (*z*) = sin (*a + bi*) = sin (*a*) cosh (*б*) + ИКОС (*a*) SINH (*b*)
 
 ### <a name="example"></a>Пример
 
@@ -1235,7 +1235,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)
 ```
 
-## <a name="sinh"></a> SINH
+## <a name="sinh"></a>sinh
 
 Возвращает гиперболический синус комплексного числа.
 
@@ -1246,20 +1246,20 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, гиперболический синус которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является гиперболическим синусом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие гиперболические синусы комплексных чисел:
 
-SINH (*z*) = (1/2)\*(exp (*z*)-exp (- *z*))
+SINH (*z*) = (1/2)\*(exp (*z*) — EXP (- *z*))
 
-sinh (*z*) = sinh (*a + bi*) = sinh (*a*) cos (*b*) + *i*cosh (*a*) sin (*b*)
+SINH (*z*) = SINH (*a + bi*) = SINH (*а*) cos (*b*) + *i*cosh (*a*) sin (*b*)
 
 ### <a name="example"></a>Пример
 
@@ -1326,7 +1326,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)
 ```
 
-## <a name="sqrt"></a> SQRT
+## <a name="sqrt"></a>МНИМ
 
 Извлекает квадратный корень из комплексного числа.
 
@@ -1337,14 +1337,14 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, квадратный корень из которого требуется извлечь.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Квадратный корень из комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Квадратный корень будет иметь фазовый угол в полуинтервале (–пи/2, пи/2].
 
@@ -1414,18 +1414,18 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, тангенс которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является тангенсом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие тангенсы комплексных чисел:
 
-tan (*z*) = sin (*z*) / cos (*z*) = (exp (*iz*)-exp (- *iz*)) / *i*(exp (*iz*) + exp (- *iz*))
+Tan (*z*) =*sin (z)/* cos (*z*) = (exp (*iz*)-EXP (- *iz*))/ *i*(exp (*iz*) + EXP (- *iz*))
 
 ### <a name="example"></a>Пример
 
@@ -1492,7 +1492,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)
 ```
 
-## <a name="tanh"></a> TANH
+## <a name="tanh"></a>tanh
 
 Возвращает гиперболический тангенс комплексного числа.
 
@@ -1503,18 +1503,18 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*complexNum*\
+*комплекснум*\
 Комплексное число, гиперболический тангенс которого требуется определить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Комплексное число, которое является гиперболическим тангенсом входного комплексного числа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тождественные равенства, определяющие гиперболические тангенсы комплексных чисел:
 
-TANH (*z*) = sinh (*z*) / cosh (*z*) = (exp (*z*)-exp (- *z*)) / (exp (*z*) + exp (- *z*))
+tanh (*z*) =*SINH (z)/* cosh (*z*) = (exp (*z*)-EXP (- *z*))/(exp (*z*) + EXP (- *z*))
 
 ### <a name="example"></a>Пример
 
