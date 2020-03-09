@@ -21,13 +21,13 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449459"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872419"
 ---
-# <a name="conditionvariable-class"></a>Класс condition_variable
+# <a name="condition_variable-class"></a>Класс condition_variable
 
 Класс `condition_variable` используется для ожидания события при наличии `mutex` типа `unique_lock<mutex>`. Объекты этого типа могут иметь лучшую производительность, чем объекты типа [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).
 
@@ -37,13 +37,13 @@ ms.locfileid: "68449459"
 class condition_variable;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="constructors"></a>Конструкторы
 
 |||
 |-|-|
-|[condition_variable](#condition_variable)|Создает объект `condition_variable`.|
+|[condition_variable](#condition_variable)|Формирует объект `condition_variable`.|
 
 ### <a name="functions"></a>Функции
 
@@ -52,19 +52,19 @@ class condition_variable;
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор condition_variable.|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable`.|
-|[wait](#wait)|Блокирует поток.|
+|[ожидания](#wait)|Блокирует поток.|
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
 ## <a name="condition_variable"></a>condition_variable
 
-Создает объект `condition_variable`.
+Формирует объект `condition_variable`.
 
 ```cpp
 condition_variable();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
@@ -109,13 +109,13 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-*лкк*\
+*Лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Возможен*\
+*Пред*\
 Любое выражение, возвращающее **значение true** или **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](#notify_one) или [notify_all](#notify_all). Он может также ложно активироваться.
 
@@ -145,24 +145,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-*лкк*\
+*Лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Rel_time*\
 Объект `chrono::duration`, указывающий количество времени до активации потока.
 
-*Возможен*\
+*Пред*\
 Любое выражение, возвращающее **значение true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый метод возвращает `cv_status::timeout` значение, если ожидание завершается после истечения *Rel_time* . В противном случае метод возвращает значение `cv_status::no_timeout`.
+Первый метод возвращает `cv_status::timeout`, если ожидание завершается при истечении *Rel_time* . В противном случае метод возвращает значение `cv_status::no_timeout`.
 
 Второй метод возвращает значение *пред*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Первый метод блокируется до тех `condition_variable` пор, пока объект не сообщит о вызове [notify_one](#notify_one) или [notify_all](#notify_all) или до истечения интервала времени *Rel_time* . Он может также ложно активироваться.
+Первый метод блокируется до тех пор, пока объект `condition_variable` не сообщит о вызове функции [notify_one](#notify_one) или [notify_all](#notify_all) или до истечения интервала времени *Rel_time* . Он может также ложно активироваться.
 
 Второй метод фактически выполняет следующий код.
 
@@ -203,22 +203,22 @@ bool wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*лкк*\
+*Лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Abs_time*\
 Объект [chrono::time_point](../standard-library/time-point-class.md).
 
-*Возможен*\
+*Пред*\
 Любое выражение, возвращающее **значение true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Методы, возвращающие `cv_status` тип `cv_status::timeout` , возвращают, если ожидание завершается при истечении *Abs_time* . В противном случае эти методы возвращают `cv_status::no_timeout`.
+Методы, возвращающие тип `cv_status`, возвращают `cv_status::timeout`, если ожидание завершается по истечении *Abs_time* . В противном случае эти методы возвращают `cv_status::no_timeout`.
 
 Методы, возвращающие **bool** , возвращают значение " *пред*".
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](#notify_one) или [notify_all](#notify_all)`Abs_time`. Он может также ложно активироваться.
 
@@ -234,7 +234,7 @@ return true;
 
 Третий и четвертый методы используют указатель на объект типа `xtime` для замены объекта `chrono::time_point`. Объект `xtime` задает максимальное время ожидания сигнала.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [<condition_variable>](../standard-library/condition-variable.md)

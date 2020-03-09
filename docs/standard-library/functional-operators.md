@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243776"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876352"
 ---
 # <a name="ltfunctionalgt-operators"></a>Операторы &lt;functional&gt;
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
 Проверяет, является ли вызываемый объект пустым.
 
@@ -30,16 +30,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Параметры
 
-*Fty*\
+*Фти*\
 Тип функции для заключения в оболочку.
 
-*F*\
+\ *f*
 Объект функции
 
-*NPC*\
+*нпк*\
 Указатель null
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Операторы принимают аргумент, являющийся ссылкой на объект `function`, и аргумент, являющийся константой указателя null. В обоих случаях возвращается значение true только в том случае, если объект `function` пуст.
 
@@ -75,7 +75,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
 Проверяет, является ли вызываемый объект не пустым.
 
@@ -89,16 +89,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Параметры
 
-*Fty*\
+*Фти*\
 Тип функции для заключения в оболочку.
 
-*F*\
+\ *f*
 Объект функции
 
-*NPC*\
+*нпк*\
 Указатель null
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Операторы принимают аргумент, являющийся ссылкой на объект `function`, и аргумент, являющийся константой указателя null. В обоих случаях возвращается значение true только в том случае, если объект `function` не пуст.
 
