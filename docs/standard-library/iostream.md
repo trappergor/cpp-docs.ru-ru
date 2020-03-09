@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257810"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856545"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "77257810"
 > [!NOTE]
 > Библиотека \<iostream > использует инструкции `#include <ios>`, `#include <streambuf>`, `#include <istream>`и `#include <ostream>`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Объекты можно разделить на две группы:
 
@@ -73,7 +73,7 @@ extern ostream cerr;
 
 Объект [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой без буферизации в стандартный вывод ошибок в виде байтового потока. После создания объекта выражение `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) имеет ненулевое значение и `cerr.tie() == &cout`.
 
@@ -119,7 +119,7 @@ extern istream cin;
 
 Объект [istream](../standard-library/istream-typedefs.md#istream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Объект контролирует получение данных из стандартного ввода, как потока байтов. После создания объекта вызов `cin.`[tie](../standard-library/basic-ios-class.md#tie) возвращает `&`[cout](#cout).
 
@@ -170,7 +170,7 @@ extern ostream clog;
 
 Объект [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой с буферизацей в стандартный вывод ошибок в виде байтового потока.
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 Объект [ostream](../standard-library/ostream-typedefs.md#ostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой в стандартный вывод в виде байтового потока.
 
@@ -210,7 +210,7 @@ extern wostream wcerr;
 
 Объект [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой без буферизации в стандартный вывод ошибок в виде двухбайтового потока. После создания объекта выражение `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) не равно нулю.
 
@@ -230,7 +230,7 @@ extern wistream wcin;
 
 Объект [wistream](../standard-library/istream-typedefs.md#wistream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет извлечением из стандартного ввода в виде двухбайтового потока. После создания объекта вызов `wcin.`[tie](../standard-library/basic-ios-class.md#tie) возвращает `&`[wcout](#wcout).
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 Объект [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой с буферизацей в стандартный вывод ошибок в виде двухбайтового потока.
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 Объект [wostream](../standard-library/ostream-typedefs.md#wostream).
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
 Этот объект управляет вставкой в стандартный вывод в качестве широкого потока.
 
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 Дополнительные сведения см. в разделе [Базовые операции CString](../atl-mfc-shared/basic-cstring-operations.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

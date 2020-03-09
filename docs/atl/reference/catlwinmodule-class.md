@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlWinModule
+title: Класс Катлвинмодуле
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlWinModule
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246828"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857355"
 ---
-# <a name="catlwinmodule-class"></a>Класс CAtlWinModule
+# <a name="catlwinmodule-class"></a>Класс Катлвинмодуле
 
-Этот класс обеспечивает поддержку для работы с окнами компоненты ATL.
+Этот класс обеспечивает поддержку для компонентов окна ATL.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,25 +30,25 @@ ms.locfileid: "62246828"
 class CAtlWinModule : public _ATL_WIN_MODULE
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CAtlWinModule::CAtlWinModule](#catlwinmodule)|Конструктор.|
-|[CAtlWinModule:: ~ CAtlWinModule](#dtor)|Деструктор|
+|[Катлвинмодуле:: Катлвинмодуле](#catlwinmodule)|Конструктор.|
+|[Катлвинмодуле:: ~ Катлвинмодуле](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|Добавляет объект данных.|
-|[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|Возвращает указатель на объект данных модуля окна.|
+|[Катлвинмодуле:: Аддкреатевнддата](#addcreatewnddata)|Добавляет объект данных.|
+|[Катлвинмодуле:: Екстракткреатевнддата](#extractcreatewnddata)|Возвращает указатель на объект данных модуля окна.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс обеспечивает поддержку для всех классов ATL, для которых требуются функции управления окнами.
+Этот класс обеспечивает поддержку для всех классов ATL, для которых требуются функции для окон.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,11 +58,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData
+##  <a name="addcreatewnddata"></a>Катлвинмодуле:: Аддкреатевнддата
 
-Этот метод инициализирует и добавляет `_AtlCreateWndData` структуры.
+Этот метод инициализирует и добавляет структуру `_AtlCreateWndData`.
 
 ```
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
@@ -71,16 +71,16 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="parameters"></a>Параметры
 
 *pData*<br/>
-Указатель на `_AtlCreateWndData` структуры для инициализации и добавления к текущему модулю.
+Указатель на структуру `_AtlCreateWndData` для инициализации и добавления в текущий модуль.
 
-*pObject*<br/>
-Указатель на объект **это** указатель.
+*Объект*<br/>
+Указатель на **этот** указатель объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывает метод [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) какие инициализирует [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) структуры. Эта структура будет хранить **это** указатель, используемый для получения экземпляра класса в процедуры окна.
+Этот метод вызывает [атлвинмодулеаддкреатевнддата](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) , который инициализирует структуру [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) . Эта структура будет хранить **этот** указатель, используемый для получения экземпляра класса в процедурах окна.
 
-##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
+##  <a name="catlwinmodule"></a>Катлвинмодуле:: Катлвинмодуле
 
 Конструктор.
 
@@ -88,11 +88,11 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 CAtlWinModule();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В случае сбоя инициализации **EXCEPTION_NONCONTINUABLE** возникает исключение.
+Если инициализация завершается неудачей, возникает исключение **EXCEPTION_NONCONTINUABLE** .
 
-##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule
+##  <a name="dtor"></a>Катлвинмодуле:: ~ Катлвинмодуле
 
 Деструктор
 
@@ -100,13 +100,13 @@ CAtlWinModule();
 ~CAtlWinModule();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData
+##  <a name="extractcreatewnddata"></a>Катлвинмодуле:: Екстракткреатевнддата
 
-Этот метод возвращает указатель на `_AtlCreateWndData` структуры.
+Этот метод возвращает указатель на структуру `_AtlCreateWndData`.
 
 ```
 void* ExtractCreateWndData();
@@ -114,10 +114,10 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на `_AtlCreateWndData` структуры, добавлены ранее с [CAtlWinModule::AddCreateWndData](#addcreatewnddata), или значение NULL, если объект не доступен.
+Возвращает указатель на `_AtlCreateWndData` структуру, ранее добавленную с помощью [катлвинмодуле:: аддкреатевнддата](#addcreatewnddata), или значение null, если объект недоступен.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
-[Модульные классы](../../atl/atl-module-classes.md)
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
+[Классы модулей](../../atl/atl-module-classes.md)
