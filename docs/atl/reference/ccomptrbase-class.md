@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298619"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864970"
 ---
 # <a name="ccomptrbase-class"></a>Класс Ккомптрбасе
 
@@ -40,47 +40,47 @@ class CComPtrBase
 *T*<br/>
 Тип объекта, на который ссылается интеллектуальный указатель.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Ккомптрбасе:: ~ Ккомптрбасе](#dtor)|Деструктор|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Ккомптрбасе:: Advise](#advise)|Вызовите этот метод, чтобы создать соединение между точкой подключения `CComPtrBase`и приемником клиента.|
-|[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
+|[Ккомптрбасе:: Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
 |[Ккомптрбасе:: CoCreateInstance](#cocreateinstance)|Вызовите этот метод, чтобы создать объект класса, связанный с указанным ИДЕНТИФИКАТОРом класса или ИДЕНТИФИКАТОРом программы.|
 |[Ккомптрбасе:: CopyTo](#copyto)|Вызовите этот метод, чтобы скопировать указатель `CComPtrBase` в другую переменную указателя.|
 |[Ккомптрбасе::D етач](#detach)|Вызовите этот метод, чтобы освободить владение указателем.|
 |[Ккомптрбасе:: Исекуалобжект](#isequalobject)|Вызовите этот метод, чтобы проверить, указывает ли указанный `IUnknown` на тот же объект, связанный с объектом `CComPtrBase`.|
 |[Ккомптрбасе:: QueryInterface](#queryinterface)|Вызовите этот метод, чтобы вернуть указатель на указанный интерфейс.|
-|[CComPtrBase::Release](#release)|Вызовите этот метод, чтобы освободить интерфейс.|
+|[Ккомптрбасе:: Release](#release)|Вызовите этот метод, чтобы освободить интерфейс.|
 |[Ккомптрбасе:: SetSite](#setsite)|Вызовите этот метод, чтобы задать сайт `CComPtrBase` объекта для `IUnknown` родительского объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Ккомптрбасе:: operator T *](#operator_t_star)|Оператор CAST.|
 |[Ккомптрбасе:: operator!](#operator_not)|Оператор NOT.|
 |[Ккомптрбасе:: operator &](#operator_amp)|Оператора &.|
 |[Ккомптрбасе:: operator *](#operator_star)|Оператор \*.|
-|[Ккомптрбасе:: operator <](#ccomptrbase__operator lt)|Оператор «меньше».|
+|[Ккомптрбасе:: operator <](#ccomptrbase__operator lt)|Оператор "меньше чем".|
 |[Ккомптрбасе:: operator = =](#operator_eq_eq)|Оператор равенства.|
 |[Ккомптрбасе:: operator — >](#operator_ptr)|Оператор указателя на члены.|
 
 ### <a name="public-data-members"></a>Открытые элементы данных
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Ккомптрбасе::p](#p)|Переменная члена данных указателя.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Этот класс предоставляет базу для других смарт-указателей, использующих подпрограммы управления памятью COM, такие как [CComQIPtr](../../atl/reference/ccomqiptr-class.md) и [CComPtr](../../atl/reference/ccomptr-class.md). Производные классы добавляют собственные конструкторы и операторы, но используют методы, предоставляемые `CComPtrBase`.
 
@@ -114,7 +114,7 @@ HRESULT Advise(
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в разделе [атладвисе](connection-point-global-functions.md#atladvise) .
 
@@ -131,7 +131,7 @@ void Attach(T* p2) throw();
 *–*<br/>
 Объект `CComPtrBase` будет становиться владельцем этого указателя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `Attach` вызывает [ккомптрбасе:: Release](#release) для существующей переменной члена [ккомптрбасе::p](#p) , а затем присваивает *P2* значение `CComPtrBase::p`. Когда объект `CComPtrBase` берет на себя владение указателем, он автоматически вызывает `Release` на указателе, который удаляет указатель и все выделенные данные, если счетчик ссылок на объект переходит в 0.
 
@@ -143,7 +143,7 @@ void Attach(T* p2) throw();
 ~CComPtrBase() throw();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Освобождает интерфейс, на который указывает `CComPtrBase`.
 
@@ -181,7 +181,7 @@ CLSID, связанный с данными и кодом, который буд
 
 Возвращает S_OK при успешном выполнении или REGDB_E_CLASSNOTREG, CLASS_E_NOAGGREGATION, CO_E_CLASSSTRING или E_NOINTERFACE при сбое. Описание этих ошибок см. в разделе [кокреатеклассинстанце](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) и [клсидфромпрогид](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) .
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если вызывается первая форма метода, [клсидфромпрогид](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) используется для восстановления идентификатора CLSID. Затем обе формы вызывают [кокреатеклассинстанце](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
@@ -204,7 +204,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 Возвращает S_OK при успешном выполнении E_POINTER при сбое.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Копирует указатель `CComPtrBase` в *PPT*. Счетчик ссылок на переменную-член [ккомптрбасе::p](#p) увеличивается.
 
@@ -222,7 +222,7 @@ T* Detach() throw();
 
 Возвращает копию указателя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Освобождает владение указателем, задает для переменной-члена [ккомптрбасе::p](#p) данных значение NULL и возвращает копию указателя.
 
@@ -237,7 +237,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="parameters"></a>Параметры
 
 *посер*<br/>
-Сравниваемый шаблон `IUnknown *`.
+Объект `IUnknown *` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -310,13 +310,13 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 Возвращает значение переменной элемента данных [ккомптрбасе::p](#p) .
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот оператор используется для вызова метода в классе, на который указывает объект `CComPtrBase`. В отладочных сборках возникнет ошибка утверждения, если элемент данных `CComPtrBase` указывает на значение NULL.
 
 ##  <a name="operator_lt"></a>Ккомптрбасе:: operator &lt;
 
-Оператор «меньше».
+Оператор "меньше чем".
 
 ```
 bool operator<(T* pT) const throw();
@@ -339,7 +339,7 @@ bool operator<(T* pT) const throw();
 operator T*() const throw();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Возвращает указатель на тип данных Object, определенный в шаблоне класса.
 
@@ -351,7 +351,7 @@ operator T*() const throw();
 T* p;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта переменная члена содержит сведения об указателе.
 
@@ -376,7 +376,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 Возвращает S_OK при успешном выполнении или E_NOINTERFACE при сбое.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот метод вызывает [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)).
 
@@ -390,7 +390,7 @@ template <class Q> HRESULT QueryInterface(Q
 void Release() throw();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Интерфейс освобожден, и [ккомптрбасе::p](#p) имеет значение null.
 
@@ -411,10 +411,10 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот метод вызывает [атлсетчилдсите](composite-control-global-functions.md#atlsetchildsite).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Обзор класса](../../atl/atl-class-overview.md)
