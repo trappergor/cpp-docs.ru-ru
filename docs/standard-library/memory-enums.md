@@ -5,11 +5,11 @@ f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
 ms.openlocfilehash: 78cdb0fe6c0d9487500804d21fe4ad4870fcad0f
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257836"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884080"
 ---
 # <a name="ltmemorygt-enums"></a>Перечисления &lt;memory&gt;
 
@@ -25,7 +25,7 @@ class pointer_safety {
 };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **Перечисление** с заданной областью определяет значения, которые могут быть возвращены `get_pointer_safety()`.
 

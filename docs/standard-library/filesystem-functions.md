@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898713"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875833"
 ---
 # <a name="ltfilesystemgt-functions"></a>Функции &lt;filesystem&gt;
 
@@ -152,7 +152,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - `skip_existing`, `overwrite_existing` или `update_existing`
 
-- `copy_symlinks` или `skip_symlinks`
+- `copy_symlinks` либо `skip_symlinks`
 
 - `directories_only`, `create_symlinks` или `create_hard_links`
 
@@ -184,7 +184,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - В противном случае, если `is_directory(f)`, `copy_file(from, to` / `from.filename(), opts)`.
 
-- Если это не требуется, установите значение `copy_file(from, to, opts)`.
+- В противном случае — `copy_file(from, to, opts)`.
 
 В противном случае, если `is_directory(f) && (opts & copy_options::recursive || !opts)`, то:
 
@@ -306,7 +306,7 @@ bool equivalent(const path& left, const path& right, error_code& ec) noexcept;
 
 Функции возвращают **значение true** , только если *Left* и *right* выбирают одну и ту же сущность FileSystem.
 
-## <a name="exists"></a>  exists
+## <a name="exists"></a> существует
 
 ```cpp
 bool exists(file_status stat) noexcept;
