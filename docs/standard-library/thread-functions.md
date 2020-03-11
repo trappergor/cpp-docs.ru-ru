@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458503"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876180"
 ---
 # <a name="ltthreadgt-functions"></a>Функции &lt;thread&gt;
 
@@ -55,9 +55,9 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 Объект [duration](../standard-library/duration-class.md), задающий интервал времени.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция блокирует вызывающий поток в течение как минимум времени, заданного параметром *Rel_time*. Эта функция не вызывает исключений.
+Функция блокирует вызывающий поток в течение как минимум времени, заданного *Rel_time*. Эта функция не вызывает исключений.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -75,7 +75,7 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 Представляет момент времени.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция не вызывает исключений.
 
@@ -89,13 +89,13 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*Left*\
 Левый объект **потока** .
 
-*Правильно*\
+*Справа*\
 Правый объект **потока** .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция вызывает `Left.swap(Right)`.
 
@@ -107,6 +107,6 @@ void swap(thread& Left, thread& Right) noexcept;
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<thread>](../standard-library/thread.md)

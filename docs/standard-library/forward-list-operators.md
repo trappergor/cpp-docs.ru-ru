@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689690"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874760"
 ---
 # <a name="ltforward_listgt-operators"></a>Операторы &lt;forward_list&gt;
 
@@ -37,13 +37,13 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона перегружает `operator==` для сравнения двух объектов шаблона класса `forward_list`. Функция возвращает `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
@@ -59,17 +59,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если списки не равны; в противном случае **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона возвращает `!(left == right)`.
 
@@ -85,21 +85,21 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если список слева от оператора меньше, чем список справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона перегружает `operator<` для сравнения двух объектов шаблона класса `forward_list`. Функция возвращает `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>&lt; оператора =
+## <a name="op_lt_eq"></a>&lt;оператора =
 
 Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -111,17 +111,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если список в левой части оператора меньше или равен списку в правой части оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона возвращает `!(right < left)`.
 
@@ -137,21 +137,21 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если список слева от оператора больше списка справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция шаблона возвращает `right < left`.
 
-## <a name="op_gt_eq"></a>&gt; оператора =
+## <a name="op_gt_eq"></a>&gt;оператора =
 
 Проверяет, больше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -163,16 +163,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Объект типа `forward_list`.
 
-*справа* \
+*справа*\
 Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если прямой список в левой части оператора больше или равен прямому списку справа от оператора; в противном случае — **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Эта функция шаблона возвращает `!(left < right)`.
+Функция-шаблон возвращает `!(left < right)`.

@@ -119,15 +119,15 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323265"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869950"
 ---
 # <a name="cwinappex-class"></a>Класс CWinAppEx
 
-`CWinAppEx` Обрабатывает состояние приложения, сохраняет состояние в реестр, загружает состояние из реестра, инициализирует диспетчеры приложения и приводятся ссылки на эти те же диспетчеры приложения.
+`CWinAppEx` обрабатывает состояние приложения, сохраняет состояние в реестр, загружает состояние из реестра, инициализирует диспетчеры приложений и предоставляет ссылки на те же диспетчеры приложений.
 
    Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 ## <a name="syntax"></a>Синтаксис
@@ -136,93 +136,93 @@ ms.locfileid: "62323265"
 class CWinAppEx : public CWinApp
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CWinAppEx::CWinAppEx](#cwinappex)|Создает объект `CWinAppEx`.|
+|[CWinAppEx:: CWinAppEx](#cwinappex)|Формирует объект `CWinAppEx`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CWinAppEx::CleanState](#cleanstate)|Удаляет сведения о приложении из реестра Windows.|
-|[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Указывает, будет ли приложение загрузить исходный размер и расположение фрейма главного окна из реестра.|
-|[CWinAppEx::EnableTearOffMenus](#enabletearoffmenus)|Включает перемещаемое меню для приложения.|
-|[CWinAppEx::EnableUserTools](#enableusertools)|Позволяет пользователю создавать пользовательских команд меню в приложении.|
-|[CWinAppEx::ExitInstance](#exitinstance)|Вызывается платформой изнутри `Run` функцию-член для выхода из этого экземпляра приложения. (Переопределяет [CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).)|
-|[CWinAppEx::GetBinary](#getbinary)|Считывает двоичные данные, связанные со значением указанного раздела.|
-|[CWinAppEx::GetContextMenuManager](#getcontextmenumanager)|Возвращает указатель на глобальную [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта.|
-|[CWinAppEx::GetDataVersion](#getdataversion)||
-|[CWinAppEx::GetDataVersionMajor](#getdataversionmajor)|Возвращает основной номер версии приложения, сохраненных в реестре Windows.|
-|[CWinAppEx::GetDataVersionMinor](#getdataversionminor)|Возвращает дополнительный номер версии приложения, сохраненных в реестре Windows.|
-|[CWinAppEx::GetInt](#getint)|Считывает числовых данных, связанный с указанным значением из реестра.|
-|[CWinAppEx::GetKeyboardManager](#getkeyboardmanager)|Возвращает указатель на глобальную [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) объекта.|
-|[CWinAppEx::GetMouseManager](#getmousemanager)|Возвращает указатель на глобальную [CMouseManager](../../mfc/reference/cmousemanager-class.md) объекта.|
-|[CWinAppEx::GetObject](#getobject)|Считывает `CObject`-производные данные, связанные с указанным значением из реестра.|
-|[CWinAppEx::GetRegSectionPath](#getregsectionpath)|Возвращает строку, — это путь к разделу реестра. Этот путь соединяет предоставленный относительный путь на путь приложения.|
-|[CWinAppEx::GetRegistryBase](#getregistrybase)|Возвращает путь в реестре для приложения.|
-|[CWinAppEx::GetSectionBinary](#getsectionbinary)|Считывает двоичных данных, связанный с указанным ключом и значением из реестра.|
-|[CWinAppEx::GetSectionInt](#getsectionint)|Считывает числовые данные из реестра, связанные с указанным ключом и значением.|
-|[CWinAppEx::GetSectionObject](#getsectionobject)|Считывает `CObject` данные, связанные с указанным ключом и значением из реестра.|
-|[CWinAppEx::GetSectionString](#getsectionstring)|Считывает строки данных, связанный с указанным ключом и значением из реестра.|
-|[CWinAppEx::GetShellManager](#getshellmanager)|Возвращает указатель на глобальную [CShellManager](../../mfc/reference/cshellmanager-class.md) объекта.|
-|[CWinAppEx::GetString](#getstring)|Считывает строки данных, связанный с указанным значением из реестра.|
-|[CWinAppEx::GetTooltipManager](#gettooltipmanager)|Возвращает указатель на глобальную [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) объекта.|
-|[CWinAppEx::GetUserToolsManager](#getusertoolsmanager)|Возвращает указатель на глобальную [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) объекта.|
-|[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)|Инициализирует `CContextMenuManager` объекта.|
-|[CWinAppEx::InitKeyboardManager](#initkeyboardmanager)|Инициализирует `CKeyboardManager` объекта.|
-|[CWinAppEx::InitMouseManager](#initmousemanager)|Инициализирует `CMouseManager` объекта.|
-|[CWinAppEx::InitShellManager](#initshellmanager)|Инициализирует `CShellManager` класса|
-|[CWinAppEx::InitTooltipManager](#inittooltipmanager)|Инициализирует `CTooltipManager` класса.|
-|[CWinAppEx::IsResourceSmartUpdate](#isresourcesmartupdate)||
-|[CWinAppEx::IsStateExists](#isstateexists)|Указывает, является ли указанный ключ в реестре.|
-|[CWinAppEx::LoadState](#loadstate)|Загружает состояние приложения из реестра.|
-|[CWinAppEx::OnAppContextHelp](#onappcontexthelp)|Вызывается платформой, когда пользователь запрашивает контекстная справка для **настройки** диалоговое окно.|
-|[CWinAppEx::OnViewDoubleClick](#onviewdoubleclick)|Вызывает определяемую пользователем команду, при двойном щелчке в любом месте в приложении.|
-|[CWinAppEx::OnWorkspaceIdle](#onworkspaceidle)||
-|[CWinAppEx::SaveState](#savestate)|Записывает состояние платформы приложений в реестр Windows.|
-|[CWinAppEx::SetRegistryBase](#setregistrybase)|Задает путь к разделу реестра по умолчанию. Этот ключ будет использоваться в качестве корневого для всех последующих обращений.|
-|[CWinAppEx::ShowPopupMenu](#showpopupmenu)|Отображает всплывающее меню.|
-|[CWinAppEx::WriteBinary](#writebinary)|Записывает двоичные данные для указанного значения реестра.|
-|[CWinAppEx::WriteInt](#writeint)|Записывает указанный параметр реестра числовые данные.|
-|[CWinAppEx::WriteObject](#writeobject)|Записывает данные, полученные из [класс CObject](../../mfc/reference/cobject-class.md) для указанного значения реестра.|
-|[CWinAppEx::WriteSectionBinary](#writesectionbinary)|Записывает двоичные данные в значение из указанного раздела реестра.|
-|[CWinAppEx::WriteSectionInt](#writesectionint)|Записывает значение из указанного раздела реестра числовые данные.|
-|[CWinAppEx::WriteSectionObject](#writesectionobject)|Записывает данные, получаемые из `CObject` класс значение из указанного раздела реестра.|
-|[CWinAppEx::WriteSectionString](#writesectionstring)|Записывает данные строки значение указанного раздела реестра.|
-|[CWinAppEx::WriteString](#writestring)|Записывает указанный параметр реестра строковые данные.|
+|[CWinAppEx:: Клеанстате](#cleanstate)|Удаляет сведения о приложении из реестра Windows.|
+|[CWinAppEx:: Енаблелоадвиндовплацемент](#enableloadwindowplacement)|Указывает, будет ли приложение загружать исходный размер и расположение главного окна фрейма из реестра.|
+|[CWinAppEx:: Енаблетеароффменус](#enabletearoffmenus)|Включает для приложения меню с разрывом.|
+|[CWinAppEx:: Енаблеусертулс](#enableusertools)|Позволяет пользователю создавать пользовательские команды меню в приложении.|
+|[CWinAppEx:: ExitInstance](#exitinstance)|Вызывается платформой из функции члена `Run` для выхода из этого экземпляра приложения. (Переопределяет метод [CWinApp:: ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance).)|
+|[CWinAppEx:: binary](#getbinary)|Считывает двоичные данные, связанные с указанным значением реестра.|
+|[CWinAppEx:: Жетконтекстменуманажер](#getcontextmenumanager)|Возвращает указатель на глобальный объект [кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md) .|
+|[CWinAppEx:: Жетдатаверсион](#getdataversion)||
+|[CWinAppEx:: Жетдатаверсионмажор](#getdataversionmajor)|Возвращает основную версию приложения, сохраненную в реестре Windows.|
+|[CWinAppEx:: Жетдатаверсионминор](#getdataversionminor)|Возвращает дополнительный номер версии приложения, сохраненного в реестре Windows.|
+|[CWinAppEx:: GetInt](#getint)|Считывает числовые данные, связанные с указанным значением из реестра.|
+|[CWinAppEx:: Жеткэйбоардманажер](#getkeyboardmanager)|Возвращает указатель на глобальный объект [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) .|
+|[CWinAppEx:: Жетмаусеманажер](#getmousemanager)|Возвращает указатель на глобальный объект [кмаусеманажер](../../mfc/reference/cmousemanager-class.md) .|
+|[CWinAppEx:: GetObject](#getobject)|Считывает из реестра данные, полученные `CObject`, связанные с указанным значением.|
+|[CWinAppEx:: Жетрегсектионпас](#getregsectionpath)|Возвращает строку, которая является путем к разделу реестра. Этот путь объединяет указанный относительный путь с путем к приложению.|
+|[CWinAppEx:: Жетрегистрибасе](#getregistrybase)|Возвращает путь реестра для приложения.|
+|[CWinAppEx:: Жетсектионбинари](#getsectionbinary)|Считывает двоичные данные, связанные с указанным ключом и значением из реестра.|
+|[CWinAppEx:: Жетсектионинт](#getsectionint)|Считывает числовые данные из реестра, связанного с указанным ключом и значением.|
+|[CWinAppEx:: Жетсектионобжект](#getsectionobject)|Считывает `CObject` данные, связанные с указанным ключом и значением из реестра.|
+|[CWinAppEx:: Жетсектионстринг](#getsectionstring)|Считывает строковые данные, связанные с указанным ключом и значением из реестра.|
+|[CWinAppEx:: Жетшеллманажер](#getshellmanager)|Возвращает указатель на глобальный объект [кшеллманажер](../../mfc/reference/cshellmanager-class.md) .|
+|[CWinAppEx:: GetString](#getstring)|Считывает строковые данные, связанные с указанным значением из реестра.|
+|[CWinAppEx:: Жеттултипманажер](#gettooltipmanager)|Возвращает указатель на глобальный объект [ктултипманажер](../../mfc/reference/ctooltipmanager-class.md) .|
+|[CWinAppEx:: Жетусертулсманажер](#getusertoolsmanager)|Возвращает указатель на глобальный объект [кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md) .|
+|[CWinAppEx:: Инитконтекстменуманажер](#initcontextmenumanager)|Инициализирует объект `CContextMenuManager`.|
+|[CWinAppEx:: Иниткэйбоардманажер](#initkeyboardmanager)|Инициализирует объект `CKeyboardManager`.|
+|[CWinAppEx:: Инитмаусеманажер](#initmousemanager)|Инициализирует объект `CMouseManager`.|
+|[CWinAppEx:: Инитшеллманажер](#initshellmanager)|Инициализирует класс `CShellManager`|
+|[CWinAppEx:: Иниттултипманажер](#inittooltipmanager)|Инициализирует класс `CTooltipManager`.|
+|[CWinAppEx:: Исресаурцесмартупдате](#isresourcesmartupdate)||
+|[CWinAppEx:: Исстатиксистс](#isstateexists)|Указывает, находится ли указанный ключ в реестре.|
+|[CWinAppEx:: LoadState](#loadstate)|Загружает состояние приложения из реестра.|
+|[CWinAppEx:: Онаппконтексселп](#onappcontexthelp)|Вызывается платформой, когда пользователь запрашивает контекстную справку для диалогового окна " **Настройка** ".|
+|[CWinAppEx:: Онвиевдаублекликк](#onviewdoubleclick)|Вызывает определяемую пользователем команду, когда пользователь дважды щелкает в любом месте приложения.|
+|[CWinAppEx:: Онворкспацеидле](#onworkspaceidle)||
+|[CWinAppEx:: SaveState](#savestate)|Записывает состояние платформы приложений в реестр Windows.|
+|[CWinAppEx:: Сетрегистрибасе](#setregistrybase)|Задает путь к разделу реестра по умолчанию. Этот ключ будет служить корнем для всех последующих вызовов реестра.|
+|[CWinAppEx:: Шовпопупмену](#showpopupmenu)|Отображает всплывающее меню.|
+|[CWinAppEx:: Вритебинари](#writebinary)|Записывает двоичные данные в указанное значение реестра.|
+|[CWinAppEx:: Вритеинт](#writeint)|Записывает числовые данные в указанное значение реестра.|
+|[CWinAppEx:: WriteObject](#writeobject)|Записывает данные, полученные из [класса CObject](../../mfc/reference/cobject-class.md) , в указанное значение реестра.|
+|[CWinAppEx:: Вритесектионбинари](#writesectionbinary)|Записывает двоичные данные в значение указанного раздела реестра.|
+|[CWinAppEx:: Вритесектионинт](#writesectionint)|Записывает числовые данные в значение указанного раздела реестра.|
+|[CWinAppEx:: Вритесектионобжект](#writesectionobject)|Записывает данные, полученные из класса `CObject`, в значение указанного раздела реестра.|
+|[CWinAppEx:: Вритесектионстринг](#writesectionstring)|Записывает строковые данные в значение указанного раздела реестра.|
+|[CWinAppEx:: WriteString](#writestring)|Записывает строковые данные в указанное значение реестра.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CWinAppEx::LoadCustomState](#loadcustomstate)|Вызывается платформой при загрузке состояния приложения.|
-|[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Вызывается платформой при загрузке размер и расположение приложения из реестра. Загруженные данные включает размер и расположение основного фрейма во время последнего закрытия приложения.|
-|[CWinAppEx::OnClosingMainFrame](#onclosingmainframe)|Вызывается платформой, обрабатывая событие WM_CLOSE фрейма главного окна.|
-|[CWinAppEx::PreLoadState](#preloadstate)|Вызывается платформой непосредственно перед загрузкой состояния приложения.|
-|[CWinAppEx::PreSaveState](#presavestate)|Вызывается платформой непосредственно перед сохранением состояния приложения.|
-|[CWinAppEx::ReloadWindowPlacement](#reloadwindowplacement)|Перезагружает размер и расположение окна, предоставленного из реестра|
-|[CWinAppEx::SaveCustomState](#savecustomstate)|Вызвано структурой после он записывает состояние приложения в реестр.|
-|[CWinAppEx::StoreWindowPlacement](#storewindowplacement)|Вызывается платформой для записи в реестр размер и расположение основного фрейма.|
+|[CWinAppEx:: Лоадкустомстате](#loadcustomstate)|Вызывается платформой при загрузке состояния приложения.|
+|[CWinAppEx:: Лоадвиндовплацемент](#loadwindowplacement)|Вызывается платформой при загрузке в реестре размера и расположения приложения. Загруженные данные включают размер и расположение основного кадра во время последнего закрытия приложения.|
+|[CWinAppEx:: Онклосингмаинфраме](#onclosingmainframe)|Вызывается структурой при обработке WM_CLOSE главного окна фрейма.|
+|[CWinAppEx::Pная LoadState](#preloadstate)|Вызывается платформой непосредственно перед загрузкой состояния приложения.|
+|[CWinAppEx::P Ресавестате](#presavestate)|Вызывается платформой непосредственно перед сохранением состояния приложения.|
+|[CWinAppEx:: Релоадвиндовплацемент](#reloadwindowplacement)|Перезагружает размер и расположение переданного окна из реестра.|
+|[CWinAppEx:: Савекустомстате](#savecustomstate)|Вызвано структурой после записи состояния приложения в реестр.|
+|[CWinAppEx:: Сторевиндовплацемент](#storewindowplacement)|Вызывается платформой для записи размера и расположения главного фрейма в реестр.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Указывает ли платформа приведет к сбросу всех изображениям значков панели инструментов при загрузке окна фрейма, который содержит панели инструментов.|
+|[CWinAppEx:: m_bForceImageReset](#m_bforceimagereset)|Указывает, будет ли платформа сбрасывать все изображения панели инструментов при загрузке окна фрейма, содержащего панель инструментов.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Большая часть функциональных возможностях, предоставляемых платформой MFC зависит `CWinAppEx` класса. Можно включить `CWinAppEx` класс в свое приложение в одном из двух способов:
+Большая часть функциональных возможностей, предоставляемых платформой MFC, зависит от класса `CWinAppEx`. Вы можете внедрить класс `CWinAppEx` в приложение одним из двух способов:
 
-- Создать `CWinAppEx` класс в основном потоке.
+- Создайте класс `CWinAppEx` в основном потоке.
 
-- Наследуйте класс от основного приложения `CWinAppEx`.
+- Создайте класс основного приложения из `CWinAppEx`.
 
-После внедрения `CWinAppEx` в приложение, вы можете инициализировать один из диспетчеров приложений. Прежде чем использовать диспетчер приложения, необходимо инициализировать его путем вызова метода соответствующие инициализации. Чтобы получить указатель на иному менеджеру, вызовите метод get связан. `CWinAppEx` Класс управляет следующие диспетчеры приложения: [Класс CMouseManager](../../mfc/reference/cmousemanager-class.md), [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), и [ Класс CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+После включения `CWinAppEx` в приложение можно инициализировать любой диспетчер приложений. Прежде чем использовать диспетчер приложений, его необходимо инициализировать, вызвав соответствующий метод Initialize. Чтобы получить указатель на конкретный диспетчер, вызовите соответствующий метод Get. Класс `CWinAppEx` управляет следующими диспетчерами приложений: [класс кмаусеманажер](../../mfc/reference/cmousemanager-class.md), класс [кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), класс [кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md)и [класс кменутеароффманажер](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -238,9 +238,9 @@ class CWinAppEx : public CWinApp
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxwinappex.h
+**Заголовок:** афксвинаппекс. h
 
-##  <a name="cleanstate"></a>  CWinAppEx::CleanState
+##  <a name="cleanstate"></a>CWinAppEx:: Клеанстате
 
 Удаляет все сведения о приложении из реестра Windows.
 
@@ -250,20 +250,20 @@ virtual BOOL CleanState(LPCTSTR lpszSectionName=NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSectionName*<br/>
-[in] Строка, содержащая путь раздела реестра.
+*лпсзсектионнаме*<br/>
+окне Строка, содержащая путь к разделу реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод был выполнен успешно; в противном случае 0.
+Ненулевое значение, если метод был успешным; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод очищает данные приложения из указанного раздела реестра. Этот раздел, чтобы очистить с помощью параметра можно указать *lpszSectionName*. Если *lpszSectionName* имеет значение NULL, этот метод будет использовать путь реестра по умолчанию, хранящиеся в `CWinAppEx` объекта. Чтобы получить путь к реестру по умолчанию, используйте [CWinAppEx::GetRegistryBase](#getregistrybase).
+Этот метод удаляет данные приложения из определенного раздела реестра. Можно указать раздел для очистки с помощью параметра *лпсзсектионнаме*. Если *лпсзсектионнаме* имеет значение null, этот метод будет использовать путь реестра по умолчанию, хранящийся в объекте `CWinAppEx`. Чтобы получить путь к реестру по умолчанию, используйте [CWinAppEx:: жетрегистрибасе](#getregistrybase).
 
-##  <a name="cwinappex"></a>  CWinAppEx::CWinAppEx
+##  <a name="cwinappex"></a>CWinAppEx:: CWinAppEx
 
-Создает объект `CWinAppEx`.
+Формирует объект `CWinAppEx`.
 
 ```
 CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
@@ -271,16 +271,16 @@ CWinAppEx(BOOL bResourceSmartUpdate = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*bResourceSmartUpdate*<br/>
-[in] Логический параметр, который указывает, должен ли объект рабочей области определения и обработки обновления ресурса.
+*бресаурцесмартупдате*<br/>
+окне Логический параметр, указывающий, должен ли объект рабочей области обнаруживать и управлять обновлениями ресурсов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CWinAppEx` Класс содержит методы инициализации, предоставляет функциональные возможности для сохранения и загрузки сведений о приложении в реестр и управляет глобальные параметры приложения. Он также позволяет использовать глобальный диспетчеры, такие как [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) и [класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md). Каждое приложение может иметь только один экземпляр `CWinAppEx` класса.
+Класс `CWinAppEx` имеет методы инициализации, предоставляет функциональные возможности для сохранения и загрузки сведений о приложениях в реестр, а также управляет глобальными параметрами приложения. Он также позволяет использовать глобальные руководители, такие как [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) и [класс кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md). Каждое приложение может иметь только один экземпляр класса `CWinAppEx`.
 
-##  <a name="enableloadwindowplacement"></a>  CWinAppEx::EnableLoadWindowPlacement
+##  <a name="enableloadwindowplacement"></a>CWinAppEx:: Енаблелоадвиндовплацемент
 
-Указывает, будет ли приложение загрузить исходный размер и расположение фрейма главного окна из реестра.
+Указывает, будет ли приложение загружать исходный размер и расположение главного окна фрейма из реестра.
 
 ```
 void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
@@ -289,15 +289,15 @@ void EnableLoadWindowPlacement(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Указывает, загружает ли приложение, исходный размер и расположение фрейма главного окна из реестра.
+окне Указывает, загружает ли приложение исходный размер и расположение главного окна фрейма из реестра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию размер и расположение основного фрейма загружается из реестра и другие параметры приложения. Это происходит во время [CWinAppEx::LoadState](#loadstate). Если вы не хотите загрузить размещения начального окна из реестра, этот метод вызывается со *bEnable* значение FALSE.
+По умолчанию размер и расположение главного фрейма загружаются из реестра вместе с другими параметрами приложения. Это происходит во время [CWinAppEx:: LoadState](#loadstate). Если вы не хотите загружать исходное размещение окна из реестра, вызовите этот метод с параметром *бенабле* , для которого задано значение false.
 
-##  <a name="enabletearoffmenus"></a>  CWinAppEx::EnableTearOffMenus
+##  <a name="enabletearoffmenus"></a>CWinAppEx:: Енаблетеароффменус
 
-Создает и инициализирует [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) объекта.
+Создает и инициализирует объект [кменутеароффманажер](../../mfc/reference/cmenutearoffmanager-class.md) .
 
 ```
 BOOL EnableTearOffMenus(
@@ -308,26 +308,26 @@ BOOL EnableTearOffMenus(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRegEntry*<br/>
-[in] Строка, содержащая путь к разделу реестра. Приложение использует этот раздел реестра для хранения сведений о перемещаемыми меню.
+*лпсзрежентри*<br/>
+окне Строка, содержащая путь к разделу реестра. Приложение использует этот раздел реестра для хранения информации о неразрывных меню.
 
-*uiCmdFirst*<br/>
-[in] Идентификатор первого tear меню.
+*уикмдфирст*<br/>
+окне Первый разрыв из идентификатора меню.
 
-*uiCmdLast*<br/>
-[in] Идентификатор последнего tear меню.
+*уикмдласт*<br/>
+окне ИДЕНТИФИКАТОР меню последнего разрыва.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если `CMenuTearOffManager` создан и инициализирован успешно; Значение FALSE, если произошла ошибка, или если `CMenuTearOffManager` уже существует.
+Значение TRUE, если `CMenuTearOffManager` создан и инициализирован успешно; Значение FALSE, если возникает ошибка или `CMenuTearOffManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция используется для включения перемещаемые меню в приложении. Вы должны вызвать эту функцию из `InitInstance`.
+Эта функция используется для включения в приложении меню разрыва. Эту функцию следует вызывать из `InitInstance`.
 
-##  <a name="enableusertools"></a>  CWinAppEx::EnableUserTools
+##  <a name="enableusertools"></a>CWinAppEx:: Енаблеусертулс
 
-Позволяет пользователю создавать пользовательских команд меню, уменьшить число нажатий клавиш в приложении. Этот метод создает [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) объекта.
+Позволяет пользователю создавать пользовательские команды меню, уменьшающие нажатия клавиш в приложении. Этот метод создает объект [кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md) .
 
 ```
 BOOL EnableUserTools(
@@ -341,37 +341,37 @@ BOOL EnableUserTools(
 
 ### <a name="parameters"></a>Параметры
 
-*uiCmdToolsDummy*<br/>
-[in] Целое число без знака, она используется в качестве заполнителя для идентификатор команды меню "Сервис" пользователя.
+*уикмдтулсдумми*<br/>
+окне Целое число без знака, используемое платформой в качестве заполнителя для идентификатора команды в меню "средства пользователя".
 
-*uiCmdFirst*<br/>
-[in] Идентификатор команды для команды средство первого пользователя.
+*уикмдфирст*<br/>
+окне Идентификатор команды для первой команды средства пользователя.
 
-*uiCmdLast*<br/>
-[in] Идентификатор команды для команды средство последнего пользователя.
+*уикмдласт*<br/>
+окне Идентификатор команды для последней команды средства User.
 
-*pToolRTC*<br/>
-[in] Объект класса, `CUserToolsManager` объект использует, чтобы создать новые пользовательские инструменты.
+*птулртк*<br/>
+окне Класс, используемый объектом `CUserToolsManager` для создания новых пользовательских инструментов.
 
-*uArgMenuID*<br/>
-[in] Идентификатор аргумента меню.
+*уаргменуид*<br/>
+окне ИДЕНТИФИКАТОР меню аргументов.
 
-*uInitDirMenuID*<br/>
-[in] Идентификатор меню для начальной средство каталога.
+*уинитдирменуид*<br/>
+окне ИДЕНТИФИКАТОР меню для исходного каталога инструмента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод создает и инициализирует `CUserToolsManager` объекта; Значение FALSE, если метод завершается сбоем или `CUserToolsManager` объект уже существует.
+Значение TRUE, если метод создает и инициализирует объект `CUserToolsManager`; Значение FALSE, если метод завершается ошибкой или если объект `CUserToolsManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Когда вы включаете определенные пользователем инструменты, платформа автоматически поддерживает динамическое меню, который может быть расширен во время настройки. Платформа связывает каждый новый элемент с внешней команды. Платформа вызывает эти команды, когда пользователь выбирает соответствующий элемент из **средства** меню.
+При включении пользовательских средств платформа автоматически поддерживает динамическое меню, которое можно расширить во время настройки. Платформа связывает каждый новый элемент с внешней командой. Платформа вызывает эти команды, когда пользователь выбирает соответствующий элемент в меню **Сервис** .
 
-Каждый раз, когда пользователь добавляет новый элемент, платформа создает новый объект. Тип класса для нового объекта определяется *pToolRTC*. *PToolRTC* типа класса должен быть производным от [класс CUserTool](../../mfc/reference/cusertool-class.md).
+Каждый раз, когда пользователь добавляет новый элемент, платформа создает новый объект. Тип класса для нового объекта определяется *птулртк*. Тип класса *птулртк* должен быть производным от [класса кусертул](../../mfc/reference/cusertool-class.md).
 
-Дополнительные сведения о пользовательских средств и о способах внедрения их в приложение, см. в разделе [определенные пользователем инструменты](../../mfc/user-defined-tools.md).
+Дополнительные сведения о пользовательских средствах и способах их внедрения в приложение см. в разделе пользовательские [средства](../../mfc/user-defined-tools.md).
 
-##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
+##  <a name="exitinstance"></a>CWinAppEx:: ExitInstance
 
 ```
 virtual int ExitInstance();
@@ -379,11 +379,11 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getbinary"></a>  CWinAppEx::GetBinary
+##  <a name="getbinary"></a>CWinAppEx:: binary
 
-Считывает двоичные данные из указанного раздела.
+Считывает двоичные данные из указанного раздела реестра.
 
 ```
 BOOL GetBinary(
@@ -394,28 +394,28 @@ BOOL GetBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзентри*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*ppData*<br/>
-[out] Указатель на буфер, в который метод заполняет с двоичными данными.
+*ппдата*<br/>
+заполняет Указатель на буфер, который метод заполняет двоичными данными.
 
-*pBytes*<br/>
-[out] Указатель на целое число без знака, метод для записи число считанных байтов.
+*пбитес*<br/>
+заполняет Указатель на целое число без знака, используемое методом для записи числа считанных байтов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает двоичные данные, записанные в реестр. Для записи данных в реестр, используйте методы [CWinAppEx::WriteBinary](#writebinary) и [CWinAppEx::WriteSectionBinary](#writesectionbinary).
+Этот метод считывает двоичные данные, записанные в реестр. Чтобы записать данные в реестр, используйте методы [CWinAppEx:: вритебинари](#writebinary) и [CWinAppEx:: вритесектионбинари](#writesectionbinary).
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, расположенной в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getcontextmenumanager"></a>  CWinAppEx::GetContextMenuManager
+##  <a name="getcontextmenumanager"></a>CWinAppEx:: Жетконтекстменуманажер
 
-Возвращает указатель на глобальную [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта.
+Возвращает указатель на глобальный объект [кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md) .
 
 ```
 CContextMenuManager* GetContextMenuManager();
@@ -423,13 +423,13 @@ CContextMenuManager* GetContextMenuManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CContextMenuManager` объекта.
+Указатель на глобальный объект `CContextMenuManager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объект CContextMenuManager не инициализирован, эта функция вызывает [CWinAppEx::InitContextMenuManager](#initcontextmenumanager) перед возвращением указатель.
+Если объект Кконтекстменуманажер не инициализирован, эта функция вызывает [CWinAppEx:: инитконтекстменуманажер](#initcontextmenumanager) , прежде чем возвращает указатель.
 
-##  <a name="getdataversion"></a>  CWinAppEx::GetDataVersion
+##  <a name="getdataversion"></a>CWinAppEx:: Жетдатаверсион
 
 ```
 int GetDataVersion() const;
@@ -437,11 +437,11 @@ int GetDataVersion() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdataversionmajor"></a>  CWinAppEx::GetDataVersionMajor
+##  <a name="getdataversionmajor"></a>CWinAppEx:: Жетдатаверсионмажор
 
-Возвращает основной номер версии приложения, которое сохраняется в реестре Windows, при вызове [CWinAppEx::SaveState](#savestate).
+Возвращает основную версию приложения, которая сохраняется в реестре Windows при вызове [CWinAppEx:: SaveState](#savestate).
 
 ```
 int GetDataVersionMajor() const;
@@ -449,11 +449,11 @@ int GetDataVersionMajor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целое число, содержащее номер основной версии.
+Целочисленное значение, содержащее основной номер версии.
 
-##  <a name="getdataversionminor"></a>  CWinAppEx::GetDataVersionMinor
+##  <a name="getdataversionminor"></a>CWinAppEx:: Жетдатаверсионминор
 
-Возвращает дополнительный номер версии приложения, которое сохраняется в реестре Windows, при вызове [CWinAppEx::SaveState](#savestate).
+Возвращает дополнительный номер версии приложения, который сохраняется в реестре Windows при вызове [CWinAppEx:: SaveState](#savestate).
 
 ```
 int GetDataVersionMinor() const;
@@ -463,9 +463,9 @@ int GetDataVersionMinor() const;
 
 Целочисленное значение, содержащее дополнительный номер версии.
 
-##  <a name="getint"></a>  CWinAppEx::GetInt
+##  <a name="getint"></a>CWinAppEx:: GetInt
 
-Считывает данные целое число из указанного раздела.
+Считывает целочисленные данные из указанного раздела реестра.
 
 ```
 int GetInt(
@@ -475,25 +475,25 @@ int GetInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя записи реестра.
+*лпсзентри*<br/>
+окне Строка, содержащая имя записи реестра.
 
-*nDefault*<br/>
-[in] Значение по умолчанию, возвращаемое методом, если указанной записи реестра не существует.
+*ндефаулт*<br/>
+окне Значение по умолчанию, которое метод возвращает, если указанная запись реестра не существует.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Данные реестра, если метод был выполнен успешно; в противном случае *nDefault*.
+Данные реестра, если метод был успешным; в противном случае *ндефаулт*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает целочисленные данные из реестра. Если имеется не целочисленные данные, связанные с разделом реестра, обозначается *lpszEntry*, этот метод возвращает *nDefault*. Для записи данных в реестр, используйте методы [CWinAppEx::WriteSectionInt](#writesectionint) и [CWinAppEx::WriteInt](#writeint).
+Этот метод считывает целочисленные данные из реестра. Если нет целочисленных данных, связанных с разделом реестра, указанным параметром *лпсзентри*, этот метод возвращает *ндефаулт*. Чтобы записать данные в реестр, используйте методы [CWinAppEx:: вритесектионинт](#writesectionint) и [CWinAppEx:: вритеинт](#writeint).
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, расположенной в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getkeyboardmanager"></a>  CWinAppEx::GetKeyboardManager
+##  <a name="getkeyboardmanager"></a>CWinAppEx:: Жеткэйбоардманажер
 
-Возвращает указатель на глобальную [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) объекта.
+Возвращает указатель на глобальный объект [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) .
 
 ```
 CKeyboardManager* GetKeyboardManager();
@@ -501,15 +501,15 @@ CKeyboardManager* GetKeyboardManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CKeyboardManager` объекта.
+Указатель на глобальный объект `CKeyboardManager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если диспетчер клавиатуры не инициализирован, эта функция вызывает [CWinAppEx::InitKeyboardManager](#initkeyboardmanager) перед возвращением указатель.
+Если диспетчер клавиатуры не инициализирован, эта функция вызывает [CWinAppEx:: иниткэйбоардманажер](#initkeyboardmanager) , прежде чем возвращает указатель.
 
-##  <a name="getmousemanager"></a>  CWinAppEx::GetMouseManager
+##  <a name="getmousemanager"></a>CWinAppEx:: Жетмаусеманажер
 
-Возвращает указатель на глобальную [CMouseManager](../../mfc/reference/cmousemanager-class.md) объекта.
+Возвращает указатель на глобальный объект [кмаусеманажер](../../mfc/reference/cmousemanager-class.md) .
 
 ```
 CMouseManager* GetMouseManager();
@@ -517,15 +517,15 @@ CMouseManager* GetMouseManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CMouseManager` объекта.
+Указатель на глобальный объект `CMouseManager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если диспетчер мыши не инициализирован, эта функция вызывает [CWinAppEx::InitMouseManager](#initmousemanager) перед возвращением указатель.
+Если диспетчер мыши не инициализирован, эта функция вызывает [CWinAppEx:: инитмаусеманажер](#initmousemanager) , прежде чем возвращает указатель.
 
-##  <a name="getobject"></a>  CWinAppEx::GetObject
+##  <a name="getobject"></a>CWinAppEx:: GetObject
 
-Считывает [CObject](../../mfc/reference/cobject-class.md)получен суточный - данных из реестра.
+Считывает данные о [CObject](../../mfc/reference/cobject-class.md)-производный из реестра.
 
 ```
 BOOL GetObject(
@@ -535,25 +535,25 @@ BOOL GetObject(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая относительный путь записи в реестре.
+*лпсзентри*<br/>
+окне Строка, содержащая относительный путь к записи реестра.
 
 *obj*<br/>
-[out] Ссылку на `CObject`. Данный метод использует эту ссылку для хранения данных реестра.
+заполняет Ссылка на `CObject`. Метод использует эту ссылку для хранения данных реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод был выполнен успешно; в противном случае 0.
+Ненулевое значение, если метод был успешным; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает данные из реестра, который является производным от `CObject`. Для записи `CObject` данных в реестр, используйте либо [CWinAppEx::WriteObject](#writeobject) или [CWinAppEx::WriteSectionObject](#writesectionobject).
+Этот метод считывает данные из реестра, который является производным от `CObject`. Чтобы записать `CObject` данные в реестр, используйте [CWinAppEx:: WriteObject](#writeobject) или [CWinAppEx:: вритесектионобжект](#writesectionobject).
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, которая находится в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getregistrybase"></a>  CWinAppEx::GetRegistryBase
+##  <a name="getregistrybase"></a>CWinAppEx:: Жетрегистрибасе
 
-Возвращает путь в реестре по умолчанию для приложения.
+Извлекает путь реестра по умолчанию для приложения.
 
 ```
 LPCTSTR GetRegistryBase();
@@ -563,11 +563,11 @@ LPCTSTR GetRegistryBase();
 
 Строка, содержащая путь к расположению реестра по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Все методы [класс CWinAppEx](../../mfc/reference/cwinappex-class.md) , имеющих доступ к начала реестра в расположении по умолчанию. Этот метод позволяет получить путь расположения реестра по умолчанию. Используйте [CWinAppEx::SetRegistryBase](#setregistrybase) для изменения расположения реестра по умолчанию.
+Все методы [класса CWinAppEx](../../mfc/reference/cwinappex-class.md) , которые обращаются к реестру, начинаются в расположении по умолчанию. Этот метод используется для получения пути к расположению реестра по умолчанию. Используйте [CWinAppEx:: сетрегистрибасе](#setregistrybase) , чтобы изменить расположение реестра по умолчанию.
 
-##  <a name="getregsectionpath"></a>  CWinAppEx::GetRegSectionPath
+##  <a name="getregsectionpath"></a>CWinAppEx:: Жетрегсектионпас
 
 Создает и возвращает абсолютный путь к разделу реестра.
 
@@ -577,18 +577,18 @@ CString GetRegSectionPath(LPCTSTR szSectionAdd = _T(""));
 
 ### <a name="parameters"></a>Параметры
 
-*szSectionAdd*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*сзсектионадд*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CString` , содержащий абсолютный путь к разделу реестра.
+`CString`, содержащий абсолютный путь к разделу реестра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод определяет абсолютный путь к разделу реестра, добавив, относительный путь в *szSectionAdd* расположение реестра по умолчанию для вашего приложения. Чтобы получить ключ реестра по умолчанию, используйте метод [CWinAppEx::GetRegistryBase](#getregistrybase).
+Этот метод определяет абсолютный путь к разделу реестра, добавляя относительный путь в *сзсектионадд* в расположение реестра по умолчанию для приложения. Чтобы получить раздел реестра по умолчанию, используйте метод [CWinAppEx:: жетрегистрибасе](#getregistrybase).
 
-##  <a name="getsectionbinary"></a>  CWinAppEx::GetSectionBinary
+##  <a name="getsectionbinary"></a>CWinAppEx:: Жетсектионбинари
 
 Считывает двоичные данные из реестра.
 
@@ -602,31 +602,31 @@ BOOL GetSectionBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая значение для чтения.
+*лпсзентри*<br/>
+окне Строка, содержащая значение для чтения.
 
-*ppData*<br/>
-[out] Указатель на буфер, где метод сохраняет данные.
+*ппдата*<br/>
+заполняет Указатель на буфер, в котором метод хранит данные.
 
-*pBytes*<br/>
-[out] Указатель на целое число без знака. Метод записывает размер *ppData* к данному параметру.
+*пбитес*<br/>
+заполняет Указатель на целое число без знака. Метод записывает размер *ппдата* в этот параметр.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает двоичные данные, которые записываются в реестр с помощью методов [CWinAppEx::WriteBinary](#writebinary) и [CWinAppEx::WriteSectionBinary](#writesectionbinary).
+Этот метод считывает двоичные данные, записанные в реестр, с помощью методов [CWinAppEx:: вритебинари](#writebinary) и [CWinAppEx:: вритесектионбинари](#writesectionbinary).
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getsectionint"></a>  CWinAppEx::GetSectionInt
+##  <a name="getsectionint"></a>CWinAppEx:: Жетсектионинт
 
-Считывает целое число данные из реестра.
+Считывает целочисленные данные из реестра.
 
 ```
 int GetSectionInt(
@@ -637,28 +637,28 @@ int GetSectionInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая значение для чтения.
+*лпсзентри*<br/>
+окне Строка, содержащая значение для чтения.
 
-*nDefault*<br/>
-[in] Значение по умолчанию для возврата, если указанное значение не существует.
+*ндефаулт*<br/>
+окне Значение по умолчанию, возвращаемое, если указанное значение не существует.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целочисленные данные, хранящиеся в реестре задано значение; *nDefault* Если данные не существует.
+Целочисленные данные, хранящиеся в указанном значении реестра; *ндефаулт* , если данные не существуют.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте методы [CWinAppEx::WriteInt](#writeint) и [CWinAppEx::WriteSectionInt](#writesectionint) для записи данных integer в реестр.
+Используйте методы [CWinAppEx:: вритеинт](#writeint) и [CWinAppEx:: вритесектионинт](#writesectionint) для записи целочисленных данных в реестр.
 
-*LpszSubSection* параметр не является абсолютным путем записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем к записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getsectionobject"></a>  CWinAppEx::GetSectionObject
+##  <a name="getsectionobject"></a>CWinAppEx:: Жетсектионобжект
 
-Считывает [CObject](../../mfc/reference/cobject-class.md) данных реестра из реестра.
+Считывает из реестра данные реестра [CObject](../../mfc/reference/cobject-class.md) .
 
 ```
 BOOL GetSectionObject(
@@ -669,28 +669,28 @@ BOOL GetSectionObject(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая значение для чтения.
+*лпсзентри*<br/>
+окне Строка, содержащая значение для чтения.
 
 *obj*<br/>
-[out] Ссылку на `CObject`. Данный метод использует это `CObject` для хранения данных реестра.
+заполняет Ссылка на `CObject`. Метод использует этот `CObject` для хранения данных реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает данные из реестра. Чтение данных является `CObject` данные или данные для класса, производного от `CObject`. Для записи `CObject` данных в реестр, используйте либо [CWinAppEx::WriteObject](#writeobject) или [CWinAppEx::WriteSectionObject](#writesectionobject).
+Этот метод считывает данные из реестра. Чтение данных — это `CObject` данные или данные для класса, производного от `CObject`. Чтобы записать `CObject` данные в реестр, используйте [CWinAppEx:: WriteObject](#writeobject) или [CWinAppEx:: вритесектионобжект](#writesectionobject).
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getsectionstring"></a>  CWinAppEx::GetSectionString
+##  <a name="getsectionstring"></a>CWinAppEx:: Жетсектионстринг
 
-Операции чтения строковые данные из реестра.
+Считывает строковые данные из реестра.
 
 ```
 CString GetSectionString(
@@ -701,28 +701,28 @@ CString GetSectionString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая значение для чтения.
+*лпсзентри*<br/>
+окне Строка, содержащая значение для чтения.
 
-*lpszDefault*<br/>
-[in] Значение по умолчанию для возврата, если указанное значение не существует.
+*лпсздефаулт*<br/>
+окне Значение по умолчанию, возвращаемое, если указанное значение не существует.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строковые данные, хранящиеся в указанный параметр реестра, если данные существуют; в противном случае *lpszDefault*.
+Строковые данные, хранящиеся в указанном значении реестра, если данные существуют; в противном случае *лпсздефаулт*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает строки данных, записанных в реестр. Используйте [CWinAppEx::WriteString](#writestring) и [CWinAppEx::WriteSectionString](#writesectionstring) для записи строки данных в реестр.
+Этот метод считывает строковые данные, записанные в реестр. Используйте [CWinAppEx:: WriteString](#writestring) и [CWinAppEx:: вритесектионстринг](#writesectionstring) для записи строковых данных в реестр.
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="getshellmanager"></a>  CWinAppEx::GetShellManager
+##  <a name="getshellmanager"></a>CWinAppEx:: Жетшеллманажер
 
-Возвращает указатель на глобальную [CShellManager](../../mfc/reference/cshellmanager-class.md) объекта.
+Возвращает указатель на глобальный объект [кшеллманажер](../../mfc/reference/cshellmanager-class.md) .
 
 ```
 CShellManager* GetShellManager();
@@ -730,15 +730,15 @@ CShellManager* GetShellManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CShellManager` объекта.
+Указатель на глобальный объект `CShellManager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если `CShellManager` объект не инициализирован, эта функция вызывает [CWinAppEx::InitShellManager](#initshellmanager) перед возвращением указатель.
+Если объект `CShellManager` не инициализирован, эта функция вызывает [CWinAppEx:: инитшеллманажер](#initshellmanager) , прежде чем возвращает указатель.
 
-##  <a name="getstring"></a>  CWinAppEx::GetString
+##  <a name="getstring"></a>CWinAppEx:: GetString
 
-Операции чтения строковые данные из указанного раздела.
+Считывает строковые данные из указанного раздела реестра.
 
 ```
 CString GetString(
@@ -748,25 +748,25 @@ CString GetString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя раздела реестра
+*лпсзентри*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*lpzDefault*<br/>
-[in] Значение по умолчанию, возвращаемое методом, если указанной записи реестра не существует.
+*лпздефаулт*<br/>
+окне Значение по умолчанию, которое метод возвращает, если указанная запись реестра не существует.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строковые данные, хранящиеся в реестре, если выполнение прошло успешно; *lpszDefault* в противном случае.
+Строковые данные, хранящиеся в реестре в случае успеха; *лпсздефаулт* в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод считывает строки данных, записанных в реестр. Для записи данных в реестр, используйте методы [CWinAppEx::WriteString](#writestring) или [CWinAppEx::WriteSectionString](#writesectionstring).
+Этот метод считывает строковые данные, записанные в реестр. Чтобы записать данные в реестр, используйте методы [CWinAppEx:: WriteString](#writestring) или [CWinAppEx:: вритесектионстринг](#writesectionstring).
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, расположенной в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="gettooltipmanager"></a>  CWinAppEx::GetTooltipManager
+##  <a name="gettooltipmanager"></a>CWinAppEx:: Жеттултипманажер
 
-Возвращает указатель на глобальную [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) объекта.
+Возвращает указатель на глобальный объект [ктултипманажер](../../mfc/reference/ctooltipmanager-class.md) .
 
 ```
 CTooltipManager* GetTooltipManager();
@@ -774,15 +774,15 @@ CTooltipManager* GetTooltipManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CTooltipManager` объекта.
+Указатель на глобальный объект `CTooltipManager`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если `CTooltipManager` объект не инициализирован, эта функция вызывает [CWinAppEx::InitTooltipManager](#inittooltipmanager) перед возвращением указатель.
+Если объект `CTooltipManager` не инициализирован, эта функция вызывает [CWinAppEx:: иниттултипманажер](#inittooltipmanager) , прежде чем возвращает указатель.
 
-##  <a name="getusertoolsmanager"></a>  CWinAppEx::GetUserToolsManager
+##  <a name="getusertoolsmanager"></a>CWinAppEx:: Жетусертулсманажер
 
-Возвращает указатель на глобальную [CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md) объекта.
+Возвращает указатель на глобальный объект [кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md) .
 
 ```
 CUserToolsManager* GetUserToolsManager();
@@ -790,15 +790,15 @@ CUserToolsManager* GetUserToolsManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на глобальную `CUserToolsManager` объекта; Значение NULL, если пользователь средств управления не включена для приложения.
+Указатель на глобальный объект `CUserToolsManager`; Значение NULL, если управление пользовательскими инструментами не включено для приложения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Прежде чем получить указатель на `CUserToolsManager` объекта, необходимо инициализировать диспетчер путем вызова [CWinAppEx::EnableUserTools](#enableusertools).
+Перед получением указателя на объект `CUserToolsManager` необходимо инициализировать диспетчер путем вызова [CWinAppEx:: енаблеусертулс](#enableusertools).
 
-##  <a name="initcontextmenumanager"></a>  CWinAppEx::InitContextMenuManager
+##  <a name="initcontextmenumanager"></a>CWinAppEx:: Инитконтекстменуманажер
 
-Инициализирует [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта.
+Инициализирует объект [кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md) .
 
 ```
 BOOL InitContextMenuManager();
@@ -806,17 +806,17 @@ BOOL InitContextMenuManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если этот метод создает объект CContextMenuManager; 0, если `CContextMenuManager` объект уже существует.
+Ненулевое значение, если метод создает объект Кконтекстменуманажер; 0, если объект `CContextMenuManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При вызове метода [CWinAppEx::GetContextMenuManager](#getcontextmenumanager), реализация по умолчанию этот метод вызывает `InitContextMenuManager`.
+При вызове [CWinAppEx:: жетконтекстменуманажер](#getcontextmenumanager)реализация по умолчанию этого метода вызывает `InitContextMenuManager`.
 
-Если приложение уже имеет меню диспетчера контекста можно вызвать метод `InitContextMenuManager`, приложение будет иметь [ASSERT](diagnostic-services.md#assert) сбоя. Таким образом, не следует вызывать `InitContextMenuManager` при создании `CContextMenuManager` объекта напрямую. Если вы не используете пользовательский `CContextMenuManager`, следует использовать `GetContextMenuManager` для создания `CContextMenuManager` объекта.
+Если в приложении уже есть диспетчер контекстных меню и вы вызываете `InitContextMenuManager`, приложение будет иметь сбой [Assert](diagnostic-services.md#assert) . Поэтому не следует вызывать `InitContextMenuManager` при непосредственном создании объекта `CContextMenuManager`. Если пользовательская `CContextMenuManager`не используется, для создания объекта `CContextMenuManager` следует использовать `GetContextMenuManager`.
 
-##  <a name="initkeyboardmanager"></a>  CWinAppEx::InitKeyboardManager
+##  <a name="initkeyboardmanager"></a>CWinAppEx:: Иниткэйбоардманажер
 
-Инициализирует [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) объекта.
+Инициализирует объект [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md) .
 
 ```
 BOOL InitKeyboardManager();
@@ -824,17 +824,17 @@ BOOL InitKeyboardManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод создает `CKeyboardManager` объекта; 0, если `CKeyboardManager` объект уже существует.
+Ненулевое значение, если метод создает объект `CKeyboardManager`; 0, если объект `CKeyboardManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При вызове метода [CWinAppEx::GetKeyboardManager](#getkeyboardmanager), реализация по умолчанию этот метод вызывает `InitKeyboardManager`.
+При вызове [CWinAppEx:: жеткэйбоардманажер](#getkeyboardmanager)реализация по умолчанию этого метода вызывает `InitKeyboardManager`.
 
-Если приложение уже имеет manager клавиатуры можно вызвать метод `InitKeyboardManager`, приложение будет иметь [ASSERT](diagnostic-services.md#assert) сбоя. Таким образом, не следует вызывать `InitKeyboardManager` при создании `CKeyboardManager` объекта напрямую. Если вы не используете пользовательский `CKeyboardManager`, следует использовать `GetKeyboardManager` для создания `CKeyboardManager` объекта.
+Если в приложении уже есть диспетчер клавиатуры, и вы вызываете `InitKeyboardManager`, приложение будет иметь сбой [Assert](diagnostic-services.md#assert) . Поэтому не следует вызывать `InitKeyboardManager` при непосредственном создании объекта `CKeyboardManager`. Если пользовательская `CKeyboardManager`не используется, для создания объекта `CKeyboardManager` следует использовать `GetKeyboardManager`.
 
-##  <a name="initmousemanager"></a>  CWinAppEx::InitMouseManager
+##  <a name="initmousemanager"></a>CWinAppEx:: Инитмаусеманажер
 
-Инициализирует [CMouseManager](../../mfc/reference/cmousemanager-class.md) объекта.
+Инициализирует объект [кмаусеманажер](../../mfc/reference/cmousemanager-class.md) .
 
 ```
 BOOL InitMouseManager();
@@ -842,17 +842,17 @@ BOOL InitMouseManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод создает `CMouseManager` объекта; 0, если `CMouseManager` объект уже существует.
+Ненулевое значение, если метод создает объект `CMouseManager`; 0, если объект `CMouseManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При вызове метода [CWinAppEx::GetMouseManager](#getmousemanager), реализация по умолчанию этот метод вызывает `InitMouseManager`.
+При вызове [CWinAppEx:: жетмаусеманажер](#getmousemanager)реализация по умолчанию этого метода вызывает `InitMouseManager`.
 
-Если приложение уже имеет manager мыши можно вызвать метод `InitMouseManager`, приложение будет иметь [ASSERT](diagnostic-services.md#assert) сбоя. Поэтому не следует вызывать `InitMouseManager` при создании `CMouseManager` объекта напрямую. Если вы не используете пользовательский `CMouseManager`, следует использовать `GetMouseManager` для создания `CMouseManager` объекта.
+Если в приложении уже есть диспетчер мыши и вы вызываете `InitMouseManager`, приложение будет иметь сбой [Assert](diagnostic-services.md#assert) . Поэтому не следует вызывать `InitMouseManager` при непосредственном создании `CMouseManager` объекта. Если пользовательская `CMouseManager`не используется, для создания объекта `CMouseManager` следует использовать `GetMouseManager`.
 
-##  <a name="initshellmanager"></a>  CWinAppEx::InitShellManager
+##  <a name="initshellmanager"></a>CWinAppEx:: Инитшеллманажер
 
-Инициализирует [CShellManager](../../mfc/reference/cshellmanager-class.md) объекта.
+Инициализирует объект [кшеллманажер](../../mfc/reference/cshellmanager-class.md) .
 
 ```
 BOOL InitShellManager();
@@ -860,17 +860,17 @@ BOOL InitShellManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод создает `CShellManager` объекта; 0, если `CShellManager` объект уже существует.
+Ненулевое значение, если метод создает объект `CShellManager`; 0, если объект `CShellManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При вызове метода [CWinAppEx::GetShellManager](#getshellmanager), реализация по умолчанию этот метод вызывает `InitShellManager`.
+При вызове [CWinAppEx:: жетшеллманажер](#getshellmanager)реализация по умолчанию этого метода вызывает `InitShellManager`.
 
-Если приложение уже имеет диспетчер оболочки можно вызвать метод `InitShellManager`, вашего приложение создает событие [ASSERT](diagnostic-services.md#assert) сбоя. Таким образом, не следует вызывать `InitShellManager` при создании `CShellManager` объекта напрямую. Если вы не используете пользовательский `CShellManager`, использовать `GetShellManager` для создания `CShellManager` объекта.
+Если в приложении уже есть диспетчер оболочки и вы вызываете `InitShellManager`, приложение вызывает сбой [Assert](diagnostic-services.md#assert) . Поэтому не вызывайте `InitShellManager`, если объект `CShellManager` создается напрямую. Если вы не используете настраиваемый `CShellManager`, используйте `GetShellManager` для создания объекта `CShellManager`.
 
-##  <a name="inittooltipmanager"></a>  CWinAppEx::InitTooltipManager
+##  <a name="inittooltipmanager"></a>CWinAppEx:: Иниттултипманажер
 
-Инициализирует [CTooltipManager](../../mfc/reference/ctooltipmanager-class.md) объекта.
+Инициализирует объект [ктултипманажер](../../mfc/reference/ctooltipmanager-class.md) .
 
 ```
 BOOL InitTooltipManager();
@@ -878,15 +878,15 @@ BOOL InitTooltipManager();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод создает `CTooltipManager` объекта; 0, если `CTooltipManager` объект уже существует.
+Ненулевое значение, если метод создает объект `CTooltipManager`; 0, если объект `CTooltipManager` уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При вызове метода [CWinAppEx::GetTooltipManager](#gettooltipmanager), реализация по умолчанию этот метод вызывает `InitTooltipManager`.
+При вызове [CWinAppEx:: жеттултипманажер](#gettooltipmanager)реализация по умолчанию этого метода вызывает `InitTooltipManager`.
 
-Если приложение уже имеет диспетчера всплывающих подсказок и вызывается `InitTooltipManager`, приложение будет иметь [ASSERT](diagnostic-services.md#assert) сбоя. Таким образом, не следует вызывать `InitTooltipManager` при создании `CTooltipManager` объекта напрямую. Если вы не используете пользовательский `CTooltipManager`, следует использовать `GetTooltipManager` для создания `CTooltipManager` объекта.
+Если в приложении уже есть диспетчер подсказок и вы вызываете `InitTooltipManager`, приложение будет иметь сбой [Assert](diagnostic-services.md#assert) . Поэтому не следует вызывать `InitTooltipManager` при непосредственном создании объекта `CTooltipManager`. Если пользовательская `CTooltipManager`не используется, для создания объекта `CTooltipManager` следует использовать `GetTooltipManager`.
 
-##  <a name="isresourcesmartupdate"></a>  CWinAppEx::IsResourceSmartUpdate
+##  <a name="isresourcesmartupdate"></a>CWinAppEx:: Исресаурцесмартупдате
 
 ```
 BOOL IsResourceSmartUpdate() const;
@@ -894,11 +894,11 @@ BOOL IsResourceSmartUpdate() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isstateexists"></a>  CWinAppEx::IsStateExists
+##  <a name="isstateexists"></a>CWinAppEx:: Исстатиксистс
 
-Указывает, является ли указанный ключ в реестре.
+Указывает, находится ли указанный ключ в реестре.
 
 ```
 BOOL IsStateExists(LPCTSTR lpszSectionName);
@@ -906,28 +906,28 @@ BOOL IsStateExists(LPCTSTR lpszSectionName);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSectionName*<br/>
-[in] Строка, содержащая путь раздела реестра.
+*лпсзсектионнаме*<br/>
+окне Строка, содержащая путь к разделу реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если ключ находится в реестре; в противном случае 0.
+Ненулевое значение, если ключ находится в реестре; в противном случае — 0.
 
-##  <a name="loadcustomstate"></a>  CWinAppEx::LoadCustomState
+##  <a name="loadcustomstate"></a>CWinAppEx:: Лоадкустомстате
 
-Этот метод вызывается платформой, после загрузки состояния приложения из реестра.
+Платформа вызывает этот метод после загрузки состояния приложения из реестра.
 
 ```
 virtual void LoadCustomState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если вы хотите выполнять обработку после приложение загружает состояние из реестра. По умолчанию этот метод не выполняет никаких действий.
+Переопределите этот метод, если требуется выполнить обработку после того, как приложение загрузит состояние из реестра. По умолчанию этот метод не выполняет никаких действий.
 
-Чтобы загрузить пользовательские сведения о состоянии из реестра, данные необходимо сначала сохранить с помощью [CWinAppEx::SaveCustomState](#savecustomstate).
+Чтобы загрузить сведения о пользовательском состоянии из реестра, необходимо сначала сохранить сведения с помощью [CWinAppEx:: савекустомстате](#savecustomstate).
 
-##  <a name="loadstate"></a>  CWinAppEx::LoadState
+##  <a name="loadstate"></a>CWinAppEx:: LoadState
 
 Считывает состояние приложения из реестра Windows.
 
@@ -951,30 +951,30 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Параметры
 
-*pFrame*<br/>
-[in] Указатель на объект фрейма окна. Сведения о состоянии в реестре применяется метод для этого фрейма окна.
+*пфраме*<br/>
+окне Указатель на объект окна фрейма. Метод применяет сведения о состоянии в реестре к этому окну фрейма.
 
-*lpszSectionName*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсектионнаме*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*pFrameImpl*<br/>
-[in] Указатель на `CFrameImpl` объект. Сведения о состоянии в реестре применяется метод для этого фрейма окна.
+*пфрамеимпл*<br/>
+окне Указатель на объект `CFrameImpl`. Метод применяет сведения о состоянии в реестре к этому окну фрейма.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод загружает состояние приложения и данные о состоянии для окна фрейма. Загрузить сведения для фрейма окна применяется к предоставленным фрейма окна. Если вы не предоставляете окна фрейма, загружается только сведения о состоянии приложения. Сведения о приложении включает в себя состояние [класс CMouseManager](../../mfc/reference/cmousemanager-class.md), [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)и [ Класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
+Этот метод загружает состояние приложения и все сведения о состоянии окна фрейма. Загруженные сведения для окна фрейма применяются к указанному окну фрейма. Если не указать окно фрейма, загружается только информация о состоянии приложения. Сведения о приложении включают состояние [класса кмаусеманажер](../../mfc/reference/cmousemanager-class.md), [класс кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)и [класс кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md).
 
-Реализация по умолчанию `CFrameImpl::OnLoadFrame` вызовы `LoadState`.
+Реализация `CFrameImpl::OnLoadFrame` по умолчанию вызывает `LoadState`.
 
-*LpszSectionName* параметр не абсолютный путь для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсектионнаме* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="loadwindowplacement"></a>  CWinAppEx::LoadWindowPlacement
+##  <a name="loadwindowplacement"></a>CWinAppEx:: Лоадвиндовплацемент
 
-Вызывается платформой при загрузке из реестра размер и расположение окна главного фрейма.
+Вызывается платформой при загрузке размера и расположения главного окна фрейма из реестра.
 
 ```
 virtual BOOL LoadWindowPlacement(
@@ -985,40 +985,40 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="parameters"></a>Параметры
 
-*rectNormalPosition*<br/>
-[out] Прямоугольник, содержащий координаты фрейма главного окна, находящегося в восстановленной положение.
+*ректнормалпоситион*<br/>
+заполняет Прямоугольник, содержащий координаты главного окна фрейма, если он находится в восстановленной положении.
 
-*nFlags*<br/>
-[out] Флаги, определяющие положение свернутого окна и каким образом операционная система переключает между свернутого окна и окно восстановленной.
+*нфлагс*<br/>
+заполняет Флаги, управляющие положением окна с минимальным окном и способом переключения операционной системы между окном с минимальным и восстановленным окном.
 
-*nShowCmd*<br/>
-[out] Целое число, указывающее состояние отображения окна. Дополнительные сведения о возможных значениях см. в разделе [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
+*ншовкмд*<br/>
+заполняет Целое число, указывающее состояние отображения окна. Дополнительные сведения о возможных значениях см. в разделе [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию в MFC автоматически загружает предыдущее расположение и состояние окна главного фрейма, при запуске приложения. Дополнительные сведения о том, как эти сведения хранятся в реестре, см. в разделе [CWinAppEx::StoreWindowPlacement](#storewindowplacement).
+По умолчанию MFC автоматически загружает предыдущее расположение и состояние главного окна фрейма при запуске приложения. Дополнительные сведения о хранении этих сведений в реестре см. в разделе [CWinAppEx:: сторевиндовплацемент](#storewindowplacement).
 
-Переопределите этот метод, если вы хотите загрузить дополнительные сведения о фрейма главного окна.
+Переопределите этот метод, если требуется загрузить дополнительные сведения о главном окне фрейма.
 
-##  <a name="m_bforceimagereset"></a>  CWinAppEx::m_bForceImageReset
+##  <a name="m_bforceimagereset"></a>CWinAppEx:: m_bForceImageReset
 
-Указывает ли платформа сбрасывает все изображениям значков панели инструментов, при загрузке окна фрейма, который содержит панели инструментов.
+Указывает, будет ли платформа сбрасывать все изображения панели инструментов при перезагрузке окна фрейма, содержащего панель инструментов.
 
 ```
 BOOL m_bForceImageReset;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_bForceImageReset` Член данных является защищенной переменной.
+Элемент данных `m_bForceImageReset` является защищенной переменной.
 
-##  <a name="onappcontexthelp"></a>  CWinAppEx::OnAppContextHelp
+##  <a name="onappcontexthelp"></a>CWinAppEx:: Онаппконтексселп
 
-Этот метод вызывается платформой, когда пользователь запрашивает контекстная справка для **настройки** диалоговое окно.
+Платформа вызывает этот метод, когда пользователь запрашивает контекстную справку для диалогового окна **настройки** .
 
 ```
 virtual void OnAppContextHelp(
@@ -1028,19 +1028,19 @@ virtual void OnAppContextHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*pWndControl*<br/>
-[in] Указатель на объект окна, для которого пользователь вызвал контекстной справки.
+*пвндконтрол*<br/>
+окне Указатель на объект окна, для которого вызываемая пользователем Справка контекстного вызова.
 
-*[dwHelpIDArray]*<br/>
-[in] Зарезервированное значение.
+*Двхелпидаррай []*<br/>
+окне Зарезервированное значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В настоящее время этот метод зарезервирован для использования в будущем. Реализация по умолчанию не выполняет никаких действий, и он в настоящее время не вызывается платформой.
+Этот метод в настоящее время зарезервирован для использования в будущем. Реализация по умолчанию не выполняет никаких действий и в настоящее время не вызывается платформой.
 
-##  <a name="onclosingmainframe"></a>  CWinAppEx::OnClosingMainFrame
+##  <a name="onclosingmainframe"></a>CWinAppEx:: Онклосингмаинфраме
 
-Этот метод вызывается платформой, обрабатывая событие WM_CLOSE фрейм окна.
+Платформа вызывает этот метод, когда фрейм окна обрабатывает WM_CLOSE.
 
 ```
 virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
@@ -1048,16 +1048,16 @@ virtual void OnClosingMainFrame(CFrameImpl* pFrameImpl);
 
 ### <a name="parameters"></a>Параметры
 
-*pFrameImpl*<br/>
-[in] Указатель на `CFrameImpl` объект.
+*пфрамеимпл*<br/>
+окне Указатель на объект `CFrameImpl`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию этот метод сохраняет состояние *pFrameImpl*.
+Реализация по умолчанию этого метода сохраняет состояние *пфрамеимпл*.
 
-##  <a name="onviewdoubleclick"></a>  CWinAppEx::OnViewDoubleClick
+##  <a name="onviewdoubleclick"></a>CWinAppEx:: Онвиевдаублекликк
 
-Вызывает определяемую пользователем команду, связанного с представлением при двойном щелчке в любом месте в этом представлении.
+Вызывает определяемую пользователем команду, связанную с представлением, когда пользователь дважды щелкает в любом месте этого представления.
 
 ```
 virtual BOOL OnViewDoubleClick(
@@ -1067,21 +1067,21 @@ virtual BOOL OnViewDoubleClick(
 
 ### <a name="parameters"></a>Параметры
 
-*pWnd*<br/>
-[in] Указатель на объект производного от [CView Class](../../mfc/reference/cview-class.md).
+*Приводится*<br/>
+окне Указатель на объект, производный от [класса CView](../../mfc/reference/cview-class.md).
 
-*iViewId*<br/>
-[in] Код представления.
+*ивиевид*<br/>
+окне Идентификатор представления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если платформа находит команды; в противном случае — значение FALSE.
+Значение TRUE, если платформа находит команду; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для поддержки пользовательских мыши поведение, необходимо вызвать эту функцию во время обработки сообщения WM_LBUTTONDBLCLK. Этот метод будет выполняться команда, связанная с идентификатор представления, предоставляемые *iViewId*. Дополнительные сведения о поведении пользовательских мыши см. в разделе [Настройка мыши и клавиатуры](../../mfc/keyboard-and-mouse-customization.md).
+Для поддержки пользовательского поведения мыши необходимо вызвать эту функцию при обработке сообщения WM_LBUTTONDBLCLK. Этот метод выполнит команду, связанную с ИДЕНТИФИКАТОРом представления, предоставленным *ивиевид*. Дополнительные сведения о пользовательском поведении мыши см. в разделе [Настройка клавиатуры и мыши](../../mfc/keyboard-and-mouse-customization.md).
 
-##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
+##  <a name="onworkspaceidle"></a>CWinAppEx:: Онворкспацеидле
 
 ```
 virtual BOOL OnWorkspaceIdle(CWnd*);
@@ -1089,37 +1089,37 @@ virtual BOOL OnWorkspaceIdle(CWnd*);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CWnd&#38;*<br/>
+окне *CWnd&#38;*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="preloadstate"></a>  CWinAppEx::PreLoadState
+##  <a name="preloadstate"></a>CWinAppEx::Pная LoadState
 
-Этот метод вызывается платформой непосредственно перед его загружает состояние приложения из реестра.
+Платформа вызывает этот метод непосредственно перед загрузкой состояния приложения из реестра.
 
 ```
 virtual void PreLoadState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если вы хотите выполнять обработку, непосредственно перед framework загружает состояние приложения.
+Переопределите этот метод, если требуется выполнить обработку немедленно, прежде чем платформа загрузит состояние приложения.
 
-##  <a name="presavestate"></a>  CWinAppEx::PreSaveState
+##  <a name="presavestate"></a>CWinAppEx::P Ресавестате
 
-Этот метод вызывается платформой непосредственно перед она сохраняет состояние приложения.
+Платформа вызывает этот метод непосредственно перед сохранением состояния приложения.
 
 ```
 virtual void PreSaveState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если вы хотите выполнять обработку, непосредственно перед framework сохраняет состояние приложения.
+Переопределите этот метод, если требуется выполнить обработку немедленно, прежде чем платформа сохранит состояние приложения.
 
-##  <a name="reloadwindowplacement"></a>  CWinAppEx::ReloadWindowPlacement
+##  <a name="reloadwindowplacement"></a>CWinAppEx:: Релоадвиндовплацемент
 
 Перезагружает размер и расположение окна из реестра.
 
@@ -1129,30 +1129,30 @@ virtual BOOL ReloadWindowPlacement(CFrameWnd* pFrame);
 
 ### <a name="parameters"></a>Параметры
 
-*pFrame*<br/>
-[in] Указатель на фрейм окна.
+*пфраме*<br/>
+окне Указатель на окно фрейма.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод был выполнен успешно; 0, если нагрузка неудачных или возникли нет данных для загрузки.
+Ненулевое значение, если метод был успешным; 0, если загрузка не удалась или отсутствуют данные для загрузки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте функцию [CWinAppEx::StoreWindowPlacement](#storewindowplacement) записываемый размер и расположение окна в реестр.
+Используйте функцию [CWinAppEx:: сторевиндовплацемент](#storewindowplacement) для записи размера и расположения окна в реестр.
 
-##  <a name="savecustomstate"></a>  CWinAppEx::SaveCustomState
+##  <a name="savecustomstate"></a>CWinAppEx:: Савекустомстате
 
-Этот метод вызывается платформой, после его сохраняет состояние приложения в реестр.
+Платформа вызывает этот метод после сохранения состояния приложения в реестре.
 
 ```
 virtual void SaveCustomState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если вы хотите выполнять обработку после приложение сохраняет состояние в реестр. По умолчанию этот метод не выполняет никаких действий.
+Переопределите этот метод, если требуется выполнить обработку после сохранения приложением состояния в реестре. По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="savestate"></a>  CWinAppEx::SaveState
+##  <a name="savestate"></a>CWinAppEx:: SaveState
 
 Записывает состояние приложения в реестр Windows.
 
@@ -1176,28 +1176,28 @@ BOOL SaveState(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSectionName*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсектионнаме*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*pFrameImpl*<br/>
-[in] Указатель на `CFrameImpl` объект. Этот кадр сохраняется в реестре Windows.
+*пфрамеимпл*<br/>
+окне Указатель на объект `CFrameImpl`. Этот кадр сохраняется в реестре Windows.
 
-*pFrame*<br/>
-[in] Указатель на объект фрейма окна. Этот кадр сохраняется в реестре Windows.
+*пфраме*<br/>
+окне Указатель на объект окна фрейма. Этот кадр сохраняется в реестре Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод сохраняет состояние приложения и данные о состоянии для предоставленного фрейма окна. Если вы не укажете окна фрейма, метод сохраняет только состояние приложения. Сведения о приложении включает в себя состояние [класс CMouseManager](../../mfc/reference/cmousemanager-class.md), [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)и [ Класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md).
+Этот метод сохраняет состояние приложения и все сведения о состоянии для указанного окна фрейма. Если окно фрейма не предоставлено, метод сохраняет только состояние приложения. Сведения о приложении включают состояние [класса кмаусеманажер](../../mfc/reference/cmousemanager-class.md), [класс кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)и [класс кусертулсманажер](../../mfc/reference/cusertoolsmanager-class.md).
 
-*LpszSectionName* параметр не абсолютный путь для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсектионнаме* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-##  <a name="setregistrybase"></a>  CWinAppEx::SetRegistryBase
+##  <a name="setregistrybase"></a>CWinAppEx:: Сетрегистрибасе
 
-Задает путь в реестре по умолчанию для приложения.
+Задает путь реестра по умолчанию для приложения.
 
 ```
 LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
@@ -1205,18 +1205,18 @@ LPCTSTR SetRegistryBase(LPCTSTR lpszSectionName = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSectionName*<br/>
-[in] Строка, содержащая путь к разделу реестра.
+*лпсзсектионнаме*<br/>
+окне Строка, содержащая путь к разделу реестра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Строка, содержащая путь к расположению реестра по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Все методы [класс CWinAppEx](../../mfc/reference/cwinappex-class.md) , имеющих доступ к начала реестра в расположении по умолчанию. Этот метод можно используйте для изменения в этом расположении реестра по умолчанию. Используйте [CWinAppEx::GetRegistryBase](#getregistrybase) для получения расположения реестра по умолчанию.
+Все методы [класса CWinAppEx](../../mfc/reference/cwinappex-class.md) , которые обращаются к реестру, начинаются в расположении по умолчанию. Используйте этот метод, чтобы изменить расположение реестра по умолчанию. Используйте [CWinAppEx:: жетрегистрибасе](#getregistrybase) , чтобы получить расположение реестра по умолчанию.
 
-##  <a name="showpopupmenu"></a>  CWinAppEx::ShowPopupMenu
+##  <a name="showpopupmenu"></a>CWinAppEx:: Шовпопупмену
 
 Отображает всплывающее меню.
 
@@ -1229,28 +1229,28 @@ virtual BOOL ShowPopupMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*uiMenuResId*<br/>
-[in] Идентификатор ресурса меню.
+*уименуресид*<br/>
+окне Идентификатор ресурса меню.
 
 *point*<br/>
-[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий положение меню в экранных координатах.
+окне Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий расположение меню в экранных координатах.
 
-*pWnd*<br/>
-[in] Указатель на окно, владеющее во всплывающем меню.
+*Приводится*<br/>
+окне Указатель на окно, которому принадлежит всплывающее меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если успешно; отображается во всплывающем меню в противном случае 0.
+Ненулевое значение, если всплывающее меню отображается успешно. 0 в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отображает меню, связанное с *uiMenuResId*.
+Этот метод отображает меню, связанное с *уименуресид*.
 
-Чтобы обеспечить поддержку всплывающих меню, необходимо иметь [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) объекта. Если не был инициализирован `CContextMenuManager` объекта, `ShowPopupMenu` завершится ошибкой.
+Для поддержки всплывающих меню необходим объект [кконтекстменуманажер](../../mfc/reference/ccontextmenumanager-class.md) . Если объект `CContextMenuManager` не инициализирован, `ShowPopupMenu` завершится ошибкой.
 
-##  <a name="storewindowplacement"></a>  CWinAppEx::StoreWindowPlacement
+##  <a name="storewindowplacement"></a>CWinAppEx:: Сторевиндовплацемент
 
-Вызывается платформой для записи в реестр размер и расположение окна главного фрейма.
+Вызывается платформой для записи размера и расположения главного окна фрейма в реестр.
 
 ```
 virtual BOOL StoreWindowPlacement(
@@ -1261,26 +1261,26 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="parameters"></a>Параметры
 
-*nFlags*<br/>
-[in] Флаги, определяющие положение свернутого окна и каким образом операционная система переключает между свернутого окна и окно восстановленной.
+*нфлагс*<br/>
+окне Флаги, управляющие положением окна с минимальным окном и способом переключения операционной системы между окном с минимальным и восстановленным окном.
 
-*nShowCmd*<br/>
-[in] Целое число, указывающее состояние отображения окна. Дополнительные сведения о возможных значениях см. в разделе [CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
+*ншовкмд*<br/>
+окне Целое число, указывающее состояние отображения окна. Дополнительные сведения о возможных значениях см. в разделе [CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow).
 
-*rectNormalPosition*<br/>
-[in] Прямоугольник, содержащий координаты фрейма главного окна, находящегося в состоянии восстановленной.
+*ректнормалпоситион*<br/>
+окне Прямоугольник, содержащий координаты главного окна фрейма, если он находится в состоянии restored.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию MFC автоматически сохраняет положение и состояние окна главного фрейма до выхода из приложения. Эти сведения хранятся в реестре Windows WindowPlacement ключ в расположении реестра по умолчанию для приложения. Дополнительные сведения о расположении реестра по умолчанию приложения, см. в разделе [CWinAppEx::GetRegistryBase](#getregistrybase).
+По умолчанию MFC автоматически сохраняет расположение и состояние главного окна фрейма перед выходом из приложения. Эти сведения хранятся в реестре Windows в разделе Виндовплацемент раздела реестра по умолчанию для приложения. Дополнительные сведения о местоположении реестра по умолчанию для приложения см. в разделе [CWinAppEx:: жетрегистрибасе](#getregistrybase).
 
-Переопределите этот метод, если вы хотите хранения дополнительной информации о фрейма главного окна.
+Переопределите этот метод, если требуется сохранить дополнительные сведения о главном окне фрейма.
 
-##  <a name="writebinary"></a>  CWinAppEx::WriteBinary
+##  <a name="writebinary"></a>CWinAppEx:: Вритебинари
 
 Записывает двоичные данные в реестр.
 
@@ -1293,28 +1293,28 @@ BOOL WriteBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзентри*<br/>
+окне Строка, содержащая имя раздела реестра.
 
 *pData*<br/>
-[in] Сохраняемые данные.
+окне Данные для хранения.
 
 *nBytes*<br/>
-[in] Размер *pData* в байтах.
+окне Размер *pData* в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, которая находится в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-Если ключ, указанный параметром *lpszEntry* не существует, этот метод создаст его.
+Если ключ, заданный параметром *лпсзентри* , не существует, этот метод создаст его.
 
-##  <a name="writeint"></a>  CWinAppEx::WriteInt
+##  <a name="writeint"></a>CWinAppEx:: Вритеинт
 
-Записывает в реестр числовых данных.
+Записывает числовые данные в реестр.
 
 ```
 BOOL WriteInt(
@@ -1324,25 +1324,25 @@ BOOL WriteInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзентри*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*nValue*<br/>
-[in] Сохраняемые данные.
+*Nзначение*<br/>
+окне Данные для хранения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, расположенной в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-Если ключ, указанный параметром *lpszEntry* не существует, этот метод создаст его.
+Если ключ, заданный параметром *лпсзентри* , не существует, этот метод создаст его.
 
-##  <a name="writeobject"></a>  CWinAppEx::WriteObject
+##  <a name="writeobject"></a>CWinAppEx:: WriteObject
 
-Записывает данные, получаемые из [класс CObject](../../mfc/reference/cobject-class.md) в реестр.
+Записывает данные, полученные из [класса CObject](../../mfc/reference/cobject-class.md) , в реестр.
 
 ```
 BOOL WriteObject(
@@ -1352,23 +1352,23 @@ BOOL WriteObject(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая присваиваемое значение.
+*лпсзентри*<br/>
+окне Строка, содержащая заданное значение.
 
 *obj*<br/>
-[in] Ссылку на `CObject` данных, в которой будут храниться в методе.
+окне Ссылка на `CObject` данных, которые будут храниться в методе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод записывает *obj* данных указанному значению в разделе реестра по умолчанию. Используйте [CWinAppEx::GetRegistryBase](#getregistrybase) для определения текущего раздела реестра.
+Этот метод записывает данные *obj* в указанное значение в разделе реестра по умолчанию. Чтобы определить текущий раздел реестра, используйте [CWinAppEx:: жетрегистрибасе](#getregistrybase) .
 
-##  <a name="writesectionbinary"></a>  CWinAppEx::WriteSectionBinary
+##  <a name="writesectionbinary"></a>CWinAppEx:: Вритесектионбинари
 
-Записывает значение в реестре двоичных данных.
+Записывает двоичные данные в значение в реестре.
 
 ```
 BOOL WriteSectionBinary(
@@ -1380,31 +1380,31 @@ BOOL WriteSectionBinary(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая имя раздела реестра
+*лпсзсубсектион*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая присваиваемое значение.
+*лпсзентри*<br/>
+окне Строка, содержащая заданное значение.
 
 *pData*<br/>
-[in] Данные для записи в реестр.
+окне Данные, записываемые в реестр.
 
 *nBytes*<br/>
-[in] Размер *pData* в байтах.
+окне Размер *pData* в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszSubSection* параметр не абсолютный путь для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-Если ключ, указанный параметром *lpszEntry* не существует, этот метод создаст его.
+Если ключ, заданный параметром *лпсзентри* , не существует, этот метод создаст его.
 
-##  <a name="writesectionint"></a>  CWinAppEx::WriteSectionInt
+##  <a name="writesectionint"></a>CWinAppEx:: Вритесектионинт
 
-Записывает в реестр числовых данных.
+Записывает числовые данные в реестр.
 
 ```
 BOOL WriteSectionInt(
@@ -1415,28 +1415,28 @@ BOOL WriteSectionInt(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая относительный путь раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая относительный путь к разделу реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая присваиваемое значение.
+*лпсзентри*<br/>
+окне Строка, содержащая заданное значение.
 
-*nValue*<br/>
-[in] Данные для записи в реестр.
+*Nзначение*<br/>
+окне Данные, записываемые в реестр.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в раздел реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется к разделу реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-Если ключ, указанный параметром *lpszEntry* не существует, этот метод создаст его.
+Если ключ, заданный параметром *лпсзентри* , не существует, этот метод создаст его.
 
-##  <a name="writesectionobject"></a>  CWinAppEx::WriteSectionObject
+##  <a name="writesectionobject"></a>CWinAppEx:: Вритесектионобжект
 
-Записывает данные, получаемые из [класс CObject](../../mfc/reference/cobject-class.md) значение реестра.
+Записывает данные, полученные от [класса CObject](../../mfc/reference/cobject-class.md) , в определенное значение реестра.
 
 ```
 BOOL WriteSectionObject(
@@ -1447,28 +1447,28 @@ BOOL WriteSectionObject(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя значения, которое необходимо задать.
+*лпсзентри*<br/>
+окне Строка, содержащая имя устанавливаемого значения.
 
 *obj*<br/>
-[in] Сохраняемые данные.
+окне Данные для хранения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase), соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase)соответственно.
 
-Если значение, заданное *lpszEntry* не существует в раздел реестра, указанный по *lpszSubSection*, этот метод создаст это значение.
+Если значение, заданное параметром *лпсзентри* , не существует в разделе реестра, указанном параметром *лпсзсубсектион*, этот метод создаст это значение.
 
-##  <a name="writesectionstring"></a>  CWinAppEx::WriteSectionString
+##  <a name="writesectionstring"></a>CWinAppEx:: Вритесектионстринг
 
-Записывает данные строковое значение в реестре.
+Записывает строковые данные в значение в реестре.
 
 ```
 BOOL WriteSectionString(
@@ -1479,28 +1479,28 @@ BOOL WriteSectionString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszSubSection*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзсубсектион*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*lpszEntry*<br/>
-[in] Строка, содержащая присваиваемое значение.
+*лпсзентри*<br/>
+окне Строка, содержащая заданное значение.
 
-*lpszValue*<br/>
-[in] Строковые данные для записи в реестр.
+*лпсзвалуе*<br/>
+окне Строковые данные для записи в реестр.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszSubSection* параметр не является абсолютным, записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase), соответственно.
+Параметр *лпсзсубсектион* не является абсолютным путем для записи реестра. Это относительный путь, который добавляется в конец раздела реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase)соответственно.
 
-Если значение, заданное *lpszEntry* не существует в *lpszSubSection*, этот метод создаст его.
+Если значение, заданное параметром *лпсзентри* , не существует в *лпсзсубсектион*, этот метод создаст его.
 
-##  <a name="writestring"></a>  CWinAppEx::WriteString
+##  <a name="writestring"></a>CWinAppEx:: WriteString
 
-Строковые данные операций записи в реестр.
+Записывает строковые данные в реестр.
 
 ```
 BOOL WriteString(
@@ -1510,23 +1510,23 @@ BOOL WriteString(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszEntry*<br/>
-[in] Строка, содержащая имя раздела реестра.
+*лпсзентри*<br/>
+окне Строка, содержащая имя раздела реестра.
 
-*lpszValue*<br/>
-[in] Сохраняемые данные.
+*лпсзвалуе*<br/>
+окне Данные для хранения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если этот метод успешно выполнен; в противном случае — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-*LpszEntry* представляет имя записи реестра, расположенный в разделе реестра по умолчанию для вашего приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx::GetRegistryBase](#getregistrybase) и [CWinAppEx::SetRegistryBase](#setregistrybase) соответственно.
+Параметр *лпсзентри* — это имя записи реестра, расположенной в разделе реестра по умолчанию для приложения. Чтобы получить или задать раздел реестра по умолчанию, используйте методы [CWinAppEx:: жетрегистрибасе](#getregistrybase) и [CWinAppEx:: сетрегистрибасе](#setregistrybase) соответственно.
 
-Если ключ, указанный параметром *lspzEntry* не существует, этот метод создаст его.
+Если ключ, заданный параметром *лспзентри* , не существует, этот метод создаст его.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

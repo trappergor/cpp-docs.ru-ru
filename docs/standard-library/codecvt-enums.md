@@ -7,11 +7,11 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459792"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866160"
 ---
 # <a name="ltcodecvtgt-enums"></a>Перечисления &lt;codecvt&gt;
 
@@ -27,7 +27,7 @@ enum codecvt_mode {
 };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Перечисление определяет три константы, которые поставляют сведения о конфигурации для аспектов языкового стандарта, объявленных в [\<codecvt>](../standard-library/codecvt.md). Это могут быть следующие значения:
 
@@ -39,6 +39,6 @@ enum codecvt_mode {
 
 Эти константы можно связывать логическим оператором OR в произвольные сочетания.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<codecvt>](../standard-library/codecvt.md)

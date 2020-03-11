@@ -15,15 +15,15 @@ helpviewer_keywords:
 - std::lock [C++]
 - std::try_to_lock [C++]
 ms.openlocfilehash: f6bd6a86e91c2d59fec2083dcf0ec6314d7c41ab
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240566"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856304"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>Функции и переменные &lt;мьютексов&gt;
 
-## <a name="adopt_lock"></a> adopt_lock
+## <a name="adopt_lock"></a>adopt_lock
 
 Представляет объект, который можно передать в конструкторы для [lock_guard](../standard-library/lock-guard-class.md) и [unique_lock](../standard-library/unique-lock-class.md), чтобы указать на блокировку объекта мьютекса, также передаваемого в конструктор.
 
@@ -31,7 +31,7 @@ ms.locfileid: "68240566"
 const adopt_lock_t adopt_lock;
 ```
 
-## <a name="call_once"></a> call_once
+## <a name="call_once"></a>call_once
 
 Предоставляет механизм для однократного вызова указанного объекта во время выполнения.
 
@@ -43,20 +43,20 @@ void call_once(once_flag& Flag,
 
 ### <a name="parameters"></a>Параметры
 
-*Флаг*\
+*Пометить*\
 Объект [once_flag](../standard-library/once-flag-structure.md), который гарантирует, что вызываемый объект вызывается только один раз.
 
-*F*\
+\ *F*
 Вызываемый объект.
 
-*ОБЪЕКТ*\
+*\*
 Список аргументов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если *флаг* является недопустимым, функция создает [system_error](../standard-library/system-error-class.md) с кодом ошибки `invalid_argument`. В противном случае функция-шаблон использует его *флаг* аргумент, чтобы убедиться, что вызывает `F(A...)` успешно ровно один раз, независимо от того, сколько раз вызывается функция-шаблон. Если `F(A...)` завершает работу, создавая исключение, вызов считается неуспешным.
+Если *флаг* является недопустимым, функция создает [system_error](../standard-library/system-error-class.md) , имеющую код ошибки `invalid_argument`. В противном случае функция шаблона использует свой аргумент *флага* , чтобы гарантировать, что она вызывает `F(A...)` успешно только один раз, независимо от того, сколько раз вызывается функция шаблона. Если `F(A...)` завершает работу, создавая исключение, вызов считается неуспешным.
 
-## <a name="defer_lock"></a> defer_lock
+## <a name="defer_lock"></a>defer_lock
 
 Представляет объект, который может быть передан в конструктор для [unique_lock](../standard-library/unique-lock-class.md). Это означает, что конструктор не должен блокировать объект мьютекса, который также ему передается.
 
@@ -64,7 +64,7 @@ void call_once(once_flag& Flag,
 const defer_lock_t defer_lock;
 ```
 
-## <a name="lock"></a> Блокировки
+## <a name="lock"></a>скрыть
 
 Пытается заблокировать все аргументы без взаимоблокировки.
 
@@ -73,26 +73,26 @@ template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Аргументы функции-шаблона должны быть типа *мьютекс*, за исключением того, что при вызове `try_lock` могут вызываться исключения.
 
 Функция блокирует все свои аргументы без взаимоблокировки путем вызовов `lock`, `try_lock`, и `unlock`. Если вызов `lock` или `try_lock` приводит к исключению, функция вызывает `unlock` для любых объектов-мьютексов, которые были успешно заблокированы до повторного создания исключения.
 
-## <a name="swap"></a> Swap
+## <a name="swap"></a>позиции
 
 ```cpp
 template <class Mutex>
 void swap(unique_lock<Mutex>& x, unique_lock<Mutex>& y) noexcept;
 ```
 
-## <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a>try_lock
 
 ```cpp
 template <class L1, class L2, class... L3> int try_lock(L1&, L2&, L3&...);
 ```
 
-## <a name="try_to_lock"></a> try_to_lock
+## <a name="try_to_lock"></a>try_to_lock
 
 Представляет объект, который можно передать в конструктор для [unique_lock](../standard-library/unique-lock-class.md), чтобы указать, что конструктор должен попытаться разблокировать объект `mutex`, который также передается в него, без блокировки.
 

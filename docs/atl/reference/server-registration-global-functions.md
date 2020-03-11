@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495464"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863226"
 ---
 # <a name="server-registration-global-functions"></a>Глобальные функции регистрации сервера
 
@@ -58,11 +58,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`AtlComModuleRegisterServer`просматривает автоматически сформированную карту объектов ATL и регистрирует каждый объект на карте. Если *пклсид* не равен null, регистрируется только объект, на который ссылается *пклсид* . в противном случае регистрируются все объекты.
+`AtlComModuleRegisterServer` просматривает автоматически созданную карту объектов ATL и регистрирует каждый объект на карте. Если *пклсид* не равен null, регистрируется только объект, на который ссылается *пклсид* . в противном случае регистрируются все объекты.
 
 Эта функция вызывается методом [катлкоммодуле:: регистерсервер](catlcommodule-class.md#registerserver).
 
@@ -90,11 +90,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`AtlComModuleUnregisterServer`проходит по карте объектов ATL и отменяет регистрацию каждого объекта в сопоставлении. Если *пклсид* не равно null, то отменяется только объект, на который ссылается *пклсид* . в противном случае отменяется регистрация всех объектов.
+`AtlComModuleUnregisterServer` проходит по карте объектов ATL и отменяет регистрацию каждого объекта на карте. Если *пклсид* не равно null, то отменяется только объект, на который ссылается *пклсид* . в противном случае отменяется регистрация всех объектов.
 
 Эта функция вызывается методом [катлкоммодуле:: унрегистерсервер](catlcommodule-class.md#unregisterserver).
 
@@ -122,9 +122,9 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [CComModule:: регистерклассобжектс](ccommodule-class.md#registerclassobjects) (устарела в ATL 7,0) и [CAtlExeModuleT:: регистерклассобжектс](catlexemodulet-class.md#registerclassobjects).
 
@@ -143,9 +143,9 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [CComModule:: ревокеклассобжектс](ccommodule-class.md#revokeclassobjects) (устарела в ATL 7,0) и [CAtlExeModuleT:: ревокеклассобжектс](catlexemodulet-class.md#revokeclassobjects).
 
@@ -177,12 +177,12 @@ IID запрашиваемого интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [CComModule:: жетклассобжект](ccommodule-class.md#getclassobject) (устарела в ATL 7,0) и [CAtlDllModuleT:: жетклассобжект](catldllmodulet-class.md#getclassobject).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции](../../atl/reference/atl-functions.md)

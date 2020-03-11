@@ -8,17 +8,17 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688921"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856604"
 ---
 # <a name="ltstringgt-typedefs"></a>Определения типов &lt;string&gt;
 
 ||||
 |-|-|-|
-|[string](#string)|[u16string](#u16string)|[u32string](#u32string)|
+|[строка](#string)|[u16string](#u16string)|[u32string](#u32string)|
 |[wstring](#wstring)|
 
 ## строка <a name="string"></a>
@@ -31,7 +31,7 @@ ms.locfileid: "72688921"
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Следующие объявления являются равнозначными:
 
@@ -53,7 +53,7 @@ basic_string<char> str("");
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -67,7 +67,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
@@ -81,7 +81,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Следующие объявления являются равнозначными:
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Размер **wchar_t** определяется реализацией. Если код зависит от типа **wchar_t** и имеет определенный размер, проверьте реализацию своей платформы (например, с `sizeof(wchar_t)`). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
+> Размер **wchar_t** определяется реализацией. Если код зависит от **wchar_t** для определенного размера, проверьте реализацию своей платформы (например, с помощью `sizeof(wchar_t)`). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<string>](../standard-library/string.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450348"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937453"
 ---
 # <a name="slice-class"></a>Класс slice
 
 Служебный класс, используемый для определения одномерных подмножеств родительского valarray. Если valarray рассматривается как двухмерная матрица со всеми элементами в массиве, срез извлекает одномерный вектор из двухмерного массива.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Класс хранит параметры, характеризующие объект типа [slice_array](../standard-library/slice-array-class.md). Подмножество valarray косвенно создается, когда объект среза класса отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:
 
@@ -39,13 +39,13 @@ ms.locfileid: "68450348"
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[slice](#slice)|Определяет подмножество `valarray`, состоящее из нескольких элементов, которые находятся на одинаковом расстоянии друг от друга и начинаются с указанного элемента.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[size](#size)|Определяет число элементов в срезе `valarray`.|
 |[start](#start)|Находит начальный индекс среза `valarray`.|
@@ -53,7 +53,7 @@ ms.locfileid: "68450348"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<valarray>
+**Заголовок:** \<valarray >
 
 **Пространство имен:** std
 
@@ -142,14 +142,14 @@ slice(
 *_Len*\
 Количество элементов в подмножестве.
 
-*шага*\
+\ *stride*
 Расстояние между элементами в подмножестве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Конструктор по умолчанию хранит нули для начального индекса, общей длины и полного шага. Второй конструктор сохраняет *_StartIndex* для начального индекса, *_Len* для общей длины и *шаг* для шага.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Полный шаг может быть отрицательным.
 
@@ -310,6 +310,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

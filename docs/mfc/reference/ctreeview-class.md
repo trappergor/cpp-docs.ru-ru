@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323600"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883997"
 ---
 # <a name="ctreeview-class"></a>Класс CTreeView
 
-Упрощает использование элемента управления дерева и [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), который инкапсулирует его функциональность, в архитектуру представления документов MFC.
+Упрощает использование элемента управления "дерево" и [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), класса, который инкапсулирует функции управления деревом, с архитектурой "документ-представление" MFC.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,23 +27,23 @@ ms.locfileid: "62323600"
 class CTreeView : public CCtrlView
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|Создает объект `CTreeView`.|
+|[CTreeView:: CTreeView](#ctreeview)|Формирует объект `CTreeView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|Возвращает дерево, связанный с представлением.|
+|[CTreeView:: GetTreeCtrl](#gettreectrl)|Возвращает элемент управления "дерево", связанный с представлением.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Дополнительные сведения об этой архитектуре см. в обзоре, для [CView](../../mfc/reference/cview-class.md) класс и перекрестные ссылки, указанных там.
+Дополнительные сведения об этой архитектуре см. в обзоре класса [CView](../../mfc/reference/cview-class.md) и перекрестных ссылок, указанных здесь.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -55,31 +55,31 @@ class CTreeView : public CCtrlView
 
 [CView](../../mfc/reference/cview-class.md)
 
-[CCtrlView](../../mfc/reference/cctrlview-class.md)
+[кктрлвиев](../../mfc/reference/cctrlview-class.md)
 
 `CTreeView`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxcview.h
+**Заголовок:** афксквиев. h
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView:: CTreeView
 
-Создает объект `CTreeView`.
+Формирует объект `CTreeView`.
 
 ```
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView:: GetTreeCtrl
 
-Возвращает ссылку на дерево управления, связанный с представлением.
+Возвращает ссылку на элемент управления "дерево", связанный с представлением.
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

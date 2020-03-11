@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: c372f43bc5184349e70f29b6c0ae6a490f2102ed
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821874"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854585"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -106,7 +106,7 @@ RUNTIME_CLASS объекта, производного от [CWinThread](../../m
 
 Указатель на только что созданный объект потока или значение NULL, если происходит сбой.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Первая форма `AfxBeginThread` создает рабочий поток. Вторая форма создает поток, который может выступать в качестве потока пользовательского интерфейса или рабочего потока.
 
@@ -156,7 +156,7 @@ void AFXAPI AfxEndThread(
 *бделете*\
 Удаляет объект потока из памяти.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Должен вызываться из потока для завершения.
 
@@ -187,7 +187,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 Обработчик для модуля, содержащего ресурс.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `AfxFindResourceHandle` находит конкретный ресурс и возвращает маркер модуля, содержащего ресурс. Ресурс может находиться в любой загружаемой библиотеке DLL расширения MFC. `AfxFindResourceHandle` сообщает, какой из них имеет ресурс.
 
@@ -224,7 +224,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 
 Значение TRUE, если функция выполнена. в противном случае — значение FALSE.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `AfxFreeLibrary` уменьшает число ссылок загруженного модуля библиотеки динамической компоновки (DLL). Когда счетчик ссылок достигает нуля, модуль не сопоставляется с адресным пространством вызывающего процесса, и этот маркер становится недействительным. Этот счетчик ссылок увеличивается каждый раз, когда вызывается `AfxLoadLibrary`.
 
@@ -254,7 +254,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 Указатель на единственный объект `CWinApp` для приложения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если этот метод возвращает значение NULL, это может означать, что главное окно приложения еще не полностью инициализировано. Это также может указывать на проблему.
 
@@ -298,7 +298,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 Значение HINSTANCE для текущего экземпляра приложения. Если вызывается из библиотеки DLL, связанной с УСРДЛЛ версией MFC, возвращается значение HINSTANCE для библиотеки DLL.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `AfxGetInstanceHandle` всегда возвращает значение HINSTANCE для исполняемого файла (. EXE), если только он не вызывается из библиотеки DLL, связанной с УСРДЛЛ версией MFC. В этом случае он возвращает значение HINSTANCE для библиотеки DLL.
 
@@ -326,7 +326,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 Если `AfxGetMainWnd` вызывается из основного потока приложения, он возвращает главное окно приложения согласно приведенным выше правилам. Если функция вызывается из вторичного потока в приложении, функция возвращает главное окно, связанное с потоком, который выполнил вызов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если приложение не является сервером OLE, то вызов этой функции эквивалентен непосредственной ссылке на *m_pMainWnd* элемент объекта приложения.
 
@@ -350,7 +350,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 
 Значение TRUE указывает, что данные реестра направляются на узел HKCU. Значение FALSE указывает, что приложение записывает сведения о реестре в узел по умолчанию. Узел по умолчанию — **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Если включить перенаправление реестра, платформа перенаправит доступ из **HKCR** в **HKEY_CURRENT_USER \софтваре\классес**. Перенаправление затрагивает только платформы MFC и ATL.
 
@@ -392,7 +392,7 @@ CWinThread* AfxGetThread();
 
 Указатель на выполняющийся в данный момент поток; в противном случае — NULL.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Должен вызываться из потока.
 
@@ -415,7 +415,7 @@ CWinThread* AfxGetThread();
 BOOL AFXAPI AfxInitRichEdit();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Эта функция предоставляется для обеспечения обратной совместимости. Новые приложения должны использовать [требуется метод afxinitrichedit2](#afxinitrichedit2).
 
@@ -437,7 +437,7 @@ BOOL AFXAPI AfxInitRichEdit();
 BOOL AFXAPI AfxInitRichEdit2();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Вызовите эту функцию, чтобы загрузить библиотеки RICHED20. DLL и инициализация версии 2,0 элемента управления Rich Edit. При вызове метода `Create` [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md), [CRichEditView](../../mfc/reference/cricheditview-class.md)или [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)обычно не требуется вызывать эту функцию, но в некоторых случаях это может потребоваться.
 
@@ -464,7 +464,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 Значение TRUE, если предоставленное окно является расширенным объектом Frame; в противном случае — FALSE.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот метод возвращает значение TRUE, если *приводится* является производным от одного из следующих классов:
 
@@ -503,7 +503,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 Значение TRUE, если предоставленное окно является объектом панели инструментов; в противном случае — FALSE.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот метод возвращает `TRUE`, если *приводится* является производным от `CMFCToolBar`. Этот метод полезен при проверке того, что параметр функции или метода является `CMFCToolBar`ным объектом.
 
@@ -546,7 +546,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 Если функция выполнена, возвращаемое значение является обработчиком модуля. При сбое возвращаемое значение равно NULL.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Он возвращает маркер, который можно использовать в [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) для получения адреса функции DLL. `AfxLoadLibrary` также можно использовать для отображения других исполняемых модулей.
 
@@ -593,7 +593,7 @@ HINSTANCE AFXAPI AfxLoadLibraryEx(LPCTSTR lpFileName, HANDLE hFile, DWORD dwFlag
 
 Если функция выполнена, возвращаемое значение является обработчиком модуля. При сбое возвращаемое значение равно NULL.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 `AfxLoadLibraryEx` возвращает маркер, который можно использовать в [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) для получения адреса функции DLL. `AfxLoadLibraryEx` также можно использовать для отображения других исполняемых модулей.
 
@@ -652,7 +652,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 
 Значение TRUE, если класс успешно зарегистрирован; в противном случае — FALSE.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При использовании этой функции класс автоматически отменяет регистрацию при выгрузке библиотеки DLL.
 
@@ -707,7 +707,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 > [!NOTE]
 > Возвращаемое значение является указателем на статический буфер. Чтобы сохранить эту строку, назначьте ее переменной `CString`.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Библиотека Microsoft Foundation Class автоматически регистрирует несколько стандартных классов окон. Вызывайте эту функцию, если требуется зарегистрировать собственные классы окон.
 
@@ -738,7 +738,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 *бенабле*\
 окне Значение TRUE указывает, что данные реестра направляются на узел HKCU. Значение FALSE указывает, что приложение записывает сведения о реестре в узел по умолчанию. Узел по умолчанию — **HKEY_CLASSES_ROOT** (**HKCR**).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 До Windows Vista приложения, которые обращаются к реестру, часто использовали узел **HKEY_CLASSES_ROOT** . Однако в Windows Vista или более поздних операционных системах необходимо запустить приложение в режиме с повышенными правами для записи в раздел HKCR.
 
@@ -804,7 +804,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 
 Ненулевое значение, если функция выполнена успешно; в противном случае — 0.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 При использовании сокетов MFC во вторичных потоках в статическом связанном приложении MFC необходимо вызвать `AfxSocketInit` в каждом потоке, использующем сокеты для инициализации библиотек сокетов. По умолчанию `AfxSocketInit` вызывается только в основном потоке.
 
@@ -852,7 +852,7 @@ BOOL AFXAPI AfxWinInit(
 *нкмдшов*\
 Указывает, как будет отображаться главное окно приложения с графическим пользовательским интерфейсом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Для консольного приложения, которое не использует предоставляемую MFC функцию `WinMain`, необходимо напрямую вызвать `AfxWinInit`, чтобы инициализировать MFC.
 
@@ -869,7 +869,7 @@ BOOL AFXAPI AfxWinInit(
 
   **Заголовок** AFXWIN. h
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Макросы и глобальные](mfc-macros-and-globals.md)\
 [Класс CWinApp](cwinapp-class.md)\

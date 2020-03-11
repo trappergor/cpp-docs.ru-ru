@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496936"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864922"
 ---
 # <a name="cfirepropnotifyevent-class"></a>Класс Кфирепропнотифевент
 
@@ -31,20 +31,20 @@ ms.locfileid: "69496936"
 class CFirePropNotifyEvent
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Кфирепропнотифевент:: Фиреончанжед](#fireonchanged)|Статически Сообщает приемнику контейнера, что свойство элемента управления изменилось.|
 |[Кфирепропнотифевент:: Фиреонрекуестедит](#fireonrequestedit)|Статически Уведомляет приемник контейнера, что свойство элемента управления собирается измениться.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CFirePropNotifyEvent`содержит два метода, уведомляющих приемник контейнера о том, что свойство элемента управления изменилось или будет изменено.
+`CFirePropNotifyEvent` имеет два метода, которые уведомляют приемник контейнера о том, что свойство элемента управления изменилось или будет изменяться.
 
-Если класс `IPropertyNotifySink` `FireOnRequestEdit` , реализующий элемент управления, является производным от, `FireOnChanged` методывызываютсяпривызовеметодаили.`CFirePropNotifyEvent` Если класс элемента управления не является производным `IPropertyNotifySink`от, вызовы этих функций возвращают значение S_OK.
+Если класс, реализующий элемент управления, является производным от `IPropertyNotifySink`, методы `CFirePropNotifyEvent` вызываются при вызове `FireOnRequestEdit` или `FireOnChanged`. Если класс элемента управления не является производным от `IPropertyNotifySink`, вызовы этих функций возвращают S_OK.
 
 Дополнительные сведения о создании элементов управления см. в [учебнике по ATL](../../atl/active-template-library-atl-tutorial.md).
 
@@ -63,7 +63,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Параметры
 
 *pUnk*<br/>
-окне `IUnknown` Указатель на объект объекта, отправляющего уведомление.
+окне Указатель на `IUnknown` объекта, отправляющего уведомление.
 
 *dispID*<br/>
 окне Идентификатор измененного свойства.
@@ -72,7 +72,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эту функцию можно вызывать, даже если элемент управления не поддерживает точки подключения.
 
@@ -87,7 +87,7 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>Параметры
 
 *pUnk*<br/>
-окне `IUnknown` Указатель на объект объекта, отправляющего уведомление.
+окне Указатель на `IUnknown` объекта, отправляющего уведомление.
 
 *dispID*<br/>
 окне Идентификатор свойства, которое необходимо изменить.
@@ -96,10 +96,10 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эту функцию можно вызывать, даже если элемент управления не поддерживает точки подключения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обзор класса](../../atl/atl-class-overview.md)

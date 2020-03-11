@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497858"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864450"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -42,13 +42,13 @@ BEGIN_CATEGORY_MAP(theClass)
 *секласс*<br/>
 окне Имя класса, содержащего карту категорий.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Таблица категорий используется для указания категорий компонентов, которые будут реализованы классом COM, и категорий, которые требуются для его контейнера.
 
 Добавьте запись [IMPLEMENTED_CATEGORY](#implemented_category) на карту для каждой категории, реализованной классом com. Добавьте запись [REQUIRED_CATEGORY](#required_category) на карту для каждой категории, которую класс требует реализовать на своих клиентах. Отметьте конец схемы с помощью макроса [END_CATEGORY_MAP](#end_category_map) .
 
-Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если у класса есть связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
+Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанную [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
 
 > [!NOTE]
 >  ATL использует стандартный диспетчер категорий компонентов для регистрации категорий компонентов. Если диспетчер отсутствует в системе при регистрации модуля, регистрация будет выполнена, но категории компонентов не будут зарегистрированы для этого класса.
@@ -73,7 +73,7 @@ END_CATEGORY_MAP()
 
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-Добавьте макрос IMPLEMENTED_CATEGORY в [карту категории](#begin_category_map) компонента, чтобы указать, что он должен быть зарегистрирован в качестве реализации категории, определяемой параметром *CATID* .
+Добавьте IMPLEMENTED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что он должен быть зарегистрирован в качестве реализации категории, определяемой параметром *CATID* .
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -84,9 +84,9 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 окне Константа или переменная CATID, содержащая глобальный уникальный идентификатор (GUID) для реализованной категории. Адрес *CATID* будет создан и добавлен на карту. Для выбора категорий запасов см. таблицу ниже.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Категории компонентов, перечисленные в карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный макрос [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.
 
 Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования, не создавая его экземпляр.
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Описание|Символ|GUID реестра|
+|Description|Символ|GUID реестра|
 |-----------------|------------|-------------------|
 |Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -110,7 +110,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-Добавьте макрос REQUIRED_CATEGORY в [карту категории](#begin_category_map) компонента, чтобы указать, что его следует зарегистрировать, как требуется категория, определяемая параметром *CATID* .
+Добавьте REQUIRED_CATEGORYный макрос к [карте категории](#begin_category_map) компонента, чтобы указать, что она должна быть зарегистрирована как обязательная Категория, определяемая параметром *CATID* .
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -121,9 +121,9 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 окне Константа или переменная CATID, содержащая глобальный уникальный идентификатор (GUID) для требуемой категории. Адрес *CATID* будет создан и добавлен на карту. Для выбора категорий запасов см. таблицу ниже.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Категории компонентов, перечисленные в карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный макрос [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .
+Категории компонентов, перечисленные на карте, будут регистрироваться автоматически при регистрации модуля, если класс имеет связанный [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.
 
 Клиенты могут использовать сведения о категории, зарегистрированные для класса, чтобы определить его возможности и требования, не создавая его экземпляр. Например, элементу управления может потребоваться, чтобы контейнер поддерживал привязку данных. Контейнер может определить, есть ли у него возможности, необходимые для размещения элемента управления, выполнив запрос к диспетчеру категорий для категорий, необходимых для этого элемента управления. Если контейнер не поддерживает требуемую функцию, он может отказаться размещать COM-объект.
 
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор категорий запасов
 
-|Описание|Символ|GUID реестра|
+|Description|Символ|GUID реестра|
 |-----------------|------------|-------------------|
 |Безопасность в сценариях|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасность для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -145,6 +145,6 @@ REQUIRED_CATEGORY( catID )
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)

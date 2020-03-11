@@ -17,13 +17,13 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455517"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865874"
 ---
-# <a name="basicifstream-class"></a>Класс basic_ifstream
+# <a name="basic_ifstream-class"></a>Класс basic_ifstream
 
 Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.
 
@@ -39,10 +39,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 *Elem*\
 Базовый элемент буфера файла.
 
-*ТС*\
+*Tr*\
 Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Объект сохраняет объект класса `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -71,13 +71,13 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>Входные данные: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>Входные данные: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -85,13 +85,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|Выполняет инициализацию нового экземпляра объекта `basic_ifstream`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
@@ -101,13 +101,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Description|
 |-|-|
 |[оператор=](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<fstream>
+**Заголовок:** \<FStream >
 
 **Пространство имен:** std
 
@@ -142,7 +142,7 @@ basic_ifstream(basic_ifstream&& right);
 *_Prot*\
 Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый конструктор инициализирует базовый класс путем вызова [basic_istream](../standard-library/basic-istream-class.md)( `sb`), где `sb` — сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -183,13 +183,13 @@ int main(int argc, char **argv)
 void close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция члена вызывает [rdbuf](#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `close`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
+Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`close`.
 
 ## <a name="is_open"></a>  basic_ifstream::is_open
 
@@ -203,13 +203,13 @@ bool is_open() const;
 
 Значение **true**, если файл открыт, или **false** в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `is_open`, см. в разделе [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open).
+Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#is_open)basic_filebuf::is_open`is_open`.
 
 ## <a name="open"></a>  basic_ifstream::open
 
@@ -246,13 +246,13 @@ void open(
 *_Prot*\
 Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**). Если метод Open завершается неудачей,`failbit`функция вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(), что может вызвать исключение ios_base:: failure.
+Функция-член вызывает [rdbuf](#rdbuf) **->** [Open](../standard-library/basic-filebuf-class.md#open)(_ *имя_файла*, `_Mode` &#124; **ios_base:: in**). Если метод Open не выполняется, функция вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`), что может вызвать исключение ios_base:: failure.
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `open`, см. в разделе [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
+Пример использования `open`см. в разделе [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -264,14 +264,14 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа*\
 Ссылка rvalue на объект `basic_ifstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает `*this`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue. Дополнительные сведения см. в разделе [Значения Lvalue и Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
@@ -289,7 +289,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется `rdbuf`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
+Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`rdbuf`.
 
 ## <a name="swap"></a>  basic_ifstream::swap
 
@@ -301,14 +301,14 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа*\
 Ссылка на другой буфер потока.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция элемента меняет местами содержимое этого объекта на содержимое, находящееся *справа*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Программирование iostream](../standard-library/iostream-programming.md)\

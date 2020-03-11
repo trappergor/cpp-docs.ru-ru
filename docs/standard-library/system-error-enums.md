@@ -6,11 +6,11 @@ f1_keywords:
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
 ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257784"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876287"
 ---
 # <a name="ltsystem_errorgt-enums"></a>Перечисления &lt;system_error&gt;
 
@@ -101,7 +101,7 @@ class errc {
 };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 ## <a name="io_errc"></a>io_errc
 
@@ -113,7 +113,7 @@ class io_errc {
 };
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Объекты [std::make_error_code()](../standard-library/system-error-functions.md#make_error_code) и [std::make_error_condition()](../standard-library/system-error-functions.md#make_error_condition) являются перегруженными для этого перечисления.
 
