@@ -101,11 +101,11 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741513"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883674"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -176,7 +176,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView:: Онреплацеалл](#onreplaceall)|Заменяет все вхождения заданной строки новой строкой.|
 |[CRichEditView:: Онреплацесел](#onreplacesel)|Заменяет текущее выделение.|
 |[CRichEditView:: Онтекстнотфаунд](#ontextnotfound)|Обрабатывает уведомление пользователя о том, что запрошенный текст не найден.|
-|[CRichEditView:: Куерякцептдата](#queryacceptdata)|Запросы для просмотра сведений о данных `IDataObject`в.|
+|[CRichEditView:: Куерякцептдата](#queryacceptdata)|Запросы для просмотра данных в `IDataObject`.|
 |[CRichEditView:: Врапчанжед](#wrapchanged)|Корректирует целевое устройство вывода для этого представления расширенного редактирования на основе значения `m_nWordWrap`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
@@ -190,7 +190,7 @@ class CRichEditView : public CCtrlView
 
 «Форматируемый элемент управления» — это окно, в котором пользователь может вводить и редактировать текст. Тексту можно присвоить форматирование символов и абзацев, а также включить внедренные объекты OLE. Элементы управления Rich Edit предоставляют программный интерфейс для форматирования текста. Однако приложение должно реализовывать любые компоненты пользовательского интерфейса, необходимые для того, чтобы сделать операции форматирования доступными для пользователя.
 
-`CRichEditView`поддерживает текстовую характеристику текста и форматирования текста. `CRichEditDoc`поддерживает список элементов OLE клиента, которые находятся в представлении. `CRichEditCntrItem`предоставляет доступ на стороне контейнера к элементу OLE-клиента.
+`CRichEditView` поддерживает текст и характеристики форматирования текста. `CRichEditDoc` поддерживает список элементов OLE клиента, которые находятся в представлении. `CRichEditCntrItem` предоставляет доступ на стороне контейнера к элементу OLE-клиента.
 
 Этот общий элемент управления Windows (и, следовательно, [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) и связанные классы) доступен только для программ, работающих под управлением Windows 95/98 и Windows NT версии 3,51 и более поздних версий.
 
@@ -225,7 +225,7 @@ void AdjustDialogPosition(CDialog* pDlg);
 ### <a name="parameters"></a>Параметры
 
 *пдлг*<br/>
-Указатель на `CDialog` объект.
+Указатель на объект `CDialog`.
 
 ##  <a name="canpaste"></a>CRichEditView:: Канпасте
 
@@ -241,7 +241,7 @@ BOOL CanPaste() const;
 
 ##  <a name="cricheditview"></a>CRichEditView:: CRichEditView
 
-Вызовите эту функцию, чтобы `CRichEditView` создать объект.
+Вызовите эту функцию, чтобы создать объект `CRichEditView`.
 
 ```
 CRichEditView();
@@ -361,7 +361,7 @@ CHARFORMAT2& GetCharFormatSelection();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в описании сообщения [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) и структуры [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) в Windows SDK.
+Дополнительные сведения см. в разделе сообщение [EM_GETCHARFORMAT](/windows/win32/Controls/em-getcharformat) и структура [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -387,21 +387,21 @@ virtual HRESULT GetClipboardData(
 *двреко*<br/>
 Флаг операции буфера обмена. Может принимать одно из следующих значений.
 
-- RECO_COPY копировать в буфер обмена.
+- RECO_COPY скопировать в буфер обмена.
 
 - RECO_CUT вырезать в буфер обмена.
 
-- Операция перетаскивания RECO_DRAG (перетаскивание).
+- RECO_DRAG операцию перетаскивания (перетаскивание).
 
 - Операция удаления RECO_DROP (перетаскивание).
 
-- RECO_PASTE вставка из буфера обмена.
+- RECO_PASTE вставить из буфера обмена.
 
 *лпричдатаобж*<br/>
 Указатель на объект [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) , содержащий данные буфера обмена из элемента управления Rich Edit ( [Иричедитоле:: жетклипбоарддата](/windows/win32/api/richole/nf-richole-iricheditole-getclipboarddata)).
 
 *лплпдатаобж*<br/>
-Указатель на переменную указателя, которая получает адрес `IDataObject` объекта, представляющего диапазон, указанный в параметре *лпчрг* . Значение *лплпдатаобж* игнорируется, если возвращается ошибка.
+Указатель на переменную указателя, которая получает адрес объекта `IDataObject`, представляющего диапазон, указанный в параметре *лпчрг* . Значение *лплпдатаобж* игнорируется, если возвращается ошибка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -409,7 +409,7 @@ virtual HRESULT GetClipboardData(
 
 ### <a name="remarks"></a>Примечания
 
-Если возвращаемое значение указывает на успешное выполнение `IDataObject` , `IRichEditOleCallback::GetClipboardData` возвращает объект, к которому обращается *лплпдатаобж*. в противном случае возвращается объект, к которому обращается *лпричдатаобж*. Переопределите эту функцию для предоставления собственных данных в буфере обмена. Реализация по умолчанию этой функции возвращает значение E_NOTIMPL.
+Если возвращаемое значение указывает на успешное выполнение, `IRichEditOleCallback::GetClipboardData` возвращает `IDataObject`, к которому обращается *лплпдатаобж*; в противном случае возвращается тот, к которому обращается *лпричдатаобж*. Переопределите эту функцию для предоставления собственных данных в буфере обмена. Реализация по умолчанию этой функции возвращает E_NOTIMPL.
 
 Это расширенный переопределяемый объект.
 
@@ -432,7 +432,7 @@ virtual HMENU GetContextMenu(
 Тип выбора. Значения типа выбора описаны в разделе "Примечания".
 
 *лполеобж*<br/>
-Указатель на `OLEOBJECT` структуру, указывающую первый выбранный объект OLE, если выделенный фрагмент содержит один или несколько элементов OLE. Если выделение не содержит элементов, *лполеобж* имеет значение null. `OLEOBJECT` Структура содержит указатель на таблицу v-table объекта OLE.
+Указатель на структуру `OLEOBJECT`, указывающую первый выбранный OLE-объект, если выделенный фрагмент содержит один или несколько элементов OLE. Если выделение не содержит элементов, *лполеобж* имеет значение null. Структура `OLEOBJECT` содержит указатель на таблицу v-table объекта OLE.
 
 *лпчрг*<br/>
 Указатель на структуру [чарранже](/windows/win32/api/richedit/ns-richedit-charrange) , содержащую текущее выделение.
@@ -463,7 +463,7 @@ virtual HMENU GetContextMenu(
 
 ##  <a name="getdocument"></a>CRichEditView:: a Document
 
-Вызовите эту функцию, чтобы получить указатель на `CRichEditDoc` объект, связанный с этим представлением.
+Вызовите эту функцию, чтобы получить указатель на `CRichEditDoc`, связанный с этим представлением.
 
 ```
 CRichEditDoc* GetDocument() const;
@@ -471,11 +471,11 @@ CRichEditDoc* GetDocument() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) , связанный с `CRichEditView` объектом.
+Указатель на объект [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) , связанный с объектом `CRichEditView`.
 
 ##  <a name="getinplaceactiveitem"></a>CRichEditView:: Жетинплацеактивеитем
 
-Вызовите эту функцию, чтобы получить объект OLE, который в данный момент активируется `CRichEditView` в этом объекте.
+Вызовите эту функцию, чтобы получить объект OLE, который в настоящее время активирован на месте в этом `CRichEditView` объекте.
 
 ```
 CRichEditCntrItem* GetInPlaceActiveItem() const;
@@ -543,7 +543,7 @@ PARAFORMAT2& GetParaFormatSelection();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) Message и [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_GETPARAFORMAT](/windows/win32/Controls/em-getparaformat) Message и структура [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) в Windows SDK.
 
 ##  <a name="getprintrect"></a>CRichEditView:: Жетпринтрект
 
@@ -575,7 +575,7 @@ int GetPrintWidth() const;
 
 ##  <a name="getricheditctrl"></a>CRichEditView:: Жетричедитктрл
 
-Вызовите эту функцию, чтобы получить объект [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) , связанный `CRichEditView` с объектом.
+Вызовите эту функцию, чтобы получить объект [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) , связанный с объектом `CRichEditView`.
 
 ```
 CRichEditCtrl& GetRichEditCtrl() const;
@@ -583,7 +583,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CRichEditCtrl` Объект для этого представления.
+Объект `CRichEditCtrl` для этого представления.
 
 ### <a name="example"></a>Пример
 
@@ -591,7 +591,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 
 ##  <a name="getselecteditem"></a>CRichEditView:: Жетселектедитем
 
-Вызовите эту функцию для получения `CRichEditCntrItem` объекта OLE (объект), выбранного в данный момент в этом `CRichEditView` объекте.
+Вызовите эту функцию, чтобы получить элемент OLE (объект `CRichEditCntrItem`), выбранный в данный момент в объекте `CRichEditView`.
 
 ```
 CRichEditCntrItem* GetSelectedItem() const;
@@ -599,7 +599,7 @@ CRichEditCntrItem* GetSelectedItem() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект [кричедиткнтритем](../../mfc/reference/cricheditcntritem-class.md) , выбранный в `CRichEditView` объекте; NULL, если в этом представлении не выбран ни один элемент.
+Указатель на объект [кричедиткнтритем](../../mfc/reference/cricheditcntritem-class.md) , выбранный в объекте `CRichEditView`; NULL, если в этом представлении не выбран ни один элемент.
 
 ##  <a name="gettextlength"></a>CRichEditView:: Жеттекстленгс
 
@@ -615,7 +615,7 @@ long GetTextLength() const;
 
 ##  <a name="gettextlengthex"></a>CRichEditView:: Жеттекстленгсекс
 
-Вызовите эту функцию члена, чтобы вычислить длину текста в `CRichEditView` этом объекте.
+Вызовите эту функцию члена, чтобы вычислить длину текста в этом `CRichEditView` объекте.
 
 ```
 long GetTextLengthEx(
@@ -637,7 +637,7 @@ long GetTextLengthEx(
 
 ### <a name="remarks"></a>Примечания
 
-`GetTextLengthEx`предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения см. в разделе [об элементах управления Rich Edit](/windows/win32/Controls/about-rich-edit-controls) в Windows SDK.
+`GetTextLengthEx` предоставляет дополнительные способы определения длины текста. Он поддерживает широкие возможности редактирования 2,0. Дополнительные сведения см. в разделе [об элементах управления Rich Edit](/windows/win32/Controls/about-rich-edit-controls) в Windows SDK.
 
 ##  <a name="insertfileasobject"></a>CRichEditView:: Инсертфилеасобжект
 
@@ -729,13 +729,13 @@ int m_nWordWrap;
 
 ### <a name="remarks"></a>Примечания
 
-Одно из следующих значений:
+Принимает одно из следующих значений:
 
-- `WrapNone`Указывает, что автоматический перенос по словам отсутствует.
+- `WrapNone` указывает на отсутствие автоматического переноса слов.
 
-- `WrapToWindow`Обозначает перенос по словам в зависимости от ширины окна.
+- `WrapToWindow` обозначает перенос по словам в зависимости от ширины окна.
 
-- `WrapToTargetDevice`Обозначает перенос по словам в зависимости от характеристик целевого устройства.
+- `WrapToTargetDevice` обозначает перенос по словам в зависимости от характеристик целевого устройства.
 
 ### <a name="example"></a>Пример
 
@@ -834,7 +834,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
 
 ### <a name="remarks"></a>Примечания
 
-Как правило, это делается путем создания [колестреамфиле](../../mfc/reference/colestreamfile-class.md) вокруг `IStorage`. Можно присоединить к Archive и [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , вызываемую для загрузки данных. `COleStreamFile`
+Как правило, это делается путем создания [колестреамфиле](../../mfc/reference/colestreamfile-class.md) вокруг `IStorage`. `COleStreamFile` можно присоединить к Archive и [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , вызываемый для загрузки данных.
 
 Это расширенный переопределяемый объект.
 
@@ -851,13 +851,13 @@ void OnParaAlign(WORD wAlign);
 ### <a name="parameters"></a>Параметры
 
 *валигн*<br/>
-Выравнивание требуемого абзаца. Одно из следующих значений:
+Выравнивание требуемого абзаца. Принимает одно из следующих значений:
 
 - PFA_LEFT выровняйте абзацы по левому краю.
 
 - PFA_RIGHT выровняйте абзацы по правому краю.
 
-- PFA_CENTER выравнивание абзацев между полями.
+- PFA_CENTER центрирование абзацев между полями.
 
 ### <a name="example"></a>Пример
 
@@ -898,7 +898,7 @@ virtual void OnReplaceAll(
 Заменяемый текст.
 
 *лпсзреплаце*<br/>
-Текст для замены.
+Текст замены.
 
 *бкасе*<br/>
 Указывает, учитывается ли регистр при поиске.
@@ -942,7 +942,7 @@ virtual void OnReplaceSel(
 Указывает, должны ли в поиске выделяться целые слова.
 
 *лпсзреплаце*<br/>
-Текст для замены.
+Текст замены.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1019,13 +1019,13 @@ void OnUpdateParaAlign(
 Указатель на объект [Поддержка CCmdUI](../../mfc/reference/ccmdui-class.md) .
 
 *валигн*<br/>
-Выравнивание абзаца для проверки. Одно из следующих значений:
+Выравнивание абзаца для проверки. Принимает одно из следующих значений:
 
 - PFA_LEFT выровняйте абзацы по левому краю.
 
 - PFA_RIGHT выровняйте абзацы по правому краю.
 
-- PFA_CENTER выравнивание абзацев между полями.
+- PFA_CENTER центрирование абзацев между полями.
 
 ### <a name="example"></a>Пример
 
@@ -1143,7 +1143,7 @@ virtual HRESULT QueryAcceptData(
 
 Переопределите эту функцию, чтобы она обрабатывала другую организацию COM-элементов в производном классе документа. Это расширенный переопределяемый объект.
 
-Дополнительные сведения о HRESULT и `IDataObject`см. в разделе [структура кодов ошибок com](/windows/win32/com/structure-of-com-error-codes) и [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)соответственно в Windows SDK.
+Дополнительные сведения о HRESULT и `IDataObject`см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes) и [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)соответственно в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1151,7 +1151,7 @@ virtual HRESULT QueryAcceptData(
 
 ##  <a name="setcharformat"></a>CRichEditView:: Сетчарформат
 
-Вызовите эту функцию, чтобы задать атрибуты форматирования символов для нового текста в `CRichEditView` этом объекте.
+Вызовите эту функцию, чтобы задать атрибуты форматирования символов для нового текста в этом `CRichEditView` объекте.
 
 ```
 void SetCharFormat(CHARFORMAT2 cf);
@@ -1164,9 +1164,9 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция изменяет только атрибуты, `dwMask` указанные членом *CF* .
+Эта функция изменяет только атрибуты, заданные элементом `dwMask` в *CF* .
 
-Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) Message и [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETCHARFORMAT](/windows/win32/Controls/em-setcharformat) Message и структура [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1187,9 +1187,9 @@ void SetMargins(const CRect& rectMargin);
 
 ### <a name="remarks"></a>Примечания
 
-Если [m_nWordWrap](#m_nwordwrap) имеет `WrapToTargetDevice`значение, необходимо вызвать [врапчанжед](#wrapchanged) после использования этой функции для настройки характеристик печати.
+Если [m_nWordWrap](#m_nwordwrap) `WrapToTargetDevice`, следует вызвать [врапчанжед](#wrapchanged) после использования этой функции для настройки характеристик печати.
 
-Обратите внимание, что поля, используемые [PrintPage](#printpage) , относительны относительно физической страницы, а не логической страницы. Таким словами, поля с нуля часто обрезает текст, так как многие принтеры имеют непечатаемые области на странице. Чтобы избежать обрезки текста, следует вызвать метод USE `SetMargins` для установки разумных полей принтера перед печатью.
+Обратите внимание, что поля, используемые [PrintPage](#printpage) , относительны относительно физической страницы, а не логической страницы. Таким словами, поля с нуля часто обрезает текст, так как многие принтеры имеют непечатаемые области на странице. Чтобы избежать обрезки текста, следует вызвать метод use `SetMargins`, чтобы задать разумные поля принтера перед печатью.
 
 ### <a name="example"></a>Пример
 
@@ -1210,7 +1210,7 @@ void SetPaperSize(CSize sizePaper);
 
 ### <a name="remarks"></a>Примечания
 
-Если [m_nWordWrap](#m_nwordwrap) имеет `WrapToTargetDevice`значение, необходимо вызвать [врапчанжед](#wrapchanged) после использования этой функции для настройки характеристик печати.
+Если [m_nWordWrap](#m_nwordwrap) `WrapToTargetDevice`, следует вызвать [врапчанжед](#wrapchanged) после использования этой функции для настройки характеристик печати.
 
 ### <a name="example"></a>Пример
 
@@ -1218,7 +1218,7 @@ void SetPaperSize(CSize sizePaper);
 
 ##  <a name="setparaformat"></a>CRichEditView:: Сетпараформат
 
-Вызывайте эту функцию, чтобы задать атрибуты форматирования абзаца для текущего выделения в `CRichEditView` этом объекте.
+Вызовите эту функцию, чтобы задать атрибуты форматирования абзаца для текущего выбора в этом `CRichEditView` объекте.
 
 ```
 BOOL SetParaFormat(PARAFORMAT2& pf);
@@ -1235,9 +1235,9 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция изменяет только атрибуты, `dwMask` указанные членом *PF* .
+Эта функция изменяет только атрибуты, заданные членом `dwMask` *PF* .
 
-Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) Message и [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) Structure статьи Windows SDK.
+Дополнительные сведения см. в разделе [EM_SETPARAFORMAT](/windows/win32/Controls/em-setparaformat) Message и структура [PARAFORMAT2](/windows/win32/api/richedit/ns-richedit-paraformat2) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1276,7 +1276,7 @@ virtual void WrapChanged();
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите эту функцию, чтобы изменить способ, которым представление форматированного редактирования будет реагировать на изменения в [m_nWordWrap](#m_nwordwrap) или характеристики печати ( [онпринтерчанжед](#onprinterchanged)).
+Переопределите эту функцию, чтобы изменить способ, которым представление форматированного редактирования будет реагировать на изменения в [m_nWordWrap](#m_nwordwrap) или на характеристики печати ( [онпринтерчанжед](#onprinterchanged)).
 
 ### <a name="example"></a>Пример
 
