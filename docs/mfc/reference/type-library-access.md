@@ -5,28 +5,28 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611533"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867041"
 ---
 # <a name="type-library-access"></a>Доступ к библиотеке типов
 
-Библиотеки типов предоставить доступ к интерфейсам управления OLE для других приложений, поддерживающих OLE. Каждый элемент управления OLE должен иметь библиотеку типов, если один или несколько интерфейсов должны быть предоставлены.
+Библиотеки типов предоставляют интерфейсы элемента управления OLE другим приложениям, поддерживающим технологию OLE. Каждый элемент управления OLE должен иметь библиотеку типов, если требуется предоставить один или несколько интерфейсов.
 
-Следующие макросы разрешить управления OLE для предоставления доступа к библиотеке типов:
+Следующие макросы позволяют элементу управления OLE предоставлять доступ к собственной библиотеке типов:
 
 ### <a name="type-library-access"></a>Доступ к библиотеке типов
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет `GetTypeLib` функции-члена элемента управления OLE (необходимо использовать в объявлении класса).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует `GetTypeLib` функции-члена элемента управления OLE (необходимо использовать в реализации класса).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет функцию-член `GetTypeLib` элемента управления OLE (должна использоваться в объявлении класса).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует функцию-член `GetTypeLib` элемента управления OLE (должна использоваться в реализации класса).|
 
-##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB
+##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-Объявляет `GetTypeLib` функция-член класса элемента управления.
+Объявляет функцию члена `GetTypeLib` класса Control.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,9 +35,9 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
-Имя класса элемента управления, относящиеся к библиотеке типов.
+Имя класса элемента управления, связанного с библиотекой типов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте этот макрос в файле заголовка класса элемента управления.
 
@@ -45,9 +45,9 @@ DECLARE_OLETYPELIB(class_name)
 
 **Заголовок:** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB
+##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-Реализует элемент управления `GetTypeLib` функция-член.
+Реализует функцию члена `GetTypeLib` элемента управления.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,25 +56,25 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
-Имя класса элемента управления, относящиеся к библиотеке типов.
+Имя класса элемента управления, связанного с библиотекой типов.
 
-*tlid*<br/>
-Идентификатор библиотеки типов.
+*тлид*<br/>
+ИДЕНТИФИКАЦИОНный номер библиотеки типов.
 
-*wVerMajor*<br/>
-Номер основной номер версии библиотеки типов.
+*ввермажор*<br/>
+Основной номер версии библиотеки типов.
 
-*wVerMinor*<br/>
-Номера дополнительный номер версии библиотеки типов.
+*вверминор*<br/>
+Дополнительный номер версии библиотеки типов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос должен указываться в файле реализации для любого класса элемента управления, который использует declare_oletypelib-макрос.
+Этот макрос должен присутствовать в файле реализации для любого класса элементов управления, использующего макрос DECLARE_OLETYPELIB.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

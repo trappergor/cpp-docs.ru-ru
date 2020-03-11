@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689211"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856632"
 ---
 # <a name="numpunct-class"></a>Класс numpunct
 
@@ -50,29 +50,29 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* \
+*CharType*\
 Тип, используемый внутри программы для кодирования символов в языковом стандарте.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[numpunct](#numpunct)|Конструктор для объектов типа `numpunct`.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Description|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[string_type](#string_type)|Тип, описывающий строку, содержащую символы типа `CharType`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[decimal_point](#decimal_point)|Возвращает элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
 |[do_decimal_point](#do_decimal_point)|Защищенная виртуальная функция-член, которая вызывается, чтобы возвратить элемент определенного языкового стандарта для использования в качестве десятичного разделителя.|
@@ -87,7 +87,7 @@ class numpunct : public locale::facet;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<locale>
+**Заголовок:** \<языковой стандарт >
 
 **Пространство имен:** std
 
@@ -99,7 +99,7 @@ class numpunct : public locale::facet;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом для параметра-шаблона **Chartype.**
 
@@ -115,7 +115,7 @@ CharType decimal_point() const;
 
 Элемент определенного языкового стандарта для использования в качестве десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_decimal_point](#do_decimal_point).
 
@@ -174,7 +174,7 @@ virtual string_type do_falsename() const;
 
 Строка, содержащая последовательность для использования в качестве текстового представления значения **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает строку false для представления значения **false** во всех языковых стандартах.
 
@@ -194,7 +194,7 @@ virtual string do_grouping() const;
 
 Определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция-член возвращает определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя. Кодирование такое же, как для **lconv::grouping**.
 
@@ -214,7 +214,7 @@ virtual CharType do_thousands_sep() const;
 
 Возвращает элемент определенного языкового стандарта для использования в качестве разделителя тысяч.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция-член возвращает элемент типа `CharType`, зависящий от языкового стандарта, для использования в качестве разделителя групп слева от любой десятичной запятой.
 
@@ -230,7 +230,7 @@ virtual CharType do_thousands_sep() const;
 virtual string_type do_truename() const;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Строка, которая будет использоваться как текстовое представление значения **true**.
 
@@ -252,7 +252,7 @@ string_type falsename() const;
 
 Строка, содержащая последовательность `CharType`s для использования в качестве текстового представления значения **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает строку false для представления значения **false** во всех языковых стандартах.
 
@@ -301,7 +301,7 @@ string grouping() const;
 
 Определенное языковым стандартом правило группирования цифр слева от любого десятичного разделителя.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_grouping](#do_grouping).
 
@@ -345,12 +345,12 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs* \
+*_Refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Возможные значения для параметра *_Refs* и их значимость:
+Возможные значения параметра *_Refs* и их значимость:
 
 - 0: время существования объекта управляется языковыми стандартами, которые его содержат.
 
@@ -370,7 +370,7 @@ explicit numpunct(size_t _Refs = 0);
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип описывает специализацию шаблона класса [basic_string](../standard-library/basic-string-class.md) , объекты которой могут хранить копии последовательностей пунктуации.
 
@@ -386,7 +386,7 @@ CharType thousands_sep() const;
 
 Возвращает элемент определенного языкового стандарта для использования в качестве разделителя тысяч.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_thousands_sep](#do_thousands_sep).
 
@@ -429,7 +429,7 @@ string_type falsename() const;
 
 Строка, которая будет использоваться как текстовое представление значения **true**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает [do_truename](#do_truename).
 
@@ -466,7 +466,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<locale>](../standard-library/locale.md)\
 [Класс facet](../standard-library/locale-class.md#facet_class)\

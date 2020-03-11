@@ -8,26 +8,26 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502028"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855698"
 ---
 # <a name="ole-initialization"></a>Инициализация OLE
 
-Прежде чем приложение сможет использовать системные службы OLE, оно должно инициализировать системные библиотеки DLL OLE и убедиться, что библиотеки DLL имеют правильную версию. `AfxOleInit` Функция инициализирует системные DLL-библиотеки OLE.
+Прежде чем приложение сможет использовать системные службы OLE, оно должно инициализировать системные библиотеки DLL OLE и убедиться, что библиотеки DLL имеют правильную версию. Функция `AfxOleInit` инициализирует системные DLL-библиотеки OLE.
 
 ### <a name="ole-initialization"></a>Инициализация OLE
 
 |||
 |-|-|
 |[афксолеинит](#afxoleinit)|Инициализирует библиотеки OLE.|
-|[афксенаблеконтролконтаинер](#afxenablecontrolcontainer)|Вызовите эту функцию в `InitInstance` функции объекта приложения, чтобы обеспечить поддержку включения элементов управления OLE.|
+|[афксенаблеконтролконтаинер](#afxenablecontrolcontainer)|Вызовите эту функцию в функции `InitInstance` объекта приложения, чтобы обеспечить поддержку включения элементов управления OLE.|
 
 ## <a name="afxenablecontrolcontainer"></a>афксенаблеконтролконтаинер
 
-Вызовите эту функцию в `InitInstance` функции объекта приложения, чтобы обеспечить поддержку включения элементов управления OLE.
+Вызовите эту функцию в функции `InitInstance` объекта приложения, чтобы обеспечить поддержку включения элементов управления OLE.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ ms.locfileid: "69502028"
 void AfxEnableControlContainer( );
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения об элементах управления OLE (которые теперь называются элементами управления ActiveX) см. в [разделах элементы управления ActiveX](../mfc-activex-controls.md).
 
@@ -55,7 +55,7 @@ BOOL AFXAPI AfxOleInit();
 
 Ненулевое значение в случае успешного выполнения; 0, если инициализация не удалась, возможно, установлены неверные версии системных библиотек OLE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызовите эту функцию, чтобы инициализировать поддержку OLE для приложения MFC. При вызове этой функции выполняются следующие действия.
 
@@ -67,12 +67,12 @@ BOOL AFXAPI AfxOleInit();
 >  Если **афксолеинит** вызывается из библиотеки DLL MFC, вызов завершится ошибкой. Сбой происходит из-за того, что функция предполагает, что, если она вызывается из библиотеки DLL, система OLE была ранее инициализирована вызывающим приложением.
 
 > [!NOTE]
->  Приложения MFC должны быть инициализированы как однопотоковое подразделение (STA). При вызове [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) в `InitInstance` переопределении укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
+>  Приложения MFC должны быть инициализированы как однопотоковое подразделение (STA). При вызове [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) в переопределении `InitInstance` укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

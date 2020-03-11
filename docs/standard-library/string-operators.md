@@ -21,19 +21,19 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685999"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890906"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
 ||||
 |-|-|-|
-|[оператор!= ](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[оператор==](#op_eq_eq)|
+|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
+|[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
+|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
 
 ## <a name="op_add"></a> operator+
 
@@ -103,19 +103,19 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для объединения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для объединения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Строка, которая является объединением входных строк.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Функции каждой перегрузки `operator+` для сцепления двух объектов класса шаблона класса [basic_string](../standard-library/basic-string-class.md). Все фактически возвращают `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Дополнительные сведения см. в разделе [append](../standard-library/basic-string-class.md#append).
+Функции каждой перегрузки `operator+` для сцепления двух объектов шаблона класса [Basic_string класса](../standard-library/basic-string-class.md). Все фактически возвращают `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Дополнительные сведения см. в разделе [append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Пример
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора.
 
@@ -192,17 +192,17 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически не равен строковому объекту в правой части; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами строк основывается на попарном лексикографическом сравнении их символов. Две строки считаются равными, если они имеют одинаковое число символов и их соответствующие значения символов совпадают. В противном случае они не равны.
 
@@ -283,17 +283,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически равен строковому объекту в правой части; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами строк основывается на попарном лексикографическом сравнении их символов. Две строки считаются равными, если они имеют одинаковое число символов и их соответствующие значения символов совпадают. В противном случае они не равны.
 
@@ -374,17 +374,17 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически меньше, чем строковый объект в правой части; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Лексикографическое сравнение между строками сравнивает их символ за символом до:
 
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>  operator&lt;=
 
 Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.
 
@@ -470,17 +470,17 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически меньше, чем строковый объект в правой части, или равен ему; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Лексикографическое сравнение между строками сравнивает их символ за символом до:
 
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>  operator&lt;&lt;
 
 Функция шаблона, записывающая строку в выходной поток.
 
@@ -563,7 +563,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ostr* \
+*_Ostr*\
 Поток вывода, в который выполняется запись.
 
 \ *str*
@@ -573,9 +573,9 @@ basic_ostream<CharType, Traits>& operator<<(
 
 Записывает значение заданной строки в выходной поток *_Ostr*.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Функция шаблона перегружает **оператор < <** , чтобы вставить *str* объекта класса [basic_string](../standard-library/basic-string-class.md) в поток *\_Ostr*. Функция фактически возвращает `_Ostr.write( str.c_str, str.size )`.
+Функция шаблона перегружает **оператор < <** для вставки *str* объекта шаблона класса [basic_string](../standard-library/basic-string-class.md) в поток *\_OSTR*. Функция фактически возвращает `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a> operator&gt;
 
@@ -600,17 +600,17 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически больше, чем строковый объект в правой части; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Лексикографическое сравнение между строками сравнивает их символ за символом до:
 
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>  operator&gt;=
 
 Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.
 
@@ -703,17 +703,17 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left* \
+*left*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа* \
+*справа*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение **true**, если строковый объект в левой части оператора лексикографически больше, чем строковый объект в правой части, или равен ему; в противном случае — значение **false**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Лексикографическое сравнение между строками сравнивает их символ за символом до:
 
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a>  operator&gt;&gt;
 
 Функция-шаблон, считывающая строку из входного потока.
 
@@ -796,31 +796,31 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr* \
+*_Istr*\
 Входной поток, используемый для извлечения последовательности
 
-*справа* \
+*справа*\
 Строка, извлекаемая из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Считывает значение указанной строки из *_Istr* и возвращает его в *right*.
+Считывает значение указанной строки из *_Istr* и возвращает ее в *right*.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Оператор пропускает начальные пробелы, если не установлен флаг `skipws`. Он считывает следующие символы до пробела или до конца файла.
 
-Функция шаблона перегружает **оператор > >** , чтобы заменить последовательность, управляемую *справа* , на последовательность элементов, извлеченных из потока *_Istr*. Точки остановки извлечения:
+Функция шаблона перегружает **оператор > >** для замены последовательности, управляемой *справа* , на последовательность элементов, извлеченных из *_Istr*потока. Точки остановки извлечения:
 
-- в конце файла;
+- Конец файла.
 
 - После извлечения `_Istr` функцией. Элементы **width**, если это значение ненулевое.
 
 После извлечения `_Istr` функцией. Элементы [max_size](../standard-library/basic-string-class.md#max_size).
 
-- После того как функция извлечет элемент *ch*, для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) имеет значение true (в этом случае символ возвращается).
+- После того как функция извлекает элемент *CH* , для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **имеет**значение ( **ctype**\< **CharType**>:: **Space**, *CH*) равно true, в этом случае символ возвращается.
 
-Если функция не извлекает элементы, она вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). В любом случае она вызывает **istr**. **width**(0) и возвращает \* **this**.
+Если функция не извлекает элементы, она вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). В любом случае она вызывает **istr**. **Width**(0) и возвращает \* **this**.
 
 ### <a name="example"></a>Пример
 
@@ -841,6 +841,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<string>](../standard-library/string.md)

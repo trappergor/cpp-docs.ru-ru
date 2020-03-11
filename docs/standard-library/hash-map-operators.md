@@ -6,20 +6,20 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448732"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856700"
 ---
-# <a name="lthashmapgt-operators"></a>Операторы &lt;hash_map&gt;
+# <a name="lthash_mapgt-operators"></a>Операторы &lt;hash_map&gt;
 
 |||
 |-|-|
 |[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[operator==](#op_eq_eq)|[оператор== (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 > [!NOTE]
 > Этот API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `hash_map`.
 
-*Правильно*\
+*справа*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объекты hash_map не равны; **false**, если объекты hash_map равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
-Члены [< hash_map >](hash-map.md) и [< hash_set >](hash-set.md) заголовков в [пространстве имен stdext](stdext-namespace.md).
+Члены [< hash_map >](hash-map.md) и [< hash_set](hash-set.md) > заголовков в [пространстве имен stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Пример
 
@@ -101,17 +101,17 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `hash_map`.
 
-*Правильно*\
+*справа*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объект hash_map слева от оператора равен объекту hash_map справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -168,17 +168,17 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `hash_multimap`.
 
-*Правильно*\
+*справа*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объекты hash_multimap не равны; **false**, если они равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами hash_multimap основывается на попарном сравнении их элементов. Два объекта hash_multimap равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -235,17 +235,17 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `hash_multimap`.
 
-*Правильно*\
+*справа*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объект hash_multimap слева от оператора равен объекту hash_multimap справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами hash_multimap основывается на попарном сравнении их элементов. Два объекта hash_multimap равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -289,6 +289,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<hash_map>](hash-map.md)

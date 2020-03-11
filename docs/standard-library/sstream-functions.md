@@ -5,11 +5,11 @@ f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
 ms.openlocfilehash: 707d35123797b84b2b7cef1d1cfd9005e4becb1c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447528"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865926"
 ---
 # <a name="ltsstreamgt-functions"></a>Функции &lt;sstream&gt;
 
@@ -45,15 +45,15 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Description|
 |---------------|-----------------|
 |*left*|Ссылка на объект `sstream`.|
 |*right*|Ссылка на объект `sstream`.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция шаблона выполняет `left.swap(right)`.
+Функция шаблона выполняет метод `left.swap(right)`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<sstream>](../standard-library/sstream.md)

@@ -6,19 +6,19 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454771"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874002"
 ---
-# <a name="ltunorderedmapgt-operators"></a>Операторы &lt;unordered_map&gt;
+# <a name="ltunordered_mapgt-operators"></a>Операторы &lt;unordered_map&gt;
 
 |||||
 |-|-|-|-|
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 Проверяет, не равен ли объект [unordered_map](../standard-library/unordered-map-class.md) в левой части объекту unordered_map в правой части.
 
@@ -28,17 +28,17 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `unordered_map`.
 
-*Правильно*\
+*справа*\
 Объект типа `unordered_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если unordered_maps не равны; **значение false** , если они равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Произвольный порядок хранения элементов не влияет на сравнение объектов unordered_map. Два объекта unordered_map равны, если они имеют одинаковое число элементов и элементы в одном контейнере представляют собой перестановки элементов в другом контейнере. В противном случае они не равны.
 
@@ -92,17 +92,17 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `unordered_map`.
 
-*Правильно*\
+*справа*\
 Объект типа `unordered_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если unordered_maps равны; **значение false** , если они не равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Произвольный порядок хранения элементов не влияет на сравнение объектов unordered_map. Два объекта unordered_map равны, если они имеют одинаковое число элементов и элементы в одном контейнере представляют собой перестановки элементов в другом контейнере. В противном случае они не равны.
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a> operator!=
+## <a name="op_neq_multimap"></a>  operator!=
 
 Проверяет, не равен ли объект [unordered_multimap](../standard-library/unordered-multimap-class.md) в левой части объекту unordered_multimap в правой части.
 
@@ -156,17 +156,17 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `unordered_multimap`.
 
-*Правильно*\
+*справа*\
 Объект типа `unordered_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если unordered_multimaps не равны; **значение false** , если они равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Произвольный порядок хранения элементов не влияет на сравнение объектов unordered_multimap. Два объекта unordered_multimap равны, если они имеют одинаковое число элементов и элементы в одном контейнере представляют собой перестановки элементов в другом контейнере. В противном случае они не равны.
 
@@ -221,17 +221,17 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Параметры
 
-*слева*\
+*left*\
 Объект типа `unordered_multimap`.
 
-*Правильно*\
+*справа*\
 Объект типа `unordered_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **значение true** , если unordered_multimaps равны; **значение false** , если они не равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Произвольный порядок хранения элементов не влияет на сравнение объектов unordered_multimap. Два объекта unordered_multimap равны, если они имеют одинаковое число элементов и элементы в одном контейнере представляют собой перестановки элементов в другом контейнере. В противном случае они не равны.
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<unordered_map>](../standard-library/unordered-map.md)

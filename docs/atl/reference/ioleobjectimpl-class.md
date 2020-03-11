@@ -50,11 +50,11 @@ helpviewer_keywords:
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
 ms.openlocfilehash: ded158b0ec862de5b0d0b23dd4b9edb50ad577ef
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495733"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862939"
 ---
 # <a name="ioleobjectimpl-class"></a>Класс Иолеобжектимпл
 
@@ -75,11 +75,11 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 *T*<br/>
 Класс, производный от `IOleObjectImpl`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Иолеобжектимпл:: Advise](#advise)|Устанавливает вспомогательное соединение с элементом управления.|
 |[Иолеобжектимпл:: Close](#close)|Изменяет состояние элемента управления с "работает" на "Загружено".|
@@ -94,14 +94,14 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[Иолеобжектимпл:: Енумадвисе](#enumadvise)|Перечисляет советы по вспомогательным соединениям элемента управления.|
 |[Иолеобжектимпл:: Енумвербс](#enumverbs)|Перечисляет действия для элемента управления.|
 |[Иолеобжектимпл:: Жетклиентсите](#getclientsite)|Извлекает клиентский сайт элемента управления.|
-|[Иолеобжектимпл:: Жетклипбоарддата](#getclipboarddata)|Извлекает данные из буфера обмена. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Иолеобжектимпл:: Жетклипбоарддата](#getclipboarddata)|Извлекает данные из буфера обмена. Реализация ATL возвращает E_NOTIMPL.|
 |[Иолеобжектимпл:: расширение](#getextent)|Извлекает экстент отображаемой области элемента управления.|
 |[Иолеобжектимпл:: Жетмискстатус](#getmiscstatus)|Возвращает состояние элемента управления.|
-|[Иолеобжектимпл:: моникер](#getmoniker)|Извлекает моникер элемента управления. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Иолеобжектимпл:: моникер](#getmoniker)|Извлекает моникер элемента управления. Реализация ATL возвращает E_NOTIMPL.|
 |[Иолеобжектимпл:: Жетусерклассид](#getuserclassid)|Получает идентификатор класса элемента управления.|
 |[Иолеобжектимпл:: Жетусертипе](#getusertype)|Извлекает имя пользовательского типа элемента управления.|
-|[Иолеобжектимпл:: Инитфромдата](#initfromdata)|Инициализирует элемент управления из выбранных данных. Реализация ATL возвращает значение E_NOTIMPL.|
-|[Иолеобжектимпл:: Исуптодате](#isuptodate)|Проверяет, является ли элемент управления актуальным. Реализация ATL возвращает значение S_OK.|
+|[Иолеобжектимпл:: Инитфромдата](#initfromdata)|Инициализирует элемент управления из выбранных данных. Реализация ATL возвращает E_NOTIMPL.|
+|[Иолеобжектимпл:: Исуптодате](#isuptodate)|Проверяет, является ли элемент управления актуальным. Реализация ATL возвращает S_OK.|
 |[Иолеобжектимпл:: Онпоствербдискардундо](#onpostverbdiscardundo)|Вызывается методом [довербдискардундо](#doverbdiscardundo) после отклонения состояния отмены.|
 |[Иолеобжектимпл:: Онпоствербхиде](#onpostverbhide)|Вызывается методом [довербхиде](#doverbhide) после скрытия элемента управления.|
 |[Иолеобжектимпл:: Онпоствербинплацеактивате](#onpostverbinplaceactivate)|Вызывается методом [довербинплацеактивате](#doverbinplaceactivate) после активации элемента управления на месте.|
@@ -115,18 +115,18 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 |[Иолеобжектимпл:: Онпревербшов](#onpreverbshow)|Вызывается методом [довербшов](#doverbshow) , прежде чем элемент управления станет видимым.|
 |[Иолеобжектимпл:: Онпревербуиактивате](#onpreverbuiactivate)|Вызывается методом [довербуиактивате](#doverbuiactivate) перед активацией пользовательского интерфейса элемента управления.|
 |[Иолеобжектимпл:: Сетклиентсите](#setclientsite)|Сообщает элементу управления о своем клиентском сайте в контейнере.|
-|[Иолеобжектимпл:: Сетколорсчеме](#setcolorscheme)|Рекомендует использовать цветовую схему для приложения элемента управления, если таковая имеется. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Иолеобжектимпл:: Сетколорсчеме](#setcolorscheme)|Рекомендует использовать цветовую схему для приложения элемента управления, если таковая имеется. Реализация ATL возвращает E_NOTIMPL.|
 |[Иолеобжектимпл:: Сетекстент](#setextent)|Задает экстент отображаемой области элемента управления.|
 |[Иолеобжектимпл:: Сесостнамес](#sethostnames)|Сообщает элементу управления имена приложения контейнера и документа контейнера.|
-|[Иолеобжектимпл:: Сетмоникер](#setmoniker)|Указывает элементу управления, что это моникер. Реализация ATL возвращает значение E_NOTIMPL.|
+|[Иолеобжектимпл:: Сетмоникер](#setmoniker)|Указывает элементу управления, что это моникер. Реализация ATL возвращает E_NOTIMPL.|
 |[Иолеобжектимпл:: unadvise](#unadvise)|Удаляет вспомогательное соединение с элементом управления.|
-|[Иолеобжектимпл:: Update](#update)|Обновляет элемент управления. Реализация ATL возвращает значение S_OK.|
+|[Иолеобжектимпл:: Update](#update)|Обновляет элемент управления. Реализация ATL возвращает S_OK.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Интерфейс [иолеобжект](/windows/win32/api/oleidl/nn-oleidl-ioleobject) — это основной интерфейс, через который контейнер взаимодействует с элементом управления. Класс `IOleObjectImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown` , отправляя сведения в устройство дампа в отладочных сборках.
+Интерфейс [иолеобжект](/windows/win32/api/oleidl/nn-oleidl-ioleobject) — это основной интерфейс, через который контейнер взаимодействует с элементом управления. Класс `IOleObjectImpl` предоставляет реализацию этого интерфейса по умолчанию и реализует `IUnknown`, отправляя сведения в устройство дампа в отладочных сборках.
 
-**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+Руководство по **сопутствующим статьям** [ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -148,7 +148,7 @@ STDMETHOD(Advise)(
     DWORD* pdwConnection);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) в Windows SDK.
 
@@ -160,11 +160,11 @@ STDMETHOD(Advise)(
 STDMETHOD(Close)(DWORD dwSaveOption);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Деактивирует элемент управления и удаляет окно элемента управления, если оно существует. Если элемент данных класса элемента управления [ккомконтролбасе:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) имеет значение true, а параметр *двсавеоптион* — OLECLOSE_SAVEIFDIRTY или OLECLOSE_PROMPTSAVE, свойства элемента управления сохраняются перед закрытием.
+Деактивирует элемент управления и удаляет окно элемента управления, если оно существует. Если элемент данных класса элемента управления имеет значение [ккомконтролбасе:: m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) true, а параметр *двсавеоптион* — либо OLECLOSE_SAVEIFDIRTY, либо OLECLOSE_PROMPTSAVE, то свойства элемента управления сохраняются перед закрытием.
 
-Указатели, удерживаемые в элементах данных класса Control [ккомконтролбасе:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) и [Ккомконтролбасе:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) , освобождаются, а элементы данных [ккомконтролбасе:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [ккомконтролбасе:: m_ Бвндлесс](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)и [ккомконтролбасе:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) имеют значение false.
+Указатели, удерживаемые в элементах данных класса Control [ккомконтролбасе:: m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) и [ккомконтролбасе:: m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) , освобождаются, а элементы данных [ккомконтролбасе:: m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd), [ккомконтролбасе:: m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)и [ккомконтролбасе:: m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) устанавливаются в значение false.
 
 См. раздел [иолеобжект:: Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) в Windows SDK.
 
@@ -182,9 +182,9 @@ STDMETHOD(DoVerb)(
     LPCRECT lprcPosRect);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В зависимости от значения `iVerb`, одна из вспомогательных функций ATL `DoVerb` вызывается следующим образом:
+В зависимости от значения `iVerb`одна из вспомогательных функций `DoVerb` ATL вызывается следующим образом:
 
 |*иверб* Значений|Вызвана вспомогательная функция Доверб|
 |-------------------|-----------------------------------|
@@ -217,7 +217,7 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
 ##  <a name="doverbhide"></a>Иолеобжектимпл::D Овербхиде
 
@@ -237,7 +237,7 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
 ##  <a name="doverbinplaceactivate"></a>Иолеобжектимпл::D Овербинплацеактивате
 
@@ -259,9 +259,9 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Активирует элемент управления на месте путем вызова [ккомконтролбасе:: инплацеактивате](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Если элемент данных `m_bWindowOnly` класса элемента управления не имеет значения true `DoVerbInPlaceActivate` , сначала пытается активировать элемент управления как безоконный (возможно только в том случае, если контейнер поддерживает [иолеинплацеситевиндовлесс](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Если это не удается, функция пытается активировать элемент управления с помощью расширенных функций (возможно, только если контейнер поддерживает [иолеинплацеситикс](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Если это не удается, функция пытается активировать элемент управления без расширенных функций (возможно только в том случае, если контейнер поддерживает [иолеинплацесите](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Если активация прошла успешно, функция уведомляет контейнер, что элемент управления был активирован.
+Активирует элемент управления на месте путем вызова [ккомконтролбасе:: инплацеактивате](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate). Если элемент данных класса элемента управления не `m_bWindowOnly` имеет значение TRUE, `DoVerbInPlaceActivate` сначала пытается активировать элемент управления как безоконный (возможно только в том случае, если контейнер поддерживает [иолеинплацеситевиндовлесс](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)). Если это не удается, функция пытается активировать элемент управления с помощью расширенных функций (возможно, только если контейнер поддерживает [иолеинплацеситикс](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)). Если это не удается, функция пытается активировать элемент управления без расширенных функций (возможно только в том случае, если контейнер поддерживает [иолеинплацесите](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)). Если активация прошла успешно, функция уведомляет контейнер, что элемент управления был активирован.
 
 ##  <a name="doverbopen"></a>Иолеобжектимпл::D Овербопен
 
@@ -281,7 +281,7 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
 ##  <a name="doverbprimary"></a>Иолеобжектимпл::D Овербпримари
 
@@ -303,7 +303,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию задано отображение страниц свойств. Это можно переопределить в классе элемента управления, чтобы вызвать другое поведение при двойном щелчке. Например, воспроизведение видео или переход по месту на месте.
 
@@ -355,19 +355,19 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: енумадвисе](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) в Windows SDK.
 
 ##  <a name="enumverbs"></a>Иолеобжектимпл:: Енумвербс
 
-Предоставляет перечисление зарегистрированных действий (глаголов) для этого элемента управления путем `OleRegEnumVerbs`вызова метода.
+Предоставляет перечисление зарегистрированных действий (глаголов) для этого элемента управления путем вызова `OleRegEnumVerbs`.
 
 ```
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вы можете добавлять команды в rgsный файл проекта. Например, см. раздел ЦИРККТЛ. RGS в образце [Circ](../../overview/visual-cpp-samples.md) .
 
@@ -375,13 +375,13 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ##  <a name="getclientsite"></a>Иолеобжектимпл:: Жетклиентсите
 
-Помещает указатель в элемент данных класса элемента управления [ккомконтролбасе:: m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) в *ппклиентсите* и увеличивает счетчик ссылок на указатель.
+Помещает указатель в элемент данных класса элемента управления [ккомконтролбасе:: m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) в *ппклиентсите* и увеличивает значение счетчика ссылок в указателе.
 
 ```
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: жетклиентсите](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) в Windows SDK.
 
@@ -397,9 +397,9 @@ STDMETHOD(GetClipboardData)(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: жетклипбоарддата](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) в Windows SDK.
 
@@ -413,7 +413,7 @@ STDMETHOD(GetExtent)(
     SIZEL* psizel);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Размер хранится в элементе управления Data Control Member [ккомконтролбасе:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent).
 
@@ -421,7 +421,7 @@ STDMETHOD(GetExtent)(
 
 ##  <a name="getmiscstatus"></a>Иолеобжектимпл:: Жетмискстатус
 
-Возвращает указатель на зарегистрированную информацию о состоянии для элемента управления путем `OleRegGetMiscStatus`вызова.
+Возвращает указатель на зарегистрированную информацию о состоянии для элемента управления путем вызова `OleRegGetMiscStatus`.
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -429,7 +429,7 @@ STDMETHOD(GetMiscStatus)(
     DWORD* pdwStatus);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сведения о состоянии включают варианты поведения, поддерживаемые элементом управления и данными представления. Вы можете добавить сведения о состоянии в rgsный файл проекта.
 
@@ -448,9 +448,9 @@ STDMETHOD(GetMoniker)(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. [иолеобжект:: a моникер](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) в Windows SDK.
 
@@ -462,7 +462,7 @@ STDMETHOD(GetMoniker)(
 STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: жетусерклассид](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) в Windows SDK.
 
@@ -476,7 +476,7 @@ STDMETHOD(GetUserType)(
     LPOLESTR* pszUserType);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Имя типа пользователя используется для вывода элементов пользовательского интерфейса, например меню и диалоговых окон. Имя пользовательского типа можно изменить в RGS-файле проекта.
 
@@ -495,9 +495,9 @@ STDMETHOD(InitFromData)(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: инитфромдата](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) в Windows SDK.
 
@@ -511,9 +511,9 @@ STDMETHOD(IsUpToDate)(void);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: исуптодате](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) в Windows SDK.
 
@@ -527,9 +527,9 @@ HRESULT OnPostVerbDiscardUndo();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после удаления состояния отмены.
 
@@ -543,9 +543,9 @@ HRESULT OnPostVerbHide();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после скрытия элемента управления.
 
@@ -559,9 +559,9 @@ HRESULT OnPostVerbInPlaceActivate();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после того, как элемент управления будет активирован на месте.
 
@@ -575,9 +575,9 @@ HRESULT OnPostVerbOpen();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после открытия элемента управления для редактирования в отдельном окне.
 
@@ -591,9 +591,9 @@ HRESULT OnPostVerbShow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после того, как элемент управления станет видимым.
 
@@ -607,9 +607,9 @@ HRESULT OnPostVerbUIActivate();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переопределите этот метод с помощью кода, который должен выполняться после активации пользовательского интерфейса элемента управления.
 
@@ -623,9 +623,9 @@ HRESULT OnPreVerbDiscardUndo();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить отклонения состояния отмены, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -639,9 +639,9 @@ HRESULT OnPreVerbHide();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить скрытие элемента управления, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -655,9 +655,9 @@ HRESULT OnPreVerbInPlaceActivate();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить активацию элемента управления на месте, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -671,9 +671,9 @@ HRESULT OnPreVerbOpen();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить открытие элемента управления для редактирования в отдельном окне, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -687,9 +687,9 @@ HRESULT OnPreVerbShow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить видимость элемента управления, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -703,9 +703,9 @@ HRESULT OnPreVerbUIActivate();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы предотвратить активацию пользовательского интерфейса элемента управления, Переопределите этот метод, чтобы он возвращал ошибку HRESULT.
 
@@ -717,9 +717,9 @@ HRESULT OnPreVerbUIActivate();
 STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Затем метод возвращает значение S_OK.
+Затем метод возвращает S_OK.
 
 См. раздел [иолеобжект:: сетклиентсите](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) в Windows SDK.
 
@@ -733,9 +733,9 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: сетколорсчеме](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) в Windows SDK.
 
@@ -749,13 +749,13 @@ STDMETHOD(SetExtent)(
     SIZEL* psizel);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В противном случае `SetExtent` сохраняет значение, на которое указывает `psizel`, в элементе управления Data класса Member [CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Это значение находится в единицах HIMETRIC (0,01 мм на единицу).
+В противном случае `SetExtent` сохраняет значение, на которое указывает, `psizel` в элемент данных класса элемента управления [ккомконтролбасе:: m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent). Это значение находится в единицах HIMETRIC (0,01 мм на единицу).
 
-Если элемент данных класса элемента управления [ккомконтролбасе:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) имеет значение true `SetExtent` , также сохраняет значения, на которые `psizel` указывает, в элементе управления элемент данных класса Control [ккомконтролбасе:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
+Если элемент данных класса элемента управления [ккомконтролбасе:: m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) имеет значение TRUE, `SetExtent` также сохраняет значение, на которое указывает, `psizel` в члене данных класса элемента управления [ккомконтролбасе:: m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural).
 
-Если элемент данных класса элемента управления [ккомконтролбасе:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) имеет значение true `SetExtent` , `SendOnDataChange` вызывает `SendOnViewChange` и, чтобы уведомить все приемники уведомлений, зарегистрированные с помощью держателя рекомендаций, что размер элемента управления изменился.
+Если элемент данных класса элемента управления [ккомконтролбасе:: m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) имеет значение TRUE, `SetExtent` вызывает `SendOnDataChange` и `SendOnViewChange`, чтобы уведомлять все приемники уведомлений, зарегистрированные с помощью держателя рекомендаций, что размер элемента управления изменился.
 
 См. раздел [иолеобжект:: сетекстент](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) в Windows SDK.
 
@@ -769,9 +769,9 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: сесостнамес](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) в Windows SDK.
 
@@ -787,21 +787,21 @@ STDMETHOD(SetMoniker)(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: сетмоникер](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) в Windows SDK.
 
 ##  <a name="unadvise"></a>Иолеобжектимпл:: unadvise
 
-Удаляет вспомогательное соединение, `m_spOleAdviseHolder` хранящееся в элементе данных класса элемента управления.
+Удаляет вспомогательное соединение, хранящееся в элементе данных `m_spOleAdviseHolder`ного класса элемента управления.
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) в Windows SDK.
 
@@ -815,13 +815,13 @@ STDMETHOD(Update)(void);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 См. раздел [иолеобжект:: Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) в Windows SDK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
 [Интерфейсы элементов управления ActiveX](/windows/win32/com/activex-controls-interfaces)<br/>

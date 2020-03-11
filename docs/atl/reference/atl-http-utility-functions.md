@@ -3,11 +3,11 @@ title: Служебные функции HTTP библиотеки ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497965"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865042"
 ---
 # <a name="atl-http-utility-functions"></a>Служебные функции HTTP библиотеки ATL
 
@@ -15,13 +15,13 @@ ms.locfileid: "69497965"
 
 |||
 |-|-|
-|[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Каноникализес URL-адрес, который включает преобразование недопустимых символов и пробелов в управляющие последовательности.|
-|[AtlCombineUrl](#atlcombineurl)|Объединяет базовый URL-адрес и относительный URL-адрес в один канонический URL-адрес.|
+|[атлканоникализеурл](#atlcanonicalizeurl)|Каноникализес URL-адрес, который включает преобразование недопустимых символов и пробелов в управляющие последовательности.|
+|[атлкомбинеурл](#atlcombineurl)|Объединяет базовый URL-адрес и относительный URL-адрес в один канонический URL-адрес.|
 |[атлескапеурл](#atlescapeurl)|Преобразует все ненадежные символы в escape-последовательности.|
 |[атлжетдефаултурлпорт](#atlgetdefaulturlport)|Возвращает номер порта по умолчанию, связанный с определенным протоколом или схемой Интернета.|
 |[атлисунсафеурлчар](#atlisunsafeurlchar)|Определяет, является ли символ защищенным для использования в URL-адресе.|
 |[атлунескапеурл](#atlunescapeurl)|Преобразует экранированные символы обратно в исходные значения.|
-|[RGBToHtml](#rgbtohtml)|Преобразует значение [COLORREF](/windows/win32/gdi/colorref) в HTML-текст, соответствующий значению цвета.|
+|[ргбтохтмл](#rgbtohtml)|Преобразует значение [COLORREF](/windows/win32/gdi/colorref) в HTML-текст, соответствующий значению цвета.|
 |[системтиметохттпдате](#systemtimetohttpdate)|Вызывайте эту функцию для преобразования системного времени в строку в формате, пригодном для использования в заголовках HTTP.|
 
 ## <a name="requirements"></a>Требования
@@ -52,7 +52,7 @@ URL-адрес для канонизации.
 Указатель на переменную, которая содержит длину в символах *сзканоникализед*. Если функция завершается с ошибкой, переменная получает число символов, записанных в буфер, включая завершающий символ null. Если функция завершается с ошибкой, переменная получает необходимую длину в байтах буфера, включая пробел для завершающего нуль-символа.
 
 *dwFlags*<br/>
-Флаги ATL_URL, управляющие поведением этой функции.
+ATL_URL флаги, управляющие поведением этой функции.
 
 - ATL_URL_BROWSER_MODE не кодирует и не декодировать символы после "#" или "?" и не удаляет конечные пробелы после "?". Если это значение не указано, то весь URL-адрес кодируется, а конечные пробелы удаляются.
 
@@ -66,13 +66,13 @@ URL-адрес для канонизации.
 
 - ATL_URL_NO_ENCODE не преобразует ненадежные символы в escape-последовательности.
 
-- ATL_URL_NO_META не удаляет метаданные (например, "." и "..") из URL-адреса.
+- ATL_URL_NO_META не удаляет в URL-адресе метаданные (например, "." и "..").
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Ведет себя как текущая версия [интернетканоникализеурл](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , но не требует установки WinInet или Internet Explorer.
 
@@ -91,10 +91,10 @@ inline BOOL AtlCombineUrl(
 
 ### <a name="parameters"></a>Параметры
 
-*szBaseUrl*<br/>
-Базовый URL-адрес.
+*сзбасеурл*<br/>
+Базовый URL.
 
-*szRelativeUrl*<br/>
+*сзрелативеурл*<br/>
 URL-адрес относительно базового URL-адреса.
 
 *сзбуффер*<br/>
@@ -110,7 +110,7 @@ URL-адрес относительно базового URL-адреса.
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Ведет себя как текущая версия [интернеткомбинеурл](/windows/win32/api/wininet/nf-wininet-internetcombineurlw) , но не требует установки WinInet или Internet Explorer.
 
@@ -149,7 +149,7 @@ URL-адрес для преобразования.
 Размер буфера *лпсзстрингаут*.
 
 *dwFlags*<br/>
-Флаги ATL_URL, управляющие поведением этой функции. Возможные значения см. в разделе [атлканоникализеурл](#atlcanonicalizeurl) .
+ATL_URL флаги, управляющие поведением этой функции. Возможные значения см. в разделе [атлканоникализеурл](#atlcanonicalizeurl) .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -170,7 +170,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port) , связанный с указанной схемой или ATL_URL_INVALID_PORT_NUMBER, если схема не распознана.
+[ATL_URL_PORT](atl-typedefs.md#atl_url_port) , связанная с указанной схемой, или ATL_URL_INVALID_PORT_NUMBER, если схема не распознана.
 
 ## <a name="atlisunsafeurlchar"></a>атлисунсафеурлчар
 
@@ -189,7 +189,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 Возвращает значение TRUE, если входной символ является ненадежным, и FALSE в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Символы, которые не должны использоваться в URL-адресах, можно проверить с помощью этой функции и преобразовать с помощью [атлканоникализеурл](#atlcanonicalizeurl).
 
@@ -229,7 +229,7 @@ URL-адрес для преобразования.
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Отменяет процесс преобразования, примененный функцией [атлескапеурл](#atlescapeurl).
 
@@ -252,14 +252,14 @@ bool inline RGBToHtml(
 *пбаут*<br/>
 Выделенный вызывающим объектом буфер для получения текста для значения цвета HTML. В буфере должно быть по крайней мере 8 символов, включая пробел для нулевого символа конца строки).
 
-*nBuffer*<br/>
+*нбуффер*<br/>
 Размер (в байтах) буфера (включая пробел для символа завершения null).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Значение цвета HTML — это знак решетки, за которым следует 6-значное шестнадцатеричное значение, использующее 2 цифры для каждого красного, зеленого и синего компонентов цвета (например, #FFFFFF является белым).
 
@@ -279,10 +279,10 @@ inline void SystemTimeToHttpDate(
 Системное время для получения в виде строки формата HTTP.
 
 *стртиме*<br/>
-Ссылка на строковую переменную для получения даты и времени HTTP, как определено в RFC[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)2616 () и RFC[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)1123 ().
+Ссылка на строковую переменную для получения даты и времени HTTP, как определено в RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) и RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Основные понятия](../active-template-library-atl-concepts.md)<br/>
 [Компоненты ATL COM Desktop](../atl-com-desktop-components.md)<br/>
-[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)
+[интернетканоникализеурл](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (vector)
 - std::operator== (vector)
 ms.openlocfilehash: f6717add93c489f536bd0c0b0f82b74bbd915985
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240982"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876065"
 ---
 # <a name="ltvectorgt-operators"></a>Операторы &lt;vector&gt;
 
-## <a name="op_neq"></a> оператор! =
+## <a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта слева от оператора объекту справа от оператора.
 
@@ -35,17 +35,17 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объекты vector не равны; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Два объекта vector равны, если они содержат одинаковое количество элементов и соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -76,7 +76,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="op_lt"></a> Оператор&lt;
+## <a name="op_lt">Оператор </a>&lt;
 
 Проверяет, что объект слева от оператора меньше, чем объект справа от оператора.
 
@@ -86,10 +86,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -127,7 +127,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="op_lt_eq"></a> Оператор&lt;=
+## <a name="op_lt_eq"></a>&lt;оператора =
 
 Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.
 
@@ -137,10 +137,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -178,7 +178,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="op_eq_eq"></a> оператор ==
+## <a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта слева от оператора объекту справа от оператора.
 
@@ -188,17 +188,17 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 **true**, если объект vector слева от оператора равен объекту vector справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Два объекта vector равны, если они содержат одинаковое количество элементов и соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -229,7 +229,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="op_gt"></a> Оператор&gt;
+## <a name="op_gt">Оператор </a>&gt;
 
 Проверяет, что объект слева от оператора больше, чем объект справа от оператора.
 
@@ -239,10 +239,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -281,7 +281,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="op_gt_eq"></a> Оператор&gt;=
+## <a name="op_gt_eq"></a>&gt;оператора =
 
 Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.
 
@@ -291,10 +291,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*\
+*left*\
 Объект типа `vector`.
 
-*Правильно*\
+*справа*\
 Объект типа `vector`.
 
 ### <a name="return-value"></a>Возвращаемое значение

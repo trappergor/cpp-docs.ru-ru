@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: f1aa76514b98bbf12f8e516d3d54f68e8ef4dd7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496106"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862940"
 ---
 # <a name="cworkerthread-class"></a>Класс Кворкерсреад
 
@@ -41,24 +41,24 @@ class CWorkerThread
 *среадтраитс*<br/>
 Класс, предоставляющий функцию создания потока, например [кртсреадтраитс](../../atl/reference/crtthreadtraits-class.md) или [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-structures"></a>Защищенные структуры
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`WorkerClientEntry`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Кворкерсреад:: Кворкерсреад](#cworkerthread)|Конструктор для рабочего потока.|
 |[Кворкерсреад:: ~ Кворкерсреад](#dtor)|Деструктор для рабочего потока.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Кворкерсреад:: Аддхандле](#addhandle)|Вызовите этот метод, чтобы добавить обработчик ожидающего объекта в список, обслуживаемый рабочим потоком.|
 |[Кворкерсреад:: Аддтимер](#addtimer)|Вызовите этот метод, чтобы добавить периодический таймер ожидания в список, обслуживаемый рабочим потоком.|
@@ -68,7 +68,7 @@ class CWorkerThread
 |[Кворкерсреад:: Ремовехандле](#removehandle)|Вызовите этот метод, чтобы удалить маркер из списка ожидающих объектов.|
 |[Кворкерсреад:: Shutdown](#shutdown)|Вызовите этот метод, чтобы завершить работу рабочего потока.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 ### <a name="to-use-cworkerthread"></a>Использование Кворкерсреад
 
@@ -116,9 +116,9 @@ HRESULT AddHandle(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 [Иворкерсреадклиент:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через *пклиент* при сигнале дескриптора *хобжект*.
 
@@ -150,9 +150,9 @@ HRESULT AddTimer(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 [Иворкерсреадклиент:: Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) будет вызываться через *пклиент* при сигнале таймера.
 
@@ -174,7 +174,7 @@ CWorkerThread() throw();
 ~CWorkerThread() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает [кворкерсреад:: Shutdown](#shutdown).
 
@@ -219,13 +219,13 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод следует вызывать для инициализации объекта после создания или после вызова [кворкерсреад:: Shutdown](#shutdown).
 
-Чтобы два или более `CWorkerThread` объектов использовали один и тот же рабочий поток, инициализируйте один из них без передачи аргументов, а затем передайте указатель на этот объект `Initialize` методам других. Инициализация объектов, инициализированных с помощью указателя, должна быть завершена до того, как объект использовался для их инициализации.
+Чтобы два или более `CWorkerThread`ных объектов использовали один и тот же рабочий поток, инициализируйте один из них без передачи аргументов, а затем передайте указатель на этот объект в `Initialize` методы других. Инициализация объектов, инициализированных с помощью указателя, должна быть завершена до того, как объект использовался для их инициализации.
 
 Сведения о том, как изменяется поведение метода при инициализации с помощью указателя на существующий объект, см. в разделе [кворкерсреад:: Shutdown](#shutdown) .
 
@@ -244,11 +244,11 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При удалении маркера [иворкерсреадклиент:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, переданного в [аддхандле](#addhandle). Если этот вызов завершается `CWorkerThread` неудачно, вызывает функцию Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) для маркера.
+При удалении маркера [иворкерсреадклиент:: CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, переданного в [аддхандле](#addhandle). Если этот вызов завершается неудачей, `CWorkerThread` вызывает функцию Windows [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) для маркера.
 
 ##  <a name="shutdown"></a>Кворкерсреад:: Shutdown
 
@@ -261,19 +261,19 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ### <a name="parameters"></a>Параметры
 
 *двваит*<br/>
-Время ожидания (в миллисекундах) завершения работы рабочего потока. ATL_WORKER_THREAD_WAIT по умолчанию — 10 секунд. При необходимости можно определить собственное значение для этого символа, прежде чем включать файлов atlutil. h.
+Время ожидания (в миллисекундах) завершения работы рабочего потока. ATL_WORKER_THREAD_WAIT значение по умолчанию — 10 секунд. При необходимости можно определить собственное значение для этого символа, прежде чем включать файлов atlutil. h.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое, например при превышении значения времени ожидания *двваит*.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое, например при превышении значения времени ожидания *двваит*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Чтобы повторно использовать объект, вызовите метод [кворкерсреад:: Initialize](#initialize) после вызова этого метода.
 
-Обратите внимание `Shutdown` , что вызов для объекта, инициализированного указателем `CWorkerThread` на другой объект, не имеет результата и всегда возвращает значение S_OK.
+Обратите внимание, что вызов `Shutdown` для объекта, инициализированного указателем на другой объект `CWorkerThread`, не имеет результата и всегда возвращает S_OK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [дефаултсреадтраитс](atl-typedefs.md#defaultthreadtraits)<br/>
 [Классы](../../atl/reference/atl-classes.md)<br/>

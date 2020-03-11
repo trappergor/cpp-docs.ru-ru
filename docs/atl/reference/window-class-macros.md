@@ -1,5 +1,5 @@
 ---
-title: Макросы класса окна
+title: Макросы класса Window
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::DECLARE_WND_CLASS
@@ -7,30 +7,30 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
 ms.openlocfilehash: c4617a04c199741b97316122456e417a94275e89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197178"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862980"
 ---
-# <a name="window-class-macros"></a>Макросы класса окна
+# <a name="window-class-macros"></a>Макросы класса Window
 
-Эти макросы определяют служебных программ класса окна.
+Эти макросы определяют служебные программы класса Window.
 
 |||
 |-|-|
-|[DECLARE_WND_CLASS](#declare_wnd_class)|Позволяет указать имя класса окна.|
-|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017 г.) Позволяет указать имя нового класса окна и включающего класса Оконная процедура которого будет использоваться новый класс.|
-|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Позволяет указать имя существующий класс окон, на котором будет основан новый класс окна.|
-|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Позволяет указать параметры типа класса.|
+|[DECLARE_WND_CLASS](#declare_wnd_class)|Позволяет указать имя нового класса окна.|
+|[DECLARE_WND_CLASS2](#declare_wnd_class2)|(Visual Studio 2017) Позволяет указать имя нового класса окна и включающий его класс, процедуру окна которого будет использовать новый класс.|
+|[DECLARE_WND_SUPERCLASS](#declare_wnd_superclass)|Позволяет указать имя существующего класса окна, на котором будет основываться новый класс окна.|
+|[DECLARE_WND_CLASS_EX](#declare_wnd_class_ex)|Позволяет указать параметры класса.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlwin.h
+**Заголовок:** atlwin. h
 
-##  <a name="declare_wnd_class"></a>  DECLARE_WND_CLASS
+##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS
 
-Позволяет указать имя класса окна. Поместите этот макрос в элемент управления ActiveX библиотеки ATL класс элемента управления.
+Позволяет указать имя нового класса окна. Поместите этот макрос в класс элемента управления ActiveX ATL.
 
 ```
 DECLARE_WND_CLASS( WndClassName )
@@ -38,14 +38,14 @@ DECLARE_WND_CLASS( WndClassName )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*<br/>
-[in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна.
+*вндкласснаме*<br/>
+окне Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса Window.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если вы используете параметр /permissive-compiler, то DECLARE_WND_CLASS приведет к ошибке компилятора; Вместо этого используйте DECLARE_WND_CLASS2.
+Если используется параметр компилятора/permissive-, то DECLARE_WND_CLASS вызовет ошибку компилятора; Вместо этого используйте DECLARE_WND_CLASS2.
 
-DECLARE_WND_CLASS позволяет указать имя нового класса окна, сведения о которой будут управляться [CWndClassInfo](cwndclassinfo-class.md). DECLARE_WND_CLASS определяет новый класс окна путем реализации статического следующую функцию:
+DECLARE_WND_CLASS позволяет указать имя нового класса окон, данные которого будут управляться с помощью [квндклассинфо](cwndclassinfo-class.md). DECLARE_WND_CLASS определяет новый класс окна, реализуя следующую статическую функцию:
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
@@ -57,15 +57,15 @@ DECLARE_WND_CLASS задает следующие стили для нового
 
 - CS_DBLCLKS
 
-DECLARE_WND_CLASS также задает цвет фона окна по умолчанию. Используйте [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) макрос для предоставления собственных стилей и цвет фона.
+DECLARE_WND_CLASS также указывает цвет фона окна по умолчанию. Используйте макрос [DECLARE_WND_CLASS_EX](#declare_wnd_class_ex) для создания собственных стилей и цвета фона.
 
-[CWindowImpl](cwindowimpl-class.md) использует макрос DECLARE_WND_CLASS создать окно, в зависимости от нового класса окна. Чтобы переопределить это поведение, используйте [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) макрос, или предоставить собственную реализацию [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) функции.
+[Квиндовимпл](cwindowimpl-class.md) использует макрос DECLARE_WND_CLASS для создания окна на основе нового класса окна. Чтобы переопределить это поведение, используйте макрос [DECLARE_WND_SUPERCLASS](#declare_wnd_superclass) или предоставьте собственную реализацию функции [жетвндклассинфо](cwindowimpl-class.md#getwndclassinfo) .
 
-Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
+Дополнительные сведения об использовании Windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 
-##  <a name="declare_wnd_class2"></a>  DECLARE_WND_CLASS2
+##  <a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2
 
-(Visual Studio 2017 г.) Подобен DECLARE_WND_CLASS, но с дополнительным параметром, чтобы избежать ошибки зависимое имя при компиляции с параметром /permissive-option.
+(Visual Studio 2017) Аналогичен DECLARE_WND_CLASS, но с дополнительным параметром, который позволяет избежать ошибки зависимого имени при компиляции с параметром/permissive-.
 
 ```
 DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
@@ -73,20 +73,20 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*<br/>
-[in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна.
+*вндкласснаме*<br/>
+окне Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса Window.
 
-*EnclosingClass*<br/>
-[in] Имя класса окна, ограничивающий новый класс окна. Не может принимать значение NULL.
+*енклосингкласс*<br/>
+окне Имя класса окна, охватывающего новый класс окна. Не может быть NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если вы используете /permissive-option, DECLARE_WND_CLASS приведет к ошибке компиляции, так как он содержит зависимое имя. DECLARE_WND_CLASS2 необходимо явно указывать имя класса, этот макрос используется и не вызывает ошибку в разделе /permissive-flag.
-В противном случае этот макрос идентична [DECLARE_WND_CLASS](#declare_wnd_class).
+Если используется параметр/permissive-, то DECLARE_WND_CLASS вызовет ошибку компиляции, так как она содержит зависимое имя. DECLARE_WND_CLASS2 требует явного указания имени класса, в котором используется этот макрос, и не вызывает ошибку в/permissive-флаге.
+В противном случае этот макрос идентичен [DECLARE_WND_CLASS](#declare_wnd_class).
 
-##  <a name="declare_wnd_superclass"></a>  DECLARE_WND_SUPERCLASS
+##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS
 
-Позволяет указать параметры типа класса. Поместите этот макрос в элемент управления ActiveX библиотеки ATL класс элемента управления.
+Позволяет указать параметры класса. Поместите этот макрос в класс элемента управления ActiveX ATL.
 
 ```
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
@@ -94,29 +94,29 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*<br/>
-[in] Имя окна класса суперкласса, будет *OrigWndClassName*. Если значение равно NULL, ATL создаст имя класса окна.
+*вндкласснаме*<br/>
+окне Имя класса окна, который будет суперклассом *оригвндкласснаме*. Если значение равно NULL, ATL создаст имя класса Window.
 
-*OrigWndClassName*<br/>
-[in] Имя существующего класса окна.
+*оригвндкласснаме*<br/>
+окне Имя существующего класса окна.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос можно указать имя класса окна, который будет суперкласса существующий класс окон. [CWndClassInfo](cwndclassinfo-class.md) управляет данными суперкласса.
+Этот макрос позволяет указать имя класса окна, который будет суперклассом для существующего класса Window. [Квндклассинфо](cwndclassinfo-class.md) управляет сведениями о суперклассе.
 
-DECLARE_WND_SUPERCLASS реализует следующие статические функции:
+DECLARE_WND_SUPERCLASS реализует следующую статическую функцию:
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
-По умолчанию [CWindowImpl](cwindowimpl-class.md) использует [DECLARE_WND_CLASS](#declare_wnd_class) макрос для создания окна на основании нового класса окна. Путем указания макроса DECLARE_WND_SUPERCLASS в `CWindowImpl`-производного класса, класс окна будет основываться на существующий класс, но будет использовать в процедуре окна. Этот прием называется создание надклассов.
+По умолчанию [квиндовимпл](cwindowimpl-class.md) использует макрос [DECLARE_WND_CLASS](#declare_wnd_class) для создания окна на основе нового класса окна. При указании макроса DECLARE_WND_SUPERCLASS в производном от `CWindowImpl`классе класс Window будет основан на существующем классе, но будет использовать процедуру окна. Этот метод называется «подклассом».
 
-Помимо использования DECLARE_WND_CLASS и DECLARE_WND_SUPERCLASS макросы, можно переопределить [GetWndClassInfo](cwindowimpl-class.md#getwndclassinfo) функцию со своей собственной реализации.
+Кроме использования макросов DECLARE_WND_CLASS и DECLARE_WND_SUPERCLASS, функцию [жетвндклассинфо](cwindowimpl-class.md#getwndclassinfo) можно переопределить собственной реализацией.
 
-Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
+Дополнительные сведения об использовании Windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 
-##  <a name="declare_wnd_class_ex"></a>  DECLARE_WND_CLASS_EX
+##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX
 
-Позволяет указать имя существующий класс окон, на котором будет основан новый класс окна. Поместите этот макрос в элемент управления ActiveX библиотеки ATL класс элемента управления.
+Позволяет указать имя существующего класса окна, на котором будет основываться новый класс окна. Поместите этот макрос в класс элемента управления ActiveX ATL.
 
 ```
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
@@ -124,23 +124,23 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 
 ### <a name="parameters"></a>Параметры
 
-*WndClassName*<br/>
-[in] Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса окна.
+*вндкласснаме*<br/>
+окне Имя нового класса окна. Если значение равно NULL, ATL создаст имя класса Window.
 
-*Стиль*<br/>
-[in] Стиль окна.
+*style*<br/>
+окне Стиль окна.
 
-*фоновый*<br/>
-[in] Цвет фона окна.
+*Фоновая*<br/>
+окне Цвет фона окна.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос можно указать параметры класса нового класса окна, сведения о которой будут управляться [CWndClassInfo](cwndclassinfo-class.md). DECLARE_WND_CLASS_EX определяет новый класс окна путем реализации статического следующую функцию:
+Этот макрос позволяет указать параметры класса нового класса Window, сведения которого будут управляться с помощью [квндклассинфо](cwndclassinfo-class.md). DECLARE_WND_CLASS_EX определяет новый класс окна, реализуя следующую статическую функцию:
 
 [!code-cpp[NVC_ATL_Windowing#127](../../atl/codesnippet/cpp/window-class-macros_1.cpp)]
 
-Если вы хотите использовать стили по умолчанию и цвет фона, используйте [DECLARE_WND_CLASS](#declare_wnd_class) макрос. Дополнительные сведения об использовании windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
+Если вы хотите использовать стили и цвет фона по умолчанию, используйте макрос [DECLARE_WND_CLASS](#declare_wnd_class) . Дополнительные сведения об использовании Windows в ATL см. в статье [классы окон ATL](../../atl/atl-window-classes.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](atl-macros.md)
