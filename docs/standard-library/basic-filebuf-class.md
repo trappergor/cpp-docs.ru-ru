@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856585"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128744"
 ---
 # <a name="basic_filebuf-class"></a>Класс basic_filebuf
 
@@ -66,7 +66,7 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 *Tr*\
 Признаки базового элемента буферного файла (обычно `char_traits<Char_T>`).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Шаблон класса описывает буфер потока, который управляет передачей элементов типа *Char_T*, признаки символов которых определяются классом *tr*, в последовательность элементов, хранящуюся во внешнем файле, и из нее.
 
@@ -196,13 +196,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[basic_filebuf](#basic_filebuf)|Создает объект типа `basic_filebuf`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Description|
 |-|-|
 |[char_type](#char_type)|Связывает имя типа с параметром шаблона `Char_T`.|
 |[int_type](#int_type)|Делает этот тип в области `basic_filebuf` эквивалентным типу с таким же именем в области `Tr`.|
@@ -212,7 +212,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Описание|
+|Функция-член|Description|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Указывает, открыт ли файл.|
@@ -243,7 +243,7 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый конструктор сохраняет пустой указатель во всех указателях, управляющих входным и выходным буферами. Он также сохраняет пустой указатель в указателе файла.
 
@@ -269,7 +269,7 @@ basic_filebuf<Char_T, Tr> *close();
 
 Функция-член возвращает указатель null, если указатель файла является указателем null.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `close` вызывает `fclose(fp)`. Если эта функция возвращает ненулевое значение, то возвращается пустой указатель. В противном случае возвращается **this**, чтобы указать, что файл был успешно закрыт.
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если указатель файла не является пустым указателем.
+**значение true** , если указатель файла не имеет значение null.
 
 ### <a name="example"></a>Пример
 
@@ -413,9 +413,9 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если указатель файла является пустым, эта функция возвращает пустой указатель. В противном случае возвращается **this**.
+Если буфер уже открыт или если указатель файла является пустым указателем, функция возвращает пустой указатель. В противном случае возвращается **this**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция члена открывает файл с именем *filename*, вызывая [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` определяется из `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`:
 
@@ -458,7 +458,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 Возвращает __* this__.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue. Дополнительные сведения см. в разделе [декларатор ссылок rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
@@ -479,7 +479,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 Если функция не может быть выполнена, возвращается `traits_type::eof`. В противном случае возвращается `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если `_Meta != traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), Защищенная виртуальная функция – член пытается вставить элемент `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)` в выходной буфер. Для этого существует несколько способов.
 
@@ -506,7 +506,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 Если функция не может быть выполнена, возвращается `traits_type::eof`. В противном случае возвращается `traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция-член помещает элемент обратно во входной буфер, а затем делает его текущим (на него указывает следующий указатель). Если `_Meta == traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof), элемент, который необходимо вернуть обратно, фактически находится в потоке до текущего элемента. В противном случае этот элемент заменяется `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)`. Функция может передать элемент обратно различными способами.
 
@@ -550,7 +550,7 @@ virtual pos_type seekoff(
 
 Возвращает новую позицию или недопустимую позицию потока.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция – член пытается изменить текущие позиции для управляемых потоков. Для объекта класса [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`позиция потока может быть представлена объектом типа `fpos_t`, который хранит смещение и все сведения о состоянии, необходимые для синтаксического анализа большого потока. Нулевое смещение относится к первому элементу потока. (Объект типа [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type) хранит по крайней мере объект `fpos_t`.)
 
@@ -580,7 +580,7 @@ virtual pos_type seekpos(
 
 Если указатель файла `fp` является пустым указателем, функция завершается ошибкой. В противном случае он пытается изменить позицию потока путем вызова `fsetpos(fp, &fposn)`, где `fposn` — объект `fpos_t`, хранящийся в `pos`. Если эта функция выполняется успешно, функция возвращает `pos`. В противном случае она возвращает недопустимую позицию в потоке. Чтобы определить, является ли позиция потока недопустимой, сравните возвращаемое значение с `pos_type(off_type(-1))`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция – член пытается изменить текущие позиции для управляемых потоков. Для объекта класса [`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`позиция потока может быть представлена объектом типа `fpos_t`, который хранит смещение и все сведения о состоянии, необходимые для синтаксического анализа большого потока. Нулевое смещение относится к первому элементу потока. (Объект типа `pos_type` хранит по крайней мере объект `fpos_t`.)
 
@@ -610,7 +610,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 Эта защищенная функция-член возвращает нуль, если указатель файла `fp` является пустым указателем.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `setbuf` вызывает `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`, чтобы предложить массив элементов `count`, начиная с *_Buffer* в виде буфера для потока. Если эта функция возвращает ненулевое значение, то возвращается пустой указатель. В противном случае она возвращает **this**, чтобы сообщить об успешном завершении.
 
@@ -659,7 +659,7 @@ virtual int_type underflow();
 
 Если функция не может быть выполнена, она возвращает `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof). В противном случае возвращается `ch`, который преобразуется, как описано в разделе "Примечания".
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Защищенная виртуальная функция члена пытается извлечь текущий элемент `ch` из входного потока и вернуть элемент как `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(ch)`. Для этого существует несколько способов.
 
@@ -667,7 +667,7 @@ virtual int_type underflow();
 
 - Он может считывать один или несколько элементов типа **char**, как при последовательных вызовах формы `fgetc(fp)`и преобразовывать их в элемент `ch` типа `Char_T` с помощью аспекта преобразования файлов `fac` для вызова `fac.in` по мере необходимости. В случае сбоя какого-либо преобразования или операции чтения эта функция завершается неудачно.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [\<fstream>](../standard-library/fstream.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
