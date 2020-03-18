@@ -1,19 +1,17 @@
 ---
 title: Сопоставления процедур
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746895"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444854"
 ---
 # <a name="routine-mappings"></a>Сопоставления процедур
 
@@ -82,11 +80,11 @@ ms.locfileid: "57746895"
 |`_taccess_s`|`_access_s`|`_access_s`|`_waccess_s`|
 |`_tasctime`|`asctime`|`asctime`|`_wasctime`|
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|
-|`_tccmp`|Сопоставляется макросу или встраиваемой функции|`_mbsncmp`|Сопоставляется макросу или встраиваемой функции|
-|`_tccpy`|Сопоставляется макросу или встраиваемой функции|`_mbccpy`|Сопоставляется макросу или встраиваемой функции|
+|`_tccmp`|Сопоставляется макросу или встроенной функции|`_mbsncmp`|Сопоставляется макросу или встроенной функции|
+|`_tccpy`|Сопоставляется макросу или встроенной функции|`_mbccpy`|Сопоставляется макросу или встроенной функции|
 |`_tccpy_s`|`strcpy_s`|`_mbccpy_s`|`wcscpy_s`|
 |`_tchdir`|`_chdir`|`_chdir`|`_wchdir`|
-|`_tclen`|Сопоставляется макросу или встраиваемой функции|`_mbclen`|Сопоставляется макросу или встраиваемой функции|
+|`_tclen`|Сопоставляется макросу или встроенной функции|`_mbclen`|Сопоставляется макросу или встроенной функции|
 |`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|
 |`_tcprintf`|`_cprintf`|`_cprintf`|`_cwprintf`|
 |`_tcprintf_s`|`_cprintf_s`|`_cprintf_s`|`_cwprintf_s`|
@@ -262,7 +260,7 @@ ms.locfileid: "57746895"
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Универсальные текстовые сопоставления](../c-runtime-library/generic-text-mappings.md)<br/>
 [Сопоставления типов данных](../c-runtime-library/data-type-mappings.md)<br/>

@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943410"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443049"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -52,16 +48,16 @@ double _cabs(
 
 ### <a name="parameters"></a>Параметры
 
-*z*<br/>
+*гармошкой*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_cabs** возвращает абсолютное значение своего аргумента в случае успеха. При переполнении **_cabs** возвращает **HUGE_VAL** **и устанавливает значение** « **ERANGE**» для «Overflow». Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
+При успешном выполнении **_cabs** возвращает абсолютное значение его аргумента. При переполнении **_cabs** возвращает **HUGE_VAL** **и задает для** **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_cabs** вычисляет абсолютное значение комплексного числа, которое должно быть структурой типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественного компонента *x* и мнимого компонента *y*. Вызов **_cabs** создает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
+Функция **_cabs** вычисляет абсолютное значение комплексного числа, которое должно быть структурой типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественного компонента *x* и мнимого компонента *y*. Вызов **_cabs** возвращает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
 
 ## <a name="requirements"></a>Требования
 
@@ -69,7 +65,7 @@ double _cabs(
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -96,7 +92,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>

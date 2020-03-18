@@ -2,36 +2,36 @@
 title: /ALLOWBIND
 ms.date: 11/04/2016
 f1_keywords:
-- /allowbind
+- /allowbind_bind
 helpviewer_keywords:
 - ALLOWBIND editbin option
 - /ALLOWBIND editbin option
 - -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-ms.openlocfilehash: 4cb7e5a3627d865e2f2193dee096c72cced75f5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f5b662223914cbb4970188595afb52cc2500cd4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273200"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440391"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 
-Указывает, можно ли привязать библиотеку DLL.
+Указывает, может ли быть привязана библиотека DLL.
 
 ```
 
 /ALLOWBIND[:NO]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Параметра/ALLOWBIND** параметр устанавливает бит в заголовке DLL, указывающий Bind.exe, что изображение может быть привязан. Привязки можно разрешить изображения загружаются быстрее, если загрузчик не имеет повторное размещение и выполнение адресную привязку для каждой библиотеки DLL, на которую указывает ссылка. Вы можете не захотеть библиотеку DLL, если она подписана цифровой подписью, подпись недействительной привязки. Привязки не оказывает влияния технологию address space макета randomization (ASLR) включен для образа с помощью **/DYNAMICBASE** в версиях Windows, поддерживать ASLR.
+Параметр **/ALLOWBIND** задает бит в заголовке библиотеки DLL, который указывает BIND. exe на то, что образ может быть привязан. Привязка позволяет быстрее загружать изображение, когда загрузчику не нужно перегружаться и выполнять исправление адресов для каждой библиотеки DLL, на которую указывает ссылка. Вы не хотите, чтобы библиотека DLL была привязана, если она подписана цифровой подписью, а привязывание сделает сигнатуру недействительной. Привязка не действует, если для образа включен случайный выбор структуры адресного пространства (ASLR) с помощью **/DynamicBase** для версий Windows, поддерживающих ASLR.
 
-Используйте **/ALLOWBIND:NO** для предотвращения Bind.exe привязка библиотеки DLL.
+Используйте **/ALLOWBIND: No** , чтобы запретить BIND. exe ПРИВЯЗКУ библиотеки DLL.
 
-Дополнительные сведения см. в разделе [параметра/ALLOWBIND](allowbind-prevent-dll-binding.md) параметр компоновщика.
+Дополнительные сведения см. в описании параметра компоновщика [/ALLOWBIND](allowbind-prevent-dll-binding.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры EDITBIN](editbin-options.md)

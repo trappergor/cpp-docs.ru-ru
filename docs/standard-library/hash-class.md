@@ -7,8 +7,6 @@ f1_keywords:
 - memory/std::hash
 - string/std::hash
 - system_error/std::hash
-- thread/std::hash
-- typeindex/std::hash
 - vector/std::hash
 - XSTDDEF/std::hash
 - xstring/std::hash
@@ -23,12 +21,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: aa51e56197ba79afbe2bd2597596c52b23a4f65b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687999"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446579"
 ---
 # <a name="hash-class"></a>Класс hash
 
@@ -43,9 +41,9 @@ struct hash {
 };
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Объект функции определяет хэш-функцию для сопоставления значений типа *Ty* с распределением значений индекса. Член `operator()` Возвращает хэш-код для *Val*, который подходит для использования с шаблонами классов `unordered_map`, `unordered_multimap`, `unordered_set` и `unordered_multiset`. Стандартная библиотека предоставляет специализации для основных типов: *Ty* может иметь любой скалярный тип, включая типы указателей и типы перечисления. Кроме того, имеются специализации для типов библиотек `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` и `vector<bool>`.
+Объект функции определяет хэш-функцию для сопоставления значений типа *Ty* с распределением значений индекса. Член `operator()` Возвращает хэш-код для *Val*, который подходит для использования с шаблонами классов `unordered_map`, `unordered_multimap`, `unordered_set`и `unordered_multiset`. Стандартная библиотека предоставляет специализации для основных типов: *Ty* может иметь любой скалярный тип, включая типы указателей и типы перечисления. Кроме того, имеются специализации для типов библиотек `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant` и `vector<bool>`.
 
 ## <a name="example"></a>Пример
 
@@ -72,11 +70,11 @@ int main()
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<functional>
+**Заголовок:** \<функциональные >
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [Класс unordered_multimap](../standard-library/unordered-multimap-class.md)\

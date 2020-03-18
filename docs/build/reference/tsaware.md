@@ -2,18 +2,18 @@
 title: /TSAWARE
 ms.date: 11/04/2016
 f1_keywords:
-- /tsaware
+- /tsaware_editbin
 helpviewer_keywords:
 - -TSAWARE editbin option
 - /TSAWARE editbin option
 - TSAWARE editbin option
 ms.assetid: 84715050-c907-4118-8cff-2973411ae931
-ms.openlocfilehash: 0800b05cd4619c8ac380c878a5c81bf55be3ede5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66202743be20bc040560027a4ab1ebc5a16cd442
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317527"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438832"
 ---
 # <a name="tsaware"></a>/TSAWARE
 
@@ -21,10 +21,10 @@ ms.locfileid: "62317527"
 /TSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Параметр/TSAWARE служебной программы EDITBIN позволяет изменять образ программы так же, как если бы вы использовали [/TSAWARE](tsaware-create-terminal-server-aware-application.md) параметр компоновщика.
+Параметр/TSAWARE программы EDITBIN позволяет изменить образ программы таким же образом, как если бы использовался параметр компоновщика [/TSAWARE](tsaware-create-terminal-server-aware-application.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры EDITBIN](editbin-options.md)

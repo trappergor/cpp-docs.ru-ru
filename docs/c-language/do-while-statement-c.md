@@ -3,16 +3,15 @@ title: Оператор do-while (C)
 ms.date: 11/04/2016
 f1_keywords:
 - do
-- while
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147507"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438589"
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C)
 
@@ -20,7 +19,7 @@ ms.locfileid: "56147507"
 
 ## <a name="syntax"></a>Синтаксис
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do** *statement*  **while (**  *expression* **) ;**
+*оператор итерации*: &nbsp;&nbsp;&nbsp;&nbsp;**Do***оператор***while (** *выражение* **);**
 
 Выражение *expression* в операторе *do-while* вычисляется после выполнения тела цикла. Поэтому тело цикла всегда выполняется по крайней мере один раз.
 
@@ -44,6 +43,6 @@ do
 
 В этом операторе *do-while* два оператора `y = f( x );` и `x--;` выполняются независимо от начального значения переменной `x`. Затем вычисляется выражение `x > 0`. Если `x` больше 0, тело оператора выполняется еще раз и снова вычисляется выражение `x > 0`. Тело оператора многократно выполняется, пока значение переменной `x` остается больше 0. Выполнение оператора *do-while* завершается, когда значение переменной `x` становится равным 0 или отрицательным. Тело цикла выполняется по крайней мере один раз.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Оператор do-while (C)](../cpp/do-while-statement-cpp.md)

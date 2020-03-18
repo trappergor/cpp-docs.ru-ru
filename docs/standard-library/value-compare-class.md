@@ -2,18 +2,18 @@
 title: Класс value_compare
 ms.date: 11/04/2016
 f1_keywords:
-- value_compare
+- hash_map/std::value_compare
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d64d51869ca8db1ed42e9d33691f59da4473d8d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452371"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447566"
 ---
-# <a name="valuecompare-class"></a>Класс value_compare
+# <a name="value_compare-class"></a>Класс value_compare
 
 Предоставляет объект функции, который может сравнивать элементы hash_map путем сравнения значения ключей для определения относительного порядка в hash_map.
 
@@ -37,9 +37,9 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Критерий сравнения, предоставляемый value_compare `value_types` между целыми элементами, содержащимся в hash_map, вызывается путем сравнения ключей соответствующих элементов с помощью вспомогательной конструкции класса. Оператор функции-члена использует объект `comp` типа `key_compare` , хранящийся в объекте функции, предоставляемом функцией value_compare, для сравнения компонентов с ключевыми порядками сортировки двух элементов.
+Критерии сравнения, предоставляемые value_compare между `value_types` целых элементов, содержащихся в hash_map, задаются с помощью сравнения между ключами соответствующих элементов при помощи вспомогательной конструкции класса. Оператор функции-члена использует объект `comp` типа `key_compare`, хранящегося в объекте функции, предоставляемом value_compare, для сравнения компонентов с ключевыми порядками сортировки двух элементов.
 
 Для объектов hash_set и hash_multiset, которые представляют собой простые контейнеры, в которых значения ключей идентичны значениям элементов, value_compare эквивалентно `key_compare`; для объектов hash_map и hash_multimap это не так, так как элементы типа `pair` не эквивалентны значению ключа элемента.
 
@@ -49,11 +49,11 @@ protected:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<hash_map>
+**Заголовок:** \<hash_map >
 
 **Пространство имен:** stdext
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Структура binary_function](../standard-library/binary-function-struct.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

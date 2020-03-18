@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
 ms.openlocfilehash: 68a0a0f35d1a1f4519401080f9f207bf76c87079
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890800"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424335"
 ---
 # <a name="cinternetfile-class"></a>Класс Цинтернетфиле
 
@@ -79,7 +79,7 @@ class CInternetFile : public CStdioFile
 |----------|-----------------|
 |[Цинтернетфиле:: operator ХИНТЕРНЕТ](#operator_hinternet)|Оператор приведения для обработчика Интернета.|
 
-### <a name="protected-data-members"></a>Защищенные члены данных
+### <a name="protected-data-members"></a>Защищенные элементы данных
 
 |Имя|Description|
 |----------|-----------------|

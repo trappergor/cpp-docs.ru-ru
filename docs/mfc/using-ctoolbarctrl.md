@@ -1,24 +1,22 @@
 ---
 title: Использование CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411673"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442238"
 ---
 # <a name="using-ctoolbarctrl"></a>Использование CToolBarCtrl
 
-Можно использовать элемент управления toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) для создания окна элемента управления, содержащий кнопок и необязательные пробелы. Каждой кнопки в окне инструментов управления отправляет сообщение команды родительского окна, как пользователь выбирает его. Как правило кнопок на панели инструментов, соответствующие элементам в меню приложения, предоставляя дополнительные и более прямой способ пользователю получить доступ к командам приложения.
+С помощью элемента управления Toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) можно создать окно элемента управления, содержащее кнопки и необязательные пробелы. Каждая кнопка в окне элемента управления панели инструментов отправляет командное сообщение родительскому окну, как пользователь выбирает его. Как правило, кнопки на панели инструментов соответствуют элементам меню приложения, что предоставляет пользователю дополнительный и более прямой способ доступа к командам приложения.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Способы создания панели инструментов](../mfc/methods-of-creating-a-toolbar.md)
 
@@ -32,6 +30,6 @@ ms.locfileid: "62411673"
 
 - [Настройка внешнего вида элементов управления "Панель инструментов"](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

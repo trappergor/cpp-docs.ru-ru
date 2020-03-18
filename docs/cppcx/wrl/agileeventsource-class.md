@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821744"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441269"
 ---
 # <a name="agileeventsource-class"></a>Класс Агиливентсаурце
 
@@ -38,7 +37,7 @@ class AgileEventSource :
 *тевентсаурцеоптионс*<br/>
 Структура [инвокемодеоптионс](invokemodeoptions-structure.md) , для которой в поле инвокемоде задано значение `InvokeMode::StopOnFirstError` или `InvokeMode::FireAll`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Подавляющее большинство компонентов в среда выполнения Windows являются гибкими компонентами. Дополнительные сведения см. в разделе Работа [с потоками иC++маршалирование (/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
@@ -54,11 +53,11 @@ class AgileEventSource :
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[Метод Агиливентсаурце:: Add](#add)|Добавляет в набор обработчиков событий для текущего объекта **агиливентсаурце** обработчик событий Agile, представленный указанным интерфейсом делегата.|
 
@@ -77,16 +76,16 @@ HRESULT Add(
 
 ### <a name="parameters"></a>Параметры
 
-*delegateInterface*<br/>
+*делегатеинтерфаце*<br/>
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
-*Лекс*<br/>
+*token*<br/>
 После завершения операции представляет дескриптор события. Используйте этот маркер в качестве параметра метода `Remove()` для отмены обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

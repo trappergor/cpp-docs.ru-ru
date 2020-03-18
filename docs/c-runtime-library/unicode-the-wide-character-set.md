@@ -1,20 +1,18 @@
 ---
-title: 'Юникод: набор расширенных символов'
+title: Юникод. Набор расширенных символов
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - Unicode [C++], wide character set
 - wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
-ms.openlocfilehash: dc9028be85870766af0274ede091d74a9b4d5130
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3a0c5698544c72e19feea8f35b7f5a516d95d561
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745436"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444487"
 ---
-# <a name="unicode-the-wide-character-set"></a>Юникод: набор расширенных символов
+# <a name="unicode-the-wide-character-set"></a>Юникод. Набор расширенных символов
 
 Расширенный символ — это двухбайтовый многоязыковой код символа. Все символы, используемые в современных вычислительных системах по всему миру, включая технические символы и специальные знаки, используемые в издательском деле, могут быть представлены в соответствии со стандартом Юникода в виде расширенных символов. Разработанный и поддерживаемый большим консорциумом, который включает Microsoft, стандарт Юникода теперь является общепринятым.
 
@@ -22,7 +20,7 @@ ms.locfileid: "57745436"
 
 Как правило, расширенные символы занимают больший объем памяти, чем многобайтовые знаки, однако обрабатываются они быстрее. Кроме того, при многобайтовом кодировании одновременно может быть представлен только один языковой стандарт, в то время как в Юникоде одновременно могут быть представлены все мировые кодировки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Интернационализация](../c-runtime-library/internationalization.md)<br/>
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

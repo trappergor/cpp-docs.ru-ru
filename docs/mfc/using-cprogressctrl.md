@@ -1,30 +1,28 @@
 ---
 title: Использование CProgressCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CProgressCtrl
 helpviewer_keywords:
 - progress controls [MFC]
 - CProgressCtrl class [MFC], using
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: eb332d0c6eb55dddcd20d6d4f07fe6f666c015ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a575a766650a77b0908f0fa3016139239b23dc56
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411753"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441903"
 ---
 # <a name="using-cprogressctrl"></a>Использование CProgressCtrl
 
-Элемент управления ходом выполнения можно использовать для отображения хода выполнения длительной операции. Это прямоугольник, который постепенно заполняется системным цветом выделения в ходе выполнения операции.
+С помощью элемента управления progress можно указать ход выполнения длительной операции. Это прямоугольник, который постепенно заполняется цветом системного выделения при выполнении операции.
 
-Элемент управления выполнения представляется в MFC классом [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
+Элемент управления progress представлен в MFC по классу [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
 
-При первоначальном создании индикатора хода выполнения, указывается его размеров и положения, родительскому окну (обычно в диалоговом окне) и идентификатор. С помощью *dwStyle* параметр, можно также указать различные стили окна для элемента управления и стили для заполнения.
+При первоначальном создании элемента управления ходом выполнения указываются его размер и расположение, родительское окно (обычно диалоговое окно) и идентификатор. С помощью параметра *двстиле* можно также указать различные стили окна для элемента управления и стили для его заполнения.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Стили для элемента управления "Индикатор выполнения"](../mfc/styles-for-the-progress-control.md)
 
@@ -32,6 +30,6 @@ ms.locfileid: "62411753"
 
 - [Управление элементом управления "Индикатор выполнения"](../mfc/manipulating-the-progress-control.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

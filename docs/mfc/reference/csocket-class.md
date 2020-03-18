@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854575"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426555"
 ---
 # <a name="csocket-class"></a>Класс CSocket
 
@@ -41,13 +41,13 @@ class CSocket : public CAsyncSocket
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[CSocket:: CSocket](#csocket)|Формирует объект `CSocket`.|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[CSocket:: Attach](#attach)|Присоединяет маркер СОКЕТа к объекту `CSocket`.|
 |[CSocket:: Канцелблоккингкалл](#cancelblockingcall)|Отменяет выполняющийся в данный момент блокирующий вызов.|
@@ -57,11 +57,11 @@ class CSocket : public CAsyncSocket
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[CSocket:: Онмессажепендинг](#onmessagepending)|Вызывается для обработки ожидающих сообщений при ожидании завершения блокирующего вызова.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CSocket` работает с классами `CSocketFile` и `CArchive` для управления отправкой и получением данных.
 
@@ -111,7 +111,7 @@ BOOL Attach(SOCKET hSocket);
 
 Ненулевое значение, если функция выполнена успешно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Маркер СОКЕТа хранится в элементе данных [m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket) объекта.
 
@@ -133,7 +133,7 @@ BOOL Attach(SOCKET hSocket);
 void CancelBlockingCall();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция отменяет все невыполненные операции блокировки для этого сокета. Исходный вызов блокировки будет завершаться как можно скорее с ошибкой ВСАЕИНТР.
 
@@ -169,7 +169,7 @@ SOCK_STREAM или SOCK_DGRAM.
 
 Ненулевое значение, если функция выполнена успешно; в противном случае — 0, и можно получить конкретный код ошибки, вызвав `GetLastError`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 затем `Create` вызывает `Bind`, чтобы привязать сокет к указанному адресу. Поддерживаются следующие типы сокетов:
 
@@ -190,7 +190,7 @@ SOCK_STREAM или SOCK_DGRAM.
 CSocket();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 После создания необходимо вызвать функцию члена `Create`.
 
@@ -213,7 +213,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 
 Указатель на объект `CSocket` или значение NULL, если к *хсоккет*не присоединен `CSocket` объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При наличии маркера СОКЕТа, если объект `CSocket` не присоединен к этому обработчику, функция-член возвращает значение NULL и не создает временный объект.
 
@@ -231,7 +231,7 @@ BOOL IsBlocking();
 
 Ненулевое значение, если сокет блокируется; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения см. в разделе [сокеты Windows: Использование сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
@@ -247,7 +247,7 @@ virtual BOOL OnMessagePending();
 
 Ненулевое значение, если сообщение было обработано; в противном случае — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Это расширенный переопределяемый объект.
 
@@ -255,7 +255,7 @@ virtual BOOL OnMessagePending();
 
 Дополнительные сведения см. в разделе [сокеты Windows: Использование сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAsyncSocket](../../mfc/reference/casyncsocket-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

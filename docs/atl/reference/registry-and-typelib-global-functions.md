@@ -18,11 +18,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863224"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422952"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Глобальные функции реестра и библиотеки типов
 
@@ -75,7 +75,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 S_OK, если метод выполнен успешно, в противном случае — код ошибки HRESULT при возникновении ошибки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию перенаправление реестра отключено. Если этот параметр включен, доступ к реестру перенаправляется в **HKEY_CURRENT_USER \софтваре\классес**.
 
@@ -191,7 +191,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [атлкоммодулеунрегистерсервер](server-registration-global-functions.md#atlcommoduleunregisterserver) и [Катлкоммодуле:: регистертипелиб](../../atl/reference/catlcommodule-class.md#registertypelib).
 
@@ -307,7 +307,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 S_OK, если метод выполнен успешно, в противном случае — код ошибки HRESULT при возникновении ошибки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию перенаправление реестра отключено. Если этот параметр включен, доступ к реестру перенаправляется в **HKEY_CURRENT_USER \софтваре\классес**.
 
@@ -341,7 +341,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [катлкоммодуле:: унрегистертипелиб](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [атлкоммодулеунрегистерсервер](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
@@ -381,7 +381,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта вспомогательная функция используется [атлрегистертипелиб](#atlregistertypelib) и [атлунрегистертипелиб](#atlunregistertypelib).
 
@@ -421,7 +421,7 @@ HRESULT RegistryDataExchange(
 
 Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Макросы [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) и [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) расширяются до функции, которая вызывает `RegistryDataExchange`.
 
@@ -437,7 +437,7 @@ HRESULT RegistryDataExchange(
 
 **Заголовок:** atlbase. h
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Функции](atl-functions.md)<br/>
 [Макросы для обмена данными с реестром](registry-data-exchange-macros.md)

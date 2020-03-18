@@ -1,20 +1,18 @@
 ---
 title: Однобайтовые и многобайтовые кодировки
 ms.date: 11/04/2016
-f1_keywords:
-- c.character.multibyte
 helpviewer_keywords:
 - SBCS (single byte character set)
 - MBCS [C++], about MBCS
 - character sets [C++], multibyte
 - character sets [C++], single byte
 ms.assetid: 2cbc78ea-33c0-4cfb-b0df-7ce2458431ce
-ms.openlocfilehash: 1e2d3f26891257101b4a9511f4e0b10f03113309
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a6a0f3aaaa463297b7c51b035acc7b2f4a40b6cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745326"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444648"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Однобайтовые и многобайтовые кодировки
 
@@ -25,7 +23,7 @@ ms.locfileid: "57745326"
 
 Многобайтовая кодировка может состоять из одно- и двухбайтовых символов. Таким образом, строка в многобайтовой кодировке может содержать смесь однобайтовых и двухбайтовых символов. Двухбайтовый многобайтовый символ имеет старший байт и младший байт. В отдельных многобайтовых кодировках старшие и младшие байты попадают в определенный диапазон. Когда эти диапазоны перекрываются, необходимо оценить конкретный контекст, чтобы определить, является ли данный байт старшим или младшим.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Интернационализация](../c-runtime-library/internationalization.md)<br/>
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

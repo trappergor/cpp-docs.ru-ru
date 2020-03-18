@@ -1,26 +1,24 @@
 ---
 title: Использование CTreeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411660"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442189"
 ---
 # <a name="using-ctreectrl"></a>Использование CTreeCtrl
 
-Дерево, представленный классом [CTreeCtrl](../mfc/reference/ctreectrl-class.md), — это окно, которое отображает иерархический список элементов, таких как заголовки в документе, записи в индексе, или файлы и каталоги на диске. Каждый элемент состоит из метки и необязательное растровое изображение, и каждый элемент может иметь список элементов, связанные с ней. Щелкнув элемент, пользователю можно развернуть и свернуть связанного списка элементов. Дерево каталогов в левой панели проводника является примером элемента управления дерева.
+Древовидный элемент управления, представленный классом [CTreeCtrl](../mfc/reference/ctreectrl-class.md), представляет собой окно, в котором отображается иерархический список элементов, например заголовки в документе, записи в индексе или файлы и каталоги на диске. Каждый элемент состоит из метки и необязательного изображения точечного рисунка, и каждый элемент может иметь список связанных с ним подэлементов. Щелкнув элемент, пользователь может развернуть и свернуть связанный список подэлементов. Дерево каталогов в левой области проводника является примером элемента управления "дерево".
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
-- [CTreeCtrl или CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+- [CTreeCtrl и CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
 - [Использование элементов управления древовидного типа](../mfc/using-tree-controls.md)
 
@@ -48,6 +46,6 @@ ms.locfileid: "62411660"
 
 - [Уведомляющие сообщения древовидного элемента управления](../mfc/tree-control-notification-messages.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

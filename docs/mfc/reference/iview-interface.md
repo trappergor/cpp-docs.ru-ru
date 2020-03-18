@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426255"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445666"
 ---
 # <a name="iview-interface"></a>Интерфейс IView
 
@@ -54,6 +54,7 @@ interface class IView
 ## <a name="onactivateview"></a>IView:: Онактиватевиев
 
 Вызывается MFC при активации или отключении представления.
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ void OnActivateView(bool activate);
 ## <a name="oninitialupdate"></a>IView:: Онинитиалупдате
 
 Вызывается структурой после первого присоединения представления к документу, но до первоначального отображения представления.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView:: OnUpdate
 
 Вызывается MFC после изменения документа представления.
+
 ```
 void OnUpdate();
 ```

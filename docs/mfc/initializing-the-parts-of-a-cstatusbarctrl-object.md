@@ -1,8 +1,6 @@
 ---
 title: Инициализация частей объекта CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], simple mode
 - status bars [MFC], declaring parts of
@@ -12,26 +10,26 @@ helpviewer_keywords:
 - icons, using in status bars
 - CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
-ms.openlocfilehash: 0f00aee03a74799bf14563653b50c487ff001d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b65a2bbb68eaa7058f3514bb95a5209a0e5e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182323"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444452"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Инициализация частей объекта CStatusBarCtrl
 
-По умолчанию строка состояния отображаются сведения о состоянии, с помощью отдельных панелей. Эти области (называемый также частей) может содержать строку текста, значок или оба.
+По умолчанию в строке состояния отображаются сведения о состоянии с помощью отдельных панелей. Эти панели (также называемые частями) могут содержать текстовую строку, значок или и то, и другое.
 
-Используйте [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) для определения, сколько частей и длину, строка состояния будет иметь. После создания частей строки состояния, выполнять вызовы [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) и [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) для установки текста или значка для определенной части строки состояния. После части был успешно установлен, элемент управления перерисовывается автоматически.
+Используйте [сетпартс](../mfc/reference/cstatusbarctrl-class.md#setparts) , чтобы определить, сколько частей и длина строки состояния будут иметь значение. После создания частей строки состояния выполните вызовы [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) и [сетикон](../mfc/reference/cstatusbarctrl-class.md#seticon) , чтобы задать текст или значок для определенной части строки состояния. После успешной установки части элемент управления автоматически перерисовывается.
 
-Следующий пример инициализирует существующий `CStatusBarCtrl` объекта (`m_StatusBarCtrl`) с помощью четырех панелей и затем задает значок (IDI_ICON1) и текст во второй части.
+В следующем примере инициализируется существующий объект `CStatusBarCtrl` (`m_StatusBarCtrl`) с четырьмя панелями, а затем задается значок (IDI_ICON1) и некоторый текст во второй части.
 
 [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]
 
-Дополнительные сведения о настройке режима `CStatusBarCtrl` объекта на простой, обратитесь к разделу [Установка режима объекта CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
+Дополнительные сведения о том, как установить режим объекта `CStatusBarCtrl` в значение SIMPLE, см. в разделе [Установка режима для объекта CStatusBarCtrl](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)

@@ -1,22 +1,20 @@
 ---
-title: Управление временем
+title: Операции управления временем
 ms.date: 11/04/2016
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446789"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444587"
 ---
-# <a name="time-management"></a>Управление временем
+# <a name="time-management"></a>Операции управления временем
 
 Эти функции следует использовать для получения текущего времени, его преобразования, корректировки и хранения, как требуется. Текущее время представляет собой системное время.
 
@@ -24,7 +22,7 @@ ms.locfileid: "65446789"
 
 ### <a name="time-routines"></a>Подпрограммы времени
 
-|Функция|Использовать|
+|Компонент|Использование|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Преобразуют время из типа**struct tm** в символьную строку. Версии этих функций с суффиксом **_s** являются более безопасными.|
 |[часы](../c-runtime-library/reference/clock.md)|Возвращают реальное прошедшее время для процесса.|
@@ -47,8 +45,8 @@ ms.locfileid: "65446789"
 > Во всех версиях Microsoft C/C++, кроме версии Microsoft C/C++ 7.0, и во всех версиях Visual C++ эта функция времени возвращает текущее время как количество секунд, прошедших с полуночи 1-го января 1970 года. В версии Microsoft C/C++ 7.0 функция **time** возвращает текущее время как количество секунд, истекших с полуночи 31-го декабря 1899 года.
 
 > [!NOTE]
-> В версиях Visual C++ и Microsoft C/C++ до Visual Studio 2005 тип **time_t** определялся как **long** **int** (32-разрядный). Поэтому его невозможно использовать для дат после 3:14:07 19 января 2038 года (в формате UTC). Теперь тип **time_t** по умолчанию эквивалентен типу **__time64_t**, но при задании директивы **_USE_32BIT_TIME_T** тип **time_t** изменяется на тип **__time32_t** и заставляет многие функции времени вызывать версии, принимающие 32-разрядный тип **time_t**. Дополнительные сведения см. в статье [Standard Types](../c-runtime-library/standard-types.md) (Стандартные типы) и в комментариях в документации для отдельных функций времени.
+> В версиях Visual C++ и Microsoft C/C++ до Visual Studio 2005 **time_t** было **длиннее** **целого** (32 бит) и поэтому не может использоваться для дат после 3:14:07 19 января, 2038, UTC. Теперь тип **time_t** по умолчанию эквивалентен типу **__time64_t**, но при задании директивы **_USE_32BIT_TIME_T** тип **time_t** изменяется на тип **__time32_t** и заставляет многие функции времени вызывать версии, принимающие 32-разрядный тип **time_t**. Дополнительные сведения см. в статье [Standard Types](../c-runtime-library/standard-types.md) (Стандартные типы) и в комментариях в документации для отдельных функций времени.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>

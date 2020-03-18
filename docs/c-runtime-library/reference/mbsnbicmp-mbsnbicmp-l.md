@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952193"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442836"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -79,15 +73,15 @@ int _mbsnbicmp(
 
 Возвращаемое значение показывает связь между подстроками.
 
-|Возвращаемое значение|Описание|
+|Возвращаемое значение|Description|
 |------------------|-----------------|
 |< 0|Строка *строка1* меньше, чем *строка2* подстроки.|
 |0|Строка *строка1* совпадает с подстрокой *строка_замены* .|
 |> 0|Строка *строка1* больше, чем *строка2* подстроки.|
 
-При возникновении ошибки **_mbsnbicmp** возвращает **_NLSCMPERROR**, который определен в String. h и Mbstring. h.
+При возникновении ошибки **_mbsnbicmp** возвращает **_NLSCMPERROR**, которая определена в String. h и Mbstring. h.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_mbsnbicmp** выполняет порядковое сравнение по сравнению с первым *числом* байтов *строка1* и *строка2*. Сравнение выполняется путем преобразования каждого символа в нижний регистр; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) — это зависящая от регистра версия **_mbsnbicmp**. Сравнение завершается, если достигнут завершающий нуль-символ в любой строке до сравнения символов *счетчика* . Если строки равны, когда завершающий нуль-символ достигается в любой строке до сравнения символов *счетчика* , более короткая строка меньше.
 
@@ -97,11 +91,11 @@ int _mbsnbicmp(
 
 **_mbsnbicmp** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) . На нее не влияет текущий параметр языкового стандарта.
 
-Если *строка1* или *строка2* являются пустым указателем, **_mbsnbicmp** вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** **и устанавливает значение** переводится в **еинвал**.
+Если *строка1* или *строка2* являются пустым указателем, **_mbsnbicmp** вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** **и устанавливает для** **еинвал**.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
@@ -112,13 +106,13 @@ int _mbsnbicmp(
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

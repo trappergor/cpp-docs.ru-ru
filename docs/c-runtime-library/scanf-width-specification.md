@@ -1,28 +1,15 @@
 ---
 title: Спецификация ширины scanf
 ms.date: 10/22/2019
-api_location:
-- msvcr100.dll
-- msvcr120.dll
-- msvcr80.dll
-- msvcr110_clr0400.dll
-- msvcr110.dll
-- msvcr90.dll
-api_type:
-- DLLExport
-topic_type:
-- apiref
-f1_keywords:
-- scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 54331f4150c50b084b59ac51b3f34ffe15c5b1c8
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ea0b2728021e3093ab7818af17e60c598f73587f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811117"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444703"
 ---
 # <a name="scanf-width-specification"></a>Спецификация ширины scanf
 
@@ -54,8 +41,8 @@ scanf_s("%20s", str, 21);
 
 |Чтобы указать|Используемый префикс|Со спецификатором типа|
 |----------------|----------------|-------------------------|
-|**double**|**l**|**e**, **E**, **f**, **g**или **G**|
-|**long double** (аналогично double)|**L**|**e**, **E**, **f**, **g**или **G**|
+|**double**|**l**|**e**, **E**, **f**, **g** или **G**|
+|**long double** (аналогично double)|**L**|**e**, **E**, **f**, **g** или **G**|
 |**long int**|**l**|**d**, **i**, **o**, **x** или **X**|
 |**long unsigned int**|**l**|**u**|
 |**long long**|**ll**|**d**, **i**, **o**, **x** или **X**|
@@ -106,7 +93,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 По какой бы причине функция `scanf` не прекратила чтение поля ввода, считается, что следующее поле ввода начинается с первого непрочитанного символа. Конфликтующий символ, если таковой имеется, считается непрочтенным. Это первый символ следующего поля ввода или первый символ в последующих операциях чтения входного потока.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [scanf, _scanf_l, wscanf, _wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

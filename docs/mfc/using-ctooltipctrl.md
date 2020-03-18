@@ -1,24 +1,22 @@
 ---
 title: Использование CToolTipCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411630"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442200"
 ---
 # <a name="using-ctooltipctrl"></a>Использование CToolTipCtrl
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) класс инкапсулирует функциональность элемента управления всплывающей подсказки, небольшое всплывающее окно, которое отображается одна строка текста, описывающая назначение инструмента в приложении. Во всплывающей подсказке будет скрыт в большинстве случаев, отображаются, только когда пользователь помещает курсор над инструментом и оставляет его примерно половина во-вторых. Подсказка появляется рядом с курсором и исчезает, когда пользователь нажимает кнопку мыши, или выводит указатель из средства.
+Класс [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) инкапсулирует функциональные возможности элемента управления "Подсказка", небольшое всплывающее окно, в котором отображается одна строка текста, описывающая назначение средства в приложении. Всплывающая подсказка скрыта в большинстве случаев, когда пользователь помещает курсор в средство и оставляет его примерно в течение одной половины секунды. Всплывающая подсказка появляется рядом с курсором и исчезает, когда пользователь нажимает кнопку мыши или перемещает курсор с этого инструмента.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Способы создания подсказок](../mfc/methods-of-creating-tool-tips.md)
 
@@ -28,7 +26,7 @@ ms.locfileid: "62411630"
 
 - [Управление элементом управления "Подсказка"](../mfc/manipulating-the-tool-tip-control.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)

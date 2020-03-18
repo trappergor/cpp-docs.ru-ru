@@ -4,11 +4,11 @@ description: Создание, настройка, изменение и ком�
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865683"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79429190"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Создание и настройка проекта Linux CMake
 

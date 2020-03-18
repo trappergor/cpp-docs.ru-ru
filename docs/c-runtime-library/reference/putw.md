@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949751"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443721"
 ---
 # <a name="_putw"></a>_putw
 
@@ -60,11 +59,11 @@ int _putw(
 
 Возвращает записанное значение. Возвращаемое значение **EOF** может указывать на ошибку. Поскольку **EOF** также является допустимым целочисленным значением, используйте **ferror** для проверки ошибки. Если *Stream* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **EOF**.
 
-Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_putw** записывает двоичное значение типа **int** в текущее расположение *потока.* **_putw** не влияет на выравнивание элементов в потоке и не предполагает никакого специального выравнивания. **_putw** в первую очередь для совместимости с предыдущими библиотеками. Проблемы переносимости могут возникать в **_putw** , так как размер **целого** числа и порядок байтов в пределах **целого** числа различаются в разных системах.
+Функция **_putw** записывает двоичное значение типа **int** в текущее расположение *потока.* **_putw** не влияет на выравнивание элементов в потоке и не предполагает никакого особого выравнивания. **_putw** в первую очередь для совместимости с предыдущими библиотеками. Проблемы переносимости могут возникать с **_putw** , так как размер **целого** числа и порядок байтов в пределах **целого** числа различаются в разных системах.
 
 ## <a name="requirements"></a>Требования
 
@@ -72,7 +71,7 @@ int _putw(
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -110,13 +109,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
 Wrote ten words
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

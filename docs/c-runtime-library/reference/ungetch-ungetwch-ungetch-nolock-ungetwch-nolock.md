@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945909"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443749"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -87,9 +86,9 @@ wint_t _ungetwch_nolock(
 
 Обе функции возвращают символ *c* в случае успеха. Если возникает ошибка, **_ungetch** возвращает значение **EOF** , а **_ungetwch** возвращает **WEOF**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Эти функции отправляют символ *c* обратно в консоль, что приводит к тому, что *c* будет следующий символ, считанный **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** завершаются ошибкой, если они вызываются более одного раза до следующего считывания. Аргумент *c* не может быть **EOF** (или **WEOF**).
+Эти функции отправляют символ *c* обратно в консоль, что приводит к тому, что *c* будет считаться следующим символом **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** завершаются ошибкой, если они вызываются более одного раза перед следующим чтением. Аргумент *c* не может быть **EOF** (или **WEOF**).
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
@@ -107,7 +106,7 @@ wint_t _ungetwch_nolock(
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

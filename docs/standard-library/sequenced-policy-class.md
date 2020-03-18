@@ -2,17 +2,17 @@
 title: Класс sequenced_policy
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269196"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444916"
 ---
-# <a name="sequencedpolicy-class"></a>Класс sequenced_policy
+# <a name="sequenced_policy-class"></a>Класс sequenced_policy
 
-Используется как уникальный тип для устранения неоднозначности перегрузки параллельного алгоритма и требуют, что выполнение параллельного алгоритма не может выполняться параллельно.
+Используется в качестве уникального типа для устранения неоднозначности при перегрузке параллельного алгоритма и требует, чтобы выполнение параллельного алгоритма не было параллельным.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -20,6 +20,6 @@ ms.locfileid: "68269196"
 class execution::sequenced_policy;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Во время выполнения параллельного алгоритма с `execution::sequenced_policy` политики, если вызов функции доступа элемент завершается через неперехваченное исключение `terminate()` должны вызываться.
+При выполнении параллельного алгоритма с политикой `execution::sequenced_policy`, если вызов функции доступа к элементу завершается с помощью неперехваченного исключения, вызываемый `terminate()` должен быть вызван.

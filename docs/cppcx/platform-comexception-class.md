@@ -4,17 +4,17 @@ ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
-- VCCORLIB/Platform::Exception::HResult
-- VCCORLIB/Platform::Exception::Message
+- VCCORLIB/Platform::COMException::HResult
+- VCCORLIB/Platform::COMException::Message
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500550"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444298"
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 
@@ -26,7 +26,7 @@ ms.locfileid: "69500550"
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
 Класс COMException наследует от класса Object и интерфейсов IException, IPrintable и IEquatable.
 
@@ -34,7 +34,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 **Конструкторы**
 
-|Член|Описание|
+|Участник|Description|
 |------------|-----------------|
 |[COMException](#ctor)|Инициализирует новый экземпляр класса COMException.|
 
@@ -46,7 +46,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 Класс COMException имеет следующие свойства.
 
-|Член|Описание|
+|Участник|Description|
 |------------|-----------------|
 |[Exception:: HResult](#hresult)|Значение HRESULT, соответствующее исключению.|
 |[Исключение:: Message](#message)|Сообщение с описанием исключения.|
@@ -55,16 +55,16 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 Следующие предопределенные исключения наследуются от класса COMException. Они отличаются от класса COMException только своими именами, именами своих конструкторов и значениями HRESULT.
 
-|name|Значение HRESULT|Описание|
+|Имя|Значение HRESULT|Description|
 |----------|------------------------|-----------------|
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|
 |AccessDeniedException|E_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|
 |ChangedStateException|E_CHANGED_STATE|Возникает, если метод итератора коллекции или представления коллекции вызван после изменения родительской коллекции, что делает результаты метода недействительными.|
 |ClassNotRegisteredException|REGDB_E_CLASSNOTREG|Возникает, если COM-класс не зарегистрирован.|
 |DisconnectedException|RPC_E_DISCONNECTED|Возникает, если объект отключен от своих клиентов.|
-|FailureException|E_FAIL|Возникает, если операция завершается неудачно.|
+|FailureException|E_FAIL|Возникает при сбое операции.|
 |InvalidArgumentException|E_INVALIDARG|Вызывается, если один из передаваемых методу аргументов является недопустимым.|
-|InvalidCastException|E_NOINTERFACE|Возникает, если тип не удается привести к другому типу.|
+|InvalidCastException|E_NOINTERFACE|Возникает, если тип не удается привести тип к другому типу.|
 |NotImplementedException|E_NOTIMPL|Возникает, если метод интерфейса не реализован в классе.|
 |NullReferenceException|E_POINTER|Возникает при попытке разыменовать ссылку на объект NULL.|
 |OperationCanceledException|E_ABORT|Возникает при отмене операции.|
@@ -77,7 +77,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 **Минимальный поддерживаемый сервер:** Windows Server 2012
 
-**Пространство имен:** Платформа
+**Пространство имен:** Platform
 
 **Метаданные:** platform.winmd
 
@@ -111,7 +111,7 @@ public:
 
 Значение HRESULT, задающее ошибку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения о том, как интерпретировать значение HRESULT, см. в разделе [структура кодов ошибок COM](/windows/win32/com/structure-of-com-error-codes).
 
@@ -129,6 +129,6 @@ public:property String^ Message {    String^ get();}
 
 Описание исключения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

@@ -1,8 +1,6 @@
 ---
 title: Классы поддержки отладки
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.debug
 helpviewer_keywords:
 - debugging memory leaks, MFC
 - memory allocation, debugging dynamic
@@ -12,23 +10,23 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 90a21b260185bb2202eed66b8e4144eb7183c157
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 570a1e87eadcce18feacf20f9c25562662eb17c9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241285"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446986"
 ---
 # <a name="debugging-support-classes"></a>Классы поддержки отладки
 
-MFC предоставляет следующие классы для отладки проблем выделения динамической памяти.
+MFC предоставляет следующие классы для отладки проблем, связанных с выделением динамической памяти.
 
 [CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
-Предоставляет место назначения для диагностическом дампе.
+Предоставляет место назначения для диагностических дампов.
 
 [CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
-Структура, которая предоставляет моментальные снимки использования памяти. Также используется для сравнения моментальных снимков памяти более ранней и более поздних версий.
+Структура, которая предоставляет моментальные снимки использования памяти. Также используется для сравнения более ранних и более поздних моментальных снимков памяти.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Обзор класса](../mfc/class-library-overview.md)

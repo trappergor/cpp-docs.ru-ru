@@ -3,12 +3,12 @@ title: Справочник по CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422844"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442556"
 ---
 # <a name="cpppropertiesjson-reference"></a>Справочник по CppProperties. JSON
 
@@ -28,7 +28,7 @@ ms.locfileid: "79422844"
 |`forcedInclude`|Заголовок, автоматически включаемый в каждый блок компиляции (сопоставляется с /FI для MSVC или с -include для clang)|
 |`undefines`|Список макросов, которые должны быть неопределенными (сопоставляется с /U для MSVC)|
 |`intelliSenseMode`|Используемая подсистема IntelliSense. Можно указать один из стандартных вариантов конкретной архитектуры для КОМПИЛЯТОРОМ MSVC, GCC или Clang.|
-|`environments`|Определяемые пользователем наборы переменных, которые ведут себя как переменные среды в командной строке и доступны с параметром $ {env.<VARIABLE>} макровирусах.|
+|`environments`|Определяемые пользователем наборы переменных, которые ведут себя как переменные среды в командной строке и доступны с помощью макроса $ {env.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>значения указан параметр intellisensemode
 

@@ -1,21 +1,19 @@
 ---
-title: 'Надежные библиотеки: Стандартная библиотека C++'
+title: 'Безопасные библиотеки: стандартная библиотека C++'
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454548"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446098"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Надежные библиотеки: Стандартная библиотека C++
+# <a name="safe-libraries-c-standard-library"></a>Безопасные библиотеки: стандартная библиотека C++
 
 В библиотеки, поставляемые с Microsoft C++, включая C++ стандартную библиотеку, внесено несколько улучшений, чтобы сделать их более безопасными.
 
@@ -23,7 +21,7 @@ ms.locfileid: "68454548"
 
 Также были внесены некоторые улучшения для повышения безопасности итераторов и алгоритмов. Дополнительные сведения см. в разделах [Проверяемые итераторы](../standard-library/checked-iterators.md), [Поддержка в отладке итераторов](../standard-library/debug-iterator-support.md) и [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В следующей таблице перечислены потенциально небезопасные методы стандартной библиотеки C++, а также их более безопасные эквиваленты:
 
@@ -34,16 +32,16 @@ ms.locfileid: "68454548"
 
 При вызове любого из перечисленных выше потенциально небезопасных методов или при неправильном использовании итераторов компилятор создает [Предупреждение компилятора (уровень 3) С4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Сведения о том, как отключить эти предупреждения, см. в разделе [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)
 
 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)
 
-[Checked Iterators](../standard-library/checked-iterators.md)
+[Проверяемые итераторы](../standard-library/checked-iterators.md)
 
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)
+[Поддержка итераторов отладки](../standard-library/debug-iterator-support.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)

@@ -1,31 +1,29 @@
 ---
 title: Классы активных документов
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.document
 helpviewer_keywords:
 - Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
-ms.openlocfilehash: c4087d8e223e08842d5b402bdf063a908d1e22bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c74b1287243c18bf8d7f26325e726b09463700f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394992"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445810"
 ---
 # <a name="active-document-classes"></a>Классы активных документов
 
-Активные документы могут отображаться в окне всей клиентской веб-браузера, например Internet Explorer 5.5 или в контейнере Active, например связыватель по Microsoft Office, которая поддерживает активные документы.
+Активные документы могут отображаться либо во всем клиентском окне веб-браузера, например в Internet Explorer 5,5, либо в активном контейнере, таком как Microsoft Office связыватель, который поддерживает активные документы.
 
-[CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)<br/>
-Сопоставляет интерфейсы активного документа и инициализирует и активирует объект активного документа.
+[кдокобжектсервер](../mfc/reference/cdocobjectserver-class.md)<br/>
+Сопоставляет интерфейсы активного документа и инициализирует и активирует активный объект документа.
 
-[CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)<br/>
-Реализует команды OLE-сервера специально для серверы активных документов.
+[кдокобжектсерверитем](../mfc/reference/cdocobjectserveritem-class.md)<br/>
+Реализует команды OLE Server специально для серверов активных документов.
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
 Реализует хранение активных документов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Обзор класса](../mfc/class-library-overview.md)

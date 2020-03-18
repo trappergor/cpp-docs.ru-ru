@@ -1,5 +1,5 @@
 ---
-title: Делегат и макросы сопоставления интерфейса (MFC)
+title: Макросы с картами делегата и интерфейса (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - delegate map macros [MFC]
@@ -7,30 +7,30 @@ helpviewer_keywords:
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322986"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426747"
 ---
-# <a name="delegate-and-interface-map-macros"></a>Макросы сопоставления делегата и интерфейса
+# <a name="delegate-and-interface-map-macros"></a>Макросы схем делегата и интерфейса
 
-MFC поддерживает макросы для делегата и схемы интерфейсов:
+MFC поддерживает следующие макросы для сопоставлений делегатов и интерфейсов:
 
 |||
 |-|-|
-|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Начинает сопоставление делегатов.|
-|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Начинается определение interfaced карты.|
-|[Делегат CommandHandler](#commandhandler)|Регистрирует обратный вызов методов источник команды.  |
+|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Начинает карту делегата.|
+|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Начинает определение взаимосвязанной схемы.|
+|[Делегат Коммандхандлер](#commandhandler)|Регистрирует методы обратного вызова с источником команды.  |
 |[END_DELEGATE_MAP](#end_delegate_map)|Завершает карту делегата.|
-|[END_INTERFACE_MAP](#end_interface_map)|Завершает схему интерфейсов в файле реализации. |
+|[END_INTERFACE_MAP](#end_interface_map)|Завершает карту интерфейса в файле реализации. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Создает запись в сопоставлении делегата.|
-|[INTERFACE_PART](#interface_part)|Использовать между макрос BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, который будет поддерживать этот объект.|
-|[MAKE_DELEGATE](#make_delegate)|Присоединяет обработчик событий для элемента управления.|
+|[INTERFACE_PART](#interface_part)|Используется между макросом BEGIN_INTERFACE_MAP и макросом END_INTERFACE_MAP для каждого интерфейса, который будет поддерживаться объектом.|
+|[MAKE_DELEGATE](#make_delegate)|Присоединяет обработчик событий к управляемому элементу управления.|
 
-## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
 
-Начинает сопоставление делегатов.
+Начинает карту делегата.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -40,20 +40,20 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="parameters"></a>Параметры
 
-*КЛАСС*<br/>
-Класс, в котором размещен управляемый элемент управления.
+*СМ*<br/>
+Класс, в котором размещается управляемый элемент управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос отмечает начало списка записей делегата, составляющих карту делегата. Пример того, как используется этот макрос, см. в разделе [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
+Этот макрос отмечает начало списка записей делегатов, образующих карту делегатов. Пример использования этого макроса см. в разделе [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** msclr\event.h
+**Заголовок:** мсклр\евент.х
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
-Начинается определение interfaced карты, при использовании в файле реализации.
+Начинает определение взаимосвязанной схемы при использовании в файле реализации.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -63,25 +63,25 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*<br/>
+*секласс*<br/>
 Класс, в котором определяется схема интерфейсов.
 
 *baseClass*<br/>
-Класс, от которого *theClass* является производным от.
+Класс, от которого наследуется *секласс* .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для каждого интерфейса, реализуемого имеется один или несколько вызовов макросов INTERFACE_PART. Для каждого агрегата, используемого классом имеется один вызов макроса INTERFACE_AGGREGATE.
+Для каждого реализуемого интерфейса существует один или несколько INTERFACE_PART вызовов макросов. Для каждого статистического выражения, используемого классом, существует один INTERFACE_AGGREGATE вызов макроса.
 
-Дополнительные сведения о схемы интерфейсов, см. в разделе [технические 38 Примечание](../tn038-mfc-ole-iunknown-implementation.md).
+Дополнительные сведения о картах интерфейсов см. в [техническом примечании 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxwin.h
 
-##  <a name="commandhandler"></a>Делегат CommandHandler
+##  <a name="commandhandler"></a>Делегат Коммандхандлер
 
-Регистрирует обратный вызов методов источник команды.
+Регистрирует методы обратного вызова с источником команды.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -94,21 +94,21 @@ delegate void CommandHandler(  UINT^ cmdID  );
 *cmdID*<br/>
 Идентификатор команды.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот делегат регистрируется источник команды методы обратного вызова. При добавлении делегат исходный объект команды, метод обратного вызова становится обработчик команд, поступающих из указанного источника.
+Этот делегат регистрирует методы обратного вызова с источником команды. При добавлении делегата в исходный объект команды метод обратного вызова превращается в обработчик команд, поступающих из указанного источника.
 
-Дополнительные сведения см. в разделе [Как Добавление команды управления маршрутизации в Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Дополнительные сведения см. в разделе [инструкции. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
-Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)
+**Заголовок:** афксвинформс. h (определен в сборке atlmfc\lib\mfcmifc80.dll)
 
-##  <a name="commanduihandler"></a>CommandUIHandler
+##  <a name="commanduihandler"></a>коммандуихандлер
 
-Регистрирует методы обратного вызова с сообщением команды обновления интерфейса пользователя.
+Регистрирует методы обратного вызова в сообщении командной строки для обновления пользовательского интерфейса.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -121,18 +121,18 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 *cmdID*<br/>
 Идентификатор команды.
 
-*cmdUI*<br/>
-Идентификатор команды сообщения.
+*кмдуи*<br/>
+Идентификатор сообщения команды.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот делегат регистрирует методы обратного вызова с сообщением команды обновления интерфейса пользователя. `CommandUIHandler` аналогичен [CommandHandler](#commandhandler) за исключением того, что этот делегат используется с командами обновление объектов интерфейса пользователя. Команды обновления интерфейса пользователя должны быть сопоставлены одному с методами обработчика сообщений.
+Этот делегат регистрирует методы обратного вызова с помощью сообщения команды обновления пользовательского интерфейса. `CommandUIHandler` похож на [коммандхандлер](#commandhandler) , за исключением того, что этот делегат используется с командами обновления объекта пользовательского интерфейса. Команды обновления пользовательского интерфейса должны сопоставляться один к одному с помощью методов обработчика сообщений.
 
-Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)
+**Заголовок:** афксвинформс. h (определен в сборке atlmfc\lib\mfcmifc80.dll)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
@@ -144,17 +144,17 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 END_DELEGATE_MAP();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос отмечает конец список операций делегата, которые compose карту делегата. Пример того, как используется этот макрос, см. в разделе [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
+Этот макрос отмечает конец списка записей делегатов, образующих карту делегатов. Пример использования этого макроса см. в разделе [EVENT_DELEGATE_ENTRY](#event_delegate_entry).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** msclr\event.h
+**Заголовок:** мсклр\евент.х
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
-Завершает схему интерфейсов в файле реализации.
+Завершает карту интерфейса в файле реализации.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -162,9 +162,9 @@ END_DELEGATE_MAP();
 END_INTERFACE_MAP( )
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные сведения о схемы интерфейсов, см. в разделе [технические 38 Примечание](../tn038-mfc-ole-iunknown-implementation.md).
+Дополнительные сведения о картах интерфейсов см. в [техническом примечании 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -182,22 +182,22 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="parameters"></a>Параметры
 
-*ЧЛЕН*<br/>
-Метод обработчика событий для присоединения к элементу управления.
+*УЧАСТНИКАМИ*<br/>
+Метод обработчика событий, который должен быть присоединен к элементу управления.
 
-*ЗАПОЛНИТЕЛЬ С НОМЕРОМ 0*<br/>
-Первый аргумент метода обработчика управляемого события, такие как `Object^`.
+*ARG0*<br/>
+Первый аргумент метода обработчика управляемых событий, например `Object^`.
 
 *ARG1*<br/>
-Второй аргумент метода обработчика управляемого события, такие как `EventArgs^`.
+Второй аргумент метода обработчика управляемых событий, например `EventArgs^`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждая запись в сопоставлении делегата соответствует делегата обработчика управляемого события, созданные [MAKE_DELEGATE](#make_delegate).
+Каждая запись в сопоставлении делегата соответствует делегату управляемого обработчика событий, созданному [MAKE_DELEGATE](#make_delegate).
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано, как использовать для создания записи в карте делегат для EVENT_DELEGATE_ENTRY `OnClick` обработчик событий; см; также в примере кода в MAKE_DELEGATE. Дополнительные сведения см. в разделе [Как Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+В следующем примере кода показано, как использовать EVENT_DELEGATE_ENTRY для создания записи в сопоставлении делегата для обработчика событий `OnClick`. см. также пример кода в MAKE_DELEGATE. Дополнительные сведения см. [в разделе инструкции. Sink Windows Forms события из собственных C++ классов](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -207,11 +207,11 @@ END_DELEGATE_MAP()
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** msclr\event.h
+**Заголовок:** мсклр\евент.х
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
-Использовать между макрос BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, который будет поддерживать этот объект.
+Используется между макросом BEGIN_INTERFACE_MAP и макросом END_INTERFACE_MAP для каждого интерфейса, который будет поддерживаться объектом.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -221,18 +221,18 @@ INTERFACE_PART( theClass, iid, localClass)
 
 ### <a name="parameters"></a>Параметры
 
-*theClass*<br/>
+*секласс*<br/>
 Имя класса, содержащего схему интерфейсов.
 *IID*<br/>
-Идентификатор IID, должны быть сопоставлены с внедренным классом.
-*localClass*<br/>
+IID, который должен быть сопоставлен с внедренным классом.
+*локалкласс*<br/>
 Имя локального класса.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Он позволяет сопоставить IID с членом класса, обозначенного *theClass* и *localClass*.
+Он позволяет сопоставлять IID с членом класса, указанного в *секласс* и *локалкласс*.
 
-Дополнительные сведения о схемы интерфейсов, см. в разделе [технические 38 Примечание](../tn038-mfc-ole-iunknown-implementation.md).
+Дополнительные сведения о картах интерфейсов см. в [техническом примечании 38](../tn038-mfc-ole-iunknown-implementation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -240,7 +240,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
-Присоединяет обработчик событий для элемента управления.
+Присоединяет обработчик событий к управляемому элементу управления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -250,19 +250,19 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="parameters"></a>Параметры
 
-*ДЕЛЕГАТ*<br/>
-Тип управляемого события обработчика делегата, такие как [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).
+*ПОЛУЧИТЬ*<br/>
+Тип делегата управляемого обработчика событий, например [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).
 
-*ЧЛЕН*<br/>
-Имя метода обработчика событий для присоединения к элементу управления.
+*УЧАСТНИКАМИ*<br/>
+Имя метода обработчика событий, который должен быть присоединен к элементу управления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот макрос создает делегат обработчика управляемого события типа *ДЕЛЕГИРОВАТЬ* и имени *ЧЛЕН*. Делегат handler управляемого события позволяет собственного класса для обработки управляемых событий.
+Этот макрос создает управляемый делегат обработчика событий типа *Delegate* и *члена*Name. Делегат управляемого обработчика событий позволяет собственному классу управлять управляемыми событиями.
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано, как вызвать `MAKE_DELEGATE` для присоединения `OnClick` обработчик событий к элементу управления MFC `MyControl`. Более широкие объяснение того, как работает этот макрос в приложении MFC, см. в разделе [как: Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+В следующем примере кода показано, как вызвать `MAKE_DELEGATE`, чтобы присоединить обработчик событий `OnClick` к элементу управления MFC `MyControl`. Более подробное описание работы этого макроса в приложении MFC см. в разделе [как передавать Windows Forms события C++ из собственных классов](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -276,10 +276,10 @@ void CMyView::OnInitialUpdate()
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** msclr\event.h
+**Заголовок:** мсклр\евент.х
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Практическое руководство. Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
 [Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
+[Макросы и глобальные](mfc-macros-and-globals.md)<br/>

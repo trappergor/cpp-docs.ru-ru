@@ -1,55 +1,55 @@
 ---
-title: Класс CUIntArray
+title: Класс Куинтаррай
 ms.date: 11/04/2016
 f1_keywords:
 - CUIntArray
 - AFXCOLL/CUIntArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CUIntArray::CUIntArray
+- AFXCOLL/CUIntArray::Add
+- AFXCOLL/CUIntArray::Append
+- AFXCOLL/CUIntArray::Copy
+- AFXCOLL/CUIntArray::ElementAt
+- AFXCOLL/CUIntArray::FreeExtra
+- AFXCOLL/CUIntArray::GetAt
+- AFXCOLL/CUIntArray::GetCount
+- AFXCOLL/CUIntArray::GetData
+- AFXCOLL/CUIntArray::GetSize
+- AFXCOLL/CUIntArray::GetUpperBound
+- AFXCOLL/CUIntArray::InsertAt
+- AFXCOLL/CUIntArray::IsEmpty
+- AFXCOLL/CUIntArray::RemoveAll
+- AFXCOLL/CUIntArray::RemoveAt
+- AFXCOLL/CUIntArray::SetAt
+- AFXCOLL/CUIntArray::SetAtGrow
+- AFXCOLL/CUIntArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CUIntArray [MFC], CUIntArray
+- CUIntArray [MFC], Add
+- CUIntArray [MFC], Append
+- CUIntArray [MFC], Copy
+- CUIntArray [MFC], ElementAt
+- CUIntArray [MFC], FreeExtra
+- CUIntArray [MFC], GetAt
+- CUIntArray [MFC], GetCount
+- CUIntArray [MFC], GetData
+- CUIntArray [MFC], GetSize
+- CUIntArray [MFC], GetUpperBound
+- CUIntArray [MFC], InsertAt
+- CUIntArray [MFC], IsEmpty
+- CUIntArray [MFC], RemoveAll
+- CUIntArray [MFC], RemoveAt
+- CUIntArray [MFC], SetAt
+- CUIntArray [MFC], SetAtGrow
+- CUIntArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: 39d5fd4707f1c03de78cf9fd078655389c93ba17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 932062ec289a34cffcd929853233a0c7c81a7a72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323548"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447537"
 ---
-# <a name="cuintarray-class"></a>Класс CUIntArray
+# <a name="cuintarray-class"></a>Класс Куинтаррай
 
 Поддерживает массивы целых чисел без знака.
 
@@ -59,9 +59,9 @@ ms.locfileid: "62323548"
 class CUIntArray : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Функции-члены `CUIntArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемое значение, замените целое число без знака.
+Функции элементов `CUIntArray` похожи на функции членов класса [кобаррай](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Когда вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, замените UINT.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,48 +71,48 @@ class CUIntArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
+|[Куинтаррай:: Куинтаррай](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
+|[Куинтаррай:: Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
+|[Куинтаррай:: Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
+|[Куинтаррай:: Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
+|[Куинтаррай:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
+|[Куинтаррай:: Фриекстра](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
+|[Куинтаррай:: GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
+|[Куинтаррай:: NOCOUNT](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
+|[Куинтаррай:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
+|[Куинтаррай:: DataSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
+|[Куинтаррай:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
+|[Куинтаррай:: Инсертат](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
+|[Куинтаррай:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
+|[Куинтаррай:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
+|[Куинтаррай:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
+|[Куинтаррай:: SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
+|[Куинтаррай:: Сетатгров](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
+|[Куинтаррай:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
+|[Куинтаррай:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Целое число без знака или целое число без знака, отличается от слов и двойных слов, в том, что физический размер UINT может меняться в зависимости от целевой операционной среде. Целое число без знака — это тот же размер, что двойное слово соответственно.
+Целое число без знака или UINT отличается от слов и даублевордс в том, что физический размер UINT может изменяться в зависимости от целевой операционной среды. Значение UINT имеет тот же размер, что и даублеворд.
 
-`CUIntArray` включает в себя [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) макрос для поддержки доступа типа времени выполнения и создания дампа для [CDumpContext](../../mfc/reference/cdumpcontext-class.md) объекта. Если вам требуется дамп отдельных целое число без знака элементов, необходимо задать глубины контекста дампа 1 или выше. Не может быть сериализован массивов целого числа без знака.
+`CUIntArray` включает макрос [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) для поддержки доступа к типам времени выполнения и дампа в объекте [CDumpContext](../../mfc/reference/cdumpcontext-class.md) . Если требуется дамп отдельных беззнаковых целых элементов, необходимо задать для контекста дампа значение 1 или больше. Целочисленные массивы без знака не могут быть сериализованы.
 
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.
 
-Дополнительные сведения об использовании `CUIntArray`, см. в статье [коллекций](../../mfc/collections.md).
+Дополнительные сведения об использовании `CUIntArray`см. в статье [коллекции](../../mfc/collections.md)статей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -122,9 +122,9 @@ class CUIntArray : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxcoll.h
+**Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

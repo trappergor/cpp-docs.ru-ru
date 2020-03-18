@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883893"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424545"
 ---
 # <a name="cdaoquerydef-class"></a>Класс Кдаокуеридеф
 
@@ -123,7 +123,7 @@ class CDaoQueryDef : public CObject
 |[Кдаокуеридеф:: Сетретурнсрекордс](#setreturnsrecords)|Указывает, возвращает ли объект QueryDef записи. Присвоение этому атрибуту значения TRUE допускается только для запросов к серверу SQL.|
 |[Кдаокуеридеф:: Сетскл](#setsql)|Задает строку SQL, указывающую запрос, определенный объектом QueryDef.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|

@@ -4,50 +4,50 @@ ms.date: 09/07/2019
 f1_keywords:
 - CWordArray
 - AFXCOLL/CWordArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CWordArray::CWordArray
+- AFXCOLL/CWordArray::Add
+- AFXCOLL/CWordArray::Append
+- AFXCOLL/CWordArray::Copy
+- AFXCOLL/CWordArray::ElementAt
+- AFXCOLL/CWordArray::FreeExtra
+- AFXCOLL/CWordArray::GetAt
+- AFXCOLL/CWordArray::GetCount
+- AFXCOLL/CWordArray::GetData
+- AFXCOLL/CWordArray::GetSize
+- AFXCOLL/CWordArray::GetUpperBound
+- AFXCOLL/CWordArray::InsertAt
+- AFXCOLL/CWordArray::IsEmpty
+- AFXCOLL/CWordArray::RemoveAll
+- AFXCOLL/CWordArray::RemoveAt
+- AFXCOLL/CWordArray::SetAt
+- AFXCOLL/CWordArray::SetAtGrow
+- AFXCOLL/CWordArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CWordArray [MFC], CWordArray
+- CWordArray [MFC], Add
+- CWordArray [MFC], Append
+- CWordArray [MFC], Copy
+- CWordArray [MFC], ElementAt
+- CWordArray [MFC], FreeExtra
+- CWordArray [MFC], GetAt
+- CWordArray [MFC], GetCount
+- CWordArray [MFC], GetData
+- CWordArray [MFC], GetSize
+- CWordArray [MFC], GetUpperBound
+- CWordArray [MFC], InsertAt
+- CWordArray [MFC], IsEmpty
+- CWordArray [MFC], RemoveAll
+- CWordArray [MFC], RemoveAt
+- CWordArray [MFC], SetAt
+- CWordArray [MFC], SetAtGrow
+- CWordArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c136bbb14e0d7cffc604813731b6f87ba18063cf
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 99484071c81ed6b766d3e4259d9fc88353b27ea3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907915"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446221"
 ---
 # <a name="cwordarray-class"></a>Класс Квордаррай
 
@@ -59,9 +59,9 @@ ms.locfileid: "70907915"
 class CWordArray : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Функции `CWordArray` элементов похожи на функции членов класса [кобаррай](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Везде, где отображается указатель [CObject](../../mfc/reference/cobject-class.md) в качестве параметра функции или возвращаемого значения, подставьте слово.
+Функции элементов `CWordArray` похожи на функции членов класса [кобаррай](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Везде, где отображается указатель [CObject](../../mfc/reference/cobject-class.md) в качестве параметра функции или возвращаемого значения, подставьте слово.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,41 +71,41 @@ class CWordArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Кобаррай:: Кобаррай](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
+|[Квордаррай:: Квордаррай](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Кобаррай:: Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
-|[Кобаррай:: Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
-|[Кобаррай:: Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
-|[Кобаррай:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
-|[Кобаррай:: Фриекстра](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
-|[Кобаррай:: GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
-|[Кобаррай:: NOCOUNT](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
-|[Кобаррай:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
-|[Кобаррай:: DataSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
-|[Кобаррай:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
-|[Кобаррай:: Инсертат](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
-|[Кобаррай:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
-|[Кобаррай:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
-|[Кобаррай:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
-|[Кобаррай:: SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
-|[Кобаррай:: Сетатгров](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
-|[Кобаррай:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
+|[Квордаррай:: Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
+|[Квордаррай:: Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
+|[Квордаррай:: Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
+|[Квордаррай:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на указатель элемента в массиве.|
+|[Квордаррай:: Фриекстра](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
+|[Квордаррай:: GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
+|[Квордаррай:: NOCOUNT](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
+|[Квордаррай:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
+|[Квордаррай:: DataSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
+|[Квордаррай:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
+|[Квордаррай:: Инсертат](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
+|[Квордаррай:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
+|[Квордаррай:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
+|[Квордаррай:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
+|[Квордаррай:: SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
+|[Квордаррай:: Сетатгров](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
+|[Квордаррай:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[Кобаррай:: operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
+|[Квордаррай:: operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CWordArray`включает макрос [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) для поддержки сериализации и дампа своих элементов. Если массив слов хранится в архиве либо с перегруженным оператором вставки, либо с функцией-членом [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , каждый элемент в свою очередь сериализуется.
+`CWordArray` включает макрос [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) для поддержки сериализации и дампа его элементов. Если массив слов хранится в архиве либо с перегруженным оператором вставки, либо с функцией-членом [CObject:: Serialize](../../mfc/reference/cobject-class.md#serialize) , каждый элемент в свою очередь сериализуется.
 
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.
@@ -124,427 +124,7 @@ class CWordArray : public CObject
 
 **Заголовок:** афксколл. h
 
-##  <a name="icommandsource_interface"></a>Интерфейс ICommandSource
-
-Управляет командами, отправленными из исходного объекта команды в пользовательский элемент управления.
-
-```
-interface class ICommandSource
-```
-
-### <a name="remarks"></a>Примечания
-
-При размещении пользовательского элемента управления в представлении MFC [класс квинформсвиев](../../mfc/reference/cwinformsview-class.md) направляет команды и обновляет сообщения пользовательского интерфейса команды в пользовательский элемент управления, чтобы разрешить обработку команд MFC (например, элементы меню фрейма и кнопки панели инструментов). Реализуя, вы предоставляете пользовательскому элементу управления ссылку `ICommandSource` на объект.
-
-См. практическое руководство по [ Добавьте маршрутизацию команд в элемент управления](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) Windows Forms, чтобы получить пример использования. `ICommandTarget`
-
-Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-##  <a name="addcommandhandler"></a>ICommandSource:: Аддкоммандхандлер
-
-Добавляет обработчик команд в исходный объект команды.
-
-```
-void AddCommandHandler(
-    unsigned int cmdID,
-    CommandHandler^ cmdHandler);
-```
-
-### <a name="parameters"></a>Параметры
-
-*cmdID*<br/>
-Идентификатор команды.
-
-*кмдхандлер*<br/>
-Дескриптор метода обработчика команд.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод добавляет обработчик команд *кмдхандлер* в исходный объект команды и сопоставляет обработчик с *cmdID*.
-
-См. практическое руководство по [ Добавьте маршрутизацию команд в элемент управления](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) Windows Forms, чтобы получить пример использования. `AddCommandHandler`
-
-##  <a name="addcommandrangehandler"></a>ICommandSource:: Аддкоммандранжехандлер
-
-Добавляет группу обработчиков команд в исходный объект команды.
-
-```
-void AddCommandRangeHandler(
-    unsigned int cmdIDMin,
-    unsigned int cmdIDMax,
-    CommandHandler^ cmdHandler);
-```
-
-### <a name="parameters"></a>Параметры
-
-*кмдидмин*<br/>
-Начальный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдидмакс*<br/>
-Конечный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдхандлер*<br/>
-Дескриптор метода обработчика сообщений, с которым сопоставлены команды.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод сопоставляет непрерывный диапазон идентификаторов команд с одним обработчиком сообщений и добавляет его в исходный объект команды. Используется для обработки группы связанных кнопок с помощью одного метода.
-
-##  <a name="addcommandrangeuihandler"></a>ICommandSource:: Аддкоммандранжеуихандлер
-
-Добавляет группу обработчиков сообщений команд пользовательского интерфейса в исходный объект команды.
-
-```
-void AddCommandRangeUIHandler(
-    unsigned int cmdIDMin,
-    unsigned int cmdIDMax,
-    CommandUIHandler^ cmdUIHandler);
-```
-
-### <a name="parameters"></a>Параметры
-
-*кмдидмин*<br/>
-Начальный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдидмакс*<br/>
-Конечный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдхандлер*<br/>
-Дескриптор метода обработчика сообщений, с которым сопоставлены команды.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод сопоставляет непрерывный диапазон идентификаторов команд с одним обработчиком командного сообщения пользовательского интерфейса и добавляет его в исходный объект команды. Используется для обработки группы связанных кнопок с помощью одного метода.
-
-##  <a name="addcommanduihandler"></a>ICommandSource:: Аддкоммандуихандлер
-
-Добавляет обработчик сообщений командной строки пользовательского интерфейса в исходный объект команды.
-
-```
-void AddCommandUIHandler(
-    unsigned int cmdID,
-    CommandUIHandler^ cmdUIHandler);
-```
-
-### <a name="parameters"></a>Параметры
-
-*cmdID*<br/>
-Идентификатор команды.
-
-*кмдуихандлер*<br/>
-Дескриптор метода обработчика командного сообщения пользовательского интерфейса.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод добавляет обработчик сообщений команды пользовательского интерфейса *кмдхандлер* в исходный объект команды и сопоставляет обработчик с *cmdID*.
-
-##  <a name="postcommand"></a>ICommandSource::P Осткомманд
-
-Отправляет сообщение, не дожидаясь его обработки.
-
-```
-void PostCommand(unsigned int command);
-```
-
-### <a name="parameters"></a>Параметры
-
-*command*<br/>
-Идентификатор команды сообщения, которое необходимо опубликовать.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод асинхронно отправляет сообщение, сопоставленное с ИДЕНТИФИКАТОРом, указанным *командой*. Он вызывает [CWnd::P остмессаже](../../mfc/reference/cwnd-class.md#postmessage) , чтобы поместить сообщение в очередь сообщений окна, а затем возвращает, не дожидаясь обработки сообщения соответствующим окном.
-
-##  <a name="removecommandhandler"></a>ICommandSource:: Ремовекоммандхандлер
-
-Удаляет обработчик команд из объекта источника команды.
-
-```
-void RemoveCommandHandler(unsigned int cmdID);
-```
-
-### <a name="parameters"></a>Параметры
-
-*cmdID*<br/>
-Идентификатор команды.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод удаляет обработчик команд, сопоставленный с *cmdID* , из объекта источника команды.
-
-##  <a name="removecommandrangehandler"></a>ICommandSource:: Ремовекоммандранжехандлер
-
-Удаляет группу обработчиков команд из объекта источника команды.
-
-```
-void RemoveCommandRangeUIHandler(
-    unsigned int cmdIDMin,
-    unsigned int cmdIDMax);
-```
-
-### <a name="parameters"></a>Параметры
-
-*кмдидмин*<br/>
-Начальный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдидмакс*<br/>
-Конечный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод удаляет группу обработчиков сообщений, сопоставленную с идентификаторами команд, указанными в *кмдидмин* и *кмдидмакс*, из объекта источника команды.
-
-##  <a name="removecommandrangeuihandler"></a>ICommandSource:: Ремовекоммандранжеуихандлер
-
-Удаляет группу обработчиков сообщений команд пользовательского интерфейса из объекта источника команды.
-
-```
-void RemoveCommandRangeUIHandler(
-    unsigned int cmdIDMin,
-    unsigned int cmdIDMax);
-```
-
-### <a name="parameters"></a>Параметры
-
-*кмдидмин*<br/>
-Начальный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-*кмдидмакс*<br/>
-Конечный индекс диапазона ИДЕНТИФИКАТОРов команд.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод удаляет группу обработчиков сообщений команд пользовательского интерфейса, сопоставленных с идентификаторами команд, указанными в *кмдидмин* и *кмдидмакс*, из объекта источника команды.
-
-##  <a name="removecommanduihandler"></a>ICommandSource:: Ремовекоммандуихандлер
-
-Удаляет обработчик сообщений командной строки пользовательского интерфейса из объекта источника команды.
-
-```
-void RemoveCommandUIHandler(unsigned int cmdID);
-```
-
-### <a name="parameters"></a>Параметры
-
-*cmdID*<br/>
-Идентификатор команды.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод удаляет обработчик сообщений команды пользовательского интерфейса, сопоставленный с *cmdID* из исходного объекта команды.
-
-##  <a name="sendcommand"></a>ICommandSource:: Сендкомманд
-
-Отправляет сообщение и ожидает его обработки перед возвратом.
-
-```
-void SendCommand(unsigned int command);
-```
-
-### <a name="parameters"></a>Параметры
-
-*command*<br/>
-Идентификатор команды отправляемого сообщения.
-
-### <a name="remarks"></a>Примечания
-
-Этот метод синхронно отправляет сообщение, сопоставленное с ИДЕНТИФИКАТОРом, указанным *командой*. Он вызывает метод [CWnd:: SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) , чтобы поместить сообщение в очередь сообщений окна, и ожидает, пока эта процедура окна не обработает сообщение перед возвратом.
-
-##  <a name="icommandtarget_interface"></a>Интерфейс ICommandTarget
-
-Предоставляет пользовательский элемент управления с интерфейсом для получения команд из исходного объекта команды.
-
-```
-interface class ICommandTarget
-```
-
-### <a name="remarks"></a>Примечания
-
-При размещении пользовательского элемента управления в представлении MFC [квинформсвиев](../../mfc/reference/cwinformsview-class.md) направляет команды и обновляет сообщения пользовательского интерфейса команды на пользовательский элемент управления, чтобы разрешить обработку команд MFC (например, элементы меню "фрейм" и кнопки панели инструментов). Реализуя `ICommandTarget`, вы предоставляете пользовательскому элементу управления ссылку на объект.
-
-См. практическое руководство по [ Добавьте маршрутизацию команд в элемент управления](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) Windows Forms, чтобы получить пример использования. `ICommandTarget`
-
-Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-##  <a name="initialize"></a>ICommandTarget:: Initialize
-
-Инициализирует целевой объект команды.
-
-```
-void Initialize(ICommandSource^ cmdSource);
-```
-
-### <a name="parameters"></a>Параметры
-
-*кмдсаурце*<br/>
-Маркер для исходного объекта команды.
-
-### <a name="remarks"></a>Примечания
-
-При размещении пользовательского элемента управления в представлении MFC [квинформсвиев](../../mfc/reference/cwinformsview-class.md) направляет команды и обновляет сообщения пользовательского интерфейса команды в пользовательский элемент управления, чтобы разрешить обработку команд MFC.
-
-Этот метод инициализирует целевой объект команды и связывает его с указанным исходным объектом команды *кмдсаурце*. Он должен вызываться в реализации класса пользовательского элемента управления. При инициализации необходимо зарегистрировать обработчики команд в объекте источника команды, вызвав [ICommandSource:: аддкоммандхандлер](../../mfc/reference/icommandsource-interface.md) в `Initialize` реализации. См. практическое руководство по [ Добавьте маршрутизацию команд в элемент управления](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) Windows Forms, чтобы получить пример использования `Initialize` для этого.
-
-##  <a name="icommandui_interface"></a>Интерфейс Икоммандуи
-
-Управляет командами пользовательского интерфейса.
-
-```
-interface class ICommandUI
-```
-
-### <a name="remarks"></a>Примечания
-
-Этот интерфейс предоставляет методы и свойства, управляющие командами пользовательского интерфейса. `ICommandUI`аналогичен [классу поддержка CCmdUI](../../mfc/reference/ccmdui-class.md), за исключением того, что `ICommandUI` используется для приложений MFC, которые взаимодействуют с компонентами .NET.
-
-`ICommandUI`используется в `ON_UPDATE_COMMAND_UI` обработчике в производном от класса классе. Когда пользователь приложения активирует (выбирает или нажимает) меню, каждый пункт меню отображается как включенный или отключенный. Цель каждой команды меню предоставляет эти сведения путем реализации `ON_UPDATE_COMMAND_UI` обработчика. Для каждого объекта командного интерфейса пользователя в приложении используйте [мастер классов](mfc-class-wizard.md) или окно **свойств** (в **представление классов**), чтобы создать запись схемы сообщений и прототип функции для каждого обработчика.
-
-Дополнительные сведения `ICommandUI` об использовании интерфейса в маршрутизации команд см. в разделе [как Добавьте маршрутизацию команд в элемент управления](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)Windows Forms.
-
-Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-Дополнительные сведения об управлении командами пользовательского интерфейса в MFC см. в разделе [класс поддержка CCmdUI](../../mfc/reference/ccmdui-class.md).
-
-##  <a name="check"></a>Икоммандуи:: Check
-
-Задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки.
-
-```
-property UICheckState Check;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки. Задайте `Check` следующие значения:
-
-|Термин|Определение|
-|----------|----------------|
-|0|Снимите флажок|
-|1|службы "Функции Azure"|
-|2|Задать неопределенное|
-
-##  <a name="continuerouting"></a>Икоммандуи:: Континуераутинг
-
-Указывает механизму маршрутизации команд продолжить маршрутизацию текущего сообщения вниз по цепочке обработчиков.
-
-```
-void ContinueRouting();
-```
-
-### <a name="remarks"></a>Примечания
-
-Это расширенная функция-член, которая должна использоваться в сочетании с обработчиком [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) , возвращающим значение false. Дополнительные сведения см. в техническом примечании [TN006. Схемы](../../mfc/tn006-message-maps.md)сообщений.
-
-##  <a name="enabled"></a>Икоммандуи:: Enabled
-
-Включает или отключает элемент пользовательского интерфейса для этой команды.
-
-```
-property bool Enabled;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство включает или отключает элемент пользовательского интерфейса для этой команды. Задайте `Enabled` значение true, чтобы включить элемент, или false, чтобы отключить его.
-
-##  <a name="id"></a>Икоммандуи:: ID
-
-Возвращает идентификатор объекта пользовательского интерфейса, представленного `ICommandUI` объектом.
-
-```
-property unsigned int ID;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство получает идентификатор (маркер) элемента меню, кнопки панели инструментов или другого объекта пользовательского интерфейса, представленного `ICommandUI` объектом.
-
-##  <a name="index"></a>Икоммандуи:: index
-
-Возвращает индекс объекта пользовательского интерфейса, представленного `ICommandUI` объектом.
-
-```
-property unsigned int Index;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство получает индекс (маркер) элемента меню, кнопки панели инструментов или другого объекта пользовательского интерфейса, представленного `ICommandUI` объектом.
-
-##  <a name="radio"></a>Икоммандуи:: Radio
-
-Задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки.
-
-```
-property bool Radio;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки. Задайте `Radio` значение true, чтобы включить элемент; в противном случае — значение false.
-
-##  <a name="text"></a>Икоммандуи:: Text
-
-Задает текст элемента пользовательского интерфейса для этой команды.
-
-```
-property String^ Text;
-```
-
-### <a name="remarks"></a>Примечания
-
-Это свойство задает текст элемента пользовательского интерфейса для этой команды. Задайте `Text` в качестве маркера текстовой строки.
-
-##  <a name="iview_interface"></a>Интерфейс IView
-
-Реализует несколько методов, которые [квинформсвиев](../../mfc/reference/cwinformsview-class.md) использует для отправки уведомлений представления управляемому элементу управления.
-
-```
-interface class IView
-```
-
-### <a name="remarks"></a>Примечания
-
-`IView`реализует несколько методов, `CWinFormsView` которые используются для пересылки общих уведомлений о представлении в размещенный управляемый элемент управления. Это [онинитиалупдате](../../mfc/reference/iview-interface.md), [OnUpdate](../../mfc/reference/iview-interface.md) и [онактиватевиев](../../mfc/reference/iview-interface.md).
-
-`IView`аналогичен [CView](../../mfc/reference/cview-class.md), но используется только с управляемыми представлениями и элементами управления.
-
-Дополнительные сведения об использовании Windows Forms см. в разделе [Использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-##  <a name="onactivateview"></a>IView:: Онактиватевиев
-
-Вызывается MFC при активации или отключении представления.
-
-```
-void OnActivateView(bool activate);
-```
-
-### <a name="parameters"></a>Параметры
-
-*вызова*<br/>
-Указывает, активируется ли представление или деактивируется.
-
-##  <a name="oninitialupdate"></a>IView:: Онинитиалупдате
-
-Вызывается структурой после первого присоединения представления к документу, но до первоначального отображения представления.
-
-```
-void OnInitialUpdate();
-```
-
-##  <a name="onupdate"></a>IView:: OnUpdate
-
-Вызывается MFC после изменения документа представления.
-
-```
-void OnUpdate();
-```
-
-### <a name="remarks"></a>Примечания
-
-Эта функция позволяет представлению обновлять свое отображение в соответствии с изменениями.
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пример СОБРАНий MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>

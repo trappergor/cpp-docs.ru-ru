@@ -1,50 +1,49 @@
 ---
-title: / NATVIS (Добавление файла Natvis в PDB-ФАЙЛ)
+title: /NATVIS (добавление файла NATVIS в файл PDB)
 ms.date: 08/10/2017
 f1_keywords:
 - /natvis
-- VC.Project.VCLinkerTool.ImportLIbrary
 helpviewer_keywords:
 - NATVIS linker option
 - /NATVIS linker option
 - -NATVIS linker option
 - Add Natvis file to PDB
 ms.assetid: 8747fc0c-701a-4796-bb4d-818ab4465cca
-ms.openlocfilehash: e758a49b41a17d805b752947cd1944087c8ff852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16e320a2f8f946912fef6a354f27f6514a67e29
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320621"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439274"
 ---
-# <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS (Добавление файла Natvis в PDB-ФАЙЛ)
+# <a name="natvis-add-natvis-to-pdb"></a>/NATVIS (добавление файла NATVIS в файл PDB)
 
-> / NATVIS:*имя файла*
+> /НАТВИС:*имя файла*
 
 ## <a name="parameters"></a>Параметры
 
 *filename*<br/>
-Natvis-файл для добавления в PDB-файл. Он внедряет визуализация отладчика в файле Natvis в PDB-ФАЙЛ.
+Natvis-файл для добавления в PDB-файл. Он внедряет визуализацию отладчика в файл Natvis в PDB.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Параметр /NATVIS внедряет визуализация отладчика, определенный в natvis-файла *filename* в PDB-файл, созданный с помощью LINK. Это позволяет отладчику отображать визуализации, независимо от natvis-файл. Можно использовать несколько вариантов /NATVIS для внедрения более одного файла Natvis в файл PDB.
+Параметр/НАТВИС внедряет визуализации отладчика, определенные в файле Natvis-файла, в PDB *-файл,* созданный LINK. Это позволяет отладчику отображать визуализации независимо от natvis – файла. Можно использовать несколько параметров/НАТВИС для внедрения нескольких Natvis-файлов в созданный PDB-файл.
 
-LINK игнорирует /NATVIS, когда PDB-файл не создается с помощью [/DEBUG](debug-generate-debug-info.md) параметр. Сведения о создании и использовании natvis-файлы, см. в разделе [Создание настраиваемых представлений собственных объектов в отладчике Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
+LINK игнорирует/НАТВИС, если PDB-файл не создается с помощью параметра [/Debug](debug-generate-debug-info.md) . Сведения о создании и использовании natvis файлов см. [в разделе Создание пользовательских представлений собственных объектов в отладчике Visual Studio](/visualstudio/debugger/create-custom-views-of-native-objects).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Выберите **командной строки** страницы свойств в **компоновщика** папки.
+1. Выберите страницу свойств **Командная строка** в папке **Компоновщик** .
 
-1. Добавьте параметр /NATVIS **Дополнительные параметры** текстовое поле.
+1. Добавьте параметр/НАТВИС в текстовое поле **Дополнительные параметры** .
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
-- Этот параметр не поддерживает программный эквивалент.
+- Этот параметр не имеет программного эквивалента.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)

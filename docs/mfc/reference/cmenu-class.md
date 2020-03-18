@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855641"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426243"
 ---
 # <a name="cmenu-class"></a>Класс Кмену
 
@@ -159,7 +159,7 @@ class CMenu : public CObject
 |[Кмену:: operator! =](#operator_neq)|Определяет, являются ли два объекта меню неравными.|
 |[Кмену:: operator = =](#operator_eq_eq)|Определяет, равны ли два объекта меню.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|
@@ -1428,7 +1428,7 @@ BOOL TrackPopupMenu(
 Определяет окно, которому принадлежит всплывающее меню. Этот параметр не может иметь значение NULL, даже если указан флаг TPM_NONOTIFY. Это окно получает все WM_COMMAND сообщения из меню. В версиях Windows 3,1 и более поздних, окно не получает WM_COMMAND сообщений до тех пор, пока `TrackPopupMenu` не вернет. В Windows 3,0 окно получает WM_COMMAND сообщения до того, как `TrackPopupMenu` возвращает.
 
 *лпрект*<br/>
-Не обрабатывается.
+Пропускается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

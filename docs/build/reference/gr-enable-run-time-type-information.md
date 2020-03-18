@@ -2,7 +2,6 @@
 title: /GR (Предоставление информации о типах во время выполнения)
 ms.date: 11/04/2016
 f1_keywords:
-- /gr
 - VC.Project.VCCLWCECompilerTool.RuntimeTypeInfo
 - VC.Project.VCCLCompilerTool.RuntimeTypeInfo
 helpviewer_keywords:
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
-ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee1398b2f9ee78c62fb84aa591e77708cd0d9d83
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292124"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439597"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Предоставление информации о типах во время выполнения)
 
@@ -29,29 +28,29 @@ ms.locfileid: "62292124"
 /GR[-]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Когда **/GR** имеет значение on, компилятор определяет `_CPPRTTI` макрос препроцессора. По умолчанию **/GR** включен. **Полиморфическом** отключает сведения о типе времени выполнения.
+Если параметр **/GR** имеет значение ON, компилятор определяет `_CPPRTTI` макрос препроцессора. По умолчанию **/GR** имеет значение ON. **/GR-** отключает сведения о типах времени выполнения.
 
-Используйте **/GR** если компилятору не удается разрешить тип объекта в коде статически. Как правило, требуется **/GR** при использовании в коде параметр [оператор dynamic_cast](../../cpp/dynamic-cast-operator.md) или [typeid](../../cpp/typeid-operator.md). Тем не менее **/GR** увеличивает размер разделов .rdata изображения. Если код использует **dynamic_cast** или **typeid**, **полиморфическом** может выдать изображение меньшего размера.
+Используйте **/GR** , если компилятор не может статически разрешить тип объекта в коде. Обычно требуется параметр **/GR** , если в коде используется [оператор dynamic_cast](../../cpp/dynamic-cast-operator.md) или [typeid](../../cpp/typeid-operator.md). Однако **/GR** увеличивает размер разделов RDATA изображения. Если в коде не используется **dynamic_cast** или **typeid**, **/GR-** может создать меньшее изображение.
 
-Дополнительные сведения о проверке типов во время выполнения, см. в разделе [сведения о типе времени выполнения](../../cpp/run-time-type-information.md) в *Справочник по языку C++*.
+Дополнительные сведения о проверке типов во время выполнения см. в разделе [сведения о типах во время выполнения](../../cpp/run-time-type-information.md) в  *C++ справочнике по языку*.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
-1. Нажмите кнопку **языка** страницу свойств.
+1. Перейдите на страницу свойств **язык** .
 
-1. Изменить **включить сведения о типе времени выполнения** свойство.
+1. Измените свойство **включить сведения о типе времени выполнения** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeTypeInfo%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры компилятора MSVC](compiler-options.md)<br/>
 [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

@@ -1,26 +1,24 @@
 ---
 title: Использование CDateTimeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CDateTimeCtrl
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-ms.openlocfilehash: 251528cafcbedb0352a1962d70452f8b8778f10b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c437c97ad6c6d377b3bc62099e569b29f03346
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348605"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447077"
 ---
 # <a name="using-cdatetimectrl"></a>Использование CDateTimeCtrl
 
-Элемент управления выбора даты и времени ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) реализует интуитивно понятный способ ввода или выбора определенной даты. Основной интерфейс элемента управления аналогичны функциям поле со списком. Тем не менее если пользователь разворачивает элемент управления, появляется элемент управления Календарь месяца (по умолчанию), позволяя пользователю указать определенную дату. При выборе даты, управляющий элемент календаря автоматически закроется.
+Элемент управления выбора даты и времени ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) реализует интуитивно понятный и распознаваемый метод ввода или выбора определенной даты. Основной интерфейс элемента управления аналогичен функции поля со списком. Однако если пользователь расширяет элемент управления, появляется элемент управления "месячный календарь" (по умолчанию), позволяющий пользователю указать конкретную дату. Если выбрана дата, элемент управления "календарь месяца" автоматически исчезает.
 
 > [!NOTE]
->  Чтобы использовать оба метода `CDateTimePicker` и `CMonthCalCtrl` классов в проекте, необходимо включить AFXDTCTL. H, обычно в STDAFX проекта. H-файл.
+>  Чтобы использовать классы `CDateTimePicker` и `CMonthCalCtrl` в проекте, необходимо включить АФКСДТКТЛ. H, как правило, в файле STDAFX проекта. H файл.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Создание элемента выбора даты и времени](../mfc/creating-the-date-and-time-picker-control.md)
 
@@ -34,6 +32,6 @@ ms.locfileid: "62348605"
 
 - [Обработка уведомляющих сообщений в элементах выбора даты и времени](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

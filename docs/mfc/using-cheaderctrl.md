@@ -1,29 +1,27 @@
 ---
 title: Использование CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386412"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443997"
 ---
 # <a name="using-cheaderctrl"></a>Использование CHeaderCtrl
 
-Использование заголовка элемента управления, представленный классом [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), чтобы отобразить заголовки столбцов для столбцов списка. Например элемент управления заголовка может оказаться полезным для реализации управления столбцов на листе.
+Используйте элемент управления "заголовок", представленный классом [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), для вывода заголовков столбцов для списка столбцов. Например, элемент управления "заголовок" полезен для реализации элементов управления столбцами в электронной таблице.
 
-Элемент управления заголовка обычно состоит из частей, называемых «элементы заголовка,» каждого подшипника заголовок для связанного столбца текста или цифр. В зависимости от того, стили, которые можно задать можно предоставить ряд способов direct для пользователей для работы с элементами заголовка.
+Элемент управления "заголовок" обычно разделяется на части, называемые "элементами заголовка", каждый из которых имеет заголовок для связанного столбца текста или чисел. В зависимости от заданных стилей можно предоставить пользователям несколько прямых способов управления элементами заголовка.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) предоставляет элемент управления, внедренные заголовком и [CListView](../mfc/reference/clistview-class.md) инкапсулирует `CListCtrl` в класс MFC. В общем случае подумать об использовании `CHeaderCtrl` к спискам метки, которые вы собираетесь нарисовать вручную.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) предоставляет встроенный элемент управления "заголовок", а [CListView](../mfc/reference/clistview-class.md) ИНКАПСУЛИРУЕТ `CListCtrl` в классе MFC. Как правило, с помощью `CHeaderCtrl` можно пометить списки, которые вы собираетесь нарисовать.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Элементы управления "Заголовок" и "Список"](../mfc/header-control-and-list-control.md)
 
@@ -49,6 +47,6 @@ ms.locfileid: "62386412"
 
 - [Обработка уведомлений элемента управления "Заголовок"](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

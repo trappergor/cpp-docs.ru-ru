@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426663"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445693"
 ---
 # <a name="icommandui-interface"></a>Интерфейс Икоммандуи
 
@@ -60,6 +60,7 @@ interface class ICommandUI
 ## <a name="check"></a>Икоммандуи:: Check
 
 Задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ property UICheckState Check;
 ## <a name="continuerouting"></a>Икоммандуи:: Континуераутинг
 
 Указывает механизму маршрутизации команд продолжить маршрутизацию текущего сообщения вниз по цепочке обработчиков.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ void ContinueRouting();
 ## <a name="enabled"></a>Икоммандуи:: Enabled
 
 Включает или отключает элемент пользовательского интерфейса для этой команды.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ property bool Enabled;
 ## <a name="id"></a>Икоммандуи:: ID
 
 Возвращает идентификатор объекта пользовательского интерфейса, представленного объектом Икоммандуи.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ property unsigned int ID;
 ## <a name="index"></a>Икоммандуи:: index
 
 Возвращает индекс объекта пользовательского интерфейса, представленного объектом Икоммандуи.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ property unsigned int Index;
 ## <a name="radio"></a>Икоммандуи:: Radio
 
 Задает для элемента пользовательского интерфейса для этой команды соответствующее состояние проверки.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ property bool Radio;
 ## <a name="text"></a>Икоммандуи:: Text
 
 Задает текст элемента пользовательского интерфейса для этой команды.
+
 ```
 property String^ Text;
 ```

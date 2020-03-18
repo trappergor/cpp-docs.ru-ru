@@ -2,17 +2,15 @@
 title: Параметры EDITBIN
 description: Справочное руководство по параметрам командной строки программы EDITBIN (Microsoft).
 ms.date: 02/09/2020
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9fd4170e5ee020780963d83936f1a9fd08d2be11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257706"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439971"
 ---
 # <a name="editbin-options"></a>Параметры EDITBIN
 
@@ -29,7 +27,7 @@ EDITBIN можно использовать для изменения объек
 |[/APPCONTAINER](appcontainer.md)|Указывает, должно ли приложение запускаться в AppContainer, например в приложении UWP.|
 |[/BIND](bind.md)|Устанавливает адреса точек входа в указанных объектах для ускорения времени загрузки.|
 |[/DYNAMICBASE](dynamicbase.md)|Указывает, можно ли случайным образом изменить базовый образ библиотеки DLL или исполняемого файла во время загрузки с помощью функции выбора макета адресного пространства (ASLR).|
-|[/ERRORREPORT](errorreport-editbin-exe.md)| Устаревшее. Отчеты об ошибках контролируются параметрами [отчеты об ошибках Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/ERRORREPORT](errorreport-editbin-exe.md)| Не рекомендуется. Отчеты об ошибках контролируются параметрами [отчеты об ошибках Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/HEAP](heap.md)|Задает размер кучи исполняемого образа в байтах.|
 |[/HIGHENTROPYVA](highentropyva.md)|Указывает, поддерживает ли библиотека DLL или исполняемый образ режим произвольной энтропии (64 бит) адресного пространства (ASLR).|
 |[/INTEGRITYCHECK](integritycheck.md)|Указывает, следует ли проверять цифровую подпись во время загрузки.|
@@ -45,7 +43,7 @@ EDITBIN можно использовать для изменения объек
 |[/TSAWARE](tsaware.md)|Указывает, что приложение предназначено для работы в среде с несколькими пользователями.|
 |[/VERSION](version.md)|Задает номер версии в заголовке.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Дополнительные\ средств сборки компилятором MSVC](c-cpp-build-tools.md)
 [Справочник ЕDITBIN](editbin-reference.md)

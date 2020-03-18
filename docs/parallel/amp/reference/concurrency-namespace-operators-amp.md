@@ -3,11 +3,11 @@ title: Операторы пространства имен Concurrency (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883735"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424923"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Операторы пространства имен Concurrency (AMP)
 
@@ -276,6 +276,6 @@ _Tuple_type<_Rank>   operator%(
 
 Результат первого указанного аргумента модуля, второго заданного аргумента.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Concurrency](concurrency-namespace-cpp-amp.md)

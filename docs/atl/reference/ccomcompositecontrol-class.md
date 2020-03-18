@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864968"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423306"
 ---
 # <a name="ccomcompositecontrol-class"></a>Класс Ккомкомпоситеконтрол
 
@@ -61,7 +61,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 |[Ккомкомпоситеконтрол:: Креатеконтролвиндов](#createcontrolwindow)|Вызовите этот метод, чтобы создать окно управления и порекомендовать любой размещенный элемент управления.|
 |[Ккомкомпоситеконтрол:: Сетбаккграундколорфромамбиент](#setbackgroundcolorfromambient)|Вызовите этот метод, чтобы задать цвет фона составного элемента управления с помощью фонового цвета контейнера.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|

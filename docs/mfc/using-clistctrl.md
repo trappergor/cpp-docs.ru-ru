@@ -1,17 +1,15 @@
 ---
 title: Использование CListCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512913"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441973"
 ---
 # <a name="using-clistctrl"></a>Использование CListCtrl
 
@@ -22,7 +20,7 @@ ms.locfileid: "69512913"
 Дополнительные сведения см. в разделе [о элементах управления "представление списка](/windows/win32/Controls/list-view-controls-overview) " в Windows SDK.
 
 > [!NOTE]
->  Windows SDK ссылается на список элементов управления как "элементы управления представления списка". Такое использование "View" не относится к классам представления MFC, особенно `CListView`. Дополнительные сведения см. в разделе [элемент управления списка и представление списка](../mfc/list-control-and-list-view.md).
+>  Windows SDK ссылается на список элементов управления как "элементы управления представления списка". Использование представления не относится к классам представления MFC, особенно `CListView`. Дополнительные сведения см. в разделе [элемент управления списка и представление списка](../mfc/list-control-and-list-view.md).
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
@@ -52,6 +50,6 @@ ms.locfileid: "69512913"
 
 - [Уничтожение элемента управления "Список"](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)

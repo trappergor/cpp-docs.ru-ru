@@ -1,23 +1,21 @@
 ---
-title: 'TN036: Использование CFormView с AppWizard и ClassWizard'
+title: TN036. Использование CFormView с AppWizard и ClassWizard
 ms.date: 11/04/2016
-f1_keywords:
-- CFormView
 helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
-ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a339ba7b4a3837d4712174dbb5b749131435617
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305532"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447412"
 ---
-# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: Использование CFormView с AppWizard и ClassWizard
+# <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036. Использование CFormView с AppWizard и ClassWizard
 
-Это техническое Примечание было описано, как модифицировать приложение, созданный мастером приложений, чтобы использовалась `CFormView` вместо значения по умолчанию `CView` как класс главного представления. Это поддерживается непосредственно с этой версией Visual C++.
+В этом техническом примечании описано, как изменить созданное помощью мастера приложение таким образом, чтобы оно использовало `CFormView` вместо `CView` по умолчанию в качестве основного класса представления. Это поддерживается непосредственно в этой версии Visual C++.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)

@@ -3,17 +3,17 @@ title: Интерфейс Platform::IBoxArray
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
-- VCCORLIB/Namespace not found::Platform
-- VCCORLIB/Namespace not found::Platform::Value
+- VCCORLIB/Platform::IBoxArray
+- VCCORLIB/Platform::IBoxArray::Value
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392080"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444156"
 ---
 # <a name="platformiboxarray-interface"></a>Интерфейс Platform::IBoxArray
 
@@ -31,19 +31,19 @@ interface class IBoxArray
 *T*<br/>
 Тип упакованного значение в каждом элементе массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`IBoxArray` — C++имя /CX `Windows::Foundation::IReferenceArray`.
+`IBoxArray` — имя C++/cx для `Windows::Foundation::IReferenceArray`.
 
-### <a name="members"></a>Участники
+### <a name="members"></a>Члены
 
 Интерфейс `IBoxArray` наследует от интерфейса `IValueType` . Интерфейс`IBoxArray` также содержит следующие члены:
 
-|Метод|Описание|
+|Метод|Description|
 |------------|-----------------|
-|[Значение](#value)|Возвращает распакованный массив, который ранее хранился в этом экземпляре `IBoxArray` .|
+|[Value](#value)|Возвращает распакованный массив, который ранее хранился в этом экземпляре `IBoxArray` .|
 
-## <a name="value"></a> IBoxArray::Value Property
+## <a name="value"></a>Свойство IBoxArray:: value
 
 Возвращает значение, которое было изначально сохранено в этом объекте.
 
@@ -58,14 +58,14 @@ property T Value {T get();}
 *T*<br/>
 Введите запакованное значение.
 
-### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
+### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
 Возвращает значение, которое было изначально сохранено в этом объекте.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Например, см. в разделе [упаковки-преобразования](../cppcx/boxing-c-cx.md).
+Пример см. в разделе [Упаковка](../cppcx/boxing-c-cx.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы Array и WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
