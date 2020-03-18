@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865509"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422682"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
 
@@ -3302,7 +3302,7 @@ ms.locfileid: "78865509"
 
 - Переменная среды __MSVCRT_HEAP_SELECT больше не поддерживается. Эта переменная среды удалена, и замена ей не предусмотрена.
 
-### <a name="microsoft-macro-assembler-reference"></a>Справочные материалы по ассемблеру Microsoft Macro Assembler
+### <a name="microsoft-macro-assembler-reference"></a>Справочник по Microsoft Macro Assembler
 
 - Некоторые директивы были удалены из компилятора справочных материалов по ассемблеру Microsoft Macro Assembler. Удаленные директивы: `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087` и `.NO87`.
 

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424443"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442683"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>Пример
 
 В следующем примере кода демонстрируется метод `GetGroupInfoByIndex`. В предыдущем разделе этого примера кода мы создали элемент управления "представление списка", в котором в представлении отчета отображаются два столбца с названием "ClientID" и "Grade". В следующем примере кода извлекаются сведения о группе, индекс которой равен 0, если такая группа существует.
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ BOOL GetGroupRect(
 ### <a name="example"></a>Пример
 
 В следующем примере кода определяется переменная, `m_listCtrl`, которая используется для доступа к текущему элементу управления "список-представление". Эта переменная используется в следующем примере.
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Функция сравнения должна возвращать отрицательное значение, если первый элемент должен предшествовать второму, положительное значение, если первый элемент должен следовать за вторым, или равняться нулю, если два элемента равны.
 
 Параметр *lParam1* — это 32-разрядное значение, связанное с первым сравниваемым элементом, а параметр *lParam2* — значение, связанное со вторым элементом. Это значения, указанные в элементе *lParam* структуры [лвитем](/windows/win32/api/commctrl/ns-commctrl-lvitemw) элементов, когда они вставляются в список. Параметр *лпарамсорт* совпадает со значением *двдата* .
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Это сообщение похоже на [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), за исключением типа данных, передаваемых в функцию сравнения. В [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems) *lParam1* и *lParam2* — это значения сравниваемых элементов. В [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex) *lParam1* — это текущий индекс первого сравниваемого элемента, а *lParam2* — текущий индекс второго элемента. Вы можете отправить [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) сообщение, чтобы получить дополнительные сведения об элементе.
 
 Функция сравнения должна возвращать отрицательное значение, если первый элемент должен предшествовать второму, положительное значение, если первый элемент должен следовать за вторым, или равняться нулю, если два элемента равны.

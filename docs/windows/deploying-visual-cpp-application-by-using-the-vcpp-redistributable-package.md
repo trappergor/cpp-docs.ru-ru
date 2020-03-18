@@ -4,18 +4,18 @@ ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: a235fa12138fd00a0f6d722cad7776980ad3d292
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 1e09debc53e5b1b3e1eeaa6a63924b04fd2b7ca5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877288"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443889"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++
 
 Это пошаговое руководство описывает использование распространяемого пакета Visual C++ для развертывания приложения Visual C++.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения данного пошагового руководства необходимо следующее.
 
@@ -25,7 +25,7 @@ ms.locfileid: "64877288"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Использование распространяемого пакета Visual C++ для развертывания приложения
 
-1.  Вы можете создать приложение MFC и выполнить его сборку, следуя инструкциям в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1.  Вы можете создать приложение MFC и выполнить его сборку, выполнив инструкции в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Создайте файл, присвойте ему имя setup.bat и добавьте в него приведенные ниже команды. Измените `MyMFCApplication` на имя проекта.
 
@@ -54,7 +54,7 @@ ms.locfileid: "64877288"
 
       - Ваше приложение MFC (файл EXE).
 
-      - vcredist_x86.exe. Этот файл расположен в папке \Program Files (x86)\Microsoft Visual Studio \<версия>\SDK\Bootstrapper\Packages\.. Также его можно скачать из [Центра загрузки Майкрософт](https://www.microsoft.com/download/confirmation.aspx?id=5555).
+      - vcredist_x86.exe. В Visual Studio 2015 этот файл находится в папке *% вЦинсталлдир% redist\\1033\\* . В Visual Studio 2017 и Visual Studio 2019 этот файл находится в папке *% вктулсредистдир%* . Вы также можете [скачать последнюю поддерживаемую версию распространяемого файла от корпорации Майкрософт](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads).
 
       - Файл setup.bat, созданный на предыдущем шаге.
 
@@ -83,8 +83,8 @@ ms.locfileid: "64877288"
       Самоизвлекающийся файл установки устанавливает приложение MFC, которое находится в папке, указанной в шаге 2. Приложение выполняется успешно, так как в самоизвлекающийся файл установки включен установщик распространяемого пакета Visual C++.
 
       > [!IMPORTANT]
-      > Чтобы определить, какая версия среды выполнения установлена, установщик проверяет раздел реестра \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<версия>\VC\Runtimes\\<platform>. Если установленная сейчас версия новее чем та, которую пытается установить установщик, последний сообщает об успешной операции без установки более ранней версии и оставляет дополнительную запись на странице установленных программ в панели управления.
+      > Чтобы определить, какая версия среды выполнения установлена, установщик проверяет раздел реестра \\HKLM\\SOFTWARE\\Microsoft\\VisualStudio\\_version_\\VC\\среды выполнения\\_платформы_\\версии. Если установленная сейчас версия новее чем та, которую пытается установить установщик, последний сообщает об успешной операции без установки более ранней версии и оставляет дополнительную запись на странице установленных программ в панели управления.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Примеры развертывания](deployment-examples.md)<br/>

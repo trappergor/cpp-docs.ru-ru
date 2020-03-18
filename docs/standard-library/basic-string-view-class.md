@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 2f262ee238d8ee9b441f5bc1daebcf6a64f35a52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416174"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445838"
 ---
 # <a name="basic_string_view-class"></a>Класс basic_string_view
 
@@ -189,13 +189,13 @@ class basic_string_view;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[basic_string_view](#basic_string_view)|Конструирует string_view, который пуст или указывает на все или часть данных какого-либо другого объекта строки или на массив символов в стиле C.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Description|
 |-|-|
 |**const_iterator**|Итератор произвольного доступа, который может считывать элементы **const** .|
 |**const_pointer**|`using const_pointer = const value_type*;`|
@@ -213,19 +213,19 @@ class basic_string_view;
 
 ### <a name="member-operators"></a>Операторы членов
 
-|Оператор|Описание|
+|Оператор|Description|
 |-|-|
 |[оператор=](#op_eq)|Присваивает string_view или преобразуемый строковый объект другому string_viewу.|
 |[operator\[\]](#op_at)|Возвращает элемент по указанному индексу.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Описание|
+|Функция-член|Description|
 |-|-|
 |[at](#at)|Возвращает const_reference элементу в указанном расположении.|
 |[back](#back)|Возвращает const_reference последнему элементу.|
 |[begin](#begin)|Возвращает итератор const, обращающийся к первому элементу. (string_views являются неизменяемыми.)|
-|[begin](#cbegin)|То же, что и [Begin](#begin).|
+|[cbegin](#cbegin)|То же, что и [Begin](#begin).|
 |[cend](#cend)|Возвращает константный итератор, указывающий на один за последним элементом.|
 |[copy](#copy)|Копирует не более указанного числа символов из индексированной позиции в исходном string_view в целевой массив символов. (Не рекомендуется. Вместо этого используйте _Copy_s.)|
 |[_Copy_s](#_copy_s)|Безопасная функция копирования CRT.|
@@ -252,7 +252,7 @@ class basic_string_view;
 |[substr](#substr)|Возвращает подстроку указанной длины, начиная с указанного индекса.|
 |[swap](#swap)|Обмен содержимым двух string_views.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если функция должна создать последовательность, длина которой превышает [max_size](#max_size) элементов, функция выдает сообщение об ошибке длины, создавая объект типа [length_error](../standard-library/length-error-class.md).
 
@@ -281,7 +281,7 @@ constexpr const_reference at(size_type offset) const;
 
 Const_reference символу в позиции, указанной в индексе параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый элемент имеет нулевой индекс, и следующие элементы индексируются последовательно положительными целыми числами, поэтому string_view length *n* содержит *n*-й элемент, индексируемый по числу *n –* 1. **при** вызове метод вызывает исключение для недопустимых индексов, в отличие от [оператора\[\]](#op_at). 
 
@@ -318,7 +318,7 @@ constexpr const_reference back() const;
 
 Const_reference к последнему элементу в string_view.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Создает исключение, если string_view пуст.
 
@@ -361,7 +361,7 @@ constexpr basic_string_view(const charT* str, size_type len);
 *len*\
 Число символов, включаемых в представление.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В конструкторах с параметром charT * предполагается, что входные данные завершаются нулем, но завершающее значение NULL не включено в string_view.
 
@@ -402,7 +402,7 @@ constexpr const_iterator cend() const noexcept;
 
 **Константный** итератор произвольного доступа, указывающий на место сразу за концом диапазона.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
@@ -443,7 +443,7 @@ String_view, который необходимо сравнить с этим st
 
 Отрицательное значение, если это string_view меньше, чем *стрв* или *ptr*; нуль, если две последовательности символов равны; или положительное значение, если это string_view больше, чем *стрв* или *ptr*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функции-члены `compare` выполняют сравнение с учетом регистра либо всех, либо части каждой последовательности символов. 
 
@@ -578,7 +578,7 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 
 Число фактически скопированных символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Символ NULL не добавляется в конец копии.
 
@@ -611,7 +611,7 @@ _ *Подсчитайте* количество символов, которые
 
 Число фактически скопированных символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Символ NULL не добавляется в конец копии.
 
@@ -653,7 +653,7 @@ constexpr value_type *data() const noexcept;
 
 Указатель на константу для первого элемента последовательности символов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указатель не может изменить символы.
 
@@ -671,7 +671,7 @@ constexpr bool empty() const noexcept;
 
 **значение true** , если объект string_view не содержит символов; **значение false** , если содержит хотя бы один символ.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член эквивалентна [размеру](#size)() = = 0.
 
@@ -687,7 +687,7 @@ constexpr const_iterator end() const noexcept;
 
 Возвращает const_iterator произвольного доступа, указывающий на один за последним элементом.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `end` используется для проверки того, достиг ли const_iterator конца string_view. Значение, возвращаемое `end`, не должно быть подвергнуто удалению ссылки.
 
@@ -863,7 +863,7 @@ constexpr const_reference front() const;
 
 Const_reference к первому элементу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Создает исключение, если string_view пуст.
 
@@ -875,7 +875,7 @@ Const_reference к первому элементу.
 constexpr size_type length() const noexcept;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член такая же, как [size](#size).
 
@@ -891,7 +891,7 @@ constexpr size_type max_size() const noexcept;
 
 Максимальное число символов, которое может содержать string_view.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Исключение типа [length_error](../standard-library/length-error-class.md) возникает, когда операция создает string_view с длиной больше `max_size()`.
 
@@ -902,12 +902,14 @@ constexpr size_type max_size() const noexcept;
 ```cpp
 constexpr basic_string_view& operator=(const basic_string_view&) noexcept = default;
 ```
+
 ### <a name="example"></a>Пример
 
 ```cpp
    string_view s = "Hello";
    string_view s2 = s;
 ```
+
 ## <a name="op_at"></a>basic_string_view:: operator []
 
 Предоставляет const_reference символу с указанным индексом.
@@ -925,7 +927,7 @@ constexpr const_reference operator[](size_type offset) const;
 
 Const_reference символу в позиции, указанной в индексе параметра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый элемент имеет нулевой индекс, а следующие элементы последовательно индексируются положительными целыми числами, поэтому string_view length *n* содержит *n*-й элемент, индексируемый по числу *n* – 1.
 
@@ -935,7 +937,7 @@ Const_reference символу в позиции, указанной в инде
 
 Возвращаемая ссылка может быть недействительной, если базовые строковые данные изменяются или удаляются объектом-владельцем.
 
-При компиляции с [\_итератора\_отладки\_уровень](../standard-library/iterator-debug-level.md) , равный 1 или 2, при попытке доступа к элементу за пределами string_view возникнет ошибка времени выполнения. Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с [\_итератора\_отладки\_уровень](../standard-library/iterator-debug-level.md) , равный 1 или 2, при попытке доступа к элементу за пределами string_view возникнет ошибка времени выполнения. Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
 
 ## <a name="rbegin"></a>basic_string_view:: rbegin
 
@@ -949,7 +951,7 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 
 Возвращает итератор произвольного доступа к первому элементу в обращенном string_viewе, что привело к последнему элементу в соответствующем необращенном string_view.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `rbegin` используется с обратным string_view так же, как [Begin](#begin) используется с string_view. `rbegin` можно использовать для обратной инициализации итерации.
 
@@ -961,7 +963,7 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 constexpr void remove_prefix(size_type n);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оставляет базовые данные без изменений. Перемещает string_view указатель вперед на n элементов и задает для элемента данных Private `size` значение size-n.
 
@@ -973,7 +975,7 @@ constexpr void remove_prefix(size_type n);
 constexpr void remove_suffix(size_type n);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оставляет базовые данные и указатель на него без изменений. Задает для элемента данных частного `size` значение size-n.
 
@@ -989,7 +991,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 Константный реверсивный итератор произвольного доступа, указывающий на один за последним элементом в обращенном string_view.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `rend` используется с обратным string_view так же, как [End](#end) используется с string_view. `rend` можно использовать для проверки того, достиг ли обратный итератор конца своего string_view. Значение, возвращаемое `rend`, не должно быть подвергнуто удалению ссылки.
 
@@ -1037,7 +1039,7 @@ constexpr size_type size() const noexcept;
 
 Длина string_view.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 String_view может изменить ее длину, например `remove_prefix` и `remove_suffix`. Так как это не изменяет базовые строковые данные, размер string_view не обязательно должен быть равен размеру базовых данных.
 
@@ -1074,7 +1076,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *окп*\
 Источник string_view, значения указателей и размеров которых должны быть заменены на string_view назначения.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [\<string_view >](../standard-library/string-view.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

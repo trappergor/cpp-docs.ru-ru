@@ -3,7 +3,6 @@ title: /HEAP (Установка размера кучи)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
-- /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
 helpviewer_keywords:
 - -HEAP linker option
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f155ad56ec1a90479b402e38e7ec7f3e3d80e470
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270358"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439523"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Установка размера кучи)
 
@@ -24,33 +23,33 @@ ms.locfileid: "62270358"
 /HEAP:reserve[,commit]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Параметр/Heap задает размер кучи в байтах. Этот параметр предназначен только для использования, при построении файла .exe.
+Параметр/HEAP задает размер кучи в байтах. Этот параметр используется только при сборке EXE-файла.
 
-*Зарезервировать* аргумент задает общее выделение кучи виртуальной памяти. Размер кучи по умолчанию составляет 1 МБ. Компоновщик Округляет указанное значение до ближайшего 4 байт.
+Аргумент *Reserve* задает общее выделение кучи в виртуальной памяти. Размер кучи по умолчанию — 1 МБ. Компоновщик Округляет указанное значение до ближайших 4 байт.
 
-Необязательный `commit` аргумент указывает объем физической памяти для одновременного выделения. Выделенной виртуальной памяти резервирует пространство в файле подкачки. Более высокий `commit` значение экономит время, когда требуется больше пространства кучи приложения, но увеличивает требования к памяти и, возможно, время запуска.
+Необязательный аргумент `commit` указывает объем физической памяти, выделяемой за раз. Выделенная виртуальная память приводит к тому, что пространство резервируется в файле подкачки. Более высокое значение `commit` экономит время, когда приложению требуется больше пространства в куче, но увеличивает требования к памяти и, возможно, время запуска.
 
-Укажите *зарезервировать* и `commit` значения в десятичном или нотации языка.
+Укажите значения *Reserve* и `commit` в формате десятичной или C-языковой нотации.
 
-Эта функция также доступна через файл определения модуля с [HEAPSIZE](heapsize.md).
+Эта функция также доступна через файл определения модуля с [хеапсизе](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
-1. Нажмите кнопку **компоновщика** папки.
+1. Выберите папку **компоновщика**.
 
-1. Нажмите кнопку **системы** страницу свойств.
+1. Перейдите на страницу свойств **системы** .
 
-1. Изменить **выделить память для кучи** свойство.
+1. Измените свойство " **Размер фиксации кучи** ".
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
-- См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.
+- Ознакомьтесь с разделами <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapReserveSize%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.HeapCommitSize%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)

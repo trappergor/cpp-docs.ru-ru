@@ -1,38 +1,36 @@
 ---
 title: создание объекта CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-ms.openlocfilehash: d0f41731e3a4db7b15d4f2a7ebaac94135d5350d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf1d2eeb9efd2f8a1e7b433c0e18dd868a8b9aca
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406136"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445892"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>создание объекта CToolBarCtrl
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекты содержат несколько внутренних структур данных — список точечного рисунка изображения для кнопки, список строк метки кнопки и список `TBBUTTON` структуры —, связать изображение и/или строка с позиции, стиль, состояние, и Идентификатор команды кнопки. Каждый из элементов этих структур данных ссылается отсчитываемый от нуля индекс. Перед использованием `CToolBarCtrl` объекта, необходимо настроить эти структуры данных. Список структур данных, см. в разделе [элементы управления панели инструментов](controls-mfc.md) в пакете Windows SDK. Список строк может использоваться только для надписей на кнопках; не удается извлечь строки из панели инструментов.
+Объекты [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) содержат несколько внутренних структур данных — список растровых изображений для кнопок, список строк меток для кнопок и список структур `TBBUTTON`, которые связывают изображение и (или) строку с положением, стилем, состоянием и идентификатором команды кнопки. На каждый элемент этих структур данных ссылается индекс, начинающийся с нуля. Прежде чем можно будет использовать объект `CToolBarCtrl`, необходимо настроить эти структуры данных. Список структур данных см. в разделе [элементы управления ToolBar](controls-mfc.md) в Windows SDK. Список строк можно использовать только для меток кнопок; нельзя получить строки с панели инструментов.
 
-Чтобы использовать `CToolBarCtrl` объекта, вы обычно выполняются следующие действия:
+Чтобы использовать объект `CToolBarCtrl`, обычно выполняются следующие действия.
 
-### <a name="to-use-a-ctoolbarctrl-object"></a>Для использования объекта CToolBarCtrl
+### <a name="to-use-a-ctoolbarctrl-object"></a>Использование объекта CToolBarCtrl
 
-1. Создать [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекта.
+1. Создайте объект [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) .
 
-1. Вызовите [создать](../mfc/reference/ctoolbarctrl-class.md#create) для создания общего элемента управления панели инструментов Windows и присоединить его к `CToolBarCtrl` объекта. Растровые изображения для кнопок, добавить точечного рисунка для кнопки на панели инструментов, вызвав [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). Если требуется строка подписи для кнопок, добавлять строки панели инструментов, вызвав [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) и/или [AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). После вызова метода `AddString` и/или `AddStrings`, следует вызывать [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) для получения в строку или строки будут выводиться.
+1. Вызовите [CREATE](../mfc/reference/ctoolbarctrl-class.md#create) , чтобы создать общий элемент управления панели инструментов Windows и присоединить его к объекту `CToolBarCtrl`. Если необходимо, чтобы растровые изображения для кнопок, добавьте на панель инструментов точечные рисунки, вызвав [аддбитмап](../mfc/reference/ctoolbarctrl-class.md#addbitmap). Если требуется использовать строковые метки для кнопок, добавьте строки на панель инструментов, вызвав [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) и/или [аддстрингс](../mfc/reference/ctoolbarctrl-class.md#addstrings). После вызова `AddString` и (или) `AddStrings`следует вызвать функцию [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) , чтобы получить строку или строки для отображения.
 
-1. Добавьте структур кнопки панели инструментов, вызвав метод [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).
+1. Добавьте структуры кнопок на панель инструментов, вызвав [аддбуттонс](../mfc/reference/ctoolbarctrl-class.md#addbuttons).
 
-1. Всплывающие подсказки следует обрабатывать **TTN_NEEDTEXT** сообщений в окно-владелец панели инструментов, как описано в разделе [обработка уведомлений всплывающих совет](../mfc/handling-tool-tip-notifications.md).
+1. Если вы хотите использовать подсказки, обработайте сообщения **TTN_NEEDTEXT** в окне владельца панели инструментов, как описано в разделе [Обработка всплывающих уведомлений](../mfc/handling-tool-tip-notifications.md).
 
-1. Если требуется, чтобы пользователь имел возможность настроить панель инструментов, обрабатывать настройки уведомляющих сообщений в окно-владелец, как описано в разделе [обработка уведомлений о настройке](../mfc/handling-customization-notifications.md).
+1. Если вы хотите, чтобы пользователь мог настраивать панель инструментов, обрабатывайте сообщения уведомления о настройке в окне "владелец", как описано в разделе [обработка уведомлений о настройке](../mfc/handling-customization-notifications.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)

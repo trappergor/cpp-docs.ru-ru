@@ -1,20 +1,18 @@
 ---
 title: Классы представления (архитектура)
 ms.date: 09/17/2019
-f1_keywords:
-- vc.classes.view
 helpviewer_keywords:
 - form and record views [MFC]
 - view classes [MFC]
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 7235ccfea1f41dd185f0b5b6be9b39ea16250d94
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302974"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447167"
 ---
 # <a name="view-classes-architecture"></a>Классы представления (архитектура)
 
@@ -68,6 +66,6 @@ ms.locfileid: "74302974"
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 Представление, содержащее элемент управления "дерево" Windows (см. [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). Элемент управления "дерево" отображает значки и строки, расположенные в иерархии так же, как и левая панель проводника.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Обзор класса](../mfc/class-library-overview.md)

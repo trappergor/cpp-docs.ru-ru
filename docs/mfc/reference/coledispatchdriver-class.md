@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855630"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426633"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|Формирует объект `COleDispatchDriver`.|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: Аттачдиспатч](#attachdispatch)|Присоединяет `IDispatch`ное соединение к объекту `COleDispatchDriver`.|
 |[COleDispatchDriver:: Креатедиспатч](#createdispatch)|Создает подключение `IDispatch` и прикрепляет его к объекту `COleDispatchDriver`.|
@@ -65,19 +65,19 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: operator =](#operator_eq)|Копирует исходное значение в объект `COleDispatchDriver`.|
 |[COleDispatchDriver:: operator ЛПДИСПАТЧ](#operator_lpdispatch)|Обращается к базовому указателю `IDispatch`.|
 
 ### <a name="public-data-members"></a>Открытые элементы данных
 
-|Имя|Описание|
+|Имя|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|Указывает, следует ли освобождать `IDispatch` во время `ReleaseDispatch` или уничтожения объекта.|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|Указывает указатель на интерфейс `IDispatch`, прикрепленный к этому `COleDispatchDriver`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `COleDispatchDriver` не имеет базового класса.
 
@@ -117,7 +117,7 @@ void AttachDispatch(
 *бауторелеасе*<br/>
 Определяет, следует ли освободить диспетчер, когда этот объект выходит из области действия.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция освобождает все указатели `IDispatch` , которые уже присоединены к объекту `COleDispatchDriver` .
 
@@ -146,7 +146,7 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 *диспатчсрк*<br/>
 Ссылка на существующий объект `COleDispatchDriver`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Форма `COleDispatchDriver`(`LPDISPATCH lpDispatch`, **BOOL**`bAutoRelease` = **true**) соединяет интерфейс [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) .
 
@@ -203,7 +203,7 @@ LPDISPATCH DetachDispatch();
 
 Указатель на ранее присоединенный объект OLE `IDispatch`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `IDispatch` не выпущен.
 
@@ -272,13 +272,13 @@ void AFX_CDECL InvokeHelper(
 *...*<br/>
 Список переменных параметров типов, указанных в *пбпараминфо*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Параметр *пбпараминфо* задает типы параметров, передаваемых методу или свойству. Переменный список аргументов представлен в объявлении синтаксиса как **...** .
 
 Возможные значения для аргумента *втрет* взяты из перечисления VARENUM. Возможны следующие значения:
 
-|Символ|Тип возвращаемого значения|
+|Символ|Тип возвращаемых данных|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -312,7 +312,7 @@ void AFX_CDECL InvokeHelper(
 BOOL m_bAutoRelease;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию в конструкторе для `m_bAutoRelease` задано значение TRUE.
 
@@ -330,7 +330,7 @@ BOOL m_bAutoRelease;
 LPDISPATCH m_lpDispatch;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Элемент данных `m_lpDispatch` является открытой переменной типа ЛПДИСПАТЧ.
 
@@ -373,7 +373,7 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если для этого соединения задано автоматическое освобождение, эта функция вызывает `IDispatch::Release` перед освобождением интерфейса.
 
@@ -406,7 +406,7 @@ void AFX_CDECL SetProperty(
 
 [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пример CALCDRIV в MFC](../../overview/visual-cpp-samples.md)<br/>
 [Пример ACDUAL библиотеки MFC](../../overview/visual-cpp-samples.md)<br/>

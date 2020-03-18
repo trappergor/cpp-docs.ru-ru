@@ -1,19 +1,16 @@
 ---
 title: '> &lt;исключений (C++ комментарии к документации)'
 ms.date: 11/04/2016
-f1_keywords:
-- exception
-- <exception>
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d56e0ce7c892cfd9fd909b5268043d77929bd43c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988291"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439860"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -34,10 +31,10 @@ ms.locfileid: "74988291"
 
 Дополнительные сведения о создании ссылки cref на универсальный тип см. в разделе [\<see>](see-visual-cpp.md).
 
-*description*<br/>
+*Описание*<br/>
 Описание.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](doc-process-documentation-comments-c-cpp.md).
 
@@ -67,6 +64,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Документация XML](xml-documentation-visual-cpp.md)

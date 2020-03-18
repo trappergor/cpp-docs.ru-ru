@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _wexeclpe
-- execlpe
 - wexeclpe
 - _execlpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0783e07c945de7d65a11247efc6346c5e315c900
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941910"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443026"
 ---
 # <a name="_execlpe-_wexeclpe"></a>_execlpe, _wexeclpe
 
@@ -79,7 +78,7 @@ intptr_t _wexeclpe(
 
 В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение, равное-1, **указывает на ошибку** . в этом случае задается глобальная переменная «пробуждение».
 
-|**значение по** значению|Описание|
+|**значение по** значению|Description|
 |-------------------|-----------------|
 |**E2BIG**|Пространство, требуемое для аргументов и параметров среды, превышает 32 КБ.|
 |**EACCES**|Указанный файл имеет нарушение блокировки или общего доступа.|
@@ -91,7 +90,7 @@ intptr_t _wexeclpe(
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций загружает и выполняет новый процесс и передает каждый аргумент командной строки как отдельный параметр, а также передает массив указателей на параметры среды. Эти функции используют переменную среды **path** для поиска файла, который нужно выполнить.
 
@@ -99,18 +98,18 @@ intptr_t _wexeclpe(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|Необязательный заголовок|
+|Компонент|Обязательный заголовок|Необязательный заголовок|
 |--------------|---------------------|---------------------|
 |**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<process.h> или \<wchar.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в разделе [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>

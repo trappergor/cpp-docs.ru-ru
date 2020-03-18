@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 f1_keywords:
 - CByteArray
 - AFXCOLL/CByteArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CByteArray::CByteArray
+- AFXCOLL/CByteArray::Add
+- AFXCOLL/CByteArray::Append
+- AFXCOLL/CByteArray::Copy
+- AFXCOLL/CByteArray::ElementAt
+- AFXCOLL/CByteArray::FreeExtra
+- AFXCOLL/CByteArray::GetAt
+- AFXCOLL/CByteArray::GetCount
+- AFXCOLL/CByteArray::GetData
+- AFXCOLL/CByteArray::GetSize
+- AFXCOLL/CByteArray::GetUpperBound
+- AFXCOLL/CByteArray::InsertAt
+- AFXCOLL/CByteArray::IsEmpty
+- AFXCOLL/CByteArray::RemoveAll
+- AFXCOLL/CByteArray::RemoveAt
+- AFXCOLL/CByteArray::SetAt
+- AFXCOLL/CByteArray::SetAtGrow
+- AFXCOLL/CByteArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CByteArray [MFC], CByteArray
+- CByteArray [MFC], Add
+- CByteArray [MFC], Append
+- CByteArray [MFC], Copy
+- CByteArray [MFC], ElementAt
+- CByteArray [MFC], FreeExtra
+- CByteArray [MFC], GetAt
+- CByteArray [MFC], GetCount
+- CByteArray [MFC], GetData
+- CByteArray [MFC], GetSize
+- CByteArray [MFC], GetUpperBound
+- CByteArray [MFC], InsertAt
+- CByteArray [MFC], IsEmpty
+- CByteArray [MFC], RemoveAll
+- CByteArray [MFC], RemoveAt
+- CByteArray [MFC], SetAt
+- CByteArray [MFC], SetAtGrow
+- CByteArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-ms.openlocfilehash: b1c48e087052308dfb6b27275c5b4997ed9cca7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2453e7c040b9101f9c3a3b018e274b16e76ebea7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279129"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446346"
 ---
 # <a name="cbytearray-class"></a>Класс CByteArray
 
@@ -59,9 +59,9 @@ ms.locfileid: "62279129"
 class CByteArray : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-Функции-члены `CByteArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить БАЙТ.
+Функции элементов `CByteArray` похожи на функции членов класса [кобаррай](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Когда вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, подставьте байт.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,48 +71,48 @@ class CByteArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
+|[CByteArray:: CByteArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на байтов в массиве.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
+|[CByteArray:: Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
+|[CByteArray:: Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
+|[CByteArray:: Copy](../../mfc/reference/cobarray-class.md#copy)|Копирует другой массив в этот массив. При необходимости размер массива увеличивается.|
+|[CByteArray:: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Возвращает временную ссылку на байт в массиве.|
+|[CByteArray:: Фриекстра](../../mfc/reference/cobarray-class.md#freeextra)|Освобождает всю неиспользуемую память сверх текущей верхней границы.|
+|[CByteArray:: GetAt](../../mfc/reference/cobarray-class.md#getat)|Возвращает значение по указанному индексу.|
+|[CByteArray:: NOCOUNT](../../mfc/reference/cobarray-class.md#getcount)|Возвращает количество элементов в массиве.|
+|[CByteArray:: GetData](../../mfc/reference/cobarray-class.md#getdata)|Разрешает доступ к элементам в массиве. Может иметь значение NULL.|
+|[CByteArray:: DataSize](../../mfc/reference/cobarray-class.md#getsize)|Возвращает количество элементов в массиве.|
+|[CByteArray:: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Возвращает самый большой допустимый индекс.|
+|[CByteArray:: Инсертат](../../mfc/reference/cobarray-class.md#insertat)|Вставляет элемент (или все элементы в другом массиве) по указанному индексу.|
+|[CByteArray:: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Определяет, пуст ли массив.|
+|[CByteArray:: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Удаляет все элементы из этого массива.|
+|[CByteArray:: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Удаляет элемент по указанному индексу.|
+|[CByteArray:: SetAt](../../mfc/reference/cobarray-class.md#setat)|Задает значение для указанного индекса. Размер массива не увеличивается.|
+|[CByteArray:: Сетатгров](../../mfc/reference/cobarray-class.md#setatgrow)|Задает значение для указанного индекса. При необходимости размер массива увеличивается.|
+|[CByteArray:: SetSize](../../mfc/reference/cobarray-class.md#setsize)|Задает число элементов, которые будут храниться в этом массиве.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
+|[Оператор CByteArray:: operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CByteArray` включает в себя IMPLEMENT_SERIAL-макрос для поддержки сериализации и записи элементов в дамп. Массив байтов, хранящегося в архив, либо с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функция-член, каждый элемент является, в свою очередь, сериализации.
+`CByteArray` включает макрос IMPLEMENT_SERIAL для поддержки сериализации и дампа его элементов. Если массив байтов хранится в архиве с помощью перегруженного оператора вставки ( **<<** ) или функции-члена `Serialize`, каждый элемент в свою очередь сериализуется.
 
 > [!NOTE]
 >  Перед работой с массивом используйте функцию `SetSize`, чтобы определить его размер и выделить под него память. Если не использовать функцию `SetSize`, при добавлении элементов в массив он будет часто копироваться и для него снова и снова будет повторно выделяться память. Это может привести к ухудшению производительности и фрагментации памяти.
 
-Если требуется отладить выходные данные из отдельных элементов в массиве, необходимо задать глубину `CDumpContext` , который больше или равно 1.
+Если требуется вывод отладки из отдельных элементов в массиве, необходимо задать глубину `CDumpContext` объекта равным 1 или больше.
 
-Дополнительные сведения об использовании `CByteArray`, см. в статье [коллекций](../../mfc/collections.md).
+Дополнительные сведения об использовании `CByteArray`см. в статье [коллекции](../../mfc/collections.md)статей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -122,9 +122,9 @@ class CByteArray : public CObject
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxcoll.h
+**Заголовок:** афксколл. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

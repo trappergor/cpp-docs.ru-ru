@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424743"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441636"
 ---
 # <a name="hash_map-class"></a>Класс hash_map
 
@@ -124,7 +124,7 @@ class hash_map
 Тип, который включает два объекта-функции, один из классов compare, который может сравнить значения двух элементов как ключей сортировки, чтобы определить их относительный порядок, и хэш-функцию, которая является унарным предикатом, который сопоставляет значения ключей элементов с целыми числами без знака типа `size_t`. Этот аргумент является необязательным, и hash_compare <`Key`, меньше <`Key`>, > является значением по умолчанию.
 
 *Распределитель*\
-Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_map. Этот аргумент является необязательным, а значение по умолчанию — allocator<pair <const `Key`, `Type`>>.
+Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_map. Этот аргумент является необязательным, а значение по умолчанию — распределитель\<пары < const `Key`, `Type`> >.
 
 ## <a name="remarks"></a>Remarks
 

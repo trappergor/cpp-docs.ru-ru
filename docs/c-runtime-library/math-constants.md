@@ -2,7 +2,7 @@
 title: Математические константы
 ms.date: 11/04/2016
 f1_keywords:
-- c.constants
+- c.constants.math
 helpviewer_keywords:
 - M_PI constant
 - M_PI_2 constant
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: bd17004585e0238f36b939b19379ef62e349fac9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744166"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438265"
 ---
 # <a name="math-constants"></a>Математические константы
 
@@ -41,13 +41,13 @@ ms.locfileid: "57744166"
 #include <math.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Определены символические обозначения для следующих величин:
 
 |Символ|Выражение|Значение|
 |------------|----------------|-----------|
-|M_E|й|2.71828182845904523536|
+|M_E|Д.|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|
 |M_LOG10E|log10(e)|0.434294481903251827651|
 |M_LN2|ln(2)|0.693147180559945309417|
@@ -65,6 +65,6 @@ ms.locfileid: "57744166"
 
 Для проектов, построенных в режиме выпуска, файл ATLComTime.h уже включает math.h. Если вы используете в проекте одну или несколько математических констант, а также файл ATLComTime.h, `_USE_MATH_DEFINES` необходимо определять раньше, чем включается ATLComTime.h.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные константы](../c-runtime-library/global-constants.md)

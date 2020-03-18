@@ -1,8 +1,6 @@
 ---
 title: Сочетания клавиш (C++)
 ms.date: 02/14/2019
-f1_keywords:
-- vc.editors.accelerator
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
@@ -10,81 +8,81 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362391"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445400"
 ---
 # <a name="accelerator-keys-c"></a>Сочетания клавиш (C++)
 
 ## <a name="predefined-accelerator-keys"></a>Стандартные сочетания клавиш
 
-Существуют стандартные сочетания клавиш, которые могут быть использованы в проектах приложений Windows. Некоторые из этих виртуальных клавиш предназначены для среды Windows. Другие поддерживают браузера или приложения на базе Юникода. Вы можете использовать любую из этих клавиш в любом сочетании.
+Существуют стандартные сочетания клавиш, которые могут быть использованы в проектах приложений Windows. Некоторые из этих виртуальных клавиш предназначены для среды Windows. Другие поддерживают браузер или приложения для Юникода. Вы можете использовать любую из этих клавиш в любом сочетании.
 
-|Ключ|Описание|
+|Клавиши|Description|
 |---------|-----------------|
-|VK_ACCEPT|(IME) примите|
-|VK_BROWSER_BACK|(Windows) Браузер, **обратно** ключ|
-|VK_BROWSER_FAVORITES|(Windows) Браузер, **"Избранное"** ключ|
-|VK_BROWSER_FORWARD|(Windows) Браузер, **вперед** ключ|
-|VK_BROWSER_HOME|(Windows) Браузер, **запустить** и **Главная** ключ|
-|VK_BROWSER_REFRESH|(Windows) Браузер, **обновить** ключ|
-|VK_BROWSER_SEARCH|(Windows) Браузер, **поиска** ключ|
-|VK_BROWSER_STOP|(Windows) Браузер, **остановить** ключ|
-|VK_CONVERT|Convert (IME)|
-|VK_FINAL|Последний режим (IME)|
-|VK_HANGUEL|(IME) Режим "хангул" (поддерживается для обеспечения совместимости, используйте клавишу VK_HANGUL.)|
-|VK_HANGUL|(IME) Режим "хангыль"|
-|VK_HANJA|(IME) Режим "ханджа"|
-|VK_JUNJA|(IME) Режим "Джунджа"|
-|VK_KANA|(IME) Режим "кана"|
-|VK_KANJI|(IME) Режим "Кандзи"|
-|VK_LAUNCH_APP1|(Windows) **Запуска приложения 1** ключ|
-|VK_LAUNCH_APP2|(Windows) **Запуска приложения 2** ключ|
-|VK_LAUNCH_MAIL|(Windows) **Запуска почты** ключ|
-|VK_LAUNCH_MEDIA_SELECT|(Windows) **Выбора носителя** ключ|
-|VK_LCONTROL|**Ctrl слева** ключ|
-|VK_LMENU|**Меню с левой стороны** ключ|
-|VK_LSHIFT|**Shift слева** ключ|
-|VK_MEDIA_NEXT_TRACK|(Windows) **Следующая запись** ключ|
-|VK_MEDIA_PLAY_PAUSE|(Windows) **Мультимедиа воспроизведение/пауза** ключ|
-|VK_MEDIA_PREV_TRACK|(Windows) **Предыдущая запись** ключ|
-|VK_MEDIA_STOP|(Windows) **Остановить мультимедиа** ключ|
-|VK_MODECHANGE|Запрос на изменение режима (IME)|
-|VK_NONCONVERT|Без преобразования (IME)|
-|VK_OEM_1|(Windows) На стандартной клавиатуре США **;:** ключ|
-|VK_OEM_102|(Windows) Ключ угловой скобкой или обратной косой чертой на 102-клавишной клавиатуре RT|
-|VK_OEM_2|(Windows) На стандартной клавиатуре США **/?** клавиша|
-|VK_OEM_3|(Windows) На стандартной клавиатуре США **`~** ключ|
-|VK_OEM_4|(Windows) На стандартной клавиатуре США **[{** ключ|
-|VK_OEM_5|(Windows) На стандартной клавиатуре США **\\ &#124;** ключ|
-|VK_OEM_6|(Windows) На стандартной клавиатуре США **]}** ключ|
-|VK_OEM_7|(Windows) На стандартной клавиатуре США, раздел «один кавычка/двойная кавычка»|
-|VK_OEM_COMMA|(Windows) Для любой страны или региона **,** ключ|
-|VK_OEM_MINUS|(Windows) Для любой страны или региона **-** ключ|
-|VK_OEM_PERIOD|(Windows) Для любой страны или региона **.** клавиша|
-|VK_OEM_PLUS|(Windows) Для любой страны или региона **+** ключ|
-|VK_PACKET|(Windows) Используется для передачи символов Юникода, как будто они являются нажатий клавиш.|
-|VK_RCONTROL|**Справа Ctrl** ключ|
-|VK_RMENU|**Меню справа** ключ|
-|VK_RSHIFT|**Левая клавиша Shift** ключ|
-|VK_SLEEP|**Компьютер в спящем режиме** ключ|
-|VK_VOLUME_DOWN|(Windows) **Уменьшения громкости** ключ|
-|VK_VOLUME_MUTE|(Windows) **Звука** ключ|
-|VK_VOLUME_UP|(Windows) **Увеличения громкости** ключ|
-|VK_XBUTTON1|(Windows) **X1** кнопки мыши|
-|VK_XBUTTON2|(Windows) **X2** кнопки мыши|
+|VK_ACCEPT|(IME) Accept|
+|VK_BROWSER_BACK|Windows Браузер, клавиша **возврата**|
+|VK_BROWSER_FAVORITES|Windows Браузер, ключ **"Избранное"**|
+|VK_BROWSER_FORWARD|Windows Браузер, клавиша " **вперед** "|
+|VK_BROWSER_HOME|Windows Обозреватель, **начальный** и **домашний** ключи|
+|VK_BROWSER_REFRESH|Windows Браузер, ключ **обновления**|
+|VK_BROWSER_SEARCH|Windows Браузер, ключ **поиска**|
+|VK_BROWSER_STOP|Windows Браузер, клавиша **завершения**|
+|VK_CONVERT|(IME) Convert|
+|VK_FINAL|(IME) окончательный режим|
+|VK_HANGUEL|ВВОДА Режим хангуел (поддерживается для обеспечения совместимости, используйте VK_HANGUL)|
+|VK_HANGUL|ВВОДА Режим хангыль|
+|VK_HANJA|ВВОДА Режим ханджа|
+|VK_JUNJA|ВВОДА Режим жунжа|
+|VK_KANA|ВВОДА Режим Каны|
+|VK_KANJI|ВВОДА Режим кандзи|
+|VK_LAUNCH_APP1|Windows **Запустить ключ приложения 1**|
+|VK_LAUNCH_APP2|Windows **Запустить ключ приложения 2**|
+|VK_LAUNCH_MAIL|Windows **Запустить почтовый** ключ|
+|VK_LAUNCH_MEDIA_SELECT|Windows **Выбор ключа носителя**|
+|VK_LCONTROL|Клавиша **CTRL слева**|
+|VK_LMENU|Клавиша **меню слева**|
+|VK_LSHIFT|Клавиша **SHIFT слева**|
+|VK_MEDIA_NEXT_TRACK|Windows Ключ **следующей записи**|
+|VK_MEDIA_PLAY_PAUSE|Windows **Воспроизвести или приостановить ключ носителя**|
+|VK_MEDIA_PREV_TRACK|Windows Ключ **предыдущей записи**|
+|VK_MEDIA_STOP|Windows **Выключить ключ носителя**|
+|VK_MODECHANGE|(IME) запрос на изменение режима|
+|VK_NONCONVERT|(IME) не преобразовывать|
+|VK_OEM_1|Windows Для стандартной клавиатуры США клавиша **;:**|
+|VK_OEM_102|Windows Либо ключ угловой скобки, либо клавиша обратной косой черты на клавиатуре RT 102.|
+|VK_OEM_2|Windows Для стандартной клавиатуры США в поле **/?** ключ|
+|VK_OEM_3|Windows Для стандартной клавиатуры США **`~** ключ|
+|VK_OEM_4|Windows Для стандартной клавиатуры США параметр **[{** Key|
+|VK_OEM_5|Windows Для стандартной клавиатуры США **\\&#124;**  ключ|
+|VK_OEM_6|Windows Для стандартной клавиатуры США клавиша **]}**|
+|VK_OEM_7|Windows Для стандартной клавиатуры США — клавиша "одинарная кавычка/двойная кавычка"|
+|VK_OEM_COMMA|Windows Для любой страны или региона **, ключ**|
+|VK_OEM_MINUS|Windows Для любой страны или региона **-** ключ|
+|VK_OEM_PERIOD|Windows Для любой страны или региона **.** ключ|
+|VK_OEM_PLUS|Windows Для любой страны или региона **+** ключ|
+|VK_PACKET|Windows Используется для передачи символов Юникода, как если бы они были нажатиями клавиш.|
+|VK_RCONTROL|Клавиша **CTRL справа**|
+|VK_RMENU|Клавиша контекстного **меню**|
+|VK_RSHIFT|Клавиша **SHIFT справа**|
+|VK_SLEEP|Ключ **спящего режима компьютера**|
+|VK_VOLUME_DOWN|Windows Ключ **уменьшения громкости**|
+|VK_VOLUME_MUTE|Windows Ключ **отключения тома**|
+|VK_VOLUME_UP|Windows Ключ **уровня громкости**|
+|VK_XBUTTON1|Windows Кнопка мыши **x1**|
+|VK_XBUTTON2|Windows Кнопка мыши в **x2**|
 
-## <a name="accelerator-key-association"></a>Сопоставление ключа сочетаний клавиш
+## <a name="accelerator-key-association"></a>Связывание сочетаний клавиш
 
-Во многих случаях требуется, чтобы пункт меню и сочетание клавиш выдавали одну и ту же команду. Это можно сделать, назначив один и тот же идентификатор ресурса (ID) пункту меню и записи в таблице сочетаний клавиш приложения. Затем можно изменить заголовок пункта меню, чтобы показать имя сочетания клавиш. Дополнительные сведения о пунктах меню и сочетаний клавиш см. в разделе [команды меню](../windows/associating-a-menu-command-with-an-accelerator-key.md).
+Во многих случаях требуется, чтобы пункт меню и сочетание клавиш выдавали одну и ту же команду. Это действие выполняется путем назначения одного идентификатора ресурса (ID) элементу меню и записи в таблице сочетаний клавиш приложения. Затем можно изменить заголовок пункта меню, чтобы показать имя сочетания клавиш. Дополнительные сведения об элементах меню и сочетаниях клавиш см. в разделе [команды меню](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
 ## <a name="requirements"></a>Требования
 
 Win32
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Редактор сочетаний клавиш](../windows/accelerator-editor.md)<br/>

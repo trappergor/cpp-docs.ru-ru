@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426705"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446461"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -340,11 +340,11 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *нфлагс*<br/>
 Содержит один или несколько следующих флагов:
 
-   - `afxRegInsertable` позволяет элементу управления отображаться в диалоговом окне «Вставка объекта» для объектов OLE.
-   - `afxRegApartmentThreading` задает для потоковой модели в реестре значение ThreadingModel = апартамент.
-   - `afxRegFreeThreading` задает для модели потоков в реестре значение ThreadingModel = Free.
+- `afxRegInsertable` позволяет элементу управления отображаться в диалоговом окне «Вставка объекта» для объектов OLE.
+- `afxRegApartmentThreading` задает для потоковой модели в реестре значение ThreadingModel = апартамент.
+- `afxRegFreeThreading` задает для модели потоков в реестре значение ThreadingModel = Free.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+Можно объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading`, чтобы задать ThreadingModel = оба. Дополнительные сведения о регистрации модели потоков см. в разделе [InprocServer32](/windows/win32/com/inprocserver32) в Windows SDK.
 
 компоненты *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*, *B8* класса CLSID.
 

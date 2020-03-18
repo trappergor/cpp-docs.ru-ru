@@ -5,23 +5,22 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 - VC.Project.VCCLCompilerTool.ForcedIncludeFiles
 - VC.Project.VCCLWCECompilerTool.ForcedIncludeFiles
-- /fi
 helpviewer_keywords:
 - FI compiler option [C++]
 - -FI compiler option [C++]
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6460f75e2cad81bc1dcc540e3c687de5d0dc0d32
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293060"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439799"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (имя принудительно включаемого файла)
 
-Дает препроцессору указание для обработки указанного заголовка файла.
+Приводит к обработке препроцессором указанного файла заголовка.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,25 +28,25 @@ ms.locfileid: "62293060"
 /FI[ ]pathname
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот параметр действует так же как и при указании файла в двойные кавычки в `#include` директив в первой строке каждый исходный файл, заданный в командной строке, в переменной среды компилятора CL или в командный файл. При использовании нескольких **/FI** "Параметры", "файлы включены в порядке, они обрабатываются CL.
+Этот параметр имеет тот же результат, что и при указании файла с двойными кавычками в директиве `#include` в первой строке каждого исходного файла, указанного в командной строке, в переменной среды CL или в командном файле. При использовании нескольких параметров **/Fi** файлы включаются в том порядке, в котором они обрабатываются компилятором CL.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
-1. Нажмите кнопку **Дополнительно** страницу свойств.
+1. Перейдите на страницу свойств **Дополнительно** .
 
-1. Изменить **принудительно включаемого файла** свойство.
+1. Измените свойство **принудительно включаемого файла** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
 - См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры выходного файла (/F)](output-file-f-options.md)<br/>
 [Параметры компилятора MSVC](compiler-options.md)<br/>

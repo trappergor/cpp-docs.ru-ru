@@ -1,5 +1,5 @@
 ---
-title: Справочные материалы (среда выполнения с параллелизмом)
+title: Справочник (среда выполнения с параллелизмом)
 ms.date: 11/04/2016
 f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_My_segment
@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180151"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446289"
 ---
-# <a name="reference-concurrency-runtime"></a>Справочные материалы (среда выполнения с параллелизмом)
+# <a name="reference-concurrency-runtime"></a>Справочник (среда выполнения с параллелизмом)
 
-Этот раздел содержит справочные сведения о среде выполнения с параллелизмом.
+В этом разделе содержатся справочные сведения по среда выполнения с параллелизмом.
 
 > [!Note]
-> C++ Стандарте языка использование идентификаторов, начинающихся с символа подчеркивания (_) для реализаций, таких как библиотеки. Не используйте такие имена в коде. Поведение элементов кода, имена которых соответствуют этому соглашению, не гарантируется и может быть изменено в будущем. По этим причинам такие элементы кода исключены из документации по среде выполнения с параллелизмом.
+> C++ Языковой стандарт резервирует использование идентификаторов, начинающихся с символа подчеркивания (_) для таких реализаций, как библиотеки. Не используйте такие имена в коде. Поведение элементов кода, имена которых соответствуют этому соглашению, не гарантируется и может быть изменено в будущем. По этим причинам такие элементы кода пропускаются из документации по среда выполнения с параллелизмом.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
-Пространство имен concurrency предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, является платформой параллельного программирования для C++. Для получения дополнительной информации см. [Concurrency Runtime](../concurrency-runtime.md).
+Пространство имен Concurrency предоставляет классы и функции, которые предоставляют доступ к среда выполнения с параллелизмом, платформе параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../concurrency-runtime.md) (Среда выполнения с параллелизмом).
 
-[пространство имен std](std-namespace.md)
+[стандартное пространство имен](std-namespace.md)
 
-[пространство имен пространство stdx](stdx-namespace.md)
+[пространство имен стдкс](stdx-namespace.md)

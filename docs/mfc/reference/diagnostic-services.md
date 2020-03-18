@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426753"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446209"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 
@@ -109,6 +109,7 @@ _AFX_SECURE_NO_WARNINGS
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - Файл IMAGEHLP. DLL должна быть указана в пути. Если эта библиотека DLL отсутствует, функция отобразит сообщение об ошибке. Сведения о наборе функций, предоставляемых IMAGEHLP, см. в разделе [Библиотека справки по изображениям](/windows/win32/Debug/image-help-library) .
 
 - Модули, содержащие кадры в стеке, должны включать отладочную информацию. Если они не содержат отладочную информацию, функция все равно создаст трассировку стека, но трассировка будет менее подробной.
-  ### <a name="requirements"></a>Требования
+
+### <a name="requirements"></a>Требования
 
 **Заголовок:** afx.h
 

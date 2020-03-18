@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455246"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446200"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>Класс piecewise_constant_distribution
+# <a name="piecewise_constant_distribution-class"></a>Класс piecewise_constant_distribution
 
 Формирует кусочно-постоянное распределение с меняющимися интервалами ширины и одинаковой вероятностью в каждом интервале.
 
@@ -80,10 +80,10 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
+*Реалтипе*\
 Тип результата с плавающей точкой, по умолчанию, равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Выборочное распределение использует меняющиеся интервалы ширины с одинаковой вероятностью в каждом интервале. Сведения о других выборочных распределениях см. в разделах [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md) и [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
@@ -98,7 +98,7 @@ public:
 
 Функция свойства `densities()` возвращает значение типа `vector<result_type>` с хранимыми плотностями для каждого набора интервалов, которые вычисляются в соответствии с весами, заданными в параметрах конструктора.
 
-Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
+Член свойства `param()` устанавливает или возвращает пакет хранимого пакета распределения `param_type`.
 
 Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.
 
@@ -214,7 +214,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:** \<случайный >
 
 **Пространство имен:** std
 
@@ -257,10 +257,10 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *firstW*\
 Итератор ввода первого элемента в диапазоне весов.
 
-*диапазона*\
+*интервалы*\
 Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.
 
-*расчета*\
+*количество*\
 Количество элементов в диапазоне распределения.
 
 *xmin*\
@@ -272,14 +272,15 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *веигхтфунк*\
 Объект, представляющий функцию вероятности распределения. Оба параметра и возвращаемое значение должны быть преобразованы в **Double**.
 
-*ParM*\
+*parm*\
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор по умолчанию задает хранимые параметры таким образом, чтобы существовал один интервал от 0 до 1 с плотностью вероятности 1.
 
 Конструктор диапазона итератора
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 создает объект распределения с интервалами от итераторов в последовательности [`firstI`, `lastI`) и соответствующей последовательности весов начиная с `firstW`.
 
 Конструктор списка инициализаторов
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 Создает объект распределения с интервалами между *интервалами* списка инициализаторов и весовыми коэффициентами, созданными из функции *веигхтфунк*.
 
 Конструктор, определенный как
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-конструирует объект *распределения с* интервалами равномерного распределения по [ `xmin,xmax`], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и возвращать , оба из которых могут быть преобразованы `double`в. **Предусловие:** `xmin < xmax`
+конструирует объект *распределения с равномерно* распределенными интервалами по сравнению с [`xmin,xmax`], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и иметь возвращаемое значение, которое можно преобразовать в `double`. **Предусловие:** `xmin < xmax`
 
 Конструктор, определенный как
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -338,13 +342,13 @@ struct param_type {
 
 Параметры конструктора см. в разделе [piecewise_constant_distribution](#piecewise_constant_distribution).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **Предусловие:** `xmin < xmax`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

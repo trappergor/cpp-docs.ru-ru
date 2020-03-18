@@ -1,8 +1,6 @@
 ---
 title: Классы контейнера OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - container classes [MFC]
@@ -11,43 +9,43 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61db5310637d13da2d2cc183f12f8f62aa60e328
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186014"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447655"
 ---
 # <a name="ole-container-classes"></a>Классы контейнера OLE
 
-Эти классы используются приложением-контейнером. Оба `COleLinkingDoc` и `COleDocument` управления наборами `COleClientItem` объектов. Вместо того чтобы наследование класса документов от `CDocument`, вы будете сделайте его производным от `COleLinkingDoc` или `COleDocument`, в зависимости от того, поддержка для ссылки на объекты, внедренные в документ.
+Эти классы используются приложениями контейнеров. `COleLinkingDoc` и `COleDocument` управляют коллекциями `COleClientItem`ных объектов. Вместо того, чтобы создавать производный класс документа от `CDocument`, вы будете наследовать его от `COleLinkingDoc` или `COleDocument`в зависимости от того, требуется ли поддержка ссылок на объекты, внедренные в документ.
 
-Используйте `COleClientItem` объект для представления каждого элемента OLE в документе, который внедрен из другого документа или ссылку на другой документ.
+Используйте объект `COleClientItem` для представления каждого элемента OLE в документе, внедренного из другого документа, или ссылки на другой документ.
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
-Поддерживает вложение активного документа.
+Поддерживает включение активных документов.
 
-[COleDocument](../mfc/reference/coledocument-class.md)<br/>
-Используется для реализации составных документов, а также поддержка основной контейнер. Выступает в качестве контейнера для классов, производным от `CDocItem`. Этот класс используется как базовый класс для контейнера, документы и является базовым классом для `COleServerDoc`.
+[коледокумент](../mfc/reference/coledocument-class.md)<br/>
+Используется для реализации составного документа, а также для поддержки базовых контейнеров. Служит контейнером для классов, производных от `CDocItem`. Этот класс может использоваться в качестве базового класса для документов контейнера и является базовым классом для `COleServerDoc`.
 
-[COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
-Класс, производный от `COleDocument` , предоставляет инфраструктуру для связывания. Необходимо создать производный классы документов для приложения-контейнеры от этого класса, а не из `COleDocument` при необходимости для поддержки ссылки на внедренные объекты.
+[колелинкингдок](../mfc/reference/colelinkingdoc-class.md)<br/>
+Класс, производный от `COleDocument`, который предоставляет инфраструктуру для компоновки. Классы документов для приложений контейнера следует наследовать от этого класса, а не `COleDocument`, если требуется, чтобы они поддерживали ссылки на внедренные объекты.
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-Поддерживает список клиентских элементов управления OLE, которые в элементе управления форматированным редактированием. Используется с [CRichEditView](../mfc/reference/cricheditview-class.md) и [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).
+Поддерживает список элементов OLE, которые находятся в элементе управления Rich Edit. Используется с [CRichEditView](../mfc/reference/cricheditview-class.md) и [кричедиткнтритем](../mfc/reference/cricheditcntritem-class.md).
 
-[CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-Абстрактный базовый класс для `COleClientItem` и `COleServerItem`. Объекты классов, производные от `CDocItem` представляют частей документов.
+[кдоЦитем](../mfc/reference/cdocitem-class.md)<br/>
+Абстрактный базовый класс `COleClientItem` и `COleServerItem`. Объекты классов, производных от `CDocItem`, представляют части документов.
 
 [COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
-Класс элемента клиента, представляющий клиентского подключения для внедренного или связанного элемента OLE. Производные элементы клиента от этого класса.
+Класс клиентского элемента, представляющий сторону клиента соединения с внедренным или связанным элементом OLE. Наследовать клиентские элементы от этого класса.
 
-[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Предоставляет клиентский доступ к объект OLE, элементов, хранящихся в элементе управления "rich edit" при использовании с `CRichEditView` и `CRichEditDoc`.
+[кричедиткнтритем](../mfc/reference/cricheditcntritem-class.md)<br/>
+Предоставляет доступ на стороне клиента к элементу OLE, хранящемуся в элементе управления Rich Edit, при использовании с `CRichEditView` и `CRichEditDoc`.
 
 [COleException](../mfc/reference/coleexception-class.md)<br/>
-Исключение, полученный в результате ошибки во время обработки OLE. Этот класс используется, контейнеры и серверы.
+Исключение, полученное при сбое обработки OLE. Этот класс используется как контейнерами, так и серверами.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Обзор класса](../mfc/class-library-overview.md)

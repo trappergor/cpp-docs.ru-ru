@@ -1,32 +1,30 @@
 ---
 title: Классы сокетов Windows
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.net
 helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 4abdd8f8fbfc115b5014ffd0b3a37df357852b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f1b7b2b6674b4a5f8c8f7bff6c5fa239715f459
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371806"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445980"
 ---
 # <a name="windows-sockets-classes"></a>Классы сокетов Windows
 
-Сокеты Windows позволяют сети зависит от протоколов для обмена данными между двумя компьютерами. Эти сокеты может быть синхронным (программа ожидает, пока выполняется обмен данными) или асинхронным (программа продолжает выполнение, пока происходит обмен данными).
+Сокеты Windows обеспечивают независимый от сетевого протокола способ связи между двумя компьютерами. Эти сокеты могут быть синхронными (программа ожидает, пока связь не будет выполнена) или асинхронной (программа продолжит выполнение во время обмена данными).
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)<br/>
-Инкапсулирует API сокетов Windows в случае тонкой оболочки.
+Инкапсулирует API сокетов Windows в тонкой оболочке.
 
 [CSocket](../mfc/reference/csocket-class.md)<br/>
-Высокий уровень абстракции производным от `CAsyncSocket`. Он работает синхронно.
+Абстракция более высокого уровня, производная от `CAsyncSocket`. Он работает синхронно.
 
 [CSocketFile](../mfc/reference/csocketfile-class.md)<br/>
-Предоставляет `CFile` интерфейс сокетов Windows.
+Предоставляет интерфейс `CFile` для сокета Windows.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../mfc/class-library-overview.md)
+[Обзор класса](../mfc/class-library-overview.md)

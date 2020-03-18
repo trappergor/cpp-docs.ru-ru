@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- spawnle
 - _spawnle
 - wspawnle
 - _wspawnle
@@ -34,12 +33,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: a0225d007bfc69d88982b4c130410bc6be9abc06
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9d3c97f5fb7f98a2c045b3f5657211b3866c4b78
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947968"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442727"
 ---
 # <a name="_spawnle-_wspawnle"></a>_spawnle, _wspawnle
 
@@ -99,7 +98,7 @@ intptr_t _wspawnle(
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций создает и выполняет новый процесс и передает каждый аргумент командной строки как отдельный параметр, а также передает массив указателей на параметры среды.
 
@@ -112,13 +111,13 @@ intptr_t _wspawnle(
 |**_spawnle**|\<process.h>|
 |**_wspawnle**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в разделе [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [Функции _spawn, _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946259"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443677"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -66,9 +65,9 @@ __int64 _telli64(
 
 Возвращаемое значение-1L указывает на ошибку. Если *Handle* является недопустимым дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **значение EBADF** и возвращают-1L.
 
-Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Функция **_tell** возвращает текущую позиции указателя файла (при наличии), связанного с аргументом *Handle* . Позиция выражается в виде количества байт от начала файла. Для функции **_telli64** это значение выражается в виде 64-разрядного целого числа.
 
@@ -78,7 +77,7 @@ __int64 _telli64(
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -120,13 +119,13 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

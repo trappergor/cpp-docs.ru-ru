@@ -2,19 +2,17 @@
 title: Совместимость
 description: Описывает совместимость библиотеки Microsoft универсального времени выполнения C (UCRT) со стандартной библиотекой C, POSIX, безопасностью CRT и приложениями Магазина.
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988727"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443488"
 ---
 # <a name="compatibility"></a>Совместимость
 
@@ -30,10 +28,10 @@ ms.locfileid: "74988727"
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Приложения UWP, среда выполнения Windows и среда выполнения C](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|Описывает, когда подпрограммы UCRT несовместимы с универсальными приложениями Windows или приложениями Microsoft Store.|
-|[Совместимость ANSI с C](../c-runtime-library/ansi-c-compliance.md)|Описывает именования, соответствующие стандартам, в UCRT.|
+|[Совместимость ANSI с C](../c-runtime-library/ansi-c-compliance.md)|Описывает именования, совместимые со стандартами, в UCRT.|
 |[UNIX](../c-runtime-library/unix.md)|Рекомендации по переносу программ в UNIX.|
 |[Платформы Windows (CRT)](../c-runtime-library/windows-platforms-crt.md)|Перечисление операционных систем, поддерживающих CRT.|
 |[Обратная совместимость](../c-runtime-library/backward-compatibility.md)|Описание сопоставлений старых имен CRT с новыми.|

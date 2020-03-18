@@ -1,20 +1,18 @@
 ---
 title: Обработка ошибок (CRT)
 ms.date: 11/04/2016
-f1_keywords:
-- c.errors
 helpviewer_keywords:
 - error handling, C routines for
 - logic errors
 - error handling, library routines
 - testing, for program errors
 ms.assetid: 125ac697-9eb0-4152-a440-b7842f23d97f
-ms.openlocfilehash: 7b3a5676c9297b1d7805f92b3a15cc71518ecd65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: d38aaf76a4901b12290782957db90049d815d278
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551223"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443321"
 ---
 # <a name="error-handling-crt"></a>Обработка ошибок (CRT)
 
@@ -22,7 +20,7 @@ ms.locfileid: "50551223"
 
 ## <a name="error-handling-routines"></a>Процедуры обработки ошибок
 
-|Подпрограмма|Использовать|
+|Подпрограмма|Использование|
 |-------------|---------|
 |Макрос [assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|Проверка на наличие ошибок в логике программы; доступен как в итоговой, так и в отладочной версии библиотек среды выполнения.|
 |Макросы [_ASSERT, _ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|Подобны **assert**, но доступны только в отладочных версиях библиотеки времени выполнения.|
@@ -34,6 +32,6 @@ ms.locfileid: "50551223"
 |[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|Изменяет **__error_mode** для определения отличного от используемого по умолчанию расположения, куда среда выполнения C записывает сообщение об ошибке для ошибок, которые могут вызвать завершение программы.|
 |[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|Задает обработчик для вызова чистой виртуальной функции.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)

@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: Описывает классы, функции и типы в заголовке filesystem стандартной C++ библиотеки.
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725686"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441711"
 ---
 # &lt;filesystem&gt;
 
@@ -42,7 +37,7 @@ using namespace std::experimental::filesystem::v1;
 
 Этот заголовок поддерживает файловые системы для одного из двух основных классов операционных систем размещения: Microsoft Windows и POSIX.
 
-Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Например:
+Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Пример:
 
 - Windows поддерживает несколько корневых имен, например `c:` или `\\network_name`. Файловая система состоит из леса деревьев, каждый из которых имеет собственный корневой каталог, например `c:\` или `\\network_name\`, и каждый с собственным текущим каталогом для заполнения относительного пути (не является абсолютным путем).
 
@@ -98,7 +93,7 @@ using namespace std::experimental::filesystem::v1;
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловойC++системе ()](../standard-library/file-system-navigation.md).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="classes"></a>Классы
 
@@ -111,7 +106,7 @@ using namespace std::experimental::filesystem::v1;
 |[класс recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы. Итератор может также просматривать подкаталоги.|
 |[класс file_status](../standard-library/file-status-class.md)|Создает оболочку для `file_type`.|
 
-### <a name="structs"></a>структурам;
+### <a name="structs"></a>Структуры
 
 |||
 |-|-|
@@ -129,12 +124,12 @@ using namespace std::experimental::filesystem::v1;
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file) , которое определяет действия в случае, если целевой файл уже существует.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file), которое определяет поведение в случае, если конечный файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Перечисляет параметры для функции `permissions`. |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

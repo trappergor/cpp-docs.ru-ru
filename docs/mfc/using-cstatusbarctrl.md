@@ -1,24 +1,22 @@
 ---
 title: Использование CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411699"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442332"
 ---
 # <a name="using-cstatusbarctrl"></a>Использование CStatusBarCtrl
 
-Можно использовать элемент управления строки состояния ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) для создания окна управления, которые отражают различные состояния сведения о приложении. В окне состояния можно разделить на части, которые отображают более одного типа данных.
+С помощью элемента управления "строка состояния" ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) можно создать окно управления, отражающее различные типы сведений о приложении. Окно состояния можно разделить на части, отображающие более одного типа информации.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
 
 - [Способы создания строки состояния](../mfc/methods-of-creating-a-status-bar.md)
 
@@ -32,6 +30,6 @@ ms.locfileid: "62411699"
 
 - [Использование всплывающих подсказок в объекте CStatusBarCtrl](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы управления](../mfc/controls-mfc.md)
