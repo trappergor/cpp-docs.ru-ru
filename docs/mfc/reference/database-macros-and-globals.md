@@ -14,36 +14,36 @@ helpviewer_keywords:
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
 ms.openlocfilehash: 47a1bb434801c24ab8eee048d9ef8f93793101cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323194"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426273"
 ---
 # <a name="database-macros-and-globals"></a>Макросы и глобальные объекты баз данных
 
-Макросы и глобальные объекты, перечисленные ниже применяются к приложениям баз данных на основе ODBC. Они не используются с приложениями на основе DAO.
+Указанные ниже макросы и глобальные приложения применимы к приложениям баз данных на основе ODBC. Они не используются в приложениях на основе DAO.
 
-Прежде чем 4.2 MFC, макросы `AFX_SQL_ASYNC` и `AFX_SQL_SYNC` дал возможность дать время для других процессов асинхронных операций. Начиная с MFC версии 4.2, реализация этих макросов, изменить, так как классы MFC ODBC, используемые только синхронные операции. Макрос `AFX_ODBC_CALL` были знакомы с MFC версии 4.2.
+До MFC 4,2 макросы `AFX_SQL_ASYNC` и `AFX_SQL_SYNC` предоставили асинхронным операциям возможность выдавать время другим процессам. Начиная с MFC 4,2, реализация этих макросов изменилась, так как классы ODBC MFC используют только синхронные операции. Макрос `AFX_ODBC_CALL` был впервые добавлен в MFC 4,2.
 
 ### <a name="database-macros"></a>Макросы базы данных
 
 |||
 |-|-|
-|[AFX_ODBC_CALL](#afx_odbc_call)|Вызывает функцию ODBC API, который возвращает `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` будет повторно вызывать функцию до его больше не возвращает `SQL_STILL_EXECUTING`.|
+|[AFX_ODBC_CALL](#afx_odbc_call)|Вызывает функцию API ODBC, которая возвращает `SQL_STILL_EXECUTING`. `AFX_ODBC_CALL` будет вызывать функцию повторно, пока она больше не возвратит `SQL_STILL_EXECUTING`.|
 |[AFX_SQL_ASYNC](#afx_sql_async)|Вызывает `AFX_ODBC_CALL`.|
-|[AFX_SQL_SYNC](#afx_sql_sync)|Вызывает функцию ODBC API, который не возвращает `SQL_STILL_EXECUTING`.|
+|[AFX_SQL_SYNC](#afx_sql_sync)|Вызывает функцию API ODBC, которая не возвращает `SQL_STILL_EXECUTING`.|
 
-### <a name="database-globals"></a>Глобальные значения базы данных
+### <a name="database-globals"></a>Глобальные базы данных
 
 |||
 |-|-|
-|[AfxDbInitModule](#afxdbinitmodule)|Добавляет поддержку базы данных для обычной библиотеки DLL MFC, динамически компонуемые с MFC.|
-|[AfxGetHENV](#afxgethenv)|Извлекает дескриптор среды ODBC в настоящий момент каким MFC. Вы можете использовать этот дескриптор в прямые вызовы ODBC.|
+|[афксдбинитмодуле](#afxdbinitmodule)|Добавляет поддержку базы данных для обычной библиотеки DLL MFC, которая динамически связана с MFC.|
+|[афксжесенв](#afxgethenv)|Извлекает маркер среды ODBC, используемой в настоящий момент библиотекой MFC. Этот обработчик можно использовать в прямых вызовах ODBC.|
 
-## <a name="afxdbinitmodule"></a> AfxDbInitModule
+## <a name="afxdbinitmodule"></a>афксдбинитмодуле
 
-Для баз данных MFC (или DAO) поддерживает регулярных DLL MFC, динамически компонуемые с MFC, добавьте вызов данной функции в библиотеке регулярных DLL MFC `CWinApp::InitInstance` функцию для инициализации MFC базы данных библиотеки DLL.
+Для поддержки базы данных MFC (или DAO) из обычной библиотеки DLL MFC, которая динамически связана с MFC, добавьте вызов этой функции в функции `CWinApp::InitInstance` в обычной библиотеке DLL MFC для инициализации библиотеки DLL базы данных MFC.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -51,17 +51,17 @@ ms.locfileid: "62323194"
 void AFXAPI AfxDbInitModule( );
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Убедитесь, что этот вызов происходит перед любой вызов базового класса или любого добавленного кода обращается к базе данных MFC DLL. Базы данных MFC DLL является расширением MFC DLL. в порядке для библиотеки DLL расширения MFC в `CDynLinkLibrary` цепочки, его необходимо создать `CDynLinkLibrary` объект в контексте каждого модуля, он будет использоваться. `AfxDbInitModule` Создает `CDynLinkLibrary` объекта в контексте библиотеки регулярных DLL MFC, таким образом, чтобы он получает встроены в `CDynLinkLibrary` объект цепочки обычной библиотеки DLL MFC.
+Убедитесь, что этот вызов происходит до любого вызова базового класса или любого добавленного кода, который обращается к библиотеке DLL базы данных MFC. Библиотека DLL базы данных MFC является библиотекой DLL расширения MFC. чтобы библиотека DLL расширения MFC была подключена к цепочке `CDynLinkLibrary`, она должна создать объект `CDynLinkLibrary` в контексте каждого модуля, который будет его использовать. `AfxDbInitModule` создает объект `CDynLinkLibrary` в контексте обычной библиотеки DLL MFC, чтобы он был подключен в `CDynLinkLibrary` цепочки объектов обычной библиотеки DLL MFC.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** \<afxdll_.h >
+**Заголовок:** \<AFXDLL_. h >
 
-##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL
 
-Используйте этот макрос для вызова любой функции ODBC API, могут возвращать `SQL_STILL_EXECUTING`.
+Используйте этот макрос для вызова любой функции API ODBC, которая может возвращать `SQL_STILL_EXECUTING`.
 
 ```
 AFX_ODBC_CALL(SQLFunc)
@@ -69,30 +69,30 @@ AFX_ODBC_CALL(SQLFunc)
 
 ### <a name="parameters"></a>Параметры
 
-*SQLFunc*<br/>
-Функции ODBC API. Дополнительные сведения о функции ODBC API см. в разделе Windows SDK.
+*склфунк*<br/>
+Функция API ODBC. Дополнительные сведения о функциях API ODBC см. в Windows SDK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`AFX_ODBC_CALL` несколько раз вызывает функцию до его больше не возвращает `SQL_STILL_EXECUTING`.
+`AFX_ODBC_CALL` повторно вызывает функцию, пока она больше не возвращает `SQL_STILL_EXECUTING`.
 
-Перед вызовом `AFX_ODBC_CALL`, необходимо объявить переменную, `nRetCode`, типа RETCODE.
+Перед вызовом `AFX_ODBC_CALL`необходимо объявить переменную `nRetCode`типа РЕТКОДЕ.
 
-Обратите внимание на то, что MFC ODBC классы сейчас используется только синхронная обработка. Чтобы выполнить асинхронную операцию, необходимо вызвать функцию ODBC API `SQLSetConnectOption`. Дополнительные сведения см. в разделе «Выполнение функции асинхронно» в пакете Windows SDK.
+Обратите внимание, что классы ODBC MFC теперь используют только синхронную обработку. Чтобы выполнить асинхронную операцию, необходимо вызвать функцию API ODBC `SQLSetConnectOption`. Дополнительные сведения см. в разделе "асинхронное выполнение функций в Windows SDK".
 
 ### <a name="example"></a>Пример
 
-В этом примере используется `AFX_ODBC_CALL` для вызова `SQLColumns` функции ODBC API, которая возвращает список столбцов в таблице с именем, `strTableName`. Обратите внимание на объявление `nRetCode` и использование элементов данных набора записей для передачи параметров в функцию. В примере также демонстрируется проверка результатов вызова с `Check`, функция-член класса `CRecordset`. Переменная `prs` — это указатель на `CRecordset` объект, объявленные в другом месте.
+В этом примере используется `AFX_ODBC_CALL` для вызова функции `SQLColumns` ODBC API, которая возвращает список столбцов в таблице с именем, равным `strTableName`. Обратите внимание на объявление `nRetCode` и использование элементов данных набора записей для передачи параметров в функцию. В примере также показано, как проверить результаты вызова с помощью `Check`, функции-члена класса `CRecordset`. Переменная `prs` является указателем на объект `CRecordset`, объявленный в других местах.
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxdb.h
+**Заголовок:** афксдб. h
 
-##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC
 
-Реализация этого макроса, изменения в MFC 4.2.
+Реализация этого макроса изменена в MFC 4,2.
 
 ```
 AFX_SQL_ASYNC(prs, SQLFunc)
@@ -100,26 +100,26 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>Параметры
 
-*запросы на Вытягивание*<br/>
-Указатель на `CRecordset` объекта или `CDatabase` объекта. Начиная с версии 4.2 MFC, значение этого параметра игнорируется.
+*Вытягивание*<br/>
+Указатель на `CRecordset` объект или объект `CDatabase`. Начиная с MFC 4,2, значение этого параметра игнорируется.
 
-*SQLFunc*<br/>
-Функции ODBC API. Дополнительные сведения о функции ODBC API см. в разделе Windows SDK.
+*склфунк*<br/>
+Функция API ODBC. Дополнительные сведения о функциях API ODBC см. в Windows SDK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`AFX_SQL_ASYNC` просто вызывает макрос [AFX_ODBC_CALL](#afx_odbc_call) и игнорирует *запросы на Вытягивание* параметра. В версиях MFC до 4.2 `AFX_SQL_ASYNC` использовался для вызова функций ODBC API, которые могут возвращать `SQL_STILL_EXECUTING`. Если функции ODBC API возвратил `SQL_STILL_EXECUTING`, затем `AFX_SQL_ASYNC` вызовет `prs->OnWaitForDataSource`.
+`AFX_SQL_ASYNC` просто вызывает макрос [AFX_ODBC_CALL](#afx_odbc_call) и игнорирует параметр *вытягивание* . В версиях MFC до 4,2 `AFX_SQL_ASYNC` использовался для вызова функций API ODBC, которые могут возвращать `SQL_STILL_EXECUTING`. Если функция API ODBC возвратила `SQL_STILL_EXECUTING`, `AFX_SQL_ASYNC` вызовет `prs->OnWaitForDataSource`.
 
 > [!NOTE]
->  Классы MFC ODBC теперь использовать только синхронную обработку. Чтобы выполнить асинхронную операцию, необходимо вызвать функцию ODBC API `SQLSetConnectOption`. Дополнительные сведения см. в разделе «Выполнение функции асинхронно» в пакете Windows SDK.
+>  Классы ODBC MFC теперь используют только синхронную обработку. Чтобы выполнить асинхронную операцию, необходимо вызвать функцию API ODBC `SQLSetConnectOption`. Дополнительные сведения см. в разделе "асинхронное выполнение функций в Windows SDK".
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdb.h
+  **Заголовок** афксдб. h
 
-##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC
 
-`AFX_SQL_SYNC` Макрос просто вызывает функцию `SQLFunc`.
+Макрос `AFX_SQL_SYNC` просто вызывает функцию `SQLFunc`.
 
 ```
 AFX_SQL_SYNC(SQLFunc)
@@ -127,30 +127,30 @@ AFX_SQL_SYNC(SQLFunc)
 
 ### <a name="parameters"></a>Параметры
 
-*SQLFunc*<br/>
-Функции ODBC API. Дополнительные сведения об этих функциях см. в разделе Windows SDK.
+*склфунк*<br/>
+Функция API ODBC. Дополнительные сведения об этих функциях см. в Windows SDK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте этот макрос для вызова функций ODBC API, которые не будут возвращать `SQL_STILL_EXECUTING`.
+Используйте этот макрос для вызова функций API ODBC, которые не будут возвращать `SQL_STILL_EXECUTING`.
 
-Перед вызовом `AFX_SQL_SYNC`, необходимо объявить переменную, `nRetCode`, типа RETCODE. Можно проверить значение `nRetCode` после вызова макроса.
+Перед вызовом `AFX_SQL_SYNC`необходимо объявить переменную `nRetCode`типа РЕТКОДЕ. Можно проверить значение `nRetCode` после вызова макроса.
 
-Обратите внимание, что реализация `AFX_SQL_SYNC` изменения в MFC 4.2. Так как проверка состояния сервера больше не требуется, `AFX_SQL_SYNC` просто присваивает значение свойству `nRetCode`. Например, вместо вызова
+Обратите внимание, что реализация `AFX_SQL_SYNC` изменилась в MFC 4,2. Поскольку проверка состояния сервера больше не требуется, `AFX_SQL_SYNC` просто присваивает значение `nRetCode`. Например, вместо выполнения вызова
 
 [!code-cpp[NVC_MFCDatabase#40](../../mfc/codesnippet/cpp/database-macros-and-globals_2.cpp)]
 
-Вы можете просто задать назначения
+можно просто сделать назначение
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdb.h
+  **Заголовок** афксдб. h
 
-##  <a name="afxgethenv"></a>  AfxGetHENV
+##  <a name="afxgethenv"></a>афксжесенв
 
-Возвращенный дескриптор можно использовать в прямые вызовы ODBC, но не должно закрыть дескриптор или Предположим, что дескриптор является по-прежнему действующими и доступными после любых существующих `CDatabase`- или `CRecordset`-производных объектов будут уничтожены.
+Возвращенный обработчик можно использовать в прямых вызовах ODBC, но не следует закрывать этот обработчик или предполагается, что он по-прежнему является допустимым и доступным после уничтожения всех существующих `CDatabase`или `CRecordset`объектов.
 
 ```
 HENV AFXAPI AfxGetHENV();
@@ -158,12 +158,12 @@ HENV AFXAPI AfxGetHENV();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор среды ODBC в настоящий момент каким MFC. Может быть `SQL_HENV_NULL` при наличии не [CDatabase](../../mfc/reference/cdatabase-class.md) объекты и нет [CRecordset](../../mfc/reference/crecordset-class.md) используемых объектов.
+Обработчик для среды ODBC, используемой в настоящий момент библиотекой MFC. Может быть `SQL_HENV_NULL`, если отсутствуют объекты [CDatabase](../../mfc/reference/cdatabase-class.md) и объекты [CRecordset](../../mfc/reference/crecordset-class.md) не используются.
 
 ### <a name="requirements"></a>Требования
 
-  **Заголовок** afxdb.h
+  **Заголовок** афксдб. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)

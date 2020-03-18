@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855513"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425853"
 ---
 # <a name="ole-drag-and-drop"></a>перетаскивание OLE
 
@@ -81,7 +81,7 @@ ms.locfileid: "78855513"
 | `GiveFeedback` | Визуальная обратная связь, например внешний вид курсора, для различных результатов перетаскивания. |
 | `QueryContinueDrag` | Завершение операции перетаскивания. Эта функция позволяет проверять состояние ключей модификатора во время операции перетаскивания. |
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 \ [OLE](../mfc/ole-in-mfc.md)
 [Объекты данных OLE и источники данных](../mfc/data-objects-and-data-sources-ole.md)\

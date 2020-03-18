@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874844"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424077"
 ---
 # <a name="basic_istream-class"></a>Класс basic_istream
 
@@ -190,7 +190,7 @@ basic_istream(basic_istream&& right);
 **значение true** , если это стандартный поток; в противном случае — **значение false**.
 
 *справа*\
-Объект `basic_istream` для копирования.
+Объект `basic_istream`, который требуется скопировать.
 
 ### <a name="remarks"></a>Remarks
 
@@ -704,7 +704,7 @@ basic_istream<Char_T, Tr>& read(
 Массив, из которого должны считываться символы.
 
 *количество*\
-Число символов для чтения.
+Количество символов, которые необходимо считать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -765,7 +765,7 @@ streamsize readsome(
 Массив, в котором `readsome` сохраняет символы, которые считывает.
 
 *количество*\
-Число символов для чтения.
+Количество символов, которые необходимо считать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

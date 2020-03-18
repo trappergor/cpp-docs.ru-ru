@@ -1,10 +1,6 @@
 ---
 title: Управление памятью с помощью CStringT
 ms.date: 11/04/2016
-f1_keywords:
-- CStringT
-- ATL::CStringT
-- ATL.CStringT
 helpviewer_keywords:
 - CString objects, memory management
 - memory [C++], usage
@@ -14,16 +10,16 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: 8f83b088becf97ca3d8779a537e42369b4a8c832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af042c80b9e3e0de872261f89255a26728b218cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235202"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440502"
 ---
 # <a name="memory-management-with-cstringt"></a>Управление памятью с помощью CStringT
 
-Класс [CStringT](../atl-mfc-shared/reference/cstringt-class.md) — это класс шаблона, используемый для работы со строками знаков переменной длины. Выпущенных при помощи диспетчера строковый объект, связанный с каждым экземпляром и выделения памяти для хранения этих строк `CStringT`. MFC и ATL предоставляют экземпляров по умолчанию `CStringT`, который называется `CString`, `CStringA`, и `CStringW`, который работы со строками из разных символьных типов. Эти типы символов имеют тип TCHAR, **char**, и `wchar_t`, соответственно. Эти строковые типы по умолчанию использовать диспетчер строки, который выделяет память из кучи процесса (в ATL) или кучи CRT (в MFC). Эта схема выделения памяти достаточно для типичных приложений. Однако для кода, что делает с большим объемом используйте строки (или многопоточном коде), диспетчеры памяти по умолчанию может работать медленнее. В этом разделе описывается, как переопределить значение по умолчанию поведение управления памятью `CStringT`, в частности Создание Распределители оптимизированных для поставленной задачи.
+Класс [CStringT](../atl-mfc-shared/reference/cstringt-class.md) — это класс шаблона, используемый для управления символьными строками переменной длины. Память для хранения этих строк выделяется и освобождается через объект диспетчера строк, связанный с каждым экземпляром `CStringT`. MFC и ATL предоставляют экземпляры по умолчанию `CStringT`, называемые `CString`, `CStringA`и `CStringW`, которые управляют строками различных типов символов. Эти типы символов имеют тип TCHAR, **char**и `wchar_t`соответственно. Эти строковые типы по умолчанию используют диспетчер строк, который выделяет память из кучи процесса (в ATL) или кучи CRT (в MFC). Для типичных приложений эта схема выделения памяти достаточно велика. Однако для кода, выполняющего интенсивное использование строк (или многопоточного кода), стандартные диспетчеры памяти могут работать не оптимально. В этом разделе описывается, как переопределить поведение управления памятью по умолчанию для `CStringT`, создавая специально оптимизированные распределителя для поставленной задачи.
 
 - [Реализация пользовательского диспетчера строк (базовый метод)](../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md)
 
@@ -31,8 +27,8 @@ ms.locfileid: "62235202"
 
 - [Реализация пользовательского диспетчера строк (расширенный метод)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
 
-- [CFixedStringT. Пример пользовательского диспетчера строк](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+- [CFixedStringT: пример пользовательского диспетчера строк](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Образце CustomString](../overview/visual-cpp-samples.md)
+[Пример Кустомстринг](../overview/visual-cpp-samples.md)

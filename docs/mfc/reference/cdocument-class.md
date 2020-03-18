@@ -121,11 +121,11 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856765"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424461"
 ---
 # <a name="cdocument-class"></a>Класс CDocument
 
@@ -205,7 +205,7 @@ class CDocument : public CCmdTarget
 |[CDocument:: Онфилесендмаил](#onfilesendmail)|Отправляет почтовое сообщение с прикрепленным документом.|
 |[CDocument:: Онупдатефилесендмаил](#onupdatefilesendmail)|Включает команду Отправить почту, если имеется поддержка по почте.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|

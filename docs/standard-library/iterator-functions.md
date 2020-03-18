@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: 69f1007f0c7f587e81313f5de97947410bf243df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874057"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425649"
 ---
 # <a name="ltiteratorgt-functions"></a>Функции &lt;iterator&gt;
 
@@ -837,7 +837,7 @@ InputIterator next(
 ### <a name="parameters"></a>Параметры
 
 *первый*\
-Текущая позиция.
+Текущее положение.
 
 *_Off*\
 Количество раз для прохода.
@@ -864,7 +864,7 @@ BidirectionalIterator prev(
 ### <a name="parameters"></a>Параметры
 
 *первый*\
-Текущая позиция.
+Текущее положение.
 
 *_Off*\
 Количество раз для прохода.

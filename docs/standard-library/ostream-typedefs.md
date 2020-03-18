@@ -6,11 +6,11 @@ f1_keywords:
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856613"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425307"
 ---
 # <a name="ltostreamgt-typedefs"></a>Определения типов &lt;ostream&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "78856613"
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом [basic_ostream](../standard-library/basic-ostream-class.md)шаблона класса, специализированного для элементов типа **char** с признаками символа по умолчанию.
 
@@ -38,10 +38,10 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом [basic_ostream](../standard-library/basic-ostream-class.md)шаблона класса, специализированного для элементов типа **wchar_t** с признаками символа по умолчанию.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [\<ostream>](../standard-library/ostream.md)

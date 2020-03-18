@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874515"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424599"
 ---
 # <a name="carray-class"></a>Класс CArray
 
@@ -611,7 +611,7 @@ void SetSize(
 ### <a name="parameters"></a>Параметры
 
 *нневсизе*<br/>
-Новый размер массива (число элементов). Должна быть не ниже 0.
+Новый размер массива (число элементов). Должно быть больше или равно 0.
 
 *нгровби*<br/>
 Минимальное число слотов элементов для выделения при необходимости увеличения размера.
