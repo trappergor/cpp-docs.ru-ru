@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855354"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423168"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчетов об ошибках
 
@@ -228,7 +228,7 @@ ATLTRACE2(
 
 |Категория ATL|Description|
 |------------------|-----------------|
-|`atlTraceGeneral`|Отчеты по всем приложениям ATL. По умолчанию.|
+|`atlTraceGeneral`|Отчеты по всем приложениям ATL. Это значение используется по умолчанию.|
 |`atlTraceCOM`|Сообщает о методах COM.|
 |`atlTraceQI`|Отчеты о вызовах QueryInterface.|
 |`atlTraceRegistrar`|Сообщает о регистрации объектов.|

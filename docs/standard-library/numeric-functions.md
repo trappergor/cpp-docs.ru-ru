@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856364"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425367"
 ---
 # <a name="ltnumericgt-functions"></a>Функции &lt;numeric&gt;
 
@@ -242,7 +242,7 @@ ForwardIterator2 adjacent_difference(
 
 Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне первая функция-шаблон сохраняет последовательные *`adjacent_difference` значения 1*, *a*2 – *a*1, a3 *и 2 в*диапазоне назначения.
 
-Для последовательности значений *a*1 (2, *a*3) во входном диапазоне Вторая функция *-* шаблон сохраняет последовательные *`adjacent_difference` значения 1* *, 2* *Binary_Op*1, 3 *Binary_Op* *a*2 в диапазоне назначения.
+Для последовательности значений *a*1 (2, *a*3) во входном диапазоне Вторая функция *-* шаблон сохраняет последовательные *`adjacent_difference` значения 1* *, 2* *Binary_Op* *a*1, 3 *Binary_Op* *a*2 в диапазоне назначения. *a*
 
 Бинарная операция *Binary_Op* не обязательно должна быть ассоциативной или коммутативной, так как указан порядок примененных операций.
 

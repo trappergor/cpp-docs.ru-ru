@@ -3,11 +3,11 @@ title: Тривиальные типы, типы стандартной стру
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934212"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423708"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Тривиальные типы, типы стандартной структуры, POD и типы литералов
 
@@ -187,12 +187,12 @@ int main()
 
 Тип литерала — это такой тип, макет которого может быть определен во время компиляции. Ниже указаны типы литералов.
 
-- void
+- аннулировать
 - скалярные типы
 - ссылки
 - Массивы void, скалярных типов или ссылок
 - Класс, имеющий тривиальный деструктор, а также один или несколько конструкторов constexpr, которые не являются конструкторами перемещений или копий. Кроме того, все его нестатические данные-члены и базовые классы должны быть типами литералов и не должны изменяться.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Основные понятия](../cpp/basic-concepts-cpp.md)

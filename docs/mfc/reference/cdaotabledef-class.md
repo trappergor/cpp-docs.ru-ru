@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883877"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424515"
 ---
 # <a name="cdaotabledef-class"></a>Класс Кдаотабледеф
 
@@ -860,7 +860,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 В следующей таблице показаны возможные типы баз данных и соответствующие им описатели и пути.
 
-|Тип базы данных|класса хранения|путь|
+|Тип базы данных|Описатель|путь|
 |-------------------|---------------|----------|
 |База данных с помощью ядра СУБД Jet|"[`database`];"|"`drive`:\\\ *путь*\\\ *filename*. ФОРМАТЕ|
 |dBASE III|"dBASE III;"|"`drive`:\\\ *путь*"|
