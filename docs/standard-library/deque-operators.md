@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883821"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424833"
 ---
 # <a name="ltdequegt-operators"></a>Операторы &lt;deque&gt;
 
@@ -45,7 +45,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 Значение **true**, если объекты deque не равны, значение **false**, если объекты deque равны.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Два объекта deque, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -96,7 +96,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 **true**, если объект deque слева от оператора меньше объекта deque справа от оператора (и не равен ему); в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Отношение «меньше» между двумя объектами основывается на сравнении первой пары неравных элементов.
 
@@ -151,7 +151,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 **true**, если объект deque слева от оператора меньше объекта deque справа от оператора (или равен ему); в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Отношение «меньше или равно» между двумя объектами основывается на сравнении первой пары неравных элементов.
 
@@ -206,7 +206,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 **true**, если объект deque слева от оператора равен объекту deque справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Два объекта deque равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
@@ -264,7 +264,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 **true**, если объект deque слева от оператора больше объекта deque справа от оператора; в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Отношение «больше» между двумя объектами основывается на сравнении первой пары неравных элементов.
 
@@ -320,7 +320,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 **true**, если объект deque слева от оператора больше объекта deque справа от оператора (или равен ему); в противном случае **false**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Сравнение между объектами deque основывается на попарном сравнении элементов этих списков. Отношение «больше или равно» между двумя объектами основывается на сравнении первой пары неравных элементов.
 

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: d78bbc6e66fe97af1049fa6976ac8c5fa806ef43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883820"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424869"
 ---
 # <a name="deque-class"></a>Класс deque
 
@@ -114,7 +114,7 @@ class deque
 *Распределитель*\
 Тип, представляющий сохраненный объект распределителя, содержащий сведения о распределении и отмене распределения памяти для deque. Этот аргумент является необязательным, и значение по умолчанию — **распределитель\<тип >** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Выбор типа контейнера должен в общем случае производиться на основе типа поиска и вставки, который требуется приложению. [Векторы](../standard-library/vector-class.md) должны быть предпочитаемыми контейнерами для управления последовательностями, когда важен произвольный доступ к любому элементу, а вставка и удаление элементов требуется лишь в конце последовательности. Производительность контейнера list выше, если эффективные вставки и удаления (в константном времени) в любом расположении в последовательности имеют больший приоритет. Таким операциям в середине последовательности требуются копии элементов и присвоения, пропорциональные количеству элементов в последовательности (линейное время).
 
@@ -206,7 +206,7 @@ class deque
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `allocator_type` является синонимом параметра-шаблона `Allocator`.
 
@@ -248,7 +248,7 @@ void assign(initializer_list<Type> IList);
 *IList*\
 Объект initializer_list, вставляемый в очередь.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 После удаления любых существующих элементов в целевой очереди `assign` либо вставляет указанный диапазон элементов из исходной очереди или какой-либо другой очереди в целевую очередь, либо вставляет копии нового элемента указанного значения в целевую очередь.
 
@@ -370,7 +370,7 @@ const_reference back() const;
 
 Последний элемент очереди. Если очередь пуста, возвращаемое значение не определено.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `back` присвоено `const_reference`, то объект очереди нельзя изменить. Если возвращаемое значение `back` присвоено `reference`, то объект очереди можно изменить.
 
@@ -419,7 +419,7 @@ iterator begin();
 
 Итератор произвольного доступа, адресующий первый элемент в очереди или расположение после пустой очереди.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `begin` присвоено `const_iterator`, то объект очереди нельзя изменить. Если возвращаемое значение `begin` присваивается `iterator`, то объект deque можно изменить.
 
@@ -470,7 +470,7 @@ const_iterator cbegin() const;
 
 **Константный** итератор произвольного доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона, `cbegin() == cend()`).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.
 
@@ -496,7 +496,7 @@ const_iterator cend() const;
 
 Итератор произвольного доступа, который указывает на место сразу после конца диапазона.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
@@ -556,7 +556,7 @@ The size of the deque after clearing is 0
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `const_iterator`нельзя использовать для изменения значения элемента.
 
@@ -572,7 +572,7 @@ typedef implementation-defined const_iterator;
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `const_pointer`нельзя использовать для изменения значения элемента. Для доступа к элементу очереди чаще используется [iterator](#iterator).
 
@@ -584,7 +584,7 @@ typedef typename Allocator::const_pointer const_pointer;
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `const_reference`нельзя использовать для изменения значения элемента.
 
@@ -628,7 +628,7 @@ The second element is 20
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `const_reverse_iterator` не может изменять значение элемента и используется для последовательного прохождения через очередь в обратную сторону.
 
@@ -648,7 +648,7 @@ const_reverse_iterator crbegin() const;
 
 Константный обратный итератор произвольного доступа, указывающий на первый элемент в обращенном объекте [deque](../standard-library/deque-class.md) или на элемент, который был последним в `deque` до обращения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `crbegin`, то объект `deque` невозможно изменить.
 
@@ -697,7 +697,7 @@ const_reverse_iterator crend() const;
 
 Константный обратный итератор произвольного доступа, адресующий расположение после последнего элемента в обращенном объекте [deque](../standard-library/deque-class.md) (расположение перед первым элементом в необращенной очереди).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `crend` используется с обращенной `deque` точно так же, как [array::cend](../standard-library/array-class-stl.md#cend) используется с `deque`.
 
@@ -787,7 +787,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 *IList*\
 Копируемый initializer_list.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Все конструкторы хранят объект распределителя (*Al*) и инициализируют deque.
 
@@ -1019,7 +1019,7 @@ int main( )
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `difference_type` также можно описать как число элементов между двумя указателями.
 
@@ -1088,7 +1088,7 @@ iterator emplace(
 
 Функция возвращает итератор, указывающий на положение вставки нового элемента в очередь.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Любая операция вставки может быть ресурсоемкой. Факторы производительности при работе с объектом `deque` рассматриваются в разделе `deque`.
 
@@ -1283,7 +1283,7 @@ iterator end();
 
 Возвращает итератор произвольного доступа, адресующий расположение за последним элементом в очереди. Если очередь пуста, то deque::end == deque::begin.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `end` используется для проверки того, достиг ли итератор конца его deque.
 
@@ -1354,7 +1354,7 @@ iterator erase(iterator first, iterator last);
 
 Итератор произвольного доступа, указывающий на первый элемент, оставшийся после удаленных элементов, или на указатель конца очереди, если такого элемента не существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `erase` никогда не создает исключений.
 
@@ -1416,7 +1416,7 @@ const_reference front() const;
 
 Если очередь пуста, возвращаемое значение не определено.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `front` присвоено `const_reference`, то объект очереди нельзя изменить. Если возвращаемое значение `front` присвоено `reference`, то объект очереди можно изменить.
 
@@ -1464,7 +1464,7 @@ Allocator get_allocator() const;
 
 Распределитель, используемый очередью.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Распределители для класса очереди определяют, как этот класс управляет хранилищем. Распределители по умолчанию для классов контейнеров из стандартной библиотеки C++ достаточны для большинства задач программирования. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.
 
@@ -1544,7 +1544,7 @@ IList);
 
 Две первые функции вставки возвращают итератор, указывающий на положение вставки нового элемента в очередь.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Любая операция вставки может быть ресурсоемкой.
 
@@ -1556,7 +1556,7 @@ IList);
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `iterator` можно использовать для изменения значения элемента.
 
@@ -1614,7 +1614,7 @@ const_reference operator[](size_type pos) const;
 
 Ссылка на элемент, позиция которого указана в аргументе. Если заданная позиция больше размера очереди, результат не определен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если возвращаемое значение `operator[]` присвоено `const_reference`, то объект очереди нельзя изменить. Если возвращаемое значение `operator[]` присвоено `reference`, то объект очереди можно изменить.
 
@@ -1661,7 +1661,7 @@ deque& operator=(deque&& right);
 *справа*\
 Очередь, предоставляющая новое содержимое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первое переопределение копирует элементы в этот deque с *правого*края, источника назначения. Второе переопределение перемещает элементы в deque из *right*.
 
@@ -1728,7 +1728,7 @@ int main( )
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `pointer` можно использовать для изменения значения элемента. Для доступа к элементу очереди чаще используется [iterator](#iterator).
 
@@ -1740,7 +1740,7 @@ typedef typename Allocator::pointer pointer;
 void pop_back();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Последний элемент не должен быть пустым. `pop_back` никогда не создает исключений.
 
@@ -1782,7 +1782,7 @@ After deleting the element at the end of the deque, the last element is: 1
 void pop_front();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый элемент не должен быть пустым. `pop_front` никогда не создает исключений.
 
@@ -1831,7 +1831,7 @@ void push_back(Type&& val);
 *val*\
 Элемент, добавляемый в конец очереди.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При создании исключения очередь не изменяется, а исключение создается снова.
 
@@ -1849,7 +1849,7 @@ void push_front(Type&& val);
 *val*\
 Элемент, добавляемый в начало очереди.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При создании исключения очередь не изменяется, а исключение создается снова.
 
@@ -1904,7 +1904,7 @@ reverse_iterator rbegin();
 
 Обратный итератор произвольного доступа, указывающий на первый элемент в обращенной очереди или на последний элемент в необращенной очереди.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `rbegin` используется с обращенной очередью точно так же, как [begin](#begin) используется с очередью.
 
@@ -2016,7 +2016,7 @@ reverse_iterator rend();
 
 Обратный итератор произвольного доступа, адресующий расположение после последнего элемента в обращенной очереди (расположение перед первым элементом в необращенной очереди).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `rend` используется с обращенной очередью точно так же, как [end](#end) используется с очередью.
 
@@ -2105,7 +2105,7 @@ void resize(size_type _Newsize, Type val);
 *val*\
 Значение новых элементов, добавляемых в очередь, если новый размер больше исходного. Если значение не задано, новым элементам назначается значение по умолчанию для класса.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если размер deque меньше запрошенного размера, *_Newsize*элементы добавляются в deque до тех пор, пока не достигнет запрошенного размера.
 
@@ -2163,7 +2163,7 @@ The value of the last element is now 20
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Тип `reverse_iterator` используется для итерации по очереди.
 
@@ -2179,7 +2179,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Переносимого способа определения, уменьшает ли `shrink_to_fit` хранилище, используемое объектом [deque](../standard-library/deque-class.md), не существует.
 
@@ -2347,7 +2347,7 @@ After swapping with c2, deque c1 is: 1 2 3
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `value_type` является синонимом параметра-шаблона `Type`.
 
@@ -2371,7 +2371,7 @@ int main( )
 44
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866447"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426009"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -90,7 +90,7 @@ class CControlBar : public CWnd
 |[CControlBar:: Сетбордерс](#setborders)|Задает значения границ панели управления.|
 |[CControlBar:: Сетинплацеовнер](#setinplaceowner)|Изменяет владельца на месте панели элементов управления.|
 
-### <a name="public-data-members"></a>Открытые члены данных
+### <a name="public-data-members"></a>Открытые элементы данных
 
 |Имя|Description|
 |----------|-----------------|
@@ -191,8 +191,8 @@ virtual CSize CalcFixedLayout(
 |--------------|-----------|----------------|-----------------|--------------------------|
 |TRUE|TRUE|Растяжение по горизонтали|Горизонтально ориентированный|Не закрепление|
 |TRUE|FALSE|Вертикальное растяжение|С вертикальной ориентацией|Не закрепление|
-|FALSE|TRUE|Растяжение недоступно|Горизонтально ориентированный|Закрепление|
-|FALSE|FALSE|Растяжение недоступно|С вертикальной ориентацией|Закрепление|
+|FALSE|TRUE|Растяжение недоступно|Горизонтально ориентированный|Docking|
+|FALSE|FALSE|Растяжение недоступно|С вертикальной ориентацией|Docking|
 
 ##  <a name="calcinsiderect"></a>CControlBar:: КалЦинсидерект
 

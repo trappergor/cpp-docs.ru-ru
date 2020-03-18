@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865875"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424065"
 ---
 # <a name="basic_ofstream-class"></a>Класс basic_ofstream
 
@@ -42,7 +42,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 *Tr*\
 Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 При **wchar_t** специализации `basic_ofstream` записи в файл, если файл открыт в текстовом режиме, будет записана последовательность MBCS. Внутреннее представление будет использовать буфер символов `wchar_t`.
 
@@ -72,13 +72,13 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[basic_ofstream](#basic_ofstream)|Создает объект типа `basic_ofstream`.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Описание|
+|Функция-член|Description|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
@@ -88,7 +88,7 @@ int main(int argc, char **argv)
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Description|
 |-|-|
 |[оператор=](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue reference`, которое не оставляет копию.|
 
@@ -133,7 +133,7 @@ basic_ofstream(
 *справа*\
 Ссылка rvalue на объект `basic_ofstream`, используемый для инициализации этого объекта `basic_ofstream`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первый конструктор инициализирует базовый класс путем вызова [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), где `sb` — это сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -171,7 +171,7 @@ int main(int argc, char **argv)
 void close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-член вызывает [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
 
@@ -191,7 +191,7 @@ bool is_open() const;
 
 Значение **true**, если файл открыт, или **false** в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция – член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
@@ -252,7 +252,7 @@ void open(
 *_Prot*\
 Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *filename*, `_Mode` &#124; `ios_base::out`). Если эта функция возвращает пустой указатель, функция вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
@@ -277,7 +277,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 Возвращает `*this`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue.
 
@@ -310,11 +310,11 @@ void swap(basic_ofstream& right);
 *справа*\
 Ссылка `lvalue` на другой объект `basic_ofstream`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция элемента меняет местами содержимое этого объекта на содержимое, находящееся *справа*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Класс basic_ostream](../standard-library/basic-ostream-class.md)\
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

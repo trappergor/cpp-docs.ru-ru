@@ -1,19 +1,18 @@
 ---
-title: '&lt;Список > (C++ комментариев документации)'
+title: '> списка &lt;(C++ комментарии к документации)'
 ms.date: 11/04/2016
 f1_keywords:
 - list
-- <list>
 helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: fd5b97ac518bc4075697da7b6ed88ed46bdd8814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305272"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439298"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -39,10 +38,10 @@ ms.locfileid: "62305272"
 *term*<br/>
 Термин, который будет определен в `description`.
 
-*description*<br/>
+*Описание*<br/>
 Либо элемент маркированного или нумерованного списка, либо определение `term`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждый элемент в списке указывается в блоке \<item>. При создании списка определений необходимо указать одновременно `term` и `description`. Тем не менее для таблицы, маркированного или нумерованного списка достаточно ввести только `description`.
 
@@ -69,6 +68,6 @@ ms.locfileid: "62305272"
 class MyClass {};
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Документация XML](xml-documentation-visual-cpp.md)

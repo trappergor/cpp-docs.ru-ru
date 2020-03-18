@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876365"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425883"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ class CEdit : public CWnd
 
 Каждая запись схемы сообщений имеет следующий вид:
 
-  **Уведомление ON_** **(** _ID_ **,** _мемберфксн_ **)**
+  **Уведомление ON_** _NOTIFICATION_ **(** _ID_ **,** _мемберфксн_ **)**
 
 где `id` указывает идентификатор дочернего окна элемента управления редактирования, отправляющего уведомление, а `memberFxn` — имя родительской функции-члена, которая была написана для работы с уведомлением.
 

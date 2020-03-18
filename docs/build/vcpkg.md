@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857031"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422760"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -25,7 +25,7 @@ vcpkg — это диспетчер пакетов на базе командн
 
 Можно также создать клон vcpkg с закрытыми библиотеками в коллекции портов. Добавьте порт, который скачивает готовые двоичные файлы и файлы заголовков. Затем создайте файл portfile.cmake, который просто копирует эти файлы в нужное расположение.
 
-<sup>1</sup> *Примечание. источники недоступны для некоторых специализированных библиотек. В этих случаях vcpkg скачивает совместимые готовые двоичные файлы.*
+<sup>1</sup> *Примечание. Для некоторых частных библиотек исходные файлы недоступны. В этих случаях vcpkg скачает готовые совместимые двоичные файлы.*
 
 ## <a name="installation"></a>Установка
 
@@ -117,7 +117,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 1. Создайте клон vcpkg.
 1. Измените portfile для библиотеки, чтобы получить нужную версию.
-1. Выполните **vcpkg install \<библиотека>** .
+1. Выполните **vcpkg install \<библиотека>**.
 1. Используйте **vcpkg integrate project** для создания пакета NuGet, который будет ссылаться на эту библиотеку для каждого конкретного проекта.
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Интеграция с Visual Studio Code (Linux и MacOS)
@@ -146,8 +146,8 @@ zlib:x86-windows        1.2.11   A compression library
 
 - **--no-dry-run**: выполнение обновления; если параметр не указан, эта команда просто выводит список устаревших пакетов.
 - **--keep-going**: продолжение установки пакетов даже при возникновении сбоя для одного из них.
-- **--triplet \<t>** : задание триады по умолчанию для неквалифицированных пакетов.
-- **--vcpkg-root \<путь>** : указание каталога vcpkg для использования вместо текущего каталога или каталога средства.
+- **--triplet \<t>**: задание триады по умолчанию для неквалифицированных пакетов.
+- **--vcpkg-root \<путь>**: указание каталога vcpkg для использования вместо текущего каталога или каталога средства.
 
 ### <a name="upgrade-example"></a>Пример обновления
 
@@ -204,7 +204,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="command-line-reference"></a>Справочник по командной строке
 
-|Get-Help|Description|
+|Команда|Описание|
 |---------|---------|
 |**vcpkg search \[путь]**|Поиск пакетов, доступных для установки|
 |**vcpkg install \<пакет>...**|Установка пакета|
@@ -226,7 +226,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ### <a name="options"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |---------|---------|
 |**--triplet \<t>**|Указание триады значений для целевой архитектуры (по умолчанию: `%VCPKG_DEFAULT_TRIPLET%`, см. также **vcpkg help triplet**)|
 |**--vcpkg-root \<путь>**|Указание корневого каталога vcpkg (по умолчанию: `%VCPKG_ROOT%`)|

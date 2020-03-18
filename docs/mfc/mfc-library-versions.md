@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856804"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425703"
 ---
 # <a name="mfc-library-versions"></a>Версии библиотек MFC
 
@@ -89,7 +89,7 @@ ms.locfileid: "78856804"
 
 буквы, показанные курсивом в нижнем регистре, являются заполнителями для описателей, значения которых перечислены в следующей таблице.
 
-|класса хранения|Значения и смысл|
+|Описатель|Значения и смысл|
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) или Unicode (U); пропустить для версии без элементов управления MFC в диалоговых окнах|
 |*c*|Версия с элементами управления MFC в диалоговых окнах (во вт.) или без них (НМКД)|

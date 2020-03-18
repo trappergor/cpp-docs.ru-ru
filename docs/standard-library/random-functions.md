@@ -7,11 +7,11 @@ ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
 ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873939"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425247"
 ---
 # <a name="ltrandomgt-functions"></a>Функции &lt;random&gt;
 
@@ -38,6 +38,6 @@ RealType generate_canonical(Generator& Gen);
 *Общие*\
 Ссылка на экземпляр генератора случайных чисел типа " *генератор*".
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция шаблона вызывает `operator()` операции *Gen* многократно и упаковывает возвращаемые значения в значение с плавающей запятой `x` типа *реалтипе* , пока оно не собрало указанное число битов мантисса в `x`. Указанное число является меньшим из *битов* (значение которого должно быть ненулевым) и полным числом битов мантисса в *реалтипе*. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
