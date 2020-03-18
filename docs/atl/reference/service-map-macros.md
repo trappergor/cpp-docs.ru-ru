@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862519"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422934"
 ---
 # <a name="service-map-macros"></a>Сопоставление служб макросов
 
@@ -42,7 +42,7 @@ BEGIN_SERVICE_MAP(theClass)
 *секласс*<br/>
 окне Указывает класс, содержащий схему услуги.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте схему Услуги для реализации функциональности поставщика услуг в объекте COM. Сначала необходимо создать класс, производный от [исервицепровидеримпл](../../atl/reference/iserviceproviderimpl-class.md). Существует два типа записей:
 
@@ -134,7 +134,7 @@ STDMETHOD(QueryService)(
 |E_UNEXPECTED|Произошла неизвестная ошибка.|
 |E_NOINTERFACE|Запрошенный интерфейс не является частью этой службы, или служба неизвестна.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `QueryService` возвращает косвенный указатель на запрошенный интерфейс в указанной службе. Вызывающий объект отвечает за освобождение этого указателя, когда он больше не требуется.
 
@@ -150,6 +150,6 @@ STDMETHOD(QueryService)(
 
 Две различные службы, такие как SID_SMyService и SID_SYourService, могут указывать использование одного интерфейса, даже несмотря на то, что реализация интерфейса может вообще не иметь ничего общего между двумя службами. Это работает, поскольку вызов `QueryService` (SID_SMyService, IID_IDispatch) может возвращать другой объект, отличный от `QueryService` (SID_SYourService, IID_IDispatch). При указании другого идентификатора службы удостоверение объекта не предполагается.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)

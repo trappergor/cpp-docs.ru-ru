@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855380"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424419"
 ---
 # <a name="cfileexception-class"></a>Класс Кфиликсцептион
 
@@ -221,7 +221,7 @@ int m_cause;
     >  Перечислители причины `CFileException` отличаются от перечислителей причины `CArchiveException`.
 
     > [!NOTE]
-    > `CArchiveException::generic` не рекомендуется к использованию. Используйте вместо этого `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
+    > Параметр `CArchiveException::generic` использовать не рекомендуется. Используйте вместо этого `genericException`. Если **универсальное** приложение используется в приложении и строится с помощью параметра/CLR, то в результате синтаксических ошибок не будет легко расшифроваться.
 
 ### <a name="example"></a>Пример
 

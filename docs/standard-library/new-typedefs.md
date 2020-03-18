@@ -5,11 +5,11 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854950"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425379"
 ---
 # <a name="ltnewgt-typedefs"></a>Определения типов &lt;new&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "78854950"
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Это число является максимальным рекомендуемым размером непрерывной памяти, занимаемой двумя объектами, к которым осуществляется доступ с использованием временных расположений параллельных потоков. Он должен быть не менее `alignof(max_align_t)`.
 
@@ -46,7 +46,7 @@ static_assert(sizeof(together) <= hardware_constructive_interference_size);
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Это число является минимальным рекомендуемым смещением между двумя параллельно доступными объектами во избежание дополнительного снижения производительности из-за конкуренции, представленной реализацией. Он должен быть не менее `alignof(max_align_t)`.
 
@@ -67,7 +67,7 @@ struct keep_apart {
 typedef void (*new_handler)();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот тип функции обработчика вызывается **оператором new** или `operator new[]`, когда они не могут удовлетворить запрос на дополнительное хранилище.
 

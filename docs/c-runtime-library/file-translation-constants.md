@@ -1,8 +1,6 @@
 ---
 title: Константы трансляции файлов
 ms.date: 11/04/2016
-f1_keywords:
-- c.constants.file
 helpviewer_keywords:
 - translation constants
 - file translation [C++], constants
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375914"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443259"
 ---
 # <a name="file-translation-constants"></a>Константы трансляции файлов
 
@@ -26,7 +24,7 @@ ms.locfileid: "68375914"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти константы определяют режим преобразования ( **"b"** или **"t"** ). Режим содержится в строке, указывающей тип доступа ( **"r"** , **"w"** , **"a"** , **"r+"** , **"w+"** , **"a+"** ).
 
@@ -45,7 +43,7 @@ ms.locfileid: "68375914"
 
 Если символы **t** или **b** в параметре *mode* не указаны, режим преобразования определяется переменной режима по умолчанию [_fmode](../c-runtime-library/fmode.md). Дополнительные сведения об использовании двоичного и текстового режимов см. в разделе [Файловый ввод-вывод в текстовом и двоичном режиме](../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>

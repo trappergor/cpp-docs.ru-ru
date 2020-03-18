@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865825"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423648"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase - класс
 
@@ -42,7 +42,7 @@ class ComPtrRefBase;
 
 ## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
 Имя            | Description
 --------------- | -------------------------------------------------
@@ -55,7 +55,7 @@ class ComPtrRefBase;
 [Оператор comptrrefbase:: operator IInspectable * *](#operator-iinspectable-star-star) | Преобразует текущий элемент данных [ptr_](#ptr) в указатель на `IInspectable` интерфейсе.
 [Оператор comptrrefbase:: operator IUnknown * *](#operator-iunknown-star-star)         | Преобразует текущий элемент данных [ptr_](#ptr) в указатель на `IUnknown` интерфейсе.
 
-### <a name="protected-data-members"></a>Защищенные члены данных
+### <a name="protected-data-members"></a>Защищенные элементы данных
 
 Имя                        | Description
 --------------------------- | ----------------------------------------------------------------
