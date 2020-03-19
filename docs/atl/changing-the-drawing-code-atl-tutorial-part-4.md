@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127385"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509384"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Изменение кода отрисовки (учебник ATL, часть 4)
 
@@ -111,12 +111,15 @@ ms.locfileid: "77127385"
     > [!NOTE]
     > Для ошибок, связанных с `ATL::CW2AEX`, в Script. cpp замените строку `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` на `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`и строку `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` с `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Для ошибок, связанных с `HMONITOR`, откройте файл StdAfx. h в проекте `TCProps` и замените:
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
+    >
     > на
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500
