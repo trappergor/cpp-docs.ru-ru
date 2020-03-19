@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245880"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509420"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Спецификации исключений (throw, не Except) (C++)
 
@@ -24,11 +24,13 @@ ms.locfileid: "74245880"
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 сообщает компилятору, что функция не создает исключений. Однако в **/std: режим c++ 14** это может привести к неопределенному поведению, если функция создает исключение. Поэтому рекомендуется использовать оператор " [except](../cpp/noexcept-cpp.md) " вместо того, который приведен выше.
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 В следующей таблице перечислены реализации спецификаций C++ исключений Майкрософт.
 
 |Спецификация исключений|Значение|
@@ -52,10 +54,10 @@ void MyFunction(int i) noexcept;
 
 В следующей таблице приведены сведения о том C++ , может ли функция вызываться в различных параметрах обработки исключений компилятора.
 
-|Функция|/EHsc|/EHs|/EHa|/EHac|
+|Компонент|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
 |Функция C++ без спецификации исключений|Да|Да|Да|Да|
-|C++функция с `noexcept`, `noexcept(true)`или спецификацией исключения `throw()`|Нет|Нет|Да|Да|
+|C++функция с `noexcept`, `noexcept(true)`или спецификацией исключения `throw()`|нет|нет|Да|Да|
 |C++функция с `noexcept(false)`, `throw(...)`или спецификацией исключения `throw(type)`|Да|Да|Да|Да|
 
 ## <a name="example"></a>Пример
@@ -127,7 +129,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Операторы try, throw и catch (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
 [Современные C++ рекомендации по исключениям и обработке ошибок](errors-and-exception-handling-modern-cpp.md)
