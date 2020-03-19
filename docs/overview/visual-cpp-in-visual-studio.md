@@ -126,7 +126,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 
 [Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[Справочник по языку C#](../c-language/c-language-reference.md)
+[Справочник по языку C](../c-language/c-language-reference.md)
 
 [Внутренние объекты компилятора и язык ассемблера](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
@@ -175,6 +175,6 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по языку C#](../c-language/c-language-reference.md)
+- [Справочник по языку C](../c-language/c-language-reference.md)
 - [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)
 - [Внутренние объекты компилятора и язык ассемблера](../intrinsics/compiler-intrinsics-and-assembly-language.md)
