@@ -1,25 +1,25 @@
 ---
-title: Практическое руководство. Перенос собственного класса для использованияC#
+title: Практическое руководство. Создание программы-оболочки собственного класса для использования в C#
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387127"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545891"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>Практическое руководство. Перенос собственного класса для использованияC#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>Пошаговое руководство. Перенос собственного класса для использования в C\#
 
-В этом примере показано, как программы-оболочки собственного класса C++, его можно было использовать в коде, созданном на C# или другом языке .NET.
+В этом примере показано, как создать оболочку для собственного C++ класса, чтобы его можно было использовать в коде C#, созданном в, или на другом языке .NET.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

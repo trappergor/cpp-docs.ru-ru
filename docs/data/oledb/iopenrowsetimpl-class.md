@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390780"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545909"
 ---
 # <a name="iopenrowsetimpl-class"></a>Класс IOpenRowsetImpl
 
-Предоставляет реализацию для `IOpenRowset` интерфейс.
+Предоставляет реализацию интерфейса `IOpenRowset`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,29 +33,29 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ### <a name="parameters"></a>Параметры
 
-*SessionClass*<br/>
-Ваш класс, производный от `IOpenRowsetImpl`.
+*сессионкласс*<br/>
+Класс, производный от `IOpenRowsetImpl`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[CreateRowset](#createrowset)|Создает объект набора строк. Не вызывается непосредственно пользователем.|
-|[OpenRowset](#openrowset)|Открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса. (Не в ATLDB. H)|
+|[BULK](#openrowset)|Открывает и возвращает набор строк, включающий все строки из одной базовой таблицы или индекса. (Не в ATLDB. Высоты|
 
 ## <a name="remarks"></a>Примечания
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) интерфейс является обязательным для объекта сеанса. Она открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.
+Интерфейс [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) является обязательным для объекта сеанса. Он открывает и возвращает набор строк, включающий все строки из одной базовой таблицы или индекса.
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>IOpenRowsetImpl:: CreateRowset
 
-Создает объект набора строк. Не вызывается непосредственно пользователем. См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB.*
+Создает объект набора строк. Не вызывается непосредственно пользователем. См. раздел [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB.*
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -75,16 +74,16 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Параметры
 
 *RowsetClass*<br/>
-Член класса шаблона, представляющий пользователя класса набора строк. Как правило, создаются с помощью мастера.
+Член класса шаблона, представляющий класс набора строк пользователя. Обычно создается мастером.
 
-*pRowsetObj*<br/>
-[out] Указатель на объект набора строк. Обычно этот параметр не используется, но он может использоваться, если необходимо выполнить дополнительные действия в наборе строк перед его передачей в COM-объект. Время существования *pRowsetObj* привязана к *ppRowset*.
+*провсетобж*<br/>
+заполняет Указатель на объект набора строк. Обычно этот параметр не используется, но его можно использовать, если необходимо выполнить больше работы над набором строк перед передачей его в COM-объект. Время существования *провсетобж* привязывается *ппровсет*.
 
-Другие параметры, см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *Справочник программиста OLE DB по.*
+Другие параметры см. в разделе [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB.*
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>IOpenRowsetImpl:: OpenRowset
 
-Открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.
+Открывает и возвращает набор строк, включающий все строки из одной базовой таблицы или индекса.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -100,13 +99,13 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод не найден в ATLDB. З. Он создается с помощью мастера объекта ATL, при создании поставщика.
+Этот метод не найден в ATLDB. Высоты. Он создается мастером объектов ATL при создании поставщика.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

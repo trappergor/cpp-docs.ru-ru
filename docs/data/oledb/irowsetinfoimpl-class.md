@@ -9,7 +9,6 @@ f1_keywords:
 - IRowsetInfoImpl.GetProperties
 - ATL::IRowsetInfoImpl::GetProperties
 - IRowsetInfoImpl::GetProperties
-- GetProperties
 - ATL::IRowsetInfoImpl::GetReferencedRowset
 - GetReferencedRowset
 - ATL.IRowsetInfoImpl.GetReferencedRowset
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: b42ecf6c03dd1023d1ba150d579f77c4bae8998a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7389ba689fb1f371b5fbf73045dcdc78cd465d88
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390728"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545843"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
 
-Предоставляет реализацию для [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) интерфейс.
+Предоставляет реализацию для интерфейса [ировсетинфо](/previous-versions/windows/desktop/ms724541(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,32 +48,32 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IRowsetInfoImpl`.
+Класс, производный от `IRowsetInfoImpl`.
 
-*PropClass*<br/>
-Класс определяемые пользователем свойства, который по умолчанию используется *T*.
+*пропкласс*<br/>
+Определяемый пользователем класс свойств, который по умолчанию имеет значение *T*.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** altdb.h
+**Заголовок:** алтдб. h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Возвращает текущие значения всех свойств, поддерживаемое набором строк.|
-|[GetReferencedRowset](#getreferencedrowset)|Возвращает указатель интерфейса на набор строк, к которому применяется закладка.|
-|[GetSpecification](#getspecification)|Возвращает указатель интерфейса объекта (команды или сеанса), создавшего этот набор строк.|
+|[GetProperties](#getproperties)|Возвращает текущие значения всех свойств, которые поддерживаются набором строк.|
+|[жетреференцедровсет](#getreferencedrowset)|Возвращает указатель интерфейса на набор строк, к которому применяется закладка.|
+|[Подробные](#getspecification)|Возвращает указатель интерфейса объекта (команды или сеанса работы), создавшего этот набор строк.|
 
 ## <a name="remarks"></a>Примечания
 
-Обязательный интерфейс наборов строк. Этот класс реализует свойства набора строк с помощью [сопоставление набора свойств](../../data/oledb/begin-propset-map.md) определен в классе вашей команды. Несмотря на то, что класса набора строк отображается для класса команды свойство задает, набор строк предоставляется вместе с свою собственную копию свойства времени выполнения при его создании с помощью команды или сеанса работы объекта.
+Обязательный интерфейс для наборов строк. Этот класс реализует свойства набора строк с помощью [схемы набора свойств](../../data/oledb/begin-propset-map.md) , определенной в классе команд. Несмотря на то, что класс набора строк использует наборы свойств класса Command, набор строк предоставляется со своей собственной копией свойств времени выполнения, когда он создается объектом команды или сеанса.
 
-## <a name="getproperties"></a> IRowsetInfoImpl::GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>Свойства IRowsetInfoImpl:: Properties
 
-Возвращает текущие параметры для свойств в `DBPROPSET_ROWSET` группы.
+Возвращает текущие параметры для свойств в группе `DBPROPSET_ROWSET`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -87,9 +86,9 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ировсетинфо:: Properties](/previous-versions/windows/desktop/ms719611(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl:: Жетреференцедровсет
 
 Возвращает указатель интерфейса на набор строк, к которому применяется закладка.
 
@@ -103,11 +102,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки.
+См. раздел [ировсетинфо:: жетреференцедровсет](/previous-versions/windows/desktop/ms721145(v=vs.85)) в *справочнике программиста OLE DB*. Параметр *иординал* должен быть столбцом закладки.
 
-## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl::
 
-Возвращает указатель интерфейса объекта (команды или сеанса), создавшего этот набор строк.
+Возвращает указатель интерфейса объекта (команды или сеанса работы), создавшего этот набор строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -118,13 +117,13 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ировсетинфо::](/previous-versions/windows/desktop/ms716746(v=vs.85)) *IsReference в справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод используется с [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) извлекаемого свойства из объекта источника данных.
+Используйте этот метод совместно с [ижетдатасаурцеимпл](../../data/oledb/igetdatasourceimpl-class.md) для извлечения свойств из объекта источника данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

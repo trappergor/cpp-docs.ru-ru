@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223018"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545099"
 ---
 # <a name="finally"></a>finally
 
-В дополнение к `try` и `catch` предложений, поддержка обработки исключений CLR `finally` предложение. Семантика идентична `__finally` блока в структурированной обработки исключений (SEH). Объект `__finally` можно выполнить блок `try` или `catch` блока.
+В дополнение к предложениям `try` и `catch`, обработка исключений CLR поддерживает предложение `finally`. Семантика идентична блоку `__finally` в структурированной обработке исключений (SEH). Блок `__finally` может следовать за блоком `try` или `catch`.
 
 ## <a name="remarks"></a>Примечания
 
-Цель `finally` блок должен освободить все ресурсы, после возникновения исключения. Обратите внимание, что `finally` блоке выполняется всегда, даже если исключение не создано. `catch` Блок выполняется только в том случае, если управляемое исключение возникает в пределах связанного `try` блока.
+Целью блока `finally` является очистка всех ресурсов, оставшихся после возникновения исключения. Обратите внимание, что блок `finally` всегда выполняется, даже если исключение не было создано. Блок `catch` выполняется только в том случае, если управляемое исключение создается в связанном блоке `try`.
 
-`finally` — контекстно-зависимые ключевое слово; см. в разделе [контекстные ключевые слова](../extensions/context-sensitive-keywords-cpp-component-extensions.md) Дополнительные сведения.
+`finally` является контекстно-зависимым ключевым словом; Дополнительные сведения см. в разделе [контекстно-зависимые ключевые слова](../extensions/context-sensitive-keywords-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано простое `finally` блок:
+В следующем примере показан простой блок `finally`.
 
-```
+```cpp
 // keyword__finally.cpp
 // compile with: /clr
 using namespace System;
@@ -56,6 +56,6 @@ MyException
 in finally
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка исключений](../extensions/exception-handling-cpp-component-extensions.md)

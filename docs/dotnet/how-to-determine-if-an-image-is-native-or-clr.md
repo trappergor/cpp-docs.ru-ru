@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определить, является ли изображение машинный код или среда CLR
+title: 'Практическое руководство. Машинный код или среда CLR: определение цели созданного изображения'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387348"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545291"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Практическое руководство. Определить, является ли изображение машинный код или среда CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>Практическое руководство. Машинный код или среда CLR: определение цели созданного изображения
 
-Один из способов определить, было ли изображение создано для среда CLR является использование **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
+Один из способов определить, было ли создано изображение для среды CLR, — использовать **dumpbin**[/CLRHEADER](../build/reference/clrheader.md).
 
-Можно также программным путем проверять, было ли изображение создано для среды CLR. Дополнительные сведения см. в разделе [Как Обнаружение/CLR компиляция](../dotnet/how-to-detect-clr-compilation.md).
+Можно также программно проверить, было ли создано изображение для среды CLR. Дополнительные сведения см. [в разделе инструкции. Обнаружение компиляции/clr](../dotnet/how-to-detect-clr-compilation.md).
 
 ## <a name="example"></a>Пример
 
-Следующий пример определяет ли образ был создан для выполнения в среда CLR.
+В следующем примере определяется, было ли создано изображение для выполнения в среде CLR.
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;
@@ -81,6 +81,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

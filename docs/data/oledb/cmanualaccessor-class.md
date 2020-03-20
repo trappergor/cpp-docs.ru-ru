@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::CManualAccessor::AddBindEntry
 - ATL.CManualAccessor.AddBindEntry
 - CManualAccessor::AddBindEntry
-- AddBindEntry
 - CManualAccessor.AddBindEntry
 - CManualAccessor::AddParameterEntry
 - ATL.CManualAccessor.AddParameterEntry
@@ -16,7 +15,6 @@ f1_keywords:
 - AddParameterEntry
 - ATL::CManualAccessor::AddParameterEntry
 - ATL::CManualAccessor::CreateAccessor
-- CreateAccessor
 - ATL.CManualAccessor.CreateAccessor
 - CManualAccessor.CreateAccessor
 - CManualAccessor::CreateAccessor
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231068"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546071"
 ---
 # <a name="cmanualaccessor-class"></a>Класс CManualAccessor
 
-Представляет тип метода доступа, предназначен для опытных пользователей.
+Представляет тип метода доступа, предназначенный для расширенного использования.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,24 +51,24 @@ class CManualAccessor : public CAccessorBase
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[AddBindEntry](#addbindentry)|Добавляет запись привязки для выходных столбцов.|
-|[AddParameterEntry](#addparameterentry)|Добавляет запись параметра в метод доступа к параметру.|
-|[CreateAccessor](#createaccessor)|Выделяет память для столбца структуры привязки и инициализирует элементы данных столбцов.|
-|[CreateParameterAccessor](#createparameteraccessor)|Выделяет память для параметра привязки структур и инициализирует параметризованные члены данных.|
+|[AddBindEntry](#addbindentry)|Добавляет запись привязки к выходным столбцам.|
+|[аддпараметерентри](#addparameterentry)|Добавляет запись параметра в метод доступа к параметру.|
+|[CreateAccessor](#createaccessor)|Выделяет память для структур привязки столбца и инициализирует элементы данных столбца.|
+|[креатепараметеракцессор](#createparameteraccessor)|Выделяет память для параметров структуры привязки и инициализирует элементы данных параметров.|
 
 ## <a name="remarks"></a>Примечания
 
-С помощью `CManualAccessor`, можно указать параметр и выходная привязка столбца путем вызова функции времени выполнения.
+С помощью `CManualAccessor`можно указать параметры и привязку выходного столбца с помощью вызовов функций времени выполнения.
 
-## <a name="addbindentry"></a> CManualAccessor::AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
 
-Добавляет запись привязки для выходных столбцов.
+Добавляет запись привязки к выходным столбцам.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -84,33 +82,33 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) в *справочнике программиста OLE DB*.
 
-*nOrdinal*<br/>
-[in] Номер столбца.
+*нординал*<br/>
+окне Номер столбца.
 
 *wType*<br/>
-[in] Тип данных.
+окне Тип данных.
 
-*nColumnSize*<br/>
-[in] Размер столбца в байтах.
+*нколумнсизе*<br/>
+окне Размер столбца в байтах.
 
 *pData*<br/>
-[in] Указатель на данные столбца, сохраненного в буфере.
+окне Указатель на данные столбца, хранящиеся в буфере.
 
-*pLength*<br/>
-[in] Указатель длины поля, если это необходимо.
+*пленгс*<br/>
+окне Указатель на длину поля, если это необходимо.
 
-*pStatus*<br/>
-[in] Указатель на переменную для привязки к состояние столбца, если это необходимо.
+*пстатус*<br/>
+окне Указатель на переменную, которая должна быть привязана к состоянию столбца, если это необходимо.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы использовать эту функцию, необходимо сначала вызвать [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Не удается добавить больше записей, чем количество столбцов, указанных в `CreateAccessor`.
+Чтобы использовать эту функцию, необходимо сначала вызвать [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Нельзя добавить больше записей, чем количество столбцов, указанное в `CreateAccessor`.
 
-## <a name="addparameterentry"></a> CManualAccessor::AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: Аддпараметерентри
 
-Добавляет запись параметра запись на параметр структуры.
+Добавляет запись параметра в структуры записи параметра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -125,36 +123,36 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) в *справочнике программиста OLE DB*.
 
-*nOrdinal*<br/>
-[in] Номер параметра.
+*нординал*<br/>
+окне Номер параметра.
 
 *wType*<br/>
-[in] Тип данных.
+окне Тип данных.
 
-*nColumnSize*<br/>
-[in] Размер столбца в байтах.
+*нколумнсизе*<br/>
+окне Размер столбца в байтах.
 
 *pData*<br/>
-[in] Указатель на данные столбца, сохраненного в буфере.
+окне Указатель на данные столбца, хранящиеся в буфере.
 
-*pLength*<br/>
-[in] Указатель длины поля, если это необходимо.
+*пленгс*<br/>
+окне Указатель на длину поля, если это необходимо.
 
-*pStatus*<br/>
-[in] Указатель на переменную для привязки к состояние столбца, если это необходимо.
+*пстатус*<br/>
+окне Указатель на переменную, которая должна быть привязана к состоянию столбца, если это необходимо.
 
-*eParamIO*<br/>
-[in] Указывает, является ли параметр, с которой связана привязка ввода, ввода вывода или вывода.
+*епарамио*<br/>
+окне Указывает, является ли параметр, с которым связана привязка, входным, входным или выходным параметром.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы использовать эту функцию, необходимо сначала вызвать [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
+Чтобы использовать эту функцию, необходимо сначала вызвать [креатепараметеракцессор](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="createaccessor"></a> CManualAccessor::CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: CreateAccessor
 
-Выделяет память для столбца структуры привязки и инициализирует элементы данных столбцов.
+Выделяет память для структур привязки столбца и инициализирует элементы данных столбца.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -166,14 +164,14 @@ HRESULT CreateAccessor(int nBindEntries,
 
 #### <a name="parameters"></a>Параметры
 
-*nBindEntries*<br/>
-[in] Число столбцов. Это число должно соответствовать количество вызовов [CManualAccessor::AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) функции.
+*нбиндентриес*<br/>
+окне Число столбцов. Это число должно соответствовать числу вызовов функции [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) .
 
 *pBuffer*<br/>
-[in] Указатель на буфер, где хранятся выходные столбцы.
+окне Указатель на буфер, в котором хранятся выходные столбцы.
 
-*nBufferSize*<br/>
-[in] Размер буфера в байтах.
+*нбуфферсизе*<br/>
+окне Размер буфера в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -181,11 +179,11 @@ HRESULT CreateAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>Примечания
 
-Вызывайте эту функцию перед вызовом метода `CManualAccessor::AddBindEntry` функции.
+Вызовите эту функцию перед вызовом функции `CManualAccessor::AddBindEntry`.
 
-## <a name="createparameteraccessor"></a> CManualAccessor::CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: Креатепараметеракцессор
 
-Выделяет память для параметра привязки структур и инициализирует параметризованные члены данных.
+Выделяет память для параметров структуры привязки и инициализирует элементы данных параметров.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -197,14 +195,14 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 #### <a name="parameters"></a>Параметры
 
-*nBindEntries*<br/>
-[in] Число столбцов.
+*нбиндентриес*<br/>
+окне Число столбцов.
 
 *pBuffer*<br/>
-[in] Указатель на буфер, где хранятся входные столбцы.
+окне Указатель на буфер, в котором хранятся входные столбцы.
 
-*nBufferSize*<br/>
-[in] Размер буфера в байтах.
+*нбуфферсизе*<br/>
+окне Размер буфера в байтах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -212,12 +210,12 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>Примечания
 
-Вы должны вызвать эту функцию перед вызовом [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md).
+Эту функцию необходимо вызвать перед вызовом [аддпараметерентри](../../data/oledb/cmanualaccessor-addparameterentry.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[дбвиевер](../../overview/visual-cpp-samples.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>

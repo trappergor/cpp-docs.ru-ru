@@ -5,14 +5,12 @@ f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-- SetData
 - IRowsetUpdateImpl::SetData
 - IRowsetUpdateImpl.SetData
 - ATL::IRowsetUpdateImpl::SetData
 - ATL.IRowsetUpdateImpl.SetData
 - ATL.IRowsetUpdateImpl.GetOriginalData
 - IRowsetUpdateImpl.GetOriginalData
-- GetOriginalData
 - ATL::IRowsetUpdateImpl::GetOriginalData
 - IRowsetUpdateImpl::GetOriginalData
 - IRowsetUpdateImpl::GetPendingRows
@@ -24,7 +22,6 @@ f1_keywords:
 - IRowsetUpdateImpl::GetRowStatus
 - IRowsetUpdateImpl.GetRowStatus
 - ATL::IRowsetUpdateImpl::GetRowStatus
-- GetRowStatus
 - ATL.IRowsetUpdateImpl.Undo
 - ATL::IRowsetUpdateImpl::Undo
 - IRowsetUpdateImpl::Undo
@@ -52,16 +49,16 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dba962c761fac0408a3c68a46ec6447aa7832522
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390715"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545723"
 ---
 # <a name="irowsetupdateimpl-class"></a>Класс IRowsetUpdateImpl
 
-Реализация шаблонов OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85)) интерфейс.
+Реализация OLE DB шаблонов интерфейса [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -87,45 +84,45 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 Класс, производный от `IRowsetUpdateImpl`.
 
-*Хранилища*<br/>
-Записи пользователя.
+*Память*<br/>
+Запись пользователя.
 
 *UpdateArray*<br/>
 Массив, содержащий кэшированные данные для обновления набора строк.
 
-*RowClass*<br/>
+*ровкласс*<br/>
 Единица хранения для `HROW`.
 
-*MapClass*<br/>
-Единица хранения для всех дескрипторов строк, удерживаемые поставщика.
+*мапкласс*<br/>
+Единица хранения для всех дескрипторов строк, удерживаемых поставщиком.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="interface-methods-used-with-irowsetchange"></a>Методы интерфейса (используется с IRowsetChange)
-
-|||
-|-|-|
-|[SetData](#setdata)|Задает значения данных в один или несколько столбцов.|
-
-### <a name="interface-methods-used-with-irowsetupdate"></a>Методы интерфейса (используется с IRowsetUpdate)
+### <a name="interface-methods-used-with-irowsetchange"></a>Методы интерфейса (используются с IRowsetChange)
 
 |||
 |-|-|
-|[GetOriginalData](#getoriginaldata)|Возвращает данные, наиболее недавно передаваемые или полученные из источника данных, игнорируя ожидающие изменения.|
-|[GetPendingRows](#getpendingrows)|Возвращает список строк с предполагаемыми изменениями.|
-|[GetRowStatus](#getrowstatus)|Возвращает состояние указанной строки.|
-|[Отменить](#undo)|Отменяет все изменения в строку с момента последнего получения или обновления.|
-|[Обновление](#update)|Передает любые изменения, внесенные в строку с момента последнего получения или обновления.|
+|[SetData](#setdata)|Задает значения данных в одном или нескольких столбцах.|
+
+### <a name="interface-methods-used-with-irowsetupdate"></a>Методы интерфейса (используются с IRowsetUpdate)
+
+|||
+|-|-|
+|[жеторигиналдата](#getoriginaldata)|Возвращает данные, которые были переданы в последнее время или получены из источника данных, игнорируя ожидающие изменения.|
+|[жетпендингровс](#getpendingrows)|Возвращает список строк с ожидающими изменениями.|
+|[жетровстатус](#getrowstatus)|Возвращает состояние указанных строк.|
+|[Отменить](#undo)|Отменяет любые изменения в строке с момента последней выборки или обновления.|
+|[Update](#update)|Передает все изменения, внесенные в строку с момента последней выборки или обновления.|
 
 ### <a name="implementation-methods-callback"></a>Методы реализации (обратный вызов)
 
 |||
 |-|-|
-|[IsUpdateAllowed](#isupdateallowed)|Используются для проверки безопасности, целостности, и т. д перед предоставлением обновлений.|
+|[исупдатеалловед](#isupdateallowed)|Используется для проверки безопасности, целостности и т. д. перед разрешением обновлений.|
 
 ### <a name="data-members"></a>Элементы данных
 
@@ -135,22 +132,22 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 
 ## <a name="remarks"></a>Примечания
 
-Вам необходимо сначала прочесть и понять в документации по [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), так как все там описано также применяется здесь. Также следует ознакомиться с главе 6 *Справочник программиста OLE DB по* о настройке данных.
+Сначала следует прочитать и разобраться в документации по [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)), так как все описанное здесь также применимо. Также следует ознакомиться с главой 6 *справочника по OLE DB программиста* по настройке данных.
 
-`IRowsetUpdateImpl` реализует OLE DB `IRowsetUpdate` интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с `IRowsetChange` для источника данных и отменить изменения перед передачей.
+`IRowsetUpdateImpl` реализует интерфейс OLE DB `IRowsetUpdate`, который позволяет потребителям откладывать передачу изменений, внесенных с `IRowsetChange` в источник данных, и отменять изменения перед передачей.
 
 > [!IMPORTANT]
->  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде ЧЕМ пытаться реализации поставщика:
+>  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде чем пытаться реализовать поставщик:
 
 - [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)
 
-- Глава 6 *справочнике программиста OLE DB*
+- Глава 6 *справочника по OLE DB программисту*
 
-- Также см. в разделе как `RUpdateRowset` класс используется в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца
+- См. также использование класса `RUpdateRowset` в образце [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="setdata"></a> IRowsetUpdateImpl::SetData
+## <a name="irowsetupdateimplsetdata"></a><a name="setdata"></a>IRowsetUpdateImpl:: SetData
 
-Задает значения данных в один или несколько столбцов.
+Задает значения данных в одном или нескольких столбцах.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -162,15 +159,15 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод переопределяет [IRowsetChangeImpl::SetData](../../data/oledb/irowsetchangeimpl-setdata.md) метод но включает кэширование исходных данных, чтобы разрешить немедленно обновляемых подписок или отложенной обработки операции.
+Этот метод переопределяет метод [ировсетчанжеимпл:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) , но включает кэширование исходных данных, чтобы позволить немедленно или отложенную обработку операции.
 
-## <a name="getoriginaldata"></a> IRowsetUpdateImpl::GetOriginalData
+## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a>IRowsetUpdateImpl:: Жеторигиналдата
 
-Возвращает данные, наиболее недавно передаваемые или полученные из источника данных, игнорируя ожидающие изменения.
+Возвращает данные, которые были переданы в последнее время или получены из источника данных, игнорируя ожидающие изменения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -182,11 +179,11 @@ STDMETHOD (GetOriginalData )(HROW hRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowsetUpdate:: жеторигиналдата](/previous-versions/windows/desktop/ms709947(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
+## <a name="irowsetupdateimplgetpendingrows"></a><a name="getpendingrows"></a>IRowsetUpdateImpl:: Жетпендингровс
 
-Возвращает список строк с предполагаемыми изменениями.
+Возвращает список строк с ожидающими изменениями.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -200,18 +197,18 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-*hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)).
+*хресервед*<br/>
+окне Соответствует параметру *параметру hChapter* в [IRowsetUpdate:: жетпендингровс](/previous-versions/windows/desktop/ms719626(v=vs.85)).
 
-Другие параметры, см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) в *Справочник программиста OLE DB по*.
+Другие параметры см. в разделе [IRowsetUpdate:: жетпендингровс](/previous-versions/windows/desktop/ms719626(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) в *Справочник программиста OLE DB по*.
+Дополнительные сведения см. в разделе [IRowsetUpdate:: жетпендингровс](/previous-versions/windows/desktop/ms719626(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
+## <a name="irowsetupdateimplgetrowstatus"></a><a name="getrowstatus"></a>IRowsetUpdateImpl:: Жетровстатус
 
-Возвращает состояние указанной строки.
+Возвращает состояние указанных строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -224,14 +221,14 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-*hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)).
+*хресервед*<br/>
+окне Соответствует параметру *параметру hChapter* в [IRowsetUpdate:: жетровстатус](/previous-versions/windows/desktop/ms724377(v=vs.85)).
 
-Другие параметры, см. в разделе [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) в *Справочник программиста OLE DB по*.
+Другие параметры см. в разделе [IRowsetUpdate:: жетровстатус](/previous-versions/windows/desktop/ms724377(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="undo"></a> IRowsetUpdateImpl::Undo
+## <a name="irowsetupdateimplundo"></a><a name="undo"></a>IRowsetUpdateImpl:: Undo
 
-Отменяет все изменения в строку с момента последнего получения или обновления.
+Отменяет любые изменения в строке с момента последней выборки или обновления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -246,20 +243,20 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-*hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
+*хресервед*<br/>
+окне Соответствует параметру *параметру hChapter* в [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
-*pcRowsUndone*<br/>
-[out] Соответствует *pcRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
+*пкровсундоне*<br/>
+заполняет Соответствует параметру *пкровс* в [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
-*prgRowsUndone*<br/>
-[in] Соответствует *prgRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
+*пргровсундоне*<br/>
+окне Соответствует параметру *пргровс* в [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)).
 
-Другие параметры, см. в разделе [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) в *Справочник программиста OLE DB по*.
+Другие параметры см. в разделе [IRowsetUpdate:: Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="update"></a> IRowsetUpdateImpl::Update
+## <a name="irowsetupdateimplupdate"></a><a name="update"></a>IRowsetUpdateImpl:: Update
 
-Передает любые изменения, внесенные в строку с момента последнего получения или обновления.
+Передает все изменения, внесенные в строку с момента последней выборки или обновления.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -274,18 +271,18 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-*hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)).
+*хресервед*<br/>
+окне Соответствует параметру *параметру hChapter* в [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)).
 
-Другие параметры, см. в разделе [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) в *Справочник программиста OLE DB по*.
+Другие параметры см. в разделе [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Изменения передаются путем вызова [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Потребитель должен вызвать метод [CRowset::Update](../../data/oledb/crowset-update.md) изменения вступили в силу. Задайте *prgRowstatus* соответствующее значение, описанных в [состояния строк](/previous-versions/windows/desktop/ms722752(v=vs.85)) в *Справочник программиста OLE DB по*.
+Изменения передаются путем вызова [ировсетчанжеимпл:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Чтобы изменения вступили в силу, потребитель должен вызвать метод [CRowset:: Update](../../data/oledb/crowset-update.md) . Задайте для *пргровстатус* соответствующее значение, как описано в разделе [состояния строк](/previous-versions/windows/desktop/ms722752(v=vs.85)) в *справочнике по OLE DB программиста*.
 
-## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
+## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a>IRowsetUpdateImpl:: Исупдатеалловед
 
-Переопределите этот метод для проверки безопасности, целостность и так далее до обновления.
+Переопределите этот метод, чтобы проверить безопасность, целостность и т. д. перед обновлением.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -298,21 +295,21 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 #### <a name="parameters"></a>Параметры
 
 *status*<br/>
-[in] Состояние отложенных операций по строкам.
+окне Состояние ожидающих операций в строках.
 
-*hRowUpdate*<br/>
-[in] Дескриптор строки, которые пользователю нужно обновить.
+*хровупдате*<br/>
+окне Обрабатывает строки, которые пользователь хочет обновить.
 
-*pRowStatus*<br/>
-[out] Состояние, возвращаемое для пользователя.
+*провстатус*<br/>
+заполняет Состояние, возвращенное пользователю.
 
 ### <a name="remarks"></a>Примечания
 
-Если вы определили, что обновление должно быть разрешено, возвращает значение S_OK; в противном случае возвращает значение E_FAIL. Если разрешить обновления, необходимо также задать `DBROWSTATUS` в [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) — соответствующую [состоянием строк](/previous-versions/windows/desktop/ms722752(v=vs.85)).
+Если вы определили, что обновление должно быть разрешено, возвращает S_OK; в противном случае возвращает E_FAIL. Если вы разрешаете обновление, необходимо также задать `DBROWSTATUS` в [IRowsetUpdateImpl:: Update](../../data/oledb/irowsetupdateimpl-update.md) до соответствующего [состояния строки](/previous-versions/windows/desktop/ms722752(v=vs.85)).
 
-## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
+## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a>IRowsetUpdateImpl:: m_mapCachedData
 
-Карта, содержащая исходные данные для отложенной операции.
+Схема, содержащая исходные данные для отложенной операции.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -327,12 +324,12 @@ m_mapCachedData;
 #### <a name="parameters"></a>Параметры
 
 *hRow*<br/>
-Дескриптор строки данных.
+Обработчик строк для данных.
 
 *pData*<br/>
-Указатель данных должен быть помещен в кэш. Данные имеют тип *хранения* (класс записей пользователя). См. в разделе *хранения* аргумент шаблона в [класс IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).
+Указатель на данные для кэширования. Данные имеют тип *хранилища* (класс записи пользователя). См. аргумент шаблона *хранилища* в [классе IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

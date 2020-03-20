@@ -2,7 +2,6 @@
 title: Классы схемы Rowset и Typedef
 ms.date: 11/04/2016
 f1_keywords:
-- vc.templates.ole
 - CAssertionInfo
 - CAssertions
 - CCatalogInfo
@@ -100,7 +99,6 @@ f1_keywords:
 - DEFAULT_COLLATE_NAME
 - DEFAULT_COLLATE_SCHEMA
 - DELETE_RULE
-- DELETE_RULE
 - DOMAIN_CATALOG
 - DOMAIN_NAME
 - DOMAIN_SCHEMA
@@ -138,7 +136,6 @@ f1_keywords:
 - m_bFixedPrecScale
 - m_bHasDefault
 - m_bInitiallyDeferred
-- m_bInitiallyDeferred
 - m_bIsDeferrable
 - m_bIsGrantable
 - m_bIsLong
@@ -153,7 +150,6 @@ f1_keywords:
 - m_guidPKColumn
 - m_guidTable
 - m_guidType
-- m_nCardinality
 - m_nCardinality
 - m_nCollation
 - m_nColumnFlags
@@ -180,7 +176,6 @@ f1_keywords:
 - m_nRowsetNumber
 - m_nScale
 - m_nSearchable
-- m_nType
 - m_szBindingStyle
 - m_szCatalog
 - m_szCharCatalog
@@ -226,8 +221,6 @@ f1_keywords:
 - m_szLiteralPrefix
 - m_szLocalTypeName
 - m_szMatchOption
-- m_szName
-- m_szName
 - m_szObjectCatalog
 - m_szObjectName
 - m_szObjectSchema
@@ -555,107 +548,107 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 3dee9844902928e5952a299caae34e29b3a6d72b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404524"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545741"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Классы схемы Rowset и Typedef
 
-Схема является коллекцией объектов базы данных, которые принадлежат либо были созданы, конкретным пользователем. Каталог может содержать один или несколько схем, но всегда должен содержать схема с именем INFORMATION_SCHEMA, который содержит представления и домены информационной схемы. Сведения о схеме в OLE DB извлекается с использованием предопределенные наборы строк схемы и включает типы, таблиц, столбцов, индексов, представлений, утверждения и ограничения, статистики, наборов символов, параметры сортировки и домены.
+Схема — это коллекция объектов базы данных, принадлежащих или созданных определенным пользователем. Каталог может содержать одну или несколько схем, но всегда должен содержать схему с именем INFORMATION_SCHEMA, которая содержит представления и домены информационной схемы. Сведения о схеме в OLE DB извлекаются с помощью стандартных наборов строк схемы, а также включают типы, таблицы, столбцы, индексы, представления, утверждения и ограничения, статистику, наборы символов, параметры сортировки и домены.
 
-Наборы строк схемы — это предопределенные наборы строк, представляющих метаданные. Наборы строк схемы, обычно используются в динамическое программирование, когда структура базы данных не известен во время компиляции. Эти наборы строк схемы можно использовать для получения сведений о базе данных во время выполнения.
+Наборы строк схемы — это предопределенные наборы строк, представляющие метаданные. Наборы строк схемы обычно используются в динамическом программировании, где структура базы данных неизвестна во время компиляции. Эти наборы строк схемы можно использовать для получения сведений о базе данных во время выполнения.
 
-Используйте классы typedef для создания наборов строк схемы. Ниже перечислены соответствующие typedef и классы набора строк схемы. Необходимо вызвать [CRestrictions::Open](../../data/oledb/crestrictions-open.md) после создания экземпляра набора строк схемы. Этот метод возвращает результирующий набор, в соответствии с заданными ограничениями. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) сведения о столбцах ограничений, связанных с каждого набора строк схемы.
+Используйте классы typedef для создания экземпляров наборов строк схемы. Соответствующие классы typedef и набора строк схемы перечислены ниже. После создания экземпляра набора строк схемы необходимо вызвать метод [cRestrictions:: Open](../../data/oledb/crestrictions-open.md) . Этот метод возвращает результирующий набор на основе указанных вами ограничений. Сведения о столбцах ограничений, связанных с каждым набором строк схемы, см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) .
 
-В следующей таблице приведены все OLE DB наборы строк схемы и соответствующим шаблоны OLE DB typedef-класс и класс info.
+В следующей таблице показаны все наборы строк схемы OLE DB и соответствующие им классы OLE DB шаблонов typedef и info.
 
-|Набор строк схемы OLE DB|TypeDef-класс|Сведения о классе|
+|OLE DB набора строк схемы|Typedef, класс|INFO, класс|
 |--------------------------|-------------------|----------------|
-|[УТВЕРЖДЕНИЯ](/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[КАТАЛОГИ](/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
-|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[ПАРАМЕТРЫ СОРТИРОВКИ](/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
-|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
-|[СТОЛБЦЫ](/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
-|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
-|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
-|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
-|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
-|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[ИНДЕКСЫ](/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
-|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
-|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[ПРОЦЕДУРЫ](/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
-|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
-|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
-|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
-|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
-|[СХЕМЫ](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
-|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[СТАТИСТИКА](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
-|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[ТАБЛИЦЫ](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
-|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[ПЕРЕВОДЫ](/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
-|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
-|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
-|[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
-|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
+|[УТВЕРЖДЕНИЯ](/previous-versions/windows/desktop/ms719776(v=vs.85))|[кассертионс](#assertion)|[кассертионинфо](#assertion)|
+|[КАТАЛОГИ](/previous-versions/windows/desktop/ms721241(v=vs.85))|[ккаталогс](#catalog)|[ккаталогинфо](#catalog)|
+|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85))|[кчарактерсетс](#characterset)|[кчарактерсетинфо](#characterset)|
+|[ПАРАМЕТРЫ сортировки](/previous-versions/windows/desktop/ms715783(v=vs.85))|[кколлатионс](#collation)|[кколлатионинфо](#collation)|
+|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85))|[кколумнпривилежес](#columnprivilege)|[кколумнпривилежеинфо](#columnprivilege)|
+|[COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85))|[кколумнс](#columns)|[кколумнсинфо](#columns)|
+|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85))|[кконстраинтколумнусаже](#constraintcolumnusage)|[кконстраинтколумнусажеинфо](#constraintcolumnusage)|
+|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710(v=vs.85))|[кконстраинттаблеусаже](#constrainttableusage)|[кконстраинттаблеусажеинфо](#constrainttableusage)|
+|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85))|[кчеккконстраинтс](#checkconstraint)|[кчеккконстраинтинфо](#checkconstraint)|
+|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85))|[кколумндомаинусаже](#columndomainusage)|[кколумндомаинусажеинфо](#columndomainusage)|
+|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85))|[кфореигнкэйс](#foreignkeys)|[кфореигнкэйсинфо](#foreignkeys)|
+|[ИНДЕКСИРУЕТ](/previous-versions/windows/desktop/ms709712(v=vs.85))|[Циндексес](#index)|[Циндексинфо](#index)|
+|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85))|[ккэйколумн](#keycolumn)|[ккэйколумнинфо](#keycolumn)|
+|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85))|[кпримарикэйс](#primarykey)|[кпримарикэйинфо](#primarykey)|
+|[ОПИСАНО](/previous-versions/windows/desktop/ms724021(v=vs.85))|[кпроцедурес](#procedure)|[кпроцедуреинфо](#procedure)|
+|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85))|[кпроцедуреколумнс](#procedurecolumn)|[кпроцедуреколумнинфо](#procedurecolumn)|
+|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85))|[кпроцедурепараметерс](#procedureparam)|[кпроцедурепараметеринфо](#procedureparam)|
+|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85))|[кпровидертипес](#provider)|[кпровидеринфо](#provider)|
+|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[креферентиалконстраинтинфо](#referentialconstraint)|
+|[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[ксчемата](#schemata)|[ксчематаинфо](#schemata)|
+|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[кскллангуажес](#sqllanguage)|[кскллангуажеинфо](#sqllanguage)|
+|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[кстатистикс](#statistic)|[кстатистиЦинфо](#statistic)|
+|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[ктаблеконстраинтс](#tableconstraint)|[ктаблеконстраинтинфо](#tableconstraint)|
+|[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[ктаблес](#table)|[ктаблеинфо](#table)|
+|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[ктаблепривилежес](#tableprivilege)|[ктаблепривилежеинфо](#tableprivilege)|
+|[ТОВАРА](/previous-versions/windows/desktop/ms725365(v=vs.85))|[ктранслатионс](#translation)|[ктранслатионинфо](#translation)|
+|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85))|[кусажепривилежес](#usageprivilege)|[кусажепривилежеинфо](#usageprivilege)|
+|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85))|[квиевколумнусаже](#viewcolumn)|[квиевколумнинфо](#viewcolumn)|
+|[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CView](#view)|[квиевинфо](#view)|
+|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[квиевтаблеусаже](#viewtable)|[квиевтаблеинфо](#viewtable)|
 
-## <a name="assertion"></a> CAssertions, CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>Кассертионс, Кассертионинфо
 
-Вызовите typedef-класс `CAssertions` для реализации его класс параметров `CAssertionInfo`.
+Вызовите класс typedef `CAssertions`, чтобы реализовать его класс параметров `CAssertionInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Этот класс определяет утверждения, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса для `CAssertionInfo` и их соответствующих OLE DB столбцов. См. в разделе [УТВЕРЖДЕНИЯ строк](/previous-versions/windows/desktop/ms719776(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены элементы данных класса для `CAssertionInfo` и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк утверждений](/previous-versions/windows/desktop/ms719776(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="catalog"></a> CCatalogs, CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>Ккаталогс, Ккаталогинфо
 
-Вызовите typedef-класс `CCatalogs` для реализации его класс параметров `CCatalogInfo`.
+Вызовите класс typedef `CCatalogs`, чтобы реализовать его класс параметров `CCatalogInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Этот класс определяет физические атрибуты, связанные с каталогами, доступными из СУБД.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [КАТАЛОГОВ набора строк](/previous-versions/windows/desktop/ms721241(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [Catalog Rowset](/previous-versions/windows/desktop/ms721241(v=vs.85)) в *справочнике по OLE DB программиста* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="characterset"></a> CCharacterSets, CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>Кчарактерсетс, Кчарактерсетинфо
 
-Вызовите typedef-класс `CCharacterSets` для реализации его класс параметров `CCharacterSetInfo`.
+Вызовите класс typedef `CCharacterSets`, чтобы реализовать его класс параметров `CCharacterSetInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет наборы символов, определенные в каталоге и доступные указанному пользователю.
+Этот класс определяет наборы символов, определенные в каталоге и доступные для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CHARACTER_SETS](/previous-versions/windows/desktop/ms722638(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [CHARACTER_SETS набор строк](/previous-versions/windows/desktop/ms722638(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CHARACTER_SET_CATALOG|
 |m_szSchema|CHARACTER_SET_SCHEMA|
@@ -666,39 +659,39 @@ ms.locfileid: "62404524"
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="checkconstraint"></a> CCheckConstraints, CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>Кчеккконстраинтс, Кчеккконстраинтинфо
 
-Вызовите typedef-класс `CCheckConstraints` для реализации его класс параметров `CCheckConstraintInfo`.
+Вызовите класс typedef `CCheckConstraints`, чтобы реализовать его класс параметров `CCheckConstraintInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс указывает проверочные ограничения, определенные в каталоге, принадлежащие данному пользователю. Ограничение check задает значения данных или форматы, допустимые для одного или нескольких столбцов в таблице.
+Этот класс определяет проверочные ограничения, определенные в каталоге, которые принадлежат данному пользователю. Проверочное ограничение задает значения данных или форматы, допустимые в одном или нескольких столбцах таблицы.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [CHECK_CONSTRAINTS набор строк](/previous-versions/windows/desktop/ms712845(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_szCheckClause|CHECK_CLAUSE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="collation"></a> CCollations, CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>Кколлатионс, Кколлатионинфо
 
-Вызовите typedef-класс `CCollations` для реализации его класс параметров `CCollationInfo`.
+Вызовите класс typedef `CCollations`, чтобы реализовать его класс параметров `CCollationInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет параметров сортировки символов, определенные в каталоге, которые доступны для данного пользователя.
+Этот класс определяет параметры сортировки символов, определенные в каталоге и доступные для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора параметров СОРТИРОВКИ строк](/previous-versions/windows/desktop/ms715783(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор параметров сортировки](/previous-versions/windows/desktop/ms715783(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|COLLATION_CATALOG|
 |m_szSchema|COLLATION_SCHEMA|
@@ -708,19 +701,19 @@ ms.locfileid: "62404524"
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="columndomainusage"></a> CColumnDomainUsage, CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>Кколумндомаинусаже, Кколумндомаинусажеинфо
 
-Вызовите typedef-класс `CColumnDomainUsage` для реализации его класс параметров `CColumnDomainUsageInfo`.
+Вызовите класс typedef `CColumnDomainUsage`, чтобы реализовать его класс параметров `CColumnDomainUsageInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы, определенные в каталоге, зависящие от домена определены в каталоге и принадлежат данному пользователю.
+Этот класс определяет столбцы, определенные в каталоге, которые зависят от домена, определенного в каталоге и принадлежат данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [COLUMN_DOMAIN_USAGE набор строк](/previous-versions/windows/desktop/ms711240(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|DOMAIN_CATALOG|
 |m_szSchema|DOMAIN_SCHEMA|
@@ -732,19 +725,19 @@ ms.locfileid: "62404524"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="columnprivilege"></a> CColumnPrivileges, CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>Кколумнпривилежес, Кколумнпривилежеинфо
 
-Вызовите typedef-класс `CColumnPrivileges` для реализации его класс параметров `CColumnPrivilegeInfo`.
+Вызовите класс typedef `CColumnPrivileges`, чтобы реализовать его класс параметров `CColumnPrivilegeInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет права доступа к столбцам таблиц, определенные в каталоге, которые доступны или могут быть предоставлены данным пользователем.
+Этот класс определяет привилегии для столбцов таблиц, определенных в каталоге, которые доступны или предоставлены данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [COLUMN_PRIVILEGES набор строк](/previous-versions/windows/desktop/ms715800(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szGrantor|GRANTOR|
 |m_szGrantee|GRANTEE|
@@ -757,19 +750,19 @@ ms.locfileid: "62404524"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="columns"></a> CColumns, CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>Кколумнс, Кколумнсинфо
 
-Вызовите typedef-класс `CColumns` для реализации его класс параметров `CColumnsInfo`.
+Вызовите класс typedef `CColumns`, чтобы реализовать его класс параметров `CColumnsInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы таблиц, определенные в каталоге и доступные указанному пользователю.
+Этот класс определяет столбцы таблиц, определенных в каталоге и доступных для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк COLUMNS](/previous-versions/windows/desktop/ms723052(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -798,21 +791,21 @@ ms.locfileid: "62404524"
 |m_szDomainCatalog|DOMAIN_CATALOG|
 |m_szDomainSchema|DOMAIN_SCHEMA|
 |m_szDomainName|DOMAIN_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="constraintcolumnusage"></a> CConstraintColumnUsage, CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>Кконстраинтколумнусаже, Кконстраинтколумнусажеинфо
 
-Вызовите typedef-класс `CConstraintColumnUsage` для реализации его класс параметров `CConstraintColumnUsageInfo`.
+Вызовите класс typedef `CConstraintColumnUsage`, чтобы реализовать его класс параметров `CConstraintColumnUsageInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы, используемые ссылочные ограничения, ограничения unique, ограничения check и утверждения, определенные в каталоге и принадлежащие данному пользователю.
+Этот класс определяет столбцы, используемые ссылочными ограничениями, ограничениями UNIQUE, ограничениями CHECK и утверждениями, определенными в каталоге и принадлежащими данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [CONSTRAINT_COLUMN_USAGE набор строк](/previous-versions/windows/desktop/ms724522(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -824,19 +817,19 @@ ms.locfileid: "62404524"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="constrainttableusage"></a> CConstraintTableUsage, CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>Кконстраинттаблеусаже, Кконстраинттаблеусажеинфо
 
-Вызовите typedef-класс `CConstraintTableUsage` для реализации его класс параметров `CConstraintTableUsageInfo`.
+Вызовите класс typedef `CConstraintTableUsage`, чтобы реализовать его класс параметров `CConstraintTableUsageInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет таблицы используется ссылочные ограничения, ограничения unique, ограничения check и утверждения, определенные в каталоге и принадлежащие данному пользователю.
+Этот класс определяет таблицы, используемые ссылочными ограничениями, ограничениями UNIQUE, проверочными ограничениями и утверждениями, определенными в каталоге и принадлежащими данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms724522(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [CONSTRAINT_TABLE_USAGE набор строк](/previous-versions/windows/desktop/ms724522(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -845,19 +838,19 @@ ms.locfileid: "62404524"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="foreignkeys"></a> CForeignKeys, CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>Кфореигнкэйс, Кфореигнкэйсинфо
 
-Вызовите typedef-класс `CForeignKeys` для реализации его класс параметров `CForeignKeysInfo`.
+Вызовите класс typedef `CForeignKeys`, чтобы реализовать его класс параметров `CForeignKeysInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы внешнего ключа, определенные в каталоге данным пользователем.
+Этот класс определяет внешние ключевые столбцы, определенные в каталоге данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [FOREIGN_KEYS набор строк](/previous-versions/windows/desktop/ms711276(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szPKTableCatalog|PK_TABLE_CATALOG|
 |m_szPKTableSchema|PK_TABLE_SCHEMA|
@@ -871,23 +864,23 @@ ms.locfileid: "62404524"
 |m_szFKColumnName|FK_COLUMN_NAME|
 |m_guidFKColumn|FK_COLUMN_GUID|
 |m_nFKColumnPropID|FK_COLUMN_PROPID|
-|m_nOrdinal|ПОРЯДКОВЫЙ НОМЕР|
+|m_nOrdinal|ПОРЯДКОВЫЙ номер|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="index"></a> CIndexes, CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a>Циндексес, Циндексинфо
 
-Вызовите typedef-класс `CIndexes` для реализации его класс параметров `CIndexInfo`.
+Вызовите класс typedef `CIndexes`, чтобы реализовать его класс параметров `CIndexInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет индексы, определенные в каталоге, принадлежащие данному пользователю.
+Этот класс определяет индексы, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [наборе строк INDEXES](/previous-versions/windows/desktop/ms709712(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе « [индексы](/previous-versions/windows/desktop/ms709712(v=vs.85)) » в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -898,7 +891,7 @@ ms.locfileid: "62404524"
 |m_bPrimaryKey|PRIMARY_KEY|
 |m_bUnique|UNIQUE|
 |m_bClustered|CLUSTERED|
-|m_nType|TYPE|
+|m_nType|ТИП|
 |m_nFillFactor|FILL_FACTOR|
 |m_nInitialSize|INITIAL_SIZE|
 |m_nNulls|NULLS|
@@ -914,19 +907,19 @@ ms.locfileid: "62404524"
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="keycolumn"></a> CKeyColumns, CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>Ккэйколумнс, Ккэйколумнинфо
 
-Вызовите typedef-класс `CKeyColumns` для реализации его класс параметров `CKeyColumnInfo`.
+Вызовите класс typedef `CKeyColumns`, чтобы реализовать его класс параметров `CKeyColumnInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы, определенные в каталоге, которые являются ограниченными как ключи данным пользователем.
+Этот класс определяет столбцы, определенные в каталоге, которые ограничены ключами данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [KEY_COLUMN_USAGE набор строк](/previous-versions/windows/desktop/ms712990(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szConstraintCatalog|CONSTRAINT_CATALOG|
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
@@ -939,19 +932,19 @@ ms.locfileid: "62404524"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="primarykey"></a> CPrimaryKeys, CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>Кпримарикэйс, Кпримарикэйинфо
 
-Вызовите typedef-класс `CPrimaryKeys` для реализации его класс параметров `CPrimaryKeyInfo`.
+Вызовите класс typedef `CPrimaryKeys`, чтобы реализовать его класс параметров `CPrimaryKeyInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы первичного ключа, определенные в каталоге данным пользователем.
+Этот класс определяет первичные ключевые столбцы, определенные в каталоге указанным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [PRIMARY_KEYS набор строк](/previous-versions/windows/desktop/ms714362(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -959,21 +952,21 @@ ms.locfileid: "62404524"
 |m_szColumnName|COLUMN_NAME|
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
-|m_nOrdinal|ПОРЯДКОВЫЙ НОМЕР|
+|m_nOrdinal|ПОРЯДКОВЫЙ номер|
 
-## <a name="procedurecolumn"></a> CProcedureColumns, CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>Кпроцедуреколумнс, Кпроцедуреколумнинфо
 
-Вызовите typedef-класс `CProcedureColumns` для реализации его класс параметров `CProcedureColumnInfo`.
+Вызовите класс typedef `CProcedureColumns`, чтобы реализовать его класс параметров `CProcedureColumnInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Этот класс возвращает сведения о столбцах наборов строк, возвращаемых процедурами.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [PROCEDURE_COLUMNS набор строк](/previous-versions/windows/desktop/ms723092(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
@@ -990,21 +983,21 @@ ms.locfileid: "62404524"
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>Кпроцедурепараметерс Кпроцедурепараминфо
 
-Вызовите typedef-класс `CProcedureParameters` для реализации его класс параметров `CProcedureParamInfo`.
+Вызовите класс typedef `CProcedureParameters`, чтобы реализовать его класс параметров `CProcedureParamInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
 Этот класс возвращает сведения о параметрах и кодах возврата процедур.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [PROCEDURE_PARAMETERS набор строк](/previous-versions/windows/desktop/ms713623(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
@@ -1020,42 +1013,42 @@ ms.locfileid: "62404524"
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="procedure"></a> CProcedures, CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>Кпроцедурес, Кпроцедуреинфо
 
-Вызовите typedef-класс `CProcedures` для реализации его класс параметров `CProcedureInfo`.
+Вызовите класс typedef `CProcedures`, чтобы реализовать его класс параметров `CProcedureInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет процедуры, определенные в каталоге, принадлежащие данному пользователю.
+Этот класс определяет процедуры, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк ПРОЦЕДУР](/previous-versions/windows/desktop/ms724021(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [процедуры набора строк](/previous-versions/windows/desktop/ms724021(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|PROCEDURE_CATALOG|
 |m_szSchema|PROCEDURE_SCHEMA|
 |m_szName|PROCEDURE_NAME|
 |m_nType|PROCEDURE_TYPE|
 |m_szDefinition|PROCEDURE_DEFINITION|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="provider"></a> CProviderTypes CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>Кпровидертипес, Кпровидеринфо
 
-Вызовите typedef-класс `CProviderTypes` для реализации его класс параметров `CProviderInfo`.
+Вызовите класс typedef `CProviderTypes`, чтобы реализовать его класс параметров `CProviderInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет типы (базовый) данных, поддерживаемые поставщиком данных.
+Этот класс определяет (базовый) типы данных, поддерживаемые поставщиком данных.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [PROVIDER_TYPES набор строк](/previous-versions/windows/desktop/ms709785(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTypeName|TYPE_NAME|
 |m_nDataType|DATA_TYPE|
@@ -1065,32 +1058,32 @@ ms.locfileid: "62404524"
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|ДЛЯ ПОИСКА|
+|m_nSearchable|SEARCHABLE|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
 |m_szLocalTypeName|LOCAL_TYPE_NAME|
 |m_nMinScale|MINIMUM_SCALE|
 |m_nMaxScale|MAXIMUM_SCALE|
-|m_guidType|Идентификатор GUID|
-|m_szTypeLib|БИБЛИОТЕКИ ТИПОВ|
+|m_guidType|GUID|
+|m_szTypeLib|TYPELIB|
 |m_szVersion|VERSION|
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="referentialconstraint"></a> CReferentialConstraints, CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints, Креферентиалконстраинтинфо
 
-Вызовите typedef-класс `CReferentialConstraints` для реализации его класс параметров `CReferentialConstraintInfo`.
+Вызовите класс typedef `CReferentialConstraints`, чтобы реализовать его класс параметров `CReferentialConstraintInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс указывает ссылочные ограничения, определенные в каталоге, принадлежащие данному пользователю.
+Этот класс определяет ссылочные ограничения, определенные в каталоге, которые принадлежат данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [REFERENTIAL_CONSTRAINTS набор строк](/previous-versions/windows/desktop/ms719737(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
@@ -1101,21 +1094,21 @@ ms.locfileid: "62404524"
 |m_szMatchOption|MATCH_OPTION|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="schemata"></a> CSchemata, CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>Ксчемата, Ксчематаинфо
 
-Вызовите typedef-класс `CSchemata` для реализации его класс параметров `CSchemataInfo`.
+Вызовите класс typedef `CSchemata`, чтобы реализовать его класс параметров `CSchemataInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс указывает схемы, принадлежащие данному пользователю.
+Этот класс определяет схемы, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк СХЕМЫ](/previous-versions/windows/desktop/ms716887(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85)) в *справочнике программиста OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CATALOG_NAME|
 |m_szName|SCHEMA_NAME|
@@ -1124,19 +1117,19 @@ ms.locfileid: "62404524"
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="sqllanguage"></a> CSQLLanguages, CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>Кскллангуажес, Кскллангуажеинфо
 
-Вызовите typedef-класс `CSQLLanguages` для реализации его класс параметров `CSQLLanguageInfo`.
+Вызовите класс typedef `CSQLLanguages`, чтобы реализовать его класс параметров `CSQLLanguageInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенные в каталоге.
+Этот класс определяет уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенными в каталоге.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [SQL_LANGUAGES набор строк](/previous-versions/windows/desktop/ms714374(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szSource|SQL_LANGUAGE_SOURCE|
 |m_szYear|SQL_LANGUAGE_YEAR|
@@ -1146,38 +1139,38 @@ ms.locfileid: "62404524"
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="statistic"></a> CStatistics, CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>Кстатистикс, КстатистиЦинфо
 
-Вызовите typedef-класс `CStatistics` для реализации его класс параметров `CStatisticInfo`.
+Вызовите класс typedef `CStatistics`, чтобы реализовать его класс параметров `CStatisticInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет статистические данные, определенные в каталоге, принадлежащие данному пользователю.
+Этот класс определяет статистические данные, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк СТАТИСТИКА](/previous-versions/windows/desktop/ms715957(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [статистические наборы строк](/previous-versions/windows/desktop/ms715957(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="tableconstraint"></a> CTableConstraints, CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>Ктаблеконстраинтс, Ктаблеконстраинтинфо
 
-Вызовите typedef-класс `CTableConstraints` для реализации его класс параметров `CTableConstraintInfo`.
+Вызовите класс typedef `CTableConstraints`, чтобы реализовать его класс параметров `CTableConstraintInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс указывает ограничения таблицы, определенные в каталоге, принадлежащие данному пользователю.
+Этот класс определяет ограничения таблицы, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [TABLE_CONSTRAINTS набор строк](/previous-versions/windows/desktop/ms715921(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|CONSTRAINT_CATALOG|
 |m_szSchema|CONSTRAINT_SCHEMA|
@@ -1188,21 +1181,21 @@ ms.locfileid: "62404524"
 |m_szType|CONSTRAINT_TYPE|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="tableprivilege"></a> CTablePrivileges, CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>Ктаблепривилежес, Ктаблепривилежеинфо
 
-Вызовите typedef-класс `CTablePrivileges` для реализации его класс параметров `CTablePrivilegeInfo`.
+Вызовите класс typedef `CTablePrivileges`, чтобы реализовать его класс параметров `CTablePrivilegeInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет таблицы, определены в каталоге и доступные указанному пользователю.
+Этот класс определяет таблицы, определенные в каталоге и доступные для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [TABLE_PRIVILEGES набор строк](/previous-versions/windows/desktop/ms725428(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szGrantor|GRANTOR|
 |m_szGrantee|GRANTEE|
@@ -1212,40 +1205,40 @@ ms.locfileid: "62404524"
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="table"></a> CTables, CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a>Ктаблес, Ктаблеинфо
 
-Вызовите typedef-класс `CTables` для реализации его класс параметров `CTableInfo`.
+Вызовите класс typedef `CTables`, чтобы реализовать его класс параметров `CTableInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет права доступа к таблицам, определенные в каталоге, которые доступны или предоставлены данным пользователем.
+Этот класс определяет привилегии для таблиц, определенных в каталоге, которые доступны или предоставлены данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк таблиц](/previous-versions/windows/desktop/ms716980(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|TABLE_CATALOG|
 |m_szSchema|TABLE_SCHEMA|
 |m_szName|TABLE_NAME|
 |m_szType|TABLE_TYPE|
 |m_guidTable|TABLE_GUID|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="translation"></a> CTranslations, CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>Ктранслатионс, Ктранслатионинфо
 
-Вызовите typedef-класс `CTranslations` для реализации его класс параметров `CTranslationInfo`.
+Вызовите класс typedef `CTranslations`, чтобы реализовать его класс параметров `CTranslationInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет преобразование символов, определенные в каталоге и доступные указанному пользователю.
+Этот класс определяет переводы символов, определенные в каталоге и доступные для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [переводы строк](/previous-versions/windows/desktop/ms725365(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [набор строк перевода](/previous-versions/windows/desktop/ms725365(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|TRANSLATION_CATALOG|
 |m_szSchema|TRANSLATION_SCHEMA|
@@ -1257,42 +1250,42 @@ ms.locfileid: "62404524"
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="usageprivilege"></a> CUsagePrivileges, CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>Кусажепривилежес, Кусажепривилежеинфо
 
-Вызовите typedef-класс `CUsagePrivileges` для реализации его класс параметров `CUsagePrivilegeInfo`.
+Вызовите класс typedef `CUsagePrivileges`, чтобы реализовать его класс параметров `CUsagePrivilegeInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставлены данным пользователем.
+Этот класс определяет привилегии на использование для объектов, определенных в каталоге и доступных данному пользователю или предоставленных этим пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [USAGE_PRIVILEGES набор строк](/previous-versions/windows/desktop/ms722743(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szGrantor|GRANTOR|
 |m_szGrantee|GRANTEE|
 |m_szObjectCatalog|OBJECT_CATALOG|
 |m_szObjectSchema|OBJECT_SCHEMA|
 |m_szObjectName|OBJECT_NAME|
-|m_szObjectType|OBJECT_TYPE|
+|m_szObjectType|Object_Type|
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="viewcolumn"></a> CViewColumnUsage, CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>Квиевколумнусаже, Квиевколумнинфо
 
-Вызовите typedef-класс `CViewColumnUsage` для реализации его класс параметров `CViewColumnInfo`.
+Вызовите класс typedef `CViewColumnUsage`, чтобы реализовать его класс параметров `CViewColumnInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет столбцы, на который просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.
+Этот класс определяет столбцы, от которых зависят просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [VIEW_COLUMN_USAGE набор строк](/previous-versions/windows/desktop/ms714896(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|VIEW_CATALOG|
 |m_szSchema|VIEW_SCHEMA|
@@ -1304,19 +1297,19 @@ ms.locfileid: "62404524"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="view"></a> CViews, CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a>CView, Квиевинфо
 
-Вызовите typedef-класс `CViews` для реализации его класс параметров `CViewInfo`.
+Вызовите класс typedef `CViews`, чтобы реализовать его класс параметров `CViewInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет таблицы на просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.
+Этот класс определяет таблицы, в которых зависят просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [ПРЕДСТАВЛЕНИЯ набора строк](/previous-versions/windows/desktop/ms723122(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в статье [набор строк представлений](/previous-versions/windows/desktop/ms723122(v=vs.85)) в *справочнике по OLE DB программисту* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szTableCatalog|TABLE_CATALOG|
 |m_szTableSchema|TABLE_SCHEMA|
@@ -1324,21 +1317,21 @@ ms.locfileid: "62404524"
 |m_szDefinition|VIEW_DEFINITION|
 |m_bCheckOption|CHECK_OPTION|
 |m_bIsUpdatable|IS_UPDATABLE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|ОПИСАНИЕ|
 
-## <a name="viewtable"></a> CViewTableUsage, CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>Квиевтаблеусаже, Квиевтаблеинфо
 
-Вызовите typedef-класс `CViewTableUsage` для реализации его класс параметров `CViewTableInfo`.
+Вызовите класс typedef `CViewTableUsage`, чтобы реализовать его класс параметров `CViewTableInfo`.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классы typedef.
+Дополнительные сведения об использовании классов typedef см. в разделе Классы [наборов строк схемы и классы typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) .
 
-Этот класс определяет рассматриваемые таблицы, определенные в каталоге, которые доступны для данного пользователя.
+Этот класс определяет просмотренные таблицы, определенные в каталоге, доступные для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены члены данных класса и их соответствующие OLE DB столбцы. Дополнительные сведения о схеме и столбцах см. в разделе [VIEW_TABLE_USAGE набор строк](/previous-versions/windows/desktop/ms719727(v=vs.85)) в *справочнике по программированию OLE DB* .
 
-|Элементы данных|Столбцы OLE DB|
+|Элементы данных|OLE DB столбцы|
 |------------------|--------------------|
 |m_szCatalog|VIEW_CATALOG|
 |m_szSchema|VIEW_SCHEMA|
@@ -1349,8 +1342,8 @@ ms.locfileid: "62404524"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbsch.h
+**Заголовок:** атлдбсч. h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

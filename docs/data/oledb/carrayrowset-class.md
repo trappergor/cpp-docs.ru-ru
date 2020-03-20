@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176165"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545615"
 ---
 # <a name="carrayrowset-class"></a>Класс CArrayRowset
 
-Обращений к элементы набора строк с помощью синтаксиса массива.
+Обращается к элементам набора строк с помощью синтаксиса Array.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -65,37 +64,37 @@ class CArrayRowset :
 
 ### <a name="parameters"></a>Параметры
 
-*TAccessor*<br/>
-Тип метода доступа класса, который вы хотите использовать набор строк.
+*такцессор*<br/>
+Тип класса метода доступа, который должен использоваться набором строк.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[CArrayRowset](#carrayrowset)|Конструктор.|
-|[Снимок](#snapshot)|Считывает всего набора строк в памяти.|
+|[Моментальный снимок](#snapshot)|Считывает весь набор строк в память.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор&#91;&#93;](#operator)|Обращается к элементу набора строк.|
+|[Станции&#91;&#93;](#operator)|Обращается к элементу набора строк.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|Номер строки, уже считанные.|
+|[CArrayRowset::m_nRowsRead](#nrowsread)|Число уже считанных строк.|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
-Создает новый объект `CArrayRowset`.
+Создает новый объект типа `CArrayRowset`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -106,11 +105,11 @@ CArrayRowset(int nMax = 100000);
 #### <a name="parameters"></a>Параметры
 
 *Nмакс.*<br/>
-[in] Максимальное число строк в наборе строк.
+окне Максимальное число строк в наборе строк.
 
-## <a name="snapshot"></a> CArrayRowset::Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: snapshot
 
-Считывает всего набора строк в памяти, создания образа или моментального снимка его.
+Считывает весь набор строк в память, создавая изображение или его снимок.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -118,9 +117,9 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: operator
 
-Предоставляет синтаксис, подобный массиву для доступа к строке в наборе строк.
+Предоставляет синтаксис, подобный массиву, для доступа к строке в наборе строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -130,23 +129,23 @@ TAccessor & operator[](int nrow);
 
 #### <a name="parameters"></a>Параметры
 
-*TAccessor*<br/>
-Параметр шаблона, указывающее тип метода доступа, хранящиеся в наборе строк.
+*такцессор*<br/>
+Шаблонный параметр, указывающий тип метода доступа, хранящегося в наборе строк.
 
-*nRow*<br/>
-[in] Номер строки (элемент массива), необходимо получить доступ.
+*нров*<br/>
+окне Номер строки (элемента массива), к которой требуется получить доступ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Содержимое Запрошенная строка.
+Содержимое запрошенной строки.
 
 ### <a name="remarks"></a>Примечания
 
-Если *nRow* превышает число строк в наборе строк, возникает исключение.
+Если *нров* превышает количество строк в наборе строк, возникает исключение.
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
-Содержит количество строк в наборе строк, которые уже были считаны.
+Содержит количество строк в наборе строк, которые уже считаны.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -154,8 +153,8 @@ TAccessor & operator[](int nrow);
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CRowset](../../data/oledb/crowset-class.md)

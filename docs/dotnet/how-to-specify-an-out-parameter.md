@@ -1,31 +1,31 @@
 ---
-title: Практическое руководство. Определение выходного параметра
+title: Как указать выходной параметр
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 901257b92aaa5e13e6e79d612ca590b734e15881
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387228"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545447"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>Практическое руководство. Определение выходного параметра
+# <a name="how-to-specify-an-out-parameter"></a>Как указать выходной параметр
 
-В этом примере показано, как указать, что параметр функции является выходным параметром и способ вызова этой функции из программы на C#.
+В этом примере показано, как указать, что параметр функции является параметром `out` и как вызывать эту функцию из C# программы.
 
-Выходной параметр указывается в Visual C++ с использованием <xref:System.Runtime.InteropServices.OutAttribute> .
+Параметр `out` задается в C++ с помощью <xref:System.Runtime.InteropServices.OutAttribute>.
 
 ## <a name="example"></a>Пример
 
-В первой части этого примера является DLL Visual C++ с типом, который содержит функцию с выходным параметром.
+В первой части этого примера создается C++ библиотека DLL. Он определяет тип, содержащий функцию с параметром `out`.
 
-```
+```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>Пример
+Этот исходный файл является C# клиентом, использующим C++ компонент, созданный в предыдущем примере.
 
-Это клиент C#, который использует компонент Visual C++, созданных в предыдущем примере.
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;
@@ -55,6 +53,6 @@ class TestClass {
 a string
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

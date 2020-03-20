@@ -6,22 +6,21 @@ f1_keywords:
 - IDBCreateCommandImpl
 - ATL.IDBCreateCommandImpl
 - IDBCreateCommandImpl.CreateCommand
-- CreateCommand
 - IDBCreateCommandImpl::CreateCommand
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 7450d91cd5e5383b55e2ebb391fe5f1190cbed2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408918"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545825"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Класс IDBCreateCommandImpl
 
-Предоставляет реализацию [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) интерфейс.
+Предоставляет реализацию интерфейса [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,14 +35,14 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 *T*<br/>
 Объект сеанса, производный от `IDBCreateCommandImpl`.
 
-*CommandClass*<br/>
+*коммандкласс*<br/>
 Класс команд.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
@@ -53,9 +52,9 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ## <a name="remarks"></a>Примечания
 
-Дополнительный интерфейс для объекта сеанса, чтобы получить новую команду.
+Необязательный интерфейс объекта Session для получения новой команды.
 
-## <a name="createcommand"></a> IDBCreateCommandImpl::CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>Идбкреатекоммандимпл:: CreateCommand
 
 Создает новую команду и возвращает запрошенный интерфейс.
 
@@ -69,15 +68,15 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IDBCreateCommand:: CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) в *справочнике программиста OLE DB*.
 
-Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IDBCreateCommand::CreateCommand`:
+Некоторые параметры соответствуют *OLE DB ссылочным параметрам программиста* с разными именами, которые описаны в разделе `IDBCreateCommand::CreateCommand`.
 
-|Параметры шаблона OLE DB|*Справочник программиста OLE DB по* параметров|
+|OLE DB параметры шаблона|*OLE DB ссылочные параметры программиста*|
 |--------------------------------|------------------------------------------------|
-|*ppvCommand*|*ppCommand*|
+|*ппвкомманд*|*ппкомманд*|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390845"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545897"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 
-Реализует OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) интерфейс, позволяющий тестирования для идентификации строки.
+Реализует интерфейс OLE DB [ировсетидентити](/previous-versions/windows/desktop/ms715913(v=vs.85)) , который позволяет выполнять проверку подлинности строк.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,24 +37,24 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 *T*<br/>
 Класс, производный от `IRowsetIdentityImpl`.
 
-*RowClass*<br/>
+*ровкласс*<br/>
 Единица хранения для `HROW`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[IsSameRow](#issamerow)|Сравнение дескрипторов двух строк, чтобы увидеть, если они ссылаются на той же строке.|
+|[IsSameRow](#issamerow)|Сравнивает два дескриптора строки, чтобы определить, ссылаются ли они на одну и ту же строку.|
 
-## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
 
-Сравнение дескрипторов двух строк, чтобы увидеть, если они ссылаются на той же строке.
+Сравнивает два дескриптора строки, чтобы определить, ссылаются ли они на одну и ту же строку.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ировсетидентити:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы сравнить дескрипторов строк, этот метод приводит `HROW` дескрипторы для `RowClass` члены и вызовы `memcmp` над указателями.
+Для сравнения дескрипторов строк этот метод приводит `HROW` дескрипторы к `RowClass`ным элементам и вызывает `memcmp` для указателей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -11,7 +11,6 @@ f1_keywords:
 - CStreamRowset.CStreamRowset
 - ATL.CStreamRowset.CStreamRowset
 - ATL::CStreamRowset::CStreamRowset
-- CStreamRowset
 - CStreamRowset<TAccessor>::CStreamRowset
 - ATL::CStreamRowset<TAccessor>::CStreamRowset
 - CStreamRowset<TAccessor>.Close
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: b566ddab89d2198e3f6b24eb9a20c60747749d1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368673"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545561"
 ---
 # <a name="cstreamrowset-class"></a>Класс CStreamRowset
 
-Используется в `CCommand` или `CTable` объявления.
+Используется в объявлении `CCommand` или `CTable`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,44 +46,44 @@ class CStreamRowset
 
 ### <a name="parameters"></a>Параметры
 
-*TAccessor*<br/>
-Класс, метод доступа.
+*такцессор*<br/>
+Класс метода доступа.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует `CStreamRowset` объекта.|
-|[Закрыть](#close)|Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) указатель на интерфейс в классе.|
+|[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует объект `CStreamRowset`.|
+|[Закрыть](#close)|Освобождает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.|
 
 ## <a name="remarks"></a>Примечания
 
-Используйте `CStreamRowset` в вашей `CCommand` или `CTable` объявление, например:
+Используйте `CStreamRowset` в объявлении `CCommand` или `CTable`, например:
 
 [!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
 
-или
+или диспетчер конфигурации служб
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` Возвращает `ISequentialStream` указатель, который хранится в `m_spStream`. Затем используйте `Read` метод для извлечения данных (строка Юникод) в формате XML. Пример:
+`ICommand::Execute` возвращает указатель `ISequentialStream`, хранящийся в `m_spStream`. Затем используется метод `Read` для получения данных (строки в Юникоде) в формате XML. Например:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
-SQL Server 2000 выполняет форматирование XML и возвращает все столбцы и строки набора строк как одну строку XML.
+SQL Server 2000 выполняет форматирование XML и будет возвращать все столбцы и все строки набора строк в виде одной строки XML.
 
 > [!NOTE]
 >  Эта функция работает только с SQL Server 2000.
 
-## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
+## <a name="cstreamrowsetcstreamrowset"></a><a name="cstreamrowset"></a>CStreamRowset:: CStreamRowset
 
-Создает и инициализирует `CStreamRowset` объекта.
+Создает и инициализирует объект `CStreamRowset`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -92,9 +91,9 @@ SQL Server 2000 выполняет форматирование XML и возв�
 CStreamRowset();
 ```
 
-## <a name="close"></a> CStreamRowset::Close
+## <a name="cstreamrowsetclose"></a><a name="close"></a>CStreamRowset:: Close
 
-Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) указатель на интерфейс в классе.
+Освобождает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -102,7 +101,7 @@ CStreamRowset();
 void Close();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

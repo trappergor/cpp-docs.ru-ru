@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516679"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "79545435"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Явные переопределения (C++/CLI и C++/CX)
 
@@ -41,7 +41,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="remarks"></a>Примечания
 
-Используйте явные переопределения, чтобы создать псевдоним для метода сигнатуры или предоставить разные реализации для методов с одной и той же сигнатурой.
+Используйте явные переопределения для создания псевдонима для сигнатуры метода или для предоставления различных реализаций для методов с одинаковой сигнатурой.
 
 Сведения об изменении поведения унаследованных типов и их членов см. в разделе [Спецификаторы переопределения](override-specifiers-cpp-component-extensions.md).
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

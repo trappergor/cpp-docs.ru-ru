@@ -1,29 +1,29 @@
 ---
-title: Практическое руководство. Перехватывать исключения в машинном коде, создаваемые MSIL
+title: Практическое руководство. Исключения в машинном коде, создаваемые MSIL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379050"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545087"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Перехватывать исключения в машинном коде, создаваемые MSIL
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Исключения в машинном коде, создаваемые MSIL
 
-В машинном коде можно перехватить исключение C++ из MSIL.  Можно перехватить исключения CLR с `__try` и `__except`.
+В машинном коде можно перехватывать собственное C++ исключение из MSIL.  Исключения CLR можно перехватывать с помощью `__try` и `__except`.
 
-Дополнительные сведения см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md) и [обработка исключений C++](../cpp/cpp-exception-handling.md).
+Дополнительные сведения см. в разделе [структурированная обработка исключений (C++C/)](../cpp/structured-exception-handling-c-cpp.md) и [современные C++ рекомендации по исключениям и обработке ошибок](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>Пример
 
-Следующий пример определяет модуль с две функции, которая создает собственных исключений и другой, приводящий к исключению MSIL.
+В следующем примере определяется модуль с двумя функциями, один из которых создает собственное исключение, а другой вызывает исключение MSIL.
 
-```
+```cpp
 // catch_MSIL_in_native.cpp
 // compile with: /clr /c
 void Test() {
@@ -37,9 +37,9 @@ void Test2() {
 
 ## <a name="example"></a>Пример
 
-Следующий пример определяет модуль, который перехватывает исключение MSIL, так и машинный код.
+В следующем примере определяется модуль, который перехватывает исключение native и MSIL.
 
-```
+```cpp
 // catch_MSIL_in_native_2.cpp
 // compile with: /clr catch_MSIL_in_native.obj
 #include <iostream>
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обработка исключений](../extensions/exception-handling-cpp-component-extensions.md)

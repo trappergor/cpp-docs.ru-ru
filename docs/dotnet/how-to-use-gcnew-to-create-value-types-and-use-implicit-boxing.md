@@ -6,20 +6,20 @@ helpviewer_keywords:
 - boxing, implicit
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-ms.openlocfilehash: c67f8e0b9511f4ed1610e72e4a7df41c949b1d27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 891704d24ca7a7bf8724c8e57faa2aef20a7f982
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387166"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544877"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Практическое руководство. Использование gcnew для создания типов значений и использование неявной упаковки-преобразования
 
-С помощью [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) в значение типа создает это упакованный тип значений, который можно поместить в управляемый, сборщиком мусора куче.
+При использовании команды [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) для типа значения создается упакованный тип значения, который затем может быть помещен в управляемую кучу с накоплением мусора.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // vcmcppv2_explicit_boxing4.cpp
 // compile with: /clr
 public value class V {
@@ -44,6 +44,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Упаковка-преобразование](../extensions/boxing-cpp-component-extensions.md)
