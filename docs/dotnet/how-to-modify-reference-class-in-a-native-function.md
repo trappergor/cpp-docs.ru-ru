@@ -6,22 +6,22 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404394"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544883"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>Практическое руководство. Изменение ссылочного класса в собственной функции
 
-Можно передать с массивом CLR ссылочного класса в неуправляемую функцию и измените класс, с помощью службы PInvoke.
+Можно передать ссылочный класс с массивом CLR в собственную функцию и изменить класс с помощью служб PInvoke.
 
 ## <a name="example"></a>Пример
 
-Скомпилируйте следующий собственной библиотеки.
+Скомпилируйте следующую собственную библиотеку.
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -51,7 +51,7 @@ extern "C"  {
 
 Скомпилируйте следующую сборку.
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -89,6 +89,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

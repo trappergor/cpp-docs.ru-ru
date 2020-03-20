@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Преобразование char * руководство.
+title: Практическое руководство. Преобразование строки char * в массив System::Byte
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-ms.openlocfilehash: 9ef84e31ee3db703857e3b28ef70dda8d5d01229
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b53fc329dad1421c7c30f673d0360703773ea65
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387667"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545357"
 ---
-# <a name="how-to-convert-char--string-to-systembyte-array"></a>Практическое руководство. Преобразование char \* строку в массив System::Byte
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Как преобразовать символьную строку \* в массив System:: Byte
 
-Наиболее эффективный способ преобразования `char *` строка <xref:System.Byte> массива является использование <xref:System.Runtime.InteropServices.Marshal> класса.
+Наиболее эффективный способ преобразования `char *` строки в <xref:System.Byte> массив — использование <xref:System.Runtime.InteropServices.Marshal> класса.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // convert_native_string_to_Byte_array.cpp
 // compile with: /clr
 #include <string.h>
@@ -51,6 +51,6 @@ int main() {
 Native String
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

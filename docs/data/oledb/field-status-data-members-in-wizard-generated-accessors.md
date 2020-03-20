@@ -5,18 +5,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 41be62627d79c7207816818f09956a60e8b3facc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707562"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "79545513"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Статус поля элементов данных в мастере создания методов доступа
 
 ::: moniker range="vs-2019"
 
-Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Создание объекта-получателя без помощи мастера](creating-a-consumer-without-using-a-wizard.md).
+Мастер объекта-получателя ATL OLE DB недоступен в Visual Studio 2019 и более поздних версиях. Эту функцию все еще можно добавить вручную. Дополнительные сведения см. в статье [Creating a Consumer Without Using a Wizard](creating-a-consumer-without-using-a-wizard.md) (Создание объекта-получателя без помощи мастера).
 
 ::: moniker-end
 
@@ -44,18 +44,18 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
@@ -114,6 +114,6 @@ public:
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

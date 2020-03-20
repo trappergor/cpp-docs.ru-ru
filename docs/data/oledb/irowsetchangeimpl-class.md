@@ -15,7 +15,6 @@ f1_keywords:
 - IRowsetChangeImpl.InsertRow
 - ATL::IRowsetChangeImpl::InsertRow
 - IRowsetChangeImpl::InsertRow
-- SetData
 - IRowsetChangeImpl::SetData
 - ATL.IRowsetChangeImpl.SetData
 - IRowsetChangeImpl.SetData
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 8b2a92fdefd965d4b87e0a9ed411cc1b5c89b8f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390767"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545903"
 ---
 # <a name="irowsetchangeimpl-class"></a>Класс IRowsetChangeImpl
 
-Реализация шаблонов OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) интерфейс в спецификации OLE DB.
+OLE DB шаблонов реализации интерфейса [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) в спецификации OLE DB.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -60,56 +59,56 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *T*<br/>
 Класс, производный от `IRowsetChangeImpl`.
 
-*Хранилища*<br/>
-Записи пользователя.
+*Память*<br/>
+Запись пользователя.
 
 *BaseInterface*<br/>
-Базовый класс для интерфейса, такие как `IRowsetChange`.
+Базовый класс для интерфейса, например `IRowsetChange`.
 
-*RowClass*<br/>
-Единица хранения для дескриптора строки.
+*ровкласс*<br/>
+Единица хранения для маркера строки.
 
-*MapClass*<br/>
-Единица хранения для всех дескрипторов строк, удерживаемые поставщика.
+*мапкласс*<br/>
+Единица хранения для всех дескрипторов строк, удерживаемых поставщиком.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="interface-methods-used-with-irowsetchange"></a>Методы интерфейса (используется с IRowsetChange)
+### <a name="interface-methods-used-with-irowsetchange"></a>Методы интерфейса (используются с IRowsetChange)
 
 |||
 |-|-|
 |[DeleteRows](#deleterows)|Удаляет строки из набора строк.|
-|[InsertRow](#insertrow)|Вставляет строку в наборе строк.|
-|[SetData](#setdata)|Задает значения данных в один или несколько столбцов.|
+|[InsertRow](#insertrow)|Вставляет строку в набор строк.|
+|[SetData](#setdata)|Задает значения данных в одном или нескольких столбцах.|
 
-### <a name="implementation-method-callback"></a>Реализация метода (обратный вызов)
+### <a name="implementation-method-callback"></a>Метод реализации (обратный вызов)
 
 |||
 |-|-|
-|[FlushData](#flushdata)|Переопределить поставщиком для фиксации данных в хранилище.|
+|[FlushData](#flushdata)|Переопределено поставщиком для фиксации данных в хранилище.|
 
 ## <a name="remarks"></a>Примечания
 
-Этот интерфейс отвечает за операции записи немедленно в хранилище данных. «Немедленно» означает, что когда конечный пользователь (пользователь, с помощью потребителя) делает все изменения, эти изменения немедленно переносятся данные хранения (и не может быть отменена).
+Этот интерфейс отвечает за немедленное выполнение операций записи в хранилище данных. "Immediate" означает, что когда конечный пользователь (человек, использующий потребитель) вносит изменения, эти изменения немедленно передаются в хранилище данных (и их нельзя отменить).
 
-`IRowsetChangeImpl` реализует OLE DB `IRowsetChange` интерфейс, позволяющий обновлять значения столбцов в существующих строках, удаление строк и вставки новых строк.
+`IRowsetChangeImpl` реализует интерфейс OLE DB `IRowsetChange`, который позволяет обновлять значения столбцов в существующих строках, удалять строки и вставлять новые строки.
 
-Реализация шаблонов OLE DB поддерживает все базовые методы (`SetData`, `InsertRow`, и `DeleteRows`).
+Реализация шаблонов OLE DB поддерживает все базовые методы (`SetData`, `InsertRow`и `DeleteRows`).
 
 > [!IMPORTANT]
->  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде ЧЕМ пытаться реализации поставщика:
+>  Настоятельно рекомендуется ознакомиться со следующей документацией, прежде чем пытаться реализовать поставщик:
 
 - [Создание поставщика с возможностью записи](../../data/oledb/creating-an-updatable-provider.md)
 
-- Глава 6 *справочнике программиста OLE DB*
+- Глава 6 *справочника по OLE DB программисту*
 
-- Также см. в разделе как `RUpdateRowset` класс используется в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца.
+- Также посмотрите, как в образце [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) используется класс `RUpdateRowset`.
 
-## <a name="deleterows"></a> IRowsetChangeImpl::DeleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>Ировсетчанжеимпл::D Елетеровс
 
 Удаляет строки из набора строк.
 
@@ -124,9 +123,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowsetChange::D елетеровс](/previous-versions/windows/desktop/ms724362(v=vs.85)) в *справочнике по программисту OLE DB*.
 
-## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>Ировсетчанжеимпл:: InsertRow
 
 Создает и инициализирует новую строку в наборе строк.
 
@@ -141,11 +140,11 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetChange::InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowsetChange:: insertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="setdata"></a> IRowsetChangeImpl::SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>Ировсетчанжеимпл:: SetData
 
-Задает значения данных в один или несколько столбцов.
+Задает значения данных в одном или нескольких столбцах.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -157,11 +156,11 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>Ировсетчанжеимпл:: FlushData
 
-Переопределить поставщиком для фиксации данных в хранилище.
+Переопределено поставщиком для фиксации данных в хранилище.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -172,17 +171,17 @@ HRESULT FlushData(HROW hRowToFlush,
 
 #### <a name="parameters"></a>Параметры
 
-*hRowToFlush*<br/>
-[in] Дескриптор строки данных. Тип этой строки будет определяться *RowClass* аргумент шаблона `IRowsetImpl` класс (`CSimpleRow` по умолчанию).
+*хровтофлуш*<br/>
+окне Обработчик строк для данных. Тип этой строки определяется из аргумента шаблона *ровкласс* класса `IRowsetImpl` (по умолчанию`CSimpleRow`).
 
-*hAccessorToFlush*<br/>
-[in] Дескриптор метода доступа, который содержит сведения о привязке и сведения о типе в его `PROVIDER_MAP` (см. в разделе [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).
+*хакцессортофлуш*<br/>
+окне Обработчик метода доступа, который содержит сведения о привязке и сведения о типе в своем `PROVIDER_MAP` (см. [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

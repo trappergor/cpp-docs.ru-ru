@@ -1,15 +1,15 @@
 ---
 title: Реализация простых объектов-получателей
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707535"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544708"
 ---
 # <a name="implementing-a-simple-consumer"></a>Реализация простых объектов-получателей
 
@@ -33,7 +33,7 @@ ms.locfileid: "65707535"
 > [!NOTE]
 > Чтобы создать приложение объекта-получателя для тестирования `MyProv` (тот же поставщик, описанный в разделе [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md)), необходимо включить поддержку закладок, как описано в разделе [Добавление поддержки закладок для объекта-получателя](#bookmark).
 
-## <a name="retrieve" ></a> Извлечение данных с помощью объекта-получателя
+## <a name="retrieving-data-with-the-consumer"></a><a name="retrieve" ></a> Извлечение данных с помощью объекта-получателя
 
 ### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>Изменение консольного приложения для использования объекта-получателя OLE DB
 
@@ -42,7 +42,7 @@ ms.locfileid: "65707535"
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])
@@ -64,7 +64,7 @@ ms.locfileid: "65707535"
     }
     ```
 
-## <a name="bookmark" ></a> Добавление поддержки закладок для объекта-получателя
+## <a name="adding-bookmark-support-to-the-consumer"></a><a name="bookmark" ></a> Добавление поддержки закладок для объекта-получателя
 
 Закладка — это столбец, который однозначно определяет строки в таблице. Обычно, хотя и не всегда, это ключевой столбец. Он зависит от поставщика. В этом разделе показано, как добавить поддержку закладок. Чтобы сделать это, в классе записей пользователей необходимо сделать следующее:
 
@@ -205,6 +205,6 @@ ms.locfileid: "65707535"
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

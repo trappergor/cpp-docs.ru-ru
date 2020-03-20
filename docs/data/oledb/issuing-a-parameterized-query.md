@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390663"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "79545507"
 ---
 # <a name="issuing-a-parameterized-query"></a>Выполнение параметризированного запроса
 
-Следующий пример выдает простой параметризованный запрос, который извлекает записи с полем возраст (то есть больше 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра записи пользователя необходимо иметь дополнительную схему. В следующем коде, в проекте ATL используется `CCommand` вместо класса `CTable` класс, используемый в предыдущем примере, [перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md).
+В следующем примере создается простой параметризованный запрос, извлекающий записи с полем Age (более 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра запись пользователя должна иметь дополнительную карту. Следующий код в проекте ATL использует класс `CCommand` вместо класса `CTable`, используемого в предыдущем примере, [обходят простой набор строк](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-Записи пользователя `CArtists`, выглядит как в этом примере:
+Запись пользователя `CArtists`выглядит, как показано в следующем примере:
 
 ```cpp
 class CArtists
@@ -77,6 +77,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

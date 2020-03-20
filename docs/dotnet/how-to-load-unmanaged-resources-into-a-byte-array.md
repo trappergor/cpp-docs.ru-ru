@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344970"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544961"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>Практическое руководство. Загрузка неуправляемых ресурсов в массив байтов
 
-В этом разделе рассматривается несколько способов загрузки неуправляемых ресурсов в <xref:System.Byte> массива.
+В этом разделе обсуждается несколько способов загрузки неуправляемых ресурсов в массив <xref:System.Byte>.
 
 ## <a name="example"></a>Пример
 
-Если вы знаете размер неуправляемого ресурса, можно заранее выделите массив CLR и затем загрузить ресурс в массиве, используя указатель на блок массива CLR массива.
+Если вы знакомы с размером неуправляемого ресурса, можно предварительно выделить массив CLR, а затем загрузить ресурс в массив с помощью указателя на блок массива в массиве CLR.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-В этом примере показано, как копировать данные из блока неуправляемой памяти в управляемый массив.
+В этом примере показано, как скопировать данные из неуправляемого блока памяти в управляемый массив.
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

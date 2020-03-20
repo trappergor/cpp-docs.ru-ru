@@ -5,36 +5,36 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387556"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545051"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>Практическое руководство. Преобразование из коллекции .NET в контейнер STL/CLR
 
-В этом разделе показано, как для преобразования коллекции .NET в их эквивалент контейнеры STL/CLR. В качестве примера мы покажем, как преобразовать .NET <xref:System.Collections.Generic.List%601> для STL/CLR [вектор](../dotnet/vector-stl-clr.md) и как преобразовать .NET <xref:System.Collections.Generic.Dictionary%602> для STL/CLR [карты](../dotnet/map-stl-clr.md), но процедура одинакова для всех коллекций и контейнеров .
+В этом разделе показано, как преобразовать коллекции .NET в эквивалентные контейнеры STL/CLR. В качестве примера мы покажем, как преобразовать <xref:System.Collections.Generic.List%601> .NET в [вектор](../dotnet/vector-stl-clr.md) STL/CLR и как преобразовать <xref:System.Collections.Generic.Dictionary%602> .NET в [карту](../dotnet/map-stl-clr.md)STL/CLR, но процедура аналогична для всех коллекций и контейнеров.
 
-### <a name="to-create-a-container-from-a-collection"></a>Чтобы создать контейнер из коллекции
+### <a name="to-create-a-container-from-a-collection"></a>Создание контейнера из коллекции
 
-1. Чтобы преобразовать всю коллекцию, создайте контейнер STL/CLR и коллекция передается в конструктор.
+1. Чтобы преобразовать целую коллекцию, создайте контейнер STL/CLR и передайте коллекцию в конструктор.
 
-   В первом примере показано этой процедуры.
+   В первом примере демонстрируется эта процедура.
 
--ИЛИ-
+-или-
 
-1. Создание универсального контейнера STL/CLR, создав [collection_adapter](../dotnet/collection-adapter-stl-clr.md) объекта. Этот класс шаблона принимает интерфейс коллекции .NET в качестве аргумента. Чтобы проверить, какие интерфейсы поддерживаются, см. в разделе [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
+1. Создайте универсальный контейнер STL/CLR, создав объект [collection_adapter](../dotnet/collection-adapter-stl-clr.md) . Этот класс шаблона принимает в качестве аргумента интерфейс коллекции .NET. Сведения о том, какие интерфейсы поддерживаются, см. в разделе [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md).
 
-1. Скопируйте содержимое коллекции .NET в контейнер. Это можно сделать с помощью STL/CLR [алгоритм](../dotnet/algorithm-stl-clr.md), или путем прохода по коллекции .NET и Вставка копии каждого элемента в контейнер STL/CLR.
+1. Скопируйте содержимое коллекции .NET в контейнер. Это можно сделать с помощью [алгоритма](../dotnet/algorithm-stl-clr.md)STL/CLR или путем прохода по коллекции .NET и вставки копии каждого элемента в контейнер STL/CLR.
 
-   Второй пример демонстрирует эту процедуру.
+   Во втором примере демонстрируется эта процедура.
 
 ## <a name="example"></a>Пример
 
-В этом примере мы создадим универсальный <xref:System.Collections.Generic.List%601> и добавьте в него 5 элементами. Затем создаем `vector` с помощью конструктора, принимающего <xref:System.Collections.Generic.IEnumerable%601> как аргумент.
+В этом примере мы создадим универсальный <xref:System.Collections.Generic.List%601> и добавим в него 5 элементов. Затем мы создаем `vector` с помощью конструктора, который принимает <xref:System.Collections.Generic.IEnumerable%601> в качестве аргумента.
 
-```
+```cpp
 // cliext_convert_list_to_vector.cpp
 // compile with: /clr
 
@@ -78,9 +78,9 @@ The contents of the cliext::vector are:
 
 ## <a name="example"></a>Пример
 
-В этом примере мы создадим универсальный <xref:System.Collections.Generic.Dictionary%602> и добавьте в него 5 элементами. Затем создаем `collection_adapter` программы-оболочки для <xref:System.Collections.Generic.Dictionary%602> как простой контейнер STL/CLR. Наконец, мы создаем `map` и скопируйте содержимое <xref:System.Collections.Generic.Dictionary%602> для `map` перебор `collection_adapter`. В ходе этого процесса мы создадим новую пару, с помощью `make_pair` функции и вставить новую пару непосредственно в `map`.
+В этом примере мы создадим универсальный <xref:System.Collections.Generic.Dictionary%602> и добавим в него 5 элементов. Затем мы создадим `collection_adapter`, чтобы создать оболочку <xref:System.Collections.Generic.Dictionary%602> как простой контейнер STL/CLR. Наконец, мы создаем `map` и копируем содержимое <xref:System.Collections.Generic.Dictionary%602> в `map` путем прохода по `collection_adapter`. Во время этого процесса мы создаем новую пару с помощью функции `make_pair` и вставляем новую пару непосредственно в `map`.
 
-```
+```cpp
 // cliext_convert_dictionary_to_map.cpp
 // compile with: /clr
 
@@ -128,7 +128,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

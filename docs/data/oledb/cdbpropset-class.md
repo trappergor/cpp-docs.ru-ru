@@ -21,7 +21,6 @@ f1_keywords:
 - ATL.CDBPropSet.SetGUID
 - CDBPropSet.SetGUID
 - ATL::CDBPropSet::SetGUID
-- SetGUID
 - CDBPropSet::SetGUID
 helpviewer_keywords:
 - CDBPropSet class
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: b58c0262d361ede37bc3db68784177ec4c29f3a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325030"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546119"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
-Наследует от `DBPROPSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также `AddProperty` доступ к методу.
+Наследует от структуры `DBPROPSET` и добавляет конструктор, который инициализирует ключевые поля, а также метод доступа `AddProperty`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -54,27 +53,27 @@ class CDBPropSet : public tagDBPROPSET
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[AddProperty](#addproperty)|Добавляет свойство в набор свойств.|
-|[CDBPropSet](#cdbpropset)|Конструктор.|
-|[SetGUID](#setguid)|Наборы `guidPropertySet` поле `DBPROPSET` структуры.|
+|[кдбпропсет](#cdbpropset)|Конструктор.|
+|[сетгуид](#setguid)|Задает поле `guidPropertySet` структуры `DBPROPSET`.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор =](#op_equal)|Назначает содержимое для одного свойства.|
+|[Оператор =](#op_equal)|Присваивает содержимому одного свойства значение другого.|
 
 ## <a name="remarks"></a>Примечания
 
-Использование поставщиков и потребителей OLE DB `DBPROPSET` структуры для передачи массивов `DBPROP` структуры. Каждый `DBPROP` структура представляет одно свойство, которое можно задать.
+Поставщики OLE DB и потребители используют структуры `DBPROPSET` для передачи массивов структур `DBPROP`. Каждая структура `DBPROP` представляет одно свойство, которое можно задать.
 
-## <a name="addproperty"></a> CDBPropSet::AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>Кдбпропсет:: AddProperty
 
 Добавляет свойство в набор свойств.
 
@@ -97,37 +96,37 @@ bool AddProperty(DWORD dwPropertyID,
 
 #### <a name="parameters"></a>Параметры
 
-*dwPropertyID*<br/>
-[in] Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` из `DBPROP` структуры, добавляемый в набор свойств.
+*двпропертид*<br/>
+окне Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` структуры `DBPROP`, добавленной в набор свойств.
 
 *var*<br/>
-[in] Значение variant, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+окне Вариант, используемый для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
-*szValue*<br/>
-[in] Строка, используемая для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.
+*сзвалуе*<br/>
+окне Строка, используемая для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
 *bValue*<br/>
-[in] Объект `BYTE` или логическое значение, используемое для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.
+окне `BYTE` или логическое значение, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
-*nValue*<br/>
-[in] Целочисленное значение, используемое для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+*Nзначение*<br/>
+окне Целочисленное значение, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
-*fltValue*<br/>
-[in] Значение с плавающей запятой, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+*флтвалуе*<br/>
+окне Значение с плавающей запятой, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
-*dblValue*<br/>
-[in] Значение с плавающей запятой двойной точности, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+*дблвалуе*<br/>
+окне Значение с плавающей запятой двойной точности, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
-*cyValue*<br/>
-[in] Значение валюты CY, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+*цивалуе*<br/>
+окне Значение валюты CY, используемое для инициализации значения свойства для структуры `DBPROP`, добавленной в набор свойств.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если свойство было успешно добавлено. В противном случае **false**.
+**значение true** , если свойство было успешно добавлено. В противном случае — **false**.
 
-## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>Кдбпропсет:: Кдбпропсет
 
-Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
+Конструктор. Инициализирует поля `rgProperties`, `cProperties`и `guidPropertySet` структуры [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -141,15 +140,15 @@ CDBPropSet();
 
 #### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.
+*guid*<br/>
+окне Идентификатор GUID, используемый для инициализации поля `guidPropertySet`.
 
-*набор свойств*<br/>
-[in] Другой `CDBPropSet` объект для копирования.
+*Prop*<br/>
+окне Другой объект `CDBPropSet` для создания копии.
 
-## <a name="setguid"></a> CDBPropSet::SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>Кдбпропсет:: Сетгуид
 
-Наборы `guidPropertySet` в `DBPROPSET` структуры.
+Задает поле `guidPropertySet` в структуре `DBPROPSET`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -159,16 +158,16 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
+*guid*<br/>
+окне Идентификатор GUID, используемый для задания `guidPropertySet` поля структуры [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
 ### <a name="remarks"></a>Примечания
 
-Это поле можно задать [конструктор](../../data/oledb/cdbpropset-cdbpropset.md) также.
+Это поле также может быть задано [конструктором](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a> CDBPropSet::operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>Кдбпропсет:: operator =
 
-Назначает содержимое одного из свойств задать другой набор свойств.
+Присваивает содержимое одного свойства набору другому набору свойств.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -176,10 +175,10 @@ void SetGUID(const GUID& guid) throw();
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Структуре DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
-[структуры DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))
+Структура [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

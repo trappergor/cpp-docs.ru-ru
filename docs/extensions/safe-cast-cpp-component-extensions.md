@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516639"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544642"
 ---
-# <a name="safecast-ccli-and-ccx"></a>Операция safe_cast (C++/CLI и C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>Операция safe_cast (C++/CLI и C++/CX)
 
 В случае успешного выполнения операция **safe_cast** возвращает указанное выражение как указанный тип. В противном случае вызывается исключение `InvalidCastException`.
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516639"
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-Операция **safe_cast** позволяет изменить тип указанного выражения. В ситуациях, где вы полностью рассчитываете на возможность преобразования переменной или параметра в определенный тип, можно использовать **safe_cast** без блока **try-catch** для обнаружения ошибок программирования во время разработки. Дополнительные сведения см. в статье [Приведение (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx).
+Операция **safe_cast** позволяет изменить тип указанного выражения. В ситуациях, где вы полностью рассчитываете на возможность преобразования переменной или параметра в определенный тип, можно использовать **safe_cast** без блока **try-catch** для обнаружения ошибок программирования во время разработки. Дополнительные сведения см. в статье [Приведение (C++/CX)](../cppcx/casting-c-cx.md).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -50,7 +50,7 @@ ms.locfileid: "65516639"
 
 ### <a name="remarks"></a>Примечания
 
-Операция **safe_cast** вызывает исключение `InvalidCastException`, если не может преобразовать выражение *expression* в тип, заданный параметром *type-id*. Для перехвата `InvalidCastException` укажите параметр компилятора[/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md) и используйте оператор **try-catch**.
+**safe_cast** создает исключение `InvalidCastException`, если оно не может преобразовать *выражение* в тип, указанный в *типе-ID*. Чтобы перехватить `InvalidCastException`, укажите параметр компилятора [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) и используйте инструкцию **try/catch** .
 
 ### <a name="requirements"></a>Требования
 
@@ -164,6 +164,6 @@ int main() {
 Caught expected exception
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

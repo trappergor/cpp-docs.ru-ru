@@ -8,7 +8,6 @@ f1_keywords:
 - ATL::IDBInitializeImpl
 - ATL.IDBInitializeImpl
 - IDBInitializeImpl.IDBInitializeImpl
-- IDBInitializeImpl
 - IDBInitializeImpl::IDBInitializeImpl
 - Initialize
 - IDBInitializeImpl::Initialize
@@ -39,16 +38,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 3418ce11e1a607d66fee593b32fd3a4b7d197407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409022"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546065"
 ---
 # <a name="idbinitializeimpl-class"></a>Класс IDBInitializeImpl
 
-Предоставляет реализацию для [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) интерфейс.
+Предоставляет реализацию для интерфейса [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -60,39 +59,39 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IDBInitializeImpl`.
+Класс, производный от `IDBInitializeImpl`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[IDBInitializeImpl](#idbinitializeimpl)|Конструктор.|
+|[идбинитиализеимпл](#idbinitializeimpl)|Конструктор.|
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
 |||
 |-|-|
-|[Initialize](#initialize)|Запускает службу.|
-|[Отменить инициализацию](#uninitialize)|Останавливает службу.|
+|[Initialize](#initialize)|Запускает поставщик.|
+|[Отменить инициализацию](#uninitialize)|Останавливает поставщик.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
 |[m_dwStatus](#dwstatus)|Флаги источника данных.|
-|[m_pCUtlPropInfo](#pcutlpropinfo)|Указатель на реализацию свойства DB сведения.|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|Указатель на реализацию свойств базы данных.|
 
 ## <a name="remarks"></a>Примечания
 
-Обязательный интерфейс на объекты источника данных и дополнительный интерфейс для перечислителей.
+Обязательный интерфейс для объектов источника данных и необязательный интерфейс для перечислителей.
 
-## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>Идбинитиализеимпл:: Идбинитиализеимпл
 
 Конструктор.
 
@@ -104,11 +103,11 @@ IDBInitializeImpl();
 
 ### <a name="remarks"></a>Примечания
 
-Инициализирует все члены данных.
+Инициализирует все элементы данных.
 
-## <a name="initialize"></a> IDBInitializeImpl::Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>Идбинитиализеимпл:: Initialize
 
-Инициализирует объект источника данных, Подготовка поддержка его свойств.
+Инициализирует объект источника данных, подготавливая поддержку его свойств.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -118,11 +117,11 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IDBInitialize::Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>Идбинитиализеимпл:: Uninitialize
 
-Объект, в неинициализированном состоянии источника местах данные путем освобождения внутренних ресурсов, таких как поддержка свойств.
+Помещает объект источника данных в неинициализированное состояние путем освобождения внутренних ресурсов, таких как поддержка свойств.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -132,9 +131,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IDBInitialize::Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IDBInitialize:: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>Идбинитиализеимпл:: m_dwStatus
 
 Флаги источника данных.
 
@@ -146,7 +145,7 @@ DWORD m_dwStatus;
 
 ### <a name="remarks"></a>Примечания
 
-Эти флаги задать или указать состояние различных атрибутов для объекта источника данных. Содержит один или несколько из следующих **перечисления** значения:
+Эти флаги указывают или указывают состояние различных атрибутов для объекта источника данных. Содержит одно или несколько из следующих **перечисляемых** значений:
 
 ```cpp
 enum DATASOURCE_FLAGS {
@@ -158,13 +157,13 @@ enum DATASOURCE_FLAGS {
 
 |||
 |-|-|
-|`DSF_MASK_INIT`|Маска, чтобы включить восстановление неинициализированном состоянии.|
-|`DSF_PERSIST_DIRTY`|Набор, если объект источника данных требует постоянного хранения (то есть, если будут внесены изменения).|
-|`DSF_INITIALIZED`|Набор, если источник данных был инициализирован.|
+|`DSF_MASK_INIT`|Маска для включения восстановления неинициализированного состояния.|
+|`DSF_PERSIST_DIRTY`|Задайте значение, если для объекта источника данных требуется сохраняемость (т. е., если были внесены изменения).|
+|`DSF_INITIALIZED`|Установите, если источник данных был инициализирован.|
 
-## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>Идбинитиализеимпл:: m_pCUtlPropInfo
 
-Указатель на объект реализации свойства DB сведения.
+Указатель на объект реализации со сведениями о свойствах базы данных.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -172,7 +171,7 @@ enum DATASOURCE_FLAGS {
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

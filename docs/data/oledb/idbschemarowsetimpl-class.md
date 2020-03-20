@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c34f84254fc57b6cd5f8b4763faac313a01636b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409035"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544588"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl - класс
 
@@ -56,14 +56,14 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 ### <a name="parameters"></a>Параметры
 
-*SessionClass*<br/>
+*сессионкласс*<br/>
 Класс, по которому наследуется `IDBSchemaRowsetImpl` . Как правило, этот класс будет классом сеанса пользователя.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
@@ -84,15 +84,15 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 Этот класс реализует интерфейс [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) и шаблонизируемую функцию создателя [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md).
 
-OLE DB использует наборы строк схемы для возврата сведений о данных в поставщике. Такие данные часто называют метаданными. По умолчанию поставщик всегда должен поддерживать `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, и `DBSCHEMA_PROVIDER_TYPES`, как описано в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *Справочник программиста OLE DB по*. Наборы строк схемы назначаются в карте схемы. Сведения о карте записей схемы см. в разделе [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
+OLE DB использует наборы строк схемы для возврата сведений о данных в поставщике. Такие данные часто называют метаданными. По умолчанию поставщик всегда должен поддерживать `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`и `DBSCHEMA_PROVIDER_TYPES`, как описано в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *справочнике программиста OLE DB*. Наборы строк схемы назначаются в карте схемы. Сведения о карте записей схемы см. в разделе [SCHEMA_ENTRY](../../data/oledb/schema-entry.md).
 
-Мастер поставщиков OLE DB в мастере объектов ATL автоматически создает код для наборов строк схемы в проекте. (По умолчанию мастер поддерживает упомянутые выше обязательные наборы строк схемы.) При создании потребителя мастер объектов ATL использует наборы строк схемы для привязки правильных данных к поставщику. Если наборы строк схемы не реализованы для представления правильных метаданных, мастер не выполнит привязку правильных данных.
+Мастер поставщиков OLE DB в мастере объектов ATL автоматически создает код для наборов строк схемы в проекте. (По умолчанию мастер поддерживает наборы строк обязательных схем, которые были ранее упомянуты.) При создании объекта-получателя с помощью мастера объектов ATL мастер использует наборы строк схемы для привязки правильных данных к поставщику. Если наборы строк схемы не реализованы для представления правильных метаданных, мастер не выполнит привязку правильных данных.
 
 Сведения о поддержке наборов строк схемы в поставщике см. в разделе [Поддержка наборов строк схемы](../../data/oledb/supporting-schema-rowsets.md).
 
 Дополнительные сведения о наборах строк схемы см. в разделе [Наборы строк схемы](/previous-versions/windows/desktop/ms712921(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="checkrestrictions"></a> IDBSchemaRowsetImpl::CheckRestrictions
+## <a name="idbschemarowsetimplcheckrestrictions"></a><a name="checkrestrictions"></a>IDBSchemaRowsetImpl:: Чеккрестриктионс
 
 Проверяет допустимость ограничений относительно набора строк схемы.
 
@@ -105,24 +105,24 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 
 #### <a name="parameters"></a>Параметры
 
-*rguidSchema*<br/>
+*ргуидсчема*<br/>
 [входные данные] Ссылка на запрошенный GUID набора строк схемы (например, `DBSCHEMA_TABLES`).
 
 *cRestrictions*<br/>
 [входные данные] Число ограничений, переданных потребителем для набора строк схемы.
 
-*rgRestrictions*<br/>
-[входные данные] Массив длиной *cRestrictions* для задаваемых значений ограничений. Дополнительные сведения см. в описании *rgRestrictions* параметр в [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
+*ргрестриктионс*<br/>
+[входные данные] Массив длиной *cRestrictions* для задаваемых значений ограничений. Дополнительные сведения см. в описании параметра *ргрестриктионс* в [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `CheckRestrictions` для проверки допустимости ограничений для набора строк схемы. Он проверяет ограничения для `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`, и `DBSCHEMA_PROVIDER_TYPES` наборы строк схемы. Вызывается для определения, если объект-получатель вызов `IDBSchemaRowset::GetRowset` указано правильно. Если необходима поддержка наборов строк схемы, отличных от перечисленных выше, создайте собственную функцию для выполнения этой задачи.
+Используйте `CheckRestrictions` для проверки допустимости ограничений для набора строк схемы. Он проверяет ограничения для наборов строк схемы `DBSCHEMA_TABLES`, `DBSCHEMA_COLUMNS`и `DBSCHEMA_PROVIDER_TYPES`. Вызовите его, чтобы определить, правильно ли вызван вызов `IDBSchemaRowset::GetRowset` потребителя. Если необходима поддержка наборов строк схемы, отличных от перечисленных выше, создайте собственную функцию для выполнения этой задачи.
 
-`CheckRestrictions` Определяет, если потребитель вызывает [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) с правильным ограничением и правильным типом ограничения (например, VT_BSTR для строки), поддерживаемыми поставщиком. Он также определяет, поддерживается ли правильное количество ограничений. По умолчанию `CheckRestrictions` будет обращаться к поставщику через вызов [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , ограничения которого он поддерживает в заданном наборе строк. Затем он сравнит ограничения от потребителя с ограничениями, поддерживаемыми поставщиком. Результатом будет успешное или неудачное выполнение.
+`CheckRestrictions` определяет, вызывает ли потребитель [набор строк](../../data/oledb/idbschemarowsetimpl-getrowset.md) с правильным ограничением и правильным типом ограничения (например, VT_BSTR для строки), который поддерживает поставщик. Он также определяет, поддерживается ли правильное количество ограничений. По умолчанию `CheckRestrictions` будет обращаться к поставщику через вызов [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) , ограничения которого он поддерживает в заданном наборе строк. Затем он сравнит ограничения от потребителя с ограничениями, поддерживаемыми поставщиком. Результатом будет успешное или неудачное выполнение.
 
-Дополнительные сведения о наборах строк схемы см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *Справочник программиста OLE DB по* в пакете Windows SDK.
+Дополнительные сведения о наборах строк схемы см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
-## <a name="createschemarowset"></a> IDBSchemaRowsetImpl::CreateSchemaRowset
+## <a name="idbschemarowsetimplcreateschemarowset"></a><a name="createschemarowset"></a>IDBSchemaRowsetImpl:: Креатесчемаровсет
 
 Реализует функцию создателя COM-объекта для объекта, указанного параметром шаблона.
 
@@ -142,17 +142,17 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-*pUnkOuter*<br/>
-[in] Внешний [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) при агрегировании; в противном случае — значение NULL.
+*пункаутер*<br/>
+окне Внешний [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) при статистической обработке; в противном случае — null.
 
 *cRestrictions*<br/>
 [входные данные] Число ограничений, применяемых к набору строк.
 
-*rgRestrictions*<br/>
+*ргрестриктионс*<br/>
 [входные данные] Массив `cRestrictions`**VARIANT**, применяемых к набору строк.
 
 *riid*<br/>
-[in] Интерфейс [QueryInterface](../../atl/queryinterface.md) для на выходе `IUnknown`.
+окне Интерфейс для [QueryInterface](../../atl/queryinterface.md) , для которого выводится `IUnknown`вывода.
 
 *cPropertySets*<br/>
 [входные данные] Число задаваемых наборов свойств.
@@ -161,10 +161,10 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [входные данные] Массив структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , определяющих задаваемые свойства.
 
 *ppRowset*<br/>
-[out] Исходящий `IUnknown` по запросу *riid*. Это `IUnknown` — это интерфейс объекта набора строк схемы.
+заполняет Исходящий `IUnknown`, запрошенный *riid*. Этот `IUnknown` является интерфейсом в объекте набора строк схемы.
 
-*pSchemaRowset*<br/>
-[выходные данные] Указатель на экземпляр класса набора строк схемы. Как правило, этот параметр не используется, но может применяться, если необходимо выполнить дополнительные действия в наборе строк схемы перед передачей его в COM-объект. Время существования *pSchemaRowset* привязана к *ppRowset*.
+*псчемаровсет*<br/>
+[выходные данные] Указатель на экземпляр класса набора строк схемы. Как правило, этот параметр не используется, но может применяться, если необходимо выполнить дополнительные действия в наборе строк схемы перед передачей его в COM-объект. Время существования *псчемаровсет* привязывается *ппровсет*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -174,7 +174,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 
 Эта функция реализует универсальный создатель для всех типов наборов строк схемы. Как правило, пользователь не вызывает эту функцию. Ее вызывает реализация карты схемы.
 
-## <a name="setrestrictions"></a> IDBSchemaRowsetImpl::SetRestrictions
+## <a name="idbschemarowsetimplsetrestrictions"></a><a name="setrestrictions"></a>IDBSchemaRowsetImpl:: SetRestrictions
 
 Указывает, какие ограничения поддерживаются в определенном наборе строк схемы.
 
@@ -189,27 +189,27 @@ void SetRestrictions(ULONG cRestrictions,
 #### <a name="parameters"></a>Параметры
 
 *cRestrictions*<br/>
-[in] Число ограничений в *rgRestrictions* массива и число GUID в *rguidSchema* массива.
+окне Число ограничений в массиве *ргрестриктионс* и число идентификаторов GUID в массиве *ргуидсчема* .
 
-*rguidSchema*<br/>
+*ргуидсчема*<br/>
 [входные данные] Массив GUID наборов строк схемы, для которого требуется извлечь ограничения. Каждый элемент массива содержит GUID одного набора строк схемы (например, `DBSCHEMA_TABLES`).
 
-*rgRestrictions*<br/>
-[входные данные] Массив длиной *cRestrictions* для задаваемых значений ограничений. Каждый элемент соответствует ограничениям в наборе строк схемы, определяемом по GUID. Если набор строк схемы не поддерживается поставщиком, элементу присваивается нулевое значение. В противном случае значение **ULONG** значение содержит битовую маску, которая представляет ограничения, поддерживаемые в этом наборе строк схемы. Дополнительные сведения, на котором ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *Справочник программиста OLE DB по* в Windows ПАКЕТ SDK.
+*ргрестриктионс*<br/>
+[входные данные] Массив длиной *cRestrictions* для задаваемых значений ограничений. Каждый элемент соответствует ограничениям в наборе строк схемы, определяемом по GUID. Если набор строк схемы не поддерживается поставщиком, элементу присваивается нулевое значение. В противном случае значение **ULONG** значение содержит битовую маску, которая представляет ограничения, поддерживаемые в этом наборе строк схемы. Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице идентификаторов GUID набора строк схемы в [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *справочнике по OLE DB программисту* в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-`IDBSchemaRowset` Вызывает `SetRestrictions` для определения ограничений, поддерживаемых в определенном наборе строк схемы (вызывается с помощью [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) через повышенный указатель). Ограничения позволяют выбирать только совпадающие строки (например, поиск всех столбцов в таблице MyTable). Ограничения являются необязательными, и если не поддерживается ни одно ограничение (по умолчанию), всегда возвращаются все данные.
+Объект `IDBSchemaRowset` вызывает `SetRestrictions`, чтобы определить ограничения, которые вы поддерживаете в определенном наборе строк схемы (он вызывается с помощью функций [GetSchema](../../data/oledb/idbschemarowsetimpl-getschemas.md) через переданный указатель). Ограничения позволяют выбирать только совпадающие строки (например, поиск всех столбцов в таблице MyTable). Ограничения являются необязательными, и если не поддерживается ни одно ограничение (по умолчанию), всегда возвращаются все данные.
 
-Реализация по умолчанию этот метод задает *rgRestrictions* массив элементов, равным 0. Чтобы задать ограничения, отличные от используемых по умолчанию, нужно переопределить установку по умолчанию в классе сеанса.
+Реализация по умолчанию этого метода устанавливает для элементов массива *ргрестриктионс* значение 0. Чтобы задать ограничения, отличные от используемых по умолчанию, нужно переопределить установку по умолчанию в классе сеанса.
 
 Сведения о реализации поддержки наборов строк схемы см. в разделе [Поддержка наборов строк схемы](../../data/oledb/supporting-schema-rowsets.md).
 
 Пример поставщика, поддерживающего наборы строк схемы, см. в примере [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-Дополнительные сведения о наборах строк схемы см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *Справочник программиста OLE DB по* в пакете Windows SDK.
+Дополнительные сведения о наборах строк схемы см. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
-## <a name="getrowset"></a> IDBSchemaRowsetImpl::GetRowset
+## <a name="idbschemarowsetimplgetrowset"></a><a name="getrowset"></a>IDBSchemaRowsetImpl:: Rowset
 
 Возвращает набор строк схемы.
 
@@ -228,16 +228,16 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-*pUnkOuter*<br/>
-[in] Внешний `IUnknown` при агрегировании; в противном случае — NULL.
+*пункаутер*<br/>
+окне Внешний `IUnknown` при статистической обработке; в противном случае — NULL.
 
-*rguidSchema*<br/>
+*ргуидсчема*<br/>
 [входные данные] Ссылка на запрошенный GUID набора строк схемы (например, `DBSCHEMA_TABLES`).
 
 *cRestrictions*<br/>
 [входные данные] Число ограничений, применяемых к набору строк.
 
-*rgRestrictions*<br/>
+*ргрестриктионс*<br/>
 [входные данные] Массив типов `cRestrictions`**VARIANT**, которые представляют ограничения.
 
 *riid*<br/>
@@ -254,11 +254,11 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 ### <a name="remarks"></a>Примечания
 
-Для реализаций этого метода пользователь должен иметь карту схемы в классе сеанса. С помощью сведений о карте схемы, `GetRowset` создает объект определенного набора строк, если *rguidSchema* параметра равно одному из GUID карты записей. Описание карты записей см. в разделе [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) .
+Для реализаций этого метода пользователь должен иметь карту схемы в классе сеанса. Используя сведения о схеме схемы, `GetRowset` создает заданный объект набора строк, если параметр *ргуидсчема* равен одному из идентификаторов GUID записей Map. Описание карты записей см. в разделе [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) .
 
-См. в разделе [IDBSchemaRowset::GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) в Windows SDK.
+См. раздел [IDBSchemaRowset:: Rowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) в Windows SDK.
 
-## <a name="getschemas"></a> IDBSchemaRowsetImpl::GetSchemas
+## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a>IDBSchemaRowsetImpl:: GetSchema
 
 Возвращает список наборов строк схемы, доступных для [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md).
 
@@ -283,11 +283,11 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод возвращает массив всех наборов строк схемы, поддерживаемых поставщиком. См. в разделе [IDBSchemaRowset::GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) в Windows SDK.
+Этот метод возвращает массив всех наборов строк схемы, поддерживаемых поставщиком. См. раздел [IDBSchemaRowset:: GetSchema](/previous-versions/windows/desktop/ms719605(v=vs.85)) в Windows SDK.
 
 Для реализаций этой функции пользователь должен иметь карту схемы в классе сеанса. Затем с помощью сведений о карте схемы выдается массив идентификаторов GUID для схемы на карте. Он представляет схемы, поддерживаемые поставщиком.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Классы Rowset и Typedef схемы](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [Поддержка наборов строк схемы](../../data/oledb/supporting-schema-rowsets.md)<br/>

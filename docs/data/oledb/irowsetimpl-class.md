@@ -4,7 +4,6 @@ ms.date: 11/04/2016
 f1_keywords:
 - IRowsetImpl
 - IRowsetImpl::AddRefRows
-- AddRefRows
 - IRowsetImpl.AddRefRows
 - ATL::IRowsetImpl::AddRefRows
 - ATL.IRowsetImpl.AddRefRows
@@ -29,14 +28,12 @@ f1_keywords:
 - ATL::IRowsetImpl::IRowsetImpl
 - ATL.IRowsetImpl.IRowsetImpl
 - IRowsetImpl::IRowsetImpl
-- IRowsetImpl
 - ATL::IRowsetImpl::RefRows
 - ATL.IRowsetImpl.RefRows
 - IRowsetImpl.RefRows
 - RefRows
 - IRowsetImpl::RefRows
 - ATL.IRowsetImpl.ReleaseRows
-- ReleaseRows
 - IRowsetImpl::ReleaseRows
 - ATL::IRowsetImpl::ReleaseRows
 - IRowsetImpl.ReleaseRows
@@ -91,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 47b03a542933c6223e098bc9d8fa8d45bf5e047b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390754"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546047"
 ---
 # <a name="irowsetimpl-class"></a>Класс IRowsetImpl
 
@@ -118,53 +115,53 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IRowsetImpl`.
-
-*RowsetInterface*<br/>
 Класс, производный от `IRowsetImpl`.
 
-*RowClass*<br/>
+*ровсетинтерфаце*<br/>
+Класс, производный от `IRowsetImpl`.
+
+*ровкласс*<br/>
 Единица хранения для `HROW`.
 
-*MapClass*<br/>
-Единица хранения для всех дескрипторов строк, удерживаемые поставщика.
+*мапкласс*<br/>
+Единица хранения для всех дескрипторов строк, удерживаемых поставщиком.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[AddRefRows](#addrefrows)|Добавляет счетчик ссылок в дескриптор существующей строки.|
-|[CreateRow](#createrow)|Вызывается средой [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) выделить новый `HROW`. Не вызывается непосредственно пользователем.|
-|[GetData](#getdata)|Извлекает данные из копии строки в наборе строк.|
-|[GetDBStatus](#getdbstatus)|Возвращает состояние для указанного поля.|
+|[аддрефровс](#addrefrows)|Добавляет счетчик ссылок в дескриптор существующей строки.|
+|[креатеров](#createrow)|Вызывается методом [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) для выделения нового `HROW`. Не вызывается непосредственно пользователем.|
+|[GetData](#getdata)|Извлекает данные из копии набора строк для строки.|
+|[жетдбстатус](#getdbstatus)|Возвращает состояние указанного поля.|
 |[GetNextRows](#getnextrows)|Последовательно извлекает строки с запоминанием предыдущей позиции.|
 |[IRowsetImpl](#irowsetimpl)|Конструктор. Не вызывается непосредственно пользователем.|
-|[RefRows](#refrows)|Вызывается средой [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) и [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Не вызывается непосредственно пользователем.|
+|[рефровс](#refrows)|Вызывается с помощью [аддрефровс](../../data/oledb/irowsetimpl-addrefrows.md) и [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md). Не вызывается непосредственно пользователем.|
 |[ReleaseRows](#releaserows)|Высвобождает строки.|
-|[Свойство RestartPosition](#restartposition)|Перемещает позицию следующей выборки в его начальное положение; то есть его положение при первом набора строк создан.|
-|[SetDBStatus](#setdbstatus)|Задает флаги состояния для указанного поля.|
+|[Свойство RestartPosition](#restartposition)|Перемещает расположение следующей выборки в исходное расположение; то есть его расположение при первом создании набора строк.|
+|[сетдбстатус](#setdbstatus)|Задает флаги состояния для указанного поля.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
-|[m_bCanFetchBack](#bcanfetchback)|Указывает, поддерживает ли поставщик обратной выборки.|
-|[m_bCanScrollBack](#bcanscrollback)|Указывает ли поставщик может включать его курсор прокрутки назад.|
-|[m_bReset](#breset)|Указывает, ли поставщик сбросить его положение курсора. Это имеет особое значение при прокрутке в обратном направлении или выборка в обратном направлении [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|
-|[m_iRowset](#irowset)|Индекс для набора строк, представляющий курсор.|
+|[m_bCanFetchBack](#bcanfetchback)|Указывает, поддерживает ли поставщик обратную выборку.|
+|[m_bCanScrollBack](#bcanscrollback)|Указывает, может ли поставщик прокручивать курсор назад.|
+|[m_bReset](#breset)|Указывает, сброшен ли поставщик позицию курсора. Это имеет особое значение при прокрутке в обратном направлении или в обратном направлении в [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md).|
+|[m_iRowset](#irowset)|Индекс набора строк, представляющий курсор.|
 |[m_rgRowHandles](#rgrowhandles)|Список дескрипторов строк.|
 
 ## <a name="remarks"></a>Примечания
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) — это базовый интерфейс набора строк.
 
-## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl:: Аддрефровс
 
 Добавляет счетчик ссылок в дескриптор существующей строки.
 
@@ -179,11 +176,11 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: аддрефровс](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="createrow"></a> IRowsetImpl::CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl:: Креатеров
 
-Вспомогательный метод, вызываемый [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) выделить новый `HROW`.
+Вспомогательный метод, вызываемый [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) для выделения нового `HROW`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -195,22 +192,22 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 #### <a name="parameters"></a>Параметры
 
-*lRowsOffset*<br/>
-Позиция курсора создаваемой строки.
+*лровсоффсет*<br/>
+Позиции курсора создаваемой строки.
 
-*cRowsObtained*<br/>
-Ссылка передается обратно пользователю, указывающее число созданных строк.
+*кровсобтаинед*<br/>
+Ссылка, которая передается обратно пользователю, указывая количество созданных строк.
 
-*rgRows*<br/>
-Массив `HROW`s возвращается вызывающей стороне с дескрипторами только что созданной строки.
+*ргровс*<br/>
+Массив `HROW`s, возвращенный вызывающему объекту с вновь созданными дескрипторами строк.
 
 ### <a name="remarks"></a>Примечания
 
-Если строка существует, этот метод вызывает [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) и возвращает. В противном случае выделяет новый экземпляр переменной шаблона RowClass и добавляет ее к [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
+Если строка существует, этот метод вызывает [аддрефровс](../../data/oledb/irowsetimpl-addrefrows.md) и возвращает. В противном случае он выделяет новый экземпляр переменной шаблона Ровкласс и добавляет его в [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).
 
-## <a name="getdata"></a> IRowsetImpl::GetData
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl:: GetData
 
-Извлекает данные из копии строки в наборе строк.
+Извлекает данные из копии набора строк для строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -222,21 +219,21 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) в *справочнике по OLE DB программиста*.
 
-Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IRowset::GetData`:
+Некоторые параметры соответствуют *OLE DB ссылочным параметрам программиста* с разными именами, которые описаны в разделе `IRowset::GetData`.
 
-|Параметры шаблона OLE DB|*Справочник программиста OLE DB по* параметров|
+|OLE DB параметры шаблона|*OLE DB ссылочные параметры программиста*|
 |--------------------------------|------------------------------------------------|
-|*pDstData*|*pData*|
+|*пдстдата*|*pData*|
 
 ### <a name="remarks"></a>Примечания
 
-Также обрабатывает преобразование данных с помощью преобразования данных OLE DB для библиотеки DLL.
+Также обрабатывает преобразование данных с помощью OLE DB библиотеки DLL преобразования данных.
 
-## <a name="getdbstatus"></a> IRowsetImpl::GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl:: Жетдбстатус
 
-Возвращает флаги состояния DBSTATUS для указанного поля.
+Возвращает флаги состояния ДБСТАТУС для указанного поля.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -247,17 +244,17 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 #### <a name="parameters"></a>Параметры
 
-*currentRow*<br/>
-[in] Текущая строка.
+*куррентров*<br/>
+окне Текущая строка.
 
 *columnNames*<br/>
-[in] Столбец, для которого запрашивается состояние.
+окне Столбец, для которого запрашивается состояние.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) флаги для столбца.
+Флаги [дбстатус](/previous-versions/windows/desktop/ms722617(v=vs.85)) для столбца.
 
-## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl:: GetNextRows
 
 Последовательно извлекает строки с запоминанием предыдущей позиции.
 
@@ -273,9 +270,9 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
 
 Конструктор.
 
@@ -289,9 +286,9 @@ IRowsetImpl();
 
 Обычно не требуется вызывать этот метод напрямую.
 
-## <a name="refrows"></a> IRowsetImpl::RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl:: Рефровс
 
-Вызывается средой [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) и [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) увеличивается или выпуска счетчик ссылок в дескриптор существующей строки.
+Вызывается методами [аддрефровс](../../data/oledb/irowsetimpl-addrefrows.md) и [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) для увеличения или освобождения счетчика ссылок до существующего маркера строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -305,13 +302,13 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: аддрефровс](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-## <a name="releaserows"></a> IRowsetImpl::ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl:: ReleaseRows
 
 Высвобождает строки.
 
@@ -327,11 +324,11 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="restartposition"></a> IRowsetImpl::RestartPosition
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl:: свойство RestartPosition
 
-Перемещает позицию следующей выборки в его начальное положение; то есть его положение при первом набора строк создан.
+Перемещает расположение следующей выборки в исходное расположение; то есть его расположение при первом создании набора строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -341,15 +338,15 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IRowset:: свойство RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
-Положение в наборе строк не определено до `GetNextRow` вызывается. Вы можете переместить назад в rowet путем вызова `RestartPosition` и затем выборку и прокрутку в обратном направлении.
+Расположение набора строк не определено до вызова `GetNextRow`. Можно перемещаться назад в ровет, вызывая `RestartPosition`, а затем извлекать или прокручивать обратную сторону.
 
-## <a name="setdbstatus"></a> IRowsetImpl::SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl:: Сетдбстатус
 
-Задает флаги состояния DBSTATUS для указанного поля.
+Задает флаги состояния ДБСТАТУС для указанного поля.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -361,14 +358,14 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 #### <a name="parameters"></a>Параметры
 
-*statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) флажки, которые нужно установить для столбца.
+*статусфлагс*<br/>
+Флаги [дбстатус](/previous-versions/windows/desktop/ms722617(v=vs.85)) , которые необходимо задать для столбца.
 
-*currentRow*<br/>
+*куррентров*<br/>
 Текущая строка.
 
 *columnInfo*<br/>
-Столбец, для которой задается состояние.
+Столбец, для которого задается состояние.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -376,11 +373,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 ### <a name="remarks"></a>Примечания
 
-Поставщик переопределяет эту функцию для предоставления специальной обработки для DBSTATUS_S_ISNULL и DBSTATUS_S_DEFAULT.
+Поставщик переопределяет эту функцию, чтобы обеспечить специальную обработку DBSTATUS_S_ISNULL и DBSTATUS_S_DEFAULT.
 
-## <a name="bcanfetchback"></a> IRowsetImpl::m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
 
-Указывает, поддерживает ли поставщик обратной выборки.
+Указывает, поддерживает ли поставщик обратную выборку.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -390,11 +387,11 @@ unsigned m_bCanFetchBack:1;
 
 ### <a name="remarks"></a>Примечания
 
-Связанная с `DBPROP_CANFETCHBACKWARDS` свойство в `DBPROPSET_ROWSET` группы. Поставщик должен поддерживать `DBPROP_CANFETCHBACKWARDS` для `m_bCanFetchBackwards` быть **true**.
+Связано со свойством `DBPROP_CANFETCHBACKWARDS` в группе `DBPROPSET_ROWSET`. Поставщик должен поддерживать `DBPROP_CANFETCHBACKWARDS`, чтобы `m_bCanFetchBackwards` иметь **значение true**.
 
-## <a name="bcanscrollback"></a> IRowsetImpl::m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
 
-Указывает ли поставщик может включать его курсор прокрутки назад.
+Указывает, может ли поставщик прокручивать курсор назад.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -404,11 +401,11 @@ unsigned  m_bCanScrollBack:1;
 
 ### <a name="remarks"></a>Примечания
 
-Связанная с `DBPROP_CANSCROLLBACKWARDS` свойство в `DBPROPSET_ROWSET` группы. Поставщик должен поддерживать `DBPROP_CANSCROLLBACKWARDS` для `m_bCanFetchBackwards` быть **true**.
+Связано со свойством `DBPROP_CANSCROLLBACKWARDS` в группе `DBPROPSET_ROWSET`. Поставщик должен поддерживать `DBPROP_CANSCROLLBACKWARDS`, чтобы `m_bCanFetchBackwards` иметь **значение true**.
 
-## <a name="breset"></a> IRowsetImpl::m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl:: m_bReset
 
-Битовый флаг, используемый для определения того, если положение курсора определяется в наборе строк.
+Битовый флаг, используемый для определения положения курсора в наборе строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -418,11 +415,11 @@ unsigned m_bReset:1;
 
 ### <a name="remarks"></a>Примечания
 
-Если потребитель вызывает метод [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) с отрицательным `lOffset` или *cRows* и `m_bReset` имеет значение true, `GetNextRows` перемещается в конец набора строк. Если `m_bReset` имеет значение false, получатель принимает код ошибки, в соответствии со спецификацией OLE DB. `m_bReset` Флаг получает значение **true** при первоначальном создании набора строк, и когда потребитель вызывает [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). Он возвращает значение **false** при вызове `GetNextRows`.
+Если потребитель вызывает [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) с отрицательным `lOffset` или *crowset* , а `m_bReset` имеет значение true, `GetNextRows` перемещается в конец набора строк. Если `m_bReset` имеет значение false, потребитель получает код ошибки в соответствие со спецификацией OLE DB. Флаг `m_bReset` получает значение **true** при создании набора строк, а потребитель вызывает [IRowsetImpl:: свойство RestartPosition](../../data/oledb/irowsetimpl-restartposition.md). При вызове `GetNextRows`он получает значение **false** .
 
-## <a name="irowset"></a> IRowsetImpl::m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl:: m_iRowset
 
-Индекс для набора строк, представляющий курсор.
+Индекс набора строк, представляющий курсор.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -430,9 +427,9 @@ unsigned m_bReset:1;
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="rgrowhandles"></a> IRowsetImpl::m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
 
-Сопоставления дескрипторов строк, в настоящее время содержатся поставщиком в ответ на `GetNextRows`.
+Схема дескрипторов строк, которые в настоящее время содержатся в поставщике в ответ на `GetNextRows`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -442,9 +439,9 @@ MapClass m_rgRowHandles;
 
 ### <a name="remarks"></a>Примечания
 
-Дескрипторы строк удаляются путем вызова `ReleaseRows`. См. в разделе [Обзор IRowsetImpl](../../data/oledb/irowsetimpl-class.md) для определения *MapClass*.
+Дескрипторы строк удаляются путем вызова `ReleaseRows`. Определение *мапкласс*см. в [обзоре IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

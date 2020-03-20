@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389155"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "79545519"
 ---
 # <a name="traversing-a-simple-rowset"></a>Перебор простого набора строк
 
-В следующем примере показано быстрый и простой базы данных access, не включает команды. Следующий код потребителя, в проект ATL, извлекает записи из таблицы с именем *исполнители* в Microsoft Access базу данных, используя поставщик Microsoft OLE DB для ODBC. Код создает [CTable](../../data/oledb/ctable-class.md) таблицы с методом доступа на основе класс записей пользователя `CArtists`. Открывает соединение, открывается сеанс подключения и открывает таблицу в сеансе.
+В следующем примере показан быстрый и простой доступ к базе данных, который не затрагивает команды. Следующий код потребителя в проекте ATL извлекает записи из таблицы с именем « *исполнители* » в базе данных Microsoft Access с помощью поставщика Microsoft OLE DB для ODBC. Код создает объект таблицы [CTable](../../data/oledb/ctable-class.md) с методом доступа на основе класса записей пользователя `CArtists`. Он открывает подключение, открывает сеанс для соединения и открывает таблицу в сеансе.
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-Записи пользователя `CArtists`, выглядит как в этом примере:
+Запись пользователя `CArtists`выглядит, как показано в следующем примере:
 
 ```cpp
 class CArtists
@@ -74,6 +74,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

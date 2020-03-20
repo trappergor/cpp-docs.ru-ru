@@ -1,21 +1,24 @@
 ---
 title: ref class и ref struct (C++/CLI и C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788788"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544666"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class и ref struct (C++/CLI и C++/CX)
 
@@ -60,7 +63,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 Когда ссылочный тип наследует от другого ссылочного типа, виртуальные функции в базовом классе необходимо явно переопределить (с помощью [override](override-cpp-component-extensions.md)) или скрыть (с помощью[new (new slot in vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Функции производного класса должны также быть явно помечены как **virtual**.
 
-Для обнаружения во время компиляции, является ли тип **ref class** или **ref struct**, а также **value class** или **value struct**, используйте `__is_ref_class (type)`, `__is_value_class (type)` или `__is_simple_value_class (type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка признаков типов компилятором (C++/CLI и C++/CX)).
+Для обнаружения во время компиляции, является ли тип **ref class** или **ref struct**, а также **value class** или **value struct**, используйте `__is_ref_class (type)`, `__is_value_class (type)` или `__is_simple_value_class (type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 Дополнительные сведения о классах и структурах см. в разделе
 
@@ -70,7 +73,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [Классы и структуры (C++)](../cpp/classes-and-structs-cpp.md)
 
-- [Деструкторы и методы завершения в статье "Практическое руководство. Определение и использование классов и структур (C++/CLI)"](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Деструкторы и методы завершения в методах: определение и использование классов и структур (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Пользовательские операторы (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -84,7 +87,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>Примечания
 
-См. разделы [Классы и структуры ссылки (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md) и [Классы и структуры значений (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx).
+См. разделы [Классы и структуры ссылки (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md) и [Классы и структуры значений (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md).
 
 ### <a name="parameters"></a>Параметры
 
@@ -118,6 +121,6 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 Параметр компилятора: `/clr`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

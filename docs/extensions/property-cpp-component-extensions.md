@@ -2,18 +2,15 @@
 title: property (C++/CLI и C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516509"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545759"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI и C++/CX)
 
@@ -70,7 +67,7 @@ property type default[index_list] {
 *access-modifier*<br/>
 Квалификатор доступа. Допустимые квалификаторы — **статический** и **виртуальный**.
 
-Методы доступа get или set не требуется согласовывать с **виртуальным **квалификатором, но они должны быть согласованы со** статистическим** квалификатором.
+Методы доступа get или set не требуется согласовывать с **виртуальным** квалификатором, но они должны быть согласованы со **статистическим** квалификатором.
 
 *inheritance-modifier*<br/>
 Квалификатор наследования. Допустимые квалификаторы — **абстрактный** и **запечатанный**.
@@ -86,7 +83,7 @@ property type default[index_list] {
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-Дополнительные сведения см. в разделе [Свойства (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx).
+Дополнительные сведения см. в разделе [Свойства (C++/CX)](../cppcx/properties-c-cx.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Использование собственного типа в компиляции - clr
+title: Как использовать собственный тип в компиляции в среде CLR
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387205"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545207"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Практическое руководство. Использование собственного типа в компиляции/CLR
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Практическое руководство. Использование собственного типа в компиляции /clr
 
-Можно определить собственный тип в **/CLR** компиляции и любое использование этого машинного типа в сборке является допустимым. Тем не менее собственные типы, не будет использоваться в ссылочных метаданных.
+Можно определить собственный тип в компиляции **/CLR** , и любое использование этого собственного типа из сборки является допустимым. Однако собственные типы не будут доступны для использования в метаданных, на которые имеются ссылки.
 
-Каждая сборка может содержать определение каждого собственный тип, который будет использоваться.
+Каждая сборка должна содержать определение каждого собственного типа, который будет использоваться.
 
 Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -25,7 +25,7 @@ ms.locfileid: "62387205"
 
 В этом примере создается компонент, который определяет и использует собственный тип.
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>Пример
 
-В этом примере определяется клиент, который использует компонент. Обратите внимание на то, что это ошибка для доступа к в собственный тип, если оно определено в единице компиляции.
+В этом примере определяется клиент, использующий компонент. Обратите внимание, что при доступе к собственному типу возникает ошибка, если он не определен в компилируемого объекта.
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"
@@ -61,6 +61,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

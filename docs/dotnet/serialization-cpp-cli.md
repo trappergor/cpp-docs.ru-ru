@@ -9,30 +9,30 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384677"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545165"
 ---
 # <a name="serialization-ccli"></a>Сериализация (C++/CLI)
 
-Сериализация (процесс сохранения состояния объекта или члена на постоянный носитель) управляемых классов (в том числе отдельных полей или свойств) поддерживается <xref:System.SerializableAttribute> и <xref:System.NonSerializedAttribute> классы.
+Сериализация (процесс хранения состояния объекта или элемента на постоянный носитель) управляемых классов (включая отдельные поля или свойства) поддерживается классами <xref:System.SerializableAttribute> и <xref:System.NonSerializedAttribute>.
 
 ## <a name="remarks"></a>Примечания
 
-Применить **SerializableAttribute** настраиваемого атрибута для управляемого класса, чтобы сериализовать весь класс или только к определенным полям или свойствам для сериализации части управляемого класса. Используйте **NonSerializedAttribute** настраиваемого атрибута для освобождения полей или свойств управляемого класса из сериализации.
+Примените настраиваемый атрибут **SerializableAttribute** к управляемому классу, чтобы сериализовать весь класс или применить его только к конкретным полям или свойствам для сериализации частей управляемого класса. Используйте настраиваемый атрибут **NonSerializedAttribute** , чтобы исключить из сериализации поля или свойства управляемого класса.
 
 ## <a name="example"></a>Пример
 
 ### <a name="description"></a>Описание
 
-В следующем примере, класс `MyClass` (и свойство `m_nCount`) помечен как сериализуемый. Тем не менее `m_nData` свойство не сериализуется, обозначенный **NonSerialized** настраиваемого атрибута:
+В следующем примере класс `MyClass` (и свойство `m_nCount`) помечается как сериализуемый. Однако свойство `m_nData` не сериализуется, как указано **Несериализованным** пользовательским атрибутом:
 
 ### <a name="code"></a>Код
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -47,10 +47,10 @@ private:
 };
 ```
 
-### <a name="comments"></a>Комментарии
+### <a name="comments"></a>Comments
 
-Обратите внимание, что оба атрибута можно ссылаться с помощью их «короткое имя» (**Serializable** и **NonSerialized**). Далее приведено [применение атрибутов](/dotnet/standard/attributes/applying-attributes).
+Обратите внимание, что к обоим атрибутам можно обращаться с помощью «краткого имени» (**сериализуемых** и **несериализуемых**). Это Подробнее объясняется в разделах [применение атрибутов](/dotnet/standard/attributes/applying-attributes).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

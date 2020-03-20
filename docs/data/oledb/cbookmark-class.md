@@ -11,7 +11,6 @@ f1_keywords:
 - CBookmark::CBookmark
 - ATL.CBookmark.CBookmark
 - CBookmark.CBookmark
-- CBookmark
 - ATL::CBookmark<0>::CBookmark<0>
 - ATL.CBookmark<0>.CBookmark<0>
 - CBookmark<0>::CBookmark<0>
@@ -67,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209394"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79546029"
 ---
 # <a name="cbookmark-class"></a>Класс CBookmark
 
-Содержит значение закладки в свой буфер.
+Содержит значение закладки в своем буфере.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -90,35 +89,35 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="parameters"></a>Параметры
 
-*nSize*<br/>
-Размер буфера закладки в байтах. Когда *nSize* равен нулю, буфера закладки создается динамически во время выполнения.
+*нсизе*<br/>
+Размер буфера закладки в байтах. Если *нсизе* равен нулю, буфер закладки будет динамически создаваться во время выполнения.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[CBookmark](#cbookmark)|Конструктор|
-|[GetBuffer](#getbuffer)|Извлекает указатель на буфер.|
-|[GetSize](#getsize)|Получает размер буфера в байтах.|
-|[SetBookmark](#setbookmark)|Задает значение закладки.|
+|[Буферизация](#getbuffer)|Получает указатель на буфер.|
+|[GetSize](#getsize)|Возвращает размер буфера в байтах.|
+|[сетбукмарк](#setbookmark)|Задает значение закладки.|
 
 ### <a name="operators"></a>Операторы
 
 |||
 |-|-|
-|[оператор =](#operator)|Назначает один `CBookmark` класса в другой.|
+|[Оператор =](#operator)|Назначает один класс `CBookmark` другому.|
 
 ## <a name="remarks"></a>Примечания
 
-`CBookmark<0>` является специализацией шаблона `CBookmark`; его буфера создается динамически во время выполнения.
+`CBookmark<0>` является специализацией шаблона `CBookmark`; его буфер создается динамически во время выполнения.
 
-## <a name="cbookmark"></a> CBookmark::CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark:: CBookmark
 
 Конструктор.
 
@@ -131,19 +130,19 @@ CBookmark(DBLENGTH nSize);
 
 #### <a name="parameters"></a>Параметры
 
-*nSize*<br/>
-[in] Размер буфера закладки в байтах.
+*нсизе*<br/>
+окне Размер буфера закладки в байтах.
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция задает буфер значение NULL, и размер буфера равным 0. Вторая функция задает размер буфера *nSize*и буфер для байтового массива *nSize* байт.
+Первая функция устанавливает буфер в значение NULL, а размер буфера — в 0. Вторая функция задает размер буфера равным *нсизе*, а буфер — массиву байтов *нсизе* байт.
 
 > [!NOTE]
 >  Эта функция доступна только в `CBookmark<0>`.
 
-## <a name="getbuffer"></a> CBookmark::GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark:: buffer
 
-Извлекает указатель на буфер закладки.
+Получает указатель на буфер закладки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -155,9 +154,9 @@ virtual BYTE* GetBuffer() const throw();
 
 Указатель на буфер закладки.
 
-## <a name="getsize"></a> CBookmark::GetSize
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark:: DataSize
 
-Получает размер буфера закладки.
+Возвращает размер буфера закладки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -169,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 Размер буфера в байтах.
 
-## <a name="setbookmark"></a> CBookmark::SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark:: Сетбукмарк
 
-Копирует значение ссылается *pBuffer* для `CBookmark` буфер и задает размер буфера *nSize*.
+Копирует значение закладки, на которое ссылается *pBuffer* , в буфер `CBookmark` и устанавливает размер буфера равным *нсизе*.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -181,23 +180,23 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*nSize*<br/>
-[in] Размер буфера закладки.
+*нсизе*<br/>
+окне Размер буфера закладок.
 
 *pBuffer*<br/>
-[in] Указатель на массив байтов, содержащий значение.
+окне Указатель на массив байтов, содержащий значение закладки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
 ### <a name="remarks"></a>Примечания
 
 Эта функция доступна только в `CBookmark<0>`.
 
-## <a name="operator"></a> CBookmark::operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark:: operator =
 
-Назначает `CBookmark` объект с другим объектом.
+Назначает объект `CBookmark` другому объекту.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -209,7 +208,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 Этот оператор необходим только в `CBookmark<0>`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

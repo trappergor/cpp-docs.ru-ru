@@ -1,6 +1,6 @@
 ---
 title: Общие сведения о маршалировании в C++
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,71 +10,69 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384742"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "79544438"
 ---
-# <a name="overview-of-marshaling-in-c"></a>Общие сведения о маршалировании в C++
+# <a name="overview-of-marshaling-in-ccli"></a>Общие сведения о маршалировании в C++/CLI
 
-В смешанном режиме иногда необходимо выполнить маршалинг данных между неуправляемыми и управляемыми типами. Visual Studio 2008 появилась *библиотека маршалинга* для маршалинга и преобразования данных в простой способ.  Библиотека маршалинга состоит из набора функций и `marshal_context` класс, который выполняют маршалинг для типов. Библиотека определяется в эти заголовки в **включают msclr** каталог для других выпусков Visual Studio:
+В смешанном режиме иногда требуется маршалировать данные между собственными и управляемыми типами. *Библиотека упаковки* упрощает маршалирование и преобразование данных простым способом.  Библиотека упаковки состоит из набора функций и класса `marshal_context`, выполняющего маршалирование для общих типов. Библиотека определена в этих заголовках каталога **include/мсклр** для вашего выпуска Visual Studio:
 
-|Header|Описание|
+|Заголовок|Описание|
 |---------------|-----------------|
-|Marshal.h|`marshal_context` класс и маршалинга функции, свободные контекста|
-|marshal_atl.h| Функции для маршалинга типов ATL|
-|marshal_cppstd.h|Функции для маршалинга стандартные типы C++|
-|marshal_windows.h|Функции для маршалинга типов Windows|
+|Marshal. h|`marshal_context` функции маршалирования без контекста|
+|marshal_atl.h| Функции для маршалирования типов ATL|
+|marshal_cppstd. h|Функции для маршалирования стандартных C++ типов|
+|marshal_windows. h|Функции для маршалирования типов окон|
 
-Путь по умолчанию для **msclr** папка — нечто подобное в зависимости от того, какой выпуск имеется и номер сборки:
+Путь по умолчанию для папки **мсклр** выглядит примерно так, как в зависимости от имеющегося выпуска и номера сборки:
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-Библиотека маршалинга можно использовать с или без [класс marshal_context](../dotnet/marshal-context-class.md). Некоторые преобразования требуется контекст. Другие преобразования может быть реализован с помощью [marshal_as](../dotnet/marshal-as.md) функции. В следующей таблице перечислены текущего преобразования, поддерживаемые, требуется ли контекст и какой файл маршалинг необходимо включить:
+Библиотеку можно использовать с [классом marshal_context](../dotnet/marshal-context-class.md)или без него. Для некоторых преобразований требуется контекст. Другие преобразования можно реализовать с помощью функции [marshal_as](../dotnet/marshal-as.md) . В следующей таблице перечислены поддерживаемые преобразования, указаны ли они в контексте и какой файл маршалирования необходимо включить.
 
-|Из типа|Для ввода|Метод маршалинг|Включить файл|
+|Из типа|В тип|Метод Marshal|Включаемый файл|
 |---------------|-------------|--------------------|------------------|
-|System::String ^|const char \*|marshal_context|Marshal.h|
-|const char \*|System::String ^|marshal_as|Marshal.h|
-|Char \*|System::String ^|marshal_as|Marshal.h|
-|System::String ^|const wchar_t\*|marshal_context|Marshal.h|
-|const wchar_t \*|System::String ^|marshal_as|Marshal.h|
-|wchar_t \*|System::String ^|marshal_as|Marshal.h|
-|System::IntPtr|HANDLE|marshal_as|marshal_windows.h|
-|HANDLE|System::IntPtr|marshal_as|marshal_windows.h|
-|System::String ^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System::String ^|marshal_as|Marshal.h|
-|System::String ^|bstr_t|marshal_as|marshal_windows.h|
-|bstr_t|System::String ^|marshal_as|marshal_windows.h|
-|System::String ^|std::string|marshal_as|marshal_cppstd.h|
-|std::string|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|std::wstring|marshal_as|marshal_cppstd.h|
-|std::wstring|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|CStringT\<char>|marshal_as|marshal_atl.h|
-|CStringT\<char>|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
-|CStringT<wchar_t>|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CComBSTR|marshal_as|marshal_atl.h|
-|CComBSTR|System::String ^|marshal_as|marshal_atl.h|
+|System:: строка ^|Константа char \*|marshal_context|Marshal. h|
+|Константа char \*|System:: строка ^|marshal_as|Marshal. h|
+|Char \*|System:: строка ^|marshal_as|Marshal. h|
+|System:: строка ^|\* const wchar_t|marshal_context|Marshal. h|
+|\* const wchar_t|System:: строка ^|marshal_as|Marshal. h|
+|wchar_t \*|System:: строка ^|marshal_as|Marshal. h|
+|System:: IntPtr|HANDLE|marshal_as|marshal_windows. h|
+|HANDLE|System:: IntPtr|marshal_as|marshal_windows. h|
+|System:: строка ^|BSTR|marshal_context|marshal_windows. h|
+|BSTR|System:: строка ^|marshal_as|Marshal. h|
+|System:: строка ^|bstr_t|marshal_as|marshal_windows. h|
+|bstr_t|System:: строка ^|marshal_as|marshal_windows. h|
+|System:: строка ^|std:: String|marshal_as|marshal_cppstd. h|
+|std:: String|System:: строка ^|marshal_as|marshal_cppstd. h|
+|System:: строка ^|std:: wstring|marshal_as|marshal_cppstd. h|
+|std:: wstring|System:: строка ^|marshal_as|marshal_cppstd. h|
+|System:: строка ^|CStringT\<char >|marshal_as|marshal_atl.h|
+|CStringT\<char >|System:: строка ^|marshal_as|marshal_atl.h|
+|System:: строка ^|CStringT < wchar_t >|marshal_as|marshal_atl.h|
+|CStringT < wchar_t >|System:: строка ^|marshal_as|marshal_atl.h|
+|System:: строка ^|CComBSTR|marshal_as|marshal_atl.h|
+|CComBSTR|System:: строка ^|marshal_as|marshal_atl.h|
 
-Маршалинг требуется контекст, только в том случае, когда маршалинга из управляемого в машинный код данных типов и собственный тип, который необходимо преобразовать к имеет деструктор для автоматической очистки. Контекст маршалинга уничтожает выделенный собственного типа данных в деструкторе. Таким образом преобразований, которые требуется контекст будет действителен только в том случае, пока не будет удален в контексте. Чтобы сохранить все упакованные значения, необходимо скопировать значения собственные переменные.
+Для маршалирования требуется контекст только при маршалировании из управляемых типов данных, а собственный тип, в котором выполняется преобразование, не имеет деструктора для автоматической очистки. Контекст маршалирования уничтожает выделенный собственный тип данных в его деструкторе. Поэтому преобразования, требующие контекста, будут действительны только до тех пор, пока не будет удален контекст. Чтобы сохранить все упакованные значения, необходимо скопировать значения в собственные переменные.
 
 > [!NOTE]
->  Если с внедренными `NULL`s в строке, маршалинг строки результат не гарантируется. Встроенный `NULL`s может привести к усечению строки, или они могут сохраняться.
+>  Если в строке есть внедренные `NULL`s, результат маршалирования строки не гарантируется. Внедренный `NULL`s может привести к усечению строки или сохранить их.
 
-В этом примере показано, как включить каталог msclr в объявлении заголовка include:
+В этом примере показано, как включить каталог мсклр в объявление заголовка include:
 
 `#include "msclr\marshal_cppstd.h"`
 
-Библиотека маршалинга является расширяемой, таким образом, можно добавить собственные маршалинга типов. Дополнительные сведения о расширении библиотеке маршалинга см. в разделе [как: Расширение библиотеки маршалинга](../dotnet/how-to-extend-the-marshaling-library.md).
+Библиотека упаковки расширяема, поэтому можно добавлять собственные типы маршалирования. Дополнительные сведения о расширении библиотеки для маршалирования см. в разделе [как расширить библиотеку маршалирования](../dotnet/how-to-extend-the-marshaling-library.md).
 
-В более ранних версий, следует маршалировать данные с помощью [неуправляемого](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Дополнительные сведения о `PInvoke`, см. в разделе [вызов собственных функций из управляемого кода](../dotnet/calling-native-functions-from-managed-code.md).
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Библиотека поддержки C++](../dotnet/cpp-support-library.md)<br/>
 [Практическое руководство. Расширение библиотеки маршалинга](../dotnet/how-to-extend-the-marshaling-library.md)

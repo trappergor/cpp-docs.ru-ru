@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516159"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544672"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Упаковка-преобразование (C++/CLI и C++/CX)
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-Подробные сведения см. в статье [Boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx) (Упаковка-преобразование (C++/CX)).
+Подробные сведения см. в статье [Boxing (C++/CX)](../cppcx/boxing-c-cx.md) (Упаковка-преобразование (C++/CX)).
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
@@ -80,13 +80,13 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 Упаковка-преобразование и распаковка-преобразование позволяют обрабатывать типы значений как объекты. Типы значений, включая типы структур и встроенные типы, такие как int, могут преобразовываться в тип <xref:System.Object> и из этого типа.
 
-Дополнительные сведения:
+Дополнительные сведения см. в разделе:
 
 - [Практическое руководство. Явный запрос упаковки-преобразования](../dotnet/how-to-explicitly-request-boxing.md)
 
 - [Практическое руководство. Использование gcnew для создания типов значений и использование неявной упаковки-преобразования](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)
 
-- [Практическое руководство. Распаковка](../dotnet/how-to-unbox.md)
+- [Практическое руководство. Распаковка-преобразование](../dotnet/how-to-unbox.md)
 
 - [Стандартные преобразования и неявная упаковка-преобразование](../dotnet/standard-conversions-and-implicit-boxing.md)
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -7,25 +7,23 @@ f1_keywords:
 - ATL::ICommandPropertiesImpl
 - ICommandPropertiesImpl::GetProperties
 - ICommandPropertiesImpl.GetProperties
-- GetProperties
 - ICommandPropertiesImpl.SetProperties
 - ICommandPropertiesImpl::SetProperties
-- SetProperties
 helpviewer_keywords:
 - ICommandPropertiesImpl class
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 1250f1c5c5094a0ca8348f325260e6079afe2baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408957"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545975"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
 
-Предоставляет реализацию [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) интерфейс.
+Предоставляет реализацию интерфейса [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,31 +36,31 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от
+Ваш класс, производный от
 
-*PropClass*<br/>
+*пропкласс*<br/>
 Класс свойств.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
 |||
 |-|-|
-|[GetProperties](#getproperties)|Возвращает список свойств в группе свойств набора строк, в настоящее время запрашиваются для набора строк.|
+|[GetProperties](#getproperties)|Возвращает список свойств в группе свойств набора строк, запрашиваемых в данный момент для набора строк.|
 |[SetProperties](#setproperties)|Задает свойства в группе свойств набора строк.|
 
 ## <a name="remarks"></a>Примечания
 
-Это обязательно на команды. Реализация предоставляется с определением статическую функцию [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макрос.
+Это обязательно для команд. Реализация обеспечивается статической функцией, определенной [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макросом.
 
-## <a name="getproperties"></a> ICommandPropertiesImpl::GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>Свойства ICommandPropertiesImpl:: Properties
 
-Возвращает все наборы запрошенного свойства, с помощью команды сопоставление свойств.
+Возвращает все запрошенные наборы свойств с помощью схемы свойств команды.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -75,13 +73,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ICommandProperties:: Properties](/previous-versions/windows/desktop/ms723119(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
 См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a> ICommandPropertiesImpl::SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
 
 Задает свойства для объекта команды.
 
@@ -94,9 +92,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ICommandProperties:: SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

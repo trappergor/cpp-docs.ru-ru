@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: a7ee0ef9c98ee940ab810abd82f6220da95d7346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da0f2bc1a503226e41198871e6dc48ace7a86854
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351499"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545375"
 ---
-# <a name="callinappdomain-function"></a>Функция call_in_appdomain
+# <a name="call_in_appdomain-function"></a>Функция call_in_appdomain
 
 Выполняет функцию в указанном домене приложения.
 
@@ -41,29 +41,29 @@ RetType call_in_appdomain(
 
 #### <a name="parameters"></a>Параметры
 
-*appdomainId*<br/>
-Домен приложения для вызова функции.
+*аппдомаинид*<br/>
+Домен приложения, в котором вызывается функция.
 
-*voidFunc*<br/>
-Указатель на `void` функцию, которая принимает параметры N (0 < = N < = 15).
+*воидфунк*<br/>
+Указатель на функцию `void`, принимающую N параметров (0 < = N < = 15).
 
-*nonvoidFunc*<br/>
-Указатель на отличный от`void` функцию, которая принимает параметры N (0 < = N < = 15).
+*нонвоидфунк*<br/>
+Указатель на функцию, не`void`, которая принимает N параметров (0 < = N < = 15).
 
 *arg1... argN*<br/>
-От 0 до 15 параметров должны быть переданы `voidFunc` или `nonvoidFunc` в другом домене приложения.
+От нуля до 15 параметров, которые должны быть переданы `voidFunc` или `nonvoidFunc` в другом AppDomain.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Результат выполнения `voidFunc` или `nonvoidFunc` в указанный домен приложения.
+Результат выполнения `voidFunc` или `nonvoidFunc` в указанном домене приложения.
 
 ## <a name="remarks"></a>Примечания
 
-Аргументы функции передаются в `call_in_appdomain` не должны быть типами среды CLR.
+Аргументы функции, переданной в `call_in_appdomain`, не должны быть типами CLR.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // msl_call_in_appdomain.cpp
 // compile with: /clr
 
@@ -118,6 +118,6 @@ appDomain1 id = 2
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<msclr\appdomain.h >
+**Файл заголовка** \<мсклр\аппдомаин.х >
 
-**Пространство имен** msclr
+Мсклр **пространства имен**

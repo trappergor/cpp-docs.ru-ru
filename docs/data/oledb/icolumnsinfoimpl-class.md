@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409152"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545987"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Класс IColumnsInfoImpl
 
-Предоставляет реализацию [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) интерфейс.
+Предоставляет реализацию интерфейса [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,26 +49,26 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IColumnsInfoImpl`.
+Класс, производный от `IColumnsInfoImpl`.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldb.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|Возвращает метаданные столбца, требуемые большинством объектов-получателей.|
-|[MapColumnIDs](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.|
+|[мапколумнидс](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе данных, заданных указанными идентификаторами столбца.|
 
 ## <a name="remarks"></a>Примечания
 
-Обязательный интерфейс для наборов строк и команд. Для изменения поведения вашего поставщика `IColumnsInfo` реализации, необходимо изменить сопоставление столбцов поставщика.
+Обязательный интерфейс для наборов строк и команд. Чтобы изменить поведение реализации `IColumnsInfo` поставщика, необходимо изменить карту столбцов поставщика.
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
 
 Возвращает метаданные столбца, требуемые большинством объектов-получателей.
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
+См. раздел [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl:: Мапколумнидс
 
-Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.
+Возвращает массив порядковых номеров столбцов в наборе данных, заданных указанными идентификаторами столбца.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [IColumnsInfo:: мапколумнидс](/previous-versions/windows/desktop/ms714200(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

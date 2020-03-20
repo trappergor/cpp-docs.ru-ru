@@ -2,22 +2,19 @@
 title: Функция swap (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- msclr::swap
-- msclr.swap
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384560"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545945"
 ---
-# <a name="swap-function-autohandle"></a>Функция swap (auto_handle)
+# <a name="swap-function-auto_handle"></a>Функция swap (auto_handle)
 
-Меняет местами объекты между одним `auto_handle` и другого.
+Меняет местами объекты между одним `auto_handle` и другим.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,14 +29,14 @@ void swap(
 #### <a name="parameters"></a>Параметры
 
 *_left*<br/>
-Объект `auto_handle`.
+`auto_handle`.
 
 *_right*<br/>
-Другой `auto_handle`.
+Другой объект `auto_handle`.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -66,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<msclr\auto_handle.h >
+**Файл заголовка** \<мсклр \ auto_handle. h >
 
-**Пространство имен** msclr
+Мсклр **пространства имен**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

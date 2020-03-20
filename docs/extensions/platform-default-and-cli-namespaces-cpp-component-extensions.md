@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516519"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544654"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Пространства имен Platform, default и cli (C++/CLI и C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65516519"
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-Подробные сведения см. в статье [Namespaces and type visibility (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx) (Пространства имен и видимость типов (C++/CX )).
+Подробные сведения см. в статье [Namespaces and type visibility (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md) (Пространства имен и видимость типов (C++/CX )).
 
 ### <a name="requirements"></a>Требования
 
@@ -78,6 +78,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525120"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544702"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Создание объекта-получателя без помощи мастера
 
@@ -17,7 +17,7 @@ ms.locfileid: "65525120"
 
 Чтобы добавить поддержку потребителя OLE DB без использования **Мастера потребителя ATL OLE DB** выполните приведенные далее действия.
 
-- В файле pch.h добавьте следующие инструкции `#include`.
+- В файле *PCH. h* добавьте следующие `#include` операторы:
 
     ```cpp
     #include <atlbase.h>
@@ -76,6 +76,6 @@ ms.locfileid: "65525120"
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Создание объекта-получателя OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)
