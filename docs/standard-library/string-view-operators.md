@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446767"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076408"
 ---
 # <a name="ltstring_viewgt-operators"></a>операторы&gt; string_view &lt;
 
-Используйте эти операторы для сравнения двух string_viewных объектов, string_view и другого строкового объекта (например, [std:: String](basic-string-class.md)или **char\*** ), для которых предоставляется неявное преобразование. 
+Используйте эти операторы для сравнения двух string_viewных объектов, string_view и другого строкового объекта (например, [std:: String](basic-string-class.md)или **char\*** ), для которых предоставляется неявное преобразование.
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ ms.locfileid: "79446767"
 |[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[оператор "" ОКП](#op_sv)|
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство объекта слева от оператора объекту справа от оператора.
 
@@ -67,13 +67,13 @@ bool operator!=(
 
 **значение true** , если объект слева от оператора не лексикографически равным объекту с правой стороны; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
-Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне. 
+Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
 Сравнение основано на парном лексикографическом сравнении последовательностей символов. Если число элементов равно количеству и все элементы равны, то два объекта равны. В противном случае они не равны.
 
-## <a name="op_eq_eq"></a>Оператор = =
+## <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство объекта слева от оператора объекту справа от оператора.
 
@@ -106,14 +106,13 @@ bool operator==(
 
 **значение true** , если объект в левой части оператора является лексикографически равным объекту с правой стороны; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
-Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне. 
+Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
 Сравнение основано на парном лексикографическом сравнении последовательностей символов. Если число элементов равно количеству и все элементы равны, то два объекта равны.
 
-
-## <a name="op_lt">Оператор </a>&lt;
+## <a name="operatorlt"></a><a name="op_lt">Оператор </a>&lt;
 
 Проверяет, меньше ли объект в левой части оператора, чем объект справа sidestring_view
 
@@ -146,9 +145,9 @@ bool operator<(
 
 **значение true** , если объект в левой части оператора лексикографически меньше объекта с правой стороны; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
-Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне. 
+Неявное преобразование должно существовать из *convertible_string_type* string_view на другой стороне.
 
 Сравнение основано на парном лексикографическом сравнении последовательностей символов. При обнаружении первой неравной пары символов возвращается результат этого сравнения. Если неравные символы не найдены, но одна последовательность короче, более короткая последовательность меньше чем длинная. Иными словами, "Cat" меньше "кошки".
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>&lt;оператора =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>&lt;оператора =
 
 Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.
 
@@ -207,11 +206,11 @@ bool operator<=(
 
 **значение true** , если объект в левой части оператора лексикографически меньше или равен объекту в правой части; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 См. [&lt;оператора ](#op_lt).
 
-## <a name="op_lt_lt"></a>&lt;оператора &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>&lt;оператора &lt;
 
 Записывает string_view в поток вывода.
 
@@ -233,11 +232,11 @@ String_view, который необходимо указать в потоке 
 
 поток вывода, в который выполняется запись.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот оператор используется для вставки содержимого string_view в поток вывода, например с помощью [std:: cout](iostream.md#cout).
 
-## <a name="op_gt">Оператор </a>&gt;
+## <a name="operatorgt"></a><a name="op_gt">Оператор </a>&gt;
 
 Проверяет, что объект слева от оператора больше, чем объект справа от оператора.
 
@@ -270,11 +269,11 @@ bool operator>(
 
 **значение true** , если объект в левой части оператора лексикографически больше объекта string_view с правой стороны; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 См. [&lt;оператора ](#op_lt).
 
-## <a name="op_gt_eq"></a>&gt;оператора =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>&gt;оператора =
 
 Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.
 
@@ -307,13 +306,13 @@ bool operator>=(
 
 **true** , если объект слева от оператора лексикографически больше или равен объекту с правой стороны; в противном случае — **false**.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 См. [&lt;оператора ](#op_lt).
 
-## <a name="op_sv"></a>оператор "ОКП (string_view литерал)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>оператор "ОКП (string_view литерал)
 
-Конструирует string_view из строкового литерала. Требуется `std::literals::string_view_literals`пространства имен. 
+Конструирует string_view из строкового литерала. Требуется `std::literals::string_view_literals`пространства имен.
 
 ### <a name="example"></a>Пример
 
@@ -328,6 +327,6 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [\<string_view >](../standard-library/string-view.md)

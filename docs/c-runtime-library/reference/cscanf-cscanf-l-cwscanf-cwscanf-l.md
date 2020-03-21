@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778315"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079995"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Считывает форматированные данные из консоли. Существуют более безопасные версии этих функций; см. раздел [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > В Visual Studio 2015 семейство функций `printf` и `scanf` было объявлено как **встроенное** и перемещено в заголовки `<stdio.h>` и `<conio.h>`. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в [разделе C++ журнал изменений Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
@@ -93,7 +93,7 @@ int _cwscanf_l(
 *format*<br/>
 Строка управления форматом.
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные параметры.
 
 *locale*<br/>
@@ -103,9 +103,9 @@ int _cwscanf_l(
 
 Число успешно преобразованных и назначенных полей. Возвращаемое значение не включает поля, которые были считаны, но не назначены. Возвращаемое значение — **EOF** для попытки чтения в конце файла. Это может произойти при перенаправлении ввода данных с клавиатуры на уровне командной строки операционной системы. Возвращаемое значение 0 означает, что поля не были назначены.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
-Функция **_cscanf** считывает данные непосредственно из консоли в расположения, указанные *аргументом*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формате*. Формат управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и параметр *Format* для функции [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Хотя **_cscanf** обычно выводит символ ввода, он не делает этого, если последний вызов был бы **_ungetch**.
+Функция **_cscanf** считывает данные непосредственно из консоли в расположения, указанные *аргументом*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формате*. Формат управляет интерпретацией полей ввода и имеет ту же форму и функцию, что и параметр *Format* для функции [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Хотя **_cscanf** обычно отображает входной символ, он не делает этого, если последний вызов был **_ungetch**.
 
 Эта функция проверяет свои параметры. Если параметр format имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **еинвал** задается значение, а функция возвращает **EOF**.
 
@@ -125,7 +125,7 @@ int _cwscanf_l(
 |**_cscanf**, **_cscanf_l**|\<conio.h>|
 |**_cwscanf**, **_cwscanf_l**|\<conio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

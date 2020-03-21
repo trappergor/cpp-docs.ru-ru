@@ -6,31 +6,30 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fdaafd5c8243143fd9705d45db2497577820ca0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1d4e962e91e2a30356fc9f90a26dbeb857c8a29
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395746"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075896"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
 
-Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и ODBC для SQL Server 2012 является предпочтительным способом для подключения к источникам данных SQL.
+Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC. Начиная с Visual Studio 2015 и SQL Server 2012 ODBC является предпочтительным способом подключения к источникам данных SQL.
 
-Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) пакета SDK в MSDN.
+Дополнительные сведения об использовании ODBC API без MFC см. в разделе пакет SDK для [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) в MSDN.
 
+## <a name="in-this-section"></a>в этом разделе
 
-## <a name="in-this-section"></a>В этом разделе
+- [ODBC](odbc-basics.md)— стандартный интерфейс подключения к базе данных и API
 
-- [ODBC](odbc-basics.md)— Open Database Connectivity standard и API
+- [Какая поддержка MFC предоставляется](odbc-and-mfc.md) для программирования ODBC
 
-- [Какие MFC поддержку предоставляет](odbc-and-mfc.md) для программирования с использованием ODBC
-
-- [Какие драйверы ODBC доступны](odbc-driver-list.md)
+- [Доступные драйверы ODBC](odbc-driver-list.md)
 
 - [Подключение к источникам данных ODBC](data-source-managing-connections-odbc.md)
 
-- [Запишите обмен полей (RFX)](record-field-exchange-rfx.md) между базой данных и объектом набора записей
+- [Обмен полями записей (RFX)](record-field-exchange-rfx.md) между базой данных и объектом Recordset
 
 - [Наборы записей ODBC](recordset-odbc.md)
 
@@ -40,25 +39,25 @@ ms.locfileid: "62395746"
 
 - [Определение схемы источника данных ODBC](data-source-determining-the-schema-of-the-data-source-odbc.md) во время выполнения
 
-- [Программная настройка источника данных ODBC](data-source-programmatically-configuring-an-odbc-data-source.md)
+- [Настройка источника данных ODBC программными средствами](data-source-programmatically-configuring-an-odbc-data-source.md)
 
-- [Создание таблицы в источнике данных ODBC программным путем](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)
+- [Программное создание таблицы в источнике данных ODBC](data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)
 
-- [Пакетная выборка строк](recordset-fetching-records-in-bulk-odbc.md)
+- [Некоторая выборка записей](recordset-fetching-records-in-bulk-odbc.md)
 
-- [Настройка инструкции SQL набора записей](sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [Настройка инструкции SQL моего набора записей](sql-customizing-your-recordsets-sql-statement-odbc.md)
 
 - [Выполнение прямых вызовов SQL](sql-making-direct-sql-calls-odbc.md)
 
-- [Выполнение прямых вызовов API-Интерфейс ODBC](odbc-calling-odbc-api-functions-directly.md)
+- [Выполнение прямых вызовов к API ODBC](odbc-calling-odbc-api-functions-directly.md)
 
-- [Как работают классы базы данных с архитектурой документ/представление MFC?](working-with-documents-and-views.md)
+- [Как классы базы данных работают с архитектурой "документ-представление" MFC?](working-with-documents-and-views.md)
 
 - [Список драйверов ODBC](odbc-driver-list.md)
 
 ## <a name="odbc-database-tasks"></a>Задачи базы данных ODBC
 
-Эти задачи основаны на основе MFC [ODBC](odbc-basics.md) классы. Дополнительные сведения об использовании ODBC API без использования MFC см. в разделе [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK.
+Эти задачи основаны на классах MFC [ODBC](odbc-basics.md) . Дополнительные сведения об использовании ODBC API без MFC см. в разделе пакет SDK для [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) .
 
 - [Установка и начало работы с ODBC](installing-and-getting-started-with-odbc.md)
 
@@ -76,6 +75,6 @@ ms.locfileid: "62395746"
 
 - [Использование набора записей MFC ODBC](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-[Доступ к данным, программирование (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Программирование доступа к данным (библиотеки MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

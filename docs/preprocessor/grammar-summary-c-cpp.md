@@ -1,23 +1,23 @@
 ---
-title: Сводка по грамматике препроцессора (C++C/)
+title: Общие сведения о грамматике препроцессора (C/C++)
 description: Определяет и описывает синтаксис препроцессораC++ Microsoft C/COMPILER (компилятором MSVC).
 ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 99e7e8218a80e28d67767392cadfb5c4918a3bfe
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302189"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076876"
 ---
-# <a name="preprocessor-grammar-summary-cc"></a>Сводка по грамматике препроцессора (C++C/)
+# <a name="preprocessor-grammar-summary-cc"></a>Общие сведения о грамматике препроцессора (C/C++)
 
 В этой статье описывается формальное описание грамматики C C++ и препроцессора. Он охватывает синтаксис директив и операторов предварительной обработки. Дополнительные сведения см. в разделе директивы [препроцессора](../preprocessor/preprocessor.md) и директивы [pragma и ключевое слово __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
-## <a name="definitions"></a>Определения для сводки грамматики
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>Определения для сводки грамматики
 
 Терминальные слова — это конечные точки в определении синтаксиса. Никакое другое разрешение невозможно. Терминальные слова включают в себя набор зарезервированных ключевых слов и определенные пользователем идентификаторы.
 
@@ -29,7 +29,7 @@ ms.locfileid: "75302189"
 
 **{** *выражение*<sub>OPT</sub> **}**
 
-## <a name="conventions"></a>Соглашения о документе
+## <a name="document-conventions"></a><a name="conventions"></a>Соглашения о документе
 
 В соглашениях используются разные атрибуты шрифтов для различных компонентов синтаксиса. Ниже перечислены символы и шрифты.
 
@@ -52,14 +52,14 @@ ms.locfileid: "75302189"
 
 В блоках синтаксиса кода, запятых (`,`), Periods (`.`), точки с запятой (`;`), двоеточия (`:`), круглые скобки (`( )`), двойные кавычки (`"`) и одинарные кавычки (`'`) являются литералами.
 
-## <a name="grammar"></a>Грамматика препроцессора
+## <a name="preprocessor-grammar"></a><a name="grammar"></a>Грамматика препроцессора
 
 *Строка управления*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#define** *идентификатора* *маркера — строка*<sub>\</sub>
-&nbsp;&nbsp;&nbsp;&nbsp;**идентификатор #define** **(** *идентификатор*<sub>OPT</sub> **,** ... **,** *идентификатор*<sub>неявной</sub> *строки токена-строка*<sub>\</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**идентификатор #define** *identifier* **(** *идентификатор*<sub>OPT</sub> **,** ... **,** *идентификатор*<sub>неявной</sub> **)** *строки токена-строка*<sub>\</sub>
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _path-Spec_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _path-Spec_ **>** \
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** **"** _filename_ **"** <sub></sub> *с цифрами*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** **"** _filename_ **"** <sub>opt</sub> *с цифрами*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#undef** *идентификатор*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#error** *строки токена*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *Строка токена*
@@ -70,15 +70,15 @@ ms.locfileid: "75302189"
 &nbsp;&nbsp;&nbsp;&nbsp;любое другое константное выражение
 
 *условное*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*Если-Part* *elif — Parts*<sub>— часть.</sub><sub></sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*Если-Part* *elif — Parts*<sub>— часть.</sub> *else-part*<sub>opt</sub> *endif-line*
 
 *If-Part*: \
-&nbsp;&nbsp;&nbsp;&nbsp; *тексте* в строке
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *тексте* в строке
 
 *If-Line*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#if** *константа-Expression*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *идентификатор*\
-&nbsp;&nbsp;&nbsp;&nbsp; *идентификатор* #ifndef
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *идентификатор* #ifndef
 
 *elif — части*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-Line* *Text*\
@@ -98,7 +98,7 @@ ms.locfileid: "75302189"
 
 *последовательность цифр*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*digit*\
-&nbsp;&nbsp;&nbsp;&nbsp; *цифровую* последовательность
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *цифровую* последовательность
 
 *digit*: один из \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
@@ -124,7 +124,6 @@ ms.locfileid: "75302189"
 
 > [!NOTE]
 > Следующие Нетерминальные значения расширены в разделе [лексические обозначения](../cpp/lexical-conventions.md)  *C++ справочника по языку*: *константа*, *константное выражение*, *идентификатор*, *ключевое слово*, *оператор*и *знак препинания*.
-
 
 ## <a name="see-also"></a>См. также:
 

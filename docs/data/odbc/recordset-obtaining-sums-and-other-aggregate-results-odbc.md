@@ -10,16 +10,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707847"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075903"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Набор записей. Определение сумм и других статистических результатов (ODBC)
 
-> [!NOTE] 
+> [!NOTE]
 > Мастер потребителя MFC ODBC недоступен в Visual Studio 2019 и более поздних версиях. При этом вы по-прежнему можете создать потребитель вручную.
 
 Этот раздел относится к классам ODBC библиотеки MFC.
@@ -36,7 +36,7 @@ ms.locfileid: "65707847"
 
 - **COUNT** — подсчитывает число записей в столбце с числовым типом данных.
 
-С помощью функций SQL можно получать статистическую информацию о записях в источнике данных, не извлекая эти записи из источника. Создаваемый набор записей обычно состоит из одной записи (если все столбцы являются статистическими), которая содержит значение. (При использовании предложения **GROUP BY** записей может быть несколько.) Это значение представляет собой результат вычисления или извлечения, выполненного функцией SQL.
+С помощью функций SQL можно получать статистическую информацию о записях в источнике данных, не извлекая эти записи из источника. Создаваемый набор записей обычно состоит из одной записи (если все столбцы являются статистическими), которая содержит значение. (При использовании предложения **Group By** может существовать несколько записей.) Это значение является результатом вычисления или извлечения, выполненного функцией SQL.
 
 > [!TIP]
 >  Чтобы добавить предложение SQL **GROUP BY** и, возможно, предложение **HAVING** в инструкцию SQL, добавьте их в конце `m_strFilter`. Например:
@@ -56,7 +56,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 
 - **MAX** и **MIN** возвращают тот же тип данных, который имеют обрабатываемые столбцы.
 
-     Например, если мастер **добавления класса** создает элемент данных `long` `m_lSales` для столбца "Продажи", для статистического результата его нужно заменить на элемент данных `double m_dblSumSales`. См. следующий пример.
+     Например, мастер **добавления классов** создает `long` `m_lSales` для размещения столбца Sales, но его необходимо заменить на элемент данных `double m_dblSumSales`, чтобы он соответствовал статистическому результату. См. указанный ниже пример.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Получение статистического результата для набора записей
 
@@ -68,7 +68,7 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     на:
+     вставьте
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -85,13 +85,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-В:
+Кому:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

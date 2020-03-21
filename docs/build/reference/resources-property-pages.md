@@ -14,12 +14,12 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177342"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078291"
 ---
 # <a name="resources-property-page"></a>Страница свойств ресурсов
 
@@ -59,10 +59,10 @@ ms.locfileid: "70177342"
 
 Указывает имя файла ресурсов (/FO [файл])
 
-## <a name="null-terminate-strings"></a>Строки завершения со значением NULL 
+## <a name="null-terminate-strings"></a>Строки завершения со значением NULL
 
 Добавьте значения NULL ко всем строкам в таблицах строк. параметра
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [C++Справочник по страницам свойств проекта](property-pages-visual-cpp.md)

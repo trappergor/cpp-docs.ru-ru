@@ -6,17 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452333"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076682"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-Включает заголовку \<стандартной библиотеки C сигнал. h > и добавляет связанные имена `std` в пространство имен. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.
-
+Включает заголовок стандартной библиотеки C \<сигнал. h > и добавляет связанные имена в пространство имен `std`. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,7 +50,7 @@ signal-handler* signal(int sig, signal-handler* func);
 int raise(int sig);
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\

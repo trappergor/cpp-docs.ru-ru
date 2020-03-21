@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626602"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076949"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild и MSBuild: изменения системы сборки в Visual Studio 2010
 
@@ -63,7 +63,7 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vc-directories-settings"></a>Параметры каталогов VC + +
 
-Параметры каталогов Visual C++ указываются на [странице свойств каталогов VC ++](../ide/vcpp-directories-property-page.md). В Visual Studio 2008 и более ранних версиях параметры каталогов применяются для каждого пользователя, а список исключенных каталогов указывается в файле *сисинкл. dat* . 
+Параметры каталогов Visual C++ указываются на [странице свойств каталогов VC ++](../ide/vcpp-directories-property-page.md). В Visual Studio 2008 и более ранних версиях параметры каталогов применяются для каждого пользователя, а список исключенных каталогов указывается в файле *сисинкл. dat* .
 
 Невозможно изменить параметры каталогов VC++ при запуске [devenv/resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) в командной строке. Также нельзя изменить параметры в меню **Сервис**, **Импорт и экспорт параметров**, **Сбросить все параметры**.
 
@@ -73,6 +73,6 @@ Property=<value>;$(MyProperty)
 2. Выберите **Импорт выбранных параметров окружения**
 3. Следуйте указаниям мастера.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [MSBuild в командной строке — C++](../build/msbuild-visual-cpp.md)

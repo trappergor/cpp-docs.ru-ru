@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940949"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077336"
 ---
 # <a name="fflush"></a>fflush
 
@@ -71,11 +71,11 @@ int fflush(
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }
@@ -127,7 +127,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose, _fcloseall](fclose-fcloseall.md)<br/>

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: d6920a73f107f226cc31cb27fd15178f6d2f1c26
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525255"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079005"
 ---
 # <a name="user-record"></a>Запись пользователя
 
-> [!NOTE] 
+> [!NOTE]
 > Мастер поставщика OLE DB в ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
 Запись пользователя предоставляет структуру кода и данных, представляющую собой данные столбца для набора строк. Запись пользователя может создаваться во время компиляции или выполнения. При создании поставщика с помощью службы **Мастер поставщика ATL OLE DB** мастер создает запись пользователя по умолчанию, которая выглядит следующим образом (при условии, что указано имя поставщика [короткое имя] из *MyProvider*).
@@ -43,7 +43,7 @@ END_PROVIDER_COLUMN_MAP()
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
 ```
 
 Это соответствует следующему.
@@ -69,6 +69,6 @@ static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 
 Более подробный пример переопределения `GetColumnInfo` в записи пользователя см. в статье [Dynamically Determining Columns Returned to the Consumer](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md) (Динамично определяемые столбцы, возвращенные объекту-получателю).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
