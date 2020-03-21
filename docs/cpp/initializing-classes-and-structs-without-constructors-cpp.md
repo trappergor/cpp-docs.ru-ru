@@ -3,12 +3,12 @@ title: Инициализация фигурных скобок для клас�
 description: Использовать инициализацию фигурных скобок с любым C++ классом, структурой или объединением
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652628"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075883"
 ---
 # <a name="brace-initialization"></a>Инициализация фигурных скобок
 
@@ -166,7 +166,6 @@ map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
-
 
 ## <a name="see-also"></a>См. также:
 

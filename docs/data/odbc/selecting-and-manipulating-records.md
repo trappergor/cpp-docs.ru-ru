@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707811"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079799"
 ---
 # <a name="selecting-and-manipulating-records"></a>Выбор и операции с записями
 
-> [!NOTE] 
+> [!NOTE]
 > Мастер потребителя MFC ODBC недоступен в Visual Studio 2019 и более поздних версиях. При этом вы по-прежнему можете создать потребитель вручную.
 
 Как правило, при выборе записей из источника данных с использованием инструкции SQL **SELECT** вы получаете набор результатов, который представляет собой набор записей из таблицы или запроса. Для выбора набора результатов и доступа к нему используется объект набора записей в классах базы данных. Этот объект имеет зависящий от приложения класс, который является производным от класса [CRecordset](../../mfc/reference/crecordset-class.md). При определении класса набора записей указываются источник данных, с которым он будет связан, используемая таблица, а также столбцы этой таблицы. С помощью мастера приложений MFC или диалогового окна **Добавить класс** (см. описание в разделе [Добавление потребителя MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) создается класс с подключением к конкретному источнику данных. Этот мастер записывает функцию-член [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) класса `CRecordset`, которая возвращает имя таблицы.
@@ -36,6 +36,6 @@ ms.locfileid: "65707811"
 
 После завершения работы с объектом набора записей его необходимо закрыть и уничтожить. Дополнительные сведения о наборах записей см. в разделе [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)

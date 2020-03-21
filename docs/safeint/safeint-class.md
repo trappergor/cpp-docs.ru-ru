@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515559"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076820"
 ---
 # <a name="safeint-class"></a>Класс SafeInt
 
 Расширяет примитивы целых чисел, чтобы предотвратить переполнение целого числа, и позволяет сравнивать разные типы целых чисел.
 
-> [!NOTE] 
+> [!NOTE]
 > Последняя версия этой библиотеки размещена здесь: [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Синтаксис
@@ -36,7 +36,7 @@ class SafeInt;
 | Шаблон  |  Описание |
 |--------|------------|
 | T         |  Тип целого числа или логического параметра, который заменяет `SafeInt`. |
-| E         |  Перечисляемый тип данных, который определяет политику обработки ошибок. |
+| Д         |  Перечисляемый тип данных, который определяет политику обработки ошибок. |
 | U         |  Тип целого числа или логического параметра для дополнительного операнда. |
 
 | Параметр  |  Описание |
@@ -45,17 +45,17 @@ class SafeInt;
 | *i*        |  [in] Входной параметр, представляющий значение справа от оператора в нескольких отдельных функциях. |
 | *bits*     |  [in] Входной параметр, представляющий значение справа от оператора в нескольких отдельных функциях. |
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-| name                          |  Описание |
+| Имя                          |  Описание |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Конструктор по умолчанию. |
 
 ### <a name="assignment-operators"></a>Операторы присваивания
 
-| name  |  Синтаксис |
+| Имя  |  Синтаксис |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Операторы приведения
 
-| name              |  Синтаксис |
+| Имя              |  Синтаксис |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Операторы сравнения
 
-| name  |  Синтаксис |
+| Имя  |  Синтаксис |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Арифметические операторы
 
-| name  |  Синтаксис |
+| Имя  |  Синтаксис |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Логические операторы
 
-| name     |  Синтаксис |
+| Имя     |  Синтаксис |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -158,9 +158,9 @@ class SafeInt;
 | ^=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()` |
 | &#124;   |  `SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()` |
 | &#124;   |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()` |
-| |=  |  `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()` |
-| |=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
-| |=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
+| &#124;=  |  `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
 ## <a name="remarks"></a>Примечания
 
@@ -229,9 +229,9 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **Пространство имен:** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
-Создает объект `SafeInt`.
+Формирует объект `SafeInt`.
 
 ```cpp
 SafeInt() throw

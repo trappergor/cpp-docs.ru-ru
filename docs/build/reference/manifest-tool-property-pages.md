@@ -1,5 +1,5 @@
 ---
-title: Страницы свойств средства манифестов
+title: Страницы свойств инструмента манифеста
 ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927680"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079501"
 ---
-# <a name="manifest-tool-property-pages"></a>Страницы свойств средства манифестов
+# <a name="manifest-tool-property-pages"></a>Страницы свойств инструмента манифеста
 
-Используйте эти страницы, чтобы указать общие параметры для [MT. exe](/windows/win32/sbscs/mt-exe). Эти страницы находятся в разделе**Свойства** >  **проекта** > **Свойства** > конфигурации**манифеста**.
+Используйте эти страницы, чтобы указать общие параметры для [MT. exe](/windows/win32/sbscs/mt-exe). Эти страницы находятся в разделе **свойства** > **проекта** > **Свойства конфигурации** > **инструмент манифеста**.
 
 ## <a name="general-property-page"></a>Страница свойств "Общие"
 
@@ -49,9 +49,9 @@ ms.locfileid: "70927680"
 
 Использует параметр /identity для указания строки удостоверения, которая состоит из атрибутов для [элемента \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Строка удостоверения начинается со значения для атрибута `name`, за которым следуют пары *атрибут* = *значение*. Атрибуты в строке удостоверения разделяются запятыми.
 
-Вот пример строки идентификатора:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Вот пример строки идентификатора: `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Страница свойств «входные и выходные данные»     
+## <a name="input-and-output-property-page"></a>Страница свойств «входные и выходные данные»
 
 ###  <a name="additional-manifest-files"></a>Дополнительные файлы манифеста
 
@@ -97,7 +97,7 @@ ms.locfileid: "70927680"
 
 Указывает, поддерживает ли приложение DPI. По умолчанию этот параметр имеет значение **Да** для проектов MFC и значение **Нет** в противном случае, так как только проекты MFC имеют встроенную поддержку DPI. Вы можете переопределить параметр на значение **Да**, если добавите код для обработки различных параметров DPI. Если включить поддержку DPI при отсутствии таковой, приложение может выглядеть запутанным или мелким.
 
-**Элементов**
+**Choices**
 
 - **None**
 - **С поддержкой высокого DPI**
@@ -105,7 +105,7 @@ ms.locfileid: "70927680"
 
 ## <a name="isolated-com-property-page"></a>Изолированная страница свойств COM
 
-Дополнительные сведения об изолированном com см. в разделе [изолированные приложения](/windows/win32/SbsCs/isolated-applications) и [инструкции. Создание изолированных приложений для использования COM](../how-to-build-isolated-applications-to-consume-com-components.md)-компонентов.
+Дополнительные сведения об изолированном COM см. в разделе [изолированные приложения](/windows/win32/SbsCs/isolated-applications) и [инструкции. создание изолированных приложений для использования COM-компонентов](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Файл библиотеки типов
 
@@ -137,7 +137,6 @@ ms.locfileid: "70927680"
 
 Дополнительные параметры
 
-
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [C++Справочник по страницам свойств проекта](property-pages-visual-cpp.md)

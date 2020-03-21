@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441711"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076513"
 ---
 # &lt;filesystem&gt;
 
@@ -32,12 +32,12 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> В выпуске Visual Studio 2017 заголовок \<filesystem> был еще не C++ стандартным. C++в Visual Studio 2017 RTW реализует окончательный черновой стандарт, который находится в стандарте [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf). Visual Studio 2017 версии 15,7 и более поздних версий поддерживает новый язык C++ 17 \<filesystem> Standard.
+> В выпуске Visual Studio 2017 заголовок \<filesystem> был еще не C++ стандартным. C++в Visual Studio 2017 RTW реализует окончательный черновой стандарт, который находится в стандарте [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100). Visual Studio 2017 версии 15,7 и более поздних версий поддерживает новый язык C++ 17 \<filesystem> Standard.
 > Это совершенно новая реализация, несовместимая с предыдущей версией `std::experimental`. Она была необходима для поддержки символьную ссылку, исправления ошибок и изменений в стандартном поведении. В настоящее время, включая \<filesystem> предоставляет новые `std::filesystem` и предыдущее `std::experimental::filesystem`. Включая \<experimental/filesystem> предоставляет только старую реализацию experimental. Реализация experimental будет удалена в следующем выпуске библиотек ABI.
 
 Этот заголовок поддерживает файловые системы для одного из двух основных классов операционных систем размещения: Microsoft Windows и POSIX.
 
-Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Пример:
+Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Например:
 
 - Windows поддерживает несколько корневых имен, например `c:` или `\\network_name`. Файловая система состоит из леса деревьев, каждый из которых имеет собственный корневой каталог, например `c:\` или `\\network_name\`, и каждый с собственным текущим каталогом для заполнения относительного пути (не является абсолютным путем).
 
@@ -130,6 +130,6 @@ using namespace std::experimental::filesystem::v1;
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Перечисляет параметры для функции `permissions`. |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

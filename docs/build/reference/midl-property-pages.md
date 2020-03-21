@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927694"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076132"
 ---
 # <a name="midl-property-pages"></a>Страницы свойств MIDL
 
@@ -62,15 +62,15 @@ ms.locfileid: "70927694"
 
 ### <a name="preprocessor-definitions"></a>Определения препроцессора
 
-Задает одно или несколько определений, включая макросы MIDL (\[макросы\][/D](/windows/win32/midl/-d))).
+Указывает одно или несколько определений, включая MIDL-макросы ([/d](/windows/win32/midl/-d))\[макросы\]).
 
 ### <a name="additional-include-directories"></a>Дополнительные каталоги включаемых файлов
 
-Указывает один или несколько каталогов для добавления к пути включения (\]путь[/i](/windows/win32/midl/-i)\[).
+Указывает один или несколько каталогов для добавления к пути включения ([/i](/windows/win32/midl/-i)\[путь\]).
 
 ### <a name="additional-metadata-directories"></a>Дополнительные каталоги метаданных
 
-Укажите каталог, содержащий файл Windows. Foundation. winmd (\]путь[/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Укажите каталог, содержащий файл Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[путь\]).
 
 ### <a name="enable-windows-runtime"></a>Включить среда выполнения Windows
 
@@ -78,7 +78,7 @@ ms.locfileid: "70927694"
 
 ### <a name="ignore-standard-include-path"></a>Игнорировать стандартный путь включаемых файлов
 
-Пропуск текущих и ВКЛЮЧАЕМых каталогов ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
+Игнорировать текущие и ВКЛЮЧАЕМые каталоги ([/no_def_idir](/windows/win32/midl/-no-def-idir)).
 
 ### <a name="mktyplib-compatible"></a>Совместимый с MkTypLib
 
@@ -88,7 +88,7 @@ ms.locfileid: "70927694"
 
 Устанавливает точность ошибок кода MIDL ([/w](/windows/win32/midl/-w)).
 
-**Элементов**
+**Choices**
 
 - **1**
 - **1**
@@ -108,17 +108,17 @@ ms.locfileid: "70927694"
 
 Указывает тип символа по умолчанию для компилятора C, который будет использоваться для компиляции созданного кода. ([/char](/windows/win32/midl/-char) подписано | не подписано | ascii7).
 
-**Элементов**
+**Choices**
 
 - **Подписано** -подписано
 - Без **знака** — без знака
 - **ASCII** -ASCII
 
-### <a name="target-environment"></a>Целевая среда
+### <a name="target-environment"></a>Целевое окружение
 
 Указывает целевую среду ([/env](/windows/win32/midl/-env) ARM32 | Win32 | ia64 | x64).
 
-**Элементов**
+**Choices**
 
 - **Не задано** — Win32
 - **Microsoft Windows 32-bit** -Win32
@@ -157,7 +157,7 @@ ms.locfileid: "70927694"
 
 Задает имя создаваемого файла метаданных ([/WinMD](/windows/win32/midl/-winmd) filename).
 
-### <a name="header-file"></a>Заголовочный файл
+### <a name="header-file"></a>Файл заголовка
 
 Задает имя создаваемого файла заголовка ([/h](/windows/win32/midl/-h) filename).
 
@@ -185,7 +185,7 @@ ms.locfileid: "70927694"
 
 Создать только файл заглушки клиента ([/Client](/windows/win32/midl/-client) [заглушка | нет]).
 
-**Элементов**
+**Choices**
 
 - **Заглушка заглушки**
 - **None** — нет.
@@ -194,7 +194,7 @@ ms.locfileid: "70927694"
 
 Создать только файл заглушки сервера ([/Server](/windows/win32/midl/-server) [заглушка | нет]).
 
-**Элементов**
+**Choices**
 
 - **Заглушка заглушки**
 - **None** — нет.
@@ -211,7 +211,7 @@ ms.locfileid: "70927694"
 
 Указывает формат файла библиотеки типов ([/oldtlb |/newtlb]).
 
-**Элементов**
+**Choices**
 
 - **Невформат** — новый формат
 - **Олдформат** — старый формат
@@ -220,7 +220,7 @@ ms.locfileid: "70927694"
 
 ### <a name="c-preprocess-options"></a>Параметры предварительной обработки C
 
-Указывает параметры для передачи препроцессору компилятора C (параметры[/cpp_opt](/windows/win32/midl/-cpp-opt) ).
+Указывает параметры для передачи препроцессору компилятора C ([/параметры cpp_opt](/windows/win32/midl/-cpp-opt) ).
 
 ### <a name="undefine-preprocessor-definitions"></a>Отменить определения препроцессора
 
@@ -230,7 +230,7 @@ ms.locfileid: "70927694"
 
 Выберите параметр проверки ошибок ([/Error все | нет]).
 
-**Элементов**
+**Choices**
 
 - **Енаблекустом** — все
 - **Все** -все
@@ -242,7 +242,7 @@ ms.locfileid: "70927694"
 
 ### <a name="check-bounds"></a>Проверить границы
 
-Проверьте определение размера и длины передачи ([/Error](/windows/win32/midl/-error) bounds_check).
+Проверьте определение размера и длины передачи ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Проверить диапазон перечисления
 
@@ -254,7 +254,7 @@ ms.locfileid: "70927694"
 
 ### <a name="check-stub-data"></a>Проверка данных заглушки
 
-Выдавать дополнительную проверку на допустимость данных заглушки на стороне сервера ([/Error](/windows/win32/midl/-error) stub_data).
+Выдавать дополнительную проверку на допустимость данных заглушки на стороне сервера ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Начало с пространством имен "ABI"
 
@@ -268,7 +268,7 @@ ms.locfileid: "70927694"
 
 Задает уровень упаковки для структур в целевой системе (/ZpN).
 
-**Элементов**
+**Choices**
 
 - **Не задано** — не задано
 - **1 байт** — Zp1
@@ -283,6 +283,3 @@ ms.locfileid: "70927694"
 ### <a name="minimum-target-system"></a>Минимальная целевая система
 
 Задайте минимальную целевую систему (строку[/Target](/windows/win32/midl/-target) ).
-
-
-

@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707006"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076216"
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
-
 
 ::: moniker range="vs-2019"
 
@@ -34,22 +33,22 @@ ms.locfileid: "65707006"
 
    |Параметр|Описание|
    |------------|-----------------|
-   |**Single**|Страница свойств выполняется только в первичном COM-потоке.|
+   |**Один**|Страница свойств выполняется только в первичном COM-потоке.|
    |**Подразделение**|Страница свойств может быть создана в любом подразделении с одним потоком. По умолчанию.|
 
-- **Статистическая обработка**
+- **Агрегирование**
 
    Добавляет поддержку агрегирования для страницы свойств, которую вы создаете. Подробные сведения см. в статье [Aggregation](../../atl/aggregation.md) (Агрегирование).
 
    |Параметр|Описание|
    |------------|-----------------|
    |**Да**|Создает страницу свойств, которую можно агрегировать.|
-   |**No**|Создает страницу свойств, которую нельзя агрегировать.|
+   |**Нет**|Создает страницу свойств, которую нельзя агрегировать.|
    |**Только**|Создает страницу свойств, экземпляр для которой можно создать только посредством агрегирования.|
 
 ::: moniker-end
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Мастер страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md)<br/>
 [Строки, мастер страницы свойств ATL](../../atl/reference/strings-atl-property-page-wizard.md)

@@ -4,12 +4,12 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: bf42981396abf8e91077da5c1cc1f180891d2a63
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b5d44a378e231b99f1b6461bc1329179bfd68f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446553"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075828"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>Предупреждения компилятора по версии компилятора
 
@@ -21,7 +21,7 @@ ms.locfileid: "79446553"
 |-|-|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
-| Visual Studio 2005 | 14.00.50727.762 |
+| Visual Studio 2005 | 14.00.50727.762 |
 | Visual Studio 2008 | 15.00.21022.08 |
 | Visual Studio 2010 | 16.00.40219.01 |
 | Visual Studio 2012 | 17.00.51106.1 |
@@ -55,7 +55,6 @@ ms.locfileid: "79446553"
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
-
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Предупреждения, появившиеся в Visual Studio 2017 версии 15,8 (компилятор версии 19.15.26726.0)
 
@@ -672,7 +671,7 @@ ms.locfileid: "79446553"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Ошибки иC++ предупреждения средств разработки C/компилятора и сборки](../compiler-errors-1/c-cpp-build-errors.md) \
 [Предупреждения компилятора C4000-C5999](compiler-warnings-c4000-c5999.md) \

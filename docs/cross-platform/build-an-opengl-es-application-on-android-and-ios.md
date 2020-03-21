@@ -2,12 +2,12 @@
 title: Создание приложения OpenGL ES в Android и iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470079"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079669"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Создание приложения OpenGL ES в Android и iOS
 
@@ -109,7 +109,7 @@ ms.locfileid: "79470079"
 
    Созданные проекты приложения и библиотеки для собственных действий Android помещают C++ общий код в динамическую библиотеку. Он включает в себя "связующий" код для взаимодействия с платформой Android. Большая часть кода приложения находится в библиотеке. Манифест, ресурсы и инструкции по сборке находятся в проекте упаковки. Общий код вызывается из main.cpp в проекте NativeActivity. Более подробную информацию о программировании Android Native Activity см. на странице [Concepts](https://developer.android.com/ndk/guides/concepts.html) (Основные понятия) в Android Developer NDK.
 
-   Visual Studio создает проекты собственных действий Android с помощью пакета NDK для Android. В нем используется Clang в качестве набора инструментов платформы. Visual Studio сопоставляет свойства проекта с командами Compile, Link и Debug на целевой платформе. Чтобы получить подробные сведения, откройте диалоговое окно **Страницы свойств** для проекта MyOpenGLESApp.Android.NativeActivity. Более подробную информацию о параметрах командной строки см. в [руководстве пользователя компилятора Clang](http://clang.llvm.org/docs/UsersManual.html).
+   Visual Studio создает проекты собственных действий Android с помощью пакета NDK для Android. В нем используется Clang в качестве набора инструментов платформы. Visual Studio сопоставляет свойства проекта с командами Compile, Link и Debug на целевой платформе. Чтобы получить подробные сведения, откройте диалоговое окно **Страницы свойств** для проекта MyOpenGLESApp.Android.NativeActivity. Более подробную информацию о параметрах командной строки см. в [руководстве пользователя компилятора Clang](https://clang.llvm.org/docs/UsersManual.html).
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>Сборка и запуск приложения для iOS на устройстве iOS
 

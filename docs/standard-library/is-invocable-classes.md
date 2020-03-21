@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 53394a10464e2688953cd1b5703530e2719b7593
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456232"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076459"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>классы is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
+# <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>классы is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Эти шаблоны определяют, можно ли вызывать тип с указанными типами аргументов. `is_invocable_r`а `is_nothrow_invocable_r` также определить, будет ли результат вызова преобразован в конкретный тип. `is_nothrow_invocable`а `is_nothrow_invocable_r` также определить, может ли вызов не создавать исключения. Добавлено в C++ 17.
+Эти шаблоны определяют, можно ли вызывать тип с указанными типами аргументов. `is_invocable_r` и `is_nothrow_invocable_r` также определяют, будет ли результат вызова преобразован в определенный тип. `is_nothrow_invocable` и `is_nothrow_invocable_r` также определяют, известно ли, что вызов не создает исключения. Добавлено в C++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Параметры
 
-*Предназначен*\
+*Вызываемый*\
 Вызываемый тип для запроса.
 
 *Args*\
 Типы аргументов для запроса.
 
-*Приведен*\
-Тип результата вызываемого  элемента должен быть преобразован в.
+*Преобразуемые*\
+Тип результата *вызываемого* элемента должен быть преобразован в.
 
 ## <a name="remarks"></a>Примечания
 
-Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с помощью аргументов arguments в невычисленном контексте.  `is_invocable`
+Предикат типа `is_invocable` содержит значение true, если *вызываемый* вызываемый тип можно вызвать с помощью *аргументов arguments* в невычисленном контексте.
 
-Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с *помощью аргументов arguments* в неоцененном контексте, чтобы получить тип результата, преобразуемый в преобразуемое.  `is_invocable_r`
+Предикат типа `is_invocable_r` содержит значение true, если вызываемый вызываемый *тип можно вызвать* с помощью *аргументов arguments* в неоцененном контексте, чтобы получить тип результата, преобразуемый в *преобразуемое*.
 
-Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с помощью аргументов arguments в неоцененном контексте, и такой вызов не вызывает исключение.  `is_nothrow_invocable`
+Предикат типа `is_nothrow_invocable` содержит значение true, если *вызываемый* вызываемый тип можно вызвать с помощью *аргументов arguments* в неоцененном контексте, и такой вызов не вызывает исключение.
 
-Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с *помощью аргументов arguments* в неоцененном контексте, чтобы получить тип результата, преобразуемый в *Преобразование, и*что такой вызов известно не для создания `is_nothrow_invocable_r` исключение.
+Предикат типа `is_nothrow_invocable_r` содержит значение true, если *вызываемый* вызываемый тип можно вызвать с помощью аргументов arguments в неоцененном контексте, чтобы получить тип результата *,* преобразуемый *в преобразование* , а такой вызов известен, чтобы не вызывал исключение.
 
-Каждый из типов, которые могут быть преобразованы, вызываемые и типы в аргументах *типа пакета параметров* , должны быть полным типом, массивом неизвестной привязки или, возможно, имеет **значение void**с квалификатором. В противном случае поведение предиката не определено.
+Каждый из типов, *которые могут быть* *преобразованы*, *вызываемые*и типы в аргументах типа пакета параметров, должны быть полным типом, массивом неизвестной привязки или, возможно, имеет **значение void**с квалификатором. В противном случае поведение предиката не определено.
 
 ## <a name="example"></a>Пример
 
@@ -103,7 +103,7 @@ int main()
 {
     static_assert( std::is_invocable<decltype(test1), short>::value );
 
-    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value ); 
+    static_assert( std::is_invocable_r<int(*)(), decltype(test1), int>::value );
     static_assert( std::is_invocable_r<long(*)(), decltype(test1), int>::value ); // fails
 
     static_assert( std::is_nothrow_invocable<decltype(test1), int>::value );
@@ -116,11 +116,11 @@ int main()
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<type_traits>
+**Заголовок:** \<type_traits >
 
 **Пространство имен:** std
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [<type_traits>](../standard-library/type-traits.md)\
-[вызвать](functional-functions.md#invoke)
+[invoke](functional-functions.md#invoke)

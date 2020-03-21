@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685869"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076373"
 ---
 # <a name="student_t_distribution-class"></a>Класс student_t_distribution
 
@@ -64,10 +64,10 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
+*Реалтипе*\
 Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с *t*-распределением учащегося. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
@@ -78,9 +78,9 @@ public:
 
 Функция свойства `n()` возвращает значение для хранимого параметра распределения `n`.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](http://mathworld.wolfram.com/Studentst-Distribution.html) на веб-сайте Wolfram MathWorld.
+Дополнительные сведения о *t*-распределении Стьюдента см. в статье [T-распределение Стьюдента](https://mathworld.wolfram.com/Studentst-Distribution.html) на веб-сайте Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<random>
+**Заголовок:** \<случайный >
 
 **Пространство имен:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 Формирует распределение.
 
@@ -177,10 +177,10 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Параметр распределения `n`.
 
-*parm* \
+*parm*\
 Пакет параметров, используемый для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 **Предусловие:** `0.0 < n`
 
@@ -188,7 +188,7 @@ explicit student_t_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 Сохраняет все параметры распределения.
 
@@ -208,15 +208,15 @@ struct param_type {
 *n*\
 Параметр распределения `n`.
 
-*справа* \
+*справа*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Примечания
 
 **Предусловие:** `0.0 < n`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [\<random>](../standard-library/random.md)

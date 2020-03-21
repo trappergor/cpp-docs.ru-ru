@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 308fa1a2309ddfda1a02fe6a687360185c1e7c6e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3ed2eceb60c2efa78181faea58a256b0e35d489f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245854"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076616"
 ---
-# <a name="errorcategory-class"></a>Класс error_category
+# <a name="error_category-class"></a>Класс error_category
 
 Представляет абстрактный, общий базовый класс для объектов, который описывает категорию кодов ошибок.
 
@@ -41,13 +41,13 @@ error_category(const error_category&) = delete
 
 `error_category` реализуют два стандартных объекта: [generic_category](../standard-library/system-error-functions.md#generic_category) и [system_category](../standard-library/system-error-functions.md#system_category).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="typedefs"></a>Определения типов
 
 |||
 |-|-|
-|[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
+|[value_type](#value_type)|Тип, представляющий сохраняемое значение кода ошибки.|
 
 ### <a name="functions"></a>Функции
 
@@ -69,7 +69,7 @@ error_category(const error_category&) = delete
 |[operator!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|
 |[оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|
 
-## <a name="default_error_condition"></a> default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
 
 Сохраняет значение кода ошибки для объекта условия ошибки.
 
@@ -88,7 +88,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="remarks"></a>Примечания
 
-### <a name="equivalent"></a> Эквивалент
+### <a name="equivalent"></a><a name="equivalent"></a>друг
 
 Возвращает значение, указывающее, эквивалентны ли объекты ошибок.
 
@@ -108,12 +108,12 @@ virtual bool equivalent(const error_code& _Code,
 *_Cond*\
 Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.
 
-*Фра_гменты*\
+*_Code*\
 Объект [error_code](../standard-library/error-code-class.md) для сравнения.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если категории и значения равны; в противном случае — **false**.
+**значение true** , если категория и значение равны; в противном случае — **значение false**.
 
 #### <a name="remarks"></a>Примечания
 
@@ -121,13 +121,13 @@ virtual bool equivalent(const error_code& _Code,
 
 Вторая функция-член возвращает значение `*this == _Code.category() && _Code.value() == _Errval`.
 
-### <a name="generic"></a> generic_category
+### <a name="generic_category"></a><a name="generic"></a>generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a> Сообщение
+### <a name="message"></a><a name="message"></a>Сообщение
 
 Возвращает имя указанного кода ошибки.
 
@@ -137,16 +137,16 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="parameters"></a>Параметры
 
-*Val*\
+*val*\
 Значение кода ошибки для описания.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает описательное имя кода ошибки *val* для категории.
+Возвращает описательное имя кода ошибки *Val* для категории.
 
 #### <a name="remarks"></a>Примечания
 
-### <a name="name"></a> Имя
+### <a name="name"></a><a name="name"></a>безымян
 
 Возвращает имя категории.
 
@@ -158,14 +158,13 @@ virtual const char *name() const = 0;
 
 Возвращает имя категории как строку байтов, заканчивающуюся нулем.
 
-### <a name="op_as"></a> оператор =
+### <a name="operator"></a><a name="op_as"></a>Оператор =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-
-### <a name="op_eq_eq"></a> оператор ==
+### <a name="operator"></a><a name="op_eq_eq"></a>Оператор = =
 
 Проверяет равенство между объектами `error_category`.
 
@@ -175,7 +174,7 @@ bool operator==(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа*\
 Объект для проверки на равенство.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -186,7 +185,7 @@ bool operator==(const error_category& right) const;
 
 Этот оператор-член возвращает `this == &right`.
 
-### <a name="op_neq"></a> оператор! =
+### <a name="operator"></a><a name="op_neq"></a>operator! =
 
 Проверяет неравенство между объектами `error_category`.
 
@@ -196,18 +195,18 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа*\
 Объект для проверки на неравенство.
 
 #### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если `error_category` объект не равным `error_category` переданный объект *правой*; в противном случае **false**.
+**значение true** , если объект `error_category` не равен `error_category` объекту, переданному по *правому краю*; в противном случае — **false**.
 
 #### <a name="remarks"></a>Примечания
 
 Оператор-член возвращает `(!*this == right)`.
 
-### <a name="op_lt"></a> Оператор&lt;
+### <a name="operatorlt"></a><a name="op_lt">Оператор </a>&lt;
 
 Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.
 
@@ -217,7 +216,7 @@ bool operator<(const error_category& right) const;
 
 #### <a name="parameters"></a>Параметры
 
-*Правильно*\
+*справа*\
 Сравниваемый объект `error_category`.
 
 #### <a name="return-value"></a>Возвращаемое значение
@@ -228,15 +227,15 @@ bool operator<(const error_category& right) const;
 
 Оператор-член возвращает `this < &right`.
 
-### <a name="system"></a> system_category
+### <a name="system_category"></a><a name="system"></a>system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a> value_type
+### <a name="value_type"></a><a name="value_type"></a>value_type
 
-Тип, представляющий сохраненное значение кода ошибки.
+Тип, представляющий сохраняемое значение кода ошибки.
 
 ```cpp
 typedef int value_type;
@@ -244,4 +243,4 @@ typedef int value_type;
 
 #### <a name="remarks"></a>Примечания
 
-Это определение типа является синонимом **int**.
+Это определение типа является синонимом для **int**.

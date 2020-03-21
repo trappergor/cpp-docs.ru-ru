@@ -24,16 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ede3c828437aab1759c6711fc40511c69646a133
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424827"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076567"
 ---
 # <a name="ltexceptiongt-functions"></a>Функции &lt;exception&gt;
 
-## <a name="current_exception"></a>current_exception
+## <a name="current_exception"></a><a name="current_exception"></a>current_exception
 
 Получает интеллектуальный указатель на текущее исключение.
 
@@ -45,7 +45,7 @@ exception_ptr current_exception();
 
 Объект [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), указывающий на текущее исключение.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Вызовите функцию `current_exception` в блоке catch. Если исключение находится в полете и блок перехвата может перехватить это исключение, функция `current_exception` возвращает объект `exception_ptr`, который ссылается на это исключение. В противном случае функция возвращает объект `exception_ptr` со значением null.
 
@@ -55,7 +55,7 @@ exception_ptr current_exception();
 
 Последующие вызовы функции `current_exception` возвращают объекты `exception_ptr`, которые ссылаются на различные копии текущего исключения. Соответственно, при сравнении объекты не признаются равными, поскольку они ссылаются на различные копии, даже если эти копии имеют одинаковые бинарные значения.
 
-## <a name="make_exception_ptr"></a>make_exception_ptr
+## <a name="make_exception_ptr"></a><a name="make_exception_ptr"></a>make_exception_ptr
 
 Создает объект [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), содержащий копию исключения.
 
@@ -73,13 +73,13 @@ template <class E>
 
 Объект [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) , указывающий на копию текущего исключения, *за исключением*.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Вызов функции `make_exception_ptr` аналогичен созданию исключения C++, его перехвату в блоке catch и последующему вызову функции [current_exception](../standard-library/exception-functions.md#current_exception) для возвращения объекта `exception_ptr`, ссылающегося на это исключение. Реализация Майкрософт для функции `make_exception_ptr` является более эффективной, чем создание и последующий перехват исключения.
 
 Приложение обычно не требует функции `make_exception_ptr`, и мы не рекомендуем использовать ее.
 
-## <a name="rethrow_exception"></a>rethrow_exception
+## <a name="rethrow_exception"></a><a name="rethrow_exception"></a>rethrow_exception
 
 Создает исключение, переданное в качестве параметра.
 
@@ -92,11 +92,11 @@ void rethrow_exception(exception_ptr P);
 *P*\
 Перехваченное исключение, подлежащее повторному вызову. Если параметр *P* имеет [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)null, функция создает исключение [std:: bad_exception](../standard-library/bad-exception-class.md).
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 После сохранения перехваченного исключения в объект `exception_ptr` основной поток может обработать этот объект. В основном потоке вызовите функцию `rethrow_exception`, указав объект `exception_ptr` в качестве аргумента. Функция `rethrow_exception` извлекает исключение из объекта `exception_ptr` и затем вызывает это исключение в контексте основного потока.
 
-## <a name="get_terminate"></a>get_terminate
+## <a name="get_terminate"></a><a name="get_terminate"></a>get_terminate
 
 Получает текущую функцию `terminate_handler`.
 
@@ -104,7 +104,7 @@ void rethrow_exception(exception_ptr P);
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>set_terminate
+## <a name="set_terminate"></a><a name="set_terminate"></a>set_terminate
 
 Создает новый `terminate_handler`, подлежащий вызову при завершении программы.
 
@@ -121,7 +121,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 Адрес предыдущей функция, используемой для вызова при завершении.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Функция устанавливает новый [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) в качестве функции * *фнев*. Таким словами, *фнев* не должен быть пустым указателем. Функция возвращает адрес предыдущего обработчика завершения.
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>get_unexpected
+## <a name="get_unexpected"></a><a name="get_unexpected"></a>get_unexpected
 
 Получает текущую функцию `unexpected_handler`.
 
@@ -161,18 +161,18 @@ int main()
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a>rethrow_if_nested
+## <a name="rethrow_if_nested"></a><a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
-template <class E> 
+template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Если не является типом полиморфизма или если `nested_exception` недоступен или является неоднозначным, то никакого влияния не происходит. В противном случае выполняет динамическое приведение.
 
-## <a name="set_unexpected"></a>set_unexpected
+## <a name="set_unexpected"></a><a name="set_unexpected"></a>set_unexpected
 
 Создает новый `unexpected_handler`, подлежащий вызову при обнаружении неожиданного исключения.
 
@@ -189,7 +189,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 Адрес предыдущего обработчика `unexpected_handler`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 *фнев* не должен быть пустым указателем.
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>заканчива
+## <a name="terminate"></a><a name="terminate"></a>заканчива
 
 Вызывает обработчик завершения.
 
@@ -228,7 +228,7 @@ int main()
 void terminate();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Функция вызывает обработчик завершения — функцию типа **void**. Если `terminate` вызывается непосредственно программой, обработчик завершения является последним заданным вызовом метода [set_terminate](../standard-library/exception-functions.md#set_terminate). Если `terminate` вызывается по какой-либо из нескольких других причин во время вычисления выражения Throw, обработчик завершения является, что он действует сразу после вычисления выражения Throw.
 
@@ -238,18 +238,18 @@ void terminate();
 
 См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `terminate`.
 
-## <a name="throw_with_nested"></a>throw_with_nested
+## <a name="throw_with_nested"></a><a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
     void throw_with_nested(T&& t);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Создает исключение с вложенными исключениями.
 
-## <a name="uncaught_exception"></a>uncaught_exception
+## <a name="uncaught_exception"></a><a name="uncaught_exception"></a>uncaught_exception
 
 Возвращает **true**, только если созданное исключение в настоящий момент обрабатывается.
 
@@ -314,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>известно
+## <a name="unexpected"></a><a name="unexpected"></a>известно
 
 Вызывает обработчик неожиданных исключений.
 
@@ -322,7 +322,7 @@ In Test::~Test("outside try block")
 void unexpected();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Стандарт C++ требует вызова `unexpected` в том случае, когда функция создает исключение, которого нет в ее списке throw. Текущая реализация это не поддерживает. В данном примере `unexpected` вызывается напрямую, что вызывает обработчик неожиданных исключений.
 

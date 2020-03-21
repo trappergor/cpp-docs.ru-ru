@@ -38,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: a3765da94560eb84a1d441a6b25c42822fc857bb
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 38979a058cd6a8b029961708b4197daea2826d85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509475"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077169"
 ---
 # <a name="hstring-class"></a>Класс HString
 
@@ -55,7 +55,7 @@ ms.locfileid: "79509475"
 class HString;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Среда выполнения Windows предоставляет доступ к строкам через дескрипторы [HString](/windows/win32/WinRT/hstring) . Класс `HString` предоставляет удобные функции и операторы для упрощения использования дескрипторов HSTRING. Этот класс может управлять временем существования HSTRING, которому он владеет, с помощью шаблона RAII.
 
@@ -63,14 +63,14 @@ class HString;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                                | Description
+Имя                                | Описание
 ----------------------------------- | -----------------------------------------------------
-[HString:: HString](#hstring)        | Инициализирует новый экземпляр класса `HString`.
+[HString:: HString](#hstring)        | Инициализация нового экземпляра класса `HString`.
 [HString:: ~ HString](#tilde-hstring) | Уничтожает текущий экземпляр класса `HString`.
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-Имя                                     | Description
+Имя                                     | Описание
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [HString:: Attach](#attach)               | Связывает указанный объект `HString` с текущим объектом `HString`.
 [HString:: CopyTo](#copyto)               | Копирует текущий объект `HString` в объект HSTRING.
@@ -85,7 +85,7 @@ class HString;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-Имя                                         | Description
+Имя                                         | Описание
 -------------------------------------------- | ----------------------------------------------------------------------------
 [HString:: operator =](#operator-assign)       | Перемещает значение другого объекта `HString` в текущий объект `HString`.
 [HString:: operator = =](#operator-equality)    | Указывает, равны ли два параметра.
@@ -140,7 +140,7 @@ HRESULT CopyTo(
 *str*<br/>
 HSTRING, который получает копию.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот метод вызывает функцию [виндовсдупликатестринг](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) .
 
@@ -180,7 +180,7 @@ HSTRING* GetAddressOf() throw()
 
 Указатель на базовый дескриптор HSTRING.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 После этой операции строковое значение базового дескриптора HSTRING будет уничтожено.
 
@@ -200,10 +200,9 @@ const wchar_t* GetRawBuffer(unsigned int* length) const;
 
 **Константный** указатель на базовые строковые данные.
 
-
 ## <a name="hstringhstring"></a><a name="hstring"></a>HString:: HString
 
-Инициализирует новый экземпляр класса `HString`.
+Инициализация нового экземпляра класса `HString`.
 
 ```cpp
 HString() throw();
@@ -218,7 +217,7 @@ HString(HString&& other) throw();
 *other*<br/>
 Существующий объект `HString`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Первый конструктор инициализирует новый пустой объект `HString`.
 
@@ -279,7 +278,7 @@ HString& operator=(HString&& other) throw()
 *other*<br/>
 Существующий объект `HString`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Значение существующего объекта копируется в *текущий объект `HString`* , а затем удаляется *другой* объект.
 

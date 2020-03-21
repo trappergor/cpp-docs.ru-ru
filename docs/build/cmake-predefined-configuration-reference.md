@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509436"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078755"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Предопределенные конфигурации сборки CMake
 
@@ -34,7 +34,6 @@ ms.locfileid: "79509436"
 - MinGW Release
 
 При выборе конфигурации она добавляется в файл *CMakeSettings. JSON* в корневой папке проекта. После этого ее можно использовать для сборки проекта. Дополнительные сведения о свойствах конфигурации см. в разделе [Справочник по CMakeSettings](cmakesettings-reference.md).
-
 
 ## <a name="linux-predefined-build-configurations"></a>Предопределенные конфигурации сборки Linux:
 
@@ -382,7 +381,6 @@ You can use these optional settings for more control:
 
 При выборе конфигурации она добавляется в файл CMakeSettings.json в корневой папке проекта. После этого ее можно использовать для сборки проекта.
 
-
 ```json
 {
   "configurations": [
@@ -696,7 +694,7 @@ You can use these optional settings for more control:
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Проекты CMake в Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Настройка проекта Linux CMake](../linux/cmake-linux-project.md)<br/>

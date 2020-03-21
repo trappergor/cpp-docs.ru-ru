@@ -4,12 +4,12 @@ description: BNF описание MASM для x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322826"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075466"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Грамматика BNF Microsoft Macro Assembler
 
@@ -121,9 +121,9 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;; *текст* ;;
 
 *комментдир*\
-&nbsp;&nbsp;&nbsp;разделитель **комментариев** &nbsp;\
+&nbsp;&nbsp;&nbsp;разделитель **комментариев** *delimiter* &nbsp;\
 &nbsp;&nbsp;&nbsp;&nbsp;*text*\
-&nbsp;&nbsp;&nbsp;&nbsp; *текст* разделителя текста;;
+&nbsp;&nbsp;&nbsp;&nbsp;*text* *delimiter* *текст* разделителя текста;;
 
 *коммлист*\
 &nbsp;&nbsp;&nbsp;&nbsp;*коммдекл* | *коммлист* , *коммдекл*
@@ -270,7 +270,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
 &nbsp;&nbsp;&nbsp;&nbsp;| **Width** *ID*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *ИД* маски\
+&nbsp;&nbsp;&nbsp;&nbsp;| **MASK** *ИД* маски\
 &nbsp;&nbsp;&nbsp;&nbsp;| **size** *сизеарг*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *сизеарг*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **length** *ID*\
@@ -278,7 +278,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;| *рекордконст*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *строка*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *константа*\
-&nbsp;&nbsp;&nbsp;&nbsp;*тип* | 
+&nbsp;&nbsp;&nbsp;&nbsp;*тип* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **$**\
 &nbsp;&nbsp;&nbsp;&nbsp;| *сегментрегистер*\
@@ -289,7 +289,7 @@ ms.locfileid: "75322826"
 *ечодир*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ECHO**\
 &nbsp;&nbsp;&nbsp;&nbsp;*арбитраритекст* ;; \
-% *арбитраритекст* ;; \
+%**OUT** *арбитраритекст* ;; \
 
 *елсеифблокк*\
 &nbsp;&nbsp;&nbsp;&nbsp;*елсеифстатемент* ;; \
@@ -537,7 +537,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* : | *идентификатор* :: | @@:
 
 *лабелдир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **метки** идентификатора *куалифиедтипе* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*id* **метки** идентификатора *куалифиедтипе* ;;
 
 *лангтипе*\
 &nbsp;&nbsp;&nbsp;&nbsp;**C** | **PASCAL** | **FORTRAN** | **Basic** | **syscall** | **STDCALL**
@@ -676,7 +676,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* ;; \
 
 *неарфар*\
-&nbsp;&nbsp;&nbsp;&nbsp;**около** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**около** | **FAR**
 
 *нестедструкт*\
 &nbsp;&nbsp;&nbsp;&nbsp;*струксдр* ⟦ *ID* ⟧;; \
@@ -716,7 +716,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;| **proc** : *овисибилити*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **пролога** : *макроид*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **только для** **чтения | \**
-&nbsp;&nbsp;&nbsp; **&nbsp;| с заданной областью** ** | **
+&nbsp;&nbsp;&nbsp; **&nbsp;| с заданной областью** ** | ** \
 &nbsp;&nbsp;&nbsp;&nbsp;| **сегмент** : *сегсизе*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **SETIF2** : bool
 
@@ -800,7 +800,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *Distance* ⟧ ⟦ *Лангтипе* ⟧ ⟦ *протоарглист* ⟧ | *идентификатор* типа
 
 *прототипедир*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* *протоспек*
+&nbsp;&nbsp;&nbsp;&nbsp;*ID* **PROTO** *протоспек*
 
 *пубдеф*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *лангтипе* ⟧ *ID*
@@ -818,7 +818,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;*тип* &nbsp;| ⟦ *Distance* ⟧ **ptr** ⟦ *куалифиедтипе* ⟧
 
 *квалификатор*\
-&nbsp;&nbsp;&nbsp;&nbsp;*куалифиедтипе* |  *протоспек*
+&nbsp;&nbsp;&nbsp;&nbsp;*куалифиедтипе* | **PROTO** *протоспек*
 
 *цитата*\
 &nbsp;&nbsp;&nbsp;&nbsp;"|"
@@ -836,7 +836,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;*рекордтаг* { *олдрекордфиелдлист* } | *рекордтаг* < *олдрекордфиелдлист* >
 
 *рекорддир*\
-&nbsp;&nbsp;&nbsp;&nbsp; **запись** рекордтаг *битдефлист* ;;
+&nbsp;&nbsp;&nbsp;&nbsp;*recordTag* **запись** рекордтаг *битдефлист* ;;
 
 *рекордфиелдлист*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *constExpr* ⟧ | *рекордфиелдлист* , ⟦;; ⟧ ⟦ *constExpr* ⟧
@@ -856,7 +856,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;*спеЦиалрегистер* | *гпрегистер* | *битерегистер* | *квордрегистер* |  *фпурегистер* | *симдрегистер* | *сегментрегистер*
 
 *реглист*\
-&nbsp;&nbsp;&nbsp;&nbsp;*register* |  *регистр* реглист
+&nbsp;&nbsp;&nbsp;&nbsp;*register* | *regList* *регистр* реглист
 
 *relOp*\
 &nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | GE
@@ -866,7 +866,7 @@ ms.locfileid: "75322826"
 &nbsp;&nbsp;&nbsp;&nbsp;*блоккстатементс* ;; Унтилдир;;
 
 *репеатдир*\
-&nbsp;&nbsp;&nbsp;&nbsp;**повторить** |  повтор
+&nbsp;&nbsp;&nbsp;&nbsp;**повторить** | **REPT** повтор
 
 *скаларинстлист*\
 &nbsp;&nbsp;&nbsp;&nbsp;*инитвалуе* | *скаларинстлист* , ⟦;; ⟧ *инитвалуе*
@@ -1071,4 +1071,3 @@ ms.locfileid: "75322826"
 
 *график xmmregister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

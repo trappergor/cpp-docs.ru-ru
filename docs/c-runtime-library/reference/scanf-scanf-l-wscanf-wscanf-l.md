@@ -43,18 +43,18 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778322"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079214"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Считывает отформатированные данные из стандартного входного потока. Существуют более безопасные версии этих функций; см. раздел [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > В Visual Studio 2015 семейство функций `printf` и `scanf` было объявлено как **встроенное** и перемещено в заголовки `<stdio.h>` и `<conio.h>`. При переносе старого кода вы можете увидеть ошибку *LNK2019* в подключении к этим функциям. Дополнительные сведения см. в [разделе C++ журнал изменений Visual 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Синтаксис
@@ -85,7 +85,7 @@ int _wscanf_l(
 *format*<br/>
 Строка управления форматированием.
 
-*параметр*<br/>
+*argument*<br/>
 Необязательные аргументы.
 
 *locale*<br/>
@@ -99,7 +99,7 @@ int _wscanf_l(
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Примечания
 
 Функция **scanf** считывает данные из стандартного входного потока **stdin** и записывает данные в расположение, заданное *аргументом*. Каждый *аргумент* должен быть указателем на переменную типа, которая соответствует спецификатору типа в *формате*. Если копирование производится между перекрывающимися строками, поведение не определено.
 
@@ -126,7 +126,7 @@ int _wscanf_l(
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -166,11 +166,11 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

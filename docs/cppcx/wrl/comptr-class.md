@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2881d25434291aebff6a2d3a542044e58e0e81f2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423654"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077881"
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 
@@ -80,7 +80,7 @@ friend class ComPtr;
 *U*<br/>
 Класс, к которому текущий `ComPtr` является дружественным. (Шаблон, который использует этот параметр, защищен.)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 `ComPtr<>` объявляет тип, представляющий указатель базового интерфейса. Используйте `ComPtr<>` для объявления переменной, а затем используйте оператор доступа к членам стрелки (`->`) для доступа к функции-члену интерфейса.
 
@@ -90,20 +90,20 @@ friend class ComPtr;
 
 ### <a name="public-typedefs"></a>Открытые определения типов
 
-Имя            | Description
+Имя            | Описание
 --------------- | ---------------------------------------------------------------
 `InterfaceType` | Синоним для типа, указанного параметром-шаблоном *T* .
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                             | Description
+Имя                             | Описание
 -------------------------------- | --------------------------------------------------------------------------------------------------------------------
 [ComPtr:: ComPtr](#comptr)        | Инициализирует новый экземпляр класса `ComPtr`. Перегрузки предоставляют конструкторы по умолчанию, конструкторы копирования, перемещения и преобразования.
 [ComPtr:: ~ ComPtr](#tilde-comptr) | Выполняет деинициализацию экземпляра `ComPtr`.
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
-Имя                                                      | Description
+Имя                                                      | Описание
 --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ComPtr:: AS](#as)                                         | Возвращает объект `ComPtr`, представляющий интерфейс, определяемый указанным параметром шаблона.
 [ComPtr:: AsIID](#asiid)                                   | Возвращает объект `ComPtr`, представляющий интерфейс, идентифицируемый по указанному ИДЕНТИФИКАТОРу интерфейса.
@@ -119,14 +119,14 @@ friend class ComPtr;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-Имя                                        | Description
+Имя                                        | Описание
 ------------------------------------------- | --------------------------------------------------------------------------------
 [ComPtr:: InternalAddRef](#internaladdref)   | Увеличивает число ссылок интерфейса, связанного с этим `ComPtr`.
 [ComPtr:: InternalRelease](#internalrelease) | Выполняет операцию освобождения COM для интерфейса, связанного с этим `ComPtr`.
 
 ### <a name="public-operators"></a>Открытые операторы
 
-Имя                                                                                           | Description
+Имя                                                                                           | Описание
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
 [ComPtr:: operator &](#operator-ampersand)                                                       | Извлекает адрес текущего `ComPtr`.
 [ComPtr:: operator — >](#operator-arrow)                                                          | Извлекает указатель на тип, заданный текущим параметром шаблона.
@@ -137,7 +137,7 @@ friend class ComPtr;
 
 ### <a name="protected-data-members"></a>Защищенные элементы данных
 
-Имя                 | Description
+Имя                 | Описание
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::p tr_](#ptr) | Содержит указатель на интерфейс, связанный с, и управляется этим `ComPtr`.
 
@@ -151,7 +151,7 @@ friend class ComPtr;
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
+## <a name="comptrcomptr"></a><a name="tilde-comptr"></a>ComPtr:: ~ ComPtr
 
 Выполняет деинициализацию экземпляра `ComPtr`.
 
@@ -159,7 +159,7 @@ friend class ComPtr;
 WRL_NOTHROW ~ComPtr();
 ```
 
-## <a name="as"></a>ComPtr:: AS
+## <a name="comptras"></a><a name="as"></a>ComPtr:: AS
 
 Возвращает объект `ComPtr`, представляющий интерфейс, определяемый указанным параметром шаблона.
 
@@ -183,7 +183,7 @@ HRESULT As(
 *p*<br/>
 Объект `ComPtr`, представляющий интерфейс, указанный параметром *U*. Параметр *p* не должен ссылаться на текущий объект `ComPtr`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Первый шаблон — это форма, которую необходимо использовать в коде. Второй шаблон является внутренней вспомогательной специализацией, которая поддерживает функции языка C++, например ключевое слово выведения типа [auto](../../cpp/auto-cpp.md) .
 
@@ -191,7 +191,7 @@ HRESULT As(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="asiid"></a>ComPtr:: AsIID
+## <a name="comptrasiid"></a><a name="asiid"></a>ComPtr:: AsIID
 
 Возвращает объект `ComPtr`, представляющий интерфейс, идентифицируемый по указанному ИДЕНТИФИКАТОРу интерфейса.
 
@@ -214,7 +214,7 @@ WRL_NOTHROW HRESULT AsIID(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="asweak"></a>ComPtr:: AsWeak
+## <a name="comptrasweak"></a><a name="asweak"></a>ComPtr:: AsWeak
 
 Извлекает слабую ссылку на текущий объект.
 
@@ -233,7 +233,7 @@ HRESULT AsWeak(
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="attach"></a>ComPtr:: Attach
+## <a name="comptrattach"></a><a name="attach"></a>ComPtr:: Attach
 
 Связывает этот `ComPtr` с типом интерфейса, указанным в параметре типа текущего шаблона.
 
@@ -248,7 +248,7 @@ void Attach(
 *other*<br/>
 Тип интерфейса.
 
-## <a name="comptr"></a>ComPtr:: ComPtr
+## <a name="comptrcomptr"></a><a name="comptr"></a>ComPtr:: ComPtr
 
 Инициализирует новый экземпляр класса `ComPtr`. Перегрузки предоставляют конструкторы по умолчанию, конструкторы копирования, перемещения и преобразования.
 
@@ -294,7 +294,7 @@ WRL_NOTHROW ComPtr(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Первый конструктор является конструктором по умолчанию, который явно создает пустой объект. Второй конструктор указывает [__nullptr](../../extensions/nullptr-cpp-component-extensions.md), который явно создает пустой объект.
 
@@ -304,7 +304,7 @@ WRL_NOTHROW ComPtr(
 
 Шестой и седьмой конструкторы являются конструкторами перемещения. Седьмой конструктор перемещает объект, если он преобразуется в текущий тип.
 
-## <a name="copyto"></a>ComPtr:: CopyTo
+## <a name="comptrcopyto"></a><a name="copyto"></a>ComPtr:: CopyTo
 
 Копирует текущий или указанный интерфейс, связанный с этим `ComPtr`, в указанный указатель.
 
@@ -339,7 +339,7 @@ HRESULT CopyTo(
 
 S_OK в случае успеха; в противном случае возвращается значение HRESULT, указывающее, почему не удалось выполнить неявную операцию `QueryInterface`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Первая функция возвращает копию указателя на интерфейс, связанный с данным `ComPtr`. Эта функция всегда возвращает значение S_OK.
 
@@ -347,7 +347,7 @@ S_OK в случае успеха; в противном случае возвр
 
 Третья функция выполняет `QueryInterface`ную операцию с интерфейсом, связанным с этим `ComPtr`, для базового интерфейса параметра *U* .
 
-## <a name="detach"></a>ComPtr::D етач
+## <a name="comptrdetach"></a><a name="detach"></a>ComPtr::D етач
 
 Отменяет связь этого объекта `ComPtr` с интерфейсом, который он представляет.
 
@@ -359,7 +359,7 @@ T* Detach();
 
 Указатель на интерфейс, который был представлен этим объектом `ComPtr`.
 
-## <a name="get"></a>ComPtr:: Get
+## <a name="comptrget"></a><a name="get"></a>ComPtr:: Get
 
 Получает указатель на интерфейс, связанный с данным `ComPtr`.
 
@@ -371,7 +371,7 @@ T* Get() const;
 
 Указатель на интерфейс, связанный с данным `ComPtr`.
 
-## <a name="getaddressof"></a>ComPtr:: GetAddressOf
+## <a name="comptrgetaddressof"></a><a name="getaddressof"></a>ComPtr:: GetAddressOf
 
 Извлекает адрес элемента данных [ptr_](#ptr) , который содержит указатель на интерфейс, представленный этим `ComPtr`.
 
@@ -384,7 +384,7 @@ T** GetAddressOf();
 
 Адрес переменной.
 
-## <a name="internaladdref"></a>ComPtr:: InternalAddRef
+## <a name="comptrinternaladdref"></a><a name="internaladdref"></a>ComPtr:: InternalAddRef
 
 Увеличивает число ссылок интерфейса, связанного с этим `ComPtr`.
 
@@ -392,11 +392,11 @@ T** GetAddressOf();
 void InternalAddRef() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот метод защищен.
 
-## <a name="internalrelease"></a>ComPtr:: InternalRelease
+## <a name="comptrinternalrelease"></a><a name="internalrelease"></a>ComPtr:: InternalRelease
 
 Выполняет операцию освобождения COM для интерфейса, связанного с этим `ComPtr`.
 
@@ -404,11 +404,11 @@ void InternalAddRef() const;
 void InternalRelease();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот метод защищен.
 
-## <a name="operator-ampersand"></a>ComPtr:: operator&amp;
+## <a name="comptroperatoramp"></a><a name="operator-ampersand"></a>ComPtr:: operator&amp;
 
 Освобождает интерфейс, связанный с этим объектом `ComPtr`, а затем извлекает адрес объекта `ComPtr`.
 
@@ -422,11 +422,11 @@ const Details::ComPtrRef<const WeakRef> operator&() const
 
 Слабая ссылка на текущий объект `ComPtr`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Этот метод отличается от [ComPtr:: GetAddressOf](#getaddressof) тем, что этот метод освобождает ссылку на указатель интерфейса. Используйте метод `ComPtr::GetAddressOf`, если необходим адрес указателя интерфейса, но этот интерфейс освобождать не требуется.
 
-## <a name="operator-arrow"></a>ComPtr:: operator —&gt;
+## <a name="comptroperator-gt"></a><a name="operator-arrow"></a>ComPtr:: operator —&gt;
 
 Извлекает указатель на тип, заданный текущим параметром шаблона.
 
@@ -438,11 +438,11 @@ WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->()
 
 Указатель на тип, заданный текущим именем типа шаблона.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Эта вспомогательная функция удаляет лишнюю нагрузку, вызванную использованием макроса STDMETHOD. Эта функция делает `IUnknown` типов `private` вместо `virtual`.
 
-## <a name="operator-assign"></a>ComPtr:: operator =
+## <a name="comptroperator"></a><a name="operator-assign"></a>ComPtr:: operator =
 
 Присваивает значение текущему `ComPtr`.
 
@@ -485,7 +485,7 @@ WRL_NOTHROW ComPtr& operator=(
 
 Ссылка на текущий `ComPtr`.
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 Первая версия этого оператора присваивает пустое значение текущему `ComPtr`.
 
@@ -501,7 +501,7 @@ WRL_NOTHROW ComPtr& operator=(
 
 Седьмая версия — это оператор Copy, использующий семантику перемещения; Ссылка rvalue на `ComPtr` типа *U* является статической приведением и присваивается текущему `ComPtr`.
 
-## <a name="operator-equality"></a>ComPtr:: operator = =
+## <a name="comptroperator"></a><a name="operator-equality"></a>ComPtr:: operator = =
 
 Определение равенства двух объектов `ComPtr`.
 
@@ -536,7 +536,7 @@ bool operator==(
 
 Второй и третий операторы выдают `true`, если объект *a* равен `nullptr`; в противном случае `false`.
 
-## <a name="operator-inequality"></a>ComPtr:: operator! =
+## <a name="comptroperator"></a><a name="operator-inequality"></a>ComPtr:: operator! =
 
 Определяет неравенство двух объектов `ComPtr`.
 
@@ -571,7 +571,7 @@ bool operator!=(
 
 Второй и третий операторы выдают `true`, если объект *a* не равен `nullptr`; в противном случае `false`.
 
-## <a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D состояния:: BoolType
+## <a name="comptroperator-microsoftwrldetailsbooltype"></a><a name="operator-microsoft-wrl-details-booltype"></a>ComPtr:: operator Microsoft:: WRL::D состояния:: BoolType
 
 Указывает, управляет ли `ComPtr` время существования объекта в интерфейсе.
 
@@ -583,7 +583,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 Если интерфейс связан с этим `ComPtr`, то адрес элемента данных [BoolStruct:: Member](boolstruct-structure.md#member) ; в противном случае `nullptr`.
 
-## <a name="ptr"></a>ComPtr::p tr_
+## <a name="comptrptr_"></a><a name="ptr"></a>ComPtr::p tr_
 
 Содержит указатель на интерфейс, связанный с, и управляется этим `ComPtr`.
 
@@ -591,11 +591,11 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 InterfaceType *ptr_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 `ptr_` — это внутренний, защищенный элемент данных.
 
-## <a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf
+## <a name="comptrreleaseandgetaddressof"></a><a name="releaseandgetaddressof"></a>ComPtr:: ReleaseAndGetAddressOf
 
 Освобождает интерфейс, связанный с этим `ComPtr`, а затем извлекает адрес элемента данных [ptr_](#ptr) , который содержит указатель на освобожденный интерфейс.
 
@@ -607,7 +607,7 @@ T** ReleaseAndGetAddressOf();
 
 Адрес [ptr_ного](#ptr) элемента данных этого `ComPtr`.
 
-## <a name="reset"></a>ComPtr:: Reset
+## <a name="comptrreset"></a><a name="reset"></a>ComPtr:: Reset
 
 Освобождает все ссылки для указателя на интерфейс, связанный с данным `ComPtr`.
 
@@ -619,7 +619,7 @@ unsigned long Reset();
 
 Число освобожденных ссылок, если таковые имеются.
 
-## <a name="swap"></a>ComPtr:: swap
+## <a name="comptrswap"></a><a name="swap"></a>ComPtr:: swap
 
 Обменивается данными интерфейсом, управляемым текущим `ComPtr`, с интерфейсом, управляемым заданным `ComPtr`.
 
@@ -637,4 +637,3 @@ void Swap(
 
 *r*<br/>
 `ComPtr`.
-

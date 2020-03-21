@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 29b4337679f05d780d3d6cd5de6bf6f889a6ea30
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bc349137661d7026e48688f8ef510958de270280
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496329"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075223"
 ---
 # <a name="cstockpropimpl-class"></a>Класс Кстоккпропимпл
 
@@ -82,12 +82,12 @@ ms.locfileid: "69496329"
 
 ```
 template <
-    class T, 
+    class T,
     class InterfaceName,
     const IID* piid = &_ATL_IIDOF(InterfaceName),
     const GUID* plibid = &CComModule::m_libid,
     WORD wMajor = 1,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE CStockPropImpl :
     public IDispatchImpl<InterfaceName, piid, plibid, wMajor, wMinor, tihclass>
@@ -96,7 +96,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, реализующий элемент управления и производный `CStockPropImpl`от.
+Класс, реализующий элемент управления и производный от `CStockPropImpl`.
 
 *InterfaceName*<br/>
 Сдвоенный интерфейс, предоставляющий стандартные свойства.
@@ -108,17 +108,17 @@ class ATL_NO_VTABLE CStockPropImpl :
 Указатель на идентификатор LIBID библиотеки типов, содержащей определение `InterfaceName`.
 
 *вмажор*<br/>
-Основной номер версии для библиотеки типов. Значение по умолчанию — 1.
+Основной номер версии для библиотеки типов. Значение по умолчанию ― 1.
 
 *вминор*<br/>
-Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.
+Дополнительный номер версии для библиотеки типов. По умолчанию используется значение 0.
 
 *тихкласс*<br/>
 Класс, используемый для управления сведениями о типе для *T*. Значение по умолчанию — `CComTypeInfoHolder`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="public-methods"></a>Общедоступные методы
 
 |||
 |-|-|
@@ -165,7 +165,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 |[put_FillStyle](#put_fillstyle)|Вызывайте этот метод для задания стиля заливки элемента управления, например сплошной, прозрачной или перекрестной штриховки.|
 |[put_Font](#put_font)|Вызовите этот метод, чтобы задать свойства шрифта элемента управления.|
 |[put_ForeColor](#put_forecolor)|Вызовите этот метод, чтобы задать цвет переднего плана элемента управления.|
-|[put_HWND](#put_hwnd)|Этот метод возвращает значение E_FAIL.|
+|[put_HWND](#put_hwnd)|Этот метод возвращает E_FAIL.|
 |[put_MouseIcon](#put_mouseicon)|Вызовите этот метод, чтобы задать свойства рисунка (значок, точечный рисунок или метафайл), отображаемые при наведении указателя мыши на элемент управления.|
 |[put_MousePointer](#put_mousepointer)|Вызовите этот метод, чтобы задать тип указателя мыши, отображаемого при наведении указателя мыши на элемент управления, например стрелка, крест или Песочные часы.|
 |[put_Picture](#put_picture)|Вызовите этот метод, чтобы задать отображение свойств рисунка рисунка (значка, точечного рисунка или метафайла).|
@@ -173,18 +173,18 @@ class ATL_NO_VTABLE CStockPropImpl :
 |[put_TabStop](#put_tabstop)|Вызовите этот метод, чтобы установить значение флага, указывающего, является ли элемент управления элементом табуляции или нет.|
 |[put_Text](#put_text)|Вызовите этот метод, чтобы задать текст, отображаемый с элементом управления.|
 |[путвалид](#put_valid)|Вызовите этот метод, чтобы установить флаг, указывающий, является ли элемент управления допустимым.|
-|[put_Window](#put_window)|Этот метод вызывает [кстоккпропимпл::P ut_hwnd](#put_hwnd), который ВОЗВРАЩАЕТ значение E_FAIL.|
+|[put_Window](#put_window)|Этот метод вызывает [кстоккпропимпл::p ut_HWND](#put_hwnd), который возвращает E_FAIL.|
 |[putref_Font](#putref_font)|Вызовите этот метод, чтобы задать свойства шрифта элемента управления со счетчиком ссылок.|
 |[putref_MouseIcon](#putref_mouseicon)|Вызовите этот метод, чтобы задать свойства рисунка (значок, точечный рисунок или метафайл), отображаемые при наведении указателя мыши на элемент управления со счетчиком ссылок.|
 |[putref_Picture](#putref_picture)|Вызовите этот метод, чтобы задать отображение свойств рисунка (значка, точечного рисунка или метафайла) со счетчиком ссылок.|
 
 ## <a name="remarks"></a>Примечания
 
-`CStockPropImpl`предоставляет методы **размещения** и **получения** для каждого стандартного свойства. Эти методы предоставляют код, необходимый для задания или получения элемента данных, связанного с каждым свойством, а также для уведомления и синхронизации с контейнером при изменении любого свойства.
+`CStockPropImpl` предоставляет **методы** for и **Get** для каждого стандартного свойства. Эти методы предоставляют код, необходимый для задания или получения элемента данных, связанного с каждым свойством, а также для уведомления и синхронизации с контейнером при изменении любого свойства.
 
-Visual Studio обеспечивает поддержку стандартных свойств с помощью мастеров. Дополнительные сведения о добавлении свойств запасов в элемент управления см. в учебнике по [ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio обеспечивает поддержку стандартных свойств с помощью мастеров. Дополнительные сведения о добавлении свойств запасов в элемент управления см. в [учебнике по ATL](../../atl/active-template-library-atl-tutorial.md).
 
-Для обеспечения обратной `CStockPropImpl` совместимости также `get_Window` предоставляет `put_Window` методы и, которые `get_HWND` просто `put_HWND`вызывают и соответственно. Реализация по умолчанию `put_HWND` возвращает значение E_FAIL, так как HWND должно быть свойством только для чтения.
+Для обеспечения обратной совместимости `CStockPropImpl` также предоставляет методы `get_Window` и `put_Window`, которые просто вызывают `get_HWND` и `put_HWND`соответственно. Реализация `put_HWND` по умолчанию возвращает E_FAIL, так как HWND должен быть свойством только для чтения.
 
 Следующие свойства также имеют реализацию **путреф** :
 
@@ -194,7 +194,7 @@ Visual Studio обеспечивает поддержку стандартных
 
 - Рисунок
 
-Те же три стандартных свойства должны иметь соответствующие элементы данных типа `CComPtr` или другого класса, обеспечивающего правильный подсчет ссылок на интерфейс с помощью оператора присваивания.
+Для тех же трех стандартных свойств требуется, чтобы соответствующий элемент данных был типа `CComPtr` или какой бы иной класс, обеспечивающий правильный подсчет ссылок на интерфейс, с помощью оператора присваивания.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -208,7 +208,7 @@ Visual Studio обеспечивает поддержку стандартных
 
 **Заголовок:** атлктл. h
 
-##  <a name="get_appearance"></a>Кстоккпропимпл:: get_Appearance
+##  <a name="cstockpropimplget_appearance"></a><a name="get_appearance"></a>Кстоккпропимпл:: get_Appearance
 
 Вызовите этот метод, чтобы получить стиль заливки, используемый элементом управления, например Flat или 3D.
 
@@ -223,9 +223,9 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_autosize"></a>Кстоккпропимпл:: get_AutoSize
+##  <a name="cstockpropimplget_autosize"></a><a name="get_autosize"></a>Кстоккпропимпл:: get_AutoSize
 
 Вызовите этот метод, чтобы получить состояние флага, указывающего, может ли элемент управления иметь другой размер.
 
@@ -240,9 +240,9 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_backcolor"></a>Кстоккпропимпл:: get_BackColor
+##  <a name="cstockpropimplget_backcolor"></a><a name="get_backcolor"></a>Кстоккпропимпл:: get_BackColor
 
 Вызовите этот метод, чтобы получить цвет фона элемента управления.
 
@@ -257,9 +257,9 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_backstyle"></a>Кстоккпропимпл:: get_BackStyle
+##  <a name="cstockpropimplget_backstyle"></a><a name="get_backstyle"></a>Кстоккпропимпл:: get_BackStyle
 
 Вызовите этот метод, чтобы получить стиль фона элемента управления: прозрачный или непрозрачный.
 
@@ -274,9 +274,9 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_bordercolor"></a>Кстоккпропимпл:: get_BorderColor
+##  <a name="cstockpropimplget_bordercolor"></a><a name="get_bordercolor"></a>Кстоккпропимпл:: get_BorderColor
 
 Вызовите этот метод, чтобы получить цвет границы элемента управления.
 
@@ -291,9 +291,9 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_borderstyle"></a>Кстоккпропимпл:: get_BorderStyle
+##  <a name="cstockpropimplget_borderstyle"></a><a name="get_borderstyle"></a>Кстоккпропимпл:: get_BorderStyle
 
 Вызовите этот метод, чтобы получить стиль границы элемента управления.
 
@@ -308,9 +308,9 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_bordervisible"></a>Кстоккпропимпл:: get_BorderVisible
+##  <a name="cstockpropimplget_bordervisible"></a><a name="get_bordervisible"></a>Кстоккпропимпл:: get_BorderVisible
 
 Вызовите этот метод, чтобы получить состояние флага, указывающего, является ли граница элемента управления видимой.
 
@@ -325,9 +325,9 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_borderwidth"></a>Кстоккпропимпл:: get_BorderWidth
+##  <a name="cstockpropimplget_borderwidth"></a><a name="get_borderwidth"></a>Кстоккпропимпл:: get_BorderWidth
 
 Вызовите этот метод, чтобы получить ширину границы элемента управления.
 
@@ -342,9 +342,9 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_caption"></a>Кстоккпропимпл:: get_Caption
+##  <a name="cstockpropimplget_caption"></a><a name="get_caption"></a>Кстоккпропимпл:: get_Caption
 
 Вызовите этот метод, чтобы получить текст, указанный в заголовке объекта.
 
@@ -359,9 +359,9 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_drawmode"></a>Кстоккпропимпл:: get_DrawMode
+##  <a name="cstockpropimplget_drawmode"></a><a name="get_drawmode"></a>Кстоккпропимпл:: get_DrawMode
 
 Вызовите этот метод, чтобы получить режим рисования элемента управления, например, с помощью пера XOR или инвертирования цветов.
 
@@ -376,9 +376,9 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_drawstyle"></a>Кстоккпропимпл:: get_DrawStyle
+##  <a name="cstockpropimplget_drawstyle"></a><a name="get_drawstyle"></a>Кстоккпропимпл:: get_DrawStyle
 
 Вызовите этот метод, чтобы получить стиль отображения элемента управления, например сплошной, пунктирный или пунктирный.
 
@@ -393,9 +393,9 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_drawwidth"></a>Кстоккпропимпл:: get_DrawWidth
+##  <a name="cstockpropimplget_drawwidth"></a><a name="get_drawwidth"></a>Кстоккпропимпл:: get_DrawWidth
 
 Вызовите этот метод, чтобы получить ширину отрисовки (в пикселях), используемую методами рисования элемента управления.
 
@@ -410,9 +410,9 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_enabled"></a>Кстоккпропимпл:: get_Enabled
+##  <a name="cstockpropimplget_enabled"></a><a name="get_enabled"></a>Кстоккпропимпл:: get_Enabled
 
 Вызовите этот метод, чтобы получить состояние флага, указывающего, включен ли элемент управления.
 
@@ -427,9 +427,9 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_fillcolor"></a>Кстоккпропимпл:: get_FillColor
+##  <a name="cstockpropimplget_fillcolor"></a><a name="get_fillcolor"></a>Кстоккпропимпл:: get_FillColor
 
 Вызовите этот метод, чтобы получить цвет заливки элемента управления.
 
@@ -444,9 +444,9 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_fillstyle"></a>Кстоккпропимпл:: get_FillStyle
+##  <a name="cstockpropimplget_fillstyle"></a><a name="get_fillstyle"></a>Кстоккпропимпл:: get_FillStyle
 
 Вызовите этот метод, чтобы получить стиль заливки элемента управления, например "Сплошная", "Прозрачная" или "кросшатчед".
 
@@ -461,9 +461,9 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_font"></a>Кстоккпропимпл:: get_Font
+##  <a name="cstockpropimplget_font"></a><a name="get_font"></a>Кстоккпропимпл:: get_Font
 
 Вызовите этот метод, чтобы получить указатель на свойства шрифта элемента управления.
 
@@ -478,9 +478,9 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_forecolor"></a>Кстоккпропимпл:: get_ForeColor
+##  <a name="cstockpropimplget_forecolor"></a><a name="get_forecolor"></a>Кстоккпропимпл:: get_ForeColor
 
 Вызовите этот метод, чтобы получить цвет переднего плана элемента управления.
 
@@ -495,9 +495,9 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_hwnd"></a>Кстоккпропимпл:: get_HWND
+##  <a name="cstockpropimplget_hwnd"></a><a name="get_hwnd"></a>Кстоккпропимпл:: get_HWND
 
 Вызовите этот метод, чтобы получить маркер окна, связанный с элементом управления.
 
@@ -512,9 +512,9 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_mouseicon"></a>Кстоккпропимпл:: get_MouseIcon
+##  <a name="cstockpropimplget_mouseicon"></a><a name="get_mouseicon"></a>Кстоккпропимпл:: get_MouseIcon
 
 Вызовите этот метод, чтобы получить свойства рисунка изображения (значка, растрового изображения или метафайла), отображаемого при наведении указателя мыши на элемент управления.
 
@@ -529,9 +529,9 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_mousepointer"></a>Кстоккпропимпл:: get_MousePointer
+##  <a name="cstockpropimplget_mousepointer"></a><a name="get_mousepointer"></a>Кстоккпропимпл:: get_MousePointer
 
 Вызывайте этот метод для получения типа указателя мыши, отображаемого при наведении указателя мыши на элемент управления, например стрелка, крест или Песочные часы.
 
@@ -546,9 +546,9 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_picture"></a>Кстоккпропимпл:: get_Picture
+##  <a name="cstockpropimplget_picture"></a><a name="get_picture"></a>Кстоккпропимпл:: get_Picture
 
 Вызовите этот метод, чтобы получить указатель на свойства рисунка рисунка (значка, растрового изображения или метафайла), который будет отображаться.
 
@@ -563,9 +563,9 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_readystate"></a>Кстоккпропимпл:: get_ReadyState
+##  <a name="cstockpropimplget_readystate"></a><a name="get_readystate"></a>Кстоккпропимпл:: get_ReadyState
 
 Вызовите этот метод, чтобы получить состояние готовности элемента управления, например загрузка или загрузка.
 
@@ -580,9 +580,9 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_tabstop"></a>Кстоккпропимпл:: get_TabStop
+##  <a name="cstockpropimplget_tabstop"></a><a name="get_tabstop"></a>Кстоккпропимпл:: get_TabStop
 
 Вызовите этот метод, чтобы получить состояние флага, указывающего, является ли элемент управления элементом табуляции или нет.
 
@@ -597,9 +597,9 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_text"></a>Кстоккпропимпл:: get_Text
+##  <a name="cstockpropimplget_text"></a><a name="get_text"></a>Кстоккпропимпл:: get_Text
 
 Вызовите этот метод, чтобы получить текст, отображаемый с элементом управления.
 
@@ -614,9 +614,9 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_valid"></a>Кстоккпропимпл:: IsValid
+##  <a name="cstockpropimplgetvalid"></a><a name="get_valid"></a>Кстоккпропимпл:: IsValid
 
 Вызовите этот метод, чтобы получить состояние флага, указывающего, является ли элемент управления допустимым.
 
@@ -631,9 +631,9 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="get_window"></a>Кстоккпропимпл:: get_Window
+##  <a name="cstockpropimplget_window"></a><a name="get_window"></a>Кстоккпропимпл:: get_Window
 
 Вызовите этот метод, чтобы получить маркер окна, связанный с элементом управления. Идентично [кстоккпропимпл:: get_HWND](#get_hwnd).
 
@@ -648,9 +648,9 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_appearance"></a>Кстоккпропимпл::p ut_Appearance
+##  <a name="cstockpropimplput_appearance"></a><a name="put_appearance"></a>Кстоккпропимпл::p ut_Appearance
 
 Вызовите этот метод, чтобы задать стиль заливки, используемый элементом управления, например Flat или 3D.
 
@@ -665,9 +665,9 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_autosize"></a>Кстоккпропимпл::p ut_AutoSize
+##  <a name="cstockpropimplput_autosize"></a><a name="put_autosize"></a>Кстоккпропимпл::p ut_AutoSize
 
 Вызовите этот метод, чтобы задать значение флага, которое указывает, не может ли элемент управления иметь другой размер.
 
@@ -682,9 +682,9 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_backcolor"></a>Кстоккпропимпл::p ut_BackColor
+##  <a name="cstockpropimplput_backcolor"></a><a name="put_backcolor"></a>Кстоккпропимпл::p ut_BackColor
 
 Вызовите этот метод, чтобы задать цвет фона элемента управления.
 
@@ -699,9 +699,9 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_backstyle"></a>Кстоккпропимпл::p ut_BackStyle
+##  <a name="cstockpropimplput_backstyle"></a><a name="put_backstyle"></a>Кстоккпропимпл::p ut_BackStyle
 
 Вызовите этот метод, чтобы задать стиль фона элемента управления.
 
@@ -716,9 +716,9 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_bordercolor"></a>Кстоккпропимпл::p ut_BorderColor
+##  <a name="cstockpropimplput_bordercolor"></a><a name="put_bordercolor"></a>Кстоккпропимпл::p ut_BorderColor
 
 Вызовите этот метод, чтобы задать цвет границы элемента управления.
 
@@ -733,9 +733,9 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_borderstyle"></a>Кстоккпропимпл::p ut_BorderStyle
+##  <a name="cstockpropimplput_borderstyle"></a><a name="put_borderstyle"></a>Кстоккпропимпл::p ut_BorderStyle
 
 Вызовите этот метод, чтобы задать стиль границы элемента управления.
 
@@ -750,9 +750,9 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_bordervisible"></a>Кстоккпропимпл::p ut_BorderVisible
+##  <a name="cstockpropimplput_bordervisible"></a><a name="put_bordervisible"></a>Кстоккпропимпл::p ut_BorderVisible
 
 Вызовите этот метод, чтобы установить значение флага, определяющего видимость границы элемента управления.
 
@@ -767,9 +767,9 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_borderwidth"></a>Кстоккпропимпл::p ut_BorderWidth
+##  <a name="cstockpropimplput_borderwidth"></a><a name="put_borderwidth"></a>Кстоккпропимпл::p ut_BorderWidth
 
 Вызовите этот метод, чтобы задать ширину границы элемента управления.
 
@@ -784,9 +784,9 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_caption"></a>Кстоккпропимпл::p ut_Caption
+##  <a name="cstockpropimplput_caption"></a><a name="put_caption"></a>Кстоккпропимпл::p ut_Caption
 
 Вызовите этот метод, чтобы задать текст, отображаемый с помощью элемента управления.
 
@@ -801,9 +801,9 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_drawmode"></a>Кстоккпропимпл::p ut_DrawMode
+##  <a name="cstockpropimplput_drawmode"></a><a name="put_drawmode"></a>Кстоккпропимпл::p ut_DrawMode
 
 Вызовите этот метод, чтобы задать режим рисования элемента управления, например, перо XOR или Инверсия цветов.
 
@@ -818,9 +818,9 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_drawstyle"></a>Кстоккпропимпл::p ut_DrawStyle
+##  <a name="cstockpropimplput_drawstyle"></a><a name="put_drawstyle"></a>Кстоккпропимпл::p ut_DrawStyle
 
 Вызовите этот метод, чтобы задать стиль отображения элемента управления, например сплошной, пунктирный или пунктирный.
 
@@ -835,9 +835,9 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_drawwidth"></a>Кстоккпропимпл::p ut_DrawWidth
+##  <a name="cstockpropimplput_drawwidth"></a><a name="put_drawwidth"></a>Кстоккпропимпл::p ut_DrawWidth
 
 Вызовите этот метод, чтобы задать ширину (в пикселях), используемую методами рисования элемента управления.
 
@@ -852,9 +852,9 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_enabled"></a>Кстоккпропимпл::p ut_Enabled
+##  <a name="cstockpropimplput_enabled"></a><a name="put_enabled"></a>Кстоккпропимпл::p ut_Enabled
 
 Вызовите этот метод, чтобы установить значение флага, указывающего, включен ли элемент управления.
 
@@ -869,9 +869,9 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_fillcolor"></a>Кстоккпропимпл::p ut_FillColor
+##  <a name="cstockpropimplput_fillcolor"></a><a name="put_fillcolor"></a>Кстоккпропимпл::p ut_FillColor
 
 Вызовите этот метод, чтобы задать цвет заливки элемента управления.
 
@@ -886,9 +886,9 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_fillstyle"></a>Кстоккпропимпл::p ut_FillStyle
+##  <a name="cstockpropimplput_fillstyle"></a><a name="put_fillstyle"></a>Кстоккпропимпл::p ut_FillStyle
 
 Вызывайте этот метод для задания стиля заливки элемента управления, например сплошной, прозрачной или перекрестной штриховки.
 
@@ -903,9 +903,9 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_font"></a>Кстоккпропимпл::p ut_Font
+##  <a name="cstockpropimplput_font"></a><a name="put_font"></a>Кстоккпропимпл::p ut_Font
 
 Вызовите этот метод, чтобы задать свойства шрифта элемента управления.
 
@@ -920,9 +920,9 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_forecolor"></a>Кстоккпропимпл::p ut_ForeColor
+##  <a name="cstockpropimplput_forecolor"></a><a name="put_forecolor"></a>Кстоккпропимпл::p ut_ForeColor
 
 Вызовите этот метод, чтобы задать цвет переднего плана элемента управления.
 
@@ -937,11 +937,11 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_hwnd"></a>Кстоккпропимпл::p ut_HWND
+##  <a name="cstockpropimplput_hwnd"></a><a name="put_hwnd"></a>Кстоккпропимпл::p ut_HWND
 
-Этот метод возвращает значение E_FAIL.
+Этот метод возвращает E_FAIL.
 
 ```
 HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
@@ -954,13 +954,13 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_FAIL.
+Возвращает E_FAIL.
 
 ### <a name="remarks"></a>Примечания
 
 Маркер окна является значением только для чтения.
 
-##  <a name="put_mouseicon"></a>Кстоккпропимпл::p ut_MouseIcon
+##  <a name="cstockpropimplput_mouseicon"></a><a name="put_mouseicon"></a>Кстоккпропимпл::p ut_MouseIcon
 
 Вызовите этот метод, чтобы задать свойства рисунка (значок, точечный рисунок или метафайл), отображаемые при наведении указателя мыши на элемент управления.
 
@@ -975,9 +975,9 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_mousepointer"></a>Кстоккпропимпл::p ut_MousePointer
+##  <a name="cstockpropimplput_mousepointer"></a><a name="put_mousepointer"></a>Кстоккпропимпл::p ut_MousePointer
 
 Вызовите этот метод, чтобы задать тип указателя мыши, отображаемого при наведении указателя мыши на элемент управления, например стрелка, крест или Песочные часы.
 
@@ -992,9 +992,9 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_picture"></a>Кстоккпропимпл::p ut_Picture
+##  <a name="cstockpropimplput_picture"></a><a name="put_picture"></a>Кстоккпропимпл::p ut_Picture
 
 Вызовите этот метод, чтобы задать отображение свойств рисунка рисунка (значка, точечного рисунка или метафайла).
 
@@ -1009,9 +1009,9 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_readystate"></a>Кстоккпропимпл::p ut_ReadyState
+##  <a name="cstockpropimplput_readystate"></a><a name="put_readystate"></a>Кстоккпропимпл::p ut_ReadyState
 
 Вызовите этот метод, чтобы задать состояние готовности элемента управления, например загрузка или загрузка.
 
@@ -1026,9 +1026,9 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_tabstop"></a>Кстоккпропимпл::p ut_TabStop
+##  <a name="cstockpropimplput_tabstop"></a><a name="put_tabstop"></a>Кстоккпропимпл::p ut_TabStop
 
 Вызовите этот метод, чтобы установить флаг, указывающий, является ли элемент управления элементом табуляции или нет.
 
@@ -1043,9 +1043,9 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_text"></a>Кстоккпропимпл::p ut_Text
+##  <a name="cstockpropimplput_text"></a><a name="put_text"></a>Кстоккпропимпл::p ut_Text
 
 Вызовите этот метод, чтобы задать текст, отображаемый с элементом управления.
 
@@ -1060,9 +1060,9 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_valid"></a>Кстоккпропимпл::p утвалид
+##  <a name="cstockpropimplputvalid"></a><a name="put_valid"></a>Кстоккпропимпл::p утвалид
 
 Вызовите этот метод, чтобы установить флаг, указывающий, является ли элемент управления допустимым.
 
@@ -1077,11 +1077,11 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-##  <a name="put_window"></a>Кстоккпропимпл::p ut_Window
+##  <a name="cstockpropimplput_window"></a><a name="put_window"></a>Кстоккпропимпл::p ut_Window
 
-Этот метод вызывает [кстоккпропимпл::P ut_hwnd](#put_hwnd), который ВОЗВРАЩАЕТ значение E_FAIL.
+Этот метод вызывает [кстоккпропимпл::p ut_HWND](#put_hwnd), который возвращает E_FAIL.
 
 ```
 HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
@@ -1094,13 +1094,13 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_FAIL.
+Возвращает E_FAIL.
 
 ### <a name="remarks"></a>Примечания
 
 Маркер окна является значением только для чтения.
 
-##  <a name="putref_font"></a>Кстоккпропимпл::p utref_Font
+##  <a name="cstockpropimplputref_font"></a><a name="putref_font"></a>Кстоккпропимпл::p utref_Font
 
 Вызовите этот метод, чтобы задать свойства шрифта элемента управления со счетчиком ссылок.
 
@@ -1115,13 +1115,13 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-То же, что и [кстоккпропимпл::P ut_font](#put_font), но со счетчиком ссылок.
+То же, что и [кстоккпропимпл::p ut_Font](#put_font), но со счетчиком ссылок.
 
-##  <a name="putref_mouseicon"></a>Кстоккпропимпл::p utref_MouseIcon
+##  <a name="cstockpropimplputref_mouseicon"></a><a name="putref_mouseicon"></a>Кстоккпропимпл::p utref_MouseIcon
 
 Вызовите этот метод, чтобы задать свойства рисунка (значок, точечный рисунок или метафайл), отображаемые при наведении указателя мыши на элемент управления со счетчиком ссылок.
 
@@ -1136,13 +1136,13 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-То же, что и [кстоккпропимпл::P ut_mouseicon](#put_mouseicon), но со счетчиком ссылок.
+То же, что и [кстоккпропимпл::p ut_MouseIcon](#put_mouseicon), но со счетчиком ссылок.
 
-##  <a name="putref_picture"></a>Кстоккпропимпл::p utref_Picture
+##  <a name="cstockpropimplputref_picture"></a><a name="putref_picture"></a>Кстоккпропимпл::p utref_Picture
 
 Вызовите этот метод, чтобы задать отображение свойств рисунка (значка, точечного рисунка или метафайла) со счетчиком ссылок.
 
@@ -1157,13 +1157,13 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK при успешном выполнении или ошибку HRESULT при сбое.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Примечания
 
-То же, что и [кстоккпропимпл::P ut_picture](#put_picture), но со счетчиком ссылок.
+То же, что и [кстоккпропимпл::p ut_Picture](#put_picture), но со счетчиком ссылок.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс IDispatchImpl](../../atl/reference/idispatchimpl-class.md)

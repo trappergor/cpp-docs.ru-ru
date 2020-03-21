@@ -6,16 +6,16 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 81f793fbdc6d9dda567051b8c35a96f3d3f2f470
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 3e27d276e5500c1e32ca7b576b355f14f18a47f6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524618"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075266"
 ---
 # <a name="adding-an-atl-property-page"></a>Добавление страницы свойств ATL
 
-> [!NOTE] 
+> [!NOTE]
 > Мастер страницы свойств в ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
 Чтобы добавить объект библиотеки шаблонных классов (ATL) на страницу свойств в проекте, необходимо создавать проект как COM-приложение ATL или приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md), чтобы создать приложение ATL, или [добавить объект ATL в свое приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.
@@ -35,8 +35,8 @@ ms.locfileid: "65524618"
 
 После создания страницы свойств для элемента управления необходимо предоставить запись [PROP_PAGE](property-map-macros.md#prop_page) в схему сопоставления свойств для элемента управления.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Страницы свойств](../../atl/atl-com-property-pages.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Пример: реализация страницы свойств](../../atl/example-implementing-a-property-page.md)
+[Пример. Реализация страницы свойств](../../atl/example-implementing-a-property-page.md)
