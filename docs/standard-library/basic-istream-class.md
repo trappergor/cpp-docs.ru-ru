@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150795"
 ---
 # <a name="basic_istream-class"></a>Класс basic_istream
 
@@ -169,7 +169,7 @@ setstate(state);
 
 **Пространство имен:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 Создает объект типа `basic_istream`.
 
@@ -202,7 +202,7 @@ basic_istream(basic_istream&& right);
 
 Дополнительные сведения о входных потоках см. в примере для [класса basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream).
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 Возвращает число символов, считанных во время последнего неформатированного ввода.
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 Считывает один или несколько символов из входного потока.
 
@@ -295,7 +295,7 @@ basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delim
 
 Четвертая функция извлекает до `count - 1` элементов и сохраняет их в массиве, начиная с *str*. Она всегда сохраняет `char_type` после сохранения всех извлеченных элементов. В целях тестирования извлечение останавливается:
 
-- Конец файла.
+- в конце файла;
 
 - После извлечения из функции элемента, который сравнивается с *разделителем*. В этом случае элемент помещается обратно в управляемую последовательность.
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 Получает строку из входного потока.
 
@@ -368,7 +368,7 @@ basic_istream<Char_T, Tr>& getline(
 
 Вторая функция извлекает до `count - 1` элементов и сохраняет их в массиве, начиная с *str*. Она всегда сохраняет символ окончания строки после сохранения всех извлеченных элементов. В целях тестирования извлечение останавливается:
 
-- Конец файла.
+- в конце файла;
 
 - После извлечения из функции элемента, который сравнивается с *разделителем*. В этом случае элемент не помещается обратно и не добавляется в управляемую последовательность.
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 Пропускает несколько элементов после текущей позиции чтения.
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>Базовый\_IStream:: operator > >
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>Базовый\_IStream:: operator > >
 
 Вызывает функцию для входного потока или считывает форматированные данные из входного потока.
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 Назначает `basic_istream` справа от оператора этому объекту. Это назначение перемещения, включающее ссылку на `rvalue`, которая не оставляет копию.
 
@@ -595,7 +595,7 @@ basic_istream& operator=(basic_istream&& right);
 
 Оператор члена вызывает `swap(right)`.
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 Возвращает следующий символ для чтения.
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 Помещает указанный символ в поток.
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 Считывает указанное количество символов из потока и сохраняет их в массиве.
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 Считывает указанное число значений символов.
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 Перемещает позицию чтения в потоке.
 
@@ -838,7 +838,7 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > Не используйте вторую функцию-член с текстовыми файлами, так как стандартный C++ не поддерживает относительный поиск в текстовых файлах.
 
-Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, первая функция-член вызывает `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, для некоторых `pos_type` временных объектов `newpos`. Если `fail` имеет значение false, вторая функция вызывает `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. В любом случае, если `(off_type)newpos == (off_type)(-1)` (операция позиционирования завершается ошибкой), функция вызывает `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Обе функции возвращают __* this__.
+Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение false, первая функция-член вызывает `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, для некоторых `pos_type` временных объектов `newpos`. Если `fail` имеет значение false, вторая функция вызывает `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. В любом случае, если `(off_type)newpos == (off_type)(-1)` (операция позиционирования завершается ошибкой), функция вызывает `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Обе функции возвращают __* this__.
 
 Если [`fail`](../standard-library/basic-ios-class.md#fail) имеет значение true, функции-члены не выполняют никаких действий.
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 Вложенный класс описывает объект, объявление которого структурирует форматированные и неформатированные входные функции.
 
@@ -883,11 +883,11 @@ class sentry {
 
 - Вызывает `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) , если `_Istr.tie` не является пустым указателем.
 
-- Фактически вызывает [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`, если `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`](../standard-library/ios-functions.md#skipws) не равны нулю.
+- Фактически вызывает [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)`, если `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`](../standard-library/ios-functions.md#skipws) не равны нулю.
 
 Если после любой такой подготовки `_Istr.good` имеет значение false, конструктор вызывает `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае конструктор сохраняет значение, возвращаемое `_Istr.good`, в `status`. Последующий вызов `operator bool` доставляет это сохраненное значение.
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 Меняет местами содержимое двух объектов `basic_istream`.
 
@@ -904,7 +904,7 @@ void swap(basic_istream& right);
 
 Функция члена вызывает [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`. Он также обменивается счетчиком извлечения с числом извлечений *справа*.
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 Синхронизирует устройство ввода, связанное с потоком, с буфером потока.
 
@@ -916,7 +916,7 @@ int sync();
 
 Если [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) является пустым указателем, функция возвращает значение-1. В противном случае он вызывает `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Если этот вызов возвращает значение-1, функция вызывает [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` и возвращает-1. В противном случае функция возвращает нуль.
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 Сообщает текущую позицию чтения в потоке.
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 Помещает самый последний считанный символ обратно в поток.
 
