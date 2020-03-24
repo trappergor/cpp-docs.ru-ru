@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426933"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150634"
 ---
 # <a name="ltiosgt-functions"></a>Функции &lt;ios&gt;
 
-## <a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
 Устанавливает режим отображения переменных типа [bool](../cpp/bool-cpp.md) в потоке в виде **true** или **false**.
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>уменьшение
+## <a name="dec"></a><a name="dec"></a>уменьшение
 
 Устанавливает режим отображения целочисленных переменных в нотации с основанием 10.
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;iOS&gt; дефаултфлоат
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;iOS&gt; дефаултфлоат
 
 Устанавливает флаги объекта `ios_base` в соответствии с форматом отображения значений с плавающей запятой, принятым по умолчанию.
 
@@ -187,7 +187,7 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 Манипулятор фактически вызывает `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, а затем возвращает *iosbase*.
 
-## <a name="fixed"></a>префикс
+## <a name="fixed"></a><a name="fixed"></a>префикс
 
 Устанавливает режим отображения чисел с плавающей запятой в нотации фиксированного десятичного формата.
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>Hex
+## <a name="hex"></a><a name="hex"></a>Hex
 
 Устанавливает режим отображения целочисленных переменных в шестнадцатеричной записи.
 
@@ -262,13 +262,13 @@ ios_base& hex(ios_base& str);
 
 Пример использования `hex`см. в [Dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="hexfloat"></a>свертывания
+## <a name="hexfloat"></a><a name="hexfloat"></a>свертывания
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>внутрикластерных
+## <a name="internal"></a><a name="internal"></a>внутрикластерных
 
 Устанавливает режим выравнивания знака числа по левому краю, а самого числа — по правому краю.
 
@@ -297,7 +297,7 @@ ios_base& internal(ios_base& str);
 
 [showpos](../standard-library/ios-functions.md#showpos) вызывает показ знака для отображения положительных чисел.
 
-Манипулятор фактически вызывает `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, а затем возвращает *str*.
+Манипулятор фактически вызывает `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: Internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, а затем возвращает *str*.
 
 ### <a name="example"></a>Пример
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>слева
+## <a name="left"></a><a name="left"></a>слева
 
 Устанавливает режим добавления левого поля для текста, ширина которого меньше, чем ширина выходных данных, при представлении его в потоке.
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>нобулалфа
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>нобулалфа
 
 Устанавливает режим отображения переменных типа [bool](../cpp/bool-cpp.md) в потоке в виде 1 или 0.
 
@@ -418,7 +418,7 @@ ios_base& noboolalpha(ios_base& str);
 
 См. [boolalpha](../standard-library/ios-functions.md#boolalpha) с примером использования `noboolalpha`.
 
-## <a name="noshowbase"></a>ношовбасе
+## <a name="noshowbase"></a><a name="noshowbase"></a>ношовбасе
 
 Отключает отображение основания нотации, в которой отображается число.
 
@@ -445,7 +445,7 @@ ios_base& noshowbase(ios_base& str);
 
 См. [showbase](../standard-library/ios-functions.md#showbase) с примером использования `noshowbase`.
 
-## <a name="noshowpoint"></a>ношовпоинт
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>ношовпоинт
 
 Отображает только целую часть числа с плавающей запятой, дробная часть которого равна нулю.
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>ношовпос
+## <a name="noshowpos"></a><a name="noshowpos"></a>ношовпос
 
 Устанавливает режим отображения положительных чисел без обязательного знака.
 
@@ -519,7 +519,7 @@ ios_base& noshowpos(ios_base& str);
 
 См. [showpos](../standard-library/ios-functions.md#showpos) с примером использования `noshowpos`.
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 Устанавливает режим чтения пробелов потоком ввода.
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>наунитбуф
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>наунитбуф
 
 Устанавливает буферизацию выходных данных и их обработку при заполнении буфера.
 
@@ -584,7 +584,7 @@ ios_base& nounitbuf(ios_base& str);
 
 Манипулятор эффективно вызывает `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`, а затем возвращает *str*.
 
-## <a name="nouppercase"></a>прописные буквы
+## <a name="nouppercase"></a><a name="nouppercase"></a>прописные буквы
 
 Устанавливает режим отображения шестнадцатеричных цифр и показателя степени в экспоненциальном представлении в нижнем регистре.
 
@@ -609,7 +609,7 @@ ios_base& nouppercase(ios_base& str);
 
 См. [uppercase](../standard-library/ios-functions.md#uppercase) с примером использования `nouppercase`.
 
-## <a name="oct"></a>октября
+## <a name="oct"></a><a name="oct"></a>октября
 
 Устанавливает режим отображения целочисленных переменных в нотации с основанием 8.
 
@@ -636,7 +636,7 @@ ios_base& oct(ios_base& str);
 
 Пример использования `oct`см. в [Dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="right"></a>Правильно
+## <a name="right"></a><a name="right"></a>Правильно
 
 Устанавливает режим добавления правого поля для текста, ширина которого меньше, чем ширина выходных данных, при представлении его в потоке.
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>экспоненциаль
+## <a name="scientific"></a><a name="scientific"></a>экспоненциаль
 
 Устанавливает режим отображения чисел с плавающей запятой с использованием экспоненциального представления.
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>showbase
 
 Включает отображение основания нотации, в которой отображается число.
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 Отображает целую часть числа с плавающей запятой и цифры справа от десятичной запятой даже в том случае, если дробная часть равна нулю.
 
@@ -819,7 +819,7 @@ ios_base& showpoint(ios_base& str);
 
 См. [noshowpoint](../standard-library/ios-functions.md#noshowpoint) с примером использования `showpoint`.
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 Устанавливает режим отображения положительных чисел с обязательным знаком.
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 Устанавливает режим игнорирования пробелов потоком ввода.
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 Устанавливает режим обработки выходных данных при наличии данных в буфере.
 
@@ -941,7 +941,7 @@ ios_base& unitbuf(ios_base& str);
 
 Манипулятор фактически вызывает `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, а затем возвращает *str*.
 
-## <a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
 
 Устанавливает режим отображения шестнадцатеричных цифр и показателя степени в экспоненциальном представлении в верхнем регистре.
 

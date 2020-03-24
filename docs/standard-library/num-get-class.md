@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889995"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150620"
 ---
 # <a name="num_get-class"></a>Класс num_get
 
@@ -34,43 +34,43 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType* \
+*CharType*\
 Тип, используемый внутри программы для кодирования символов в языковом стандарте.
 
-*InputIterator* \
+*InputIterator*\
 Тип итератора, из которого функции получения числовых значений считывают своих входные данные.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Как и в случае любого другого аспекта языкового стандарта, начальное сохраненное значение статического идентификатора объекта равно нулю. Первая попытка получить доступ к сохраненному значению сохранит уникальное положительное значение в **id.**
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Description|
 |-|-|
 |[num_get](#num_get)|Конструктор для объектов типа `num_get`, используемых для извлечения числовых значений из последовательностей.|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Description|
 |-|-|
 |[char_type](#char_type)|Тип, используемый для описания символа, используемого языковым стандартом.|
 |[iter_type](#iter_type)|Тип, который описывает итератор ввода.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Description|
 |-|-|
 |[do_get](#do_get)|Виртуальная функция, вызываемая для извлечения числового или логического значения из последовательности символов, представляющей денежное значение.|
 |[get](#get)|Извлекает числовое или логическое значение из последовательности символов.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<locale>
+**Заголовок:** \<языковой стандарт >
 
 **Пространство имен:** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 Тип, используемый для описания символа, используемого языковым стандартом.
 
@@ -78,11 +78,11 @@ class num_get : public locale::facet;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Тип является синонимом параметра-шаблона **CharType**.
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 Виртуальная функция, вызываемая для извлечения числового или логического значения из последовательности символов, представляющей денежное значение.
 
@@ -167,26 +167,26 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Параметры
 
-*первый* \
+*первый*\
 Начало диапазона символов для чтения числа.
 
-*последние* \
+*последние*\
 Конец диапазона символов для чтения числа.
 
-*iosbase* \
+*iosbase*\
 [Ios_base](../standard-library/ios-base-class.md), флаги которого используются для преобразования.
 
 \ *состояния*
 Состояние, к которому при сбое добавляется failbit (см. [ios_base::iostate](../standard-library/ios-base-class.md#iostate)).
 
-*val* \
+*val*\
 Прочитанное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Итератор после чтения значения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Первая виртуальная защищенная функция-член:
 
@@ -211,11 +211,11 @@ virtual iter_type do_get(
 
 В противном случае спецификация преобразования имеет значение `ld`.
 
-Формат целочисленного поля ввода дополнительно определяется [аспектом локали](../standard-library/locale-class.md#facet_class)`fac`, возвращаемого вызовом [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. В частности:
+Формат целочисленного поля ввода дополнительно определяется [аспектом языкового стандарта](../standard-library/locale-class.md#facet_class)`fac` возвращаемого вызовом [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`. В частности:
 
-`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` определяет, как группируются цифры слева от любой десятичной запятой
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` определяет, как группируются цифры слева от любого десятичного разделителя;
 
-`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` определяет последовательность, разделяющую группы цифр слева от любой десятичной запятой.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` определяет последовательность, которая разделяет группы цифр слева от любого десятичного разделителя.
 
 Если в числовом поле ввода нет экземпляров `fac.thousands_sep()`, то ограничения группировки не применяются. В противном случае применяются ограничения группировки, накладываемые `fac.grouping()`, и разделители удаляются перед выполнением преобразования сканирования.
 
@@ -323,13 +323,13 @@ virtual iter_type do_get(
 
 ведет себя так же, как первая, за исключением того, что она пытается сопоставить полное, непустое логическое поле ввода. При успешном выполнении он преобразует логическое поле ввода в значение типа **bool** и сохраняет это значение в *Val*.
 
-Логическое поле ввода может иметь одну из двух форм. Если `iosbase.flags() & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) имеет значение false, поле совпадает с целочисленным полем ввода, за исключением того, что преобразованное значение должно быть 0 (false) или 1 (true). В противном случае последовательность должна соответствовать либо `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (для false), либо `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (для true).
+Логическое поле ввода может иметь одну из двух форм. Если `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) имеет значение false, поле совпадает с целочисленным полем ввода, за исключением того, что преобразованное значение должно быть 0 (false) или 1 (true). В противном случае последовательность должна соответствовать либо `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (для false), либо `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (для true).
 
 ### <a name="example"></a>Пример
 
 См. пример для [get](#get), где виртуальная функция-член вызывается из `do_get`.
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 Извлекает числовое или логическое значение из последовательности символов.
 
@@ -414,26 +414,26 @@ iter_type get(
 
 ### <a name="parameters"></a>Параметры
 
-*первый* \
+*первый*\
 Начало диапазона символов для чтения числа.
 
-*последние* \
+*последние*\
 Конец диапазона символов для чтения числа.
 
-*iosbase* \
+*iosbase*\
 [Ios_base](../standard-library/ios-base-class.md), флаги которого используются для преобразования.
 
 \ *состояния*
 Состояние, к которому при сбое добавляется failbit (см. [ios_base::iostate](../standard-library/ios-base-class.md#iostate)).
 
-*val* \
+*val*\
 Прочитанное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Итератор после чтения значения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Все функции элементов возвращают [do_get](#do_get)`( first, last, iosbase, state, val)`.
 
@@ -441,7 +441,7 @@ iter_type get(
 
 Целочисленное поле ввода преобразуется теми же правилами, которые используются функциями просмотра для сопоставления и преобразования последовательности элементов **char** из файла. Предполагается, что каждый такой элемент **char** сопоставлен с эквивалентным элементом типа `CharType` простым сопоставлением «один к одному». Эквивалентная спецификация преобразования сканирования определяется следующим образом:
 
-- Если `iosbase.`[флаги](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования `lo`.
+- Если `iosbase.`[флаги](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), спецификация преобразования `lo`.
 
 - Если `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), спецификация преобразования имеет значение `lx`.
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 Тип, который описывает итератор ввода.
 
@@ -559,11 +559,11 @@ int main( )
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Этот тип является синонимом для параметра шаблона `InputIterator`.
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 Конструктор для объектов типа `num_get`, используемых для извлечения числовых значений из последовательностей.
 
@@ -576,7 +576,7 @@ explicit num_get(size_t refs = 0);
 \ *ReFS*
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Возможные значения для параметра *ReFS* и их значимости:
 
@@ -590,7 +590,7 @@ explicit num_get(size_t refs = 0);
 
 Конструктор инициализирует свой базовый объект с `locale::`[аспектом](../standard-library/locale-class.md#facet_class)`(refs)`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [\<locale>](../standard-library/locale.md)\
 [Класс facet](../standard-library/locale-class.md#facet_class)\

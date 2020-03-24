@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9b4492f10e2871792d8e1870fcfea37775dc7bde
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427347"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150853"
 ---
 # <a name="basic_filebuf-class"></a>Класс basic_filebuf
 
@@ -233,7 +233,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 **Пространство имен:** std
 
-## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
 Создает объект типа `basic_filebuf`.
 
@@ -249,7 +249,7 @@ basic_filebuf(basic_filebuf&& right);
 
 Второй конструктор инициализирует объект с содержимым *right*, который рассматривается как ссылка rvalue.
 
-## <a name="char_type"></a>  basic_filebuf::char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a>  basic_filebuf::char_type
 
 Связывает имя типа с параметром шаблона `Char_T`.
 
@@ -257,7 +257,7 @@ basic_filebuf(basic_filebuf&& right);
 typedef Char_T char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::close
+## <a name="basic_filebufclose"></a><a name="close"></a>  basic_filebuf::close
 
 Закрывает файл.
 
@@ -324,7 +324,7 @@ s
 1
 ```
 
-## <a name="int_type"></a>  basic_filebuf::int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a>  basic_filebuf::int_type
 
 Делает этот тип в области `basic_filebuf` эквивалентным типу с тем же именем в области `Tr`.
 
@@ -332,7 +332,7 @@ s
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a>  basic_filebuf::is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a>  basic_filebuf::is_open
 
 Указывает, открыт ли файл.
 
@@ -368,7 +368,7 @@ false
 true
 ```
 
-## <a name="off_type"></a>  basic_filebuf::off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a>  basic_filebuf::off_type
 
 Делает этот тип в области `basic_filebuf` эквивалентным типу с тем же именем в области `Tr`.
 
@@ -376,7 +376,7 @@ true
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a>  basic_filebuf::open
+## <a name="basic_filebufopen"></a><a name="open"></a>  basic_filebuf::open
 
 Открывает файл.
 
@@ -417,7 +417,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена открывает файл с именем *filename*, вызывая [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` определяется из `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`:
+Функция члена открывает файл с именем *filename*, вызывая [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`. `strmode` определяется из `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`:
 
 - `ios_base::in` будет `"r"` (открыть существующий файл для чтения).
 
@@ -441,7 +441,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 Пример использования `open`см. в [`basic_filebuf::close`](#close) .
 
-## <a name="op_eq"></a>  basic_filebuf::operator=
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a>  basic_filebuf::operator=
 
 Назначьте содержимое этого объекта буфера потока. Это назначение перемещения, включающее rvalue, который не оставляет копию позади.
 
@@ -462,7 +462,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue. Дополнительные сведения см. в разделе [декларатор ссылок rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="overflow"></a>  basic_filebuf::overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a>  basic_filebuf::overflow
 
 Вызывается при вставке нового символа в полный буфер.
 
@@ -489,7 +489,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 - Он может преобразовать все ожидающие выходные данные в выходной буфер, а затем `ch`, используя аспект преобразования файлов `fac` для вызова `fac.out` по мере необходимости. Каждый созданный элемент `ch` типа *char* записывается в связанный поток, обозначенный указателем файла `fp` как при последовательных вызовах формы `fputc(ch, fp)`. В случае сбоя любого преобразования или записи эта функция завершается неудачно.
 
-## <a name="pbackfail"></a>  basic_filebuf::pbackfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>  basic_filebuf::pbackfail
 
 Пытается поместить элемент обратно во входной поток, затем делает его текущим (на него указывает следующий указатель).
 
@@ -516,7 +516,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - Если функция может вернуть элемент во входной поток, это может сделать это, например, путем вызова `ungetc` для элемента типа **char**.
 
-## <a name="pos_type"></a>  basic_filebuf::pos_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>  basic_filebuf::pos_type
 
 Делает этот тип в области `basic_filebuf` эквивалентным типу с тем же именем в области `Tr`.
 
@@ -524,7 +524,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_filebuf::seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>  basic_filebuf::seekoff
 
 Пытается изменить текущие положения для управляемых потоков.
 
@@ -558,7 +558,7 @@ virtual pos_type seekoff(
 
 Если указатель файла `fp` является пустым указателем, функция завершается ошибкой. В противном случае он пытается изменить расположение потока путем вызова `fseek(fp, _Off, _Way)`. Если эта функция выполнена, а полученное положение `fposn` можно определить с помощью метода `fgetpos(fp, &fposn)`, функция будет выполнена. Если функция завершается с ошибкой, она возвращает значение типа `pos_type` содержащий `fposn`. В противном случае она возвращает недопустимую позицию в потоке.
 
-## <a name="seekpos"></a>  basic_filebuf::seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>  basic_filebuf::seekpos
 
 Пытается изменить текущие положения для управляемых потоков.
 
@@ -588,7 +588,7 @@ virtual pos_type seekpos(
 
 Что касается широкого потока, если после открытия такого потока или с момента последнего вызова `streampos` были произведены какие-либо вставки, то эта функция вызывает [переполнение](#overflow). Он также вставляет любую последовательность, необходимую для восстановления исходного состояния преобразования, с помощью аспекта преобразования файлов `fac` для вызова `fac.unshift` по мере необходимости. Каждый созданный элемент `byte` типа **char** записывается в связанный поток, обозначенный указателем файла `fp` как при последовательных вызовах формы `fputc(byte, fp)`. Если вызов `fac.unshift` или любая операция записи завершается неудачей, функция не будет выполнена успешно.
 
-## <a name="setbuf"></a>  basic_filebuf::setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>  basic_filebuf::setbuf
 
 Выполняет операции, относящиеся непосредственно к каждому производному буферу потока.
 
@@ -614,7 +614,7 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 `setbuf` вызывает `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))`, чтобы предложить массив элементов `count`, начиная с *_Buffer* в виде буфера для потока. Если эта функция возвращает ненулевое значение, то возвращается пустой указатель. В противном случае она возвращает **this**, чтобы сообщить об успешном завершении.
 
-## <a name="swap"></a>  basic_filebuf::swap
+## <a name="basic_filebufswap"></a><a name="swap"></a>  basic_filebuf::swap
 
 Меняет местами содержимое этого объекта `basic_filebuf` с содержимым указанного объекта `basic_filebuf`.
 
@@ -627,7 +627,7 @@ void swap(basic_filebuf& right);
 *справа*\
 Ссылка lvalue на другую `basic_filebuf`.
 
-## <a name="sync"></a>  basic_filebuf::sync
+## <a name="basic_filebufsync"></a><a name="sync"></a>  basic_filebuf::sync
 
 Пытается синхронизировать управляемые потоки с любыми связанными внешними потоками.
 
@@ -639,7 +639,7 @@ virtual int sync();
 
 Возвращает нуль, если указатель файла `fp` является пустым указателем. В противном случае он возвращает нуль только в том случае, если вызовы как [переполнения](#overflow) , так и `fflush(fp)` успешны при сбросе всех ожидающих выходных данных в поток.
 
-## <a name="traits_type"></a>  basic_filebuf::traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>  basic_filebuf::traits_type
 
 Связывает имя типа с параметром шаблона `Tr`.
 
@@ -647,7 +647,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a>  basic_filebuf::underflow
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a>  basic_filebuf::underflow
 
 Извлекает текущий элемент из входного потока.
 
