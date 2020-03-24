@@ -2,12 +2,12 @@
 title: Настройка проекта C++ для Linux в Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429178"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077730"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
 
@@ -17,9 +17,9 @@ ms.locfileid: "79429178"
 
 ::: moniker-end
 
-В этой статье описано, как [создать и настроить проект C++ для Linux в Visual Studio](create-a-new-linux-project.md). См. подробнее о [настройке проектов CMake Linux](cmake-linux-project.md). 
+В этой статье описано, как [создать и настроить проект C++ для Linux в Visual Studio](create-a-new-linux-project.md). См. подробнее о [настройке проектов CMake Linux](cmake-linux-project.md).
 
-Вы можете настроить проект Linux для физического компьютера или виртуальной машины Linux, а также для [подсистемы Windows для Linux](/windows/wsl/about) (WSL). 
+Вы можете настроить проект Linux для физического компьютера или виртуальной машины Linux, а также для [подсистемы Windows для Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ ms.locfileid: "79429178"
 
 ![События сборки](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense для заголовков в удаленных системах
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> IntelliSense для заголовков в удаленных системах
 
 При добавлении нового подключения в **диспетчере подключений** Visual Studio автоматически обнаруживает каталоги включения (include) для компилятора на удаленной системе. Затем Visual Studio архивирует с помощью zip и копирует эти файлы в каталог на локальном компьютере Windows. После этого при каждом использовании данного соединения в проекте Visual Studio или CMake заголовки в этих каталогах используются для обеспечения поддержки технологии IntelliSense.
 
