@@ -3,12 +3,12 @@ title: Создание и настройка проекта Linux CMake в Visu
 description: Создание, настройка, изменение и компиляция проекта Linux CMake в Visual Studio
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429190"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077666"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Создание и настройка проекта Linux CMake
 
@@ -37,14 +37,14 @@ Visual Studio не изменяет файлы CMakeLists.txt, чтобы дру
 
 ## <a name="before-you-begin"></a>Подготовка к работе
 
-Сначала убедитесь, что вы установили рабочую нагрузку **Разработка для Linux на C++** , включая компонент CMake. См. раздел [Установка рабочей нагрузки Linux для проектов C++ в Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+Сначала убедитесь, что вы установили рабочую нагрузку **Разработка для Linux на C++** , включая компонент CMake. См. раздел [Установка рабочей нагрузки Linux для проектов C++ в Visual Studio](download-install-and-setup-the-linux-development-workload.md).
 
-Убедитесь, что в системе Linux установлены следующие компоненты: 
+Убедитесь, что в системе Linux установлены следующие компоненты:
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
-Чтобы выполнить настройку для использования подсистемы Windows для Linux, щелкните **Управление конфигурациями** в разделе раскрывающегося меню конфигураций на главной панели инструментов. Теперь щелкните **Добавить конфигурацию** и выберите **WSL-Debug** или **WSL-Release** для GCC либо один из вариантов Clang для набора инструментов Clang/LLVM. 
+Чтобы выполнить настройку для использования подсистемы Windows для Linux, щелкните **Управление конфигурациями** в разделе раскрывающегося меню конфигураций на главной панели инструментов. Теперь щелкните **Добавить конфигурацию** и выберите **WSL-Debug** или **WSL-Release** для GCC либо один из вариантов Clang для набора инструментов Clang/LLVM.
 
 **Visual Studio 2019 версии 16.1** Если вы планируете использовать WSL, копировать или использовать источники либо заголовке не нужно, так как компилятор в Linux имеет прямой доступ к файловой системе Windows, где находятся исходные файлы. (В Windows версии 1903 и выше все приложения Windows также могут напрямую обращаться к файлам заголовков Linux, но Visual Studio пока не поддерживает эту возможность).
 
@@ -102,13 +102,13 @@ add_executable(hello-cmake hello.cpp)
 
 После выбора целевого удаленного объекта Linux ваш источник будет скопирован в удаленную систему.
 
-Когда вы выберете целевой объект, CMake автоматически выполнится в системе Linux, чтобы создать кэш CMake для проекта. 
+Когда вы выберете целевой объект, CMake автоматически выполнится в системе Linux, чтобы создать кэш CMake для проекта.
 
 ![Создание кэша CMake в Linux](media/cmake-linux-1.png "Создание кэша CMake в Linux")
 
 Чтобы включить поддержку удаленных заголовков IntelliSense в удаленных системах Linux, Visual Studio автоматически копирует их с компьютера Linux в папку на локальном компьютере Windows. Подробнее см. в разделе [IntelliSense для удаленных заголовков](configure-a-linux-project.md#remote_intellisense).
 
-## <a name="debug_cmake_project"></a> Отладка проекта CMake
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> Отладка проекта CMake
 
 Чтобы отладить код в указанной целевой системе отладки, задайте точку останова, выберите целевой объект CMake в качестве элемента автозагрузки на панели инструментов рядом с параметром проекта, а затем щелкните **&#x23f5; Запустить** на панели инструментов или нажмите клавишу F5.
 
@@ -125,13 +125,13 @@ add_executable(hello-cmake hello.cpp)
 
 Чтобы указать дополнительные аргументы, добавьте их в массив JSON `args`. Дополнительные сведения см. в статьях [Проекты "Открыть папку" для C++](../build/open-folder-projects-cpp.md) и [Настройка сеансов отладки CMake](../build/configure-cmake-debugging-sessions.md).
 
-## <a name="configure_cmake_linux"></a> Настройка параметров CMake для Linux
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a> Настройка параметров CMake для Linux
 
-Файл CMakeSettings.json в проекте Linux CMake может указывать все свойства, перечисленные в разделе [Настройка параметров CMake](../build/customize-cmake-settings.md), а также дополнительные свойства, определяющие параметры сборки на удаленном компьютере Linux. 
+Файл CMakeSettings.json в проекте Linux CMake может указывать все свойства, перечисленные в разделе [Настройка параметров CMake](../build/customize-cmake-settings.md), а также дополнительные свойства, определяющие параметры сборки на удаленном компьютере Linux.
 
 ::: moniker range="vs-2019"
 
-Чтобы изменить параметры CMake по умолчанию в Visual Studio 2019, на главной панели инструментов откройте раскрывающийся список **Конфигурация** и выберите **Управление конфигурациями**. 
+Чтобы изменить параметры CMake по умолчанию в Visual Studio 2019, на главной панели инструментов откройте раскрывающийся список **Конфигурация** и выберите **Управление конфигурациями**.
 
 ![Управление конфигурациями CMake](../build/media/vs2019-cmake-manage-configurations.png "Раскрывающийся список конфигураций CMake")
 
@@ -202,10 +202,10 @@ add_executable(hello-cmake hello.cpp)
   ]
 }
 ```
+
 ::: moniker-end
 
 Дополнительные сведения об этих параметрах см. в разделе [документации по CMakeSettings.json](../build/cmakesettings-reference.md).
-
 
 ## <a name="optional-settings"></a>Необязательные параметры
 
@@ -220,8 +220,6 @@ add_executable(hello-cmake hello.cpp)
 ```
 
 Эти параметры позволяют выполнять команды в системе Linux до и после сборки, а также до создания CMake. Они могут быть любой командой, допустимой на удаленной системе. Выходные данные передаются обратно в Visual Studio.
-
-
 
 ## <a name="see-also"></a>См. также
 
