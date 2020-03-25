@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172169"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI и C++/CX)
 
@@ -43,7 +43,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 *base_interface*<br/>
 (Необязательно) Базовый интерфейс для *имени* интерфейса.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **interface struct** — это эквивалент **interface class**.
 
@@ -53,7 +53,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 Класс или структура, которые является производными от интерфейса, должны реализовывать все элементы интерфейса. При реализации *имени* интерфейса необходимо также реализовать интерфейсы из списка `base_interface`.
 
-Дополнительные сведения:
+Дополнительные сведения см. в разделе:
 
 - [Практическое руководство. Определение статического конструктора интерфейса (C++выполняет)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -61,13 +61,13 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 Сведения о других типах среды CLR см. в статье о [классах и структурах](classes-and-structs-cpp-component-extensions.md).
 
-Во время компиляции можно определить, является ли тип интерфейсом, с помощью `__is_interface_class(type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка признаков типов компилятором (C++/CLI и C++/CX)).
+Во время компиляции можно определить, является ли тип интерфейсом, с помощью `__is_interface_class(type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 В среде разработки можно обратится в справку F1 для получения сведений об этих ключевых словах, выделив ключевое слово (к примеру, `interface class`) и нажав клавишу F1.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).
 
@@ -77,7 +77,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде CLR).
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)
