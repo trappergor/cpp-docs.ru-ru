@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214543"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -23,7 +23,7 @@ ms.locfileid: "69513976"
 [switch_is]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **switch_is** C++ имеет те же функциональные возможности, что и атрибут [switch_is](/windows/win32/Midl/switch-is) MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69513976"
 
 |||
 |-|-|
-|**Относится к**|**typedef**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**typedef**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

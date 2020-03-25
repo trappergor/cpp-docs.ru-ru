@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213971"
 ---
 # <a name="getmodulebase-function"></a>Функция GetModuleBase
 
-Извлекает [ModuleBase](modulebase-class.md) указатель, который позволяет увеличивать и уменьшать счетчик ссылок [RuntimeClass](runtimeclass-class.md) объекта.
+Извлекает указатель [ModuleBase](modulebase-class.md) , позволяющий увеличивать и уменьшать число ссылок объекта [RuntimeClass](runtimeclass-class.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,20 +24,20 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `ModuleBase` .
+Указатель на объект `ModuleBase`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эта внутренняя функция используется для увеличения и уменьшения числа ссылок объекта.
 
-Эту функцию можно использовать для управления счетчиками ссылок путем вызова [ModuleBase::IncrementObjectCount](modulebase-class.md#incrementobjectcount) и [ModuleBase::DecrementObjectCount](modulebase-class.md#decrementobjectcount).
+Эту функцию можно использовать для управления счетчиком ссылок путем вызова [ModuleBase:: IncrementObjectCount](modulebase-class.md#incrementobjectcount) и [ModuleBase::D екрементобжекткаунт](modulebase-class.md#decrementobjectcount).
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

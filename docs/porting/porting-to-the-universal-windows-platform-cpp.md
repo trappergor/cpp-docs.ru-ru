@@ -2,12 +2,12 @@
 title: Перенос в универсальную платформу Windows (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 0013d85ad8c27c06560c9f9e541691f4335252d1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 7663fbac62687562f09a3a1ed66b8c09b75c51fd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076859"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167645"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>Перенос в универсальную платформу Windows (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "80076859"
 
 То же самое можно сделать при наличии классической DLL-библиотеки Win32, которую требуется вызывать из приложения UWP. С помощью таких процедур можно создать уровень пользовательского интерфейса UWP для существующего классического приложения Windows на языке C++ или кроссплатформенного стандартного кода C++. См. [Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
-## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Перенос приложения для магазина Windows 8.1 на UWP
+## <a name="porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> Перенос приложения для Магазина Windows 8.1 на UWP
 
 Если у вас есть приложение для магазина Windows 8.1, эту процедуру можно использовать для того, чтобы оно могло работать на UWP и любом устройстве с ОС Windows 10.  Рекомендуется сначала построить проект с помощью Visual Studio 2019 в качестве Windows 8.1 проекта, чтобы сначала устранить все проблемы, возникающие в результате изменений в компиляторе и библиотеках. После этого можно воспользоваться одним из двух способов преобразования проекта в проект UWP для Windows 10. Самый простой способ (как поясняется в следующей процедуре) — создание универсального проекта Windows и копирование в него существующего кода. Если вы использовали универсальный проект для классического приложения Windows 8.1 и Windows Phone 8.1, то проект будет запускаться с двумя разными макетами в XAML. Однако на выходе вы получите один динамический макет, адаптирующийся под размер экрана.
 
@@ -82,7 +82,7 @@ ms.locfileid: "80076859"
 
 1. Выполните сборку и устраните все ошибки, возникающие из-за критических изменений между разными версиями пакета SDK Windows.
 
-## <a name="troubleshooting"></a>Диагностика
+## <a name="troubleshooting"></a>Устранение неполадок
 
 В процессе портирования кода на платформу UWP могут возникать различные ошибки. Могут возникать следующие проблемы.
 
@@ -106,7 +106,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 Если вы создали новый проект UWP в Visual Studio, эта ошибка не появится.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Visual C++: руководство по переносу](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [Разработка приложений для универсальной платформы Windows (UWP)](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

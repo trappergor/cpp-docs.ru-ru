@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231314"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213607"
 ---
 # <a name="removereference-structure"></a>RemoveReference - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,17 +36,17 @@ struct RemoveReference<T&&>;
 *T*<br/>
 Класс.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Удаляет ссылка или rvalue признака из параметра шаблона указанного класса.
+Отделяет ссылку или признак rvalue-reference от указанного параметра шаблона класса.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Открытые определения типов
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`Type`|Синоним для параметра-шаблона класса.|
+|`Type`|Синоним для параметра шаблона класса.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -54,10 +54,10 @@ struct RemoveReference<T&&>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** internal.h
+**Заголовок:** internal. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

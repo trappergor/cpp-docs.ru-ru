@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f9ed80bdcc04302c0dee85935f377c8e3dbfd37f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514618"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166840"
 ---
 # <a name="import"></a>импорт
 
@@ -30,15 +30,15 @@ ms.locfileid: "69514618"
 *idl_file*<br/>
 Имя IDL-файла, который необходимо импортировать в библиотеку типов текущего проекта.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Атрибут **Import** C++ приводит к тому, что `import "docobj.idl"` инструкциябудетпомещенаподинструкциейвсозданномIDL-файле.`#import` Атрибут **Import** имеет те же функциональные возможности, что и атрибут [Import](/windows/win32/Midl/import) MIDL.
+Атрибут **Import** C++ приводит к тому, что `#import` оператор помещается под инструкцией `import "docobj.idl"` в созданном IDL-файле. Атрибут **Import** имеет те же функциональные возможности, что и атрибут [Import](/windows/win32/Midl/import) MIDL.
 
-Атрибут **Import** помещает указанный файл в IDL-файл, который будет создан проектом. атрибут **Import** не позволяет вызывать конструкции в указанном файле из исходного кода в проекте.  Чтобы вызвать конструкции в указанном файле из исходного кода в проекте, используйте [#import](../../preprocessor/hash-import-directive-cpp.md) и `embedded_idl` атрибут или включите h-файл для *idl_file*, если файл. h существует.
+Атрибут **Import** помещает указанный файл в IDL-файл, который будет создан проектом. атрибут **Import** не позволяет вызывать конструкции в указанном файле из исходного кода в проекте.  Чтобы вызвать конструкции в указанном файле из исходного кода в проекте, используйте [#import](../../preprocessor/hash-import-directive-cpp.md) и атрибут `embedded_idl` или можно включить h-файл для *idl_file*, если файл. h существует.
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже коде
+Следующий код:
 
 ```cpp
 // cpp_attr_ref_import.cpp
@@ -66,14 +66,14 @@ library MyLib {
 
 |||
 |-|-|
-|**Относится к**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|В любом месте|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>

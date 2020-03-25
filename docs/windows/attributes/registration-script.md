@@ -1,21 +1,21 @@
 ---
-title: registration_script (C++ атрибут COM)
+title: registration_script (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407319"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214582"
 ---
-# <a name="registrationscript"></a>registration_script
+# <a name="registration_script"></a>registration_script
 
-Выполняет указанную регистрацию пользовательский скрипт.
+Выполняет указанный пользовательский скрипт регистрации.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,18 +25,18 @@ ms.locfileid: "62407319"
 
 ### <a name="parameters"></a>Параметры
 
-*сценарий*<br/>
-Полный путь к файлу сценария (.rgs) регистрации. Значение **none**, такие как `script = "none"`, означает, что компонентный класс не требования для регистрации.
+*индекса*<br/>
+Полный путь к файлу пользовательского скрипта регистрации (RGS). Значение **None**, например `script = "none"`, указывает на то, что компонент coclass не имеет требований регистрации.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**Registration_script** C++ атрибут выполняет скрипт регистрации, определяемое *сценарий*. Если этот атрибут не указан, используется стандартный RGS-файл, (содержащий сведения о регистрации компонента). Дополнительные сведения о файлах .rgs, см. в разделе [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
+Атрибут **registration_script** C++ выполняет пользовательский скрипт регистрации, указанный в *скрипте*. Если этот атрибут не указан, используется стандартный RGS-файл (содержащий сведения для регистрации компонента). Дополнительные сведения о RGS-файлах см. [в разделе "компонент реестра ATL" (регистратор)](../../atl/atl-registry-component-registrar.md).
 
 Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу.
 
 ## <a name="example"></a>Пример
 
-Следующий код указывает, что компонент имеет сценарий реестра с именем cpp_attr_ref_registration_script.rgs.
+Следующий код указывает, что у компонента есть сценарий реестра с именем cpp_attr_ref_registration_script. RGS.
 
 ```cpp
 // cpp_attr_ref_registration_script.cpp
@@ -63,14 +63,14 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|
-|**Недопустимые атрибуты**|Нет|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|Один или несколько из следующих элементов: `coclass`, `progid`или `vi_progid`.|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты COM](com-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>

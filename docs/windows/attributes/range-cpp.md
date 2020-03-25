@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214621"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "69514139"
 *high*<br/>
 Большое значение диапазона.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **Range** C++ имеет те же функциональные возможности, что и атрибут [Range](/windows/win32/Midl/range) MIDL.
 
@@ -57,14 +57,14 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса, параметр интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса, параметр интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>

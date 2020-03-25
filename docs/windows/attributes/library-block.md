@@ -1,21 +1,21 @@
 ---
-title: library_block (C++ атрибут COM)
+title: library_block (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214777"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
-Помещает конструкцию внутри блока библиотеки IDL.
+Размещает конструкцию внутри блока библиотеки IDL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,13 +23,13 @@ ms.locfileid: "62409256"
 [library_block]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-При размещении конструкции внутри блока библиотеки, убедитесь, что он будет передан в библиотеку типов, независимо от того, является ли он указывается. По умолчанию, единственными конструкциями модификаторами [coclass](coclass.md), [disp-интерфейс](dispinterface.md), и [idl_module](idl-module.md) атрибуты помещаются в блок library.
+При помещении конструкции в блок библиотеки вы гарантируете, что она будет передаваться в библиотеку типов, независимо от того, есть ли на нее ссылка. По умолчанию в блок библиотеки помещаются только конструкции, измененные атрибутами [coclass](coclass.md), [DISP](dispinterface.md)и [idl_module](idl-module.md) .
 
 ## <a name="example"></a>Пример
 
-В следующем коде пользовательский интерфейс помещается в блок library.
+В следующем коде пользовательский интерфейс помещается внутрь блока Library.
 
 ```cpp
 // cpp_attr_ref_library_block.cpp
@@ -49,13 +49,13 @@ __interface IMyInterface {
 |||
 |-|-|
 |**Применение**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)

@@ -3,12 +3,12 @@ title: MFC и ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 87f4a9deb40d7c35498f5cbd66efb6bd976547c2
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 3a58e68925fd77d002400bfe9d1f2bd28c60f78c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214335"
 ---
 # <a name="mfc-and-atl"></a>MFC и ATL
 
@@ -22,7 +22,7 @@ ms.locfileid: "71274655"
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание|
+|Title|Description|
 |-----------|-----------------|
 |[Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md)|Классы Microsoft Foundation Classes предоставляют тонкую объектно-ориентированную оболочку для Win32, которая позволяет быстро создавать приложения с графическим пользовательским интерфейсом на языке C++.|
 |[Компоненты ATL COM Desktop](../atl/atl-com-desktop-components.md)|Библиотека ATL предоставляет шаблоны классов и другие конструкции, упрощающие создание COM-объектов на C++.|

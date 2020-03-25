@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: 5e1d0376a8b2646f12064105af7bcf555f4a8e31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398245"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213893"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,11 +24,11 @@ ms.locfileid: "62398245"
 struct ImplementsBase;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используется для проверки типов параметров шаблона в [Implements-структура](implements-structure.md).
+Используется для проверки типов параметров шаблона в [структуре Implements](implements-structure.md).
 
-**ImplementsBase** структура пуста намеренно.
+Структура **ImplementsBase** пуста в структуре.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -36,10 +36,10 @@ struct ImplementsBase;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

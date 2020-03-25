@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
-ms.openlocfilehash: 2ba130862b1debbe2991ca7cbcae50192f900cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b9c1e1213949d7d700094caa6687232df881ce6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165487"
 ---
 # <a name="compiler-error-c3862"></a>Ошибка компилятора C3862
 
-> "*функция*": не удается скомпилировать неуправляемую функцию с параметром/clr: pure или/CLR: safe
+> "*функция*": невозможно скомпилировать неуправляемую функцию с параметрами/clr: pure или/CLR: Сейф
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-В компиляцию с параметром **/CLR: pure** или **/CLR: safe** может дать только изображение MSIL, изображение без машинного (неуправляемого) кода.  Следовательно, нельзя использовать `unmanaged` прагма-директиву **/CLR: pure** или **/CLR: safe** компиляции.
+Компиляция с **/clr: pure** или **/clr: Сейф** приведет к созданию образа только MSIL, изображения без машинного (неуправляемого) кода.  Поэтому нельзя использовать директиву pragma `unmanaged` в компиляции **/clr: pure** или **/clr: Сейф** .
 
-Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).
+Дополнительные сведения см. в статьях [/CLR (компиляция общеязыковой среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md) и [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).
 
 ## <a name="example"></a>Пример
 

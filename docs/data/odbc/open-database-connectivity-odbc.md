@@ -6,12 +6,12 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: d1d4e962e91e2a30356fc9f90a26dbeb857c8a29
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075896"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213087"
 ---
 # <a name="open-database-connectivity-odbc"></a>Интерфейс ODBC (ODBC)
 
@@ -75,6 +75,6 @@ ms.locfileid: "80075896"
 
 - [Использование набора записей MFC ODBC](use-mfc-odbc-recordsets.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Программирование доступа к данным (библиотеки MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

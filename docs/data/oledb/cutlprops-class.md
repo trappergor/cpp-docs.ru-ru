@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545555"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211111"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](#onpropertychanged)|Вызывается после задания свойства для управления связанными свойствами.|
 |[сетпропвалуе](#setpropvalue)|Задает свойство в наборе свойств.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Большая часть этого класса является подробным описанием реализации.
 
@@ -126,7 +126,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 Стандартное значение HRESULT. Возвращаемое значение по умолчанию — S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если у вас есть подпрограммы проверки, которые необходимо использовать для задания значения свойства, следует переопределить эту функцию. Например, можно проверить DBPROP_AUTH_PASSWORD для таблицы паролей, чтобы определить допустимое значение.
 
@@ -145,7 +145,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 окне IID запрошенного интерфейса. Дополнительные сведения см. в описании параметра *riid* `ICommand::Execute` в *справочнике по программированию OLE DB* (в *пакете SDK для MDAC*).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `OnInterfaceRequested` обрабатывает запросы потребителей для необязательного интерфейса, когда потребитель вызывает метод для одного из интерфейсов создания объекта (например, `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`или `ICommand`). Он устанавливает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает `IID_IRowsetLocate`, `OnInterfaceRequested` задает интерфейс `DBPROP_IRowsetLocate`. Это позволит поддерживать правильное состояние во время создания набора строк.
 
@@ -188,7 +188,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 Стандартное значение HRESULT. Возвращаемое значение по умолчанию — S_OK.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если требуется управлять связанными свойствами, такими как закладки или обновления, значения которых зависят от значения другого свойства, следует переопределить эту функцию.
 
@@ -225,7 +225,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 
 `Failure` в случае сбоя и S_OK в случае успеха.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

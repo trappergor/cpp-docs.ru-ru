@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2185
 ms.assetid: 74bc9f64-7b4c-4735-ba13-67c43f8c47db
-ms.openlocfilehash: d1d9d3d6f40d5797d5d51684734adc80ee8da591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3ec8b92d9411e790870c582d98cc67c7e68284a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385957"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206782"
 ---
 # <a name="compiler-error-c2185"></a>Ошибка компилятора C2185
 
-«Идентификатор»: недопустимое базовое выделение памяти
+"идентификатор": недопустимое выделение на основе
 
-Объявлена переменная регистра или автоматически (локальный) переменной `__based`. Только глобальные переменные могут быть объявлены `__based`.
+Переменная Register или автоматическая (локальная) переменная объявляется `__based`. `__based`могут быть объявлены только глобальные переменные.

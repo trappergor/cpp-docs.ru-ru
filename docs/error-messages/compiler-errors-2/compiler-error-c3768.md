@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534be9e3873276313335ca921264be92c9259b93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400218"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165747"
 ---
 # <a name="compiler-error-c3768"></a>Ошибка компилятора C3768
 
-> Невозможно получить адрес функции виртуального vararg в полностью управляемого кода
+> невозможно получить адрес виртуальной функции vararg в чистом управляемом коде
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: pure** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
-При компиляции с параметром **/CLR: pure**, невозможно получить адрес виртуальной `vararg` функции.
+При компиляции с **параметром/clr: pure**нельзя получить адрес виртуальной функции `vararg`.
 
 ## <a name="example"></a>Пример
 

@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211293"
 ---
 # <a name="crowset-class"></a>Класс CRowset
 
@@ -286,7 +286,7 @@ class CRowset
 |[Update](#update)|Передает все ожидающие изменения, внесенные в текущую строку с момента последней выборки или обновления.|
 |[UpdateAll](#updateall)|Передает все ожидающие изменения, внесенные во все строки с момента последней выборки или обновления.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В OLE DB набор строк — это объект, через который программа устанавливает и извлекает данные.
 
@@ -306,7 +306,7 @@ HRESULT AddRefRows() throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод увеличивает значение счетчика ссылок для текущего маркера строки. Вызовите [ReleaseRows](../../data/oledb/crowset-releaserows.md) , чтобы уменьшить число. Строки, возвращаемые методами Move, имеют счетчик ссылок, равный единице.
 
@@ -320,7 +320,7 @@ HRESULT AddRefRows() throw();
 void Close() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод освобождает все строки, находящиеся в данный момент в наборе строк.
 
@@ -351,7 +351,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetLocate`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetLocate` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -435,7 +435,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetFind`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetFind` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -468,7 +468,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetScroll`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetScroll` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -495,7 +495,7 @@ HRESULT GetData(int nAccessor) throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если указать метод доступа, который не является средством автодоступа в [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md), используйте этот метод для явного получения данных путем передачи номера метода доступа.
 
@@ -522,7 +522,7 @@ HRESULT GetDataHere(int nAccessor,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Пример использования этой функции см. в разделе [пример для чтения](../../overview/visual-cpp-samples.md).
 
@@ -540,7 +540,7 @@ HRESULT GetOriginalData() throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод получает данные, которые были получены недавно из источника данных или переданы в него. Он не извлекает значения на основе ожидающих изменений.
 
@@ -565,7 +565,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetUpdate` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -592,7 +592,7 @@ HRESULT Insert(int nAccessor = 0,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetChange`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetChange` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -639,7 +639,7 @@ HRESULT MoveFirst() throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает метод [IRowset:: свойство RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) , чтобы переместить расположение следующей выборки в начальную позицию (положение следующей выборки при создании набора строк) и получает начальную строку.
 
@@ -657,7 +657,7 @@ HRESULT MoveLast() throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызывает метод [IRowset:: свойство RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) , чтобы переместить место следующей выборки в последнюю позицию и извлечь последнюю строку.
 
@@ -688,7 +688,7 @@ HRESULT MoveNext(LONG lSkip,
 
 Стандартное значение HRESULT. По достижении конца набора строк возвращает DB_S_ENDOFROWSET.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Извлекает следующую последовательную строку из объекта `CRowset`, заменяя предыдущую позицию. При необходимости можно пропустить *лскип* строки или переместить назад.
 
@@ -714,7 +714,7 @@ HRESULT MovePrev() throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода необходимо задать `DBPROP_CANFETCHBACKWARDS` или `DBPROP_CANSCROLLBACKWARDS` VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetLocate`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также присвоить параметру `DBPROP_IRowsetLocate` значение VARIANT_TRUE и установить `DBPROP_CANFETCHBACKWARDS` на VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -773,7 +773,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `MoveToRatio` выбирает строки приблизительно по следующей формуле:
 
@@ -818,7 +818,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для `SetData` формы, которая не принимает аргументы, для обновления используются все методы доступа. Обычно `SetData` вызывается для установки значений данных в столбцах строки, а затем вызывается [Update](../../data/oledb/crowset-update.md) для передачи этих изменений.
 
@@ -853,7 +853,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для этого метода требуется дополнительный интерфейс `IRowsetUpdate`, который может не поддерживаться для всех поставщиков; в этом случае метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetUpdate` для VARIANT_TRUE перед вызовом `Open` для таблицы или команды, содержащей набор строк.
 
@@ -884,7 +884,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Передает все ожидающие изменения, внесенные в текущую строку, с момента последней выборки или обновления этой строки (с помощью `Update` или [UpdateAll](../../data/oledb/crowset-updateall.md)). Как правило, метод [SetData](../../data/oledb/crowset-setdata.md) вызывается для задания значений данных в столбцах строки, а затем вызывается метод `Update` для передачи этих изменений.
 
@@ -913,7 +913,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 *ппстатус*<br/>
 заполняет Указатель на расположение, где `Update` возвращает значение состояния строки. Если *ппстатус* имеет значение null, состояние не возвращается.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Передает все ожидающие изменения, внесенные во все строки, так как эти строки были в последний раз выбраны или обновлены с помощью [Update](../../data/oledb/crowset-update.md) или `UpdateAll`. `UpdateAll` обновит каждую измененную строку независимо от того, есть ли у вас их обработчик (см. раздел *пфров*).
 
@@ -925,7 +925,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 Стандартное значение HRESULT.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Пример Дбвиевер](../../overview/visual-cpp-samples.md)<br/>
 [Пример для чтения](../../overview/visual-cpp-samples.md)<br/>

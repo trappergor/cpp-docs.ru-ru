@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 5e7d8abd29033fc88dae1e83fcc6467fb0ace46f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154624"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170713"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
 **Блок, относящийся только к системам Microsoft**
 
-Преобразует `char *` значение `BSTR`.
+Преобразует значение типа `char *` в значение типа `BSTR`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,7 +28,7 @@ BSTR __stdcall ConvertStringToBSTR(const char* pSrc)
 #### <a name="parameters"></a>Параметры
 
 *pSrc*<br/>
-Объект `char *` переменной.
+Переменная `char *`.
 
 ## <a name="example"></a>Пример
 
@@ -60,10 +60,10 @@ BSTR text: Test
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<comutil.h >
+**Заголовок:** \<комутил. h >
 
-**LIB:** comsuppw.lib или comsuppwd.lib (см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) Дополнительные сведения)
+**Lib:** комсуппв. lib или комсуппвд. lib (Дополнительные сведения см. в разделе [/Zc: wchar_t (wchar_t является собственным типом)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

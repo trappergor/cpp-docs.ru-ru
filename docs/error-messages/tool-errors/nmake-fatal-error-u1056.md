@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1056
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
-ms.openlocfilehash: b15b14c04dd91ae648ea4311612c122f04f90477
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10131e518fa608292fff58672ede36390bcd665b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367269"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182907"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Неустранимая ошибка NMAKE U1056
 
-не удается найти процессор команд
+не удается найти обработчик команд
 
-Интерпретатор командной строки не находился в каталоге, указанном в **COMSPEC** или **путь** переменные среды.
+Обработчик команд не находится в пути, указанном в переменных среды **ComSpec** или **path** .
 
-Программа NMAKE использует COMMAND.COM или CMD. EXE-файла в качестве обработчика команды при выполнении команд. Он сначала ищет для обработки команды в пути, заданном в **COMSPEC**. Если **COMSPEC** не существует, поиск NMAKE, каталоги, заданные в **путь**.
+NMAKE использует COMMAND.COM или CMD. EXE в качестве обработчика команд при выполнении команд. Он сначала ищет обработчик команд в пути, установленном в **ComSpec**. Если **ComSpec** не существует, NMAKE выполняет поиск в каталогах, указанных в параметре **path**.

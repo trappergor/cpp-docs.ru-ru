@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214127"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy - перечисление
 
@@ -26,21 +26,21 @@ ms.locfileid: "62398762"
 enum CancelTransitionPolicy;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="values"></a>Значения
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
 |`RemainCanceled`|Если асинхронная операция в данный момент находится в запрошенном клиентом состоянии отмены, это означает, что данный элемент остается в отмененном состоянии, в отличие от перехода к окончательному состоянию завершения или ошибки.|
 |`TransitionFromCanceled`|Если асинхронная операция в данный момент находится в запрошенном клиентом состоянии отмены, это означает, что состояние должно перейти из данного состояния отмены в окончательное состояние завершения или ошибки, как определено вызовом, который использует этот флажок.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** async.h
+**Заголовок:** Async. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

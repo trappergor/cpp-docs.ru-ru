@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180190"
 ---
 # <a name="enumerations-c"></a>Перечисления (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Обратите внимание, что в строке `hand = account_num;` по-прежнему содержится ошибка, которая происходит при использовании неограниченных перечислений, как показано выше. Эта ошибка устраняется с помощью явного приведения. Однако при использовании ограниченных перечислений попытка преобразования в следующем операторе — `account_num = Suit::Hearts;` — больше не будет разрешена без явного приведения.
 
-## <a name="no_enumerators"></a>Перечисления без перечислителей
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Перечисления без перечислителей
 
 **Visual Studio 2017 версии 15,3 и более поздних версий** (доступно с помощью [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): путем определения перечисления (Regular или с областью видимости) с явным базовым типом и без перечислителей, вы можете использовать новый целочисленный тип, который не имеет неявного преобразования в любой другой тип. Используя этот тип вместо встроенного базового типа, можно исключить потенциальные ошибки для незначительных ошибок, вызванных случайными неявными преобразованиями.
 

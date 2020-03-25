@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 691871bfc4a9e63167611a3228807fb12e32d1cb
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210448"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
 
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[жетреференцедровсет](#getreferencedrowset)|Возвращает указатель интерфейса на набор строк, к которому применяется закладка.|
 |[Подробные](#getspecification)|Возвращает указатель интерфейса объекта (команды или сеанса работы), создавшего этот набор строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обязательный интерфейс для наборов строк. Этот класс реализует свойства набора строк с помощью [схемы набора свойств](../../data/oledb/begin-propset-map.md) , определенной в классе команд. Несмотря на то, что класс набора строк использует наборы свойств класса Command, набор строк предоставляется со своей собственной копией свойств времени выполнения, когда он создается объектом команды или сеанса.
 
@@ -119,11 +119,11 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 См. раздел [ировсетинфо::](/previous-versions/windows/desktop/ms716746(v=vs.85)) *IsReference в справочнике программиста OLE DB*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте этот метод совместно с [ижетдатасаурцеимпл](../../data/oledb/igetdatasourceimpl-class.md) для извлечения свойств из объекта источника данных.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

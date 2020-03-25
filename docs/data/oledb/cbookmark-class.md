@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546029"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212242"
 ---
 # <a name="cbookmark-class"></a>Класс CBookmark
 
@@ -113,7 +113,7 @@ class CBookmark< 0 > : public CBookmarkBase
 |-|-|
 |[Оператор =](#operator)|Назначает один класс `CBookmark` другому.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CBookmark<0>` является специализацией шаблона `CBookmark`; его буфер создается динамически во время выполнения.
 
@@ -133,7 +133,7 @@ CBookmark(DBLENGTH nSize);
 *нсизе*<br/>
 окне Размер буфера закладки в байтах.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первая функция устанавливает буфер в значение NULL, а размер буфера — в 0. Вторая функция задает размер буфера равным *нсизе*, а буфер — массиву байтов *нсизе* байт.
 
@@ -190,7 +190,7 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция доступна только в `CBookmark<0>`.
 
@@ -204,11 +204,11 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 CBookmark& operator =(const CBookmark& bookmark) throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор необходим только в `CBookmark<0>`.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

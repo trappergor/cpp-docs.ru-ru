@@ -6,14 +6,14 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 2b75f6c4763ddd7d3fd2d802371e21c40d506b16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 22c0fe4424e4df81ebb0355dfac2168af725b971
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172286"
 ---
-# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
+# <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 
 **interior_ptr** можно использовать с типом значения.
 
@@ -22,7 +22,7 @@ ms.locfileid: "65515759"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 В следующем примере C++/CLI показано использование **interior_ptr** с типом значения.
 
@@ -67,7 +67,7 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 В типе значения указатель **this** равен interior_ptr.
 
@@ -89,7 +89,7 @@ value struct V {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 В следующем примере показано использование оператора взятия адреса со статическими членами.
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)

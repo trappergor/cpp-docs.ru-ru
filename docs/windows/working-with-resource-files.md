@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513587"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165890"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
 > [!WARNING]
 > Этот раздел относится к классическим приложениям Windows, написанным на C++.
 >
-> Дополнительные сведения о ресурсах в универсальная платформа Windows приложениях, C++написанных в, см. в разделе [Определение ресурсов приложения](/windows/uwp/app-resources/)или о добавлении ресурсов в C++проекты/CLI (управляемые), см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) на веб-странице разработчика .NET Framework Программ.
+> Сведения о ресурсах в универсальная платформа Windows приложениях, написанных C++в, см. в разделе [Определение ресурсов приложения](/windows/uwp/app-resources/)или C++о добавлении ресурсов в проекты/CLI (управляемые), см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) статьи .NET Framework разработчика.
 
 Ресурсы могут состоять из широкого диапазона элементов, например:
 
@@ -36,7 +36,7 @@ ms.locfileid: "69513587"
 
 Сведения об глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Глобализация и локализация .NET Framework приложений](/dotnet/standard/globalization-localization/index).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 Описание файлов ресурсов и их использования в классических приложениях Windows. Также содержит ссылки на статьи с описанием использования файлов ресурсов.
@@ -47,7 +47,7 @@ ms.locfileid: "69513587"
 [Редакторы ресурсов](../windows/resource-editors.md)<br/>
 Описание редакторов ресурсов, предоставляемых в Visual Studio, и типов ресурсов, которые можно изменить с помощью каждого редактора. Также содержит ссылки на подробные сведения об использовании каждого редактора.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 Ссылки на документацию по Visual C++.
@@ -55,7 +55,7 @@ ms.locfileid: "69513587"
 [Обращайтесь к нам](/visualstudio/ide/talk-to-us)<br/>
 Ссылки на сведения об использовании документации, обращении в службу поддержки и использовании специальных возможностей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)<br/>
 [Меню и другие ресурсы](/windows/win32/menurc/resources)

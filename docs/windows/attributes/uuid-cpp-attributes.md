@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c507a9ae42afc5081c290d38464aa7f24c277d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166124"
 ---
 # <a name="uuid-c-attributes"></a>uuid (атрибуты C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "69514947"
 *uuid*<br/>
 128-разрядный уникальный идентификатор.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Если в определении интерфейса или класса не задан атрибут **UUID** C++ , то компилятор Майкрософт C++ предоставит его. При указании **UUID**необходимо включить кавычки.
 
@@ -50,14 +50,14 @@ ms.locfileid: "69514947"
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**, **интерфейс**, **объединение**, перечисление|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**класс**, **Структура**, **интерфейс**, **объединение**, **перечисление**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

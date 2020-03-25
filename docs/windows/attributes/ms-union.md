@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514379"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166644"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514379"
 [ms_union]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **ms_union** C++ имеет те же функциональные возможности, что и атрибут [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL.
 
@@ -60,14 +60,14 @@ __interface IFireTabCtrl {
 
 |||
 |-|-|
-|**Относится к**|Неинкапсулированные объединения|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|Неинкапсулированные объединения|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)

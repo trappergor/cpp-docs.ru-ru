@@ -16,16 +16,16 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301331"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179215"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 **__ptr32** представляет собственный указатель в 32-разрядной системе, а **__ptr64** представляет собственный указатель в 64-разрядной системе.
 
@@ -75,6 +75,6 @@ int main()
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Встроенные типы](../cpp/fundamental-types-cpp.md)

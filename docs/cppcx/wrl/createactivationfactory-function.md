@@ -1,5 +1,5 @@
 ---
-title: CreateActivationFactory - функция
+title: Функция CreateActivationFactory
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ca3469128cf3d412138d5d39a1587cbc20150699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398632"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214075"
 ---
-# <a name="createactivationfactory-function"></a>CreateActivationFactory - функция
+# <a name="createactivationfactory-function"></a>Функция CreateActivationFactory
 
 Создает фабрику, производящую экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.
 
@@ -31,31 +31,31 @@ template<typename Factory>
 ### <a name="parameters"></a>Параметры
 
 *flags*<br/>
-Сочетание одного или нескольких [RuntimeClassType](runtimeclasstype-enumeration.md) значений перечисления.
+Сочетание одного или нескольких значений перечисления [RuntimeClassType](runtimeclasstype-enumeration.md) .
 
 *entry*<br/>
-Указатель на [CreatorMap](creatormap-structure.md) , содержащий инициализации и регистрации сведений о параметрах *riid*.
+Указатель на [CreatorMap](creatormap-structure.md) , содержащий сведения об инициализации и регистрации параметра *riid*.
 
 *riid*<br/>
 Ссылка на идентификатор интерфейса.
 
-*ppFactory*<br/>
+*ппфактори*<br/>
 Если эта операция завершается успешно, указатель на фабрику активации.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Ошибка assert создается в том случае, если параметр шаблона *фабрики* не является производным от интерфейса `IActivationFactory`.
+Если *фабрика* параметров шаблона не является производной от интерфейса `IActivationFactory`, генерируется ошибка Assert.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Wrappers::Details](microsoft-wrl-wrappers-details-namespace.md)

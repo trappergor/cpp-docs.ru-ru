@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514113"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214595"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514113"
 [ref]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **ref** C++ имеет те же функциональные возможности, что и атрибут [ref](/windows/win32/Midl/ref) MIDL.
 
@@ -49,14 +49,14 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**Относится к**|**typedef**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**typedef**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

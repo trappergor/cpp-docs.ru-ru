@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080047"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208533"
 ---
 # <a name="lock-class"></a>Класс lock
 
@@ -31,7 +31,7 @@ ms.locfileid: "80080047"
 ref class lock;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `lock` доступен только для объектов CLR и может использоваться только в коде CLR.
 
@@ -41,14 +41,14 @@ ref class lock;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Description|
 |---------|-----------|
 |[lock::lock](#lock)|Создает объект `lock`, при необходимости ожидающий получения блокировки в течение заданного промежутка времени или вообще без него.|
 |[lock::~lock](#tilde-lock)|Разструктура объекта `lock`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Description|
 |---------|-----------|
 |[lock::acquire](#acquire)|Запрашивает блокировку на объект, при необходимости ожидая получения блокировки в течение заданного времени или вообще без него.|
 |[lock::is_locked](#is-locked)|Указывает, удерживается ли блокировка.|
@@ -57,7 +57,7 @@ ref class lock;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Description|
 |---------|-----------|
 |[Оператор lock::&nbsp;bool](#operator-bool)|Оператор для использования `lock` в условном выражении.|
 |[lock::operator==](#operator-equality)|Оператор равенства.|
@@ -103,7 +103,7 @@ template<class T> lock(
 
 Вызывает <xref:System.ApplicationException>, если получение блокировки не происходит до истечения времени ожидания.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первые три формы конструктора пытаются получить блокировку `_object` за указанный период времени ожидания (или <xref:System.Threading.Timeout.Infinite>, если не указано ни одного).
 
@@ -211,7 +211,7 @@ All threads completed.
 ~lock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Деструктор вызывает [блокировку:: Release](../dotnet/lock-release.md).
 
@@ -328,7 +328,7 @@ void acquire(
 
 Вызывает <xref:System.ApplicationException>, если получение блокировки не происходит до истечения времени ожидания.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если значение времени ожидания не указано, то время ожидания по умолчанию — <xref:System.Threading.Timeout.Infinite>.
 
@@ -539,7 +539,7 @@ operator bool();
 
 `true`, если блокировка удерживается, `false` в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор фактически преобразует в `_detail_class::_safe_bool`, который является более безопасным, чем `bool`, поскольку он не может быть преобразован в целочисленный тип.
 
@@ -642,7 +642,7 @@ All threads completed.
 void release();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если блокировка не удерживается, `release` не выполняет никаких действий.
 
@@ -760,7 +760,7 @@ bool try_acquire(
 
 `true`, если блокировка была получена, `false` в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если блокировка уже получена, эта функция не выполняет никаких действий.
 

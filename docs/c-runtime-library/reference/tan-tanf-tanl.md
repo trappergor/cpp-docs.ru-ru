@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168711"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -68,12 +68,12 @@ long double tan( long double x );  // C++ only
 
 Функции **Tan** возвращают тангенс *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Ввод|Исключение SEH|**Matherr** Об|
+|Входные данные|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
 |± КНАН, С|none|_DOMAIN|
-|± INF|**НЕДОПУСТИМЫЙ**|_DOMAIN|
+|± INF|**Недопустимый**|_DOMAIN|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **значения типа** **float** или **Long** . В программе на языке **Tan** всегда принимает и возвращает **Double**.
 
@@ -83,7 +83,7 @@ long double tan( long double x );  // C++ only
 |-------------|---------------------|-|
 |**Tan**, **TANF**, **танл**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

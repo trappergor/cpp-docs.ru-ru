@@ -1,5 +1,5 @@
 ---
-title: MixIn - структура
+title: Структура MixIn
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213699"
 ---
-# <a name="mixin-structure"></a>MixIn - структура
+# <a name="mixin-structure"></a>Структура MixIn
 
 Гарантирует, что класс среды выполнения является производным от интерфейсов среды выполнения Windows, если таковые имеются, а затем от интерфейсов классической модели COM.
 
@@ -31,18 +31,18 @@ struct MixIn;
 
 ### <a name="parameters"></a>Параметры
 
-*Производные*<br/>
-Тип, производный от [реализует](implements-structure.md) структуры.
+*Получает*<br/>
+Тип, производный от структуры [Implements](implements-structure.md) .
 
-*MixInType*<br/>
+*миксинтипе*<br/>
 Базовый тип.
 
-*hasImplements*<br/>
-**значение true,** Если *MixInType* является производным от текущей реализации базового типа; **false** в противном случае.
+*хасимплементс*<br/>
+**значение true** , если *миксинтипе* является производным от текущей реализации базового типа. в противном случае — **значение false** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Если класс является производным от среды выполнения Windows и интерфейсов класса модели COM, список объявления класса сначала должен перечислить все интерфейсы среды выполнения Windows, и затем любой классического COM интерфейсы. **MixIn** гарантирует, что интерфейсы будут указаны в правильном порядке.
+Если класс является производным от среда выполнения Windows и COM-интерфейсов класса, список объявлений класса должен сначала отобразить все интерфейсы среда выполнения Windows, а затем — любые классические COM-интерфейсы. **Примеси** гарантирует, что интерфейсы указываются в правильном порядке.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,10 +50,10 @@ struct MixIn;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

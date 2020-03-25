@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 4b446d69651cb3cf52bd6c15899d85ed76b319da
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 252d17fc56c13415f1068d6b16ed8b1ee663b5f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079811"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212892"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Набор записей. Порядок выборки записей в наборе (ODBC)
 
@@ -97,7 +97,7 @@ ms.locfileid: "80079811"
 
 Если набор записей должен быть основан на сложной инструкции SQL, используйте эти способы настройки в определенном сочетании. Например, это может потребоваться, если используются предложения и ключевые слова SQL, которые не поддерживаются наборами записей напрямую, или объединяются несколько таблиц.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Порядок обновления записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>

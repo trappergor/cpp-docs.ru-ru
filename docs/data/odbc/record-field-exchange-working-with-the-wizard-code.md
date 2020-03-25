@@ -15,12 +15,12 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 1149ab2b85c9cd803da0cd2d2ed6d931a020764e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 08d58561e0fb9305ff3a8d6aa6a62eb24d9b9d25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213048"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Обмен данными с полями записей (RFX). Работа с кодом мастера
 
@@ -141,6 +141,6 @@ m_nFields += 3;
 
 Это код для добавления трех новых полей. При добавлении элементов данных параметров необходимо инициализировать элемент данных [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams), который содержит количество элементов данных параметров. Поместите инициализацию `m_nParams` за скобки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

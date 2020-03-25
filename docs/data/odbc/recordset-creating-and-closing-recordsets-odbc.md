@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 155b51debfb6eacd3cbdd3293875274ca2dc4ab5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212983"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Набор записей. Создание и закрытие наборов записей (ODBC)
 
@@ -110,7 +110,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 `Close` освобождает обработку `HSTMT` набора записей. Он не удаляет объект C++.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

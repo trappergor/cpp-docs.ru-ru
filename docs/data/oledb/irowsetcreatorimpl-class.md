@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544582"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210552"
 ---
 # <a name="irowsetcreatorimpl-class"></a>Класс IRowsetCreatorImpl
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |-|-|
 |[SetSite](#setsite)|Задает сайт, содержащий объект набора строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Этот класс наследует от [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) и переопределяет [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite). Когда команда поставщика или объект сеанса создает набор строк, он вызывает `QueryInterface` для объекта набора строк, который ищет `IObjectWithSite` и вызывает `SetSite` передачи интерфейса `IUnkown` объекта набора строк в качестве интерфейса сайта.
 
@@ -78,11 +78,11 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Кроме того, `IRowsetCreatorImpl::SetSite` включает свойства OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

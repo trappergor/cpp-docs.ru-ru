@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166371"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,10 +27,10 @@ ms.locfileid: "69514061"
 
 ### <a name="parameters"></a>Параметры
 
-*interfaces*<br/>
+*интерфейс*<br/>
 Один или несколько интерфейсов, которые не могут вызываться произвольно для COM-объекта. Этот параметр допустим только при применении к классу.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **restrict** C++ имеет те же функциональные возможности, что и атрибут [ограниченного](/windows/win32/Midl/restricted) MIDL.
 
@@ -67,14 +67,14 @@ class c : public a, public b
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса, **интерфейс**, **класс**, **Структура**|
-|**Повторяемый**|Нет|
+|**Применение**|Метод интерфейса, **интерфейс**, **класс**, **Структура**|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|**coclass** (при применении к **классу** или **структуре**)|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

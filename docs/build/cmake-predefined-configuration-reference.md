@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169842"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Предопределенные конфигурации сборки CMake
 
@@ -694,7 +694,7 @@ You can use these optional settings for more control:
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Проекты CMake в Visual Studio](cmake-projects-in-visual-studio.md)<br/>
 [Настройка проекта Linux CMake](../linux/cmake-linux-project.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501766"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214920"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -25,10 +25,10 @@ ms.locfileid: "69501766"
 
 ### <a name="parameters"></a>Параметры
 
-*statement*<br/>
+*инструкция*<br/>
 Инструкция C.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **cpp_quote** C++ полезен, если необходимо поместить директиву препроцессора в IDL-файл.
 
@@ -38,7 +38,7 @@ ms.locfileid: "69501766"
 
 ## <a name="example"></a>Пример
 
-См. пример для [Dual](dual.md) в примере использование **cpp_quote**.
+См. пример для [Dual](dual.md) в качестве примера использования **cpp_quote**.
 
 ## <a name="requirements"></a>Требования
 
@@ -46,14 +46,14 @@ ms.locfileid: "69501766"
 
 |||
 |-|-|
-|**Относится к**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|В любом месте|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212957"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Набор записей. Объявление класса для предопределенного запроса (ODBC)
 
@@ -56,7 +56,7 @@ ms.locfileid: "80079839"
 
 1. Вручную добавьте инициализации для новых элементов данных полей в конструкторе класса набора записей.
 
-   Кроме того, необходимо увеличить значение инициализации для элемента данных [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Мастер пишет инициализацию, но она охватывает только элементы данных полей, которые он добавил сам. Например:
+   Кроме того, необходимо увеличить значение инициализации для элемента данных [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields). Мастер пишет инициализацию, но она охватывает только элементы данных полей, которые он добавил сам. Пример:
 
     ```cpp
     m_nFields += 6;
@@ -153,7 +153,7 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 >  Возможно, вам потребуется обработать возвращаемое значение (выходной параметр) из хранимой процедуры. Дополнительные сведения и пример см. в разделе [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Выполнение обновления наборов записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>

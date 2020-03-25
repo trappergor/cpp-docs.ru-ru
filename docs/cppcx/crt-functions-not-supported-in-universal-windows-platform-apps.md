@@ -2,16 +2,16 @@
 title: Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows
 ms.date: 12/30/2016
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: 763d76dd9eb139c10f4147e5fa069a0901fe5398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf67cb9c0a2438ee6ac1bcc7753c0f89b63a356d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188386"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214322"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows
 
-Многие функции среды выполнения C (CRT) недоступны при построении приложений универсальной платформы Windows. В некоторых случаях доступны обходные решения, — например, можно использовать среду выполнения Windows или API-интерфейсов Win32. Однако в других случаях функции CRT запрещены, поскольку соответствующие им функции или вспомогательные API не могут применяться к приложениям UWP. Чтобы найти альтернативный метод, который поддерживается для среды выполнения Windows, см. в разделе [альтернативы интерфейсов API Windows в приложениях UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
+Многие функции среды выполнения C (CRT) недоступны при построении приложений универсальной платформы Windows. В некоторых случаях доступны обходные пути, например, можно использовать среда выполнения Windows или интерфейсы API Win32. Однако в других случаях функции CRT запрещены, поскольку соответствующие им функции или вспомогательные API не могут применяться к приложениям UWP. Чтобы найти альтернативный метод, который поддерживается для среда выполнения Windows, см. раздел [альтернативы интерфейсам API Windows в приложениях UWP](/uwp/win32-and-com/alternatives-to-windows-apis-uwp).
 
 В следующей таблице перечислены функции CRT, которые недоступны при построении приложений UWP, и приведены применимые решения.
 
@@ -22,7 +22,7 @@ ms.locfileid: "62188386"
 |_beep _sleep _seterrormode|Эти функции устарели в предыдущих версиях CRT. Кроме того, соответствующие API Win32 недоступны для приложений UWP.|Обходное решение отсутствует.|
 |chdir _chdrive getcwd|Эти функции являются устаревшими или не являются потокобезопасными.|Используйте _chdir, _getcwd и связанные функции.|
 |_cgets _cgets_s _cgetws _cgetws_s _cprintf _cprintf_l _cprintf_p _cprintf_p_l _cprintf_s _cprintf_s_l _cputs _cputws _cscanf _cscanf_l _cscanf_s _cscanf_s_l _cwait _cwprintf _cwprintf_l _cwprintf_p _cwprintf_p_l _cwprintf_s _cwprintf_s_l _cwscanf _cwscanf_l _cwscanf_s _cwscanf_s_l _vcprintf _vcprintf_l _vcprintf_p _vcprintf_p_l _vcprintf_s _vcprintf_s_l _vcwprintf _vcwprintf_l _vcwprintf_p _vcwprintf_p_l _vcwprintf_s _vcwprintf_s_l _getch _getch_nolock _getche _getche_nolock _getwch _getwch_nolock _getwche _getwche_nolock _putch _putch_nolock _putwch _putwch_nolock _ungetch _ungetch_nolock _ungetwch _ungetwch_nolock _kbhit kbhit putch cgets cprintf cputs cscanf cwait getch getche ungetch|Эти функции используются для чтения напрямую с консоли и записи на консоль. Приложения UWP имеют только графический пользовательский интерфейс и не поддерживают консоль.|Обходное решение отсутствует.|
-|getpid|Эта функция устарела.|Используйте _getpid или API Win32 `GetCurrentProcessId()`.|
+|getpid|Эта функция является устаревшей.|Используйте _getpid или API Win32 `GetCurrentProcessId()`.|
 |_getdiskfree|Недоступно.|Используйте API Win32 `GetDiskFreeSpaceExW()`.|
 |_getdrive _getdrives|Соответствующий API недоступен для приложений UWP.|Обходное решение отсутствует.|
 |_inp _inpd _inpw _outp _outpd _outpw inp inpd inpw outp outpd outpw|Ввод-вывод через порты не поддерживается в приложениях UWP.|Обходное решение отсутствует.|
@@ -33,13 +33,13 @@ ms.locfileid: "62188386"
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|Переменные среды недоступны для приложений UWP.|Обходное решение отсутствует. Чтобы установить часовой пояс, используйте _tzset.|
 |_loaddll _getdllprocaddr _unloaddll|Эти функции устарели в предыдущих версиях CRT. Кроме того, пользователь не может загружать библиотеки DLL, отличные от DLL из пакета самого приложения.|Для загрузки и использования упакованных DLL следует применять API Win32 `LoadPackagedLibrary`, `GetProcAddress`и `FreeLibrary` .|
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|Эта функциональность недоступна для приложений UWP. Приложение UWP не может вызывать другое приложение UWP или классическое приложение.|Обходное решение отсутствует.|
-|_heapwalk _heapadd _heapchk _heapset _heapused|Эти функции обычно используются для работы с кучей. Однако соответствующие API Win32 не поддерживаются в приложениях UWP. И приложения больше не могут создавать и использовать закрытые кучи.|Обходное решение отсутствует. Но функция `_heapwalk` доступна в DEBUG CRT для целей отладки. Их нельзя использовать в приложениях, которые отправляются в Microsoft Store.|
+|_heapwalk _heapadd _heapchk _heapset _heapused|Эти функции обычно используются для работы с кучей. Однако соответствующие API Win32 не поддерживаются в приложениях UWP. И приложения больше не могут создавать и использовать закрытые кучи.|Обходное решение отсутствует. Но функция `_heapwalk` доступна в DEBUG CRT для целей отладки. Их нельзя использовать в приложениях, которые передаются в Microsoft Store.|
 
-Следующие функции доступны в CRT для приложений универсальной платформы Windows, но должен использоваться только в том случае, если нельзя использовать соответствующий Win32 или API среды выполнения Windows — например, при переносе больших объемов кода
+В CRT для приложений UWP доступны следующие функции, но их следует использовать только в том случае, если не удается использовать соответствующие API Win32 или среда выполнения Windows, например при переносе больших баз кода.
 
 |||
 |-|-|
-|Однобайтовые строковые функции, например `strcat`, `strcpy`, `strlwr`и так далее.|Сделайте свои приложения UWP только Юникод, так как все API-интерфейсов Win32 и API среды выполнения Windows, представляемые используют только наборы символов Юникода.  Однобайтовые функции были сохранены для переноса больших объемов кода; в остальных случаях их следует избегать и по возможности использовать соответствующие функции для работы с расширенными символами.|
+|Однобайтовые строковые функции, например `strcat`, `strcpy`, `strlwr`и так далее.|Сделайте приложения UWP строго Юникод, так как все API-интерфейсы Win32 и среда выполнения Windows API, предоставляемые, используют только наборы символов Юникода.  Однобайтовые функции были сохранены для переноса больших объемов кода; в остальных случаях их следует избегать и по возможности использовать соответствующие функции для работы с расширенными символами.|
 |Функции ввода-вывода потоков и ввода-вывода файлов нижнего уровня, например `fopen`, `open`и так далее.|Эти функции являются синхронными, т. е. их не рекомендуется использовать в приложениях UWP. В приложениях UWP для открытия, чтения и записи файлов используйте асинхронные API, чтобы избежать блокировки потока пользовательского интерфейса. Примеры таких API можно найти в классе `Windows::Storage::FileIO` .|
 
 ## <a name="windows-8x-store-apps-and-windows-phone-8x-apps"></a>Приложения для Магазина Windows 8.x и приложения Windows Phone 8.x

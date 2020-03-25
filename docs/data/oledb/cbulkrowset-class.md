@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545801"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212127"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 
@@ -271,7 +271,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `MoveToRatio` выбирает строки примерно в соответствии со следующей формулой:
 
@@ -308,11 +308,11 @@ void SetRows(DBROWCOUNT nRows) throw();
 *nRows*<br/>
 окне Новый размер набора строк (число строк).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При вызове этой функции она должна быть перед открытием набора строк.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

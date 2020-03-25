@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4410
 ms.assetid: 7dcdb720-118a-4823-ba73-575f6ad79a71
-ms.openlocfilehash: dfe15dc125a1ca9ca3faec74a5cdb40e27d80c0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe813bfd19f6f7fa3020910d8f2913afd032aaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408307"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162443"
 ---
 # <a name="compiler-warning-level-1-c4410"></a>Предупреждение компилятора (уровень 1) C4410
 
 Недопустимый размер для операнда
 
-Одно из операторов инструкции имеет неправильный размер. Минимальный допустимый размер для операнда был использован.
+Один из операндов инструкции имеет неправильный размер. Использовался наименьший допустимый размер операнда.

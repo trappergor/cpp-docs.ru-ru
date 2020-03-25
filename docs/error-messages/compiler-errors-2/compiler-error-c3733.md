@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
-ms.openlocfilehash: 006f87691c6e0839115e2c02ab0d922aa95eaa93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 961aa0caf31d49917f6df67305bc01d465884b68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165903"
 ---
 # <a name="compiler-error-c3733"></a>Ошибка компилятора C3733
 
-«событие»: неправильный синтаксис для задания COM-события; Возможно, отсутствует «__interface»?
+"событие": неправильный синтаксис для указания события COM; Вы забыли "__interface"?
 
-Неправильный синтаксис был использован для COM-события. Чтобы устранить эту ошибку, измените тип события или исправьте синтаксис, чтобы соответствовать требованиям к именам событий COM.
+Для события COM использован неправильный синтаксис. Чтобы устранить эту ошибку, измените тип события или исправьте синтаксис в соответствии с правилами событий COM.
 
 Следующий пример приводит к возникновению ошибки C3733:
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: 698dbfe77c82ac2f0425ed1c1bff4d917ed86f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd6a9ebc58845e88e5e82a4e29f5ccc2a46bebfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160480"
 ---
-# <a name="varianttclear"></a>_variant_t::Clear
+# <a name="_variant_tclear"></a>_variant_t::Clear
 
 **Блок, относящийся только к системам Microsoft**
 
-Удаляет инкапсулированный `VARIANT` объекта.
+Очищает инкапсулированный `VARIANT` объект.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,12 +28,12 @@ ms.locfileid: "62165898"
 void Clear( );
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Вызовы `VariantClear` в инкапсулированном `VARIANT` объекта.
+Вызывает `VariantClear` для инкапсулированного `VARIANT` объекта.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _variant_t](../cpp/variant-t-class.md)

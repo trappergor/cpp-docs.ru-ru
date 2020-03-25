@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447317"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178552"
 ---
 # <a name="storage-classes"></a>Классы хранилищ
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447317"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>статически
+## <a name="static"></a><a name="static"></a>статически
 
 Ключевое слово **static** можно использовать для объявления переменных и функций в глобальной области видимости, области пространства имен и области класса. Статические переменные также могут быть объявлены в локальной области видимости.
 
@@ -155,11 +155,11 @@ var == value
 
 Начиная с версии C++ 11 для инициализации статических локальных переменных гарантируется потокобезопасность. Эта функция иногда называется *магической статичностью*. Однако в многопоточном приложении все последующие назначения должны быть синхронизированы. Потокобезопасную функцию статической инициализации можно отключить с помощью флага [/Zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) , чтобы избежать зависимости от CRT.
 
-## <a name="extern"></a>Название
+## <a name="extern"></a><a name="extern"></a>Название
 
 Объекты и переменные, объявленные как **extern** , объявляют объект, который определен в другой записи преобразования или во внешней области видимости как внешняя компоновка. Дополнительные сведения см. в разделе [Внешние](extern-cpp.md) и [переводные единицы и компоновка](program-and-linkage-cpp.md).
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Переменная, объявленная с описателем **thread_local** , доступна только в потоке, в котором он создан. Переменная создается при создании потока и уничтожается при его уничтожении. Каждый поток имеет свою собственную копию переменной. В Windows **thread_local** функционально эквивалентен атрибуту [__declspec (thread)](../cpp/thread.md) , характерному для Microsoft.
 
@@ -194,7 +194,7 @@ void DoSomething()
 
 В Windows **thread_local** функционально эквивалентен [__declspec (thread)](../cpp/thread.md) , за исключением того, что **__declspec (thread)** можно применить к определению типа и является допустимым в коде на языке C. Везде, где это возможно, используйте **thread_local** , так как C++ он является частью стандартного и, следовательно, более переносимым.
 
-##  <a name="register"></a>зарегистрировать
+##  <a name="register"></a><a name="register"></a>зарегистрировать
 
 **Visual Studio 2017 версии 15,3 и более поздних версий** (доступно в [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): ключевое слово **Register** больше не является поддерживаемым классом хранения. Ключевое слово по-прежнему зарезервировано в стандарте для будущего использования.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: eaf95312b73b5165d64de7f9ded95db29d8909d0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec4198c283700daa2e02e2507b9874eaf02858e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212814"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Набор записей. Параметризация набора записей (ODBC)
 
@@ -176,7 +176,7 @@ if( !rsStudents.Requery( ) )
 > [!NOTE]
 >  При необходимости вы можете присвоить элементу данных параметра значение Null, используя [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Также вы можете проверить, имеет ли элемент данных параметра значение Null, используя [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>

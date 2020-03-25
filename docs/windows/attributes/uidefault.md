@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513897"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214465"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -23,7 +23,7 @@ ms.locfileid: "69513897"
 [uidefault]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **уидефаулт** C++ имеет те же функциональные возможности, что и атрибут [уидефаулт](/windows/win32/Midl/uidefault) MIDL.
 
@@ -54,14 +54,14 @@ __interface ICustom{
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)

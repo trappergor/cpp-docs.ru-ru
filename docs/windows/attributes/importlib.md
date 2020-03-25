@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166813"
 ---
 # <a name="importlib"></a>importlib
 
@@ -28,9 +28,9 @@ ms.locfileid: "69514609"
 *tlb_file*<br/>
 Заключенное в кавычки имя TLB-файла, который необходимо импортировать в библиотеку типов текущего проекта.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Атрибут **importlib** C++ вызывает помещение инструкциивблокбиблиотекисозданногоidl-файла.`importlib` Атрибут **importlib** имеет те же функциональные возможности, что и атрибут [importlib](/windows/win32/Midl/importlib) MIDL.
+Атрибут **importlib** C++ вызывает помещение инструкции `importlib` в блок библиотеки созданного idl-файла. Атрибут **importlib** имеет те же функциональные возможности, что и атрибут [importlib](/windows/win32/Midl/importlib) MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -49,14 +49,14 @@ ms.locfileid: "69514609"
 
 |||
 |-|-|
-|**Относится к**|В любом месте|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|В любом месте|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>

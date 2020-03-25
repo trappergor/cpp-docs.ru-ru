@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1305
 ms.assetid: 1629c850-e2db-4678-83d8-9bfc85323bc5
-ms.openlocfilehash: 988842a0d5e8002ffd1478a2e10a8c88ee971911
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad00eb3d95e9f09d4f84daefb7e2a87fd1a3abf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397501"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203363"
 ---
 # <a name="fatal-error-c1305"></a>Неустранимая ошибка C1305
 
-База данных профилей «PGD-файл» предназначена для другой архитектуры
+база данных профиля "pgd_file" предназначена для другой архитектуры
 
-PGD-файл, который был создан из операции/LTCG: PGINSTRUMENT для другой платформы передан [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Оптимизация, зависимая от профиля](../../build/profile-guided-optimizations.md) доступны для платформ x86 и x64. Тем не менее PGD-файл, созданный с помощью операции/LTCG: PGINSTRUMENT для одной платформы не является допустимым как входные данные для разных платформ / LTCG: PGOPTIMIZE.
+PGD-файл, созданный из операции/LTCG: PGINSTRUMENT для другой платформы, был передан в [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md) . [Профильная оптимизация](../../build/profile-guided-optimizations.md) доступна для платформ x86 и x64. Однако PGD-файл, созданный с помощью операции/LTCG: PGINSTRUMENT для одной платформы, недопустим в качестве входных данных для файла/LTCG: PGOPTIMIZE для другой платформы.
 
-Чтобы устранить эту ошибку, необходимо только передайте PGD-файл, который создается с помощью/LTCG: PGINSTRUMENT для/LTCG: PGOPTIMIZE на той же платформе.
+Чтобы устранить эту ошибку, передайте PGD-файл, созданный с помощью/LTCG: PGINSTRUMENT, в/LTCG: PGOPTIMIZE на той же платформе.

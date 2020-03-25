@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215232"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -23,13 +23,13 @@ ms.locfileid: "69514849"
 [wire_marshal]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **wire_marshal** C++ имеет те же функциональные возможности, что и атрибут [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL.
 
 ## <a name="example"></a>Пример
 
-В следующем коде показано использование **wire_marshal**:
+В следующем коде показано использование **wire_marshal**.
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -53,14 +53,14 @@ ms.locfileid: "69514849"
 
 |||
 |-|-|
-|**Относится к**|**typedef**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**typedef**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-ms.openlocfilehash: cea3404e0732cb0e16b3fa9199ce95e3dfcc23f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da438c65256d9a7e5bf5b02e108fee1385171d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386152"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181217"
 ---
-# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
+# <a name="_bstr_tgetbstr"></a>_bstr_t::GetBSTR
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -29,16 +29,16 @@ BSTR& GetBSTR( );
 
 Начало строки `BSTR`, инкапсулированной объектом `_bstr_t`.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**GetBSTR** влияет на все `_bstr_t` объектов данной общей папки `BSTR`. Более одного `_bstr_t` могут совместно использовать `BSTR` при помощи конструктора копии и **оператор =**.
+Значение **BSTR** влияет на все объекты `_bstr_t`, которые совместно используют `BSTR`. Несколько `_bstr_t` могут совместно использовать `BSTR` с помощью конструктора копирования и **оператора =** .
 
 ## <a name="example"></a>Пример
 
-См. в разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) в качестве примера использования **GetBSTR**.
+См. раздел [_bstr_t:: Assign](../cpp/bstr-t-assign.md) в качестве примера с помощью функции **BSTR**.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_bstr_t Class](../cpp/bstr-t-class.md)

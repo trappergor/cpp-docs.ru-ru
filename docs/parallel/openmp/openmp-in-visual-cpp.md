@@ -6,29 +6,29 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c792f94e675ba3f83b4aad8c180ede46770c6856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215011"
 ---
 # <a name="openmp-in-visual-c"></a>OpenMP в Visual C++
 
-API OpenMP C и C++ прикладной программный интерфейс позволяет создавать приложения, которые эффективно использовать несколько процессоров. Visual C++ поддерживает стандарт OpenMP 2.0.
+Интерфейс OpenMP C и C++ прикладной программы позволяют создавать приложения, которые эффективно используют несколько процессоров. Визуальный C++ элемент поддерживает стандарт OpenMP 2,0.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Справочник по библиотеке](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
-Ссылки на конструкции, используемые в OpenMP API.
+Содержит ссылки на конструкции, используемые в API OpenMP.
 
-[C и C++ прикладной программный интерфейс](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
-Описывает API OpenMP C и C++ API, как описано в спецификации версии 2.0 перед аттестационной комиссией архитектура OpenMP.
+[C и C++ интерфейс прикладной программы](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+Обсуждает OpenMP C и C++ API, как описано в спецификации версии 2,0 на доске проверки архитектуры OpenMP.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [/openmp (включение поддержки OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
 Указывает компилятору обрабатывать `#pragma omp`.
 
 [Предопределенные макросы](../../preprocessor/predefined-macros.md)<br/>
-Имена предварительно определенных макросов реализации ANSI C и Microsoft C++. См. в статье макрос _OPENMP.
+Называет стандартные макросы ANSI C C++ и Microsoft. См. макрос _OPENMP.

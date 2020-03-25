@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
-ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624b3ab47ccb1c934b612ec8648b5eee0d233690
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160861"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176979"
 ---
 # <a name="compiler-error-c2919"></a>Ошибка компилятора C2919
 
-«Тип»: Операторы не могут использоваться на опубликованной поверхности типа WinRT
+type: операторы не могут напрямую использоваться на опубликованной поверхности типа WinRT.
 
 Система с типом среды выполнения Windows не поддерживает функции — члены оператора на опубликованной поверхности типа. Это вызвано тем, что не все языки могут использовать функции — члены оператора. Вы можете создать закрытые или внутренние функции — члены оператора, которые можно вызывать из кода C++ в том же классе или блоке компиляции.
 

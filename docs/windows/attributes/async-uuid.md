@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501866"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168464"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501866"
 *uuid*<br/>
 UUID, определяющий версию интерфейса.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **async_uuid** C++ имеет те же функциональные возможности, что и атрибут [async_uuid](/windows/win32/Midl/async-uuid) MIDL.
 
@@ -52,14 +52,14 @@ __interface ICustom {
 
 |||
 |-|-|
-|**Относится к**|`interface`|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|`interface`|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|**Dual**, **DISP**|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)

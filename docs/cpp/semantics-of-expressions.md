@@ -7,18 +7,18 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178853"
 ---
 # <a name="semantics-of-expressions"></a>Семантика выражений
 
 Выражения оцениваются по приоритетности и группировке операторов. ([Приоритет операторов и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md) в [лексических соглашениях](../cpp/lexical-conventions.md)показывает связи C++ , которые операторы накладывают на выражения.)
 
-## <a name="order-of-evaluation"></a>Порядок вычислений
+## <a name="order-of-evaluation"></a>Порядок оценки
 
 Рассмотрим следующий пример.
 
@@ -69,8 +69,8 @@ int main()
 
 |Требуется тип|Допускаются типы|
 |-------------------|-------------------|
-|*type*|*тип* `const`<br /> *тип* `volatile`<br /> *тип*&<br /> *тип* `const`&<br /> *тип* `volatile`&<br /> *тип* `volatile const`<br /> *тип* `volatile const`&|
-|*тип* \*|*тип* \*<br /> `const` *тип* \*<br /> `volatile` *тип* \*<br /> `volatile const` *тип* \*|
+|*type*|*тип* `const`<br /> *тип* `volatile`<br /> *type*&<br /> *тип* `const`&<br /> *тип* `volatile`&<br /> *тип* `volatile const`<br /> *тип* `volatile const`&|
+|*тип* \*|*тип* \*<br /> *тип* `const` \*<br /> *тип* `volatile` \*<br /> *тип* `volatile const` \*|
 |*тип* `const`|*type*<br /> *тип* `const`<br />*тип* `const`&|
 |*тип* `volatile`|*type*<br /> *тип* `volatile`<br /> *тип* `volatile`&|
 
@@ -78,7 +78,7 @@ int main()
 
 ## <a name="ambiguous-expressions"></a>Неоднозначные выражения
 
-Значение некоторых выражений неоднозначно. Такие выражения чаще всего встречаются, если значение объекта несколько раз изменяется в одном выражении. Подобные выражения зависят от конкретного порядка вычисления, когда этот порядок не определяется языком. Рассмотрим следующий пример.
+Значение некоторых выражений неоднозначно. Такие выражения чаще всего встречаются, если значение объекта несколько раз изменяется в одном выражении. Подобные выражения зависят от конкретного порядка вычисления, когда этот порядок не определяется языком. Рассмотрим следующий пример:
 
 ```
 int i = 7;
@@ -116,6 +116,6 @@ func( i, ++i );
 
 - Выражение в операторе return. До возврата управления в вызывающую функцию полностью вычисляется выражение и учитываются все побочные эффекты.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Выражения](../cpp/expressions-cpp.md)

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368439"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211150"
 ---
 # <a name="ctable-class"></a>Класс CTable
 
-Предоставляет средства для прямого доступа к простому набору строк (без параметров).
+Предоставляет средства для прямого доступа к простому набору строк (один без параметров).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,31 +35,31 @@ class CTable :
 
 ### <a name="parameters"></a>Параметры
 
-*TAccessor*<br/>
-Класс, метод доступа.
+*такцессор*<br/>
+Класс метода доступа.
 
-*TRowset*<br/>
+*тровсет*<br/>
 Класс набора строк.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[Открыть](#open)|Открытие таблицы.|
+|[Открыть](#open)|Открывает таблицу.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-См. в разделе [CCommand](../../data/oledb/ccommand-class.md) сведения о том, как выполнить команду, чтобы получить доступ к набор строк.
+Сведения о том, как выполнить команду для доступа к набору строк, см. в разделе [CCommand](../../data/oledb/ccommand-class.md) .
 
-## <a name="open"></a> CTable::Open
+## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
 
-Открытие таблицы.
+Открывает таблицу.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -82,33 +82,33 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Параметры
 
-*Сеанс*<br/>
-[in] Сеанс, в течение которого открыт таблицы.
+*сессии*<br/>
+окне Сеанс, для которого открыта таблица.
 
-*wszTableName*<br/>
-[in] Имя таблицы, передаваемое в виде строки Юникода.
+*всзтабленаме*<br/>
+окне Имя открываемой таблицы, передаваемое в виде строки Юникода.
 
-*szTableName*<br/>
-[in] Имя таблицы, переданного как строку ANSI.
+*сзтабленаме*<br/>
+окне Имя открываемой таблицы, передаваемое как строка ANSI.
 
 *dbid*<br/>
-[in] `DBID` Таблицы, чтобы открыть.
+окне `DBID` таблицы, которую необходимо открыть.
 
-*pPropSet*<br/>
-[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.
+*ппропсет*<br/>
+окне Указатель на массив структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , содержащий свойства и значения, которые необходимо задать. См. раздел [наборы свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике по OLE DB программисту* в Windows SDK. Значение по умолчанию NULL указывает на отсутствие свойств.
 
-*ulPropSets*<br/>
-[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент.
+*улпропсетс*<br/>
+окне Число структур [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) , переданных в аргументе *ппропсет* .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *Справочник программиста OLE DB по*.
+Дополнительные сведения см. в разделе [IOpenRowset:: OPENROWSET](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

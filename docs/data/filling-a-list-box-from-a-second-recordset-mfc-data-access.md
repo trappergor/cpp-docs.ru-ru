@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213412"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Заполнение списка из второго набора записей (доступ к данным MFC)
 
@@ -28,13 +28,13 @@ ms.locfileid: "62397930"
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Чтобы заполнить поле со списком или список из второго набора записей
 
-1. Создание объекта набора записей ([CRecordset](../mfc/reference/crecordset-class.md).
+1. Создайте объект Recordset ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Получить указатель на [CComboBox](../mfc/reference/ccombobox-class.md) объект для элемента управления полем со списком.
+1. Получите указатель на объект [CComboBox](../mfc/reference/ccombobox-class.md) для элемента управления "поле со списком".
 
 1. Очистите поле со списком от любого предыдущего содержимого.
 
-1. Перемещение по всем записям в наборе записей, вызов [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) для каждой строки из текущей записи, вы хотите добавить в поле со списком.
+1. Переместите все записи из набора записей, вызвав [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) для каждой строки из текущей записи, которую необходимо добавить в поле со списком.
 
 1. Инициализируйте выбор элементов в поле со списком.
 
@@ -68,7 +68,7 @@ void CSectionForm::OnInitialUpdate()
 
 Функция получает `m_courseSet` из документа и открывает его. Затем она очищает `m_ctlCourseList` и совершается прокрутку по `m_courseSet`. Для каждой записи,  функция вызывает для поля со списком функцию-член `AddString`, чтобы добавить идентификатор курса из записи. И, наконец, код задает для поля со списком выбранный элемент.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Представления записей (доступ к данным MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Список драйверов ODBC](../data/odbc/odbc-driver-list.md)

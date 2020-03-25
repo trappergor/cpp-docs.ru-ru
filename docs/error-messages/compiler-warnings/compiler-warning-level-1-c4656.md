@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
-ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a78da51a99aa924eadbf5c9f458ceb0a75889141
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175653"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>Предупреждение компилятора (уровень 1) C4656
 
-«символ»: тип данных новых было изменено с момента последней сборки или имеются разные объявления
+"символ": тип данных является новым или был изменен с момента последней сборки или определен по-другому в другом расположении
 
 Вы добавили или изменили тип данных, сделав его новым для исходного кода с момента последней успешной сборки. Функция "Изменить и продолжить" не поддерживает изменения существующих типов данных.
 

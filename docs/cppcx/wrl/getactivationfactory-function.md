@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398424"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213984"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory - функция
 
@@ -35,11 +35,11 @@ inline HRESULT GetActivationFactory(
 *T*<br/>
 Параметр шаблона, который определяет тип фабрики активации.
 
-*activatableClassId*<br/>
+*Запись*<br/>
 Имя класса, который может создать фабрика активации.
 
-*фабрики*<br/>
-После завершения операции, ссылка на фабрику активации для типа *T*.
+*установлен*<br/>
+По завершении этой операции — ссылка на фабрику активации для типа *T*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -49,8 +49,8 @@ inline HRESULT GetActivationFactory(
 
 **Заголовок:** client.h
 
-**Пространство имен:** Windows::Foundation
+**Пространство имен:** Windows:: Foundation
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Windows::Foundation](windows-foundation-namespace.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215284"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -24,18 +24,18 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Параметры
 
-*Elem* \
+*Elem*\
 Тип двухбайтового элемента.
 
-*Макскоде* \
+*Макскоде*\
 Максимальное количество символов для аспекта языкового стандарта.
 
-*Режим* \
+*Режим*\
 Сведения о конфигурации для аспекта языкового стандарта.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Этот шаблон класса выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-16LE, если mode & little_endian или UTF-16BE в противном случае.
+Этот шаблон класса выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-16LE, если режим & little_endian или UTF-16BE в противном случае.
 
 Поток байтов должен записываться в двоичный файл; при записи в текстовый файл он может быть поврежден.
 
@@ -43,4 +43,4 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 Заголовок: \<codecvt >
 
-Пространство имен: STD
+Пространство имен: std

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 4f4bfe233e3228c50aee734de4ad979c38a55fda
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f252206f6e364b1a87ee3b7b88b14d0ea19bacb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514524"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214790"
 ---
 # <a name="length_is"></a>length_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "69514524"
 *expression*<br/>
 Одно или несколько выражений языка C. Пустые слоты аргументов разрешены.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **length_is** C++ имеет те же функциональные возможности, что и атрибут [length_is](/windows/win32/Midl/length-is) MIDL.
 
@@ -42,14 +42,14 @@ ms.locfileid: "69514524"
 
 |||
 |-|-|
-|**Относится к**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Поле в **структуре** или **объединении**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
