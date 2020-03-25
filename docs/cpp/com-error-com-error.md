@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
-ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac902f0fda90f77526ef53139ef0d523d8c22e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155128"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180788"
 ---
-# <a name="comerrorcomerror"></a>_com_error::_com_error
+# <a name="_com_error_com_error"></a>_com_error::_com_error
 
 **Блок, относящийся только к системам Microsoft**
 
-Создает **_com_error** объекта.
+Конструирует объект **_com_error** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,34 +32,34 @@ _com_error( const _com_error& that ) throw( );
 
 #### <a name="parameters"></a>Параметры
 
-*hr*<br/>
-Информация HRESULT.
+*кадров*<br/>
+Сведения HRESULT.
 
-*perrinfo*<br/>
+*перринфо*<br/>
 Объект `IErrorInfo`.
 
-*fAddRef*<br/>
-Значение по умолчанию дает конструктору указание вызвать метод AddRef на отличный от null `IErrorInfo` интерфейс. Это обеспечивает правильный подсчет ссылок в общем случае, когда владение интерфейсом передается в **_com_error** объект, например:
+*фаддреф*<br/>
+По умолчанию конструктор вызывает AddRef для интерфейса `IErrorInfo`, отличного от NULL. Это обеспечивает правильный подсчет ссылок в общем случае, когда владение интерфейсом передается в объект **_com_error** , например:
 
 ```cpp
 throw _com_error(hr, perrinfo);
 ```
 
-Если вы не хотите код, чтобы передать права владения для **_com_error** объекта и `AddRef` необходим для смещения `Release` в **_com_error** деструктор, конструируется объект как выглядит следующим образом:
+Если вы не хотите, чтобы код переносит владение объекту **_com_error** , а `AddRef` требуется смещение `Release` в деструкторе **_com_error** , создайте объект следующим образом:
 
 ```cpp
 _com_error err(hr, perrinfo, true);
 ```
 
-*,*<br/>
-Существующий **_com_error** объекта.
+*что*<br/>
+Существующий объект **_com_error** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Первый конструктор создает новый объект по заданному HRESULT и необязательный `IErrorInfo` объекта. Второй создает копию существующего **_com_error** объекта.
+Первый конструктор создает новый объект с заданным значением HRESULT и необязательным `IErrorInfo` объектом. Вторая создает копию существующего объекта **_com_error** .
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_error](../cpp/com-error-class.md)

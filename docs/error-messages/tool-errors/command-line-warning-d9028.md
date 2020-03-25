@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D9028
 ms.assetid: 03852b51-fa59-4114-ab1f-2af0509119af
-ms.openlocfilehash: 007c0a9e9a0f51740b1d6b668905fa20d7ef2964
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e65881159176ba0d144a8abc5f395ce1b96402f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214055"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196655"
 ---
 # <a name="command-line-warning-d9028"></a>Предупреждение командной строки D9028
 
-> Сбой минимальной повторной сборки, возврат к обычной сборке
+> Сбой минимальной перестроения, возврат к обычной сборке
 
-IDB-файла проекта поврежден. Удалите файл и перестройте.
+IDB-файл проекта поврежден. Удалите файл и выполните повторную сборку.
 
-Дополнительные сведения о минимальное перестроение и IDB-файла, см. в разделе устаревших [параметр компилятора /Gm](../../build/reference/gm-enable-minimal-rebuild.md).
+Дополнительные сведения о минимальных пересборках и IDB – файле см. в разделе устаревший [параметр компилятора/GM](../../build/reference/gm-enable-minimal-rebuild.md).

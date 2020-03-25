@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2017
 ms.assetid: 5fcc0135-cd60-4b1d-a7dd-8a4f2312697b
-ms.openlocfilehash: ce8791e2463ca31fde64500b8b957ecdf5bf6d93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee685c44a702acda94f6e6c8aa04f4a63bc6024e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346617"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191903"
 ---
 # <a name="resource-compiler-error-rc2017"></a>Ошибка компилятора ресурсов RC2017
 
-Недопустимая escape-последовательность
+недопустимая escape-последовательность
 
-Escape-последовательность используется, где не ожидалось только одно.
+Появлялась escape-последовательность, где она не ожидалась.
 
-Escape-последовательность — обратная косая черта ( **\\** ) следуют число или буква — может использоваться только в символьной или строковой константы.
+Escape-последовательность — обратная косая черта ( **\\** ), за которой следует число или буква, может возникать только в символьной или строковой константе.

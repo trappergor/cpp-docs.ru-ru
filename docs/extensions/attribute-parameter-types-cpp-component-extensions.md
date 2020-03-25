@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: fbb2bd68f589630608e341b944b4201c12d67211
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b8cb222af2d5b25a90f35d8d32688567bb3fb1d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516179"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172650"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>Типы параметров атрибутов (C++/CLI и C++/CX)
 
 Значения, передаваемые в атрибуты, должны быть известны компилятору во время компиляции.  Параметры атрибутов могут быть следующих типов:
 
-- **bool**
+- **bool**;
 
 - **char**, **unsigned char**
 
@@ -67,7 +67,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 При определении атрибутов все неименованные (позиционные) аргументы должны предшествовать любым именованным аргументам.
 
@@ -101,7 +101,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 Параметры атрибутов могут быть одномерными массивами указанных выше типов.
 
@@ -122,6 +122,6 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пользовательские атрибуты](user-defined-attributes-cpp-component-extensions.md)

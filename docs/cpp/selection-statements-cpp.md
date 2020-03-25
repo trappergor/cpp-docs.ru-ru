@@ -6,21 +6,21 @@ helpviewer_keywords:
 - selection statements [C++], syntax
 - selection statements
 ms.assetid: 2ce662fc-5e62-461b-ac31-2c159d8ef33b
-ms.openlocfilehash: 51165a4fa609f79c19b81b7660a23127a7520358
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35ae97c23b802faaa2cfafe74940ea6a22d52e8b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267249"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178839"
 ---
 # <a name="selection-statements-c"></a>Операторы выбора (C++)
 
-Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), предоставляют средства для условного выполнения части кода.
+Операторы C++ выбора, [If](../cpp/if-else-statement-cpp.md) [и,](../cpp/switch-statement-cpp.md)предоставляют средства для условного выполнения разделов кода.
 
-[__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) позволяют включать код в зависимости от наличия определенного символа.
+Операторы [__if_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) позволяют условно включать код в зависимости от существования символа.
 
 Синтаксис этих операторов см. в соответствующих разделах.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546125"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212039"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
 
@@ -68,7 +68,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |-|-|
 |[Оператор =](#op_equal)|Присваивает содержимому одного идентификатора свойства другое значение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 OLE DB потребители используют структуры `DBPROPIDSET` для передачи массива идентификаторов свойств, для которых потребитель хочет получить сведения о свойствах. Свойства, определенные в одной структуре [дбпропидсет](/previous-versions/windows/desktop/ms717981(v=vs.85)) , принадлежат одному набору свойств.
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 окне Идентификатор GUID, используемый для задания `guidPropertySet` поля структуры [дбпропидсет](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Это поле также может быть задано [конструктором](../../data/oledb/cdbpropidset-cdbpropidset.md) . Вызывайте эту функцию, если для этого класса используется конструктор по умолчанию.
 
@@ -138,7 +138,7 @@ void SetGUID(const GUID& guid) throw();
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

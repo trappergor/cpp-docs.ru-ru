@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193762"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>Предупреждение средств компоновщика LNK4237
 
-/SUBSYSTEM:NATIVE, указанный при импорте из «dll»; Используйте/SUBSYSTEM: Console или/SUBSYSTEM: Windows.
+Указан/SUBSYSTEM: NATIVE при импорте из "DLL"; Используйте/SUBSYSTEM: CONSOLE или/SUBSYSTEM: WINDOWS.
 
-[/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md) был указан при построении приложения windows (Win32), в котором непосредственно использует один или несколько из следующих:
+Параметр [/SUBSYSTEM: Native](../../build/reference/subsystem-specify-subsystem.md) был указан при создании приложения Windows (Win32), которое непосредственно использует один или несколько следующих компонентов:
 
 - kernel32.dll
 
@@ -25,6 +25,6 @@ ms.locfileid: "62352662"
 
 - user32.dll
 
-- один из необходимых компонентов msvcrt\* библиотеки DLL.
+- Одна из библиотек MSVCRT\*.
 
-Устранить это предупреждение, не указывая **/SUBSYSTEM:NATIVE**.
+Устраните это предупреждение, не указывая **/SUBSYSTEM: Native**.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1218
 ms.assetid: bf599350-be03-4344-be43-91e29c4f1556
-ms.openlocfilehash: 8a2a92f642759d654530d4979262b01a5a581088
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aefc92e9fc6223d1d9ecd5f7dc60d4dfc65d7d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195062"
 ---
 # <a name="linker-tools-error-lnk1218"></a>Ошибка средств компоновщика LNK1218
 
-Предупреждение, обрабатываемое как ошибка; выходной файл не создан
+предупреждение, обрабатываемое как ошибка; выходной файл не создан
 
-При компоновке с **/WX**, любые предупреждения компоновщика будут обрабатываться как ошибки, и выходной файл не будет создан.
+При компоновке с параметром **/WX**любые предупреждения компоновщика будут рассматриваться как ошибки, а выходной файл не будет создан.
 
-См. в разделе [/WX (обработка предупреждений компоновщика как ошибки)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Дополнительные сведения.
+Дополнительные сведения см. в разделе [/WX (Обработка предупреждений компоновщика как ошибок)](../../build/reference/wx-treat-linker-warnings-as-errors.md) .

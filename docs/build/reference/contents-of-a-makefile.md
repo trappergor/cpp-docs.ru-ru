@@ -5,16 +5,16 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169920"
 ---
 # <a name="contents-of-a-makefile"></a>Содержимое файла makefile
 
-Содержит makefile:
+Файл Makefile содержит:
 
 - [Блоки описания](description-blocks.md)
 
@@ -28,12 +28,12 @@ ms.locfileid: "62294100"
 
 - [Директивы предварительной обработки](makefile-preprocessing.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Присутствуют другие компоненты, которые можно использовать в файлах makefile [подстановочные знаки](wildcards-and-nmake.md), [длинные имена файлов](long-filenames-in-a-makefile.md), [комментарии](comments-in-a-makefile.md), и [специальные символы](special-characters-in-a-makefile.md).
+К другим функциям, которые можно использовать в файле makefile, относятся [подстановочные знаки](wildcards-and-nmake.md), [длинные имена файлов](long-filenames-in-a-makefile.md), [Комментарии](comments-in-a-makefile.md)и [специальные символы](special-characters-in-a-makefile.md).
 
-Пример, см. в разделе [образец файла Makefile](sample-makefile.md).
+Пример см. в разделе [Пример файла makefile](sample-makefile.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по программе NMAKE](nmake-reference.md)

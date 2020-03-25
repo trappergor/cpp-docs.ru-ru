@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 6a8f31e8db6f5ca5a680dd47b5d5391c84ce5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 402251592a87b723d75fd1b2cd0786be7b17dbfc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187626"
 ---
-# <a name="varianttoperator-"></a>_variant_t::operator =
+# <a name="_variant_toperator-"></a>_variant_t::operator =
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -115,44 +115,44 @@ _variant_t& operator=(
 );
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Оператор присваивает новое значение объекту `_variant_t`.
 
-- **оператор = (***varSrc***)** присвоение существующего `VARIANT` для `_variant_t` объекта.
+- **operator = (**  *варсрк*  **)** Назначает существующий `VARIANT` объекту `_variant_t`.
 
-- **оператор = (***pVarSrc***)** присвоение существующего `VARIANT` для `_variant_t` объекта.
+- **operator = (**  *пварсрк*  **)** Назначает существующий `VARIANT` объекту `_variant_t`.
 
-- **оператор = (***var_t_Src***)** присвоение существующего `_variant_t` объект `_variant_t` объекта.    
+- **operator = (**  *var_t_Src*  **)** Присваивает существующий объект `_variant_t` объекту `_variant_t`.
 
-- **оператор = (***sSrc***)** назначает **короткие** целочисленное значение, которое `_variant_t` объекта.
+- **operator = (**  *ССРК*  **)** Присваивает **короткое** целое значение объекту `_variant_t`.
 
-- **оператор = (**`lSrc`**)** назначает **long** целочисленное значение, которое `_variant_t` объекта.
+- **operator = (** `lSrc` **)** Присваивает **длинное** целое значение объекту `_variant_t`.
 
-- **оператор = (***fltSrc***)** назначает **float** числового значения `_variant_t` объекта.
+- **operator = (**  *флтсрк*  **)** Присваивает числовое значение **float** объекту `_variant_t`.
 
-- **оператор = (***dblSrc***)** назначает **двойные** числового значения `_variant_t` объекта.
+- **operator = (**  *дблсрк*  **)** Присваивает значение **типа Double** числовому объекту `_variant_t`.
 
-- **оператор = (***cySrc***)** назначает `CY` объект `_variant_t` объекта.
+- **operator = (**  *цисрк*  **)** Назначает объект `CY` объекту `_variant_t`.
 
-- **оператор = (***bstrSrc***)** назначает `BSTR` объект `_variant_t` объекта.
+- **operator = (**  *бстрсрк*  **)** Назначает объект `BSTR` объекту `_variant_t`.
 
-- **оператор = (***wstrSrc***)** присвоение строки Юникода `_variant_t` объекта.
+- **operator = (**  *встрсрк*  **)** Присваивает строку Юникода объекту `_variant_t`.
 
-- **оператор = (**`strSrc`**)** присвоение многобайтовой строки `_variant_t` объекта.
+- **operator = (** `strSrc` **)** Присваивает многобайтовую строку объекту `_variant_t`.
 
-- **оператор = (** `bSrc` **)** назначает **bool** значение `_variant_t` объекта.
+- **operator = (** `bSrc` **)** Присваивает **логическое** значение объекту `_variant_t`.
 
-- **оператор = (***pDispSrc***)** назначает `VT_DISPATCH` объект `_variant_t` объекта.
+- **operator = (**  *пдиспсрк*  **)** Назначает объект `VT_DISPATCH` объекту `_variant_t`.
 
-- **оператор = (***pIUnknownSrc***)** назначает `VT_UNKNOWN` объект `_variant_t` объекта.
+- **operator = (**  *пиункновнсрк*  **)** Назначает объект `VT_UNKNOWN` объекту `_variant_t`.
 
-- **оператор = (***decSrc***)** назначает `DECIMAL` значение `_variant_t` объекта.
+- **operator = (**  *дексрк*  **)** Присваивает значение `DECIMAL` объекту `_variant_t`.
 
-- **оператор = (** `bSrc` **)** назначает `BYTE` значение `_variant_t` объекта.
+- **operator = (** `bSrc` **)** Присваивает значение `BYTE` объекту `_variant_t`.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _variant_t](../cpp/variant-t-class.md)

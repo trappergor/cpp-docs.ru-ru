@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2406
 ms.assetid: 9d3fbc4c-40bb-42c7-bfd7-7656c40e2065
-ms.openlocfilehash: 6e1cc35351a07c37031625fd2453d4856755bcdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99bf4146feebe637a85b871f22efb41e2442c92e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205781"
 ---
 # <a name="compiler-error-c2406"></a>Ошибка компилятора C2406
 
 "идентификатор": имя не определено в "контекст"
 
-Неопределенный идентификатор используется с `SIZE`, `LENGTH`, или оператор выбора члена (.).
+Неопределенный идентификатор используется с оператором `SIZE`, `LENGTH`или Member-Selection (.).

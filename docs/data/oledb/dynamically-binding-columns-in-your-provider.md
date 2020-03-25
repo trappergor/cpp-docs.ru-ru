@@ -6,34 +6,34 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 3c66cf58ce1f8b83b2b3308c8dabba6cf8cdf0ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175554"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210981"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>Динамическое связывание столбцов в поставщике
 
-Убедитесь, что вам действительно необходим динамическая привязка столбцов. Так как он может понадобиться:
+Убедитесь, что вам действительно нужна динамическая привязка столбцов. Это может потребоваться по следующим причинам:
 
-- Во время компиляции не определены столбцы набора строк.
+- Столбцы набора строк не определяются во время компиляции.
 
-- Чтобы помочь элемент, такой как закладка, которая добавляет столбцы.
+- Поддерживается элемент, такой как Bookmark, который добавляет столбцы.
 
-## <a name="to-implement-dynamic-column-binding"></a>Для реализации динамическая привязка столбцов
+## <a name="to-implement-dynamic-column-binding"></a>Реализация динамической привязки столбцов
 
 1. Удалите все `PROVIDER_COLUMN_MAP`s из кода.
 
-1. В записи пользователя (структуру) добавьте следующее объявление:
+1. В записи пользователя (структура) добавьте следующее объявление:
 
     ```cpp
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. Реализуйте `GetColumnInfo` функции. Эта функция определяет схему хранения информации. Может потребоваться получить свойства или другие сведения для этой функции. Может потребоваться создать макрос, аналогичную [COLUMN_ENTRY](../../data/oledb/column-entry.md) макрос для добавления своих собственных сведений.
+1. Реализуйте функцию `GetColumnInfo`. Эта функция размещает сведения о том, как хранятся данные. Для этой функции может потребоваться получить свойства или другую информацию. Для добавления собственной информации может потребоваться создать макрос, аналогичный макросу [COLUMN_ENTRY](../../data/oledb/column-entry.md) .
 
-   В следующем примере показан `GetColumnInfo` функции.
+   В следующем примере показана функция `GetColumnInfo`.
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -86,6 +86,6 @@ ms.locfileid: "62175554"
     }
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195372"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169829"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Форматирование выходных данных этапа настраиваемого построения или события построения
 
@@ -30,7 +30,7 @@ ms.locfileid: "62195372"
 
 Выходные данные должны иметь следующий формат:
 
-> {<em>имя_файла</em>**(**<em>строка№</em> \[**,** <em>столбец№</em>]**)** &#124; *toolname*} **:** \[ <em>любой текст</em> ] {**ошибка** &#124; **предупреждение**} <em>код+номер</em>**:**<em>локализуемая строка</em> \[ <em>любой текст</em> ]
+> {<em>filename</em> **(** <em>строка #</em> \[ **,** <em>столбец #</em>] **)** &#124; *ToolName*} **:** \[ <em>любой текст</em> ] {**Error** &#124; **warning**} <em>код + номер</em> **:** <em>локализуемое строка</em> \[ <em>любого текста</em> ]
 
 Где:
 
@@ -46,6 +46,6 @@ ms.locfileid: "62195372"
 >
 > ССЫЛКА : неустранимая ошибка LNK1104: не удается открыть файл "*somelib.lib*"
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Сведения об этапах настраиваемой сборки и событиях сборки](understanding-custom-build-steps-and-build-events.md)

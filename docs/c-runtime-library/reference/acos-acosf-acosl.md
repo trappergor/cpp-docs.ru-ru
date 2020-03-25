@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171298"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -69,13 +69,13 @@ long double acos( long double x );   // C++ only
 
 По умолчанию, если *x* меньше-1 или больше 1, **Acos** возвращает неопределенное значение.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
 |± КНАН, С|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Acos** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **Acos** всегда принимает и возвращает значение **типа Double**.
 
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>

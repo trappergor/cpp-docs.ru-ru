@@ -1,5 +1,5 @@
 ---
-title: RuntimeClassType - перечисление
+title: Перечисление RuntimeClassType
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403140"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213581"
 ---
-# <a name="runtimeclasstype-enumeration"></a>RuntimeClassType - перечисление
+# <a name="runtimeclasstype-enumeration"></a>Перечисление RuntimeClassType
 
-Указывает тип [RuntimeClass](runtimeclass-class.md) экземпляр, который поддерживается.
+Указывает поддерживаемый тип экземпляра [RuntimeClass](runtimeclass-class.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,25 +24,25 @@ ms.locfileid: "62403140"
 enum RuntimeClassType;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="values"></a>Значения
 
-|name|Описание|
+|Имя|Description|
 |----------|-----------------|
-|`ClassicCom`|Классического COM-класс среды выполнения.|
-|`Delegate`|Аналогично параметру `ClassicCom`.|
-|`InhibitFtmBase`|Отключает `FtmBase` поддержку во время работы `__WRL_CONFIGURATION_LEGACY__` не определен.|
+|`ClassicCom`|Классический класс среды выполнения COM.|
+|`Delegate`|Эквивалент `ClassicCom`.|
+|`InhibitFtmBase`|Отключает поддержку `FtmBase`, пока `__WRL_CONFIGURATION_LEGACY__` не определена.|
 |`InhibitWeakReference`|Отключает поддержку слабых ссылок.|
-|`WinRt`|Класс среды выполнения Windows.|
+|`WinRt`|Класс среда выполнения Windows.|
 |`WinRtClassicComMix`|Комбинация `WinRt` и `ClassicCom`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

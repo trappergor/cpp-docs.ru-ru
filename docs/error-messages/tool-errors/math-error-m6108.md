@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: d60e9b6284c79828fda1f7af542fcf197f189ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173729"
 ---
 # <a name="math-error-m6108"></a>Математическая ошибка M6108
 
 квадратный корень
 
-Операнд в операции квадратный корень было отрицательным.
+Операнд в операции с квадратным корнем был отрицательным.
 
 Программа завершается с кодом выхода 136.
 
 > [!NOTE]
->  `sqrt` Функции в библиотеке времени выполнения C и встроенная функция FORTRAN **SQRT** не создают эту ошибку. C `sqrt` функция проверяет аргумент перед выполнением операции и возвращает значение ошибки, если операнд является отрицательным. FORTRAN **SQRT** функция создает ошибку домена [M6201](../../error-messages/tool-errors/math-error-m6201.md) вместо этой ошибки.
+>  Функция `sqrt` в библиотеке времени выполнения C и встроенная функция FORTRAN **sqrt** не создают эту ошибку. Функция C `sqrt` проверяет аргумент перед выполнением операции и возвращает значение ошибки, если операнд является отрицательным. Функция FORTRAN **sqrt** создает ошибку домена [M6201](../../error-messages/tool-errors/math-error-m6201.md) , а не эту ошибку.

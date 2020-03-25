@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <para> C++ XML tag
 - para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-ms.openlocfilehash: d8de55344eef7634d8a9a55a32b8ff5beb8852d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38c50a1152b8fea9b6d7bd55d89deff6546dbc83
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171181"
 ---
 # <a name="ltparagt"></a>&lt;para&gt;
 
@@ -30,7 +30,7 @@ ms.locfileid: "62320023"
 *content*<br/>
 Текст абзаца.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](doc-process-documentation-comments-c-cpp.md).
 
@@ -38,6 +38,6 @@ ms.locfileid: "62320023"
 
 В разделе [\<summary>](summary-visual-cpp.md) можно найти пример использования тега \<para>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Документация XML](xml-documentation-visual-cpp.md)

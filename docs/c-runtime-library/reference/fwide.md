@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 652aee03bfb5504a51d74efb326cc7a3d7c28649
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171207"
 ---
 # <a name="fwide"></a>fwide
 
@@ -55,13 +55,13 @@ int fwide(
 
 В настоящее время эта функция просто возвращает *режим*.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Текущая версия этой функции не соответствует стандарту.
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 

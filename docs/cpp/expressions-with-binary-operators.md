@@ -6,18 +6,18 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154312"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188991"
 ---
 # <a name="expressions-with-binary-operators"></a>Выражения с бинарными операторами
 
 Бинарные операторы действуют на два операнда в выражении. Используются следующие бинарные операторы.
 
-- [Мультипликативные операторы](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+- [Операторы мультипликативные](../cpp/multiplicative-operators-and-the-modulus-operator.md)
 
    - Умножение (*)
 
@@ -33,19 +33,19 @@ ms.locfileid: "62154312"
 
 - [Операторы сдвига](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Сдвиг вправо (>>)
+   - Сдвиг вправо (> >)
 
-   - Сдвиг влево (<<)
+   - Сдвиг влево (< <)
 
 - [Операторы отношения и равенства](../cpp/relational-operators-equal-and-equal.md)
 
-   - Меньше (\<)
+   - Знак "меньше" (\<)
 
-   - Больше (>)
+   - Знак «больше» >)
 
    - Меньше или равно (\<=)
 
-   - Больше или равно (> =)
+   - Больше или равно (>=)
 
    - Равно (==)
 
@@ -57,7 +57,7 @@ ms.locfileid: "62154312"
 
    - [Побитовое исключающее или (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Побитовое включающее или (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [Побитовое инклюзивное или (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Логические операторы
 
@@ -71,7 +71,7 @@ ms.locfileid: "62154312"
 
    - Присваивание сложения (+=)
 
-   - Присваивание вычитания (-)
+   - Присваивание вычитания (-=)
 
    - Присваивание умножения (*=)
 
@@ -81,16 +81,16 @@ ms.locfileid: "62154312"
 
    - Присваивание сдвига влево (<\<=)
 
-   - Сдвиг вправо и присваивание (>> =)
+   - Присваивание сдвига вправо (> > =)
 
    - Присваивание побитового и (& =)
 
    - Присваивание побитового исключающего ИЛИ (^=)
 
-   - Побитовое присваивание включительно или (&#124;=)
+   - Побитовое инклюзивное&#124;или присваивание (=)
 
-- [Оператор "запятая"](../cpp/comma-operator.md) (,)
+- [Оператор "запятая](../cpp/comma-operator.md) " (,)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Типы выражений](../cpp/types-of-expressions.md)

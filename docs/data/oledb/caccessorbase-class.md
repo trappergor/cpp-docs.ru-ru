@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 34c92f9057f2273d57b69bdb42c49a81923c3d2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aef8a04d7adff903e21491a91014d55aab769da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212296"
 ---
 # <a name="caccessorbase-class"></a>Класс CAccessorBase
 
-Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет одному набору строк для управления несколько методов доступа. Он также предоставляет привязки параметров и выходных столбцов.
+Все методы доступа в шаблонах OLE DB являются производными от этого класса. `CAccessorBase` позволяет использовать один набор строк для управления множеством методов доступа. Он также предоставляет привязку для параметров и выходных столбцов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,25 +42,25 @@ ms.locfileid: "62284063"
 // Replace with syntax
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 
 |||
 |-|-|
-|[Закрыть](#close)|Закрывает методов доступа.|
-|[GetHAccessor](#geth)|Извлекает дескриптор метода доступа.|
-|[GetNumAccessors](#getnum)|Получает число методов доступа, созданный классом.|
-|[IsAutoAccessor](#isauto)|Проверяет, является ли указанный метод доступа автоматическим.|
-|[ReleaseAccessors](#release)|Освобождает методов доступа.|
+|[Закрыть](#close)|Закрывает методы доступа.|
+|[жесакцессор](#geth)|Извлекает маркер метода доступа.|
+|[жетнумакцессорс](#getnum)|Возвращает количество методов доступа, созданных классом.|
+|[исаутоакцессор](#isauto)|Проверяет, является ли указанный метод доступа автоматическим.|
+|[релеасеакцессорс](#release)|Освобождает методы доступа.|
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atldbcli.h
 
-## <a name="close"></a> CAccessorBase::Close
+## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: Close
 
-Закрывает методов доступа.
+Закрывает методы доступа.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -68,13 +68,13 @@ ms.locfileid: "62284063"
 void Close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Необходимо вызвать [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) первого.
+Сначала необходимо вызвать [релеасеакцессорс](../../data/oledb/caccessorbase-releaseaccessors.md) .
 
-## <a name="geth"></a> CAccessorBase::GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase:: Жесакцессор
 
-Извлекает дескриптор метода доступа указанного метода доступа.
+Получает маркер метода доступа для указанного метода доступа.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -84,16 +84,16 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 #### <a name="parameters"></a>Параметры
 
-*nAccessor*<br/>
-[in] Число ноль смещение для метода доступа.
+*накцессор*<br/>
+окне Число с нулевым смещением для метода доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор метода доступа.
+Обработчик метода доступа.
 
-## <a name="getnum"></a> CAccessorBase::GetNumAccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase:: Жетнумакцессорс
 
-Получает число методов доступа, созданный классом.
+Возвращает количество методов доступа, созданных классом.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -103,11 +103,11 @@ ULONG GetNumAccessors() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число методов доступа, созданный классом.
+Количество методов доступа, созданных классом.
 
-## <a name="isauto"></a> CAccessorBase::IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase:: Исаутоакцессор
 
-Возвращает значение true, если данные извлекаются автоматически для метода доступа во время операции перемещения.
+Возвращает значение true, если данные автоматически извлекаются для метода доступа во время операции перемещения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -117,16 +117,16 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 #### <a name="parameters"></a>Параметры
 
-*nAccessor*<br/>
-[in] Число ноль смещение для метода доступа.
+*накцессор*<br/>
+окне Число с нулевым смещением для метода доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **true** Если метод доступа является автоматическим. В противном случае возвращается значение **false**.
+Возвращает **значение true** , если метод доступа является автоматическим. В противном случае возвращается значение **false**.
 
-## <a name="release"></a> CAccessorBase::ReleaseAccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: Релеасеакцессорс
 
-Освобождает методы доступа, созданный классом.
+Освобождает методы доступа, созданные классом.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -137,18 +137,18 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>Параметры
 
 *pUnk*<br/>
-[in] Указатель на `IUnknown` интерфейса для COM-объекта, для которого будут созданы методы доступа.
+окне Указатель на интерфейс `IUnknown` для COM-объекта, для которого были созданы методы доступа.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT.
+Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывается из [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).
+Вызывается из [CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)

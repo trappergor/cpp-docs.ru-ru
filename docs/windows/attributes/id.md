@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501410"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168061"
 ---
-# <a name="id"></a>id
+# <a name="id"></a>идентификатор
 
 Задает параметр *DISPID* для функции-члена (свойства или метода в интерфейсе или DISP).
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501410"
 *DISPID*<br/>
 Идентификатор диспетчеризации для метода интерфейса.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **ID** C++ имеет те же функциональные возможности, что и атрибут [ID](/windows/win32/Midl/id) MIDL.
 
@@ -42,18 +42,18 @@ ms.locfileid: "69501410"
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
 [Атрибуты элементов данных](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[in](in-cpp.md)<br/>
+[В поле](in-cpp.md)<br/>
 [out](out-cpp.md)

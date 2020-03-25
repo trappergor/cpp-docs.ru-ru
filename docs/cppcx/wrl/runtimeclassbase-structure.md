@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 80762a7a2cfdc5c630a42627b8cfd8323f3567eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213594"
 ---
 # <a name="runtimeclassbase-structure"></a>Структура RuntimeClassBase
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -22,9 +22,9 @@ ms.locfileid: "62403182"
 struct RuntimeClassBase;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Позволяет определить `RuntimeClass` в [сделать](make-function.md) функции.
+Используется для обнаружения `RuntimeClass` в функции [make](make-function.md) .
 
 **RuntimeClassBase** является пустой структурой.
 
@@ -34,10 +34,10 @@ struct RuntimeClassBase;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

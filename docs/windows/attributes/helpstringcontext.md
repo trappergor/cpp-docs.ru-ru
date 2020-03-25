@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 339d65070efe8bf2dafae2cf76e92c75a1bebc18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168153"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -28,7 +28,7 @@ ms.locfileid: "69501493"
 *contextID*<br/>
 32-разрядный идентификатор контекста справки в файле **справки** .
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **хелпстрингконтекст** C++ имеет те же функциональные возможности, что и атрибут [хелпстрингконтекст](/windows/win32/Midl/helpstringcontext) ODL.
 
@@ -54,14 +54,14 @@ __interface IMyI
 
 |||
 |-|-|
-|**Относится к**|**класс**, **интерфейс**, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**класс**, **интерфейс**, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>

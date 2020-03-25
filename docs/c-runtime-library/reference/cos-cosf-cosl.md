@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170259"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -67,14 +67,14 @@ long double cos( long double x );  // C++ only
 
 Косинус *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± КНАН, С|none|**_DOMAIN**|
-|± INF|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± INF|**Недопустимый**|**_DOMAIN**|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C функция **COS** всегда принимает и возвращает значение **типа Double**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C функция **COS** всегда принимает и возвращает значение **типа Double**.
 
 ## <a name="requirements"></a>Требования
 
@@ -82,13 +82,13 @@ long double cos( long double x );  // C++ only
 |-------------|---------------------|-|
 |**COS**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в [sin, sinf, sinl](sin-sinf-sinl.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

@@ -2,36 +2,36 @@
 title: Общие сведения об объявлениях
 ms.date: 11/04/2016
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-ms.openlocfilehash: 88cfc78089e0efd4765a40ab0d9c6dc333deb125
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e553f4bdfffcd4bba6a39b2d37af6ba25a3d65d9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170440"
 ---
 # <a name="summary-of-declarations"></a>Общие сведения об объявлениях
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*объявления-описатели* *attribute-seq*<sub>неявное</sub> *init-декларатор-List*<sub>OPT</sub> **;**
 
 *declaration-specifiers*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declaration-specifiers*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*спецификаторы объявлений*<sub>opt</sub> *класса хранения*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;спецификаторы *объявления*<sub>opt</sub> *спецификатора типа*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*спецификаторы объявления*<sub>opt</sub> *квалификаторов типа*
 
 *attribute-seq* :&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*attribute* *attribute-seq*<sub>opt</sub>
+атрибут *атрибута* &nbsp;&nbsp;&nbsp;&nbsp; *-Seq*<sub>OPT</sub>
 
 *атрибут* : один из&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;[__asm](../assembler/inline/asm.md) [__clrcall](../cpp/clrcall.md) [__stdcall](../cpp/stdcall.md) [__based](../cpp/based-grammar.md) [__fastcall](../cpp/fastcall.md) [__thiscall](../cpp/thiscall.md) [__cdecl](../cpp/cdecl.md) [__inline](../cpp/inline-functions-cpp.md) [__vectorcall](../cpp/vectorcall.md)
 
 *init-declarator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-декларатор-List* **,** *декларатор*
 
 *init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator*  **=**  *initializer* /\* Для инициализации скалярных переменных \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*декларатор* **=** *инициализатор* /\* для скалярной инициализации \*/
 
 *storage-class-specifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
@@ -64,49 +64,49 @@ ms.locfileid: "74857025"
 &nbsp;&nbsp;&nbsp;&nbsp;**volatile**
 
 *declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;<sub>opt</sub> *прямого объявления* *указателя*
 
 *direct-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *declarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**  /\* Декларатор нового стиля \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**  /\* Декларатор устаревшего стиля \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *декларатор* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*прямого объявления* **[** *константное выражение*<sub>OPT</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*прямого объявления* **(** *parameter-type-List* **)**  /\* декларатора нового стиля \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*прямого объявления* **(** *идентификатор-списка*<sub>OPT</sub> **)**  /\* декларатора устаревшего стиля \*/
 
 *pointer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> - *квалификатор, список*<sub>необязательностей</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> <sub>необязательное</sub> *pointer* отображение *списка квалификаторов типа*
 
 *parameter-type-list*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* Список параметров \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+&nbsp;&nbsp;&nbsp;&nbsp; *-список параметров* **,...**
 
 *parameter-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,** *parameter-declaration*
+&nbsp;&nbsp;&nbsp;&nbsp; *-список параметров* **,** *объявление параметров*
 
 *type-qualifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
+&nbsp;&nbsp;&nbsp;&nbsp;- *квалификатор типа* *списка*
 
 *enum-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;**идентификатор перечисления** *identifier*<sub>OPT</sub> **{** *перечислитель-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**enum** *идентификатор* перечисления
 
 *enumerator-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
+&nbsp;&nbsp;&nbsp;*перечислителя &nbsp;-List* **,** *Enumerator*
 
 *enumerator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*перечисление константы* **=** *константное выражение*
 
 *enumeration-constant*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
 *спецификатор-структуры-или-объединения*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*структуры-or-Union* *идентификатор*<sub>OPT</sub> **{** *struct-объявление-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*структуру или* *идентификатор* объединения
 
 *структура-или-объединение*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
@@ -114,57 +114,57 @@ ms.locfileid: "74857025"
 
 *список-объявлений-структуры*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+&nbsp;&nbsp; *&nbsp;&nbsp;-* *объявление* структуры в виде структуры
 
 *объявление-структуры*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
+&nbsp;&nbsp;&nbsp;*описатель квалификатора* &nbsp;-List-список *деклараторов* -список **;**
 
 *список-спецификаторов-и-квалификаторов*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *specifier-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;описателе описателей *типа* - *квалификатор-List*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;описателе *квалификаторов типа* - *квалификатор-List*<sub>opt</sub>
 
 *список-деклараторов-структуры*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+&nbsp;&nbsp; *&nbsp;&nbsp;структуры декларатор структуры-* *декларатора* **,** *декларатор структуры*
 
 *декларатор-структуры*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*декларатор*<sub>opt</sub> *спецификатора типа* **:** *константное выражение*
 
 *parameter-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator* /\* Именованный декларатор \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *abstract-declarator*<sub>opt</sub> /\* Анонимный декларатор \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*декларатор* *описателей* /\* с именем декларатор \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *абстрактные*описатели — объявление<sub>OPT</sub> /\* анонимного декларатора \*/
 
 *identifier-list*: /\* Для декларатора устаревшего стиля \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*идентификатор-список* **,** *идентификатор*
 
 *abstract-declarator*: /\* Используется с анонимными деклараторами \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-abstract-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*указателями*прямого и<sub>неявного</sub> - *абстрактного-декларатора*
 
 *direct-abstract-declarator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **(** *abstract-declarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-abstract-declarator*<sub>opt</sub> **(** *parameter-type-list*<sub>opt</sub> **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **(** *абстрактное объявление* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-декларатор*<sub>OPT</sub> **[** *константное выражение*<sub>OPT</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Direct-abstract-декларатор*<sub>OPT</sub> **(** *параметр-Type-List*<sub>OPT</sub> **)**
 
 *initializer*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **}**  /\* Для агрегатной инициализации \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-list* **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-List* **}**  /\* для агрегатной инициализации \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *initializer-List* **,}**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list* **,** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*инициализатор-списка* **,** *инициализатор*
 
 *type-name*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *abstract-declarator*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;*описатель квалификатора &nbsp;-List* *abstract-декларатор*<sub>opt</sub>
 
 *typedef-name*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*
 
 *Extended-decl-модификатор-seq*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*Расширенный-decl-модификатор-seq* *Extended-decl-модификатор*
 
 *Расширенный-decl-модификатор*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
@@ -172,7 +172,7 @@ ms.locfileid: "74857025"
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Соглашения о вызовах](../cpp/calling-conventions.md)<br/>
 [Грамматика структуры фразы](../c-language/phrase-structure-grammar.md)<br/>

@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: fd4c24e3933738d128dffd41018466c33b419de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4191704da2fdac849ac1ce97692c2421ba7cda41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168387"
 ---
 # <a name="attribute-programming-faq"></a>Атрибутивное программирование. Часто задаваемые вопросы
 
-В этом разделе содержатся ответы на следующие часто задаваемые вопросы:
+В этом разделе содержатся ответы на следующие часто задаваемые вопросы.
 
-- [Что такое значение HRESULT](#vcconattributeprogrammmingfaqanchor1)
+- [Что такое HRESULT?](#vcconattributeprogrammmingfaqanchor1)
 
-- [Если необходимо указать имя параметра для атрибута?](#vcconattributeprogrammmingfaqanchor2)
+- [Когда нужно указывать имя параметра для атрибута?](#vcconattributeprogrammmingfaqanchor2)
 
-- [Можно использовать комментарии в блоке атрибута?](#vcconattributeprogrammmingfaqanchor3)
+- [Можно ли использовать комментарии в блоке атрибутов?](#vcconattributeprogrammmingfaqanchor3)
 
 - [Как атрибуты взаимодействуют с наследованием?](#vcconattributeprogrammmingfaqanchor4)
 
-- [Как использовать атрибуты в проекте ATL без атрибутов?](#vcconattributeprogrammmingfaqanchor5)
+- [Как можно использовать атрибуты в проекте ATL без атрибутов?](#vcconattributeprogrammmingfaqanchor5)
 
-- [Как использовать IDL-файл в проекте с атрибутами?](#vcconattributeprogrammmingfaqanchor6)
+- [Как можно использовать idl-файл в проекте с атрибутами?](#vcconattributeprogrammmingfaqanchor6)
 
-- [Можно изменить код, который вставлен с помощью атрибута?](#vcconattributeprogrammmingfaqanchor7)
+- [Можно ли изменить код, который вставляется с помощью атрибута?](#vcconattributeprogrammmingfaqanchor7)
 
-- [Как пересылать объявить интерфейсе с атрибутами?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [Как можно переадресовать объявление интерфейса с атрибутами?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
-- [Можно использовать атрибуты в классе, производном от класса, который также использует атрибуты](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
+- [Можно ли использовать атрибуты класса, производного от класса, который также использует атрибуты?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a> Что такое значение HRESULT
+##  <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>Что такое HRESULT?
 
-Значение HRESULT является простой тип данных, часто используется в качестве возвращаемого значения атрибутов и ATL в целом. В следующей таблице описаны различные значения. Дополнительные значения содержатся в файле winerror.h файл заголовка.
+HRESULT — это простой тип данных, который часто используется в качестве возвращаемого значения атрибутами и ATL в целом. В следующей таблице описаны различные значения. Дополнительные значения содержатся в файле заголовка Winerror. h.
 
-|name|Описание|Значение|
+|Имя|Description|Значение|
 |----------|-----------------|-----------|
 |S_OK|Операция выполнена успешно|0x00000000|
-|E_UNEXPECTED|Непредвиденная ошибка|0x8000FFFF|
+|E_UNEXPECTED|Непредвиденный сбой|0x8000FFFF|
 |E_NOTIMPL|Не реализовано|0x80004001|
-|E_OUTOFMEMORY|Не удалось выделить необходимую память|0x8007000E|
-|E_INVALIDARG|Один или несколько аргументов являются недопустимыми|0x80070057|
-|E_NOINTERFACE|Интерфейс не поддерживается|0x80004002|
+|E_OUTOFMEMORY|Не удалось выделить требуемую память|0x8007000E|
+|E_INVALIDARG|Один или несколько аргументов недопустимы|0x80070057|
+|E_NOINTERFACE|Такой интерфейс не поддерживается|0x80004002|
 |E_POINTER|Недопустимый указатель|0x80004003|
-|E_HANDLE|Недопустимый дескриптор|0x80070006|
+|E_HANDLE|Недопустимый Handle|0x80070006|
 |E_ABORT|Операция прервана|0x80004004|
-|E_FAIL|Неизвестная ошибка|0x80004005|
-|E_ACCESSDENIED|Ошибка доступа|0x80070005|
+|E_FAIL|Неопределенный сбой|0x80004005|
+|E_ACCESSDENIED|Общая ошибка отказа в доступе|0x80070005|
 
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a> Если необходимо указать имя параметра для атрибута?
+##  <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>Когда нужно указывать имя параметра для атрибута?
 
-В большинстве случаев Если атрибут имеет один параметр, этот параметр называется. Это имя не требуется при вставке атрибутов в коде. Например, следующее использование [статистическую обработку](aggregatable.md) атрибут:
+В большинстве случаев, если атрибут имеет единственный параметр, этот параметр называется. Это имя не требуется при вставке атрибута в код. Например, следующее использование [статистического](aggregatable.md) атрибута:
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -66,7 +66,7 @@ class CMyClass
 };
 ```
 
-именно так же, как:
+точно такой же, как:
 
 ```cpp
 [coclass, aggregatable(allowed)]
@@ -76,27 +76,27 @@ class CMyClass
 };
 ```
 
-Тем не менее следующие атрибуты имеют единый, неименованные параметры:
+Однако следующие атрибуты имеют одиночные безымянные параметры:
 
 ||||
 |-|-|-|
 |[call_as](call-as.md)|[case](case-cpp.md)|[cpp_quote](cpp-quote.md)|
-|[default](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
+|[значение по умолчанию](default-cpp.md)|[defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
 |[emitidl](emitidl.md)|[entry](entry.md)|[first_is](first-is.md)|
 |[helpcontext](helpcontext.md)|[helpfile](helpfile.md)|[helpstring](helpstring.md)|
-|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[id](id.md)|
+|[helpstringcontext](helpstringcontext.md)|[helpstringdll](helpstringdll.md)|[идентификатор](id.md)|
 |[iid_is](iid-is.md)|[import](import.md)|[importlib](importlib.md)|
 |[include](include-cpp.md)|[includelib](includelib-cpp.md)|[last_is](last-is.md)|
 |[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
 |[pointer_default](pointer-default.md)|[pragma](pragma.md)|[restricted](restricted.md)|
-|[size_is](size-is.md)|[source](source-cpp.md)|[switch_is](switch-is.md)|
+|[size_is](size-is.md)|[источник](source-cpp.md)|[switch_is](switch-is.md)|
 |[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
 
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a> Можно использовать комментарии в блоке атрибута?
+##  <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>Можно ли использовать комментарии в блоке атрибутов?
 
-Можно использовать однострочные и многострочные комментарии в блоке атрибута. Тем не менее нельзя использовать либо стиль комментария в круглых скобках, содержащий параметры для атрибута.
+В блоке атрибутов можно использовать как однострочные, так и многострочные комментарии. Однако нельзя использовать любой из стилей комментариев в круглых скобках, содержащих параметры атрибута.
 
-Допускается следующее:
+Допустимы следующие действия:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +105,30 @@ class CMyClass
 ]
 ```
 
-Не допускается следующее:
+Запрещены следующие действия:
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a> Как атрибуты взаимодействуют с наследованием?
+##  <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>Как атрибуты взаимодействуют с наследованием?
 
-Классы с атрибутом и неопределенными может наследовать от других классов, которые могут сами быть атрибуты или нет. Результат использования производного от класса с атрибутом является производным от этого класса, после поставщик атрибутов изменила свой код. Атрибуты, не передаются по производные классы через наследование C++. Поставщик атрибутов только преобразует код вблизи его атрибуты.
+Классы с атрибутами и без атрибутов можно наследовать от других классов, которые сами по себе могут быть атрибутами. Результат наследования от класса с атрибутом является таким же, как производный от этого класса после преобразования его кода поставщиком атрибутов. Атрибуты не передаются в производные C++ классы посредством наследования. Поставщик атрибутов преобразует код только в окружении его атрибутов.
 
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a> Как использовать атрибуты в проекте ATL без атрибутов?
+##  <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>Как можно использовать атрибуты в проекте ATL без атрибутов?
 
-Возможно, проект ATL без атрибутов, который IDL-файле, и можно приступить к добавлению помеченных атрибутами объектов. В этом случае следует использовать **мастер добавления класса** для предоставления кода.
+У вас может быть проект ATL без атрибута, имеющий IDL-файл, и вы можете начать добавлять объекты с атрибутами. В этом случае для предоставления кода используйте **Мастер добавления классов** .
 
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a> Как использовать IDL-файл в проекте с атрибутами?
+##  <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>Как можно использовать idl-файл в проекте с атрибутами?
 
-Возможно IDL-файла, который вы хотите использовать в проекте ATL с атрибутами. В этом случае используется [importidl](importidl.md) атрибут, для компиляции в IDL-файл h-файл (см. в разделе [страницы свойств MIDL](../../build/reference/midl-property-pages.md) в проекте **страницы свойств** диалоговое окно), и Включите h-файл в проект.
+Возможно, у вас есть IDL-файл, который вы хотите использовать в проекте с атрибутами ATL. В этом случае следует использовать атрибут [импортидл](importidl.md) , скомпилировать IDL-файл в файл. h (см. [страницы свойств MIDL](../../build/reference/midl-property-pages.md) в диалоговом окне **страницы свойств** проекта), а затем включить h-файл в проект.
 
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a> Можно изменить код, который вставлен с помощью атрибута?
+##  <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>Можно ли изменить код, который вставляется с помощью атрибута?
 
-Некоторые атрибуты вставки кода в проекте. Этот код можно просмотреть с помощью [/Fx](../../build/reference/fx-merge-injected-code.md) параметр компилятора. Можно также скопировать код из внедренного файла и вставьте его в исходном коде. Это позволяет изменять поведение атрибута. Тем не менее может потребоваться изменить другие части кода также.
+Некоторые атрибуты вставляют код в проект. Введенный код можно просмотреть с помощью параметра компилятора [/FX](../../build/reference/fx-merge-injected-code.md) . Также можно скопировать код из вставленного файла и вставить его в исходный код. Это позволяет изменить поведение атрибута. Однако также может потребоваться изменить другие части кода.
 
-Следующий пример является результатом копирования введенного кода в файл исходного кода:
+Следующий пример является результатом копирования вставленного кода в файл исходного кода:
 
 ```cpp
 // attr_injected.cpp
@@ -234,14 +234,14 @@ public:
 int main() {}
 ```
 
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> Как пересылать объявить интерфейсе с атрибутами?
+##  <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>Как можно переадресовать объявление интерфейса с атрибутами?
 
-Если вы собираетесь сделать у прямого объявления интерфейсе с атрибутами, необходимо применить те же атрибуты для опережающего объявления, относящиеся к объявлению фактический интерфейс. Необходимо также применить [Экспорт](export.md) для вашей опережающего объявления атрибута.
+Если вы собираетесь создать прямую объявление интерфейса с атрибутом, необходимо применить те же атрибуты к объявлению прямого объявления, которое применяется к фактическому объявлению интерфейса. Также необходимо применить атрибут [Export](export.md) к объявлению прямого объявления.
 
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> Можно использовать атрибуты в классе, производном от класса, который также использует атрибуты
+##  <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>Можно ли использовать атрибуты класса, производного от класса, который также использует атрибуты?
 
-Нет, с помощью атрибутов в классе, производном от класса, который также использует атрибуты не поддерживается.
+Нет, использование атрибутов класса, производного от класса, который также использует атрибуты, не поддерживается.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты C++ для модели COM и .NET](cpp-attributes-com-net.md)

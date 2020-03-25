@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516219"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172534"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Поддержка признаков типов компилятором (C++/CLI и C++/CX)
 
@@ -74,7 +74,7 @@ ms.locfileid: "65516219"
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Признаки типов особенно важны для программистов, создающих библиотеки.
 
@@ -82,7 +82,7 @@ ms.locfileid: "65516219"
 
 (В списке ниже примеры кода представлены только на C++/CLI. Но соответствующий признак типа также поддерживается в C++/CX, если не указано иное. Термин "тип платформы" относится к типам среды выполнения Windows или типам среды CLR).
 
-- `__has_assign(` *тип* `)`
+- *тип* `__has_assign(` `)`
 
    Возвращает значение **true**, если тип платформы или собственный тип содержит оператор присваивания копии.
 
@@ -96,7 +96,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_copy(` *тип* `)`
+- *тип* `__has_copy(` `)`
 
    Возвращает значение **true**, если тип платформы или собственный тип содержит конструктор копии.
 
@@ -110,9 +110,9 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_finalizer(` *тип* `)`
+- *тип* `__has_finalizer(` `)`
 
-   (Не поддерживается в C++/CX.) Возвращает значение **true**, если тип CLR содержит метод завершения. Дополнительные сведения см. в разделе [Деструкторы и методы завершения статьи "Практическое руководство. Определение и использование классов и структур (C++/CLI)"](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).
+   (Не поддерживается в C++/CX.) Возвращает **значение true** , если тип CLR имеет метод завершения. См. раздел [деструкторы и методы завершения в разделе как определить и использовать классы и структуры (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) для получения дополнительных сведений.
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_nothrow_assign(` *тип* `)`
+- *тип* `__has_nothrow_assign(` `)`
 
    Возвращает значение **true**, если оператор присваивания копии имеет пустую спецификацию исключений.
 
@@ -143,7 +143,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_nothrow_constructor(` *тип* `)`
+- *тип* `__has_nothrow_constructor(` `)`
 
    Возвращает значение **true**, если конструктор по умолчанию имеет пустую спецификацию исключений.
 
@@ -159,7 +159,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_nothrow_copy(` *тип* `)`
+- *тип* `__has_nothrow_copy(` `)`
 
    Возвращает значение **true**, если конструктор копии имеет пустую спецификацию исключений.
 
@@ -175,7 +175,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_trivial_assign(` *тип* `)`
+- *тип* `__has_trivial_assign(` `)`
 
    Возвращает значение **true**, если тип содержит тривиальный оператор присваивания, созданный компилятором.
 
@@ -189,7 +189,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_trivial_constructor(` *тип* `)`
+- *тип* `__has_trivial_constructor(` `)`
 
    Возвращает значение **true**, если тип содержит тривиальный конструктор, созданный компилятором.
 
@@ -203,7 +203,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_trivial_copy(` *тип* `)`
+- *тип* `__has_trivial_copy(` `)`
 
    Возвращает значение **true**, если тип содержит тривиальный конструктор копии, созданный компилятором.
 
@@ -217,7 +217,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_trivial_destructor(` *тип* `)`
+- *тип* `__has_trivial_destructor(` `)`
 
    Возвращает значение **true**, если тип содержит тривиальный деструктор, созданный компилятором.
 
@@ -232,7 +232,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_user_destructor(` *тип* `)`
+- *тип* `__has_user_destructor(` `)`
 
    Возвращает значение **true**, если тип платформы или собственный тип содержит объявленный пользователем деструктор.
 
@@ -249,7 +249,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__has_virtual_destructor(` *тип* `)`
+- *тип* `__has_virtual_destructor(` `)`
 
    Возвращает значение **true**, если тип содержит виртуальный деструктор.
 
@@ -268,7 +268,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_abstract(` *тип* `)`
+- *тип* `__is_abstract(` `)`
 
    Возвращает значение **true**, если тип является абстрактным. Дополнительные сведения о собственных абстрактных типах см. в статье [Abstract Classes](../cpp/abstract-classes-cpp.md) (Абстрактные типы (C++)).
 
@@ -308,7 +308,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_class(` *тип* `)`
+- *тип* `__is_class(` `)`
 
    Возвращает значение **true**, если тип является собственным классом или структурой.
 
@@ -322,7 +322,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    Возвращает значение **true**, если первый тип может быть преобразован во второй.
 
@@ -340,7 +340,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_delegate(` *тип* `)`
+- *тип* `__is_delegate(` `)`
 
    Возвращает значение **true**, если `type` является делегатом. Дополнительные сведения см. в статье [delegate (C++/CLI and C++/CX)](delegate-cpp-component-extensions.md).
 
@@ -351,7 +351,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_empty(` *тип* `)`
+- *тип* `__is_empty(` `)`
 
    Возвращает значение **true**, если тип не содержит элементов данных экземпляра.
 
@@ -367,7 +367,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_enum(` *тип* `)`
+- *тип* `__is_enum(` `)`
 
    Возвращает значение **true**, если тип является собственным перечислением.
 
@@ -389,7 +389,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_interface_class(` *тип* `)`
+- *тип* `__is_interface_class(` `)`
 
    Возвращает значение **true**, если интерфейс платформы передан. Дополнительные сведения см. в статье [interface class](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_pod(` *тип* `)`
+- *тип* `__is_pod(` `)`
 
    Возвращает значение **true**, если тип является классом или объединением без конструктора или закрытых либо защищенных нестатических элементов, базовых классов и виртуальных функций. Дополнительные сведения о POD см. в разделах 8.5.1/1, 9/4 и 3.9/10 стандарта C++.
 
@@ -419,7 +419,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_polymorphic(` *тип* `)`
+- *тип* `__is_polymorphic(` `)`
 
    Возвращает значение **true**, если собственный тип содержит виртуальные функции.
 
@@ -435,7 +435,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_ref_array(` *тип* `)`
+- *тип* `__is_ref_array(` `)`
 
    Возвращает значение **true**, если передается массив платформы. Дополнительные сведения см. в статье [Arrays (C++/CLI and C++/CX)](arrays-cpp-component-extensions.md) (Массивы (C++/CLI и C++/CX)).
 
@@ -447,7 +447,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_ref_class(` *тип* `)`
+- *тип* `__is_ref_class(` `)`
 
    Возвращает значение **true**, если ссылочный класс передан. Дополнительные сведения об определяемых пользователем ссылочных типах см. в статье [ref class and ref struct (C++/CLI and C++/CX)](classes-and-structs-cpp-component-extensions.md) (ref class и ref struct (C++/CLI и C++/CX)).
 
@@ -460,7 +460,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_sealed(` *тип* `)`
+- *тип* `__is_sealed(` `)`
 
    Возвращает значение **true**, если передается платформа или собственный тип, отмеченный как запечатанный. Дополнительные сведения см. в статье [sealed (C++/CLI and C++/CX)](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_simple_value_class(` *тип* `)`
+- *тип* `__is_simple_value_class(` `)`
 
    Возвращает значение **true**, если передается тип значения, не содержащий ссылки на кучу со сборкой мусора. Дополнительные сведения об определяемых пользователем типах значений см. в статье [ref class and ref struct (C++/CLI and C++/CX)](classes-and-structs-cpp-component-extensions.md) (ref class и ref struct (C++/CLI и C++/CX)).
 
@@ -489,7 +489,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_union(` *тип* `)`
+- *тип* `__is_union(` `)`
 
    Возвращает значение **true**, если тип является объединением.
 
@@ -506,7 +506,7 @@ ms.locfileid: "65516219"
     }
     ```
 
-- `__is_value_class(` *тип* `)`
+- *тип* `__is_value_class(` `)`
 
    Возвращает значение **true**, если передается тип значения. Дополнительные сведения об определяемых пользователем типах значений см. в статье [ref class and ref struct (C++/CLI and C++/CX)](classes-and-structs-cpp-component-extensions.md) (ref class и ref struct (C++/CLI и C++/CX)).
 
@@ -520,7 +520,7 @@ ms.locfileid: "65516219"
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Признак типа `__has_finalizer(`*type*`)` не поддерживается, поскольку эта платформа не поддерживает методы завершения.
 
@@ -530,7 +530,7 @@ ms.locfileid: "65516219"
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 (Отсутствуют комментарии для данной возможности в рамках этой платформы).
 
@@ -568,6 +568,6 @@ int main () {
 R is a ref class
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490932"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168516"
 ---
 # <a name="appobject"></a>appobject
 
@@ -23,7 +23,7 @@ ms.locfileid: "69490932"
 [appobject]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **аппобжект** C++ имеет те же функциональные возможности, что и атрибут [аппобжект](/windows/win32/Midl/appobject) MIDL.
 
@@ -52,14 +52,14 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
 |**Обязательные атрибуты**|`coclass`|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 1a8abc8b73ee878ac2feefa210268e87c608e938
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212840"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Набор записей. Определение сумм и других статистических результатов (ODBC)
 
@@ -39,7 +39,7 @@ ms.locfileid: "80075903"
 С помощью функций SQL можно получать статистическую информацию о записях в источнике данных, не извлекая эти записи из источника. Создаваемый набор записей обычно состоит из одной записи (если все столбцы являются статистическими), которая содержит значение. (При использовании предложения **Group By** может существовать несколько записей.) Это значение является результатом вычисления или извлечения, выполненного функцией SQL.
 
 > [!TIP]
->  Чтобы добавить предложение SQL **GROUP BY** и, возможно, предложение **HAVING** в инструкцию SQL, добавьте их в конце `m_strFilter`. Например:
+>  Чтобы добавить предложение SQL **GROUP BY** и, возможно, предложение **HAVING** в инструкцию SQL, добавьте их в конце `m_strFilter`. Пример:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -85,13 +85,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-Кому:
+на:
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

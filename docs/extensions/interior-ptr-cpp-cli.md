@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515699"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172156"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 *Внутренний указатель* объявляет указатель на внутреннюю часть ссылочного типа, но не на сам объект. Он может указывать на дескриптор ссылки, тип значения, дескриптор упакованного типа, член управляемого типа или элемент управляемого массива.
 
@@ -56,7 +56,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 *initializer*<br/>
 Член ссылочного типа, элемент управляемого массива или любой другой объект, который можно присвоить собственному указателю.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Собственный указатель не может отслеживать элемент, если его расположение изменяется в управляемой куче в результате перемещения экземпляров объекта сборщиком мусора. Чтобы указатель правильно ссылался на экземпляр, среде выполнения необходимо обновить его, соориентировав на вновь расположенный объект.
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: bb4b67a4c534598a8e26eb9ab5f297b108b67b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079865"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212996"
 ---
 # <a name="recordset-architecture-odbc"></a>Набор записей. Архитектура (ODBC)
 
@@ -94,7 +94,7 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 
 Дополнительные сведения и примеры см. [в разделе Обмен полями записи. Использование RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Объявление класса таблицы (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2113
 ms.assetid: cbf52e93-ab14-49b7-9ce8-fb55877602ec
-ms.openlocfilehash: 66f2fac2e5524b948db241d6032fb7b6acaaa6de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba286ce9c8ee3663d978b09b6158a6954efdf742
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191799"
 ---
 # <a name="resource-compiler-error-rc2113"></a>Ошибка компилятора ресурсов RC2113
 
-В диалоговом окне ожидается END
+Ожидается END в диалоговом окне
 
-**Окончания** ключевое слово должно обнаруживаться в конце **диалоговое ОКНО** инструкции. Убедитесь, что открыть кавычки не успели воспользоваться в предыдущей инструкции.
+Ключевое слово **End** должно находиться в конце инструкции **диалогового окна** . Убедитесь, что из предыдущей инструкции не осталось открытых кавычек.

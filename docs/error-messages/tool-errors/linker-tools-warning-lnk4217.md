@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450862"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183115"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>Предупреждение средств компоновщика LNK4217
 
 > символ "*symbol*", определенный в "*filename_1. obj*", импортируется "*filename_2. obj*" в функции "*Function*"
 
-для символа указан [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) , хотя символ определен в объектном файле в том же образе. Чтобы устранить это предупреждение, удалите модификатор.`__declspec(dllimport)`
+для символа был указан [__declspec (dllimport)](../../cpp/dllexport-dllimport.md) , хотя символ определен в объектном файле в том же образе. Удалите модификатор `__declspec(dllimport)`, чтобы устранить это предупреждение.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 *symbol* — это имя символа, определенное в изображении. *функция* — это функция, которая импортирует символ.
 
@@ -62,7 +62,7 @@ lib.exe tt.obj /export:func /def
 link.exe main.obj tt.lib
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Предупреждение средств компоновщика LNK4049](linker-tools-warning-lnk4049.md) \
 [Предупреждение средств компоновщика LNK4286](linker-tools-warning-lnk4286.md) \

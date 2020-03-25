@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9e476183374ad2a70864fd46aaa19c616cd3ce91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167359"
 ---
 # <a name="bindable"></a>bindable
 
@@ -23,17 +23,17 @@ ms.locfileid: "69501826"
 [bindable]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 C++ Атрибут **BIND** имеет те же функциональные возможности, что и [связываемый](/windows/win32/Midl/bindable) атрибут MIDL. Его можно использовать для свойств, определенных с помощью атрибутов [propget](propget.md), [propput](propput.md)или [propputref](propputref.md) , или можно вручную определить метод, допускающий привязку.
 
 В следующих примерах MFC показано использование **BIND**.
 
-- [Примеры элементов управления: Элементы управления ActiveX на основе MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Примеры элементов управления: элементы ActiveX на основе MFC](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Образец CIRC: Элемент управления ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Пример CIRC: элемент управления ActiveX](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [Пример ТЕССЕЛП: Элемент управления ActiveX с подсказками и справкой](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [Пример ТЕССЕЛП. элемент управления ActiveX с подсказками и справкой](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>Пример
 
@@ -64,14 +64,14 @@ __interface IPropDemo : IDispatch {
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>

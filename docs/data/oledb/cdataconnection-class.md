@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212071"
 ---
 # <a name="cdataconnection-class"></a>Класс CDataConnection
 
@@ -104,7 +104,7 @@ class CDataConnection
 |[Оператор CSession &](#op_csession_amp)|Возвращает ссылку на содержащийся объект `CSession`.|
 |[operator CSession *](#op_csession_star)|Возвращает указатель на содержащийся объект `CSession`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CDataConnection` — это полезный класс для создания клиентов, поскольку он инкапсулирует необходимые объекты (источник данных и сеанс) и часть работы, которую необходимо выполнить при подключении к источнику данных.
 
@@ -131,7 +131,7 @@ CDataConnection(const CDataConnection &ds);
 *DS*<br/>
 окне Ссылка на существующее подключение к данным.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Первое переопределение создает новый объект `CDataConnection` с параметрами по умолчанию.
 
@@ -186,7 +186,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *сессии*<br/>
 [вход/выход] Ссылка на новый объект Session.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В новом сеансе в качестве родительского объекта используется объект источника данных текущего соединения, который может получить доступ ко всем тем же данным, что и источник данных.
 
@@ -204,7 +204,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 operator BOOL() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает **логическое** значение (MFC typedef). **Значение true** означает, что текущий сеанс открыт; **Значение false** означает, что текущий сеанс закрыт.
 
@@ -218,7 +218,7 @@ operator BOOL() throw();
 operator bool() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает **логическое** значение (C++ тип данных). **значение true** означает, что текущий сеанс открыт; **значение false** означает, что текущий сеанс закрыт.
 
@@ -232,7 +232,7 @@ operator bool() throw();
 operator const CDataSource&() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор возвращает ссылку на объект, содержащийся `CDataSource`, что позволяет передать объект `CDataConnection`, где ожидается `CDataSource` ссылка.
 
@@ -254,7 +254,7 @@ operator const CDataSource&() throw();
 operator const CDataSource*() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор возвращает указатель на содержащийся объект `CDataSource`, что позволяет передать объект `CDataConnection`, где ожидается указатель `CDataSource`.
 
@@ -270,7 +270,7 @@ operator const CDataSource*() throw();
 operator const CSession&();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор возвращает ссылку на объект, содержащийся `CSession`, что позволяет передать объект `CDataConnection`, где ожидается `CSession` ссылка.
 
@@ -292,7 +292,7 @@ operator const CSession&();
 operator const CSession*() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор возвращает указатель на содержащийся объект `CSession`, что позволяет передать объект `CDataConnection`, где ожидается указатель `CSession`.
 
@@ -300,7 +300,7 @@ operator const CSession*() throw();
 
 Пример использования см. в разделе [operator CSession &](../../data/oledb/cdataconnection-operator-csession-amp.md) .
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

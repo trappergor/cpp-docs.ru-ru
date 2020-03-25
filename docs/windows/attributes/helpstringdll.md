@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168126"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -25,10 +25,10 @@ ms.locfileid: "69501482"
 
 ### <a name="parameters"></a>Параметры
 
-*string*<br/>
+*строка*<br/>
 Библиотека DLL, используемая для поиска строки документа.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **хелпстрингдлл** C++ имеет те же функциональные возможности, что и атрибут [хелпстрингдлл](/windows/win32/Midl/helpstringdll) MIDL.
 
@@ -53,14 +53,14 @@ __interface IMyI
 
 |||
 |-|-|
-|**Относится к**|**класс**, **интерфейс**, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**класс**, **интерфейс**, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
