@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44356fb1a1818a02102d23e6b308457f2f39506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200516"
 ---
 # <a name="compiler-error-c3641"></a>Ошибка компилятора C3641
 
-> "*функция*": недопустимое соглашение о вызовах «соглашение_о_вызовах» для функции, скомпилированные с параметром/clr: pure или/CLR: safe
+> "*функция*": недопустимое соглашение о вызовах "calling_convention" для функции, скомпилированной с параметрами/clr: pure или/CLR: Сейф
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-Только [__clrcall](../../cpp/clrcall.md) соглашение о вызовах разрешен с [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+Только соглашение о вызовах [__clrcall](../../cpp/clrcall.md) разрешено с [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Пример
 

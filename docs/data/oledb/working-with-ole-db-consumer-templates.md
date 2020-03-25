@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395551"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209265"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Работа с шаблонами объекта-получателя OLE DB
 
-В следующих разделах приводятся некоторые примеры того, как использовать шаблоны потребителей OLE DB в типичных сценариях:
+В следующих разделах приводятся некоторые примеры использования шаблонов потребителей OLE DB в типичных сценариях.
 
 - [Упрощение доступа к данным с помощью атрибутов базы данных](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -48,16 +48,16 @@ ms.locfileid: "62395551"
 
 - [Получение уведомлений](../../data/oledb/receiving-notifications.md)
 
-Пример создания и реализации потребителя OLE DB, см. в разделе [создание простого объекта-получателя](../../data/oledb/creating-an-ole-db-consumer.md).
+Пример создания и реализации OLE DB потребителя см. [в разделе Создание простого потребителя](../../data/oledb/creating-an-ole-db-consumer.md).
 
-Также можно найти примеры использования шаблонов потребителей OLE DB в следующих примерах:
+Примеры использования шаблонов потребителей OLE DB можно найти в следующих примерах.
 
-- ["CatDB"](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [дбвиевер](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [Чтение](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

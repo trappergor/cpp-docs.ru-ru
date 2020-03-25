@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2175
 ms.assetid: 3a8fa90b-2b29-414a-bb55-cf27c2bf989a
-ms.openlocfilehash: 4c4af877d771d4e45c9336f1eb4a29fd45fa79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7d045accae170f4f7f17835ff535a044ff91219
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175489"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206925"
 ---
 # <a name="compiler-error-c2175"></a>Ошибка компилятора C2175
 
-«язык»: недопустимый код языка
+"locale": недопустимый языковой стандарт
 
-Указанный язык является недопустимым. См. в разделе [языка и строк страны или региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *Справочник по библиотеке времени выполнения* для поддерживаемых языков.
+Указан недопустимый языковой стандарт. Поддерживаемые языковые стандарты см. в разделе [строки языка и страны или региона](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) в *справочнике по библиотеке времени выполнения* .

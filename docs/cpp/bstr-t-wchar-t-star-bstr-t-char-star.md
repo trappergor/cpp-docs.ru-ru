@@ -8,14 +8,14 @@ helpviewer_keywords:
 - operator wchar_t* [C++]
 - operator char* [C++]
 ms.assetid: acd9f4a7-b427-42c2-aaae-acae21cab317
-ms.openlocfilehash: bfc149b0f0688bed567bf202fddb4ab2c3102630
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5fdce29b0be7e9aabae9e3c602822045a7bccafd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345154"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190305"
 ---
-# <a name="bstrtwchart-bstrtchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
+# <a name="_bstr_twchar_t-_bstr_tchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -30,12 +30,12 @@ operator const char*( ) const;
 operator char*( ) const;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Эти операторы можно использовать для извлечения символьных данных, инкапсулированных объектом `BSTR`. Назначение нового значения возвращенному указателю не изменяет исходные данные BSTR.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_bstr_t Class](../cpp/bstr-t-class.md)

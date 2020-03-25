@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1307
 ms.assetid: 6f77d3d4-ba8a-476c-b540-aff19eb4efc4
-ms.openlocfilehash: 1acdda77ac9cbf8d99752de3b78ab9c32bbb4cbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7eb90c8e17408f6898ef7ff1a9d9e5efcafb4fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203350"
 ---
 # <a name="fatal-error-c1307"></a>Неустранимая ошибка C1307
 
 программа была изменена после сбора данных о профилях
 
-При использовании [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md), Компоновщик обнаружил модуль ввода, который был перекомпилирован после/LTCG: PGINSTRUMENT и что модуля был изменен в точку, где данные профиля больше не нужны. Например если в модуле перекомпилированной изменен графа вызовов, компилятор выдаст C1307.
+При использовании [/LTCG: PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)Компоновщик обнаружил модуль ввода, который был перекомпилирован после/LTCG: PGINSTRUMENT, и что модуль был изменен на тот момент, когда существующие данные профиля больше не нужны. Например, если граф вызовов изменился в перекомпилированном модуле, компилятор создаст C1307.
 
-Чтобы устранить эту ошибку, запустите/LTCG: PGINSTRUMENT, вернуть все тестовые запуски и выполните/LTCG: PGOPTIMIZE. Если вам не удается запустить/LTCG: PGINSTRUMENT и вернуть все тестовые запуски, используйте/LTCG: PGUPDATE вместо/LTCG: PGOPTIMIZE для создания оптимизированного образа.
+Чтобы устранить эту ошибку, выполните/LTCG: PGINSTRUMENT, повтор всех тестовых запусков и выполните/LTCG: PGOPTIMIZE. Если не удается выполнить/LTCG: PGINSTRUMENT и повторить все тестовые запуски, используйте/LTCG: PGUPDATE вместо/LTCG: PGOPTIMIZE для создания оптимизированного образа.

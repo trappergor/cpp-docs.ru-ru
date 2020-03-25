@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1506
 ms.assetid: c73d5702-c898-4a32-b0fa-a118601a1e14
-ms.openlocfilehash: c3d6eecc997b8dd69f51cee795037968058ed346
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6799b86b362e3eb0642acaa392adf1ea4e0039c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203025"
 ---
 # <a name="fatal-error-c1506"></a>Неустранимая ошибка C1506
 
 неустранимая ошибка, связанная с областью действия блока
 
-Блок слишком велико для компиляции.
+Блок слишком велик для компиляции.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
 
-1. Непарные скобки
+1. Непарные фигурные скобки
 
-1. Особенно большими наборами функцию или класс
+1. Необычно большая функция или класс

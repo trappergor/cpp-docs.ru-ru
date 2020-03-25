@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 7fb22754248e66d7a20292af41a8e1b8ba050451
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 146a0f7a7cc1402f7c28e6bf09fead1914c7c6be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208534"
 ---
 # <a name="marshal_context-class"></a>Класс marshal_context
 
@@ -25,7 +25,7 @@ ms.locfileid: "80080034"
 class marshal_context
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте класс `marshal_context` для преобразований данных, для которых требуется контекст. Дополнительные сведения о том, какие преобразования нуждаются в контексте и какие файлы упакованы должны быть добавлены, см. [в разделе Общие сведения C++о маршалировании в ](../dotnet/overview-of-marshaling-in-cpp.md). Результат маршалирования при использовании контекста действителен только до тех пор, пока не будет удален объект `marshal_context`. Чтобы сохранить результат, необходимо скопировать данные.
 
@@ -35,14 +35,14 @@ class marshal_context
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Description|
 |---------|-----------|
 |[marshal_context::marshal_context](#marshal-context)|Конструирует объект `marshal_context`, используемый для преобразования данных между управляемыми и собственными типами данных.|
 |[marshal_context::~marshal_context](#tilde-marshal-context)|Уничтожает объект `marshal_context`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Description|
 |---------|-----------|
 |[marshal_context::marshal_as](#marshal-as)|Выполняет упаковку для определенного объекта данных, чтобы преобразовать его между управляемым и собственным типами данных.|
 
@@ -60,7 +60,7 @@ class marshal_context
 marshal_context();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для некоторых преобразований данных требуется контекст маршалирования. Дополнительные сведения о том, какие переводы нуждаются в контексте и какие файлы упакованы необходимо включить в приложение, см. [в разделе Общие сведения о C++маршалировании в ](../dotnet/overview-of-marshaling-in-cpp.md).
 
@@ -76,7 +76,7 @@ marshal_context();
 ~marshal_context();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Для некоторых преобразований данных требуется контекст маршалирования. Дополнительные сведения о том, какие переводы нуждаются в контексте и какие файлы упакованы должны быть добавлены в приложение, см. в разделе Общие сведения о [маршалировании в C++ ](../dotnet/overview-of-marshaling-in-cpp.md) .
 
@@ -101,7 +101,7 @@ To_Type marshal_as<To_Type>(
 
 Переменная типа `To_Type`, преобразованное значение `input`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция выполняет упаковку на определенном объекте данных. Эта функция используется только с преобразованиями, указанными в таблице в разделе [Общие сведения C++о маршалировании в ](../dotnet/overview-of-marshaling-in-cpp.md).
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-ms.openlocfilehash: 8a7acf943bd4c8180e60748b89a96fdf44a19576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0195973e7d23baf2f2853bdb00bedcbc841c3549
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197697"
 ---
 # <a name="bscmake-error-bk1508"></a>Ошибка BSCMAKE BK1508
 
-не удается удалить временный файл «имя_файла» [: причина]
+не удается удалить временный файл "имяфайла" [: причина]
 
-BSCMAKE не удается удалить один из временных файлов.
+BSCMAKE не может удалить один из его временных файлов.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
 
-1. Другой процесс был открыт файл.
+1. Файл открыт другим процессом.
 
 1. Аппаратная ошибка.

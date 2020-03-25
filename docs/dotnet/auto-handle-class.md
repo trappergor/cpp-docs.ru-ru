@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 44b18304aa8030e4230d78a3579cdba601888faf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3c098b558941630e5c989e5a1b5c0fc1e2c8e10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208834"
 ---
 # <a name="auto_handle-class"></a>Класс auto_handle
 
@@ -42,14 +42,14 @@ ref class auto_handle;
 
 ### <a name="public-constructors"></a>Открытые конструкторы  
 
-|Имя|Описание|  
+|Имя|Description|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|Конструктор `auto_handle`.|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|Деструктор `auto_handle`.|  
 
 ### <a name="public-methods"></a>Открытые методы  
 
-|Имя|Описание|  
+|Имя|Description|  
 |---------|-----------|  
 |[auto_handle::get](#get)|Возвращает содержащийся объект.|  
 |[auto_handle::release](#release)|Освобождает объект от управления `auto_handle`.|
@@ -58,7 +58,7 @@ ref class auto_handle;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|  
+|Имя|Description|  
 |---------|-----------|
 |[auto_handle:: operator —&gt;](#operator-arrow)|Оператор доступа к члену.|
 |[auto_handle::operator=](#operator-assign)|Оператор присвоения.|
@@ -171,7 +171,7 @@ done
 ~auto_handle();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Деструктор также деструктуре принадлежащего объекта.
 
@@ -641,7 +641,7 @@ operator bool();
 
 `true`, если упакованный объект является допустимым; в противном случае `false`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот оператор фактически преобразует в `_detail_class::_safe_bool`, который является более безопасным, чем `bool`, поскольку он не может быть преобразован в целочисленный тип.
 

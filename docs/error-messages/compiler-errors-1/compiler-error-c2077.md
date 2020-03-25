@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2077
 ms.assetid: f046f0e3-1987-477a-a0af-fe543a9f5fcb
-ms.openlocfilehash: 0f4b484e1ea248495ecb8fa838dea1b8ad63dc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7ee3545b3fe6583dac924c3563578875a443386
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404381"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207729"
 ---
 # <a name="compiler-error-c2077"></a>Ошибка компилятора C2077
 
-поле Нескалярный инициализатор «идентификатор»
+нескалярный инициализатор поля "идентификатор"
 
-Предпринята попытка инициализировать битовым полем, использовать нескалярные (структуры, объединения, массива или класса). Используйте целое число или значение с плавающей запятой.
+Попытка инициализировать битовое поле с нескалярные (структурой, объединением, массивом или классом). Используйте целое число или значение с плавающей запятой.

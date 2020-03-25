@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2018
 ms.assetid: 86b54573-dca0-4446-be1a-e3ac489c073b
-ms.openlocfilehash: eaa8b0495eb10a7547587c47bede0e4659dafada
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfea7a960ec149161c2a3252957f2676227f5d0c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303736"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208213"
 ---
 # <a name="compiler-error-c2018"></a>Ошибка компилятора C2018
 
 неизвестный знак "шестнадцатеричное_число"
 
-Исходный файл содержит непредвиденный символ ASCII, который определяется с шестнадцатеричным значением. Чтобы устранить эту ошибку, удалите символ.
+Исходный файл содержит непредвиденный символ ASCII, который определяется по шестнадцатеричному номеру. Чтобы устранить эту ошибку, удалите символ.

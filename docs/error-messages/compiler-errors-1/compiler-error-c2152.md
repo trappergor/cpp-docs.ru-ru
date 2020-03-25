@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2152
 ms.assetid: a9ea2b0c-d55d-41c7-ba9f-dd75592ffc8a
-ms.openlocfilehash: 072b5f13a639b1bd3d8e028fcd6c811012bfa2bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10178d2cd40af60603b908a9351b8e14d12c5570
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207198"
 ---
 # <a name="compiler-error-c2152"></a>Ошибка компилятора C2152
 
-«Идентификатор»: указатели на функции с разными атрибутами
+"идентификатор": указатели на функции с разными атрибутами
 
-Указатель на функцию с одно соглашение о вызовах (`__cdecl`, `__stdcall`, или `__fastcall`) присвоить указателю на функцию с другим соглашением вызова.
+Указатель на функцию с одним соглашением о вызовах (`__cdecl`, `__stdcall`или `__fastcall`) назначается указателю на функцию с другим соглашением о вызовах.

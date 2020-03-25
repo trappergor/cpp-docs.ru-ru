@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "79544738"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208814"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 
@@ -56,7 +56,7 @@ ms.locfileid: "79544738"
       // #include <tchar.h>
       ```
 
-   6. Для Windows Forms приложений в Form1. cpp закомментируйте инструкцию `#include`, которая ссылается на Windows. h. Например:
+   6. Для Windows Forms приложений в Form1. cpp закомментируйте инструкцию `#include`, которая ссылается на Windows. h. Пример:
 
       ```cpp
       // #include <windows.h>
@@ -75,7 +75,7 @@ ms.locfileid: "79544738"
 
    Везде, где это необходимо, замените неуправляемые типы ссылками на структуры из пространства имен [System](/dotnet/api/system) . В следующей таблице перечислены общие управляемые типы.
 
-   |Структура|Описание|
+   |Структура|Description|
    |---------------|-----------------|
    |[Boolean](/dotnet/api/system.boolean)|Представляет логическое значение.|
    |[Byte](/dotnet/api/system.byte)|Представляет 8-разрядное целое число без знака.|

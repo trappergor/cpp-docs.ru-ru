@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0053
 - CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-ms.openlocfilehash: 4ba55e7e8f684ed0b0332be4a8f3ae9d52e9150d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba42e0279cd7c73b575e842cada4fbf569051d19
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299576"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184792"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>Ошибка вычислителя выражений CXX0053
 
-обнаружен символ соответствует во время привязки точек останова
+совпадение нефункционального символа при привязке точек останова
 
-Символ, используемый как точка останова не является функцией. Эта ошибка может возникать, указав элемент данных в качестве точки останова.
+Символ, используемый в качестве точки останова, не является функцией. Указание члена данных в качестве точки останова может вызвать эту ошибку.
 
-Эта ошибка идентична ошибке CAN0053.
+Эта ошибка идентична CAN0053.

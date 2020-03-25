@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 7b87f8c57b0d871a577793936ea3cb7dbab7e58d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: bc5eae58ac453182fd25853edd45e2c45093f5e5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200581"
 ---
 # <a name="compiler-error-c3556"></a>Ошибка компилятора C3556
 
-> "*выражение*": неправильный аргумент для «decltype»
+> "*выражение*": неправильный аргумент для "decltype"
 
 Компилятор не может вывести тип выражения, которое является аргументом описателя типа `decltype(`*expression*`)` .
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода компилятор не может вывести тип аргумента `myFunction` , так как функция `myFunction` перегружена. Чтобы устранить эту проблему, можно использовать `static_cast` для создания экземпляра указателя на конкретный перегруженная функция для указания в `decltype` выражение.
+В следующем примере кода компилятор не может вывести тип аргумента `myFunction` , так как функция `myFunction` перегружена. Чтобы устранить эту проблему, можно использовать `static_cast`, чтобы создать экземпляр указателя на определенную перегруженную функцию для указания в выражении `decltype`.
 
 ```cpp
 // C3556.cpp

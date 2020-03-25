@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525344"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209876"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 
 Шаблоны OLE DB упрощают доступ к данным OLE DB. Visual C++ предоставляет шаблоны классов, которые реализуют многие из обычно используемых интерфейсов OLE DB. Пользовательские шаблоны Visual C++ можно использовать для написания клиентского приложения (объект-получателя) OLE DB, а шаблоны поставщика — для написания приложения сервера (поставщика).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 Предоставляет ссылки на классы шаблонов объекта-получателя OLE DB, перечисленные по использованию.
@@ -25,7 +25,7 @@ ms.locfileid: "65525344"
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 Предоставляет ссылки на классы шаблонов поставщика OLE DB, перечисленные по использованию.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
 [Общие сведения о программировании OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Описывает OLE DB и рассматривает универсальный доступ к данным в OLE DB.

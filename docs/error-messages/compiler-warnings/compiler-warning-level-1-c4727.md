@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075145"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185871"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>Предупреждение компилятора (уровень 1) C4727
 
@@ -50,7 +50,7 @@ C4727 возникает при компиляции нескольких ком
 
 ::: moniker-end
 
-Дополнительные сведения см. в разделе .
+Дополнительные сведения см. в разделе
 
 - [/Yc (создание предкомпилированного файла заголовка)](../../build/reference/yc-create-precompiled-header-file.md)
 

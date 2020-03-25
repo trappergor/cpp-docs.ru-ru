@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1245
 ms.assetid: 179c8165-ffbb-44cd-9f24-5250f29577cc
-ms.openlocfilehash: 4cf9a6c4356872b727a10a360396e51e38928b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19e3f820b5bd7fdd8eac2f7b5a96fb5923ae0b92
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160566"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183804"
 ---
 # <a name="linker-tools-error-lnk1245"></a>Ошибка средств компоновщика LNK1245
 
-Недопустимая подсистема «подсистема» задан; / SUBSYSTEM должен быть WINDOWS, WINDOWSCE или CONSOLE
+указана недопустимая подсистема "подсистема". /SUBSYSTEM должен быть WINDOWS, WINDOWSCE или CONSOLE
 
-[/ CLR](../../build/reference/clr-common-language-runtime-compilation.md) использовалась для компиляции объекта и одно из следующих условий верно:
+[/CLR](../../build/reference/clr-common-language-runtime-compilation.md) использовался для компиляции объекта, и одно из следующих условий было истинно:
 
-- Точка добавления настраиваемой записи был определен ([/Entry](../../build/reference/entry-entry-point-symbol.md)), таким образом, что компоновщик не может повлиять на подсистему.
+- Определена настраиваемая точка входа ([/entry](../../build/reference/entry-entry-point-symbol.md)), поэтому компоновщику не удалось определить подсистему.
 
-- Было передано значение [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) параметра компоновщика, который не является допустимым для/CLR объектов.
+- Значение было передано параметру компоновщика [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) , недопустимому для объектов/CLR.
 
-Для обоих случаев решением является указать допустимое значение для параметра компоновщика/SUBSYSTEM.
+В обоих случаях решением является указание допустимого значения для параметра компоновщика/SUBSYSTEM.

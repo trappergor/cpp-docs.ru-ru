@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516349"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181997"
 ---
 # <a name="generics--ccli-and-ccx"></a>Универсальные шаблоны (C++/CLI и C++/CX)
 
 Универсальные шаблоны — это параметризованные типы и методы. В этом разделе указывается, какие универсальные возможности поддерживаются как средой выполнения Windows, так и средой CLR, а какие — только средой CLR. Кроме того, рассматривается создание в C++/CLI собственных универсальных методов и типов, а также использование в C++/CLI универсальных типов, созданных на языке .NET Framework. Наконец, в этом разделе сравниваются универсальные шаблоны и шаблоны C++.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Поддержка средой выполнения Windows и средой CLR
 
@@ -49,11 +49,11 @@ ms.locfileid: "65516349"
 [Универсальные классы (C++/CLI)](generic-classes-cpp-cli.md)<br/>
 Сведения об определении и использовании универсальных классов.
 
-## <a name="related-sections"></a>Связанные разделы
+## <a name="related-sections"></a>См. также
 
-[Практическое руководство. Итерация элементов универсальной коллекции с использованием цикла for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
+[Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Использование ключевого слова [for each, in](../dotnet/for-each-in.md) в универсальной коллекции.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

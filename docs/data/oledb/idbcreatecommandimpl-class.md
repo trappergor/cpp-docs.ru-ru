@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 27ca1fd20e8f358d936789da695611d96a6e7aa1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210721"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Класс IDBCreateCommandImpl
 
@@ -50,7 +50,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 |-|-|
 |[CreateCommand](#createcommand)|Создает новую команду.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Необязательный интерфейс объекта Session для получения новой команды.
 
@@ -76,7 +76,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 |--------------------------------|------------------------------------------------|
 |*ппвкомманд*|*ппкомманд*|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

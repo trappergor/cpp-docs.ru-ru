@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 07f6fc4773a207f1d0b5a1b8bf23fbd86fd62f43
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210877"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Класс IColumnsInfoImpl
 
@@ -64,7 +64,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 |[GetColumnInfo](#getcolumninfo)|Возвращает метаданные столбца, требуемые большинством объектов-получателей.|
 |[мапколумнидс](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе данных, заданных указанными идентификаторами столбца.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Обязательный интерфейс для наборов строк и команд. Чтобы изменить поведение реализации `IColumnsInfo` поставщика, необходимо изменить карту столбцов поставщика.
 
@@ -100,7 +100,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 См. раздел [IColumnsInfo:: мапколумнидс](/previous-versions/windows/desktop/ms714200(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

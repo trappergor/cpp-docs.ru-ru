@@ -6,12 +6,12 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26aad64e5b9c7a496c2e6bb131b82740c06abe07
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183875"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188978"
 ---
 # <a name="expressions-with-unary-operators"></a>Выражения с унарными операторами
 
@@ -21,29 +21,29 @@ ms.locfileid: "62183875"
 
 - [Оператор взятия адреса (&)](../cpp/address-of-operator-amp.md)
 
-- [Оператор (+) унарного сложения](../cpp/unary-plus-and-negation-operators-plus-and.md)
+- [Оператор унарного плюса (+)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
-- [Оператор унарного отрицания (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)
+- [Унарный оператор отрицания (-)](../cpp/unary-plus-and-negation-operators-plus-and.md)
 
 - [Оператор логического отрицания (!)](../cpp/logical-negation-operator-exclpt.md)
 
-- [Оператор дополнения (~)](../cpp/one-s-complement-operator-tilde.md)
+- [Оператор дополнения до единицы (~)](../cpp/one-s-complement-operator-tilde.md)
 
-- [Префиксный оператор инкремента (++)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [Оператор префиксного инкремента (+ +)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [Оператор префиксного декремента (-)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
+- [Оператор префикса декремента (--)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-- [Оператор CAST)](../cpp/cast-operator-parens.md)
+- [Оператор CAST ()](../cpp/cast-operator-parens.md)
 
-- [оператор sizeof](../cpp/sizeof-operator.md)
+- [Оператор sizeof](../cpp/sizeof-operator.md)
 
-- [оператор __uuidof](../cpp/uuidof-operator.md)
+- [Оператор __uuidof](../cpp/uuidof-operator.md)
 
-- [оператор __alignof](../cpp/alignof-operator.md)
+- [Оператор __alignof](../cpp/alignof-operator.md)
 
-- [оператор New](../cpp/new-operator-cpp.md)
+- [Оператор New](../cpp/new-operator-cpp.md)
 
-- [оператор delete](../cpp/delete-operator-cpp.md)
+- [Delete, оператор](../cpp/delete-operator-cpp.md)
 
 Эти операторы имеют ассоциативность справа налево. Обычно синтаксис унарных выражений предшествует синтаксису постфиксных или основных выражений.
 
@@ -51,32 +51,32 @@ ms.locfileid: "62183875"
 
 - *postfix-expression*
 
-- `++` *Унарное выражение*
+- `++` *унарное выражение*
 
-- `--` *Унарное выражение*
+- `--` *унарное выражение*
 
-- *унарный оператор* *выражение приведения*
+- приведение *унарных операторов* *-выражение*
 
-- **sizeof** *унарное выражение*
+- **sizeof** *унарное выражение* sizeof
 
-- `sizeof(` *Имя типа* `)`
+- *имя типа* `sizeof(` `)`
 
-- `decltype(` *Выражение* `)`
+- `)` `decltype(` *выражение*
 
 - *выражение выделения*
 
-- *освобождение выражение*
+- *unallocation — выражение*
 
-Любой *Постфиксное выражение* считается *унарное выражение*, а поскольку любое основное выражение считается *Постфиксное выражение*, — все основные выражения считается *унарное выражение* также. Дополнительные сведения см. в разделе [постфиксные выражения](../cpp/postfix-expressions.md) и [основные выражения](../cpp/primary-expressions.md).
+Любое *постфиксное* выражение считается *унарным выражением*, а так как любое первичное выражение считается *постфиксным выражением*, любые первичные выражения считаются также *унарным выражением* . Дополнительные сведения см. в разделе [постфиксные выражения](../cpp/postfix-expressions.md) и [Первичные выражения](../cpp/primary-expressions.md).
 
-Объект *унарный оператор* состоит из одного или нескольких из следующих символов: `* & + - ! ~`
+*Унарный оператор* состоит из одного или нескольких следующих символов: `* & + - ! ~`
 
-*Выражение приведения* — это унарное выражение с необязательным приведения, чтобы изменить тип. Дополнительные сведения см. в разделе [оператор Cast: ()](../cpp/cast-operator-parens.md).
+*Выражение CAST-Expression* является унарным выражением с необязательным приведением для изменения типа. Дополнительные сведения см. в разделе [оператор CAST: ()](../cpp/cast-operator-parens.md).
 
 *Выражение* может быть любым выражением. Дополнительные сведения см. в разделе [выражения](../cpp/expressions-cpp.md).
 
-*Выражение выделения* ссылается на **новый** оператор. *Освобождение выражение* ссылается на **удалить** оператор. Дополнительные сведения см. по ссылкам, приведенным выше.
+*Выражение выделения* ссылается на **Новый** оператор. *Выражение unallocation —* это ссылка на оператор **Delete** . Дополнительные сведения см. по ссылкам, приведенным выше.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Типы выражений](../cpp/types-of-expressions.md)

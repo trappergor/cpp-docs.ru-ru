@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 300933fd6d10f5da39d9276db746ab789851a9a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211176"
 ---
 # <a name="cstreamrowset-class"></a>Класс CStreamRowset
 
@@ -62,7 +62,7 @@ class CStreamRowset
 |[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует объект `CStreamRowset`.|
 |[Закрыть](#close)|Освобождает указатель интерфейса [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) в классе.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте `CStreamRowset` в объявлении `CCommand` или `CTable`, например:
 
@@ -72,7 +72,7 @@ class CStreamRowset
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` возвращает указатель `ISequentialStream`, хранящийся в `m_spStream`. Затем используется метод `Read` для получения данных (строки в Юникоде) в формате XML. Например:
+`ICommand::Execute` возвращает указатель `ISequentialStream`, хранящийся в `m_spStream`. Затем используется метод `Read` для получения данных (строки в Юникоде) в формате XML. Пример:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
@@ -101,7 +101,7 @@ CStreamRowset();
 void Close();
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

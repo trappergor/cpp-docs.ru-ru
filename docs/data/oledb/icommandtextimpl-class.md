@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210734"
 ---
 # <a name="icommandtextimpl-class"></a>Класс ICommandTextImpl
 
-Предоставляет реализацию для [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) интерфейс.
+Предоставляет реализацию для интерфейса [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,20 +44,20 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Команда класс, производный от `ICommandTextImpl`.
+Класс команды, производный от `ICommandTextImpl`.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** altdb.h
+**Заголовок:** алтдб. h
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="interface-methods"></a>Методы интерфейса
 
 |||
 |-|-|
-|[GetCommandText](#getcommandtext)|Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
-|[SetCommandText](#setcommandtext)|Задает текст команды, заменив существующий текст команды.|
+|[жеткоммандтекст](#getcommandtext)|Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[SetCommandText](#setcommandtext)|Задает текст команды, заменяя существующий текст команды.|
 
 ### <a name="data-members"></a>Элементы данных
 
@@ -65,13 +65,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 |-|-|
 |[m_strCommandText](#strcommandtext)|Сохраняет текст команды.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Обязательный интерфейс на команды.
+Обязательный интерфейс для команд.
 
-## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: Жеткоммандтекст
 
-Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
+Возвращает текстовую команду, заданную последним вызовом метода [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -82,11 +82,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) в *справочнике программиста OLE DB*. *PguidDialect* параметр игнорируется методом по умолчанию.
+См. раздел [ICommandText:: жеткоммандтекст](/previous-versions/windows/desktop/ms709825(v=vs.85)) в *справочнике программиста OLE DB*. По умолчанию параметр *пгуиддиалект* игнорируется.
 
-## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
 
-Задает текст команды, заменив существующий текст команды.
+Задает текст команды, заменяя существующий текст команды.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -97,11 +97,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) в *справочнике программиста OLE DB*.
+См. раздел [ICommandText:: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
 
-Хранит строку текста команды.
+Сохраняет текстовую строку команды.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -109,7 +109,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

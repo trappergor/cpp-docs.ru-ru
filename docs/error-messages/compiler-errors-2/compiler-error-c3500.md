@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3500
 ms.assetid: 77336f16-04f5-4943-bfc0-faba4cd8bb51
-ms.openlocfilehash: 5dd969ae3fdc54e9ae65ee86532a3fc51116a272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf09381f36731a4c8eda125699f473616ef4cf11
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215244"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200842"
 ---
 # <a name="compiler-error-c3500"></a>Ошибка компилятора C3500
 
-Недопустимый ProgID «идентификатор программы»
+недопустимый ProgID "ProgID"
 
-Указан недопустимый идентификатор программы `#import` инструкции. Проверьте реестр Windows, чтобы убедиться, что вы указали допустимый идентификатор progid.
+В инструкции `#import` был указан недопустимый ProgID. Проверьте реестр Windows, чтобы убедиться, что указан допустимый идентификатор ProgID.

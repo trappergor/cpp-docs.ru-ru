@@ -5,33 +5,33 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 351aa2d5ce950017aa8c1b3d99c8d297a423ad9f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209005"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Роль пользователя в работе с представлением записи (доступ к данным MFC)
 
 Следующая таблица показывает, что обычно необходимо сделать, чтобы работать с представлением записи и что платформа делает за вас.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Работа с представлением записи: Вы и платформа
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Работа с представлением записей: вы и платформа
 
 |Вы|Платформа|
 |---------|-------------------|
 |Используйте редактор диалоговых окон Visual C++ для разработки формы.|Создает ресурс шаблона диалоговых окон с элементами управления.|
-|Используйте [мастер приложений MFC](../mfc/reference/database-support-mfc-application-wizard.md) для создания классов, производных от [CRecordView](../mfc/reference/crecordview-class.md) и [CRecordset](../mfc/reference/crecordset-class.md).|Создает классы за вас.|
+|Используйте [Мастер приложений MFC](../mfc/reference/database-support-mfc-application-wizard.md) для создания классов, производных от класса [CRecordView](../mfc/reference/crecordview-class.md) и [CRecordset](../mfc/reference/crecordset-class.md).|Создает классы за вас.|
 |Сопоставление элементов управления представления записи с элементами данных полей набора записей.|Обеспечивает обмен данных между элементами управления и полями набора записей.|
-||Предоставляет по умолчанию обработчики команд для **переместить в начало**, **переместить в конец**, **Переместить вперед**, и **Move Previous** команд из меню или панели инструментов кнопки.|
+||Предоставляет обработчики команд по умолчанию для **перемещения первого**, **перемещения последнего**, **перемещения вперед**и **перемещения предыдущих** команд из меню или кнопок на панели инструментов.|
 ||Сохраняет изменения в источнике данных|
 |[Дополнительно] Напишите код для заполнения списка или поля со списком или других элементов управления данными из второго набора записей.||
 |[Дополнительно] Написание кода необязательно.||
 |[Дополнительно] Напишите код для добавления и удаления записей.||
 
-Программирование на основе формы является только одним подходом в работе с базой данных. Сведения о приложениях, использующих другой пользовательский интерфейс или нет пользовательского интерфейса, см. в разделе [MFC: Использование классов базы данных с документами и представлениями](../data/mfc-using-database-classes-with-documents-and-views.md) и [MFC: Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md). Об альтернативных подходах к отображению записей базы данных см. в разделе классы [CListView](../mfc/reference/clistview-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).
+Программирование на основе формы является только одним подходом в работе с базой данных. Сведения о приложениях, использующих другой пользовательский интерфейс или отсутствии пользовательского интерфейса, см [. в статье MFC: использование классов баз данных с документами и представлениями](../data/mfc-using-database-classes-with-documents-and-views.md) и [MFC: использование классов баз данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md). Альтернативные подходы к отображению записей базы данных см. в разделе Классы [CListView](../mfc/reference/clistview-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Представления записей (доступ к данным MFC)](../data/record-views-mfc-data-access.md)<br/>
 [Список драйверов ODBC](../data/odbc/odbc-driver-list.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 481c2c0ec28972e9cef8d1103e49afa2037c2393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fa85bc7947b3b446ec7c6d3fdb0d7b62d308fb53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544570"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210331"
 ---
 # <a name="irowsetnotifycp-class"></a>Класс IRowsetNotifyCP
 
@@ -75,7 +75,7 @@ class IRowsetNotifyCP :
 |[Fire_OnRowChange](#onrowchange)|Уведомляет потребителя об изменении, влияющем на строки.|
 |[Fire_OnRowsetChange](#onrowsetchange)|Уведомляет потребителя об изменении, влияющем на весь набор строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `IRowsetNotifyCP` реализует широковещательные функции для уведомления прослушивателей на точке подключения `IID_IRowsetNotify` изменения содержимого набора строк.
 
@@ -139,7 +139,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 См. раздел [IRowsetNotify клиента:: онровсетчанже](/previous-versions/windows/desktop/ms722669(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

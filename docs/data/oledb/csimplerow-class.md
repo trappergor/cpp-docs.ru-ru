@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545567"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211124"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -73,7 +73,7 @@ class CSimpleRow
 |[m_dwRef](#dwref)|Счетчик ссылок на существующий маркер строки.|
 |[m_iRowset](#irowset)|Индекс набора строк, представляющего курсор.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Маркер строки логически является уникальным тегом для результирующей строки. `IRowsetImpl` создает новую `CSimpleRow` для каждой строки, запрашиваемой в [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` также можно заменить собственной реализацией маркера строки, так как это аргумент шаблона по умолчанию для `IRowsetImpl`. Единственным требованием для замены этого класса является то, чтобы класс замены предоставил конструктор, принимающий один параметр типа **Long**.
 
@@ -121,7 +121,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *ировсеткур*<br/>
 окне Индекс текущего набора строк.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Задает для [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) значение *ировсеткур*.
 
@@ -155,7 +155,7 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: 722757b93d3423b02340c382b16e08a31626bc01
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b1f068c928abd0a6656bed0702422d9bda843208
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209510"
 ---
 # <a name="testing-your-provider"></a>Тестирование поставщика
 
@@ -23,6 +23,6 @@ ms.locfileid: "79544540"
 
 1. Выполните OLE DB проверки соответствия (включая проверки соответствия ADO), чтобы отобразить, что поставщик соответствует стандарту уровня 0 для поставщиков OLE DB. (Чтобы получить объяснение уровня 0, выполните поиск **тестов соответствия OLE DB уровня 0** в разделе [инструкции по OLE DBу программиста](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming). Эти тесты и связанная документация входят в состав C++ Visual с пакетом SDK для доступа к данным. Эти тесты также помогают продемонстрировать, что поставщик хорошо работает при статистической обработке другими [поставщиками служб](../../data/oledb/ole-db-resource-pooling-and-services.md) и особенно полезен при изменении или добавлении свойств. Дополнительные сведения о проверках соответствия см. в файле сведений для пакета SDK для доступа к данным, который находится на одном из компакт-дисков Visual Studio.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

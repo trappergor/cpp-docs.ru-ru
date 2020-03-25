@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1136
 ms.assetid: 40c6d909-eb3f-4045-a0fc-4caa2f6db506
-ms.openlocfilehash: 272198c2baea44bb31f075cb09097ef53e92089c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee078fd24bed9efdef9e0c92d82b71a49918759a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184233"
 ---
 # <a name="linker-tools-error-lnk1136"></a>Ошибка средств компоновщика LNK1136
 
 Недопустимый или поврежденный файл
 
-Входной файл имеет поврежденный заголовок или равно нулю или ненормально малый размер.
+Входной файл либо имеет поврежденный заголовок, либо имеет нулевой размер или слишком маленький.
 
-LNK1136 также может быть вызвана, если файл был неправильно определен как дополнительная зависимость.
+LNK1136 также может возникнуть, если файл был неправильно указан как дополнительная зависимость.

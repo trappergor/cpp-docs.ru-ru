@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 8c09ea34c7dabf2cadecad7c76d766c9496f5a5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381363"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201400"
 ---
 # <a name="compiler-error-c3286"></a>Ошибка компилятора C3286
 
-> "*описатель*": у переменной цикла не может иметь любой спецификаторы классов хранения
+> "*спецификатор*": переменная итерации не может содержать спецификаторы класса хранения
 
-Класс хранения не может указываться для переменной итерации. Дополнительные сведения см. в разделе [классы хранения (C++)](../../cpp/storage-classes-cpp.md) и [для каждого из них в](../../dotnet/for-each-in.md).
+Класс хранения не может быть указан в переменной итерации. Дополнительные сведения см. в разделе [классы храненияC++()](../../cpp/storage-classes-cpp.md) и [для каждого, в](../../dotnet/for-each-in.md).
 
 ## <a name="example"></a>Пример
 
-В следующем примере возникает ошибка c3286: и также показано правильное использование.
+В следующем примере создается C3286, а также показывается правильное использование.
 
 ```cpp
 // C3286.cpp
