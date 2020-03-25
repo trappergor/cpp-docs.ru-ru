@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952749"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170193"
 ---
 # <a name="__max"></a>__max
 
@@ -50,9 +50,9 @@ ms.locfileid: "70952749"
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**__max** возвращает больше своих аргументов.
+**__max** возвращает больший из своих аргументов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Макрос **__max** сравнивает два значения и возвращает значение больше единицы. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.
 
@@ -68,7 +68,7 @@ ms.locfileid: "70952749"
 
 Дополнительные сведения см. в приведенных ниже примерах для функции [__min](min.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

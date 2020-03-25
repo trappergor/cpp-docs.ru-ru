@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172039"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Объявляет *закрепляющий указатель*, который используется только со средой CLR.
 
@@ -53,7 +53,7 @@ ms.locfileid: "65516499"
 *initializer*<br/>
 Член ссылочного типа, элемент управляемого массива или любой другой объект, который можно присвоить собственному указателю.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **pin_ptr** представляет собой надмножество функциональности собственного указателя. Таким образом, все, что можно присвоить собственному указателю, можно также присвоить указателю **pin_ptr**. Внутреннему указателю разрешается выполнять тот же набор операций, что и собственному указателю, включая сравнение и вычисления с указателями.
 
@@ -89,7 +89,7 @@ ms.locfileid: "65516499"
 
 Дополнительные сведения о внутренних указателях см. в разделе [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md).
 
-Дополнительные сведения о закрепляющих указателях см. в статьях [How to: Pin Pointers and Arrays](how-to-pin-pointers-and-arrays.md) (Руководство по закреплению указателей и массивов) и [How to: Declare Pinning Pointers and Value Types](how-to-declare-pinning-pointers-and-value-types.md) (Руководство по объявлению закрепляющих указателей и типов значений).
+Дополнительные сведения о закреплении указателей см. [в разделе как закреплять указатели и массивы](how-to-pin-pointers-and-arrays.md) и [как объявлять закрепленные указатели и типы значений](how-to-declare-pinning-pointers-and-value-types.md).
 
 ### <a name="requirements"></a>Требования
 

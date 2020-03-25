@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC1208
 ms.assetid: 7dacc4ec-3ebd-49b3-ba4c-1a2982bac720
-ms.openlocfilehash: 5562505ff56dcbd2a8588aa161826da83c26d0ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2663f586934d7877a827d3a6f6357d3b52071c24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374223"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172858"
 ---
 # <a name="resource-compiler-fatal-error-rc1208"></a>Неустранимая ошибка компилятора ресурсов RC1208
 
-имеет входной файл. Расширение RES
+входной файл имеет. Расширение RES
 
-. Расширение RES используется для вывода компилятора ресурсов. . Расширения версии-КАНДИДАТА следует использовать для компилятора ресурсов сценариев.
+Тот. Для вывода компилятора ресурсов используется расширение RES. Тот. Для скриптов компилятора ресурсов следует использовать расширение RC.

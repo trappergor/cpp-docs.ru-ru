@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171980"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI и C++/CX)
 
@@ -122,7 +122,7 @@ modifier property type default[index];
 *index_list*<br/>
 Разделенный запятыми список из одного или нескольких индексов, указанных в квадратных скобках (оператор индекса, ([])). Для каждого индекса укажите тип и (необязательно) идентификатор, который может использоваться в теле метода свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 В первом примере синтаксиса показано *простое свойство*, которое неявно объявляет методы `set` и `get`. Компилятор автоматически создает закрытое поле для хранения значения свойства.
 
@@ -210,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

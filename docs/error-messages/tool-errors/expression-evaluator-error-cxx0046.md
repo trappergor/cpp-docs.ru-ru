@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0046
 - CAN0046
 ms.assetid: a76e657b-c018-415b-b426-ce9e72eb645d
-ms.openlocfilehash: ce139867897852f35cf4758e7105c8740ed5de1e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 2e63def8388a5cfdef195fb31911abafe83f9c09
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184948"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>Ошибка вычислителя выражений CXX0046
 
-список аргументов, необходимых для функции-члена
+для функции элемента требуется список аргументов
 
-Выражение функции-члена, но не был указан фактических параметров.
+Выражение, именуемое функцией-членом, но не определяющее фактические параметры.
 
-Эта ошибка идентична ошибке CAN0046.
+Эта ошибка идентична CAN0046.
