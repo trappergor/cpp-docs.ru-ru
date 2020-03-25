@@ -1,36 +1,36 @@
 ---
-title: Практическое руководство. Активация и использование компонента среда выполнения Windows с помощью WRL
+title: Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 7f49c1362bea12576df6039b9e9f0b455cb4fae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213958"
 ---
-# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среда выполнения Windows с помощью WRL
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
 
 В этом документе показано, как использовать библиотеку C++ шаблонов среда выполнения Windows (WRL) для инициализации среда выполнения Windows и активации и использования компонента Среда выполнения Windows.
 
 Для использования компонента необходимо получить указатель интерфейса на тип, который реализуется компонентом. А так как базовая технология среда выполнения Windows является моделью COM, необходимо следовать правилам COM для обслуживания экземпляра типа. Например, необходимо поддерживать *счетчик ссылок* , который определяет, когда тип удаляется из памяти.
 
-Чтобы упростить использование среда выполнения Windows, среда выполнения Windows C++ библиотека шаблонов предоставляет шаблон смарт-указателя [ComPtr\<T >](comptr-class.md), который автоматически выполняет подсчет ссылок. При `ComPtr<`объявлении переменной укажите *идентификатор* *интерфейса-Name* `>` . Для обращения к членам интерфейса примените оператор доступа к членам класса в виде стрелки (`->`) к идентификатору.
+Чтобы упростить использование среда выполнения Windows, среда выполнения Windows C++ библиотека шаблонов предоставляет шаблон смарт-указателя [ComPtr\<t >](comptr-class.md), который автоматически выполняет подсчет ссылок. При объявлении переменной укажите `ComPtr<`*Interface-name*`>` *идентификатор*. Для обращения к членам интерфейса примените оператор доступа к членам класса в виде стрелки (`->`) к идентификатору.
 
 > [!IMPORTANT]
 > При вызове функции интерфейса всегда проверяйте возвращаемое значение HRESULT.
 
 ## <a name="activating-and-using-a-windows-runtime-component"></a>Активация и использование компонента среды выполнения Windows
 
-В следующих шагах используется `Windows::Foundation::IUriRuntimeClass` интерфейс, чтобы продемонстрировать, как создать фабрику активации для Среда выполнения Windows компонента, создать экземпляр этого компонента и получить значение свойства. В них также показано, как инициализировать среда выполнения Windows. Полный пример приведен ниже.
+В следующих шагах используется интерфейс `Windows::Foundation::IUriRuntimeClass`, чтобы продемонстрировать, как создать фабрику активации для компонента среда выполнения Windows, создать экземпляр этого компонента и получить значение свойства. В них также показано, как инициализировать среда выполнения Windows. Полный пример приведен ниже.
 
 > [!IMPORTANT]
-> Хотя обычно библиотека шаблонов среда выполнения Windows C++ используется в приложении универсальная платформа Windows (UWP), в этом примере для иллюстрации используется консольное приложение. Такие функции, `wprintf_s` как, недоступны в приложении UWP. Дополнительные сведения о типах и функциях, которые можно использовать в приложении UWP, см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальная платформа Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) и [Win32 и com для приложений UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
+> Хотя обычно библиотека шаблонов среда выполнения Windows C++ используется в приложении универсальная платформа Windows (UWP), в этом примере для иллюстрации используется консольное приложение. Такие функции, как `wprintf_s`, недоступны в приложении UWP. Дополнительные сведения о типах и функциях, которые можно использовать в приложении UWP, см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальная платформа Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) и [Win32 и com для приложений UWP](/uwp/win32-and-com/win32-and-com-for-uwp-apps).
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Активация и использование компонента среды выполнения Windows
 
-1. Включить (`#include`) все необходимые среда выполнения Windows, библиотеку C++ шаблонов среда выполнения Windows или C++ заголовки стандартной библиотеки.
+1. Включите (`#include`) все необходимые среда выполнения Windows, среда выполнения Windows C++ библиотека шаблонов или C++ заголовки стандартной библиотеки.
 
    [!code-cpp[wrl-consume-component#2](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]
 
@@ -40,15 +40,15 @@ ms.locfileid: "70926063"
 
    [!code-cpp[wrl-consume-component#3](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]
 
-   Во второй инструкции оператор [RoInitializeWrapper:: HRESULT](roinitializewrapper-class.md#hresult) возвращает `HRESULT` `Windows::Foundation::Initialize`из вызова.
+   Во второй инструкции оператор [RoInitializeWrapper:: HRESULT](roinitializewrapper-class.md#hresult) возвращает `HRESULT` из вызова `Windows::Foundation::Initialize`.
 
-3. Создайте *фабрику активации* для `ABI::Windows::Foundation::IUriRuntimeClassFactory` интерфейса.
+3. Создайте *фабрику активации* для интерфейса `ABI::Windows::Foundation::IUriRuntimeClassFactory`.
 
    [!code-cpp[wrl-consume-component#4](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]
 
-   Среда выполнения Windows использует полные имена для указания типов. `RuntimeClass_Windows_Foundation_Uri` Параметр — это строка, предоставляемая среда выполнения Windows и содержащая имя требуемого класса среды выполнения.
+   Среда выполнения Windows использует полные имена для указания типов. Параметр `RuntimeClass_Windows_Foundation_Uri` — это строка, предоставляемая среда выполнения Windows и содержащая имя требуемого класса среды выполнения.
 
-4. Инициализируйте переменную [Microsoft:: WRL:: оболочки:: HString](hstring-class.md) , которая представляет универсальный `"https://www.microsoft.com"`код ресурса (URI).
+4. Инициализируйте переменную [Microsoft:: WRL:: оболочки:: HString](hstring-class.md) , которая представляет универсальный код ресурса (URI) `"https://www.microsoft.com"`.
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 
@@ -74,10 +74,10 @@ ms.locfileid: "70926063"
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Чтобы скомпилировать код, скопируйте его и вставьте в проект Visual Studio или вставьте в файл с именем `wrl-consume-component.cpp` , а затем выполните следующую команду в окне командной строки Visual Studio.
+Чтобы скомпилировать код, скопируйте его и вставьте в проект Visual Studio или вставьте в файл с именем `wrl-consume-component.cpp` а затем выполните следующую команду в окне командной строки Visual Studio.
 
 `cl.exe wrl-consume-component.cpp runtimeobject.lib`
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Библиотека шаблонов C++ среды выполнения Windows (WRL)](windows-runtime-cpp-template-library-wrl.md)

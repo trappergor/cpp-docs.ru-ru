@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW4004
 ms.assetid: 596b6a89-9ce7-4ba7-bdcb-e8054c7efafa
-ms.openlocfilehash: bafd1084a665fc656fe184064a48e5fffc61c957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca0fb271a5ab43994ec37cc8d59c33877903f6e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182348"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>Предупреждение компилятора ресурсов RW4004
 
@@ -21,4 +21,4 @@ ms.locfileid: "62346084"
 
 Это предупреждение позволяет продолжить работу, но имейте в виду, что созданные сочетания клавиш могут не соответствовать указанной строке. (акселераторы VIRTKEY используют другие коды клавиш, чем акселераторы ASCII).
 
-Если строковые литералы являются синтаксически правильными, вы можете только обеспечить получение нужных данных с помощью сочетаний **VK_\* #define** в WINDOWS.h.
+Хотя строковые литералы являются синтаксически допустимыми, вы можете только убедиться, что вы получаете нужный ускоритель, используя значения **VK_\* #define** в Windows. h.

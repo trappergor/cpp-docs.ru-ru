@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - CVT4001
 ms.assetid: 39c13bc2-92fa-4d79-8171-039b27329dcc
-ms.openlocfilehash: 7faf2fa7762e04aa9dc94574c82b514a5ba9bdf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9c6f46cfb874b8f3613879c89b3e3bbca23b1ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406188"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196434"
 ---
 # <a name="cvtres-warning-cvt4001"></a>Предупреждение CVTRES CVT4001
 
-> Тип компьютера не задан; предполагается, что *типа*
+> тип компьютера не указан. предполагаемый *тип*
 
-CVTRES не удалось найти спецификацию компьютера. Предполагается, что тип данного компьютера. Если значение по умолчанию неверен, перезапустите CVTRES, используя параметр/Machine.
+CVTRES не удалось найти спецификацию компьютера. Предполагается, что указанный тип компьютера. Если значение по умолчанию неверно, перезапустите CVTRES с параметром/MACHINE.

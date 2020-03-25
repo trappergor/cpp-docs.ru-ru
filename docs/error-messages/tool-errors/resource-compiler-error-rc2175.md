@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2175
 ms.assetid: 3864a371-dba8-41a7-962c-e792709774f1
-ms.openlocfilehash: d8ddd8063bc614561d5b4657df092b69d7cffe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10af91f56efd2e10c9ce8ab95c2aaa2694d19d17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396818"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190733"
 ---
 # <a name="resource-compiler-error-rc2175"></a>Ошибка компилятора ресурсов RC2175
 
-Имя файла ресурсов не в формате 3.00
+имя файла ресурсов не находится в формате 3,00
 
-Указанный ресурс используется более ранний формат версии 3.00. Файл ресурса необходимо преобразовать или создать заново, используя формат версии 3.00 или более поздней версии.
+Указанный ресурс использовал формат, предшествующий версии 3,00. Файл ресурсов необходимо преобразовать или создать заново, используя формат версии 3,00 или более поздней.

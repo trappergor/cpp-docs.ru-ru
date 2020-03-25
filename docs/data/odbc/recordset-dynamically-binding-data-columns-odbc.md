@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 5647d0fec4c2add57329ad09a2374953dcd118fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456d999a056abc4c15f2dcf3b8774dfc86182272
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079843"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212931"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Набор записей. Динамическая привязка столбцов данных (ODBC)
 
@@ -171,7 +171,7 @@ RFX_Text( pFX,
 
 Когда платформа вызывает `DoFieldExchange` во время процесса `Open` с целью привязки столбцов к набору записей, вызовы RFX привязывают статические столбцы. Затем цикл вызывает функции RFX для динамических столбцов.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Работа с большими элементами данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

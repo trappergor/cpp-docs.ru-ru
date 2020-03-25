@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255031"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184207"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Ошибка средств компоновщика LNK1141
 
 Сбой при сборке файла экспорта
 
-[ССЫЛКА](../../build/reference/linking.md) не удалось создать файл экспорта (EXP).
+[Link](../../build/reference/linking.md) не удалось построить файл экспорта (exp).
 
-Причины этой ошибки включают системных проблем, таких как недостаточно памяти и ошибки синтаксиса в параметры или операторов определения модуля.
+Причиной этой ошибки являются системные проблемы, такие как нехватка памяти и синтаксические ошибки в инструкциях или операторах определения модуля.
 
-Эта ошибка предшествует другая ошибка, которая предоставляет дополнительную информацию.
+Этой ошибке предшествует другая ошибка, которая предоставляет дополнительные сведения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [EXP-файлы в качестве входных файлов компоновщика](../../build/reference/dot-exp-files-as-linker-input.md)

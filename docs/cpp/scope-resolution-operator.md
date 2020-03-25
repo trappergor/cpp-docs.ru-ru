@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267398"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178890"
 ---
 # <a name="scope-resolution-operator-"></a>Оператор разрешения области: ::
 
-Оператор разрешения области **::** используется для выявления и устранения неоднозначности идентификаторов, которые используются в разных областях. Дополнительные сведения об области см. в разделе [область](../cpp/scope-visual-cpp.md).
+Оператор разрешения области **::** используется для идентификации и устранения неоднозначности идентификаторов, используемых в разных областях. Дополнительные сведения об области действия см. в разделе [Scope](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ enum class :: identifier
 enum struct :: identifier
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `identifier` может быть переменной, функцией или значением перечисления.
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>С ограниченными перечислениями
 
-Оператор разрешения области также используется со значениями ограниченного перечисления [объявления перечислений](../cpp/enumerations-cpp.md), как показано в следующем примере:
+Оператор разрешения с заданной областью также используется со значениями [объявлений перечисления](../cpp/enumerations-cpp.md)в области перечисления, как показано в следующем примере:
 
 ```cpp
 enum class EnumA{
@@ -164,7 +164,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Встроенные операторы C++, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Пространства имен](../cpp/namespaces-cpp.md)

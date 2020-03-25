@@ -9,23 +9,23 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-ms.openlocfilehash: 3dc6706f945a5a7b0aa21c9ced8017d0a9905fb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29626d9ce98ac5bcd3889ee9417298ddfe3d7f1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329768"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212489"
 ---
 # <a name="work-with-odbc-database-connections"></a>Работа с подключениями базы данных ODBC
 
-В следующих разделах для подключения к источникам данных ODBC.
+В следующих разделах объясняется, как подключиться к источникам данных ODBC.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
-- [Управление подключениями базы данных ODBC](../../data/odbc/data-source-managing-connections-odbc.md)
+- [Управление подключениями к базам данных ODBC](../../data/odbc/data-source-managing-connections-odbc.md)
 
-- [Программная настройка источника данных ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
+- [Настройка источника данных ODBC программными средствами](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)

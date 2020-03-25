@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: a421a7fd7fa0817c74dac66946e28928b2ad82dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155089"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180593"
 ---
-# <a name="comerrorhelpcontext"></a>_com_error::HelpContext
+# <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -27,14 +27,14 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает результат `IErrorInfo::GetHelpContext` для `IErrorInfo` записанного в `_com_error` объекта. Если нет `IErrorInfo` объекта записан, возвращается нулевое значение.
+Возвращает результат `IErrorInfo::GetHelpContext` для объекта `IErrorInfo`, записанного в объекте `_com_error`. Если объект `IErrorInfo` не записан, возвращается ноль.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Любые сбои при вызове `IErrorInfo::GetHelpContext` метод игнорируется.
+Любой сбой при вызове метода `IErrorInfo::GetHelpContext` игнорируется.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс _com_error](../cpp/com-error-class.md)

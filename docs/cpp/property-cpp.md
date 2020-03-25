@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179306"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -28,9 +28,9 @@ ms.locfileid: "62301491"
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Когда компилятор обнаруживает данные-член с этим атрибутом в правой части оператора выбора члена (»**.**«или»**->**»), она преобразует операцию в `get` или `put` функции, в зависимости от того, является ли такое выражение l значением или r-значение. В более сложных контекстах, например "`+=`«, перезапись выполняется с использованием обеих `get` и `put`.
+Когда компилятор видит элемент данных, объявленный с этим атрибутом, справа от оператора выбора члена (" **.** " или " **->** "), он преобразует операцию в `get` или функцию `put` в зависимости от того, является ли это выражение l-значением или r-значением. В более сложных контекстах, таких как "`+=`", перезапись выполняется с помощью `get` и `put`.
 
 Этот атрибут также может использоваться при объявлении пустого массива в определении класса или структуры. Пример:
 
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [__declspec](../cpp/declspec.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

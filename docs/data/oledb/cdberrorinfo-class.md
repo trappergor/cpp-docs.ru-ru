@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212041"
 ---
 # <a name="cdberrorinfo-class"></a>Класс CDBErrorInfo
 
@@ -72,7 +72,7 @@ class CDBErrorInfo
 |[GetErrorParameters](#geterrorparameters)|Вызывает [IErrorRecords:: жетеррорпараметерс](/previous-versions/windows/desktop/ms715793(v=vs.85)) для возврата параметров ошибки.|
 |[жетерроррекордс](#geterrorrecords)|Возвращает записи об ошибках для указанного объекта.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Этот интерфейс возвращает пользователю одну или несколько записей об ошибках. Сначала вызовите метод [CDBErrorInfo:: жетерроррекордс](../../data/oledb/cdberrorinfo-geterrorrecords.md) , чтобы получить количество записей об ошибках. Затем вызовите одну из функций доступа, например [CDBErrorInfo:: жеталлерроринфо](../../data/oledb/cdberrorinfo-getallerrorinfo.md), чтобы получить сведения об ошибке для каждой записи.
 
@@ -118,7 +118,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 Значение S_OK, если операция завершилась успешно. Другие возвращаемые значения см. в разделе [IErrorRecords:: жетерроринфо](/previous-versions/windows/desktop/ms711230(v=vs.85)) в *справочнике программиста OLE DB* .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Выходное значение *пбстрдескриптион* получается внутренне путем вызова `IErrorInfo::GetDescription`, который ЗАДАЕТ значение null, если языковой стандарт не поддерживается, или если выполняются оба следующих условия.
 
@@ -231,11 +231,11 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если необходимо проверить интерфейс, из которого нужно получить сведения об ошибке, используйте первую форму функции. В противном случае используйте вторую форму.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [дбвиевер](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

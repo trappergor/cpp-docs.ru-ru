@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC1018
 ms.assetid: bb1d2efd-6898-412f-bb03-9ff94c54e4dc
-ms.openlocfilehash: 02e37ae2f48a6d87da128078d0e18a76f400817f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50fcd8130d1737180e5c1b7972b78e1298084618
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297532"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173079"
 ---
 # <a name="resource-compiler-fatal-error-rc1018"></a>Неустранимая ошибка компилятора ресурсов RC1018
 
-Непредвиденный «#elif»
+непредвиденный "#elif"
 
-`#elif` Директива не отображается в `#if`, **#ifdef**, или **#ifndef** построения.
+Директива `#elif` не появилась в конструкции `#if`, **#ifdef**или **#ifndef** .
 
-Убедитесь, что имеется `#if`, **#ifdef**, или **#ifndef** фактически перед этой инструкцией.
+Убедитесь, что перед этим оператором действует `#if`, **#ifdef**или **#ifndef** .

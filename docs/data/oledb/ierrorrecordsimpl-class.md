@@ -63,12 +63,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: dd9e1f39d30dc8289b0236bf655c87da04b14de6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 40ac0b248e1e90dae29a787d59f6ded9581aca70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546053"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210604"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Класс IErrorRecordsImpl
 
@@ -321,7 +321,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 CAtlArray< RecordClass > m_rgErrors;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

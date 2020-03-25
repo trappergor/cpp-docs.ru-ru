@@ -1,21 +1,21 @@
 ---
-title: двойной (атрибут COM C++)
+title: Dual (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168217"
 ---
 # <a name="dual"></a>dual
 
-Помещает интерфейс в IDL-файл как сдвоенный интерфейс.
+Помещает интерфейс в IDL-файл в виде сдвоенного интерфейса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,13 +23,13 @@ ms.locfileid: "62409685"
 [dual]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Когда **двойной** интерфейсу предшествует атрибут C++, это вызывает интерфейс необходимо поместить в блок library созданного IDL-файла.
+Когда **сдвоенный** C++ атрибут предшествует интерфейсу, он приводит к помещению интерфейса в блок библиотеки в созданном IDL-файле.
 
 ## <a name="example"></a>Пример
 
-В следующем коде приведен, использующий блок атрибутов **двойной** до определения интерфейса:
+Следующий код является блоком атрибута, который использует **Двойное** перед определением интерфейса:
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -60,13 +60,13 @@ __interface IStatic : IDispatch
 |||
 |-|-|
 |**Применение**|**interface**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`dispinterface`|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Список атрибутов по использованию](attributes-by-usage.md)<br/>

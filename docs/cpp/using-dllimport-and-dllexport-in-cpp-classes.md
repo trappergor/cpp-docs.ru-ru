@@ -13,16 +13,16 @@ helpviewer_keywords:
 - dllexport attribute [C++]
 - dllexport attribute [C++], classes [C++]
 ms.assetid: 8d7d1303-b9e9-47ca-96cc-67bf444a08a9
-ms.openlocfilehash: b42ba7c1a88a4de28eb3385bbf6cad068abf1944
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 7d67660fa3b5d57c56d02d5526f0a9ea294a8eef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857233"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187834"
 ---
 # <a name="using-dllimport-and-dllexport-in-c-classes"></a>Использование dllimport и dllexport в классах C++
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Классы можно объявлять C++ с атрибутом **DllImport** или **dllexport** . Эти формы подразумевают, что импортирован или экспортирован весь класс. Классы, которые можно экспортировать таким образом, называются экспортируемыми классами.
 
@@ -39,21 +39,21 @@ class DllExport C {
 
 Обратите внимание, что явное использование атрибутов **DllImport** и **dllexport** для членов экспортируемого класса запрещено.
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>Классы dllexport
+##  <a name="dllexport-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bdllexportclasses"></a>Классы dllexport
 
 При объявлении класса **dllexport**все его функции-члены и статические элементы данных экспортируются. Необходимо предоставить определения всех таких членов в одной программе. В противном случае возникает ошибка компоновщика. Единственным исключением из этого правила являются чистые виртуальные функции, для которых не требуется предоставлять явные определения. Однако, поскольку деструктор абстрактного класса всегда вызывается деструктором базового класса, чистые виртуальные деструкторы должны всегда предоставлять определение. Обратите внимание, что те же правила применяются и к неэкспортируемым классам.
 
 При экспорте данных типа класса или функций, которые возвращают классы, не забудьте экспортировать класс.
 
-##  <a name="_pluslang_dllexport_classesdllexportclasses"></a>Классы dllimport
+##  <a name="dllimport-classes"></a><a name="_pluslang_dllexport_classesdllexportclasses"></a>Классы dllimport
 
 При объявлении класса **DllImport**импортируются все его функции-члены и статические элементы данных. В отличие от поведения **DllImport** и **dllexport** для типов, не применяющих классы, статические элементы данных не могут указывать определение в той же программе, в которой определен класс **DllImport** .
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>Наследование и экспортируемые классы
+##  <a name="inheritance-and-exportable-classes"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2binheritanceandexportableclasses"></a>Наследование и экспортируемые классы
 
 Все базовые классы экспортируемого класса должны быть экспортируемыми. В противном случае создается предупреждение компилятора. Кроме того, все доступные члены, которые также являются классами, должны быть доступными для экспорта. Это правило позволяет классу **dllexport** наследовать от класса **DllImport** , а класс **DllImport** наследуется от класса **dllexport** (хотя второй не рекомендуется). Как правило, все, что доступно клиенту библиотеки DLL (в соответствии с правилами доступа C++), должно быть частью экспортируемого интерфейса. Сюда входят закрытые данные-члены, на которые ссылаются встраиваемые функции.
 
-##  <a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>Импорт и экспорт выборочных участников
+##  <a name="selective-member-importexport"></a><a name="_pluslang_using_dllimport_and_dllexport_in_c2b2bselectivememberimportexport"></a>Импорт и экспорт выборочных участников
 
 Поскольку функции-члены и статические данные в классе неявно имеют внешнюю компоновку, их можно объявить атрибутом **DllImport** или **dllexport** , если только не экспортируется весь класс. Если импортируется или экспортируется весь класс, явное объявление функций-членов и данных в качестве **DllImport** или **dllexport** запрещено. Если объявить статический элемент данных в определении класса как **dllexport**, определение должно выполняться где-то в той же программе (как и с внешней компоновкой некласса).
 
@@ -75,6 +75,6 @@ class DllExport C {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [dllexport, dllimport](../cpp/dllexport-dllimport.md)

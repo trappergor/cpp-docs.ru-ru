@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210994"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Выбор подходящего метода доступа
 
@@ -25,12 +25,12 @@ ms.locfileid: "80079654"
 |Класс методов доступа|Привязка|Параметр|Комментарий|
 |--------------------|-------------|---------------|-------------|
 |`CAccessor`|Создайте запись пользователя с макросами COLUMN_ENTRY. Макросы привязывают элемент данных в этой записи к методу доступа. Когда набор строк создан, столбцы не могут быть несвязанными.|Да, с помощью записи макроса PARAM_MAP. После привязки параметры не могут оставаться несвязанными.|Самый быстрый метод доступа благодаря небольшому количеству кода.|
-|`CDynamicAccessor`|Автоматически.|Нет.|Полезен, если вы не знаете тип данных в наборе строк.|
+|`CDynamicAccessor`|Автоматический.|Нет.|Полезен, если вы не знаете тип данных в наборе строк.|
 |`CDynamicParameterAccessor`|Автоматический, но может быть [переопределен](../../data/oledb/overriding-a-dynamic-accessor.md).|Да, если поставщик поддерживает `ICommandWithParameters`. Автоматическая привязка параметров.|Медленнее, чем `CDynamicAccessor`, но полезен для вызова универсальных хранимых процедур.|
-|`CDynamicStringAccessor[A,W]`|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных.|
-|`CManualAccessor`|Вручную с помощью `AddBindEntry`.|Вручную с помощью `AddParameterEntry`.|Быстрый; параметры и столбцы привязываются только один раз. Вы определяете тип данных для использования. (Пример см. в разделе пример [дбвиевер](https://github.com/Microsoft/VCSamples) .) Требуется больше кода, чем `CDynamicAccessor` или `CAccessor`. Больше напоминает прямой вызов OLE DB.|
-|`CXMLAccessor`|Автоматически.|Нет.|Извлекает данные из хранилища данных в виде строковых данных и форматирует их как данные с XML-тегами.|
+|`CDynamicStringAccessor[A,W]`|Автоматический.|Нет.|Извлекает данные из хранилища данных в виде строковых данных.|
+|`CManualAccessor`|Вручную с помощью `AddBindEntry`.|Вручную с помощью `AddParameterEntry`.|Быстрый; параметры и столбцы привязываются только один раз. Вы определяете тип данных для использования. (Пример см. в разделе пример [дбвиевер](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .) Требуется больше кода, чем `CDynamicAccessor` или `CAccessor`. Больше напоминает прямой вызов OLE DB.|
+|`CXMLAccessor`|Автоматический.|Нет.|Извлекает данные из хранилища данных в виде строковых данных и форматирует их как данные с XML-тегами.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Использование методов доступа](../../data/oledb/using-accessors.md)

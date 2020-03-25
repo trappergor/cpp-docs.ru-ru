@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375071"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203441"
 ---
 # <a name="fatal-error-c1209"></a>Неустранимая ошибка C1209
 
@@ -23,4 +23,4 @@ ms.locfileid: "62375071"
 
 Чтобы устранить ошибку C1209, установите среду CLR, поставляемую вместе с используемым компилятором.
 
-Дополнительные сведения см. в разделе [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).
+Дополнительные сведения см. в разделе [дружественныеC++сборки ()](../../dotnet/friend-assemblies-cpp.md).

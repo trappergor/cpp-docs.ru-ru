@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214231"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance - функция
 
-Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.
+Регистрирует и извлекает экземпляр указанного типа, определенного в указанном ИДЕНТИФИКАТОРе класса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,24 +32,24 @@ inline HRESULT ActivateInstance(
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Типа, подлежащего активации.
+Тип для активации.
 
-*activatableClassId*<br/>
-Имя идентификатора класса, определяет параметр *T*.
+*Запись*<br/>
+Имя идентификатора класса, определяющего параметр *T*.
 
-*экземпляр*<br/>
-После завершения операции, ссылку на экземпляр *T*.
+*instance*<br/>
+По завершении этой операции ссылка на экземпляр *T*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если выполнение прошло успешно; в противном случае ошибку HRESULT, которые указывают на причину ошибки.
+S_OK в случае успеха; в противном случае возвращается ошибка HRESULT, указывающая причину ошибки.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** client.h
 
-**Пространство имен:** Windows::Foundation
+**Пространство имен:** Windows:: Foundation
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Windows::Foundation](windows-foundation-namespace.md)

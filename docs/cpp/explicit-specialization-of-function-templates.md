@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179995"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Явная специализация шаблонов функций
 
@@ -23,7 +23,7 @@ ms.locfileid: "62184279"
 template<> void MySwap(double a, double b);
 ```
 
-Это объявление позволяет определить другую функцию для **двойные** переменные. Подобно функциям не являющихся шаблонами, стандартные преобразования типов (например, преобразование типа **float** для **двойные**) применяются.
+Это объявление позволяет определить другую функцию для переменных **типа Double** . Как и в случае с функциями, не являющимися шаблонами, применяются преобразования стандартных типов (например, повышение переменной типа **float** на **Double**).
 
 ## <a name="example"></a>Пример
 
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны функций](../cpp/function-templates.md)

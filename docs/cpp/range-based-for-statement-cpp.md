@@ -2,12 +2,12 @@
 title: Основанное на диапазоне выражение for (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: af9811fd707d4dbc28158dba3b6b3fbfcc43e4fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 504f177cf68b978642f15ba4799cab8cb517f447
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188354"
 ---
 # <a name="range-based-for-statement-c"></a>Основанное на диапазоне выражение for (C++)
 
@@ -20,7 +20,7 @@ for ( for-range-declaration : expression )
    statement
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте оператор на основе диапазона **for** для создания циклов, которые должны выполняться с помощью диапазона, который определен как любой объект, по которому можно выполнить итерацию, например `std::vector`или любую другую C++ последовательность стандартной библиотеки, диапазон которой определяется `begin()` и `end()`. Имя, объявленное в `for-range-declaration` части, является локальным для оператора **for** и не может быть повторно объявлено в `expression` или `statement`. Обратите внимание, что ключевое слово [Auto](../cpp/auto-cpp.md) является предпочтительным в `for-range-declaration` части инструкции.
 
@@ -106,7 +106,7 @@ end of vector test
 
 - Для всех остальных итераторов в них используются поиск, зависящий от аргументов (`begin()` и `end()`).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [auto](../cpp/auto-cpp.md)<br/>
 [Операторы итерации](../cpp/iteration-statements-cpp.md)<br/>

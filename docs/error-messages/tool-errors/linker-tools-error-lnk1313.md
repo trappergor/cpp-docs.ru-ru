@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160436"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194867"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Ошибка средств компоновщика LNK1313
 
 > обнаружен модуль ijw/native, невозможно скомпоновать с чистыми модулями
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Текущая версия Visual C++ не поддерживает компоновку собственных или смешанных управляемых или собственных OBJ-файлов с OBJ-файлы, скомпилированные с использованием **/CLR: pure**.
+Текущая версия Visual C++ C++ не поддерживает связывание машинных или смешанных управляемых и собственных OBJ-файлов с файлами obj, скомпилированными с **параметром/clr: pure**.
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: pure** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
 ## <a name="example"></a>Пример
 

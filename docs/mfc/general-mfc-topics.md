@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: 5f4c75e3f8bd8f7d32109cf92465dfa6e5aba6ed
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 571be8300f46ceecdc65df92d35c731bec96a92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095852"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169989"
 ---
 # <a name="general-mfc-topics"></a>Общие разделы по MFC
 
@@ -21,9 +21,9 @@ ms.locfileid: "71095852"
 
 Платформа MFC — это мощная система, позволяющая выполнять задачи построения на основе разработок опытных программистов для Windows. MFC сокращает время разработки, делает код более мобильным, обеспечивает масштабную поддержку с сохранением свободы и гибкости программирования и предоставляет простой доступ к тяжело программируемым элементам пользовательского интерфейса и технологиям, таким как технология Active, OLE и интернет-программирование. Более того, MFC упрощает программирование баз данных с помощью объектов DAO (теперь устарело) и программного программирования (ODBC) и сетевых средств через сокеты Windows. MFC упрощает программирование таких компонентов, как страницы свойств («диалоговые окна с вкладками»), окна предварительного просмотра перед печатью и плавающие настраиваемые панели инструментов.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
-`MFC Samples`, которые предоставляются в [визуальных C++ примерах](../overview/visual-cpp-samples.md)
+[Примеры MFC](../overview/visual-cpp-samples.md#mfc-samples)
 
 [Использование файлов с исходным кодом MFC](../mfc/using-the-mfc-source-files.md)
 
@@ -33,7 +33,7 @@ ms.locfileid: "71095852"
 
 [Сборка в платформе](../mfc/building-on-the-framework.md)
 
-[CWinApp. Класс приложений](../mfc/cwinapp-the-application-class.md)
+[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
 
 [Шаблоны документов и процесс создания документа/представления](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -55,6 +55,6 @@ ms.locfileid: "71095852"
 
 Дополнительные сведения о ATL см. в разделе [Справочник по библиотеке активных шаблонов](../atl/atl-class-overview.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Работа с объектами окон](../mfc/working-with-window-objects.md)

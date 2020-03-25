@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172624"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Целевые объекты атрибутов (C++/CLI и C++/CX)
 
@@ -250,7 +250,7 @@ ms.locfileid: "65516149"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Description
 
 В этом примере показано задание нескольких целевых объектов.
 
@@ -272,6 +272,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пользовательские атрибуты](user-defined-attributes-cpp-component-extensions.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: a54dbc10e80e19f744bb58c23639a4376156d2e7
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d281f801349527a065f4975b7cc3d88888f88367
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213035"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Обмен полями записей. Использование функций RFX
 
@@ -61,7 +61,7 @@ ms.locfileid: "80077094"
 
 Дополнительные сведения см. в документации по функциям RFX в разделе [макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md) в *справочнике по библиотеке классов*. Сведения о том, C++ как типы данных сопоставляются с ТИПАМИ данных SQL, см. в таблице типы данных SQL C++ ANSI, сопоставленные с ТИПАМИ данных [SQL: SQL и C++ типы данных (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Обмен данными с полями записей. Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>

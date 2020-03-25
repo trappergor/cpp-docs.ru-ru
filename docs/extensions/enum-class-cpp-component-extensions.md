@@ -3,12 +3,12 @@ title: enum class (C++/CLI и C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516599"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182140"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI и C++/CX)
 
@@ -16,7 +16,7 @@ ms.locfileid: "65516599"
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 C++/CX и C++/CLI поддерживают **открытый класс перечисления** и **закрытый класс перечисления**, которые схожи со стандартным **классом перечисления** C++, но с добавлением спецификатора доступа. В **/CLR** тип **класса перечисления** C++11 разрешен, но будет создавать предупреждение C4472, предназначенное для того, чтобы убедиться, что вам действительно требуется тип перечисления стандарта ISO, а не типы C++/CX или C++/CLI. Дополнительные сведения о ключевом слове стандарта ISO C++ **enum** см. в статье [Перечисления (C++)](../cpp/enumerations-cpp.md).
 
@@ -53,11 +53,11 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *var*<br/>
 (Необязательно) Имя переменной типа перечисления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Дополнительные сведения и примеры см. в разделе [Перечисления](../cppcx/enums-c-cx.md).
 
-Обратите внимание, что компилятор выводит сообщения об ошибках, если константное выражение, задающее значение перечислителя, не может быть представлено *underlying-type*.  Однако компилятор не сообщает об ошибке для значения, недопустимого для базового типа. Например:
+Обратите внимание, что компилятор выводит сообщения об ошибках, если константное выражение, задающее значение перечислителя, не может быть представлено *underlying-type*.  Однако компилятор не сообщает об ошибке для значения, недопустимого для базового типа. Пример:
 
 - Если тип *underlying-type* числовой и перечислитель определяет максимальное значение для этого типа, то нельзя представить значение следующего неявно указанного перечисления.
 
@@ -97,7 +97,7 @@ accessenum structname [:type] { enumerator-list } var;
 *var*<br/>
 (Необязательно) Имя переменной типа перечисления.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **enum class** и **enum struct** являются эквивалентными объявлениями.
 
@@ -219,6 +219,6 @@ convert to int: 1
 1
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

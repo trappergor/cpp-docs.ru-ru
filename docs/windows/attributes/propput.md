@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 5e10edba60832112a9023f796be56d88afd52042
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8817d0042c3055b5bbf9b111e6f02b9d9a4c152c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514192"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166449"
 ---
 # <a name="propput"></a>propput
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514192"
 [propput]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **propput** C++ имеет те же функциональные возможности, что и атрибут [propput](/windows/win32/Midl/propput) MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514192"
 
 |||
 |-|-|
-|**Относится к**|Метод|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|Метод|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`propget`, `propputref`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>

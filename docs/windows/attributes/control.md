@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501778"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214946"
 ---
-# <a name="control"></a>элемент управления
+# <a name="control"></a>управляющие
 
 Указывает, что определяемый пользователем тип является элементом управления.
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501778"
 [control]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **Control** подразумевает атрибут [coclass](coclass.md) . Атрибут **Control** C++ имеет те же функциональные возможности, что и атрибут MIDL [элемента управления](/windows/win32/Midl/control) .
 
@@ -50,14 +50,14 @@ class CTest : public ICustom {};
 
 |||
 |-|-|
-|**Относится к**|**класс**, **Структура**|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**класс**, **Структура**|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>

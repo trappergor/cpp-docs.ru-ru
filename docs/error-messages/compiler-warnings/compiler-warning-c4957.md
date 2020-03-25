@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 340c26c97d0b5b686eee487cd3fd8b6b05bdf373
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164914"
 ---
 # <a name="compiler-warning-c4957"></a>Предупреждение компилятора C4957
 
-> "*приведения*": явное приведение из "*cast_from*«to»*конечный_тип*" недоступен
+> "*приведение*": явное приведение "*cast_from*" к "*cast_to*" не поддается проверке
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В результате приведения будет создан недоступный для проверки образ.
 
 Некоторые приведения являются безопасными (например, приведение `static_cast` вызывает выполнение пользовательских преобразований и приведение `const_cast`). При выполнении приведения [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) гарантированно создается проверяемый код.
 
-Дополнительные сведения см. в разделе [чистый и проверяемый код (C++выполняет)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Дополнительные сведения см. в разделе [чистый и проверяемый кодC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
+Параметр компилятора **/clr: Сейф** является устаревшим в visual Studio 2015 и не поддерживается в visual Studio 2017.
 
 Это предупреждение выдается в качестве ошибки, и его можно отключить с помощью прагмы [warning](../../preprocessor/warning.md) или параметра компилятора [/wd](../../build/reference/compiler-option-warning-level.md) .
 

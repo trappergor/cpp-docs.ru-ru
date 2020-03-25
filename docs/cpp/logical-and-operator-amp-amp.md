@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368660"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179436"
 ---
 # <a name="logical-and-operator-ampamp"></a>Оператор логического и: &amp;&amp;
 
@@ -23,9 +23,9 @@ ms.locfileid: "62368660"
 expression && expression
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Логический оператор AND (**&&**) возвращает логическое значение TRUE, если оба операнда имеют значение TRUE и FALSE в остальных случаях. Операнды неявно преобразуются в тип **bool** предварительного ознакомления, и результат имеет тип **bool**. Логическое И имеет ассоциативность в направлении слева направо.
+Логический оператор AND ( **&&** ) возвращает логическое значение true, если оба операнда имеют значение true, в противном случае возвращает false. Перед вычислением операнды неявно преобразуются в тип **bool** , а результат имеет тип **bool**. Логическое И имеет ассоциативность в направлении слева направо.
 
 Операнды оператора логического И не должны быть одинакового типа, но должны быть целочисленного типа или типа указателя. В качестве операндов часто используются реляционные выражения и выражения равенства.
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 Если `pch` имеет значение NULL (0), правая часть выражения никогда не вычисляется. Поэтому присваивание с помощью пустого указателя невозможно.
 
-## <a name="operator-keyword-for-"></a>Ключевое слово оператора & &
+## <a name="operator-keyword-for-"></a>Ключевое слово operator для & &
 
-**И** оператор является текстовым эквивалентом **&&**. Существует два способа для доступа к **и** оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).
+Оператор **and** является текстовым эквивалентом **&&** . Существует два способа доступа к оператору **and** в программах: включение файла заголовка `iso646.h`или компиляция с параметром компилятора [/Za](../build/reference/za-ze-disable-language-extensions.md) (отключить расширения языка).
 
 ## <a name="example"></a>Пример
 
@@ -67,8 +67,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Встроенные операторы C++ приоритет и ассоциативность операторов](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Приоритет и ассоциативность встроенных операторов](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Встроенные операторы C++, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Логические операторы в C](../c-language/c-logical-operators.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "79544402"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181854"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial (C++/CLI и C++/CX)
 
@@ -49,7 +49,7 @@ class-key identifier {
 *identifier*<br/>
 Имя определенного типа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Разделяемый класс предназначен для сценариев, где вы изменяете часть определения класса в одном файле, а программное обеспечение для автоматического построения кода (например, конструктор XAML) изменяет код в этом же классе в другом файле. Использование разделяемого класса позволяет предотвратить изменение вашего кода автоматическим генератором кода. В проекте Visual Studio к сгенерированному файлу автоматически применяется модификатор **partial**.
 
@@ -77,6 +77,6 @@ class-key identifier {
 
 (Эта возможность языка не поддерживается в среде CLR.)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Partial Classes (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023) (Разделяемые классы (C++/CX))

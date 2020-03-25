@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2114
 ms.assetid: abdfdc46-6601-451f-8e81-81e92bcd2208
-ms.openlocfilehash: 0939319b363a36e534d6910a72c07d6f432c2112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b748d6224b56cbfe893348cf156f9922b50f3046
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191461"
 ---
 # <a name="resource-compiler-error-rc2114"></a>Ошибка компилятора ресурсов RC2114
 
-Ожидалось имя элемента управления класса
+Ожидаемое имя класса элемента управления
 
-`class` Поле оператора CONTROL в **диалоговое ОКНО** инструкция должна быть одной из следующих типов: КНОПКИ, поля со СПИСКОМ, EDIT, LISTBOX, полосы ПРОКРУТКИ, СТАТИЧЕСКИМ, или определяемые пользователем. Убедитесь, что класс написано правильно.
+Поле `class` оператора элемента управления в операторе **DIALOG** должно иметь один из следующих типов: Button, ComboBox, Edit, ListBox, ScrollBar, static или Defined пользователем. Убедитесь, что класс написан правильно.

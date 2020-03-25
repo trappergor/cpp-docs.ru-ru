@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: 956648babf987d156cac753f8373518a83362013
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 97a79dee826dfba4b42053bbeba8c65e4d2b429c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079678"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211189"
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 
@@ -104,7 +104,7 @@ class CRowsetImpl :
 |[m_strCommandText](#strcommandtext)|Содержит начальную команду набора строк.|
 |[m_strIndexText](#strindextext)|Содержит начальный индекс набора строк.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 `CRowsetImpl` предоставляет переопределения в виде статических преобразований. Методы управляют способом, которым данный набор строк будет проверять текст команды. Вы можете создать собственный класс `CRowsetImpl`, сделав интерфейсы реализации множественно наследуемыми. Единственный метод, для которого необходимо предоставить реализацию, — это `Execute`. В зависимости от типа создаваемого набора строк методы Creator будут иметь разные сигнатуры для `Execute`. Например, если для реализации набора строк схемы используется производный от `CRowsetImpl`класс, метод `Execute` будет иметь следующую сигнатуру:
 
@@ -143,7 +143,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 Стандартное значение HRESULT. В зависимости от того, является ли `DBID` таблицей или индексом (обозначено *биндекс*), метод возвратит значение DB_E_NOINDEX или DB_E_NOTABLE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод вызывается `CRowsetImpl` реализациями [валидатекоммандид](../../data/oledb/crowsetimpl-validatecommandid.md) и [жеткоммандфромид](../../data/oledb/crowsetimpl-getcommandfromid.md).
 
@@ -170,7 +170,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Метод `SetCommentText` вызывается `CreateRowset`, статическим методом преобразованный `IOpenRowsetImpl`.
 
@@ -199,7 +199,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 Указатель на статическую структуру `ATLCOLUMNINFO`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод является расширенным переопределением.
 
@@ -232,7 +232,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод вызывается с помощью статического предадресного `CRowsetImpl` для заполнения элементов данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). По умолчанию этот метод проверяет, содержат ли один или оба параметра строковые значения. Если они содержат строковые значения, этот метод копирует строковые значения в элементы данных. Поместив метод с этой сигнатурой в класс, производный от `CRowsetImpl`, метод будет вызываться вместо базовой реализации.
 
@@ -259,7 +259,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Этот метод вызывается с помощью статического предадресного `CRowsetImpl` для заполнения его элементов данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). По умолчанию этот метод проверяет, содержат ли или оба `DBID`строковые значения, и, если да, копирует их в элементы данных. Поместив метод с этой сигнатурой в класс, производный от `CRowsetImpl`, метод будет вызываться вместо базовой реализации.
 
@@ -273,7 +273,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 ArrayType CRowsetBaseImpl::m_rgRowData;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 *ArrayType* — это параметр шаблона для `CRowsetImpl`.
 

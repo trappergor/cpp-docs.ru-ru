@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0060
 - CXX0060
 ms.assetid: 40c0ff02-ca6b-4232-b1e3-1f3a213ee2a3
-ms.openlocfilehash: 30e44be23a84e9f14f194f9baaaba1eda6c7a097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32bee6d51368eb74ca0856607cf44bf902d202a2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299508"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184571"
 ---
 # <a name="expression-evaluator-error-cxx0060"></a>Ошибка вычислителя выражений CXX0060
 
 регистр недоступен
 
-Выражение указано, регистр, который не может использоваться. Эта ошибка может вызываться пытается получить доступ к регистр, который не существует на компьютере, где запущена.
+В выражении указан регистр, который не может быть использован. Эта ошибка может быть вызвана попыткой доступа к регистру, который не существует на компьютере, на котором выполняется.
 
-Эта ошибка идентична ошибке CAN0060.
+Эта ошибка идентична CAN0060.

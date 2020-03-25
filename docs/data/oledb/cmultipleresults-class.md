@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 5bc1bb9ab1e0b6f5f8b2914e4249361ff37cce08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88bc956c3a08c6dddbd7d26a18cfc10f778cabcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230831"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211835"
 ---
 # <a name="cmultipleresults-class"></a>Класс CMultipleResults
 
-Команды для обработки нескольких результирующих наборов, используйте `CMultipleResults` для `CCommand` аргумент шаблона *тип TMultiple*.
+Если требуется, чтобы команда обрабатывала несколько результирующих наборов, используйте `CMultipleResults` аргумента шаблона `CCommand` *тмултипле*.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -25,15 +25,15 @@ ms.locfileid: "62230831"
 class CMultipleResults
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Обработка нескольких результирующих наборов, [CCommand](../../data/oledb/ccommand-class.md) должен наследовать от этого класса.
+Для работы с несколькими результирующими наборами класс [CCommand](../../data/oledb/ccommand-class.md) должен наследовать от этого класса.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli
+**Заголовок:** Atldbcli
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

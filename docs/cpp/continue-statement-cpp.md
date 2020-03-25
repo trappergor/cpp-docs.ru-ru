@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: 6fbc4af6a9a56f3406582ea9ba59f4d5759b88a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154637"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180281"
 ---
 # <a name="continue-statement-c"></a>Оператор continue (C++)
 
-Принудительно вызывает передачу управления управляющему выражению наименьшего внешнего [сделать](../cpp/do-while-statement-cpp.md), [для](../cpp/for-statement-cpp.md), или [хотя](../cpp/while-statement-cpp.md) цикла.
+Принудительно передает управление управляющему выражению наименьшего включающего цикла [Do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)или [while](../cpp/while-statement-cpp.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,15 +23,15 @@ ms.locfileid: "62154637"
 continue;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Все остальные операторы текущей итерации не выполняются. Следующая итерация цикла определяется следующим образом.
 
-- В **сделать** или **хотя** цикл, следующая итерация начинается путем повторного вычисления управляющее выражение оператора **сделать** или **хотя** инструкции.
+- В цикле **Do** или **while** Следующая итерация начинается с переоценки управляющего выражения инструкции **Do** или **while** .
 
-- В **для** цикла (с использованием синтаксиса `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` предложение выполняется. Затем повторно выполняется предложение `cond-expr` и, в зависимости от результата, цикл завершается или начинается другая итерация.
+- В цикле **for** (с использованием синтаксиса `for`(`init-expr`; `cond-expr`; `loop-expr`)) выполняется предложение `loop-expr`. Затем повторно выполняется предложение `cond-expr` и, в зависимости от результата, цикл завершается или начинается другая итерация.
 
-В следующем примере показан как **по-прежнему** инструкция может использоваться для обхода фрагментов кода и начала выполнения следующей итерации цикла.
+В следующем примере показано, как можно использовать оператор **Continue** для обхода частей кода и начать следующую итерацию цикла.
 
 ## <a name="example"></a>Пример
 
@@ -60,7 +60,7 @@ before the continue
 after the do loop
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Операторы перехода](../cpp/jump-statements-cpp.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

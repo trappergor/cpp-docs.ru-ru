@@ -2,12 +2,12 @@
 title: Шаблоны и разрешение имен
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693a2e69446410531d6a02047e8f230542362033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266755"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160805"
 ---
 # <a name="templates-and-name-resolution"></a>Шаблоны и разрешение имен
 
@@ -73,6 +73,6 @@ ms.locfileid: "62266755"
 
 Выражения, зависящие от типа, и выражения, зависящие от значения, — это выражения, содержащие переменные, зависящие от типа или значения. Эти выражения могут иметь семантику, зависящую от параметров, используемых для шаблона.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны](../cpp/templates-cpp.md)

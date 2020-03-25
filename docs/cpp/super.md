@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6f6a7e108224ab4c97893104c5d6c38d325fa42
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330535"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160831"
 ---
-# <a name="super"></a>__super
+# <a name="__super"></a>__super
 
 **Блок, относящийся только к системам Microsoft**
 
@@ -25,15 +25,15 @@ ms.locfileid: "62330535"
 __super::member_function();
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 На этапе разрешения перегрузки учитываются все доступные методы базового класса, и вызывается функция, которая обеспечивает наилучшее совпадение.
 
 **__super** может использоваться только в теле функции-члена.
 
-**__super** нельзя использовать с помощью объявления. См. в разделе [объявление using](../cpp/using-declaration.md) Дополнительные сведения.
+**__super** нельзя использовать с объявлением using. Дополнительные сведения см. [в разделе Использование объявления](../cpp/using-declaration.md) .
 
-С появлением [атрибуты](../windows/attributes/attributes-alphabetical-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых вы можете не знать, но которые содержат методы, которые должны вызываться.
+С появлением [атрибутов](../windows/attributes/attributes-alphabetical-reference.md) , которые вставляют код, код может содержать один или несколько базовых классов, имена которых могут быть незнакомы, но содержат методы, которые вы хотите вызвать.
 
 ## <a name="example"></a>Пример
 
@@ -60,6 +60,6 @@ struct D : B1, B2 {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Ключевые слова](../cpp/keywords-cpp.md)

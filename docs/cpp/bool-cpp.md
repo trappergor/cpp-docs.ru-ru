@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301643"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190499"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -50,7 +50,7 @@ if (condexpr1) statement1;
 
 Тип **bool** участвует в целочисленных повышениях. R-значение типа **bool** может быть преобразовано в r-значение типа **int**, при этом false становится нулевым, а значение true — на единицу. В качестве отдельного типа **логическое** значение участвует в разрешении перегрузки.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Встроенные типы](../cpp/fundamental-types-cpp.md)

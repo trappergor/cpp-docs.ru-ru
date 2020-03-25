@@ -9,12 +9,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166910"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169335"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Переход к меткам во встроенном коде на языке ассемблера
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-Так как **выйти из** — это имя функции библиотеки C, этот код может привести к переходу к **выйти из** вместо функции в нужное место.
+Поскольку **Exit** — это имя функции библиотеки C, этот код может привести к переходу к функции **Exit** , а не к нужному расположению.
 
 Как и в программах MASM, в качестве счетчика текущего расположения служит знак доллара (`$`). Это метка для собираемой в данный момент инструкции. В блоках `__asm` ее основное назначение — обеспечение длинных условных переходов.
 
@@ -81,6 +81,6 @@ farlabel:
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Встроенный сборщик](../../assembler/inline/inline-assembler.md)<br/>

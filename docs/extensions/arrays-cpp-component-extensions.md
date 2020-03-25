@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182244"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Массивы (C++/CLI и C++/CX)
 
@@ -70,9 +70,9 @@ ms.locfileid: "65516199"
 *initialization-list*<br/>
 (Необязательно) Разделенный запятыми список инициализирующих элементы массива значений в фигурных скобках. Например, если *rank-size-list* имеет значение `(3)`, т. е. объявляется одномерным массивом из 3 элементов, *initialization-list* может иметь вид `{1,2,3}`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом с подсчетом ссылок. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка признаков типов компилятором (C++/CLI и C++/CX)).
+Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом с подсчетом ссылок. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ### <a name="requirements"></a>Требования
 
@@ -131,7 +131,7 @@ int main() {
 
 Например, если *rank-size-list* имеет значение `(3)`, т. е. объявляется одномерным массивом из 3 элементов, *initialization-list* может иметь вид `{1,2,3}`. Если параметр *rank-size-list* имеет значение `(3,2,4)`, т. е. объявляется трехмерным массивом с 3 элементами в первом измерении, 2 элементами во втором и 4 элементами в третьем, то параметр *initialization-list* может иметь вид `{{1,2,3},{0,0},{-5,10,-21,99}}`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 **Массив** находится в пространстве имен [Platform, default, and cli Namespaces](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 
@@ -143,7 +143,7 @@ int main() {
 
 При создании массива, тип элементов которого является типом значения `V`, к каждому элементу массива применяется конструктор по умолчанию для `V`. Дополнительные сведения см. в разделе [Эквиваленты собственным типам C++ в .NET framework](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).
 
-Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом среды CLR. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка признаков типов компилятором (C++/CLI и C++/CX)).
+Во время компиляции с помощью `__is_ref_array(type)` можно определить, является ли тип массивом среды CLR. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 ### <a name="requirements"></a>Требования
 
@@ -168,6 +168,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

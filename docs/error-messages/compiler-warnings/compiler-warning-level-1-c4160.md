@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176173"
 ---
 # <a name="compiler-warning-level-1-c4160"></a>Предупреждение компилятора (уровень 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>Директива pragma (pop,...): не найден ранее занесенный в стек идентификатор "*идентификатор*"
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (POP,...): не найден ранее отправленный идентификатор "*идентификатор*"
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Оператор pragma в исходном коде пытается извлечь из стека идентификатор, который не был занесен в стек. Чтобы устранить это предупреждение, необходимо убедиться в том, что идентификатор, извлекаемый из стека, был туда соответствующим образом занесен.
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C4160 и показаны способы ее устранения:
+В следующем примере создается C4160 и демонстрируется его устранение:
 
 ```cpp
 // C4160.cpp

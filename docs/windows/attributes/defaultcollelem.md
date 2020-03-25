@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 048d2933b8c024e74511e6cb49ae5c3240f3e710
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167125"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501654"
 [defaultcollelem]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **дефаултколлелем** C++ имеет те же функциональные возможности, что и атрибут [дефаултколлелем](/windows/win32/Midl/defaultcollelem) MIDL.
 
@@ -50,14 +50,14 @@ __interface IMyForm
 
 |||
 |-|-|
-|**Относится к**|Метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)

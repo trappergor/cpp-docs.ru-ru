@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0051
 - CXX0051
 ms.assetid: 031cd2ed-d9bb-4aa5-9858-71581bcca49c
-ms.openlocfilehash: 12d7d9ccb1fee096115e8c82c825eb8df336f63b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bacaddb39f1a380053e74c8a7e9fd952dac8ea5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160631"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184831"
 ---
 # <a name="expression-evaluator-error-cxx0051"></a>Ошибка вычислителя выражений CXX0051
 
-несколько перегруженных символу, указанному в точке останова
+в точке останова указано более одного перегруженного символа
 
-Средство оценки выражений не удалось определить какие из более чем один перегруженный символ для использования в качестве точки останова.
+Вычислителю выражений не удалось определить, какой из нескольких перегруженных символов следует использовать в качестве точки останова.
 
 Эта ошибка идентична CAN0051.

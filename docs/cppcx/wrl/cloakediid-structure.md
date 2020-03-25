@@ -1,5 +1,5 @@
 ---
-title: CloakedIid - структура
+title: Структура CloakedIid
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398723"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214114"
 ---
-# <a name="cloakediid-structure"></a>CloakedIid - структура
+# <a name="cloakediid-structure"></a>Структура CloakedIid
 
-Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.
+Указывает на шаблоны `RuntimeClass`, `Implements` и `ChainInterfaces`, которые указанный интерфейс недоступен в списке IID.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,11 +28,11 @@ struct CloakedIid : T;
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Интерфейс, который является скрытым (замаскированные).
+Скрытый (замаскированный) интерфейс.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Ниже приведен пример того, как **CloakedIid** используется: `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
+Ниже приведен пример использования **клоакедиид** : `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -42,10 +42,10 @@ struct CloakedIid : T;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** implements.h
+**Заголовок:** Implements. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)

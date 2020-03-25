@@ -6,29 +6,29 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: eac274a0207be675b8d13532c3110c6e71bd55c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345102"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190108"
 ---
 # <a name="casting-operators"></a>Операторы приведения
 
 Некоторые операторы приведения типа используются только в языке C++. Эти операторы позволяют устранить неоднозначность и возможности допустить ошибку, которые характеры для приведения типов в стиле языка C. Эти операторы перечислены ниже.
 
-- [dynamic_cast](../cpp/dynamic-cast-operator.md) используется для преобразования полиморфных типов.
+- [dynamic_cast](../cpp/dynamic-cast-operator.md) Используется для преобразования полиморфизма типов.
 
-- [static_cast](../cpp/static-cast-operator.md) используется для преобразования неполиморфных типов.
+- [static_cast](../cpp/static-cast-operator.md) Используется для преобразования типов нонполиморфик.
 
-- [const_cast](../cpp/const-cast-operator.md) используется для удаления **const**, **volatile**, и **__unaligned** атрибуты.
+- [const_cast](../cpp/const-cast-operator.md) Используется для удаления атрибутов **const**, **volatile**и **__unaligned** .
 
-- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) для простой повторной интерпретации разрядов.
+- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) Используется для простой повторной интерпретации битов.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) используется в C++выполняет для создания проверяемых MSIL.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) Используется в C++/CLI для создания проверяемого MSIL.
 
-Используйте **const_cast** и **reinterpret_cast** в качестве последнего средства, так как же опасностях как приведения старого стиля представления этих операторов. Однако они необходимы, чтобы полностью заменить приведения старого стиля.
+В качестве последнего средства следует использовать **const_cast** и **reinterpret_cast** , так как эти операторы представляют те же опасности, что и старые приведения в стиле. Однако они необходимы, чтобы полностью заменить приведения старого стиля.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Приведение](../cpp/casting.md)

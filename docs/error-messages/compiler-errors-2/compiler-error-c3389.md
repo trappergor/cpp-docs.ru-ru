@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b166096390169939f01bcb976a57612f10f7df2e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402584"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201140"
 ---
 # <a name="compiler-error-c3389"></a>Ошибка компилятора C3389
 
-> __declspec (*ключевое слово*) не может использоваться с параметром/clr: pure или/CLR: safe
+> __declspec (*ключевое слово*) нельзя использовать с параметрами/clr: pure или/CLR: Сейф
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
+Параметры компилятора **/clr: pure** и **/clr: Сейф** являются устаревшими в Visual Studio 2015 и не поддерживаются в Visual Studio 2017.
 
-Объект [__declspec](../../cpp/declspec.md) подразумевает модификатор используется состояние процесса.  [/ CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md) подразумевает на [appdomain](../../cpp/appdomain.md) состояния.  Поэтому при объявлении переменной с `keyword` **__declspec** модификатор и компиляции с параметром **/CLR: pure** не допускается.
+Используемый модификатор [__declspec](../../cpp/declspec.md) подразумевает состояние каждого процесса.  [параметр/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md) подразумевает состояние каждого [домена приложения](../../cpp/appdomain.md) .  Таким образом, объявление переменной с модификатором `keyword` **__declspec** и компиляция с **/clr: pure** не допускается.
 
 ## <a name="example"></a>Пример
 

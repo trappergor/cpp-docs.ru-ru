@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-ms.openlocfilehash: 4743e7724c5aba4171cb017654267afaac676f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0be4bebcc561cdf1df3f2502c8cc1927bdc65564
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214218"
 ---
 # <a name="activationfactorycallback-function"></a>ActivationFactoryCallback - функция
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,27 +30,27 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 ### <a name="parameters"></a>Параметры
 
 *activationId*<br/>
-Дескриптор строка, задающая имя класса среды выполнения.
+Обрабатывает строку, указывающую имя класса среды выполнения.
 
-*ppFactory*<br/>
-После завершения операции фабрику активации, соответствующее параметру *activationId*.
+*ппфактори*<br/>
+По завершении этой операции фабрика активации, соответствующая параметру *ActivationID*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Скорее всего, ошибочные значения HRESULT: CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.
+Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. Вероятные ошибки HRESULT — это CLASS_E_CLASSNOTAVAILABLE и E_INVALIDARG.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Возвращает фабрику активации для активации указанного идентификатора.
+Возвращает фабрику активации для указанного идентификатора активации.
 
-Среда выполнения Windows вызывает эту функцию обратного вызова для запроса объекта, заданный его именем класса среды выполнения.
+Среда выполнения Windows вызывает эту функцию обратного вызова для запроса объекта, указанного именем класса среды выполнения.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:: WRL::D состояния
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL::Details](microsoft-wrl-details-namespace.md)

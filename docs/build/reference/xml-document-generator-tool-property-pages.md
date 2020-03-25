@@ -1,5 +1,5 @@
 ---
-title: Страницы свойств средства создания XML-документов
+title: Страницы свойств инструмента создания XML-документов
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
@@ -8,14 +8,14 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316162"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171636"
 ---
-# <a name="xml-document-generator-tool-property-pages"></a>Страницы свойств средства создания XML-документов
+# <a name="xml-document-generator-tool-property-pages"></a>Страницы свойств инструмента создания XML-документов
 
 Страница свойств для средства создания XML-документов предоставляет функциональные возможности xdcmake.exe. xdcmake.exe объединяет XDC-файлы с XML-файлами, если исходный код содержит комментарии документации и указан параметр [/doc (обработка комментариев в документации) (C/C++)](doc-process-documentation-comments-c-cpp.md). Сведения о добавлении комментариев документации в исходный код см. в разделе [Рекомендуемые теги для комментариев документации](recommended-tags-for-documentation-comments-visual-cpp.md).
 
@@ -34,12 +34,12 @@ ms.locfileid: "62316162"
 
 - **Выходной файл документации**
 
-   Имя и каталог размещения для выходного XML-файла. См. в разделе [стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md) сведения об использовании макросов для указания местоположения каталогов.
+   Имя и каталог размещения для выходного XML-файла. Сведения об использовании макросов для указания расположения каталога см. в разделе [Common Macros for Build Commands and Properties](common-macros-for-build-commands-and-properties.md) .
 
 - **Зависимости библиотек документов**
 
    Если проект имеет зависимость от проекта LIB в решении, вы можете преобразовывать XDC-файлы из проекта LIB в XML-файлы для текущего проекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Справочник по страницам свойств проекта C++](property-pages-visual-cpp.md)
+[C++Справочник по страницам свойств проекта](property-pages-visual-cpp.md)

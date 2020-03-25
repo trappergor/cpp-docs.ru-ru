@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f37ce13e27f9b141eab928b88102813a5b6d65f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857376"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177889"
 ---
 # <a name="noreturn"></a>noreturn
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Этот атрибут **__declspec** указывает компилятору, что функция не возвращает значение. Как следствие, компилятор знает, что код, следующий за вызовом функции **__declspec (Return)** , недоступен.
 
@@ -45,7 +45,7 @@ int main() {
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [__declspec](../cpp/declspec.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

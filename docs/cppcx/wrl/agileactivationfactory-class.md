@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::AgileActivationFactory
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-ms.openlocfilehash: 854f998e31cfec577fb6ff0fb3d82dc1499f88bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f437f87861293cb6048ed6acb05428c466b3f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214205"
 ---
 # <a name="agileactivationfactory-class"></a>Класс AgileActivationFactory
 
-Представляет фабрику активации подразделения с поддержкой, который реализует [FtmBase](ftmbase-class.md).
+Представляет собой ориентированную на апартамент фабрику активации, которая реализует [метод FtmBase](ftmbase-class.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,11 +36,11 @@ class AgileActivationFactory :
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** module.h
+**Заголовок:** Module. h
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Microsoft::WRL](microsoft-wrl-namespace.md)<br/>
 [Класс ActivationFactory](activationfactory-class.md)

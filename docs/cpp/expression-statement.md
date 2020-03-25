@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C++], expression
 - expression statements
 ms.assetid: 547d7f7a-58be-4ffc-a4b3-d64c7ae7538c
-ms.openlocfilehash: 2973c3e0a1cd59edfc7ef1e771454b780da23cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f12bbbafd9be50f851e36f472098431f9ac0d5d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400608"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189004"
 ---
 # <a name="expression-statement"></a>Оператор выражений
 
@@ -24,10 +24,10 @@ ms.locfileid: "62400608"
 [expression ] ;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Вычисление всех выражений в операторе выражения и учет всех побочных эффектов осуществляются до выполнения следующего оператора. Самые распространенные операторы выражений — присваивания и вызовы функций.  Поскольку выражение является необязательным, отдельная точка с запятой считается пустым оператором выражения, называются [null](../cpp/null-statement.md) инструкции.
+Вычисление всех выражений в операторе выражения и учет всех побочных эффектов осуществляются до выполнения следующего оператора. Самые распространенные операторы выражений — присваивания и вызовы функций.  Поскольку выражение является необязательным, только точка с запятой считается пустым оператором выражения, называемой оператором [null](../cpp/null-statement.md) .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)

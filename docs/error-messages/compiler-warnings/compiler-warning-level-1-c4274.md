@@ -1,32 +1,32 @@
 ---
-title: Компилятор предупреждение (уровень 1) C4274
+title: Предупреждение компилятора (уровень 1) C4274
 ms.date: 11/04/2016
 f1_keywords:
 - C4274
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f2350f275f883e7bf18aa1621d08b34132e8dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175850"
 ---
-# <a name="compiler-warning-level-1-c4274"></a>Компилятор предупреждение (уровень 1) C4274
+# <a name="compiler-warning-level-1-c4274"></a>Предупреждение компилятора (уровень 1) C4274
 
-\#ident игнорируется; см. документацию для #pragma comment (exestr, "string")
+\#Ident игнорируется; #pragma комментарий (exestr, "String") см. в документации.
 
-`#ident` Директива, которая вставляет указанной пользователем строки в объекте или исполняемый файл, является устаревшим. Следовательно компилятор игнорирует директиву.
+Директива `#ident`, которая вставляет указанную пользователем строку в объект или исполняемый файл, является устаревшей. Следовательно, компилятор игнорирует директиву.
 
 > [!CAUTION]
->  C4274 предупреждение о необходимости использовать [#pragma comment (exestr, "string")](../../preprocessor/comment-c-cpp.md) директива. Тем не менее это является устаревшим и будет изменяться в будущих версиях компилятора. Если вы используете `#pragma` директив, компоновщик (LINK.exe) не обрабатывает эту запись комментария, созданную директивой и выдает предупреждение [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Вместо `#ident` директив, мы рекомендуем использовать строку ресурса версии файла в приложении.
+>  Предупреждение C4274 рекомендует использовать директиву [комментария #pragma (exestr, "String")](../../preprocessor/comment-c-cpp.md) . Однако этот Совет является устаревшим и будет пересмотрен в будущих выпусках компилятора. Если используется директива `#pragma`, средство компоновщика (LINK. exe) игнорирует запись комментария, созданную директивой, и выдает предупреждение [LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md). Вместо директивы `#ident` рекомендуется использовать в приложении строку ресурса версии файла.
 
 ## <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Удалить `#ident "` *строка* `"` директива.
+- Удалите директиву `#ident "`*string*`"`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [comment (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
 [Предупреждение средств компоновщика LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>

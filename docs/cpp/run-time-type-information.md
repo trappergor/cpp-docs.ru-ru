@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type information, run-time type checking
 - run-time checks, type checking
 ms.assetid: becbd0e5-0439-4c61-854f-8a74f7160c54
-ms.openlocfilehash: 1d11ee3ea472f935120c59f0faefee905361ee97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 195274d7bcef0ff4d82383a8ec828ca9267573b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178942"
 ---
 # <a name="run-time-type-information"></a>Сведения о типах времени выполнения
 
@@ -24,18 +24,18 @@ ms.locfileid: "62267406"
 
 Существует три основных элемента языка C++ для информации о типах времени выполнения.
 
-- [Dynamic_cast](../cpp/dynamic-cast-operator.md) оператор.
+- Оператор [dynamic_cast](../cpp/dynamic-cast-operator.md) .
 
    Используется для преобразования полиморфных типов.
 
-- [Typeid](../cpp/typeid-operator.md) оператор.
+- Оператор [typeid](../cpp/typeid-operator.md) .
 
    Используется для указания точного типа объекта.
 
-- [Type_info](../cpp/type-info-class.md) класса.
+- Класс [type_info](../cpp/type-info-class.md) .
 
-   Используется для хранения сведений, возвращаемых методом **typeid** оператор.
+   Используется для хранения сведений о типе, возвращаемых оператором **typeid** .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Приведение](../cpp/casting.md)

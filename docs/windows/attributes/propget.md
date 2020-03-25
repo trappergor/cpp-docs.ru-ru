@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 044562ba870d6e36ddfcec0c7e84253b111a9eea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d2c0ebab1630634ddd4fc81e7c9c8364f7fad46f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166463"
 ---
 # <a name="propget"></a>propget
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514206"
 [propget]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **propget** C++ имеет те же функциональные возможности, что и атрибут MIDL для [propget](/windows/win32/Midl/propget) .
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514206"
 
 |||
 |-|-|
-|**Относится к**|Метод|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
+|**Применение**|Метод|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
 |**Недопустимые атрибуты**|`propput`, `propputref`|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>

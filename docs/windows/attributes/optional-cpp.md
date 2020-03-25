@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214691"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514341"
 [optional]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 **Необязательный** C++ атрибут имеет те же функциональные возможности, что и [необязательный](/windows/win32/Midl/optional) атрибут MIDL.
 
@@ -50,14 +50,14 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**Относится к**|Параметр интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|Параметр интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты параметра](parameter-attributes.md)

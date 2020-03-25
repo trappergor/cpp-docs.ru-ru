@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516009"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181802"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI и C++/CX)
 
@@ -39,13 +39,13 @@ virtual return-type identifier() sealed {...};
 *return-type*<br/>
 Тип, который возвращается функцией.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 В первом примере синтаксиса запечатан (sealed) класс. Во втором примере запечатана виртуальная функция.
 
 Используйте ключевое слово **sealed** для ссылочных классов и их виртуальных функций-членов. Дополнительные сведения см. в статье [Спецификаторы переопределения и компиляция в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Во время компиляции можно определить, запечатан ли тип, используя признак типа `__is_sealed(type)`. Дополнительные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка признаков типов компилятором (C++/CLI и C++/CX)).
+Во время компиляции можно определить, запечатан ли тип, используя признак типа `__is_sealed(type)`. Подробные сведения см. в статье [Compiler Support for Type Traits (C++/CLI and C++/CX)](compiler-support-for-type-traits-cpp-component-extensions.md) (Поддержка характеристик типов компилятором (C++/CLI and C++/CX)).
 
 **sealed** — контекстно-зависимое ключевое слово.  Дополнительные сведения см. в статье [Context-Sensitive Keywords (C++/CLI and C++/CX)](context-sensitive-keywords-cpp-component-extensions.md) (Контекстно-зависимые ключевые слова (C++/CLI и C++/CX)).
 
@@ -138,6 +138,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Расширения компонентов для .NET и UWP](component-extensions-for-runtime-platforms.md)

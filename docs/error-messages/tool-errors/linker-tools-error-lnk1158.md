@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1158
 ms.assetid: 45febf16-d9e1-42db-af91-532e2717fd6a
-ms.openlocfilehash: 0dbb40fb1fe0405f3685a5e7246ecba2b53ec526
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2602c488db660ce067c672df4a746c388d987120
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184064"
 ---
 # <a name="linker-tools-error-lnk1158"></a>Ошибка средств компоновщика LNK1158
 
-не удается запустить «имя_файла»
+не удается запустить "имяфайла"
 
-Данного исполняемого файла, вызывается [ССЫЛКУ](../../build/reference/linking.md) не в каталог, содержащий ССЫЛКУ, так и в каталоге, указанном в переменной среды PATH.
+Указанный исполняемый файл, вызываемый [Link](../../build/reference/linking.md) , не находится в каталоге, содержащем Link, или в каталоге, указанном в переменной среды PATH.
 
-Например, эта ошибка может возникнуть при попытке использовать параметр PGOPTIMIZE [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) параметр компоновщика на компьютере с 32-разрядной операционной системе.
+Например, эта ошибка возникает при попытке использовать параметр PGOPTIMIZE в параметре компоновщика [/LTCG](../../build/reference/ltcg-link-time-code-generation.md) на компьютере с 32-разрядной операционной системой.

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161169"
 ---
 # <a name="nested-class-declarations"></a>Объявления вложенных классов
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` и `BufferedIO::BufferedOutput` , объявляются в `BufferedIO`. Эти имена классов не видимы за пределами области класса `BufferedIO`. Однако объект типа `BufferedIO` не содержит объекты типа `BufferedInput` или `BufferedOutput`.
+`BufferedIO::BufferedInput` и `BufferedIO::BufferedOutput` объявляются в `BufferedIO`. Эти имена классов не видимы за пределами области класса `BufferedIO`. Однако объект типа `BufferedIO` не содержит объекты типа `BufferedInput` или `BufferedOutput`.
 
 Вложенные классы могут непосредственно использовать имена, имена типов, имена статических членов и перечислители только из включающего класса. Для использования имен других членов класса необходимо использовать указатели, ссылки или имена объектов.
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-В приведенном выше примере *полное имя типа* синтаксис используется для объявления имени функции. Объявление:
+В предыдущем примере синтаксис *квалифицированного типа* используется для объявления имени функции. Объявление:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-означает "функция `read`, которая является членом класса `BufferedInput`, который находится в области класса `BufferedIO`". Так как в этом объявлении используется *полное имя типа* синтаксис, возможны конструкции следующего вида:
+означает "функция `read`, которая является членом класса `BufferedInput`, который находится в области класса `BufferedIO`". Поскольку в этом объявлении используется синтаксис *квалифицированного типа* , возможны конструкции следующей формы:
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-Выше объявление эквивалентно предыдущему, но он использует **typedef** имя вместо имен классов.
+Предыдущее объявление эквивалентно предыдущему, но использует имя **typedef** вместо имен классов.
 
 ## <a name="friend-functions-in-nested-classes"></a>Дружественные функции во вложенных классах
 
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 В предыдущем интерфейсе несколько классов могут использовать службы этой функции, передав адрес памяти, в которую требуется скопировать сообщение об ошибке.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)

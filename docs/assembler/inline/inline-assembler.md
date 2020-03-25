@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inline assembler [C++]
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
-ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d36c4d83a1fbf5d7ad718a7caf1dccb8f6745676
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169375"
 ---
 # <a name="inline-assembler"></a>Встроенный сборщик
 
@@ -24,7 +24,7 @@ ms.locfileid: "62166949"
 > [!NOTE]
 >  Программы со встроенным кодом на языке ассемблера не всегда можно перенести на другие аппаратные платформы. При разработке переносимой версии старайтесь не использовать встроенный код ассемблера.
 
-Встроенная сборка не поддерживается в ARM и x64 процессоров.  В следующих разделах объясняется, как использовать встроенный код на ассемблере в программах Visual C/C++ для процессоров x86.
+Встроенная сборка не поддерживается на процессорах ARM и x64.  В следующих разделах объясняется, как использовать встроенный код на ассемблере в программах Visual C/C++ для процессоров x86.
 
 - [Обзор встроенного кода на ассемблере](../../assembler/inline/inline-assembler-overview.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "62166949"
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Внутренние объекты компилятора и язык ассемблера](../../intrinsics/compiler-intrinsics-and-assembly-language.md)<br/>
 [Справочник по языку C++](../../cpp/cpp-language-reference.md)<br/>

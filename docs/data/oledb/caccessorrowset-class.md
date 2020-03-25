@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212255"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -70,7 +70,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[фрирекордмемори](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые необходимо освободить.|
 |[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Класс `TAccessor` управляет методом доступа. Класс *тровсет* управляет набором строк.
 
@@ -108,7 +108,7 @@ CAccessorRowset();
 void Close();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает любую связанную память.
 
@@ -145,13 +145,13 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Пользователь должен освободить информацию о возвращаемом столбце и буфере строк. Используйте вторую версию этого метода при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и необходимости переопределения привязок.
 
 Дополнительные сведения см. в разделе [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

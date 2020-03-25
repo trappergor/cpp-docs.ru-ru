@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154520"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189550"
 ---
 # <a name="default-arguments"></a>Аргументы по умолчанию
 
-Во многих случаях функции имеют аргументы, которые используются настолько редко, что достаточно значения по умолчанию. В таких случаях возможность задания аргументов по умолчанию позволяет указывать только те аргументы функции, которые важны в конкретном вызове. Чтобы проиллюстрировать этот принцип, рассмотрим пример, представленный в [перегрузка функций](../cpp/function-overloading.md).
+Во многих случаях функции имеют аргументы, которые используются настолько редко, что достаточно значения по умолчанию. В таких случаях возможность задания аргументов по умолчанию позволяет указывать только те аргументы функции, которые важны в конкретном вызове. Чтобы проиллюстрировать эту концепцию, рассмотрим пример, представленный в [перегрузке функции](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-Реализация `print` функция слегка отличается чтобы отразить тот факт, что для типа существует только одна такая функция **double**:
+Реализация функции `print` немного изменилась, чтобы отразить тот факт, что для типа **Double**существует только одна такая функция:
 
 ```cpp
 // default_arguments.cpp

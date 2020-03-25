@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214439"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514903"
 [unique]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Атрибут **UNIQUE** C++ имеет те же функциональные возможности, что и [уникальный](/windows/win32/Midl/unique) атрибут MIDL.
 
@@ -37,14 +37,14 @@ ms.locfileid: "69514903"
 
 |||
 |-|-|
-|**Относится к**|**typedef**, **struct**, **Union**, параметр интерфейса, метод интерфейса|
-|**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Отсутствуют|
-|**Недопустимые атрибуты**|Отсутствуют|
+|**Применение**|**typedef**, **struct**, **Union**, параметр интерфейса, метод интерфейса|
+|**Повторяемый**|нет|
+|**Обязательные атрибуты**|None|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>

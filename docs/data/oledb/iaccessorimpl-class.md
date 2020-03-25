@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210870"
 ---
 # <a name="iaccessorimpl-class"></a>Класс IAccessorImpl
 
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[Привязок](#getbindings)|Возвращает привязки из метода доступа.|
 |[релеасеакцессор](#releaseaccessor)|Освобождает метод доступа.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Это обязательно для наборов строк и команд. OLE DB требует, чтобы поставщики реализовали HACCESSOR, который является тегом массива структур [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Хакцессорс, предоставляемый `IAccessorImpl`, являются адресами структур `BindType`. По умолчанию `BindType` определяется как `ATLBINDINGS` в определении шаблона `IAccessorImpl`. `BindType` предоставляет механизм, используемый `IAccessorImpl` для контроля количества элементов в его `DBBINDING` массиве, а также для счетчика ссылок и флагов доступа.
 
@@ -168,7 +168,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 См. раздел [IAccessor:: релеасеакцессор](/previous-versions/windows/desktop/ms719717(v=vs.85)) в *справочнике программиста OLE DB*.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

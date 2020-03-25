@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214933"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Атрибуты C++ для модели COM и .NET
 
@@ -78,7 +78,7 @@ class CMyReceiver
 
 Кроме того, визуальный C++ компоновщик будет выводить все сведения об атрибутах, связанных с IDL, в один файл MIDL. Создавать две библиотеки типов из одного проекта будет невозможно.
 
-## <a name="contexts"></a>Контексты атрибутов
+## <a name="attribute-contexts"></a><a name="contexts"></a>Контексты атрибутов
 
 C++атрибуты можно описать с помощью четырех основных полей: целевой объект, к которому они могут применяться (**применяется к**), если они являются повторяемыми или нет (**повторяемые**), необходимое присутствие других атрибутов (**обязательных атрибутов**) и несовместимость с другими атрибутами (**недопустимые атрибуты**). Эти поля перечислены в сопроводительной таблице в справочном разделе каждого атрибута. Каждое из этих полей описано ниже.
 

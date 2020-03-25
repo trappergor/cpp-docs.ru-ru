@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-ms.openlocfilehash: 5cfc99f446499201a0f54c8e5b1dcc2d7152445c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b497c3c9eb1b30074c9b7286c438d0077525e05b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404706"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188042"
 ---
 # <a name="true-c"></a>true (C++)
 
@@ -22,9 +22,9 @@ bool-identifier = true ;
 bool-expression logical-operator true ;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Это ключевое слово является одним из двух значений переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является истинным логическим выражением). Если `i` имеет тип **bool**, то инструкция `i = true;` назначает **true** для `i`.
+Это ключевое слово является одним из двух значений для переменной типа [bool](../cpp/bool-cpp.md) или условного выражения (условное выражение теперь является истинным логическим выражением). Если `i` имеет тип **bool**, инструкция `i = true;` присваивает **значение true** `i`.
 
 ## <a name="example"></a>Пример
 
@@ -45,6 +45,6 @@ int main()
 0
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Ключевые слова](../cpp/keywords-cpp.md)
