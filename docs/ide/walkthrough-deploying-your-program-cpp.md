@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
 ms.openlocfilehash: 5cc4ead7aaef2ffa56870a374b0b73d16eb31521
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400961"
@@ -20,7 +20,7 @@ ms.locfileid: "67400961"
 
 Теперь, когда вы создали свое приложение, выполнив описанные ранее пошаговые руководства, необходимо выполнить последний шаг — создать установщик, чтобы другие пользователи могли установить программу на своих компьютерах. Для создания установщика следует добавить новый проект в имеющееся решение. Выходным файлом этого проекта будет являться файл setup.exe, который служит для установки приложения на другом компьютере.
 
-В этом пошаговом руководстве показано, как развернуть приложение с помощью установщика Windows. Кроме того, для развертывания приложения может использоваться ClickOnce. Дополнительные сведения см. в разделе [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Дополнительные общие сведения о развертывании см. в разделе [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components).
+В этом пошаговом руководстве показано, как развернуть приложение с помощью установщика Windows. Кроме того, для развертывания приложения может использоваться ClickOnce. Дополнительные сведения см. в разделе [Развертывание с помощью технологии ClickOnce для приложений Visual C++](../windows/clickonce-deployment-for-visual-cpp-applications.md). Дополнительные общие сведения о развертывании см. в разделе [Знакомство с возможностями развертывания в Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
