@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3766a93d7cba9096ce3ff775d94c17a85456fb00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363106"
 ---
 # <a name="istream_iterator-class"></a>Класс istream_iterator
 
@@ -39,10 +39,10 @@ class istream_iterator
 *Тип*\
 Тип объекта, который необходимо извлечь из потока ввода.
 
-*CharType*\
-Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным, и значение по умолчанию — **char**.
+*Chartype*\
+Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным и значение по умолчанию является **символом**.
 
-*Признаки*\
+*Черты*\
 Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным, и в качестве значения по умолчанию используется `char_traits`< `CharType`>.
 
 *Расстояние*\
@@ -52,13 +52,13 @@ class istream_iterator
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[istream_iterator](#istream_iterator)|Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Description|
+|Имя типа|Описание|
 |-|-|
 |[char_type](#char_type)|Тип, обеспечивающий тип символа для `istream_iterator`.|
 |[istream_type](#istream_type)|Тип, обеспечивающий тип потока для `istream_iterator`.|
@@ -66,19 +66,19 @@ class istream_iterator
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Description|
+|Оператор|Описание|
 |-|-|
-|[operator*](#op_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|
+|[оператор](#op_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|
 |[оператор->](#op_arrow)|Возвращает значение члена при наличии.|
-|[оператор++](#op_add_add)|Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.|
+|[оператор](#op_add_add)|Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<итератор >
+**Заголовок:** \<iterator>
 
 **Пространство имен:** std
 
-## <a name="char_type"></a>  istream_iterator::char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:char_type
 
 Тип, обеспечивающий тип символа для `istream_iterator`.
 
@@ -126,7 +126,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iterator"></a>  istream_iterator::istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator::istream_iterator
 
 Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.
 
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr*\
+*_istr*\
 Входной поток для чтения, используется для инициализации `istream_iterator`.
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор инициализирует указатель входного потока значением null и создает итератор конца потока. Второй конструктор инициализирует указатель входного потока с *& _Istr*, а затем пытается извлечь и сохранить объект типа `Type`.
+Первый конструктор инициализирует указатель входного потока значением null и создает итератор конца потока. Второй конструктор инициализирует указатель ввода потока с *&_Istr,* затем пытается `Type`извлечь и сохранить объект типа.
 
 Итератор конца потока можно использовать для проверки, достигнут ли конец потока `istream_iterator`.
 
@@ -181,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="istream_type"></a>  istream_iterator::istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator::istream_type
 
 Тип, обеспечивающий тип потока для `istream_iterator`.
 
@@ -191,13 +191,13 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом `basic_istream`\< **CharType**, **признаки**>.
+Тип является синонимом `basic_istream` \< **CharType,** **Traits**>.
 
 ### <a name="example"></a>Пример
 
 См. раздел [istream_iterator](#istream_iterator) с примером объявления и использования `istream_type`.
 
-## <a name="op_star"></a>  istream_iterator::operator*
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator::оператор
 
 Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.
 
@@ -207,7 +207,7 @@ const Type& operator*() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сохраненный объект типа `Type`.
+Сохраненный объект `Type`типа .
 
 ### <a name="example"></a>Пример
 
@@ -241,7 +241,7 @@ int main( )
 }
 ```
 
-## <a name="op_arrow"></a>  istream_iterator::operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator::оператор-&gt;
 
 Возвращает значение члена при наличии.
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="op_add_add"></a>  istream_iterator::operator++
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator::оператор
 
 Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор-член возвращает ссылку на инкрементный объект типа `Type` извлеченный из входного потока, а вторая функция-член возвращает копию объекта.
+Первый оператор-член возвращает ссылку на приращенный объект типа, `Type` извлеченный из входного потока, а функция второго члена возвращает копию объекта.
 
 ### <a name="example"></a>Пример
 
@@ -337,7 +337,7 @@ int main( )
 }
 ```
 
-## <a name="traits_type"></a>  istream_iterator::traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator::traits_type
 
 Тип, обеспечивающий тип признаков символа для `istream_iterator`.
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>См. также раздел
 
-[Структура input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
-[Структура iterator](../standard-library/iterator-struct.md)\
-[\<iterator>](../standard-library/iterator.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+[input_iterator_tag Struct](../standard-library/input-iterator-tag-struct.md)\
+[итератор Struct](../standard-library/iterator-struct.md)\
+[\<итератор>](../standard-library/iterator.md)\
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)

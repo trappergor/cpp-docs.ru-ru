@@ -1,6 +1,6 @@
 ---
 title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _strupr_s
 - _strupr_s_l
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr_s_l
 - _mbsupr_s_l
 - _wcsupr_s
+- _o__mbsupr_s
+- _o__mbsupr_s_l
+- _o__strupr_s
+- _o__strupr_s_l
+- _o__wcsupr_s
+- _o__wcsupr_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,19 +70,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: 04ae6fe34d51de8b026cb1c3536f4e3ed6fc5c22
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2fd90f462787df739f41a9e8e10f84d2fc52c456
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625903"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362986"
 ---
 # <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Преобразуют буквы в строке в прописные с использованием текущего или переданного языкового стандарта. Эти версии функций [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).
 
 > [!IMPORTANT]
-> **_mbsupr_s** и **_mbsupr_s_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s** и **_mbsupr_s_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -138,32 +145,34 @@ errno_t _mbsupr_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*Ул*<br/>
 Строка для преобразования букв.
 
 *numberOfElements*<br/>
 Размер буфера.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Нуль в случае успеха или ненулевой код ошибки в случае ошибки.
 
-Эти функции проверяют свои параметры. Если *str* является **пустым** указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функции возвращают **еинвал** и **присвойте** параметру перестройку значение **еинвал**. Если *numberOfElements* меньше длины строки, функции возвращают **ERANGE** и присвойте параметру « **ERANGE**» **значение «назад** ».
+Эти функции проверяют свои параметры. Если *str* является указателем **NULL,** вызывается обработчик параметров недействительного, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, функции возвращают **EINVAL** и устанавливают **errno** **в EINVAL.** Если *numberOfElements* меньше длины строки, функции возвращают **ERANGE** и устанавливают **errno** в **ERANGE.**
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Функция **_strupr_s** преобразует, на месте, каждую строчную букву в *str* в верхний регистр. **_wcsupr_s** — это версия **_strupr_s**для расширенных символов. **_mbsupr_s** — это версия **_strupr_s**для многобайтовых символов.
+Функция **_strupr_s** преобразует, на месте, каждая нижняя буква в *str* к uppercase. **_wcsupr_s** является широкохарактерным вариантом **_strupr_s.** **_mbsupr_s** является многобайтной версией символов **_strupr_s.**
 
-Преобразование определяется параметром категории **LC_CTYPE** языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт. концепции с суффиксом **_l** идентичны за исключением того, что они используют переданный языковой стандарт. Дополнительные сведения см. в разделе [Locale](../../c-runtime-library/locale.md).
+Преобразование определяется **LC_CTYPE** параметром категории локализовать. Другие символы не изменяются. Для получения дополнительной информации о **LC_CTYPE,** [см. setlocale](setlocale-wsetlocale.md). Версии этих функций без **_l** суффикса используют текущий локали; видения с **_l** суффикс идентичны, за исключением того, что они используют локали, передаваемую вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Отладка библиотеки версии этих функций сначала заполнить буфер с 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -175,17 +184,17 @@ errno_t _mbsupr_s_l(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |**_strupr_s**, **_strupr_s_l**|\<string.h>|
-|**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> или \<wchar.h>|
+|**_wcsupr_s,** **_wcsupr_s_l,** **_mbsupr_s,** **_mbsupr_s_l**|\<string.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. примеры [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr_s, _strlwr_s_l, _mbslwr_s, _mbslwr_s_l, _wcslwr_s, _wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)<br/>
