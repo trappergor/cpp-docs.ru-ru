@@ -2,10 +2,10 @@
 title: Разработка игр на языке C++
 ms.date: 02/26/2019
 ms.openlocfilehash: d4cc16e864d9ade1726733504a58551f9110171b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80079384"
 ---
 # <a name="game-development-with-c"></a>Разработка игр на C++

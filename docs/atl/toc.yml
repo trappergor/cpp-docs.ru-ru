@@ -111,7 +111,7 @@
           items:
             - name: Реализация страниц свойств
               href: implementing-property-pages.md
-            - name: Пример Реализация страницы свойств
+            - name: Пример. Реализация страницы свойств
               href: example-implementing-a-property-page.md
     - name: Поддержка элементов управления DHTML в ATL
       expanded: false
@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Модульные классы ATL
       href: atl-module-classes.md
-    - name: Службы ATL
+    - name: службы ATL
       expanded: false
       items:
         - name: Службы ATL

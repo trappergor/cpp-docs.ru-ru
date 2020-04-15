@@ -53,14 +53,14 @@
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: Справочники
+                    - name: Справочник
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: Общие классы ATL и MFC
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: Справочники
+                    - name: Справочник
                       tocHref: /cpp/atl-mfc-shared/reference/
                       topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
                 - name: C++/CX
@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 'Редактирование, навигация и рефакторинг кода'
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/

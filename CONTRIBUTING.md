@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316621"
 ---
 # <a name="contributing"></a>Добавление данных
 
@@ -14,11 +14,11 @@ ms.locfileid: "79509443"
 
 В этом разделе мы рассмотрим следующие темы.
 
-* [Процесс добавления данных](#process-for-contributing)
-* [Правила](#dos-and-donts)
-* [Создание документации](#building-the-docs)
-* [Добавление данных в примеры](#contributing-to-samples)
-* [Лицензионное соглашение с участником](#contributor-license-agreement)
+- [Процесс добавления данных](#process-for-contributing)
+- [Правила](#dos-and-donts)
+- [Создание документации](#building-the-docs)
+- [Добавление данных в примеры](#contributing-to-samples)
+- [Лицензионное соглашение с участником](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>Процесс добавления данных
 
