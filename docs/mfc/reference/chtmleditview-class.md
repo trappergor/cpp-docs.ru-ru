@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352078"
 ---
 # <a name="chtmleditview-class"></a>Класс CHtmlEditView
 
@@ -35,16 +35,16 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHtmlEditView::CHtmlEditView](#chtmleditview)|Создает объект `CHtmlEditView`.|
+|[CHtmlEditView::HtmlEditView](#chtmleditview)|Формирует объект `CHtmlEditView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|Создает новый объект окна.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Возвращает `IHTMLDocument2` интерфейс на текущий документ.|
+|[CHtmlEditView::Создание](#create)|Создает новый объект окна.|
+|[CHtmlEditView::GetDHtmlДокумент](#getdhtmldocument)|Возвращает `IHTMLDocument2` интерфейс в текущем документе.|
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|Извлекает имя документа по умолчанию для этого представления.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -71,15 +71,15 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 **Заголовок:** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::HtmlEditView
 
-Создает объект `CHtmlEditView`.
+Формирует объект `CHtmlEditView`.
 
 ```
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Создание
 
 Создает новый объект окна.
 
@@ -97,33 +97,33 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *lpszClassName*<br/>
-Указывает строку нуль-символом, с именем класса Windows. Имя класса может быть любое имя, зарегистрированное [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции или `RegisterClass` функции Windows. Если значение равно NULL, используется по умолчанию [CFrameWnd](../../mfc/reference/cframewnd-class.md) атрибуты.
+Указывает на строку символов с нулевым завершением, которая называет класс Windows. Имя класса может быть любым именем, зарегистрированным в глобальной функции [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) или функции `RegisterClass` Windows. Если NULL, использует предопределенные атрибуты [CFrameWnd](../../mfc/reference/cframewnd-class.md) по умолчанию.
 
 *lpszWindowName*<br/>
-Указывает символ, завершающаяся нулем строка, представляющая имя окна.
+Указывает на строку символов с нулевым завершением, представляющую имя окна.
 
 *dwStyle*<br/>
-Указывает атрибуты стиля окна. По умолчанию задаются стили WS_VISIBLE и WS_CHILD Windows.
+Определяет атрибуты стиля окна. По умолчанию установлены стили WS_VISIBLE и WS_CHILD Windows.
 
 *rect*<br/>
-Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
+Ссылка на структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) с указанием размера и положения окна. Значение *rectDefault* позволяет Windows указать размер и положение нового окна.
 
 *pParentWnd*<br/>
 Указатель на родительское окно элемента управления.
 
 *nID*<br/>
-Идентификатор представления. По умолчанию значение AFX_IDW_PANE_FIRST.
+Идентификационный номер представления. По умолчанию, установлен на AFX_IDW_PANE_FIRST.
 
 *pContext*<br/>
-Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). Значение NULL по умолчанию.
+Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL по умолчанию.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод также будет вызывать автономной WebBrowser `Navigate` метод для загрузки документа по умолчанию (см. в разделе [CHtmlEditView::GetStartDocument](#getstartdocument)).
+Этот метод также вызовет `Navigate` содержащийся метод WebBrowser для загрузки документа по умолчанию (см. [CHtmlEditView::GetStartDocument).](#getstartdocument)
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlДокумент
 
-Возвращает `IHTMLDocument2` интерфейс на текущий документ.
+Возвращает `IHTMLDocument2` интерфейс в текущем документе.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -131,10 +131,10 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ppDocument*<br/>
-[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) интерфейс.
+*ppДокумент*<br/>
+Интерфейс [IHTMLDocument2.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument
 
 Извлекает имя документа по умолчанию для этого представления.
 
@@ -142,7 +142,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 virtual LPCTSTR GetStartDocument();
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Образец HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

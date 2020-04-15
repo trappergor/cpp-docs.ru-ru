@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: ec4198c283700daa2e02e2507b9874eaf02858e9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6d28471bdc44d5d75a9eeac2327f92a8e2e265c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360661"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>Набор записей. Параметризация набора записей (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "80212814"
 
 - [Передача данных параметра в объект набора записей во время выполнения](#_core_passing_parameter_values_at_run_time).
 
-##  <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> Параметризованные наборы записей
+## <a name="parameterized-recordsets"></a><a name="_core_parameterized_recordsets"></a> Параметризованные наборы записей
 
 Параметризованные наборы записей поддерживают передачу параметров во время выполнения. Это дает два важных преимущества.
 
@@ -40,13 +40,13 @@ ms.locfileid: "80212814"
 
 При вызове метода `Open` для выполнения запроса набор записей использует данные параметра для заполнения инструкции **SQL SELECT**. Параметризация поддерживается для любых наборов записей.
 
-##  <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> Ситуации, в которых следует использовать параметры
+## <a name="when-to-use-parameters"></a><a name="_core_when_to_use_parameters"></a> Ситуации, в которых следует использовать параметры
 
 Как правило, параметры используются в следующих случаях.
 
 - Передача аргументов времени выполнения в предопределенный запрос.
 
-   Чтобы передать параметры в хранимую процедуру, необходимо указать полную настраиваемую инструкцию ODBC **CALL** с заполнителями параметров при вызове метода `Open`. Таким образом переопределяется заданная по умолчанию инструкция SQL для набора записей. Дополнительные сведения см. в разделе [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open) в *справочнике по библиотеке классов* и [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) и [набора записей: объявление класса для предопределенного запроса (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
+   Чтобы передать параметры в хранимую процедуру, необходимо указать полную настраиваемую инструкцию ODBC **CALL** с заполнителями параметров при вызове метода `Open`. Таким образом переопределяется заданная по умолчанию инструкция SQL для набора записей. Для получения дополнительной информации [см. CRecordset::Откройте](../../mfc/reference/crecordset-class.md#open) в *библиотеке класса справку* и [S'L: Настройка вашего записи в S'L заявление (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md) и [запись: Объявление класса для предопределенного запроса (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md).
 
 - Эффективное выполнение множества повторных запросов с использованием различных сведений о параметрах.
 
@@ -75,19 +75,19 @@ ms.locfileid: "80212814"
                                        // for some drivers
     ```
 
-   Описание того, как правильно использовать кавычки для строк фильтрации, см. в разделе [набор записей: Фильтрация записей (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+   Для обсуждения правильного использования кавычек для строк [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)фильтра см.
 
    Значение параметра будет изменяться каждый раз, когда вы будете отправлять запрос к набору записей для нового идентификатора учащегося.
 
    > [!TIP]
    > Использование параметров намного эффективнее применения обычного фильтра. При работе с параметризованным набором записей база данных обрабатывает инструкцию SQL **SELECT** всего один раз. Для отфильтрованного набора записей без параметров инструкция **SELECT** обрабатывается каждый раз при выполнении `Requery` с новым значением фильтра.
 
-Дополнительные сведения о фильтрах см. в разделе [набор записей: Фильтрация записей (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md).
+Для получения дополнительной информации [Recordset: Filtering Records (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)о фильтрах см.
 
-##  <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> Параметризация класса набора записей
+## <a name="parameterizing-your-recordset-class"></a><a name="_core_parameterizing_your_recordset_class"></a> Параметризация класса набора записей
 
 > [!NOTE]
-> Этот раздел относится к объектам, производным от `CRecordset`, в которых пакетная выборка строк не реализована. Если вы используете пакетную выборку строк, реализация параметров осуществляется схожим образом. Дополнительные сведения см. [в разделе набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Этот раздел относится к объектам, производным от `CRecordset`, в которых пакетная выборка строк не реализована. Если вы используете пакетную выборку строк, реализация параметров осуществляется схожим образом. Для получения дополнительной информации [см. Recordset: Извлечение записей в массовых (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Прежде чем создавать класс набора записей, определите, какие параметры вам потребуются, какие типы данных они будут иметь, а также как они будут использоваться набором записей.
 
@@ -117,7 +117,7 @@ ms.locfileid: "80212814"
 
    Элементы данных параметра следует добавлять после созданных мастером элементов данных поля. По соглашению к каждому определенному пользователем имени параметра следует добавлять слово "Param".
 
-1. Измените определение функции-члена [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) в CPP-файле. Для каждого элемента данных параметра, добавляемого в класс, добавьте вызов функции RFX. Сведения о написании функций RFX см. в разделе [Обмен полями записей: принципы работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Перед вызовами RFX в отношении параметров необходимо использовать один вызов:
+1. Измените определение функции-члена [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) в CPP-файле. Для каждого элемента данных параметра, добавляемого в класс, добавьте вызов функции RFX. Для получения информации о написании функций RFX [см.](../../data/odbc/record-field-exchange-how-rfx-works.md) Перед вызовами RFX в отношении параметров необходимо использовать один вызов:
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -126,7 +126,7 @@ ms.locfileid: "80212814"
 
 1. В конструкторе класса набора записей увеличьте количество параметров, `m_nParams`.
 
-   Дополнительные сведения см. [в статье Обмен полями записи. Работа с кодом мастера](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md).
+   Для получения [Record Field Exchange: Working with the Wizard Code](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)информации см.
 
 1. При написании кода, который создает объект набора записей этого класса, помещайте символ "?" (знак вопроса) в каждой позиции в строках инструкций SQL, в которых требуется заменять параметр.
 
@@ -138,7 +138,7 @@ ms.locfileid: "80212814"
 > [!TIP]
 > В большинстве случаев работа осуществляется со строкой, которую вы задаете в элементе данных класса [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) (если таковая есть), однако некоторые драйверы ODBC допускают использование параметров в других предложениях SQL.
 
-##  <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> Передача значений параметра во время выполнения
+## <a name="passing-parameter-values-at-run-time"></a><a name="_core_passing_parameter_values_at_run_time"></a> Передача значений параметра во время выполнения
 
 Значения параметра необходимо указывать до вызова `Open` (для нового объекта набора записей) или `Requery` (для существующего объекта).
 
@@ -174,7 +174,7 @@ if( !rsStudents.Requery( ) )
 Набор записей содержит записи учащихся, соответствующие условиям, которые задаются фильтром, создаваемым на основе параметров времени выполнения. В этом случае набор содержит записи для всех учащихся старшего курса.
 
 > [!NOTE]
->  При необходимости вы можете присвоить элементу данных параметра значение Null, используя [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Также вы можете проверить, имеет ли элемент данных параметра значение Null, используя [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
+> При необходимости вы можете присвоить элементу данных параметра значение Null, используя [SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull). Также вы можете проверить, имеет ли элемент данных параметра значение Null, используя [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
 ## <a name="see-also"></a>См. также раздел
 

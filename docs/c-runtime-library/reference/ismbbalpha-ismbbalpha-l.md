@@ -1,9 +1,11 @@
 ---
 title: _ismbbalpha, _ismbbalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalpha
 - _ismbbalpha_l
+- _o__ismbbalpha
+- _o__ismbbalpha_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: fe60eec2eb7f93d866340aabe382bf32d6b04b21
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7ff45c9d43a01d89d7ad2e9bac004ca1dcffd9d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343710"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha, _ismbbalpha_l
 
@@ -55,10 +58,10 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Целое число, которое требуется проверить.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -67,7 +70,11 @@ int _ismbbalpha_l(
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-параметр имеет ненулевое значение для *языка c*или значение 0, если нет. **_ismbbalpha** использует текущий языковой стандарт для любых параметров символов, зависящих от языкового стандарта. **_ismbbalpha_l** является идентичным за исключением того, что использует переданный языковой стандарт.
+является незерной для *c,* или 0, если это не так. **_ismbbalpha** использует текущий локал для любых параметров символов, зависящих от локальной зависимости. **_ismbbalpha_l** идентичен, за исключением того, что он использует местность, пройденое.
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -76,13 +83,13 @@ int _ismbbalpha_l(
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>

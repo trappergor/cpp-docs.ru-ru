@@ -1,6 +1,6 @@
 ---
-title: Класс Ианализер
-description: Справочник C++ по классу SDK для Build Insights ианализер.
+title: Класс IAnalyzer
+description: Ссылка на класс SDK IAnalyzer по сборке СЗ.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 53f7b36695bb24d96ccfe88afbb56ff717c94dc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: be9d80bb94450458c73fd6ce8d908985ba6f293d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329174"
 ---
-# <a name="ianalyzer-class"></a>Класс Ианализер
+# <a name="ianalyzer-class"></a>Класс IAnalyzer
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `IAnalyzer` предоставляет интерфейс для анализа трассировки трассировки событий Windows (ETW). Он используется с функциями [макединамиканализерграуп](../functions/make-dynamic-analyzer-group.md), [макединамикрелогжерграуп](../functions/make-dynamic-relogger-group.md), [макестатиканализерграуп](../functions/make-dynamic-analyzer-group.md)и [макестатикрелогжерграуп](../functions/make-static-analyzer-group.md) . Используйте `IAnalyzer` в качестве базового класса, чтобы создать собственный анализатор, который может входить в анализатор или группу повторного ведения журнала.
+Класс `IAnalyzer` предоставляет интерфейс для анализа отслеживания событий для отслеживания Windows (ETW). Он используется с функциями [MakeDynamicAnalyzerGroup,](../functions/make-dynamic-analyzer-group.md) [MakeDynamicReloggerGroup,](../functions/make-dynamic-relogger-group.md) [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)и [MakeStaticReloggGroup.](../functions/make-static-analyzer-group.md) Используйте `IAnalyzer` в качестве базового класса для создания собственного анализатора, который может быть частью группы анализатора или перелога.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,43 +61,43 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-Классы, производные от `IAnalyzer`, можно использовать как анализаторы, так и средства регистрации. При использовании в качестве регистраторов функции, зависящие от средства ведения журнала, перенаправляются в свой эквивалент анализатора. Обратная неверность: класс, производный от `IRelogger`, не может использоваться в качестве анализатора. Использование анализатора в группе повторного ведения журнала — это общий шаблон. При размещении в ранней позиции группы повторного ведения журнала анализатор может предварительно вычислить информацию и сделать ее доступной для повторного ведения журнала в последующих позициях.
+Полученные классы `IAnalyzer` могут использоваться как в качестве анализаторов, так и в релоггерах. При использовании в качестве релоггеров функции релоггера перенаправляются на эквивалент анализатора. Обратное не верно: класс, который `IRelogger` происходит от не может быть использован в качестве анализатора. Использование анализатора в группе перелогов является общим шаблоном. При размещении в раннем положении группы релоггеров анализатор может предварительно вычислить информацию и сделать ее доступной для релоггеров в более поздних позициях.
 
-Возвращаемое по умолчанию значение для всех функций, которые не переопределяются, — `AnalysisControl::CONTINUE`. Дополнительные сведения см. в разделе [аналисисконтрол](analysis-control-enum-class.md).
+Значение возврата по умолчанию для всех функций, которые не переопределены, находится `AnalysisControl::CONTINUE`под этим. Для получения дополнительной информации [см.](analysis-control-enum-class.md)
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-В дополнение к элементу [онтрацеинфо](irelogger-class.md#on-trace-info) из интерфейса `IRelogger` класс `IAnalyzer` содержит следующие члены:
+В дополнение к участнику [OnTraceInfo](irelogger-class.md#on-trace-info) из интерфейса, `IRelogger` `IAnalyzer` класс содержит следующие элементы:
 
 ### <a name="destructor"></a>Деструктор
 
-[~ Ианализер](#ianalyzer-destructor)
+[ЗиАнализ](#ianalyzer-destructor)
 
 ### <a name="functions"></a>Функции
 
-[Онбегинаналисис](#on-begin-analysis)\
-[Онбегинаналисиспасс](#on-begin-analysis-pass)\
-[Онбегинрелоггинг](#on-begin-relogging)\
-[Онбегинрелоггингпасс](#on-begin-relogging-pass)\
-[Оненданалисис](#on-end-analysis)\
-[Оненданалисиспасс](#on-end-analysis-pass)\
-[Онендрелоггинг](#on-end-relogging)\
-[Онендрелоггингпасс](#on-end-relogging-pass)\
-[Онсимпливент](#on-simple-event)\
-[Онстартактивити](#on-start-activity)\
-[онстопактивити](#on-stop-activity)
+[OnBeginAnalysis](#on-begin-analysis)\
+[OnBeginAnalysisPass](#on-begin-analysis-pass)\
+[OnBeginRelogging](#on-begin-relogging)\
+[OnBeginReloggingPass](#on-begin-relogging-pass)\
+[OnEndAnalysis](#on-end-analysis)\
+[OnEndAnalysisPass](#on-end-analysis-pass)\
+[OnEndRelogging](#on-end-relogging)\
+[OnendReloggingPass](#on-end-relogging-pass)\
+[OnSimpleEvent](#on-simple-event)\
+[OnStartActivity](#on-start-activity)\
+[OnStopActivity](#on-stop-activity)
 
-## <a name="ianalyzer-destructor"></a>~ Ианализер
+## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a>ЗиАнализ
 
-Уничтожает класс Ианализер.
+Уничтожает класс IAnalyzer.
 
 ```cpp
 virtual ~IAnalyzer();
 ```
 
-## <a name="on-begin-analysis"></a>онбегинаналисис
+## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a>OnBeginAnalysis
 
-Для анализаторов, входящих в группу анализаторов, эта функция вызывается до начала первого прохода по анализу. Для анализаторов, входящих в группу переведения журнала, эта функция вызывается до начала прохода по перезаписи. Для анализаторов, входящих в один и тот же сеанс повторного ведения журнала, и как анализатор, и в группу повторного ведения журнала, эта функция вызывается дважды перед началом первого прохода по анализу.
+Для анализаторов, входят в группу анализаторов, эта функция называется до начала первого прохода анализа. Для анализаторов, входящих в группу перелогов, эта функция вызывается до начала прохождения перезаписи. Для анализаторов, входящих в группу анализаторов и релоггеров одного и того же сеанса relogging, эта функция называется дважды до начала первого прохода анализа.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysis();
@@ -105,11 +105,11 @@ virtual AnalysisControl OnBeginAnalysis();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-begin-analysis-pass"></a>онбегинаналисиспасс
+## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
 
-Для анализаторов, входящих в группу анализаторов, эта функция вызывается в начале каждого этапа анализа. Для анализаторов, входящих в группу переведения журнала, эта функция вызывается в начале этого прохода. Для анализаторов, входящих в состав одного и того же сеанса перезаписи в систему, используется анализатор и группа переведения журнала. Эта функция вызывается в начале каждого прохода анализа и в начале этого прохода.
+Для анализаторов, входят в группу анализаторов, эта функция называется в начале каждого анализа. Для анализаторов, внеех группы релоггеров, эта функция вызывается в начале перелога. Для анализаторов, входящих как в группу анализаторов, так и в группу релогга одного и того же сеанса relogging, эта функция вызывается в начале каждого прохода анализа и в начале перелога.
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysisPass();
@@ -117,23 +117,23 @@ virtual AnalysisControl OnBeginAnalysisPass();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-begin-relogging"></a>онбегинрелоггинг
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging
 
 ```cpp
 AnalysisControl OnBeginRelogging() final;
 ```
 
-Эта функция не может быть переопределена. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Эта функция перенаправляет вызов в [онбегинаналисис](#on-begin-analysis).
+Эта функция не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Эта функция перенаправляет вызов на [OnBeginAnalysis.](#on-begin-analysis)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат вызова [онбегинаналисис](#on-begin-analysis) .
+Результат вызова [OnBeginAnalysis.](#on-begin-analysis)
 
-## <a name="on-begin-relogging-pass"></a>онбегинрелоггингпасс
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
 
-Эта функция не может быть переопределена. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Эта функция перенаправляет вызов в [онбегинаналисиспасс](#on-begin-analysis-pass).
+Эта функция не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Эта функция перенаправляет вызов на [OnBeginAnalysisPass.](#on-begin-analysis-pass)
 
 ```cpp
 AnalysisControl OnBeginReloggingPass() final;
@@ -141,14 +141,14 @@ AnalysisControl OnBeginReloggingPass() final;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат вызова [онбегинаналисиспасс](#on-begin-analysis-pass) .
+Результат вызова [OnBeginAnalysisPass.](#on-begin-analysis-pass)
 
-## <a name="on-end-analysis"></a>оненданалисис
+## <a name="onendanalysis"></a><a name="on-end-analysis"></a>OnEndAnalysis
 
-Для анализаторов, которые являются частью группы анализатора, эта функция вызывается после завершения последнего этапа анализа. Для анализаторов, которые являются частью группы переведения журнала, эта функция вызывается после завершения этапа перезаписи в журнал. Для анализаторов, которые являются частью анализатора и группы повторного ведения журнала одного и того же сеанса повторного ведения журнала, эта функция вызывается дважды:
+Для анализаторов, входят в группу анализаторов, эта функция называется после окончания последнего прохода анализа. Для анализаторов, входящих в группу перелоггеров, эта функция называется после окончания прохода перезаписи. Для анализаторов, которые являются частью группы анализатора и перелогера одного и того же сеанса relogging, эта функция называется дважды:
 
-1. После завершения всех этапов анализа и до начала прохода по перезаписи.
-1. После завершения этапа перезаписи журнала.
+1. после того, как все анализ проходит закончились и до начала перезаписи проход начинается, и
+1. после окончания перезаписи.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysis();
@@ -156,11 +156,11 @@ virtual AnalysisControl OnEndAnalysis();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-end-analysis-pass"></a>оненданалисиспасс
+## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a>OnEndAnalysisPass
 
-Для анализаторов, входящих в группу анализаторов, эта функция вызывается в конце каждого прохода анализа. Для анализаторов, входящих в группу переведения журнала, эта функция вызывается в конце прохода переведения журнала. Для анализаторов, входящих в состав одного и того же сеанса перезаписи в систему, используется анализатор и группа переведения журнала. Эта функция вызывается в конце каждого прохода анализа и в конце прохода переведения журнала.
+Для анализаторов, входят в группу анализаторов, эта функция называется в конце каждого анализа. Для анализаторов, внеех группы перелоггеров, эта функция вызывается в конце прохода relogger. Для анализаторов, входящих как в группу анализаторов, так и в группу релогга одного и того же сеанса relogging, эта функция вызывается в конце каждого прохода анализа и в конце прохода relogger.
 
 ```cpp
 virtual AnalysisControl OnEndAnalysisPass();
@@ -168,11 +168,11 @@ virtual AnalysisControl OnEndAnalysisPass();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-end-relogging"></a>онендрелоггинг
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging
 
-Эта функция не может быть переопределена. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Эта функция перенаправляет вызов в [оненданалисис](#on-end-analysis).
+Эта функция не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Эта функция перенаправляет вызов на [OnEndAnalysis.](#on-end-analysis)
 
 ```cpp
 AnalysisControl OnEndRelogging() final;
@@ -180,11 +180,11 @@ AnalysisControl OnEndRelogging() final;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат вызова [оненданалисис](#on-end-analysis) .
+Результат вызова [OnEndAnalysis.](#on-end-analysis)
 
-## <a name="on-end-relogging-pass"></a>онендрелоггингпасс
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnendReloggingPass
 
-Эта функция не может быть переопределена. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Эта функция перенаправляет вызов в [оненданалисиспасс](#on-end-analysis-pass).
+Эта функция не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Эта функция перенаправляет вызов [на OnEndAnalysisPass.](#on-end-analysis-pass)
 
 ```cpp
 AnalysisControl OnEndReloggingPass() final;
@@ -192,11 +192,11 @@ AnalysisControl OnEndReloggingPass() final;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Результат вызова [оненданалисиспасс](#on-end-analysis-pass) .
+Результат вызова [OnEndAnalysisPass.](#on-end-analysis-pass)
 
-## <a name="on-simple-event"></a>онсимпливент
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>OnSimpleEvent
 
-Эта функция вызывается при обработке простого события. Вторую версию этой функции нельзя переопределить. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Все вызовы версии 2 перенаправляются на версию 1.
+Эта функция вызывается при обработке простого события. Вторая версия этой функции не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Все вызовы в версию 2 перенаправляются в версию 1.
 
 ### <a name="version-1"></a>версия 1
 
@@ -213,19 +213,19 @@ AnalysisControl OnSimpleEvent(const EventStack& eventStack,
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для этого простого события. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого простого события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
-*релогсессион*\
+*relogСессия*\
 Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-start-activity"></a>онстартактивити
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>OnStartActivity
 
-Эта функция вызывается при обработке события начала действия. Вторую версию этой функции нельзя переопределить. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Все вызовы версии 2 перенаправляются на версию 1.
+Эта функция вызывается при обработке события начала действия. Вторая версия этой функции не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Все вызовы в версию 2 перенаправляются в версию 1.
 
 ### <a name="version-1"></a>версия 1
 
@@ -242,19 +242,19 @@ AnalysisControl OnStartActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для события начала этого действия. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого события начала события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
-*релогсессион*\
+*relogСессия*\
 Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-stop-activity"></a>онстопактивити
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
 
-Эта функция вызывается при обработке события завершения действия. Вторую версию этой функции нельзя переопределить. Он вызывается пакетом C++ SDK для Build Insights, когда анализатор входит в группу переведения журнала. Все вызовы версии 2 перенаправляются на версию 1.
+Эта функция вызывается при обработке события остановки активности. Вторая версия этой функции не может быть переопределена. Это называется SDK Build Insights, когда анализатор является частью группы перелогов. Все вызовы в версию 2 перенаправляются в версию 1.
 
 ### <a name="version-1"></a>версия 1
 
@@ -271,14 +271,14 @@ AnalysisControl OnStopActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для этого события завершения действия. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого события остановки события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
-*релогсессион*\
+*relogСессия*\
 Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
 ::: moniker-end

@@ -1,36 +1,36 @@
 ---
-title: Глобальные функции для маршалинга
+title: Маршалинг Глобальные функции
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274698"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326263"
 ---
-# <a name="marshaling-global-functions"></a>Глобальные функции для маршалинга
+# <a name="marshaling-global-functions"></a>Маршалинг Глобальные функции
 
-Эти функции обеспечивают поддержку маршалинг и преобразование указателя на интерфейс маршалинг данных.
+Эти функции обеспечивают поддержку для маршалинга и преобразования маршалингинг данных в указатели интерфейса.
 
 > [!IMPORTANT]
->  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Функции, перечисленные в следующей таблице, не могут использоваться в приложениях, выполняемых в Windows Runtime.
 
 |||
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Освобождает данные маршалинга и `IStream` указатель.|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Создает новый объект потока и маршалирует заданный указатель интерфейса.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Преобразует данные маршалинга потока в указатель интерфейса.|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Выпускает данные маршала и указатель. `IStream`|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Создает новый объект потока и маршалов указанный указатель интерфейса.|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Преобразует данные потока в указатель интерфейса.|
 
-## <a name="requirements"></a>Требования:
+## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream
 
 Освобождает данные маршалинга в потоке, затем освобождает указатель потока.
 
@@ -41,13 +41,13 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="parameters"></a>Параметры
 
 *pStream*<br/>
-[in] Указатель на `IStream` интерфейса на поток, используемый для маршалинга.
+(в) Указатель на `IStream` интерфейс в потоке, используемом для маршалинга.
 
 ### <a name="example"></a>Пример
 
-См. в примере [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Смотрите пример [для AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>"Атлетико"
 
 Создает новый объект потока, записывает в поток CLSID прокси-сервера и маршалирует заданный указатель интерфейса, записывая в поток данные, необходимые для инициализации прокси-сервера.
 
@@ -60,32 +60,32 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnk*<br/>
-[in] Указатель на интерфейс для маршалинга.
+*Панк*<br/>
+(в) Указатель на интерфейс, который должен быть маршализирован.
 
-*IID*<br/>
-[in] Идентификатор GUID интерфейса маршалируемого.
+*Iid*<br/>
+(в) GUID интерфейса, который подвергается маршалу.
 
 *ppStream*<br/>
-[out] Указатель на `IStream` интерфейса на новый объект-поток, используемый для маршалинга.
+(ваут) Указатель на `IStream` интерфейс нового объекта потока, используемого для маршалинга.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот флаг MSHLFLAGS_TABLESTRONG имеет значение, указатель может быть маршалирован в несколько потоков. Указатель также может быть неупакованный несколько раз.
+Флаг MSHLFLAGS_TABLESTRONG установлен таким образом, чтобы указатель мог быть приспущен на несколько потоков. Указатель также может быть неmarshaled несколько раз.
 
-Если маршалинг происходит сбой, освобождается указатель потока.
+При сбой в маршалах высвобождается указатель потока.
 
-`AtlMarshalPtrInProc` может использоваться только на указатель на объект в процессе.
+`AtlMarshalPtrInProc`может быть использован только на указателе на объект в процессе.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>АтлетикоПмаршалТр
 
 Преобразует данные маршалинга потока в указатель интерфейса, который может использоваться клиентом.
 
@@ -99,13 +99,13 @@ HRESULT AtlUnmarshalPtr(
 ### <a name="parameters"></a>Параметры
 
 *pStream*<br/>
-[in] Указатель на поток обрабатывает команды.
+(в) Указатель на поток неmarshaled.
 
-*IID*<br/>
-[in] Идентификатор GUID интерфейса обрабатывает команды.
+*Iid*<br/>
+(в) GUID интерфейса быть неmarshaled.
 
 *ppUnk*<br/>
-[out] Указатель на интерфейс неупакованный.
+(ваут) Указатель на немаршалированный интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -113,8 +113,8 @@ HRESULT AtlUnmarshalPtr(
 
 ### <a name="example"></a>Пример
 
-См. в примере [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Смотрите пример [для AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции](../../atl/reference/atl-functions.md)

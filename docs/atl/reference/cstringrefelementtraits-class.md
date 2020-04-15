@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4dd76b9592b255a1553be3ca7a249f58fb2672e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330585"
 ---
 # <a name="cstringrefelementtraits-class"></a>Класс CStringRefElementTraits
 
-Этот класс предоставляет статические функции, связанные с строк, которые хранятся в объектах класса коллекции. Объекты-строки обрабатываются как ссылки.
+Этот класс предоставляет статические функции, связанные со строками, хранящимися в объектах класса коллекции. Объекты строки рассматриваются в качестве ссылок.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,23 +31,23 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип данных, хранимых в коллекции.
+Тип данных, которые будут храниться в коллекции.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CStringRefElementTraits::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства.|
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух элементов строки.|
-|[CStringRefElementTraits::Hash](#hash)|Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.|
+|[CStringRefElementTraits:CompareElements](#compareelements)|Вызовите эту статическую функцию, чтобы сравнить два элемента строки для равенства.|
+|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию, чтобы сравнить два элемента строки.|
+|[CStringRefElementTraits::Хэш](#hash)|Вызовите эту статическую функцию, чтобы вычислить значение хэша для данного элемента строки.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет статические функции для сравнения строк, а также для создания хэш-значение. Эти функции полезны при использовании класса коллекции для хранения строковых данных. В отличие от [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` вызывает `CString` аргументы нельзя передать как **const** `CString&` ссылки.
+Этот класс предоставляет статические функции для сравнения строк и для создания значения хэша. Эти функции полезны при использовании класса сбора для хранения строковых данных. В отличие от [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` вызывает `CString` аргументы, которые должны быть переданы в качестве **const** `CString&` ссылки.
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,9 +59,9 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 
 **Заголовок:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements
+## <a name="cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits:CompareElements
 
-Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства.
+Вызовите эту статическую функцию, чтобы сравнить два элемента строки для равенства.
 
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
@@ -69,19 +69,19 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*element1*<br/>
-Первая строка, элемент.
+*элемент1*<br/>
+Первый элемент строки.
 
-*элемент элемент2*<br/>
-Вторая строка элемента.
+*элемент2*<br/>
+Второй элемент строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если элементы равны; значение false в противном случае.
+Возвращает верно, если элементы равны, ложные в противном случае.
 
-##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered
+## <a name="cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered
 
-Вызовите эту статическую функцию для сравнения двух элементов строки.
+Вызовите эту статическую функцию, чтобы сравнить два элемента строки.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -90,18 +90,18 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первая строка, элемент.
+Первый элемент строки.
 
 *str2*<br/>
-Вторая строка элемента.
+Второй элемент строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Нуль, если строки идентичны, < 0 Если *str1* — меньше, чем *str2*, или > 0 Если *str1* больше, чем *str2*. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.
+Ноль, если строки идентичны, < 0, если *str1* меньше, чем *str2,* или > 0, если *str1* больше, чем *str2.* Для выполнения сравнений используется метод [CStringT::Compare.](../../atl-mfc-shared/reference/cstringt-class.md#compare)
 
-##  <a name="hash"></a>  CStringRefElementTraits::Hash
+## <a name="cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Хэш
 
-Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.
+Вызовите эту статическую функцию, чтобы вычислить значение хэша для данного элемента строки.
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -109,14 +109,14 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
-Элемент строку.
+*Ул*<br/>
+Элемент строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает хэш-значение, вычисляемое с использованием содержимого строки.
+Возвращает хэш-значение, рассчитанное с использованием содержимого строки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

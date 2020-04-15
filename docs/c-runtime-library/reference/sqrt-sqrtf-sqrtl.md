@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958105"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355581"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -70,25 +72,27 @@ long double sqrtl(
 *x*<br/>
 Неотрицательные значения с плавающей запятой
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки функции **sqrt** , которые принимают типы **float** или **Long** типа **Double** . В программе C функция **sqrt** всегда принимает и возвращает **Double**.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **sqrt,** которые принимают **плавающие** или **длинные** **двойные** типы. В программе C, **sqrt** всегда принимает и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **sqrt** возвращают квадратный корень из *x*. По умолчанию, если *x* является отрицательным, функция **sqrt** возвращает неопределенное значение NaN.
+Функции **sqrt** возвращают квадратный корень *x*. По умолчанию, если *x* является отрицательным, **sqrt** возвращает неопределенный NaN.
 
-|Ввод|Исключение SEH|**_matherr** Об|
+|Входные данные|Исключение SEH|**_matherr** Исключение|
 |-----------|-------------------|--------------------------|
-|± КНАН, С|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x < 0|none|_DOMAIN|
+|- ЗНАН,IND|Нет|_DOMAIN|
+|- ∞|Нет|_DOMAIN|
+|x < 0|Нет|_DOMAIN|
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**sqrt**, **скртф**, **sqrt**|\<math.h>|\<cmath>|
+|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -117,7 +121,7 @@ int main( void )
 The square root of 45.35 is 6.73
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>

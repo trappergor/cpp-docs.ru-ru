@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcd55f6a157f4b837090a3608fb509b870aae5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218410"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352990"
 ---
 # <a name="cbasekeyframe-class"></a>Класс CBaseKeyFrame
 
@@ -43,30 +43,30 @@ class CBaseKeyFrame : public CObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Создает объект опорного кадра.|
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Строит объект ключевой рамы.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет кадр в раскадровку.|
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Возвращает базовое значение опорного кадра.|
-|[CBaseKeyFrame::IsAdded](#isadded)|Указывает, был ли опорный кадр добавлен в раскадровку.|
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Указывает, следует ли добавлять опорный кадр на раскадровку смещением, или после перехода.|
+|[CBaseKeyFrame:AddtoStoryboard](#addtostoryboard)|Добавляет клавиатуру в раскадровку.|
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Возвращает базовое значение ключевой частоты.|
+|[CBaseKeyFrame::Добавлено](#isadded)|Сообщает, был ли добавлен ключ-панель в раскадровку.|
+|[CBaseKeyFrame::IsKeyframeatOffset](#iskeyframeatoffset)|Определяет, следует ли добавлять ключ-рамку в раскадровку в смещении или после перехода.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Указывает, был ли этот опорный кадр добавлен раскадровки.|
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Указывает, следует ли добавлять этот опорный кадр на раскадровку со смещением относительно другого существующего опорного кадра, или в конце некоторых перехода.|
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Представляет ключевой кадр анимации API Windows. Опорный кадр не инициализирован присваивается определенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Определяет, был ли этот ключ-рамка добавлен в раскадровку.|
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Определяется, следует ли добавлять этот ключевой элемент в раскадровку в смещении с другого существующего ключевого кадра или в конце некоторого перехода.|
+|[CBaseKeyFrame:::m_keyframe](#m_keyframe)|Представляет aKeyframe API анимации Windows. Когда клавиатура не инициализирована, она устанавливается на предопределенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Инкапсулирует UI_ANIMATION_KEYFRAME переменной. Служит в качестве базового класса для реализации опорного кадра. Опорный кадр представляет момент времени в пределах раскадровки и может использоваться для укажите время начала и окончания переходов. Существует два типа ключевых кадров - опорные кадры, добавлен в раскадровку с указанным смещением (по времени) или опорные кадры, добавленные после указанного перехода. Так как длительность одни переходы не может быть известен до запуска анимации, фактические значения некоторых опорные кадры определяются только во время выполнения. Поскольку опорные кадры могут зависеть переходов, зависящие в очередь опорные кадры, очень важно для предотвращения бесконечной рекурсии при построении цепочки опорного кадра.
+Инкапсулирует UI_ANIMATION_KEYFRAME переменной. Служит базовым классом для любой реализации ключевых кадров. Ключевой элемент представляет момент времени в раскадровке и может использоваться для указания времени начала и окончания переходов. Есть два типа ключевых кадров - ключевые кадры, добавленные в раскадровку в указанном смещении (в срок) или ключевые кадры, добавленные после указанного перехода. Поскольку продолжительность некоторых переходов не может быть известна до начала анимации, фактические значения некоторых ключевых кадров определяются только во времени выполнения. Поскольку ключевые кадры могут зависеть от переходов, которые, в свою очередь, зависят от ключевых кадров, важно предотвратить бесконечные рекурсии при построении цепочек ключей.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -78,9 +78,9 @@ class CBaseKeyFrame : public CObject;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+## <a name="cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame:AddtoStoryboard
 
-Добавляет кадр в раскадровку.
+Добавляет клавиатуру в раскадровку.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -94,27 +94,27 @@ virtual BOOL AddToStoryboard(
 Указатель на раскадровку.
 
 *bDeepAdd*<br/>
-Если этот параметр имеет значение TRUE, добавляемый опорный кадр зависит от того, некоторые опорного кадра или перехода, этот метод пытается добавить данного опорного кадра или перехода в раскадровку сначала.
+Если этот параметр является истинным и добавленный ключевой параметр зависит от некоторых других ключевых рамок или перехода, этот метод пытается добавить этот ключевой кадр или переход к раскадровке в первую очередь.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если кадр был добавлен в раскадровку успешно; в противном случае — значение FALSE.
+TRUE, если ключ был добавлен в раскадровку успешно; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается, чтобы добавить опорный кадр на раскадровку.
+Этот метод называется для добавления клавиатуры в раскадровку.
 
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+## <a name="cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame
 
-Создает объект опорного кадра.
+Строит объект ключевой рамы.
 
 ```
 CBaseKeyFrame();
 ```
 
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+## <a name="cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe
 
-Возвращает базовое значение опорного кадра.
+Возвращает базовое значение ключевой частоты.
 
 ```
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
@@ -122,15 +122,15 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущий кадр. Значение по умолчанию — UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Текущий ключевой кадр. Значение по умолчанию является UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это метод доступа к исходному значению, опорный кадр.
+Это элемент доступа к базовому значению ключевых кадров.
 
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+## <a name="cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::Добавлено
 
-Указывает, был ли опорный кадр добавлен в раскадровку.
+Сообщает, был ли добавлен ключ-панель в раскадровку.
 
 ```
 BOOL IsAdded() const;
@@ -138,15 +138,15 @@ BOOL IsAdded() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если опорный кадр добавлен раскадровки; противном случае — значение FALSE.
+TRUE, если ключ добавляется в раскадровку; otehrwise FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В базовом классе IsAdded всегда возвращает значение TRUE, но он переопределен в производных классах.
+В базовом классе IsAdded всегда возвращается TRUE, но он переопределяется в производных классах.
 
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+## <a name="cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeatOffset
 
-Указывает, следует ли добавлять опорный кадр на раскадровку смещением, или после перехода.
+Определяет, следует ли добавлять ключ-рамку в раскадровку в смещении или после перехода.
 
 ```
 BOOL IsKeyframeAtOffset() const;
@@ -154,36 +154,36 @@ BOOL IsKeyframeAtOffset() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если следует добавить опорный кадр на раскадровку с указанным смещением. Значение FALSE, если опорный кадр следует добавить в раскадровку после некоторых перехода.
+ПРАВДА, если ключ должен быть добавлен к раскадровке в некоторых указанных смещения. FALSE, если ключ должен быть добавлен в раскадровку после некоторого перехода.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Указывает, следует ли добавлять опорный кадр на раскадровку смещением. В производном классе необходимо указать смещение или перехода.
+Определяет, следует ли добавлять ключ-рамку в раскадровку в смещении. Смещение или переход должны быть указаны в производном классе.
 
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+## <a name="cbasekeyframem_badded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded
 
-Указывает, был ли этот опорный кадр добавлен раскадровки.
+Определяет, был ли этот ключ-рамка добавлен в раскадровку.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+## <a name="cbasekeyframem_biskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset
 
-Указывает, следует ли добавлять этот опорный кадр на раскадровку со смещением относительно другого существующего опорного кадра, или в конце некоторых перехода.
+Определяется, следует ли добавлять этот ключевой элемент в раскадровку в смещении с другого существующего ключевого кадра или в конце некоторого перехода.
 
 ```
 BOOL m_bIsKeyframeAtOffset;
 ```
 
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+## <a name="cbasekeyframem_keyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame:::m_keyframe
 
-Представляет ключевой кадр анимации API Windows. Опорный кадр не инициализирован присваивается определенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Представляет aKeyframe API анимации Windows. Когда клавиатура не инициализирована, она устанавливается на предопределенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ```
 UI_ANIMATION_KEYFRAME m_keyframe;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

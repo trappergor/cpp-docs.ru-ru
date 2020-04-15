@@ -1,5 +1,5 @@
 ---
-title: Макросы схемы COM
+title: COM Карта Макрос
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 3159a53b5a500aa61b85cf2bc5a97d321ed6ebb5
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 191a0ba0aeda6ad18cdac7ba14f7ab5f3b2282f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326603"
 ---
-# <a name="com-map-macros"></a>Макросы схемы COM
+# <a name="com-map-macros"></a>COM Карта Макрос
 
-Эти макросы определяют сопоставления интерфейсов COM.
+Эти макросы определяют карты интерфейса COM.
 
 |||
 |-|-|
-|[BEGIN_COM_MAP](#begin_com_map)|Помечает начало записей карты COM-интерфейса.|
-|[END_COM_MAP](#end_com_map)|Помечает конец записей карты COM-интерфейса.|
+|[BEGIN_COM_MAP](#begin_com_map)|Отмечает начало записи карты интерфейса COM.|
+|[END_COM_MAP](#end_com_map)|Отметки конца записей карты интерфейса COM.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="begin_com_map"></a>BEGIN_COM_MAP
+## <a name="begin_com_map"></a><a name="begin_com_map"></a>BEGIN_COM_MAP
 
-Схема COM — это механизм, который предоставляет интерфейсы для объекта клиенту с помощью `QueryInterface`.
+Карта COM — это механизм, который предоставляет интерфейсы `QueryInterface`на объекте клиенту через.
 
 ```
 BEGIN_COM_MAP(x)
@@ -38,21 +38,21 @@ BEGIN_COM_MAP(x)
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-окне Имя объекта класса, на котором вы предоставляете интерфейсы.
+(в) Название объекта класса, на который вы подвергаете интерфейсы.
 
 ### <a name="remarks"></a>Remarks
 
-[CComObjectRootEx:: интерналкуеринтерфаце](ccomobjectrootex-class.md#internalqueryinterface) Возвращает указатели только для интерфейсов в сопоставлении com. Запустите карту интерфейса с помощью макроса BEGIN_COM_MAP, добавьте записи для каждого интерфейса с помощью макроса [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) или одного из его вариантов и завершите карту с помощью макроса [END_COM_MAP](#end_com_map) .
+[CComObjectRootEx::Internal'ryInterface](ccomobjectrootex-class.md#internalqueryinterface) возвращает только указатели для интерфейсов на карте COM. Начните свою карту интерфейса с BEGIN_COM_MAP макроса, добавьте записи для каждого из интерфейсов с [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) макросом или одним из его вариантов, а также завершите карту [с END_COM_MAP](#end_com_map) макросом.
 
 ### <a name="example"></a>Пример
 
-В примере с шаблоном [BEEPER](../../overview/visual-cpp-samples.md) библиотеки ATL:
+Из образца ATL [BEEPER:](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]
 
-##  <a name="end_com_map"></a>END_COM_MAP
+## <a name="end_com_map"></a><a name="end_com_map"></a>END_COM_MAP
 
-Завершает определение карты COM-интерфейса.
+Завершает определение вашей карты интерфейса COM.
 
 ```
 END_COM_MAP()
@@ -61,4 +61,4 @@ END_COM_MAP()
 ## <a name="see-also"></a>См. также раздел
 
 [Макросы](../../atl/reference/atl-macros.md)<br/>
-[Глобальные функции сопоставления COM](../../atl/reference/com-map-global-functions.md)
+[COM Карта Глобальные функции](../../atl/reference/com-map-global-functions.md)

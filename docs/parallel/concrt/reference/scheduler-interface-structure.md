@@ -6,12 +6,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_interface
 - PPLINTERFACE/concurrency::scheduler_interface::scheduler_interface::schedule
 ms.assetid: 4de61c78-a2c6-4698-bd47-964baf7fa287
-ms.openlocfilehash: 36feff80cab1c5d301c009a581b869d5c2bad5e9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: da2ebc2f9c2878baefcfa792bac08f420dbbb281
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358788"
 ---
 # <a name="scheduler_interface-structure"></a>Структура scheduler_interface
 
@@ -23,13 +23,13 @@ ms.locfileid: "77142148"
 struct __declspec(novtable) scheduler_interface;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[scheduler_interface:: Schedule](#schedule)||
+|[scheduler_interface::расписание](#schedule)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -37,11 +37,11 @@ struct __declspec(novtable) scheduler_interface;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** пплинтерфаце. h
+**Заголовок:** pplinterface.h
 
-**Пространство имен:** concurrency
+**Название:** параллелизм
 
-## <a name="schedule"></a>Метод scheduler_interface:: Schedule
+## <a name="scheduler_interfaceschedule-method"></a><a name="schedule"></a>scheduler_interface::метод графика
 
 ```cpp
 virtual void schedule(

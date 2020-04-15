@@ -2,12 +2,12 @@
 title: Набор символов ASCII
 ms.date: 11/04/2016
 ms.assetid: 2390fd40-5fe2-4410-a06c-ccc0fea2709b
-ms.openlocfilehash: 637f605f839b363dd85278f4b85fd832ca5f8e08
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 264d1f5a0f10d77a2c7c1dcc945ee6e508c70789
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335085"
 ---
 # <a name="ascii-character-set"></a>Набор символов ASCII
 
@@ -16,8 +16,8 @@ ms.locfileid: "56147170"
 Исходная кодировка — это набор допустимых символов, которые могут использоваться в исходных файлах. Для Microsoft C исходной кодировкой является стандартный набор символов ASCII.
 
 > [!NOTE]
->  **Внимание!**  Поскольку драйверы клавиатуры и консоли могут менять сопоставление кодировки, в программах для международного распространения необходимо проверять код страны/региона.
+> **Внимание!**  Поскольку драйверы клавиатуры и консоли могут менять сопоставление кодировки, в программах для международного распространения необходимо проверять код страны/региона.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Символы](../c-language/characters.md)
+[Символов](../c-language/characters.md)

@@ -1,8 +1,9 @@
 ---
 title: _pclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pclose
+- _o__pclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338529"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -51,18 +53,20 @@ FILE *stream
 
 ### <a name="parameters"></a>Параметры
 
-*вышестоящий*<br/>
-Возвращаемое значение из предыдущего вызова **_popen**.
+*Поток*<br/>
+Возврат значения от предыдущего вызова к **_popen.**
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает состояние выхода для завершающего обработчика команд или-1 при возникновении ошибки. Формат возвращаемого значения тот же, что и для **_cwait**, за исключением того, что байты нижнего и верхнего порядка меняются местами. Если Stream имеет **значение NULL**, **_pclose** **устанавливает** **еинвал** и возвращает-1.
+Возвращает состояние выхода конечного процессора команды или -1 в случае ошибки. Формат значения возврата такой же, как и для **_cwait,** за исключением байтов низкого порядка и высокого порядка, меняются. Если поток **NULL,** **_pclose** устанавливает **errno** к **EINVAL** и возвращает -1.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_pclose** ищет идентификатор процесса командного процессора (cmd. exe), запущенный связанным вызовом **_popen** , выполняет вызов [_cwait](cwait.md) для нового обработчика команд и закрывает поток в соответствующем канале.
+Функция **_pclose** ищет идентификатор процесса процессора команд (Cmd.exe), запущенный с помощью связанного **вызова _popen,** выполняет [_cwait](cwait.md) вызов нового комбайна команды и закрывает поток на связанной трубе.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -70,13 +74,13 @@ FILE *stream
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>

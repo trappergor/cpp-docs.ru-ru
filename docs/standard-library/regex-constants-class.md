@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425235"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331964"
 ---
 # <a name="regex_constants-namespace"></a>Пространство имен regex_constants
 
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<Regex >
+**Заголовок:** \<regex>
 
 **Пространство имен:** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
 
 Флаги для оповещения об ошибках синтаксиса регулярного выражения.
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- выражение содержит недопустимую обратную ссылку
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
 
 Флаги для параметров сопоставления регулярного выражения.
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- не искать соответствия после нахождения первого
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
 
 Флаги для выбора параметров синтаксиса.
 
@@ -291,10 +291,10 @@ enum syntax_option_type
 ## <a name="see-also"></a>См. также раздел
 
 [\<regex>](../standard-library/regex.md)\
-[класс regex_error](../standard-library/regex-error-class.md)\
-[функции >\<regex](../standard-library/regex-functions.md)\
+[regex_error класс](../standard-library/regex-error-class.md)\
+[\<функции regex>](../standard-library/regex-functions.md)\
 [класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[операторы\<regex >](../standard-library/regex-operators.md)\
+[\<операторы regex>](../standard-library/regex-operators.md)\
 [класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [класс regex_traits](../standard-library/regex-traits-class.md)\
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403117"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360741"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits - структура
 
@@ -30,9 +30,9 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                               | Описание
+Имя                               | Описание
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | Элемент управления выпусков общего ресурса.
+[SemaphoreTraits::Разблокировка](#unlock) | Выпускает элемент управления общим ресурсом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -44,11 +44,11 @@ name                               | Описание
 
 **Заголовок:** corewrappers.h
 
-**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Разблокировка
 
-Элемент управления выпусков общего ресурса.
+Выпускает элемент управления общим ресурсом.
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-Дескриптор `Semaphore` объекта.
+*H*<br/>
+Обработка `Semaphore` объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если обнаружено, операция разблокирования `Unlock()` выдает ошибку, которые указывают на причину сбоя.
+Если операция разблокировки `Unlock()` не выполнена, испускают ошибку, указывают причину сбоя.

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: c84a8eca25c90e0790ec8c4991d9d5a116afa59f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 075962758773660085ae0b98b668c264524cc6aa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442527"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328593"
 ---
 # <a name="exporting-from-a-dll-using-__declspecdllexport"></a>Экспорт из библиотеки DLL с использованием __declspec(dllexport)
 
-Вы можете экспортировать данные, функции, классы или функции-члены класса из библиотеки DLL с помощью ключевого слова **__declspec (dllexport)** . **__declspec (dllexport)** добавляет директиву Export в объектный файл, чтобы не нужно было использовать DEF-файл.
+Вы можете экспортировать данные, функции, функции, классифицируются или функции члена класса из DLL, используя ключевое слово **__declspec (dllexport).** **__declspec(dllexport)** добавляет директиву об экспорте в файл объекта, так что вам не нужно использовать файл .def.
 
-Это удобство наиболее очевидно при попытке экспорта декорированных C++ имен функций. Поскольку для декорирования имен нет стандартной спецификации, имя экспортированной функции может измениться между версиями компилятора. При использовании **__declspec (dllexport)** перекомпиляция DLL и зависимых exe-файлов необходима только для того, чтобы учитывать любые изменения в соглашении об именовании.
+Это удобство наиболее очевидно при попытке экспортировать украшенные названия функций СЗ. Поскольку нет стандартной спецификации для украшения имен, название экспортируемой функции может меняться между версиями компилятора. Если вы используете **__declspec (dllexport),** то перекомпиляция dLL и зависимых файлов .exe необходима только для учета любых изменений в конвенции именования.
 
-Многие директивы экспорта, такие как Ordinal, NAME и PRIVATE, могут быть сделаны только в DEF-файле, и нет способа указать эти атрибуты без DEF-файла. Однако использование **__declspec (dllexport)** в дополнение к использованию DEF-файла не приводит к ошибкам сборки.
+Многие экспортные директивы, такие как ordinals, NONAME и PRIVATE, могут быть сделаны только в файле .def, и нет никакого способа указать эти атрибуты без файла .def. Однако использование **__declspec (dllexport)** в дополнение к использованию файла .def не вызывает ошибок сборки.
 
-Для экспорта функций ключевое слово **__declspec (dllexport)** должно находиться слева от ключевого слова соглашения о вызовах, если указано ключевое слово. Пример:
+Для экспорта функций ключевое слово **__declspec (dllexport)** должно отображаться слева от ключевого слова calling-convention, если указано ключевое слово. Пример:
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
 ```
 
-Чтобы экспортировать все открытые члены данных и функции-члены в классе, ключевое слово должно находиться слева от имени класса следующим образом:
+Для экспорта всех открытых данных и функций членов в классе ключевое слово должно отображаться слева от имени класса следующим образом:
 
 ```
 class __declspec(dllexport) CExampleExport : public CObject
@@ -38,31 +38,31 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
->  `__declspec(dllexport)` нельзя применить к функции с соглашением о вызовах `__clrcall`.
+> `__declspec(dllexport)`не могут быть применены `__clrcall` к функции с конвенцией вызова.
 
-При создании библиотеки DLL обычно создается файл заголовка, содержащий прототипы функций и (или) экспортируемых классов, а также добавляется **__declspec (dllexport)** в объявления в файле заголовка. Чтобы сделать код более удобочитаемым, определите макрос для **__declspec (dllexport)** и используйте макрос с каждым экспортируемым символом:
+При создании DLL обычно создается файл заголовка, содержащий прототипы функций и/или классы, которые вы экспортируете, и добавляете **__declspec (dllexport)** в декларации в файле заголовка. Чтобы сделать код более читаемым, определите макрос для **__declspec (dllexport)** и используйте макрос с каждым символом, который вы экспортируете:
 
 ```
 #define DllExport   __declspec( dllexport )
 ```
 
-**__declspec (dllexport)** хранит имена функций в таблице экспорта библиотеки DLL. Если требуется оптимизировать размер таблицы, см. раздел [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+**__declspec (dllexport)** магазины функционируют имена в таблице экспорта DLL. Если вы хотите оптимизировать размер таблицы, [см. Функции экспорта из DLL от Ordinal, а не по имени](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 ## <a name="what-do-you-want-to-do"></a>Выбор действия
 
-- [Экспорт из библиотеки DLL с помощью DEF-файлов](exporting-from-a-dll-using-def-files.md)
+- [Экспорт из DLL с использованием файлов .def](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт и импорт с помощью AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Экспорт и импорт с использованием AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Экспорт C++ функций для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспортные функции СЗЗ для использования в исполнителях C-языка](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Экспорт функций C для использования в исполняемых C++файлах c или языка](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Функции экспорта C для использования в исполнителях C или C-языка](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Определение используемого метода экспорта](determining-which-exporting-method-to-use.md)
+- [Определение подходящего способа экспорта](determining-which-exporting-method-to-use.md)
 
 - [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
+- [Инициализация DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 

@@ -1,5 +1,5 @@
 ---
-title: Глобальные функции для обработки событий
+title: Обработка событий глобальных функций
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlWaitWithMessageLoop
@@ -7,34 +7,34 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: bb109c63b497420ad6e797cd8e0b366ce4dc0475
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2f8269dcf0f59a5d0794d3f16d4c4f85d8841ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276347"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330134"
 ---
-# <a name="event-handling-global-functions"></a>Глобальные функции для обработки событий
+# <a name="event-handling-global-functions"></a>Обработка событий глобальных функций
 
-Эта функция предоставляет обработчик событий.
+Эта функция обеспечивает обработчик событий.
 
 > [!IMPORTANT]
->  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Функция, указанная в следующей таблице, не может использоваться в приложениях, выполняющих в Windows Runtime.
 
 |||
 |-|-|
-|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Ожидает объекта сигнала, в то же время диспетчеризации сообщений окна, при необходимости.|
+|[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|Ожидает сигнализировать объект, тем временем отправляя оконные сообщения по мере необходимости.|
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop
+## <a name="atlwaitwithmessageloop"></a><a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop
 
 Ожидает объекта, о котором требуется сигнализировать; во время ожидания производит требуемую диспетчеризацию сообщений.
 
 > [!IMPORTANT]
->  Эта функция не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Эта функция не может быть использована в приложениях, выполняющих в Windows Runtime.
 
 ```
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
@@ -43,16 +43,16 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ### <a name="parameters"></a>Параметры
 
 *hEvent*<br/>
-[in] Дескриптор объекта ожидания.
+(в) Ручку объекта ждать.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если объект оповещении.
+Возвращает TRUE, если объект был сигнализирован.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Это полезно в том случае, если вы хотите ждать события объекта, и получать оповещения о них происходит, но разрешить окно сообщения для отправки во время ожидания.
+Это полезно, если вы хотите дождаться события объекта и получить уведомление о его возникновении, но разрешить отправку сообщений окон во время ожидания.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции](../../atl/reference/atl-functions.md)

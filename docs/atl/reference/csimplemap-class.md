@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330805"
 ---
 # <a name="csimplemap-class"></a>Класс CSimpleMap
 
-Этот класс обеспечивает поддержку для массива простое сопоставление.
+Этот класс обеспечивает поддержку простого массива отображения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,58 +43,58 @@ class CSimpleMap
 
 #### <a name="parameters"></a>Параметры
 
-*TKey*<br/>
-Тип ключа элемента.
+*Tkey*<br/>
+Тип ключевого элемента.
 
 *TVal*<br/>
-Тип значения элемента.
+Тип элемента значения.
 
 *TEqual*<br/>
-Объект признак, определяющий тест на равенство для элементов типа `T`.
+Объект черты, определяющий тест на `T`равенство для элементов типа.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|TypeDef для типа значения.|
-|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|TypeDef для типа ключа.|
+|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|Тип для типа значения.|
+|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|Тип для ключевого типа.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CSimpleMap::CSimpleMap](#csimplemap)|Конструктор.|
-|[CSimpleMap:: ~ CSimpleMap](#dtor)|Деструктор|
+|[CSimpleMap::](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSimpleMap::Add](#add)|Добавляет ключ и связанное значение в массив сопоставлений.|
-|[CSimpleMap::FindKey](#findkey)|Находит указанный ключ.|
-|[CSimpleMap::FindVal](#findval)|Находит указанное значение.|
-|[CSimpleMap::GetKeyAt](#getkeyat)|Извлекает указанный ключ.|
-|[CSimpleMap::GetSize](#getsize)|Возвращает число записей в массиве сопоставления.|
-|[CSimpleMap::GetValueAt](#getvalueat)|Возвращает указанное значение.|
-|[CSimpleMap::Lookup](#lookup)|Возвращает значение, связанное с указанным ключом.|
-|[CSimpleMap::Remove](#remove)|Удаляет ключ и соответствующее значение.|
+|[CSimpleMap::Добавить](#add)|Добавляет ключ и связанное с ним значение в массив карты.|
+|[CSimpleMap::FindKey](#findkey)|Находит определенный ключ.|
+|[CSimpleMap::FindVal](#findval)|Находит определенное значение.|
+|[CSimpleMap:GetKeyAt](#getkeyat)|Извлекает указанный ключ.|
+|[CSimpleMap::GetSize](#getsize)|Возвращает количество записей в массиве отображения.|
+|[CSimpleMap:GetValueat](#getvalueat)|Извлекает указанное значение.|
+|[CSimpleMap::Поиск](#lookup)|Возвращает значение, связанное с данным ключом.|
+|[CSimpleMap::Удалить](#remove)|Удаляет значение ключа и соответствия.|
 |[CSimpleMap::RemoveAll](#removeall)|Удаляет все ключи и значения.|
-|[CSimpleMap::RemoveAt](#removeat)|Удаляет указанные ключ и соответствующее значение.|
-|[CSimpleMap::ReverseLookup](#reverselookup)|Возвращает ключ, связанный с заданным значением.|
-|[CSimpleMap::SetAt](#setat)|Задает значение, связанное с указанным ключом.|
-|[CSimpleMap::SetAtIndex](#setatindex)|Задает указанные ключ и значение.|
+|[CSimpleMap::RemoveAt](#removeat)|Удаляет определенный ключ и соответствующее значение.|
+|[CSimpleMap::ReverseLookup](#reverselookup)|Возвращает ключ, связанный с данным значением.|
+|[CSimpleMap::SetAt](#setat)|Устанавливает значение, связанное с данным ключом.|
+|[CSimpleMap::SetatIndex](#setatindex)|Устанавливает конкретный ключ и значение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CSimpleMap` предоставляет поддержку для любого заданного типа массива простое сопоставление `T`, управление массив неупорядоченные ключевые элементы и связанные с ними значения.
+`CSimpleMap`обеспечивает поддержку простого массива отображения любого данного типа, `T`управления неупорядоченным набором ключевых элементов и связанных с ними значений.
 
-Параметр `TEqual` предоставляет средства определения функцию проверки на равенство для двух элементов типа `T`. Путем создания класса, аналогичную [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md), можно изменить поведение проверки на равенство для любого заданного массива. Например при работе с массив указателей, его можно использовать для определения равенства, как в зависимости от значения, которые ссылаются на указатели. Реализация по умолчанию использует **operator==()**.
+Параметр `TEqual` обеспечивает средство определения функции равенства для `T`двух элементов типа. Создавая класс, похожий на [CSimpleMapEqualHelper,](../../atl/reference/csimplemapequalhelper-class.md)можно изменить поведение теста на равенство для любого данного массива. Например, при работе с массивом указателей может быть полезно определить равенство как в зависимости от значений, на которые ссылаются указатели. Реализация по умолчанию использует **оператора .()**.
 
-Оба `CSimpleMap` и [CSimpleArray](../../atl/reference/csimplearray-class.md) предоставляются для совместимости с предыдущей ATL версий, более полный и эффективной реализации коллекции предоставляемые [CAtlArray](../../atl/reference/catlarray-class.md) и [ CAtlMap](../../atl/reference/catlmap-class.md).
+И `CSimpleMap` [CSimpleArray](../../atl/reference/csimplearray-class.md) предусмотрены для совместимости с предыдущими релизами ATL, а более полные и эффективные реализации коллекции обеспечиваются [CAtlArray](../../atl/reference/catlarray-class.md) и [CAtlMap.](../../atl/reference/catlmap-class.md)
 
-В отличие от других коллекций карты в ATL и MFC этот класс реализуется с помощью простого массива и поиска lookup необходим линейный поиск. `CAtlMap` следует использовать, если массив содержит большое количество элементов.
+В отличие от других картвизаток в ATL и MFC, этот класс реализован с простым массивом, и поиск поиска требует линейного поиска. `CAtlMap`следует использовать, когда массив содержит большое количество элементов.
 
 ## <a name="requirements"></a>Требования
 
@@ -104,9 +104,9 @@ class CSimpleMap
 
 [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]
 
-##  <a name="add"></a>  CSimpleMap::Add
+## <a name="csimplemapadd"></a><a name="add"></a>CSimpleMap::Добавить
 
-Добавляет ключ и связанное значение в массив сопоставлений.
+Добавляет ключ и связанное с ним значение в массив карты.
 
 ```
 BOOL Add(const TKey& key, const TVal& val);
@@ -114,37 +114,37 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*Ключ*<br/>
 Ключ.
 
-*Val*<br/>
+*Валь*<br/>
 Связанное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если ключ и значение были успешно добавлен, и FALSE в противном случае.
+Возвращает TRUE, если ключ и значение были успешно добавлены, FALSE в противном случае.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждая пара ключ-значение добавить сопоставление массива памяти освобождается и перераспределить, чтобы убедиться, что данные для каждого непрерывно всегда хранится причины. То есть второй ключевой элемент всегда сразу после первого ключа элемента в памяти и т. д.
+Каждая добавленная пара ключей и добавленной стоимости приводит к освобождению и перераспределению памяти массива отображения, чтобы гарантировать, что данные для каждого из них всегда хранятся смежным образом. То есть второй ключевой элемент всегда непосредственно следует за первым ключевым элементом в памяти и так далее.
 
-##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType
+## <a name="csimplemap_arrayelementtype"></a><a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType
 
-Typedef для типа ключа.
+Typedef для ключевого типа.
 
 ```
 typedef TVal _ArrayElementType;
 ```
 
-##  <a name="_arraykeytype"></a>  CSimpleMap::_ArrayKeyType
+## <a name="csimplemap_arraykeytype"></a><a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType
 
-Typedef для типа значения.
+Тип для типа значения.
 
 ```
 typedef TKey _ArrayKeyType;
 ```
 
-##  <a name="csimplemap"></a>  CSimpleMap::CSimpleMap
+## <a name="csimplemapcsimplemap"></a><a name="csimplemap"></a>CSimpleMap::CSimpleMap
 
 Конструктор.
 
@@ -152,11 +152,11 @@ typedef TKey _ArrayKeyType;
 CSimpleMap();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует члены данных.
+Инициализирует членов данных.
 
-##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap
+## <a name="csimplemapcsimplemap"></a><a name="dtor"></a>CSimpleMap::
 
 Деструктор
 
@@ -164,13 +164,13 @@ CSimpleMap();
 ~CSimpleMap();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="findkey"></a>  CSimpleMap::FindKey
+## <a name="csimplemapfindkey"></a><a name="findkey"></a>CSimpleMap::FindKey
 
-Находит указанный ключ.
+Находит определенный ключ.
 
 ```
 int FindKey(const TKey& key) const;
@@ -178,16 +178,16 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*Ключ*<br/>
 Ключ, который нужно найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает индекс ключа, если объект найден, в противном случае возвращает значение -1.
+Возвращает индекс ключа, если найдено, в противном случае возвращается -1.
 
-##  <a name="findval"></a>  CSimpleMap::FindVal
+## <a name="csimplemapfindval"></a><a name="findval"></a>CSimpleMap::FindVal
 
-Находит указанное значение.
+Находит определенное значение.
 
 ```
 int FindVal(const TVal& val) const;
@@ -195,16 +195,16 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
-Значение, которое требуется найти.
+*Валь*<br/>
+Значение, поиск которого следует выполнить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает индекс значения, если он найден; в противном случае возвращает -1.
+Возвращает индекс значения, если он найден, в противном случае возвращается -1.
 
-##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt
+## <a name="csimplemapgetkeyat"></a><a name="getkeyat"></a>CSimpleMap:GetKeyAt
 
-Получает ключ по указанному индексу.
+Извлекает ключ в указанном индексе.
 
 ```
 TKey& GetKeyAt(int nIndex) const;
@@ -212,20 +212,20 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
+*Nindex*<br/>
 Индекс возвращаемого ключевого поля.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает ключ, который ссылается *nIndex*.
+Возвращает ключ, на который ссылается *nIndex*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Индекс, переданный *nIndex* должен быть допустимым для возвращаемого значения сделать его значимым.
+Индекс, пройденный *nIndex,* должен быть действителен для того, чтобы значение возврата было значимым.
 
-##  <a name="getsize"></a>  CSimpleMap::GetSize
+## <a name="csimplemapgetsize"></a><a name="getsize"></a>CSimpleMap::GetSize
 
-Возвращает число записей в массиве сопоставления.
+Возвращает количество записей в массиве отображения.
 
 ```
 int GetSize() const;
@@ -233,11 +233,11 @@ int GetSize() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает число записей (ключ и значение — одна запись) в массиве сопоставления.
+Возвращает количество записей (ключ и значение — одна запись) в массиве отображения.
 
-##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt
+## <a name="csimplemapgetvalueat"></a><a name="getvalueat"></a>CSimpleMap:GetValueat
 
-Получает значение по указанному индексу.
+Извлекает значение в конкретном индексе.
 
 ```
 TVal& GetValueAt(int nIndex) const;
@@ -245,20 +245,20 @@ TVal& GetValueAt(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-Индекс возвращаемого значения.
+*Nindex*<br/>
+Индекс значения для возврата.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение, найденное по *nIndex*.
+Возвращает значение, на что ссылается *nIndex*.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Индекс, переданный *nIndex* должен быть допустимым для возвращаемого значения сделать его значимым.
+Индекс, пройденный *nIndex,* должен быть действителен для того, чтобы значение возврата было значимым.
 
-##  <a name="lookup"></a>  CSimpleMap::Lookup
+## <a name="csimplemaplookup"></a><a name="lookup"></a>CSimpleMap::Поиск
 
-Возвращает значение, связанное с указанным ключом.
+Возвращает значение, связанное с данным ключом.
 
 ```
 TVal Lookup(const TKey& key) const;
@@ -266,16 +266,16 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*Ключ*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает связанное значение. Если такой ключ не найден, значение NULL возвращается.
+Возвращает связанное значение. Если не найдено совпадающий ключ, NULL возвращается.
 
-##  <a name="remove"></a>  CSimpleMap::Remove
+## <a name="csimplemapremove"></a><a name="remove"></a>CSimpleMap::Удалить
 
-Удаляет ключ и соответствующее значение.
+Удаляет значение ключа и соответствия.
 
 ```
 BOOL Remove(const TKey& key);
@@ -283,14 +283,14 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*Ключ*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если ключ и соответствующее значение, были успешно удален, и FALSE в противном случае.
+Возвращает TRUE, если ключ, и соответствующие значения, были успешно удалены, FALSE в противном случае.
 
-##  <a name="removeall"></a>  CSimpleMap::RemoveAll
+## <a name="csimplemapremoveall"></a><a name="removeall"></a>CSimpleMap::RemoveAll
 
 Удаляет все ключи и значения.
 
@@ -298,13 +298,13 @@ BOOL Remove(const TKey& key);
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Удаляет все ключи и значения из массива объекта сопоставления.
+Удаляет все ключи и значения с объекта массива отображения.
 
-##  <a name="removeat"></a>  CSimpleMap::RemoveAt
+## <a name="csimplemapremoveat"></a><a name="removeat"></a>CSimpleMap::RemoveAt
 
-Удаляет ключ и связанное значение по указанному индексу.
+Удаляет ключ и связанное с ним значение в указанном индексе.
 
 ```
 BOOL RemoveAt(int nIndex);
@@ -312,16 +312,16 @@ BOOL RemoveAt(int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-Индекс ключа и связанные значения для удаления.
+*Nindex*<br/>
+Индекс ключа и связанное с ним значение для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE в случае успеха, FALSE, если указанный индекс является недопустимый индекс.
+Возвращает TRUE на успех, FALSE, если указанный индекс является недействительным индексом.
 
-##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup
+## <a name="csimplemapreverselookup"></a><a name="reverselookup"></a>CSimpleMap::ReverseLookup
 
-Возвращает ключ, связанный с заданным значением.
+Возвращает ключ, связанный с данным значением.
 
 ```
 TKey ReverseLookup(const TVal& val) const;
@@ -329,16 +329,16 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Валь*<br/>
 Значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает связанный ключ. Если такой ключ не найден, значение NULL возвращается.
+Возвращает связанный ключ. Если не найдено совпадающий ключ, NULL возвращается.
 
-##  <a name="setat"></a>  CSimpleMap::SetAt
+## <a name="csimplemapsetat"></a><a name="setat"></a>CSimpleMap::SetAt
 
-Задает значение, связанное с указанным ключом.
+Устанавливает значение, связанное с данным ключом.
 
 ```
 BOOL SetAt(const TKey& key, const TVal& val);
@@ -346,19 +346,19 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*Ключ*<br/>
 Ключ.
 
-*Val*<br/>
-Новое значение для назначения.
+*Валь*<br/>
+Новое значение для присвоения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если ключ найден и значение было успешно изменен, и FALSE в противном случае.
+Возвращает TRUE, если ключ был найден, и значение было успешно изменено, FALSE в противном случае.
 
-##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex
+## <a name="csimplemapsetatindex"></a><a name="setatindex"></a>CSimpleMap::SetatIndex
 
-Задает ключ и значение по указанному индексу.
+Устанавливает ключ и значение в указанном индексе.
 
 ```
 BOOL SetAtIndex(
@@ -369,23 +369,23 @@ BOOL SetAtIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-Индекс, ссылающиеся на ключ и значение, связывание для изменения.
+*Nindex*<br/>
+Индекс, ссылаясь на значение сопряжения ключа и значения, должен измениться.
 
-*key*<br/>
+*Ключ*<br/>
 Новый ключ.
 
-*Val*<br/>
+*Валь*<br/>
 Новое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE при успешном выполнении и FALSE, если индекс не является допустимым.
+Возвращает TRUE в случае успеха, FALSE, если индекс не действителен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обновляет ключ и значение, на которые указывают *nIndex*.
+Обновления как ключ и значение, на что указывает *nIndex*.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

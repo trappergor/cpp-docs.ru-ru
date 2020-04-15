@@ -2,12 +2,12 @@
 title: оператор Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: 5acf17b7c87a71259dba6579d8ee69e0eea86fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d35056ca1a4e7f06c9f91fe86998a676a12395f2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161593"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337001"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>оператор Windows::UI::Xaml::Interop::TypeName
 
@@ -23,11 +23,11 @@ Operator TypeName(Platform::Type^ type);
 
 Возвращает значение [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) при получении `Platform::Type^`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 `TypeName` является независимой от языка структурой среды выполнения Windows для представления сведений о типе. [Platform::Type](../cppcx/platform-type-class.md) используется только в C++ и не передается через двоичный интерфейс приложений (ABI). Ниже представлен один из способов использования `TypeName`в функции [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) .
 
-```
+```cpp
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
@@ -35,8 +35,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 
 В следующем примере показано преобразование из `TypeName` в `Type`и наоборот.
 
-```
-
+```cpp
 // Convert from Type to TypeName
 Windows::UI::Xaml::Interop::TypeName tn = TypeName(MainPage::typeid);
 
@@ -46,11 +45,11 @@ Type^ tx2 = (Type^)(tn);
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
-.NET Framework программирует `TypeName` проекта как [System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True).
+.NET Framework программирует `TypeName` проекта как [System.Type](/dotnet/api/system.type).
 
 ### <a name="requirements"></a>Требования
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [оператор Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)<br/>
-[Класс Platform::Type](../cppcx/platform-type-class.md)
+[Платформа:Тип класса](../cppcx/platform-type-class.md)

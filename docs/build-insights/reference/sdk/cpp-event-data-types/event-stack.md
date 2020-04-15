@@ -1,6 +1,6 @@
 ---
-title: Класс Евентстакк
-description: Справочник C++ по классу SDK для Build Insights евентстакк.
+title: Класс EventStack
+description: Ссылка на класс SDK EventStack.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6da2fd25082399b82d788c5d119a39e2f7388714
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: eaaaedcbf57fdaf8e437a80a7823488febac3e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334898"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324982"
 ---
-# <a name="eventstack-class"></a>Класс Евентстакк
+# <a name="eventstack-class"></a>Класс EventStack
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `EventStack` представляет собой коллекцию объектов [событий](event.md) . Все события, полученные из C++ пакета SDK для Build Insights, поступают в виде объекта `EventStack`. Последняя запись в этом стеке — это событие, обрабатываемое в данный момент. Записи, предшествующие последней записи, являются родительской иерархией текущего события. Дополнительные сведения о модели событий, используемой в C++ аналитических данных, см. в разделе [Таблица событий](../event-table.md).
+Класс `EventStack` представляет собой набор объектов [событий.](event.md) Все события, полученные от SDK Build Insights, `EventStack` происходят в виде объекта. Последней записью в этом стеке является событие, которое в настоящее время обрабатывается. Записи, предшествующие последней записи, являются родительской иерархией текущего события. Для получения более подробной информации о модели событий, используемой в исследованиях сc, смотрите [таблицу событий](../event-table.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,19 +41,19 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="constructors"></a>Конструкторы
 
-[евентстакк](#event-stack)
+[EventStack](#event-stack)
 
 ### <a name="functions"></a>Функции
 
-Оператор [Back](#back)
-[[]](#subscript-operator)
-[Размер](#size)
+[Задний](#back)
+[оператор (](#subscript-operator)
+[Size](#size)
 
-## <a name="back"></a>Назад
+## <a name="back"></a><a name="back"></a>Назад
 
 ```cpp
 RawEvent Back() const;
@@ -61,9 +61,9 @@ RawEvent Back() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [равевент](raw-event.md) , представляющий последнюю запись в стеке. Последняя запись в стеке событий — это событие, которое было активировано.
+Объект [RawEvent,](raw-event.md) представляющий последнюю запись в стеке. Последняя запись в стеке события — это событие, которое было срабатывано.
 
-## <a name="event-stack"></a>евентстакк
+## <a name="eventstack"></a><a name="event-stack"></a>EventStack
 
 ```cpp
 EventStack(const EVENT_COLLECTION_DATA& data);
@@ -71,14 +71,14 @@ EventStack(const EVENT_COLLECTION_DATA& data);
 
 ### <a name="parameters"></a>Параметры
 
-\ *данных*
-Необработанные данные, из которых строится `EventStack`.
+*Данных*\
+Необработанные данные, из которых построен. `EventStack`
 
 ### <a name="remarks"></a>Remarks
 
-Обычно вам не нужно самостоятельно создавать объекты `EventStack`. Они предоставляются пакетом SDK для C++ Build Insights, когда события обрабатываются во время анализа или сеанса перезаписи в журнал.
+Обычно вам не нужно `EventStack` строить объекты самостоятельно. Они предоставляются вам SDK Build Insights, когда события обрабатываются во время анализа или сеанса перезаписи.
 
-## <a name="subscript-operator"></a>operator []
+## <a name="operator"></a><a name="subscript-operator"></a>оператор
 
 ```cpp
 RawEvent operator[] (size_t index) const;
@@ -86,14 +86,14 @@ RawEvent operator[] (size_t index) const;
 
 ### <a name="parameters"></a>Параметры
 
-\ *индекса*
-Индекс элемента для доступа в стеке событий.
+*Индекс*\
+Индекс элемента для доступа в стеке события.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [равевент](raw-event.md) , представляющий событие, хранящееся в позиции, указанной в *индексе* в стеке событий.
+Объект [RawEvent,](raw-event.md) представляющий событие, хранящееся в положении, указанном *индексом* в стеке события.
 
-## <a name="size"></a>Изменять
+## <a name="size"></a><a name="size"></a> Размер
 
 ```cpp
 size_t Size() const;

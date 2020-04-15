@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2342432c7651fc1bd1eda23b3e56fa9306eadf09
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359271"
 ---
 # <a name="ccustominterpolator-class"></a>Класс CCustomInterpolator
 
@@ -57,37 +57,37 @@ class CCustomInterpolator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Перегружен. Создает объект пользовательского интерполятора и инициализирует длительность и скорость для указанных значений.|
+|[CCustomИнтерполатор::CCustomИнтерполатор](#ccustominterpolator)|Перегружен. Строит пользовательский объект интерполятора и инициализирует продолжительность и скорость к указанным значениям.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CCustomInterpolator::GetDependencies](#getdependencies)|Возвращает зависимости интерполятор.|
-|[CCustomInterpolator::GetDuration](#getduration)|Возвращает длительность интерполятор.|
-|[CCustomInterpolator::GetFinalValue](#getfinalvalue)|Получает конечное значение, к которому ведет интерполятора.|
-|[CCustomInterpolator::Init](#init)|Инициализирует длительность и конечное значение.|
-|[CCustomInterpolator::InterpolateValue](#interpolatevalue)|Осуществляет интерполяцию значение с указанным смещением.|
-|[CCustomInterpolator::InterpolateVelocity](#interpolatevelocity)|Осуществляет интерполяцию скорости, начиная с указанной позиции|
-|[CCustomInterpolator::SetDuration](#setduration)|Задает длительность интерполятор.|
-|[CCustomInterpolator::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Задает начальное значение и скорости интерполятор.|
+|[CCustomИнтерполатор::GetDependencies](#getdependencies)|Получает зависимости интерполятора.|
+|[CCustomИнтерполатор::GetDuration](#getduration)|Получает продолжительность интерполятора.|
+|[CCustomИнтерполатор::GetFinalValue](#getfinalvalue)|Получает окончательное значение, к которому ведет интерполятор.|
+|[CCustomИнтерполатор::Init](#init)|Инициализирует продолжительность и окончательное значение.|
+|[CCustomИнтерполатор::InterpolateValue](#interpolatevalue)|Интерполиративирует значение в заданном смещении.|
+|[CCustomИнтерполатор::Интерполоусть](#interpolatevelocity)|Интерполиративирует скорость в заданном смещении|
+|[CCustomИнтерполатор::SetDuration](#setduration)|Устанавливает продолжительность интерполятора.|
+|[CCustomИнтерполатор::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Устанавливает исходное значение и скорость интерполятора.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CCustomInterpolator::m_currentValue](#m_currentvalue)|Интерполированное значение.|
-|[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Интерполированные скорость.|
-|[CCustomInterpolator::m_duration](#m_duration)|Длительность перехода.|
-|[CCustomInterpolator::m_finalValue](#m_finalvalue)|Конечное значение переменной в конце перехода.|
-|[CCustomInterpolator::m_initialValue](#m_initialvalue)|Значение переменной в начале перехода.|
-|[CCustomInterpolator::m_initialVelocity](#m_initialvelocity)|Скорость, переменной в начале перехода.|
+|[CCustomИнтерполатор::m_currentValue](#m_currentvalue)|Интерполированное значение.|
+|[CCustomИнтерполатор::m_currentVelocity](#m_currentvelocity)|Интерполированная скорость.|
+|[CCustomИнтерполатор::m_duration](#m_duration)|Продолжительность перехода.|
+|[CCustomИнтерполатор::m_finalValue](#m_finalvalue)|Окончательное значение переменной в конце перехода.|
+|[CCustomИнтерполатор::m_initialValue](#m_initialvalue)|Значение переменной в начале перехода.|
+|[CCustomИнтерполатор::m_initialVelocity](#m_initialvelocity)|Скорость переменной в начале перехода.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Наследовать класс от CCustomInterpolator и переопределить все необходимые методы для реализации пользовательской интерполяция алгоритма. Указатель на этот класс должен передать как параметр CCustomTransition.
+Вывести класс из CCustomInterpolator и переопределить все необходимые методы для реализации пользовательского алгоритма интерполяции. Указатель к этому классу должен быть передан в качестве параметра CCustomTransition.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -97,9 +97,9 @@ class CCustomInterpolator;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="ccustominterpolator"></a>  CCustomInterpolator::CCustomInterpolator
+## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>CCustomИнтерполатор::CCustomИнтерполатор
 
-Создает объект пользовательского интерполятора и задает все значения по умолчанию 0.
+Конструирует пользовательский объект интерполятора и устанавливает все значения по умолчанию 0.
 
 ```
 CCustomInterpolator();
@@ -112,17 +112,17 @@ CCustomInterpolator(
 ### <a name="parameters"></a>Параметры
 
 *Длительность*<br/>
-Длительность перехода.
+Продолжительность перехода.
 
 *finalValue*
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте CCustomInterpolator::Init для инициализации длительность и конечное значение далее в коде.
+Используйте CCustomInterpolator::Init для инициализации продолжительности и окончательного значения позже в коде.
 
-##  <a name="getdependencies"></a>  CCustomInterpolator::GetDependencies
+## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustomИнтерполатор::GetDependencies
 
-Возвращает зависимости интерполятор.
+Получает зависимости интерполятора.
 
 ```
 virtual BOOL GetDependencies(
@@ -134,21 +134,21 @@ virtual BOOL GetDependencies(
 ### <a name="parameters"></a>Параметры
 
 *initialValueDependencies*<br/>
-Выходные данные. Аспекты интерполятора, которые зависят от начального значения, передаваемые от SetInitialValueAndVelocity.
+Выходные данные. Аспекты интерполятора, зависят от первоначального значения, переданного SetInitialValueAndVelocity.
 
-*initialVelocityDependencies*<br/>
-Выходные данные. Аспекты интерполятора, которые зависят от начальной скорости, передаваемые от SetInitialValueAndVelocity.
+*initialVelocityЗависимость*<br/>
+Выходные данные. Аспекты интерполятора, зависят от начальной скорости, перешли к SetInitialValueAndVelocity.
 
-*durationDependencies*<br/>
-Выходные данные. Аспекты интерполятора, которые зависят от длительности, передаваемые от SetDuration.
+*длительностьЗависимости*<br/>
+Выходные данные. Аспекты интерполятора, зависят от продолжительности, передаваемые SetDuration.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="getduration"></a>  CCustomInterpolator::GetDuration
+## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustomИнтерполатор::GetDuration
 
-Возвращает длительность интерполятор.
+Получает продолжительность интерполятора.
 
 ```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
@@ -157,15 +157,15 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>Параметры
 
 *Длительность*<br/>
-Выходные данные. Длительность перехода, в секундах.
+Выходные данные. Продолжительность перехода, в секундах.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="getfinalvalue"></a>  CCustomInterpolator::GetFinalValue
+## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustomИнтерполатор::GetFinalValue
 
-Получает конечное значение, к которому ведет интерполятора.
+Получает окончательное значение, к которому ведет интерполятор.
 
 ```
 virtual BOOL GetFinalValue(DOUBLE* value);
@@ -174,15 +174,15 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ### <a name="parameters"></a>Параметры
 
 *value*<br/>
-Выходные данные. Конечное значение переменной в конце перехода.
+Выходные данные. Окончательное значение переменной в конце перехода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="init"></a>  CCustomInterpolator::Init
+## <a name="ccustominterpolatorinit"></a><a name="init"></a>CCustomИнтерполатор::Init
 
-Инициализирует длительность и конечное значение.
+Инициализирует продолжительность и окончательное значение.
 
 ```
 void Init(
@@ -193,14 +193,14 @@ void Init(
 ### <a name="parameters"></a>Параметры
 
 *Длительность*<br/>
-Длительность перехода.
+Продолжительность перехода.
 
 *finalValue*<br/>
-Конечное значение переменной в конце перехода.
+Окончательное значение переменной в конце перехода.
 
-##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue
+## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>CCustomИнтерполатор::InterpolateValue
 
-Осуществляет интерполяцию значение с указанным смещением.
+Интерполиративирует значение в заданном смещении.
 
 ```
 virtual BOOL InterpolateValue(
@@ -215,11 +215,11 @@ virtual BOOL InterpolateValue(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="interpolatevelocity"></a>  CCustomInterpolator::InterpolateVelocity
+## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>CCustomИнтерполатор::Интерполоусть
 
-Осуществляет интерполяцию скорости, начиная с указанной позиции
+Интерполиративирует скорость в заданном смещении
 
 ```
 virtual BOOL InterpolateVelocity(
@@ -229,14 +229,14 @@ virtual BOOL InterpolateVelocity(
 
 ### <a name="parameters"></a>Параметры
 
-*Скорость*<br/>
-Выходные данные. Скорость переменной по смещению.
+*velocity*<br/>
+Выходные данные. Скорость переменной в смещении.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="m_currentvalue"></a>  CCustomInterpolator::m_currentValue
+## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a>CCustomИнтерполатор::m_currentValue
 
 Интерполированное значение.
 
@@ -244,31 +244,31 @@ virtual BOOL InterpolateVelocity(
 DOUBLE m_currentValue;
 ```
 
-##  <a name="m_currentvelocity"></a>  CCustomInterpolator::m_currentVelocity
+## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a>CCustomИнтерполатор::m_currentVelocity
 
-Интерполированные скорость.
+Интерполированная скорость.
 
 ```
 DOUBLE m_currentVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCustomInterpolator::m_duration
+## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a>CCustomИнтерполатор::m_duration
 
-Длительность перехода.
+Продолжительность перехода.
 
 ```
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_finalvalue"></a>  CCustomInterpolator::m_finalValue
+## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a>CCustomИнтерполатор::m_finalValue
 
-Конечное значение переменной в конце перехода.
+Окончательное значение переменной в конце перехода.
 
 ```
 DOUBLE m_finalValue;
 ```
 
-##  <a name="m_initialvalue"></a>  CCustomInterpolator::m_initialValue
+## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a>CCustomИнтерполатор::m_initialValue
 
 Значение переменной в начале перехода.
 
@@ -276,17 +276,17 @@ DOUBLE m_finalValue;
 DOUBLE m_initialValue;
 ```
 
-##  <a name="m_initialvelocity"></a>  CCustomInterpolator::m_initialVelocity
+## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a>CCustomИнтерполатор::m_initialVelocity
 
-Скорость, переменной в начале перехода.
+Скорость переменной в начале перехода.
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-##  <a name="setduration"></a>  CCustomInterpolator::SetDuration
+## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a>CCustomИнтерполатор::SetDuration
 
-Задает длительность интерполятор.
+Устанавливает продолжительность интерполятора.
 
 ```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
@@ -295,15 +295,15 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ### <a name="parameters"></a>Параметры
 
 *Длительность*<br/>
-Длительность перехода.
+Продолжительность перехода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовая реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Базовая реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-##  <a name="setinitialvalueandvelocity"></a>  CCustomInterpolator::SetInitialValueAndVelocity
+## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CCustomИнтерполатор::SetInitialValueAndVelocity
 
-Задает начальное значение и скорости интерполятор.
+Устанавливает исходное значение и скорость интерполятора.
 
 ```
 virtual BOOL SetInitialValueAndVelocity(
@@ -313,16 +313,16 @@ virtual BOOL SetInitialValueAndVelocity(
 
 ### <a name="parameters"></a>Параметры
 
-*Начальное значение*<br/>
+*начальнаястоимость*<br/>
 Значение переменной в начале перехода.
 
-*initialVelocity*<br/>
-Скорость, переменной в начале перехода.
+*ПервоначальныйВелосити*<br/>
+Скорость переменной в начале перехода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Основные реализация всегда возвращает значение TRUE. Возвращает значение FALSE из переопределенную реализацию, если вы хотите события сбоя.
+Основная реализация всегда возвращает TRUE. Возврат FALSE из перезавереденной реализации, если вы хотите провести неудачу события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

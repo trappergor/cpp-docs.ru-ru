@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 85a315ee393a002da4d0999569d4af6c34a37ee3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376845"
 ---
 # <a name="basic_ifstream-class"></a>Класс basic_ifstream
 
-Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.
+Описывает объект, который контролирует извлечение элементов и закодированных объектов из `Elem`буфера потока класса [basic_filebuf,](../standard-library/basic-filebuf-class.md)< `Elem` `Tr`>, с элементами типа, черты характера которых определяются классом. `Tr`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -85,33 +85,33 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|Выполняет инициализацию нового экземпляра объекта `basic_ifstream`.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
-|[close](#close)|Закрывает файл.|
+|[Закрыть](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
 |[open](#open)|Открывает файл.|
 |[rdbuf](#rdbuf)|Возвращает адрес сохраненного буфера потока.|
-|[swap](#swap)|Меняет местами содержимое этого `basic_ifstream` и содержимое указанного параметра `basic_ifstream`.|
+|[Своп](#swap)|Меняет местами содержимое этого `basic_ifstream` и содержимое указанного параметра `basic_ifstream`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Description|
+|Оператор|Описание|
 |-|-|
-|[оператор=](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
+|[оператора](#op_eq)|Назначает содержимое этого объекта потока. Это назначение перемещения, включающее `rvalue`, которое не оставляет копию.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<FStream >
+**Заголовок:** \<fstream>
 
 **Пространство имен:** std
 
-## <a name="basic_ifstream"></a>  basic_ifstream::basic_ifstream
+## <a name="basic_ifstreambasic_ifstream"></a><a name="basic_ifstream"></a>basic_ifstream::basic_ifstream
 
 Создает объект типа `basic_ifstream`.
 
@@ -136,7 +136,7 @@ basic_ifstream(basic_ifstream&& right);
 *_Filename*\
 Имя файла, который необходимо открыть.
 
-*_Mode*\
+*_mode*\
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
@@ -144,9 +144,9 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор инициализирует базовый класс путем вызова [basic_istream](../standard-library/basic-istream-class.md)( `sb`), где `sb` — сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
+Первый конструктор инициализирует базовый `sb`класс, `sb` позвонив [basic_istream](../standard-library/basic-istream-class.md) `Tr` (), где находится хранимый объект [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`класса,>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
 
-Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_istream`( `sb`). Он также инициализирует `sb` путем вызова [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, затем `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::in`). Если последняя функция возвращает пустой указатель, конструктор вызывает **setstate**( `failbit`).
+Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_istream`( `sb`). Он также `sb` инициализирует, позвонив [basic_filebuf](../standard-library/basic-filebuf-class.md#basic_filebuf)< `Elem`, `Tr`>, то `sb`. [открыть](../standard-library/basic-filebuf-class.md#open) `_Filename` `_Mode` (, `ios_base::in`&#124; ). Если последняя функция возвращает нулевую указку, `failbit`конструктор вызывает **setstate**( ).
 
 Четвертый конструктор инициализирует объект с содержимым `right`, что рассматривается как ссылка rvalue.
 
@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="close"></a>  basic_ifstream::close
+## <a name="basic_ifstreamclose"></a><a name="close"></a>basic_ifstream::закрыть
 
 Закрывает файл.
 
@@ -185,13 +185,13 @@ void close();
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена вызывает [rdbuf](#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
+Функция члена вызывает [rdbuf](#rdbuf) **->** [близко.](../standard-library/basic-filebuf-class.md#close)
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`close`.
+Пример, в котором используется `close`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
 
-## <a name="is_open"></a>  basic_ifstream::is_open
+## <a name="basic_ifstreamis_open"></a><a name="is_open"></a>basic_ifstream::is_open
 
 Определяет, открыт ли файл.
 
@@ -205,13 +205,13 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Remarks
 
-Функция – член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
+Функция члена возвращает [rdbuf](#rdbuf) **->** [is_open.](../standard-library/basic-filebuf-class.md#is_open)
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#is_open)basic_filebuf::is_open`is_open`.
+Пример, в котором используется `is_open`, см. в разделе [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open).
 
-## <a name="open"></a>  basic_ifstream::open
+## <a name="basic_ifstreamopen"></a><a name="open"></a>basic_ifstream::открыто
 
 Открывает файл.
 
@@ -240,7 +240,7 @@ void open(
 *_Filename*\
 Имя файла, который необходимо открыть.
 
-*_Mode*\
+*_mode*\
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
@@ -248,13 +248,13 @@ void open(
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член вызывает [rdbuf](#rdbuf) **->** [Open](../standard-library/basic-filebuf-class.md#open)(_ *имя_файла*, `_Mode` &#124; **ios_base:: in**). Если метод Open не выполняется, функция вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`), что может вызвать исключение ios_base:: failure.
+Функция члена вызывает [rdbuf](#rdbuf) **->** [открытое](../standard-library/basic-filebuf-class.md#open) `_Mode` (яFilename , &#124; **ios_base::in**). *Filename* При сбое в открытом`failbit`отеке функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(), что может бросить ios_base::failure исключение.
 
 ### <a name="example"></a>Пример
 
-Пример использования `open`см. в разделе [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
+Смотрите [basic_filebuf::открыть](../standard-library/basic-filebuf-class.md#open) для примера, который использует `open`.
 
-## <a name="op_eq"></a>  basic_ifstream::operator=
+## <a name="basic_ifstreamoperator"></a><a name="op_eq"></a>basic_ifstream::оператор
 
 Назначает содержимое этого объекта потока. Это назначение перемещения, включающее rvalue, которое не оставляет копию.
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Ссылка rvalue на объект `basic_ifstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,9 +273,9 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>Remarks
 
-Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue. Дополнительные сведения см. в разделе [Значения Lvalue и Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
+Оператор-член заменяет содержимое объекта, используя содержимое *права,* отнесемый к ссылке rvalue. Дополнительные сведения см. в разделе [Значения Lvalue и Rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md).
 
-## <a name="rdbuf"></a>  basic_ifstream::rdbuf
+## <a name="basic_ifstreamrdbuf"></a><a name="rdbuf"></a>basic_ifstream:rdbuf
 
 Возвращает адрес сохраненного буфера потока.
 
@@ -289,9 +289,9 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 ### <a name="example"></a>Пример
 
-Пример, в котором используется [, см. в разделе ](../standard-library/basic-filebuf-class.md#close)basic_filebuf::close`rdbuf`.
+Пример, в котором используется `rdbuf`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).
 
-## <a name="swap"></a>  basic_ifstream::swap
+## <a name="basic_ifstreamswap"></a><a name="swap"></a>basic_ifstream::swap
 
 Меняет местами содержимое двух объектов `basic_ifstream`.
 
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Ссылка на другой буфер потока.
 
 ### <a name="remarks"></a>Remarks
 
-Функция элемента меняет местами содержимое этого объекта на содержимое, находящееся *справа*.
+Функция участника обменивается содержимое этого объекта на содержимое *права.*
 
 ## <a name="see-also"></a>См. также раздел
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Программирование iostream](../standard-library/iostream-programming.md)\
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[программирование йострима](../standard-library/iostream-programming.md)\
+[iostreams Конвенций](../standard-library/iostreams-conventions.md)
