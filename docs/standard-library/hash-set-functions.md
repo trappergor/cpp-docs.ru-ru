@@ -5,23 +5,23 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d7df6b3c5dc0d0d493d17b3e9995bc4758ffd6d4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426939"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370588"
 ---
 # <a name="lthash_setgt-functions"></a>Функции &lt;hash_set&gt;
 
 |||
 |-|-|
-|[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|
+|[Своп](#swap)|[своп (hash_multiset)](#swap_hash_multiset)|
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Своп
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Выполняет обмен элементами между двумя объектами hash_set.
 
@@ -33,15 +33,15 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*справа*\
-Hash_set, предоставляющая элементы для переключения, или hash_set, элементы которого должны быть заменены элементами hash_set *Left*.
+*Правильно*\
+В hash_set, предусматривающие обмен элементами, или hash_set элементы которой должны быть обменены на те из hash_set *слева.*
 
-*left*\
-Hash_set, элементы которой должны быть заменены элементами hash_set *right*.
+*Левой*\
+В hash_set элементы которого должны быть обменяны с теми из hash_set *право*.
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона `swap` — это алгоритм, специализированный для класса контейнера hash_set для выполнения функции-члена `left.`[Swap](../standard-library/hash-set-class.md#swap)(`right`). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции шаблона перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции шаблона. Общая версия функции-шаблона
+Функция `swap` шаблона — это алгоритм, специализирующийся `left.`на`right`классе контейнеров hash_set для выполнения [своп](../standard-library/hash-set-class.md#swap)функции элемента (). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции-шаблоны перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции-шаблона. Общая версия функции-шаблона
 
 **template \<class T> void swap(T&, T&),**
 
@@ -51,12 +51,12 @@ Hash_set, элементы которой должны быть заменены
 
 См. пример кода для функции-члена [hash_set::swap](../standard-library/hash-set-class.md#swap), в котором используется версия шаблона `swap`.
 
-## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
+## <a name="swap-hash_multiset"></a><a name="swap_hash_multiset"></a>своп (hash_multiset)
 
 > [!NOTE]
-> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
-Меняет местами элементы двух объектов hash_multiset.
+Обменивает местами элементы двух объектов hash_multiset.
 
 ```cpp
 void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Traits, Allocator>& right);
@@ -64,15 +64,15 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Параметры
 
-*справа*\
-Hash_multiset, предоставляющая элементы для переключения, или hash_multiset, элементы которого должны быть заменены элементами hash_multiset *Left*.
+*Правильно*\
+Hash_multiset предоставление элементов для замены, или hash_multiset, элементы которых должны быть обменены с теми из hash_multiset *слева*.
 
-*left*\
-Hash_multiset, элементы которой должны быть заменены элементами hash_multiset *right*.
+*Левой*\
+Hash_multiset, элементы которого должны быть обменяны с теми из hash_multiset *правы.*
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона `swap` — это алгоритм, специализированный для класса контейнера hash_multiset для выполнения функции-члена `left.`[Swap](../standard-library/hash-multiset-class.md#swap)(`right`). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции шаблона перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции шаблона. Общая версия функции-шаблона
+Функция `swap` шаблона — это алгоритм, специализирующийся `left.`на`right`классе контейнеров hash_multiset для выполнения [своп](../standard-library/hash-multiset-class.md#swap)функции элемента (). Это экземпляр частичного упорядочивания шаблонов функций компилятором. Когда функции-шаблоны перегружаются таким образом, что соответствие шаблона и вызова функции не является уникальным, компилятор выберет наиболее специализированную версию функции-шаблона. Общая версия функции-шаблона
 
 **template \<class T> void swap(T&, T&),**
 

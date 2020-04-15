@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688362"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366754"
 ---
 # <a name="cache_chunklist-class"></a>Класс cache_chunklist
 
@@ -32,13 +32,13 @@ class cache_chunklist
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*SZ*|Число элементов в массиве, которые нужно выделить.|
+|*Sz*|Число выделяемых элементов в массиве.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Этот шаблон класса использует **оператор New** для выделения блоков необработанной памяти, блоков подвыделения для выделения хранилища для блока памяти, когда это необходимо. Он хранит освобожденные блоки памяти в отдельном свободном списке для каждого фрагмента и использует **оператор DELETE** для освобождения блока, если ни один из его блоков памяти не используется.
+Этот шаблон класса использует **новый оператор** для выделения фрагментов сырой памяти, подделывая блоки для выделения хранилища для блока памяти, когда это необходимо; он хранит блоки памяти в отдельном свободном списке для каждого куска, и использует **удаление оператора** для того чтобы deallocate ломку когда никакие из своих блоков памяти в пользе.
 
-Каждый блок памяти содержит *SZ* байты доступной памяти и указатель на блок, к которому он принадлежит. Каждый блок содержит `Nelts` блоки памяти, три указателя, тип int и данные, необходимые **операторам New** и **operator delete** .
+Каждый блок памяти содержит *Sz* байты применяемой в уотек памяти и указатель на кусок, который он принадлежит. Каждый `Nelts` кусок содержит блоки памяти, три указателя, Int и данные, которые **оператор новый** и **оператор удалить** требуют.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -46,12 +46,12 @@ class cache_chunklist
 |-|-|
 |[cache_chunklist](#cache_chunklist)|Создает объект типа `cache_chunklist`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
-|[allocate](#allocate)|Выделяет блок памяти.|
-|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[Выделить](#allocate)|Выделяет блок памяти.|
+|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 
 ## <a name="requirements"></a>Требования
 
@@ -59,7 +59,7 @@ class cache_chunklist
 
 **Пространство имен:** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::
 
 Выделяет блок памяти.
 
@@ -71,15 +71,15 @@ void *allocate(std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*count*|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число выделяемых элементов в массиве.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на выделяемый объект.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
 Создает объект типа `cache_chunklist`.
 
@@ -87,9 +87,9 @@ void *allocate(std::size_t count);
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::dраспределение
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

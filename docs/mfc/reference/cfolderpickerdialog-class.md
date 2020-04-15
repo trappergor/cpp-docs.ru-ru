@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: 435c91082fa901f0bc9726316f0358fc5a669b29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373849"
 ---
 # <a name="cfolderpickerdialog-class"></a>Класс CFolderPickerDialog
 
-Класс CFolderPickerDialog реализует CFileDialog в режиме выбора папки.
+Класс CFolderPickerDialog реализует CFileDialog в режиме сборщика папок.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,12 +29,12 @@ class CFolderPickerDialog : public CFileDialog;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CFolderPickerDialog:: ~ CFolderPickerDialog](#_dtorcfolderpickerdialog)|Деструктор.|
-|[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|Конструктор.|
+|[CFolderPickerДиалог::: »CFolderPickerDialog](#_dtorcfolderpickerdialog)|Деструктор.|
+|[CFolderPickerДиалог::CFolderPickerDialog](#cfolderpickerdialog)|Конструктор.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -56,7 +56,7 @@ class CFolderPickerDialog : public CFileDialog;
 
 **Заголовок:** afxdlgs.h
 
-##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>CFolderPickerДиалог::CFolderPickerDialog
 
 Конструктор.
 
@@ -71,20 +71,20 @@ explicit CFolderPickerDialog(
 ### <a name="parameters"></a>Параметры
 
 *lpszFolder*<br/>
-Исходная папка.
+Начальная папка.
 
 *dwFlags*<br/>
-Сочетание одного или нескольких флагов, которые дают возможность настройки диалогового окна.
+Сочетание одного или нескольких флагов, которые позволяют настроить диалоговую коробку.
 
 *pParentWnd*<br/>
-Указатель на окно родительский объект или владельца объекта поле диалогового окна.
+Указатель на родительское или владелец окна объекта диалоговой коробки.
 
 *dwSize*<br/>
 Размер структуры OPENFILENAME.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>CFolderPickerДиалог::: »CFolderPickerDialog
 
 Деструктор.
 
@@ -92,8 +92,8 @@ explicit CFolderPickerDialog(
 virtual ~CFolderPickerDialog();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

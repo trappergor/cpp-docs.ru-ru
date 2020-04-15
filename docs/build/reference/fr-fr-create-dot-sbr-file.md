@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320523"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (создать SBR-файл)
 
@@ -31,7 +31,7 @@ ms.locfileid: "62292800"
 /Fr[pathname[\filename]]
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 > [!WARNING]
 > Хотя средство BSCMAKE по-прежнему устанавливается вместе с Visual Studio, оно больше не используется в интегрированной среде разработки. Начиная с Visual Studio 2008 информация об исходном коде и символах автоматически сохраняется в SDF-файле SQL Server в папке решения.
@@ -47,11 +47,11 @@ ms.locfileid: "62292800"
 Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 > [!NOTE]
->  Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.
+> Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. В области навигации выберите страницу свойств **C/C++**, **Информация об исходном коде** .
 
@@ -59,11 +59,11 @@ ms.locfileid: "62292800"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
-- См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
+- Ознакомьтесь с разделами <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformation%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BrowseInformationFile%2A>.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Параметры выходного файла (/F)](output-file-f-options.md)<br/>
 [Параметры компилятора MSVC](compiler-options.md)<br/>
-[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
-[Указание пути](specifying-the-pathname.md)
+[MSVC Компилятор Командно-линейный синтаксис](compiler-command-line-syntax.md)<br/>
+[Указание имени Пути](specifying-the-pathname.md)

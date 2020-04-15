@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 155b51debfb6eacd3cbdd3293875274ca2dc4ab5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212983"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367075"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Набор записей. Создание и закрытие наборов записей (ODBC)
 
@@ -33,7 +33,7 @@ ms.locfileid: "80212983"
 
 - [Когда и как закрывать объект набора записей](#_core_closing_a_recordset).
 
-##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Создание наборов записей в среде выполнения
+## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Создание наборов записей в среде выполнения
 
 Перед созданием объектов набора записей в программе обычно вы записываете классы набора записей для конкретного приложения. Дополнительные сведения об этом предварительном этапе см. в разделе [Добавление объекта-получателя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-После вызова `Open` используйте функции элементов и элементы данных объекта для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление набора записей, чтобы включить изменения, которые произошли в источнике данных. Дополнительные сведения см. [в разделе набор записей: перезапрос набора записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+После вызова `Open` используйте функции элементов и элементы данных объекта для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление набора записей, чтобы включить изменения, которые произошли в источнике данных. Для получения дополнительной информации [см. Recordset: Requerying a Recordset (ODBC).](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 > [!TIP]
->  Строка подключения, которую вы используете во время разработки, может не совпадать со строкой подключения, которая требуется вашим конечным пользователям. Советы по обобщению приложения в этом отношении см. в разделе [Data Source: Управление соединениями (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+> Строка подключения, которую вы используете во время разработки, может не совпадать со строкой подключения, которая требуется вашим конечным пользователям. Идеи об обобщении приложения в этой связи можно найти на [примере источника данных: Управление соединениями (ODBC).](../../data/odbc/data-source-managing-connections-odbc.md)
 
-##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Настройка параметров набора записей
+## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Настройка параметров набора записей
 
 После создания объекта набора записей и перед вызовом `Open` для выбора записей может потребоваться задать некоторые параметры для управления поведением набора записей. Для всех наборов записей у вас есть следующие возможности.
 
@@ -94,9 +94,9 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 - Если набор записей является обновляемым и поддерживает параметры блокировки, укажите метод [блокировки](../../data/odbc/recordset-locking-records-odbc.md), используемый для обновлений.
 
 > [!NOTE]
->  Чтобы повлиять на выбор записей, необходимо настроить эти параметры перед вызовом функции элемента `Open`.
+> Чтобы повлиять на выбор записей, необходимо настроить эти параметры перед вызовом функции элемента `Open`.
 
-##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Закрытие набора записей
+## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Закрытие набора записей
 
 Когда вы закончите с набором записей, вы должны удалить его и освободить память.
 

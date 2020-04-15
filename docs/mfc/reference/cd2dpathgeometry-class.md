@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ef82151983720b654502ccf3ca647e55366268
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396357"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369167"
 ---
 # <a name="cd2dpathgeometry-class"></a>Класс CD2DPathGeometry
 
-Оболочка для ID2D1PathGeometry.
+Обертка для ID2D1PathGeometry.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,26 +47,26 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Создает объект CD2DPathGeometry.|
+|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|Строит объект CD2DPathGeometry.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DPathGeometry::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
-|[CD2DPathGeometry::Create](#create)|Создает CD2DPathGeometry. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DPathGeometry::destroy](#destroy)|Уничтожает объект CD2DPathGeometry. (Переопределяет [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
-|[CD2DPathGeometry::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Получает число фигур геометрическому пути.|
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Возвращает число сегментов в по геометрическому пути.|
-|[CD2DPathGeometry::Open](#open)|Получает приемник geometry, который используется для заполнения по геометрическому пути с цифры и сегментами.|
-|[CD2DPathGeometry::Stream](#stream)|Копирует содержимое по геометрическому пути к указанным ID2D1GeometrySink.|
+|[CD2DPathGeometry::Attach](#attach)|Прикрепляет существующий интерфейс ресурса к объекту|
+|[CD2DPathGeometry::Создание](#create)|Создает CD2DPathGeometry. (Переопределяет [CD2DРесурс::Создание](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPathGeometry::Destroy](#destroy)|Уничтожает объект CD2DPathGeometry. (Переопределяет [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
+|[CD2DPathGeometry: :Detach](#detach)|Открепите интерфейс ресурса с объекта|
+|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Извлекает количество фигур в геометрии пути.|
+|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|Извлекает количество сегментов в геометрии пути.|
+|[CD2DPathGeometry::Открыто](#open)|Извлекает раковину геометрии, которая используется для заполнения геометрии пути цифрами и сегментами.|
+|[CD2DPathGeometry::Stream](#stream)|Копирует содержимое геометрии пути на указанный ID2D1GeometrySink.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Указатель на ID2D1PathGeometry.|
 
@@ -74,9 +74,9 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DРесурс](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)
+[CD2DГеометрия](../../mfc/reference/cd2dgeometry-class.md)
 
 `CD2DPathGeometry`
 
@@ -84,9 +84,9 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="attach"></a>  CD2DPathGeometry::Attach
+## <a name="cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Attach
 
-Присоединяет существующий интерфейс ресурса к объекту
+Прикрепляет существующий интерфейс ресурса к объекту
 
 ```
 void Attach(ID2D1PathGeometry* pResource);
@@ -95,11 +95,11 @@ void Attach(ID2D1PathGeometry* pResource);
 ### <a name="parameters"></a>Параметры
 
 *pResource*<br/>
-Существующий интерфейс ресурсов. Не может иметь значение NULL
+Существующий интерфейс ресурса. Не может быть NULL
 
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry
 
-Создает объект CD2DPathGeometry.
+Строит объект CD2DPathGeometry.
 
 ```
 CD2DPathGeometry(
@@ -110,12 +110,12 @@ CD2DPathGeometry(
 ### <a name="parameters"></a>Параметры
 
 *pParentTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 *bAutoDestroy*<br/>
-Указывает, что объект будет уничтожен владельца (pParentTarget).
+Означает, что объект будет уничтожен владельцем (pParentTarget).
 
-##  <a name="create"></a>  CD2DPathGeometry::Create
+## <a name="cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Создание
 
 Создает CD2DPathGeometry.
 
@@ -126,13 +126,13 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="parameters"></a>Параметры
 
 *pRenderTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="destroy"></a>  CD2DPathGeometry::destroy
+## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy
 
 Уничтожает объект CD2DPathGeometry.
 
@@ -140,9 +140,9 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DPathGeometry::Detach
+## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry: :Detach
 
-Отсоединяет интерфейс ресурса из объекта
+Открепите интерфейс ресурса с объекта
 
 ```
 ID2D1PathGeometry* Detach();
@@ -150,11 +150,11 @@ ID2D1PathGeometry* Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс отсоединенных ресурсов.
+Указатель на отдельный интерфейс ресурса.
 
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount
 
-Получает число фигур геометрическому пути.
+Извлекает количество фигур в геометрии пути.
 
 ```
 int GetFigureCount() const;
@@ -162,11 +162,11 @@ int GetFigureCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает число фигур в по геометрическому пути.
+Возвращает количество фигур в геометрии пути.
 
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount
 
-Возвращает число сегментов в по геометрическому пути.
+Извлекает количество сегментов в геометрии пути.
 
 ```
 int GetSegmentCount() const;
@@ -174,9 +174,9 @@ int GetSegmentCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает число сегментов в по геометрическому пути.
+Возвращает количество сегментов в геометрии пути.
 
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry
 
 Указатель на ID2D1PathGeometry.
 
@@ -184,9 +184,9 @@ int GetSegmentCount() const;
 ID2D1PathGeometry* m_pPathGeometry;
 ```
 
-##  <a name="open"></a>  CD2DPathGeometry::Open
+## <a name="cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Открыто
 
-Получает приемник geometry, который используется для заполнения по геометрическому пути с цифры и сегментами.
+Извлекает раковину геометрии, которая используется для заполнения геометрии пути цифрами и сегментами.
 
 ```
 ID2D1GeometrySink* Open();
@@ -194,11 +194,11 @@ ID2D1GeometrySink* Open();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на ID2D1GeometrySink, используемый для заполнения по геометрическому пути с цифры и сегментами.
+Указатель на ID2D1GeometrySink, который используется для заполнения геометрии пути цифрами и сегментами.
 
-##  <a name="stream"></a>  CD2DPathGeometry::Stream
+## <a name="cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Stream
 
-Копирует содержимое по геометрическому пути к указанным ID2D1GeometrySink.
+Копирует содержимое геометрии пути на указанный ID2D1GeometrySink.
 
 ```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
@@ -206,13 +206,13 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 ### <a name="parameters"></a>Параметры
 
-*geometrySink*<br/>
-Приемник, в которой будет скопировано содержимое по геометрическому пути. Изменив этот приемник не изменяет содержимое данной геометрии пути.
+*геометрияСинк*<br/>
+Раковина, к которой копируется содержимое геометрии пути. Изменение этой раковины не изменяет содержимое геометрии этого пути.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

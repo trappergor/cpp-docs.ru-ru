@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-ms.openlocfilehash: 21087682d40dac521cc949a39ef4b1aab23e7d71
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 82ad2fbfb8558486134f85d7ec9bcaa6eb4e7507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369261"
 ---
 # <a name="cd2dellipse-class"></a>Класс CD2DEllipse
 
@@ -29,9 +29,9 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Перегружен. Конструирует объект из `D2D1_ELLIPSE`объекта. `CD2DEllipse`|
+|[CD2DEllipse::CD2DEllipse](#cd2dellipse)|Перегружен. Строит `CD2DEllipse` объект из `D2D1_ELLIPSE` объекта.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -41,11 +41,11 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксрендертаржет. h
+**Заголовок:** afxrendertarget.h
 
-##  <a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
+## <a name="cd2dellipsecd2dellipse"></a><a name="cd2dellipse"></a>CD2DEllipse::CD2DEllipse
 
-Конструирует объект CD2DEllipse из объекта CD2DRectF.
+Строит объект CD2DEllipse с объекта CD2DRectF.
 
 ```
 CD2DEllipse(const CD2DRectF& rect);
@@ -60,17 +60,17 @@ CD2DEllipse(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-Исходный прямоугольник
+источник прямоугольника
 
-*эллипс*<br/>
-Источник эллипса
+*ellipse*<br/>
+источник эллипса
 
-*птцентер*<br/>
+*ptCenter*<br/>
 Центральная точка эллипса.
 
-*сизерадиус*<br/>
+*размерРадиус*<br/>
 X-радиус и Y-радиус эллипса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

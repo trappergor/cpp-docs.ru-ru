@@ -7,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374735"
 ---
 # <a name="short_vector_traits-structure"></a>Структура short_vector_traits
 
-short_vector_traits позволяет получать базовую длину вектора и скалярный тип для короткого векторного типа или скалярного типа.
+short_vector_traits позволяет извлекать основной вектор длины и масштабирования типа короткого типа вектора или масштабирования типа
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -79,25 +79,25 @@ struct short_vector_traits<double_4>;
 
 `T`
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструктор short_vector_traits:: short_vector_traits](#ctor)||
+|[Конструктор short_vector_traits::short_vector_traits](#ctor)||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Константа short_vector_traits:: size](#size)||
+|[Константа short_vector_traits::size](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -105,17 +105,17 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors. h
+**Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency:: Graphics
+**Пространство имен:** Параллель:графика
 
-## <a name="ctor"></a>Конструктор short_vector_traits:: short_vector_traits
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits Конструктор
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="size"></a>Константа short_vector_traits:: size
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits:размер константа
 
 ```cpp
 static int const size = 1;

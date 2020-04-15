@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944931"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320446"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,18 +49,20 @@ int wctob(
 
 ### <a name="parameters"></a>Параметры
 
-*wchar*<br/>
+*Wchar*<br/>
 Значение, которое необходимо преобразовать.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **вктоб** успешно преобразует расширенный символ, он возвращает его представление многобайтового символа, только если многобайтовый символ имеет длину ровно один байт. Если **вктоб** встречает широкий символ, который не может быть преобразован в многобайтовый символ или многобайтовый символ, не должен быть длиннее одного байта, возвращается значение-1.
+Если **wctob** успешно преобразует широкий символ, он возвращает свое многобайтовое представление символа, только если мультибайтный символ точно один байт длиной. Если **wctob** сталкивается с широким символом, он не может преобразовать сява в мультибайтный символ или мультибайтный символ не является точно одним байтом длиной, он возвращает -1.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **вктоб** преобразует широкий символ, содержащийся в параметре *WCHAR* , в соответствующий многобайтовый символ, передаваемый возвращаемым значением **int** , если многобайтовый символ имеет ровно один байт.
+Функция **wctob** преобразует широкий символ, содержащийся в *wchar,* в соответствующий мультибайтный символ, пройденные значением возврата **Int,** если мультибайтный символ точно один байт длиной.
 
-Если **вктоб** завершился неудачей и не найден соответствующий многобайтовый символ, функция **устанавливает значение** "от" до **еилсек** и возвращает-1.
+Если **wctob** был неудачным и не был найден соответствующий мультибайтный символ, функция устанавливает **errno** к **EILSE** и возвращает -1.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -66,11 +70,11 @@ int wctob(
 |-------------|---------------------|
 |**wctob**|\<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-Эта программа иллюстрирует поведение функции **wcstombs** .
+Эта программа иллюстрирует поведение функции **wcstombs.**
 
 ```C
 // crt_wctob.c
@@ -102,10 +106,10 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

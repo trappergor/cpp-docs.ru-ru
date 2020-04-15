@@ -1,5 +1,5 @@
 ---
-title: Класс Кбиндстатускаллбакк
+title: Класс CBindStatusCallback
 ms.date: 11/04/2016
 f1_keywords:
 - CBindStatusCallback
@@ -29,19 +29,19 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 89c65ff034cf7471c379b28116a741b62269a00c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6cdac444836574dd4d398571b71bb25363af5d3d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321238"
 ---
-# <a name="cbindstatuscallback-class"></a>Класс Кбиндстатускаллбакк
+# <a name="cbindstatuscallback-class"></a>Класс CBindStatusCallback
 
-Этот класс реализует интерфейс `IBindStatusCallback` .
+Этот класс реализует интерфейс `IBindStatusCallback`.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,57 +55,57 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, содержащий функцию, которая будет вызываться при получении данных.
+Ваш класс, содержащий функцию, которая будет вызываться по мере получения данных.
 
-*нбиндфлагс*<br/>
-Задает флаги привязки, возвращаемые функцией [GetBindInfo](#getbindinfo). Реализация по умолчанию устанавливает привязку как асинхронную, извлекает последнюю версию данных или объекта и не сохраняет извлеченные данные в кэш диска.
+*nBindFlags*<br/>
+Определяет флаги связывания, которые возвращаются [GetBindInfo](#getbindinfo). Реализация по умолчанию устанавливает привязку как асинхронную, извлекает новейшую версию данных/объекта и не хранит извлеченные данные в кэше диска.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кбиндстатускаллбакк:: Кбиндстатускаллбакк](#cbindstatuscallback)|Конструктор.|
-|[Кбиндстатускаллбакк:: ~ Кбиндстатускаллбакк](#dtor)|Деструктор|
+|[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Конструктор.|
+|[CBindStatusCallback:: »Кбиндстамастокальбэк](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кбиндстатускаллбакк::D гружать](#download)|Статический метод, который запускает процесс загрузки, создает `CBindStatusCallback` объект и вызывает. `StartAsyncDownload`|
-|[Кбиндстатускаллбакк:: GetBindInfo](#getbindinfo)|Вызывается асинхронным моникером для запроса информации о типе создаваемой привязки.|
-|[Кбиндстатускаллбакк:: предшествовал](#getpriority)|Вызывается асинхронным моникером для получения приоритета операции привязки. Реализация ATL возвращает `E_NOTIMPL`.|
-|[Кбиндстатускаллбакк:: Ондатааваилабле](#ondataavailable)|Вызывается для предоставления данных приложению в том виде, в котором оно станет доступным. Считывает данные, а затем вызывает функцию, переданную в нее, для использования данных.|
-|[Кбиндстатускаллбакк:: Онловресаурце](#onlowresource)|Вызывается, когда ресурсы имеют низкий уровень. Реализация ATL возвращает значение S_OK.|
-|[Кбиндстатускаллбакк:: Онобжектаваилабле](#onobjectavailable)|Вызывается асинхронным моникером для передачи указателя на интерфейс объекта в приложение. Реализация ATL возвращает значение S_OK.|
-|[Кбиндстатускаллбакк:: OnProgress](#onprogress)|Вызывается для указания хода процесса загрузки данных. Реализация ATL возвращает значение S_OK.|
-|[Кбиндстатускаллбакк:: Онстартбиндинг](#onstartbinding)|Вызывается при запуске привязки.|
-|[Кбиндстатускаллбакк:: Онстопбиндинг](#onstopbinding)|Вызывается при остановке асинхронной пересылки данных.|
-|[Кбиндстатускаллбакк:: Стартасинкдовнлоад](#startasyncdownload)|Инициализирует доступные байты и байты, считанные в ноль, создает объект потока Push-Type из URL-адреса `OnDataAvailable` и вызывает каждый раз, когда доступны все данные.|
+|[CBindStatusCallback::D](#download)|Статический метод, который запускает `CBindStatusCallback` процесс загрузки, создает объект и вызывает. `StartAsyncDownload`|
+|[CBindStatusCallback::GetBindInfo](#getbindinfo)|Вызывается асинхронным прозвищем, чтобы запросить информацию о типе связывания, который будет создан.|
+|[CBindStatusCallback::GetPriority](#getpriority)|Вызывается асинхронным прозвищем, чтобы получить приоритет операции связывания. Возвращает реализацию `E_NOTIMPL`ATL.|
+|[CBindStatusCallback:OnData Available](#ondataavailable)|Вызывается для предоставления данных в приложение по мере его появления. Читает данные, а затем вызывает функцию, переданную ему, чтобы использовать данные.|
+|[CBindstatusCallback::OnLowResource](#onlowresource)|Вызывается, когда ресурсы низки. Реализация ATL возвращает S_OK.|
+|[CBindStatusCallback::OnObjectAvailable](#onobjectavailable)|Вызывается асинхронным псевдонимом, чтобы передать указатель интерфейса объекта в приложение. Реализация ATL возвращает S_OK.|
+|[CBindStatusCallback::OnProgress](#onprogress)|Вызывается для обозначения хода процесса загрузки данных. Реализация ATL возвращает S_OK.|
+|[CBindstatusCallback::OnStartBinding](#onstartbinding)|Вызывается при начале связывания.|
+|[CBindstatusCallback::OnstopBinding](#onstopbinding)|Вызывается при прекращении асинхронной передачи данных.|
+|[CBindStatusCallback:StartAsyncDownload](#startasyncdownload)|Инициализация доступных байтов и байтов, читаемых до нуля, создает объект потока типа push из URL и вызывает `OnDataAvailable` каждый раз, когда данные доступны.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кбиндстатускаллбакк:: m_dwAvailableToRead](#m_dwavailabletoread)|Число байтов, доступных для чтения.|
-|[Кбиндстатускаллбакк:: m_dwTotalRead](#m_dwtotalread)|Общее число считанных байтов.|
-|[Кбиндстатускаллбакк:: m_pFunc](#m_pfunc)|Указатель на функцию, вызываемую, когда данные доступны.|
-|[Кбиндстатускаллбакк:: m_pT](#m_pt)|Указатель на объект, запрашивающий асинхронную пересылку данных.|
-|[Кбиндстатускаллбакк:: m_spBindCtx](#m_spbindctx)|Указатель на интерфейс [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) для текущей операции привязки.|
-|[Кбиндстатускаллбакк:: m_spBinding](#m_spbinding)|Указатель на `IBinding` интерфейс для текущей операции привязки.|
-|[Кбиндстатускаллбакк:: m_spMoniker](#m_spmoniker)|Указатель на интерфейс [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) для используемого URL-адреса.|
-|[Кбиндстатускаллбакк:: m_spStream](#m_spstream)|Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) для перемещения данных.|
+|[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Количество байтов, доступных для чтения.|
+|[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Общее количество прочитано байтов.|
+|[CBindStatusCallback::m_pFunc](#m_pfunc)|Указатель на функцию, вызванную при наличии данных.|
+|[CBindStatusCallback::m_pT](#m_pt)|Указатель на объект, запрашивающий асинхронную передачу данных.|
+|[CBindStatusCallback::m_spBindCtx](#m_spbindctx)|Указатель на интерфейс [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) для текущей операции связывания.|
+|[CBindStatusCallback::m_spBinding](#m_spbinding)|Указатель на `IBinding` интерфейс для текущей операции связывания.|
+|[CBindStatusCallback::m_spMoniker](#m_spmoniker)|Указатель на интерфейс [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) для использования URL.й.|
+|[CBindStatusCallback::m_spStream](#m_spstream)|Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) для передачи данных.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Класс `CBindStatusCallback` реализует интерфейс `IBindStatusCallback`. `IBindStatusCallback`должен быть реализован приложением, чтобы он мог получать уведомления от асинхронной пересылки данных. В асинхронном моникере, предоставляемом `IBindStatusCallback` системой, используются методы для отправки и получения сведений об асинхронной передаче данных в объект и из него.
+Класс `CBindStatusCallback` реализует интерфейс `IBindStatusCallback`. `IBindStatusCallback`должно быть реализовано вашим приложением, чтобы оно мог получать уведомления от асинхронной передачи данных. Асинхронное прозвище, предоставляемое системой, использует `IBindStatusCallback` методы для отправки и получения информации о передаче асинхронных данных на объект и с вашего объекта.
 
-Как правило, `CBindStatusCallback` объект связан с определенной операцией привязки. Например, в примере [Async](../../overview/visual-cpp-samples.md) при задании свойства URL-адреса создается `CBindStatusCallback` объект `Download`в вызове:
+Как правило, `CBindStatusCallback` объект связан с конкретной операцией связывания. Например, в примере [ASYNC](../../overview/visual-cpp-samples.md) при установке свойства `CBindStatusCallback` URL создается `Download`объект в вызове:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
-Асинхронное моникер использует функцию `OnData` обратного вызова для вызова приложения, когда оно содержит данные. Асинхронное моникер предоставляется системой.
+Асинхронное прозвище использует функцию `OnData` обратного вызова приложения, когда у него есть данные. Асинхронное прозвище предоставляется системой.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -119,9 +119,9 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлктл. h
+**Заголовок:** atlctl.h
 
-##  <a name="cbindstatuscallback"></a>Кбиндстатускаллбакк:: Кбиндстатускаллбакк
+## <a name="cbindstatuscallbackcbindstatuscallback"></a><a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback
 
 Конструктор.
 
@@ -129,13 +129,13 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 CBindStatusCallback();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Создает объект для получения уведомлений, касающихся асинхронной пересылки данных. Как правило, для каждой операции привязки создается один объект.
+Создает объект для получения уведомлений о передаче асинхронных данных. Как правило, для каждой операции связывания создается один объект.
 
-Конструктор также инициализирует [m_pT](#m_pt) и [m_pFunc](#m_pfunc) значением NULL.
+Конструктор также инициализирует [m_pT](#m_pt) и [m_pFunc](#m_pfunc) null.
 
-##  <a name="dtor"></a>Кбиндстатускаллбакк:: ~ Кбиндстатускаллбакк
+## <a name="cbindstatuscallbackcbindstatuscallback"></a><a name="dtor"></a>CBindStatusCallback:: »Кбиндстамастокальбэк
 
 Деструктор
 
@@ -143,13 +143,13 @@ CBindStatusCallback();
 ~CBindStatusCallback();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="download"></a>Кбиндстатускаллбакк::D гружать
+## <a name="cbindstatuscallbackdownload"></a><a name="download"></a>CBindStatusCallback::D
 
-Создает объект и вызывает метод `StartAsyncDownload` , чтобы начать асинхронную загрузку данных с указанного URL-адреса. `CBindStatusCallback`
+Создает `CBindStatusCallback` объект и `StartAsyncDownload` призывает начать асинхронную загрузку данных из указанного URL.
 
 ```
 static HRESULT Download(
@@ -162,34 +162,34 @@ static HRESULT Download(
 
 ### <a name="parameters"></a>Параметры
 
-*Лутор*<br/>
-окне Указатель на объект, запрашивающий асинхронную пересылку данных. `CBindStatusCallback` Объект преобразованный в классе этого объекта.
+*Pt*<br/>
+(в) Указатель на объект, запрашивающий асинхронную передачу данных. Объект `CBindStatusCallback` используется на классе этого объекта.
 
 *pFunc*<br/>
-окне Указатель на функцию, которая получает считанные данные. Функция является членом класса объекта типа `T`. Синтаксис и пример см. в разделе [стартасинкдовнлоад](#startasyncdownload) .
+(в) Указатель на функцию, которая получает данные, которые считываемые. Функция является членом класса типа `T`объекта. Смотрите [StartAsyncDownload](#startasyncdownload) для синтаксиса и пример.
 
-*бструрл*<br/>
-окне URL-адрес для получения данных. Может быть любым допустимым URL-адресом или именем файла. Не может принимать значение NULL. Например:
+*bstrURL*<br/>
+(в) URL для получения данных. Может быть любой действительный URL или имя файла. Не может быть NULL. Пример:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*пункконтаинер*<br/>
-окне Объект `IUnknown` контейнера. По умолчанию имеет значение NULL.
+*pUnkContainer*<br/>
+(в) Контейнер. `IUnknown` NULL по умолчанию.
 
-*брелативе*<br/>
-окне Флаг, указывающий, является ли URL-адрес относительным или абсолютным. Значение FALSE по умолчанию, означающее, что URL-адрес является абсолютным.
+*bОтносительно*<br/>
+(в) Флаг, указывающий, является ли URL-адрес относительно или абсолютным. FALSE по умолчанию, то есть URL является абсолютным.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждый раз, когда все данные доступны, они отправляются `OnDataAvailable`в объект через. `OnDataAvailable`считывает данные и вызывает функцию, на которую указывает *pFunc* (например, для сохранения данных или вывода их на экран).
+Каждый раз, когда данные доступны, они отправляются на объект через `OnDataAvailable`. `OnDataAvailable`считывает данные и вызывает функцию, на которую указывает *pFunc* (например, для хранения данных или печати на экране).
 
-##  <a name="getbindinfo"></a>Кбиндстатускаллбакк:: GetBindInfo
+## <a name="cbindstatuscallbackgetbindinfo"></a><a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo
 
-Вызывается, чтобы сообщить моникеру, как выполнить привязку.
+Позвонил, чтобы сказать прозвище, как связать.
 
 ```
 STDMETHOD(GetBindInfo)(
@@ -199,31 +199,31 @@ STDMETHOD(GetBindInfo)(
 
 ### <a name="parameters"></a>Параметры
 
-*пгрфбскф*<br/>
-заполняет Указатель на значения перечисления БИНДФ, указывающий, как должна выполняться операция привязки. По умолчанию задается со следующими значениями перечисления:
+*pgrfBSCF*<br/>
+(ваут) Указатель на значения перечисления BINDF с указанием того, как должна происходить операция связывания. По умолчанию устанавливается со следующими значениями перечисления:
 
-Асинхронная загрузка BINDF_ASYNCHRONOUS.
+BINDF_ASYNCHRONOUS асинхронная загрузка.
 
-BINDF_ASYNCSTORAGE `OnDataAvailable` возвращает E_PENDING, когда данные еще недоступны, а не блокируются, пока данные не будут доступны.
+BINDF_ASYNCSTORAGE `OnDataAvailable` возвращает E_PENDING, когда данные еще не доступны, а не блокируются до тех пор, пока данные не будут доступны.
 
-BINDF_GETNEWESTVERSION. операция привязки должна получить последнюю версию данных.
+BINDF_GETNEWESTVERSION операция связывания должна получить новейшую версию данных.
 
-BINDF_NOWRITECACHE. операция привязки не должна хранить извлеченные данные в кэш диска.
+BINDF_NOWRITECACHE Операция связывания не должна хранить извлеченные данные в кэше диска.
 
-*пбиндинфо*<br/>
-[вход, выход] Указатель на `BINDINFO` структуру предоставляет дополнительные сведения о том, как происходит привязка объекта.
+*pbindinfo*<br/>
+(в, вне) Указатель на `BINDINFO` структуру, дающий больше информации о том, как объект хочет иметь привязку.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию устанавливает привязку как асинхронную и использует модель принудительной передачи данных. В модели передачи данных моникер управляет асинхронной операцией привязки и постоянно уведомляет клиента каждый раз, когда новые данные доступны.
+Реализация по умолчанию устанавливает привязку к асинхрону и использовать модель нажатия данных. В модели нажатия данных кличка приводит к работе асинхронного связывания и постоянно уведомляет клиента при наличии новых данных.
 
-##  <a name="getpriority"></a>Кбиндстатускаллбакк:: предшествовал
+## <a name="cbindstatuscallbackgetpriority"></a><a name="getpriority"></a>CBindStatusCallback::GetPriority
 
-Вызывается асинхронным моникером для получения приоритета операции привязки.
+Вызывается асинхронным прозвищем, чтобы получить приоритет операции связывания.
 
 ```
 STDMETHOD(GetPriority)(LONG* pnPriority);
@@ -231,48 +231,48 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 
 ### <a name="parameters"></a>Параметры
 
-*пнприорити*<br/>
-заполняет Адрес переменной **Long** , которая в случае успеха получает приоритет.
+*pnPriority*<br/>
+(ваут) Адрес **переменной LONG,** которая, по успеху, получает приоритет.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
-##  <a name="m_dwavailabletoread"></a>Кбиндстатускаллбакк:: m_dwAvailableToRead
+## <a name="cbindstatuscallbackm_dwavailabletoread"></a><a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead
 
-Может использоваться для хранения числа доступных для чтения байтов.
+Можно использовать для хранения количества байтов, доступных для чтения.
 
 ```
 DWORD m_dwAvailableToRead;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Инициализировано до нуля в `StartAsyncDownload`.
 
-##  <a name="m_dwtotalread"></a>Кбиндстатускаллбакк:: m_dwTotalRead
+## <a name="cbindstatuscallbackm_dwtotalread"></a><a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead
 
-Совокупное число байтов, считанных при асинхронной передаваемой данных.
+Совокупное количество байтов, читаемых в асинхронной передаче данных.
 
 ```
 DWORD m_dwTotalRead;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждый раз `OnDataAvailable` увеличивается на единицу, чем число фактически считанных байтов. Инициализировано до нуля в `StartAsyncDownload`.
+Приращенные каждый раз `OnDataAvailable` вызывается число байтов на самом деле читать. Инициализировано до нуля в `StartAsyncDownload`.
 
-##  <a name="m_pfunc"></a>Кбиндстатускаллбакк:: m_pFunc
+## <a name="cbindstatuscallbackm_pfunc"></a><a name="m_pfunc"></a>CBindStatusCallback::m_pFunc
 
-Функция, на которую указывает `m_pFunc` by, `OnDataAvailable` вызывается после считывания доступных данных (например, для сохранения данных или вывода их на экран).
+Функция, на `m_pFunc` которую `OnDataAvailable` указывается, вызывается после считываема доступные данные (например, для хранения данных или печати их на экране).
 
 ```
 ATL_PDATAAVAILABLE m_pFunc;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция, на которую указывает `m_pFunc` , является членом класса объекта и имеет следующий синтаксис:
+Функция, на `m_pFunc` которую указывается, является членом класса вашего объекта и имеет следующий синтаксис:
 
 ```
 void Function_Name(
@@ -282,69 +282,69 @@ void Function_Name(
    );
 ```
 
-##  <a name="m_pt"></a>Кбиндстатускаллбакк:: m_pT
+## <a name="cbindstatuscallbackm_pt"></a><a name="m_pt"></a>CBindStatusCallback::m_pT
 
-Указатель на объект, запрашивающий асинхронную пересылку данных.
+Указатель на объект, запрашивающий асинхронную передачу данных.
 
 ```
 T* m_pT;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CBindStatusCallback` Объект преобразованный в классе этого объекта.
+Объект `CBindStatusCallback` используется на классе этого объекта.
 
-##  <a name="m_spbindctx"></a>Кбиндстатускаллбакк:: m_spBindCtx
+## <a name="cbindstatuscallbackm_spbindctx"></a><a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx
 
-Указатель на интерфейс [IBindCtx](/windows/win32/api/objidl/nn-objidl-ibindctx) , предоставляющий доступ к контексту привязки (объект, хранящий сведения о конкретной операции привязки моникера).
+Указатель на интерфейс [IBindCtx,](/windows/win32/api/objidl/nn-objidl-ibindctx) обеспечивающий доступ к контексту связывания (объект, который хранит информацию о конкретной операции связывания моникера).
 
 ```
 CComPtr<IBindCtx> m_spBindCtx;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирован в `StartAsyncDownload`.
+Инициализировано в `StartAsyncDownload`.
 
-##  <a name="m_spbinding"></a>Кбиндстатускаллбакк:: m_spBinding
+## <a name="cbindstatuscallbackm_spbinding"></a><a name="m_spbinding"></a>CBindStatusCallback::m_spBinding
 
-Указатель на `IBinding` интерфейс текущей операции привязки.
+Указатель на `IBinding` интерфейс текущей операции связывания.
 
 ```
 CComPtr<IBinding> m_spBinding;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализируется в `OnStartBinding` и выпускается `OnStopBinding`в.
+Инициализированы и `OnStartBinding` выпущены в `OnStopBinding`.
 
-##  <a name="m_spmoniker"></a>Кбиндстатускаллбакк:: m_spMoniker
+## <a name="cbindstatuscallbackm_spmoniker"></a><a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker
 
-Указатель на интерфейс [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) для используемого URL-адреса.
+Указатель на интерфейс [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) для использования URL.й.
 
 ```
 CComPtr<IMoniker> m_spMoniker;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирован в `StartAsyncDownload`.
+Инициализировано в `StartAsyncDownload`.
 
-##  <a name="m_spstream"></a>Кбиндстатускаллбакк:: m_spStream
+## <a name="cbindstatuscallbackm_spstream"></a><a name="m_spstream"></a>CBindStatusCallback::m_spStream
 
-Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) текущей операции привязки.
+Указатель на интерфейс [IStream](/windows/win32/api/objidl/nn-objidl-istream) текущей операции связывания.
 
 ```
 CComPtr<IStream> m_spStream;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализируется в `OnDataAvailable` из структуры `STGMEDIUM` , когда флаг бксф имеет значение BCSF_FIRSTDATANOTIFICATION и освобождается, если флаг бксф имеет значение BCSF_LASTDATANOTIFICATION.
+Инициализировано `OnDataAvailable` от `STGMEDIUM` структуры, когда флаг BCSF BCSF_FIRSTDATANOTIFICATION и выпущен, когда флаг BCSF BCSF_LASTDATANOTIFICATION.
 
-##  <a name="ondataavailable"></a>Кбиндстатускаллбакк:: Ондатааваилабле
+## <a name="cbindstatuscallbackondataavailable"></a><a name="ondataavailable"></a>CBindStatusCallback:OnData Available
 
-Предоставляемые системой асинхронные вызовы `OnDataAvailable` моникера для предоставления данных объекту в том виде, в котором они становятся доступными.
+Система, поставляемая асинхронным `OnDataAvailable` псевдонимом, требует предоставления данных объекту по мере его поступления.
 
 ```
 STDMETHOD(
@@ -356,29 +356,29 @@ STDMETHOD(
 
 ### <a name="parameters"></a>Параметры
 
-*грфбскф*<br/>
-окне Значение перечисления БСКФ. Один или несколько из следующих элементов: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION или BSCF_LASTDATANOTIFICATION.
+*grfBSCF*<br/>
+(в) Значение перечисления BSCF. Один или несколько из следующих: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION или BSCF_LASTDATANOTIFICATION.
 
-*двсизе*<br/>
-окне Совокупный объем данных (в байтах), доступный с начала привязки. Может быть равно нулю, что означает, что объем данных не важен или не стал доступным никакой конкретной суммы.
+*dwSize*<br/>
+(в) Совокупное количество (в байтах) данных, доступных с начала связывания. Может быть ноль, что указывает на то, что объем данных не имеет значения или что конкретная сумма не стала доступной.
 
-*пформатетк*<br/>
-окне Указатель на структуру [форматетк](/windows/win32/com/the-formatetc-structure) , которая содержит формат доступных данных. Если формат отсутствует, может быть CF_NULL.
+*pformatetc*<br/>
+(в) Указатель на структуру [FORMATETC,](/windows/win32/com/the-formatetc-structure) содержащую формат имеющихся данных. Если нет формата, можно CF_NULL.
 
-*пстгмед*<br/>
-окне Указатель на структуру [стгмедиум](/windows/win32/com/the-stgmedium-structure) , содержащую фактические данные, которые теперь доступны.
+*pstgmed*<br/>
+(в) Указатель на структуру [STGMEDIUM,](/windows/win32/com/the-stgmedium-structure) которая содержит фактические данные, доступные в настоящее время.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`OnDataAvailable`считывает данные, а затем вызывает метод класса объекта (например, для сохранения данных или вывода их на экран). Дополнительные сведения см. в разделе [кбиндстатускаллбакк:: стартасинкдовнлоад](#startasyncdownload) .
+`OnDataAvailable`читает данные, а затем вызывает метод класса объекта (например, для хранения данных или распечатать их на экране). Смотрите [CBindStatusCallback::StartAsyncDownload](#startasyncdownload) для получения подробной информации.
 
-##  <a name="onlowresource"></a>Кбиндстатускаллбакк:: Онловресаурце
+## <a name="cbindstatuscallbackonlowresource"></a><a name="onlowresource"></a>CBindstatusCallback::OnLowResource
 
-Вызывается, когда ресурсы имеют низкий уровень.
+Вызывается, когда ресурсы низки.
 
 ```
 STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
@@ -386,16 +386,16 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 
 ### <a name="parameters"></a>Параметры
 
-*двресервед*<br/>
+*dwReserved*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="onobjectavailable"></a>Кбиндстатускаллбакк:: Онобжектаваилабле
+## <a name="cbindstatuscallbackonobjectavailable"></a><a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable
 
-Вызывается асинхронным моникером для передачи указателя на интерфейс объекта в приложение.
+Вызывается асинхронным псевдонимом, чтобы передать указатель интерфейса объекта в приложение.
 
 ```
 STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
@@ -404,18 +404,18 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="parameters"></a>Параметры
 
 *riid*<br/>
-Идентификатор интерфейса запрошенного интерфейса. Не используется.
+Идентификатор интерфейса запрашиваемого интерфейса. Не используется.
 
-*Punk*<br/>
+*Панк*<br/>
 Адрес интерфейса IUnknown. Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="onprogress"></a>Кбиндстатускаллбакк:: OnProgress
+## <a name="cbindstatuscallbackonprogress"></a><a name="onprogress"></a>CBindStatusCallback::OnProgress
 
-Вызывается для указания хода процесса загрузки данных.
+Вызывается для обозначения хода процесса загрузки данных.
 
 ```
 STDMETHOD(OnProgress)(
@@ -427,25 +427,25 @@ STDMETHOD(OnProgress)(
 
 ### <a name="parameters"></a>Параметры
 
-*улпрогресс*<br/>
-Длинное целое число без знака. Не используется.
+*ulProgress*<br/>
+Неподписанный длинный целый нисх. Не используется.
 
-*улпрогрессмакс*<br/>
-Неиспользуемое длинное целое без знака.
+*ulProgressMax*<br/>
+Неподписанный длинный целый teger Неиспользованные.
 
-*улстатускоде*<br/>
-Длинное целое число без знака. Не используется.
+*ulStatusCode*<br/>
+Неподписанный длинный целый нисх. Не используется.
 
-*сзстатустекст*<br/>
-Адрес строкового значения. Не используется.
+*szStatusТекст*<br/>
+Адрес значения строки. Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK.
+Возвращает S_OK.
 
-##  <a name="onstartbinding"></a>Кбиндстатускаллбакк:: Онстартбиндинг
+## <a name="cbindstatuscallbackonstartbinding"></a><a name="onstartbinding"></a>CBindstatusCallback::OnStartBinding
 
-Задает элемент данных, [m_spBinding](#m_spbinding) `IBinding` указатель в *пбиндинг*.
+Устанавливает член [m_spBinding](#m_spbinding) данных `IBinding` m_spBinding указателя в *pBinding*.
 
 ```
 STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
@@ -453,15 +453,15 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
 
 ### <a name="parameters"></a>Параметры
 
-*двресервед*<br/>
-Зарезервировано для будущего использования.
+*dwReserved*<br/>
+Зарезервировано для последующего использования.
 
-*пбиндинг*<br/>
-окне Адрес интерфейса Ибиндинг текущей операции привязки. Это значение не может быть равно NULL. Клиент должен вызвать AddRef для этого указателя, чтобы удержать ссылку на объект привязки.
+*pBinding*<br/>
+(в) Адрес интерфейса IBinding текущей операции связывания. Это не может быть NULL. Клиент должен вызвать AddRef по этому указателю, чтобы сохранить ссылку на обязательный объект.
 
-##  <a name="onstopbinding"></a>Кбиндстатускаллбакк:: Онстопбиндинг
+## <a name="cbindstatuscallbackonstopbinding"></a><a name="onstopbinding"></a>CBindstatusCallback::OnstopBinding
 
-Освобождает указатель `IBinding` в элементе данных [m_spBinding](#m_spbinding).
+Выпускает `IBinding` указатель в [m_spBinding](#m_spbinding)члена данных.
 
 ```
 STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
@@ -469,19 +469,19 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 
 ### <a name="parameters"></a>Параметры
 
-*hresult*<br/>
-Код состояния, возвращенный операцией привязки.
+*Hresult*<br/>
+Код состояния, возвращенный из операции связывания.
 
-*сзеррор*<br/>
-Адрес строкового значения. Не используется.
+*szОшибка*<br/>
+Адрес значения строки. Не используется.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывается предоставляемым системой асинхронным моникером для обозначения конца операции привязки.
+Вызывается системным асинхронным моникером, чтобы указать конец операции связывания.
 
-##  <a name="startasyncdownload"></a>Кбиндстатускаллбакк:: Стартасинкдовнлоад
+## <a name="cbindstatuscallbackstartasyncdownload"></a><a name="startasyncdownload"></a>CBindStatusCallback:StartAsyncDownload
 
-Запускает асинхронную загрузку данных по указанному URL-адресу.
+Начинает загрузку данных асинхронно из указанного URL-
 
 ```
 HRESULT StartAsyncDownload(
@@ -494,32 +494,32 @@ HRESULT StartAsyncDownload(
 
 ### <a name="parameters"></a>Параметры
 
-*Лутор*<br/>
-окне Указатель на объект, запрашивающий асинхронную пересылку данных. `CBindStatusCallback` Объект преобразованный в классе этого объекта.
+*Pt*<br/>
+(в) Указатель на объект, запрашивающий асинхронную передачу данных. Объект `CBindStatusCallback` используется на классе этого объекта.
 
 *pFunc*<br/>
-окне Указатель на функцию, которая получает считываемые данные. Функция является членом класса объекта типа `T`. Синтаксис и пример см. в разделе **Примечания** .
+(в) Указатель на функцию, которая получает прочитаны данные. Функция является членом класса типа `T`объекта. Смотрите **замечания** для синтаксиса и пример.
 
-*бструрл*<br/>
-окне URL-адрес для получения данных. Может быть любым допустимым URL-адресом или именем файла. Не может принимать значение NULL. Например:
+*bstrURL*<br/>
+(в) URL для получения данных. Может быть любой действительный URL или имя файла. Не может быть NULL. Пример:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
-*пункконтаинер*<br/>
-окне Объект `IUnknown` контейнера. По умолчанию имеет значение NULL.
+*pUnkContainer*<br/>
+(в) Контейнер. `IUnknown` NULL по умолчанию.
 
-*брелативе*<br/>
-окне Флаг, указывающий, является ли URL-адрес относительным или абсолютным. Значение FALSE по умолчанию, означающее, что URL-адрес является абсолютным.
+*bОтносительно*<br/>
+(в) Флаг, указывающий, является ли URL-адрес относительно или абсолютным. FALSE по умолчанию, то есть URL является абсолютным.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Одно из стандартных значений HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Каждый раз, когда все данные доступны, они отправляются `OnDataAvailable`в объект через. `OnDataAvailable`считывает данные и вызывает функцию, на которую указывает *pFunc* (например, для сохранения данных или вывода их на экран).
+Каждый раз, когда данные доступны, они отправляются на объект через `OnDataAvailable`. `OnDataAvailable`считывает данные и вызывает функцию, на которую указывает *pFunc* (например, для хранения данных или печати на экране).
 
-Функция, на которую указывает *pFunc* , является членом класса объекта и имеет следующий синтаксис:
+Функция, на которую указывает *pFunc,* является членом класса вашего объекта и имеет следующий синтаксис:
 
 ```
 void Function_Name(
@@ -528,12 +528,12 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-В следующем примере (взятом из примера [Async](../../overview/visual-cpp-samples.md) ) функция `OnData` записывает полученные данные в текстовое поле.
+В следующем примере (взятый из образца [ASYNC)](../../overview/visual-cpp-samples.md) функция `OnData` записывает полученные данные в текстовое поле.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_Windowing#87](../../atl/codesnippet/cpp/cbindstatuscallback-class_2.h)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

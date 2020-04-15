@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369112"
 ---
 # <a name="cd2drectu-class"></a>Класс CD2DRectU
 
@@ -31,21 +31,21 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|Перегружен. Создает `CD2DRectU` объекта из `D2D1_RECT_U` объекта.|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|Перегружен. Строит `CD2DRectU` объект из `D2D1_RECT_U` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
+|[CD2DRectU::IsNull](#isnull)|Возвращает значение **boolean,** которое указывает, не содержит ли выражение действительных данных (NULL).|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|Преобразует `CD2DRectU` для `CRect` объекта.|
+|[CD2DRectU:оператор CRect](#operator_crect)|`CD2DRectU` Преобразуется `CRect` в объект.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,9 +57,9 @@ class CD2DRectU : public D2D1_RECT_U;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU
 
-Создает объект CD2DRectU из объекта CRect.
+Строит объект CD2DRectU с объекта CRect.
 
 ```
 CD2DRectU(const CRect& rect);
@@ -76,23 +76,23 @@ CD2DRectU(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-исходный прямоугольник
+источник прямоугольника
 
 *uLeft*<br/>
-Левая координата источника
+источник левой координат
 
 *uTop*<br/>
-Верхняя координата источника
+источник верхней координаты
 
-*uRight*<br/>
-Источник прямо координат
+*uПраво*<br/>
+источник правой координат
 
 *uBottom*<br/>
-Нижняя координата источника
+источник нижней координаты
 
-##  <a name="isnull"></a>  CD2DRectU::ISNULL
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::IsNull
 
-Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).
+Возвращает значение Boolean, которое указывает, не содержит ли выражение действительных данных (Null).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если начало прямоугольника, левую, нижнюю и правильные значения равны 0; в противном случае — значение FALSE.
+ПРАВДА, если прямоугольник в верхней, левой, нижней и правой значения все равны 0; в противном случае FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU:оператор CRect
 
-Преобразует CD2DRectU CRect.
+Преобразует CD2DRectU в объект CRect.
 
 ```
 operator CRect();
@@ -114,6 +114,6 @@ operator CRect();
 
 Текущее значение прямоугольника D2D.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

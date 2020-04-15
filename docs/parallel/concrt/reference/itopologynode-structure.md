@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7cb815c4f7dc5ad09e8d352abc3f3375b8d9e205
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140058"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368106"
 ---
 # <a name="itopologynode-structure"></a>Структура ITopologyNode
 
@@ -29,21 +29,21 @@ ms.locfileid: "77140058"
 struct ITopologyNode;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Итопологиноде:: Жетексекутионресаурцекаунт](#getexecutionresourcecount)|Возвращает количество ресурсов выполнения, сгруппированных в этом узле.|
-|[Итопологиноде:: Жетфирстексекутионресаурце](#getfirstexecutionresource)|Возвращает первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.|
-|[Итопологиноде:: GetId](#getid)|Возвращает уникальный идентификатор диспетчер ресурсов для этого узла.|
-|[Итопологиноде:: GetNext](#getnext)|Возвращает интерфейс следующего узла топологии в порядке перечисления.|
-|[Итопологиноде:: Жетнуманоде](#getnumanode)|Возвращает назначенный Windows номер узла NUMA, к которому принадлежит данный узел Маанжер ресурса.|
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|Возвращает количество ресурсов выполнения, сгруппированных в этом узле.|
+|[ITopologyNode::GetFirstExecutionРесурс](#getfirstexecutionresource)|Возвращает первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.|
+|[ITopologyNode::GetId](#getid)|Возвращает уникальный идентификатор менеджера ресурсов для этого узла.|
+|[ITopologyNode::GetNext](#getnext)|Возвращает интерфейс следующего узла топологии в порядке перечисления.|
+|[ITopologyNode::GetNumaNode](#getnumanode)|Возвращает назначенный Windows номер узла NUMA, к которому принадлежит этот узло Ресурс Maanger.|
 
 ## <a name="remarks"></a>Remarks
 
-Этот интерфейс обычно используется для анализа топологии системы, наблюдаемой диспетчер ресурсов.
+Этот интерфейс обычно используется для ходьбы по топологии системы, наблюдаемой диспетчером ресурсов.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,11 +51,11 @@ struct ITopologyNode;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrtrm. h
+**Заголовок:** concrtrm.h
 
-**Пространство имен:** concurrency
+**Название:** параллелизм
 
-## <a name="getexecutionresourcecount"></a>Метод Итопологиноде:: Жетексекутионресаурцекаунт
+## <a name="itopologynodegetexecutionresourcecount-method"></a><a name="getexecutionresourcecount"></a>ITopologyNode::GetExecutionResourceCount Метод
 
 Возвращает количество ресурсов выполнения, сгруппированных в этом узле.
 
@@ -67,7 +67,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 Количество ресурсов выполнения, сгруппированных в этом узле.
 
-## <a name="getfirstexecutionresource"></a>Метод Итопологиноде:: Жетфирстексекутионресаурце
+## <a name="itopologynodegetfirstexecutionresource-method"></a><a name="getfirstexecutionresource"></a>ITopologyNode::GetFirstExecutionResource Метод
 
 Возвращает первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.
 
@@ -79,9 +79,9 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 Первый ресурс выполнения, сгруппированный в этом узле в порядке перечисления.
 
-## <a name="getid"></a>Метод Итопологиноде:: GetId
+## <a name="itopologynodegetid-method"></a><a name="getid"></a>ITopologyNode::GetId Метод
 
-Возвращает уникальный идентификатор диспетчер ресурсов для этого узла.
+Возвращает уникальный идентификатор менеджера ресурсов для этого узла.
 
 ```cpp
 virtual unsigned int GetId() const = 0;
@@ -89,15 +89,15 @@ virtual unsigned int GetId() const = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Уникальный идентификатор диспетчер ресурсов для этого узла.
+Уникальный идентификатор менеджера ресурсов для этого узла.
 
 ### <a name="remarks"></a>Remarks
 
-Среда выполнения с параллелизмом представляет аппаратные потоки в системе в группах узлов процессора. Узлы обычно являются производными от топологии оборудования системы. Например, все процессоры на определенном сокете или определенном узле NUMA могут принадлежать одному и тому же узлу процессора. Диспетчер ресурсов назначает уникальные идентификаторы этим узлам, начиная с `0` до и включая `nodeCount - 1`, где `nodeCount` представляет общее число узлов процессора в системе.
+Concurrency Runtime представляет аппаратные потоки в системе в группах узлов процессоров. Узлы обычно получаются из аппаратной топологии системы. Например, все процессоры на определенном гнезде или определенном узлах NUMA могут принадлежать к одному и тому же узлам процессора. Диспетчер ресурсов присваивает эти узлы `0` уникальным идентификаторам, начиная с до и включая, `nodeCount - 1`где `nodeCount` представлено общее количество узлов процессора в системе.
 
-Количество узлов можно получить из функции [жетпроцессорнодекаунт](concurrency-namespace-functions.md).
+Количество узлов можно получить из функции [GetProcessorNodeCount.](concurrency-namespace-functions.md)
 
-## <a name="getnext"></a>Метод Итопологиноде:: GetNext
+## <a name="itopologynodegetnext-method"></a><a name="getnext"></a>ITopologyNode::GetNext Метод
 
 Возвращает интерфейс следующего узла топологии в порядке перечисления.
 
@@ -109,9 +109,9 @@ virtual ITopologyNode *GetNext() const = 0;
 
 Интерфейс следующего узла в порядке перечисления. Если в порядке перечисления топологии системы больше нет узлов, этот метод возвращает значение `NULL`.
 
-## <a name="getnumanode"></a>Метод Итопологиноде:: Жетнуманоде
+## <a name="itopologynodegetnumanode-method"></a><a name="getnumanode"></a>ITopologyNode::GetNumaNode Метод
 
-Возвращает назначенный Windows номер узла NUMA, к которому принадлежит данный узел Маанжер ресурса.
+Возвращает назначенный Windows номер узла NUMA, к которому принадлежит этот узло Ресурс Maanger.
 
 ```cpp
 virtual unsigned long GetNumaNode() const = 0;
@@ -119,11 +119,11 @@ virtual unsigned long GetNumaNode() const = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Номер узла NUMA, назначенный Windows, к которому принадлежит этот диспетчер ресурсов узел.
+Windows присвоила номер узла NUMA, к которому принадлежит этот узла диспетчера ресурсов.
 
 ### <a name="remarks"></a>Remarks
 
-Прокси-поток, выполняющийся в корне виртуального процессора, принадлежащего этому узлу, будет иметь сходство по крайней мере на уровне узла NUMA для узла NUMA, возвращаемого этим методом.
+Прокси-сервер потока, работающий на корне виртуального процессора, принадлежащем этому узлам, будет иметь сродство, по крайней мере, к уровню узла NUMA для узла NUMA, возвращенного этим методом.
 
 ## <a name="see-also"></a>См. также раздел
 

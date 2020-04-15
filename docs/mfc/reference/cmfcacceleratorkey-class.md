@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCAcceleratorKey
+title: CMFCAcceleratorKey Класс
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCAcceleratorKey
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403962"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369929"
 ---
-# <a name="cmfcacceleratorkey-class"></a>Класс CMFCAcceleratorKey
+# <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey Класс
 
-Вспомогательный класс, реализующий виртуальное ключевое сопоставление и форматирование.
+Класс помощника, который реализует картирование и форматирование виртуальных ключей.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,26 +33,26 @@ class CMFCAcceleratorKey : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Создает объект `CMFCAcceleratorKey`.|
+|[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Формирует объект `CMFCAcceleratorKey`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCAcceleratorKey::Format](#format)|Преобразует структуру УСКОРЕНИЕ, визуальное представление.|
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Задает сочетание клавиш для `CMFCAcceleratorKey` объекта.|
+|[CMFCAcceleratorKey::Формат](#format)|Переводит структуру ACCEL на ее визуальное представление.|
+|[CMFCAcceleratorKey:SetAccelerator](#setaccelerator)|Устанавливает ключ ярлыка `CMFCAcceleratorKey` для объекта.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Сочетания клавиш также называются сочетания клавиш. Если вы хотите отобразить сочетания клавиш, вводимые пользователем, [класс CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) maps сочетания клавиш, таких как Alt + Shift + S, в пользовательский текстовый формат, например «Alt + Shift + S». Каждый `CMFCAcceleratorKey` объект сопоставляется одному сочетанию клавиш текстовом формате.
+Ключи от ускорителя также известны как клавиши ярлыка. Если вы хотите отобразить ярлыки клавиатуры, в которые входит пользователь, то на ключевые клавишные клавиши [CMFCAcceleratorKeyAssignCtrl Class,](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) такие как Alt-Shift-S, можно посмотреть на пользовательский текстовый формат, такой как "Alt и Shift s". Каждый `CMFCAcceleratorKey` объект отображает один ключ от короткого ключа к текстовому формату.
 
-Дополнительные сведения об использовании сочетаний клавиш и таблицы сочетаний клавиш см. в разделе [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md).
+Для получения дополнительной информации о том, как использовать клавиши ярлыка и таблицы акселераторов, [см.](../../mfc/reference/ckeyboardmanager-class.md)
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCAcceleratorKey` объекта и как использовать его `Format` метод.
+В следующем примере показано, `CMFCAcceleratorKey` как построить `Format` объект и как использовать его метод.
 
 [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]
 
@@ -66,9 +66,9 @@ class CMFCAcceleratorKey : public CObject
 
 **Заголовок:** afxacceleratorkey.h
 
-##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey
+## <a name="cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey
 
-Создает [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) объекта.
+Строит объект [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 CMFCAcceleratorKey();
@@ -78,15 +78,15 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="parameters"></a>Параметры
 
 *lpAccel*<br/>
-[in] Указатель на сочетания клавиш.
+(в) Указатель на клавишу ярлыка.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если вы не укажете сочетания клавиш при создании `CMFCAccleratorKey`, использовать [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) метод, чтобы связать сочетания клавиш с вашей `CMFCAcceleratorKey` объекта.
+Если при создании ключа краткивы `CMFCAccleratorKey`вы не предоставляете, используйте [метод CMFCAcceleratorKey::SetAccelerator](#setaccelerator) для ассоциировать ключ кратки с вашим `CMFCAcceleratorKey` объектом.
 
-##  <a name="format"></a>  CMFCAcceleratorKey::Format
+## <a name="cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Формат
 
-Преобразует структуру УСКОРЕНИЕ связанные строковому значению.
+Преобразует структуру ACCEL в связанное с ней значение строки.
 
 ```
 void Format(CString& str) const;
@@ -94,16 +94,16 @@ void Format(CString& str) const;
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
-[out] Ссылку на `CString` объекта, где метод записывает переведенные сочетания клавиш.
+*Ул*<br/>
+(ваут) Ссылка на `CString` объект, где метод пишет переведенный ключ ярлыка.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод извлекает формат строки для сочетанием клавиш. Можно задать формат строки [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) объекта с помощью конструктора или метода [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
+Этот метод получает формат строки связанного ключа ярлыка. Вы можете установить формат строки объекта [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) с помощью либо конструктора, либо метода [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
 
-##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator
+## <a name="cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey:SetAccelerator
 
-Задает сочетание клавиш для [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) объекта.
+Устанавливает ключ кратки для объекта [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 void SetAccelerator(LPACCEL lpAccel);
@@ -112,13 +112,13 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="parameters"></a>Параметры
 
 *lpAccel*<br/>
-[in] Указатель на сочетания клавиш.
+(в) Указатель на клавишу ярлыка.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод позволяет задать сочетание клавиш для `CMFCAcceleratorKey` Если вы не указали сочетания клавиш при создании `CMFCAcceleratorKey`.
+Используйте этот метод, чтобы установить ключ ярлыка для того, `CMFCAcceleratorKey` если `CMFCAcceleratorKey`вы не предоставили ключ ярлыка при создании .
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
-ms.openlocfilehash: 7f3e4cfc46655c5201e7a79a9333f532a8fcab9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b15ee67e39631926b7061826369e855bc3714a96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740810"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374194"
 ---
 # <a name="compiler-error-c2552"></a>Ошибка компилятора C2552
 
@@ -19,19 +19,19 @@ ms.locfileid: "74740810"
 
 Идентификатор агрегата был неверно инициализирован.
 
-[Статистические выражения](../../c-language/initializing-aggregate-types.md) определяются следующим образом:
+[Агрегаты](../../c-language/initializing-aggregate-types.md) определяются как:
 
 - Массивы
 
 - классы, структуры и объединения, у которых нет:
 
-   - Конструкторы
+  - Конструкторы
 
-   - закрытых или защищенных членов;
+  - закрытых или защищенных членов;
 
-   - базовых классов;
+  - базовых классов;
 
-   - Виртуальные функции
+  - Виртуальные функции
 
 Кроме того, в Visual C++ в агрегатах не допускаются типы данных, содержащие конструкторы.
 

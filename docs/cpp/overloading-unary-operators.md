@@ -11,54 +11,54 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-ms.openlocfilehash: 60444ee3c55df39e6b7820ff9b9d7ad81017b0da
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 971ef08c5e79f851c502ea872c541517065797c5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188497"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372031"
 ---
 # <a name="overloading-unary-operators"></a>Перегрузка унарных операторов
 
 Перегрузке могут быть подвергнуты следующие унарные операторы.
 
-1. `!` ([логическое не](../cpp/logical-negation-operator-exclpt.md))
+1. `!`(логично[НЕ)](../cpp/logical-negation-operator-exclpt.md)
 
-1. `&` ([адрес](../cpp/address-of-operator-amp.md))
+1. `&`[(адрес))](../cpp/address-of-operator-amp.md)
 
-1. `~` ([дополнение одного](../cpp/one-s-complement-operator-tilde.md))
+1. `~`(свое[дополнение)](../cpp/one-s-complement-operator-tilde.md)
 
-1. `*` ([разыменование указателя](../cpp/indirection-operator-star.md))
+1. `*`[(указатель dereference](../cpp/indirection-operator-star.md))
 
-1. `+` ([унарный плюс](../cpp/additive-operators-plus-and.md))
+1. `+`[(неари плюс)](../cpp/additive-operators-plus-and.md)
 
-1. `-` ([унарное отрицание](../cpp/additive-operators-plus-and.md))
+1. `-`[(Неарфляек отрицание)](../cpp/additive-operators-plus-and.md)
 
-1. `++` ([приращение](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `++`[(приращение)](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)
 
-1. `--` ([декремента](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
+1. `--`([decrement](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md))
 
-9. операторы преобразования
+1. операторы преобразования
 
-Постфиксные операторы инкремента и декремента (`++` и `--`) обрабатываются отдельно при [инкременте и декремента](../cpp/increment-and-decrement-operator-overloading-cpp.md).
+Постфикс приращения и`++` decrement операторов (и `--`) рассматриваются отдельно при [приращении и decrement](../cpp/increment-and-decrement-operator-overloading-cpp.md).
 
-Операторы преобразования также обсуждаются в отдельном разделе. см. раздел [преобразование определяемого пользователем типа](../cpp/user-defined-type-conversions-cpp.md).
+Операторы конверсии также обсуждаются в отдельной теме; см. [Конверсии типа, определяемые пользователем.](../cpp/user-defined-type-conversions-cpp.md)
 
 Следующие правила распространяются на все остальные унарные операторы. Чтобы объявить функцию унарного оператора как нестатический член, необходимо объявить ее в форме
 
-> *RET-Type* **оператор** *Op* **()**
+> *оператор рет-типа* **operator** *()* **()**
 
-где *RET-Type* — это тип возвращаемого значения, а *Op* — один из операторов, перечисленных в предыдущей таблице.
+где *рет-тип* является типом возврата, а *op* является одним из операторов, перечисленных в предыдущей таблице.
 
 Чтобы объявить функцию унарного оператора как глобальную функцию, необходимо объявить ее в форме
 
-> *RET-Type* **оператор** *Op* **(** *arg* **)**
+> *оператор рет-типа* **operator** *op* **(arg** *arg* **)**
 
-где *RET-Type* и *Op* описаны для функций *оператора-члена, а аргумент является* аргументом типа класса, с которым будет работать.
+где *ret-тип* и *op* как описаны для функций оператора члена и *arg* аргумент типа типа типа на котором работать.
 
 > [!NOTE]
->  Не существует ограничения на типы возвращаемого значения унарных операторов. Например, логическому НЕ (`!`) имеет смысл возвращать целочисленное значение, однако это не реализовано принудительно.
+> Не существует ограничения на типы возвращаемого значения унарных операторов. Например, логическому НЕ (`!`) имеет смысл возвращать целочисленное значение, однако это не реализовано принудительно.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Перегрузка операторов](../cpp/operator-overloading.md)
+[Перегрузка оператора](../cpp/operator-overloading.md)

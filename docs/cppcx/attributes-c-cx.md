@@ -2,22 +2,22 @@
 title: Атрибуты (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
-ms.openlocfilehash: 77962dc2d4b7f6bda90a5376e5154782365a4106
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 437432ce32497311a9a91237118d6088881662a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740380"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371870"
 ---
 # <a name="attributes-ccx"></a>Атрибуты (C++/CX)
 
-Атрибут — это специальный тип ссылочного класса, который можно добавить в квадратные скобки, чтобы среда выполнения Windows типы и методы для указания определенных поведений при создании метаданных. Несколько предварительно определенных атрибутов, например [Windows:: Foundation:: Metadata:: WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute), обычно используются в C++коде/CX. В этом примере показано, как атрибут применяется к классу.
+Атрибут — это особый вид класса реф, который может быть подготовл в квадратных скобках к типам и методам Windows Runtime, чтобы указать определенное поведение при создании метаданных. Несколько предопределенных атрибутов, например, [Windows::Foundation::Metadata::WebHostHidden](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)-обычно используются в коде C'/CX. В этом примере показано, как атрибут применяется к классу.
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
 ## <a name="custom-attributes"></a>Настраиваемые атрибуты
 
-Также можно определять настраиваемые атрибуты. Настраиваемые атрибуты должны соответствовать следующим правилам среда выполнения Windows:
+Также можно определять настраиваемые атрибуты. Пользовательские атрибуты должны соответствовать этим правилам выполнения Windows:
 
 - настраиваемые атрибуты могут содержать только открытые поля;
 
@@ -25,26 +25,26 @@ ms.locfileid: "70740380"
 
 - поле может относиться к одному из следующих типов:
 
-   - int32 (int)
+  - int32 (int)
 
-   - uint32 (unsigned int)
+  - uint32 (unsigned int)
 
-   - bool
+  - bool
 
-   - Platform::String^
+  - Platform::String^
 
-   - Windows::Foundation::HResult
+  - Windows::Foundation::HResult
 
-   - Platform::Type^
+  - Platform::Type^
 
-   - public enum class (включая перечисления, определяемые пользователем).
+  - public enum class (включая перечисления, определяемые пользователем).
 
 В следующем примере показано, как определить настраиваемый атрибут, а затем инициализировать его при использовании.
 
 [!code-cpp[cx_attributes#02](../cppcx/codesnippet/CPP/cx_attributes/class1.h#02)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Система типов (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Справочник по языку C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)
+[Ссылка на язык СЗ/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Ссылка на имены](../cppcx/namespaces-reference-c-cx.md)

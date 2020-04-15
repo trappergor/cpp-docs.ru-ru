@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1794e16489ab48d919bbd4116588fba4b74b88d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426195"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372877"
 ---
 # <a name="type-library-access"></a>Доступ к библиотеке типов
 
-Библиотеки типов предоставляют интерфейсы элемента управления OLE другим приложениям, поддерживающим технологию OLE. Каждый элемент управления OLE должен иметь библиотеку типов, если требуется предоставить один или несколько интерфейсов.
+Библиотеки типа разоблачают интерфейсы управления OLE другим приложениям, осведомленным о OLE. Каждый элемент управления OLE должен иметь библиотеку типов, если один или несколько интерфейсов должны быть выставлены.
 
-Следующие макросы позволяют элементу управления OLE предоставлять доступ к собственной библиотеке типов:
+Следующие макросы позволяют элементу управления OLE обеспечить доступ к собственной библиотеке типов:
 
 ### <a name="type-library-access"></a>Доступ к библиотеке типов
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет функцию-член `GetTypeLib` элемента управления OLE (должна использоваться в объявлении класса).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует функцию-член `GetTypeLib` элемента управления OLE (должна использоваться в реализации класса).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет функцию `GetTypeLib` элемента управления OLE (должна использоваться в декларации класса).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует функцию `GetTypeLib` элемента управления OLE (должен использоваться в реализации класса).|
 
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-Объявляет функцию члена `GetTypeLib` класса Control.
+Объявляет функцию `GetTypeLib` участника вашего класса управления.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,19 +35,19 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
-Имя класса элемента управления, связанного с библиотекой типов.
+Название класса управления, относящееся к библиотеке типов.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте этот макрос в файле заголовка класса элемента управления.
+Используйте этот макрос в файле заголовка заголовка класса управления.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-Реализует функцию члена `GetTypeLib` элемента управления.
+Реализует функцию элемента элемента `GetTypeLib` управления.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,20 +56,20 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
-Имя класса элемента управления, связанного с библиотекой типов.
+Название класса управления, относящееся к библиотеке типов.
 
-*тлид*<br/>
-ИДЕНТИФИКАЦИОНный номер библиотеки типов.
+*tlid*<br/>
+Идентификационный номер библиотеки типа.
 
-*ввермажор*<br/>
-Основной номер версии библиотеки типов.
+*wVerMajor*<br/>
+Номер основной версии библиотеки типа.
 
-*вверминор*<br/>
-Дополнительный номер версии библиотеки типов.
+*wVerMinor*<br/>
+Номер незначительной версии библиотеки типа.
 
 ### <a name="remarks"></a>Remarks
 
-Этот макрос должен присутствовать в файле реализации для любого класса элементов управления, использующего макрос DECLARE_OLETYPELIB.
+Этот макрос должен отображаться в файле реализации для любого класса управления, использующем у DECLARE_OLETYPELIB макроса.
 
 ### <a name="requirements"></a>Требования
 
@@ -77,4 +77,4 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Макросы и глобальные](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)

@@ -6,56 +6,56 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-ms.openlocfilehash: 2fe659b47893f821aab4cda31ab1a4e9a6788ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b72cac0da06b70a40e01fcc75da52f1678f3f64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252074"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317373"
 ---
 # <a name="atl-module-classes"></a>Модульные классы ATL
 
-В этом разделе рассматриваются классы модулей, впервые представленные в ATL 7.0.
+Эта тема обсуждает классы модулей, которые были новыми в ATL 7.0.
 
 ## <a name="ccommodule-replacement-classes"></a>Классы замены CComModule
 
-Более ранних версиях ATL используется `CComModule`. В ATL 7.0 `CComModule` функциональные возможности заменены несколько классов:
+Более ранние версии ATL используется `CComModule`. В ATL 7.0 `CComModule` функциональность заменяется несколькими классами:
 
-- [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) содержит сведения, необходимые для большинства приложений, использующих ATL. Содержит объект HINSTANCE модуля и экземпляра ресурса.
+- [CAtlBaseМодуль](../atl/reference/catlbasemodule-class.md) Содержит информацию, требуемую большинством приложений, которые используют ATL. Содержит HINSTANCE модуля и экземпляр ресурса.
 
-- [CAtlComModule](../atl/reference/catlcommodule-class.md) содержит сведения, необходимые для классов COM в ATL
+- [CAtlComModule](../atl/reference/catlcommodule-class.md) Содержит информацию, требуемую классами COM в ATL.
 
-- [CAtlWinModule](../atl/reference/catlwinmodule-class.md) содержит сведения, необходимые для классов управления окнами в ATL
+- [CAtlWinModule](../atl/reference/catlwinmodule-class.md) Содержит информацию, требуемую классами окон в ATL.
 
-- [CAtlDebugInterfacesModule](../atl/reference/catldebuginterfacesmodule-class.md) включает в себя поддержку для отладки интерфейса.
+- [CAtlDebugИнтерфейсыМодуль](../atl/reference/catldebuginterfacesmodule-class.md) Содержит поддержку для отладки интерфейса.
 
-- [CAtlModule](../atl/reference/catlmodule-class.md) следующие `CAtlModule`-производные классы настраиваются так, чтобы содержать данные, необходимые в конкретным типом приложения. Большинство участников в эти классы можно переопределить:
+- [CAtlModule](../atl/reference/catlmodule-class.md) Следующие `CAtlModule`классы, полученные из них, настроены таким образом, чтобы содержать информацию, требуемую в определенном типе приложения. Большинство участников этих классов могут быть переопределены:
 
-   - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) используется в приложениях библиотеки DLL. Предоставляет код для стандартный экспорт.
+  - [CAtlDllModuleT](../atl/reference/catldllmodulet-class.md) Используется в приложениях DLL. Предоставляет код для стандартного экспорта.
 
-   - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) используется в EXE-приложения. Предоставляет код, необходимый в EXE-файла.
+  - [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) Используется в приложениях EXE. Предоставляет код, необходимый в EXE.
 
-   - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) обеспечивает поддержку для создания Windows NT и Windows 2000 служб.
+  - [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) Предоставляет поддержку для создания служб Windows NT и Windows 2000.
 
-`CComModule` по-прежнему доступен для обеспечения обратной совместимости.
+`CComModule`по-прежнему доступна для обратной совместимости.
 
 ## <a name="reasons-for-distributing-ccommodule-functionality"></a>Причины для распространения функциональности CComModule
 
-Функциональные возможности `CComModule` распространялось в несколько новых классов по следующим причинам:
+Функциональность была `CComModule` распределена по нескольким новым классам по следующим причинам:
 
-- Возможности в `CComModule` детализированные.
+- Сделать функциональность `CComModule` в гранулированной.
 
-   Поддержка для COM, работы с окнами, интерфейс отладки и функций конкретного приложения (DLL или EXE) теперь доступна в отдельные классы.
+   Поддержка функций COM, windowing, интерфейса и приложений (DLL или EXE) теперь находится в отдельных классах.
 
-- Автоматически объявите глобальный экземпляр каждого из этих модулей.
+- Автоматически объявлять глобальный экземпляр каждого из этих модулей.
 
-   Глобальный экземпляр класса требуемый модуль связан в проект.
+   Глобальный экземпляр требуемых классов модулей связан с проектом.
 
-- Устраняют методов Init и термин.
+- Удалите необходимость вызова Init и Термин а.
 
-   Методы init и термин перешло в конструкторы и деструкторы классов модуля; больше не нужно вызвать Init и термин.
+   Методы Init и Term перешли в конструкторы и деструкторы для классов модулей; больше нет необходимости называть Init и Term.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Основные понятия](../atl/active-template-library-atl-concepts.md)<br/>
-[Общие сведения о классе](../atl/atl-class-overview.md)
+[Общие сведения о классах](../atl/atl-class-overview.md)

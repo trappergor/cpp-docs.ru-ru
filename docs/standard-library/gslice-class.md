@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 07c987fb08a213bb66da628bec3021a3bf9ba24a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427041"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370624"
 ---
 # <a name="gslice-class"></a>Класс gslice
 
@@ -25,13 +25,13 @@ ms.locfileid: "79427041"
 
 ## <a name="remarks"></a>Remarks
 
-Класс хранит параметры, характеризующие объект типа [gslice_array](../standard-library/gslice-array-class.md). Подмножество valarray косвенно создается, когда объект класса gslice отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:
+Класс хранит параметры, характеризующие объект типа [gslice_array](../standard-library/gslice-array-class.md). Подмножество valarray косвенно построено, когда объект class gslice отображается в качестве аргумента для объекта типа [valarray](../standard-library/valarray-class.md#op_at)**\<Type>. ** Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:
 
 - Начальный индекс.
 
-- Вектор длины класса `valarray<size_t>`.
+- Вектор длины `valarray<size_t>`класса .
 
-- Вектор STRIDE `valarray<size_t>`класса.
+- Вектором `valarray<size_t>`шага класса .
 
 Длина обоих векторов должна быть одинаковой.
 
@@ -41,25 +41,25 @@ ms.locfileid: "79427041"
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Description|
+|Конструктор|Описание|
 |-|-|
 |[gslice](#gslice)|Определяет подмножество `valarray`, состоящее из нескольких фрагментов `valarray`, начинающихся с указанного элемента.|
 
 ### <a name="member-functions"></a>Функции элементов
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
-|[size](#size)|Находит значения массива, указывающие количество элементов в общем срезе `valarray`.|
-|[start](#start)|Находит индекс начала общего среза `valarray`.|
-|[stride](#stride)|Находит расстояние между элементами в общем срезе `valarray`.|
+|[Размер](#size)|Находит значения массива, указывающие количество элементов в общем срезе `valarray`.|
+|[Начать](#start)|Находит индекс начала общего среза `valarray`.|
+|[Шаг](#stride)|Находит расстояние между элементами в общем срезе `valarray`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<valarray >
+**Заголовок:** \<valarray>
 
 **Пространство имен:** std
 
-## <a name="gslice"></a>  gslice::gslice
+## <a name="gslicegslice"></a><a name="gslice"></a>gslice:gslice
 
 Служебный класс, используемый для определения многомерных срезов valarray.
 
@@ -85,11 +85,11 @@ gslice(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Конструктор по умолчанию хранит нуль для начального индекса и векторы нулевой длины для векторов длины и шага. Второй конструктор сохраняет *_StartIndex* для начального индекса, *_LenArray* для массива длины и *_IncArray* для массива STRIDE.
+Конструктор по умолчанию хранит нуль для начального индекса и векторы нулевой длины для векторов длины и шага. Второй конструктор хранит *_StartIndex* для стартового индекса, *_LenArray* для массива длины и *_IncArray* для массива шага.
 
 ### <a name="remarks"></a>Remarks
 
-**gslice** определяет подмножество valarray, состоящее из нескольких срезов valarray, каждый из которых начинается с одного и того же указанного элемента. Единственным отличием между `gslice` и [slice::slice](../standard-library/slice-class.md#slice) является возможность применения массивов для определения нескольких срезов. Первый срез имеет первый элемент с индексом *_StartIndex*, ряд элементов, определяемых первым элементом *_LenArray*, и шаг, заданный первым элементом *_IncArray*. Следующий набор ортогональных срезов имеет первые элементы, задаваемые первом срезом. Второй элемент *_LenArray* указывает количество элементов. Шаг назначается вторым элементом *_IncArray*. Третье измерение срезов будет брать элементы двумерного массива в качестве начальных элементов и продолжать аналогичным образом
+**gslice** определяет подмножество valarray, состоящее из нескольких срезов valarray, каждый из которых начинается с одного и того же указанного элемента. Единственным отличием между `gslice` и [slice::slice](../standard-library/slice-class.md#slice) является возможность применения массивов для определения нескольких срезов. Первый срез имеет первый элемент с индексом *_StartIndex,* ряд элементов, указанных первым элементом *_LenArray,* и шаг, данный первым элементом *_IncArray.* Следующий набор ортогональных срезов имеет первые элементы, задаваемые первом срезом. Второй элемент *_LenArray* определяет количество элементов. Шаг дается вторым элементом *_IncArray*. Третье измерение срезов будет брать элементы двумерного массива в качестве начальных элементов и продолжать аналогичным образом
 
 ### <a name="example"></a>Пример
 
@@ -138,7 +138,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="size"></a>  gslice::size
+## <a name="gslicesize"></a><a name="size"></a>gslice::размер
 
 Находит значения массива, указывающие количество элементов в общем срезе valarray.
 
@@ -216,7 +216,7 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="start"></a>  gslice::start
+## <a name="gslicestart"></a><a name="start"></a>gslice::start
 
 Находит начальный индекс общего среза valarray.
 
@@ -279,7 +279,7 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="stride"></a>  gslice::stride
+## <a name="gslicestride"></a><a name="stride"></a>gslice::stride
 
 Находит расстояние между элементами в общем срезе valarray.
 
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>См. также раздел
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: d0a47a6cf0cc86409ceb9ef40d6fc6d738c86aa9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca46ccdacf5ea24f1de26cdc75bf808c4ecfaa40
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318960"
 ---
 # <a name="catlfilemapping-class"></a>Класс CAtlFileMapping
 
-Этот класс представляет размещенного в памяти файла, добавление оператора приведения к методам [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Этот класс представляет собой файл с картографом памяти, добавляя литого оператора к методам [CAtlFileMappingBase.](../../atl/reference/catlfilemappingbase-class.md)
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,19 +31,19 @@ class CAtlFileMapping : public CAtlFileMappingBase
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип данных, используемых для оператора приведения.
+Тип данных, используемых для литой оператора.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAtlFileMapping::operator T *](#operator_t_star)|Позволяет выполнять неявное преобразование из `CAtlFileMapping` объектов `T*`.|
+|[CAtlFileMapping::оператор ТЗ](#operator_t_star)|Позволяет неявное преобразование объектов `CAtlFileMapping` в `T*`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс добавляет оператор единый приведения, чтобы разрешить неявное преобразование `CAtlFileMapping` объектов `T*`. Другие члены передаются в базовом классе [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
+Этот класс добавляет одного оператора литых, чтобы позволить неявное преобразование объектов `CAtlFileMapping` в `T*`. Другие участники поставляются базовым классом, [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -55,9 +55,9 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 **Заголовок:** atlfile.h
 
-##  <a name="operator_t_star"></a>  CAtlFileMapping::operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping::оператор ТЗ
 
-Позволяет выполнять неявное преобразование из `CAtlFileMapping` объектов `T*`.
+Позволяет неявное преобразование объектов `CAtlFileMapping` в `T*`.
 
 ```
 operator T*() const throw();
@@ -65,13 +65,13 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает `T*` указатель на начало файла размещенный в памяти.
+`T*` Возвращает указатель на начало файла с картой памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовы [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) и повторно интерпретирует возвращенный указатель как `T*` где *T* является типом, используемым как параметр шаблона этого класса.
+Вызывает [CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata) и переосмысливает возвращенный `T*` указатель как тип *T,* используемый в качестве параметра шаблона этого класса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

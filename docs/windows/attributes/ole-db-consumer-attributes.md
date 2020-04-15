@@ -1,5 +1,5 @@
 ---
-title: OLE DB атрибуты потребителя (C++ com)
+title: Потребительские атрибуты OLE DB (КЗ КОМ)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], database
@@ -9,25 +9,26 @@ helpviewer_keywords:
 - database attributes [C++/CLI]
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-ms.openlocfilehash: 67f58d6dd32360248c6437f66fa7042871bc4ea6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a9147d80e87e23a754043a29eb3d15570e85aec0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214717"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377103"
 ---
 # <a name="ole-db-consumer-attributes"></a>Атрибуты потребителя OLE DB
-OLE DB атрибуты потребителя вставляют код на основе [шаблонов OLE DB потребителей](../../data/oledb/ole-db-consumer-templates-reference.md), чтобы создать рабочий OLE DB потребитель, выполняющий такие задачи, как открытие таблиц, выполнение команд и доступ к данным.
 
-|attribute|Description|
+Потребительские атрибуты OLE DB вводят код, основанный на [шаблонах для потребителей OLE DB,](../../data/oledb/ole-db-consumer-templates-reference.md)для создания работающего потребителя OLE DB, который выполняет такие задачи, как таблицы открытия, выполнение команд и доступ к данным.
+
+|Атрибут|Описание|
 |---------------|-----------------|
-|[db_accessor](db-accessor.md)|Привязывает столбцы в наборе строк и привязывает их к соответствующим картам метода доступа.|
-|[db_column](db-column.md)|Привязывает указанный столбец к набору строк.|
+|[db_accessor](db-accessor.md)|Связывает столбцы в ряд и связывает их с соответствующими картами доступа.|
+|[db_column](db-column.md)|Связывает указанный столбец с рядом.|
 |[db_command](db-command.md)|Выполняет команду OLE DB.|
-|[db_param](db-param.md)|Связывает указанную переменную элемента с входным или выходным параметром.|
-|[db_source](db-source.md)|Создает и инкапсулирует соединение (через поставщика) к источнику данных.|
+|[db_param](db-param.md)|Связывает указанную переменную участника с входним или выходным параметром.|
+|[db_source](db-source.md)|Создает и инкапсулирует соединение через поставщика к источнику данных.|
 |[db_table](db-table.md)|Открывает таблицу OLE DB.|
 
 ## <a name="see-also"></a>См. также раздел
 
-[Список атрибутов по группам](attributes-by-group.md)
+[Атрибуты по группам](attributes-by-group.md)

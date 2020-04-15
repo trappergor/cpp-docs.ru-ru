@@ -5,16 +5,16 @@ f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: c7d24fee4a47fc588b00e527594682f1c4aadf76
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 4d404b414ad632e02be5f4e9fad0e22cefb86ce2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957165"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366781"
 ---
 # <a name="boyer_moore_horspool_searcher-class"></a>класс boyer_moore_horspool_searcher
 
-`boyer_moore_horspool_searcher` Класс является типом объекта функции, который использует алгоритм Бойера-Мура-хорспул для поиска последовательности, указанной в конструкторе объекта. Поиск выполняется в другой последовательности, предоставленной оператору вызова функции объекта. Этот класс передается в качестве параметра в одну из перегрузок [std:: Search](algorithm-functions.md#search).
+Класс `boyer_moore_horspool_searcher` представляет собой тип объекта функции, который использует алгоритм Бойера-Мура-Хорспула для поиска последовательности, указанной в конструкторе объекта. Поиск выполняется в рамках другой последовательности, предоставляемой оператору вызова функции объекта. Этот класс передается в качестве параметра одной из перегрузок [std::Search](algorithm-functions.md#search).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,12 +44,12 @@ class boyer_moore_horspool_searcher
 | - | - |
 | **Конструктор** | |
 | [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | |
-| **Инструкции** | |
-| [operator()](#operator-call) | |
+| **Операторы** | |
+| [оператор()](#operator-call) | |
 
-## <a name="boyer-moore-horspool-searcher-constructor"></a>Конструктор boyer_moore_horspool_searcher
+## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a>boyer_moore_horspool_searcher конструктор
 
-Конструирует объект функции, используя последовательность для поиска, объект хэш-функции и предикат равенства. `boyer_moore_horspool_searcher`
+Строит объект `boyer_moore_horspool_searcher` функции, используя последовательность для поиска объекта хэш-функции и предикат равенства.
 
 ```cpp
 boyer_moore_horspool_searcher(
@@ -62,26 +62,26 @@ boyer_moore_horspool_searcher(
 ### <a name="parameters"></a>Параметры
 
 *pat_first*\
-Начальный элемент последовательности для поиска.
+Первоначальный элемент последовательности для поиска.
 
 *pat_last*\
 Конец последовательности для поиска.
 
-*HF*\
-Вызываемый объект, используемый для хэширования элементов последовательности.
+*Hf*\
+Callable объект, используемый для хэширования элементов последовательности.
 
-*Возможен*\
-Необязательный предикат сравнения равенства для элементов последовательности. Если тип сравнения на равенство не указан, по умолчанию используется `std::equal_to`значение.
+*Pred*\
+Факультативное сравнение равенства предикат для элементов последовательности. Если тип сравнения равенства не указан, `std::equal_to`по умолчанию .
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Создает исключение, созданное конструктором копий типов *бинарипредикате*, *hash*или *Рандомакцесситератор* , или оператор Call *бинарипредикате* или *hash*.
+Бросает любое исключение, брошенное конструктором копии *BinaryPredicate,* *Hash*, или *RandomAccessIterator* типов, или оператор вызова *BinaryPredicate* или *Хэш*.
 
-Этот класс впервые появились в C++ 17.
+Этот класс является новым в C-17.
 
-## <a name="operator-call"></a>оператор ()
+## <a name="operator"></a><a name="operator-call"></a>оператор()
 
-Оператор Call объекта Function. Ищет в последовательности `[first, last)` аргументов последовательность, указанную в конструкторе.
+Оператор вызова объекта функции. Поиск в последовательности `[first, last)` аргументов для последовательности, указанной конструктору.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -92,21 +92,21 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 ### <a name="parameters"></a>Параметры
 
-*началь*\
-Начальный элемент последовательности, в которой необходимо выполнить поиск.
+*Первый*\
+Первоначальный элемент последовательности для поиска внутри.
 
-*Последняя*\
-Конец последовательности, в которой необходимо выполнить поиск.
+*Последний*\
+Конец последовательности для поиска внутри.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если шаблон `[pat_first, pat_last)` поиска пуст, возвращает значение `make_pair(first, first)`. Если шаблон поиска не найден, возвращает `make_pair(last, last)`. В противном случае возвращает пару итераторов в начало и конец последовательности в `[first, last)` таком `[pat_first, pat_last)` же порядке, что и в соответствии с допустимым предикатом.
+Если шаблон `[pat_first, pat_last)` поиска пуст, `make_pair(first, first)`возвращается . Если шаблон поиска не найден, `make_pair(last, last)`возвращается. В противном случае, возвращает пару итераторов в `[first, last)` начало и `[pat_first, pat_last)` конец последовательности в том, что равно в соответствии с *предикатом pred*.
 
-Этот класс впервые появились в C++ 17.
+Этот класс является новым в C-17.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<functional>](functional.md)\
+[\<функциональный>](functional.md)\
 [функции алгоритма](algorithm-functions.md)\
 [класс boyer_moore_searcher](boyer-moore-searcher-class.md)\
-[std:: Search](algorithm-functions.md#search)
+[std::поиск](algorithm-functions.md#search)

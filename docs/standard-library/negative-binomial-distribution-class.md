@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689258"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367963"
 ---
 # <a name="negative_binomial_distribution-class"></a>Класс negative_binomial_distribution
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Инттипе* \
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
+*IntType*\
+Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа, или тип **int** , если он не указан, распределяется в соответствии с дискретной функцией вероятности неравномерного распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа, или введите **int,** если не предусмотрено, распределенное в соответствии с функцией дискретной вероятности отрицательного биномиального распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Члены свойств `k()` и `p()` возвращают текущие сохраненные значения параметров распределения *k* и *p* соответственно.
+Члены `k()` свойств `p()` и возвращают в настоящее время сохраненные значения параметра распределения *k* и *p* соответственно.
 
 Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.
 
@@ -93,9 +93,9 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
-Подробные сведения о дискретной функции вероятности неравномерного распределения см. в статье Wolfram MathWorld ( [отрицательное биномиальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400516)).
+Для получения подробной информации о негативном биномиальной функции [Negative Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516)дискретной вероятности, см.
 
 ## <a name="example"></a>Пример
 
@@ -221,7 +221,7 @@ Histogram for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
 
 Формирует распределение.
 
@@ -232,16 +232,16 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*k* \
+*K*\
 Параметр распределения `k`.
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*parm* \
+*парм*\
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < k` и `0.0 < p ≤ 1.0`
 
@@ -249,31 +249,31 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  negative_binomial_distribution::param_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::pараматип
 
 Сохраняет параметры распределения.
 
-Структура param_type {typedef negative_binomial_distribution `<`result_type > distribution_type; param_type (result_type k = 1, Double p = 0,5); result_type k () const; двойное p () const;
+struct param_type -`<`typedef negative_binomial_distribution result_type> distribution_type; param_type (result_type k 1, double p s 0.5); result_type k() const; double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Параметры
 
-*k* \
+*K*\
 Параметр распределения `k`.
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*справа* \
+*Правильно*\
 Структура `param_type`, используемая для сравнения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < k` и `0.0 < p ≤ 1.0`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

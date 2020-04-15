@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427125"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368415"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -24,11 +24,11 @@ ms.locfileid: "79427125"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<экспериментальная или файловая система >
+**Заголовок:** \<experimental/filesystem>
 
 **Пространство имен:** std::experimental::filesystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a><a name="copy_options"></a>copy_options
 
 Перечисление значений битовой маски, используемое с функциями [copy](filesystem-functions.md#copy) и [copy_file](filesystem-functions.md#copy_file), чтобы указать поведение.
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>Значения
 
-|`Name`|Description|
+|`Name`|Описание|
 |------------|-----------------|
 |`none`|Выполнять поведение по умолчанию для операции.|
 |`skip_existing`|Не копировать, если файл уже существует, не сообщать об ошибке.|
@@ -64,7 +64,7 @@ enum class copy_options {
 |`create_symlinks`|Создать символические ссылки вместо копирования файлов. В качестве исходного пути должен использоваться абсолютный путь, если назначением является текущий каталог.|
 |`create_hard_links`|Создать жесткие связи вместо копирования файлов.|
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
 Определяет, следует выполнить символьные ссылки на каталоги или их игнорировать.
 
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Значения
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |`none`|Поведение по умолчанию: игнорировать символические ссылки на каталоги. Отказ в разрешении является ошибкой.|
 |`follow_directory_symlink`|Символьные ссылки на каталоги можно рассматривать как фактические каталоги.|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a><a name="file_type"></a>file_type
 
-Перечисление для типов файлов. Поддерживаемые значения: Regular, Directory, not_found и Unknown.
+Перечисление для типов файлов. Поддерживаемые значения являются регулярными, каталогами, not_found и неизвестными.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Значения
 
-|Имя|Значение|Description|
+|name|Значение|Описание|
 |----------|-----------|-----------------|
 |`not_found`|-1|Представляет несуществующий файл.|
 |`none`|0|Представляет файл, у которого нет атрибута типа. (Не поддерживается.)|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Представляет сокет в системе UNIX. (Не поддерживается.)|
 |`unknown`|8|Представляет файл, состояние которого невозможно определить.|
 
-## <a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a>perm_options
 
-Включает значения `replace`, `add`, `remove`и `nofollow`.
+Включает `replace`значения, `add` `remove`и `nofollow`.
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  perms
+## <a name="perms"></a><a name="perms"></a>Завивки
 
-Флаги разрешений файла. Поддерживаемые значения по сути — ReadOnly и ALL. Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
+Флаги разрешений файла. Поддерживаемые значения, по сути, являются "только для чтения" и все. Для файла с доступом "только для чтения" не установлен ни один из разрядов * _write. В противном случае установлен разряд `all` (0x0777).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>См. также раздел
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
+[\<файловая система>](../standard-library/filesystem.md)

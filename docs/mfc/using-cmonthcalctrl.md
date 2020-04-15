@@ -4,27 +4,27 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: f13532b67fa129d0fed402deef2696c0bc25f585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c704c61c057def706aef774b8a6e34671a68fbec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366505"
 ---
 # <a name="using-cmonthcalctrl"></a>Использование CMonthCalCtrl
 
-Элемент управления "Календарь на месяц" ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) реализует пользовательский интерфейс, подобный календарю. Это дает пользователю интуитивно понятный и распознаваемый метод ввода или выбора даты. Элемент управления также предоставляет приложению средства для получения и задания сведений о датах в элементе управления с использованием существующих типов данных. По умолчанию элемент управления "Календарь на месяц" отображает текущий день и месяц. Однако пользователь может перейти к предыдущему и следующему месяцам и выбрать конкретный месяц и (или) год.
+Управление календарем месяца[(CMonthCalCtrl)](../mfc/reference/cmonthcalctrl-class.md)реализует пользовательский интерфейс, похожий на календарь. Это дает пользователю очень интуитивный и узнаваемый метод ввода или выбора даты. Элемент управления также предоставляет приложению средства для получения и установки информации о дате в элементе управления с использованием существующих типов данных. По умолчанию элемент управления календаря месяца отображает текущий день и месяц. Тем не менее, пользователь может прокрутить до предыдущих и следующих месяцев и выбрать определенный месяц и / или год.
 
 > [!NOTE]
->  Чтобы использовать класс `CMonthCalCtrl` в проекте, необходимо включить АФКСДТКТЛ. H, обычно в *файле stdafx. h*.
+> Чтобы использовать `CMonthCalCtrl` класс в проекте, необходимо включить AFXDTCTL. H, как правило, в *stdafx.h*.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
+## <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать больше о
 
 - [Создание элемента управления "Календарь на месяц"](../mfc/creating-the-month-calendar-control.md)
 
 - [Примеры элемента управления "Календарь на месяц"](../mfc/month-calendar-control-examples.md)
 
-- [Обработка уведомляющих сообщений в элементах управления "Календарь на месяц"](../mfc/processing-notification-messages-in-month-calendar-controls.md)
+- [Обработка сообщений уведомлений в элементах управления календарем месяца](../mfc/processing-notification-messages-in-month-calendar-controls.md)
 
 - [Установка состояния дня в элементе управления "Календарь на месяц"](../mfc/setting-the-day-state-of-a-month-calendar-control.md)
 

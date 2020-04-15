@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCVisualManagerWindows
+title: CmFCVisualManagerWindows Класс
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCVisualManagerWindows
@@ -140,18 +140,18 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1231df8fa6287e5983327784283c37c2f0eb6ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373645"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319857"
 ---
-# <a name="cmfcvisualmanagerwindows-class"></a>Класс CMFCVisualManagerWindows
+# <a name="cmfcvisualmanagerwindows-class"></a>CmFCVisualManagerWindows Класс
 
-`CMFCVisualManagerWindows` Имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает Windows XP или Vista темы.
+`CMFCVisualManagerWindows`имитирует внешний вид Microsoft Windows XP или Microsoft Vista, когда пользователь выбирает тему Windows XP или Vista.
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -163,96 +163,96 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод, чтобы определить ли 3D вкладки, всегда должны быть выделены в приложении. (Переопределяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
+|[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод, чтобы определить, должны ли 3D-вкладки всегда быть выделены в приложении. (Отменяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Переопределяет `CMFCVisualManager::DrawComboBorderWinXP`.)|
-|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
-|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Переопределяет [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
-|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Этот метод вызывается платформой при рисовании кнопки на панели инструментов. (Переопределяет [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|
+|[CMFCVisualManagerWindows::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|(Отменяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
+|[CMFCVisualManagerWindows::DrawPushButtonWinXP](#drawpushbuttonwinxp)|(Отменяет [CMFCVisualManager::DrawPushButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).)|
+|[CMFCVisualManagerWindows::GetButtonExtraBorder](#getbuttonextraborder)|Фрейм вызывает этот метод, когда он рисует кнопку панели инструментов. (Переопределяет [CMFCVisualManager::GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).)|
 |[CMFCVisualManagerWindows::GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)|(Переопределяет [CMFCVisualManager::GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).)|
 |[CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|(Переопределяет `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`.)|
-|[CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|(Переопределяет `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`.)|
+|[CMFCVisualManagerWindows::GetHighlightedMenuTextColor](#gethighlightedmenuitemtextcolor)|(Переопределяет `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`.)|
 |[CMFCVisualManagerWindows::GetPopupMenuGap](#getpopupmenugap)|(Переопределяет `CMFCVisualManagerOfficeXP::GetPopupMenuGap`.)|
-|[CMFCVisualManagerWindows::GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|(Переопределяет `CMFCVisualManagerOfficeXP::GetToolbarButtonTextColor`.)|
+|[CMFCVisualManagerWindows::GetToolbarButtonText](#gettoolbarbuttontextcolor)|(Переопределяет `CMFCVisualManagerOfficeXP::GetToolbarButtonTextColor`.)|
 |[CMFCVisualManagerWindows::IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)|(Переопределяет [CMFCVisualManager::IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).)|
 |[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|(Переопределяет `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`.)|
 |[CMFCVisualManagerWindows::IsOfficeStyleMenus](#isofficestylemenus)||
-|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Указывает, реализует ли наглядный диспетчер меню Office XP в стиле. (Переопределяет [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|
-|[CMFCVisualManagerWindows::IsWindowsThemingSupported](#iswindowsthemingsupported)|(Переопределяет `CMFCVisualManager::IsWindowsThemingSupported`.)|
-|[CMFCVisualManagerWindows::IsWinXPThemeAvailable](#iswinxpthemeavailable)|Указывает, доступен ли темы Windows.|
+|[CMFCVisualManagerWindows::IsOfficeXPStyleMenus](#isofficexpstylemenus)|Указывает, реализует ли визуальный менеджер меню в стиле Office XP. (Переопределяет [CMFCVisualManager::IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).)|
+|[CMFCVisualManagerWindows::IsWindowsThemingПоддерживает](#iswindowsthemingsupported)|(Переопределяет `CMFCVisualManager::IsWindowsThemingSupported`.)|
+|[CMFCVisualManagerWindows::IsWinXPThemeДоступно](#iswinxpthemeavailable)|Указывается, доступна ли тема Windows.|
 |[CMFCVisualManagerWindows::OnDrawBarGripper](#ondrawbargripper)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBarGripper`.)|
-|[CMFCVisualManagerWindows::OnDrawBrowseButton](#ondrawbrowsebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
-|[CMFCVisualManagerWindows::OnDrawButtonBorder](#ondrawbuttonborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawButtonSeparator](#ondrawbuttonseparator)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`.)|
-|[CMFCVisualManagerWindows::OnDrawCaptionButton](#ondrawcaptionbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
-|[CMFCVisualManagerWindows::OnDrawCaptionButtonIcon](#ondrawcaptionbuttonicon)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`.)|
-|[CMFCVisualManagerWindows::OnDrawCheckBoxEx](#ondrawcheckboxex)|(Переопределяет [CMFCVisualManager::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
-|[CMFCVisualManagerWindows::OnDrawComboBorder](#ondrawcomboborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawComboDropButton](#ondrawcombodropbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
-|[CMFCVisualManagerWindows::OnDrawControlBorder](#ondrawcontrolborder)|(Переопределяет [CMFCVisualManager::OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
-|[CMFCVisualManagerWindows::OnDrawEditBorder](#ondraweditborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|
+|[CMFCVisualManagerWindows::OndrawBrowseButton](#ondrawbrowsebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`.)|
+|[CMFCVisualManagerWindows::OndrawbuttonBorder](#ondrawbuttonborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`.)|
+|[CMFCVisualManagerWindows::OnDrawButtonСепаратор](#ondrawbuttonseparator)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`.)|
+|[CMFCVisualManagerWindows::OndrawcaptionButton](#ondrawcaptionbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`.)|
+|[CMFCVisualManagerWindows::OndrawcaptionButtonIcon](#ondrawcaptionbuttonicon)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`.)|
+|[CMFCVisualManagerWindows::OndrawCheckBoxex](#ondrawcheckboxex)|(Переопределяет [CMFCVisualManager::OndrawCheckBoxex](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).)|
+|[CMFCVisualManagerWindows::OndrawComboborder](#ondrawcomboborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboBorder`.)|
+|[CMFCVisualManagerWindows::OndrawComboDropButton](#ondrawcombodropbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`.)|
+|[CMFCVisualManagerWindows::OndrawControlBorder](#ondrawcontrolborder)|(Переопределяет [CMFCVisualManager::OndrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).)|
+|[CMFCVisualManagerWindows::OndrawEditBorder](#ondraweditborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawEditBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawExpandingBox](#ondrawexpandingbox)|(Переопределяет [CMFCVisualManager::OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).)|
 |[CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Этот метод вызывается платформой при рисовании границы вокруг экземпляр [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md). (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
-|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Эта функция вызывается платформой при рисовании стрелки сортировки элемента управления заголовка. (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
-|[CMFCVisualManagerWindows::OnDrawMenuBorder](#ondrawmenuborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawMenuSystemButton](#ondrawmenusystembutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|
-|[CMFCVisualManagerWindows::OnDrawMiniFrameBorder](#ondrawminiframeborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Вызывается платформой при рисовании границ кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|Рамка называет этот метод, когда он рисует границу вокруг экземпляра [класса CMFCHeaderCtrl.](../../mfc/reference/cmfcheaderctrl-class.md) (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).)|
+|[CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|Фрейм вызывает эту функцию, когда рисует сортировочную стрелку элемента управления заголовком. (Переопределяет [CMFCVisualManager::OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow).)|
+|[CMFCVisualManagerWindows::OndrawMenuBorder](#ondrawmenuborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`.)|
+|[CMFCVisualManagerWindows::OndrawMenuSystemButton](#ondrawmenusystembutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`.)|
+|[CMFCVisualManagerWindows::OndrawminiframeBorder](#ondrawminiframeborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`.)|
+|[CMFCVisualManagerWindows::OndrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|Вызывается по фрейму, когда он рисует границу кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OndrawOutlookPageButtonborder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).)|
 |[CMFCVisualManagerWindows::OnDrawPaneBorder](#ondrawpaneborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawPaneCaption](#ondrawpanecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`.)|
 |[CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`.)|
 |[CMFCVisualManagerWindows::OnDrawScrollButtons](#ondrawscrollbuttons)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`.)|
-|[CMFCVisualManagerWindows::OnDrawSeparator](#ondrawseparator)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|
+|[CMFCVisualManagerWindows::OnDrawСепаратор](#ondrawseparator)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSeparator`.)|
 |[CMFCVisualManagerWindows::OnDrawSpinButtons](#ondrawspinbuttons)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`.)|
 |[CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawStatusBarProgress](#ondrawstatusbarprogress)|Этот метод вызывается платформой при рисовании индикатора хода выполнения [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) объекта. (Переопределяет [CMFCVisualManager::OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
-|[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|Этот метод вызывается платформой при рисовании поле размер для [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md). (Переопределяет [CMFCVisualManager::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
-|[CMFCVisualManagerWindows::OnDrawTab](#ondrawtab)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTab`.)|
-|[CMFCVisualManagerWindows::OnDrawTabCloseButton](#ondrawtabclosebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`.)|
+|[CMFCVisualManagerWindows::OndrawStatusbarProgress](#ondrawstatusbarprogress)|Рамочная система вызывает этот метод, когда он рисует индикатор хода на объекте [CMFCStatusBar.](../../mfc/reference/cmfcstatusbar-class.md) (Переопределяет [CMFCVisualManager::Ondrawstatusbarprogress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).)|
+|[CMFCVisualManagerWindows::OndrawstatusbarSizeBox](#ondrawstatusbarsizebox)|Рамочная система вызывает этот метод, когда он рисует поле размера для [CMFCStatusBar.](../../mfc/reference/cmfcstatusbar-class.md) (Переопределяет [CMFCVisualManager::OndrawstatusbarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).)|
+|[CMFCVisualManagerWindows::OndrawTab](#ondrawtab)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTab`.)|
+|[CMFCVisualManagerWindows::OndrawTabcloseButton](#ondrawtabclosebutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`.)|
 |[CMFCVisualManagerWindows::OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawTask](#ondrawtask)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTask`.)|
-|[CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|
-|[CMFCVisualManagerWindows::OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|
-|[CMFCVisualManagerWindows::OnDrawTearOffCaption](#ondrawtearoffcaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|
+|[CMFCVisualManagerWindows::OndrawTask](#ondrawtask)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTask`.)|
+|[CMFCVisualManagerWindows::OndrawtasksGroupAreaBorder](#ondrawtasksgroupareaborder)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`.)|
+|[CMFCVisualManagerWindows::OndrawtasksGroupCaption](#ondrawtasksgroupcaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`.)|
+|[CMFCVisualManagerWindows::OndrawtearoffCaption](#ondrawtearoffcaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`.)|
 |[CMFCVisualManagerWindows::OnErasePopupWindowButton](#onerasepopupwindowbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`.)|
 |[CMFCVisualManagerWindows::OnEraseTabsArea](#onerasetabsarea)|(Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsArea`.)|
 |[CMFCVisualManagerWindows::OnEraseTabsButton](#onerasetabsbutton)|(Переопределяет `CMFCVisualManagerOfficeXP::OnEraseTabsButton`.)|
-|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Этот метод вызывается платформой при его стирает кадр на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md). (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
-|[CMFCVisualManagerWindows::OnFillBarBackground](#onfillbarbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
-|[CMFCVisualManagerWindows::OnFillButtonInterior](#onfillbuttoninterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
-|[CMFCVisualManagerWindows::OnFillCommandsListBackground](#onfillcommandslistbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
-|[CMFCVisualManagerWindows::OnFillMiniFrameCaption](#onfillminiframecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
-|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Этот метод вызывается платформой при его заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
-|[CMFCVisualManagerWindows::OnFillTasksGroupInterior](#onfilltasksgroupinterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
-|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Этот метод вызывается платформой при заливке фона [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) элемента управления. (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
-|[CMFCVisualManagerWindows::OnHighlightMenuItem](#onhighlightmenuitem)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|
-|[CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|
+|[CMFCVisualManagerWindows::OnEraseTabsFrame](#onerasetabsframe)|Платформа вызывает этот метод, когда он стирает кадр на [CMFCBaseTabCtrl класса.](../../mfc/reference/cmfcbasetabctrl-class.md) (Переопределяет [CMFCVisualManager::OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe).)|
+|[CMFCVisualManagerWindows::OnfillBarbackground](#onfillbarbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillBarBackground`.)|
+|[CMFCVisualManagerWindows::OnfillbuttonInterior](#onfillbuttoninterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillButtonInterior`.)|
+|[CMFCVisualManagerWindows::OnFillCommandsList](#onfillcommandslistbackground)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`.)|
+|[CMFCVisualManagerWindows::OnfillminiFrameCaption](#onfillminiframecaption)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`.)|
+|[CMFCVisualManagerWindows::OnFillOutlookPageButton](#onfilloutlookpagebutton)|Рамочная система вызывает этот метод, когда он заполняет внутреннюю часть кнопки страницы Outlook. (Переопределяет [CMFCVisualManager::OnfillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).)|
+|[CMFCVisualManagerWindows::OnfillTasksgroupInterior](#onfilltasksgroupinterior)|(Переопределяет `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`.)|
+|[CMFCVisualManagerWindows::OnFillTasksPaneBackground](#onfilltaskspanebackground)|Рамочная система вызывает этот метод, когда он заполняет фон управления [CMFCTasksPane.](../../mfc/reference/cmfctaskspane-class.md) (Переопределяет [CMFCVisualManager::OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).)|
+|[CMFCVisualManagerWindows::OnhighlightMenuitem](#onhighlightmenuitem)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`.)|
+|[CMFCVisualManagerWindows::OnHighlightРедкоИспользуемыеМенюэлементы](#onhighlightrarelyusedmenuitems)|(Переопределяет `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`.)|
 |[CMFCVisualManagerWindows::OnUpdateSystemColors](#onupdatesystemcolors)|(Переопределяет `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`.)|
 |[CMFCVisualManagerWindows::SetOfficeStyleMenus](#setofficestylemenus)||
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Указывает, отображаются ли темы Windows XP 3D вкладки.|
+|[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Уточняется, отображает ли тема Windows XP 3D-вкладки.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используйте `CMFCVisualManagerWindows` классе, чтобы изменить внешний вид приложения для имитации текущей темы на компьютере, на котором выполняется приложение.
+Используйте `CMFCVisualManagerWindows` класс, чтобы изменить внешний вид приложения, чтобы имитировать текущую тему на компьютере, где работает приложение.
 
-Однако темы Windows может быть недоступен, если приложение работает под управлением версии Windows более ранней, чем Windows XP, или если темы отключены, так как пользователь использует **классической** представления. Если тема не станет доступным, приложение использует наглядный диспетчер по умолчанию, определенные в [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md).
+Тем не менее, тема Windows может быть недоступна, если ваше приложение работает на версии Windows раньше, чем Windows XP или если темы отключены, потому что пользователь использует **классический** вид. Если тема недоступна, приложение использует визуальный менеджер по умолчанию, определенный в [CMFCVisualManager.](../../mfc/reference/cmfcvisualmanager-class.md)
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `CMFCVisualManagerWindows`. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
+Следующий пример показывает, `CMFCVisualManagerWindows`как использовать . Этот фрагмент кода является частью [образца демо-версии оповещения рабочего стола.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 
@@ -260,19 +260,19 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseВизуальныйМенеджер](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
 [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
-[Преобразованный CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** afxvisualmanagerwindows.h
 
-##  <a name="alwayshighlight3dtabs"></a>  CMFCVisualManagerWindows::AlwaysHighlight3DTabs
+## <a name="cmfcvisualmanagerwindowsalwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFCVisualManagerWindows::AlwaysHighlight3DTabs
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -280,9 +280,9 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="cmfcvisualmanagerwindows"></a>  CMFCVisualManagerWindows::CMFCVisualManagerWindows
+## <a name="cmfcvisualmanagerwindowscmfcvisualmanagerwindows"></a><a name="cmfcvisualmanagerwindows"></a>CMFCVisualManagerWindows::CMFCVisualManagerWindows
 
 ```
 CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
@@ -290,11 +290,11 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bIsTemporary*<br/>
+(в) *bIsВременный*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerWindows::DrawComboBorderWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFCVisualManagerWindows::DrawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(
@@ -307,17 +307,17 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
+(в) *bDisabled*<br/>
+(в) *bIsDropped*<br/>
+(в) *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawComboDropButtonWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerWindows::DrawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(
@@ -330,17 +330,17 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
+(в) *bDisabled*<br/>
+(в) *bIsDropped*<br/>
+(в) *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerWindows::DrawPushButtonWinXP
+## <a name="cmfcvisualmanagerwindowsdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFCVisualManagerWindows::DrawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(
@@ -352,16 +352,16 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
+(в) *pButton*<br/>
+(в) *uiState*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getbuttonextraborder"></a>  CMFCVisualManagerWindows::GetButtonExtraBorder
+## <a name="cmfcvisualmanagerwindowsgetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFCVisualManagerWindows::GetButtonExtraBorder
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -369,9 +369,9 @@ virtual CSize GetButtonExtraBorder() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getcaptionbuttonextraborder"></a>  CMFCVisualManagerWindows::GetCaptionButtonExtraBorder
+## <a name="cmfcvisualmanagerwindowsgetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFCVisualManagerWindows::GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -379,9 +379,9 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdockingpanecaptionextraheight"></a>  CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight
+## <a name="cmfcvisualmanagerwindowsgetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFCVisualManagerWindows::GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -389,9 +389,9 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="gethighlightedmenuitemtextcolor"></a>  CMFCVisualManagerWindows::GetHighlightedMenuItemTextColor
+## <a name="cmfcvisualmanagerwindowsgethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFCVisualManagerWindows::GetHighlightedMenuTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
@@ -399,13 +399,13 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pButton*<br/>
+(в) *pButton*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpopupmenugap"></a>  CMFCVisualManagerWindows::GetPopupMenuGap
+## <a name="cmfcvisualmanagerwindowsgetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFCVisualManagerWindows::GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -413,9 +413,9 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="gettoolbarbuttontextcolor"></a>  CMFCVisualManagerWindows::GetToolbarButtonTextColor
+## <a name="cmfcvisualmanagerwindowsgettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFCVisualManagerWindows::GetToolbarButtonText
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -425,14 +425,14 @@ virtual COLORREF GetToolbarButtonTextColor(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pButton*<br/>
-[in] *состояния*<br/>
+(в) *pButton*<br/>
+(в) *состояние*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isdefaultwinxppopupbutton"></a>  CMFCVisualManagerWindows::IsDefaultWinXPPopupButton
+## <a name="cmfcvisualmanagerwindowsisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFCVisualManagerWindows::IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const;
@@ -440,13 +440,13 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pButton*<br/>
+(в) *pButton*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ishighlightwholemenuitem"></a>  CMFCVisualManagerWindows::IsHighlightWholeMenuItem
+## <a name="cmfcvisualmanagerwindowsishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFCVisualManagerWindows::IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -454,9 +454,9 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isofficestylemenus"></a>  CMFCVisualManagerWindows::IsOfficeStyleMenus
+## <a name="cmfcvisualmanagerwindowsisofficestylemenus"></a><a name="isofficestylemenus"></a>CMFCVisualManagerWindows::IsOfficeStyleMenus
 
 ```
 BOOL IsOfficeStyleMenus() const;
@@ -464,9 +464,9 @@ BOOL IsOfficeStyleMenus() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isofficexpstylemenus"></a>  CMFCVisualManagerWindows::IsOfficeXPStyleMenus
+## <a name="cmfcvisualmanagerwindowsisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFCVisualManagerWindows::IsOfficeXPStyleMenus
 
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
@@ -474,9 +474,9 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerWindows::IsWindowsThemingSupported
+## <a name="cmfcvisualmanagerwindowsiswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFCVisualManagerWindows::IsWindowsThemingПоддерживает
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -484,11 +484,11 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="iswinxpthemeavailable"></a>  CMFCVisualManagerWindows::IsWinXPThemeAvailable
+## <a name="cmfcvisualmanagerwindowsiswinxpthemeavailable"></a><a name="iswinxpthemeavailable"></a>CMFCVisualManagerWindows::IsWinXPThemeДоступно
 
-Определяет, доступна ли Тема Windows.
+Определяет, доступна ли тема Windows.
 
 ```
 static BOOL IsWinXPThemeAvailible();
@@ -496,25 +496,25 @@ static BOOL IsWinXPThemeAvailible();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если тема доступна; в противном случае 0.
+Nonzero, если тема доступна; в противном случае 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод допустим для всех Windows XP и более поздние версии темы.
+Этот метод действителен для всех Windows XP и более поздних тем.
 
-`IsWinXPThemeAvailable` идентичен `CMFCVisualManagerWindows::IsWindowsThemingAvailable` за исключением того, что `IsWinXPThemeAvailable` — это статический метод. Таким образом будет создан временный наглядный диспетчер, если он не существует.
+`IsWinXPThemeAvailable`идентичен `CMFCVisualManagerWindows::IsWindowsThemingAvailable` `IsWinXPThemeAvailable` за исключением того, что является статическим методом. Таким образом, он создаст временный визуальный менеджер, если его не существует.
 
-`IsWinXPThemeAvailable` всегда возвращает 0 для версий Windows, более ранних, чем Windows XP.
+`IsWinXPThemeAvailable`всегда возвращать 0s для версий Windows раньше, чем Windows XP.
 
-##  <a name="m_b3dtabsxptheme"></a>  CMFCVisualManagerWindows::m_b3DTabsXPTheme
+## <a name="cmfcvisualmanagerwindowsm_b3dtabsxptheme"></a><a name="m_b3dtabsxptheme"></a>CMFCVisualManagerWindows::m_b3DTabsXPTheme
 
-Логический параметр, который определяет, отображает ли Диспетчер визуальных 3D вкладки.
+Параметр Boolean, определяющий, отображает ли визуальный менеджер 3D-вкладки.
 
 ```
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;
 ```
 
-##  <a name="ondrawbargripper"></a>  CMFCVisualManagerWindows::OnDrawBarGripper
+## <a name="cmfcvisualmanagerwindowsondrawbargripper"></a><a name="ondrawbargripper"></a>CMFCVisualManagerWindows::OnDrawBarGripper
 
 ```
 virtual void OnDrawBarGripper(
@@ -526,14 +526,14 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectGripper*<br/>
-[in] *bHorz*<br/>
-[in] *pBar*<br/>
+(в) *pDC*<br/>
+(в) *rectGripper*<br/>
+(в) *bHorz*<br/>
+(в) *pBar*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerWindows::OnDrawBrowseButton
+## <a name="cmfcvisualmanagerwindowsondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCVisualManagerWindows::OndrawBrowseButton
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -546,17 +546,17 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pEdit*<br/>
-[in] *состояния*<br/>
-[in] *clrText*<br/>
+(в) *pEdit*<br/>
+(в) *состояние*<br/>
+(в) *clrText*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFCVisualManagerWindows::OndrawbuttonBorder
 
 ```
 virtual void OnDrawButtonBorder(
@@ -568,14 +568,14 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
 [in] *rect*<br/>
-[in] *состояния*<br/>
+(в) *состояние*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawbuttonseparator"></a>  CMFCVisualManagerWindows::OnDrawButtonSeparator
+## <a name="cmfcvisualmanagerwindowsondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFCVisualManagerWindows::OnDrawButtonСепаратор
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -588,15 +588,15 @@ virtual void OnDrawButtonSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
 [in] *rect*<br/>
-[in] *состояния*<br/>
-[in] *bHorz*<br/>
+(в) *состояние*<br/>
+(в) *bHorz*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcaptionbutton"></a>  CMFCVisualManagerWindows::OnDrawCaptionButton
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFCVisualManagerWindows::OndrawcaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -611,17 +611,17 @@ virtual void OnDrawCaptionButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
-[in] *bActive*<br/>
-[in] *bHorz*<br/>
-[in] *bMaximized*<br/>
-[in] *bDisabled*<br/>
-[in] *nImageID*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
+(в) *bАктивный*<br/>
+(в) *bHorz*<br/>
+(в) *bMaximized*<br/>
+(в) *bDisabled*<br/>
+(в) *nImageID*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcaptionbuttonicon"></a>  CMFCVisualManagerWindows::OnDrawCaptionButtonIcon
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbuttonicon"></a><a name="ondrawcaptionbuttonicon"></a>CMFCVisualManagerWindows::OndrawcaptionButtonIcon
 
 ```
 virtual void OnDrawCaptionButtonIcon(
@@ -635,16 +635,16 @@ virtual void OnDrawCaptionButtonIcon(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
-[in] *идентификатор*<br/>
-[in] *bActive*<br/>
-[in] *bDisabled*<br/>
-[in] *ptImage*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
+(в) *id*<br/>
+(в) *bАктивный*<br/>
+(в) *bDisabled*<br/>
+(в) *ptImage*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerWindows::OnDrawCheckBoxEx
+## <a name="cmfcvisualmanagerwindowsondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFCVisualManagerWindows::OndrawCheckBoxex
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -658,16 +658,16 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *nState*<br/>
-[in] *bHighlighted*<br/>
-[in] *bPressed*<br/>
-[in] *bEnabled*<br/>
+(в) *nState*<br/>
+(в) *bНазалион*<br/>
+(в) *bPressed*<br/>
+(в) *bВСтои*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerWindows::OnDrawComboBorder
+## <a name="cmfcvisualmanagerwindowsondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFCVisualManagerWindows::OndrawComboborder
 
 ```
 virtual void OnDrawComboBorder(
@@ -681,16 +681,16 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+(в) *bDisabled*<br/>
+(в) *bIsDropped*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerWindows::OnDrawComboDropButton
+## <a name="cmfcvisualmanagerwindowsondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFCVisualManagerWindows::OndrawComboDropButton
 
 ```
 virtual void OnDrawComboDropButton(
@@ -704,16 +704,16 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsDropped*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+(в) *bDisabled*<br/>
+(в) *bIsDropped*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerWindows::OnDrawControlBorder
+## <a name="cmfcvisualmanagerwindowsondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFCVisualManagerWindows::OndrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
@@ -721,11 +721,11 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWndCtrl*<br/>
+(в) *pWndCtrl*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondraweditborder"></a>  CMFCVisualManagerWindows::OnDrawEditBorder
+## <a name="cmfcvisualmanagerwindowsondraweditborder"></a><a name="ondraweditborder"></a>CMFCVisualManagerWindows::OndrawEditBorder
 
 ```
 virtual void OnDrawEditBorder(
@@ -738,15 +738,15 @@ virtual void OnDrawEditBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bDisabled*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *pButton*<br/>
+(в) *bDisabled*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerWindows::OnDrawExpandingBox
+## <a name="cmfcvisualmanagerwindowsondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFCVisualManagerWindows::OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -758,14 +758,14 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsOpened*<br/>
-[in] *colorBox*<br/>
+(в) *bIsОткрыт*<br/>
+(в) *colorBox*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawfloatingtoolbarborder"></a>  CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder
+## <a name="cmfcvisualmanagerwindowsondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFCVisualManagerWindows::OnDrawFloatingToolbarBorder
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -777,14 +777,14 @@ virtual void OnDrawFloatingToolbarBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pToolBar*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+(в) *pDC*<br/>
+(в) *pToolBar*<br/>
+(в) *rectBorder*<br/>
+(в) *rectBorderSize*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlBorder
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -797,15 +797,15 @@ virtual void OnDrawHeaderCtrlBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pCtrl*<br/>
-[in] *основного контроллера домена*<br/>
+(в) *pCtrl*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsHighlighted*<br/>
+(в) *bIsPressed*<br/>
+(в) *bIsHighlighted*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawheaderctrlsortarrow"></a>  CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFCVisualManagerWindows::OnDrawHeaderCtrlSortArrow
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -817,14 +817,14 @@ virtual void OnDrawHeaderCtrlSortArrow(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pCtrl*<br/>
-[in] *основного контроллера домена*<br/>
+(в) *pCtrl*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsUp*<br/>
+(в) *bIsUp*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerWindows::OnDrawMenuBorder
+## <a name="cmfcvisualmanagerwindowsondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFCVisualManagerWindows::OndrawMenuBorder
 
 ```
 virtual void OnDrawMenuBorder(
@@ -835,13 +835,13 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pMenu*<br/>
+(в) *pDC*<br/>
+(в) *pMenu*<br/>
 [in] *rect*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawmenusystembutton"></a>  CMFCVisualManagerWindows::OnDrawMenuSystemButton
+## <a name="cmfcvisualmanagerwindowsondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFCVisualManagerWindows::OndrawMenuSystemButton
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -854,15 +854,15 @@ virtual void OnDrawMenuSystemButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *uiSystemCommand*<br/>
-[in] *nStyle*<br/>
-[in] *bHighlight*<br/>
+(в) *uiSystemCommand*<br/>
+(в) *nСтиль*<br/>
+(в) *bHighlight*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawminiframeborder"></a>  CMFCVisualManagerWindows::OnDrawMiniFrameBorder
+## <a name="cmfcvisualmanagerwindowsondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFCVisualManagerWindows::OndrawminiframeBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -874,14 +874,14 @@ virtual void OnDrawMiniFrameBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pFrameWnd*<br/>
-[in] *rectBorder*<br/>
-[in] *rectBorderSize*<br/>
+(в) *pDC*<br/>
+(в) *pFrameWnd*<br/>
+(в) *rectBorder*<br/>
+(в) *rectBorderSize*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerWindows::OnDrawOutlookPageButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerWindows::OndrawOutlookPageButtonBorder
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -893,14 +893,14 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectBtn*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
+(в) *pDC*<br/>
+(в) *rectBtn*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *bIsPressed*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerWindows::OnDrawPaneBorder
+## <a name="cmfcvisualmanagerwindowsondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFCVisualManagerWindows::OnDrawPaneBorder
 
 ```
 virtual void OnDrawPaneBorder(
@@ -911,13 +911,13 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
 [in] *rect*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerWindows::OnDrawPaneCaption
+## <a name="cmfcvisualmanagerwindowsondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFCVisualManagerWindows::OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -930,17 +930,17 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
-[in] *bActive*<br/>
-[in] *rectCaption*<br/>
-[in] *rectButtons*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
+(в) *bАктивный*<br/>
+(в) *rectCaption*<br/>
+(в) *rectButtons*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerWindows::OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -951,13 +951,13 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *rectClient*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerWindows::OnDrawScrollButtons
+## <a name="cmfcvisualmanagerwindowsondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFCVisualManagerWindows::OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -970,15 +970,15 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *nBorderSize*<br/>
-[in] *iImage*<br/>
-[in] *bHilited*<br/>
+(в) *nBorderSize*<br/>
+(в) *iImage*<br/>
+(в) *bHilited*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawseparator"></a>  CMFCVisualManagerWindows::OnDrawSeparator
+## <a name="cmfcvisualmanagerwindowsondrawseparator"></a><a name="ondrawseparator"></a>CMFCVisualManagerWindows::OnDrawСепаратор
 
 ```
 virtual void OnDrawSeparator(
@@ -990,14 +990,14 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
 [in] *rect*<br/>
-[in] *bIsHoriz*<br/>
+(в) *bIsHoriz*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawspinbuttons"></a>  CMFCVisualManagerWindows::OnDrawSpinButtons
+## <a name="cmfcvisualmanagerwindowsondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFCVisualManagerWindows::OnDrawSpinButtons
 
 ```
 virtual void OnDrawSpinButtons(
@@ -1010,15 +1010,15 @@ virtual void OnDrawSpinButtons(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectSpin*<br/>
-[in] *nState*<br/>
-[in] *bOrientation*<br/>
-[in] *pSpinCtrl*<br/>
+(в) *pDC*<br/>
+(в) *rectSpin*<br/>
+(в) *nState*<br/>
+(в) *bОриентация*<br/>
+(в) *pSpinCtrl*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerWindows::OnDrawStatusBarPaneBorder
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1031,15 +1031,15 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
-[in] *rectPane*<br/>
-[in] *uiID*<br/>
-[in] *nStyle*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
+(в) *rectPane*<br/>
+(в) *uiID*<br/>
+(в) *nСтиль*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerWindows::OnDrawStatusBarProgress
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFCVisualManagerWindows::OndrawStatusbarProgress
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -1056,19 +1056,19 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pStatusBar*<br/>
-[in] *rectProgress*<br/>
-[in] *nProgressTotal*<br/>
-[in] *nProgressCurr*<br/>
-[in] *clrBar*<br/>
-[in] *clrProgressBarDest*<br/>
-[in] *clrProgressText*<br/>
-[in] *bProgressText*<br/>
+(в) *pDC*<br/>
+(в) *pStatusBar*<br/>
+(в) *rectProgress*<br/>
+(в) *nProgressTotal*<br/>
+(в) *nProgressCurr*<br/>
+(в) *clrBar*<br/>
+(в) *clrProgressBarDest*<br/>
+(в) *clrProgressТекст*<br/>
+(в) *bProgressТекст*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerWindows::OnDrawStatusBarSizeBox
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerWindows::OndrawstatusbarSizeBox
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1079,13 +1079,13 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pStatBar*<br/>
-[in] *rectSizeBox*<br/>
+(в) *pDC*<br/>
+(в) *pStatBar*<br/>
+(в) *rectSizeBox*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtab"></a>  CMFCVisualManagerWindows::OnDrawTab
+## <a name="cmfcvisualmanagerwindowsondrawtab"></a><a name="ondrawtab"></a>CMFCVisualManagerWindows::OndrawTab
 
 ```
 virtual void OnDrawTab(
@@ -1098,15 +1098,15 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectTab*<br/>
+(в) *pDC*<br/>
+(в) *rectTab*<br/>
 [in] *iTab*<br/>
-[in] *bIsActive*<br/>
-[in] *pTabWnd*<br/>
+(в) *bIsActive*<br/>
+(в) *pTabWnd*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtabclosebutton"></a>  CMFCVisualManagerWindows::OnDrawTabCloseButton
+## <a name="cmfcvisualmanagerwindowsondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFCVisualManagerWindows::OndrawTabcloseButton
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -1120,16 +1120,16 @@ virtual void OnDrawTabCloseButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *bIsDisabled*<br/>
+(в) *pTabWnd*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *bIsPressed*<br/>
+(в) *bIsDisabled*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerWindows::OnDrawTabsButtonBorder
+## <a name="cmfcvisualmanagerwindowsondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerWindows::OnDrawTabsButtonBorder
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1142,15 +1142,15 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *uiState*<br/>
-[in] *pWndTab*<br/>
+(в) *pButton*<br/>
+(в) *uiState*<br/>
+(в) *pWndTab*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtask"></a>  CMFCVisualManagerWindows::OnDrawTask
+## <a name="cmfcvisualmanagerwindowsondrawtask"></a><a name="ondrawtask"></a>CMFCVisualManagerWindows::OndrawTask
 
 ```
 virtual void OnDrawTask(
@@ -1163,15 +1163,15 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pTask*<br/>
-[in] *pIcons*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
+(в) *pDC*<br/>
+(в) *pTask*<br/>
+(в) *pIcons*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *bIsSelected*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupAreaBorder
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerWindows::OndrawtasksGroupAreaBorder
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1183,14 +1183,14 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bSpecial*<br/>
-[in] *bNoTitle*<br/>
+(в) *bSpecial*<br/>
+(в) *bNoTitle*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerWindows::OnDrawTasksGroupCaption
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerWindows::OndrawtasksGroupCaption
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1203,15 +1203,15 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pGroup*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsSelected*<br/>
-[in] *bCanCollapse*<br/>
+(в) *pDC*<br/>
+(в) *pGroup*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *bIsSelected*<br/>
+(в) *bCanCollapse*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerWindows::OnDrawTearOffCaption
+## <a name="cmfcvisualmanagerwindowsondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFCVisualManagerWindows::OndrawtearoffCaption
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1222,13 +1222,13 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsActive*<br/>
+(в) *bIsActive*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerWindows::OnErasePopupWindowButton
+## <a name="cmfcvisualmanagerwindowsonerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFCVisualManagerWindows::OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -1239,13 +1239,13 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectClient*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *rectClient*<br/>
+(в) *pButton*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onerasetabsarea"></a>  CMFCVisualManagerWindows::OnEraseTabsArea
+## <a name="cmfcvisualmanagerwindowsonerasetabsarea"></a><a name="onerasetabsarea"></a>CMFCVisualManagerWindows::OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -1256,13 +1256,13 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
+(в) *pTabWnd*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerWindows::OnEraseTabsButton
+## <a name="cmfcvisualmanagerwindowsonerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFCVisualManagerWindows::OnEraseTabsButton
 
 ```
 virtual void OnEraseTabsButton(
@@ -1274,14 +1274,14 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pButton*<br/>
-[in] *pWndTab*<br/>
+(в) *pButton*<br/>
+(в) *pWndTab*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onerasetabsframe"></a>  CMFCVisualManagerWindows::OnEraseTabsFrame
+## <a name="cmfcvisualmanagerwindowsonerasetabsframe"></a><a name="onerasetabsframe"></a>CMFCVisualManagerWindows::OnEraseTabsFrame
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1292,15 +1292,15 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *pTabWnd*<br/>
+(в) *pTabWnd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillbarbackground"></a>  CMFCVisualManagerWindows::OnFillBarBackground
+## <a name="cmfcvisualmanagerwindowsonfillbarbackground"></a><a name="onfillbarbackground"></a>CMFCVisualManagerWindows::OnfillBarbackground
 
 ```
 virtual void OnFillBarBackground(
@@ -1313,15 +1313,15 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pBar*<br/>
-[in] *rectClient*<br/>
-[in] *rectClip*<br/>
-[in] *bNCArea*<br/>
+(в) *pDC*<br/>
+(в) *pBar*<br/>
+(в) *rectClient*<br/>
+(в) *rectClip*<br/>
+(в) *bNCArea*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerWindows::OnFillButtonInterior
+## <a name="cmfcvisualmanagerwindowsonfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFCVisualManagerWindows::OnfillbuttonInterior
 
 ```
 virtual void OnFillButtonInterior(
@@ -1333,14 +1333,14 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
 [in] *rect*<br/>
-[in] *состояния*<br/>
+(в) *состояние*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerWindows::OnFillCommandsListBackground
+## <a name="cmfcvisualmanagerwindowsonfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFCVisualManagerWindows::OnFillCommandsList
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -1351,15 +1351,15 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsSelected*<br/>
+(в) *bIsSelected*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfillminiframecaption"></a>  CMFCVisualManagerWindows::OnFillMiniFrameCaption
+## <a name="cmfcvisualmanagerwindowsonfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFCVisualManagerWindows::OnfillminiFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -1371,16 +1371,16 @@ virtual COLORREF OnFillMiniFrameCaption(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectCaption*<br/>
-[in] *pFrameWnd*<br/>
-[in] *bActive*<br/>
+(в) *pDC*<br/>
+(в) *rectCaption*<br/>
+(в) *pFrameWnd*<br/>
+(в) *bАктивный*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerWindows::OnFillOutlookPageButton
+## <a name="cmfcvisualmanagerwindowsonfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFCVisualManagerWindows::OnFillOutlookPageButton
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -1393,15 +1393,15 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bIsHighlighted*<br/>
-[in] *bIsPressed*<br/>
-[in] *clrText*<br/>
+(в) *bIsHighlighted*<br/>
+(в) *bIsPressed*<br/>
+(в) *clrText*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerWindows::OnFillTasksGroupInterior
+## <a name="cmfcvisualmanagerwindowsonfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFCVisualManagerWindows::OnfillTasksgroupInterior
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -1412,13 +1412,13 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+(в) *pDC*<br/>
 [in] *rect*<br/>
-[in] *bSpecial*<br/>
+(в) *bSpecial*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerWindows::OnFillTasksPaneBackground
+## <a name="cmfcvisualmanagerwindowsonfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFCVisualManagerWindows::OnFillTasksPaneBackground
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -1428,12 +1428,12 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectWorkArea*<br/>
+(в) *pDC*<br/>
+(в) *rectWorkArea*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onhighlightmenuitem"></a>  CMFCVisualManagerWindows::OnHighlightMenuItem
+## <a name="cmfcvisualmanagerwindowsonhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFCVisualManagerWindows::OnhighlightMenuitem
 
 ```
 virtual void OnHighlightMenuItem(
@@ -1445,14 +1445,14 @@ virtual void OnHighlightMenuItem(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *pButton*<br/>
+(в) *pDC*<br/>
+(в) *pButton*<br/>
 [in] *rect*<br/>
-[in] *clrText*<br/>
+(в) *clrText*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerWindows::OnHighlightRarelyUsedMenuItems
+## <a name="cmfcvisualmanagerwindowsonhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerWindows::OnHighlightРедкоИспользуемыеМенюэлементы
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -1462,20 +1462,20 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
-[in] *rectRarelyUsed*<br/>
+(в) *pDC*<br/>
+(в) *rectRarelyИспользуется*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerWindows::OnUpdateSystemColors
+## <a name="cmfcvisualmanagerwindowsonupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFCVisualManagerWindows::OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setofficestylemenus"></a>  CMFCVisualManagerWindows::SetOfficeStyleMenus
+## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a>CMFCVisualManagerWindows::SetOfficeStyleMenus
 
 ```
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
@@ -1483,13 +1483,13 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bOn*<br/>
+(в) *bOn*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[Класс CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFCVisualManagerOfficeXP Класс](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)

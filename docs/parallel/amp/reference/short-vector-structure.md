@@ -6,16 +6,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126439"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374755"
 ---
 # <a name="short_vector-structure"></a>Структура short_vector
 
-short_vector предоставляет определения метапрограммирование, которые полезны для универсального программирования коротких векторов.
+short_vector предоставляет определения метапрограммирования, которые полезны для программирования коротких векторов в целом.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -81,19 +81,19 @@ struct short_vector<double, 4>;
 
 *_Size*<br/>
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[Конструктор short_vector:: short_vector](#ctor)||
+|[Конструктор short_vector::short_vector](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -101,11 +101,11 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp_short_vectors. h
+**Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency:: Graphics
+**Пространство имен:** Параллель:графика
 
-## <a name="ctor"></a>Конструктор short_vector:: short_vector
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector::short_vector Конструктор
 
 ```cpp
 short_vector();

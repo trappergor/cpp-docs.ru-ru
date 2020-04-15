@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: eb72c3abbe87bc975dbc3c99ffab9e77635c9df5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2c6a976f3874d563f5bba600b9894ae0103625b0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689707"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319597"
 ---
 # <a name="fisher_f_distribution-class"></a>Класс fisher_f_distribution
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с F-распределением Фишера. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользователем типа плавающей точки, или **введите двойной** тип, если ни один не предоставляется, распределенный в соответствии с F-Распределением Фишера. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -94,7 +94,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Подробные сведения о нормальном F-распределении см. в статье в Wolfram MathWorld [F-распределение](https://go.microsoft.com/fwlink/p/?linkid=400899).
 
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 Первый запуск:
 
@@ -237,7 +237,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution::fisher_f_distribution
 
 Формирует распределение.
 
@@ -248,16 +248,16 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*m* \
+*М*\
 Параметр распределения `m`.
 
-*n*\
+*N*\
 Параметр распределения `n`.
 
-*parm* \
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < m` и `0.0 < n`
 
@@ -265,7 +265,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  fisher_f_distribution::param_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::pарам-тип
 
 Сохраняет параметры распределения.
 
@@ -283,21 +283,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*m* \
+*М*\
 Параметр распределения `m`.
 
-*n*\
+*N*\
 Параметр распределения `n`.
 
-*справа* \
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 **Предварительные условия:** `0.0 < m` и `0.0 < n`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

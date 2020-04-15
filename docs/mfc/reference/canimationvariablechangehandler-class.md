@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f45fdad00bacf56e2ee8c30b76e99d626902534
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377084"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Класс CAnimationVariableChangeHandler
 
@@ -31,21 +31,21 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Создает объект `CAnimationVariableChangeHandler`.|
+|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Формирует объект `CAnimationVariableChangeHandler`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`CAnimationVariableChangeHandler::CreateInstance`|Создает экземпляр класса `CAnimationVariableChangeHandler` объекта.|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Содержит указатель на контроллер анимации для маршрутизации события.|
+|`CAnimationVariableChangeHandler::CreateInstance`|Создает экземпляр `CAnimationVariableChangeHandler` объекта.|
+|[CanimationvariablevariableChangehandler::OnvalueChanged](#onvaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|
+|[CAnimationVariableChangeChangeHandler::SetAnimationController](#setanimationcontroller)|Хранит указатель контроллера анимации для маршрутизатора событий.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот обработчик событий создается и передается `IUIAnimationVariable::SetVariableChangeHandler` при вызове метода `CAnimationVariable::EnableValueChangedEvent` или `CAnimationBaseObject::EnableValueChangedEvent` (что позволяет это событие для всех переменных анимации, инкапсулированных в объект анимации).
+Обработчик событий создается `IUIAnimationVariable::SetVariableChangeHandler` и передается `CAnimationVariable::EnableValueChangedEvent` `CAnimationBaseObject::EnableValueChangedEvent` методу, когда вы вызываете или (что позволяет этому событию для всех переменных анимации, инкапсулированных в объекте анимации).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,7 +59,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged
+## <a name="canimationvariablechangehandleronvaluechanged"></a><a name="onvaluechanged"></a>CanimationvariablevariableChangehandler::OnvalueChanged
 
 Вызывается при изменении значения переменной анимации.
 
@@ -73,25 +73,25 @@ IFACEMETHOD(OnValueChanged) (
 
 ### <a name="parameters"></a>Параметры
 
-*раскадровки*<br/>
-Раскадровки, который выполняет анимацию переменной.
+*Раскадровки*<br/>
+Раскадровка, онимающая переменную.
 
-*Переменная*<br/>
-Переменная анимации, которая была обновлена.
+*переменная*<br/>
+Обновленная переменная анимации.
 
-*новое значение*<br/>
+*newValue*<br/>
 Новое значение.
 
-*значение previousValue*<br/>
+*предыдущаястоимость*<br/>
 Предыдущее значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController
+## <a name="canimationvariablechangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableChangeChangeHandler::SetAnimationController
 
-Содержит указатель на контроллер анимации для маршрутизации события.
+Хранит указатель контроллера анимации для маршрутизатора событий.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -99,9 +99,9 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>Параметры
 
-*pAnimationController*<br/>
+*pAnimationКонтроллер*<br/>
 Указатель на контроллер анимации, который будет получать события.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

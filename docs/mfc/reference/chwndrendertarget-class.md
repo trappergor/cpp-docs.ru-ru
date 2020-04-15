@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-ms.openlocfilehash: bf446cdf1ea064943ff92d66ac89b0e4177e6910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24cf4127c2f429f66143af3a0f49625f23a4e6ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345790"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372467"
 ---
 # <a name="chwndrendertarget-class"></a>Класс CHwndRenderTarget
 
-Оболочка для ID2D1HwndRenderTarget.
+Обертка для ID2D1HwndRenderTarget.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,32 +47,32 @@ class CHwndRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Создает объект CHwndRenderTarget из HWND.|
+|[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|Строит объект CHwndRenderTarget из HWND.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHwndRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
-|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Указывает, является ли перекрыто HWND, связанный с этой целевой объект отрисовки.|
-|[CHwndRenderTarget::Create](#create)|Создает целевой объект отрисовки, связанный с окном|
-|[CHwndRenderTarget::Detach](#detach)|Отсоединяет интерфейс целевой объект отрисовки из объекта|
-|[CHwndRenderTarget::GetHwnd](#gethwnd)|Возвращает HWND, связанный с данным объектом рендеринга.|
+|[CHwndRenderTarget:Attach](#attach)|Прикрепляет существующий целевой интерфейс рендера к объекту|
+|[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|Указывает, является ли HWND, связанный с этой целью рендеринга, окклюзией.|
+|[CHwndRenderTarget::Создание](#create)|Создает цель рендеринга, связанная с окном|
+|[CHwndRenderTarget::Detach](#detach)|Отеки визуализировать целевой интерфейс от объекта|
+|[CHwndRenderTarget:GetHwnd](#gethwnd)|Возвращает HWND, связанный с этой целью рендеринга.|
 |[CHwndRenderTarget::GetHwndRenderTarget](#gethwndrendertarget)|Возвращает интерфейс ID2D1HwndRenderTarget.|
-|[CHwndRenderTarget::ReCreate](#recreate)|Повторно создает целевой объект отрисовки, связанный с окном|
-|[CHwndRenderTarget::Resize](#resize)|Изменяет размер целевого объекта отрисовки по размеру указанного пикселя|
+|[CHwndRenderTarget::ReCreate](#recreate)|Повторное создание цели рендера, связанной с окном|
+|[CHwndRenderTarget::Resize](#resize)|Изменяет размер цели рендера на указанный размер пикселя|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|Возвращает интерфейс ID2D1HwndRenderTarget.|
+|[CHwndRenderTarget:оператор ID2D1HwndRenderTarget](#operator_id2d1hwndrendertarget_star)|Возвращает интерфейс ID2D1HwndRenderTarget.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|Указатель на объект ID2D1HwndRenderTarget.|
 
@@ -88,9 +88,9 @@ class CHwndRenderTarget : public CRenderTarget;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="attach"></a>  CHwndRenderTarget::Attach
+## <a name="chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget:Attach
 
-Присоединение существующих отрисовки целевой интерфейс к объекту
+Прикрепляет существующий целевой интерфейс рендера к объекту
 
 ```
 void Attach(ID2D1HwndRenderTarget* pTarget);
@@ -99,11 +99,11 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
 ### <a name="parameters"></a>Параметры
 
 *pTarget*<br/>
-Существующий интерфейс целевой объект отрисовки. Не может иметь значение NULL
+Существующий целевой интерфейс рендеринга. Не может быть NULL
 
-##  <a name="checkwindowstate"></a>  CHwndRenderTarget::CheckWindowState
+## <a name="chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState
 
-Указывает, является ли перекрыто HWND, связанный с этой целевой объект отрисовки.
+Указывает, является ли HWND, связанный с этой целью рендеринга, окклюзией.
 
 ```
 D2D1_WINDOW_STATE CheckWindowState() const;
@@ -111,11 +111,11 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение, указывающее ли целевой объект отрисовки HWND, связанный с данным перекрыто.
+Значение, указывавкоторое на то, является ли HWND, связанный с этой целью рендеринга, окклюзией.
 
-##  <a name="chwndrendertarget"></a>  CHwndRenderTarget::CHwndRenderTarget
+## <a name="chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget
 
-Создает объект CHwndRenderTarget из HWND.
+Строит объект CHwndRenderTarget из HWND.
 
 ```
 CHwndRenderTarget(HWND hwnd = NULL);
@@ -123,12 +123,12 @@ CHwndRenderTarget(HWND hwnd = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*hwnd*<br/>
-Целевой объект отрисовки HWND, связанный с данным
+*Hwnd*<br/>
+HWND, связанный с этой целью рендеринга
 
-##  <a name="create"></a>  CHwndRenderTarget::Create
+## <a name="chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Создание
 
-Создает целевой объект отрисовки, связанный с окном
+Создает цель рендеринга, связанная с окном
 
 ```
 BOOL Create(HWND hWnd);
@@ -136,16 +136,16 @@ BOOL Create(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*<br/>
-Целевой объект отрисовки HWND, связанный с данным
+*Hwnd*<br/>
+HWND, связанный с этой целью рендеринга
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE
 
-##  <a name="detach"></a>  CHwndRenderTarget::Detach
+## <a name="chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach
 
-Отсоединяет интерфейс целевой объект отрисовки из объекта
+Отеки визуализировать целевой интерфейс от объекта
 
 ```
 ID2D1HwndRenderTarget* Detach();
@@ -153,11 +153,11 @@ ID2D1HwndRenderTarget* Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на отсоединенной отображения интерфейса целевой объект.
+Указатель на отдельный интерфейс рендеринга.
 
-##  <a name="gethwnd"></a>  CHwndRenderTarget::GetHwnd
+## <a name="chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget:GetHwnd
 
-Возвращает HWND, связанный с данным объектом рендеринга.
+Возвращает HWND, связанный с этой целью рендеринга.
 
 ```
 HWND GetHwnd() const;
@@ -165,9 +165,9 @@ HWND GetHwnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целевой объект отрисовки HWND, связанный с данным.
+HWND, связанный с этой целью рендеринга.
 
-##  <a name="gethwndrendertarget"></a>  CHwndRenderTarget::GetHwndRenderTarget
+## <a name="chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget
 
 Возвращает интерфейс ID2D1HwndRenderTarget.
 
@@ -177,9 +177,9 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1HwndRenderTarget или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1HwndRenderTarget или NULL, если объект еще не инициализирован.
 
-##  <a name="m_phwndrendertarget"></a>  CHwndRenderTarget::m_pHwndRenderTarget
+## <a name="chwndrendertargetm_phwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget
 
 Указатель на объект ID2D1HwndRenderTarget.
 
@@ -187,7 +187,7 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;
 ```
 
-##  <a name="operator_id2d1hwndrendertarget_star"></a>  CHwndRenderTarget::operator ID2D1HwndRenderTarget *
+## <a name="chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget:оператор ID2D1HwndRenderTarget
 
 Возвращает интерфейс ID2D1HwndRenderTarget.
 
@@ -197,11 +197,11 @@ operator ID2D1HwndRenderTarget*();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1HwndRenderTarget или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1HwndRenderTarget или NULL, если объект еще не инициализирован.
 
-##  <a name="recreate"></a>  CHwndRenderTarget::ReCreate
+## <a name="chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::ReCreate
 
-Повторно создает целевой объект отрисовки, связанный с окном
+Повторное создание цели рендера, связанной с окном
 
 ```
 BOOL ReCreate(HWND hWnd);
@@ -209,16 +209,16 @@ BOOL ReCreate(HWND hWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*hWnd*<br/>
-Целевой объект отрисовки HWND, связанный с данным
+*Hwnd*<br/>
+HWND, связанный с этой целью рендеринга
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE.
 
-##  <a name="resize"></a>  CHwndRenderTarget::Resize
+## <a name="chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Resize
 
-Изменяет размер целевого объекта отрисовки по размеру указанного пикселя
+Изменяет размер цели рендера на указанный размер пикселя
 
 ```
 BOOL Resize(const CD2DSizeU& size);
@@ -226,13 +226,13 @@ BOOL Resize(const CD2DSizeU& size);
 
 ### <a name="parameters"></a>Параметры
 
-*size*<br/>
-Новый размер целевого объекта отрисовки в пикселях устройства
+*Размер*<br/>
+Новый размер цели рендеринга в пикселях устройства
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

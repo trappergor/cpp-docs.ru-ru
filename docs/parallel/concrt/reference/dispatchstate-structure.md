@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c4103f89f7fc74c5368bafac3c82685ff9b6e03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372697"
 ---
 # <a name="dispatchstate-structure"></a>Структура DispatchState
 
@@ -28,21 +28,21 @@ ms.locfileid: "77143047"
 struct DispatchState;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[DispatchState::D Испатчстате](#ctor)|Создает новый объект `DispatchState`.|
+|[Диспетчер::DispatchState](#ctor)|Создает новый объект `DispatchState`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[DispatchState:: m_dispatchStateSize](#m_dispatchstatesize)|Размер этой структуры, которая используется для управления версиями.|
-|[DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Сообщает, вошел ли этот контекст в метод `Dispatch`, поскольку предыдущий контекст асинхронно заблокирован. Он используется только в контексте планирования UMS и устанавливается в значение `0` для всех других контекстов выполнения.|
-|[DispatchState:: m_reserved](#m_reserved)|Биты, зарезервированные для будущей передачи информации.|
+|[Диспетчер::m_dispatchStateSize](#m_dispatchstatesize)|Размер этой структуры, которая используется для версий.|
+|[Диспетчер::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Сообщает, вошел ли `Dispatch` этот контекст в метод, поскольку предыдущий контекст асинхронно заблокирован. Это используется только в контексте планирования UMS и `0` устанавливается в значении для всех других контекстов выполнения.|
+|[Диспетчер::m_reserved](#m_reserved)|Биты зарезервированы для передачи информации в будущем.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -50,11 +50,11 @@ struct DispatchState;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrtrm. h
+**Заголовок:** concrtrm.h
 
-**Пространство имен:** concurrency
+**Название:** параллелизм
 
-## <a name="ctor"></a>DispatchState: конструктор:D Испатчстате
+## <a name="dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Диспетчер::DispatchГосударственный конструктор
 
 Создает новый объект `DispatchState`.
 
@@ -62,25 +62,25 @@ struct DispatchState;
 DispatchState();
 ```
 
-## <a name="m_dispatchstatesize"></a>Элемент данных DispatchState:: m_dispatchStateSize
+## <a name="dispatchstatem_dispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>DispatchState::m_dispatchStateSize член данных
 
-Размер этой структуры, которая используется для управления версиями.
+Размер этой структуры, которая используется для версий.
 
 ```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-## <a name="m_fispreviouscontextasynchronouslyblocked"></a>Элемент данных DispatchState:: m_fIsPreviousContextAsynchronouslyBlocked
+## <a name="dispatchstatem_fispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Диспетчер::m_fIsPreviousContextAsynchronouslyBlocked член данных
 
-Сообщает, вошел ли этот контекст в метод `Dispatch`, поскольку предыдущий контекст асинхронно заблокирован. Он используется только в контексте планирования UMS и устанавливается в значение `0` для всех других контекстов выполнения.
+Сообщает, вошел ли `Dispatch` этот контекст в метод, поскольку предыдущий контекст асинхронно заблокирован. Это используется только в контексте планирования UMS и `0` устанавливается в значении для всех других контекстов выполнения.
 
 ```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-## <a name="m_reserved"></a>Элемент данных DispatchState:: m_reserved
+## <a name="dispatchstatem_reserved-data-member"></a><a name="m_reserved"></a>Диспетчер::m_reserved член данных
 
-Биты, зарезервированные для будущей передачи информации.
+Биты зарезервированы для передачи информации в будущем.
 
 ```cpp
 unsigned int m_reserved : 31;

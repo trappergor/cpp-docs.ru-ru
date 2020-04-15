@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368446"
 ---
 # <a name="extreme_value_distribution-class"></a>Класс extreme_value_distribution
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Модуль генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Двигатель генератора случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с экстремальным распределением значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользователем типа плавающей точки, или **введите двойной,** если ни один не предоставляется, распределенный в соответствии с экстремальным распределением значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ public:
 
 Функции свойств `a()` и `b()` возвращают соответствующие значения для хранимых параметров распределения `a` и `b`.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Дополнительные сведения о распределении экстремальных значений см. в статье [Распределение экстремальных значений](https://go.microsoft.com/fwlink/p/?linkid=401110) на веб-сайте Wolfram MathWorld.
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
 
 Формирует распределение.
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a_value* \
+*a_value*\
 Параметр распределения `a`.
 
-*b_value* \
+*b_value*\
 Параметр распределения `b`.
 
-*parm* \
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < b`
+**Предварительное условие:**`0.0 < b`
 
 Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a_value*, а значение `b` содержит значение *b_value*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::pарам-тип
 
 Сохраняет параметры распределения.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a_value* \
+*a_value*\
 Параметр распределения `a`.
 
-*b_value* \
+*b_value*\
 Параметр распределения `b`.
 
-*справа* \
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < b`
+**Предварительное условие:**`0.0 < b`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

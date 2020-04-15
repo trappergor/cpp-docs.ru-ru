@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 8b05284104f9d2e5e7704bceaee6f8adf9a33aac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497659"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321173"
 ---
 # <a name="ccomaggobject-class"></a>Класс CComAggObject
 
-Этот класс реализует интерфейс [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для агрегированного объекта. По определению агрегированный объект содержится внутри внешнего объекта. Класс аналогичен [классу CComObject](../../atl/reference/ccomobject-class.md), за исключением того, что он предоставляет интерфейс, напрямую доступный внешним клиентам. `CComAggObject`
+Этот класс реализует интерфейс [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для агрегированного объекта. По определению, агрегированный объект содержится внутри внешнего объекта. Класс `CComAggObject` похож на [класс CComObject,](../../atl/reference/ccomobject-class.md)за исключением того, что он предоставляет интерфейс, который непосредственно доступен для внешних клиентов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,40 +38,40 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>Параметры
 
-*нем*<br/>
-Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которые требуется поддерживать для объекта.
+*Содержащиеся*<br/>
+Ваш класс, полученный из [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx,](../../atl/reference/ccomobjectrootex-class.md)а также из любых других интерфейсов, которые вы хотите поддерживать на объекте.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComAggObject:: CComAggObject](#ccomaggobject)|Конструктор.|
-|[CComAggObject:: ~ CComAggObject](#dtor)|Деструктор|
+|[CComAggObject::CComAggObject](#ccomaggobject)|Конструктор.|
+|[CComAggObject:::CComAggObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComAggObject:: AddRef](#addref)|Увеличивает значение счетчика ссылок для агрегированного объекта.|
-|[CComAggObject:: CreateInstance](#createinstance)|Эта статическая функция позволяет создать новый объект **<** `contained` **>** CComAggObject без дополнительной нагрузки на [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
-|[CComAggObject:: Финалконструкт](#finalconstruct)|Выполняет окончательную инициализацию `m_contained`.|
-|[CComAggObject:: Финалрелеасе](#finalrelease)|Выполняет окончательное уничтожение `m_contained`.|
-|[CComAggObject:: QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|
-|[CComAggObject:: Release](#release)|Уменьшает значение счетчика ссылок на агрегированный объект.|
+|[CComAggObject:AddRef](#addref)|Приращения эталона рассчитывают на агрегированный объект.|
+|[CComAggObject::Создание](#createinstance)|Эта статическая функция позволяет создавать новый **CComAggObject<** `contained` **>** объект без накладных расходов [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).|
+|[CComAggObject::FinalConstruct](#finalconstruct)|Выполняет окончательную инициализацию `m_contained`.|
+|[CComAggObject::FinalRelease](#finalrelease)|Выполняет окончательное `m_contained`уничтожение .|
+|[CComAggObject::QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|
+|[CComAggObject:Release](#release)|Декреты эталона рассчитывают на агрегированный объект.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComAggObject:: m_contained](#m_contained)|Делегирует `IUnknown` вызовы внешней неизвестной.|
+|[CComAggObject::m_contained](#m_contained)|Делегаты `IUnknown` звонят к внешнему неизвестному.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComAggObject`реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для агрегированного объекта. `CComAggObject`имеет собственный `IUnknown` интерфейс, отделенный от `IUnknown` интерфейса внешнего объекта и сохраняющий собственный счетчик ссылок.
+`CComAggObject`реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для агрегированного объекта. `CComAggObject`имеет свой `IUnknown` собственный интерфейс, отдельно `IUnknown` от интерфейса внешнего объекта, и поддерживает свой собственный подсчет ссылок.
 
-Дополнительные сведения о статистической обработке см. в статье [основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Для получения дополнительной информации об агрегации смотрите в статье [Основы объектов ATL COM](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,11 +85,11 @@ class CComAggObject : public IUnknown,
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="addref"></a>CComAggObject:: AddRef
+## <a name="ccomaggobjectaddref"></a><a name="addref"></a>CComAggObject:AddRef
 
-Увеличивает значение счетчика ссылок для агрегированного объекта.
+Приращения эталона рассчитывают на агрегированный объект.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,7 +99,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Значение, которое может быть полезно для диагностики или тестирования.
 
-##  <a name="ccomaggobject"></a>CComAggObject:: CComAggObject
+## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComAggObject::CComAggObject
 
 Конструктор.
 
@@ -109,16 +109,16 @@ CComAggObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*<br/>
-окне Внешняя неизвестная.
+*Pv*<br/>
+(в) Внешнее неизвестное.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует элемент `CComContainedObject` [m_contained](#m_contained) и увеличивает счетчик блокировок модуля.
+Инициализирует элемент `CComContainedObject`[m_contained](#m_contained) и увеличивает счетчик блокировок модуля.
 
-Деструктор уменьшает счетчик блокировок модуля.
+Декременты декретов модуля блокировки.
 
-##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject
+## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAggObject:::CComAggObject
 
 Деструктор
 
@@ -126,13 +126,13 @@ CComAggObject(void* pv);
 ~CComAggObject();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает все выделенные ресурсы, вызывает [финалрелеасе](#finalrelease)и уменьшает число блокировок модуля.
+Освобождает все выделенные ресурсы, вызывает [FinalRelease](#finalrelease)и высчитывает количество блокировки модуля.
 
-##  <a name="createinstance"></a>CComAggObject:: CreateInstance
+## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAggObject::Создание
 
-Эта статическая функция позволяет создать новый объект **<** `contained` **>** CComAggObject без дополнительной нагрузки на [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+Эта статическая функция позволяет создавать новый **CComAggObject<** `contained` **>** объект без накладных расходов [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -142,22 +142,22 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*PP*<br/>
-заполняет Указатель на **CComAggObject\<** ,<em>содержащий</em> **>** указатель. Если `CreateInstance` операция завершилась неудачно, *PP* имеет значение null.
+*Pp*<br/>
+(ваут) Указатель на **CComAggObject\<**<em>содержал</em> **>** указатель. Если `CreateInstance` неудача, *pp* установлен на NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Возвращаемый объект имеет нулевое значение счетчика ссылок, поэтому `AddRef` вызовите его немедленно `Release` , а затем используйте для освобождения ссылки на указатель объекта по завершении.
+Возвращается объект имеет подсчет ссылок `AddRef` ноль, `Release` поэтому немедленно позвоните, а затем используйте для освобождения ссылки на указатель объекта, когда вы закончите.
 
-Если прямой доступ к объекту не требуется, но по-прежнему требуется создать новый объект без дополнительной нагрузки `CoCreateInstance`, используйте [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) .
+Если вам не нужен прямой доступ к объекту, но все `CoCreateInstance`же хотите создать новый объект без накладных расходов, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо этого.
 
-##  <a name="finalconstruct"></a>CComAggObject:: Финалконструкт
+## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAggObject::FinalConstruct
 
-Метод, вызываемый на последних стадиях создания объекта, выполняет последнюю инициализацию элемента [m_contained](#m_contained) .
+Этот метод, вызванный на заключительных этапах строительства объекта, выполняет любую окончательную инициализацию на [m_contained](#m_contained) члене.
 
 ```
 HRESULT FinalConstruct();
@@ -167,17 +167,17 @@ HRESULT FinalConstruct();
 
 Стандартное значение HRESULT.
 
-##  <a name="finalrelease"></a>CComAggObject:: Финалрелеасе
+## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAggObject::FinalRelease
 
-Этот метод вызывается при уничтожении объекта, освобождая член [m_contained](#m_contained) .
+Вызывается во время уничтожения объекта, этот метод освобождает [m_contained](#m_contained) члена.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>CComAggObject:: m_contained
+## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a>CComAggObject::m_contained
 
-Объект [ккомконтаинедобжект](../../atl/reference/ccomcontainedobject-class.md) , производный от класса.
+Объект [CComContainedObject, полученный](../../atl/reference/ccomcontainedobject-class.md) из вашего класса.
 
 ```
 CComContainedObject<contained> m_contained;
@@ -185,14 +185,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>Параметры
 
-*нем*<br/>
-окне Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также от любых других интерфейсов, которые требуется поддерживать для объекта.
+*Содержащиеся*<br/>
+(в) Ваш класс, полученный из [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx,](../../atl/reference/ccomobjectrootex-class.md)а также из любых других интерфейсов, которые вы хотите поддерживать на объекте.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Все `IUnknown` вызовы через `m_contained` делегируются внешней неизвестной.
+Все `IUnknown` вызовы через `m_contained` делегируются внешнему неизвестному.
 
-##  <a name="queryinterface"></a>CComAggObject:: QueryInterface
+## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAggObject::QueryInterface
 
 Извлекает указатель на запрошенный интерфейс.
 
@@ -204,26 +204,26 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*<br/>
-окне Идентификатор запрашиваемого интерфейса.
+*Iid*<br/>
+(в) Идентификатор запрашиваемого интерфейса.
 
-*ппвобжект*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по *IID*. Если объект не поддерживает этот интерфейс, *ппвобжект* имеет значение null.
+*ppvObject*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *iid.* Если объект не поддерживает этот интерфейс, *ppvObject* настроен на NULL.
 
-*PP*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по типу `Q`. Если объект не поддерживает этот интерфейс, *PP* имеет значение null.
+*Pp*<br/>
+(ваут) Указатель на указатель интерфейса, `Q`идентифицированный по типу. Если объект не поддерживает этот интерфейс, *pp* настроен на NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если запрошенный интерфейс имеет `IUnknown`значение `QueryInterface` , `IUnknown` функция возвращает указатель на агрегатный объект и увеличивает счетчик ссылок. В противном случае этот метод запрашивает интерфейс через `CComContainedObject` член [m_contained](#m_contained).
+Если запрашиваемый `IUnknown` `QueryInterface` интерфейс, возвращает указатель на собственный `IUnknown` агрегированный объект и приращает значение отсчета ссылок. В противном случае этот метод `CComContainedObject` запрашивает интерфейс через члена, [m_contained](#m_contained).
 
-##  <a name="release"></a>CComAggObject:: Release
+## <a name="ccomaggobjectrelease"></a><a name="release"></a>CComAggObject:Release
 
-Уменьшает значение счетчика ссылок на агрегированный объект.
+Декреты эталона рассчитывают на агрегированный объект.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,13 +231,13 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В отладочных сборках `Release` возвращает значение, которое может быть полезно для диагностики или тестирования. В сборках, не относящихся к отладке, `Release` всегда возвращает 0.
+В сборках отладок возвращается значение, `Release` которое может быть полезно для диагностики или тестирования. В неотлибуговых `Release` сборках всегда возвращается 0.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComObject](../../atl/reference/ccomobject-class.md)<br/>
 [Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

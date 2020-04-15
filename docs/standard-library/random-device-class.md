@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 184513bc63975bd8eaaf0e53300e5a6be7986389
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320273"
 ---
-# <a name="randomdevice-class"></a>Класс random_device
+# <a name="random_device-class"></a>Класс random_device
 
 Формирует случайную последовательность с помощью внешнего устройства.
 
@@ -53,10 +53,10 @@ public:
 
 |||
 |-|-|
-|[random_device](#random_device)|[энтропии](#entropy)|
+|[random_device](#random_device)|[Энтропии](#entropy)|
 |[random_device::operator()](#op_call)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Этот класс описывает источник случайных чисел и, согласно стандарту ISO C++, может быть недетерминистическим или криптостойким (но это необязательно). В реализации в Visual Studio полученные значения являются недетерминистическими и криптостойкими, но производительность ниже, чем у генераторов, созданных на основе механизмов и адаптеров механизмов (таких как [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md), быстрого и качественного механизма для большинства приложений).
 
@@ -64,7 +64,7 @@ public:
 
 Не гарантируется, что `random_device` приведет к неблокирующему вызову.
 
-В целом, `random_device` используется для получения начальных значений для других генераторов, созданных с помощью механизмов или адаптеров механизмов. Дополнительные сведения см. в разделе [\<random>](../standard-library/random.md).
+В целом, `random_device` используется для получения начальных значений для других генераторов, созданных с помощью механизмов или адаптеров механизмов. Для получения дополнительной информации см [ \<>. ](../standard-library/random.md)
 
 ## <a name="example"></a>Пример
 
@@ -100,7 +100,7 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-Этот пример упрощен и не представляет собой общего примера применения этого генератора. Более полный пример приведен в разделе [\<random>](../standard-library/random.md).
+Этот пример упрощен и не представляет собой общего примера применения этого генератора. Для более репрезентативного примера кода с [ \<>м. ](../standard-library/random.md)
 
 ## <a name="requirements"></a>Требования
 
@@ -108,7 +108,7 @@ a random value == 213725214
 
 **Пространство имен:** std
 
-## <a name="random_device"></a>  random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
 
 Формирует генератор.
 
@@ -116,11 +116,11 @@ a random value == 213725214
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор инициализирует генератор, как требуется, игнорируя строковый параметр. Возвращает значение определенного в реализации типа, производного из [exception](../standard-library/exception-class.md), если не удалось инициализировать `random_device`.
 
-## <a name="entropy"></a>  random_device::entropy
+## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::энтропия
 
 Оценивает стохастичность источника.
 
@@ -128,11 +128,11 @@ random_device(const std::string& = "");
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-член возвращает оценку стохастичности источника в битах.
 
-## <a name="op_call"></a>  random_device::operator()
+## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device:оператор()
 
 Возвращает случайное значение.
 
@@ -140,10 +140,10 @@ double entropy() const noexcept;
 result_type operator()();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Возвращает значения с равномерным распределением в замкнутом интервале [`min, max`] в соответствии с функциями-членами `min()` и `max()`. Если случайное число не удалось получить, возвращается значение определенного в реализации типа, производного от [exception](../standard-library/exception-class.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

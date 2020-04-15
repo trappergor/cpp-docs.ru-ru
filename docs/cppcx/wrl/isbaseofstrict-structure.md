@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 85aeb71ceaa162cc6366836dd286f2f9983d34e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71db5a1b52a7d7d5471c15591fb34d954b465d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371352"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,25 +32,25 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*<br/>
+*Базы*<br/>
 Базовый тип.
 
-*Производные*<br/>
+*Производным*<br/>
 Производный тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Проверяет, является ли один тип базовым для другого.
 
-Первый шаблон проверяет, является ли тип, производный от базового типа, который может дать **true** или **false**. Второй шаблон проверяет, является ли тип является производным от самого себя, которая всегда создает **false**.
+Первый шаблон проверяет, является ли тип выведен из базового типа, который может дать **истинное** или **ложное.** Второй шаблон проверяет, является ли тип производным от самого себя, что всегда дает **ложное.**
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constants"></a>Открытые константы
 
-name                            | Описание
+Имя                            | Описание
 ------------------------------- | --------------------------------------------------
-[IsBaseOfStrict::value](#value) | Указывает, является ли один тип базовым для другого.
+[IsBaseOfStrict::стоимость](#value) | Указывает, является ли один тип базовым для другого.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,18 +60,18 @@ name                            | Описание
 
 **Заголовок:** internal.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="value"></a>IsBaseOfStrict::value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict::стоимость
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 static const bool value = __is_base_of(Base, Derived);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Указывает, является ли один тип базовым для другого.
 
-`value` — **true** Если тип `Base` является базовым классом типа `Derived`, в противном случае это **false**.
+`value`**верно,** если `Base` тип является базовым `Derived`классом типа, в противном случае это **ложно.**

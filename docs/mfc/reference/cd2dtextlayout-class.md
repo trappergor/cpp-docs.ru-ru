@@ -28,16 +28,16 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: ca89d12c6aeed33be740aa9f999e7c11d6c32056
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9be4c1134e2f82ceb3af31cbeb1a7d55f4071777
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396188"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369029"
 ---
 # <a name="cd2dtextlayout-class"></a>Класс CD2DTextLayout
 
-Оболочка для IDWriteTextLayout.
+Обертка для IDWriteTextLayout.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,34 +49,34 @@ class CD2DTextLayout : public CD2DResource;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Создает объект CD2DTextLayout.|
-|[CD2DTextLayout:: ~ CD2DTextLayout](#_dtorcd2dtextlayout)|Деструктор Вызывается при уничтожении объекта макета текста D2D.|
+|[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Строит объект CD2DTextLayout.|
+|[CD2DTextLayout: :»CD2DTextLayout](#_dtorcd2dtextlayout)|Деструктор Вызывается при уничтожении объекта макета текста D2D.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DTextLayout::Create](#create)|Создает CD2DTextLayout. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DTextLayout::destroy](#destroy)|Уничтожает объект CD2DTextLayout. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DTextLayout::Создание](#create)|Создает CD2DTextLayout. (Переопределяет [CD2DРесурс::Создание](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DTextLayout::Destroy](#destroy)|Уничтожает объект CD2DTextLayout. (Переопределяет [CD2DРесурс::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DTextLayout::Get](#get)|Возвращает интерфейс IDWriteTextLayout|
-|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Копирует имя семейства шрифтов текста в указанной позиции.|
-|[CD2DTextLayout::GetLocaleName](#getlocalename)|Возвращает имя языкового стандарта текста в указанной позиции.|
-|[CD2DTextLayout::IsValid](#isvalid)|Проверяет допустимость ресурсов (переопределяет [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2DTextLayout::ReCreate](#recreate)|Повторно создает CD2DTextLayout. (Переопределяет [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|
-|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Имя семейства шрифтов, завершающаяся нулем наборов для текста в указанный текстовый диапазон|
-|[CD2DTextLayout::SetLocaleName](#setlocalename)|Задает имя языкового стандарта для текста в указанный текстовый диапазон|
+|[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Копирует фамилию шрифта текста в указанном положении.|
+|[CD2DTextLayout::GetLocaleName](#getlocalename)|Получает название локализации текста в указанном положении.|
+|[CD2DTextLayout::IsValid](#isvalid)|Проверка достоверности ресурса (Переопределения [CD2DРесурса:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DTextLayout::ReCreate](#recreate)|Воссоздает CD2DTextLayout. (Переопределяет [CD2DРесурс::Воссоздание](../../mfc/reference/cd2dresource-class.md#recreate).)|
+|[CD2DTextLayout::SetFontFamilyName](#setfontfamilyname)|Устанавливает фамилию недействительных шрифтов для текста в определенном текстовом диапазоне|
+|[CD2DTextLayout::SetLocaleName](#setlocalename)|Устанавливает название локализации для текста в определенном диапазоне текста|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Возвращает интерфейс IDWriteTextLayout|
+|[CD2DTextLayout:Оператор IDWriteTextLayout](#operator_idwritetextlayout_star)|Возвращает интерфейс IDWriteTextLayout|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Указатель на IDWriteTextLayout.|
 
@@ -84,7 +84,7 @@ class CD2DTextLayout : public CD2DResource;
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[CD2DРесурс](../../mfc/reference/cd2dresource-class.md)
 
 [CD2DTextLayout](../../mfc/reference/cd2dtextlayout-class.md)
 
@@ -92,7 +92,7 @@ class CD2DTextLayout : public CD2DResource;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout
+## <a name="cd2dtextlayoutcd2dtextlayout"></a><a name="_dtorcd2dtextlayout"></a>CD2DTextLayout: :»CD2DTextLayout
 
 Деструктор Вызывается при уничтожении объекта макета текста D2D.
 
@@ -100,9 +100,9 @@ class CD2DTextLayout : public CD2DResource;
 virtual ~CD2DTextLayout();
 ```
 
-##  <a name="cd2dtextlayout"></a>  CD2DTextLayout::CD2DTextLayout
+## <a name="cd2dtextlayoutcd2dtextlayout"></a><a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout
 
-Создает объект CD2DTextLayout.
+Строит объект CD2DTextLayout.
 
 ```
 CD2DTextLayout(
@@ -116,21 +116,21 @@ CD2DTextLayout(
 ### <a name="parameters"></a>Параметры
 
 *pParentTarget*<br/>
-Указатель на целевой объект отрисовки.
+Указатель на цель рендера.
 
 *strText*<br/>
-Объект CString, содержащий строку, чтобы создать новый объект CD2DTextLayout из.
+Объект CString, содержащий строку для создания нового объекта CD2DTextLayout.
 
-*TextFormat*<br/>
-Объект CString, содержащий формат, применяемый к строке.
+*textFormat*<br/>
+Объект CString, содержащий формат для применения к строке.
 
 *sizeMax*<br/>
-Размер окна макета.
+Размер макетной коробки.
 
 *bAutoDestroy*<br/>
-Указывает, что объект будет уничтожен владельца (pParentTarget).
+Означает, что объект будет уничтожен владельцем (pParentTarget).
 
-##  <a name="create"></a>  CD2DTextLayout::Create
+## <a name="cd2dtextlayoutcreate"></a><a name="create"></a>CD2DTextLayout::Создание
 
 Создает CD2DTextLayout.
 
@@ -140,9 +140,9 @@ virtual HRESULT Create(CRenderTarget* */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="destroy"></a>  CD2DTextLayout::destroy
+## <a name="cd2dtextlayoutdestroy"></a><a name="destroy"></a>CD2DTextLayout::Destroy
 
 Уничтожает объект CD2DTextLayout.
 
@@ -150,7 +150,7 @@ virtual HRESULT Create(CRenderTarget* */);
 virtual void Destroy();
 ```
 
-##  <a name="get"></a>  CD2DTextLayout::Get
+## <a name="cd2dtextlayoutget"></a><a name="get"></a>CD2DTextLayout::Get
 
 Возвращает интерфейс IDWriteTextLayout
 
@@ -160,11 +160,11 @@ IDWriteTextLayout* Get();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IDWriteTextLayout или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс IDWriteTextLayout или NULL, если объект еще не инициализирован.
 
-##  <a name="getfontfamilyname"></a>  CD2DTextLayout::GetFontFamilyName
+## <a name="cd2dtextlayoutgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName
 
-Копирует имя семейства шрифтов текста в указанной позиции.
+Копирует фамилию шрифта текста в указанном положении.
 
 ```
 CString GetFontFamilyName(
@@ -174,19 +174,19 @@ CString GetFontFamilyName(
 
 ### <a name="parameters"></a>Параметры
 
-*currentPosition*<br/>
-Позиция текст для проверки.
+*текущаяПозиция*<br/>
+Позиция текста для изучения.
 
-*TextRange*<br/>
-Диапазон текста, который имеет то же форматирование текста в позиции, заданной параметром currentPosition. Это означает, что запуск имеет точный как позиции, указанной в, включая, но не ограничиваясь имя семейства шрифтов.
+*textRange*<br/>
+Диапазон текста, который имеет тот же форматирование, что и текст в позиции, указанной currentPosition. Это означает, что запуск имеет точное форматирование, как указанное положение, включая, но не ограничиваясь фамилией шрифта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект CString, содержащий текущее имя семейства шрифтов.
+Объект CString, содержащий текущую фамилию шрифта.
 
-##  <a name="getlocalename"></a>  CD2DTextLayout::GetLocaleName
+## <a name="cd2dtextlayoutgetlocalename"></a><a name="getlocalename"></a>CD2DTextLayout::GetLocaleName
 
-Возвращает имя языкового стандарта текста в указанной позиции.
+Получает название локализации текста в указанном положении.
 
 ```
 CString GetLocaleName(
@@ -196,19 +196,19 @@ CString GetLocaleName(
 
 ### <a name="parameters"></a>Параметры
 
-*currentPosition*<br/>
+*текущаяПозиция*<br/>
 Положение текста для проверки.
 
-*TextRange*<br/>
-Диапазон текста, который имеет то же форматирование текста в позиции, заданной параметром currentPosition. Это означает, что запуск имеет точный как позиции, указанной в, включая, но не ограничиваясь имени языкового стандарта.
+*textRange*<br/>
+Диапазон текста, который имеет тот же форматирование, что и текст в позиции, указанной currentPosition. Это означает, что запуск имеет точное форматирование, как указанное положение, включая, но не ограничиваясь названием ломык.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект CString, содержащий имя текущего языкового стандарта.
+Объект CString, содержащий текущее имя локализу.
 
-##  <a name="isvalid"></a>  CD2DTextLayout::IsValid
+## <a name="cd2dtextlayoutisvalid"></a><a name="isvalid"></a>CD2DTextLayout::IsValid
 
-Проверяет допустимость ресурсов
+Проверка достоверности ресурса
 
 ```
 virtual BOOL IsValid() const;
@@ -216,9 +216,9 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если ресурс является допустимым; в противном случае — значение FALSE.
+TRUE, если ресурс действителен; в противном случае FALSE.
 
-##  <a name="m_ptextlayout"></a>  CD2DTextLayout::m_pTextLayout
+## <a name="cd2dtextlayoutm_ptextlayout"></a><a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout
 
 Указатель на IDWriteTextLayout.
 
@@ -226,7 +226,7 @@ virtual BOOL IsValid() const;
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
+## <a name="cd2dtextlayoutoperator-idwritetextlayout"></a><a name="operator_idwritetextlayout_star"></a>CD2DTextLayout:Оператор IDWriteTextLayout
 
 Возвращает интерфейс IDWriteTextLayout
 
@@ -236,11 +236,11 @@ operator IDWriteTextLayout*();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс IDWriteTextLayout или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс IDWriteTextLayout или NULL, если объект еще не инициализирован.
 
-##  <a name="recreate"></a>  CD2DTextLayout::ReCreate
+## <a name="cd2dtextlayoutrecreate"></a><a name="recreate"></a>CD2DTextLayout::ReCreate
 
-Повторно создает CD2DTextLayout.
+Воссоздает CD2DTextLayout.
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* */);
@@ -248,11 +248,11 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
+Если метод завершается успешно, возвращает значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="setfontfamilyname"></a>  CD2DTextLayout::SetFontFamilyName
+## <a name="cd2dtextlayoutsetfontfamilyname"></a><a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName
 
-Имя семейства шрифтов, завершающаяся нулем наборов для текста в указанный текстовый диапазон
+Устанавливает фамилию недействительных шрифтов для текста в определенном текстовом диапазоне
 
 ```
 BOOL SetFontFamilyName(
@@ -263,18 +263,18 @@ BOOL SetFontFamilyName(
 ### <a name="parameters"></a>Параметры
 
 *pwzFontFamilyName*<br/>
-Имя семейства шрифтов, к которому применяется всей строки текста в диапазоне, определяемом textRange
+Фамилия шрифта, которая применяется ко всей строке текста в диапазоне, указанном textRange
 
-*TextRange*<br/>
-Текстовый диапазон, к которому относится это изменение
+*textRange*<br/>
+Диапазон текста, к которому относится это изменение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE
 
-##  <a name="setlocalename"></a>  CD2DTextLayout::SetLocaleName
+## <a name="cd2dtextlayoutsetlocalename"></a><a name="setlocalename"></a>CD2DTextLayout::SetLocaleName
 
-Задает имя языкового стандарта для текста в указанный текстовый диапазон
+Устанавливает название локализации для текста в определенном диапазоне текста
 
 ```
 BOOL SetLocaleName(
@@ -285,15 +285,15 @@ BOOL SetLocaleName(
 ### <a name="parameters"></a>Параметры
 
 *pwzLocaleName*<br/>
-Строка имени языкового стандарта, завершающаяся нулем
+Строка с нулевым именем локализового имени
 
-*TextRange*<br/>
-Текстовый диапазон, к которому относится это изменение
+*textRange*<br/>
+Диапазон текста, к которому относится это изменение
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

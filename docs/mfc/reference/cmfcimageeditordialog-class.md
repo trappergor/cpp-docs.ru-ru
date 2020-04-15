@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCImageEditorDialog
+title: CMFCImageEditorEditorДиоредакторКласс
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 97f16fa00b2e90fd9c43bf9b6792b4eafe7d7b88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c2a919428689fe107b82041bd87b758ede2bc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394536"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367465"
 ---
-# <a name="cmfcimageeditordialog-class"></a>Класс CMFCImageEditorDialog
+# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorEditorДиоредакторКласс
 
-`CMFCImageEditorDialog` Класс поддерживает в диалоговом окне редактора изображений.
+Класс `CMFCImageEditorDialog` поддерживает диалоговую коробку редактора изображений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,27 +29,27 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Создает объект `CMFCImageEditorDialog`.|
+|[CMFCImageEditorИсточникДиалог::CMFCImageEditorИсточникДиалог](#cmfcimageeditordialog)|Формирует объект `CMFCImageEditorDialog`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CMFCImageEditorDialog` Класс предоставляет диалоговое окно, которое включает в себя:
+Класс `CMFCImageEditorDialog` предоставляет диалоговый ящик, который включает в себя:
 
-- Область картинки, можно использовать для изменения отдельных пикселей изображения.
+- Область изображения, используемая для изменения отдельных пикселей на изображении.
 
-- Графические средства для изменения пиксели в области рисунка.
+- Инструменты рисования для изменения пикселей в области изображения.
 
-- Цветовая палитра, чтобы указать цвет, используемый для рисования.
+- Цветовая палитра для определения цвета, используемого инструментами рисования.
 
-- В области предварительного просмотра, который отображает эффект от изменения.
+- Область предварительного просмотра, отображая эффект от вашего отправления.
 
-Ниже показан редактор изображений диалоговое окно.
+На следующей иллюстрации показан амебьера редактора изображений.
 
-![Диалоговое окно CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "диалоговое окно CMFCImageEditorDialog")
+![Диалоговое окно CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "Диалоговое окно CMFCImageEditorDialog")
 
-Один из способов использования `CMFCImageEditorDialog` объекта является его передача `CBitmap` изображение для редактирования. Не создавайте большое изображение, так как область редактирования изображения имеет ограниченный размер и размер в логических пикселях корректируется по ее размерам. Вызовите `DoModal` метод, чтобы запустить модальное диалоговое окно.
+Один из способов использования `CMFCImageEditorDialog` объекта `CBitmap` — передать ему изображение, поднисвоее его. Не создавайте большое изображение, поскольку область редактирования изображений имеет ограниченный размер, а логический размер пикселя регулируется в соответствии с этой областью. Вызовите `DoModal` метод, чтобы запустить модальный диалоговый ящик.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,9 +69,9 @@ class CMFCImageEditorDialog : public CDialogEx
 
 **Заголовок:** afximageeditordialog.h
 
-##  <a name="cmfcimageeditordialog"></a>  CMFCImageEditorDialog::CMFCImageEditorDialog
+## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>CMFCImageEditorИсточникДиалог::CMFCImageEditorИсточникДиалог
 
-Создает объект `CMFCImageEditorDialog`.
+Формирует объект `CMFCImageEditorDialog`.
 
 ```
 CMFCImageEditorDialog(
@@ -85,26 +85,26 @@ CMFCImageEditorDialog(
 *pBitmap*<br/>
 Указатель на изображение.
 
-*pParent*<br/>
-Указатель на родительское окно текущего диалогового редактора изображений.
+*pРодитель*<br/>
+Указатель на родительское окно текущего окна диалогового редактора изображений.
 
 *nBitsPixel*<br/>
-Количество битов, используемых для представления цвета одного пикселя, который также называется глубиной цвета.  Если *nBitsPixel* параметра равно -1, глубина цвета является производным от изображение, указанное *pBitmap* параметра. Значение по умолчанию — -1.
+Количество битов, используемых для представления цвета одного пикселя, который также называется глубиной цвета.  Если параметр *nBitsPixel* -1, глубина цвета вытекает из изображения, указанного параметром *pBitmap.* Значение по умолчанию — -1.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Чтобы изменить изображение, передать указатель образа `CMFCImageEditorDialog` конструктор. Затем вызовите `DoModal` метод, чтобы открыть модальное диалоговое окно. Когда `DoModal` возвращает метод, битовая карта содержит новый образ.
+Чтобы изменить изображение, передайте указатель `CMFCImageEditorDialog` изображения конструктору. Затем позвоните в `DoModal` метод, чтобы открыть модальный диалоговый ящик. Когда `DoModal` метод возвращается, битная карта содержит новое изображение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCImageEditorDialog` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как `CMFCImageEditorDialog` построить объект класса. Этот пример является частью [образца новых элементов управления.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

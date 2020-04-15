@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 7e24c320e909bb2d0471acdd275f89c43d3e44de
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367287"
 ---
 # <a name="uniform_int_distribution-class"></a>Класс uniform_int_distribution
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Инттипе* \
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
+*IntType*\
+Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает инклюзивное инклюзивное распределение, которое создает значения указанного пользователем целочисленного типа с распределением, так что каждое значение одинаково возможно. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает инклюзивный дистрибутив, который создает значения определенного пользовательского интегрального типа с распределением, так что каждое значение одинаково вероятно. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 ## <a name="example"></a>Пример
 
@@ -179,7 +179,7 @@ Distribution for 200 samples:
 
 **Пространство имен:** std
 
-## <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
 
 Формирует распределение.
 
@@ -191,24 +191,24 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*\*
+*a*\
 Нижняя граница случайных значений (инклюзивно).
 
-*b* \
+*B*\
 Верхняя граница случайных значений (инклюзивно).
 
-*parm* \
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `a ≤ b`
+**Предварительное условие:**`a ≤ b`
 
-Первый конструктор конструирует объект, хранимое значение которого *содержит значение* *a* , а хранимое значение *b* содержит значение *b*.
+Первый конструктор строит объект, *сохраненное* значение которого содержит значение *и* чье значение *b* содержит значение *b.*
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  uniform_int_distribution::param_type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::pараматип
 
 Сохраняет параметры распределения.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*\*
+*a*\
 Нижняя граница случайных значений (инклюзивно).
 
-*b* \
+*B*\
 Верхняя граница случайных значений (инклюзивно).
 
-*справа* \
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `a ≤ b`
+**Предварительное условие:**`a ≤ b`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-ms.openlocfilehash: 6c7649b7131e3b1620112acf89867d0731d7265d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe096185f6f0b71ad45757cd0b75ab13c41e5f5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317830"
 ---
 # <a name="cfixedstringt-class"></a>Класс CFixedStringT
 
-Этот класс представляет строковый объект с помощью фиксированного символьного буфера.
+Этот класс представляет собой объект строки с фиксированным буфером символов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,36 +30,36 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 #### <a name="parameters"></a>Параметры
 
 *StringType*<br/>
-Используется в качестве базового класса для фиксированной строки объекта и может быть любым `CStringT`-тип данных на основе. Некоторые примеры включают `CString`, `CStringA`, и `CStringW`.
+Используется в качестве базового класса для объекта `CStringT`фиксированной строки и может быть любым типом. Некоторые примеры включают, `CString` `CStringA`, и `CStringW`.
 
 *t_nChars*<br/>
-Число символов, сохраненных в буфере.
+Количество символов, хранящихся в буфере.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CFixedStringT::CFixedStringT](#cfixedstringt)|Конструктор для создаваемого строкового объекта.|
+|[CFixedStringt::CfixedStringt](#cfixedstringt)|Конструктор для объекта строки.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CFixedStringT::operator =](#operator_eq)|Назначает новое значение для `CFixedStringT` объекта.|
+|[CFixedStringT::оператор](#operator_eq)|Присваивает объекту `CFixedStringT` новое значение.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс является примером класса пользовательскую строку, на основе `CStringT`. Хотя они похожи, эти два класса отличаются в реализации. Основные отличия `CFixedStringT` и `CStringT` являются:
+Этот класс является примером пользовательского `CStringT`класса строки на основе . Хотя эти два класса схожи отличаются по своему осуществлению. Основные различия `CFixedStringT` `CStringT` между и являются:
 
-- Буфер исходного символа, выделяется как часть объекта и имеет размер *t_nChars*. Это позволяет `CFixedString` объект занимают блок непрерывной памяти для повышения производительности. Тем не менее если содержимое `CFixedStringT` превышении объект *t_nChars*, динамическое выделение памяти буфера.
+- Первоначальный буфер символов выделяется как часть объекта и имеет размер *t_nChars.* Это позволяет `CFixedString` объекту занимать смежный кусок памяти для целей производительности. Однако, если содержимое `CFixedStringT` объекта вырастает за пределы *t_nChars,* буфер распределяется динамически.
 
-- Буфер символов для `CFixedStringT` объекта, всегда имеют одинаковую длину ( *t_nChars*). Нет ограничений на размер буфера для `CStringT` объектов.
+- Буфер символов `CFixedStringT` для объекта всегда одинаковой длины *(t_nChars).* Для `CStringT` объектов нет ограничений по размеру буфера.
 
-- Диспетчер памяти для `CFixedStringT` настраивается таким образом, общий доступ к [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) объекта между двумя или несколькими `CFixedStringT` объектов не допускается. `CStringT` объекты не имеют этого ограничения.
+- Для менеджера `CFixedStringT` памяти настраивается таким образом, что не допускается совместное использование объекта [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) между двумя или более `CFixedStringT` объектами. `CStringT`объекты не имеют этого ограничения.
 
-Дополнительные сведения о настройке `CFixedStringT` и управление памятью для строковых объектов в целом, см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Для получения дополнительной информации `CFixedStringT` о настройке и управлении памятью для объектов строки в целом, см. [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -75,9 +75,9 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 **Заголовок:** cstringt.h
 
-##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT
+## <a name="cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringt::CfixedStringt
 
-Создает объект `CFixedStringT`.
+Формирует объект `CFixedStringT`.
 
 ```
 CFixedStringT() throw();
@@ -92,21 +92,21 @@ explicit CFixedStringT(const unsigned char* pszSrc);
 ### <a name="parameters"></a>Параметры
 
 *pszSrc*<br/>
-Заканчивающуюся нулем строку, который необходимо скопировать в это `CFixedStringT` объекта.
+Нулевая строка, которая будет `CFixedStringT` скопирована в этот объект.
 
 *strSrc*<br/>
-Существующий `CFixedStringT` объект, который необходимо скопировать в это `CFixedStringT` объекта.
+Существующий `CFixedStringT` объект, который должен `CFixedStringT` быть скопирован в этот объект.
 
 *pStringMgr*<br/>
-Указатель на диспетчер памяти `CFixedStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управление памятью для `CFixedStringT`, см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+Указатель на менеджер памяти `CFixedStringT` объекта. Для получения `IAtlStringMgr` дополнительной информации `CFixedStringT`и управления памятью для, см. [Управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Поскольку конструкторы копируют входные данные в новый объем выделенного хранилища, следует иметь в виду, что память, может привести к исключения. Некоторые из этих конструкторов в качестве функции преобразования.
+Поскольку конструкторы копируют входные данные в новое выделенное хранилище, следует знать, что могут возникнуть исключения из памяти. Некоторые из этих конструкторов выступают в качестве функций преобразования.
 
-##  <a name="operator_eq"></a>  CFixedStringT::operator =
+## <a name="cfixedstringtoperator-"></a><a name="operator_eq"></a>CFixedStringT::оператор
 
-Повторно инициализирует существующий `CFixedStringT` объект новыми данными.
+Репарализует существующий `CFixedStringT` объект с новыми данными.
 
 ```
 CFixedStringT<StringType, t_nChars>& operator=(
@@ -120,17 +120,17 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& strSrc);
 ### <a name="parameters"></a>Параметры
 
 *pszSrc*<br/>
-Заканчивающуюся нулем строку, который необходимо скопировать в это `CFixedStringT` объекта.
+Нулевая строка, которая будет `CFixedStringT` скопирована в этот объект.
 
 *strSrc*<br/>
-Существующий `CFixedStringT` копируются в это `CFixedStringT` объекта.
+Существующий, `CFixedStringT` который будет `CFixedStringT` скопирован в этот объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Следует иметь в виду, памяти, могут возникать исключения, каждый раз при использовании оператора присваивания, так как часто выделяется новая память для хранения результирующего `CFixedStringT` объекта.
+Вы должны знать, что исключения памяти могут возникать всякий раз, когда `CFixedStringT` вы используете оператора назначения, потому что новое хранилище часто выделяется для удержания полученного объекта.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CStringT](../../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+[Общие классы ATL/MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
