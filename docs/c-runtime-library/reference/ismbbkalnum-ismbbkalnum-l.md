@@ -1,9 +1,11 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
+- _o__ismbbkalnum
+- _o__ismbbkalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954181"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343664"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -56,15 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Целое число, которое требуется проверить.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkalnum** возвращает ненулевое значение, если целое число *c* не является текстовым символом, отличным от знаков препинания, или 0 в противном случае. **_ismbbkalnum** использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. **_ismbbkalnum_l** идентичен **_ismbbkalnum** , за исключением того, что он принимает языковой стандарт в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** возвращает ненулевое значение, если *целый* c является текстовым символом, не являемым ASCII, кроме знаков препинания, или 0, если это не так. **_ismbbkalnum** использует текущий локал для информации о локально-зависимых персонажах. **_ismbbkalnum_l** идентичен **_ismbbkalnum** за исключением того, что он принимает локализы в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -73,9 +80,9 @@ int _ismbbkalnum_l(
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>

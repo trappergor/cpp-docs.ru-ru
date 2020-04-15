@@ -1,11 +1,15 @@
 ---
 title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341058"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -80,36 +85,38 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Многобайтовый символ для преобразования.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
+Каждая из этих функций возвращает преобразованный символ *c,* если это возможно. В противном случае он возвращает символ *c* без изменений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции проверяют символ *c* и, если это возможно, применяют одно из следующих преобразований.
+Функции проверяют символ *c* и, если возможно, применяют одно из следующих преобразований.
 
 |Подпрограммы|Преобразования|
 |--------------|--------------|
 |**_mbctolower**, **_mbctolower_l**|Символ верхнего регистра в символ нижнего регистра.|
 |**_mbctoupper**, **_mbctoupper_l**|Символ нижнего регистра в символ верхнего регистра.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без суффикса **_l** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Версия с суффиксом **_l** идентична, за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без **_l** суффикса использует текущий локали для этого поведения, зависящем от локали; версия с **_l** суффикса идентична, за исключением того, что она использует параметр локализации, передаваемый вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В предыдущих версиях **_mbctolower** назывался **жтоловер**, а **_mbctoupper** назывался **жтауппер**. В новом коде используйте новые имена.
+В предыдущих версиях **_mbctolower** назывался **jtolower,** а **_mbctoupper** назывался **jtoupper**. В новом коде используйте новые имена.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**токуэр**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>Требования
@@ -119,9 +126,9 @@ unsigned int _mbctoupper_l(
 |**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
 |**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

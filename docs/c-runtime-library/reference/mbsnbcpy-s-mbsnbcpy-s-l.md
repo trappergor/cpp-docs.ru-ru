@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy_s, _mbsnbcpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
+- _o__mbsnbcpy_s
+- _o__mbsnbcpy_s_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: fbbdbeb671f501974ceee9565b8d668e8281f92e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d3c4a07ffb5ed4040a4bb99ee354e01f0d62f42a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624304"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340682"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
-Копирует **n** байт строки в строку назначения. Это версии функций [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Копии **n** байтов строки к строке назначения. Это версии функций [_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -82,39 +85,41 @@ errno_t _mbsnbcpy_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*стрдест*<br/>
+*strDest*<br/>
 Место назначение для копирования строки символов.
 
-*сизеинбитес*<br/>
+*размерInBytes*<br/>
 Размер буфера назначения.
 
-*стрсаурце*<br/>
+*strSource*<br/>
 Копируемая строка символов.
 
 *count*<br/>
 Число байтов для копирования.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Нуль в случае успеха; **Еинвал** , если был передан неверный параметр.
+Ноль в случае успеха; **EINVAL,** если плохой параметр был принят дюйма
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Функция **_mbsnbcpy_s** копирует *число* байтов из *стрсаурце* в *стрдест*. Если параметр *Count* превышает размер *стрдест*, то любая из входных строк является пустым указателем, или *сизеинбитес* или *Count* имеет значение 0, функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **еинвал**. Если исходная и Целевая строки перекрываются, поведение **_mbsnbcpy_s** не определено.
+**Копии функций _mbsnbcpy_s** *отсчитывают* байты от *strSource* до *strDest.* Если *количество* превышает размер *strDest,* то любая из строк ввода является нулевой указкой, или *размерInBytes* или *отсчет* 0, функция вызывает недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, функция возвращает **EINVAL**. Если строки источника и назначения перекрываются, поведение **_mbsnbcpy_s** не определено.
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> В отличие от незащищенной версии этой функции, **_mbsnbcpy_s** не выполняет никаких внутренних дополнений NULL и всегда завершает строку.
+> В отличие от незащищенной версии этой функции, **_mbsnbcpy_s** не делает никаких нулевых обивка и всегда нуля прекращает строку.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Отладка библиотеки версии этих функций сначала заполнить буфер с 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -130,9 +135,9 @@ errno_t _mbsnbcpy_s_l(
 
 Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

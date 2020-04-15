@@ -1,5 +1,5 @@
 ---
-title: Semaphore - класс
+title: Класс Semaphore
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: 10357bb1cd46a33a8d4090c1ccc30050584d1816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403141"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359359"
 ---
-# <a name="semaphore-class"></a>Semaphore - класс
+# <a name="semaphore-class"></a>Класс Semaphore
 
 Представляет объект синхронизации, который управляет общим ресурсом и поддерживает ограниченное число пользователей.
 
@@ -34,27 +34,27 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-name       | Описание
+Имя       | Описание
 ---------- | ------------------------------------------------------
-`SyncLock` | Синоним для класса, поддерживающего синхронной блокировки.
+`SyncLock` | Синоним для класса, поддерживающего синхронные блокировки.
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                               | Описание
+Имя                               | Описание
 ---------------------------------- | ----------------------------------------------------
-[Semaphore::Semaphore](#semaphore) | Инициализирует новый экземпляр класса `Semaphore`.
+[Семафор:Семафор](#semaphore) | Инициализирует новый экземпляр класса `Semaphore`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                     | Описание
+Имя                     | Описание
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Semaphore::LOCK](#lock) | Ожидает, пока текущий объект или объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.
+[Семафор::Блокировка](#lock) | Ожидание, пока текущий объект или объект, связанный с указанной ручкой, не будут в состоянии сигнала или истек указанный интервал тайм-аута.
 
 ### <a name="public-operators"></a>Открытые операторы
 
-name                                     | Описание
+Имя                                     | Описание
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[Semaphore::operator =](#operator-assign) | Перемещает указанный дескриптор из `Semaphore` объект с текущим `Semaphore` объекта.
+[Семафор:Оператор](#operator-assign) | Перемещение указанной ручки `Semaphore` с `Semaphore` объекта на текущий объект.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -64,11 +64,11 @@ name                                     | Описание
 
 **Заголовок:** corewrappers.h
 
-**Пространство имен:** Microsoft::WRL::Wrappers
+**Пространство имен:** Microsoft:WRL::Wrappers
 
-## <a name="lock"></a>Semaphore::LOCK
+## <a name="semaphorelock"></a><a name="lock"></a>Семафор::Блокировка
 
-Только после текущего объекта, или `Semaphore` объект, связанный с указанным дескриптором, находится в сигнальном состоянии или истечет указанный интервал времени ожидания.
+Ожидание, пока текущий `Semaphore` объект или объект, связанный с указанной ручкой, не будут в состоянии сигнала или истек указанный интервал тайм-аута.
 
 ```cpp
 SyncLock Lock(
@@ -83,19 +83,19 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>Параметры
 
-*в миллисекундах*<br/>
+*Миллисекунд*<br/>
 Интервал времени ожидания в миллисекундах. Значение по умолчанию равно INFINITE, что означает неограниченное время ожидания.
 
-*h*<br/>
-Дескриптор `Semaphore` объекта.
+*H*<br/>
+Ручка к `Semaphore` объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
+`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`;
 
-## <a name="operator-assign"></a>Semaphore::operator =
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a>Семафор:Оператор
 
-Перемещает указанный дескриптор из `Semaphore` объект с текущим `Semaphore` объекта.
+Перемещение указанной ручки `Semaphore` с `Semaphore` объекта на текущий объект.
 
 ```cpp
 Semaphore& operator=(
@@ -105,14 +105,14 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-Ссылка rvalue на `Semaphore` объекта.
+*H*<br/>
+Rvalue-ссылка `Semaphore` на объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылку на текущий `Semaphore` объекта.
+Ссылка на `Semaphore` текущий объект.
 
-## <a name="semaphore"></a>Semaphore::Semaphore
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a>Семафор:Семафор
 
 Инициализирует новый экземпляр класса `Semaphore`.
 
@@ -128,5 +128,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>Параметры
 
-*h*<br/>
-Дескриптор или rvalue ссылка на `Semaphore` объекта.
+*H*<br/>
+Ручка или rvalue-ссылка `Semaphore` на объект.

@@ -188,18 +188,18 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425775"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361442"
 ---
 # <a name="cmfcribbonbar-class"></a>Класс CMFCRibbonBar
 
 Класс `CMFCRibbonBar` реализует панель ленты. Аналогичная реализация использовалась в Office 2007.
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -207,109 +207,109 @@ ms.locfileid: "79425775"
 class CMFCRibbonBar : public CPane
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCRibbonBar::CMFCRibbonBar`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonBar:: Активатеконтексткатегори](#activatecontextcategory)|Активирует уже видимую категорию контекста.|
-|[CMFCRibbonBar:: AddCategory](#addcategory)|Добавляет на ленту новую категорию.|
-|[CMFCRibbonBar:: Аддконтексткатегори](#addcontextcategory)|Добавляет категорию контекста.|
-|[CMFCRibbonBar:: Аддмаинкатегори](#addmaincategory)|Добавляет новую основную категорию ленты.|
-|[CMFCRibbonBar:: Аддпринтпревиевкатегори](#addprintpreviewcategory)||
-|[CMFCRibbonBar:: Аддкатонликатегори](#addqatonlycategory)||
-|[CMFCRibbonBar:: Аддтотабс](#addtotabs)|Добавляет элемент ленты справа от панели ленты.|
-|[CMFCRibbonBar:: Креатикс](#createex)|Создает панель элементов управления и прикрепляет ее к объекту [CPane](../../mfc/reference/cpane-class.md) . (Переопределяет [CPane:: креатикс](../../mfc/reference/cpane-class.md#createex).)|
-|[CMFCRibbonBar:: Create](#create)|Создает элемент управления панели ленты и прикрепляет его к панели ленты.|
-|[CMFCRibbonBar::D Еактиватекэйбоардфокус](#deactivatekeyboardfocus)||
-|[CMFCRibbonBar::D Равменуимаже](#drawmenuimage)||
-|[CMFCRibbonBar::D Вмкомпоситиончанжед](#dwmcompositionchanged)||
-|[CMFCRibbonBar:: Енаблекэйтипс](#enablekeytips)|Включает или отключает всплывающие подсказки для элемента управления ленты.|
-|[CMFCRibbonBar:: Енаблепринтпревиев](#enableprintpreview)|Включите вкладку **Просмотр предварительного просмотра** .|
-|[CMFCRibbonBar:: Енаблетултипс](#enabletooltips)|Включает или отключает всплывающие подсказки и описания на панели ленты.|
-|[CMFCRibbonBar:: Финдбидата](#findbydata)|Поиск элемента ленты по указанным пользователем данным.|
-|[CMFCRibbonBar:: Финдбид](#findbyid)|Находит элемент ленты по указанному идентификатору команды.|
-|[CMFCRibbonBar:: Финдкатегориндексбидата](#findcategoryindexbydata)|Находит индекс категории ленты, содержащей определенные пользователем данные.|
-|[CMFCRibbonBar:: Форцерекалклайаут](#forcerecalclayout)||
-|[CMFCRibbonBar:: Жетактивекатегори](#getactivecategory)|Возвращает указатель на активную категорию.|
-|[CMFCRibbonBar:: Жеткаптионхеигхт](#getcaptionheight)|Возвращает высоту заголовка. (Переопределяет [CBasePane:: жеткаптионхеигхт](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
-|[CMFCRibbonBar:: Тип Category](#getcategory)|Возвращает указатель на категорию, расположенную по указанному индексу.|
-|[CMFCRibbonBar:: Жеткатегорикаунт](#getcategorycount)|Возвращает число категорий ленты на панели ленты.|
-|[CMFCRibbonBar:: Жеткатегорихеигхт](#getcategoryheight)||
-|[CMFCRibbonBar:: Жеткатегориндекс](#getcategoryindex)|Возвращает индекс категории ленты.|
-|[CMFCRibbonBar:: Жетконтекстнаме](#getcontextname)|Извлекает имя заголовка категории контекста, указанного с помощью идентификатора.|
-|[CMFCRibbonBar:: Жетдроппеддовн](#getdroppeddown)||
-|[CMFCRibbonBar:: Жетелементсбид](#getelementsbyid)|Возвращает массив, содержащий указатели на все элементы ленты с указанными идентификаторами.|
-|[CMFCRibbonBar:: Жетаппликатионбуттон](#getapplicationbutton)|Возвращает указатель на кнопку ленты.|
-|[CMFCRibbonBar:: с фокусировкой](#getfocused)|Возвращает элемент, имеющий фокус ввода.|
-|[CMFCRibbonBar:: Жесидефлагс](#gethideflags)||
-|[CMFCRibbonBar:: Жетитемидслист](#getitemidslist)||
-|[CMFCRibbonBar:: Жеткэйбоарднавигатионлевел](#getkeyboardnavigationlevel)||
-|[CMFCRibbonBar:: Жеткэйбоарднавлевелкуррент](#getkeyboardnavlevelcurrent)||
-|[CMFCRibbonBar:: Жеткэйбоарднавлевелпарент](#getkeyboardnavlevelparent)||
-|[CMFCRibbonBar:: Жетмаинкатегори](#getmaincategory)|Возвращает указатель на выбранную категорию ленты.|
-|[CMFCRibbonBar:: Жеткаткоммандслокатион](#getqatcommandslocation)||
-|[CMFCRibbonBar:: Жеткатдроппеддовн](#getqatdroppeddown)||
-|[CMFCRibbonBar:: Жеткуиккакцесскоммандс](#getquickaccesscommands)|Заполняет список идентификаторами команд всех элементов, отображающихся на панели быстрого доступа.|
-|[CMFCRibbonBar:: Жеткуиккакцесстулбарлокатион](#getquickaccesstoolbarlocation)||
-|[CMFCRibbonBar:: Жеттабтранкатератио](#gettabtrancateratio)||
-|[CMFCRibbonBar:: Жеттултипфикседвидсларжеимаже](#gettooltipfixedwidthlargeimage)||
-|[CMFCRibbonBar:: Жеттултипфикседвидсрегулар](#gettooltipfixedwidthregular)||
-|[CMFCRibbonBar:: Жетвисиблекатегорикаунт](#getvisiblecategorycount)||
-|[CMFCRibbonBar:: Хидеаллконтексткатегориес](#hideallcontextcategories)|Скрывает все видимые и активные категории.|
-|[CMFCRibbonBar:: Хидекэйтипс](#hidekeytips)||
-|[CMFCRibbonBar:: HitTest](#hittest)|Находит указатель на элемент ленты, расположенный в указанной точке клиентских координат панели ленты.|
-|[CMFCRibbonBar:: Искэйтипенаблед](#iskeytipenabled)|Определяет, включены ли ключевые подсказки.|
-|[CMFCRibbonBar:: Исмаинриббонбар](#ismainribbonbar)||
-|[CMFCRibbonBar:: Испринтпревиевенаблед](#isprintpreviewenabled)|Определяет, включена ли вкладка **предварительного просмотра печати** .|
-|[CMFCRibbonBar:: Искатемпти](#isqatempty)||
-|[CMFCRibbonBar:: Искуиккакцесстулбаронтоп](#isquickaccesstoolbarontop)|Определяет, находится ли панель быстрого доступа над панелью ленты.|
-|[CMFCRibbonBar:: Исреплацефрамекаптион](#isreplaceframecaption)|Определяет, заменяет панель ленты заголовок главного фрейма или добавляется под ним.|
-|[CMFCRibbonBar:: Исшовграупбордер](#isshowgroupborder)||
-|[CMFCRibbonBar:: Истултипдескренаблед](#istooltipdescrenabled)|Определяет, включены ли всплывающие описания.|
-|[CMFCRibbonBar:: Истултипенаблед](#istooltipenabled)|Определяет, включены ли всплывающие подсказки для ленты.|
-|[CMFCRibbonBar:: Истранспаренткаптион](#istransparentcaption)||
-|[CMFCRibbonBar:: IsWindows7Look](#iswindows7look)|Указывает, оформлена ли лента в стиле Windows 7 (небольшая прямоугольная кнопка приложения).|
-|[CMFCRibbonBar:: Лоадфромресаурце](#loadfromresource)|Перегружен. Загружает панель ленты из ресурсов приложения.|
-|[CMFCRibbonBar:: Онкликкбуттон](#onclickbutton)||
-|[CMFCRibbonBar:: Онедитконтекстмену](#oneditcontextmenu)||
-|[CMFCRibbonBar:: Онртлчанжед](#onrtlchanged)|(Переопределяет `CPane::OnRTLChanged`.)|
-|[CMFCRibbonBar:: Онсетаккдата](#onsetaccdata)|(Переопределяет [CBasePane:: онсетаккдата](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
-|[CMFCRibbonBar:: Оншовриббонконтекстмену](#onshowribboncontextmenu)||
-|[CMFCRibbonBar:: Оншовриббонкатмену](#onshowribbonqatmenu)||
-|[CMFCRibbonBar:: Онсискэйдовн](#onsyskeydown)||
-|[CMFCRibbonBar:: Онсискэйуп](#onsyskeyup)||
-|[CMFCRibbonBar::P Оптултип](#poptooltip)||
-|[CMFCRibbonBar::P Ретранслатемессаже](#pretranslatemessage)|(Переопределяет `CBasePane::PreTranslateMessage`.)|
-|[CMFCRibbonBar:: RecalcLayout](#recalclayout)|(Переопределяет [CPane:: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
-|[CMFCRibbonBar:: Ремовеаллкатегориес](#removeallcategories)|Удаляет все категории с панели ленты.|
-|[CMFCRibbonBar:: Ремовеаллфромтабс](#removeallfromtabs)|Удаляет все элементы ленты из области вкладки.|
-|[CMFCRibbonBar:: Ремовекатегори](#removecategory)|Удаляет категорию ленты, расположенную по указанному индексу.|
-|[CMFCRibbonBar:: Саветоксмлбуффер](#savetoxmlbuffer)|Сохраняет панель ленты в буфер.|
-|[CMFCRibbonBar:: SaveToXMLFile](#savetoxmlfile)|Сохраняет панель ленты в файл XML.|
-|[CMFCRibbonBar:: Сетактивекатегори](#setactivecategory)|Назначает указанной категории ленты активное состояние.|
-|[CMFCRibbonBar:: Сетактивемдичилд](#setactivemdichild)||
-|[CMFCRibbonBar:: Сетелементкэйс](#setelementkeys)|Задает указанные ключевые подсказки для всех элементов ленты, которые имеют указанный идентификатор команды.|
-|[CMFCRibbonBar:: Сетаппликатионбуттон](#setapplicationbutton)|Помещает на панель ленты кнопку приложения.|
-|[CMFCRibbonBar:: Сеткэйбоарднавигатионлевел](#setkeyboardnavigationlevel)||
-|[CMFCRibbonBar:: Сетмаксимиземоде](#setmaximizemode)||
-|[CMFCRibbonBar:: Сеткуиккакцесскоммандс](#setquickaccesscommands)|Добавляет один или несколько элементов ленты на панель быстрого доступа.|
-|[CMFCRibbonBar:: Сеткуиккакцессдефаултстате](#setquickaccessdefaultstate)|Задает состояние панели быстрого доступа по умолчанию.|
-|[CMFCRibbonBar:: Сеткуиккакцесстулбаронтоп](#setquickaccesstoolbarontop)|Помещает панель быстрого доступа над панелью ленты или под ней.|
-|[CMFCRibbonBar:: Сеттултипфикседвидс](#settooltipfixedwidth)||
-|[CMFCRibbonBar:: SetWindows7Look](#setwindows7look)|Включает или отключает оформление ленты в стиле Windows 7 (небольшая прямоугольная кнопка приложения).|
-|[CMFCRibbonBar:: Шовкатегори](#showcategory)|Отображает или скрывает указанную категорию ленты.|
-|[CMFCRibbonBar:: Шовконтексткатегориес](#showcontextcategories)|Показывает или скрывает категории контекста с указанным идентификатором.|
-|[CMFCRibbonBar:: Шовкэйтипс](#showkeytips)||
-|[CMFCRibbonBar:: Тогглемимимизестате](#togglemimimizestate)|Переключает панель ленты между свернутым и развернутым состояниями.|
-|[CMFCRibbonBar:: Транслатечар](#translatechar)||
+|[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|Активирует уже видимую категорию контекста.|
+|[CMFCRibbonBar::AddCategory](#addcategory)|Добавляет на ленту новую категорию.|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|Добавляет категорию контекста.|
+|[CMFCRibbonBar::AddMainCategory](#addmaincategory)|Добавляет новую основную категорию ленты.|
+|[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
+|[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
+|[CMFCRibbonBar::AddToTabs](#addtotabs)|Добавляет элемент ленты справа от панели ленты.|
+|[CMFCRibbonBar::CreateEx](#createex)|Создает панель управления и прикрепляет ее к объекту [CPane.](../../mfc/reference/cpane-class.md) (Перекрывает [CPane::CreateEx](../../mfc/reference/cpane-class.md#createex).)|
+|[CMFCRibbonBar::Create](#create)|Создает элемент управления панели ленты и прикрепляет его к панели ленты.|
+|[CMFCRibbonBar::DeactivateKeyboardFocus](#deactivatekeyboardfocus)||
+|[CMFCRibbonBar::DrawMenuImage](#drawmenuimage)||
+|[CMFCRibbonBar::DWMCompositionChanged](#dwmcompositionchanged)||
+|[CMFCRibbonBar::EnableKeyTips](#enablekeytips)|Включает или отключает всплывающие подсказки для элемента управления ленты.|
+|[CMFCRibbonBar::EnablePrintPreview](#enableprintpreview)|Включить вкладку **Print Preview.**|
+|[CMFCRibbonBar::EnableToolTips](#enabletooltips)|Включает или отключает всплывающие подсказки и описания на панели ленты.|
+|[CMFCRibbonBar::FindByData](#findbydata)|Поиск элемента ленты по указанным пользователем данным.|
+|[CMFCRibbonBar::FindByID](#findbyid)|Находит элемент ленты по указанному идентификатору команды.|
+|[CMFCRibbonBar::FindCategoryIndexByData](#findcategoryindexbydata)|Находит индекс категории ленты, содержащей определенные пользователем данные.|
+|[CMFCRibbonBar::ForceRecalcLayout](#forcerecalclayout)||
+|[CMFCRibbonBar::GetActiveCategory](#getactivecategory)|Возвращает указатель на активную категорию.|
+|[CMFCRibbonBar::GetCaptionHeight](#getcaptionheight)|Возвращает высоту заголовка. (Оверлет [CBasePane::GetCaptionHeight](../../mfc/reference/cbasepane-class.md#getcaptionheight).)|
+|[CMFCRibbonBar::GetCategory](#getcategory)|Возвращает указатель на категорию, расположенную по указанному индексу.|
+|[CMFCRibbonBar::GetCategoryCount](#getcategorycount)|Возвращает число категорий ленты на панели ленты.|
+|[CMFCRibbonBar::GetCategoryHeight](#getcategoryheight)||
+|[CMFCRibbonBar::GetCategoryIndex](#getcategoryindex)|Возвращает индекс категории ленты.|
+|[CMFCRibbonBar::GetContextName](#getcontextname)|Извлекает имя заголовка категории контекста, указанного с помощью идентификатора.|
+|[CMFCRibbonBar::GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonBar::GetElementsByID](#getelementsbyid)|Возвращает массив, содержащий указатели на все элементы ленты с указанными идентификаторами.|
+|[CMFCRibbonBar::GetApplicationButton](#getapplicationbutton)|Возвращает указатель на кнопку ленты.|
+|[CMFCRibbonBar::GetFocused](#getfocused)|Возвращает элемент, имеющий фокус ввода.|
+|[CMFCRibbonBar::GetHideFlags](#gethideflags)||
+|[CMFCRibbonBar::GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonBar::GetKeyboardNavigationLevel](#getkeyboardnavigationlevel)||
+|[CMFCRibbonBar::GetKeyboardNavLevelCurrent](#getkeyboardnavlevelcurrent)||
+|[CMFCRibbonBar::GetKeyboardNavLevelParent](#getkeyboardnavlevelparent)||
+|[CMFCRibbonBar::GetMainCategory](#getmaincategory)|Возвращает указатель на выбранную категорию ленты.|
+|[CMFCRibbonBar::GetQATCommandsLocation](#getqatcommandslocation)||
+|[CMFCRibbonBar::GetQATDroppedDown](#getqatdroppeddown)||
+|[CMFCRibbonBar::GetQuickAccessCommands](#getquickaccesscommands)|Заполняет список идентификаторами команд всех элементов, отображающихся на панели быстрого доступа.|
+|[CMFCRibbonBar::GetQuickAccessToolbarLocation](#getquickaccesstoolbarlocation)||
+|[CMFCRibbonBar::GetTabTrancateRatio](#gettabtrancateratio)||
+|[CMFCRibbonBar::GetTooltipFixedWidthLargeImage](#gettooltipfixedwidthlargeimage)||
+|[CMFCRibbonBar::GetTooltipFixedWidthRegular](#gettooltipfixedwidthregular)||
+|[CMFCRibbonBar::GetVisibleCategoryCount](#getvisiblecategorycount)||
+|[CMFCRibbonBar::HideAllContextCategories](#hideallcontextcategories)|Скрывает все видимые и активные категории.|
+|[CMFCRibbonBar::HideKeyTips](#hidekeytips)||
+|[CMFCRibbonBar::HitTest](#hittest)|Находит указатель на элемент ленты, расположенный в указанной точке клиентских координат панели ленты.|
+|[CMFCRibbonBar::IsKeyTipEnabled](#iskeytipenabled)|Определяет, включены ли ключевые подсказки.|
+|[CMFCRibbonBar::IsMainRibbonBar](#ismainribbonbar)||
+|[CMFCRibbonBar::IsPrintPreviewEnabled](#isprintpreviewenabled)|Определяет, включена ли вкладка **Print Preview.**|
+|[CMFCRibbonBar::IsQATEmpty](#isqatempty)||
+|[CMFCRibbonBar::IsQuickAccessToolbarOnTop](#isquickaccesstoolbarontop)|Определяет, находится ли панель быстрого доступа над панелью ленты.|
+|[CMFCRibbonBar::IsReplaceFrameCaption](#isreplaceframecaption)|Определяет, заменяет панель ленты заголовок главного фрейма или добавляется под ним.|
+|[CMFCRibbonBar::IsShowGroupBorder](#isshowgroupborder)||
+|[CMFCRibbonBar::IsToolTipDescrEnabled](#istooltipdescrenabled)|Определяет, включены ли всплывающие описания.|
+|[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|Определяет, включены ли всплывающие подсказки для ленты.|
+|[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
+|[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|Указывает, оформлена ли лента в стиле Windows 7 (небольшая прямоугольная кнопка приложения).|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|Перегружен. Загружает панель ленты из ресурсов приложения.|
+|[CMFCRibbonBar::OnClickButton](#onclickbutton)||
+|[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
+|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(Переопределяет `CPane::OnRTLChanged`.)|
+|[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(Переопределяет [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|
+|[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||
+|[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
+|[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
+|[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
+|[CMFCRibbonBar::PopTooltip](#poptooltip)||
+|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(Переопределяет `CBasePane::PreTranslateMessage`.)|
+|[CMFCRibbonBar::RecalcLayout](#recalclayout)|(Перекрывает [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|Удаляет все категории с панели ленты.|
+|[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|Удаляет все элементы ленты из области вкладки.|
+|[CMFCRibbonBar::RemoveCategory](#removecategory)|Удаляет категорию ленты, расположенную по указанному индексу.|
+|[CMFCRibbonBar::SaveToXMLBuffer](#savetoxmlbuffer)|Сохраняет панель ленты в буфер.|
+|[CMFCRibbonBar::SaveToXMLFile](#savetoxmlfile)|Сохраняет панель ленты в файл XML.|
+|[CMFCRibbonBar::SetActiveCategory](#setactivecategory)|Назначает указанной категории ленты активное состояние.|
+|[CMFCRibbonBar::SetActiveMDIChild](#setactivemdichild)||
+|[CMFCRibbonBar::SetElementKeys](#setelementkeys)|Задает указанные ключевые подсказки для всех элементов ленты, которые имеют указанный идентификатор команды.|
+|[CMFCRibbonBar::SetApplicationButton](#setapplicationbutton)|Помещает на панель ленты кнопку приложения.|
+|[CMFCRibbonBar::SetKeyboardNavigationLevel](#setkeyboardnavigationlevel)||
+|[CMFCRibbonBar::SetMaximizeMode](#setmaximizemode)||
+|[CMFCRibbonBar::SetQuickAccessCommands](#setquickaccesscommands)|Добавляет один или несколько элементов ленты на панель быстрого доступа.|
+|[CMFCRibbonBar::SetQuickAccessDefaultState](#setquickaccessdefaultstate)|Задает состояние панели быстрого доступа по умолчанию.|
+|[CMFCRibbonBar::SetQuickAccessToolbarOnTop](#setquickaccesstoolbarontop)|Помещает панель быстрого доступа над панелью ленты или под ней.|
+|[CMFCRibbonBar::SetTooltipFixedWidth](#settooltipfixedwidth)||
+|[CMFCRibbonBar::SetWindows7Look](#setwindows7look)|Включает или отключает оформление ленты в стиле Windows 7 (небольшая прямоугольная кнопка приложения).|
+|[CMFCRibbonBar::ShowCategory](#showcategory)|Отображает или скрывает указанную категорию ленты.|
+|[CMFCRibbonBar::ShowContextCategories](#showcontextcategories)|Показывает или скрывает категории контекста с указанным идентификатором.|
+|[CMFCRibbonBar::ShowKeyTips](#showkeytips)||
+|[CMFCRibbonBar::ToggleMimimizeState](#togglemimimizestate)|Переключает панель ленты между свернутым и развернутым состояниями.|
+|[CMFCRibbonBar::TranslateChar](#translatechar)||
 
 ## <a name="remarks"></a>Remarks
 
@@ -317,9 +317,9 @@ class CMFCRibbonBar : public CPane
 
 Элементы, отображающиеся на панели ленты, разворачиваются и сворачиваются, чтобы оптимально задействовать доступное пространство. Например, если в группе ленты становится недостаточно места для отображения всех необходимых элементов, она превращается в кнопку, элементы которой показываются во всплывающем меню. Лента ведет себя как статическая (неперемещаемая) панель элементов управления, которую можно закрепить в верхней части фрейма.
 
-С помощью класса `CMFCRibbonStatusBar` вы можете реализовать строку состояния, аналогичную используемой в Office 2007. Категория ленты содержит (и отображает) группу [панелей ленты](../../mfc/reference/cmfcribbonpanel-class.md). Каждая панель ленты содержит один или несколько элементов ленты, которые являются производными от [метод CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
+С помощью класса `CMFCRibbonStatusBar` вы можете реализовать строку состояния, аналогичную используемой в Office 2007. Категория ленты содержит (и отображает) группу [лентовых панелей.](../../mfc/reference/cmfcribbonpanel-class.md) Каждая лента панели содержит один или несколько элементов ленты, которые являются производными от [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Сведения о том, как добавить ленту в существующее приложение MFC, см. [в разделе Пошаговое руководство. Обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Для получения информации о том, как добавить ленту бар для существующего приложения MFC, [см.](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -339,7 +339,7 @@ class CMFCRibbonBar : public CPane
 
 **Заголовок:** afxribbonbar.h
 
-##  <a name="activatecontextcategory"></a>CMFCRibbonBar:: Активатеконтексткатегори
+## <a name="cmfcribbonbaractivatecontextcategory"></a><a name="activatecontextcategory"></a>CMFCRibbonBar::АктивироватьКонтекстКатегория
 
 Активирует уже видимую категорию контекста.
 
@@ -349,16 +349,16 @@ BOOL ActivateContextCategory(UINT uiContextID);
 
 ### <a name="parameters"></a>Параметры
 
-*уиконтекстид*<br/>
-окне Идентификатор категории контекста.
+*uiContextID*<br/>
+(в) Идентификатор категории контекста.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если категория контекста с *уиконтекстид* найдена и активирована. в противном случае — FALSE.
+TRUE, если находится и активирована контекстная категория с *uiContextID;* в противном случае FALSE.
 
-##  <a name="addcategory"></a>CMFCRibbonBar:: AddCategory
+## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a>CMFCRibbonBar::ДобавитьКатегория
 
-Создает и инициализирует новую категорию ленты для панели ленты.
+Создает и инициализирует новую категорию ленты для ленты бар.
 
 ```
 CMFCRibbonCategory* AddCategory(
@@ -375,44 +375,44 @@ CMFCRibbonCategory* AddCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзнаме*<br/>
-окне Имя категории ленты.
+*lpszName*<br/>
+(в) Название категории ленты.
 
-*уисмаллимажесресид*<br/>
-окне Идентификатор ресурса мелкого списка изображений для категории ленты.
+*uiSmallImagesResID*<br/>
+(в) Идентификатор ресурсов небольшого списка изображений для категории ленты.
 
-*уиларжеимажесресид*<br/>
-окне Идентификатор ресурса большого списка изображений для категории ленты.
+*uiLargeImagesResID*<br/>
+(в) Идентификатор ресурсов большого списка изображений для категории ленты.
 
-*сизесмаллимаже*<br/>
-окне Указывает размер мелких изображений для категории ленты.
+*размерМалыйОбраз*<br/>
+(в) Определяет размер небольших изображений для категории ленты.
 
-*сизеларжеимаже*<br/>
-окне Указывает размер больших изображений для категории ленты.
+*размерБольшоеизображение*<br/>
+(в) Определяет размер больших изображений для категории ленты.
 
 *nInsertAt*<br/>
-окне Отсчитываемый от нуля индекс расположения категории.
+(в) Нулевой индекс местоположения категории.
 
-*прти*<br/>
-окне Указатель на класс времени выполнения [класса кмфкриббонкатегори](../../mfc/reference/cmfcribboncategory-class.md) для динамического создания категории ленты во время выполнения.
+*pRTI*<br/>
+(в) Указатель на класс выполнения [CMFCRibbonCategory класса](../../mfc/reference/cmfcribboncategory-class.md) динамически создать ленточное категорию во время выполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новую категорию ленты, если метод был успешным; в противном случае значение NULL.
+Указатель на новую категорию ленты, если метод был успешным; в противном случае, NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Если параметр *прти* имеет значение, отличное от NULL, новая категория ленты создается динамически с помощью класса времени выполнения.
+Если параметр *pRTI* не является NULL, новая категория лентсоздается динамически с помощью класса времени выполнения.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `AddCategory` в классе `CMFCRibbonBar`.
+В следующем примере показано, `AddCategory` как `CMFCRibbonBar` использовать метод в классе.
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>CMFCRibbonBar:: Аддконтексткатегори
+## <a name="cmfcribbonbaraddcontextcategory"></a><a name="addcontextcategory"></a>CMFCRibbonBar::AddContextCategory
 
-Создает и инициализирует новую категорию контекста для панели ленты.
+Создает и инициализирует новую категорию контекста для ленты бар.
 
 ```
 CMFCRibbonCategory* AddContextCategory(
@@ -431,42 +431,42 @@ CMFCRibbonCategory* AddContextCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзнаме*<br/>
-окне Имя категории.
+*lpszName*<br/>
+(в) Название категории.
 
-*лпсзконтекстнаме*<br/>
-окне Имя заголовка категории контекста.
+*lpszКонтекстНам*<br/>
+(в) Название заголовка контекстной категории.
 
-*уиконтекстид*<br/>
-окне Идентификатор контекста.
+*uiContextID*<br/>
+(в) Идентификатор контекста.
 
-*клрконтекст*<br/>
-окне Цвет заголовка категории контекста.
+*clrКонтекст*<br/>
+(в) Цвет заголовка контекстной категории.
 
-*уисмаллимажесресид*<br/>
-окне Идентификатор ресурса мелкого изображения категории контекста.
+*uiSmallImagesResID*<br/>
+(в) Идентификатор ресурсов небольшого изображения контекстной категории.
 
-*уиларжеимажесресид*<br/>
-окне Идентификатор ресурса крупного изображения категории контекста.
+*uiLargeImagesResID*<br/>
+(в) Идентификатор ресурсов большого изображения контекстной категории.
 
-*сизесмаллимаже*<br/>
-окне Размер мелкого изображения.
+*размерМалыйОбраз*<br/>
+(в) Размер небольшого изображения.
 
-*сизеларжеимаже*<br/>
-окне Размер большого изображения.
+*размерБольшоеизображение*<br/>
+(в) Размер большого изображения.
 
-*прти*<br/>
-окне Указатель на класс среды выполнения.
+*pRTI*<br/>
+(в) Указатель на класс времени выполнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на только что созданную категорию или значение NULL, если метод `CreateObject` *прти* не может создать указанную категорию.
+Указатель на вновь созданную категорию, или NULL, если `CreateObject` метод *pRTI* не может создать указанную категорию.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция используется для добавления категории контекста. Категории контекста — это особый тип категории, который можно отображать или скрывать во время выполнения в зависимости от контекста текущего приложения. Например, когда пользователь выбирает объект, можно отобразить специальные вкладки с контекстными категориями, с помощью которых можно изменить конкретный выбранный объект.
+Используйте эту функцию для добавления категории контекста. Категории контекста — это особый тип категории, который может быть отображен или скрыт во время выполнения, в зависимости от текущего контекста приложения. Например, когда пользователь выбирает объект, можно отображать специальные вкладки с категориями контекста, которые используются для изменения определенного выбранного объекта.
 
-Цвет категории контекста может быть одним из следующих значений:
+Цвет контекстной категории может быть одним из следующих значений:
 
 - AFX_CategoryColor_None
 
@@ -484,9 +484,9 @@ CMFCRibbonCategory* AddContextCategory(
 
 - AFX_CategoryColor_Violet
 
-##  <a name="addmaincategory"></a>CMFCRibbonBar:: Аддмаинкатегори
+## <a name="cmfcribbonbaraddmaincategory"></a><a name="addmaincategory"></a>CMFCRibbonBar::AddMainКатегория
 
-Создает новую основную категорию ленты для панели ленты.
+Создает новую главную категорию ленты для ленты бар.
 
 ```
 CMFCRibbonMainPanel* AddMainCategory(
@@ -501,24 +501,24 @@ CMFCRibbonMainPanel* AddMainCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзнаме*<br/>
-окне Имя основной категории ленты.
+*lpszName*<br/>
+(в) Название главной категории ленты.
 
-*уисмаллимажесресид*<br/>
-окне Идентификатор ресурса мелких изображений.
+*uiSmallImagesResID*<br/>
+(в) Идентификатор ресурсов небольших изображений.
 
-*уиларжеимажесресид*<br/>
-окне Идентификатор ресурса больших изображений.
+*uiLargeImagesResID*<br/>
+(в) Идентификатор ресурсов больших изображений.
 
-*сизесмаллимаже*<br/>
-окне Размер мелких изображений.
+*размерМалыйОбраз*<br/>
+(в) Размер небольших изображений.
 
-*сизеларжеимаже*<br/>
-окне Размер больших изображений.
+*размерБольшоеизображение*<br/>
+(в) Размер больших изображений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новую основную категорию ленты, если метод выполнен успешно; в противном случае значение NULL.
+Указатель на новую основную категорию ленты, если метод был успешным; в противном случае, NULL.
 
 ### <a name="remarks"></a>Remarks
 
@@ -526,13 +526,13 @@ CMFCRibbonMainPanel* AddMainCategory(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `AddMainCategory` в классе `CMFCRibbonBar`.
+В следующем примере показано, `AddMainCategory` как `CMFCRibbonBar` использовать метод в классе.
 
 [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]
 
-##  <a name="addprintpreviewcategory"></a>CMFCRibbonBar:: Аддпринтпревиевкатегори
+## <a name="cmfcribbonbaraddprintpreviewcategory"></a><a name="addprintpreviewcategory"></a>CMFCRibbonBar:AddPrintPreviewКатегория
 
-Создает категорию предварительного просмотра на панели ленты.
+Создает категорию предварительного просмотра печати на ленте бар.
 
 ```
 CMFCRibbonCategory* AddPrintPreviewCategory();
@@ -540,15 +540,15 @@ CMFCRibbonCategory* AddPrintPreviewCategory();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новую категорию ленты, если метод был успешным; в противном случае значение NULL.
+Указатель на новую категорию ленты, если метод был успешным; в противном случае, NULL.
 
 ### <a name="remarks"></a>Remarks
 
 Этот метод создает категорию ленты и элементы управления, необходимые для обеспечения предварительного просмотра печати.
 
-##  <a name="addqatonlycategory"></a>CMFCRibbonBar:: Аддкатонликатегори
+## <a name="cmfcribbonbaraddqatonlycategory"></a><a name="addqatonlycategory"></a>CMFCRibbonBar::Добавить
 
-Создает категорию ленты панели быстрого доступа.
+Создает категорию ленты быстрого доступа.
 
 ```
 CMFCRibbonCategory* AddQATOnlyCategory(
@@ -560,26 +560,26 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзнаме*<br/>
-окне Имя категории.
+*lpszName*<br/>
+(в) Название категории.
 
-*уисмаллимажесресид*<br/>
-окне Идентификатор ресурса списка изображений для категории.
+*uiSmallImagesResID*<br/>
+(в) Идентификатор ресурса списка изображений для категории.
 
-*сизесмаллимаже*<br/>
-окне Размер изображений для элементов ленты в категории.
+*размерМалыйОбраз*<br/>
+(в) Размер изображений для элементов ленты в категории.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новую категорию, если метод был успешным; в противном случае значение NULL.
+Указатель на новую категорию, если метод был успешным; в противном случае, NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Категория ленты панель быстрого доступа используется только в диалоговом окне Настройка панели быстрого доступа.
+Категория ленты быстрого доступа используется только в поле настройки панели инструментов быстрого доступа.
 
-##  <a name="addtotabs"></a>CMFCRibbonBar:: Аддтотабс
+## <a name="cmfcribbonbaraddtotabs"></a><a name="addtotabs"></a>CMFCRibbonBar::AddToTabs
 
-Добавляет указанный элемент ленты в строку табуляции панели ленты.
+Добавляет указанный элемент ленты в строку вкладок ленточного бара.
 
 ```
 void AddToTabs(CMFCRibbonBaseElement* pElement);
@@ -587,16 +587,16 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>Параметры
 
-*пелемент*<br/>
-окне Указатель на элемент ленты.
+*pElement*<br/>
+(в) Указатель на элемент ленты.
 
 ### <a name="remarks"></a>Remarks
 
-Элемент Ribbon располагается перед всеми системными кнопками.
+Элемент ленты расположен перед любыми системными кнопками.
 
-##  <a name="cmfcribbonbar"></a>CMFCRibbonBar:: CMFCRibbonBar
+## <a name="cmfcribbonbarcmfcribbonbar"></a><a name="cmfcribbonbar"></a>CMFCRibbonBar::CMFCRibbonBar
 
-Создает и инициализирует объект [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) .
+Строит и инициализирует объект [CMFCRibbonBar.](../../mfc/reference/cmfcribbonbar-class.md)
 
 ```
 CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
@@ -604,14 +604,14 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*бреплацефрамекаптион*<br/>
-окне Значение TRUE, чтобы панель ленты заменила заголовок главного окна фрейма; Значение FALSE для нахождение панели ленты под заголовком главного окна фрейма.
+*bReplaceFrameCaption*<br/>
+(в) TRUE для ленты бар, чтобы заменить подпись к главному окну кадра; FALSE, чтобы найти ленту бар под подписью окна главного кадра.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="create"></a>CMFCRibbonBar:: Create
+## <a name="cmfcribbonbarcreate"></a><a name="create"></a>CMFCRibbonBar::Создание
 
-Создает окно для панели ленты.
+Создает окно для ленты бар.
 
 ```
 BOOL Create(
@@ -622,30 +622,30 @@ BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*ппарентвнд*<br/>
-окне Указатель на родительское окно для панели ленты.
+*pParentWnd*<br/>
+(в) Указатель на родительское окно для ленты бар.
 
-*двстиле*<br/>
-окне Логическое сочетание стилей для нового окна.
+*dwStyle*<br/>
+(в) Логическое сочетание стилей для нового окна.
 
 *nID*<br/>
-окне Идентификатор нового окна.
+(в) Идентификатор нового окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно было создано; в противном случае — FALSE.
+TRUE, если окно было создано; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `Create` класса `CMFCRibbonBar`.
+В следующем примере показано, `Create` как `CMFCRibbonBar` использовать метод класса.
 
 [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]
 
-##  <a name="createex"></a>CMFCRibbonBar:: Креатикс
+## <a name="cmfcribbonbarcreateex"></a><a name="createex"></a>CMFCRibbonBar::CreateEx
 
-Создает окно для панели ленты.
+Создает окно для ленты бар.
 
 ```
 BOOL CreateEx(
@@ -657,27 +657,27 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*ппарентвнд*<br/>
-окне Указатель на родительское окно для панели ленты.
+*pParentWnd*<br/>
+(в) Указатель на родительское окно для ленты бар.
 
-*двктрлстиле*<br/>
-окне Этот параметр не используется.
+*dwCtrlStyle*<br/>
+(в) Этот параметр не используется.
 
-*двстиле*<br/>
-окне Логическое сочетание стилей для нового окна.
+*dwStyle*<br/>
+(в) Логическое сочетание стилей для нового окна.
 
 *nID*<br/>
-окне Идентификатор нового окна.
+(в) Идентификатор нового окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно было создано; в противном случае — FALSE.
+TRUE, если окно было создано; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::D Еактиватекэйбоардфокус
+## <a name="cmfcribbonbardeactivatekeyboardfocus"></a><a name="deactivatekeyboardfocus"></a>CMFCRibbonBar::DэактивАкваФокус
 
-Закрывает все элементы управления keytip на панели ленты.
+Закрывает все элементы управления keytip на ленте бар.
 
 ```
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
@@ -685,12 +685,12 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*бсетфокус*<br/>
-окне Значение TRUE, чтобы установить фокус на родительское окно панели ленты.
+*bSetFocus*<br/>
+(в) TRUE установить фокус на родительское окно ленты бар.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="drawmenuimage"></a>CMFCRibbonBar::D Равменуимаже
+## <a name="cmfcribbonbardrawmenuimage"></a><a name="drawmenuimage"></a>CMFCRibbonBar::DrawMenuImage
 
 Рисует изображение для кнопки меню.
 
@@ -704,23 +704,23 @@ BOOL DrawMenuImage(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-окне Указатель на контекст устройства для кнопки меню.
+(в) Указатель на контекст устройства для кнопки меню.
 
-*пменуитем*<br/>
-окне Указатель на кнопку меню панели инструментов.
+*pMenuItem*<br/>
+(в) Указатель на кнопку меню панели инструментов.
 
-*ректимаже*<br/>
-окне Отображаемый прямоугольник для кнопки меню.
+*rectImage*<br/>
+(в) Прямоугольник дисплея для кнопки меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если изображение было нарисован; в противном случае — FALSE.
+TRUE, если изображение было нарисовано; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="dwmcompositionchanged"></a>CMFCRibbonBar::D Вмкомпоситиончанжед
+## <a name="cmfcribbonbardwmcompositionchanged"></a><a name="dwmcompositionchanged"></a>CMFCRibbonBar::DWMCompositionИзменен
 
-Корректирует отображение панели ленты при включении или отключении композиции диспетчер окон рабочего стола (DWM).
+Настраивает отображение ленты панели, когда настольное окно manager (DWM) композиция включена или отключена.
 
 ```
 virtual void DWMCompositionChanged();
@@ -728,9 +728,9 @@ virtual void DWMCompositionChanged();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="enablekeytips"></a>CMFCRibbonBar:: Енаблекэйтипс
+## <a name="cmfcribbonbarenablekeytips"></a><a name="enablekeytips"></a>CMFCRibbonBar::EnableKeyTips
 
-Включает или отключает функцию keytip для панели ленты.
+Включает или отключает функцию keytip для ленты бар.
 
 ```
 void EnableKeyTips(BOOL bEnable = TRUE);
@@ -739,15 +739,15 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-окне Значение TRUE, чтобы включить функцию подсказок. Значение FALSE, чтобы отключить функцию подсказок.
+(в) TRUE для включения функции ключевых наконечников; FALSE для отключать функцию ключей.
 
 ### <a name="remarks"></a>Remarks
 
-При включении этой функции ключевые подсказки отображаются, когда пользователь нажимает кнопку ALT или F10. Когда пользователь нажимает клавишу ALT, отображаются ключевые подсказки с задержкой в 200 миллисекунд. Эта задержка позволяет выполнять сочетания клавиш, чтобы нажатая клавиша ALT не мешала другим сочетаниям, включающим клавишу ALT.
+При включании этой функции отображаются ключевые советы, когда пользователь нажимает на кнопку ALT или F10. Когда пользователь нажимает на ключ ALT, ключевые советы отображаются с 200-миллисекундной задержкой. Эта задержка позволяет выполнять ярлыки, чтобы нажатие клавиши ALT не мешало другим комбинациям, включающие ключ ALT.
 
-##  <a name="enableprintpreview"></a>CMFCRibbonBar:: Енаблепринтпревиев
+## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a>CMFCRibbonBar:EnablePrintPreview
 
-Включает или отключает функцию **предварительного просмотра печати** .
+Позволяет или отсвагает функцию **предварительного просмотра печати.**
 
 ```
 void EnablePrintPreview(BOOL bEnable = TRUE);
@@ -756,17 +756,17 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-окне Значение TRUE, чтобы включить **Предварительный просмотр функции печати** ; Значение FALSE, чтобы отключить **предварительную версию функции предварительного просмотра** .
+(в) TRUE для включения функции **предварительного просмотра печати;** FALSE для оттоговать функцию **предварительного просмотра печати.**
 
 ### <a name="remarks"></a>Remarks
 
-Если *бенабле* имеет значение false и существует категория предварительного просмотра печати, она удаляется.
+Если *bEnable* false и существует категория предварительного просмотра печати, она удаляется.
 
-По умолчанию функция **предварительного просмотра** включена.
+По умолчанию включена функция **предварительного просмотра печати.**
 
-##  <a name="enabletooltips"></a>CMFCRibbonBar:: Енаблетултипс
+## <a name="cmfcribbonbarenabletooltips"></a><a name="enabletooltips"></a>CMFCRibbonBar::EnableToolTips
 
-Включает или отключает подсказки и дополнительные описания всплывающей подсказки на панели ленты.
+Включает или отстраняет инструменты и дополнительные описания инструментов на ленте бар.
 
 ```
 void EnableToolTips(
@@ -777,18 +777,18 @@ void EnableToolTips(
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-окне Значение TRUE, чтобы включить подсказки на панели ленты. Значение FALSE, чтобы отключить подсказки на панели ленты.
+(в) TRUE для включения инструментария на ленточном батончике; FALSE отключить инструменты на ленте бар.
 
-*бенабледескр*<br/>
-окне Значение TRUE, чтобы включить описания всплывающей подсказки в подсказке; Значение FALSE, чтобы отключить описания всплывающей подсказки в подсказке.
+*bEnableDescr*<br/>
+(в) TRUE для включения описания инструментов на наборе инструментов; FALSE для отработки описания инструментов на наборе инструментов.
 
 ### <a name="remarks"></a>Remarks
 
-Параметр *бенабле* определяет, отображаются ли подсказки при наведении указателя мыши на элемент ленты. Параметр *бенабледескр* определяет, отображается ли дополнительный описательный текст с текстом подсказки.
+Параметр *bEnable* определяет, отображаются ли наконечники инструментов, когда мышь парит над элементом ленты. Параметр *bEnableDescr* определяет, отображается ли дополнительный описательный текст с текстом tooltip.
 
-##  <a name="findbydata"></a>CMFCRibbonBar:: Финдбидата
+## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a>CMFCRibbonBar:FindbyData
 
-Получает указатель на элемент ленты, если он имеет указанные данные и видимость.
+Извлекает указатель на элемент ленты, если он имеет указанные данные и видимость.
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -798,23 +798,23 @@ CMFCRibbonBaseElement* FindByData(
 
 ### <a name="parameters"></a>Параметры
 
-*двдата*<br/>
-окне Данные, связанные с элементом Ribbon.
+*dwData*<br/>
+(в) Данные, связанные с элементом ленты.
 
-*бвисиблеонли*<br/>
-окне Значение TRUE для поиска только видимых элементов ленты; Значение FALSE для поиска всех элементов ленты.
+*bVisibleOnly*<br/>
+(в) TRUE для поиска видимых элементов ленты только; FALSE для поиска всех элементов ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, если он имеет указанные данные и видимость; в противном случае — NULL.
+Указатель на элемент ленты, если он имеет указанные данные и видимость; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Элемент Ribbon — это любой элемент управления, который можно добавить на ленту, например кнопку на ленте или категорию ленты, или ползунок ленты.
+Элемент ленты — это элемент элемента, который можно добавить к ленте, например, ленточной кнопкой, категорией ленты или ленточным ползунок.
 
-##  <a name="findbyid"></a>CMFCRibbonBar:: Финдбид
+## <a name="cmfcribbonbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonBar::FindbyID
 
-Извлекает указатель на элемент ленты, имеющий указанные идентификатор команды и значения поиска.
+Извлекает указатель на элемент ленты с указанным идентификатором команды и значениями поиска.
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -825,28 +825,28 @@ CMFCRibbonBaseElement* FindByID(
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Идентификатор команды для элемента ленты.
+*uiCmdID*<br/>
+(в) Идентификатор команды для элемента ленты.
 
-*бвисиблеонли*<br/>
-окне Значение TRUE для поиска только видимых элементов ленты; Значение FALSE для поиска всех элементов ленты.
+*bVisibleOnly*<br/>
+(в) TRUE для поиска видимых элементов ленты только; FALSE для поиска всех элементов ленты.
 
-*бексклудекат*<br/>
-окне Значение TRUE, чтобы исключить элементы панели быстрого доступа из поиска. в противном случае — значение FALSE.
+*bExclude-AT*<br/>
+(в) TRUE, чтобы исключить элементы панели инструментов быстрого доступа из поиска; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, если у него есть указанный идентификатор команды и искомые значения; в противном случае значение NULL.
+Указатель на элемент ленты, если он имеет указанный идентификатор команды и значения поиска; в противном случае, NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Элемент Ribbon — это любой элемент управления ленты, который можно добавить на ленту, например кнопку на ленте или категорию ленты, или ползунок ленты.
+Элемент ленты — это любой элемент ленточного управления, который можно добавить к ленте, например, ленточку, категорию ленты или ленточный ползунок.
 
-В общем случае может существовать несколько элементов Ribbon с одинаковым ИДЕНТИФИКАТОРом команды. Если необходимо получить указатели на все элементы ленты, использующие указанный идентификатор команды, используйте метод [CMFCRibbonBar:: жетелементсбид](#getelementsbyid) .
+В общем, может быть несколько элементов ленты, который имеет тот же идентификатор команды. Если вы хотите получить указатели на все элементы ленты, которые используют указанный идентификатор команды, используйте метод [CMFCRibbonBar::GetElementsByID.](#getelementsbyid)
 
-##  <a name="findcategoryindexbydata"></a>CMFCRibbonBar:: Финдкатегориндексбидата
+## <a name="cmfcribbonbarfindcategoryindexbydata"></a><a name="findcategoryindexbydata"></a>CMFCRibbonBar:FindCategoryИндексЫДанные
 
-Извлекает индекс категории ленты, содержащей указанные данные.
+Извлекает индекс категории ленты, содержащий указанные данные.
 
 ```
 int FindCategoryIndexByData(DWORD dwData) const;
@@ -854,16 +854,16 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 ### <a name="parameters"></a>Параметры
 
-*двдата*<br/>
-окне Данные, связанные с категорией ленты.
+*dwData*<br/>
+(в) Данные, связанные с категорией ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс категории ленты, если метод был успешным; в противном случае — 1.
+Индекс нулевой основе категории ленты, если метод был успешным; в противном случае -1.
 
-##  <a name="forcerecalclayout"></a>CMFCRibbonBar:: Форцерекалклайаут
+## <a name="cmfcribbonbarforcerecalclayout"></a><a name="forcerecalclayout"></a>CMFCRibbonBar::ForceRecalcLayout
 
-Настраивает макет всех элементов на ленте и родительском окне и перерисовывает все окно.
+Регулирует расположение всех элементов в ленте бар и родительское окно и перерисовывает все окно.
 
 ```
 void ForceRecalcLayout();
@@ -871,9 +871,9 @@ void ForceRecalcLayout();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getactivecategory"></a>CMFCRibbonBar:: Жетактивекатегори
+## <a name="cmfcribbonbargetactivecategory"></a><a name="getactivecategory"></a>CMFCRibbonBar:GetActiveКатегория
 
-Получает указатель на активную категорию ленты.
+Извлекает указатель в категорию активных лент.
 
 ```
 CMFCRibbonCategory* GetActiveCategory() const;
@@ -881,17 +881,17 @@ CMFCRibbonCategory* GetActiveCategory() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на активную категорию ленты; или значение NULL, если категория не активна.
+Указатель на категорию активной ленты; или NULL, если ни одна категория не активна.
 
 ### <a name="remarks"></a>Remarks
 
-Категория активна, если она имеет фокус. По умолчанию активная категория является первой категорией в левой части панели ленты.
+Категория активна, если она имеет фокус. По умолчанию активная категория является первой категорией на левой стороне ленточного бара.
 
-Основная категория отображается, когда пользователь нажимает кнопку приложения и не может быть активной категорией.
+Основная категория отображается, когда пользователь нажимает кнопку приложения, и она не может быть активной категорией.
 
-##  <a name="getapplicationbutton"></a>CMFCRibbonBar:: Жетаппликатионбуттон
+## <a name="cmfcribbonbargetapplicationbutton"></a><a name="getapplicationbutton"></a>CMFCRibbonBar:GetApplicationButton
 
-Получает указатель на кнопку приложения.
+Извлекает указатель на кнопку приложения.
 
 ```
 CMFCRibbonApplicationButton* GetApplicationButton() const;
@@ -899,11 +899,11 @@ CMFCRibbonApplicationButton* GetApplicationButton() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на кнопку приложения; или значение NULL, если кнопка не была задана.
+Указатель на кнопку приложения; или NULL, если кнопка не установлена.
 
-##  <a name="getcaptionheight"></a>CMFCRibbonBar:: Жеткаптионхеигхт
+## <a name="cmfcribbonbargetcaptionheight"></a><a name="getcaptionheight"></a>CMFCRibbonBar::GetCaptionHeight
 
-Получает высоту области заголовка для панели ленты.
+Получает высоту области заголовка для ленты бар.
 
 ```
 int GetCaptionHeight() const;
@@ -911,13 +911,13 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота (в пикселях) области заголовка для панели ленты.
+Высота, в пикселях, области заголовка для ленты бар.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getcategory"></a>CMFCRibbonBar:: Тип Category
+## <a name="cmfcribbonbargetcategory"></a><a name="getcategory"></a>CMFCRibbonBar::GetCategory
 
-Получает указатель на категорию ленты по указанному индексу.
+Извлекает указатель в категорию ленты в указанном индексе.
 
 ```
 CMFCRibbonCategory* GetCategory(int nIndex) const;
@@ -925,16 +925,16 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Отсчитываемый от нуля индекс категории ленты в списке категорий ленты, который содержится в панели ленты.
+*Nindex*<br/>
+(в) Нулевой индекс категории ленты в списке категорий лент, который содержится в ленте бар.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на категорию ленты по указанному индексу; в противном случае значение NULL, если *ниндекс* находится за пределами диапазона.
+Указатель на категорию ленты в указанном индексе; в противном случае, NULL, если *nIndex* был вне диапазона.
 
-##  <a name="getcategorycount"></a>CMFCRibbonBar:: Жеткатегорикаунт
+## <a name="cmfcribbonbargetcategorycount"></a><a name="getcategorycount"></a>CMFCRibbonBar::GetCategoryCount
 
-Возвращает число категорий ленты на ленте.
+Извлекает количество категорий лент в ленте бар.
 
 ```
 int GetCategoryCount() const;
@@ -942,11 +942,11 @@ int GetCategoryCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число категорий ленты на панели ленты.
+Количество лент категорий в ленте бар.
 
-##  <a name="getcategoryheight"></a>CMFCRibbonBar:: Жеткатегорихеигхт
+## <a name="cmfcribbonbargetcategoryheight"></a><a name="getcategoryheight"></a>CMFCRibbonBar::GetCategoryHeight
 
-Возвращает высоту категории.
+Получает высоту категории.
 
 ```
 int GetCategoryHeight() const;
@@ -958,9 +958,9 @@ int GetCategoryHeight() const;
 
 ### <a name="remarks"></a>Remarks
 
-Высота категории включает высоту вкладки Категория.
+Высота категории включает высоту вкладки категории.
 
-##  <a name="getcategoryindex"></a>CMFCRibbonBar:: Жеткатегориндекс
+## <a name="cmfcribbonbargetcategoryindex"></a><a name="getcategoryindex"></a>CMFCRibbonBar::GetCategoryIndex
 
 Извлекает индекс указанной категории ленты.
 
@@ -970,16 +970,16 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пкатегори*<br/>
-окне Указатель на категорию ленты.
+*pКатегория*<br/>
+(в) Указатель на ленту категории.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс категории ленты, заданной параметром *пкатегори*; значение-1, если категория ленты не найдена.
+Индекс нулевой основе категории ленты, указанный *pCategory*; или -1, если категория ленты не найдена.
 
-##  <a name="getcontextname"></a>CMFCRibbonBar:: Жетконтекстнаме
+## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a>CMFCRibbonBar::GetContextName
 
-Возвращает имя метки контекстной категории, заданной ИДЕНТИФИКАТОРом контекста.
+Извлекает имя заголовка контекстной категории, указанное идентификатором контекста.
 
 ```
 BOOL GetContextName(
@@ -989,19 +989,19 @@ BOOL GetContextName(
 
 ### <a name="parameters"></a>Параметры
 
-*уиконтекстид*<br/>
-окне Идентификатор контекста категории ленты.
+*uiContextID*<br/>
+(в) Идентификатор контекста категории ленты.
 
 *strName*<br/>
-заполняет Имя заголовка категории контекста.
+(ваут) Название заголовка контекстной категории.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае значение FALSE, если *уиконтекстид* равен нулю или заголовок категории контекста не найден.
+ПРАВДА, если метод был успешным; в противном случае, FALSE, если *uiContextID* был равен нулю или подпись категории контекста не была найдена.
 
-##  <a name="getdroppeddown"></a>CMFCRibbonBar:: Жетдроппеддовн
+## <a name="cmfcribbonbargetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBar::GetDroppedDown
 
-Извлекает элемент ленты, который в данный момент удаляется.
+Извлекает элемент ленты, который в настоящее время упал.
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -1009,13 +1009,13 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент ленты, который в данный момент удаляется; или значение NULL, если элемент ленты в данный момент не отбрасывается.
+Элемент ленты, который в настоящее время упал; или NULL, если ни один элемент ленты в настоящее время не упал.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getelementsbyid"></a>CMFCRibbonBar:: Жетелементсбид
+## <a name="cmfcribbonbargetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonBar::GetElementsbyID
 
-Извлекает массив указателей на все элементы ленты, имеющие конкретный идентификатор команды.
+Извлекает массив указателей для всех элементов ленты, которые имеют определенный идентификатор команды.
 
 ```
 void GetElementsByID(
@@ -1025,19 +1025,19 @@ void GetElementsByID(
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Идентификатор команды элемента ленты.
+*uiCmdID*<br/>
+(в) Командный идентификатор элемента ленты.
 
-*арбуттонс*<br/>
-заполняет Массив указателей на элементы ленты.
+*arButtons*<br/>
+(ваут) Массив указателей на элементы ленты.
 
 ### <a name="remarks"></a>Remarks
 
-Несколько элементов ленты могут иметь одинаковый идентификатор команды, так как некоторые элементы ленты можно скопировать на панель быстрого доступа.
+Несколько элементов ленты могут иметь один и тот же идентификатор команды, поскольку некоторые элементы ленты могут быть скопированы на панель инструментов быстрого доступа.
 
-##  <a name="gethideflags"></a>CMFCRibbonBar:: Жесидефлагс
+## <a name="cmfcribbonbargethideflags"></a><a name="gethideflags"></a>CMFCRibbonBar::GetHideFlags
 
-Получает флаги, указывающие, какая часть панели ленты видна.
+Извлекает флаги, указывающие, сколько ленты бар виден.
 
 ```
 DWORD GetHideFlags() const;
@@ -1045,20 +1045,20 @@ DWORD GetHideFlags() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Флаги, указывающие, какая часть панели ленты видна.
+Флаги, указывающие, сколько ленты бар виден.
 
 ### <a name="remarks"></a>Remarks
 
-В следующей таблице перечислены возможные сочетания флагов для возвращаемого значения.
+В следующей таблице перечислено возможное сочетание флагов для значения возврата:
 
 |||
 |-|-|
-|AFX_RIBBONBAR_HIDE_ELEMENTS|Панель ленты сведена по вертикали, и видимы только вкладки категорий, Главная кнопка и панель быстрого доступа.  |
-|AFX_RIBBONBAR_HIDE_ALL|Ширина панели ленты меньше минимальной ширины и полностью скрыта.  |
+|AFX_RIBBONBAR_HIDE_ELEMENTS|Лента бар сведена к минимуму вертикально и только вкладки категории, основная кнопка, и быстрый доступ панели инструментов видны.  |
+|AFX_RIBBONBAR_HIDE_ALL|Ширина ленты бар меньше, чем минимальная ширина и полностью скрыты.  |
 
-##  <a name="getitemidslist"></a>CMFCRibbonBar:: Жетитемидслист
+## <a name="cmfcribbonbargetitemidslist"></a><a name="getitemidslist"></a>CMFCRibbonBar:GetItemIDsList
 
-Получает идентификаторы команд для указанной коллекции элементов ленты на ленте.
+Получает иные иные данные для указанной коллекции элементов ленты на ленте бар.
 
 ```
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
@@ -1067,17 +1067,17 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 
 ### <a name="parameters"></a>Параметры
 
-*лститемс*<br/>
-заполняет Список идентификаторов команд для элементов ленты, содержащихся на панели ленты.
+*lstItems*<br/>
+(ваут) Список интпредтов команд для элементов ленты, которые содержатся в ленте бар.
 
-*бхидденонли*<br/>
-окне Значение TRUE, чтобы исключить отображаемые элементы ленты; Значение FALSE, чтобы включить все элементы ленты на ленте.
+*bHiddenТолько*<br/>
+(в) TRUE для исключения элементов ленты, которые отображаются; FALSE включить все элементы ленты в ленту бар.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar:: Жеткэйбоарднавигатионлевел
+## <a name="cmfcribbonbargetkeyboardnavigationlevel"></a><a name="getkeyboardnavigationlevel"></a>CMFCRibbonBar::GetKeyboardNavigationLevel
 
-Извлекает текущий уровень навигации по мере нажатия пользователем подсказки, содержащиеся на ленте.
+Получает текущий уровень навигации, как пользователь нажимает на ключевые наконечники, которые содержатся на ленте бар.
 
 ```
 int GetKeyboardNavigationLevel() const;
@@ -1085,19 +1085,19 @@ int GetKeyboardNavigationLevel() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущий уровень навигации в качестве пользователя нажимает подсказки, содержащиеся на панели ленты. В следующей таблице перечислены возможные возвращаемые значения.
+Текущий уровень навигации, как пользователь нажимает клавиши, которые содержатся на ленте бар. В следующей таблице перечислены возможные значения возврата:
 
 |||
 |-|-|
-|-1|Подсказки не отображаются.|
-|0|Отображаются подсказки.|
-|1|Пользователь нажал на отображаемый keytip.|
+|-1|Ключевые наконечники не отображаются.|
+|0|Отображаются ключевые наконечники.|
+|1|Пользователь нажал на отображаемый клавиатуру.|
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar:: Жеткэйбоарднавлевелкуррент
+## <a name="cmfcribbonbargetkeyboardnavlevelcurrent"></a><a name="getkeyboardnavlevelcurrent"></a>CMFCRibbonBar::GetKeyboardNavLevelCurrent
 
-Извлекает текущий объект навигации по клавиатуре на ленте.
+Извлекает текущий навигационный объект клавиатуры на ленточной панели.
 
 ```
 CObject* GetKeyboardNavLevelCurrent() const;
@@ -1105,15 +1105,15 @@ CObject* GetKeyboardNavLevelCurrent() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущий объект навигации по клавиатуре на панели ленты; значение NULL, если ни один объект не отображает подсказки.
+Текущий навигационный объект клавиатуры на ленточной ленте; в противном случае NULL, если ни один объект в настоящее время не отображает кончики ключей.
 
 ### <a name="remarks"></a>Remarks
 
-Объект, который в данный момент отображает ключевые подсказки, является текущим объектом навигации с помощью клавиатуры.
+Объект, который в настоящее время отображает ключевые наконечники, является текущим навигационным объектом клавиатуры.
 
-##  <a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar:: Жеткэйбоарднавлевелпарент
+## <a name="cmfcribbonbargetkeyboardnavlevelparent"></a><a name="getkeyboardnavlevelparent"></a>CMFCRibbonBar::GetKeyboardNavLevelParent
 
-Получает родительский объект навигации с клавиатурой на ленте.
+Извлекает родительский навигационный объект клавиатуры на ленточной панели.
 
 ```
 CObject* GetKeyboardNavLevelParent() const;
@@ -1121,15 +1121,15 @@ CObject* GetKeyboardNavLevelParent() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Родительский объект навигации с клавиатурой на панели ленты; в противном случае — NULL.
+Родительский навигационный объект клавиатуры на ленточной ленте; в противном случае NULL.
 
 ### <a name="remarks"></a>Remarks
 
-Когда пользователь нажимает keytip на панели ленты, текущий объект перехода по клавише превращается в родительский объект навигации по клавише.
+Когда пользователь нажимает клавишу на ленте, текущий объект навигации клавиатуры становится родительским навигационным объектом клавиатуры.
 
-##  <a name="getmaincategory"></a>CMFCRibbonBar:: Жетмаинкатегори
+## <a name="cmfcribbonbargetmaincategory"></a><a name="getmaincategory"></a>CMFCRibbonBar::GetMainКатегория
 
-Извлекает указатель на основную категорию ленты.
+Получает указатель в основной категории ленты.
 
 ```
 CMFCRibbonCategory* GetMainCategory() const;
@@ -1137,15 +1137,15 @@ CMFCRibbonCategory* GetMainCategory() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на основную категорию ленты.
+Указатель на главную категорию ленты.
 
 ### <a name="remarks"></a>Remarks
 
-Главная Категория ленты содержит главную панель ленты.
+В категории «Основная лента» есть основная лента.
 
-##  <a name="getqatcommandslocation"></a>CMFCRibbonBar:: Жеткаткоммандслокатион
+## <a name="cmfcribbonbargetqatcommandslocation"></a><a name="getqatcommandslocation"></a>CMFCRibbonBar::Get-ATCommandsLocation
 
-Извлекает прямоугольник, отображаемый для раздела команды панели быстрого доступа.
+Извлекает прямоугольник дисплея для раздела команд панели инструментов быстрого доступа.
 
 ```
 CRect GetQATCommandsLocation() const;
@@ -1153,15 +1153,15 @@ CRect GetQATCommandsLocation() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отображаемый прямоугольник для раздела команды панели быстрого доступа.
+Прямоугольник дисплея для раздела команд панели инструментов быстрого доступа.
 
 ### <a name="remarks"></a>Remarks
 
-Раздел команды в прямоугольнике экрана не содержит кнопку Настройка.
+Раздел команд прямоугольника дисплея не включает кнопку настройки.
 
-##  <a name="getqatdroppeddown"></a>CMFCRibbonBar:: Жеткатдроппеддовн
+## <a name="cmfcribbonbargetqatdroppeddown"></a><a name="getqatdroppeddown"></a>CMFCRibbonBar::Get'ATDroppeddown
 
-Получает указатель на элемент ленты на панели инструментов быстрого доступа, в котором раскрывается всплывающее меню.
+Получает указатель на элемент ленты на панели инструментов быстрого доступа, которая имеет свое всплывающее меню упал.
 
 ```
 CMFCRibbonBaseElement* GetQATDroppedDown();
@@ -1169,13 +1169,13 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты на панели инструментов быстрого доступа, в котором раскрывается всплывающее меню.
+Указатель на элемент ленты на панели инструментов быстрого доступа, которая имеет свое всплывающее меню упал.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getquickaccesscommands"></a>CMFCRibbonBar:: Жеткуиккакцесскоммандс
+## <a name="cmfcribbonbargetquickaccesscommands"></a><a name="getquickaccesscommands"></a>CMFCRibbonBar::Get'uickAccessCommands
 
-Извлекает список идентификаторов команд для элементов ленты на панели инструментов быстрого доступа.
+Извлекает список идовинов команд для элементов ленты на панели инструментов быстрого доступа.
 
 ```
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
@@ -1183,16 +1183,16 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 
 ### <a name="parameters"></a>Параметры
 
-*лсткоммандс*<br/>
-заполняет Список идентификаторов команд для элементов ленты на панели инструментов быстрого доступа.
+*lstCommands*<br/>
+(ваут) Список идовинных команд для элементов ленты на панели инструментов быстрого доступа.
 
 ### <a name="remarks"></a>Remarks
 
-Список не содержит элементов ленты, которые являются разделителями элементов управления.
+Список не содержит элементы ленты, которые являются элементами управления.
 
-##  <a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar:: Жеткуиккакцесстулбарлокатион
+## <a name="cmfcribbonbargetquickaccesstoolbarlocation"></a><a name="getquickaccesstoolbarlocation"></a>CMFCRibbonBar::Get'uickAccessToolbarLocation
 
-Извлекает прямоугольник, отображаемый для панели быстрого доступа.
+Извлекает прямоугольник дисплея для панели инструментов быстрого доступа.
 
 ```
 CRect GetQuickAccessToolbarLocation() const;
@@ -1200,13 +1200,13 @@ CRect GetQuickAccessToolbarLocation() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Прямоугольник, отображаемый для панели быстрого доступа.
+Прямоугольник дисплея для панели инструментов быстрого доступа.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabtrancateratio"></a>CMFCRibbonBar:: Жеттабтранкатератио
+## <a name="cmfcribbonbargettabtrancateratio"></a><a name="gettabtrancateratio"></a>CMFCRibbonBar::GetTabTrancateRatio
 
-Извлекает процент уменьшения размера в отображаемой ширине вкладок категорий.
+Извлекает уменьшение размера процента в ширине дисплея вкладок категории.
 
 ```
 int GetTabTrancateRatio() const;
@@ -1214,15 +1214,15 @@ int GetTabTrancateRatio() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Уменьшение размера в процентах от ширины отображаемых вкладок категорий.
+Уменьшение размера процента в ширине дисплея вкладок категории.
 
 ### <a name="remarks"></a>Remarks
 
-Вкладки категорий уменьшаются по ширине, если на панели ленты недостаточно ширины.
+Вкладки категории уменьшаются в ширину, когда на ленте не хватает ширины.
 
-##  <a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar:: Жеттултипфикседвидсларжеимаже
+## <a name="cmfcribbonbargettooltipfixedwidthlargeimage"></a><a name="gettooltipfixedwidthlargeimage"></a>CMFCRibbonBar::GetTooltipFixedWidthLargeImage
 
-Получает большой размер подсказки для панели ленты.
+Получает большой размер ширины tooltip для ленты бар.
 
 ```
 int GetTooltipFixedWidthLargeImage() const;
@@ -1230,15 +1230,15 @@ int GetTooltipFixedWidthLargeImage() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Большой размер подсказок в пикселях.
+Большой размер ширины инструмента в пикселях.
 
 ### <a name="remarks"></a>Remarks
 
-Если большой размер подсказок имеет значение 0, ширина варьируется.
+Если большой размер ширины tooltip 0, ширина изменяется.
 
-##  <a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar:: Жеттултипфикседвидсрегулар
+## <a name="cmfcribbonbargettooltipfixedwidthregular"></a><a name="gettooltipfixedwidthregular"></a>CMFCRibbonBar::GetTooltipFixedВимон
 
-Возвращает стандартный размер подсказки для панели ленты.
+Извлекает регулярный размер ширины tooltip для ленты бар.
 
 ```
 int GetTooltipFixedWidthRegular() const;
@@ -1246,15 +1246,15 @@ int GetTooltipFixedWidthRegular() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Обычный размер подсказок в пикселях.
+Регулярный размер ширины инструмента в пикселях.
 
 ### <a name="remarks"></a>Remarks
 
-Если обычный размер подсказок имеет значение 0, ширина изменяется.
+Если обычный размер ширины инструмента составляет 0, ширина варьируется.
 
-##  <a name="getvisiblecategorycount"></a>CMFCRibbonBar:: Жетвисиблекатегорикаунт
+## <a name="cmfcribbonbargetvisiblecategorycount"></a><a name="getvisiblecategorycount"></a>CMFCRibbonBar::GetVisibleCategoryCount
 
-Возвращает число видимых категорий на ленте.
+Получает количество видимых категорий на ленте бар.
 
 ```
 int GetVisibleCategoryCount() const;
@@ -1262,13 +1262,13 @@ int GetVisibleCategoryCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число видимых категорий на панели ленты.
+Количество видимых категорий на ленточном батончике.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hideallcontextcategories"></a>CMFCRibbonBar:: Хидеаллконтексткатегориес
+## <a name="cmfcribbonbarhideallcontextcategories"></a><a name="hideallcontextcategories"></a>CMFCRibbonBar::HideAllContextCategories
 
-Скрывает все категории контекста на панели ленты.
+Скрывает все категории контекста на ленте бар.
 
 ```
 BOOL HideAllContextCategories();
@@ -1276,15 +1276,15 @@ BOOL HideAllContextCategories();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если хотя бы одна категория контекста скрыта; в противном случае — значение FALSE.
+TRUE, если хотя бы одна категория контекста была скрыта; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Если категория контекста активна, активная категория сбрасывается до первой видимой категории в списке Категория.
+Если категория контекста активна, активная категория свозит в первую видимую категорию в списке категорий.
 
-##  <a name="hidekeytips"></a>CMFCRibbonBar:: Хидекэйтипс
+## <a name="cmfcribbonbarhidekeytips"></a><a name="hidekeytips"></a>CMFCRibbonBar::HideKeyTips
 
-Скрывает все подсказки на панели ленты.
+Скрывает все кончики ключей на ленте бар.
 
 ```
 void HideKeyTips();
@@ -1292,9 +1292,9 @@ void HideKeyTips();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hittest"></a>CMFCRibbonBar:: HitTest
+## <a name="cmfcribbonbarhittest"></a><a name="hittest"></a>CMFCRibbonBar::HitTest
 
-Извлекает указатель на элемент ленты, заданный расположением точки.
+Извлекает указатель на элемент ленты, указанный расположением точки.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -1305,26 +1305,26 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-окне Расположение точки в координатах панели ленты.
+*Точки*<br/>
+(в) Расположение точки в координатах ленточного бара.
 
-*бчеккактивекатегори*<br/>
-окне Значение TRUE для поиска активной категории; Значение FALSE, чтобы не выполнять поиск в активной категории.
+*bCheckActiveКатегория*<br/>
+(в) TRUE для поиска активной категории; FALSE не искать активную категорию.
 
-*бчеккпанелкаптион*<br/>
-окне Значение TRUE, чтобы протестировать заголовок панели ленты с точкой, расположенной в ней; Значение FALSE, чтобы не проверять заголовок панели ленты с точкой, расположенной в ней. Дополнительные сведения см. в разделе «Примечания».
+*bCheckPanelCaption*<br/>
+(в) TRUE для проверки подписи к ленте панели с точкой, расположенной в нем; FALSE не тестировать подпись ленты панели с точкой, расположенной в нем. Дополнительные сведения см. в разделе «Примечания».
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент ленты, расположенный в указанной точке; значение NULL, если точка не находится в элементе ленты.
+Указатель на элемент ленты, расположенный в указанной точке; в противном случае NULL, если точка не находится в элементе ленты.
 
 ### <a name="remarks"></a>Remarks
 
-Заголовок панели ленты с точкой, расположенной в ней, не проверяется, если параметр *бчеккактивекатегори* имеет значение true.
+Подпись к лентовой панели с расположенной в ней точкой не тестируется, если параметр *bCheckActiveCategory* не является правдой.
 
-##  <a name="iskeytipenabled"></a>CMFCRibbonBar:: Искэйтипенаблед
+## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a>CMFCRibbonBar::IsKeyTip
 
-Указывает, включена ли функция "подсказки клавиш".
+Указывает, включена ли функция «ключевые наконечники».
 
 ```
 BOOL IsKeyTipEnabled() const;
@@ -1332,11 +1332,11 @@ BOOL IsKeyTipEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если включена функция подсказки клавиш; в противном случае — FALSE.
+TRUE, если функция "ключевые наконечники" включена; в противном случае FALSE.
 
-##  <a name="ismainribbonbar"></a>CMFCRibbonBar:: Исмаинриббонбар
+## <a name="cmfcribbonbarismainribbonbar"></a><a name="ismainribbonbar"></a>CMFCRibbonBar::IsMainRibbonBar
 
-Указывает, является ли панель ленты основной лентой.
+Указывает, является ли лента бар основной лентой бар.
 
 ```
 virtual BOOL IsMainRibbonBar() const;
@@ -1344,15 +1344,15 @@ virtual BOOL IsMainRibbonBar() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение TRUE.
+Всегда возвращается TRUE.
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод всегда возвращает значение TRUE. Переопределите этот метод, чтобы указать, является ли панель ленты основной лентой.
+По умолчанию этот метод всегда возвращает TRUE. Переопределить этот метод, чтобы указать, является ли лента бар основной лентой бар.
 
-##  <a name="isprintpreviewenabled"></a>CMFCRibbonBar:: Испринтпревиевенаблед
+## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a>CMFCRibbonBar::IsPrintPreview
 
-Указывает, включена ли функция **предварительного просмотра печати** .
+Указывается, включена ли функция **предварительного просмотра печати.**
 
 ```
 BOOL IsPrintPreviewEnabled() const;
@@ -1360,11 +1360,11 @@ BOOL IsPrintPreviewEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если **Предварительная версия функции печати** включена; в противном случае — FALSE.
+TRUE, если функция **предварительного просмотра печати** включена; в противном случае FALSE.
 
-##  <a name="isqatempty"></a>CMFCRibbonBar:: Искатемпти
+## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a>CMFCRibbonBar:: Иззапт
 
-Указывает, содержит ли панель быстрого доступа кнопки команд.
+Указывает, содержит ли панель инструментов быстрого доступа кнопки команд.
 
 ```
 BOOL IsQATEmpty() const;
@@ -1372,13 +1372,13 @@ BOOL IsQATEmpty() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель быстрого доступа содержит кнопки команд; в противном случае — FALSE.
+TRUE, если панель инструментов быстрого доступа содержит кнопки команд; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isquickaccesstoolbarontop"></a>CMFCRibbonBar:: Искуиккакцесстулбаронтоп
+## <a name="cmfcribbonbarisquickaccesstoolbarontop"></a><a name="isquickaccesstoolbarontop"></a>CMFCRibbonbar:: IsquickAccessToolbaronTop
 
-Указывает, расположена ли панель быстрого доступа над панелью ленты или под ней.
+Указывает, находится ли панель инструментов быстрого доступа над или под лентой бар.
 
 ```
 BOOL IsQuickAccessToolbarOnTop() const;
@@ -1386,11 +1386,11 @@ BOOL IsQuickAccessToolbarOnTop() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель инструментов быстрого доступа расположена над панелью ленты. Значение FALSE, если панель инструментов быстрого доступа расположена под панелью ленты.
+ПРАВДА, если панель инструментов быстрого доступа находится над лентой бар; FALSE, если панель инструментов быстрого доступа находится под лентой бар.
 
-##  <a name="isreplaceframecaption"></a>CMFCRibbonBar:: Исреплацефрамекаптион
+## <a name="cmfcribbonbarisreplaceframecaption"></a><a name="isreplaceframecaption"></a>CMFCRibbonBar::IsReplaceFrameCaption
 
-Указывает, заменяется ли панель ленты заголовком главного окна фрейма.
+Указывает, заменяет ли лента бар или находится под заголовком окна основного кадра.
 
 ```
 BOOL IsReplaceFrameCaption() const;
@@ -1398,11 +1398,11 @@ BOOL IsReplaceFrameCaption() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель ленты заменяет заголовок главного окна фрейма; Значение FALSE, если панель ленты находится под заголовком главного окна фрейма.
+TRUE, если лента бар заменяет подпись к главному окну кадра; FALSE, если лента бар находится под подписью окна основной рамы.
 
-##  <a name="isshowgroupborder"></a>CMFCRibbonBar:: Исшовграупбордер
+## <a name="cmfcribbonbarisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBar::IsShowGroupBorder
 
-Указывает, отображаются ли границы группы на группах кнопок, расположенных на ленте.
+Указывает, отображаются ли группы кнопок, расположенные на ленте, групповой границы.
 
 ```
 virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
@@ -1410,20 +1410,20 @@ virtual BOOL IsShowGroupBorder(CMFCRibbonButtonsGroup* pGroup) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пграуп*<br/>
-окне Этот параметр не используется.
+*pGroup*<br/>
+(в) Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Всегда возвращает значение FALSE.
+Всегда возвращает FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод всегда возвращает значение FALSE. Переопределите этот метод, чтобы указать, отображаются ли границы группы на группах кнопок, расположенных на ленте.
+По умолчанию этот метод всегда возвращает FALSE. Переопределить этот метод, чтобы указать, отображаются ли группы кнопок, расположенные на ленте, групповой границы.
 
-##  <a name="istooltipdescrenabled"></a>CMFCRibbonBar:: Истултипдескренаблед
+## <a name="cmfcribbonbaristooltipdescrenabled"></a><a name="istooltipdescrenabled"></a>CMFCRibbonBar::IstoolTipDescr
 
-Указывает, включены ли описания всплывающих подсказок.
+Указывает, включены ли описания наборов инструментов.
 
 ```
 BOOL IsToolTipDescrEnabled() const;
@@ -1431,15 +1431,15 @@ BOOL IsToolTipDescrEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если описания подсказок включены. Значение FALSE, если описания подсказки отключены.
+TRUE, если включены описания наборов инструментов; FALSE, если описания наборов инструментов отключены.
 
 ### <a name="remarks"></a>Remarks
 
-Описания подсказок — это дополнительный описательный текст, отображаемый с текстом подсказки.
+Описания Tooltip представляют дополнительный описательный текст, отображаемый текстом tooltip.
 
-##  <a name="istooltipenabled"></a>CMFCRibbonBar:: Истултипенаблед
+## <a name="cmfcribbonbaristooltipenabled"></a><a name="istooltipenabled"></a>CMFCRibbonBar::IstoolТип
 
-Указывает, включены или отключены подсказки для панели ленты.
+Указывает, включены ли наборы инструментов или отключены для ленточной ленты.
 
 ```
 BOOL IsToolTipEnabled() const;
@@ -1447,11 +1447,11 @@ BOOL IsToolTipEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если подсказки включены. Значение FALSE, если подсказки отключены.
+TRUE, если инструменты включены; FALSE, если инструменты отключены.
 
-##  <a name="istransparentcaption"></a>CMFCRibbonBar:: Истранспаренткаптион
+## <a name="cmfcribbonbaristransparentcaption"></a><a name="istransparentcaption"></a>CMFCRibbonBar::IsTransparentCaption
 
-Указывает, задан ли экран для цветовой схемы Windows Aero.
+Указывает, установлен ли дисплей для цветовой гаммы Windows Aero.
 
 ```
 BOOL IsTransparentCaption() const;
@@ -1459,13 +1459,13 @@ BOOL IsTransparentCaption() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если цветовая схема — Windows Aero; в противном случае — FALSE.
+ПРАВДА, если цветовая гамма Windows Aero; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onclickbutton"></a>CMFCRibbonBar:: Онкликкбуттон
+## <a name="cmfcribbonbaronclickbutton"></a><a name="onclickbutton"></a>CMFCRibbonBar::OnClickButton
 
-Этот метод сохраняется для обеспечения обратной совместимости с существующими приложениями и не должен использоваться для новой разработки.
+Этот метод сохраняется для обратной совместимости с существующими приложениями и не должен использоваться для новой разработки.
 
 ```
 virtual void OnClickButton(
@@ -1475,15 +1475,15 @@ virtual void OnClickButton(
 
 ### <a name="parameters"></a>Параметры
 
-*пбуттон*<br/>
-окне Указатель на кнопку, которая была нажата.
+*pButton*<br/>
+(в) Указатель на кнопку, которая была нажата.
 
-*point*<br/>
-окне Этот параметр не используется.
+*Точки*<br/>
+(в) Этот параметр не используется.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="oneditcontextmenu"></a>CMFCRibbonBar:: Онедитконтекстмену
+## <a name="cmfcribbonbaroneditcontextmenu"></a><a name="oneditcontextmenu"></a>CMFCRibbonBar::OnEditContextMenu
 
 ```
 virtual void OnEditContextMenu(
@@ -1493,14 +1493,14 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-окне *педит*<br/>
-окне *точка*<br/>
+(в) *pEdit*<br/>
+(в) *точки*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onrtlchanged"></a>CMFCRibbonBar:: Онртлчанжед
+## <a name="cmfcribbonbaronrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonBar::OnRTLИзменен
 
-Вызывается структурой при изменении направления в макете.
+Вызывается по фреймворку, когда макет меняет направление.
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -1508,14 +1508,14 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Параметры
 
-*бисртл*<br/>
-окне Значение TRUE, если макет размещается справа налево; Значение FALSE, если макет расположен слева направо.
+*bIsRTL*<br/>
+(в) ПРАВДА, если макет справа налево; FALSE, если макет слева направо.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод настраивает макет всех элементов управления на панели ленты для нового направления макета.
+Этот метод регулирует расположение всех элементов управления на ленте бар для нового направления макета.
 
-##  <a name="onsetaccdata"></a>CMFCRibbonBar:: Онсетаккдата
+## <a name="cmfcribbonbaronsetaccdata"></a><a name="onsetaccdata"></a>CMFCRibbonBar::OnsetAccData
 
 Этот метод является внутренним для платформы и не предназначен для вызова из пользовательского кода.
 
@@ -1525,7 +1525,7 @@ BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>Параметры
 
-Long *лвал* . индекс доступного объекта.
+длинный *lVal* Индекс доступного объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1533,7 +1533,7 @@ Long *лвал* . индекс доступного объекта.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onshowribboncontextmenu"></a>CMFCRibbonBar:: Оншовриббонконтекстмену
+## <a name="cmfcribbonbaronshowribboncontextmenu"></a><a name="onshowribboncontextmenu"></a>CMFCRibbonBar::OnshowribbonContextMenu
 
 ```
 virtual BOOL OnShowRibbonContextMenu(
@@ -1545,16 +1545,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-окне *приводится*<br/>
-окне *x*<br/>
-окне по *оси y*<br/>
-окне *Фит*<br/>
+(в) *pWnd*<br/>
+(в) *x*<br/>
+(в) *y*<br/>
+(в) *pHit*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onshowribbonqatmenu"></a>CMFCRibbonBar:: Оншовриббонкатмену
+## <a name="cmfcribbonbaronshowribbonqatmenu"></a><a name="onshowribbonqatmenu"></a>CMFCRibbonBar::OnShowRibbon-ATMenu
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1566,18 +1566,18 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>Параметры
 
-окне *приводится*<br/>
-окне *x*<br/>
-окне по *оси y*<br/>
-окне *Фит*<br/>
+(в) *pWnd*<br/>
+(в) *x*<br/>
+(в) *y*<br/>
+(в) *pHit*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsyskeydown"></a>CMFCRibbonBar:: Онсискэйдовн
+## <a name="cmfcribbonbaronsyskeydown"></a><a name="onsyskeydown"></a>CMFCRibbonBar::OnSysKeyDown
 
-Вызывается платформой, когда пользователь нажимает клавишу F10 или удерживает клавишу ALT, а затем нажимает другой ключ.
+Вызывается рамки, когда пользователь нажимает клавишу F10 или удерживает клавишу ALT, а затем нажимает другой ключ.
 
 ```
 BOOL OnSysKeyDown(
@@ -1588,24 +1588,24 @@ BOOL OnSysKeyDown(
 
 ### <a name="parameters"></a>Параметры
 
-*пфрамевнд*<br/>
-окне Указатель на родительское окно основного фрейма ленты.
+*pFrameWnd*<br/>
+(в) Указатель на родительское основное окно рамы ленточного бара.
 
 *wParam*<br/>
-окне Код виртуального ключа нажатой клавиши.
+(в) Виртуальный код ключа нажатия ключа.
 
 *lParam*<br/>
-окне Флаги состояния клавиатуры при нажатии клавиши.
+(в) Клавиатура государства флаги, когда ключ был нажат.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если событие нажатия клавиши было обработано; в противном случае — FALSE.
+TRUE, если событие нажатия клавиши было обработано; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onsyskeyup"></a>CMFCRibbonBar:: Онсискэйуп
+## <a name="cmfcribbonbaronsyskeyup"></a><a name="onsyskeyup"></a>CMFCRibbonBar::OnSysKeyUp
 
-Вызывается платформой, когда пользователь отпускает клавишу F10, клавишу ALT или клавишу, которая была нажата при удержании клавиши ALT.
+Вызывается по системе, когда пользователь выпускает ключ F10, ключ ALT или ключ, который был нажат, когда ключ ALT был задержан.
 
 ```
 BOOL OnSysKeyUp(
@@ -1616,24 +1616,24 @@ BOOL OnSysKeyUp(
 
 ### <a name="parameters"></a>Параметры
 
-*пфрамевнд*<br/>
-окне Указатель на родительское окно основного фрейма ленты.
+*pFrameWnd*<br/>
+(в) Указатель на родительское основное окно рамы ленточного бара.
 
 *wParam*<br/>
-окне Виртуальный код ключа для выпуска.
+(в) Виртуальный код ключа ключа, выпускаемого.
 
 *lParam*<br/>
-окне Этот параметр не используется.
+(в) Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если событие нажатия клавиши было обработано; в противном случае — FALSE.
+TRUE, если событие нажатия клавиши было обработано; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="poptooltip"></a>CMFCRibbonBar::P Оптултип
+## <a name="cmfcribbonbarpoptooltip"></a><a name="poptooltip"></a>CMFCRibbonBar: :PopTooltip
 
-Удаляет подсказку из представления.
+Удаляет набор инструментов из поля зрения.
 
 ```
 void PopTooltip();
@@ -1641,9 +1641,9 @@ void PopTooltip();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="pretranslatemessage"></a>CMFCRibbonBar::P Ретранслатемессаже
+## <a name="cmfcribbonbarpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCRibbonBar::PreTranslateMessage
 
-Определяет, обрабатывается ли указанное сообщение панелью ленты.
+Определяет, обрабатывается ли указанное сообщение ленточной лентой.
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1651,18 +1651,18 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Параметры
 
-*пмсг*<br/>
-окне Указатель на сообщение.
+*pMsg*<br/>
+(в) Указатель на сообщение.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если сообщение было обработано панелью ленты; в противном случае — FALSE.
+ПРАВДА, если сообщение было обработано лентой бар; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="recalclayout"></a>CMFCRibbonBar:: RecalcLayout
+## <a name="cmfcribbonbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonBar::RecalcLayout
 
-Корректирует макет всех элементов управления на панели ленты.
+Регулирует расположение всех элементов управления на ленте бар.
 
 ```
 virtual void RecalcLayout();
@@ -1670,11 +1670,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Remarks
 
-После настройки макета отображается панель ленты.
+После регулировки макета обновляется отображение ленты.
 
-##  <a name="removeallcategories"></a>CMFCRibbonBar:: Ремовеаллкатегориес
+## <a name="cmfcribbonbarremoveallcategories"></a><a name="removeallcategories"></a>CMFCRibbonBar::RemoveAll Categories
 
-Удаляет все категории ленты из панели ленты.
+Удаляет все категории лент из ленты бар.
 
 ```
 void RemoveAllCategories();
@@ -1682,9 +1682,9 @@ void RemoveAllCategories();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод удаляет все категории ленты из памяти и из списка категорий.
+Этот метод удаляет все категории лент из памяти и из списка категорий.
 
-##  <a name="removeallfromtabs"></a>CMFCRibbonBar:: Ремовеаллфромтабс
+## <a name="cmfcribbonbarremoveallfromtabs"></a><a name="removeallfromtabs"></a>CMFCRibbonBar::RemoveAllFromTabs
 
 Удаляет все элементы ленты из области вкладки.
 
@@ -1694,11 +1694,11 @@ void RemoveAllFromTabs();
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция используется, если требуется удалить все элементы, добавленные в область вкладок, с помощью метода [CMFCRibbonBar:: аддтотабс](#addtotabs) .
+Используйте эту функцию, если вы хотите удалить все элементы, которые вы добавили в область вкладки с помощью метода [CMFCRibbonBar::AddToTabs.](#addtotabs)
 
-##  <a name="removecategory"></a>CMFCRibbonBar:: Ремовекатегори
+## <a name="cmfcribbonbarremovecategory"></a><a name="removecategory"></a>CMFCRibbonBar::УдалитьКатегория
 
-Удаляет указанную категорию ленты с ленты.
+Удаляет указанную категорию ленты из ленты бар.
 
 ```
 BOOL RemoveCategory(int nIndex);
@@ -1706,20 +1706,20 @@ BOOL RemoveCategory(int nIndex);
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Отсчитываемый от нуля индекс категории в списке категорий ленты, который содержится в панели ленты.
+*Nindex*<br/>
+(в) Индекс категории с нулевым уровнем, содержащийся в ленточном баре.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная категория ленты удалена; в противном случае — FALSE.
+TRUE, если указанная категория ленты была удалена; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
 Указанная категория ленты удаляется из памяти и из списка категорий.
 
-##  <a name="setactivecategory"></a>CMFCRibbonBar:: Сетактивекатегори
+## <a name="cmfcribbonbarsetactivecategory"></a><a name="setactivecategory"></a>CMFCRibbonBar::SetActiveКатегория
 
-Устанавливает указанную категорию ленты в качестве активной категории.
+Устанавливает указанную категорию ленты как активную категорию.
 
 ```
 BOOL SetActiveCategory(
@@ -1729,25 +1729,25 @@ BOOL SetActiveCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*пкатегори*<br/>
-окне Категория ленты, содержащаяся на панели ленты.
+*pКатегория*<br/>
+(в) Категория ленты, которая содержится в ленте бар.
 
-*бфорцересторе*<br/>
-окне Значение TRUE, чтобы развернуть панель ленты в режиме сворачивания; Значение FALSE для отображения активной категории во всплывающем окне, если панель ленты сведена к полосе.
+*bForceRestore*<br/>
+(в) TRUE, чтобы максимизировать ленту бар, если она сведена к минимуму; FALSE для отображения активной категории во всплывающем окне, если лента бар сведена к минимуму.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная категория была задана как активная категория. в противном случае — FALSE.
+TRUE, если указанная категория была установлена в качестве активной категории; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Основная категория ленты не может быть активной категорией.
+Основной категорией ленты не может быть активная категория.
 
-Если категория, указанная параметром *пкатегори* , не отображается, ее нельзя установить в качестве активной категории.
+Если категория, указанная *pCategory,* не отображается, она не может быть установлена как активная категория.
 
-##  <a name="setactivemdichild"></a>CMFCRibbonBar:: Сетактивемдичилд
+## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a>CMFCRibbonBar::SetActiveMDIChild
 
-Связывает системные кнопки на панели ленты, принадлежащей дочернему окну многодокументного интерфейса (MDI), в указанное дочернее окно MDI.
+Связывает системные кнопки на ленте панели, которые принадлежат к многодокументному интерфейсу (MDI) окну ребенка к указанному окну ребенка MDI.
 
 ```
 void SetActiveMDIChild(CWnd* pWnd);
@@ -1755,12 +1755,12 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-окне Указатель на дочернее окно MDI.
+*pWnd*<br/>
+(в) Указатель на окно ребенка MDI.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setapplicationbutton"></a>CMFCRibbonBar:: Сетаппликатионбуттон
+## <a name="cmfcribbonbarsetapplicationbutton"></a><a name="setapplicationbutton"></a>CMFCRibbonBar::SetApplicationButton
 
 Помещает на панель ленты кнопку приложения.
 
@@ -1772,25 +1772,25 @@ void SetApplicationButton(
 
 ### <a name="parameters"></a>Параметры
 
-*пбуттон*<br/>
-окне Указатель на кнопку ленты приложения.
+*pButton*<br/>
+(в) Указатель на кнопку ленты приложения.
 
-*сизебуттон*<br/>
-окне Размер кнопки на ленте приложения.
+*размерКнопка*<br/>
+(в) Размер кнопки ленты приложения.
 
 ### <a name="remarks"></a>Remarks
 
-Кнопка ленты приложения является большой круглой кнопкой, расположенной в левом верхнем углу элемента управления Ribbon.
+Кнопка ленты приложения представляет собой большую закругленные кнопки, расположенную в верхнем левом углу управления лентой.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `SetApplicationButton` в классе `CMFCRibbonBar`.
+В следующем примере показано, `SetApplicationButton` как `CMFCRibbonBar` использовать метод в классе.
 
 [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]
 
-##  <a name="setelementkeys"></a>CMFCRibbonBar:: Сетелементкэйс
+## <a name="cmfcribbonbarsetelementkeys"></a><a name="setelementkeys"></a>CMFCRibbonBar::SetElementKeys
 
-Задает ключевые подсказки для всех элементов ленты, имеющих указанный идентификатор команды.
+Устанавливает ключевые наконечники для всех элементов ленты, которые имеют указанный идентификатор команды.
 
 ```
 BOOL SetElementKeys(
@@ -1801,26 +1801,26 @@ BOOL SetElementKeys(
 
 ### <a name="parameters"></a>Параметры
 
-*уикмдид*<br/>
-окне Идентификатор команды элемента Ribbon.
+*uiCmdID*<br/>
+(в) Идентификатор команды элемента ленты.
 
-*лпсзкэйс*<br/>
-окне Keytip.
+*lpszKeys*<br/>
+(в) Ключевой наконечник.
 
-*лпсзменукэйс*<br/>
-окне Меню keytip.
+*lpszMenuKeys*<br/>
+(в) Ключевой вариант меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если установлены ключевые подсказки по крайней мере для одного элемента ленты. в противном случае — FALSE.
+TRUE, если набор ключей хотя бы одного элемента ленты; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Необязательное меню keytip для элементов ленты с помощью разворачивающейся кнопки, открывающей всплывающее меню.
+Дополнительный клавиатура меню предназначена для элементов ленты с кнопкой сплита, которая открывает всплывающее меню.
 
-##  <a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar:: Сеткэйбоарднавигатионлевел
+## <a name="cmfcribbonbarsetkeyboardnavigationlevel"></a><a name="setkeyboardnavigationlevel"></a>CMFCRibbonBar::SetKeyboardNavigationLevel
 
-Задает уровень навигации клавиатуры при нажатии клавиш, содержащихся на ленте.
+Устанавливает уровень навигации клавиатуры, когда пользователь нажимает на клавиши, содержащиеся на ленте.
 
 ```
 void SetKeyboardNavigationLevel(
@@ -1830,19 +1830,19 @@ void SetKeyboardNavigationLevel(
 
 ### <a name="parameters"></a>Параметры
 
-*плевел*<br/>
-окне Указатель на текущий объект навигации по клавише.
+*pLevel*<br/>
+(в) Указатель на текущий навигационный объект клавиатуры.
 
-*бсетфокус*<br/>
-окне Значение TRUE, чтобы установить фокус клавиатуры на панель ленты.
+*bSetFocus*<br/>
+(в) ПРАВДА установить клавиатуру фокус на ленту бар.
 
 ### <a name="remarks"></a>Remarks
 
-Навигация с помощью клавиатуры ленты запускается, когда пользователь нажимает клавишу ALT или F10. Пользователь выбирает следующий уровень навигации, нажимая клавишу keytip на панели ленты. Пользователь может вернуться к предыдущему уровню навигации, нажав клавишу Escape.
+Клавиатура навигации ленты бар начинается, когда пользователь нажимает на ALT или F10 ключ. Пользователь выбирает следующий уровень навигации, нажимая клавишу на ленточной ленте. Пользователь может вернуться к предыдущему уровню навигации, нажав клавишу побега.
 
-##  <a name="setmaximizemode"></a>CMFCRibbonBar:: Сетмаксимиземоде
+## <a name="cmfcribbonbarsetmaximizemode"></a><a name="setmaximizemode"></a>CMFCRibbonBar::SetMaximizeMode
 
-Настраивает панель ленты, когда размер окна дочернего окна многодокументного интерфейса (MDI) попадает в развернутое состояние или выходит из него.
+Настраивает ленточку, когда размер окна многодокументного интерфейса (MDI) ввода или покидает состояние максимизации.
 
 ```
 void SetMaximizeMode(
@@ -1852,17 +1852,17 @@ void SetMaximizeMode(
 
 ### <a name="parameters"></a>Параметры
 
-*бмакс*<br/>
-окне Значение TRUE, чтобы отобразить системные кнопки для дочернего окна MDI на панели ленты. Значение FALSE, чтобы удалить системные кнопки для дочернего окна MDI с панели ленты.
+*bMax*<br/>
+(в) TRUE для отображения кнопок системы для детского окна MDI на ленточном баре; FALSE для удаления системных кнопок для детского окна MDI из ленты бар.
 
-*Приводится*<br/>
-окне Указатель на главное окно фрейма для панели ленты.
+*pWnd*<br/>
+(в) Указатель на основное окно кадра для ленты бар.
 
 ### <a name="remarks"></a>Remarks
 
-Панель ленты отображает системные кнопки для дочернего окна MDI в строке табуляции, когда дочернее окно MDI развернуто.
+Лента бар отображает кнопки системы для окна ребенка MDI в строке вкладки, когда окно ребенка MDI максимизируется.
 
-##  <a name="setquickaccesscommands"></a>CMFCRibbonBar:: Сеткуиккакцесскоммандс
+## <a name="cmfcribbonbarsetquickaccesscommands"></a><a name="setquickaccesscommands"></a>CMFCRibbonBar::Set'uickAccessCommands
 
 Добавляет один или несколько элементов ленты на панель быстрого доступа.
 
@@ -1874,21 +1874,21 @@ void SetQuickAccessCommands(
 
 ### <a name="parameters"></a>Параметры
 
-*лсткоммандс*<br/>
-окне Список команд, помещаемых на панель быстрого доступа.
+*lstCommands*<br/>
+(в) Список команд, которые будут размещены на панели инструментов быстрого доступа.
 
 *bRecalcLayout*<br/>
-окне Значение TRUE, если необходимо перерисовать ленту после добавления элементов ленты; В противном случае — значение FALSE.
+(в) ПРАВДА, если хотите перерисовать ленту после добавления элементов ленты; FALSE в противном случае.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `SetQuickAccessCommands` в классе `CMFCRibbonBar`.
+В следующем примере показано, `SetQuickAccessCommands` как `CMFCRibbonBar` использовать метод в классе.
 
 [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]
 
-##  <a name="setquickaccessdefaultstate"></a>CMFCRibbonBar:: Сеткуиккакцессдефаултстате
+## <a name="cmfcribbonbarsetquickaccessdefaultstate"></a><a name="setquickaccessdefaultstate"></a>CMFCRibbonBar::Set'uickAccessDefaultState
 
-Задает для панели быстрого доступа состояние по умолчанию.
+Устанавливает панель инструментов быстрого доступа в состояние по умолчанию.
 
 ```
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
@@ -1896,22 +1896,22 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 ### <a name="parameters"></a>Параметры
 
-*state*<br/>
-окне Состояние панели быстрого доступа по умолчанию.
+*Государства*<br/>
+(в) Состояние панели инструментов быстрого доступа по умолчанию.
 
 ### <a name="remarks"></a>Remarks
 
-Панель быстрого доступа содержит список команд и их видимость.
+Состояние панели инструментов быстрого доступа включает в себя список команд и их видимость.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать метод `SetQuickAccessDefaultState` в классе `CMFCRibbonBar`.
+В следующем примере показано, `SetQuickAccessDefaultState` как `CMFCRibbonBar` использовать метод в классе.
 
 [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]
 
-##  <a name="setquickaccesstoolbarontop"></a>CMFCRibbonBar:: Сеткуиккакцесстулбаронтоп
+## <a name="cmfcribbonbarsetquickaccesstoolbarontop"></a><a name="setquickaccesstoolbarontop"></a>CMFCRibbonbar::Set-КВиквикквиКВКТулбаронтоп
 
-Располагает панель быстрого доступа над или под панелью ленты.
+Позиции быстрого доступа панели инструментов выше или ниже ленты бар.
 
 ```
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
@@ -1919,12 +1919,12 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 ### <a name="parameters"></a>Параметры
 
-*бонтоп*<br/>
-окне Значение TRUE, чтобы разместить панель быстрого доступа над панелью ленты. Значение FALSE, чтобы разместить панель быстрого доступа под панелью ленты.
+*bOnTop*<br/>
+(в) TRUE для размещения панели инструментов быстрого доступа над лентой бар; FALSE для размещения панели инструментов быстрого доступа ниже ленточной панели.
 
-##  <a name="settooltipfixedwidth"></a>CMFCRibbonBar:: Сеттултипфикседвидс
+## <a name="cmfcribbonbarsettooltipfixedwidth"></a><a name="settooltipfixedwidth"></a>CMFCRibbonBar::SetTooltipFixedWidth
 
-Устанавливает обычные и крупные размеры подсказок фиксированной ширины для панели ленты.
+Устанавливает регулярные и большие размеры tooltip фиксированной ширины для ленты бар.
 
 ```
 void SetTooltipFixedWidth(
@@ -1934,17 +1934,17 @@ void SetTooltipFixedWidth(
 
 ### <a name="parameters"></a>Параметры
 
-*нвидсрегулар*<br/>
-окне Ширина (в пикселях) основной подсказкы фиксированного размера.
+*nWidthRegular*<br/>
+(в) Ширина, в пикселях, обычного инструмента фиксированного размера.
 
-*нвидсларжеимаже*<br/>
-окне Ширина (в пикселях) подсказок большого фиксированного размера.
+*nWidthLargeImage*<br/>
+(в) Ширина, в пикселях, большого инструмента фиксированного размера.
 
 ### <a name="remarks"></a>Remarks
 
-Установка параметра в значение 0 приводит к тому, что соответствующая ширина изменяется.
+Установка параметра до 0 приводит к тому, что соответствующая ширина будет меняться.
 
-##  <a name="showcategory"></a>CMFCRibbonBar:: Шовкатегори
+## <a name="cmfcribbonbarshowcategory"></a><a name="showcategory"></a>CMFCRibbonBar::ПоказатьКатегория
 
 Отображает или скрывает указанную категорию ленты.
 
@@ -1956,13 +1956,13 @@ void ShowCategory(
 
 ### <a name="parameters"></a>Параметры
 
-*ниндекс*<br/>
-окне Индекс категории ленты.
+*Nindex*<br/>
+(в) Индекс категории ленты.
 
 *bShow*<br/>
-окне Если значение равно TRUE, отображается категория ленты. в противном случае скройте категорию ленты.
+(в) Если правда, показать ленту категории; в противном случае, скрыть ленту категории.
 
-##  <a name="showcontextcategories"></a>CMFCRibbonBar:: Шовконтексткатегориес
+## <a name="cmfcribbonbarshowcontextcategories"></a><a name="showcontextcategories"></a>CMFCRibbonBar::ПоказатьКонтекстКатегории
 
 Показывает или скрывает категории контекста с указанным идентификатором.
 
@@ -1974,15 +1974,15 @@ void ShowContextCategories(
 
 ### <a name="parameters"></a>Параметры
 
-*уиконтекстид*<br/>
-окне Идентификатор категории контекста.
+*uiContextID*<br/>
+(в) Идентификатор категории контекста.
 
 *bShow*<br/>
-окне Если значение равно TRUE, отображаются категории с указанным ИДЕНТИФИКАТОРом. в противном случае скройте категории с указанным ИДЕНТИФИКАТОРом.
+(в) Если TRUE, отображаем категории, которые имеют указанный идентификатор; в противном случае скрой категории, которые имеют указанный идентификатор.
 
-##  <a name="showkeytips"></a>CMFCRibbonBar:: Шовкэйтипс
+## <a name="cmfcribbonbarshowkeytips"></a><a name="showkeytips"></a>CMFCRibbonBar::ShowKeyTips
 
-Показывает ключевые подсказки для каждого элемента ленты на панели ленты.
+Показывает ключевые наконечники для каждого элемента ленты на ленте бар.
 
 ```
 void ShowKeyTips();
@@ -1990,9 +1990,9 @@ void ShowKeyTips();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="togglemimimizestate"></a>CMFCRibbonBar:: Тогглемимимизестате
+## <a name="cmfcribbonbartogglemimimizestate"></a><a name="togglemimimizestate"></a>CMFCRibbonBar::ToggleMimimizeState
 
-Переключает панель ленты между минимальным и развернутым состояниями.
+Переключает ленту между сведенными и максимизированными состояниями.
 
 ```
 void ToggleMimimizeState();
@@ -2000,13 +2000,13 @@ void ToggleMimimizeState();
 
 ### <a name="remarks"></a>Remarks
 
-Опечатка в имени метода является известной проблемой.
+Ошибка в названии метода является известной проблемой.
 
-В режиме сворачивания элемент управления лента скрыт и отображаются только вкладки. Когда пользователь щелкает вкладку, элемент управления "лента" отображается в виде всплывающего окна. Окно закрывается, когда пользователь щелкает мышью или выполняет команду.
+В минимизированном состоянии элемент управления лентой скрыт и отображаются только вкладки. Когда пользователь нажимает на вкладку, элемент управления лентой отображается как всплывающее окно. Окно закрывается, когда пользователь нажимает или выполняет команду.
 
-##  <a name="translatechar"></a>CMFCRibbonBar:: Транслатечар
+## <a name="cmfcribbonbartranslatechar"></a><a name="translatechar"></a>CMFCRibbonBar::TranslateChar
 
-Определяет, обрабатывается ли на панели ленты указанный код символа нажатия клавиши.
+Определяет, обрабатывается ли указанный код символов нажатия клавиши ленточной лентой.
 
 ```
 virtual BOOL TranslateChar(UINT nChar);
@@ -2014,18 +2014,18 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*nChar*<br/>
-окне Код символа нажатия клавиши пользователя.
+*Nchar*<br/>
+(в) Код символа нажатия клавишпользователя.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если код символа был обработан панелью ленты; в противном случае — FALSE.
+TRUE, если код персонажа был обработан ленточной лентой; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Функция подсказки клавиш позволяет пользователям перемещаться по панели ленты с помощью клавиатуры.
+Функция keytips позволяет пользователям перемещаться по ленте бар с помощью клавиатуры.
 
-##  <a name="getfocused"></a>CMFCRibbonBar:: с фокусировкой
+## <a name="cmfcribbonbargetfocused"></a><a name="getfocused"></a>CMFCRibbonBar::GetFocused
 
 Возвращает элемент, имеющий фокус ввода.
 
@@ -2035,13 +2035,13 @@ virtual CMFCRibbonBaseElement* GetFocused();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на элемент с сортировкой или значение NULL.
+Указатель на сфокусированный элемент или NULL.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="iswindows7look"></a>CMFCRibbonBar:: IsWindows7Look
+## <a name="cmfcribbonbariswindows7look"></a><a name="iswindows7look"></a>CMFCRibbonBar::IsWindows7Look
 
-Указывает, имеет ли лента Windows 7 внешний вид (кнопка приложения с небольшим прямоугольным представлением).
+Указывает, имеет ли лента вид Windows 7 (маленькая прямоугольная кнопка приложения).
 
 ```
 BOOL IsWindows7Look() const;
@@ -2049,11 +2049,11 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если у ленты есть Windows 7; в противном случае — FALSE.
+ПРАВДА, если лента имеет Windows 7 вид; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="loadfromresource"></a>CMFCRibbonBar:: Лоадфромресаурце
+## <a name="cmfcribbonbarloadfromresource"></a><a name="loadfromresource"></a>CMFCRibbonBar::LoadFromResource
 
 Перегружен. Загружает панель ленты из ресурсов приложения.
 
@@ -2071,25 +2071,25 @@ virtual BOOL LoadFromResource(
 
 ### <a name="parameters"></a>Параметры
 
-*уиксмлресид*<br/>
-Указывает идентификатор ресурса XML-строки со сведениями о панели ленты.
+*uiXMLResID*<br/>
+Определяет идентификатор ресурса строки XML с информацией Ribbon Bar.
 
-*лпсзрестипе*<br/>
-Указывает тип ресурса, расположенного по адресу *уиксмлресид*.
+*lpszResType*<br/>
+Определяет тип ресурса, расположенного на *uiXMLResID.*
 
 *hInstance*<br/>
-Обработчик для модуля, исполняемый файл которого содержит ресурс. Если значение *HINSTANCE* равно null, система загружает ресурс из модуля, который использовался для создания текущего процесса.
+Ручка к модулю, исполняемый файл которого содержит ресурс. Если *hInstance* null, система загружает ресурс из модуля, который использовался для создания текущего процесса.
 
-*лпсзксмлресид*<br/>
-Указывает идентификатор ресурса (в виде строки) со сведениями о ленте.
+*lpszXMLResID*<br/>
+Упоняет идентификатор ресурса (в строке формы) с информацией Ribbon Bar.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если загрузка выполнена. в противном случае — FALSE.
+TRUE, если нагрузка удается; в противном случае FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="savetoxmlbuffer"></a>CMFCRibbonBar:: Саветоксмлбуффер
+## <a name="cmfcribbonbarsavetoxmlbuffer"></a><a name="savetoxmlbuffer"></a>CMFCRibbonBar::SavetoXMLBuffer
 
 Сохраняет панель ленты в буфер.
 
@@ -2100,7 +2100,7 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ### <a name="parameters"></a>Параметры
 
 *ppBuffer*<br/>
-Когда эта функция возвращает значение, *ппбуффер* указывает на буфер, выделенный этим методом, и содержит сведения о ленте в формате XML.
+Когда эта функция возвращается, *ppBuffer* указывает на буфер, выделенный этим методом, и содержит информацию Ribbon Bar в формате XML.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2108,9 +2108,9 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="savetoxmlfile"></a>CMFCRibbonBar:: SaveToXMLFile
+## <a name="cmfcribbonbarsavetoxmlfile"></a><a name="savetoxmlfile"></a>CMFCRibbonBar::SavetoXMLFile
 
-Сохраняет панель ленты в XML-файл.
+Сохраняет ленту бар на XML файл.
 
 ```
 BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
@@ -2118,7 +2118,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзфилепас*<br/>
+*lpszFilePath*<br/>
 Задает выходной файл.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2127,9 +2127,9 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setwindows7look"></a>CMFCRibbonBar:: SetWindows7Look
+## <a name="cmfcribbonbarsetwindows7look"></a><a name="setwindows7look"></a>CMFCRibbonBar::SetWindows7Look
 
-Включает или отключает функцию "внешний вид Windows 7" (кнопка приложения на маленьком прямоугольном приложении) для ленты.
+Позволяет или отстраняет Windows 7 смотреть (маленькая прямоугольная кнопка приложения) для ленты.
 
 ```
 void SetWindows7Look(
@@ -2140,10 +2140,10 @@ void SetWindows7Look(
 ### <a name="parameters"></a>Параметры
 
 *bWindows7Look*<br/>
-TRUE задает вид Windows 7; В противном случае — значение FALSE.
+TRUE устанавливает Windows 7 внешний вид; FALSE в противном случае.
 
-*брекалк*<br/>
-Значение TRUE пересчитывает макет ленты; В противном случае — значение FALSE.
+*bRecalc*<br/>
+TRUE пересчитывает расположение ленты; FALSE в противном случае.
 
 ### <a name="remarks"></a>Remarks
 
@@ -2152,7 +2152,7 @@ TRUE задает вид Windows 7; В противном случае — зн�
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [CPane Class](../../mfc/reference/cpane-class.md)<br/>
-[Класс CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[Класс CMFCRibbonКатегория](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Класс CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Класс CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[Пошаговое руководство. Обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[Пошаговая прогулка: Обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

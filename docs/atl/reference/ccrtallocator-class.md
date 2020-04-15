@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6bae3818fa0f1639e0e3cee4e09121580da768
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327172"
 ---
 # <a name="ccrtallocator-class"></a>Класс CCRTAllocator
 
-Этот класс предоставляет методы для управления памяти с помощью подпрограммы CRT памяти.
+Этот класс предоставляет методы управления памятью с помощью процедур CRT памяти.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,21 +31,21 @@ class ATL::CCRTAllocator
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CCRTAllocator::Allocate](#allocate)|(Статический) Этот метод используется для выделения памяти.|
-|[CCRTAllocator::Free](#free)|(Статический) Вызовите этот метод для освобождения памяти.|
-|[CCRTAllocator::Reallocate](#reallocate)|(Статический) Этот метод вызывается для повторного выделения памяти.|
+|[CCRTAllocator::Выделение](#allocate)|(Статик) Вызовите этот метод для выделения памяти.|
+|[CCRTAllocator::Бесплатно](#free)|(Статик) Вызовите этот метод, чтобы освободить память.|
+|[CCRTAllocator::Перераспределить](#reallocate)|(Статик) Вызовите этот метод для перераспределения памяти.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс используется [CHeapPtr](../../atl/reference/cheapptr-class.md) для предоставления процедур выделения памяти CRT. Класс какой [CComAllocator](../../atl/reference/ccomallocator-class.md), предоставляет те же методы, с помощью COM-подпрограммы.
+Этот класс используется [CHeapPtr](../../atl/reference/cheapptr-class.md) для обеспечения процедур распределения памяти CRT. Аналог класса, [CComAllocator](../../atl/reference/ccomallocator-class.md), предоставляет те же методы, используя COM процедур.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файле atlcore.h
+**Заголовок:** atlcore.h
 
-##  <a name="allocate"></a>  CCRTAllocator::Allocate
+## <a name="ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Выделение
 
 Вызовите эту статическую функция для выделения памяти.
 
@@ -55,20 +55,20 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nBytes*<br/>
+*nБайт*<br/>
 Количество байтов, которые необходимо выделить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает указатель void на выделенное пространство или значение NULL, если памяти недостаточно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Выделяет память. См. в разделе [malloc](../../c-runtime-library/reference/malloc.md) для получения дополнительных сведений.
+Выделяет память. Подробнее о [малле.](../../c-runtime-library/reference/malloc.md)
 
-##  <a name="free"></a>  CCRTAllocator::Free
+## <a name="ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Бесплатно
 
-Вызовите эту статическую функцию для освобождения памяти.
+Вызовите эту статическую функцию для свободной памяти.
 
 ```
 static void Free(void* p) throw();
@@ -76,14 +76,14 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*P*<br/>
 Указатель на выделенную область памяти.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает выделенную память. См. в разделе [бесплатный](../../c-runtime-library/reference/free.md) для получения дополнительных сведений.
+Освобождает выделенную память. Смотрите [бесплатно](../../c-runtime-library/reference/free.md) для получения более подробной информации.
 
-##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
+## <a name="ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Перераспределить
 
 Вызовите эту статическую функцию для повторного выделения памяти.
 
@@ -93,22 +93,22 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*P*<br/>
 Указатель на выделенную область памяти.
 
-*nBytes*<br/>
+*nБайт*<br/>
 Количество байтов, которые необходимо выделить повторно.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает указатель void на выделенное пространство или значение NULL, если памяти недостаточно.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Изменяет объем выделенной памяти. См. в разделе [realloc](../../c-runtime-library/reference/realloc.md) для получения дополнительных сведений.
+Изменяет объем выделенной памяти. Более подробную информацию можно узнать в [realloc.](../../c-runtime-library/reference/realloc.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
 [Класс CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 8b7e32ddab5b2f0667b17b0f127ac2e7e5d9a426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330883"
 ---
 # <a name="csimplearrayequalhelper-class"></a>Класс CSimpleArrayEqualHelper
 
-Этот класс представляет вспомогательный объект для [CSimpleArray](../../atl/reference/csimplearray-class.md) класса.
+Этот класс является помощником для класса [CSimpleArray.](../../atl/reference/csimplearray-class.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,21 +35,21 @@ class CSimpleArrayEqualHelper
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSimpleArrayEqualHelper::IsEqual](#isequal)|(Статический) Сравнивает два `CSimpleArray` объекта элементов на предмет равенства.|
+|[CSimpleArrayУравнойХелсер::Аум](#isequal)|(Статик) Тестирует `CSimpleArray` два элемента объекта на равенство.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс признаков является дополнением к `CSimpleArray` класса. Он предоставляет метод для сравнения двух элементов, хранящихся в `CSimpleArray` объекта. По умолчанию элементы сравниваются с помощью **operator=()**, но если массив содержит сложные типы данных, которые не хватает собственные оператор равенства, вам потребуется переопределение этого класса.
+Этот класс черт является дополнением к классу. `CSimpleArray` Он предоставляет метод сравнения двух элементов, хранящихся в объекте. `CSimpleArray` По умолчанию элементы сравниваются с использованием **оператора ()**, но если массив содержит сложные типы данных, которые не имеют своего оператора равенства, вам нужно будет переопределить этот класс.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelper::IsEqual
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayУравнойХелсер::Аум
 
-Сравнивает два `CSimpleArray` объекта элементов на предмет равенства.
+Тестирует `CSimpleArray` два элемента объекта на равенство.
 
 ```
 static bool IsEqual(
@@ -62,15 +62,15 @@ static bool IsEqual(
 *T1*<br/>
 Объект типа T.
 
-*T2*<br/>
+*t2*<br/>
 Объект типа T.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если элементы равны; значение false в противном случае.
+Возвращает верно, если элементы равны, ложные в противном случае.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CSimpleArray](../../atl/reference/csimplearray-class.md)<br/>
-[Класс CSimpleArrayEqualHelperFalse](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[CSimpleArrayEqualHelperFalse Класс](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

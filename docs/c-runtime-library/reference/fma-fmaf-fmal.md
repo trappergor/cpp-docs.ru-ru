@@ -1,10 +1,13 @@
 ---
 title: fma, fmaf, fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346571"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -83,10 +87,10 @@ long double fmal(
 *x*<br/>
 Первое значение для перемножения.
 
-*y*<br/>
+*Y*<br/>
 Второе значение для перемножения.
 
-*z*<br/>
+*Z*<br/>
 Значение для сложения.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -95,32 +99,34 @@ long double fmal(
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблемы|Назад|
+|Проблемы|Возвращает|
 |-----------|------------|
-|*x* = бесконечность, *y* = 0 или<br /><br /> *x* = 0, *y* = бесконечность|NaN|
-|*x* или *y* = точное ± бесконечности, *z* = бесконечность с противоположным знаком|NaN|
-|*x* или *y* = NaN|NaN|
-|not (*x* = 0, *y*= неопределенное) и *z* = NaN<br /><br /> not (*x*= неопределенный, *y*= 0) и *z* = NaN|NaN|
-|Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
+|*х* - ИНФИНИТИОН, *у* й 0 или<br /><br /> *х* 0, *у-инфинитизм*|NaN|
+|*x* или *y* - точная - ИНФИНИТИЯ, *z* - INFINITY с противоположным знаком|NaN|
+|*x* или *y* - NaN|NaN|
+|нет *(х* 0, *у*неопределенный срок) и *z*<br /><br /> нет *(х*неопределенный, *у*Й0) и *z*|NaN|
+|Ошибка переполнения диапазона|HUGE_VAL, HUGE_VALF или HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
 
-Ошибки сообщаются, как указано в [_matherr](matherr.md).
+Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **FMA** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **FMA** всегда принимает и возвращает значение **типа Double**.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **FMA,** которые принимают и возвращают **поплавок,** и **длинные** **двойные** типы. В программе C, **fma** всегда принимает и возвращает **двойник.**
 
 Эта функция вычисляет значение с бесконечной точностью, после чего округляет результат.
 
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**FMA**, **фмаф**, **фмал**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>

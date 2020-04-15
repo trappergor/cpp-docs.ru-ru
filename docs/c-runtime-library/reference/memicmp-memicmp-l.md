@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333227"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -59,16 +62,16 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>Параметры
 
-*buffer1*<br/>
+*буфер1*<br/>
 Первый буфер.
 
-*buffer2*<br/>
+*буфер2*<br/>
 Второй буфер.
 
 *count*<br/>
 Число символов.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -77,18 +80,20 @@ int _memicmp_l(
 
 |Возвращаемое значение|Отношения между определенным числом начальных байтов буфера 1 и буфера 2|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1* меньше *buffer2*.|
-|0|*buffer1* идентично *buffer2*.|
-|> 0|*buffer1* больше *buffer2*.|
+|< 0|*buffer1* меньше, чем *буфер2*.|
+|0|*buffer1* идентичен *буферу2*.|
+|> 0|*buffer1* больше, чем *буфер2*.|
 |**_NLSCMPERROR**|Произошла ошибка.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_memicmp** сравнивает символы первого *числа* двух буферов *buffer1* и *buffer2* byte по байтам. Сравнение выполняется без учета регистра.
+Функция **_memicmp** сравнивает первые *символы количества* буферов 2 буферов1 и *buffer2* byte byte byte. *buffer1* Сравнение выполняется без учета регистра.
 
-Если *buffer1* или *buffer2* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** **и устанавливает значение** переводится в **еинвал**.
+Если *буфер1* или *буфер2* является нулевой указателем, эта функция вызывает недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, функция **возвращается _NLSCMPERROR** и устанавливает **errno** в **EINVAL.**
 
-**_memicmp** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_memicmp_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_memicmp** использует текущий локал для поведения, зависящем от локализуемого; **_memicmp_l** идентичен, за исключением того, что он использует локал, передаваемый в вместо. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -97,7 +102,7 @@ int _memicmp_l(
 |**_memicmp**|\<memory.h> или \<string.h>|
 |**_memicmp_l**|\<memory.h> или \<string.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -134,7 +139,7 @@ Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'
 First is equal to second.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
