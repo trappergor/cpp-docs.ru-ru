@@ -13,19 +13,19 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 4b68198c17d7bd030b88bc78ad4de1367c914703
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a72b3b4308ed83dfdc4a2895a04d1fe9a177ce5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327030"
 ---
 # <a name="cdynamicchain-class"></a>Класс CDynamicChain
 
-Этот класс предоставляет методы, поддержки динамической цепочки схемы сообщений.
+Этот класс предоставляет методы, поддерживающие динамическое цепочку карт сообщений.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,50 +37,50 @@ class CDynamicChain
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Конструктор.|
-|[CDynamicChain:: ~ CDynamicChain](#dtor)|Деструктор|
+|[CDynamicChain::CDynamicChain](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDynamicChain::CallChain](#callchain)|Направляет сообщение Windows для схемы сообщений другим объектом.|
-|[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет запись сопоставления сообщения из коллекции.|
-|[CDynamicChain::SetChainEntry](#setchainentry)|Добавляет запись сопоставления сообщений в коллекцию или изменяет существующую запись.|
+|[CDynamicChain:CallChain](#callchain)|Направляет сообщение Windows на карту сообщений другого объекта.|
+|[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет запись карты сообщения из коллекции.|
+|[CDynamicChain::SetChainEntry](#setchainentry)|Добавляет запись на карту сообщений в коллекцию или изменяет существующую запись.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CDynamicChain` Управляет коллекцией схемы сообщений, включение Windows сообщение направляется во время выполнения, в схеме сообщений другим объектом.
+`CDynamicChain`управляет коллекцией карт сообщений, что позволяет направлять сообщение Windows во время выполнения на карту сообщений другого объекта.
 
-Чтобы добавить поддержку динамической цепочки для схем сообщений, сделайте следующее:
+Чтобы добавить поддержку динамической цепочки карт сообщений, сделайте следующее:
 
-- Наследование класса из `CDynamicChain`. В схеме сообщений, укажите [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос цепочку в схеме сообщений другим объектом по умолчанию.
+- Выизвуйте свой класс из `CDynamicChain`. На карте сообщений укажите [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос акцепировать к карте сообщения по умолчанию другого объекта.
 
-- Каждый класс, требуется цепочку сертификатов до из [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap` позволяет объекту предоставлять его схемы сообщений к другим объектам.
+- Вывести каждый класс, который вы хотите, чтобы цепи к от [CMessageMap](../../atl/reference/cmessagemap-class.md). `CMessageMap`позволяет объекту разоблачать свои карты сообщений другим объектам.
 
-- Вызовите `CDynamicChain::SetChainEntry` определить, какие объекта и сопоставление сообщений, вы хотите цепочки.
+- Позвоните, `CDynamicChain::SetChainEntry` чтобы определить, какой объект и на какую карту сообщений вы хотите приковать.
 
-Например предположим, что ваш класс определяется следующим образом:
+Например, предположим, что ваш класс определяется следующим образом:
 
 [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]
 
-Затем клиент вызывает `CMyWindow::SetChainEntry`:
+Затем клиент `CMyWindow::SetChainEntry`звонит:
 
 [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]
 
-где `chainedObj` — цепного объект и является экземпляром класса, производного от `CMessageMap`. Теперь если `myCtl` получает сообщение, которое не обрабатывается `OnPaint` или `OnSetFocus`, процедура окна направляет сообщение `chainedObj`в схеме сообщений по умолчанию.
+где `chainedObj` находится цепной объект и является экземпляром `CMessageMap`класса, полученного из . Теперь, `myCtl` если получает сообщение, которое не обрабатывается `OnPaint` или `OnSetFocus`, `chainedObj`процедура окна направляет сообщение на карту сообщения по умолчанию.
 
-Дополнительные сведения о цепочках map сообщения, см. в разделе [схемы сообщений](../../atl/message-maps-atl.md) в статье «Классы окон ATL».
+Для получения дополнительной информации о цепочке карты сообщений смотрите [Карты сообщений](../../atl/message-maps-atl.md) в статье «Классы окон ATL».
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlwin.h
 
-##  <a name="callchain"></a>  CDynamicChain::CallChain
+## <a name="cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain:CallChain
 
-Направляет сообщение Windows, схему сообщений другим объектом.
+Направляет сообщение Windows на карту сообщений другого объекта.
 
 ```
 BOOL CallChain(
@@ -95,34 +95,34 @@ BOOL CallChain(
 ### <a name="parameters"></a>Параметры
 
 *dwChainID*<br/>
-[in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.
+(в) Уникальный идентификатор, связанный с цепным объектом и его картой сообщений.
 
-*hWnd*<br/>
-[in] Дескриптор окна, принимающего сообщение.
+*Hwnd*<br/>
+(в) Ручка к окну, получающая сообщение.
 
 *uMsg*<br/>
-[in] Сообщение, отправленное окну.
+(в) Сообщение, отправленное в окно.
 
 *wParam*<br/>
-[in] Дополнительные сведения, относящиеся к сообщению.
+(в) Дополнительная информация, соомнее сообщения.
 
 *lParam*<br/>
-[in] Дополнительные сведения, относящиеся к сообщению.
+(в) Дополнительная информация, соомнее сообщения.
 
 *lResult*<br/>
-[out] Результат обработки сообщения.
+(ваут) Результат обработки сообщений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если оно полностью обрабатывается; в противном случае — значение FALSE.
+TRUE, если сообщение полностью обработано; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для вызова процедуры окна `CallChain`, необходимо указать [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщения. Например, см. в разделе [CDynamicChain](../../atl/reference/cdynamicchain-class.md) Обзор.
+Для того чтобы процедура `CallChain`окна была вызвать, необходимо указать [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) макрос на карте сообщений. Например, [см.](../../atl/reference/cdynamicchain-class.md)
 
-`CallChain` требуется предыдущего вызова [SetChainEntry](#setchainentry) связываемый *dwChainID* значение с помощью объекта и схему сообщений.
+`CallChain`Требуется предыдущий вызов [SetChainEntry,](#setchainentry) чтобы связать значение *dwChainID* с объектом и его картой сообщений.
 
-##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain
+## <a name="cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain
 
 Конструктор.
 
@@ -130,7 +130,7 @@ BOOL CallChain(
 CDynamicChain();
 ```
 
-##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain
+## <a name="cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain::CDynamicChain
 
 Деструктор
 
@@ -138,13 +138,13 @@ CDynamicChain();
 ~CDynamicChain();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry
+## <a name="cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry
 
-Удаляет указанное сообщение карты из коллекции.
+Удаляет указанную карту сообщений из коллекции.
 
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
@@ -153,15 +153,15 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="parameters"></a>Параметры
 
 *dwChainID*<br/>
-[in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений. Изначально вы определите это значение путем вызова [SetChainEntry](#setchainentry).
+(в) Уникальный идентификатор, связанный с цепным объектом и его картой сообщений. Первоначально это значение определяется через вызов [в SetChainEntry.](#setchainentry)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если в схеме сообщений был успешно удален из коллекции. В противном случае — значение FALSE.
+TRUE, если карта сообщений успешно удалена из коллекции. В противном случае — значение FALSE.
 
-##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry
+## <a name="cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain::SetChainEntry
 
-Карта указанное сообщение добавляется в коллекцию.
+Добавляет указанную карту сообщения в коллекцию.
 
 ```
 BOOL SetChainEntry(
@@ -173,23 +173,23 @@ BOOL SetChainEntry(
 ### <a name="parameters"></a>Параметры
 
 *dwChainID*<br/>
-[in] Уникальный идентификатор, связанный с объектом цепочки и схему сообщений.
+(в) Уникальный идентификатор, связанный с цепным объектом и его картой сообщений.
 
 *pObject*<br/>
-[in] Указатель на объект цепочки объявление схемы сообщений. Этот объект должен быть производным от [CMessageMap](../../atl/reference/cmessagemap-class.md).
+(в) Указатель на цепной объект, объявляющий карту сообщения. Этот объект должен быть получен из [CMessageMap](../../atl/reference/cmessagemap-class.md).
 
 *dwMsgMapID*<br/>
-[in] Идентификатор схемы сообщений в цепочке объекта. Значение по умолчанию — 0, который определяет схему сообщений по умолчанию, объявленные с [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map). Чтобы указать альтернативную схему сообщений, объявленные с [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map), передайте `msgMapID`.
+(в) Идентификатор карты сообщений в цепном объекте. Значение по умолчанию составляет 0, что определяет карту сообщения по умолчанию, заявленную [с BEGIN_MSG_MAP.](message-map-macros-atl.md#begin_msg_map) Чтобы указать альтернативную карту сообщений, объявленную `msgMapID`с [ALT_MSG_MAP (msgMapID),](message-map-macros-atl.md#alt_msg_map)пройти .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если в схеме сообщений успешно добавлен в коллекцию. В противном случае — значение FALSE.
+TRUE, если карта сообщений успешно добавлена в коллекцию. В противном случае — значение FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если *dwChainID* значение уже существует в коллекции, его связанный объект и схему сообщений заменяются *pObject* и *dwMsgMapID*, соответственно. В противном случае добавляется новая запись.
+Если значение *dwChainID* уже существует в коллекции, связанный с ним объект и карта сообщений заменяются *pObject* и *dwMsgMapID*соответственно. В противном случае добавляется новая запись.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

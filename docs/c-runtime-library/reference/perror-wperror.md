@@ -1,9 +1,10 @@
 ---
 title: perror, _wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951034"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338530"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -57,26 +59,28 @@ void _wperror(
 
 ### <a name="parameters"></a>Параметры
 
-*message*<br/>
+*Сообщение*<br/>
 Строковое сообщение для вывода.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **perror** выводит сообщение об ошибке в **stderr**. **_wperror** — это версия **_perror**для расширенных символов; Аргумент *сообщения* для **_wperror** является строкой расширенных символов. в противном случае **_wperror** и **_perror** ведут себя одинаково.
+Функция **perror** печатает сообщение об ошибке **stderr.** **_wperror** является широкохарактерным вариантом **_perror;** аргумент *сообщения* для **_wperror** является широкохарактерной строкой. **_wperror** и **_perror** ведут себя одинаково иначе.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-сначала *выводится сообщение* , за которым следует двоеточие, затем — сообщение об ошибке системы для последнего вызова библиотеки, вызвавшего ошибку, и, наконец, символ новой строки. Если *Message* является пустым указателем или указателем на строку null, **perror** выводит только системное сообщение об ошибке.
+*сообщение* печатается сначала, затем двоеточие, затем сообщение об ошибке системы для последнего вызова библиотеки, которое произвело ошибку, и, наконец, новым символом. Если *сообщение* является нулевой указателем или указателем на нулевую строку, **perror** печатает только сообщение об ошибке системы.
 
-Номер ошибки хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (определенной в файле ERRNO.H). Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. **perror** выводит соответствующее сообщение об ошибке **, используя значение** переводятся в качестве индекса для **_sys_errlist**. Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определяется как максимальное число элементов в массиве **_sys_errlist** .
+Номер ошибки хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (определенной в файле ERRNO.H). Доступ к системным сообщениям об ошибках осуществляется через переменную [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), которая представляет собой массив сообщений об ошибке, отсортированный по номеру ошибки. **perror** печатает соответствующее сообщение об ошибке, используя значение **errno** в качестве индекса для **_sys_errlist.** Значение переменной [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) определяется как максимальное количество элементов в **массиве _sys_errlist.**
 
-Чтобы получить точные результаты, вызовите **perror** сразу после того, как подпрограммы библиотеки возвращают ошибку. В противном случае последующие вызовы могут перезаписать **значение** перезаписи.
+Для получения точных результатов вызов **perror** сразу после того, как рутина библиотеки возвращается с ошибкой. В противном случае последующие вызовы могут перезаписать значение **errno.**
 
-В операционной системе **Windows некоторые значения** переводятся в список в диапазоне от а. H не используется. Эти значения зарезервированы для использования операционной системой UNIX. **Список значений,** используемых операционной системой Windows, см. в разделе _doserrno, перечисление, [_sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **perror** выводит пустую строку для **любого значения** очистки, которое не используется этими платформами.
+В операционной системе Windows некоторые **errno** значения, перечисленные в ERRNO. H не используются. Эти значения зарезервированы для использования операционной системой UNIX. Смотрите [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) для перечисления **необоснований** значений, используемых операционной системой Windows. **perror** печатает пустую строку для любого **значения errno,** не используемого этими платформами.
 
 ## <a name="requirements"></a>Требования
 
@@ -85,7 +89,7 @@ void _wperror(
 |**perror**|\<stdio.h> или \<stdlib.h>|
 |**_wperror**|\<stdio.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -139,7 +143,7 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>

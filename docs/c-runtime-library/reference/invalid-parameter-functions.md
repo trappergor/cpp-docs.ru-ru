@@ -1,13 +1,16 @@
 ---
 title: _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _invalid_parameter
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
+- _o__invalid_parameter_noinfo
+- _o__invalid_parameter_noinfo_noreturn
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +25,12 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: b2714c140a2396d88c700689244c6ec04e12169c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0f0a3ea3e1f2e43d53650b4017905c696269ce20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954611"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343947"
 ---
 # <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -61,7 +64,7 @@ _invoke_watson(
 
 ## <a name="parameters"></a>Параметры
 
-*expression*<br/>
+*выражение*<br/>
 Строка, представляющая выражение параметра исходного кода, которое не является допустимым.
 
 *function_name*<br/>
@@ -73,32 +76,34 @@ _invoke_watson(
 *line_number*<br/>
 Номер строки в исходном коде, где был вызван обработчик.
 
-*процессу*<br/>
+*Защищены*<br/>
 Не используется.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Эти функции не возвращают значения. Функции **_invalid_parameter_noinfo_noreturn** и **_invoke_watson** не возвращают вызывающему объекту, а в некоторых случаях **_invalid_parameter** и **_invalid_parameter_noinfo** могут не возвращать вызывающему объекту.
+Эти функции не возвращают значения. **функции _invalid_parameter_noinfo_noreturn** и **_invoke_watson** не возвращаются вызывающему абоненту, а в некоторых случаях **_invalid_parameter** и **_invalid_parameter_noinfo** не могут вернуться к вызывающему абоненту.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Если функциям библиотеки времени выполнения C передаются недопустимые параметры, они вызывают *обработчик недопустимого параметра*. Он представляет собой функцию, в которой программист задает выполнение определенных действий. Например, обработчик может сообщить о проблеме пользователю, записать данные в журнал, установить прерывание в отладчике, завершить работу программы или не выполнять никаких действий. Если программист не указал функцию, вызывается обработчик по умолчанию **_invoke_watson**.
+Если функциям библиотеки времени выполнения C передаются недопустимые параметры, они вызывают *обработчик недопустимого параметра*. Он представляет собой функцию, в которой программист задает выполнение определенных действий. Например, обработчик может сообщить о проблеме пользователю, записать данные в журнал, установить прерывание в отладчике, завершить работу программы или не выполнять никаких действий. Если ни одна функция не указана программистом, вызывается обработчик по умолчанию, **_invoke_watson.**
 
-По умолчанию, если в коде отладки указан недопустимый параметр, функции библиотеки CRT вызывают функцию **_invalid_parameter** , используя подробные параметры. В неотладочном коде вызывается функция **_invalid_parameter_noinfo** , которая вызывает функцию **_invalid_parameter** , используя пустые параметры. Если функция библиотеки CRT, не относящаяся к отладке, требует завершения программы, вызывается функция **_invalid_parameter_noinfo_noreturn** , которая вызывает функцию **_invalid_parameter** , используя пустые параметры, после чего вызывается **_invoke_ Функция Watson** для принудительного завершения программы.
+По умолчанию, когда недействительный параметр идентифицируется в коде отладки, функции библиотеки CRT вызывают функцию **_invalid_parameter** используя многословные параметры. В коде без отливки вызывается **функция _invalid_parameter_noinfo,** которая вызывает **функцию _invalid_parameter** с помощью пустых параметров. Если функция библиотеки неотлиповки CRT требует завершения программы, вызывается **функция _invalid_parameter_noinfo_noreturn,** которая вызывает **функцию _invalid_parameter** с помощью пустых параметров, а затем вызывает сявок в **функцию _invoke_watson,** чтобы заставить окончание программы.
 
-Функция **_invalid_parameter** проверяет, задан ли заданный пользователем обработчик недопустимых параметров, и, если да, вызывает его. Например, если в текущем потоке пользователь определил локальный для потока обработчик, вызвав функцию [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), вызывается этот обработчик, после чего функция возвращается. Если пользователь определил глобальный обработчик недопустимого параметра, вызвав функцию [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), вызывается этот обработчик, после чего функция возвращается. В противном случае вызывается обработчик по умолчанию **_invoke_watson** . Поведение **_invoke_watson** по умолчанию — завершение программы. Определенные пользователем обработчики могут завершать работу программы или выполнять возврат. В тех случаях, когда восстановление работоспособности программы не гарантировано, рекомендуется завершать ее.
+**Функция _invalid_parameter** проверяет, был ли установлен определенный пользователем недействительный обработчик параметров, и если да, то вызывает его. Например, если в текущем потоке пользователь определил локальный для потока обработчик, вызвав функцию [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), вызывается этот обработчик, после чего функция возвращается. Если пользователь определил глобальный обработчик недопустимого параметра, вызвав функцию [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), вызывается этот обработчик, после чего функция возвращается. В противном случае вызывается **_invoke_watson** обработчика по умолчанию. Поведение **_invoke_watson** по умолчанию заключается в прекращении программы. Определенные пользователем обработчики могут завершать работу программы или выполнять возврат. В тех случаях, когда восстановление работоспособности программы не гарантировано, рекомендуется завершать ее.
 
-При вызове обработчика по умолчанию **_invoke_watson** , если процессор поддерживает операцию [__fastfail](../../intrinsics/fastfail.md) , он вызывается с помощью параметра **FAST_FAIL_INVALID_ARG** и процесс завершается. В противном случае возникает исключение с быстрым прекращением, которое может быть перехвачено с помощью связанного отладчика. Если процесс может продолжаться, он завершается вызовом функции Windows **терминатепроцесс** с использованием состояния кода исключения **STATUS_INVALID_CRUNTIME_PARAMETER**.
+При вызове обработчика по умолчанию **_invoke_watson,** если процессор поддерживает [__fastfail](../../intrinsics/fastfail.md) операцию, он вызывается с помощью параметра **FAST_FAIL_INVALID_ARG** и процесс завершается. В противном случае возникает исключение с быстрым прекращением, которое может быть перехвачено с помощью связанного отладчика. Если процесс разрешен к продолжению, он завершается вызовом в функцию Windows **TerminateProcess** с использованием статуса кода исключения **STATUS_INVALID_CRUNTIME_PARAMETER.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|------------------|
-|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
+|**_invalid_parameter,** **_invalid_parameter_noinfo,** **_invalid_parameter_noinfo_noreturn,** **_invoke_watson**|\<corecrt.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>

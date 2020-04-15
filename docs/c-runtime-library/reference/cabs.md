@@ -1,8 +1,9 @@
 ---
 title: _cabs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cabs
+- _o__cabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333683"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -48,16 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>Параметры
 
-*гармошкой*<br/>
+*Z*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном выполнении **_cabs** возвращает абсолютное значение его аргумента. При переполнении **_cabs** возвращает **HUGE_VAL** **и задает для** **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
+**_cabs** возвращает абсолютную ценность своего аргумента в случае успеха. На переполнении, **_cabs** возвращает **HUGE_VAL** и устанавливает **errno** к **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_cabs** вычисляет абсолютное значение комплексного числа, которое должно быть структурой типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественного компонента *x* и мнимого компонента *y*. Вызов **_cabs** возвращает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
+Функция **_cabs** вычисляет абсолютное значение сложного числа, которое должно быть структурой типа [_complex.](../../c-runtime-library/standard-types.md) Структура *z* состоит из реального компонента *x* и воображаемого компонента *y.* Призыв к **_cabs** производит значение, эквивалентное выражению. `sqrt( z.x * z.x + z.y * z.y )`
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -65,7 +69,7 @@ double _cabs(
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

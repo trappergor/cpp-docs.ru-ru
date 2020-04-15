@@ -1,5 +1,5 @@
 ---
-title: Страницы свойств инструмента создания XML-документов
+title: Страницы свойств средства создания XML-документов
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
@@ -8,23 +8,23 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335770"
 ---
-# <a name="xml-document-generator-tool-property-pages"></a>Страницы свойств инструмента создания XML-документов
+# <a name="xml-document-generator-tool-property-pages"></a>Страницы свойств средства создания XML-документов
 
 Страница свойств для средства создания XML-документов предоставляет функциональные возможности xdcmake.exe. xdcmake.exe объединяет XDC-файлы с XML-файлами, если исходный код содержит комментарии документации и указан параметр [/doc (обработка комментариев в документации) (C/C++)](doc-process-documentation-comments-c-cpp.md). Сведения о добавлении комментариев документации в исходный код см. в разделе [Рекомендуемые теги для комментариев документации](recommended-tags-for-documentation-comments-visual-cpp.md).
 
 > [!NOTE]
->  Параметры xdcmake.exe в среде разработки (страницы свойств) отличаются от параметров, доступных при использовании xdcmake.exe из командной строки. Сведения об использовании xdcmake.exe из командной строки см. в разделе [Справочник по XDCMake](xdcmake-reference.md).
+> Параметры xdcmake.exe в среде разработки (страницы свойств) отличаются от параметров, доступных при использовании xdcmake.exe из командной строки. Сведения об использовании xdcmake.exe из командной строки см. в разделе [Справочник по XDCMake](xdcmake-reference.md).
 
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса
 
-- **Отключить загрузочное объявление**
+- **Отключить загрузочный баннер**
 
    Позволяет запретить вывод сообщения об авторских правах.
 
@@ -34,7 +34,7 @@ ms.locfileid: "80171636"
 
 - **Выходной файл документации**
 
-   Имя и каталог размещения для выходного XML-файла. Сведения об использовании макросов для указания расположения каталога см. в разделе [Common Macros for Build Commands and Properties](common-macros-for-build-commands-and-properties.md) .
+   Имя и каталог размещения для выходного XML-файла. См [Общие макросы для создания команд и свойств](common-macros-for-build-commands-and-properties.md) для получения информации об использовании макросов для указания местоположений каталогов.
 
 - **Зависимости библиотек документов**
 
@@ -42,4 +42,4 @@ ms.locfileid: "80171636"
 
 ## <a name="see-also"></a>См. также раздел
 
-[C++Справочник по страницам свойств проекта](property-pages-visual-cpp.md)
+[Ссылка на свойство проекта «СИ»](property-pages-visual-cpp.md)

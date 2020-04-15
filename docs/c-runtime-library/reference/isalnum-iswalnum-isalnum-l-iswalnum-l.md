@@ -1,11 +1,13 @@
 ---
 title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
+- _o_isalnum
+- _o_iswalnum
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a64cdc28d78a4a8691c74c66e2b4c18e4d0c31b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954588"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343966"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -62,26 +65,30 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Проверяемое целое число.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм возвращает ненулевое значение, если *c* является определенным представлением алфавитно-цифрового символа. **isAlnum** возвращает ненулевое значение, если для *языка Си* **или** **не равно нулю** , то есть если *c* находится внутри диапазонов a – z, a – z или 0-9. **исвалнум** возвращает ненулевое значение, если параметр **исвалфа** или **исвдигит** не равен нулю для *c*. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих процедур возвращается ненулевой, если *c* является особым представлением алфавитного персонажа. **isalnum** возвращает ненулевое значение, если либо **isalpha** или **isdigit** является ненулевой для *c,* то есть, если *c* находится в пределах диапазонов A - я, a - z, или 0 - 9. **iswalnum** возвращает ненулевое значение, если либо **iswalpha** или **iswdigit** является ненулевым для *c*. Каждая из этих процедур возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций с суффиксом **_l** используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций, которые имеют **_l** суффикс, используется параметр локализации, который передается вместо текущего локаль. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isAlnum** и **_isalnum_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
+Поведение **isalnum** и **_isalnum_l** не определено, если *c* не eOF или в диапазоне от 0 до 0xFF, включительно. При использовании библиотеки CRT отладки и *c* не является одним из этих значений, функции повышают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -92,10 +99,10 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 |**_isalnum_l**|\<ctype.h>|
 |**_iswalnum_l**|\<ctype.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

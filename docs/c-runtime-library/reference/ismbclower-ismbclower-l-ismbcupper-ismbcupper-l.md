@@ -1,11 +1,15 @@
 ---
 title: _ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
+- _o__ismbclower
+- _o__ismbclower_l
+- _o__ismbcupper
+- _o__ismbcupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +40,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9a0991d974c33cff22044364f7a4351f160215a8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953785"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342930"
 ---
 # <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l
 
@@ -70,28 +75,30 @@ int _ismbcupper_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ, который требуется проверить.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c*< = 255 и имеется соответствующая подпрограммы **_ismbb** (например, **_ismbcalnum** соответствует **_ismbbalnum**), результатом является возвращаемое значение соответствующей подпрограммы **_ismbb** .
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c<* 255 и есть соответствующий **_ismbb** рутины (например, **_ismbcalnum** соответствует **_ismbbalnum),** то результатом является значение возврата соответствующей **_ismbb** рутины.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.
 
-Версии этих функций с суффиксом **_l** идентичны за исключением того, что они используют переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с **_l** суффикса идентичны, за исключением того, что они используют локали, передаваемые в вместо текущего локализации для их поведения, зависящем от локализации. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|Строчные буквы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением буквы английского алфавита в формате ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbclower_l**|Строчные буквы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением буквы английского алфавита в формате ASCII: 0x61 < =*c*< = 0x7A.|
-|**_ismbcupper**|Прописные буквы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением буквы английского алфавита в формате ASCII: 0x41 влево < =*c*< = 0x5A.|
-|**_ismbcupper_l**|Прописные буквы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением буквы английского алфавита в формате ASCII: 0x41 влево < =*c*< = 0x5A.|
+|**_ismbclower**|Строчные буквы|Возвращает ненулевой, если и только если *c* является однобайным представлением буквы ASCII по нижнему регистру: 0x61<*c*<0x7A.|
+|**_ismbclower_l**|Строчные буквы|Возвращает ненулевой, если и только если *c* является однобайным представлением буквы ASCII по нижнему регистру: 0x61<*c*<0x7A.|
+|**_ismbcupper**|Прописные буквы|Возвращает ненулевой, если и только если *c* является однобайным представлением верхней буквы ASCII: 0x41<и*c*<0x5A.|
+|**_ismbcupper_l**|Прописные буквы|Возвращает ненулевой, если и только если *c* является однобайным представлением верхней буквы ASCII: 0x41<и*c*<0x5A.|
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -102,13 +109,13 @@ int _ismbcupper_l(
 |**_ismbcupper**|\<mbstring.h>|
 |**_ismbcupper_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Подпрограммы _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Процедуры _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>

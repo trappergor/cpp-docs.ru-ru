@@ -1,9 +1,11 @@
 ---
 title: _mkdir, _wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951718"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338787"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -66,21 +69,23 @@ int _wmkdir(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает значение 0, если новый каталог успешно создан. При возникновении ошибки функция возвращает-1 **и задает значение** переводится следующим образом.
+Каждая функция возвращает значение 0, если новый каталог успешно создан. При ошибке функция возвращает -1 и устанавливает **errno** следующим образом.
 
-**Иксист** Каталог не был создан, так как *dirname* — это имя существующего файла, каталога или устройства.
+**EEXIST** Каталог не был создан, потому что *dirname* — это имя существующего файла, каталога или устройства.
 
-**Еноент** Путь не найден.
+**ENOENT** Путь не найден.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_mkdir** создает новый каталог с указанным *dirname.* **_mkdir** может создавать только один новый каталог для каждого вызова, поэтому только последний компонент *dirname* может называть новый каталог. **_mkdir** не преобразует разделители пути. В Windows NT оба символа, обратная косая черта (\\) и косая черта (/), являются допустимыми разделителями пути в строках символов в подпрограммах времени выполнения.
+Функция **_mkdir** создает новый каталог с указанным *dirname.* **_mkdir** может создать только один новый каталог за вызов, поэтому только последний компонент *dirname* может назвать новый каталог. **_mkdir** не переводит елират. В Windows NT оба символа, обратная косая черта (\\) и косая черта (/), являются допустимыми разделителями пути в строках символов в подпрограммах времени выполнения.
 
-**_wmkdir** — это версия **_mkdir**для расширенных символов; Аргумент *dirname* для **_wmkdir** является строкой расширенных символов. в противном случае **_wmkdir** и **_mkdir** ведут себя одинаково.
+**_wmkdir** является широкохарактерным вариантом **_mkdir;** *аргумент dirname* для **_wmkdir** является широкохарактерной строкой. **_wmkdir** и **_mkdir** ведут себя одинаково иначе.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -93,7 +98,7 @@ int _wmkdir(
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -124,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Пример результатов выполнения
+### <a name="sample-output"></a>Пример выходных данных
 
 ```Output
 Directory '\testtmp' was successfully created
@@ -140,7 +145,7 @@ Directory of C:\testtmp
 Directory '\testtmp' was successfully removed
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>
 [_chdir, _wchdir](chdir-wchdir.md)<br/>

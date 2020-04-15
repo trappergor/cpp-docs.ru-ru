@@ -1,6 +1,6 @@
 ---
 title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbcpunct_l
 - _ismbcblank
@@ -12,6 +12,16 @@ api_name:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
+- _o__ismbcblank
+- _o__ismbcblank_l
+- _o__ismbcgraph
+- _o__ismbcgraph_l
+- _o__ismbcprint
+- _o__ismbcprint_l
+- _o__ismbcpunct
+- _o__ismbcpunct_l
+- _o__ismbcspace
+- _o__ismbcspace_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +70,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eb76b6ebdbe4b27ce5a7368ad1b8c2dd8f858d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343242"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
@@ -115,29 +126,31 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ, который требуется определить.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и имеется соответствующая подпрограммы **_ismbb** (например, **_ismbcalnum** соответствует **_ismbbalnum**), результатом является возвращаемое значение соответствующей подпрограммы **_ismbb** .
+Каждая из этих подпрограмм возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* <255 и есть соответствующий **_ismbb** рутины (например, **_ismbcalnum** соответствует **_ismbbalnum),** то результатом является значение возврата соответствующей **_ismbb** рутины.
 
-Версии этих функций идентичны, за исключением того, что с суффиксом **_l** используется переданный языковой стандарт для поведения, зависящего от языкового стандарта, а не текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций идентичны, за исключением того, что те, которые имеют **_l** суффикса использовать локали, которые передаются в их локально-зависимого поведения, а не текущего локализации. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Графические символы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением любого печатного символа ASCII или катакана, за исключением пробела ().|
-|**_ismbcprint**|Печатные символы|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением любого печатного символа ASCII или катакана, включая пробел ().|
-|**_ismbcpunct**|Пунктуация|Возвращает ненулевое значение только в том случае, если *c* является однобайтовым представлением любого символа пунктуации ASCII или катаканы.|
-|**_ismbcblank**|Пробелы или символы горизонтальной табуляции|Возвращает ненулевое значение только в том случае, если *c* является пробелом или символом горизонтальной табуляции: *c*= 0x20 или *c*= 0x09.|
-|**_ismbcspace**|Пробел|Возвращает ненулевое значение только в том случае, если *c* является символом пробела: *c*= 0x20 или 0x09 < =*c*< = 0x0D.|
+|**_ismbcgraph**|GRAPHIC|Возвращает ненулевой, если и только если *c* является однобайным представлением любого ASCII или katakana печати характер, за исключением белого пространства ( ).|
+|**_ismbcprint**|Печатные символы|Возвращает ненулевой, если и только если *c* является однобайным представлением любого ASCII или katakana печати характер, включая белое пространство ( ).|
+|**_ismbcpunct**|Пунктуация|Возвращает ненулевой, если и только если *c* является однобайным представлением любого знака пунктуации ASCII или katakana.|
+|**_ismbcblank**|Пробелы или символы горизонтальной табуляции|Возвращает ненулевой, если и только если *c* является символом пространства или горизонтальной вкладки: *c*0x20 или *c*0x09.|
+|**_ismbcspace**|Пробел|Возвращает ненулевой, если и только если *c* является белого пространства символ: *с*0x20 или 0x09<*с*<0x0D.|
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -154,17 +167,17 @@ int _ismbcspace_l(
 |**_ismbcspace**|\<mbstring.h>|
 |**_ismbcspace_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
 Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Подпрограммы _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Процедуры _ismbc](../../c-runtime-library/ismbc-routines.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>

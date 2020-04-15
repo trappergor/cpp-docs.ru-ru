@@ -1,11 +1,12 @@
 ---
-title: ldexp, лдекспф, лдекспл
-ms.date: 04/05/2018
+title: ldexp, ldexpf, ldexpl
+ms.date: 4/2/2020
 api_name:
 - ldexp
 - ldexpf
 - ldexpl
 - _ldexpl
+- _o_ldexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,14 +39,14 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 7fabd00c7ddc5c430c158089b7e5769158b46328
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953506"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342232"
 ---
-# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, лдекспф, лдекспл
+# <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
 Умножает число с плавающей запятой на целую степень числа два.
 
@@ -78,24 +80,26 @@ long double ldexpl(
 *x*<br/>
 Значение с плавающей запятой.
 
-*exp*<br/>
+*Exp*<br/>
 Целый показатель степени.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ldexp** возвращают значение<sup>*exp*</sup> *x* \* 2 в случае успеха. При переполнении и в зависимости от знака *x* **ldexp** возвращает +/- **HUGE_VAL**; значение перестройки передается в **ERANGE**.
+Функции **ldexp** возвращают значение *x* \* 2<sup>*exp*</sup> в случае успеха. На переполнении, и в зависимости от знака *х*, **ldexp** возвращает **HUGE_VALся** **значение errno** устанавливается на **ERANGE.**
 
-Дополнительные сведения о параметрах **возврата и** возможностях, возвращающих ошибки, см. в разделе "_doserrno", " [_sys_errlist" и "_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)".
+Для получения дополнительной информации о **errno** и возможных значениях возврата ошибок [_sys_nerr _sys_errlist _doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)см.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ldexp** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **ldexp** всегда принимает **Double** и **int** и возвращает **Double**.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **ldexp,** которые принимают **поплавок** или **длинные** **двойные** типы. В программе C, **ldexp** всегда берет **двойной** и **int** и возвращает **двойной**.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**ldexp**, **лдекспф**, **лдекспл**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
@@ -117,13 +121,13 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Вывод
+## <a name="output"></a>Выходные данные
 
 ```Output
 4.0 times two to the power of 3 is 32.0
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

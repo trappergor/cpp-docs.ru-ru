@@ -40,20 +40,20 @@ helpviewer_keywords:
 - CMFCRibbonComboBox [MFC], SelectItem
 - CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
-ms.openlocfilehash: 89007ea3eb7fd0aef28caadf439195b4090a05d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5846b1c5590a756f0a0820583af3d0b159968ea2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237342"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375229"
 ---
 # <a name="cmfcribboncombobox-class"></a>Класс CMFCRibbonComboBox
 
-`CMFCRibbonComboBox` Класс реализует поле со списком, можно добавить на панель ленты, панель ленты или во всплывающее меню ленты.
+Класс `CMFCRibbonComboBox` реализует комбо-бокс управления, которые можно добавить в ленту бар, лента панели, или лента всплывающее меню.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class CMFCRibbonComboBox : public CMFCRibbonEdit
 ```
 
@@ -61,38 +61,38 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Создает объект CMFCRibbonComboBox.|
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Строит объект CMFCRibbonComboBox.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCRibbonComboBox::AddItem](#additem)|Добавляет уникальный элемент в поле со списком.|
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Удаляет указанный элемент из списка.|
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Указывает ли поле со списком можно изменить размер, он станет.|
-|[CMFCRibbonComboBox::FindItem](#finditem)|Возвращает индекс первого элемента в списке, которая совпадает с указанной строкой.|
-|[CMFCRibbonComboBox::GetCount](#getcount)|Возвращает число элементов в поле со списком.|
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Получает индекс выбранного элемента в поле со списком.|
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Получает высоту окна списка, когда раскрыл поле со списком.|
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Возвращает размер поля со списком, показанной в промежуточный режим.|
-|[CMFCRibbonComboBox::GetItem](#getitem)|Возвращает строку, связанную с элементом с указанным индексом в списке.|
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Возвращает данные, связанные с элемента с указанным индексом в списке.|
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Указывает, содержит ли элемент управления поля редактирования.|
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Указывает, можно ли изменять поле со списком.|
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Вызывается платформой, когда пользователь выбирает элемент в списке.|
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Удаляет все элементы из списка и очищает поля ввода.|
-|[CMFCRibbonComboBox::SelectItem](#selectitem)|Выбирает элемент в поле со списком.|
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Задает высоту элемента поле со списком при его удалении.|
+|[CMFCRibbonComboBox:AddItem](#additem)|Придаток уникального элемента к ящику списка.|
+|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Удаляет указанный элемент из окна списка.|
+|[CMFCRibbonComboBox:EnableDropDownlistresize](#enabledropdownlistresize)|Определяет, может ли поле списка изменять размер, когда оно падает вниз.|
+|[CMFCRibbonComboBox:FindItem](#finditem)|Возвращает индекс первого элемента в поле списка, которое соответствует указанной строке.|
+|[CMFCRibbonComboBox::GetCount](#getcount)|Возвращает количество элементов в поле списка.|
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Получает индекс выбранного в настоящее время элемента в поле списка.|
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Получает высоту окна списка, когда окно списка падает.|
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Возвращает размер комбо-коробки, отображаемого в промежуточном режиме.|
+|[CMFCRibbonComboBox::GetItem](#getitem)|Возвращает строку, связанную с элементом в указанном индексе, в поле списка.|
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Возвращает данные, связанные с элементом в указанном индексе, в поле списка.|
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Указывает, содержит ли элемент управления окно для отсылки.|
+|[CMFCRibbonComboBox:IsResizedropdownlist](#isresizedropdownlist)|Указывает, можно ли переопроизнести поле списка.|
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Вызывается по системе, когда пользователь выбирает элемент в поле списка.|
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Удаляет все элементы из окна списка и очищает коробку для отсеиваний.|
+|[CMFCRibbonComboBox::SelectItem](#selectitem)|Выбирает элемент в поле списка.|
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Устанавливает высоту окна списка, когда он упал.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поле со списком на ленте на состоит из поле со списком, в сочетании со статической метки или метку, которая может быть изменено пользователем. Требуется указать тип при создании поле со списком на ленте.
+Коробка ленты состоит из ящика списка в сочетании со статической этикеткой или этикеткой, которую может отредактировать пользователь. Вы должны указать, какой тип вы хотите, когда вы создаете ленту комбо-бокс.
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCRibbonComboBox` класса, добавьте элемент поля со списком, выберите элемент в поле со списком и добавьте поле со списком на панель.
+В следующем примере показано, как `CMFCRibbonComboBox` построить объект класса, добавить элемент в комбо-коробку, выбрать элемент в комбо-коробке и добавить комбо-коробку на панель.
 
 [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]
 
@@ -112,11 +112,11 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 
 **Заголовок:** afxribboncombobox.h
 
-##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem
+## <a name="cmfcribboncomboboxadditem"></a><a name="additem"></a>CMFCRibbonComboBox:AddItem
 
-Добавляет уникальный элемент в поле со списком.
+Придаток уникального элемента к ящику списка.
 
-```
+```cpp
 virtual INT_PTR AddItem(
     LPCTSTR lpszItem,
     DWORD_PTR dwData=0);
@@ -125,20 +125,20 @@ virtual INT_PTR AddItem(
 ### <a name="parameters"></a>Параметры
 
 *lpszItem*<br/>
-[in] Строка, добавляемого элемента.
+(в) Строка элемента для добавления.
 
 *dwData*<br/>
-[in] Данные, связанные с добавляемый элемент.
+(в) Данные, связанные с добавлением элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс добавленный элемент.
+Индекс нулевой основе придативного элемента.
 
-##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox
+## <a name="cmfcribboncomboboxcmfcribboncombobox"></a><a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox
 
-Создает объект `CMFCRibbonComboBox`.
+Формирует объект `CMFCRibbonComboBox`.
 
-```
+```cpp
 public:
 CMFCRibbonComboBox(
     UINT nID,
@@ -154,29 +154,29 @@ CMFCRibbonComboBox();
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Идентификатор поля со списком.
+(в) Идентификатор комбо-коробки.
 
 *bHasEditBox*<br/>
-[in] Значение TRUE, если поле ввода элемента управления; Значение FALSE в противном случае.
+(в) ПРАВДА, если вы хотите, чтобы коробка для сна, впределах управления; FALSE в противном случае.
 
 *nWidth*<br/>
-[in] Ширина поля со списком в пикселях; или -1 для ширину по умолчанию.
+(в) Ширина комбо-коробки в пикселях; или -1 для ширины по умолчанию.
 
 *lpszLabel*<br/>
-[in] Метки поля со списком.
+(в) Дисплей этикетки комбо-бокс.
 
-*Изображение*<br/>
-[in] В поле со списком индекс небольшое изображение.
+*nИзображение*<br/>
+(в) Небольшой индекс изображения комбо-коробки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Ширина по умолчанию — 108 пикселей.
+Ширина по умолчанию составляет 108 пикселей.
 
-##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem
+## <a name="cmfcribboncomboboxdeleteitem"></a><a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem
 
-Удаляет указанный элемент из списка.
+Удаляет указанный элемент из окна списка.
 
-```
+```cpp
 BOOL DeleteItem(int iIndex);
 BOOL DeleteItem(DWORD_PTR dwData);
 
@@ -186,215 +186,215 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>Параметры
 
 *iIndex*<br/>
-[in] Отсчитываемый от нуля индекс удаляемого элемента.
+(в) Нулевой индекс элемента, который будет удален.
 
 *dwData*<br/>
-[in] Данные, связанные с элементом для удаления.
+(в) Данные, связанные с элементом, который будет удален.
 
 *lpszText*<br/>
-[in] Строка удаляемого элемента. При наличии нескольких элементов с этой же строкой, удаляется первый элемент.
+(в) Строка элемента, который будет удален. Если есть несколько элементов с одной строкой, первый элемент удаляется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанный элемент был удален; в противном случае — значение FALSE.
+TRUE, если указанный элемент был удален; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize
+## <a name="cmfcribboncomboboxenabledropdownlistresize"></a><a name="enabledropdownlistresize"></a>CMFCRibbonComboBox:EnableDropDownlistresize
 
-Указывает ли поле со списком можно изменить размер, он станет.
+Определяет, может ли поле списка изменять размер, когда оно падает вниз.
 
-```
+```cpp
 void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение true, чтобы включить изменение размера; Значение FALSE, чтобы запретить изменение размера.
+(в) TRUE для включения в размер размера; FALSE для оттоговать из размеров.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При изменении размера включен, поле со списком изменит размер в соответствии с элементами, которые в нем отображаются.
+При включении изменения размера поле списка будет изменяться размер, чтобы соответствовать элементам, которые он отображает.
 
-##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem
+## <a name="cmfcribboncomboboxfinditem"></a><a name="finditem"></a>CMFCRibbonComboBox:FindItem
 
-Возвращает индекс первого элемента в списке, которая совпадает с указанной строкой.
+Возвращает индекс первого элемента в поле списка, которое соответствует указанной строке.
 
-```
+```cpp
 int FindItem(LPCTSTR lpszText) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *lpszText*<br/>
-[in] Строка элемента в поле со списком.
+(в) Строка элемента в поле списка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс элемента; или -1, если элемент не найден.
+Индекс элемента с нулевым уровнем; или -1, если элемент не найден.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount
+## <a name="cmfcribboncomboboxgetcount"></a><a name="getcount"></a>CMFCRibbonComboBox::GetCount
 
-Возвращает число элементов в поле со списком.
+Возвращает количество элементов в поле списка.
 
-```
+```cpp
 INT_PTR GetCount() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число элементов в поле со списком, или 0, если поле со списком не содержит элементов.
+Количество элементов в поле списка, или 0, если поле списка не содержит элементов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel
+## <a name="cmfcribboncomboboxgetcursel"></a><a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel
 
-Получает индекс выбранного элемента в поле со списком.
+Получает индекс выбранного в настоящее время элемента в поле списка.
 
-```
+```cpp
 int GetCurSel() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Отсчитываемый от нуля индекс выбранного элемента в списке; или -1, если элемент не выбран.
+Индекс нулевой основе выбранного в настоящее время элемента в поле списка; или -1, если элемент не выбран.
 
-##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight
+## <a name="cmfcribboncomboboxgetdropdownheight"></a><a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight
 
-Получает высоту окна списка, когда раскрыл поле со списком.
+Получает высоту окна списка, когда окно списка падает.
 
-```
+```cpp
 int GetDropDownHeight();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота в пикселях поле со списком.
+Высота, в пикселях, из списка поле.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize
+## <a name="cmfcribboncomboboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize
 
-Возвращает размер поля со списком, показанной в промежуточный режим.
+Возвращает размер комбо-коробки, отображаемого в промежуточном режиме.
 
-```
+```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства для поля со списком.
+(в) Указатель на контекст устройства для комбо-коробки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер поля со списком.
+Размер комбо-коробки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Возвращаемый размер зависит от размера поля со списком при его отображении изображений небольшого размера.
+Возвращается размер основан на размере комбо-коробки, когда он отображает небольшие изображения.
 
-##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem
+## <a name="cmfcribboncomboboxgetitem"></a><a name="getitem"></a>CMFCRibbonComboBox::GetItem
 
-Возвращает строку, связанную с элементом с указанным индексом в списке.
+Возвращает строку, связанную с элементом в указанном индексе, в поле списка.
 
-```
+```cpp
 LPCTSTR GetItem(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *iIndex*<br/>
-[in] Отсчитываемый от нуля индекс элемента в поле со списком.
+(в) Индекс элемента с нулевым уровнем в поле списка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строку, которая связана с элементом; в противном случае — значение NULL, если параметр индекса недопустим, или параметр индекса равно -1 и отсутствует элемент, выбранный в поле со списком.
+Указатель на строку, связанную с элементом; в противном случае, NULL, если параметр индекса является недействительным, или если параметр индекса -1 и нет пункта, выбранного в комбо-коробке.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData
+## <a name="cmfcribboncomboboxgetitemdata"></a><a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData
 
-Возвращает данные, связанные с элемента с указанным индексом в списке.
+Возвращает данные, связанные с элементом в указанном индексе, в поле списка.
 
-```
+```cpp
 DWORD_PTR GetItemData(int iIndex) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *iIndex*<br/>
-[in] Отсчитываемый от нуля индекс элемента в поле со списком.
+(в) Индекс элемента с нулевым уровнем в поле списка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Данные, связанные с элементом; или 0, если элемент не существует или если параметр индекса равно -1, и отсутствует элемент, выбранный в поле со списком.
+Данные, связанные с элементом; или 0, если элемент не существует, или если параметр индекса -1 и нет выбранного элемента в поле списка.
 
-##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox
+## <a name="cmfcribboncomboboxhaseditbox"></a><a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox
 
-Указывает, содержит ли элемент управления поля редактирования.
+Указывает, содержит ли элемент управления окно для отсылки.
 
-```
+```cpp
 BOOL HasEditBox() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если элемент управления содержит поле ввода; в противном случае — значение FALSE.
+TRUE, если элемент управления содержит коробку для отодвитых; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList
+## <a name="cmfcribboncomboboxisresizedropdownlist"></a><a name="isresizedropdownlist"></a>CMFCRibbonComboBox:IsResizedropdownlist
 
-Указывает, можно ли изменять поле со списком.
+Указывает, можно ли переопроизнести поле списка.
 
-```
+```cpp
 BOOL IsResizeDropDownList() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если поле со списком может быть изменен; в противном случае — значение FALSE. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)
+ПРАВДА, если список поле может быть уменьшена; в противном случае FALSE. [CMFCRibbonComboBox:EnableDropDownlistresize](#enabledropdownlistresize)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вы можете включить изменение размера поля списка с помощью [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) метод.
+Вы можете включить изменить размер окна списка с помощью метода [CMFCRibbonComboBox::EnableDropDropListReSize.](#enabledropdownlistresize)
 
-##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem
+## <a name="cmfcribboncomboboxonselectitem"></a><a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem
 
-Вызывается платформой, когда пользователь выбирает элемент в списке.
+Вызывается по системе, когда пользователь выбирает элемент в поле списка.
 
-```
+```cpp
 virtual void OnSelectItem(int nItem);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *nItem*<br/>
-[in] Индекс выбранного элемента.
+(в) Индекс выбранного элемента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если необходимо обработать Выбор ввода пользователя.
+Переопределить этот метод, если вы хотите обработать выбор ввода пользователя.
 
-##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems
+## <a name="cmfcribboncomboboxremoveallitems"></a><a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems
 
-Удаляет все элементы из списка и очищает поля ввода.
+Удаляет все элементы из окна списка и очищает коробку для отсеиваний.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem
+## <a name="cmfcribboncomboboxselectitem"></a><a name="selectitem"></a>CMFCRibbonComboBox::SelectItem
 
-Выбирает элемент в поле со списком.
+Выбирает элемент в поле списка.
 
-```
+```cpp
 BOOL SelectItem(int iIndex);
 BOOL SelectItem(DWORD_PTR dwData);
 
@@ -404,38 +404,38 @@ BOOL SelectItem(LPCTSTR lpszText);
 ### <a name="parameters"></a>Параметры
 
 *iIndex*<br/>
-[in] Отсчитываемый от нуля индекс элемента в поле со списком.
+(в) Индекс элемента с нулевым уровнем в поле списка.
 
 *dwData*<br/>
-[in] Данные, связанные с элементом в поле со списком.
+(в) Данные, связанные с элементом в поле списка.
 
 *lpszText*<br/>
-[in] Строка элемента в поле со списком.
+(в) Строка элемента в поле списка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод был выполнен успешно; в противном случае — значение FALSE.
+ПРАВДА, если метод был успешным; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight
+## <a name="cmfcribboncomboboxsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight
 
-Задает высоту элемента поле со списком при его удалении.
+Устанавливает высоту окна списка, когда он упал.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nHeight*<br/>
-[in] Высота в пикселях поле со списком.
+*nВысота*<br/>
+(в) Высота, в пикселях, из списка поле.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Высота по умолчанию — 150 пикселей.
+Высота по умолчанию составляет 150 пикселей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

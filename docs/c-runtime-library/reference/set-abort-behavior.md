@@ -1,8 +1,9 @@
 ---
 title: _set_abort_behavior
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - _set_abort_behavior
+- _o__set_abort_behavior
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: a63d4e77a91dafa4500d5fef8e9b5e94ee28cfbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fd3a3c2f99d1702cdccf68328c2122b965b2d078
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948668"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337872"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Указывает действие, выполняемое при аварийном завершении программы.
 
 > [!NOTE]
-> Не используйте функцию [Abort](abort.md) для завершения работы Microsoft Store приложения, за исключением сценариев тестирования или отладки. В соответствии с [политиками Microsoft Store](/legal/windows/agreements/store-policies)не разрешено закрывать приложения Магазина программным способом или с помощью пользовательского интерфейса. Дополнительные сведения см. в статье [жизненный цикл приложения UWP](/windows/uwp/launch-resume/app-lifecycle).
+> Не используйте функцию [прерывания](abort.md) для закрытия приложения Microsoft Store, за исключением сценариев тестирования или отладки. Программные или утилиты для использования не допускаются в соответствии с [правилами Microsoft Store.](/legal/windows/agreements/store-policies) Для получения дополнительной [UWP app lifecycle](/windows/uwp/launch-resume/app-lifecycle)информации см.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,19 +53,21 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Параметры
 
-*flags*<br/>
-Новое значение флагов [прерывания](abort.md) .
+*Флаги*<br/>
+Новое значение [флагов прерывания.](abort.md)
 
-*виде*<br/>
-Маска для устанавливаемых битов флагов [прерывания](abort.md) .
+*маска*<br/>
+Маска для [прерывания](abort.md) флаги биты установить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Старое значение флагов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Существует два флага [прерывания](abort.md) : **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение при аварийном завершении программы. В сообщении указывается, что приложение вызвало функцию [Abort](abort.md) . По умолчанию сообщение выводится. **_CALL_REPORTFAULT**(если задано) указывает, что создается дамп аварийной работы программы Watson и сообщается, когда вызывается метод [Abort](abort.md) . По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
+Есть два [флага прерывания:](abort.md) **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT.** **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение, когда программа ненормально прекращена. В сообщении говорится, что приложение вызвало функцию [прерывания.](abort.md) По умолчанию сообщение выводится. **_CALL_REPORTFAULT,** если набор, указывает, что сброс аварии Watson генерируется и сообщается, когда [прерывание](abort.md) вызывается. По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -71,7 +75,7 @@ unsigned int _set_abort_behavior(
 |-------------|---------------------|
 |**_set_abort_behavior**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -94,6 +98,6 @@ int main()
 Suppressing the abort message. If successful, this message will be the only output.
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[abort](abort.md)<br/>
+[Прервать](abort.md)<br/>

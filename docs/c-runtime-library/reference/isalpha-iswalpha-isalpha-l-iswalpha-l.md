@@ -1,11 +1,13 @@
 ---
 title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
+- _o_isalpha
+- _o_iswalpha
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 187031adc0b22aff2c5418cd7e0f3e64075f1745
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954587"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343928"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -73,26 +76,30 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Проверяемое целое число.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Языковой стандарт, используемый вместо текущего.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление алфавитного символа. Функция **in возвращает** ненулевое значение, если *c* находится внутри диапазонов a – z или a-z. **исвалфа** возвращает ненулевое значение только для расширенных символов, для которых [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** не равны нулю; то есть для любого расширенного символа, который является одним из наборов, определяемых реализацией, для которых ни один из **исвкнтрл**, **исвдигит**, **исвпункт**или **исвспаце** не равен нулю. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих процедур возвращается ненулевой, если *c* является определенным представлением алфавитного характера. **isalpha** возвращает ненулевое значение, если *c* находится в пределах диапазонов A - или a - z. **iswalpha** возвращает ненулевое значение только для широких символов, для которых [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** является ненулевым; то есть, для любого широкого символа, который является одним из реализации определены набор, для которого ни один из **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** является ненулевым. Каждая из этих процедур возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций с суффиксом **_l** используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций, которые имеют **_l** суффикс, используется параметр локализации, который передается вместо текущего локаль. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение функций **_isalpha_l** и- **Alpha** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
+Поведение **isalpha** и **_isalpha_l** не определено, если *c* не EOF или в диапазоне от 0 до 0xFF, включительно. При использовании библиотеки CRT отладки и *c* не является одним из этих значений, функции повышают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -103,10 +110,10 @@ int _iswalpha_l(
 |**_isalpha_l**|\<ctype.h>|
 |**_iswalpha_l**|\<ctype.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

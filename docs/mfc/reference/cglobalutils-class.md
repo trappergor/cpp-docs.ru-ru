@@ -38,16 +38,16 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromCy
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
-ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66c1663774076fcc4b62b766b1781efc8cc33c93
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182020"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373721"
 ---
 # <a name="cglobalutils-class"></a>Класс CGlobalUtils
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,7 +59,7 @@ class CGlobalUtils
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||
@@ -78,7 +78,7 @@ class CGlobalUtils
 |[CGlobalUtils::StringFromCy](#stringfromcy)||
 |[CGlobalUtils::StringFromDecimal](#stringfromdecimal)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -88,7 +88,7 @@ class CGlobalUtils
 
 **Заголовок:** afxglobalutils.h
 
-##  <a name="adjustrecttoworkarea"></a>  CGlobalUtils::AdjustRectToWorkArea
+## <a name="cglobalutilsadjustrecttoworkarea"></a><a name="adjustrecttoworkarea"></a>CGlobalUtils::AdjustRectToWorkArea
 
 ```
 void AdjustRectToworkArea(
@@ -98,12 +98,12 @@ void AdjustRectToworkArea(
 
 ### <a name="parameters"></a>Параметры
 
-[in, out] *rect*<br/>
-[in] *pRectDelta*<br/>
+(в, вне) *rect*<br/>
+(в) *pRectDelta*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="calcexpecteddockedrect"></a>  CGlobalUtils::CalcExpectedDockedRect
+## <a name="cglobalutilscalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CGlobalUtils::CalcExpectedDockedRect
 
 ```
 void CalcExpectedDockedRect(
@@ -117,21 +117,21 @@ void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *barContainerManager*<br/>
+(в) *barContainerManager*<br/>
 
-[in] *pWndTodock*<br/>
+(в) *pWndTodock*<br/>
 
-[in] *ptMouse*<br/>
+(в) *ptMouse*<br/>
 
-[out] *rectResult*<br/>
+(ваут) *rectResult*<br/>
 
-[out] *bDrawTab*<br/>
+(ваут) *bDrawTab*<br/>
 
-[out] *ppTargetBar*<br/>
+(ваут) *ppTargetBar*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="canbeattached"></a>  CGlobalUtils::CanBeAttached
+## <a name="cglobalutilscanbeattached"></a><a name="canbeattached"></a>CGlobalUtils::CanBeAttached
 
 ```
 BOOL CanBeAttached(CWnd* pWnd) const;
@@ -139,13 +139,13 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
+(в) *pWnd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="canpanebeinfloatingmultipaneframewnd"></a>  CGlobalUtils::CanPaneBeInFloatingMultiPaneFrameWnd
+## <a name="cglobalutilscanpanebeinfloatingmultipaneframewnd"></a><a name="canpanebeinfloatingmultipaneframewnd"></a>CGlobalUtils::CanPaneBeInFloatingMultiPaneFramed
 
 ```
 BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
@@ -153,13 +153,13 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
+(в) *pWnd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="checkalignment"></a>  CGlobalUtils::CheckAlignment
+## <a name="cglobalutilscheckalignment"></a><a name="checkalignment"></a>CGlobalUtils::CheckAlignment
 
 ```
 BOOL CheckAlignment(
@@ -175,27 +175,27 @@ BOOL CheckAlignment(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *точки*<br/>
+(в) *точки*<br/>
 
-[in] *pBar*<br/>
+(в) *pBar*<br/>
 
-[in] *nSensitivity*<br/>
+(в) *nЧувствительность*<br/>
 
-[in] *pDockManager*<br/>
+(в) *pDockManager*<br/>
 
-[in] *bOuterEdge*<br/>
+(в) *bOuterEdge*<br/>
 
-[out] *dwAlignment*<br/>
+(ваут) *dwAlignment*<br/>
 
-[in] *dwEnabledDockBars*<br/>
+(в) *dwEnabledDockBars*<br/>
 
-[in] *lpRectBounds*<br/>
+(в) *lpRectBounds*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="cyfromstring"></a>  CGlobalUtils::CyFromString
+## <a name="cglobalutilscyfromstring"></a><a name="cyfromstring"></a>CGlobalUtils::CyFromString
 
 ```
 BOOL CyFromString(
@@ -205,15 +205,15 @@ BOOL CyFromString(
 
 ### <a name="parameters"></a>Параметры
 
-[out] *cy*<br/>
+(ваут) *cy*<br/>
 
-[in] *psz*<br/>
+(в) *psz*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="decimalfromstring"></a>  CGlobalUtils::DecimalFromString
+## <a name="cglobalutilsdecimalfromstring"></a><a name="decimalfromstring"></a>CGlobalUtils::DecimalFromString
 
 ```
 BOOL DecimalFromString(
@@ -223,15 +223,15 @@ BOOL DecimalFromString(
 
 ### <a name="parameters"></a>Параметры
 
-[out] *decimal*<br/>
+(ваут) *десятичная*<br/>
 
-[in] *psz*<br/>
+(в) *psz*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="fliprect"></a>  CGlobalUtils::FlipRect
+## <a name="cglobalutilsfliprect"></a><a name="fliprect"></a>CGlobalUtils:FlipRect
 
 ```
 void FlipRect(
@@ -241,12 +241,12 @@ void FlipRect(
 
 ### <a name="parameters"></a>Параметры
 
-[in, out] *rect*<br/>
-[in] *nDegrees*<br/>
+(в, вне) *rect*<br/>
+(в) *nDegrees*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="forceadjustlayout"></a>  CGlobalUtils::ForceAdjustLayout
+## <a name="cglobalutilsforceadjustlayout"></a><a name="forceadjustlayout"></a>CGlobalUtils::ForceAdjustLayout
 
 ```
 void ForceAdjustLayout(
@@ -257,15 +257,15 @@ void ForceAdjustLayout(
 
 ### <a name="parameters"></a>Параметры
 
-[in, out] *pDockManager*<br/>
+(в, вне) *pDockManager*<br/>
 
-[in] *bForce*<br/>
+(в) *bForce*<br/>
 
-[in] *bForceInvisible*<br/>
+(в) *bForceНевидимый*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdockingmanager"></a>  CGlobalUtils::GetDockingManager
+## <a name="cglobalutilsgetdockingmanager"></a><a name="getdockingmanager"></a>CGlobalUtils::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager(CWnd* pWnd);
@@ -273,13 +273,13 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
+(в) *pWnd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getoppositealignment"></a>  CGlobalUtils::GetOppositeAlignment
+## <a name="cglobalutilsgetoppositealignment"></a><a name="getoppositealignment"></a>CGlobalUtils::GetOppositeAlignment
 
 ```
 DWORD GetOppositeAlignment(DWORD dwAlign);
@@ -287,13 +287,13 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *dwAlign*<br/>
+(в) *dwAlign*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpaneandalignfrompoint"></a>  CGlobalUtils::GetPaneAndAlignFromPoint
+## <a name="cglobalutilsgetpaneandalignfrompoint"></a><a name="getpaneandalignfrompoint"></a>CGlobalUtils::GetPaneAndAlignFromPoint
 
 ```
 BOOL GetPaneAndAlignFromPoint(
@@ -307,23 +307,23 @@ BOOL GetPaneAndAlignFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *barContainerManager*<br/>
+(в) *barContainerManager*<br/>
 
-[in] *pt*<br/>
+(в) *pt pt*<br/>
 
-[out] *ppTargetControlBar*<br/>
+(ваут) *ppTargetControlBar*<br/>
 
-[out] *dwAlignment*<br/>
+(ваут) *dwAlignment*<br/>
 
-[out] *bTabArea*<br/>
+(ваут) *bTabArea*<br/>
 
-[out] *bCaption*<br/>
+(ваут) *bCaption*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getwndicon"></a>  CGlobalUtils::GetWndIcon
+## <a name="cglobalutilsgetwndicon"></a><a name="getwndicon"></a>CGlobalUtils::GetWndIcon
 
 ```
 HICON GetWndIcon(CWnd* pWnd);
@@ -331,13 +331,13 @@ HICON GetWndIcon(CWnd* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWnd*<br/>
+(в) *pWnd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setnewparent"></a>  CGlobalUtils::SetNewParent
+## <a name="cglobalutilssetnewparent"></a><a name="setnewparent"></a>CGlobalUtils::SetNewParent
 
 ```
 void SetNewParent(
@@ -348,15 +348,15 @@ void SetNewParent(
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lstControlBars*<br/>
+(в) *lstControlBars*<br/>
 
-[in] *pNewParent*<br/>
+(в) *pNewParent*<br/>
 
-[in] *bCheckVisibility*<br/>
+(в) *bCheckВидимость*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="stringfromcy"></a>  CGlobalUtils::StringFromCy
+## <a name="cglobalutilsstringfromcy"></a><a name="stringfromcy"></a>CGlobalUtils::StringFromCy
 
 ```
 BOOL StringFromCy(
@@ -366,15 +366,15 @@ BOOL StringFromCy(
 
 ### <a name="parameters"></a>Параметры
 
-[out] *str*<br/>
+(ваут) *str*<br/>
 
-[in] *cy*<br/>
+(в) *cy*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="stringfromdecimal"></a>  CGlobalUtils::StringFromDecimal
+## <a name="cglobalutilsstringfromdecimal"></a><a name="stringfromdecimal"></a>CGlobalUtils::StringFromDecimal
 
 ```
 BOOL StringFromDecimal(
@@ -384,15 +384,15 @@ BOOL StringFromDecimal(
 
 ### <a name="parameters"></a>Параметры
 
-[out] *str*<br/>
+(ваут) *str*<br/>
 
-[in] *decimal*<br/>
+(в) *десятичная*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)

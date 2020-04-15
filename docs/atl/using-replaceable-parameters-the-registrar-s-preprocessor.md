@@ -1,49 +1,49 @@
 ---
-title: Использование подстановочных параметров (регистратор ATL)
+title: Использование заменяемых параметров (ATL регистратор)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - '%MODULE%'
 ms.assetid: 0b376994-84a6-4967-8d97-8c01dfc94efe
-ms.openlocfilehash: 1c772c0493b351d8452400a4fb1e3949ab6f28f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2474db2de384baa9113ed39aef4d3d9c9048903d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329232"
 ---
-# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Использование подстановочных параметров (регистратор&#39;препроцессор s)
+# <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>Использование заменяемых параметров (Регистратор&#39;препроцессор)
 
-Подстановочные параметры позволяют указать данные времени выполнения клиент регистратора. Чтобы сделать это, регистратор хранит карту замены, в которую он входит в значения, связанные с подстановочные параметры в скрипте. Регистратор делает эти записи во время выполнения.
+Заменяемые параметры позволяют клиенту Регистратора указывать данные о времени выполнения. Для этого Регистратор поддерживает карту замены, в которую он вводит значения, связанные со сменными параметрами в скрипте. Регистратор делает эти записи во время выполнения.
 
-##  <a name="_atl_using_.25.module.25"></a> С помощью МОДУЛЯ %
+## <a name="using-module"></a><a name="_atl_using_.25.module.25"></a>Использование %MODULE%
 
-[Мастер элементов управления ATL](../atl/reference/atl-control-wizard.md) автоматически формирует скрипт, который использует `%MODULE%`. ATL использует этот параметр можно заменить фактическое расположение библиотеки DLL или EXE-файла на сервере.
+[Мастер управления ATL](../atl/reference/atl-control-wizard.md) автоматически генерирует скрипт, который использует. `%MODULE%` ATL использует этот сменный параметр для фактического расположения DLL или EXE вашего сервера.
 
-## <a name="concatenating-run-time-data-with-script-data"></a>Объединение данных во время выполнения с помощью данных сценария
+## <a name="concatenating-run-time-data-with-script-data"></a>Совмещение данных о run-time с данными сценария
 
-Другой препроцессор используется для объединения данных во время выполнения с помощью данных сценария. Предположим, например, запись необходима, содержащий полный путь к модулю со строкой "`, 1`" в конце. Во-первых определите следующие расширения:
+Другим использованием препроцессора является совмещение данных о времени выполнения с данными скриптов. Например, предположим, что нужна запись, содержащая полный путь к модулю со строкой «приложенный`, 1`в конце. Во-первых, определить следующее расширение:
 
 ```
 'MySampleKey' = s '%MODULE%, 1'
 ```
 
-Затем, прежде чем вызвать один из скриптов, перечисленные в методы обработки [сценариев вызова](../atl/invoking-scripts.md), добавление на карту замены:
+Затем, прежде чем вызвать один из методов обработки скриптов, перечисленных в [вызове скриптов,](../atl/invoking-scripts.md)добавьте замену на карте:
 
 [!code-cpp[NVC_ATL_Utilities#113](../atl/codesnippet/cpp/using-replaceable-parameters-the-registrar-s-preprocessor_1.cpp)]
 
-При анализе скрипта регистратора расширяет `'%MODULE%, 1'` для `c:\mycode\mydll.dll, 1`.
+Во время разбора скрипта Регистратор `'%MODULE%, 1'` расширяется до `c:\mycode\mydll.dll, 1`.
 
 > [!NOTE]
->  В сценарии регистратора 4 КБ — максимальный размер маркера. (Маркер — это любой элемент, распознаваемый в синтаксисе.) Сюда входят маркеры, которые были созданы или развернут препроцессором.
+> В скрипте регистратора 4K является максимальным размером маркера. (Токен – это любой узнаваемый элемент в синтаксисе.) Это включает токены, которые были созданы или расширены препроцессором.
 
 > [!NOTE]
->  Для замены значений для замены во время выполнения, удалите вызов в сценарии для [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) макрос. Вместо этого, замените его собственным `UpdateRegistry` метод, который вызывает [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources)и передайте массив _ATL_REGMAP_ ЭЛЕМЕНТ структуры. Массив _ATL_REGMAP_ENTRY должен иметь по крайней мере одна запись, которой присваивается {NULL, NULL}, и эта запись всегда должен быть последней операции. В противном случае будет ошибка нарушения доступа, формируемое, когда `UpdateRegistryFromResource` вызывается.
+> Чтобы заменить значения замены во время выполнения, удалите вызов в скрипте на [DECLARE_REGISTRY_RESOURCE](../atl/reference/registry-macros.md#declare_registry_resource) или [DECLARE_REGISTRY_RESOURCEID](../atl/reference/registry-macros.md#declare_registry_resourceid) макрос. Вместо этого замените `UpdateRegistry` его собственным методом, который вызывает [CAtlModule::UpdateRegistryFromResourceD](../atl/reference/catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](../atl/reference/catlmodule-class.md#updateregistryfromresources), и передать массив _ATL_REGMAP_ENTRY структур. Ваш массив _ATL_REGMAP_ENTRY должен иметь по крайней мере одну запись, которая установлена на «NULL»,NULL», и эта запись всегда должна быть последней записью. В противном случае при вызове будет сгенерирована `UpdateRegistryFromResource` ошибка нарушения доступа.
 
 > [!NOTE]
->  При построении проекта, который выводит исполняемый файл ATL автоматически добавляет кавычки вокруг имени пути, созданному во время выполнения с **модуль %** параметр скрипта регистратора. Если не требуется имя пути в кавычки, используйте новый **% MODULE_RAW %** параметра вместо этого.
+> При создании проекта, который выводит исполняемый, ATL автоматически добавляет кавычки вокруг имени пути, созданного во время выполнения, с параметром скрипта регистратора **%MODULE%.** Если вы не хотите, чтобы имя пути включало кавычки, вместо этого используйте новый **параметр%MODULE_RAW%.**
 >
->  При построении проекта, который выводит библиотеку DLL, ATL не будет добавлять кавычки в имени пути Если **модуль %** или **% MODULE_RAW %** используется.
+> При создании проекта, который выводит DLL, ATL не будет добавлять кавычки в имя пути, если используется **%MODULE%** или **%MODULE_RAW%.**
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)

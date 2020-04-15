@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953302"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342112"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Блокирует объект **File** для обеспечения согласованности потоков, обращающихся к **файловому** объекту одновременно.
+Блокирует объект **FILE** для обеспечения согласованности потоков, посягающих на объект **FILE** одновременно.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,12 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Параметры
 
-*file*<br/>
+*Файл*<br/>
 Дескриптор файла.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_lock_file** блокирует объект **File** , указанный в *файле*. Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны быть сопоставлены в потоке.
+Функция **_lock_file** блокирует объект **FILE,** указанный *файлом.* Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны быть сопоставлены в потоке.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -59,7 +63,7 @@ void _lock_file( FILE* file );
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -136,7 +140,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>

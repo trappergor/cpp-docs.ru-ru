@@ -1,10 +1,13 @@
 ---
 title: round, roundf, roundl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - round
 - roundl
 - roundf
+- _o_round
+- _o_roundf
+- _o_roundl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337989"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -68,23 +72,25 @@ long double roundl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **Round** возвращают значение с плавающей запятой, представляющее ближайшее целое число к *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
+**Круглые** функции возвращают значение плавающей точки, представляющее ближайшую цель к *x.* Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **КНАН**, **С**|none|**_DOMAIN**|
+|- **ЗНАН**, **IND**|Нет|**_DOMAIN**|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Round** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C функция **Round** всегда принимает и возвращает значение **типа Double**.
+Из-за того, что СЗ допускает перегрузку, можно вызывать перегрузки **раунда,** которые принимают и возвращают **плавающие** и **длинные** **двойные** значения. В программе C **раунд** всегда берет и возвращает **двойной.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**Round**, **раундф**, **Round**|\<math.h>|
+|**круглый,** **круглый,** **круглый**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -122,7 +128,7 @@ roundl(2.500000) is 3
 roundl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

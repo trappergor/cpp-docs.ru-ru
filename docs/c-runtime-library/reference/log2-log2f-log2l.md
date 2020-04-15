@@ -1,10 +1,13 @@
 ---
 title: log2, log2f, log2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log2
 - log2l
 - log2f
+- _o_log2
+- _o_log2f
+- _o_log2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,17 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: bf1734ea2f96fa1c09b3b0d1f43b681fc31c8f9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953159"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341719"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -64,35 +68,37 @@ long double log2l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном выполнении возвращает значение log2 *x*.
+На успех, возвращает возвращение log2 *x*.
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблемы|Назад|
+|Проблемы|Возвращает|
 |-----------|------------|
 |*x* < 0|NaN|
-|*x* = ± 0|-INFINITY|
-|*x* = 1|+0|
+|*х* 0 евро|-INFINITY|
+|*x* 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
 |ошибка домена|NaN|
 |Ошибка полюса|-HUGE_VAL, -HUGE_VALF или -HUGE_VALL|
 
-Ошибки сообщаются, как указано в [_matherr](matherr.md).
+Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Если x является целым числом, эта функция фактически возвращает отсчитываемый от нуля индекс наиболее значимого 1 бита *x*.
+Если x является рядом, эта функция по существу возвращает нулевой индекс наиболее значительных 1 бит *х*.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](crt-alphabetical-function-reference.md)<br/>
 [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>

@@ -1,10 +1,11 @@
 ---
-title: FMOD, фмодф, фмодл
-ms.date: 04/05/2018
+title: fmod, fmodf, fmodl
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,14 +34,14 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957079"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346553"
 ---
-# <a name="fmod-fmodf-fmodl"></a>FMOD, фмодф, фмодл
+# <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
 Вычисляет остаток с плавающей запятой.
 
@@ -75,21 +77,23 @@ long double fmodl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**FMOD** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** возвращает оставшуюся часть *плавающей* / точки x*y.* Если значение *y* 0.0, **fmod** возвращает тихий NaN. Для получения информации о представлении тихого [printf](printf-printf-l-wprintf-wprintf-l.md)NaN семьей **printf,** см.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **FMOD** вычисляет значение *x* / *y* *остатка* с плавающей запятой, т. е *. x* = *i* \* *y* + *f*, где *i* — целое число, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
+Функция **fmod** вычисляет плавающую точку остатка *f* *x* / *y* так, что *x* = *i* \* *y* + *f*, где *я* целый ряд, *f* имеет такой же знак как *x,* и абсолютное значение *f* меньше чем абсолютное значение *y.*
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **FMOD** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
+СЗ позволяет перегружать, так что вы можете вызвать перегрузки **fmod,** которые принимают и возвращают **поплавок** и **длинные** **двойные** значения. В программе **C, fmod** всегда принимает два **двойных** аргумента и возвращает **двойной**.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
-|**FMOD**, **фмодф**, **фмодл**|\<math.h>|
+|**fmod**, **fmodf**, **fmodl**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -113,7 +117,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>

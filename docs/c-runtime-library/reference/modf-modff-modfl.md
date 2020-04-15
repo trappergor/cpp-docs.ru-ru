@@ -1,10 +1,11 @@
 ---
 title: modf, modff, modfl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - modff
 - modf
 - modfl
+- _o_modf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951543"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338686"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -63,28 +65,30 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Значение с плавающей запятой.
 
-*Дескриптор*<br/>
+*Intptr*<br/>
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Эта функция возвращает дробную часть числа *x* со знаком. Ошибка не возвращается.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции **modf** разбивают значение *x* с плавающей запятой на дробные и целые части, каждый из которых имеет тот же знак, что и *x*. Возвращается знак дробной части *x* . Целая часть сохраняется как значение с плавающей запятой в *IntPtr*.
+Функции **модфа** разбивают значение плавающей точки *x* на дробные и целые части, каждая из которых имеет тот же знак, что и *x.* Подписанная дробная часть *x* возвращается. Целый ряд хранится в виде значения плавающей точки в *intptr.*
 
-**modf** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**modf** имеет реализацию, которая использует потоковое SIMD расширения 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **modf** , которые принимают и возвращают параметры с **плавающей запятой** или **длинные** **Double** . В программе на языке C **modf** всегда принимает два значения типа Double и возвращает значение типа Double.
+СЗ позволяет перегружать, так что вы можете вызвать перегрузки **modf,** которые принимают и возвращают **поплавок** или **длинные** **двойные** параметры. В программе C **modf** всегда имеет два двойных значения и возвращает двойное значение.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**modf**, **modff**, **модфл**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
+|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -110,7 +114,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

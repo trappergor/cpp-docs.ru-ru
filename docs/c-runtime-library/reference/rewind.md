@@ -1,8 +1,9 @@
 ---
 title: rewind
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - rewind
+- _o_rewind
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 084a6f3d7e817498bffb510d865f4a32021e4ce8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b99dd1101727c3ba7d501dffc5abe22edf7f7ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338091"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,30 +50,32 @@ void rewind(
 
 ### <a name="parameters"></a>Параметры
 
-*вышестоящий*<br/>
+*Поток*<br/>
 Указатель на структуру **FILE**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **Rewind** перемещает указатель файла, связанный с *потоком* , в начало файла. Вызов функции **rewind** аналогичен вызову
+Функция **перемотки** перемещает указатель файла, связанный с *потоком,* в начало файла. Вызов функции **rewind** аналогичен вызову
 
-**(void) fseek (** _Stream_ **, 0L, SEEK_SET);**
+**(пустота) fseek (поток** _stream_**, 0L, SEEK_SET);**
 
-Однако, в отличие от [fseek](fseek-fseeki64.md), **Rewind** очищает индикаторы ошибок для потока, а также индикатор конца файла. Кроме того, в отличие от [fseek](fseek-fseeki64.md), **перемотка назад** не возвращает значение, указывающее, успешно ли был перемещен указатель.
+Однако, в отличие от [fseek,](fseek-fseeki64.md) **перемотать** индикаторы ошибки для потока, а также конечный индикатор файла. Кроме того, в отличие от [fseek,](fseek-fseeki64.md) **перемотка назад** не возвращает значение, чтобы указать, был ли указатель успешно перемещен.
 
-Чтобы очистить буфер клавиатуры, используйте **перемотка назад** с помощью потока **stdin**, связанного с клавиатурой по умолчанию.
+Чтобы очистить буфер клавиатуры, используйте **перемотка** назад с потоком **stdin**, который связан с клавиатурой по умолчанию.
 
-Если Stream является **пустым** указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает значение, а параметру " **No** " — **еинвал**.
+Если поток является указателем **NULL,** вызывается обработчик параметров недействительного, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция возвращается и **errno** устанавливается **в EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**rewind**|\<stdio.h>|
+|**Перемотки**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -110,13 +114,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
 The values written are: 1 and -37
 The values read are: 1 and -37
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>

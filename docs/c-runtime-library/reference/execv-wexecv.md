@@ -1,9 +1,11 @@
 ---
 title: _execv, _wexecv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wexecv
 - _execv
+- _o__execv
+- _o__wexecv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 638364afa75fa1b04b598370473dee48964c5763
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941858"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347887"
 ---
 # <a name="_execv-_wexecv"></a>_execv, _wexecv
 
@@ -59,17 +62,17 @@ intptr_t _wexecv(
 
 ### <a name="parameters"></a>Параметры
 
-*кмднаме*<br/>
+*cmdname*<br/>
 Путь к выполняемому файлу.
 
-*argv*<br/>
+*Argv*<br/>
 Массив указателей на параметры.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение, равное-1, **указывает на ошибку** . в этом случае задается глобальная переменная «пробуждение».
+В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Значение возврата -1 указывает на ошибку, и в этом случае установлена глобальная переменная **errno.**
 
-|**значение по** значению|Описание|
+|**значение errno**|Описание|
 |-------------------|-----------------|
 |**E2BIG**|Пространство, требуемое для аргументов и параметров среды, превышает 32 КБ.|
 |**EACCES**|Указанный файл имеет нарушение блокировки или общего доступа.|
@@ -81,30 +84,32 @@ intptr_t _wexecv(
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Каждая из этих функций загружает и выполняет новый процесс, передавая ему массив указателей на аргументы командной строки.
 
-Функции **_execv** проверяют свои параметры. Если *кмднаме* является пустым указателем или *argv* является пустым указателем, указатель на пустой массив или если массив содержит пустую строку в качестве первого аргумента, функции **_execv** вызывают обработчик недопустимых параметров, как описано в разделе параметр. [ Проверка](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **еинвал** и возвращают-1. Ни один процесс не запущен.
+**Функции _execv** проверяют свои параметры. Если *cmdname* является нулевой указатель, или если *argv* является нулевой указатель, указатель на пустой массив, или если массив содержит пустую строку в качестве первого аргумента, **_execv** функции ссылаться на недействительный обработчик параметров, как описано в [параметр проверки](../../c-runtime-library/parameter-validation.md). Если выполнение разрешено продолжать, эти функции устанавливают **errno** к **EINVAL** и возвращают -1. Ни один процесс не запущен.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|Необязательный заголовок|
+|Компонент|Обязательный заголовок|Необязательный заголовок|
 |--------------|---------------------|---------------------|
 |**_execv**|\<process.h>|\<errno.h>|
 |**_wexecv**|\<process.h> или \<wchar.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в разделе [Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление процессами и средой](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Функции _exec, _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[_exec, _wexec функции](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Прервать](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>

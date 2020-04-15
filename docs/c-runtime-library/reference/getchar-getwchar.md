@@ -1,9 +1,11 @@
 ---
 title: getchar, getwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getchar
 - getwchar
+- _o_getchar
+- _o_getwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344617"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -50,28 +53,30 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Чтобы указать на ошибку чтения или конец файла, функция **GetChars** возвращает значение **EOF**, а **getwchar** возвращает **WEOF**. Для **GetChars**используйте **ferror** или **feof** для проверки ошибки или завершения файла.
+Возвращает считанный символ. Чтобы указать ошибку чтения или состояние конца файла, **getchar** возвращает **EOF**, и **getwchar** возвращает **WEOF**. Для **getchar,** используйте **ferror** или **feof** для того чтобы проверить для ошибки или для конца архива.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Каждая подпрограммы считывает один символ из **stdin** и увеличивает связанный указатель файла, чтобы он указывал на следующий символ. Функция **GetChars** аналогична [_fgetchar](fgetc-fgetwc.md), но реализована в виде функции и макроса.
+Каждая рутина читает один символ из **stdin** и приращает связанный указатель файла, чтобы указать на следующий символ. **getchar** такой же, как [_fgetchar,](fgetc-fgetwc.md)но он реализуется как функция и как макрос.
 
 Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+|**_gettchar**|**гетчар**|**гетчар**|**getwchar**|
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**getchar**|\<stdio.h>|
+|**гетчар**|\<stdio.h>|
 |**getwchar**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях Universal Windows Platform (UWP). Стандартные ручьи потока, связанные с консолью, **stdin,** **stdout**и **stderr,** должны быть перенаправлены, прежде чем функции C run-time могут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -103,7 +108,7 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

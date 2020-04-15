@@ -1,9 +1,11 @@
 ---
 title: _ismbbkpunct, _ismbbkpunct_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkpunct_l
 - _ismbbkpunct
+- _o__ismbbkpunct
+- _o__ismbbkpunct_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 35f09013fbbe522a1eb747f2d2131a5fbb23f765
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 24e1676422d913bf406fc4cb5f114c1c025bdb97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954092"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343587"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
@@ -56,15 +59,19 @@ int _ismbbkpunct_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Целое число, которое требуется проверить.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkpunct** возвращает ненулевое значение, если целое число *c* является символом пунктуации, отличным от ASCII, или 0, если нет. Например, только для кодовой страницы 932, **_ismbbkpunct** проверяет на принадлежность к пунктуационным символам катаканы. **_ismbbkpunct** использует текущий языковой стандарт для любых параметров символов, зависящих от языкового стандарта. **_ismbbkpunct_l** является идентичным за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkpunct** возвращает ненулевое значение, если *целый* c является символом пунктуации, не являйся ASCII, или 0, если это не так. Например, только для кодовой страницы 932, **_ismbbkpunct** проверяет на принадлежность к пунктуационным символам катаканы. **_ismbbkpunct** использует текущий локал для любых параметров символов, зависящих от локальной зависимости. **_ismbbkpunct_l** идентичен, за исключением того, что он использует локал, который прошел дюйма Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -73,9 +80,9 @@ int _ismbbkpunct_l(
 |**_ismbbkpunct**|\<mbctype.h>|
 |**_ismbbkpunct_l**|\<mbctype.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[Подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>

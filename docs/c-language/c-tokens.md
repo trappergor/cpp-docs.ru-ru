@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 3984fe84e1761c785f3b3c4d7c5ef3c43d2528a2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340978"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334623"
 ---
 # <a name="c-tokens"></a>Токены C
 
@@ -20,21 +20,21 @@ ms.locfileid: "68340978"
 
 *token*: *keyword*
 
-*identifier*
+*Идентификатор*
 
-*constant*
+*Постоянной*
 
-*string-literal*
+*строка-буквальный*
 
-*operator*
+*Оператор*
 
-*знак препинания*
+*punctuator*
 
 > [!NOTE]
->  Описание соглашений о синтаксисе ANSI вы найдете во введении к статье [Общие сведения о синтаксисе языка C](../c-language/c-language-syntax-summary.md).
+> Ознакомьтесь с резюме [C Language Syntax Summary](../c-language/c-language-syntax-summary.md) для разъяснения конвенций syntax ANSI.
 
-Ключевые слова, идентификаторы, константы, строковые литералы и операторы, описанные в этом разделе, являются примерами токенов. Символы пунктуации, например квадратные ( **[ ]** ), фигурные ( **{ }** ) и круглые скобки ( **( )** ) и запятая ( **,** ), также являются лексемами.
+Ключевые слова, идентификаторы, константы, строковые литералы и операторы, описанные в этом разделе, являются примерами токенов. Символы пунктуации, например квадратные (**[ ]**), фигурные (**{ }**) и круглые скобки (**( )**) и запятая (**,**), также являются лексемами.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Элементы языка C](../c-language/elements-of-c.md)

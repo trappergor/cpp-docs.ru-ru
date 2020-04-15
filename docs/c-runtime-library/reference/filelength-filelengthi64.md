@@ -1,9 +1,11 @@
 ---
 title: _filelength, _filelengthi64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _filelengthi64
 - _filelength
+- _o__filelength
+- _o__filelengthi64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: d7cf7f5bea5ed8964ec1a714a2a70d289daf085f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a830bedc8dca65410a2df49b96c6e3bf6e11b4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346874"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength, _filelengthi64
 
@@ -56,30 +59,34 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>Параметры
 
-*fd*<br/>
+*Fd*<br/>
 Указывает дескриптор файла.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Как **_filelength** , так и **_filelengthi64** возвращают длину файла в байтах целевого файла, связанного с *демоном*к памяти. Если *демон демона* является недопустимым дескриптором файла, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, обе функции возвращают-1L **, чтобы указать** ошибку, и присвойте параметру значение **значение EBADF**.
+Оба **_filelength** и **_filelengthi64** вернуть длину файла, в байтах, целевого файла, связанного с *fd*. Если *fd* является недействительным дескриптором файлов, эта функция вызывает обработчик параметров недействительного, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, обе функции возвращают -1L, чтобы указать ошибку и установить **errno** в **EBADF.**
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
 |**_filelength**|\<io.h>|
 |**_filelengthi64**|\<io.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для функции [_chsize](chsize.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Обработка файлов](../../c-runtime-library/file-handling.md)<br/>
 [_chsize](chsize.md)<br/>
 [_fileno](fileno.md)<br/>
 [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[_stat, _wstat Functions](stat-functions.md)<br/>
+[Функции _stat, _wstat](stat-functions.md)<br/>

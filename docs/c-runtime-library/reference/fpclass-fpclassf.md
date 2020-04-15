@@ -1,9 +1,10 @@
 ---
 title: _fpclass, _fpclassf
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _fpclass
 - _fpclassf
+- _o__fpclass
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b16655fed046114e9dd8592c5e1fd3fc5f7ed4bf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346279"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass, _fpclassf
 
@@ -63,16 +65,16 @@ int _fpclassf(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **_fpclass** и **_fpclassf** возвращают целочисленное значение, которое указывает на классификацию с плавающей запятой аргумента *x*. Классификация может иметь одно из следующих значений, определенных в \<float.h>.
+**Функции _fpclass** и **_fpclassf** возвращают величину, которая указывает на классификацию аргумента *x.* Классификация может иметь одно из следующих значений, определенных в \<float.h>.
 
-|Значение|Description|
+|Значение|Описание|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|Сигнальное значение NaN|
 |**_FPCLASS_QNAN**|Несигнальное значение NaN|
 |**_FPCLASS_NINF**|Отрицательная бесконечность (-INF)|
 |**_FPCLASS_NN**|Отрицательное ненулевое нормализованное значение|
 |**_FPCLASS_ND**|Отрицательное денормализованное значение|
-|**_FPCLASS_NZ**|Отрицательный ноль (-0)|
+|**_FPCLASS_NZ**|Отрицательный ноль (- 0)|
 |**_FPCLASS_PZ**|Положительный 0 (+ 0)|
 |**_FPCLASS_PD**|Положительное денормализованное значение|
 |**_FPCLASS_PN**|Положительное ненулевое нормализованное значение|
@@ -80,7 +82,9 @@ int _fpclassf(
 
 ## <a name="remarks"></a>Remarks
 
-Функции **_fpclass** и **_fpclassf** являются специфичными для Microsoft. Они похожи на [fpclassify](fpclassify.md), но возвращают подробные сведения об аргументе. Функция **_fpclassf** доступна только при компиляции для платформы x64.
+**Функции _fpclass** и **_fpclassf** специфичны для корпорации Майкрософт. Они похожи на [fpclassify](fpclassify.md), но возвращают подробные сведения об аргументе. Функция **_fpclassf** доступна только при компиляции для платформы x64.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

@@ -1,11 +1,15 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
+- _o__mbctohira
+- _o__mbctohira_l
+- _o__mbctokata
+- _o__mbctokata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341091"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -76,28 +81,30 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Многобайтовый символ для преобразования.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
+Каждая из этих функций возвращает преобразованный символ *c,* если это возможно. В противном случае он возвращает символ *c* без изменений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функции **_mbctohira** и **_mbctokata** проверяют символ *c* и, если это возможно, применяют одно из следующих преобразований.
+**функции _mbctohira** и **_mbctokata** проверяют символ *c* и, по возможности, применяют одно из следующих преобразований.
 
 |Подпрограммы|Преобразования|
 |--------------|--------------|
 |**_mbctohira**, **_mbctohira_l**|Многобайтовые символы катакана в многобайтовые символы хирагана.|
 |**_mbctokata**, **_mbctokata_l**|Многобайтовые символы хирагана в многобайтовые символы катакана.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что не имеют суффикса **_l** , используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта, и те, у которых есть суффикс **_l** , вместо этого используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что те, которые не имеют **_l** суффикса использовать текущий локали для этого локаль-зависимого поведения и те, которые имеют **_l** суффикс вместо использования параметра локали, который передается дюйма Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbctohira** назывался **жтохира** и **_mbctokata** назывался **жтоката**. В новом коде используйте новые имена.
+В более ранних версиях, **_mbctohira** был назван **jtohira** и **_mbctokata** был назван **jtokata**. В новом коде используйте новые имена.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -108,9 +115,9 @@ unsigned int _mbctokata_l(
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>

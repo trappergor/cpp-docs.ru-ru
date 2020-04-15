@@ -1,10 +1,11 @@
 ---
 title: cos, cosf, cosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - cos
 - cosf
 - cosl
+- _o_cos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 536d9a235ef0d4b2bb68362645b5b4e03d8f37a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348468"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
-Вычисляет косинус.
+Вычисляет косин.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -65,28 +67,30 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Косинус *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
+Косин *х*. Если *x* больше или равна 263, или меньше, чем или равна -263, происходит потеря значимости в результате.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± КНАН, С|none|**_DOMAIN**|
-|± INF|**Недопустимый**|**_DOMAIN**|
+|- ЗНАН, IND|Нет|**_DOMAIN**|
+|- INF|**Недопустимый**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **COS** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C функция **COS** всегда принимает и возвращает значение **типа Double**.
+Поскольку СЗ допускает перегрузку, можно вызывать перегрузки **кос,** которые принимают и возвращают **плавающие** или **длинные** **двойные** значения. В программе C, **cos** всегда принимает и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок C|Обязательный заголовок C++|
 |-------------|---------------------|-|
-|**COS**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
+|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
-См. пример в [sin, sinf, sinl](sin-sinf-sinl.md).
+Смотрите пример в [грехе, грехе, грехе](sin-sinf-sinl.md).
 
 ## <a name="see-also"></a>См. также раздел
 

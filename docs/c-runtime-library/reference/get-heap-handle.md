@@ -1,8 +1,9 @@
 ---
 title: _get_heap_handle
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_heap_handle
+- _o__get_heap_handle
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: b5f53569db6cf99eb8f91e9a8668280b135097ce
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955867"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345085"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -49,9 +51,11 @@ intptr_t _get_heap_handle( void );
 
 Возвращает дескриптор кучи Win32, используемый системой времени выполнения C.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Используйте эту функцию, чтобы вызвать [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) и включить кучу низкой фрагментации в куче CRT.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -59,7 +63,7 @@ intptr_t _get_heap_handle( void );
 |-------------|---------------------|
 |**_get_heap_handle**|\<malloc.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="sample"></a>Пример
 
@@ -84,6 +88,6 @@ int main(void)
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>

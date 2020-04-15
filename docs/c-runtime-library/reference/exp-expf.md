@@ -1,10 +1,11 @@
 ---
 title: exp, expf, expl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - expf
 - expl
 - exp
+- _o_exp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cbf303b2b92afd83a1c3181dc98a1dbdcd639c1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941637"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347597"
 ---
 # <a name="exp-expf-expl"></a>exp, expf, expl
 
@@ -67,32 +69,34 @@ long double expl(
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Значение с плавающей запятой, експонентиате основание натурального логарифма по адресу *e* .
+Значение плавающей точки для exponentiate естественной базы logarithm *e.*
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **exp** возвращают экспоненциальное значение параметра с плавающей запятой *x*, если выполнено успешно. То есть результатом является *e*<sup>*x*</sup>, где *e* — основание натурального логарифма. При переполнении функция возвращает INF-файл (бесконечность) и при неточном потоке **exp** возвращает 0.
+Функции **exp** возвращают экспоненциальное значение параметра плавающей точки, *x,* в случае успеха. То есть, в результате *e*<sup>*x*</sup>, где *е* является основой естественного logarithm. При переполнении функция возвращает INF (бесконечность) и на недопотливую, **exp** возвращает 0.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± Скрытого NaN, неопределенного|Отсутствуют|_DOMAIN|
-|± Бесконечности|INVALID|_DOMAIN|
+|Тихий NaN, неопределенный|Отсутствуют|_DOMAIN|
+|Бесконечность|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-Функция **exp** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+Функция **exp** имеет реализацию, которая использует потоковое SIMD расширения 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающие аргумент с **плавающей запятой** или **Long** . В программе C **exp** всегда принимает и возвращает значение **типа Double**.
+СЗ позволяет перегружать, так что вы можете вызвать перегрузки **exp,** которые принимают **поплавок** или **длинный двойной** аргумент. В программе C **exp** всегда берет и возвращает **двойной.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок C|Обязательный заголовок C++|
+|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|---------------------|---|
-|**exp**, **експф**, **експл**|\<math.h>|\<cmath> или \<math.h>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -115,7 +119,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>

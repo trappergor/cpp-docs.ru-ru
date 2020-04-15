@@ -1,10 +1,11 @@
 ---
 title: asin, asinf, asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943652"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334128"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -63,31 +65,33 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функция **ASIN** Возвращает арксинус (функцию обратного синуса) *x* в диапазоне от-π/2 до π/2 радиан.
+Функция **осин** возвращает дугсин (обратную функцию синуса) *х* в диапазоне - от 2 до 2 рад.
 
-По умолчанию, если *x* меньше-1 или больше 1, **ASIN** возвращает неопределенное значение.
+По умолчанию, если *x* меньше -1 или больше, чем 1, **asin** возвращает сятворное время.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
-|± **КНАН**, **С**|none|**_DOMAIN**|
-|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± ∞|**Недопустимый**|**_DOMAIN**|
+|- **ЗНАН**, **IND**|Нет|**_DOMAIN**|
+|&#124;x&#124;>1|**Недопустимый**|**_DOMAIN**|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ASIN** с **плавающими** **значениями типа** float и **Long** . В программе на C **ASIN** всегда принимает и возвращает **Double**.
+Поскольку СЗ допускает перегрузку, можно вызывать перегрузки **осин** с **поплавком** и **длинными** **двойными** значениями. В программе C, **asin** всегда берет и возвращает **двойной**.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**ASIN**, **асинф**, **ASIN**|\<math.h>|\<cmath> или \<math.h>|
+|**асин**, **asinf**, **asinl**|\<math.h>|\<cmath> или \<math.h>|
 
 ## <a name="example"></a>Пример
 
 Дополнительные сведения см. в разделе [acos, acosf, acosl](acos-acosf-acosl.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>

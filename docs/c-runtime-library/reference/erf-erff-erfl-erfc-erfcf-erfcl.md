@@ -1,6 +1,6 @@
 ---
 title: erf, erff, erfl, erfc, erfcf, erfcl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - erff
 - erfl
@@ -8,6 +8,12 @@ api_name:
 - erfc
 - erfcf
 - erfcl
+- _o_erf
+- _o_erfc
+- _o_erfcf
+- _o_erfcl
+- _o_erff
+- _o_erfl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: ad7ad279d3686e4f33a6f5f901c60348c131b89a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "70937618"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347925"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -92,26 +99,28 @@ long double erfcl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **Фош** возвращают функцию Гаусса Error типа *x*. Функции **ерфк** возвращают дополняющую функцию ошибки Гаусса *x*.
+Функции **erf** возвращают функцию ошибки Гаусса *x.* Функции **erfc** возвращают функцию ошибки Гаусса *x*.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Функции **Фош** вычисляют функцию Гаусса Error *x*, которая определяется следующим образом:
+Функции **erf** вычисляют функцию ошибки Gauss *x,* которая определена как:
 
-![Функция Error объекта x](media/crt_erf_formula.PNG "Функция ошибок от x")
+![Функцию ошибок от x](media/crt_erf_formula.PNG "Функцию ошибок от x")
 
-Функция дополнения Гаусса Error определяется как 1-Фош (x). Функции **Фош** возвращают значение в диапазоне от-1,0 до 1,0. Ошибка не возвращается. Функции **ерфк** возвращают значение в диапазоне от 0 до 2. Если *x* слишком велико для **ерфк**, то для переменной « **No** » задано значение **ERANGE**.
+Дополнительная функция ошибки Гаусса определяется как 1 - erf(x). Функции **erf** возвращают значение в диапазоне от -1.0 до 1.0. Ошибка не возвращается. Функции **erfc** возвращают значение в диапазоне от 0 до 2. Если *x* слишком велик для **erfc,** переменная **errno** установлена на **ERANGE.**
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Фош** и **ерфк** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **Фош** и **ерфк** всегда принимают и возвращают **Двойное**значение.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **erf** и **erfc,** которые принимают и возвращают **плавающие** и **длинные** **двойные** типы. В программе C, **erf** и **erfc** всегда принимают и возвращают **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок|
+|Компонент|Обязательный заголовок|
 |--------------|---------------------|
-|**Фош**, **erff**, **ерфл**, **ерфк**, **ерфкф**, **ерфкл**|\<math.h>|
+|**erf**, **erff**, **erfl**, **erfc**, **erfcf**, **erfcl**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>

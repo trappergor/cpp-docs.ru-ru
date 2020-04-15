@@ -1,6 +1,6 @@
 ---
 title: hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _hypotf
 - hypot
@@ -8,6 +8,9 @@ api_name:
 - _hypot
 - _hypotl
 - hypotl
+- _o__hypot
+- _o__hypotf
+- _o_hypot
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168750"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343960"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -87,23 +91,25 @@ long double _hypotl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха **hypot** возвращает длину гипотенузы; в случае переполнения **hypot** возвращает INF-файл (бесконечность **), а для переменной возврата** — значение **ERANGE**. Для изменения обработки ошибок можно использовать **_matherr** .
+В случае успеха, **hypot** возвращает длину гипотенузы; при переполнении, **hypot** возвращает INF (бесконечность) и **errno** переменная установлена на **ERANGE**. Можно использовать **_matherr** для изменения обработки ошибок.
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функции **hypot** вычисляют длину гипотенузы правого треугольника, учитывая длину двух сторон *x* и *y* (иными словами, квадратный корень из *x*<sup>2</sup> + *y*<sup>2</sup>).
+Функции **hypot** вычисляют длину гипотенуза правого треугольника, учитывая длину двух сторон *x* и *y* (другими словами, квадратный корень *х*<sup>2</sup> + *y*<sup>2).</sup>
 
 Для совместимости с более ранними стандартами используются версии функций с символом подчеркивания в начале. Их поведение идентично поведению версий, которые не имеют таких символов. В новом коде рекомендуется использовать версии без символов подчеркивания.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**hypot**, **хипотф**, **хипотл**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
+|**hypot**, **hypotf**, **hypotl,** **_hypot,** **_hypotf,** **_hypotl**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

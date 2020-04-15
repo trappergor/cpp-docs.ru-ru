@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338023"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -49,11 +51,13 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_rmtmp** возвращает число закрытых и удаленных временных файлов.
+**_rmtmp** возвращает количество закрытых и удаленных временных файлов.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_rmtmp** очищает все временные файлы в текущем каталоге. Функция удаляет только те файлы, которые созданы с помощью **tmpfile**; Используйте его только в том же каталоге, в котором были созданы временные файлы.
+Функция **_rmtmp** очищает все временные файлы в текущем каталоге. Функция удаляет только те файлы, созданные **tmpfile**; использовать его только в том же каталоге, в котором были созданы временные файлы.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -61,7 +65,7 @@ int _rmtmp( void );
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 

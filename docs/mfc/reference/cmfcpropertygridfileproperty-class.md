@@ -1,5 +1,5 @@
 ---
-title: Класс Кмфкпропертигридфилепроперти
+title: Класс CMFCPropertyGridProperty
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 0ce3321968f0c29ce3b946f6127e4435b531c422
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821281"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360584"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Класс Кмфкпропертигридфилепроперти
+# <a name="cmfcpropertygridfileproperty-class"></a>Класс CMFCPropertyGridProperty
 
-`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления "список свойств", который открывает диалоговое окно выбора файла.
+Класс `CMFCPropertyGridFileProperty` поддерживает элемент управления списком свойств, который открывает диалоговую коробку выбора файлов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,35 +29,35 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Создает объект `CMFCPropertyGridFileProperty`.|
+|[CMFCPropertyGridFileНедвижимость::CMFCPropertyGridFileProperty](#cmfcpropertygridfileproperty)|Формирует объект `CMFCPropertyGridFileProperty`.|
 |`CMFCPropertyGridFileProperty::~CMFCPropertyGridFileProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Переопределяет [кмфкпропертигридпроперти:: онкликкбуттон](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[кмфкпропертигридпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
 [CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афкспропертигридктрл. h
+**Заголовок:** afxpropertygridctrl.h
 
-##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
+## <a name="cmfcpropertygridfilepropertycmfcpropertygridfileproperty"></a><a name="cmfcpropertygridfileproperty"></a>CMFCPropertyGridFileНедвижимость::CMFCPropertyGridFileProperty
 
-Создает объект `CMFCPropertyGridFileProperty`.
+Формирует объект `CMFCPropertyGridFileProperty`.
 
 ```
 CMFCPropertyGridFileProperty(
@@ -74,42 +74,42 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>Параметры
 
 *strName*<br/>
-окне Имя свойства.
+[in] Имя свойства.
 
-*бопенфиледиалог*<br/>
-окне Значение TRUE, чтобы открыть диалоговое окно **открытия файла** ; Значение FALSE, чтобы открыть диалоговое окно **сохранения файла** .
+*bOpenFileДиалог*<br/>
+(в) TRUE, чтобы открыть окно диалога **Open File;** FALSE, чтобы открыть диалоговый ящик **Save File.**
 
 *strFileName*<br/>
-окне Начальное имя файла.
+(в) Начальное имя файла.
 
-*лпсздефекст*<br/>
-окне Строка из одного или нескольких расширений имен файлов. Значение по умолчанию — NULL.
+*lpszDefExt*<br/>
+(в) Строка одного или нескольких расширений имени файла. Значение по умолчанию — NULL.
 
 *dwFlags*<br/>
-окне Флаги диалогового окна. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов OFN_HIDEREADONLY и OFN_OVERWRITEPROMPT.
+(в) Флаги коробки Dialog. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов OFN_HIDEREADONLY и OFN_OVERWRITEPROMPT.
 
-*лпсзфилтер*<br/>
-окне Строка из одного или нескольких фильтров файлов. Значение по умолчанию — NULL.
+*lpszFilter*<br/>
+(в) Строка одного или нескольких фильтров файлов. Значение по умолчанию — NULL.
 
-*лпсздескр*<br/>
-окне Описание элемента свойства. Значение по умолчанию — NULL.
+*lpszDescr*<br/>
+(в) Описание элемента свойства. Значение по умолчанию — NULL.
 
-*двдата*<br/>
-окне Данные конкретного приложения, связанные с элементом свойства. Например, 32-разрядное целое число или указатель на другие данные. Значение по умолчанию — 0.
+*dwData*<br/>
+(в) Данные, связанные с элементом свойства. Например, 32-разрядное целое число или указатель на другие данные. Значение по умолчанию — 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Полный список доступных флагов см. в разделе [Структура OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
+Полный список доступных флагов можно найти в [структуре OPENFILENAME.](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)
 
 ### <a name="example"></a>Пример
 
-В этом примере демонстрируется создание объекта с помощью конструктора класса `CMFCPropertyGridFileProperty`. Этот пример является частью демонстрационного [примера Visual Studio](../../overview/visual-cpp-samples.md).
+В этом примере демонстрируется создание объекта с помощью конструктора класса `CMFCPropertyGridFileProperty`. Этот пример является частью [образца демонстрации Visual Studio.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

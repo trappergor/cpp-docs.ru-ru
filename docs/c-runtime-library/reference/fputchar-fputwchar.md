@@ -1,9 +1,11 @@
 ---
 title: _fputchar, _fputwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fputchar
 - _fputwchar
+- _o__fputchar
+- _o__fputwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442964"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346167"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -59,22 +62,24 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ, который требуется записать.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает записанный символ. Для **_fputchar**возвращаемое значение **EOF** указывает на ошибку. Для **_fputwchar**возвращаемое значение **WEOF** указывает на ошибку. Если c равно **null**, эти функции создают исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** (или **WEOF**) и применяют **параметру «** **еинвал**».
+Каждая из этих функций возвращает записанный символ. Для **_fputchar**значение возврата **EOF** указывает на ошибку. Для **_fputwchar,** возвратное значение **WEOF** указывает на ошибку. Если c является **NULL,** эти функции генерируют недействительное исключение параметра, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, они возвращают **EOF** (или **WEOF)** и установить **errno** в **EINVAL**.
 
-Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Обе эти функции записывают один символ *c* в **stdout** и перемещает индикатор соответствующим образом. **_fputchar** эквивалентна `fputc( stdout )`. Она также эквивалентна **putchar**, но реализована только как функция, а не как функция и макрос. В отличие от **fputc** и **putchar**, эти функции несовместимы со стандартом ANSI.
+Обе эти функции заражает один символ *c* для **stdout** и продвигает индикатор по мере необходимости. **_fputchar** эквивалентен `fputc( stdout )`. Это также эквивалентно **putchar**, но реализованы только в качестве функции, а не в качестве функции и макроса. В отличие от **fputc** и **putchar,** эти функции не совместимы со стандартом ANSI.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
@@ -85,7 +90,7 @@ wint_t _fputwchar(
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью (**stdin**, **stdout**и **stderr**), необходимо перенаправить, прежде чем функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях Universal Windows Platform (UWP). Стандартные ручьи потока, связанные с консолью –**stdin,** **stdout**и **stderr**— должны быть перенаправлены, прежде чем функции C run-time могут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

@@ -1,9 +1,11 @@
 ---
 title: _putc_nolock, _putwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putc_nolock
 - _putwc_nolock
+- _o__putc_nolock
+- _o__putwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950124"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338474"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
@@ -63,23 +66,25 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ, который требуется записать.
 
-*вышестоящий*<br/>
+*Поток*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 См. **putc, putwc**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**_putc_nolock** и **_putwc_nolock** идентичны версиям без суффикса **_nolock** , за исключением того, что они не защищены от помех в других потоках. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+**_putc_nolock** и **_putwc_nolock** идентичны версиям без **_nolock** суффикса, за исключением того, что они не защищены от помех другими потоками. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
-**_putwc_nolock** — это версия **_putc_nolock**для расширенных символов; Эти две функции ведут себя одинаково, если поток открыт в режиме ANSI. **_putc_nolock** в настоящее время не поддерживает вывод в поток Юникода.
+**_putwc_nolock** является широкохарактерным вариантом **_putc_nolock;** две функции ведут себя одинаково, если поток открыт в режиме ANSI. **_putc_nolock** в настоящее время не поддерживает выход в поток UNICODE.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -92,7 +97,7 @@ wint_t _putwc_nolock(
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**и **stderr**, должны быть перенаправляться до того, как функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях Universal Windows Platform (UWP). Стандартные ручьи потока, связанные с консолью, **stdin,** **stdout**и **stderr,** должны быть перенаправлены, прежде чем функции C run-time могут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -123,13 +128,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
 This is the line of output
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc, fputwc](fputc-fputwc.md)<br/>
