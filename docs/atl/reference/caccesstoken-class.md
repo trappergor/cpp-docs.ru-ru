@@ -52,19 +52,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9ae63946dfa6244e97c376f9eccd9bab93586990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423522"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319037"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
-Этот класс является оболочкой для маркера доступа.
+Этот класс является оберткой для токена доступа.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -72,77 +72,77 @@ ms.locfileid: "79423522"
 class CAccessToken
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|
+|[CAccessToken::](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CAccessToken:: Attach](#attach)|Вызовите этот метод, чтобы стать владельцем заданного маркера маркера доступа.|
-|[CAccessToken:: Чекктокенмембершип](#checktokenmembership)|Вызовите этот метод, чтобы определить, включен ли указанный идентификатор безопасности в объекте `CAccessToken`.|
-|[CAccessToken:: Креатеимперсонатионтокен](#createimpersonationtoken)|Вызовите этот метод, чтобы создать новый маркер доступа олицетворения.|
-|[CAccessToken:: Креатепримаритокен](#createprimarytoken)|Вызовите этот метод, чтобы создать новый первичный токен.|
-|[CAccessToken:: параметр CreateProcessAsUser](#createprocessasuser)|Вызовите этот метод, чтобы создать новый процесс, выполняемый в контексте безопасности пользователя, представленного объектом `CAccessToken`.|
-|[CAccessToken:: CreateRestrictedToken](#createrestrictedtoken)|Вызовите этот метод, чтобы создать новый, ограниченный `CAccessToken` объект.|
-|[CAccessToken::D етач](#detach)|Вызовите этот метод, чтобы отменить владение маркером доступа.|
-|[CAccessToken::D Исаблепривилеже](#disableprivilege)|Вызовите этот метод, чтобы отключить привилегию в объекте `CAccessToken`.|
-|[CAccessToken::D Исаблепривилежес](#disableprivileges)|Вызовите этот метод, чтобы отключить один или несколько привилегий в объекте `CAccessToken`.|
-|[CAccessToken:: Енаблепривилеже](#enableprivilege)|Вызовите этот метод, чтобы включить привилегию в объекте `CAccessToken`.|
-|[CAccessToken:: Енаблепривилежес](#enableprivileges)|Вызовите этот метод, чтобы включить один или несколько привилегий в объекте `CAccessToken`.|
-|[CAccessToken:: Жетдефаултдакл](#getdefaultdacl)|Вызовите этот метод, чтобы вернуть список DACL по умолчанию для объекта `CAccessToken`.|
-|[CAccessToken:: Жетеффективетокен](#geteffectivetoken)|Вызовите этот метод, чтобы получить объект `CAccessToken`, равный маркеру доступа, который действует для текущего потока.|
-|[CAccessToken:: группы](#getgroups)|Вызовите этот метод, чтобы получить группы токенов объекта `CAccessToken`.|
-|[CAccessToken:: getHandler](#gethandle)|Вызовите этот метод, чтобы получить маркер маркера доступа.|
-|[CAccessToken:: Жетимперсонатионлевел](#getimpersonationlevel)|Вызовите этот метод, чтобы получить уровень олицетворения из маркера доступа.|
-|[CAccessToken:: Жетлогонсессионид](#getlogonsessionid)|Вызовите этот метод, чтобы получить идентификатор сеанса входа, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: Жетлогонсид](#getlogonsid)|Вызовите этот метод, чтобы получить идентификатор безопасности входа, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: owner](#getowner)|Вызовите этот метод, чтобы получить владельца, связанного с объектом `CAccessToken`.|
-|[CAccessToken:: Жетпримариграуп](#getprimarygroup)|Вызовите этот метод, чтобы получить основную группу, связанную с объектом `CAccessToken`.|
-|[CAccessToken:: Privileges](#getprivileges)|Вызовите этот метод, чтобы получить привилегии, связанные с объектом `CAccessToken`.|
-|[CAccessToken:: Жетпроцесстокен](#getprocesstoken)|Вызовите этот метод, чтобы инициализировать `CAccessToken` с маркером доступа из данного процесса.|
-|[CAccessToken::/Profile](#getprofile)|Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: \ Source](#getsource)|Вызовите этот метод, чтобы получить источник объекта `CAccessToken`.|
-|[CAccessToken:: Statistics](#getstatistics)|Вызовите этот метод, чтобы получить сведения, связанные с объектом `CAccessToken`.|
-|[CAccessToken:: Жеттерминалсервицессессионид](#getterminalservicessessionid)|Вызовите этот метод, чтобы получить идентификатор сеанса служб терминалов, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: Жетсреадтокен](#getthreadtoken)|Вызовите этот метод, чтобы инициализировать `CAccessToken` с маркером из данного потока.|
-|[CAccessToken:: Жеттокенид](#gettokenid)|Вызовите этот метод, чтобы получить идентификатор маркера, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: GetType](#gettype)|Вызовите этот метод, чтобы получить тип токена объекта `CAccessToken`.|
-|[CAccessToken:: пользователь](#getuser)|Вызовите этот метод, чтобы обозначить пользователя, связанного с объектом `CAccessToken`.|
-|[CAccessToken:: Хкэйкуррентусер](#hkeycurrentuser)|Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: IMPERSONATE](#impersonate)|Вызовите этот метод, чтобы назначить потоку `CAccessToken` олицетворения.|
-|[CAccessToken:: Имперсонателогжедонусер](#impersonateloggedonuser)|Вызовите этот метод, чтобы вызывающий поток олицетворять контекст безопасности вошедшего в систему пользователя.|
-|[CAccessToken:: Истокенрестриктед](#istokenrestricted)|Вызовите этот метод, чтобы проверить, содержит ли объект `CAccessToken` список ограниченных идентификаторов безопасности.|
-|[CAccessToken:: LoadUserProfile](#loaduserprofile)|Вызовите этот метод, чтобы загрузить профиль пользователя, связанный с объектом `CAccessToken`.|
-|[CAccessToken:: LogonUser](#logonuser)|Вызовите этот метод, чтобы создать сеанс входа для пользователя, связанного с заданными учетными данными.|
-|[CAccessToken:: Опенкомклиенттокен](#opencomclienttoken)|Вызовите этот метод из COM-сервера, обрабатывающего вызов от клиента, чтобы инициализировать `CAccessToken` с маркером доступа из клиента COM.|
-|[CAccessToken:: Опеннамедпипеклиенттокен](#opennamedpipeclienttoken)|Вызовите этот метод из сервера, принимающего запросы через именованный канал, чтобы инициализировать `CAccessToken` с маркером доступа от клиента.|
-|[CAccessToken:: Опенрпкклиенттокен](#openrpcclienttoken)|Вызовите этот метод из сервера, обрабатывающего вызов от клиента RPC, чтобы инициализировать `CAccessToken` с маркером доступа от клиента.|
-|[CAccessToken:: Опенсреадтокен](#openthreadtoken)|Вызовите этот метод, чтобы задать уровень олицетворения, а затем инициализировать `CAccessToken` с маркером из данного потока.|
-|[CAccessToken::P Ривилежечекк](#privilegecheck)|Вызовите этот метод, чтобы определить, включен ли указанный набор привилегий в объект `CAccessToken`.|
-|[CAccessToken:: revert](#revert)|Вызовите этот метод, чтобы прерывать поток, использующий токен олицетворения.|
-|[CAccessToken:: Сетдефаултдакл](#setdefaultdacl)|Вызовите этот метод, чтобы задать список DACL по умолчанию для объекта `CAccessToken`.|
-|[CAccessToken:: Сетовнер](#setowner)|Вызовите этот метод, чтобы задать владельца объекта `CAccessToken`.|
-|[CAccessToken:: Сетпримариграуп](#setprimarygroup)|Вызовите этот метод, чтобы задать основную группу объекта `CAccessToken`.|
+|[CAccessToken::Attach](#attach)|Вызовите этот метод, чтобы взять на себя ответственность за данную ручку маркера доступа.|
+|[CAccessToken::CheckTokenЧленство](#checktokenmembership)|Вызовите этот метод, чтобы определить, `CAccessToken` включен ли указанный SID в объекте.|
+|[CAccessToken::CreateImpersonationToken](#createimpersonationtoken)|Вызовите этот метод, чтобы создать новый маркер доступа олицетворения.|
+|[CAccessToken::CreatePrimaryToken](#createprimarytoken)|Вызовите этот метод, чтобы создать новый основной маркер.|
+|[CAccessToken::CreateProcessAsUser](#createprocessasuser)|Вызовите этот метод для создания нового процесса, работаемого `CAccessToken` в контексте безопасности пользователя, представленного объектом.|
+|[CAccessToken::CreateRestrictedToken](#createrestrictedtoken)|Вызовите этот метод, `CAccessToken` чтобы создать новый, ограниченный объект.|
+|[CAccessToken: :Detach](#detach)|Вызовите этот метод, чтобы отозвать право собственности на токен доступа.|
+|[CAccessToken: :DisablePrivilege](#disableprivilege)|Вызовите этот метод, чтобы `CAccessToken` отключить привилегию в объекте.|
+|[CAccessToken: :DуправляемыеПривилегии](#disableprivileges)|Вызовите этот метод, чтобы отключить одну `CAccessToken` или несколько привилегий в объекте.|
+|[CAccessToken:EnablePrivilege](#enableprivilege)|Вызовите этот метод, `CAccessToken` чтобы включить привилегию в объекте.|
+|[CAccessToken:EnablePrivileges](#enableprivileges)|Вызовите этот метод, чтобы включить `CAccessToken` одну или несколько привилегий в объекте.|
+|[CAccessToken::GetDefaultDacl](#getdefaultdacl)|Вызовите этот `CAccessToken` метод, чтобы вернуть DACL объекта по умолчанию.|
+|[CAccessToken:GetEffectiveToken](#geteffectivetoken)|Вызовите этот `CAccessToken` метод, чтобы получить объект, равный токену доступа, фактическидлянию для текущего потока.|
+|[CAccessToken:GetGroups](#getgroups)|Вызовите этот `CAccessToken` метод, чтобы вернуть группы маркеров объекта.|
+|[CAccessToken::GetHandle](#gethandle)|Вызовите этот метод, чтобы получить ручку к маркеру доступа.|
+|[CAccessToken::GetImpersonationLevel](#getimpersonationlevel)|Вызовите этот метод, чтобы получить уровень олицетворения из токена доступа.|
+|[CAccessToken::GetLogonSessionId](#getlogonsessionid)|Вызовите этот метод, чтобы получить `CAccessToken` идентификатор сеанса Logon, связанный с объектом.|
+|[CAccessToken::GetLogonSid](#getlogonsid)|Вызовите этот метод, чтобы получить `CAccessToken` Logon SID, связанный с объектом.|
+|[CAccessToken::GetOwner](#getowner)|Вызовите этот метод, чтобы `CAccessToken` получить владельца, связанного с объектом.|
+|[CAccessToken:GetPrimaryGroup](#getprimarygroup)|Вызовите этот метод, чтобы `CAccessToken` получить основную группу, связанную с объектом.|
+|[CAccessToken::GetPrivileges](#getprivileges)|Вызовите этот метод, чтобы `CAccessToken` получить привилегии, связанные с объектом.|
+|[CAccessToken:GetProcessToken](#getprocesstoken)|Вызовите этот метод, чтобы инициализировать `CAccessToken` токен доступа из данного процесса.|
+|[CAccessToken:GetProfile](#getprofile)|Вызовите этот метод, чтобы получить ручку, указывающую на профиль пользователя, связанный с объектом. `CAccessToken`|
+|[CAccessToken::GetSource](#getsource)|Вызовите этот метод, `CAccessToken` чтобы получить источник объекта.|
+|[CAccessToken::GetStatistics](#getstatistics)|Вызовите этот метод, `CAccessToken` чтобы получить информацию, связанную с объектом.|
+|[CAccessToken::GetTerminalServicesSessionid](#getterminalservicessessionid)|Вызовите этот метод, чтобы получить `CAccessToken` идентификатор сеанса терминалов, связанный с объектом.|
+|[CAccessToken::GetThreadToken](#getthreadtoken)|Вызовите этот метод, чтобы инициализировать `CAccessToken` токен из данного потока.|
+|[CAccessToken:GetTokenid](#gettokenid)|Вызовите этот метод, чтобы получить `CAccessToken` идентификатор маркеров, связанный с объектом.|
+|[CAccessToken:GetType](#gettype)|Вызовите этот метод, чтобы `CAccessToken` получить тип маркера объекта.|
+|[CAccessToken::GetUser](#getuser)|Вызовите этот метод, чтобы `CAccessToken` идентифицировать пользователя, связанного с объектом.|
+|[CAccessToken::HKeyCurrentUser](#hkeycurrentuser)|Вызовите этот метод, чтобы получить ручку, указывающую на профиль пользователя, связанный с объектом. `CAccessToken`|
+|[CAccessToken::Imperson](#impersonate)|Вызовите этот метод, чтобы `CAccessToken` назначить олицетворение потоку.|
+|[CAccessToken::ImpersonateLoggedOnUser](#impersonateloggedonuser)|Вызовите этот метод, чтобы позволить потоку вызовов выдать себя за контекст безопасности зарегистрированного пользователя.|
+|[CAccessToken::IsTokenRestricted](#istokenrestricted)|Вызовите этот метод `CAccessToken` для проверки, содержит ли объект список ограниченных СИДов.|
+|[CAccessToken::LoadUserProfile](#loaduserprofile)|Вызовите этот метод для загрузки профиля пользователя, связанного с объектом. `CAccessToken`|
+|[CAccessToken::LogonUser](#logonuser)|Вызовите этот метод, чтобы создать сеанс входа для пользователя, связанного с данными учетными данными.|
+|[CAccessToken::OpenCOMClientToken](#opencomclienttoken)|Вызов этого метода из сервера COM обработки вызова `CAccessToken` от клиента, чтобы инициализировать с токеном доступа от клиента COM.|
+|[CAccessToken::OpenNamedPipeClientToken](#opennamedpipeclienttoken)|Вызов этого метода из сервера, принимая запросы по названной трубе, чтобы инициализировать `CAccessToken` токен доступа от клиента.|
+|[CAccessToken::OpenRPCClientToken](#openrpcclienttoken)|Вызов этого метода из сервера обработки вызова от `CAccessToken` клиента RPC для инициализации с токендоступа доступа от клиента.|
+|[CAccessToken::OpenThreadToken](#openthreadtoken)|Вызовите этот метод, чтобы установить уровень олицетворения, а затем инициализировать `CAccessToken` с токеном из данного потока.|
+|[CAccessToken::PrivilegeCheck](#privilegecheck)|Вызовите этот метод, чтобы определить, включен `CAccessToken` ли определенный набор привилегий в объекте.|
+|[CAccessToken::Revert](#revert)|Вызовите этот метод, чтобы остановить поток, использующий маркер олицетворения.|
+|[CAccessToken::SetDefaultDacl](#setdefaultdacl)|Вызовите этот метод, чтобы установить DACL по умолчанию `CAccessToken` объекта.|
+|[CAccessToken::Set](#setowner)|Вызовите этот метод, `CAccessToken` чтобы установить владельца объекта.|
+|[CAccessToken:SetPrimaryGroup](#setprimarygroup)|Вызовите этот метод, чтобы `CAccessToken` установить основную группу объекта.|
 
 ## <a name="remarks"></a>Remarks
 
-[Маркер доступа](/windows/win32/SecAuthZ/access-tokens) — это объект, который описывает контекст безопасности процесса или потока и выделяется каждому пользователю, вошедшему в систему Windows.
+[Токен доступа](/windows/win32/SecAuthZ/access-tokens) — это объект, описывающий контекст безопасности процесса или потока и выделенный каждому пользователю, зарегистрированного на систему Windows.
 
-Общие сведения о модели управления доступом в Windows см. в разделе [Управление доступом](/windows/win32/SecAuthZ/access-control) в Windows SDK.
+Для введения в модель управления доступом [Access Control](/windows/win32/SecAuthZ/access-control) в Windows см.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлсекурити. h
+**Заголовок:** atlsecurity.h
 
-##  <a name="attach"></a>CAccessToken:: Attach
+## <a name="caccesstokenattach"></a><a name="attach"></a>CAccessToken::Attach
 
-Вызовите этот метод, чтобы стать владельцем заданного маркера маркера доступа.
+Вызовите этот метод, чтобы взять на себя ответственность за данную ручку маркера доступа.
 
 ```
 void Attach(HANDLE hToken) throw();
@@ -150,14 +150,14 @@ void Attach(HANDLE hToken) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*хтокен*<br/>
-Маркер маркера доступа.
+*hToken*<br/>
+Ручка к маркеру доступа.
 
 ### <a name="remarks"></a>Remarks
 
-В отладочных сборках возникнет ошибка утверждения, если объект `CAccessToken` уже владеет маркером доступа.
+В отладке сборки возникает `CAccessToken` ошибка утверждения, если объект уже владеет маркером доступа.
 
-##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken
+## <a name="caccesstokencaccesstoken"></a><a name="dtor"></a>CAccessToken::
 
 Деструктор
 
@@ -169,9 +169,9 @@ virtual ~CAccessToken() throw();
 
 Освобождает все выделенные ресурсы.
 
-##  <a name="checktokenmembership"></a>CAccessToken:: Чекктокенмембершип
+## <a name="caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>CAccessToken::CheckTokenЧленство
 
-Вызовите этот метод, чтобы определить, включен ли указанный идентификатор безопасности в объекте `CAccessToken`.
+Вызовите этот метод, чтобы определить, `CAccessToken` включен ли указанный SID в объекте.
 
 ```
 bool CheckTokenMembership(
@@ -181,28 +181,28 @@ bool CheckTokenMembership(
 
 ### <a name="parameters"></a>Параметры
 
-*рсид*<br/>
-Ссылка на объект [класса CSid](../../atl/reference/csid-class.md) .
+*Rsid*<br/>
+Ссылка на объект [класса CSid.](../../atl/reference/csid-class.md)
 
-*пбисмембер*<br/>
+*pbIsMember*<br/>
 Указатель на переменную, которая получает результаты проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Метод `CheckTokenMembership` проверяет наличие идентификатора безопасности в идентификаторах безопасности пользователя и группы маркера доступа. Если идентификатор безопасности существует и имеет атрибут SE_GROUP_ENABLED, *пбисмембер* имеет значение true. в противном случае для него задается значение FALSE.
+Метод `CheckTokenMembership` проверки на наличие SID в пользовательском и групповом СИД токена доступа. Если SID присутствует и имеет SE_GROUP_ENABLED атрибут, *pbIsMember* установлен на TRUE; в противном случае, он установлен на FALSE.
 
-В отладочных сборках возникнет ошибка утверждения, если *пбисмембер* не является допустимым указателем.
+В отладке сборки произойдет ошибка утверждения, если *pbIsMember* не является действительным указателем.
 
 > [!NOTE]
->  Объект `CAccessToken` должен быть маркером олицетворения, а не основным токеном.
+> Объект `CAccessToken` должен быть токеном олицетворения, а не основным маркером.
 
-##  <a name="createimpersonationtoken"></a>CAccessToken:: Креатеимперсонатионтокен
+## <a name="caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken
 
-Вызовите этот метод, чтобы создать маркер доступа для олицетворения.
+Вызовите этот метод, чтобы создать токен доступа олицетворения.
 
 ```
 bool CreateImpersonationToken(
@@ -212,23 +212,23 @@ bool CreateImpersonationToken(
 
 ### <a name="parameters"></a>Параметры
 
-*Раскрасьте*<br/>
-Указатель на новый объект `CAccessToken`.
+*Сутенер*<br/>
+Указатель на `CAccessToken` новый объект.
 
-*SIL*<br/>
-Задает [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения нового маркера.
+*Sil*<br/>
+Обращаем SECURITY_IMPERSONATION_LEVEL [перечисленный](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) тип, который обеспечивает уровень олицетворения нового токена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-`CreateImpersonationToken` вызывает [сбой duplicatetoken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) для создания нового маркера олицетворения.
+`CreateImpersonationToken`вызывает [DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) для создания нового токена олицетворения.
 
-##  <a name="createprimarytoken"></a>CAccessToken:: Креатепримаритокен
+## <a name="caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken
 
-Вызовите этот метод, чтобы создать новый первичный токен.
+Вызовите этот метод, чтобы создать новый основной маркер.
 
 ```
 bool CreatePrimaryToken(
@@ -239,26 +239,26 @@ bool CreatePrimaryToken(
 
 ### <a name="parameters"></a>Параметры
 
-*ппри*<br/>
-Указатель на новый объект `CAccessToken`.
+*pPri*<br/>
+Указатель на `CAccessToken` новый объект.
 
-*двдесиредакцесс*<br/>
-Указывает запрошенные права доступа для нового маркера. По умолчанию MAXIMUM_ALLOWED запрашивает все права доступа, допустимые для вызывающей стороны. Дополнительные сведения о правах доступа см. в разделе [права доступа и маски доступа](/windows/win32/SecAuthZ/access-rights-and-access-masks) .
+*dwDesiredAccess*<br/>
+Упоняет запрашиваемые права доступа для нового токена. По умолчанию, MAXIMUM_ALLOWED запросы всех прав доступа, которые действительны для вызываемого абонента. Подробнее о правах доступа [и масках доступа](/windows/win32/SecAuthZ/access-rights-and-access-masks) читайте в подробностях.
 
-*птокенаттрибутес*<br/>
-Указатель на структуру [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , указывающую дескриптор безопасности для нового маркера, и определяет, могут ли дочерние процессы наследовать маркер. Если *птокенаттрибутес* имеет значение null, маркер получает дескриптор безопасности по умолчанию и дескриптор не может быть унаследован.
+*pTokenАстры*<br/>
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структуру, которая определяет дескриптор безопасности для нового маркера и определяет, могут ли детские процессы унаследовать токен. Если *pTokenAttributes* является NULL, токен получает дескриптор безопасности по умолчанию, и ручка не может быть унаследована.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-`CreatePrimaryToken` вызывает [дупликатетокенекс](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) для создания нового первичного маркера.
+`CreatePrimaryToken`вызывает [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) для создания нового основного токена.
 
-##  <a name="createprocessasuser"></a>CAccessToken:: параметр CreateProcessAsUser
+## <a name="caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser
 
-Вызовите этот метод, чтобы создать новый процесс, выполняемый в контексте безопасности пользователя, представленного объектом `CAccessToken`.
+Вызовите этот метод для создания нового процесса, работаемого `CAccessToken` в контексте безопасности пользователя, представленного объектом.
 
 ```
 bool CreateProcessAsUser(
@@ -276,49 +276,49 @@ bool CreateProcessAsUser(
 
 ### <a name="parameters"></a>Параметры
 
-*паппликатионнаме*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает модуль для выполнения. Этот параметр не может иметь значение NULL.
+*pApplicationName*<br/>
+Указатель на нулевую строку, которая определяет модуль для выполнения. Этот параметр не может быть NULL.
 
-*пкоммандлине*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает командную строку для выполнения.
+*pCommandLine*<br/>
+Указатель на нулевую строку, определяющую строку команды для выполнения.
 
-*ппроцессинформатион*<br/>
-Указатель на [структуру PROCESS_INFORMATION](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) , которая получает идентификационные сведения о новом процессе.
+*pProcessInformation*<br/>
+Указатель на [PROCESS_INFORMATION структуру,](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information) которая получает идентификационную информацию о новом процессе.
 
-*пстартупинфо*<br/>
-Указатель на структуру [стартупинфо](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow) , которая указывает, как должно отобразиться главное окно для нового процесса.
+*pStartupInfo*<br/>
+Указатель на структуру [STARTUPINFO,](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow) которая определяет, как должно отображаться основное окно для нового процесса.
 
-*двкреатионфлагс*<br/>
-Задает дополнительные флаги, управляющие классом приоритета и процессом создания процесса. Список флагов см. в описании функции Win32 [параметр CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) .
+*dwCreationFlags*<br/>
+Определяет дополнительные флаги, контролирующие класс приоритетов и создание процесса. Список флагов можно осмотреть функцию Win32 [CreateProcessAsUser.](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)
 
-*блоадпрофиле*<br/>
-Если значение — TRUE, профиль пользователя загружается с помощью [LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew).
+*bLoadProfile*<br/>
+Если true, профиль пользователя загружается с [LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew).
 
-*ппроцессаттрибутес*<br/>
-Указатель на структуру [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , указывающую дескриптор безопасности для нового процесса, и определяет, могут ли дочерние процессы наследовать возвращенный дескриптор. Если *ппроцессаттрибутес* имеет значение null, процесс получает дескриптор безопасности по умолчанию, и дескриптор не может быть унаследован.
+*pПроцессАтрибуты*<br/>
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структуру, которая определяет дескриптор безопасности для нового процесса и определяет, могут ли детские процессы унаследовать возвращенную ручку. Если *pProcessAttributes* является NULL, процесс получает дескриптор безопасности по умолчанию и ручка не может быть унаследована.
 
-*псреадаттрибутес*<br/>
-Указатель на структуру [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) , указывающую дескриптор безопасности для нового потока, и определяет, могут ли дочерние процессы наследовать возвращенный дескриптор. Если *псреадаттрибутес* имеет значение null, то поток получает дескриптор безопасности по умолчанию, и дескриптор не может быть унаследован.
+*pThreadAttributes*<br/>
+Указатель на [структуру SECURITY_ATTRIBUTES,](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) которая определяет дескриптор безопасности для нового потока и определяет, могут ли детские процессы унаследовать возвращенную ручку. Если *pThreadAttributes* является NULL, поток получает дескриптор безопасности по умолчанию, а ручка не может быть унаследована.
 
-*бинхерит*<br/>
-Указывает, наследует ли новый процесс дескрипторы из вызывающего процесса. Если значение — TRUE, каждый наследуемый открытый маркер в вызывающем процессе наследуется новым процессом. Унаследованные дескрипторы имеют те же значения и привилегии доступа, что и исходные дескрипторы.
+*bНаследы*<br/>
+Указывает, наследует ли новый процесс от процесса вызова. Если true, каждая наследуемая открытая ручка в процессе вызова наследуется новым процессом. Унаследованные ручки имеют такое же значение и привилегии доступа, как и исходные ручки.
 
-*пкуррентдиректори*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает текущий диск и каталог для нового процесса. Строка должна быть полным путем, содержащим букву диска. Если этот параметр имеет значение NULL, то новый процесс будет иметь тот же текущий диск и каталог, что и вызывающий процесс.
+*pCurrentDirectory*<br/>
+Указатель на строку с нулевым завершением, которая определяет текущий диск и каталог для нового процесса. Строка должна быть полным путем, который включает в себя диск овечку. Если этот параметр NULL, новый процесс будет иметь тот же текущий диск и каталог, что и процесс вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-`CreateProcessAsUser` использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в контексте безопасности пользователя, представленного объектом `CAccessToken`. Ознакомьтесь с описанием функции [параметр CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) , чтобы получить полное описание необходимых параметров.
+`CreateProcessAsUser`использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в `CAccessToken` контексте безопасности пользователя, представленного объектом. Ознакомьтесь с описанием функции [CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) для полного обсуждения необходимых параметров.
 
-Чтобы этот метод был выполнен, объект `CAccessToken` должен содержать Ассигнпримаритокен (если только он не является ограничивающим маркером) и привилегии Инкреасекуота.
+Для успешного достижения `CAccessToken` этого метода объект должен иметь привилегии AssignPrimaryToken (за исключением тех случаев, когда это не является ограниченным токеном) и привилегий увеличения квоты.
 
-##  <a name="createrestrictedtoken"></a>CAccessToken:: CreateRestrictedToken
+## <a name="caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken
 
-Вызовите этот метод, чтобы создать новый, ограниченный `CAccessToken` объект.
+Вызовите этот метод, `CAccessToken` чтобы создать новый, ограниченный объект.
 
 ```
 bool CreateRestrictedToken(
@@ -330,32 +330,32 @@ bool CreateRestrictedToken(
 
 ### <a name="parameters"></a>Параметры
 
-*престриктедтокен*<br/>
-Новый, ограниченный `CAccessToken` объект.
+*prestrictedToken*<br/>
+Новый, `CAccessToken` ограниченный объект.
 
-*сидстодисабле*<br/>
-Объект `CTokenGroups`, указывающий идентификаторы безопасности только для запрета.
+*SidsToDisable*<br/>
+Объект, `CTokenGroups` который определяет отказ только SIDs.
 
-*сидсторестрикт*<br/>
-Объект `CTokenGroups`, указывающий идентификаторы SID.
+*SidsToОграничено*<br/>
+Объект, `CTokenGroups` опознавающий ограничивающие SID.
 
-*привилежестоделете*<br/>
-Объект `CTokenPrivileges`, указывающий права на удаление в маркере с ограниченным доступом. По умолчанию создается пустой объект.
+*ПривилегииУдалить*<br/>
+Объект, `CTokenPrivileges` опознававший привилегии для удаления в ограниченном маркере. По умолчанию создается пустой объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-`CreateRestrictedToken` использует функцию Win32 [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) для создания нового объекта `CAccessToken` с ограничениями.
+`CreateRestrictedToken`использует функцию [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 `CAccessToken` для создания нового объекта с ограничениями.
 
 > [!IMPORTANT]
->  При использовании `CreateRestrictedToken`убедитесь в следующем: существующий токен является допустимым (и не указывается пользователем), а *сидстодисабле* и *привилежестоделете* являются допустимыми (и не указаны пользователем). Если метод возвращает значение FALSE, функция Deny.
+> При `CreateRestrictedToken`использовании, убедитесь следующее: существующий маркер действителен (и не введен пользователем) и *SidsToDisable* и *PrivilegesToDelete* являются действительными (и не введены пользователем). Если метод возвращает FALSE, ототрицайте функциональность.
 
-##  <a name="detach"></a>CAccessToken::D етач
+## <a name="caccesstokendetach"></a><a name="detach"></a>CAccessToken: :Detach
 
-Вызовите этот метод, чтобы отменить владение маркером доступа.
+Вызовите этот метод, чтобы отозвать право собственности на токен доступа.
 
 ```
 HANDLE Detach() throw();
@@ -363,15 +363,15 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер `CAccessToken`, который был отсоединен.
+Возвращает ручку, `CAccessToken` которая была отсоединена.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отменяет владение маркером доступа `CAccessToken`.
+Этот метод отменяет право собственности на `CAccessToken`токен доступа.
 
-##  <a name="disableprivilege"></a>CAccessToken::D Исаблепривилеже
+## <a name="caccesstokendisableprivilege"></a><a name="disableprivilege"></a>CAccessToken: :DisablePrivilege
 
-Вызовите этот метод, чтобы отключить привилегию в объекте `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` отключить привилегию в объекте.
 
 ```
 bool DisablePrivilege(
@@ -381,19 +381,19 @@ bool DisablePrivilege(
 
 ### <a name="parameters"></a>Параметры
 
-*псзпривилеже*<br/>
-Указатель на строку, содержащую привилегию, которую необходимо отключить в объекте `CAccessToken`.
+*pszPrivilege*<br/>
+Указатель на строку, содержащую привилегию для отстранить `CAccessToken` объект.
 
-*ппревиаусстате*<br/>
-Указатель на объект `CTokenPrivileges`, который будет содержать предыдущее состояние привилегий.
+*pPreviousState*<br/>
+Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние привилегий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="disableprivileges"></a>CAccessToken::D Исаблепривилежес
+## <a name="caccesstokendisableprivileges"></a><a name="disableprivileges"></a>CAccessToken: :DуправляемыеПривилегии
 
-Вызовите этот метод, чтобы отключить один или несколько привилегий в объекте `CAccessToken`.
+Вызовите этот метод, чтобы отключить одну `CAccessToken` или несколько привилегий в объекте.
 
 ```
 bool DisablePrivileges(
@@ -403,19 +403,19 @@ bool DisablePrivileges(
 
 ### <a name="parameters"></a>Параметры
 
-*рпривилежес*<br/>
-Указатель на массив строк, содержащий привилегии для отключения в объекте `CAccessToken`.
+*rПривилегии*<br/>
+Указатель на массив строк, содержащих привилегии для отправления в объекте. `CAccessToken`
 
-*ппревиаусстате*<br/>
-Указатель на объект `CTokenPrivileges`, который будет содержать предыдущее состояние привилегий.
+*pPreviousState*<br/>
+Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние привилегий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="enableprivilege"></a>CAccessToken:: Енаблепривилеже
+## <a name="caccesstokenenableprivilege"></a><a name="enableprivilege"></a>CAccessToken:EnablePrivilege
 
-Вызовите этот метод, чтобы включить привилегию в объекте `CAccessToken`.
+Вызовите этот метод, `CAccessToken` чтобы включить привилегию в объекте.
 
 ```
 bool EnablePrivilege(
@@ -425,19 +425,19 @@ bool EnablePrivilege(
 
 ### <a name="parameters"></a>Параметры
 
-*псзпривилеже*<br/>
-Указатель на строку, содержащую привилегию, которую необходимо включить в объекте `CAccessToken`.
+*pszPrivilege*<br/>
+Указатель на строку, содержащую `CAccessToken` привилегию включения объекта.
 
-*ппревиаусстате*<br/>
-Указатель на объект `CTokenPrivileges`, который будет содержать предыдущее состояние привилегий.
+*pPreviousState*<br/>
+Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние привилегий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="enableprivileges"></a>CAccessToken:: Енаблепривилежес
+## <a name="caccesstokenenableprivileges"></a><a name="enableprivileges"></a>CAccessToken:EnablePrivileges
 
-Вызовите этот метод, чтобы включить один или несколько привилегий в объекте `CAccessToken`.
+Вызовите этот метод, чтобы включить `CAccessToken` одну или несколько привилегий в объекте.
 
 ```
 bool EnablePrivileges(
@@ -447,19 +447,19 @@ bool EnablePrivileges(
 
 ### <a name="parameters"></a>Параметры
 
-*рпривилежес*<br/>
-Указатель на массив строк, содержащий привилегии, которые должны быть включены в объекте `CAccessToken`.
+*rПривилегии*<br/>
+Указатель на массив строк, содержащих привилегии для `CAccessToken` включения объекта.
 
-*ппревиаусстате*<br/>
-Указатель на объект `CTokenPrivileges`, который будет содержать предыдущее состояние привилегий.
+*pPreviousState*<br/>
+Указатель на `CTokenPrivileges` объект, который будет содержать предыдущее состояние привилегий.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getdefaultdacl"></a>CAccessToken:: Жетдефаултдакл
+## <a name="caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl
 
-Вызовите этот метод, чтобы вернуть список DACL по умолчанию для объекта `CAccessToken`.
+Вызовите этот `CAccessToken` метод, чтобы вернуть DACL объекта по умолчанию.
 
 ```
 bool GetDefaultDacl(CDacl* pDacl) const throw(...);
@@ -467,16 +467,16 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*пдакл*<br/>
-Указатель на объект [класса кдакл](../../atl/reference/cdacl-class.md) , который будет принимать DACL по умолчанию для объекта `CAccessToken`.
+*pDacl*<br/>
+Указатель на объект [класса CDacl,](../../atl/reference/cdacl-class.md) который получит DACL `CAccessToken` объекта по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если DACL по умолчанию восстановлен, и FALSE в противном случае.
+Возвращает TRUE, если DACL по умолчанию был восстановлен, FALSE в противном случае.
 
-##  <a name="geteffectivetoken"></a>CAccessToken:: Жетеффективетокен
+## <a name="caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>CAccessToken:GetEffectiveToken
 
-Вызовите этот метод, чтобы получить объект `CAccessToken`, равный маркеру доступа, который действует для текущего потока.
+Вызовите этот `CAccessToken` метод, чтобы получить объект, равный токену доступа, фактическидлянию для текущего потока.
 
 ```
 bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
@@ -484,16 +484,16 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getgroups"></a>CAccessToken:: группы
+## <a name="caccesstokengetgroups"></a><a name="getgroups"></a>CAccessToken:GetGroups
 
-Вызовите этот метод, чтобы получить группы токенов объекта `CAccessToken`.
+Вызовите этот `CAccessToken` метод, чтобы вернуть группы маркеров объекта.
 
 ```
 bool GetGroups(CTokenGroups* pGroups) const throw(...);
@@ -501,16 +501,16 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*пграупс*<br/>
-Указатель на объект [класса ктокенграупс](../../atl/reference/ctokengroups-class.md) , который будет принимать сведения о группе.
+*pGroups*<br/>
+Указатель на объект [класса CTokenGroups,](../../atl/reference/ctokengroups-class.md) который будет получать информацию о группе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="gethandle"></a>CAccessToken:: getHandler
+## <a name="caccesstokengethandle"></a><a name="gethandle"></a>CAccessToken::GetHandle
 
-Вызовите этот метод, чтобы получить маркер маркера доступа.
+Вызовите этот метод, чтобы получить ручку к маркеру доступа.
 
 ```
 HANDLE GetHandle() const throw();
@@ -518,11 +518,11 @@ HANDLE GetHandle() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер для маркера доступа объекта `CAccessToken`.
+Возвращает ручку `CAccessToken` в маркер доступа объекта.
 
-##  <a name="getimpersonationlevel"></a>CAccessToken:: Жетимперсонатионлевел
+## <a name="caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel
 
-Вызовите этот метод, чтобы получить уровень олицетворения из маркера доступа.
+Вызовите этот метод, чтобы получить уровень олицетворения из токена доступа.
 
 ```
 bool GetImpersonationLevel(
@@ -531,16 +531,16 @@ bool GetImpersonationLevel(
 
 ### <a name="parameters"></a>Параметры
 
-*пимперсонатионлевел*<br/>
-Указатель на тип перечисления [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) , который будет принимать сведения об уровне олицетворения.
+*pImpersonationLevel*<br/>
+Указатель на [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) тип перечисления, который будет получать информацию об уровне олицетворения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getlogonsessionid"></a>CAccessToken:: Жетлогонсессионид
+## <a name="caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId
 
-Вызовите этот метод, чтобы получить идентификатор сеанса входа, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить `CAccessToken` идентификатор сеанса Logon, связанный с объектом.
 
 ```
 bool GetLogonSessionId(LUID* pluid) const throw(...);
@@ -549,19 +549,19 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Параметры
 
 *плуид*<br/>
-Указатель на [LUID](/windows/win32/api/winnt/ns-winnt-luid) , который получит идентификатор сеанса входа.
+Указатель на [LUID,](/windows/win32/api/winnt/ns-winnt-luid) который получит идентификатор сессии logon.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-В отладочных сборках возникнет ошибка утверждения, если *плуид* имеет недопустимое значение.
+В отладочных сборках возникает ошибка утверждения, если *pluid* является недействительным значением.
 
-##  <a name="getlogonsid"></a>CAccessToken:: Жетлогонсид
+## <a name="caccesstokengetlogonsid"></a><a name="getlogonsid"></a>CAccessToken::GetLogonSid
 
-Вызовите этот метод, чтобы получить идентификатор безопасности входа, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить `CAccessToken` Logon SID, связанный с объектом.
 
 ```
 bool GetLogonSid(CSid* pSid) const throw(...);
@@ -569,20 +569,20 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*Пустой pSid*<br/>
-Указатель на объект [класса CSid](../../atl/reference/csid-class.md) .
+*Psid*<br/>
+Указатель на объект [класса CSid.](../../atl/reference/csid-class.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-В отладочных сборках возникнет ошибка утверждения, если *пустой pSid* имеет недопустимое значение.
+В отладке сборки возникает ошибка утверждения, если *pSid* является недействительным значением.
 
-##  <a name="getowner"></a>CAccessToken:: owner
+## <a name="caccesstokengetowner"></a><a name="getowner"></a>CAccessToken::GetOwner
 
-Вызовите этот метод, чтобы получить владельца, связанного с объектом `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` получить владельца, связанного с объектом.
 
 ```
 bool GetOwner(CSid* pSid) const throw(...);
@@ -590,20 +590,20 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*Пустой pSid*<br/>
-Указатель на объект [класса CSid](../../atl/reference/csid-class.md) .
+*Psid*<br/>
+Указатель на объект [класса CSid.](../../atl/reference/csid-class.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Владелец задается по умолчанию для всех объектов, созданных во время действия маркера доступа.
+Владелец устанавливается по умолчанию на любые объекты, созданные в то время как этот маркер доступа в силе.
 
-##  <a name="getprimarygroup"></a>CAccessToken:: Жетпримариграуп
+## <a name="caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>CAccessToken:GetPrimaryGroup
 
-Вызовите этот метод, чтобы получить основную группу, связанную с объектом `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` получить основную группу, связанную с объектом.
 
 ```
 bool GetPrimaryGroup(CSid* pSid) const throw(...);
@@ -611,20 +611,20 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*Пустой pSid*<br/>
-Указатель на объект [класса CSid](../../atl/reference/csid-class.md) .
+*Psid*<br/>
+Указатель на объект [класса CSid.](../../atl/reference/csid-class.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Группа по умолчанию задается для всех объектов, созданных в данный период действия маркера доступа.
+Группа устанавливается по умолчанию на любые объекты, созданные в то время как этот маркер доступа в силе.
 
-##  <a name="getprivileges"></a>CAccessToken:: Privileges
+## <a name="caccesstokengetprivileges"></a><a name="getprivileges"></a>CAccessToken::GetPrivileges
 
-Вызовите этот метод, чтобы получить привилегии, связанные с объектом `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` получить привилегии, связанные с объектом.
 
 ```
 bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
@@ -632,16 +632,16 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*ппривилежес*<br/>
-Указатель на объект [класса ктокенпривилежес](../../atl/reference/ctokenprivileges-class.md) , который будет принимать привилегии.
+*pPrivileges*<br/>
+Указатель на объект [класса CTokenPrivileges,](../../atl/reference/ctokenprivileges-class.md) который получит привилегии.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getprocesstoken"></a>CAccessToken:: Жетпроцесстокен
+## <a name="caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>CAccessToken:GetProcessToken
 
-Вызовите этот метод, чтобы инициализировать `CAccessToken` с маркером доступа из данного процесса.
+Вызовите этот метод, чтобы инициализировать `CAccessToken` токен доступа из данного процесса.
 
 ```
 bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
@@ -649,23 +649,23 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*хпроцесс*<br/>
-Обработка процесса, маркер доступа к которому открыт. Если используется значение по умолчанию NULL, используется текущий процесс.
+*hПроцесс*<br/>
+Ручка к процессу, токен доступа которого открыт. При использовании значения NULL по умолчанию используется текущий процесс.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Вызывает функцию Win32 [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) .
+Вызывает функцию [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32.
 
-##  <a name="getprofile"></a>CAccessToken::/Profile
+## <a name="caccesstokengetprofile"></a><a name="getprofile"></a>CAccessToken:GetProfile
 
-Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить ручку, указывающую на профиль пользователя, связанный с объектом. `CAccessToken`
 
 ```
 HANDLE GetProfile() const throw();
@@ -673,11 +673,11 @@ HANDLE GetProfile() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер, указывающий на профиль пользователя, или значение NULL, если профиль не существует.
+Возвращает ручку, указывающую на профиль пользователя, или NULL, если не существует профиля.
 
-##  <a name="getsource"></a>CAccessToken:: \ Source
+## <a name="caccesstokengetsource"></a><a name="getsource"></a>CAccessToken::GetSource
 
-Вызовите этот метод, чтобы получить источник объекта `CAccessToken`.
+Вызовите этот метод, `CAccessToken` чтобы получить источник объекта.
 
 ```
 bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
@@ -685,16 +685,16 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*псаурце*<br/>
-Указатель на структуру [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) .
+*pИсточник*<br/>
+Указатель на [TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source) структуру.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getstatistics"></a>CAccessToken:: Statistics
+## <a name="caccesstokengetstatistics"></a><a name="getstatistics"></a>CAccessToken::GetStatistics
 
-Вызовите этот метод, чтобы получить сведения, связанные с объектом `CAccessToken`.
+Вызовите этот метод, `CAccessToken` чтобы получить информацию, связанную с объектом.
 
 ```
 bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
@@ -702,16 +702,16 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*пстатистикс*<br/>
-Указатель на структуру [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) .
+*pСтатистика*<br/>
+Указатель на [TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics) структуру.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getterminalservicessessionid"></a>CAccessToken:: Жеттерминалсервицессессионид
+## <a name="caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionid
 
-Вызовите этот метод, чтобы получить идентификатор сеанса служб терминалов, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить `CAccessToken` идентификатор сеанса терминалов, связанный с объектом.
 
 ```
 bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
@@ -719,16 +719,16 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*пдвсессионид*<br/>
-Идентификатор сеанса служб терминалов.
+*pdwSessionId*<br/>
+Идентификатор сеанса обслуживания терминала.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="getthreadtoken"></a>CAccessToken:: Жетсреадтокен
+## <a name="caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>CAccessToken::GetThreadToken
 
-Вызовите этот метод, чтобы инициализировать `CAccessToken` с маркером из данного потока.
+Вызовите этот метод, чтобы инициализировать `CAccessToken` токен из данного потока.
 
 ```
 bool GetThreadToken(
@@ -739,24 +739,24 @@ bool GetThreadToken(
 
 ### <a name="parameters"></a>Параметры
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*хсреад*<br/>
-Обработчик потока, маркер доступа к которому открыт.
+*hThread*<br/>
+Ручка к потоку, токен доступа которого открыт.
 
-*бопенасселф*<br/>
-Указывает, должна ли проверка доступа выполняться в контексте безопасности потока, вызывающего метод `GetThreadToken`, или контекста безопасности процесса для вызывающего потока.
+*bOpenAsSelf*<br/>
+Указывает, должна ли проверка доступа быть выполнена в `GetThreadToken` контексте безопасности потока вызова метода или в контексте безопасности процесса вызова потока.
 
-Если этот параметр имеет значение FALSE, проверка доступа выполняется с использованием контекста безопасности для вызывающего потока. Если поток олицетворяет клиента, этот контекст безопасности может быть таким же, как у клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа выполняется с использованием контекста безопасности процесса для вызывающего потока.
+Если этот параметр FALSE, проверка доступа выполняется с использованием контекста безопасности для потока вызова. Если поток выдает себя за клиента, этот контекст безопасности может быть контекстом процесса клиента. Если этот параметр является истинным, проверка доступа производится с использованием контекста безопасности процесса для потока вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="gettokenid"></a>CAccessToken:: Жеттокенид
+## <a name="caccesstokengettokenid"></a><a name="gettokenid"></a>CAccessToken:GetTokenid
 
-Вызовите этот метод, чтобы получить идентификатор маркера, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить `CAccessToken` идентификатор маркеров, связанный с объектом.
 
 ```
 bool GetTokenId(LUID* pluid) const throw(...);
@@ -765,15 +765,15 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>Параметры
 
 *плуид*<br/>
-Указатель на [LUID](/windows/win32/api/winnt/ns-winnt-luid) , который получит идентификатор токена.
+Указатель на [LUID,](/windows/win32/api/winnt/ns-winnt-luid) который получит идентификатор токена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="gettype"></a>CAccessToken:: GetType
+## <a name="caccesstokengettype"></a><a name="gettype"></a>CAccessToken:GetType
 
-Вызовите этот метод, чтобы получить тип токена объекта `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` получить тип маркера объекта.
 
 ```
 bool GetType(TOKEN_TYPE* pType) const throw(...);
@@ -781,20 +781,20 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*птипе*<br/>
-Адрес переменной [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) , которая в случае успеха получает тип токена.
+*pType*<br/>
+Адрес [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type) переменной, которая, по успеху, получает тип токена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Тип перечисления TOKEN_TYPE содержит значения, которые различают между основным маркером и токеном олицетворения.
+Тип TOKEN_TYPE перечисления содержит значения, которые различают основной маркер и токен олицетворения.
 
-##  <a name="getuser"></a>CAccessToken:: пользователь
+## <a name="caccesstokengetuser"></a><a name="getuser"></a>CAccessToken::GetUser
 
-Вызовите этот метод, чтобы обозначить пользователя, связанного с объектом `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` идентифицировать пользователя, связанного с объектом.
 
 ```
 bool GetUser(CSid* pSid) const throw(...);
@@ -802,16 +802,16 @@ bool GetUser(CSid* pSid) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*Пустой pSid*<br/>
-Указатель на объект [класса CSid](../../atl/reference/csid-class.md) .
+*Psid*<br/>
+Указатель на объект [класса CSid.](../../atl/reference/csid-class.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="hkeycurrentuser"></a>CAccessToken:: Хкэйкуррентусер
+## <a name="caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser
 
-Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с объектом `CAccessToken`.
+Вызовите этот метод, чтобы получить ручку, указывающую на профиль пользователя, связанный с объектом. `CAccessToken`
 
 ```
 HKEY HKeyCurrentUser() const throw();
@@ -819,11 +819,11 @@ HKEY HKeyCurrentUser() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает маркер, указывающий на профиль пользователя, или значение NULL, если профиль не существует.
+Возвращает ручку, указывающую на профиль пользователя, или NULL, если не существует профиля.
 
-##  <a name="impersonate"></a>CAccessToken:: IMPERSONATE
+## <a name="caccesstokenimpersonate"></a><a name="impersonate"></a>CAccessToken::Imperson
 
-Вызовите этот метод, чтобы назначить потоку `CAccessToken` олицетворения.
+Вызовите этот метод, чтобы `CAccessToken` назначить олицетворение потоку.
 
 ```
 bool Impersonate(HANDLE hThread = NULL) const throw(...);
@@ -831,22 +831,22 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*хсреад*<br/>
-Обработчик потока, которому назначается маркер олицетворения. Этот обработчик должен быть открыт с TOKEN_IMPERSONATE правами доступа. Если *хсреад* имеет значение null, метод приводит к остановке потока с помощью токена олицетворения.
+*hThread*<br/>
+Ручка к потоку, чтобы назначить маркер олицетворения. Эта ручка должна быть открыта с TOKEN_IMPERSONATE правами доступа. Если *hThread* является NULL, метод заставляет поток прекратить использование маркера олицетворения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-В отладочных сборках возникнет ошибка утверждения, если `CAccessToken` не имеет допустимого указателя на маркер.
+В отладке сборки возникает `CAccessToken` ошибка утверждения, если не будет действительного указателя на маркер.
 
-[Класс кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматического возврата олицетворенных маркеров доступа.
+[Класс CAutoRevertImpersonможет](../../atl/reference/cautorevertimpersonation-class.md) быть использован для автоматического возврата олицетворения токенов доступа.
 
-##  <a name="impersonateloggedonuser"></a>CAccessToken:: Имперсонателогжедонусер
+## <a name="caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser
 
-Вызовите этот метод, чтобы вызывающий поток олицетворять контекст безопасности вошедшего в систему пользователя.
+Вызовите этот метод, чтобы позволить потоку вызовов выдать себя за контекст безопасности зарегистрированного пользователя.
 
 ```
 bool ImpersonateLoggedOnUser() const throw(...);
@@ -854,16 +854,16 @@ bool ImpersonateLoggedOnUser() const throw(...);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
->  Если вызов функции олицетворения по какой-либо причине завершается неудачей, то клиент не олицетворяется, а клиентский запрос выполняется в контексте безопасности процесса, из которого был сделан вызов. Если процесс выполняется от имени привилегированной учетной записи или является членом административной группы, он может выполнять действия, которые в противном случае будут запрещены. Таким образом, возвращаемое значение для этой функции всегда должно быть подтверждено.
+> Если вызов функции олицетворения по какой-либо причине не выполняется, клиент не выдает себя за клиента, а запрос клиента выполняется в контексте безопасности процесса, из которого был сделан вызов. Если процесс выполняется как привилегированная учетная запись или как член административной группы, пользователь может выполнять действия, которые он или она в противном случае были бы запрещены. Таким образом, значение возврата для этой функции всегда должно быть подтверждено.
 
-##  <a name="istokenrestricted"></a>CAccessToken:: Истокенрестриктед
+## <a name="caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted
 
-Вызовите этот метод, чтобы проверить, содержит ли объект `CAccessToken` список ограниченных идентификаторов безопасности.
+Вызовите этот метод `CAccessToken` для проверки, содержит ли объект список ограниченных СИДов.
 
 ```
 bool IsTokenRestricted() const throw();
@@ -871,11 +871,11 @@ bool IsTokenRestricted() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение TRUE, если объект содержит список идентификаторов SID, и FALSE, если идентификаторы SID отсутствуют или если метод завершается с ошибкой.
+Возвращает TRUE, если объект содержит список ограничивающих SID, FALSE, если нет ограничения SID или если метод не удается.
 
-##  <a name="loaduserprofile"></a>CAccessToken:: LoadUserProfile
+## <a name="caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>CAccessToken::LoadUserProfile
 
-Вызовите этот метод, чтобы загрузить профиль пользователя, связанный с объектом `CAccessToken`.
+Вызовите этот метод для загрузки профиля пользователя, связанного с объектом. `CAccessToken`
 
 ```
 bool LoadUserProfile() throw(...);
@@ -883,15 +883,15 @@ bool LoadUserProfile() throw(...);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-В отладочных сборках возникнет ошибка утверждения, если `CAccessToken` не содержит допустимого маркера или если профиль пользователя уже существует.
+В отладке сборки возникает `CAccessToken` ошибка утверждения, если ошибка не содержит допустимого маркера или если профиль пользователя уже существует.
 
-##  <a name="logonuser"></a>CAccessToken:: LogonUser
+## <a name="caccesstokenlogonuser"></a><a name="logonuser"></a>CAccessToken::LogonUser
 
-Вызовите этот метод, чтобы создать сеанс входа для пользователя, связанного с заданными учетными данными.
+Вызовите этот метод, чтобы создать сеанс входа для пользователя, связанного с данными учетными данными.
 
 ```
 bool LogonUser(
@@ -904,32 +904,32 @@ bool LogonUser(
 
 ### <a name="parameters"></a>Параметры
 
-*псзусернаме*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает имя пользователя. Это имя учетной записи пользователя для входа в систему.
+*pszUserName*<br/>
+Указатель на строку с нулевым завершением, определяющую имя пользователя. Это имя учетной записи пользователя для входа в систему.
 
-*псздомаин*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает имя домена или сервера, для которого база данных учетных записей содержит учетную запись *псзусернаме* .
+*pszDomain*<br/>
+Указатель на строку с нулевым завершением, которая определяет имя домена или сервера, база данных учетной записи которого содержит учетную запись *pszUserName.*
 
-*псзпассворд*<br/>
-Указатель на строку, завершающуюся нулем, которая указывает пароль в виде открытого текста для учетной записи пользователя, указанной параметром *псзусернаме*.
+*pszPassword*<br/>
+Указатель на строку с нулевым завершением, которая определяет четкий текстовый пароль для учетной записи пользователя, указанной *pszUserName.*
 
 *dwLogonType*<br/>
-Указывает тип выполняемой операции входа. Дополнительные сведения см. в разделе [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
+Определяет тип операции logon для выполнения. Подробнее о ней читайте в [материале LogonUser.](/windows/win32/api/winbase/nf-winbase-logonuserw)
 
-*двлогонпровидер*<br/>
-Указывает поставщика входа в систему. Дополнительные сведения см. в разделе [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
+*dwLogonProvider*<br/>
+Определяет поставщика логонов. Подробнее о ней читайте в [материале LogonUser.](/windows/win32/api/winbase/nf-winbase-logonuserw)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Маркер доступа, полученный при входе в систему, будет связан с `CAccessToken`. Чтобы этот метод был выполнен, объект `CAccessToken` должен содержать привилегии SE_TCB_NAME, определяя владельца как часть базы доверенного компьютера. Дополнительные сведения о необходимых привилегиях см. в разделе [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) .
+Токен доступа, полученный от логона, `CAccessToken`будет связан с . Для успешного достижения `CAccessToken` этого метода объект должен хранить SE_TCB_NAME привилегий, идентифицируя владельца как часть доверенной компьютерной базы. Дополнительную информацию о требуемых привилегиях можно узнать в [журнале LogonUser.](/windows/win32/api/winbase/nf-winbase-logonuserw)
 
-##  <a name="opencomclienttoken"></a>CAccessToken:: Опенкомклиенттокен
+## <a name="caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken
 
-Вызовите этот метод из COM-сервера, обрабатывающего вызов от клиента, чтобы инициализировать `CAccessToken` с маркером доступа из клиента COM.
+Вызов этого метода из сервера COM обработки вызова `CAccessToken` от клиента, чтобы инициализировать с токеном доступа от клиента COM.
 
 ```
 bool OpenCOMClientToken(
@@ -940,28 +940,28 @@ bool OpenCOMClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*бимперсонате*<br/>
-Если значение — TRUE, текущий поток будет олицетворять вызывающий клиент COM, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но при завершении этого вызова поток не будет иметь маркер олицетворения.
+*bImpersonate*<br/>
+Если истина, текущий поток будет выдавать себя за вызова COM клиента, если этот вызов завершаетуспешно. Если FALSE, токен доступа будет открыт, но поток не будет иметь токен олицетворения, когда этот вызов завершается.
 
-*бопенасселф*<br/>
-Указывает, должна ли проверка доступа выполняться в контексте безопасности потока, вызывающего метод [жетсреадтокен](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , или контекста безопасности процесса для вызывающего потока.
+*bOpenAsSelf*<br/>
+Указывает, должна ли проверка доступа быть выполнена в контексте безопасности потока вызова метода [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) или в контексте безопасности процесса вызова потока.
 
-Если этот параметр имеет значение FALSE, проверка доступа выполняется с использованием контекста безопасности для вызывающего потока. Если поток олицетворяет клиента, этот контекст безопасности может быть таким же, как у клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа выполняется с использованием контекста безопасности процесса для вызывающего потока.
+Если этот параметр FALSE, проверка доступа выполняется с использованием контекста безопасности для потока вызова. Если поток выдает себя за клиента, этот контекст безопасности может быть контекстом процесса клиента. Если этот параметр является истинным, проверка доступа производится с использованием контекста безопасности процесса для потока вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-[Класс кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматического изменения олицетворенных маркеров доступа, созданных путем установки флага *бимперсонате* в значение true.
+[Класс CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) может быть использован для автоматического возврата олицетворения токенов доступа, созданных путем установки флага *bImpersonate* в TRUE.
 
-##  <a name="opennamedpipeclienttoken"></a>CAccessToken:: Опеннамедпипеклиенттокен
+## <a name="caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken
 
-Вызовите этот метод из сервера, принимающего запросы через именованный канал, чтобы инициализировать `CAccessToken` с маркером доступа от клиента.
+Вызов этого метода из сервера, принимая запросы по названной трубе, чтобы инициализировать `CAccessToken` токен доступа от клиента.
 
 ```
 bool OpenNamedPipeClientToken(
@@ -973,31 +973,31 @@ bool OpenNamedPipeClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*хпипе*<br/>
-Обработчик именованного канала.
+*hPipe*<br/>
+Ручка к названной трубе.
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*бимперсонате*<br/>
-Если значение — TRUE, текущий поток будет олицетворять клиент вызывающего канала, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но при завершении этого вызова поток не будет иметь маркер олицетворения.
+*bImpersonate*<br/>
+Если истина, текущий поток будет выдавать себя за клиента трубы вызова, если этот вызов завершаетуспешно. Если FALSE, токен доступа будет открыт, но поток не будет иметь токен олицетворения, когда этот вызов завершается.
 
-*бопенасселф*<br/>
-Указывает, должна ли проверка доступа выполняться в контексте безопасности потока, вызывающего метод [жетсреадтокен](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , или контекста безопасности процесса для вызывающего потока.
+*bOpenAsSelf*<br/>
+Указывает, должна ли проверка доступа быть выполнена в контексте безопасности потока вызова метода [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) или в контексте безопасности процесса вызова потока.
 
-Если этот параметр имеет значение FALSE, проверка доступа выполняется с использованием контекста безопасности для вызывающего потока. Если поток олицетворяет клиента, этот контекст безопасности может быть таким же, как у клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа выполняется с использованием контекста безопасности процесса для вызывающего потока.
+Если этот параметр FALSE, проверка доступа выполняется с использованием контекста безопасности для потока вызова. Если поток выдает себя за клиента, этот контекст безопасности может быть контекстом процесса клиента. Если этот параметр является истинным, проверка доступа производится с использованием контекста безопасности процесса для потока вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-[Класс кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматического изменения олицетворенных маркеров доступа, созданных путем установки флага *бимперсонате* в значение true.
+[Класс CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) может быть использован для автоматического возврата олицетворения токенов доступа, созданных путем установки флага *bImpersonate* в TRUE.
 
-##  <a name="openrpcclienttoken"></a>CAccessToken:: Опенрпкклиенттокен
+## <a name="caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken
 
-Вызовите этот метод из сервера, обрабатывающего вызов от клиента RPC, чтобы инициализировать `CAccessToken` с маркером доступа от клиента.
+Вызов этого метода из сервера обработки вызова от `CAccessToken` клиента RPC для инициализации с токендоступа доступа от клиента.
 
 ```
 bool OpenRPCClientToken(
@@ -1009,31 +1009,31 @@ bool OpenRPCClientToken(
 
 ### <a name="parameters"></a>Параметры
 
-*биндингхандле*<br/>
-Маркер привязки на сервере, представляющий привязку к клиенту.
+*Связывание*<br/>
+Связывание ручки на сервере, представляющее собой привязку к клиенту.
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*бимперсонате*<br/>
-Если значение — TRUE, текущий поток будет олицетворять вызывающий клиент RPC, если этот вызов завершается успешно. Если значение равно FALSE, маркер доступа будет открыт, но при завершении этого вызова поток не будет иметь маркер олицетворения.
+*bImpersonate*<br/>
+Если истина, текущий поток будет выдавать себя за вызова клиента RPC, если этот вызов завершаетуспешно. Если FALSE, токен доступа будет открыт, но поток не будет иметь токен олицетворения, когда этот вызов завершается.
 
-*бопенасселф*<br/>
-Указывает, должна ли проверка доступа выполняться в контексте безопасности потока, вызывающего метод [жетсреадтокен](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , или контекста безопасности процесса для вызывающего потока.
+*bOpenAsSelf*<br/>
+Указывает, должна ли проверка доступа быть выполнена в контексте безопасности потока вызова метода [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) или в контексте безопасности процесса вызова потока.
 
-Если этот параметр имеет значение FALSE, проверка доступа выполняется с использованием контекста безопасности для вызывающего потока. Если поток олицетворяет клиента, этот контекст безопасности может быть таким же, как у клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа выполняется с использованием контекста безопасности процесса для вызывающего потока.
+Если этот параметр FALSE, проверка доступа выполняется с использованием контекста безопасности для потока вызова. Если поток выдает себя за клиента, этот контекст безопасности может быть контекстом процесса клиента. Если этот параметр является истинным, проверка доступа производится с использованием контекста безопасности процесса для потока вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-[Класс кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматического изменения олицетворенных маркеров доступа, созданных путем установки флага *бимперсонате* в значение true.
+[Класс CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) может быть использован для автоматического возврата олицетворения токенов доступа, созданных путем установки флага *bImpersonate* в TRUE.
 
-##  <a name="openthreadtoken"></a>CAccessToken:: Опенсреадтокен
+## <a name="caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>CAccessToken::OpenThreadToken
 
-Вызовите этот метод, чтобы задать уровень олицетворения, а затем инициализировать `CAccessToken` с маркером из данного потока.
+Вызовите этот метод, чтобы установить уровень олицетворения, а затем инициализировать `CAccessToken` с токеном из данного потока.
 
 ```
 bool OpenThreadToken(
@@ -1045,33 +1045,33 @@ bool OpenThreadToken(
 
 ### <a name="parameters"></a>Параметры
 
-*двдесиредакцесс*<br/>
-Задает маску доступа, указывающую запрошенные типы доступа к маркеру доступа. Эти запрошенные типы доступа сравниваются с DACL маркера для определения того, какие доступ предоставлен или запрещен.
+*dwDesiredAccess*<br/>
+Упогоняет маску доступа, которая определяет запрашиваемые типы доступа к токену доступа. Эти запрашиваемые типы доступа сравниваются с dACL токена, чтобы определить, какие доступы предоставляются или отказано.
 
-*бимперсонате*<br/>
-Если значение — TRUE, поток будет оставлен на запрошенном уровне олицетворения после завершения этого метода. Если значение равно FALSE, то поток вернется к исходному уровню олицетворения.
+*bImpersonate*<br/>
+Если истина, поток будет оставлен на уровне запрашиваемого олицетворения после завершения этого метода. Если FALSE, поток вернется к исходному уровню олицетворения.
 
-*бопенасселф*<br/>
-Указывает, должна ли проверка доступа выполняться в контексте безопасности потока, вызывающего метод [жетсреадтокен](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) , или контекста безопасности процесса для вызывающего потока.
+*bOpenAsSelf*<br/>
+Указывает, должна ли проверка доступа быть выполнена в контексте безопасности потока вызова метода [GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread) или в контексте безопасности процесса вызова потока.
 
-Если этот параметр имеет значение FALSE, проверка доступа выполняется с использованием контекста безопасности для вызывающего потока. Если поток олицетворяет клиента, этот контекст безопасности может быть таким же, как у клиентского процесса. Если этот параметр имеет значение TRUE, проверка доступа выполняется с использованием контекста безопасности процесса для вызывающего потока.
+Если этот параметр FALSE, проверка доступа выполняется с использованием контекста безопасности для потока вызова. Если поток выдает себя за клиента, этот контекст безопасности может быть контекстом процесса клиента. Если этот параметр является истинным, проверка доступа производится с использованием контекста безопасности процесса для потока вызова.
 
-*SIL*<br/>
-Указывает [SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) перечислимый тип, который предоставляет уровень олицетворения маркера.
+*Sil*<br/>
+Обращаем SECURITY_IMPERSONATION_LEVEL [перечисленный](/windows/win32/api/winnt/ne-winnt-security_impersonation_level) тип, который обеспечивает уровень олицетворения токена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-`OpenThreadToken` похож на [CAccessToken:: жетсреадтокен](#getthreadtoken), но задает уровень олицетворения перед инициализацией `CAccessToken` из маркера доступа потока.
+`OpenThreadToken`похож на [CAccessToken::GetThreadToken](#getthreadtoken), но устанавливает уровень олицетворения до инициализации `CAccessToken` из токена доступа потока.
 
-[Класс кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматического изменения олицетворенных маркеров доступа, созданных путем установки флага *бимперсонате* в значение true.
+[Класс CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) может быть использован для автоматического возврата олицетворения токенов доступа, созданных путем установки флага *bImpersonate* в TRUE.
 
-##  <a name="privilegecheck"></a>CAccessToken::P Ривилежечекк
+## <a name="caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>CAccessToken::PrivilegeCheck
 
-Вызовите этот метод, чтобы определить, включен ли указанный набор привилегий в объект `CAccessToken`.
+Вызовите этот метод, чтобы определить, включен `CAccessToken` ли определенный набор привилегий в объекте.
 
 ```
 bool PrivilegeCheck(
@@ -1081,23 +1081,23 @@ bool PrivilegeCheck(
 
 ### <a name="parameters"></a>Параметры
 
-*рекуиредпривилежес*<br/>
-Указатель на структуру [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) .
+*ТребуемыеПривилегии*<br/>
+Указатель на [PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set) структуру.
 
-*пбресулт*<br/>
-Указатель на значение, которое задает метод, чтобы указать, включены ли какие-либо из указанных прав в объекте `CAccessToken`.
+*pbResult*<br/>
+Указатель на значение, установленное методом, чтобы указать, `CAccessToken` включена ли в объекте какая-либо или вся указанная привилегия.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Когда `PrivilegeCheck` возвращает, `Attributes` элемент каждой структуры [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) имеет значение SE_PRIVILEGE_USED_FOR_ACCESS, если соответствующие привилегии включены. Этот метод вызывает функцию Win32 [привилежечекк](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) .
+При `PrivilegeCheck` возврате `Attributes` член каждой структуры [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes) настроен SE_PRIVILEGE_USED_FOR_ACCESS, если включена соответствующая привилегия. Этот метод вызывает функцию [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32.
 
-##  <a name="revert"></a>CAccessToken:: revert
+## <a name="caccesstokenrevert"></a><a name="revert"></a>CAccessToken::Revert
 
-Вызовите этот метод, чтобы предотвратить использование токена олицетворения потоком.
+Вызовите этот метод, чтобы остановить поток от использования маркера олицетворения.
 
 ```
 bool Revert(HANDLE hThread = NULL) const throw();
@@ -1105,20 +1105,20 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*хсреад*<br/>
-Обработайте поток, чтобы отменить олицетворение. Если *хсреад* имеет значение null, предполагается текущий поток.
+*hThread*<br/>
+Ручка к потоку, чтобы вернуться из олицетворения. Если *hThread* является NULL, предполагается текущий поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Переверсия токенов олицетворения может быть выполнена автоматически с помощью [класса кауторевертимперсонатион](../../atl/reference/cautorevertimpersonation-class.md).
+Реверсия токенов олицетворения может быть выполнена автоматически с [помощью класса CAutoRevertImperson.](../../atl/reference/cautorevertimpersonation-class.md)
 
-##  <a name="setdefaultdacl"></a>CAccessToken:: Сетдефаултдакл
+## <a name="caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl
 
-Вызовите этот метод, чтобы задать список DACL по умолчанию для объекта `CAccessToken`.
+Вызовите этот метод, чтобы установить DACL по умолчанию `CAccessToken` объекта.
 
 ```
 bool SetDefaultDacl(const CDacl& rDacl) throw(...);
@@ -1126,20 +1126,20 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*рдакл*<br/>
-Новые сведения о [классе кдакл](../../atl/reference/cdacl-class.md) по умолчанию.
+*rDacl*<br/>
+Новая информация [cDacl Class](../../atl/reference/cdacl-class.md) по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-DACL по умолчанию — список DACL, используемый по умолчанию при создании новых объектов с помощью этого маркера доступа.
+DACL по умолчанию — это DACL, который используется по умолчанию при создании новых объектов с помощью этого токена доступа.
 
-##  <a name="setowner"></a>CAccessToken:: Сетовнер
+## <a name="caccesstokensetowner"></a><a name="setowner"></a>CAccessToken::Set
 
-Вызовите этот метод, чтобы задать владельца объекта `CAccessToken`.
+Вызовите этот метод, `CAccessToken` чтобы установить владельца объекта.
 
 ```
 bool SetOwner(const CSid& rSid) throw(...);
@@ -1147,20 +1147,20 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*рсид*<br/>
-Объект [класса CSid](../../atl/reference/csid-class.md) , содержащий сведения о владельце.
+*Rsid*<br/>
+Объект [класса CSid,](../../atl/reference/csid-class.md) содержащий информацию о владельце.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Владелец является владельцем по умолчанию, который используется для новых объектов, созданных, пока этот маркер доступа действует.
+Владелец — это владелец по умолчанию, который используется для новых объектов, созданных в то время как этот маркер доступа действует.
 
-##  <a name="setprimarygroup"></a>CAccessToken:: Сетпримариграуп
+## <a name="caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>CAccessToken:SetPrimaryGroup
 
-Вызовите этот метод, чтобы задать основную группу объекта `CAccessToken`.
+Вызовите этот метод, чтобы `CAccessToken` установить основную группу объекта.
 
 ```
 bool SetPrimaryGroup(const CSid& rSid) throw(...);
@@ -1168,19 +1168,19 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*рсид*<br/>
-Объект [класса CSid](../../atl/reference/csid-class.md) , содержащий сведения о первичной группе.
+*Rsid*<br/>
+Объект [класса CSid,](../../atl/reference/csid-class.md) содержащий основную групповую информацию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
 ### <a name="remarks"></a>Remarks
 
-Основная группа является группой по умолчанию для новых объектов, созданных во время действия маркера доступа.
+Основная группа — это группа по умолчанию для новых объектов, созданных во время действия этого токена доступа.
 
 ## <a name="see-also"></a>См. также раздел
 
-[Пример Атлсекурити](../../overview/visual-cpp-samples.md)<br/>
-[Маркеры доступа](/windows/win32/SecAuthZ/access-tokens)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Образец ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
+[Токены доступа](/windows/win32/SecAuthZ/access-tokens)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

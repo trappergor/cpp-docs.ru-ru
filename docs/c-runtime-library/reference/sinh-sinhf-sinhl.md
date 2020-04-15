@@ -1,10 +1,12 @@
 ---
 title: sinh, sinhf, sinhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
+- sinh
 - sinhl
 - sinhf
 - sinhl
+- _o_sinh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6ae500cf595707acf9022b1c52232314c36cfe4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318677"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
-Вычисляет гиперболический синус.
+Вычисляет гиперболическую синусоигу.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -65,26 +68,28 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **sinh** возвращают гиперболический синус *x*. По умолчанию, если результат слишком велик, **sinh** устанавливает для **ERANGE** **значение,** а возвращает ±**HUGE_VAL**.
+**Функции греха** возвращают гиперболическую синусоигу *х.* По умолчанию, если результат слишком велик, **синх** устанавливает **errno** к **ERANGE** и возвращает**HUGE_VAL**.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± КНАН, С|Отсутствуют|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|- ЗНАН,IND|Отсутствуют|_DOMAIN|
+|&#124;х&#124; 7,104760e-002|OVERFLOW+INEXACT|OVERFLOW|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sinh** , которые принимают и возвращают значения **типа float** или **Long** . В программе на языке C **sinh** всегда принимает и возвращает **Double**.
+Поскольку СЗ допускает перегрузку, можно вызывать перегрузки **синха,** которые принимают и возвращают **плавающие** или **длинные** **двойные** значения. В программе C, **sinh** всегда принимает и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> или \<math.h>|
+|**синх**, **sinhf**, **грех**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -115,7 +120,7 @@ sinh( 1.570796 ) = 2.301299
 cosh( 1.570796 ) = 2.509178
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b6d03da446e4a3bae02f662e5b106bd5de534d0a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376888"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;Атомарные&gt; функции
 
@@ -84,7 +84,7 @@ ms.locfileid: "79427263"
 |[atomic_signal_fence](#atomic_signal_fence)|[atomic_store](#atomic_store)|[atomic_store_explicit](#atomic_store_explicit)|
 |[atomic_thread_fence](#atomic_thread_fence)|[kill_dependency](#kill_dependency)|
 
-## <a name="atomic_compare_exchange_strong"></a>  atomic_compare_exchange_strong
+## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
 Выполняет атомарную операцию сравнения и обмена.
 
@@ -104,10 +104,10 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
-Указатель на *атомарный* объект, в котором хранится значение типа `Ty`.
+*Атом*\
+Указатель на *атомный* объект, который `Ty`хранит значение типа.
 
-\ *exp*
+*Exp*\
 Указатель на значение типа `Ty`.
 
 *Значение*\
@@ -115,13 +115,13 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если значения равны; в противном случае — **значение false**.
+**верно,** если значения равны, в противном случае **ложные**.
 
 ### <a name="remarks"></a>Remarks
 
 Этот метод выполняет атомарную операцию сравнения и обмена с помощью неявных аргументов `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum). Дополнительные сведения см. в разделе [atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit).
 
-## <a name="atomic_compare_exchange_strong_explicit"></a>  atomic_compare_exchange_strong_explicit
+## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
 
 Выполняет *атомарную операцию сравнения и обмена*.
 
@@ -145,30 +145,30 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-\ *exp*
+*Exp*\
 Указатель на значение типа `Ty`.
 
 *Значение*\
 Значение типа `Ty`.
 
-*Order1*\
+*Заказ1*\
 Первый аргумент [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2*\
-Второй аргумент `memory_order`. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, оно не может быть надежнее, чем значение *Order1*.
+*Заказ2*\
+Второй аргумент `memory_order`. Значение *Order2* не `memory_order_release` может `memory_order_acq_rel`быть или, оно не может быть сильнее, чем значение *Order1.*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если значения равны; в противном случае — **значение false**.
+**верно,** если значения равны, в противном случае **ложные**.
 
 ### <a name="remarks"></a>Remarks
 
-*Атомарная операция сравнения и обмена* сравнивает значение, хранящееся в объекте, на который указывает *Atom* , от значения, на которое указывает *exp*. Если значения равны, значение, хранящееся в объекте, на который указывает *Atom* , заменяется на *значение* с помощью `read-modify-write` операции и применяются ограничения порядка памяти, заданные параметром *Order1*. Если значения не равны, операция заменяет значение, на которое указывает *exp* , на значение, хранящееся в объекте, на который указывает *Atom* , и применяет ограничения порядка памяти, заданные параметром *Order2*.
+*Операция атомного сравнения и обмена* сравнивает значение, которое хранится в объекте, на которое указывает *Atom,* с значением, на которое указывает *Exp.* Если значения равны, значение, хранящееся в объекте, на которое указывает `read-modify-write` *атом,* заменяется *значением* с помощью операции и применяя ограничения порядка памяти, указанные *Order1.* Если значения не равны, операция заменяет значение, на которое указывает *Exp,* на значение, которое хранится в объекте, на которое указывает *Atom,* и применяет ограничения порядка памяти, указанные *Order2.*
 
-## <a name="atomic_compare_exchange_weak"></a>  atomic_compare_exchange_weak
+## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
 
 Выполняет *слабую атомарную операцию сравнения и обмена*.
 
@@ -188,10 +188,10 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-\ *exp*
+*Exp*\
 Указатель на значение типа `Ty`.
 
 *Значение*\
@@ -199,13 +199,13 @@ inline bool atomic_compare_exchange_strong(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если значения равны; в противном случае — **значение false**.
+**верно,** если значения равны, в противном случае **ложные**.
 
 ### <a name="remarks"></a>Remarks
 
 Этот метод выполняет *слабую атомарную операцию сравнения и обмена* с помощью неявных аргументов `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum). Дополнительные сведения см. в разделе [atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit).
 
-## <a name="atomic_compare_exchange_weak_explicit"></a>  atomic_compare_exchange_weak_explicit
+## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
 
 Выполняет *слабую атомарную операцию сравнения и обмена*.
 
@@ -229,32 +229,32 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
-\ *exp*
+*Exp*\
 Указатель на значение типа `Ty`.
 
 *Значение*\
 Значение типа `Ty`.
 
-*Order1*\
+*Заказ1*\
 Первый аргумент [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-*Order2*\
-Второй аргумент `memory_order`. Значение *Order2* не может быть `memory_order_release` или `memory_order_acq_rel`, а также не может быть надежным, чем значение *Order1*.
+*Заказ2*\
+Второй аргумент `memory_order`. Значение *Order2* не `memory_order_release` может `memory_order_acq_rel`быть или, и не может быть сильнее, чем значение *Order1.*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если значения равны; в противном случае — **значение false**.
+**верно,** если значения равны, в противном случае **ложные**.
 
 ### <a name="remarks"></a>Remarks
 
-Как строгие, так и слабые разновидности *атомарных операций сравнения и обмена* гарантируют, что они не сохраняют новое значение, если ожидаемые и текущие значения не равны. Строгая разновидность гарантирует, что новое значение будет храниться, если ожидаемые и текущие значения равны. Слабая разновидность иногда может возвращать **значение false** и не сохранять новое значение, даже если текущее и ожидаемое значения равны. Иными словами, функция возвращает **значение false**, но позднее исследование ожидаемого значения может обнаружить, что оно не изменилось, и, следовательно, должно быть сравнивалось как равное.
+Как сильные, так и слабые вкусы *атомной операции сравнения и обмена* гарантируют, что они не хранят новое значение, если ожидаемые и текущие значения не равны. Сильный вкус гарантирует, что он будет хранить новое значение, если ожидаемые и текущие значения равны. Слабый вкус может иногда возвращать **ложное** и не хранить новое значение, даже если текущие и ожидаемые значения равны. Другими словами, функция вернется **ложной,** но более позднее изучение ожидаемого значения может показать, что оно не изменилось, и поэтому должно было сравниться как равное.
 
-## <a name="atomic_exchange"></a>  atomic_exchange
+## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
 
-Использует *значение* для замены сохраненного значения *Atom*.
+Использует *значение* для замены хранимой стоимости *Atom.*
 
 ```cpp
 template <class T>
@@ -266,7 +266,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
 *Значение*\
@@ -274,15 +274,15 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сохраненное значение *Atom* перед обменом.
+Сохраненная стоимость *Atom* перед обменом.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_exchange` выполняет операцию `read-modify-write` для обмена значением, хранящимся в *Atom* со *значением*, с помощью `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Функция `atomic_exchange` выполняет операцию по `read-modify-write` обмену значения, которое хранится в *Atom,* с помощью *Value* `memory_order_seq_cst` [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
 
-## <a name="atomic_exchange_explicit"></a>  atomic_exchange_explicit
+## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
 
-Заменяет сохраненное значение *Atom* *значением*.
+Заменяет хранимые значения *Atom* на *значение.*
 
 ```cpp
 template <class Ty>
@@ -300,24 +300,24 @@ inline Ty atomic_exchange_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
 *Значение*\
 Значение типа `Ty`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сохраненное значение *Atom* перед обменом.
+Сохраненная стоимость *Atom* перед обменом.
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_exchange_explicit` выполняет операцию `read-modify-write` для обмена значения, хранящегося в *Atom* со *значением*, в пределах ограничений памяти, заданных по *порядку*.
+Функция `atomic_exchange_explicit` выполняет операцию по `read-modify-write` обмену значения, которое хранится в *Atom,* с *значением,* в пределах ограничений памяти, указанных *Заказом.*
 
-## <a name="atomic_fetch_add"></a>  atomic_fetch_add
+## <a name="atomic_fetch_add"></a><a name="atomic_fetch_add"></a>atomic_fetch_add
 
 Добавляет значение к существующему значению, хранящемуся в объекте `atomic`.
 
@@ -330,7 +330,7 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
 *Значение*\
@@ -342,9 +342,9 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_add` выполняет операцию `read-modify-write` для атомарного добавления *значения* в хранимое значение в *Atom*с помощью ограничения `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+Функция `atomic_fetch_add` выполняет операцию `read-modify-write` по атомарному добавлению *значения* к сохраненной стоимости в *Atom,* используя `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничение.
 
-Если атомарным типом является `atomic_address`, *значение* имеет тип `ptrdiff_t` и операция рассматривает сохраненный указатель как `char *`.
+Когда атомный `atomic_address`тип, *Значение* имеет тип `ptrdiff_t` и операция рассматривает `char *`сохраненный указатель как .
 
 Эта операция также перегружается для целочисленных типов:
 
@@ -354,7 +354,7 @@ integral atomic_fetch_add(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_add(atomic-integral* Atom, integral Value) noexcept;
 ```
 
-## <a name="atomic_fetch_add_explicit"></a>  atomic_fetch_add_explicit
+## <a name="atomic_fetch_add_explicit"></a><a name="atomic_fetch_add_explicit"></a>atomic_fetch_add_explicit
 
 Добавляет значение к существующему значению, хранящемуся в объекте `atomic`.
 
@@ -374,7 +374,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
 *Значение*\
@@ -386,7 +386,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_add_explicit` выполняет `read-modify-write` операцию, чтобы атомарным образом добавить *значение* в хранимое значение в *Atom*в ограничениях [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , заданных `Order`.
+Функция `atomic_fetch_add_explicit` выполняет операцию `read-modify-write` по атомарному добавлению *значения* к сохраненному значению в *Atom,* в пределах [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений, указанных `Order`.
 
 Когда атомарным типом является `atomic_address`, `Value` имеет тип `ptrdiff_t`, и операция считает, что тип сохраненного указателя — `char *`.
 
@@ -404,7 +404,7 @@ integral atomic_fetch_add_explicit(
     memory_order Order) noexcept;
 ```
 
-## <a name="atomic_fetch_and"></a>  atomic_fetch_and
+## <a name="atomic_fetch_and"></a><a name="atomic_fetch_and"></a>atomic_fetch_and
 
 Выполняет побитовую операцию `and` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -417,7 +417,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
@@ -429,9 +429,9 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_and` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `and` *значения* и текущего значения, хранящегося в *Atom*, с помощью ограничения `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+Функция `atomic_fetch_and` `read-modify-write` выполняет операцию по замене сохраненного значения *Atom* на битное `and` *значение* и текущее значение, которое хранится в *Atom,* используя `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничение.
 
-## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit
+## <a name="atomic_fetch_and_explicit"></a><a name="atomic_fetch_and_explicit"></a>atomic_fetch_and_explicit
 
 Выполняет побитовую операцию `and` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -451,13 +451,13 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
 Значение типа `T`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -466,9 +466,9 @@ inline T atomic_fetch_and_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_and_explicit` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `and` *значения* и текущего значения, хранящегося в *Atom*, в пределах ограничений памяти, заданных по *порядку*.
+Функция `atomic_fetch_and_explicit` выполняет операцию `read-modify-write` по замене сохраненного значения *Atom* на битное `and` *значение* и текущее значение, которое хранится в *Atom,* в пределах ограничений памяти, указанных *Порядком.*
 
-## <a name="atomic_fetch_or"></a>  atomic_fetch_or
+## <a name="atomic_fetch_or"></a><a name="atomic_fetch_or"></a>atomic_fetch_or
 
 Выполняет побитовую операцию `or` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -481,7 +481,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
@@ -493,9 +493,9 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_or` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `or` *значения* и текущего значения, хранящегося в *Atom*, с помощью `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Функция `atomic_fetch_or` `read-modify-write` выполняет операцию по замене хранимой стоимости *Atom* на битную `or` *стоимость* и текущее значение, которое хранится в *Atom,* используя `memory_order_seq_cst` [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
 
-## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit
+## <a name="atomic_fetch_or_explicit"></a><a name="atomic_fetch_or_explicit"></a>atomic_fetch_or_explicit
 
 Выполняет побитовую операцию `or` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -515,13 +515,13 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
 Значение типа `T`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -530,9 +530,9 @@ inline T atomic_fetch_or_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_or_explicit` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `or` *значения* и текущего значения, хранящегося в *Atom*, в пределах [Memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений, заданных по *порядку*.
+Функция `atomic_fetch_or_explicit` выполняет `read-modify-write` операцию по замене сохраненного значения *Atom* на битное `or` *значение* и текущее значение, которое хранится в *Atom,* в пределах [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений, указанных *Порядком.*
 
-## <a name="atomic_fetch_sub"></a>  atomic_fetch_sub
+## <a name="atomic_fetch_sub"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub
 
 Вычитает значение из существующего значения, хранящегося в объекте `atomic`.
 
@@ -550,7 +550,7 @@ T* atomic_fetch_sub(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
 *Значение*\
@@ -562,9 +562,9 @@ T* atomic_fetch_sub(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_sub` выполняет `read-modify-write` операцию для атомарного вычитания *значения* из сохраненного значения в *Atom*с помощью ограничения `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+Функция `atomic_fetch_sub` выполняет операцию `read-modify-write` по атомарной вычитанию *значения* из хранимого значения в *Atom,* используя `memory_order_seq_cst` [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничение.
 
-Если атомарным типом является `atomic_address`, *значение* имеет тип `ptrdiff_t` и операция рассматривает сохраненный указатель как `char *`.
+Когда атомный `atomic_address`тип, *Значение* имеет тип `ptrdiff_t` и операция рассматривает `char *`сохраненный указатель как .
 
 Эта операция также перегружается для целочисленных типов:
 
@@ -573,7 +573,7 @@ integral atomic_fetch_sub(volatile atomic-integral* Atom, integral Value) noexce
 integral atomic_fetch_sub(atomic-integral* Atom, integral Value) noexcept;
 ```
 
-## <a name="atomic_fetch_sub_explicit"></a>  atomic_fetch_sub_explicit
+## <a name="atomic_fetch_sub_explicit"></a><a name="atomic_fetch_sub_explicit"></a>atomic_fetch_sub_explicit
 
 Вычитает значение из существующего значения, хранящегося в объекте `atomic`.
 
@@ -592,7 +592,7 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит указатель на тип `T`.
 
 *Значение*\
@@ -604,9 +604,9 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_sub_explicit` выполняет `read-modify-write` операцию для атомарного вычитания *значения* из сохраненного значения в *Atom*в ограничениях [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , заданных `Order`.
+Функция `atomic_fetch_sub_explicit` выполняет операцию `read-modify-write` по атомарному вычитанию *значения* из хранимого значения в *Atom,* в пределах [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений, указанных `Order`.
 
-Если атомарным типом является `atomic_address`, *значение* имеет тип `ptrdiff_t` и операция рассматривает сохраненный указатель как `char *`.
+Когда атомный `atomic_address`тип, *Значение* имеет тип `ptrdiff_t` и операция рассматривает `char *`сохраненный указатель как .
 
 Эта операция также перегружается для целочисленных типов:
 
@@ -622,7 +622,7 @@ integral atomic_fetch_sub_explicit(
     memory_order Order) noexcept;
 ```
 
-## <a name="atomic_fetch_xor"></a>  atomic_fetch_xor
+## <a name="atomic_fetch_xor"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor
 
 Выполняет побитовую операцию `exclusive or` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -636,7 +636,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
@@ -648,9 +648,9 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_xor` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `exclusive or` *значения* и текущего значения, хранящегося в *Atom*, с помощью `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Функция `atomic_fetch_xor` `read-modify-write` выполняет операцию по замене хранимой стоимости *Atom* на битную `exclusive or` *стоимость* и текущее значение, которое хранится в *Atom,* используя `memory_order_seq_cst` [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
 
-## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit
+## <a name="atomic_fetch_xor_explicit"></a><a name="atomic_fetch_xor_explicit"></a>atomic_fetch_xor_explicit
 
 Выполняет побитовую операцию `exclusive or` со значением и существующим значением, хранящимся в объекте `atomic`.
 
@@ -670,13 +670,13 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 *Значение*\
 Значение типа `T`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -685,11 +685,11 @@ inline T atomic_fetch_xor_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-Функция `atomic_fetch_xor_explicit` выполняет операцию `read-modify-write` для замены сохраненного значения *Atom* на побитовую `exclusive or` *значения* и текущего значения, хранящегося в *Atom*, в пределах ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum) , заданных по *порядку*.
+Функция `atomic_fetch_xor_explicit` выполняет `read-modify-write` операцию по замене сохраненного значения *Atom* на битное `exclusive or` *значение* и текущее значение, которое хранится в *Atom,* в пределах [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений, указанных *Порядком.*
 
-## <a name="atomic_flag_clear"></a>  atomic_flag_clear
+## <a name="atomic_flag_clear"></a><a name="atomic_flag_clear"></a>atomic_flag_clear
 
-Устанавливает флаг **bool** в объекте [atomic_flag](../standard-library/atomic-flag-structure.md) в **значение false**в `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
+Устанавливает **флаг bool** в [atomic_flag](../standard-library/atomic-flag-structure.md) объект к `memory_order_seq_cst` **ложным,** в пределах [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
 
 ```cpp
 inline void atomic_flag_clear(volatile atomic_flag* Flag) noexcept;
@@ -698,12 +698,12 @@ inline void atomic_flag_clear(atomic_flag* Flag) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Пометить*\
+*Флаг*\
 Указатель на объект `atomic_flag`.
 
-## <a name="atomic_flag_clear_explicit"></a>  atomic_flag_clear_explicit
+## <a name="atomic_flag_clear_explicit"></a><a name="atomic_flag_clear_explicit"></a>atomic_flag_clear_explicit
 
-Устанавливает флаг **bool** в объекте [atomic_flag](../standard-library/atomic-flag-structure.md) в **значение false**в пределах указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+Устанавливает флаг **bool** в [atomic_flag](../standard-library/atomic-flag-structure.md) **объекте ложному,** в пределах указанных [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений.
 
 ```cpp
 inline void atomic_flag_clear_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -712,15 +712,15 @@ inline void atomic_flag_clear_explicit(atomic_flag* Flag, memory_order Order) no
 
 ### <a name="parameters"></a>Параметры
 
-*Пометить*\
+*Флаг*\
 Указатель на объект `atomic_flag`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flag_test_and_set"></a>  atomic_flag_test_and_set
+## <a name="atomic_flag_test_and_set"></a><a name="atomic_flag_test_and_set"></a>atomic_flag_test_and_set
 
-Устанавливает флаг **bool** в объекте [atomic_flag](../standard-library/atomic-flag-structure.md) в **значение true**в ограничениях [memory_orderа](../standard-library/atomic-enums.md#memory_order_enum)`memory_order_seq_cst`.
+Устанавливает **флаг bool** в [atomic_flag](../standard-library/atomic-flag-structure.md) возражают против **истинности,** в пределах ограничений `memory_order_seq_cst` [memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
 
 ```cpp
 inline bool atomic_flag_test_and_set(volatile atomic_flag* Flag,) noexcept;
@@ -729,16 +729,16 @@ inline bool atomic_flag_test_and_set(atomic_flag* Flag,) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Пометить*\
+*Флаг*\
 Указатель на объект `atomic_flag`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Начальное значение *флага*.
 
-## <a name="atomic_flag_test_and_set_explicit"></a>  atomic_flag_test_and_set_explicit
+## <a name="atomic_flag_test_and_set_explicit"></a><a name="atomic_flag_test_and_set_explicit"></a>atomic_flag_test_and_set_explicit
 
-Устанавливает флаг **bool** в объекте [atomic_flag](../standard-library/atomic-flag-structure.md) в **значение true**в пределах указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+Устанавливает флаг **bool** в [atomic_flag](../standard-library/atomic-flag-structure.md) объект к **истине,** в пределах указанных [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничений.
 
 ```cpp
 inline bool atomic_flag_test_and_set_explicit(volatile atomic_flag* Flag, memory_order Order) noexcept;
@@ -747,17 +747,17 @@ inline bool atomic_flag_test_and_set_explicit(atomic_flag* Flag, memory_order Or
 
 ### <a name="parameters"></a>Параметры
 
-*Пометить*\
+*Флаг*\
 Указатель на объект `atomic_flag`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Начальное значение *флага*.
 
-## <a name="atomic_init"></a>  atomic_init
+## <a name="atomic_init"></a><a name="atomic_init"></a>atomic_init
 
 Задает сохраненное значение в объекте `atomic`.
 
@@ -770,7 +770,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `Ty`.
 
 *Значение*\
@@ -780,7 +780,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 
 `atomic_init` не является атомарной операцией. Этот указатель не является потокобезопасным.
 
-## <a name="atomic_is_lock_free"></a>  atomic_is_lock_free
+## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a>atomic_is_lock_free
 
 Указывает, являются ли операции с объектом `atomic`*неблокирующими*.
 
@@ -793,18 +793,18 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который хранит значение типа `T`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если атомарные операции в *Atom* не записываются без блокировки; в противном случае — **значение false**.
+**верно,** если атомные операции на *Атоме* не имеют блокировки; в противном случае, **ложные**.
 
 ### <a name="remarks"></a>Remarks
 
 Атомарный тип является неблокирующим, если никакие атомарные операции с этим типом не используют блокировки. Если эта функция возвращает значение true, тип можно безопасно использовать в обработчиках сигналов.
 
-## <a name="atomic_load"></a>  atomic_load
+## <a name="atomic_load"></a><a name="atomic_load"></a>atomic_load
 
 Извлекает сохраненное значение в объект `atomic`.
 
@@ -817,7 +817,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -828,7 +828,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 `atomic_load`неявно использует `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_load_explicit"></a>  atomic_load_explicit
+## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a>atomic_load_explicit
 
 Извлекает сохраненное значение в объект `atomic` с соблюдением указанных ограничений [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
@@ -841,17 +841,17 @@ inline Ty atomic_load_explicit(const atomic<Ty>* Atom, memory_order Order) noexc
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_release``memory_order_acq_rel`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Извлеченное значение, хранящееся в *Atom*.
 
-## <a name="atomic_signal_fence"></a>  atomic_signal_fence
+## <a name="atomic_signal_fence"></a><a name="atomic_signal_fence"></a>atomic_signal_fence
 
 Действует как *граница* — это примитив синхронизации памяти, который обеспечивает порядок между операциями загрузки или сохранения — между другими границами в вызывающем потоке, которые имеют обработчики сигнала, выполняющиеся в одном потоке.
 
@@ -861,12 +861,12 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *заказов*
+*Заказ*\
 Ограничение порядка памяти, которое определяет тип границы.
 
 ### <a name="remarks"></a>Remarks
 
-Аргумент *Order* определяет тип ограждения.
+Аргумент *Заказа* определяет тип забора.
 
 |||
 |-|-|
@@ -877,7 +877,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|Граница является и границей получения, и границей выпуска.|
 |`memory_order_seq_cst`|Граница является и границей получения, и границей выпуска, и она также последовательно согласованная.|
 
-## <a name="atomic_store"></a>  atomic_store
+## <a name="atomic_store"></a><a name="atomic_store"></a>atomic_store
 
 Атомарным образом сохраняет значение в атомарном объекте.
 
@@ -890,7 +890,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на атомарный объект, который содержит значение типа `Ty`.
 
 *Значение*\
@@ -898,9 +898,9 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_store` сохраняет *значение* в объекте, на который указывает *Atom*, в ограничении `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) .
+`atomic_store`хранит *Значение* в объекте, на который указывает `memory_order_seq_cst` *Atom,* в пределах [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничения.
 
-## <a name="atomic_store_explicit"></a>  atomic_store_explicit
+## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
 
 Атомарным образом сохраняет значение в атомарном объекте.
 
@@ -920,20 +920,20 @@ inline Ty atomic_store_explicit(
 
 ### <a name="parameters"></a>Параметры
 
-\ *Atom*
+*Атом*\
 Указатель на объект `atomic`, который содержит значение типа `Ty`.
 
 *Значение*\
 Значение типа `Ty`.
 
-\ *заказов*
+*Заказ*\
 Перечисление [memory_order](../standard-library/atomic-enums.md#memory_order_enum). Не используйте `memory_order_consume`, `memory_order_acquire` или `memory_order_acq_rel`.
 
 ### <a name="remarks"></a>Remarks
 
-`atomic_store` сохраняет *значение* в объекте, на который указывает *Atom*, в `memory_order`, заданном по *порядку*.
+`atomic_store`хранилища *Значение* в объекте, который указывается `memory_order` на *Atom*, в пределах, что указано в *Порядке*.
 
-## <a name="atomic_thread_fence"></a>  atomic_thread_fence
+## <a name="atomic_thread_fence"></a><a name="atomic_thread_fence"></a>atomic_thread_fence
 
 Действует как *граница* — это примитив синхронизации памяти, который обеспечивает порядок между операциями загрузки или сохранения — без связанной атомарной операции.
 
@@ -943,12 +943,12 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-\ *заказов*
+*Заказ*\
 Ограничение порядка памяти, которое определяет тип границы.
 
 ### <a name="remarks"></a>Remarks
 
-Аргумент *Order* определяет тип ограждения.
+Аргумент *Заказа* определяет тип забора.
 
 |||
 |-|-|
@@ -959,7 +959,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 |`memory_order_acq_rel`|Граница является и границей получения, и границей выпуска.|
 |`memory_order_seq_cst`|Граница является и границей получения, и границей выпуска, и она также последовательно согласованная.|
 
-## <a name="kill_dependency"></a>  kill_dependency
+## <a name="kill_dependency"></a><a name="kill_dependency"></a>kill_dependency
 
 Удаляет зависимость.
 
@@ -975,8 +975,8 @@ Ty kill_dependency(Ty Arg) noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращаемое значение — *arg*. Вычисление *аргумента* не является зависимым от вызова функции. Разбивая возможную цепочку зависимостей, функция позволяет компилятору создавать более эффективный код.
+Значение возврата *Arg*. Оценка *Arg* не несет в себе зависимость от вызова функции. Разбивая возможную цепочку зависимостей, функция позволяет компилятору создавать более эффективный код.
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<atomic>](../standard-library/atomic.md)
+[\<атомный>](../standard-library/atomic.md)

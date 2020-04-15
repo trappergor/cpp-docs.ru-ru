@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48c7ad6fe13c5f5fbbe5829c25ce1c27896841be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318806"
 ---
 # <a name="cautoptrlist-class"></a>Класс CAutoPtrList
 
-Этот класс предоставляет методы, используемые при построении списка интеллектуальные указатели.
+Этот класс предоставляет полезные методы при построении списка интеллектуальных указателей.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,19 +39,19 @@ class CAutoPtrList :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|Конструктор.|
+|[CAutoPtrlist:CAutoPtrlist](#cautoptrlist)|Конструктор.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет конструктор и методы из производного [CAtlList](../../atl/reference/catllist-class.md) и [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) для упрощения создания объекта списка, хранение интеллектуальные указатели. Класс [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) предоставляет ту же функцию для объекта-массива.
+Этот класс предоставляет конструктор и получает методы из [CAtlList](../../atl/reference/catllist-class.md) и [CAutoPtrElementTraits,](../../atl/reference/cautoptrelementtraits-class.md) чтобы помочь создать объект списка хранения интеллектуальных указателей. Класс [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) предоставляет аналогичную функцию для объекта массива.
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CAtlList](../../atl/reference/catllist-class.md)
+[Catllist](../../atl/reference/catllist-class.md)
 
 `CAutoPtrList`
 
@@ -59,7 +59,7 @@ class CAutoPtrList :
 
 **Заголовок:** atlcoll.h
 
-##  <a name="cautoptrlist"></a>  CAutoPtrList::CAutoPtrList
+## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>CAutoPtrlist:CAutoPtrlist
 
 Конструктор.
 
@@ -70,14 +70,14 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ### <a name="parameters"></a>Параметры
 
 *nBlockSize*<br/>
-Размер блока по умолчанию 10.
+Размер блока, с значением по умолчанию 10.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Размер блока — это мера объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использовать больше ресурсов.
+Размер блока — это мера объема памяти, выделенного при необходимости нового элемента. Большие размеры блоков уменьшают вызовы для процедур распределения памяти, но используют больше ресурсов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAtlList](../../atl/reference/catllist-class.md)<br/>
 [Класс CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376553"
 ---
-# <a name="syncpercontainer-class"></a>Класс sync_per_container
+# <a name="sync_per_container-class"></a>Класс sync_per_container
 
-Описывает [фильтр синхронизации](../standard-library/allocators-header.md), предоставляющий отдельный объект кэша для каждого объекта распределителя.
+Описывает [фильтр синхронизации,](../standard-library/allocators-header.md) который предоставляет отдельный объект кэша для каждого объекта выделения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,9 +32,9 @@ class sync_per_container
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
@@ -44,7 +44,7 @@ class sync_per_container
 
 **Пространство имен:** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::равные
 
 Сравнивает два кэша на равенство.
 
@@ -57,14 +57,14 @@ bool equals(const sync_per_container<Cache>& Other) const;
 |Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Объект кэша фильтра синхронизации.|
-|*Другое*|Объект кэша для сравнения на равенство.|
+|*Прочее*|Объект кэша для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция члена всегда возвращает **значение false**.
+Функция участника всегда возвращает **ложное**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

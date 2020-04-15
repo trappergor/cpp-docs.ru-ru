@@ -39,16 +39,16 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: a841c41c8f640dcde2a3d98841f66f6c6dc04602
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6d025230abcff42e367a231e616a13f0f8c684f0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320297"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
-Включите заголовок STL/CLR `<cliext/utility>`, чтобы определить класс шаблона `pair` и несколько вспомогательных функций шаблонов.
+Включите заголовок `<cliext/utility>` STL/CLR для `pair` определения класса шаблонов и нескольких вспомогательных функций шаблона.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -58,33 +58,34 @@ ms.locfileid: "80208290"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<cliext/Utility >
+**Заголовок:** \<cliext/полезность>
 
-**Пространство имен:** cliext
+**Название:** cliext
 
 ## <a name="declarations"></a>Объявления
 
-|Class|Description|
+|Class|Описание|
 |-----------|-----------------|
-|[pair (STL/CLR)](#pair)|Создание оболочки для пары элементов.|
+|[pair (STL/CLR)](#pair)|Оберните пару элементов.|
 
-|Оператор|Description|
+|Оператор|Описание|
 |--------------|-----------------|
-|[operator== (pair) (STL/CLR)](#op_eq)|Сравнение пар "равенство".|
-|[operator!= (pair) (STL/CLR)](#op_neq)|Сравнение пар "не равно".|
-|[operator< (pair) (STL/CLR)](#op_lt)|Сравнение пар "меньше".|
-|[Оператор\<= (пары) (STL/CLR)](#op_lteq)|Сравнение пар "меньше или равно".|
-|[operator> (pair) (STL/CLR)](#op_gt)|Пара "больше, чем сравнение".|
-|[operator>= (pair) (STL/CLR)](#op_gteq)|Сравнение пар "больше или равно".|
+|[operator== (pair) (STL/CLR)](#op_eq)|Парное равное сравнение.|
+|[оператор! (пара) (STL/CLR)](#op_neq)|Пара не равное сравнение.|
+|[оператор< (пара) (STL/CLR)](#op_lt)|Пара меньше, чем сравнение.|
+|[оператор\<(пара) (STL/CLR)](#op_lteq)|Пара меньше или равное сравнение.|
+|[оператор> (пара) (STL/CLR)](#op_gt)|Пара больше, чем сравнение.|
+|[оператор>(пара) (STL/CLR)](#op_gteq)|Пара больше или равного сравнения.|
 
-|Компонент|Description|
+|Компонент|Описание|
 |--------------|-----------------|
-|[make_pair (STL/CLR)](#make_pair)|Создайте пару из пары значений.|
+|[make_pair (STL/CLR)](#make_pair)|Сделайте пару из пары значений.|
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ## <a name="pair-stlclr"></a><a name="pair"></a>пара (STL/CLR)
-Класс шаблона описывает объект, который заключает в оболочку пару значений.
+
+Класс шаблона описывает объект, который обертывает пару значений.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -97,39 +98,39 @@ template<typename Value1,
 #### <a name="parameters"></a>Параметры
 
 *Значение1*<br/>
-Тип первого упакованного значения.
+Тип первого обернутого значения.
 
-*Value2*<br/>
-Тип второго упакованного значения.
+*Значение2*<br/>
+Тип второго обернутого значения.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-|Определение типа|Description|
+|Определение типа|Описание|
 |---------------------|-----------------|
-|[pair::first_type (STL/CLR)](#first_type)|Тип первого упакованного значения.|
-|[pair::second_type (STL/CLR)](#second_type)|Тип второго упакованного значения.|
+|[pair::first_type (STL/CLR)](#first_type)|Тип первого обернутого значения.|
+|[pair::second_type (STL/CLR)](#second_type)|Тип второго обернутого значения.|
 
-|Объект Member|Description|
+|Объект участника|Описание|
 |-------------------|-----------------|
 |[pair::first (STL/CLR)](#first)|Первое сохраненное значение.|
 |[pair::second (STL/CLR)](#second)|Второе сохраненное значение.|
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |---------------------|-----------------|
-|[pair::pair (STL/CLR)](#pair_pair)|Конструирует объект-пару.|
-|[pair::swap (STL/CLR)](#swap)|Меняет местами содержимое двух пар.|
+|[pair::pair (STL/CLR)](#pair_pair)|Строит объект пары.|
+|[pair::swap (STL/CLR)](#swap)|Свопирует содержимое двух пар.|
 
-|Оператор|Description|
+|Оператор|Описание|
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|Заменяет сохраненную пару значений.|
 
 ## <a name="remarks"></a>Remarks
 
-Объект хранит пару значений. Этот класс шаблона используется для объединения двух значений в один объект. Кроме того, объект `cliext::pair` (описываемый здесь) хранит только управляемые типы; для хранения пары неуправляемых типов используется `std::pair`, объявленный в `<utility>`.
+Объект хранит пару значений. Этот класс шаблонов объединяет два значения в один объект. Кроме того, `cliext::pair` объект (описанный здесь) хранит только управляемые типы; для хранения пары неуправляемых `std::pair`типов `<utility>`использования, объявлено в .
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>пары:: First (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a>пара::первый (STL/CLR)
 
-Первое упакованное значение.
+Первое обернутое значение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -139,7 +140,7 @@ Value1 first;
 
 ### <a name="remarks"></a>Remarks
 
-Объект сохраняет первое упакованное значение.
+Объект хранит первое обернутое значение.
 
 ### <a name="example"></a>Пример
 
@@ -164,9 +165,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>пара:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>пара::first_type (STL/CLR)
 
-Тип первого упакованного значения.
+Тип первого обернутого значения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -176,7 +177,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом для параметра-шаблона *value1*.
+Тип является синонимом параметра *шаблона Value1.*
 
 ### <a name="example"></a>Пример
 
@@ -201,7 +202,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>Оператор пары:: operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a>пара::оператор ( STL/CLR)
 
 Заменяет сохраненную пару значений.
 
@@ -213,12 +214,12 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*<br/>
 Пара для копирования.
 
 ### <a name="remarks"></a>Remarks
 
-Оператор члена копирует *право* на объект, а затем возвращает `*this`. Он используется для замены сохраненной пары значений копией сохраненной пары значений в *правой*части.
+Оператор-член копирует *право* на объект, а затем возвращается. `*this` Вы используете его, чтобы заменить сохраненные пары значений с копией сохраненной пары значений в *правой.*
 
 ### <a name="example"></a>Пример
 
@@ -245,9 +246,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>пара::p Air (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>пара::pair (STL/CLR)
 
-Конструирует объект-пару.
+Строит объект пары.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -260,8 +261,8 @@ pair(Value1 val1, Value2 val2);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
-Связывание с хранилищем.
+*Правильно*<br/>
+Пара для хранения.
 
 *val1*<br/>
 Первое значение для хранения.
@@ -275,23 +276,23 @@ pair(Value1 val1, Value2 val2);
 
 `pair();`
 
-Инициализирует хранимую пару со значениями, сформированными по умолчанию.
+инициализирует сохраненную пару с значениями, построенными по умолчанию.
 
 Конструктор:
 
 `pair(pair<Value1, Value2>% right);`
 
-Инициализирует хранимую пару парой `right.`[:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right.`[парой:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+инициализирует хранит хранимые пары `right.`с [парой::первый (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right.` [пара::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 `pair(pair<Value1, Value2>^ right);`
 
-Инициализирует хранимую пару парой `right->`[:: First (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right>`[парой:: Second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
+инициализирует хранит хранимые пары `right->`с [парой::первый (STL/CLR)](../dotnet/pair-first-stl-clr.md) и `right>` [пара::second (STL/CLR)](../dotnet/pair-second-stl-clr.md).
 
 Конструктор:
 
 `pair(Value1 val1, Value2 val2);`
 
-Инициализирует хранимую пару с помощью *val1* и *val2*.
+инициализирует хранящуюся пару с *val1* и *val2*.
 
 ### <a name="example"></a>Пример
 
@@ -330,9 +331,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>пара:: Second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a>пара::второй (STL/CLR)
 
-Второе упакованное значение.
+Второе обернутое значение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -342,7 +343,7 @@ Value2 second;
 
 ### <a name="remarks"></a>Remarks
 
-Объект хранит второе упакованное значение.
+Объект хранит второе обернутое значение.
 
 ### <a name="example"></a>Пример
 
@@ -367,9 +368,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>пара:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>пара::second_type (STL/CLR)
 
-Тип второго упакованного значения.
+Тип второго обернутого значения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -379,7 +380,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>Remarks
 
-Тип является синонимом для параметра-шаблона *value2*.
+Тип является синонимом параметра *шаблона Value2.*
 
 ### <a name="example"></a>Пример
 
@@ -404,9 +405,9 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>пары:: Swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a>пара::swap (STL/CLR)
 
-Меняет местами содержимое двух пар.
+Свопирует содержимое двух пар.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -416,12 +417,12 @@ void swap(pair<Value1, Value2>% right);
 
 #### <a name="parameters"></a>Параметры
 
-*right*<br/>
-Связывание с содержимым для замены.
+*Правильно*<br/>
+Пара для обмена содержимого с.
 
 ### <a name="remarks"></a>Remarks
 
-Функция – член меняет местами хранимую пару значений между `*this` и *right*.
+Функция члена меняет сохраненную пару значений между `*this` и *правыми.*
 
 ### <a name="example"></a>Пример
 
@@ -475,7 +476,7 @@ a b c
 
 ## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
 
-Создайте `pair` из пары значений.
+Сделать `pair` из пары значений.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -488,20 +489,20 @@ template<typename Value1,
 #### <a name="parameters"></a>Параметры
 
 *Значение1*<br/>
-Тип первого упакованного значения.
+Тип первого обернутого значения.
 
-*Value2*<br/>
-Тип второго упакованного значения.
+*Значение2*<br/>
+Тип второго обернутого значения.
 
-*first*<br/>
-Первое значение для переноса.
+*Первый*<br/>
+Первое значение для обертывания.
 
-*second*<br/>
-Второе значение для переноса.
+*Второй*<br/>
+Второе значение для упаковки.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-шаблон возвращает `pair<Value1, Value2>(first, second)`. Он используется для создания объекта `pair<Value1, Value2>` из пары значений.
+Функция шаблона возвращает `pair<Value1, Value2>(first, second)`. Вы используете его `pair<Value1, Value2>` для построения объекта из пары значений.
 
 ### <a name="example"></a>Пример
 
@@ -526,9 +527,9 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (пара) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>оператор! (пара) (STL/CLR)
 
-Сравнение пар "не равно".
+Пара не равное сравнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -541,15 +542,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `!(left == right)`. Он используется для проверки, не упорядочивается ли *Left* *так, как если* бы две пары сравнивались по элементу.
+Функция оператора `!(left == right)`возвращается. Вы используете его, чтобы проверить, не упорядочен ли *левый* порядок так же, как *справа,* когда две пары сравниваются элемент за элементом.
 
 ### <a name="example"></a>Пример
 
@@ -580,9 +581,9 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>Оператор&lt; (пары) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>оператор&lt; (пара) (STL/CLR)
 
-Сравнение пар "меньше".
+Пара меньше, чем сравнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -595,15 +596,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`. Он используется для проверки, упорядочивается ли *Left* *справа* , когда две пары сравниваются по элементу.
+Функция оператора `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`возвращается. Вы используете его, чтобы проверить, является ли *левый* приказал перед *правом,* когда две пары сравниваются элемент за элементом.
 
 ### <a name="example"></a>Пример
 
@@ -634,9 +635,9 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>Оператор&lt;= (пары) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>оператор&lt;(пара) (STL/CLR)
 
-Сравнение пар "меньше или равно".
+Пара меньше или равное сравнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -649,15 +650,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `!(right < left)`. Он используется для проверки, не упорядочен ли *Left* после *right* , когда две пары сравниваются по элементу.
+Функция оператора `!(right < left)`возвращается. Вы используете его, чтобы проверить, не заказываются ли *левые* после *справа,* когда две пары сравниваются по элементам.
 
 ### <a name="example"></a>Пример
 
@@ -688,9 +689,9 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (пара) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>оператор (пара) (STL/CLR)
 
-Сравнение пар "равенство".
+Парное равное сравнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -703,15 +704,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `left.first ==` `right.first &&` `left.second ==` `right.second`. Он используется для проверки, упорядочивается ли *Left* так же, как и *справа* , если две пары сравниваются по элементу.
+Функция оператора `left.first ==` `right.first &&` `left.second ==` `right.second`возвращается. Вы используете его, чтобы проверить, упорядочен ли *левый* такой же, как *и справа,* когда две пары сравниваются элемент за элементом.
 
 ### <a name="example"></a>Пример
 
@@ -742,9 +743,9 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>Оператор&gt; (пары) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>оператор&gt; (пара) (STL/CLR)
 
-Пара "больше, чем сравнение".
+Пара больше, чем сравнение.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -757,15 +758,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `right` `<` `left`. Он используется для проверки, упорядочен ли *Left* после *right* , когда две пары сравниваются по элементу.
+Функция оператора `right` `<` `left`возвращается. Вы используете его, чтобы проверить, является ли *левый* упорядочен после *справа,* когда две пары сравниваются элемент за элементом.
 
 ### <a name="example"></a>Пример
 
@@ -796,9 +797,9 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>Оператор&gt;= (пары) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>оператор&gt;(пара) (STL/CLR)
 
-Сравнение пар "больше или равно".
+Пара больше или равного сравнения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -811,15 +812,15 @@ template<typename Value1,
 
 #### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Левой*<br/>
 Левая пара для сравнения.
 
-*right*<br/>
-Для сравнения — правая пара.
+*Правильно*<br/>
+Правильная пара для сравнения.
 
 ### <a name="remarks"></a>Remarks
 
-Функция оператора возвращает `!(left < right)`. Используйте его, чтобы проверить, не упорядочивается ли *Left* перед *right* , когда две пары сравниваются по элементу.
+Функция оператора `!(left < right)`возвращается. Вы используете его для проверки того, не заказывают ли *левый* перед *правой,* когда две пары сравниваются по элементам.
 
 ### <a name="example"></a>Пример
 

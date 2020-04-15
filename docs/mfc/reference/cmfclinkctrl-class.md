@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374394"
 ---
 # <a name="cmfclinkctrl-class"></a>Класс CMFCLinkCtrl
 
-`CMFCLinkCtrl` Класс отображает кнопку в виде гиперссылки и вызывает целевой объект связи, при нажатии кнопки.
+Класс `CMFCLinkCtrl` отображает кнопку в виде гиперссылки и вызывает цель ссылки при нажатии кнопки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,25 +35,25 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCLinkCtrl::SetURL](#seturl)|Отображает указанный URL-адрес в виде текста кнопки.|
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Задает неявный протокол (например, «http:») URL-адреса.|
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Изменяет размер кнопку, чтобы содержать текст кнопки или точечного рисунка.|
+|[CMFCLinkCtrl:SetURL](#seturl)|Отображает указанный URL в виде текста кнопки.|
+|[CMFCLinkCtrl:SetURLPrefix](#seturlprefix)|Устанавливает неявный протокол (например, "http:") URL.|
+|[CMFCLinkCtrl:SizetoContent](#sizetocontent)|Изображает кнопку, чтобы содержать текст кнопки или бит-карту.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Вызвано структурой перед началом рисования прямоугольника фокуса кнопки.|
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Вызывается рамки до фокус прямоугольника кнопки обращается.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-После нажатия кнопки, который является производным от `CMFCLinkCtrl` класс, платформа передает URL-адрес кнопки в качестве параметра `ShellExecute` метод. Затем `ShellExecute` метод открывает целевой URL-адреса.
+При нажатии кнопки, полученной `CMFCLinkCtrl` из класса, фреймворк передает URL-адрес кнопки в качестве параметра методу. `ShellExecute` Затем `ShellExecute` метод открывает цель URL.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как задать размер `CMFCLinkCtrl` , а также для задания URL-адрес и всплывающей подсказки в `CMFCLinkCtrl` объекта. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как `CMFCLinkCtrl` установить размер объекта и как установить `CMFCLinkCtrl` URL и набор инструментов в объекте. Этот пример является частью [образца новых элементов управления.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -76,9 +76,9 @@ class CMFCLinkCtrl : public CMFCButton
 
 **Заголовок:** afxlinkctrl.h
 
-##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect
 
-Вызвано структурой перед началом рисования прямоугольника фокуса кнопки.
+Вызывается рамки до фокус прямоугольника кнопки обращается.
 
 ```
 virtual void OnDrawFocusRect(
@@ -89,18 +89,18 @@ virtual void OnDrawFocusRect(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rectClient*<br/>
-[in] Ограничивающий прямоугольник для этого элемента управления ссылки.
+(в) Прямоугольник, который граничит с управлением ссылкой.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Переопределите этот метод, если вы хотите использовать собственный код для рисования прямоугольника фокуса кнопки.
+Переопределить этот метод, когда вы хотите использовать свой собственный код, чтобы нарисовать прямоугольник фокуса кнопки.
 
-##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl:SetURL
 
-Отображает указанный URL-адрес в виде текста кнопки.
+Отображает указанный URL в виде текста кнопки.
 
 ```
 void SetURL(LPCTSTR lpszURL);
@@ -109,13 +109,13 @@ void SetURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Параметры
 
 *lpszURL*<br/>
-[in] Текст кнопки для отображения.
+(в) Текст кнопки для отображения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl:SetURLPrefix
 
-Задает неявный протокол (например, «http:») URL-адреса.
+Устанавливает неявный протокол (например, "http:") URL.
 
 ```
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -124,15 +124,15 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="parameters"></a>Параметры
 
 *lpszPrefix*<br/>
-[in] Префикс URL-адрес протокола.
+(в) Префикс протокола URL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод позволяет задать префикс URL-адреса. Префикс не отображается на кнопке, но его можно использовать для перейдите к целевой URL-адрес.
+Используйте этот метод для установки префикса URL. Префикс не отображается на лице кнопки, но вы можете использовать его, чтобы помочь просматривать цель URL.
 
-##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl:SizetoContent
 
-Изменяет размер кнопку, чтобы содержать текст кнопки или точечного рисунка.
+Изображает кнопку, чтобы содержать текст кнопки или бит-карту.
 
 ```
 virtual CSize SizeToContent(
@@ -143,18 +143,18 @@ virtual CSize SizeToContent(
 ### <a name="parameters"></a>Параметры
 
 *bVCenter*<br/>
-[in] Значение TRUE, чтобы центрировать текст и кнопки растрового изображения по вертикали между верхней и нижней части элемента управления ссылки; в противном случае — значение FALSE. Значение по умолчанию — FALSE.
+(в) TRUE для центрирования текста кнопки и bitmap вертикально между верхней и нижней части управления ссылкой; в противном случае, FALSE. Значение по умолчанию — FALSE.
 
 *bHCenter*<br/>
-[in] Значение TRUE, чтобы центрировать текст и кнопки растрового изображения по горизонтали между левой и правой стороны элемента управления ссылки; в противном случае — значение FALSE. Значение по умолчанию — FALSE.
+(в) TRUE для центрирования текста кнопки и bitmap горизонтально между левой и правой сторонами управления ссылкой; в противном случае, FALSE. Значение по умолчанию — FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) , содержащий новый размер элемента управления ссылки.
+Объект [CSize,](../../atl-mfc-shared/reference/csize-class.md) содержащий новый размер управления ссылками.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

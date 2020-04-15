@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: 25249b8823b8c182133e85aa4cd07d38f5874cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374309"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits - структура
 
-Описывает общие характеристики `SRWLock` класс в режиме эксклюзивной блокировки.
+Описывает общие характеристики класса в эксклюзивном режиме блокировки. `SRWLock`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,16 +32,16 @@ struct SRWLockExclusiveTraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-name   | Описание
+Имя   | Описание
 ------ | --------------------------------------------------------------------------
-`Type` | Синоним для указателя на [SRWLOCK](srwlock-class.md) класса.
+`Type` | Синоним указателя на класс [SRWLOCK.](srwlock-class.md)
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                        | Описание
+Имя                                                        | Описание
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[SRWLockExclusiveTraits::GetInvalidValue](#getinvalidvalue) | Извлекает `SRWLockExclusiveTraits` объект, который всегда является недопустимым.
-[SRWLockExclusiveTraits::Unlock](#unlock)                   | Освобождает управлением указанного `SRWLock` объекта.
+[SRWLockExclusiveTraits::GetInvalidValue](#getinvalidvalue) | Извлекает `SRWLockExclusiveTraits` объект, который всегда является недействительным.
+[SRWLockExclusiveTraits::Разблокировка](#unlock)                   | Выпускает эксклюзивный контроль `SRWLock` указанного объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -51,11 +51,11 @@ name                                                        | Описание
 
 **Заголовок:** corewrappers.h
 
-**Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
+**Пространство имен:** Microsoft::WRL::Wrappers:: HandleTraits
 
-## <a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>SRWLockExclusiveTraits::GetInvalidValue
 
-Извлекает `SRWLockExclusiveTraits` объект, который всегда является недопустимым.
+Извлекает `SRWLockExclusiveTraits` объект, который всегда является недействительным.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,11 +63,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Пустой объект `SRWLockExclusiveTraits`
+Пустой объект `SRWLockExclusiveTraits`.
 
-## <a name="unlock"></a>SRWLockExclusiveTraits::Unlock
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWLockExclusiveTraits::Разблокировка
 
-Освобождает управлением указанного `SRWLock` объекта.
+Выпускает эксклюзивный контроль `SRWLock` указанного объекта.
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +77,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Параметры
 
-*SRWLOCK*<br/>
-Дескриптор `SRWLock` объекта.
+*Srwlock*<br/>
+Обработка `SRWLock` объекта.

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0612a4b365b928d3c9be6d76168a76b4ee1caa85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324029"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318259"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Класс CSinusoidalTransitionFromRange
 
@@ -41,35 +41,35 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Создает объект перехода.|
+|[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|Строит переходный объект.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSinusoidalTransitionFromRange::Создание](#create)|Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM. (Переопределяет [CBaseПереход::Создание](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Значение переменной анимации в пиковое значение переход wave.|
-|[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Значение переменной анимации с помощью средства переход wave.|
-|[CSinusoidalTransitionFromRange::m_duration](#m_duration)|Длительность перехода.|
-|[CSinusoidalTransitionFromRange::m_period](#m_period)|Период колебаний из wave переход в секундах.|
-|[CSinusoidalTransitionFromRange::m_slope](#m_slope)|Наклон в начале перехода.|
+|[CSinusoidalTransitionRangeRange::m_dblMaximumValue](#m_dblmaximumvalue)|Значение переменной анимации на пике синусоидальной волны.|
+|[CSinusoidalTransitionRange:::m_dblMinimumValue](#m_dblminimumvalue)|Значение переменной анимации в корыте синусоидальной волны.|
+|[CSinusoidalTransitionRangeRange::m_duration](#m_duration)|Продолжительность перехода.|
+|[CSinusoidalTransitionRangeRange:::m_period](#m_period)|Период колебаний синусоидальной волны в считанные секунды.|
+|[CSinusoidalTransitionRangeRange::m_slope](#m_slope)|Склон в начале перехода.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Значение переменной анимации используется от указанное минимальное и максимальное значение за весь период времени в диапазоне синусоиды перехода. Наклон параметр используется для устранения неоднозначности между двух возможных синусоидальных волн, указанных другими параметрами. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+Значение переменной анимации колеблется между указанным минимальным и максимальным значениями в течение всего периода синусоидального перехода. Параметр наклона используется для дисамбии между двумя возможными синусоидными волнами, указанными другими параметрами. Поскольку все переходы очищаются автоматически, рекомендуется выделять их с помощью нового оператора. Инкапсулированный объект IUIAnimationTransition COM создается CAnimationController::AnimateGroup, до тех пор это NULL. Изменение переменных членов после создания этого объекта COM не имеет эффекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseПереход](../../mfc/reference/cbasetransition-class.md)
 
 [CSinusoidalTransitionFromRange](../../mfc/reference/csinusoidaltransitionfromrange-class.md)
 
@@ -77,9 +77,9 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create
+## <a name="csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Создание
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM.
 
 ```
 virtual BOOL Create(
@@ -94,11 +94,11 @@ virtual BOOL Create(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+TRUE, если переход создан успешно; в противном случае FALSE.
 
-##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+## <a name="csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
 
-Создает объект перехода.
+Строит переходный объект.
 
 ```
 CSinusoidalTransitionFromRange(
@@ -112,60 +112,60 @@ CSinusoidalTransitionFromRange(
 ### <a name="parameters"></a>Параметры
 
 *Длительность*<br/>
-Длительность перехода.
+Продолжительность перехода.
 
 *dblMinimumValue*<br/>
-Значение переменной анимации с помощью средства переход wave.
+Значение переменной анимации в корыте синусоидальной волны.
 
 *dblMaximumValue*<br/>
-Значение переменной анимации в пиковое значение переход wave.
+Значение переменной анимации на пике синусоидальной волны.
 
 *Период*<br/>
-Период колебаний из wave переход в секундах.
+Период колебаний синусоидальной волны в считанные секунды.
 
-*Наклон*<br/>
-Наклон в начале перехода.
+*Уклона*<br/>
+Склон в начале перехода.
 
-##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue
+## <a name="csinusoidaltransitionfromrangem_dblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionRangeRange::m_dblMaximumValue
 
-Значение переменной анимации в пиковое значение переход wave.
+Значение переменной анимации на пике синусоидальной волны.
 
 ```
 DOUBLE m_dblMaximumValue;
 ```
 
-##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue
+## <a name="csinusoidaltransitionfromrangem_dblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionRange:::m_dblMinimumValue
 
-Значение переменной анимации с помощью средства переход wave.
+Значение переменной анимации в корыте синусоидальной волны.
 
 ```
 DOUBLE m_dblMinimumValue;
 ```
 
-##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration
+## <a name="csinusoidaltransitionfromrangem_duration"></a><a name="m_duration"></a>CSinusoidalTransitionRangeRange::m_duration
 
-Длительность перехода.
+Продолжительность перехода.
 
 ```
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period
+## <a name="csinusoidaltransitionfromrangem_period"></a><a name="m_period"></a>CSinusoidalTransitionRangeRange:::m_period
 
-Период колебаний из wave переход в секундах.
+Период колебаний синусоидальной волны в считанные секунды.
 
 ```
 UI_ANIMATION_SECONDS m_period;
 ```
 
-##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope
+## <a name="csinusoidaltransitionfromrangem_slope"></a><a name="m_slope"></a>CSinusoidalTransitionRangeRange::m_slope
 
-Наклон в начале перехода.
+Склон в начале перехода.
 
 ```
 UI_ANIMATION_SLOPE m_slope;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

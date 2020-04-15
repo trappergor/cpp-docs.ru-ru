@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171831"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376308"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Среда выполнения Windows и управляемые шаблоны (C++/CLI и C++/CX)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-Доступ с помощью синтаксиса языка C++/CLI к шаблонам, определенным в сборке, на которую существует ссылка, получить нельзя, но можно использовать отражение. Если экземпляр шаблон не создан, он не создается в метаданных. При создании экземпляра шаблона в метаданных появляются только функции-члены, на которые существуют ссылки.
+Доступ с помощью синтаксиса языка C++/CLI к шаблонам, определенным в сборке, на которую существует ссылка, получить нельзя, но можно использовать отражение. Если шаблон не мгновенно, он не испускается в метаданных. При создании экземпляра шаблона в метаданных появляются только функции-члены, на которые существуют ссылки.
 
 ```cpp
 // managed_templates_3.cpp

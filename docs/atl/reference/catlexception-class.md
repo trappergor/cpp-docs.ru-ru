@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: a6ed6062be02fddc111e4eda4d26226b7a7a0c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6da56e4d6c443520eb6f857624a5923e71a1e580
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260679"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318993"
 ---
 # <a name="catlexception-class"></a>Класс CAtlException
 
-Этот класс определяет ATL исключения.
+Этот класс определяет исключение ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,33 +30,33 @@ class CAtlException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlException::CAtlException](#catlexception)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAtlException::operator HRESULT](#operator_hresult)|Приводит текущий объект в значение HRESULT.|
+|[CAtlException::оператор HRESULT](#operator_hresult)|Отбрасывает текущий объект в значение HRESULT.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAtlException::m_hr](#m_hr)|Переменная типа HRESULT, созданный и используется для хранения состояния ошибки.|
+|[CAtlException::m_hr](#m_hr)|Переменная типа HRESULT, созданная объектом и используемая для хранения состояния ошибки.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Объект `CAtlException` представляет условие исключения, связанные с ATL операции. `CAtlException` Класс включает в себя членом открытых данных, который хранит код состояния, указывающее причину исключения и оператор приведения, который позволяет обрабатывать исключение, как если бы значение HRESULT.
+Объект `CAtlException` представляет условие исключения, связанное с операцией ATL. Класс `CAtlException` включает в себя общедоступный элемент данных, который хранит код статуса с указанием причины исключения, и литого оператора, который позволяет рассматривать исключение как если бы это было HRESULT.
 
-Как правило, вы будете вызывать `AtlThrow` вместо того чтобы создавать `CAtlException` объекта напрямую.
+В общем, вы `AtlThrow` будете звонить, а не создавать `CAtlException` объект напрямую.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlexcept.h
 
-##  <a name="catlexception"></a>  CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
 
 Конструктор.
 
@@ -67,30 +67,30 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>Параметры
 
-*hr*<br/>
+*Hr*<br/>
 Код ошибки HRESULT.
 
-##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException::оператор HRESULT
 
-Приводит текущий объект в значение HRESULT.
+Отбрасывает текущий объект в значение HRESULT.
 
 ```
 operator HRESULT() const throw ();
 ```
 
-##  <a name="m_hr"></a>  CAtlException::m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException::m_hr
 
-Элемент данных HRESULT.
+Член данных HRESULT.
 
 ```
 HRESULT m_hr;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Элемент данных, который хранит условие ошибки. Значение HRESULT имеет значение с помощью конструктора [CAtlException::CAtlException](#catlexception).
+Член данных, который хранит условие ошибки. Значение HRESULT устанавливается конструктором, [CAtlException::CAtlException](#catlexception).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

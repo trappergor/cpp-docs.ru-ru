@@ -86,16 +86,16 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 9c154fe621fb88a6dc96a9835fae95c4b86763de
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: a95ee024d9df835102eeffc8443ae6225775aff7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866197"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375542"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 Предоставляет функциональные возможности для упорядочения областей, которые являются производными от [CPane Class](../../mfc/reference/cpane-class.md) , в наборы строк.
 
@@ -109,54 +109,54 @@ class CDockSite: public CBasePane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDockSite:: AddRow](#addrow)||
-|[CDockSite:: Аджустдоккинглайаут](#adjustdockinglayout)|(Переопределяет [CBasePane:: аджустдоккинглайаут](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|
-|[CDockSite:: Аджустлайаут](#adjustlayout)|(Переопределяет [CBasePane:: аджустлайаут](../../mfc/reference/cbasepane-class.md#adjustlayout).)|
+|[CDockSite::AddRow](#addrow)||
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(Оверлет [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|
+|[CDockSite::AdjustLayout](#adjustlayout)|(Оверлет [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|
 |[CDockSite::AlignDockSite](#aligndocksite)||
-|[CDockSite:: Калкфикседлайаут](#calcfixedlayout)|(Переопределяет [CBasePane:: калкфикседлайаут](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[CDockSite:: Канакцептпане](#canacceptpane)|(Переопределяет [CBasePane:: канакцептпане](../../mfc/reference/cbasepane-class.md#canacceptpane).)|
-|[CDockSite:: Креатикс](#createex)|(Переопределяет [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).)|
-|[CDockSite:: Креатеров](#createrow)||
-|[CDockSite::D Оккпане](#dockpane)|(Переопределяет [CBasePane::D оккпане](../../mfc/reference/cbasepane-class.md#dockpane).)|
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Переопределяет [CBasePane::D оесалловдининсертбефоре](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
-|[CDockSite:: Финдровиндекс](#findrowindex)||
-|[CDockSite:: Фиксупвиртуалректс](#fixupvirtualrects)||
+|[CDockSite::CalcFixedLayout](#calcfixedlayout)|(Оверлет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CDockSite::CanAcceptPane](#canacceptpane)|(Переопределяет [CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane).)|
+|[CDockSite::CreateEx](#createex)|(Переопределяет [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
+|[CDockSite::CreateRow](#createrow)||
+|[CDockSite::DockPane](#dockpane)|(Оверлет [CBasePane::DockPane](../../mfc/reference/cbasepane-class.md#dockpane).)|
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(Переопределяет [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[CDockSite::FindRowIndex](#findrowindex)||
+|[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
 |[CDockSite::GetDockSiteID](#getdocksiteid)||
-|[CDockSite:: Жетдоккситеровслист](#getdocksiterowslist)||
-|[CDockSite:: Исакцессибилитикомпатибле](#isaccessibilitycompatible)|(Переопределяет `CBasePane::IsAccessibilityCompatible`.)|
-|[CDockSite:: Исдрагмоде](#isdragmode)||
-|[CDockSite:: Исластров](#islastrow)||
-|[CDockSite:: Исректвисиндокксите](#isrectwithindocksite)||
-|[CDockSite:: Исресизабле](#isresizable)|(Переопределяет [CBasePane:: исресизабле](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CDockSite:: Мовепане](#movepane)||
-|[CDockSite:: Онинсертров](#oninsertrow)||
-|[CDockSite:: Онремоверов](#onremoverow)||
-|[CDockSite:: Онресизеров](#onresizerow)||
-|[CDockSite:: Онсетвиндовпос](#onsetwindowpos)||
-|[CDockSite:: Оншовров](#onshowrow)||
-|[CDockSite:: Онсизепарент](#onsizeparent)||
-|[CDockSite::P Анефромпоинт](#panefrompoint)|Возвращает область, закрепленную на сайте закрепления в точке, указанной данным параметром.|
-|[CDockSite::D Оккпанелефтоф](#dockpaneleftof)|Закрепляет область слева от другой области.|
-|[CDockSite:: Финдпанебид](#findpanebyid)|Возвращает область, определенную по заданному идентификатору.|
-|[CDockSite:: копанель](#getpanelist)|Возвращает список областей, которые закреплены на сайте закрепления.|
-|[CDockSite:: Ректсидефромпоинт](#rectsidefrompoint)||
-|[CDockSite:: Ремовепане](#removepane)||
-|[CDockSite:: RemoveRow](#removerow)||
-|[CDockSite:: Реплацепане](#replacepane)||
-|[CDockSite:: Репоситионпанес](#repositionpanes)||
-|[CDockSite:: Ресизедокксите](#resizedocksite)||
-|[CDockSite:: Ресизеров](#resizerow)||
-|[CDockSite:: Шовпане](#showpane)|Отображает область.|
-|[CDockSite:: Шовров](#showrow)||
-|[CDockSite:: Свапровс](#swaprows)||
+|[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||
+|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Переопределяет `CBasePane::IsAccessibilityCompatible`.)|
+|[CDockSite::IsDragMode](#isdragmode)||
+|[CDockSite::IsLastRow](#islastrow)||
+|[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
+|[CDockSite::IsResizable](#isresizable)|(Переопределяет [CBasePane:: Изисуемый](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CDockSite::MovePane](#movepane)||
+|[CDockSite::OnInsertRow](#oninsertrow)||
+|[CDockSite::OnRemoveRow](#onremoverow)||
+|[CDockSite::OnResizeRow](#onresizerow)||
+|[CDockSite::OnSetWindowPos](#onsetwindowpos)||
+|[CDockSite::OnShowRow](#onshowrow)||
+|[CDockSite::OnSizeParent](#onsizeparent)||
+|[CDockSite::PaneFromPoint](#panefrompoint)|Возвращает область, закрепленную на сайте закрепления в точке, указанной данным параметром.|
+|[CDockSite::DockPaneLeftOf](#dockpaneleftof)|Закрепляет область слева от другой области.|
+|[CdockSite::FindPaneByID](#findpanebyid)|Возвращает область, определенную по заданному идентификатору.|
+|[CDockSite::GetPaneList](#getpanelist)|Возвращает список областей, которые закреплены на сайте закрепления.|
+|[CDockSite::RectSideFromPoint](#rectsidefrompoint)||
+|[CDockSite::RemovePane](#removepane)||
+|[CDockSite::RemoveRow](#removerow)||
+|[CDockSite::ReplacePane](#replacepane)||
+|[CDockSite::RepositionPanes](#repositionpanes)||
+|[CDockSite::ResizeDockSite](#resizedocksite)||
+|[CDockSite::ResizeRow](#resizerow)||
+|[CDockSite::ShowPane](#showpane)|Отображает область.|
+|[CDockSite::ShowRow](#showrow)||
+|[CDockSite::SwapRows](#swaprows)||
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Платформа автоматически создает `CDockSite` объекты при вызове [CFrameWndEx:: енабледоккинг](../../mfc/reference/cframewndex-class.md#enabledocking). Окна сайта закрепления располагаются на границе области клиента в главном окне фрейма.
+Платформа создает `CDockSite` объекты автоматически при [вызове CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking). Окна сайта закрепления располагаются на границе области клиента в главном окне фрейма.
 
-Обычно нет необходимости вызывать службы, предоставляемые сайтом DOCKER, так как [Класс CFrameWndEx](../../mfc/reference/cframewndex-class.md) обрабатывает эти службы.
+Обычно вам не нужно звонить в службы, предоставляемые сайтом док-станции, потому что [CFrameWndEx Class](../../mfc/reference/cframewndex-class.md) обрабатывает эти службы.
 
 ## <a name="example"></a>Пример
 
@@ -166,17 +166,17 @@ class CDockSite: public CBasePane
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[От CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CDockSite](../../mfc/reference/cdocksite-class.md)
+[Cobject](../../mfc/reference/cobject-class.md)\
+&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Квн](../../mfc/reference/cwnd-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Кдоксайт](../../mfc/reference/cdocksite-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афксдокксите. h
+**Заголовок:** afxDockSite.h
 
-##  <a name="addrow"></a>CDockSite:: AddRow
+## <a name="cdocksiteaddrow"></a><a name="addrow"></a>CDockSite::AddRow
 
 ```
 CDockingPanesRow* AddRow(
@@ -186,31 +186,31 @@ CDockingPanesRow* AddRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *POS-терминал*<br/>
+(в) *pos*<br/>
 
-окне *нхеигхт*<br/>
+(в) *nВысота*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="adjustdockinglayout"></a>CDockSite:: Аджустдоккинглайаут
+## <a name="cdocksiteadjustdockinglayout"></a><a name="adjustdockinglayout"></a>CdockSite::AdjustDockingLayout
 
 ```
 virtual void AdjustDockingLayout();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="adjustlayout"></a>CDockSite:: Аджустлайаут
+## <a name="cdocksiteadjustlayout"></a><a name="adjustlayout"></a>CdockSite:AdjustLayout
 
 ```
 virtual void AdjustLayout();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="aligndocksite"></a>CDockSite:: Алигндокксите
+## <a name="cdocksitealigndocksite"></a><a name="aligndocksite"></a>CDockSite::AlignDockSite
 
 ```
 void AlignDockSite(
@@ -221,15 +221,15 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-окне *ректтоалигнби*<br/>
+(в) *rectToAlignBy*<br/>
 
-окне *ректресулт*<br/>
+(в) *rectResult*<br/>
 
-окне *бмовеиммедиатели*<br/>
+(в) *bMoveImmediately*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="calcfixedlayout"></a>CDockSite:: Калкфикседлайаут
+## <a name="cdocksitecalcfixedlayout"></a><a name="calcfixedlayout"></a>CdockSite::CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -239,15 +239,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Параметры
 
-окне *бстретч*<br/>
+(в) *bStretch*<br/>
 
-окне *бхорз*<br/>
+(в) *bHorz*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="canacceptpane"></a>CDockSite:: Канакцептпане
+## <a name="cdocksitecanacceptpane"></a><a name="canacceptpane"></a>CDockSite::CanAcceptPane
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -255,13 +255,13 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-окне *пбар*<br/>
+(в) *pBar*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="createex"></a>CDockSite:: Креатикс
+## <a name="cdocksitecreateex"></a><a name="createex"></a>CDockSite::CreateEx
 
 ```
 virtual BOOL CreateEx(
@@ -275,23 +275,23 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-окне *двстиликс*<br/>
+(в) *dwStyleEx*<br/>
 
-окне *двстиле*<br/>
+(в) *dwStyle*<br/>
 
 [in] *rect*<br/>
 
-окне *ппарентвнд*<br/>
+(в) *pParentWnd*<br/>
 
-окне *двконтролбарстиле*<br/>
+(в) *dwControlBarStyle*<br/>
 
-окне *пконтекст*<br/>
+(в) *pКонтекст*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="createrow"></a>CDockSite:: Креатеров
+## <a name="cdocksitecreaterow"></a><a name="createrow"></a>CDockSite::CreateRow
 
 ```
 virtual CDockingPanesRow* CreateRow(
@@ -302,17 +302,17 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *ппарентдоккбар*<br/>
+(в) *pParentDockBar*<br/>
 
-окне *ноффсет*<br/>
+(в) *nOffset*<br/>
 
-окне *нровхеигхт*<br/>
+(в) *nRowHeight*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="dockpane"></a>CDockSite::D Оккпане
+## <a name="cdocksitedockpane"></a><a name="dockpane"></a>CDockSite::DockPane
 
 ```
 virtual void DockPane(
@@ -323,15 +323,15 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *приводится*<br/>
+(в) *pWnd*<br/>
 
-окне *доккмесод*<br/>
+(в) *докМетод*<br/>
 
-окне *лпрект*<br/>
+(в) *lpRect*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="dockpaneleftof"></a>CDockSite::D Оккпанелефтоф
+## <a name="cdocksitedockpaneleftof"></a><a name="dockpaneleftof"></a>CdockSite::DockPaneLeftOf
 
 Закрепляет область слева от другой области.
 
@@ -343,19 +343,19 @@ virtual BOOL DockPaneLeftOf(
 
 ### <a name="parameters"></a>Параметры
 
-*пбартодокк*<br/>
-[вход, выход] Указатель на область, которая должна быть закреплена слева от *птаржетбар*.
+*пбартодок*<br/>
+(в, вне) Указатель на стекол, чтобы быть пристыкован к левой части *pTargetBar*.
 
-*птаржетбар*<br/>
-[вход, выход] Указатель на целевую область.
+*pTargetBar*<br/>
+(в, вне) Указатель на целевое стекло.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель закреплена успешно; в противном случае — значение FALSE.
+TRUE, если панель пристыкована успешно; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="doesallowdyninsertbefore"></a>  CDockSite::DoesAllowDynInsertBefore
+## <a name="cdocksitedoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CDockSite::DoesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -363,11 +363,11 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="findpanebyid"></a>CDockSite:: Финдпанебид
+## <a name="cdocksitefindpanebyid"></a><a name="findpanebyid"></a>CdockSite::FindPaneByID
 
-Возвращает панель с заданным ИДЕНТИФИКАТОРом.
+Возвращает панель с учетом идентификатора.
 
 ```
 CPane* FindPaneByID(UINT nID);
@@ -376,15 +376,15 @@ CPane* FindPaneByID(UINT nID);
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-окне Идентификатор команды для поиска.
+(в) Идентификатор команды панели, который будет найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на область с указанным ИДЕНТИФИКАТОРом команды или значение NULL, если панель не найдена.
+Указатель на панель с указанным идентификатором команды или NULL, если панель не найдена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="findrowindex"></a>CDockSite:: Финдровиндекс
+## <a name="cdocksitefindrowindex"></a><a name="findrowindex"></a>Кдоксайт::FindRowIndex
 
 ```
 int FindRowIndex(CDockingPanesRow* pRow);
@@ -392,21 +392,21 @@ int FindRowIndex(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>Параметры
 
-окне *пров*<br/>
+(в) *pRow*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="fixupvirtualrects"></a>CDockSite:: Фиксупвиртуалректс
+## <a name="cdocksitefixupvirtualrects"></a><a name="fixupvirtualrects"></a>CDockSite::FixupVirtualRects
 
 ```
 virtual void FixupVirtualRects();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdocksiteid"></a>CDockSite:: Жетдоккситеид
+## <a name="cdocksitegetdocksiteid"></a><a name="getdocksiteid"></a>CDockSite:GetDockSiteID
 
 ```
 virtual UINT GetDockSiteID() const;
@@ -414,9 +414,9 @@ virtual UINT GetDockSiteID() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdocksiterowslist"></a>CDockSite:: Жетдоккситеровслист
+## <a name="cdocksitegetdocksiterowslist"></a><a name="getdocksiterowslist"></a>CDockSite::GetDockSiteRowsList
 
 ```
 const CObList& GetDockSiteRowsList() const;
@@ -424,11 +424,11 @@ const CObList& GetDockSiteRowsList() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpanelist"></a>CDockSite:: копанель
+## <a name="cdocksitegetpanelist"></a><a name="getpanelist"></a>CDockSite:GetPaneList
 
-Возвращает список панелей, закрепленных на сайте закрепления.
+Возвращает список стекол, которые пристыкованы к месту дока.
 
 ```
 const CObList& GetPaneList() const;
@@ -436,9 +436,9 @@ const CObList& GetPaneList() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Доступная только для чтения ссылка на список панелей, которые в данный момент закреплены на закрепленной панели.
+Только для чтения ссылка на список стекол в настоящее время состыкован в стыковочном баре.
 
-##  <a name="isaccessibilitycompatible"></a>CDockSite:: Исакцессибилитикомпатибле
+## <a name="cdocksiteisaccessibilitycompatible"></a><a name="isaccessibilitycompatible"></a>CDockSite::ДоступностьСовместимость
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -446,9 +446,9 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isdragmode"></a>CDockSite:: Исдрагмоде
+## <a name="cdocksiteisdragmode"></a><a name="isdragmode"></a>Кдоксит::Исдрагмой
 
 ```
 virtual BOOL IsDragMode() const;
@@ -456,9 +456,9 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="islastrow"></a>CDockSite:: Исластров
+## <a name="cdocksiteislastrow"></a><a name="islastrow"></a>Кдоксит::IsLastRow
 
 ```
 bool IsLastRow(CDockingPanesRow* pRow) const;
@@ -466,13 +466,13 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 
 ### <a name="parameters"></a>Параметры
 
-окне *пров*<br/>
+(в) *pRow*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isrectwithindocksite"></a>CDockSite:: Исректвисиндокксите
+## <a name="cdocksiteisrectwithindocksite"></a><a name="isrectwithindocksite"></a>CDockSite::IsRecinDockSite
 
 ```
 BOOL IsRectWithinDockSite(
@@ -484,13 +484,13 @@ BOOL IsRectWithinDockSite(
 
 [in] *rect*<br/>
 
-окне *птделта*<br/>
+(в) *ptDelta*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isresizable"></a>CDockSite:: Исресизабле
+## <a name="cdocksiteisresizable"></a><a name="isresizable"></a>CDockSite::Изумного
 
 ```
 virtual BOOL IsResizable() const;
@@ -498,9 +498,9 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="movepane"></a>CDockSite:: Мовепане
+## <a name="cdocksitemovepane"></a><a name="movepane"></a>CDockSite:MovePane
 
 ```
 virtual BOOL MovePane(
@@ -511,17 +511,17 @@ virtual BOOL MovePane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *приводится*<br/>
+(в) *pWnd*<br/>
 
-окне *нфлагс*<br/>
+(в) *nФлаги*<br/>
 
-окне *птоффсет*<br/>
+(в) *ptOffset*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="oninsertrow"></a>CDockSite:: Онинсертров
+## <a name="cdocksiteoninsertrow"></a><a name="oninsertrow"></a>Кдоксит::НаИнстерроу
 
 ```
 virtual void OnInsertRow(POSITION pos);
@@ -529,11 +529,11 @@ virtual void OnInsertRow(POSITION pos);
 
 ### <a name="parameters"></a>Параметры
 
-окне *POS-терминал*<br/>
+(в) *pos*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onremoverow"></a>CDockSite:: Онремоверов
+## <a name="cdocksiteonremoverow"></a><a name="onremoverow"></a>Кдоксит::ОнРумероу
 
 ```
 virtual void OnRemoveRow(
@@ -543,13 +543,13 @@ virtual void OnRemoveRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *POS-терминал*<br/>
+(в) *pos*<br/>
 
-окне *ббишов*<br/>
+(в) *bByShow*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onresizerow"></a>CDockSite:: Онресизеров
+## <a name="cdocksiteonresizerow"></a><a name="onresizerow"></a>Cdocksite::OnResizerow
 
 ```
 virtual int OnResizeRow(
@@ -559,15 +559,15 @@ virtual int OnResizeRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *провторесизе*<br/>
+(в) *prowtoresize*<br/>
 
-окне *ноффсет*<br/>
+(в) *nOffset*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onsizeparent"></a>CDockSite:: Онсизепарент
+## <a name="cdocksiteonsizeparent"></a><a name="onsizeparent"></a>Cdocksite:OnSizeParent
 
 ```
 virtual void OnSizeParent(
@@ -579,17 +579,17 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>Параметры
 
-окне *ректаваилабле*<br/>
+(в) *rectAvailable*<br/>
 
-окне *нсиде*<br/>
+(в) *nSide*<br/>
 
-окне *бекспанд*<br/>
+(в) *bРасширить*<br/>
 
-окне *ноффсет*<br/>
+(в) *nOffset*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onsetwindowpos"></a>CDockSite:: Онсетвиндовпос
+## <a name="cdocksiteonsetwindowpos"></a><a name="onsetwindowpos"></a>Cdocksite::OnsetWindowPos
 
 ```
 virtual BOOL OnSetWindowPos(
@@ -600,17 +600,17 @@ virtual BOOL OnSetWindowPos(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пвндинсертафтер*<br/>
+(в) *pWndInsertAfter*<br/>
 
-окне *ректвнд*<br/>
+(в) *rectWnd*<br/>
 
-окне *нфлагс*<br/>
+(в) *nФлаги*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onshowrow"></a>CDockSite:: Оншовров
+## <a name="cdocksiteonshowrow"></a><a name="onshowrow"></a>Кдоксит::OnShowrow
 
 ```
 virtual void OnShowRow(
@@ -620,13 +620,13 @@ virtual void OnShowRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *POS-терминал*<br/>
+(в) *pos*<br/>
 
-окне *бшов*<br/>
+(в) *bShow*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="panefrompoint"></a>CDockSite::P Анефромпоинт
+## <a name="cdocksitepanefrompoint"></a><a name="panefrompoint"></a>CDockSite::PaneFromPoint
 
 Возвращает область, закрепленную на сайте закрепления в точке, указанной данным параметром.
 
@@ -636,16 +636,16 @@ virtual CPane* PaneFromPoint(CPoint pt);
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-окне Точка, в координатах экрана, для извлекаемой области.
+*пт*<br/>
+(в) Точка, в координатах экрана, для панели для извлечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на область, расположенную в указанной точке, или значение NULL, если в указанной точке отсутствует область.
+Указатель на панель, расположенную в указанной точке или NULL, если в указанной точке не было стекол.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="rectsidefrompoint"></a>CDockSite:: Ректсидефромпоинт
+## <a name="cdocksiterectsidefrompoint"></a><a name="rectsidefrompoint"></a>CDockSite::RectSideFromPoint
 
 ```
 static int __stdcall RectSideFromPoint(
@@ -657,13 +657,13 @@ static int __stdcall RectSideFromPoint(
 
 [in] *rect*<br/>
 
-окне *точка*<br/>
+(в) *точки*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="removepane"></a>CDockSite:: Ремовепане
+## <a name="cdocksiteremovepane"></a><a name="removepane"></a>CDockSite::RemovePane
 
 ```
 virtual void RemovePane(
@@ -673,13 +673,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *приводится*<br/>
+(в) *pWnd*<br/>
 
-окне *доккмесод*<br/>
+(в) *докМетод*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="removerow"></a>CDockSite:: RemoveRow
+## <a name="cdocksiteremoverow"></a><a name="removerow"></a>CDockSite::RemoveRow
 
 ```
 void RemoveRow(CDockingPanesRow* pRow);
@@ -687,11 +687,11 @@ void RemoveRow(CDockingPanesRow* pRow);
 
 ### <a name="parameters"></a>Параметры
 
-окне *пров*<br/>
+(в) *pRow*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="replacepane"></a>CDockSite:: Реплацепане
+## <a name="cdocksitereplacepane"></a><a name="replacepane"></a>CDockSite::ReplacePane
 
 ```
 BOOL ReplacePane(
@@ -701,15 +701,15 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>Параметры
 
-окне *полдбар*<br/>
+(в) *pOldBar*<br/>
 
-окне *пневбар*<br/>
+(в) *pNewBar*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="repositionpanes"></a>CDockSite:: Репоситионпанес
+## <a name="cdocksiterepositionpanes"></a><a name="repositionpanes"></a>CdockSite:RepositionPanes
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -717,11 +717,11 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>Параметры
 
-окне *ректневклиентареа*<br/>
+(в) *rectNewClientArea*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="resizedocksite"></a>CDockSite:: Ресизедокксите
+## <a name="cdocksiteresizedocksite"></a><a name="resizedocksite"></a>Cdocksite:Resizedocksite
 
 ```
 void ResizeDockSite(
@@ -731,13 +731,13 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-окне *нневвидс*<br/>
+(в) *nNewWidth*<br/>
 
-окне *нневхеигхт*<br/>
+(в) *nNewHeight*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="resizerow"></a>CDockSite:: Ресизеров
+## <a name="cdocksiteresizerow"></a><a name="resizerow"></a>Кдоксит::Resizerow
 
 ```
 int ResizeRow(
@@ -748,17 +748,17 @@ int ResizeRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пров*<br/>
+(в) *pRow*<br/>
 
-окне *нневсизе*<br/>
+(в) *nNewSize*<br/>
 
-окне *баджустлайаут*<br/>
+(в) *bAdjustLayout*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="showpane"></a>CDockSite:: Шовпане
+## <a name="cdocksiteshowpane"></a><a name="showpane"></a>CDockSite:ShowPane
 
 Отображает область.
 
@@ -772,27 +772,27 @@ virtual BOOL ShowPane(
 
 ### <a name="parameters"></a>Параметры
 
-*пбар*<br/>
-[вход, выход] Указатель на панель, которую необходимо отобразить или скрыть.
+*pBar*<br/>
+(в, вне) Указатель на панель, чтобы быть показаны или скрыты.
 
 *bShow*<br/>
-окне Значение TRUE, чтобы указать, что область должна отображаться; Значение FALSE, чтобы указать, что панель должна быть скрыта.
+(в) TRUE указать, что панель должна быть показана; FALSE указать, что панель должна быть скрытой.
 
-*бделай*<br/>
-окне Значение TRUE, чтобы указать, что макет области должен быть отложен до отображения панели. в противном случае — значение FALSE.
+*bDelay*<br/>
+(в) TRUE указать, что макет панели должен быть отложен до тех пор, пока не будет показано стекол; в противном случае, FALSE.
 
 *bActivate*<br/>
-окне Этот параметр не используется.
+(в) Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель была успешно отображена или скрыта. Значение FALSE, если указанная панель не принадлежит этому сайту закрепления.
+ПРАВДА, если панель была показана или скрыта успешно. FALSE, если указанное стекло не принадлежит этому сайту дока.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы показать или скрыть закрепленные панели. Как правило, необязательно вызывать `CDockSite::ShowPane` напрямую, так как он вызывается родительским окном фрейма или базовой панелью.
+Вызов иметод, чтобы показать или скрыть пристыкованные стекла. Как правило, вам не `CDockSite::ShowPane` нужно звонить напрямую, потому что он вызывается окном родительской рамы или базовым стеклом.
 
-##  <a name="showrow"></a>CDockSite:: Шовров
+## <a name="cdocksiteshowrow"></a><a name="showrow"></a>CDockSite::ShowRow
 
 ```
 void ShowRow(
@@ -803,15 +803,15 @@ void ShowRow(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пров*<br/>
+(в) *pRow*<br/>
 
-окне *бшов*<br/>
+(в) *bShow*<br/>
 
-окне *баджустлайаут*<br/>
+(в) *bAdjustLayout*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="swaprows"></a>CDockSite:: Свапровс
+## <a name="cdocksiteswaprows"></a><a name="swaprows"></a>CDockSite:SwapRows
 
 ```
 void SwapRows(
@@ -821,13 +821,13 @@ void SwapRows(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пфирстров*<br/>
+(в) *pFirstRow*<br/>
 
-окне *псекондров*<br/>
+(в) *pSecondRow*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

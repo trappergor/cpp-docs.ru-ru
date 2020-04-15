@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aacbe23684914c91129d9962ae847d442cc411b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237329"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375219"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Класс CMFCRibbonContextCaption
 
@@ -31,18 +31,18 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCRibbonContextCaption::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|Возвращает цвет заголовка.|
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
-|`CMFCRibbonContextCaption::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|`CMFCRibbonContextCaption::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Создать экземпляр этого класса напрямую невозможно. [Класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) класс внутренне использует этот класс для добавления цвета категориям ленты.
+Создать экземпляр этого класса напрямую невозможно. Класс [класса CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) использует этот класс внутренне для добавления цвета к категориям ленты.
 
-Чтобы задать цвет категорий ленты, вызовите [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). Чтобы задать цвет для категорий контекста, вызовите [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
+Чтобы установить цвет для категорий лент, позвоните [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor). Чтобы установить цвет для контекстных категорий, позвоните [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,9 +58,9 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 **Заголовок:** afxRibbonBar.h
 
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+## <a name="cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFCRibbonКонтекстCaption::GetColor
 
-Возвращает цвет фона заголовка.
+Возвращает цвет фона подписи.
 
 ```
 AFX_RibbonCategoryColor GetColor() const;
@@ -68,7 +68,7 @@ AFX_RibbonCategoryColor GetColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращаемое значение может быть одно из следующих значений:
+Возвратное значение может быть одним из следующих перечисленных значений:
 
 - `AFX_CategoryColor_None`
 
@@ -86,13 +86,13 @@ AFX_RibbonCategoryColor GetColor() const;
 
 - `AFX_CategoryColor_Violet`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Цвет заголовка можно задать путем вызова [CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) или [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
+Цвет подписи можно установить, позвонив [по CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) или [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory).
 
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+## <a name="cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFCRibbonКонтекстCaption::GetRightTabX
 
-Получает положение правой границы данной категории вкладки ленты.
+Извлекает положение правого края ленты вкладки категории.
 
 ```
 int GetRightTabX() const;
@@ -100,14 +100,14 @@ int GetRightTabX() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает справа X-значение для охватывающего прямоугольника `CMFCRibbonCategory` вкладку ленты объекта или значение -1, если вкладки усекается.
+Возвращает правую X-значение оговоренного прямоугольника `CMFCRibbonCategory` вкладки ленты объекта или значение -1, если вкладка усечена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[Класс CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[Класс CMFCRibbonКатегория](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [Класс CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)

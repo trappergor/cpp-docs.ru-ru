@@ -1,5 +1,5 @@
 ---
-title: Класс _U_RECT
+title: _U_RECT класс
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_U_RECT
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4d5b2a770b3f0ecfe10be0fbad22a702aa0531
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274529"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325812"
 ---
-# <a name="urect-class"></a>Класс _U_RECT
+# <a name="_u_rect-class"></a>_U_RECT класс
 
-Предоставляет класс адаптера этот аргумент `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется в терминах указатели.
+Этот класс адаптера аргумента позволяет передавать указатели `RECT` или ссылки функции, которая реализуется с точки зрения указателей.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,35 +33,35 @@ class _U_RECT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[_U_RECT::_U_RECT](#_u_rect___u_rect)|Конструктор.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Указатель на `RECT`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс определяет две перегрузки конструктора: одна принимает **RECT &** аргумент, а другой принимает `LPRECT` аргумент. Первый конструктор сохраняет адрес ссылочный аргумент в единый данные-член класса, [m_lpRect](#_u_rect__m_lprect). Аргумент для конструктора указатель хранится непосредственно без преобразования.
+Класс определяет две перегрузки конструктора: один принимает **аргумент RECT&,** а другой принимает `LPRECT` аргумент. Первый конструктор хранит адрес эталонного аргумента в едином члене данных класса, [m_lpRect](#_u_rect__m_lprect). Аргумент к конструктору указателя хранится сразу без преобразования.
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlwin.h
 
-##  <a name="_u_rect__m_lprect"></a>  _U_RECT::m_lpRect
+## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a>_U_RECT::m_lpRect
 
-Класс содержит значение, передаваемое в любой из его конструкторов как открытый `LPRECT` элемент данных.
+Класс сохраняет значение, передаваемые одному из `LPRECT` его конструкторов в качестве публичного члена данных.
 
 ```
 LPRECT m_lpRect;
 ```
 
-##  <a name="_u_rect___u_rect"></a>  _U_RECT::_U_RECT
+## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a>_U_RECT::_U_RECT
 
-Адрес ссылочный аргумент хранится в одном данные-член класса, [m_lpRect](#_u_rect__m_lprect).
+Адрес эталонного аргумента хранится в едином члене данных класса, [m_lpRect](#_u_rect__m_lprect).
 
 ```
 _U_RECT(RECT& rc);
@@ -70,16 +70,16 @@ _U_RECT(LPRECT lpRect);
 
 ### <a name="parameters"></a>Параметры
 
-*Версия-кандидат*<br/>
-Объект `RECT` ссылки.
+*Rc*<br/>
+Ссылка `RECT`.
 
 *lpRect*<br/>
-Объект `RECT` указатель.
+Указатель. `RECT`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Аргумент для конструктора указатель хранится непосредственно без преобразования.
+Аргумент к конструктору указателя хранится сразу без преобразования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376653"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
+|[оператора!](#op_neq)|[Оператор&gt;](#op_gt)|[Оператор&gt;&gt;](#op_gt_gt)|
+|[Оператор&gt;=](#op_gt_eq)|[Оператор&lt;](#op_lt)|[Оператор&lt;&lt;](#op_lt_lt)|
+|[Оператор&lt;=](#op_lt_eq)|[оператор](#op_add)|[оператора](#op_eq_eq)|
 
-## <a name="op_add"></a> operator+
+## <a name="operator"></a><a name="op_add"></a>оператор
 
 Сцепляет два строковых объекта.
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для объединения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для объединения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Remarks
 
-Функции каждой перегрузки `operator+` для сцепления двух объектов шаблона класса [Basic_string класса](../standard-library/basic-string-class.md). Все фактически возвращают `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Дополнительные сведения см. в разделе [append](../standard-library/basic-string-class.md#append).
+Функции, каждая из которых перегружается, `operator+` чтобы совмещеть два объекта шаблона класса basic_string [класса.](../standard-library/basic-string-class.md) Все эффективно `basic_string< CharType, Traits, Allocator>(Left).append(right)`вернуться . Для получения дополнительной [append](../standard-library/basic-string-class.md#append)информации см.
 
 ### <a name="example"></a>Пример
 
@@ -169,9 +169,9 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>оператора!
 
-Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора.
+Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. 
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>оператора
 
 Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.
 
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Оператор&lt;
 
 Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.
 
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Оператор&lt;=
 
 Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.
 
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Оператор&lt;&lt;
 
 Функция шаблона, записывающая строку в выходной поток.
 
@@ -563,21 +563,21 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*_Ostr*\
+*_ostr*\
 Поток вывода, в который выполняется запись.
 
-\ *str*
+*Ул*\
 Строка, которую необходимо ввести в поток вывода.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Записывает значение заданной строки в выходной поток *_Ostr*.
+Записывает значение указанной строки в поток вывода *_Ostr.*
 
 ### <a name="remarks"></a>Remarks
 
-Функция шаблона перегружает **оператор < <** для вставки *str* объекта шаблона класса [basic_string](../standard-library/basic-string-class.md) в поток *\_OSTR*. Функция фактически возвращает `_Ostr.write( str.c_str, str.size )`.
+Функция шаблона перегружает **оператора<<** вставить *объектную стрядку* шаблона класса [basic_string](../standard-library/basic-string-class.md) в поток * \_Ostr.* Функция эффективно `_Ostr.write( str.c_str, str.size )`возвращается.
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Оператор&gt;
 
 Проверяет, что строковый объект слева от оператора больше строкового объекта справа от оператора.
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Оператор&gt;=
 
 Проверяет, что строковый объект слева от оператора больше или равен строковому объекту справа от оператора.
 
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*\
+*Левой*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
-*справа*\
+*Правильно*\
 Строка в стиле C или объект типа `basic_string` для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Оператор&gt;&gt;
 
 Функция-шаблон, считывающая строку из входного потока.
 
@@ -796,31 +796,31 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr*\
+*_istr*\
 Входной поток, используемый для извлечения последовательности
 
-*справа*\
+*Правильно*\
 Строка, извлекаемая из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Считывает значение указанной строки из *_Istr* и возвращает ее в *right*.
+Читает значение указанной строки из *_Istr* и возвращает ее *вправо.*
 
 ### <a name="remarks"></a>Remarks
 
 Оператор пропускает начальные пробелы, если не установлен флаг `skipws`. Он считывает следующие символы до пробела или до конца файла.
 
-Функция шаблона перегружает **оператор > >** для замены последовательности, управляемой *справа* , на последовательность элементов, извлеченных из *_Istr*потока. Точки остановки извлечения:
+Функция шаблона перегружает **оператора>>** заменить управляемую *правой* последовательностью элементы, извлеченные из ручья *_Istr.* Точки остановки извлечения:
 
-- Конец файла.
+- в конце файла;
 
 - После извлечения `_Istr` функцией. Элементы **width**, если это значение ненулевое.
 
 После извлечения `_Istr` функцией. Элементы [max_size](../standard-library/basic-string-class.md#max_size).
 
-- После того как функция извлекает элемент *CH* , для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **имеет**значение ( **ctype**\< **CharType**>:: **Space**, *CH*) равно true, в этом случае символ возвращается.
+- После того как функция извлечет элемент *ch*, для которого [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) имеет значение true (в этом случае символ возвращается).
 
-Если функция не извлекает элементы, она вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). В любом случае она вызывает **istr**. **Width**(0) и возвращает \* **this**.
+Если функция не извлекает элементов,`ios_base::failbit`она вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(). В любом случае она вызывает **istr**. **width**(0) и возвращает \* **this**.
 
 ### <a name="example"></a>Пример
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<string>](../standard-library/string.md)
+[\<струнная>](../standard-library/string.md)
