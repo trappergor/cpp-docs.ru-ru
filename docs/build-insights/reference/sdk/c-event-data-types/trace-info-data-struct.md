@@ -1,6 +1,6 @@
 ---
-title: Структура TRACE_INFO_DATA
-description: В C++ пакете SDK для аналитики сборки TRACE_INFO_DATA ссылка на структуру.
+title: структура TRACE_INFO_DATA
+description: Ссылка на структуру СЗ Build Insights SDK TRACE_INFO_DATA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 04cb5c013bca8879507983d169b38e5af0f1322b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335054"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325280"
 ---
-# <a name="trace_info_data-structure"></a>Структура TRACE_INFO_DATA
+# <a name="trace_info_data-structure"></a>структура TRACE_INFO_DATA
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Структура `TRACE_INFO_DATA` описывает анализируемую или регистрируемую трассировку.
+Структура `TRACE_INFO_DATA` описывает анализ или перелогировку трассы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,17 +40,17 @@ typedef struct TRACE_INFO_DATA_TAG
 } TRACE_INFO_DATA;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |  |  |
 |--|--|
-| `LogicalProcessorCount` | Число логических процессоров на компьютере, на котором была собрана трассировка. |
-| `TickFrequency` | Число тактов в секунду, используемое при вычислении длительности, измеряемой в тактах. |
-| `StartTimestamp` | Для этого поля задается значение Tick, заданное во время запуска трассировки. |
-| `StopTimestamp` | Для этого поля задается значение Tick, заданное во время остановки трассировки. |
+| `LogicalProcessorCount` | Количество логических процессоров на машине, где был собран след. |
+| `TickFrequency` | Количество тиков в секунду для использования при оценке продолжительности, измеренной в клещах. |
+| `StartTimestamp` | Это поле настроено на значение тика, захваченное во время запуска трассы. |
+| `StopTimestamp` | Это поле настроено на значение тика, захваченное во время остановки трассы. |
 
 ## <a name="remarks"></a>Remarks
 
-Вычтите `StartTimestamp` из `StopTimestamp`, чтобы получить число тактов, прошедших во время всей трассировки. Используйте `TickFrequency`, чтобы преобразовать полученное значение в единицу времени. Пример преобразования тактов в единицы времени см. в разделе [EVENT_DATA](event-data-struct.md).
+Вычесть `StartTimestamp` `StopTimestamp` из для получения числа клещей, прошедших в течение всего следа. Используйте `TickFrequency` для преобразования полученного значения в единицу времени. Например, что преобразует тиков в единицы времени, [см. EVENT_DATA](event-data-struct.md).
 
 ::: moniker-end

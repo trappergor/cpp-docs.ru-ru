@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246815"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318896"
 ---
 # <a name="cautoptrarray-class"></a>Класс CAutoPtrArray
 
-Этот класс предоставляет методы, используемые при создании массива интеллектуальных указателей.
+Этот класс предоставляет полезные методы при построении массива интеллектуальных указателей.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,15 +40,15 @@ class CAutoPtrArray : public CAtlArray<
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|Конструктор.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет конструктор и методы из производного [CAtlArray](../../atl/reference/catlarray-class.md) и [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) для упрощения создания объекта класса коллекции, хранение интеллектуальные указатели.
+Этот класс обеспечивает конструктор и получает методы из [CAtlArray](../../atl/reference/catlarray-class.md) и [CAutoPtrElementTraits,](../../atl/reference/cautoptrelementtraits-class.md) чтобы помочь созданию объекта класса коллекции, хранящих интеллектуальные указатели.
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,7 +60,7 @@ class CAutoPtrArray : public CAtlArray<
 
 **Заголовок:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Конструктор.
 
@@ -68,13 +68,13 @@ class CAutoPtrArray : public CAtlArray<
 CAutoPtrArray() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует этот массив смарт-указатель.
+Инициализирует интеллектуальный массив указателей.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CAtlArray](../../atl/reference/catlarray-class.md)<br/>
 [Класс CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [Класс CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

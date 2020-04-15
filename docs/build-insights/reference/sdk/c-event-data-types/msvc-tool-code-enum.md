@@ -1,6 +1,6 @@
 ---
-title: Перечисление MSVC_TOOL_CODE
-description: В C++ пакете SDK для аналитики сборки MSVC_TOOL_CODE ссылка перечисления.
+title: MSVC_TOOL_CODE enum
+description: SDK Build Insights sDK MSVC_TOOL_CODE ссылки.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d88a2227808867b04ef3b0557aee9c869beaead1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 96b650b5bce304ad6e487cb100f2b8f85df34eb9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325455"
 ---
-# <a name="msvc_tool_code-enum"></a>Перечисление MSVC_TOOL_CODE
+# <a name="msvc_tool_code-enum"></a>MSVC_TOOL_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Перечисление `MSVC_TOOL_CODE`.
+В `MSVC_TOOL_CODE` enum.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-| Имя | Значение | Description |
+| name | Значение | Описание |
 |--|--|--|
-| `MSVC_TOOL_CODE_CL` | 0 (0x00000000) | Компилятор (Cl. exe). |
-| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | Компоновщик (Link. exe). |
+| `MSVC_TOOL_CODE_CL` | 0 (0x0000000000) | Компилятор (cl.exe). |
+| `MSVC_TOOL_CODE_LINK` | 1 (0x00000001) | Связующее звено (link.exe). |
 
 ## <a name="remarks"></a>Remarks
 
-Используется в функциях пакета SDK C.
+Используется функциями C SDK.
 
 ::: moniker-end

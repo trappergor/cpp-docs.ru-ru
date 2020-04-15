@@ -1,5 +1,5 @@
 ---
-title: 'Класс Platform::Collections:: Vector'
+title: Класс Platform::Collections::Vector
 ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857896"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354374"
 ---
-# <a name="platformcollectionsvector-class"></a>Класс Platform::Collections:: Vector
+# <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
 
-Представляет упорядоченную коллекцию объектов с индивидуальным доступом, осуществляемым при помощи индекса. Реализует [Windows:: Foundation:: Collections:: иобсерваблевектор](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) для помощи с [привязкой данных](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Представляет упорядоченную коллекцию объектов с индивидуальным доступом, осуществляемым при помощи индекса. Реализует [Windows::Foundation::: Коллекции::: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) поможет с [связыванием данных](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -45,58 +45,58 @@ template <typename T, typename E>
 Тип элементов, содержащихся в объекте Vector.
 
 *E*<br/>
-Задает бинарный предикат для проверки равенства со значениями типа *T*. Значение по умолчанию — `std::equal_to<T>`.
+Определяет двоичный предикат для тестирования равенства со значениями типа *T.* Значение по `std::equal_to<T>`умолчанию .
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 Допустимые типы:
 
 1. целые числа
 
-1. класс интерфейса ^
+1. интерфейс класса
 
-1. открытый класс ссылки ^
+1. открытый ссылочный класс ^
 
-1. структура значения
+1. структура значений
 
 1. открытый класс перечисления
 
-Класс **vector** является C++ конкретной реализацией интерфейса [Windows:: Foundation:: Collections:: IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) .
+Класс **«Вектор»** — это конкретная реализация [Windows:::: Коллекции::::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) интерфейс.
 
-При попытке использовать тип **vector** в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+При попытке использования типа **Vector** в значении или параметре общедоступного возврата повышается ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
-### <a name="members"></a>Члены
+### <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|Инициализирует новый экземпляр класса Vector.|
+|[Вектор::Вектор](#ctor)|Инициализирует новый экземпляр класса Vector.|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Vector::Append](#append)|Вставляет указанный элемент после последнего элемента текущего объекта Vector.|
-|[Vector::Clear](#clear)|Удаляет все элементы текущего объекта Vector.|
-|[Вектор:: First](#first)|Возвращает итератор, указывающий первый элемент объекта Vector.|
-|[Vector::GetAt](#getat)|Извлекает элемент текущего объекта Vector, указанный заданным индексом.|
-|[Vector::GetMany](#getmany)|Извлекает последовательность элементов из текущего объекта Vector, начиная с указанного индекса.|
-|[Vector::GetView](#getview)|Возвращает доступное только для чтения представление объекта Vector, то есть [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
-|[Vector::IndexOf](#indexof)|Выполняет поиск указанного элемента в текущем объекте Vector и возвращает его индекс, если он найден.|
-|[Vector::InsertAt](#insertat)|Вставляет указанный элемент в текущий вектор элемента, идентифицируемого по указанному индексу.|
-|[Vector:: ReplaceAll](#replaceall)|Удаляет элементы из текущего объекта Vector, а затем вставляет элементы из указанного массива.|
+|[Вектор::Ясно](#clear)|Удаляет все элементы текущего объекта Vector.|
+|[Вектор::Первый](#first)|Возвращает итератор, указывающий первый элемент объекта Vector.|
+|[Вектор::GetAt](#getat)|Извлекает элемент текущего объекта Vector, указанный заданным индексом.|
+|[Вектор::GetMany](#getmany)|Извлекает последовательность элементов из текущего объекта Vector, начиная с указанного индекса.|
+|[Вектор::GetView](#getview)|Возвращает доступное только для чтения представление объекта Vector, то есть [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md).|
+|[Вектор::Индекс](#indexof)|Выполняет поиск указанного элемента в текущем объекте Vector и возвращает его индекс, если он найден.|
+|[Vector::InsertAt](#insertat)|Вставляет указанный элемент в текущий вектор в элементе, определенном указанным индексом.|
+|[Vector::ReplaceAll](#replaceall)|Удаляет элементы из текущего объекта Vector, а затем вставляет элементы из указанного массива.|
 |[Vector::RemoveAt](#removeat)|Удаляет элемент, определенный заданным индексом из текущего объекта Vector.|
-|[Vector:: Ремовеатенд](#removeatend)|Удаляет элемент в конце текущего объекта Vector.|
+|[Vector::RemoveAtEnd](#removeatend)|Удаляет элемент в конце текущего объекта Vector.|
 |[Vector::SetAt](#setat)|Присваивает указанное значение к элементу текущего объекта Vector, определяемому заданным индексом.|
-|[Vector::Size](#size)|Возвращает количество элементов в текущем объекте Vector.|
+|[Вектор::Размер](#size)|Возвращает количество элементов в текущем объекте Vector.|
 
-### <a name="events"></a>события
+### <a name="events"></a>События
 
 |||
 |-|-|
-|Name|Описание|
-|[Windows Event:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ векторчанжед](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
+|Имя|Описание|
+|Событие [Windows::Фундамент::Коллекция::VectorChangedEventHandler\<T>](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -108,7 +108,7 @@ template <typename T, typename E>
 
 **Пространство имен:** Platform::Collections
 
-## <a name="append"></a>Метод Vector:: Append
+## <a name="vectorappend-method"></a><a name="append"></a>Вектор::Метод аппенда
 
 Вставляет указанный элемент после последнего элемента текущего объекта Vector.
 
@@ -120,10 +120,10 @@ virtual void Append(T item);
 
 ### <a name="parameters"></a>Параметры
 
-*index*<br/>
-Элемент, который требуется вставить в объект Vector. Тип *элемента* определяется свойством *T* TypeName.
+*Индекс*<br/>
+Элемент, который требуется вставить в объект Vector. Тип *элемента* определяется тизами *T.*
 
-## <a name="clear"></a>Метод Vector:: Clear
+## <a name="vectorclear-method"></a><a name="clear"></a>Вектор::Ясный метод
 
 Удаляет все элементы текущего объекта Vector.
 
@@ -133,7 +133,7 @@ virtual void Append(T item);
 virtual void Clear();
 ```
 
-## <a name="first"></a>Метод Vector:: First
+## <a name="vectorfirst-method"></a><a name="first"></a>Вектор::Первый метод
 
 Возвращает итератор, указывающий первый элемент объекта Vector.
 
@@ -147,13 +147,13 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 Итератор, указывающий первый элемент объекта Vector.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Удобным способом удержания итератора, возвращенного первым (), является присвоение возвращаемого значения переменной, объявленной с ключевым словом **автоматического** выведения типа. Например, `auto x = myVector->First();`. Этому итератору известна длина коллекции.
+Удобный способ удержания итератора, возвращенного First() заключается в присвоении значения возврата переменной, которая задекларирована с ключевым словом **автоматического** типа вычета. Например, `auto x = myVector->First();`. Этому итератору известна длина коллекции.
 
-Если для передачи функции STL требуется пара итераторов, используйте функции Free [Windows:: Foundation:: Collections:: Begin](../cppcx/begin-function.md) и [Windows:: Foundation:: Collections:: end](../cppcx/end-function.md)
+Когда вам нужна пара итераторов, чтобы перейти к функции STL, используйте бесплатные функции [Windows::Foundation::Collections::: Начало](../cppcx/begin-function.md) и [Windows::: Коллекции:::Конец](../cppcx/end-function.md)
 
-## <a name="getat"></a>Метод Vector:: GetAt
+## <a name="vectorgetat-method"></a><a name="getat"></a>Вектор::Метод GetAt
 
 Извлекает элемент текущего объекта Vector, указанный заданным индексом.
 
@@ -165,14 +165,14 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="parameters"></a>Параметры
 
-*index*<br/>
+*Индекс*<br/>
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Элемент, заданный параметром *index* . Тип элемента определяется с помощью имени *T* TypeName.
+Элемент, указанный параметром *индекса.* Тип элемента определяется тизацией *T.*
 
-## <a name="getmany"></a>Метод Vector:: множеством
+## <a name="vectorgetmany-method"></a><a name="getmany"></a>Вектор::GetMany Метод
 
 Извлекает последовательность элементов из текущего объекта Vector, начиная с определенного индекса, и копирует их в выделенный вызывающим объектом массив.
 
@@ -190,17 +190,17 @@ virtual unsigned int GetMany(
 Отсчитываемый от нуля индекс начала элементов для извлечения.
 
 *dest*<br/>
-Выделенный вызывающим объектом массив элементов, начинающихся с элемента, указанного *startIndex* , и заканчивая последним элементом в векторе.
+Выделенный абонентом массив элементов, которые начинаются с элемента, указанного *startIndex* и заканчиваются в последнем элементе в векторе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Количество извлеченных элементов.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Эта функция не предназначена для прямого использования в клиентском коде. Он используется внутренне в [функции to_vector](../cppcx/to-vector-function.md) , чтобы обеспечить эффективное преобразование платформы:: Vector принимаемые экземпляры в экземпляры std:: Vector.
+Эта функция не предназначена для прямого использования в клиентском коде. Он используется внутренне в [to_vector функции](../cppcx/to-vector-function.md) для обеспечения эффективного преобразования платформы::Vector intances к std::vector instances.
 
-## <a name="getview"></a>Метод Vector::/View
+## <a name="vectorgetview-method"></a><a name="getview"></a>Вектор::GetView Метод
 
 Возвращает доступное только для чтения представление объекта Vector, то есть интерфейс IVectorView.
 
@@ -214,7 +214,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 Объект IVectorView.
 
-## <a name="indexof"></a>Метод Vector:: IndexOf
+## <a name="vectorindexof-method"></a><a name="indexof"></a>Вектор::Индексоф Метод
 
 Выполняет поиск указанного элемента в текущем объекте Vector и возвращает его индекс, если он найден.
 
@@ -229,22 +229,22 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 Элемент, который нужно найти.
 
-*index*<br/>
-Отсчитываемый от нуля индекс элемента, если *значение* параметра найдено. в противном случае — значение 0.
+*Индекс*<br/>
+Нулевой индекс элемента при обнаружении *значения* параметра; в противном случае, 0.
 
-Параметр *индекса* равен 0, если элемент является первым элементом вектора или элемент не найден. Если возвращаемое значение равно **true**, элемент был найден и является первым элементом; в противном случае элемент не был найден.
+Параметр *индекса* растеряет 0, если элемент является первым элементом вектора или не найден. Если значение возврата **верно,** элемент был найден, и это первый элемент; в противном случае товар не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если указанный элемент найден; в противном случае — **значение false**.
+**верно,** если указанный элемент найден; в противном случае, **ложные**.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
 IndexOf использует std::find_if для поиска элемента. Таким образом, типы настраиваемых элементов должны перегрузить оператор == и != для включения сравнений на равенство, которое требуется для find_if.
 
-##  <a name="insertat"></a>Метод Vector:: Инсертат
+## <a name="vectorinsertat-method"></a><a name="insertat"></a>Вектор::Вставка метод
 
-Вставляет указанный элемент в текущий вектор элемента, идентифицируемого по указанному индексу.
+Вставляет указанный элемент в текущий вектор в элементе, определенном указанным индексом.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -254,13 +254,13 @@ virtual void InsertAt(unsigned int index, T item)
 
 ### <a name="parameters"></a>Параметры
 
-*index*<br/>
+*Индекс*<br/>
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 *item*<br/>
-Элемент, вставляемый в Vector в элементе, указанном параметром *index*. Тип *элемента* определяется свойством *T* TypeName.
+Элемент для вставки в вектор в элементе, указанном *индексом.* Тип *элемента* определяется тизами *T.*
 
-## <a name="removeat"></a>Метод Vector:: RemoveAt
+## <a name="vectorremoveat-method"></a><a name="removeat"></a>Вектор::Удаление метода
 
 Удаляет элемент, определенный заданным индексом из текущего объекта Vector.
 
@@ -272,10 +272,10 @@ virtual void RemoveAt(unsigned int index);
 
 ### <a name="parameters"></a>Параметры
 
-*index*<br/>
+*Индекс*<br/>
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
-## <a name="removeatend"></a>Метод Vector:: Ремовеатенд
+## <a name="vectorremoveatend-method"></a><a name="removeatend"></a>Вектор::Метод удаления
 
 Удаляет элемент в конце текущего объекта Vector.
 
@@ -285,7 +285,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Метод Vector:: ReplaceAll
+## <a name="vectorreplaceall-method"></a><a name="replaceall"></a>Вектор::Заменитьвсе метод
 
 Удаляет элементы из текущего объекта Vector, а затем вставляет элементы из указанного массива.
 
@@ -297,10 +297,10 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 
 ### <a name="parameters"></a>Параметры
 
-*маленькая*<br/>
-Массив объектов, тип которых определяется свойством *T* TypeName.
+*Arr*<br/>
+Массив объектов, тип которых определяется тиной *T.*
 
-## <a name="setat"></a>Метод Vector:: SetAt
+## <a name="vectorsetat-method"></a><a name="setat"></a>Вектор::Метод SetAt
 
 Присваивает указанное значение к элементу текущего объекта Vector, определяемому заданным индексом.
 
@@ -312,13 +312,13 @@ virtual void SetAt(unsigned int index, T item);
 
 ### <a name="parameters"></a>Параметры
 
-*index*<br/>
+*Индекс*<br/>
 Целое значение без знака, отсчитываемое от нуля, которое указывает определенный элемент в объекте Vector.
 
 *item*<br/>
-Значение, присваиваемое указанному элементу. Тип *элемента* определяется свойством *T* TypeName.
+Значение, присваиваемое указанному элементу. Тип *элемента* определяется тизами *T.*
 
-## <a name="size"></a>Метод Vector:: size
+## <a name="vectorsize-method"></a><a name="size"></a>Вектор::Метод размера
 
 Возвращает количество элементов в текущем объекте Vector.
 
@@ -332,7 +332,7 @@ virtual property unsigned int Size;
 
 Количество элементов в текущем объекте Vector.
 
-## <a name="ctor"></a>Конструктор Vector:: Vector
+## <a name="vectorvector-constructor"></a><a name="ctor"></a>Вектор::Векторный конструктор
 
 Инициализирует новый экземпляр класса Vector.
 
@@ -358,40 +358,40 @@ Vector(std::initializer_list<T> il);
 ### <a name="parameters"></a>Параметры
 
 *a*<br/>
-[Массив std:: Array](../standard-library/array-class-stl.md) , который будет использоваться для инициализации вектора.
+[Std::array,](../standard-library/array-class-stl.md) который будет использоваться для инициализации Вектор.
 
-*маленькая*<br/>
-Объект [Platform:: Array](../cppcx/platform-array-class.md) , который будет использоваться для инициализации вектора.
+*Arr*<br/>
+[Платформа::Array,](../cppcx/platform-array-class.md) который будет использоваться для инициализации Вектор.
 
-*Ini*<br/>
+*Init*<br/>
 Тип коллекции объектов, используемой для инициализации текущего объекта Vector.
 
-*il*<br/>
-Объект [std:: initializer_list](../standard-library/initializer-list-class.md) объектов типа *T* , которые будут использоваться для инициализации вектора.
+*Il*<br/>
+[Std::initializer_list](../standard-library/initializer-list-class.md) объектов типа *T,* которые будут использоваться для инициализации Вектор.
 
 *N*<br/>
 Количество элементов в коллекции объектов, используемой для инициализации текущего объекта Vector.
 
-*size*<br/>
+*Размер*<br/>
 Количество элементов в объекте Vector.
 
 *value*<br/>
 Значение, используемое для инициализации каждого элемента в текущем объекте Vector.
 
-*v*<br/>
-[Значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для [std:: Vector](../standard-library/vector-class.md) , который используется для инициализации текущего вектора.
+*V*<br/>
+[Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) к [std::vector,](../standard-library/vector-class.md) который используется для инициализации текущего вектор.
 
-*ptr*<br/>
+*Ptr*<br/>
 Указатель на объект `std::vector`, используемый для инициализации текущего объекта Vector.
 
-*first*<br/>
-Первый элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *первого* передается средствами *идеальной пересылки*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+*Первый*<br/>
+Первый элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *первого* передается с помощью *идеальной пересылки.* Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*last*<br/>
-Последний элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *Last* передается средствами *идеальной пересылки*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+*Последний*<br/>
+Последний элемент в последовательности объектов, используемых для инициализации текущего объекта Vector. Тип *последнего* передается с помощью *идеальной пересылки.* Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Коллекции (C++/CX)](collections-c-cx.md)<br/>
-[Пространство имен платформы](platform-namespace-c-cx.md)<br/>
+[Коллекции (КЗ/CX)](collections-c-cx.md)<br/>
+[Название платформы](platform-namespace-c-cx.md)<br/>
 [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

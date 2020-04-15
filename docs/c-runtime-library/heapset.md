@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351272"
 ---
 # <a name="_heapset"></a>_heapset
 
 Проверяет кучи на предмет минимальной согласованности и задает для свободных записей указанное значение.
 
 > [!IMPORTANT]
->  Эта функция устарела. Начиная с Visual Studio 2015 она недоступна в CRT.
+> Эта функция является устаревшей. Начиная с Visual Studio 2015 она недоступна в CRT.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,7 +49,7 @@ int _heapset(
 
 #### <a name="parameters"></a>Параметры
 
-*fill*<br/>
+*Заполнить*<br/>
 Заполняющий символ.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -65,11 +65,11 @@ int _heapset(
 
 Кроме того, при возникновении ошибки функция `_heapset` устанавливает для параметра `errno` значение `ENOSYS`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
 Функция `_heapset` показывает расположения свободной памяти или узлы, которые были непреднамеренно перезаписаны.
 
-`_heapset` проверяет кучу на предмет минимальной согласованности, а затем задает значение `fill` для каждого байта свободных записей кучи. Это известное значение показывает, какие адреса памяти кучи содержат свободные узлы, а какие содержат данные, которые были непреднамеренно записаны в освободившуюся память. Если операционная система не поддерживает функцию `_heapset`(например, Windows 98), эта функция возвращает `_HEAPOK` и устанавливает для параметра `errno` значение `ENOSYS`.
+`_heapset` проверяет кучу на предмет минимальной согласованности, а затем задает значение `fill` для каждого байта свободных записей кучи. Это известное значение показывает, какие адреса памяти кучи содержат свободные узлы, а какие содержат данные, которые были непреднамеренно записаны в освободившуюся память. Если операционная система не поддерживает функцию `_heapset` (например, Windows 98), эта функция возвращает `_HEAPOK` и устанавливает для параметра `errno` значение `ENOSYS`.
 
 ## <a name="requirements"></a>Требования
 
@@ -121,9 +121,9 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Выделение памяти](../c-runtime-library/memory-allocation.md)<br/>
+[Распределение памяти](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>

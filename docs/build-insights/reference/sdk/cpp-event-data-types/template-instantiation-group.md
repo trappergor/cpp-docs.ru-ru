@@ -1,6 +1,6 @@
 ---
-title: Класс Темплатеинстантиатионграуп
-description: Справочник C++ по классу SDK для Build Insights темплатеинстантиатионграуп.
+title: Класс TemplateInstantiationGroup
+description: Ссылка на исследования в отношении справок о сборке SDK TemplateInstantiationGroup.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 281088b4c6cbd39b2fb7677180a7966b490ec3ac
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 18dd48219c7c68ce152c381eb505fe37b19ec8dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324259"
 ---
-# <a name="templateinstantiationgroup-class"></a>Класс Темплатеинстантиатионграуп
+# <a name="templateinstantiationgroup-class"></a>Класс TemplateInstantiationGroup
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `TemplateInstantiationGroup` используется с функциями [матчевентстакк](../functions/match-event-stack.md) и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления групп [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) событий.
+Класс `TemplateInstantiationGroup` используется с функциями [MatchEventStack](../functions/match-event-stack.md) и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для сопоставления групп [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) событий.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из его базового класса [EventGroup\<темплатеинстантиатион\>](event-group.md) класс `TemplateInstantiationGroup` содержит следующие члены:
+Наряду с унаследованных членов из своего класса `TemplateInstantiationGroup` [Исходная группа\<TemplateInstantiation,\> ](event-group.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[темплатеинстантиатионграуп](#template-instantiation-group)
+[TemplateInstantiationGroup](#template-instantiation-group)
 
-## <a name="template-instantiation-group"></a>темплатеинстантиатионграуп
+## <a name="templateinstantiationgroup"></a><a name="template-instantiation-group"></a>TemplateInstantiationGroup
 
 ```cpp
 TemplateInstantiationGroup(std::deque<TemplateInstantiation>&& group);
@@ -53,7 +53,7 @@ TemplateInstantiationGroup(std::deque<TemplateInstantiation>&& group);
 
 ### <a name="parameters"></a>Параметры
 
-\ *группы*
-Группа событий [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) .
+*Группы*\
+Группа [TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation) событий.
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: Перечисление TEMPLATE_INSTANTIATION_KIND_CODE
-description: В C++ пакете SDK для аналитики сборки TEMPLATE_INSTANTIATION_KIND_CODE ссылка перечисления.
+title: TEMPLATE_INSTANTIATION_KIND_CODE enum
+description: SDK Build Insights sDK TEMPLATE_INSTANTIATION_KIND_CODE ссылку.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 21547b1db997cb755e6836f27efc512e1388d274
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b31f2cf892547adbc566aa9edafdb423b7f528b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335072"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325303"
 ---
-# <a name="template_instantiation_kind_code-enum"></a>Перечисление TEMPLATE_INSTANTIATION_KIND_CODE
+# <a name="template_instantiation_kind_code-enum"></a>TEMPLATE_INSTANTIATION_KIND_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Перечисление `TEMPLATE_INSTANTIATION_KIND_CODE`.
+В `TEMPLATE_INSTANTIATION_KIND_CODE` enum.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-| Имя | Значение | Description |
+| name | Значение | Описание |
 |--|--|--|
-| `TEMPLATE_INSTANTIATION_KIND_CODE_CLASS` | 0 (0x00000000) | Создание экземпляра шаблона класса. |
-| `TEMPLATE_INSTANTIATION_KIND_CODE_FUNCTION` | 1 (0x00000001) | Создание экземпляра шаблона функции. |
-| `TEMPLATE_INSTANTIATION_KIND_CODE_VARIABLE` | 2 (0x00000002) | Создание экземпляра переменной constexpr. |
-| `TEMPLATE_INSTANTIATION_KIND_CODE_CONCEPT` | 3 (0x00000003) | Создание экземпляра шаблона концепции. |
+| `TEMPLATE_INSTANTIATION_KIND_CODE_CLASS` | 0 (0x0000000000) | Мгновенное воспроизведение шаблона класса. |
+| `TEMPLATE_INSTANTIATION_KIND_CODE_FUNCTION` | 1 (0x00000001) | Мгновенное воспроизведение шаблона функции. |
+| `TEMPLATE_INSTANTIATION_KIND_CODE_VARIABLE` | 2 (0x00000002) | Переменное мгновенное воспроизведение constexpr. |
+| `TEMPLATE_INSTANTIATION_KIND_CODE_CONCEPT` | 3 (0x00000003) | Мгновенное представление шаблона концепции. |
 
 ## <a name="remarks"></a>Remarks
 

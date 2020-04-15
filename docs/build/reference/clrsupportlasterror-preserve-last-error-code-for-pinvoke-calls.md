@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 64948d81759d415245e741bc6152d56bb35480d2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 19930591c2d0406c68b1a408622a49c9e8b1d551
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988350"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322277"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Сохранение кода последней ошибки для вызовов PInvoke)
 
-**Параметр/CLRSUPPORTLASTERROR**, который включен по умолчанию, сохраняет последний код ошибки функций, вызываемых через механизм P/Invoke, который позволяет вызывать собственные функции в библиотеках DLL из кода, скомпилированного с **параметром/CLR**.
+**/CLRSUPPORTLASTERROR**, который находится на по умолчанию, сохраняет последний код ошибки функций, вызванных через p/ Invoke механизм, который позволяет вызывать родные функции в DLLS, из кода, компилированного с **/clr**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -24,47 +24,47 @@ ms.locfileid: "74988350"
 /CLRSUPPORTLASTERROR{:NO | SYSTEMDLL}
 ```
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Сохранение последнего кода ошибки подразумевает снижение производительности.  Если вы не хотите повлиять на производительность с сохранением последнего кода ошибки, выполните компоновку с помощью **параметр/CLRSUPPORTLASTERROR: No**.
+Сохранение последнего кода ошибки означает снижение производительности.  Если вы не хотите, чтобы нести влияние на производительность сохранения последнего кода ошибки, ссылка с **/CLRSUPPORTLASTERROR:NO**.
 
-Можно уменьшить влияние на производительность, связавсь с **параметр/CLRSUPPORTLASTERROR: системдлл**, который сохраняет только последний код ошибки для функций в системных библиотеках DLL.  Системная библиотека DLL определяется как одно из следующих:
+Вы можете свести к минимуму влияние на производительность, связавшись с **/CLRSUPPORTLASTERROR:SYSTEMDLL**, который сохраняет только последний код ошибки для функций в системе DLLs.  Система DLL определяется как одна из следующих:
 
 |||||
 |-|-|-|-|
-|АКЛУИ. КОМПОНОВКИ|АКТИВЕДС. КОМПОНОВКИ|АДПТИФ. КОМПОНОВКИ|ADVAPI32.DLL|
-|АСИКФИЛТ. КОМПОНОВКИ|Авторизации. КОМПОНОВКИ|AVICAP32.DLL|AVIFIL32. КОМПОНОВКИ|
-|Файле. КОМПОНОВКИ|КЛУСАПИ. КОМПОНОВКИ|COMCTL32.DLL|COMDLG32. КОМПОНОВКИ|
-|КОМСВКС. КОМПОНОВКИ|CREDUI. КОМПОНОВКИ|CRYPT32.DLL|КРИПТНЕТ. КОМПОНОВКИ|
-|Динамической компоновки Cryptui. КОМПОНОВКИ|D3D8THK. КОМПОНОВКИ|DBGENG. КОМПОНОВКИ|DBGHELP. КОМПОНОВКИ|
-|DCIMAN32. КОМПОНОВКИ|ДНСАПИ. КОМПОНОВКИ|ДСПРОП. КОМПОНОВКИ|ДСУИЕКСТ. КОМПОНОВКИ|
-|GDI32. КОМПОНОВКИ|GLU32. КОМПОНОВКИ|Библиотеке. КОМПОНОВКИ|ICM32. КОМПОНОВКИ|
-|Imagehlp. КОМПОНОВКИ|IMM32. КОМПОНОВКИ|ИФЛПАПИ. КОМПОНОВКИ|ИПРОП. КОМПОНОВКИ|
-|Kernel32. КОМПОНОВКИ|КСУСЕР. КОМПОНОВКИ|LOADPERF. КОМПОНОВКИ|LZ32. КОМПОНОВКИ|
-|Библиотека MAPI32. КОМПОНОВКИ|МГМТАПИ. КОМПОНОВКИ|МОБСИНК. КОМПОНОВКИ|MPR. КОМПОНОВКИ|
-|МПРАПИ. КОМПОНОВКИ|МКРТ. КОМПОНОВКИ|MSACM32. КОМПОНОВКИ|МСКМС. КОМПОНОВКИ|
-|MSI. КОМПОНОВКИ|MSIMG32. КОМПОНОВКИ|МСРАТИНГ. КОМПОНОВКИ|МСТАСК. КОМПОНОВКИ|
-|MSVFW32. КОМПОНОВКИ|МСВСОКК. КОМПОНОВКИ|МТКСЕКС. КОМПОНОВКИ|НДДЕАПИ. КОМПОНОВКИ|
-|NETAPI32. КОМПОНОВКИ|НППТУЛС. КОМПОНОВКИ|NTDSAPI. КОМПОНОВКИ|NTDSBCLI.DLL|
-|НТМСАПИ. КОМПОНОВКИ|Библиотеками odbc32. КОМПОНОВКИ|ODBCBCP. КОМПОНОВКИ|Ole32. КОМПОНОВКИ|
-|ОЛЕАКК. КОМПОНОВКИ|Oleaut32. КОМПОНОВКИ|ОЛЕДЛГ. КОМПОНОВКИ|OPENGL32. КОМПОНОВКИ|
-|PDH. КОМПОНОВКИ|ПОВРПРОФ. КОМПОНОВКИ|КОСНАМЕ. КОМПОНОВКИ|Выбор. КОМПОНОВКИ|
-|RASAPI32.DLL|РАСДЛГ. КОМПОНОВКИ|РАССАПИ. КОМПОНОВКИ|РЕСУТИЛС. КОМПОНОВКИ|
-|Библиотеки RICHED20. КОМПОНОВКИ|RPCNS4. КОМПОНОВКИ|RPCRT4. КОМПОНОВКИ|RTM. КОМПОНОВКИ|
-|РТУТИЛС. КОМПОНОВКИ|СКАРДДЛГ. КОМПОНОВКИ|SECUR32. КОМПОНОВКИ|СЕНСАПИ. КОМПОНОВКИ|
-|Setupapi. КОМПОНОВКИ|SFC. КОМПОНОВКИ|Библиотеки. КОМПОНОВКИ|ШФОЛДЕР. КОМПОНОВКИ|
-|SHLWAPI.DLL|СИСБКУП. КОМПОНОВКИ|СНМПАПИ. КОМПОНОВКИ|СРКЛИЕНТ. КОМПОНОВКИ|
-|СТИ. КОМПОНОВКИ|TAPI32. КОМПОНОВКИ|Трафика. КОМПОНОВКИ|URL-адрес. КОМПОНОВКИ|
-|Urlmon. КОМПОНОВКИ|User32. КОМПОНОВКИ|Следующая. КОМПОНОВКИ|USP10. КОМПОНОВКИ|
-|УКССЕМЕ. КОМПОНОВКИ|ВДМДБГ. КОМПОНОВКИ|Версия. КОМПОНОВКИ|ВИНФАКС. КОМПОНОВКИ|
-|Известен. КОМПОНОВКИ|Операционной. КОМПОНОВКИ|WINMM. КОМПОНОВКИ|WINSCARD. КОМПОНОВКИ|
-|ВИНТРУСТ. КОМПОНОВКИ|WLDAP32. КОМПОНОВКИ|WOW32. КОМПОНОВКИ|WS2_32. DLL|
-|WSNMP32. КОМПОНОВКИ|WSOCK32.DLL|WTSAPI32. КОМПОНОВКИ|КСОЛЕХЛП. КОМПОНОВКИ|
+|ACLUI. Dll|АКТИВДС. Dll|АДПТИФ. Dll|ADVAPI32. Dll|
+|АСИКФИЛТ. Dll|АУТХЗ. Dll|AVICAP32. Dll|AVIFIL32. Dll|
+|Кабинет. Dll|CLUSAPI. Dll|COMCTL32. Dll|COMDLG32. Dll|
+|КОМСВЦ. Dll|КРЕДУИ. Dll|CRYPT32. Dll|КРИПТНЕТ. Dll|
+|КРИПТУИ. Dll|D3D8THK. Dll|DBGENG. Dll|DBGHELP. Dll|
+|DCIMAN32. Dll|DNSAPI. Dll|DSPROP. Dll|ДГУИЕКСТ. Dll|
+|GDI32. Dll|GLU32. Dll|HLINK. Dll|ICM32. Dll|
+|IMAGEHLP. Dll|IMM32. Dll|IPHLPAPI. Dll|ИПРОП. Dll|
+|ЯДРО32. Dll|КСУЗЕР. Dll|LOADPERF. Dll|L-32. Dll|
+|MAPI32. Dll|MGMTAPI. Dll|МОБСИН. Dll|Mpr. Dll|
+|МРАППИ. Dll|МЗРТ. Dll|MSACM32. Dll|MSCMS. Dll|
+|Msi. Dll|MSIMG32. Dll|MSRATING. Dll|МСТАЧ. Dll|
+|MSVFW32. Dll|МСВОСОК. Dll|MTXEX. Dll|НДДЕАПИ. Dll|
+|NETAPI32. Dll|АЭСБУРМС. Dll|NTDSAPI. Dll|NTDSBCLI. Dll|
+|NTMSAPI. Dll|ODBC32. Dll|ODBCBCP. Dll|OLE32. Dll|
+|ОЛЕАКС. Dll|OLEAUT32. Dll|ОЛЕДЛГ. Dll|OPENGL32. Dll|
+|Pdh. Dll|ПОВПРОФ. Dll|ЗОСНАМЕ. Dll|Запроса. Dll|
+|RASAPI32. Dll|РАСДЛГ. Dll|РАССАПИ. Dll|РЕСУТИЛС. Dll|
+|RICHED20. Dll|RPCNS4. Dll|RPCRT4. Dll|Rtm. Dll|
+|ЛЕТТИЛС. Dll|СКАРДЛГ. Dll|SECUR32. Dll|SENSAPI. Dll|
+|SETUPAPI. Dll|Sfc. Dll|Shell32. Dll|SHFOLDER. Dll|
+|SHLWAPI. Dll|SISBKUP. Dll|SNMPAPI. Dll|СРЛИНЕС. Dll|
+|Иппп. Dll|TAPI32. Dll|Трафика. Dll|Url. Dll|
+|УРЛМОН. Dll|USER32. Dll|Userenv. Dll|USP10. Dll|
+|UXTHEME. Dll|VDMDBG. Dll|Версия. Dll|Winfax. Dll|
+|ВАЙНХHTTP. Dll|Wininet. Dll|ВИНММ. Dll|WINSCARD. Dll|
+|WINTRUST. Dll|WLDAP32. Dll|WOW32. Dll|WS2_32.DLL|
+|WSNMP32. Dll|WSOCK32.DLL|ВЦКАПИ32. Dll|XOLEHLP. Dll|
 
 > [!NOTE]
->  Сохранение последней ошибки не поддерживается для неуправляемых функций, используемых кодом CLR в одном модуле.
+> Сохранение последней ошибки не поддерживается для неуправляемых функций, которые потребляются кодом CLR, в том же модуле.
 
-- Дополнительные сведения см. в разделе [/clr (компиляция CLR)](clr-common-language-runtime-compilation.md).
+- Для получения дополнительной информации [см.](clr-common-language-runtime-compilation.md)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
@@ -74,7 +74,7 @@ ms.locfileid: "74988350"
 
 1. Выберите страницу свойств **Командная строка** .
 
-1. Введите параметр в поле **Дополнительные параметры** .
+1. Введите опцию в поле **дополнительных опций.**
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
@@ -82,7 +82,7 @@ ms.locfileid: "74988350"
 
 ## <a name="example"></a>Пример
 
-В следующем примере определяется собственная библиотека DLL с одной экспортированной функцией, которая изменяет последнюю ошибку.
+Следующий пример определяет родной DLL с одной экспортируемой функцией, которая изменяет последнюю ошибку.
 
 ```cpp
 // CLRSUPPORTLASTERROR_dll.cpp
@@ -99,7 +99,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 
 ## <a name="example"></a>Пример
 
-В следующем примере используется библиотека DLL, в которой демонстрируется использование **параметр/CLRSUPPORTLASTERROR**.
+Следующий образец потребляет DLL, демонстрируя, как использовать **/CLRSUPPORTLASTERROR**.
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp
@@ -150,7 +150,7 @@ GetLastError for application call failed (127).
 GetLastError for system call succeeded (183).
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
-[Параметры компоновщика MSVC](linker-options.md)
+[Варианты MSVC Linker](linker-options.md)

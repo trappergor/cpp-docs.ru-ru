@@ -1,5 +1,5 @@
 ---
-title: Класс Колесафеаррай
+title: Класс ColeSafeArray
 ms.date: 08/29/2019
 f1_keywords:
 - COleSafeArray
@@ -60,14 +60,14 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a0ce0fc03923806c9e044a7edae3178fd3429b76
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177393"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374862"
 ---
-# <a name="colesafearray-class"></a>Класс Колесафеаррай
+# <a name="colesafearray-class"></a>Класс ColeSafeArray
 
 Класс для работы с массивами произвольных типов и измерений.
 
@@ -81,54 +81,54 @@ class COleSafeArray : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Колесафеаррай:: Колесафеаррай](#colesafearray)|Создает объект `COleSafeArray`.|
+|[ColeSafeArray::COleSafeArray](#colesafearray)|Формирует объект `COleSafeArray`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Колесафеаррай:: Акцессдата](#accessdata)|Извлекает указатель на данные массива.|
-|[Колесафеаррай:: Аллокдата](#allocdata)|Выделяет память для массива.|
-|[Колесафеаррай:: Аллокдескриптор](#allocdescriptor)|Выделяет память для дескриптора безопасного массива.|
-|[Колесафеаррай:: Attach](#attach)|Предоставляет Управление существующим `VARIANT` массивом `COleSafeArray` объекту.|
-|[Колесафеаррай:: Clear](#clear)|Освобождает все данные в базовом `VARIANT`.|
-|[Колесафеаррай:: Copy](#copy)|Создает копию существующего массива.|
-|[Колесафеаррай:: Create](#create)|Создает надежный массив.|
-|[Колесафеаррай:: Креатеонедим](#createonedim)|Создает одномерный `COleSafeArray` объект.|
-|[Колесафеаррай::D естрой](#destroy)|Уничтожает существующий массив.|
-|[Колесафеаррай::D Естройдата](#destroydata)|Уничтожает данные в надежном массиве.|
-|[Колесафеаррай::D Естройдескриптор](#destroydescriptor)|Уничтожает дескриптор безопасного массива.|
-|[Колесафеаррай::D етач](#detach)|Отсоединяет массив вариантов от `COleSafeArray` объекта (так что данные не будут освобождены).|
-|[Колесафеаррай:: Жетбитеаррай](#getbytearray)|Копирует содержимое безопасного массива в [CByteArray](../../mfc/reference/cbytearray-class.md).|
-|[Колесафеаррай:: Жетдим](#getdim)|Возвращает число измерений в массиве.|
-|[Колесафеаррай:: элемент](#getelement)|Извлекает один элемент безопасного массива.|
-|[Колесафеаррай:: Жетелемсизе](#getelemsize)|Возвращает размер одного элемента в массиве безопасного массива (в байтах).|
-|[Колесафеаррай:: Жетлбаунд](#getlbound)|Возвращает нижнюю границу любого измерения безопасного массива.|
-|[Колесафеаррай:: Жетонедимсизе](#getonedimsize)|Возвращает количество элементов в одномерном `COleSafeArray` объекте.|
-|[Колесафеаррай:: Жетубаунд](#getubound)|Возвращает верхнюю границу любого измерения безопасного массива.|
-|[Колесафеаррай:: Lock](#lock)|Увеличивает счетчик блокировок массива и помещает указатель на данные массива в дескрипторе массива.|
-|[Колесафеаррай::P Трофиндекс](#ptrofindex)|Возвращает указатель на индексированный элемент.|
-|[Колесафеаррай::P Утелемент](#putelement)|Помещает в массив один элемент.|
-|[Колесафеаррай:: ReDim](#redim)|Изменяет наименее значимую (правую) границу безопасного массива.|
-|[Колесафеаррай:: Ресизеонедим](#resizeonedim)|Изменяет число элементов в одномерном `COleSafeArray` объекте.|
-|[Колесафеаррай:: Унакцессдата](#unaccessdata)|Уменьшает счетчик блокировок массива и делает недействительным указатель, `AccessData`извлеченный.|
-|[Колесафеаррай:: Unlock](#unlock)|Уменьшает счетчик блокировок массива, чтобы его можно было освободить или изменить его размер.|
+|[ColeSafeArray::AccessData](#accessdata)|Извлекает указатель на данные массива.|
+|[COleSafeArray::AllocData](#allocdata)|Выделяет память для массива.|
+|[ColeSafeArray::АллокДескриптор](#allocdescriptor)|Выделяет память для дескриптора безопасного массива.|
+|[ColeSafeArray::Attach](#attach)|Предоставляет объекту `VARIANT` контроль над `COleSafeArray` существующим массивом.|
+|[ColeSafeArray::Clear](#clear)|Освобождает все данные в `VARIANT`базовом .|
+|[ColeSafeArray::Copy](#copy)|Создает копию существующего массива.|
+|[ColeSafeArray::Создание](#create)|Создает безопасный массив.|
+|[ColeSafeArray::CreateOneDim](#createonedim)|Создает одномерный `COleSafeArray` объект.|
+|[ColeSafeArray::Destroy](#destroy)|Уничтожает существующий массив.|
+|[ColeSafeArray::DestroyData](#destroydata)|Уничтожает данные в безопасном массиве.|
+|[ColeSafeArray::DэстройДескриптор](#destroydescriptor)|Уничтожает дескриптор безопасного массива.|
+|[ColeSafeArray: :Detach](#detach)|Отсоединяет массив VARIANT от `COleSafeArray` объекта (чтобы данные не освобождался).|
+|[ColeSafeArray::GetByteArray](#getbytearray)|Копирует содержимое безопасного массива в [CByteArray](../../mfc/reference/cbytearray-class.md).|
+|[ColeSafeArray::GetDim](#getdim)|Возвращает число измерений в массиве.|
+|[ColeSafeArray::GetElement](#getelement)|Извлекает один элемент безопасного массива.|
+|[ColeSafeArray::GetElemSize](#getelemsize)|Возвращает размер, в байтах, одного элемента в безопасном массиве.|
+|[ColeSafeArray::GetLBound](#getlbound)|Возвращает нижнюю границу для любого измерения безопасного массива.|
+|[ColeSafeArray::GetOneDimSize](#getonedimsize)|Возвращает количество элементов в одномерном `COleSafeArray` объекте.|
+|[ColeSafeArray::GetUBound](#getubound)|Возвращает верхнюю границу для любого измерения безопасного массива.|
+|[ColeSafeArray::Lock](#lock)|Приравливывает количество блокировки массива и помещает указатель на данные массива в дескрипторе массива.|
+|[ColeSafeArray::PtrOfIndex](#ptrofindex)|Возвращает указатель на индексированный элемент.|
+|[ColeSafeArray::PutElement](#putelement)|Помещает в массив один элемент.|
+|[ColeSafeArray::Redim](#redim)|Изменяет наименее значимую (самую правой) границу безопасного массива.|
+|[ColeSafeArray::ResizeoneDim](#resizeonedim)|Изменяет количество элементов в `COleSafeArray` одномерном объекте.|
+|[ColeSafeArray::UnaccessData](#unaccessdata)|Декретирует количество блокировки массива и аннулирует указатель, извлеченный `AccessData`.|
+|[ColeSafeArray::Разблокировка](#unlock)|Устрашает количество блокировки массива, чтобы он мог быть освобожден или уменьшен.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Колесафеаррай:: operator ЛПКВАРИАНТ](#operator_lpcvariant)|Обращается к базовой `VARIANT` структуре `COleSafeArray` объекта.|
-|[Колесафеаррай:: operator ЛПВАРИАНТ](#operator_lpvariant)|Обращается к базовой `VARIANT` структуре `COleSafeArray` объекта.|
-|[Колесафеаррай:: operator =](#operator_eq)|Копирует значения `COleSafeArray` в объект ( `VARIANT``SAFEARRAY` ,`COleVariant`, или`COleSafeArray` массив).|
-|[Колесафеаррай:: operator = =](#operator_eq_eq)|Сравнивает два вариативных`SAFEARRAY`массива ( `COleVariant`, `VARIANT`, или `COleSafeArray` ).|
-|[Колесафеаррай:: operator&lt;&lt;](#operator_lt_lt)|Выводит содержимое `COleSafeArray` объекта в контекст дампа.|
+|[COleSafeArray:оператор LPCVARIANT](#operator_lpcvariant)|Доступ к основной `VARIANT` структуре `COleSafeArray` объекта.|
+|[COleSafeArray::оператор LPVARIANT](#operator_lpvariant)|Доступ к основной `VARIANT` структуре `COleSafeArray` объекта.|
+|[COleSafeArray::оператор](#operator_eq)|Копирует значения в `COleSafeArray` объект`SAFEARRAY` `VARIANT`(, `COleVariant` `COleSafeArray` , или массив).|
+|[COleSafeArray::оператор](#operator_eq_eq)|Сравнивает два варианта`SAFEARRAY` `VARIANT`массива (, `COleVariant`или `COleSafeArray` массивы).|
+|[COleSafeArray::оператор&lt;&lt;](#operator_lt_lt)|Выводы содержимого `COleSafeArray` объекта в контекст еспатого.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`COleSafeArray`является производным от структуры `VARIANT` OLE. Функции- `SAFEARRAY` члены OLE доступны через `COleSafeArray`, а также набор функций-членов, специально разработанных для одномерные массивов байтов.
+`COleSafeArray`вытекает из `VARIANT` структуры OLE. Функции `SAFEARRAY` членов OLE `COleSafeArray`доступны через, а также набор функций членов, специально предназначенных для одномерных массивов байтов.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -140,7 +140,7 @@ class COleSafeArray : public tagVARIANT
 
 **Заголовок:** afxdisp.h
 
-##  <a name="accessdata"></a>Колесафеаррай:: Акцессдата
+## <a name="colesafearrayaccessdata"></a><a name="accessdata"></a>ColeSafeArray::AccessData
 
 Извлекает указатель на данные массива.
 
@@ -150,18 +150,18 @@ void AccessData(void** ppvData);
 
 ### <a name="parameters"></a>Параметры
 
-*ппвдата*<br/>
-Указатель на указатель на данные массива.
+*ppvData*<br/>
+Указатель указателя на указатель на данные массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#26](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]
 
-##  <a name="allocdata"></a>Колесафеаррай:: Аллокдата
+## <a name="colesafearrayallocdata"></a><a name="allocdata"></a>COleSafeArray::AllocData
 
 Выделяет память для безопасного массива.
 
@@ -169,11 +169,11 @@ void AccessData(void** ppvData);
 void AllocData();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="allocdescriptor"></a>Колесафеаррай:: Аллокдескриптор
+## <a name="colesafearrayallocdescriptor"></a><a name="allocdescriptor"></a>ColeSafeArray::АллокДескриптор
 
 Выделяет память для дескриптора безопасного массива.
 
@@ -183,16 +183,16 @@ void AllocDescriptor(DWORD dwDims);
 
 ### <a name="parameters"></a>Параметры
 
-*двдимс*<br/>
-Число измерений в надежном массиве.
+*dwDims*<br/>
+Количество размеров в безопасном массиве.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="attach"></a>Колесафеаррай:: Attach
+## <a name="colesafearrayattach"></a><a name="attach"></a>ColeSafeArray::Attach
 
-Предоставляет управление данными в существующем `VARIANT` массиве `COleSafeArray` объекту.
+Предоставляет объекту контроль над `VARIANT` данными `COleSafeArray` в существующем массиве.
 
 ```
 void Attach(VARIANT& varSrc);
@@ -200,32 +200,32 @@ void Attach(VARIANT& varSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*варсрк*<br/>
-Объект `VARIANT`. Параметр *варсрк* должен иметь значение VarType [VT_ARRAY](/windows/win32/api/wtypes/ne-wtypes-varenum).
+*varSrc*<br/>
+Объект `VARIANT` . Параметр *varSrc* должен иметь [VT_ARRAY](/windows/win32/api/wtypes/ne-wtypes-varenum)VARTYPE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Для типа `VARIANT`источника задано значение VT_EMPTY. Эта функция очищает текущие данные массива, если таковые имеются.
+Тип `VARIANT`источника установлен на VT_EMPTY. Эта функция очищает текущие данные массива, если таковые имеются.
 
 ### <a name="example"></a>Пример
 
-  См. пример для [колесафеаррай:: акцессдата](#accessdata).
+  Смотрите пример [COleSafeArray::AccessData](#accessdata).
 
-##  <a name="clear"></a>Колесафеаррай:: Clear
+## <a name="colesafearrayclear"></a><a name="clear"></a>ColeSafeArray::Clear
 
-Очищает защищенный массив.
+Очищает безопасный массив.
 
 ```
 void Clear();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция очищает защищенный массив, устанавливая `VARTYPE` для объекта значение VT_EMPTY. Текущее содержимое освобождается, а массив освобождается.
+Функция очищает безопасный массив, `VARTYPE` устанавливая объект на VT_EMPTY. Текущее содержимое освобождается и массив освобождается.
 
-##  <a name="colesafearray"></a>Колесафеаррай:: Колесафеаррай
+## <a name="colesafearraycolesafearray"></a><a name="colesafearray"></a>ColeSafeArray::COleSafeArray
 
-Создает объект `COleSafeArray`.
+Формирует объект `COleSafeArray`.
 
 ```
 COleSafeArray();
@@ -246,28 +246,28 @@ COleSafeArray(const COleVariant& varSrc);
 
 ### <a name="parameters"></a>Параметры
 
-*сасрк*<br/>
-Существующий `COleSafeArray` объект или `SAFEARRAY` для копирования в новый `COleSafeArray` объект.
+*saSrc*<br/>
+Существующий `COleSafeArray` объект `SAFEARRAY` или для копирования `COleSafeArray` в новый объект.
 
-*втсрк*<br/>
-Объект VarType нового `COleSafeArray` объекта.
+*vtSrc*<br/>
+VARTYPE нового `COleSafeArray` объекта.
 
-*псасрк*<br/>
-Указатель на объект, `SAFEARRAY` который необходимо скопировать в новый `COleSafeArray` объект.
+*psaSrc*<br/>
+Указатель на `SAFEARRAY` скопированный в `COleSafeArray` новый объект указатель.
 
-*варсрк*<br/>
-Существующий `VARIANT` объект или `COleVariant` , который будет скопирован в новый `COleSafeArray` объект.
+*varSrc*<br/>
+Существующий `VARIANT` `COleVariant` или объект, который должен `COleSafeArray` быть скопирован в новый объект.
 
-*pSrc*<br/>
-Указатель на `VARIANT` объект, который необходимо скопировать в новый `COleSafeArray` объект.
+*Psrc*<br/>
+Указатель на `VARIANT` объект, который должен быть `COleSafeArray` скопирован в новый объект.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Все эти конструкторы создают новые `COleSafeArray` объекты. Если параметр отсутствует, создается пустой `COleSafeArray` объект (VT_EMPTY). Если копируется из другого массива, для которого определено неявное значение `COleSafeArray`VarType `COleVariant`(a `VARIANT`, или), то VarType исходного массива сохраняется, и его не нужно указывать. `COleSafeArray` Если копируется из другого массива, у которого нет известного параметра`SAFEARRAY`VarType (), необходимо указать VarType в параметре *втсрк.* `COleSafeArray`
+Все эти конструкторы создают `COleSafeArray` новые объекты. Если параметра нет, `COleSafeArray` создается пустой объект (VT_EMPTY). Если скопирован из другого массива, который `COleSafeArray`VARTYPE известен неявно (a, `COleVariant`, или), `VARIANT`VARTYPE исходного массива сохраняется и не требуется указывать. `COleSafeArray` Если `COleSafeArray` он скопирован из другого массива, о каком VARTYPE не известен (),`SAFEARRAY`VARTYPE должен быть указан в параметре *vtSrc.*
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="copy"></a>Колесафеаррай:: Copy
+## <a name="colesafearraycopy"></a><a name="copy"></a>ColeSafeArray::Copy
 
 Создает копию существующего безопасного массива.
 
@@ -277,14 +277,14 @@ void Copy(LPSAFEARRAY* ppsa);
 
 ### <a name="parameters"></a>Параметры
 
-*ппса*<br/>
-Указатель на расположение, в котором возвращается новый дескриптор массива.
+*ppsa*<br/>
+Указатель на место, в котором можно вернуть новый дескриптор массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="create"></a>Колесафеаррай:: Create
+## <a name="colesafearraycreate"></a><a name="create"></a>ColeSafeArray::Создание
 
 Выделяет и инициализирует данные для массива.
 
@@ -302,27 +302,27 @@ void Create(
 
 ### <a name="parameters"></a>Параметры
 
-*втсрк*<br/>
-Базовый тип массива (то есть VARTYPE каждого элемента массива). Переменная VARTYPE ограничена подмножеством типов Variant. Не может быть задан ни VT_ARRAY, ни флаг VT_BYREF. VT_EMPTY и VT_NULL не являются допустимыми базовыми типами для массива. Все остальные типы являются допустимыми.
+*vtSrc*<br/>
+Базовый тип массива (т.е. VARTYPE каждого элемента массива). VARTYPE ограничен подмножеством типов вариантов. Ни VT_ARRAY, ни VT_BYREF флаг не могут быть установлены. VT_EMPTY и VT_NULL не являются действительными базовыми типами для массива. Все остальные типы являются законными.
 
-*двдимс*<br/>
-Число измерений в массиве. Его можно изменить после создания массива с помощью [ReDim](#redim).
+*dwDims*<br/>
+Количество измерений в массиве. Это может быть изменено после создания массива с [помощью Redim.](#redim)
 
-*ржелементс*<br/>
-Указатель на массив числа элементов для каждого измерения в массиве.
+*rgElements*<br/>
+Указатель на массив количества элементов для каждого измерения в массиве.
 
-*ргсабаундс*<br/>
-Указатель на вектор границ (по одному для каждого измерения), выделяемый для массива.
+*rgsabounds*<br/>
+Указатель на вектор границ (по одному для каждого измерения) для выделения для массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция при необходимости очистит текущие данные массива. При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
+Эта функция позволит очистить текущие данные массива, если это необходимо. При ошибке функция бросает [CMemoryException.](../../mfc/reference/cmemoryexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]
 
-##  <a name="createonedim"></a>Колесафеаррай:: Креатеонедим
+## <a name="colesafearraycreateonedim"></a><a name="createonedim"></a>ColeSafeArray::CreateOneDim
 
 Создает новый одномерный `COleSafeArray` объект.
 
@@ -336,29 +336,29 @@ void CreateOneDim(
 
 ### <a name="parameters"></a>Параметры
 
-*втсрк*<br/>
-Базовый тип массива (то есть VARTYPE каждого элемента массива).
+*vtSrc*<br/>
+Базовый тип массива (т.е. VARTYPE каждого элемента массива).
 
-*двелементс*<br/>
-Число элементов в массиве. Его можно изменить после создания массива с помощью [ресизеонедим](#resizeonedim).
+*dwElements*<br/>
+Количество элементов в массиве. Это может быть изменено после создания массива с [помощью ResizeOneDim](#resizeonedim).
 
-*пвсркдата*<br/>
-Указатель на данные, копируемые в массив.
+*pvSrcData*<br/>
+Указатель на данные для копирования в массив.
 
-*нлбаунд*<br/>
+*nLBound*<br/>
 Нижняя граница массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция выделяет и инициализирует данные для массива, копируя указанные данные, если указатель *пвсркдата* не равен null.
+Функция выделяет и инициализирует данные для массива, копируя указанные данные, если указатель *pvSrcData* не является NULL.
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md).
+При ошибке функция бросает [CMemoryException.](../../mfc/reference/cmemoryexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#28](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]
 
-##  <a name="destroy"></a>Колесафеаррай::D естрой
+## <a name="colesafearraydestroy"></a><a name="destroy"></a>ColeSafeArray::Destroy
 
 Уничтожает существующий дескриптор массива и все данные в массиве.
 
@@ -366,23 +366,23 @@ void CreateOneDim(
 void Destroy();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объекты хранятся в массиве, каждый объект освобождается. При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+Если объекты хранятся в массиве, каждый объект освобождается. При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="destroydata"></a>Колесафеаррай::D Естройдата
+## <a name="colesafearraydestroydata"></a><a name="destroydata"></a>ColeSafeArray::DestroyData
 
-Уничтожает все данные в надежном массиве.
+Уничтожает все данные в безопасном массиве.
 
 ```
 void DestroyData();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объекты хранятся в массиве, каждый объект освобождается. При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+Если объекты хранятся в массиве, каждый объект освобождается. При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="destroydescriptor"></a>Колесафеаррай::D Естройдескриптор
+## <a name="colesafearraydestroydescriptor"></a><a name="destroydescriptor"></a>ColeSafeArray::DэстройДескриптор
 
 Уничтожает дескриптор безопасного массива.
 
@@ -390,13 +390,13 @@ void DestroyData();
 void DestroyDescriptor();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="detach"></a>Колесафеаррай::D етач
+## <a name="colesafearraydetach"></a><a name="detach"></a>ColeSafeArray: :Detach
 
-Отсоединяет `COleSafeArray` данные от объекта. `VARIANT`
+Отсеивает данные `VARIANT` с `COleSafeArray` объекта.
 
 ```
 VARIANT Detach();
@@ -404,21 +404,21 @@ VARIANT Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Базовое `VARIANT` значение `COleSafeArray` в объекте.
+Базовое `VARIANT` значение объекта. `COleSafeArray`
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция отсоединяет данные в надежном массиве, устанавливая VARTYPE объекта в значение VT_EMPTY. Ответственность за освобождение массива путем вызова функции Windows [вариантклеар](/windows/win32/api/oleauto/nf-oleauto-variantclear).
+Функция отсоединяет данные в безопасном массиве, установив VARTYPE объекта на VT_EMPTY. Это ответственность абонента, чтобы освободить массив, позвонив функции Windows [VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear).
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
-  См. пример для [колесафеаррай::P утелемент](#putelement).
+  Смотрите пример [COleSafeArray::PutElement](#putelement).
 
-##  <a name="getbytearray"></a>Колесафеаррай:: Жетбитеаррай
+## <a name="colesafearraygetbytearray"></a><a name="getbytearray"></a>ColeSafeArray::GetByteArray
 
-Копирует содержимое безопасного массива в `CByteArray`.
+Копирует содержимое безопасного массива `CByteArray`в .
 
 ```
 void GetByteArray(CByteArray& bytes);
@@ -426,12 +426,12 @@ void GetByteArray(CByteArray& bytes);
 
 ### <a name="parameters"></a>Параметры
 
-*байт*<br/>
-Ссылка на объект [CByteArray](../../mfc/reference/cbytearray-class.md) .
+*Байт*<br/>
+Ссылка на объект [CByteArray.](../../mfc/reference/cbytearray-class.md)
 
-##  <a name="getdim"></a>Колесафеаррай:: Жетдим
+## <a name="colesafearraygetdim"></a><a name="getdim"></a>ColeSafeArray::GetDim
 
-Возвращает количество измерений в `COleSafeArray` объекте.
+Возвращает количество измерений `COleSafeArray` в объекте.
 
 ```
 DWORD GetDim();
@@ -439,13 +439,13 @@ DWORD GetDim();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число измерений в надежном массиве.
+Количество размеров в безопасном массиве.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#27](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]
 
-##  <a name="getelement"></a>Колесафеаррай:: элемент
+## <a name="colesafearraygetelement"></a><a name="getelement"></a>ColeSafeArray::GetElement
 
 Извлекает один элемент безопасного массива.
 
@@ -457,25 +457,25 @@ void GetElement(
 
 ### <a name="parameters"></a>Параметры
 
-*ргиндицес*<br/>
+*rgIndices*<br/>
 Указатель на массив индексов для каждого измерения массива.
 
-*пвдата*<br/>
-Указатель на расположение для размещения элемента массива.
+*pvData*<br/>
+Указатель на место для размещения элемента массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция автоматически вызывает функции `SafeArrayLock` Windows и `SafeArrayUnlock` до и после получения элемента. Если элемент Data является строкой, объектом или вариантом, функция копирует элемент правильным образом. Параметр *пвдата* должен указывать на большой размер буфера, чтобы вместить элемент.
+Эта функция автоматически вызывает `SafeArrayLock` `SafeArrayUnlock` функции окон и до и после извлечения элемента. Если элемент данных является строкой, объектом или вариантом, функция копирует элемент правильным образом. Параметр *pvData* должен указывать на достаточно большой буфер, чтобы содержать элемент.
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#29](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]
 
-##  <a name="getelemsize"></a>Колесафеаррай:: Жетелемсизе
+## <a name="colesafearraygetelemsize"></a><a name="getelemsize"></a>ColeSafeArray::GetElemSize
 
-Возвращает размер элемента в `COleSafeArray` объекте.
+Извлекает размер элемента `COleSafeArray` в объект.
 
 ```
 DWORD GetElemSize();
@@ -483,11 +483,11 @@ DWORD GetElemSize();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер (в байтах) элементов безопасного массива.
+Размер, в байтах, элементов безопасного массива.
 
-##  <a name="getlbound"></a>Колесафеаррай:: Жетлбаунд
+## <a name="colesafearraygetlbound"></a><a name="getlbound"></a>ColeSafeArray::GetLBound
 
-Возвращает нижнюю границу для любого измерения `COleSafeArray` объекта.
+Возвращает нижнюю границу для `COleSafeArray` любого измерения объекта.
 
 ```
 void GetLBound(
@@ -497,21 +497,21 @@ void GetLBound(
 
 ### <a name="parameters"></a>Параметры
 
-*двдим*<br/>
-Измерение массива, для которого необходимо получить нижнюю границу.
+*dwDim*<br/>
+Измерение массива, для которого можно получить нижнюю границу.
 
-*плбаунд*<br/>
-Указатель на расположение для возврата нижней границы.
+*pLBound*<br/>
+Указатель на место, чтобы вернуть нижнюю границу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#30](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]
 
-##  <a name="getonedimsize"></a>Колесафеаррай:: Жетонедимсизе
+## <a name="colesafearraygetonedimsize"></a><a name="getonedimsize"></a>ColeSafeArray::GetOneDimSize
 
 Возвращает количество элементов в одномерном `COleSafeArray` объекте.
 
@@ -521,15 +521,15 @@ DWORD GetOneDimSize();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число элементов одномерного безопасного массива.
+Количество элементов в одномерном безопасном массиве.
 
 ### <a name="example"></a>Пример
 
-  См. пример для [колесафеаррай:: креатеонедим](#createonedim).
+  Смотрите пример [для COleSafeArray::CreateOneDim](#createonedim).
 
-##  <a name="getubound"></a>Колесафеаррай:: Жетубаунд
+## <a name="colesafearraygetubound"></a><a name="getubound"></a>ColeSafeArray::GetUBound
 
-Возвращает верхнюю границу любого измерения безопасного массива.
+Возвращает верхнюю границу для любого измерения безопасного массива.
 
 ```
 void GetUBound(
@@ -539,59 +539,59 @@ void GetUBound(
 
 ### <a name="parameters"></a>Параметры
 
-*двдим*<br/>
-Измерение массива, для которого необходимо получить верхнюю границу.
+*dwDim*<br/>
+Измерение массива, для которого можно получить верхнюю границу.
 
-*пубаунд*<br/>
-Указатель на расположение для возврата верхней границы.
+*pUBound*<br/>
+Указатель на место, чтобы вернуть верхнюю границу.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#31](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]
 
-##  <a name="lock"></a>Колесафеаррай:: Lock
+## <a name="colesafearraylock"></a><a name="lock"></a>ColeSafeArray::Lock
 
-Увеличивает счетчик блокировок массива и помещает указатель на данные массива в дескрипторе массива.
+Приравливывает количество блокировки массива и размещает указатель на данные массива в дескрипторе массива.
 
 ```
 void Lock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки возникает исключение [COleException](../../mfc/reference/coleexception-class.md).
+По ошибке, он бросает [COleException](../../mfc/reference/coleexception-class.md).
 
-Указатель в дескрипторе массива является допустимым до `Unlock` вызова метода. Вызовы могут быть вложенными; требуется равное число `Unlock` вызовов. `Lock`
+Указатель в дескрипторе массива `Unlock` действителен до тех пор, пока не будет вызван. Вызовы `Lock` могут быть вложены; требуется `Unlock` равное количество вызовов.
 
-Невозможно удалить массив, пока он заблокирован.
+Массив не может быть удален, пока он заблокирован.
 
-##  <a name="operator_lpcvariant"></a>Колесафеаррай:: operator ЛПКВАРИАНТ
+## <a name="colesafearrayoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleSafeArray:оператор LPCVARIANT
 
-Вызовите этот оператор приведения, чтобы `VARIANT` получить доступ к `COleSafeArray` базовой структуре для этого объекта.
+Вызовите этого оператора литья, чтобы получить доступ к базовой `VARIANT` структуре для этого `COleSafeArray` объекта.
 
 ```
 operator LPCVARIANT() const;
 ```
 
-##  <a name="operator_lpvariant"></a>Колесафеаррай:: operator ЛПВАРИАНТ
+## <a name="colesafearrayoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleSafeArray::оператор LPVARIANT
 
-Вызовите этот оператор приведения, чтобы `VARIANT` получить доступ к `COleSafeArray` базовой структуре для этого объекта.
+Вызовите этого оператора литья, чтобы получить доступ к базовой `VARIANT` структуре для этого `COleSafeArray` объекта.
 
 ```
 operator LPVARIANT();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обратите внимание, что изменение значения `VARIANT` в структуре, к которой обращается указатель, возвращаемой этой функцией, приведет `COleSafeArray` к изменению значения этого объекта.
+Обратите внимание, что `VARIANT` изменение значения в структуре, доступ к которой будет `COleSafeArray` добавлен указателем этой функции, изменит значение этого объекта.
 
-##  <a name="operator_eq"></a>Колесафеаррай:: operator =
+## <a name="colesafearrayoperator-"></a><a name="operator_eq"></a>COleSafeArray::оператор
 
-Эти перегруженные операторы присваивания копируют исходное значение в этот `COleSafeArray` объект.
+Эти перегруженные операторы назначения копируют `COleSafeArray` исходное значение в этом объекте.
 
 ```
 COleSafeArray& operator=(const COleSafeArray& saSrc);
@@ -600,19 +600,19 @@ COleSafeArray& operator=(LPCVARIANT pSrc);
 COleSafeArray& operator=(const COleVariant& varSrc);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Краткое описание каждого оператора приведено ниже.
+Краткое описание каждого оператора:
 
-- **operator = (** *сасрк* **)** Копирует существующий `COleSafeArray` объект в этот объект.
+- **оператор** *(saSrc* **)** Копирует существующий `COleSafeArray` объект в этот объект.
 
-- **operator = (** *варсрк* **)** Копирует существующий `VARIANT` массив или `COleVariant` в этот объект.
+- **оператор No** *(varSrc* **)** Копирует `VARIANT` существующий `COleVariant` или массив в этот объект.
 
-- **operator = (** *pSrc* **)** Копирует объект массива, к которому обращается pSrc, в этот объект. `VARIANT`
+- **оператор** *(pSrc* **)** Копирует `VARIANT` объект массива, доступ к объекту, доступ к нему со *стороны pSrc.*
 
-##  <a name="operator_eq_eq"></a>Колесафеаррай:: operator = =
+## <a name="colesafearrayoperator-"></a><a name="operator_eq_eq"></a>COleSafeArray::оператор
 
-Этот оператор сравнивает два массива`SAFEARRAY`(массивы `VARIANT` `COleVariant`,, или `COleSafeArray` ) и возвращает ненулевое значение, если они равны; в противном случае — 0.
+Этот оператор сравнивает два`SAFEARRAY` `VARIANT`массива (, `COleVariant`, или `COleSafeArray` массивы) и возвращает ненулевой, если они равны; в противном случае 0.
 
 ```
 BOOL operator==(const SAFEARRAY& saSrc) const;  BOOL operator==(LPCSAFEARRAY pSrc) const;
@@ -622,13 +622,13 @@ BOOL operator==(const COleSafeArray& saSrc) const;  BOOL operator==(const VARIAN
 BOOL operator==(LPCVARIANT pSrc) const;  BOOL operator==(const COleVariant& varSrc) const;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Два массива равны, если они имеют одинаковое число измерений, равный размер в каждом измерении и равны значениям элементов.
+Два массива равны, если они имеют равное количество измерений, равный размер в каждом измерении и равные значения элементов.
 
-##  <a name="operator_lt_lt"></a>Колесафеаррай:: operator&lt;&lt;
+## <a name="colesafearrayoperator-ltlt"></a><a name="operator_lt_lt"></a>COleSafeArray::оператор&lt;&lt;
 
-Оператор вставки (< <) поддерживает дамп и сохранение `COleSafeArray` объекта в архив. `COleSafeArray`
+Оператор `COleSafeArray` вставки (<<) поддерживает диагностический `COleSafeArray` демпинг и хранение объекта в архиве.
 
 ```
 CDumpContext& AFXAPI operator<<(
@@ -636,9 +636,9 @@ CDumpContext& AFXAPI operator<<(
     COleSafeArray& saSrc);
 ```
 
-##  <a name="ptrofindex"></a>Колесафеаррай::P Трофиндекс
+## <a name="colesafearrayptrofindex"></a><a name="ptrofindex"></a>ColeSafeArray::PtrOfIndex
 
-Возвращает указатель на элемент, указанный в значениях индекса.
+Возвращает указатель элемента, указанного значениями индекса.
 
 ```
 void PtrOfIndex(
@@ -648,13 +648,13 @@ void PtrOfIndex(
 
 ### <a name="parameters"></a>Параметры
 
-*ргиндицес*<br/>
-Массив значений индекса, который определяет элемент массива. Необходимо указать все индексы для элемента.
+*rgIndices*<br/>
+Массив значений индекса, которые идентифицируют элемент массива. Все индексы элемента должны быть указаны.
 
-*ппвдата*<br/>
-При возвращении — указатель на элемент, определяемый значениями в *ргиндицес*.
+*ppvData*<br/>
+На веревке указатель на элемент, определенный значениями в *rgIndices.*
 
-##  <a name="putelement"></a>Колесафеаррай::P Утелемент
+## <a name="colesafearrayputelement"></a><a name="putelement"></a>ColeSafeArray::PutElement
 
 Помещает в массив один элемент.
 
@@ -666,27 +666,27 @@ void PutElement(
 
 ### <a name="parameters"></a>Параметры
 
-*ргиндицес*<br/>
+*rgIndices*<br/>
 Указатель на массив индексов для каждого измерения массива.
 
-*пвдата*<br/>
-Указатель на данные, которые требуется поместить в массив. Типы Variant VT_DISPATCH, VT_UNKNOWN и VT_BSTR являются указателями и не нуждаются в другом уровне косвенного обращения.
+*pvData*<br/>
+Указатель на данные, которые требуется поместить в массив. VT_DISPATCH, VT_UNKNOWN и VT_BSTR типами вариантов являются указатели и не требуют другого уровня косвенности.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция автоматически вызывает функции Windows [сафеаррайлокк](/windows/win32/api/oleauto/nf-oleauto-safearraylock) и [сафеаррайунлокк](/windows/win32/api/oleauto/nf-oleauto-safearrayunlock) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.
+Эта функция автоматически вызывает функции Windows [SafeArrayLock](/windows/win32/api/oleauto/nf-oleauto-safearraylock) и [SafeArrayUnlock](/windows/win32/api/oleauto/nf-oleauto-safearrayunlock) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.
 
 Обратите внимание, для массива можно настроить несколько блокировок, поэтому вы можете поместить в него элементы, недоступные для других операций.
 
-При возникновении ошибки функция создает исключение [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [CMemoryException](../../mfc/reference/cmemoryexception-class.md) или [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_MFCOleContainer#32](../../mfc/codesnippet/cpp/colesafearray-class_7.cpp)]
 
-##  <a name="redim"></a>Колесафеаррай:: ReDim
+## <a name="colesafearrayredim"></a><a name="redim"></a>ColeSafeArray::Redim
 
-Изменяет наименее значимую (правую) границу безопасного массива.
+Изменяет наименее значимую (самую правой) границу безопасного массива.
 
 ```
 void Redim(SAFEARRAYBOUND* psaboundNew);
@@ -694,16 +694,16 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 ### <a name="parameters"></a>Параметры
 
-*псабаунднев*<br/>
-Указатель на новую структуру с привязкой к защищенному массиву, содержащую новый привязанный массив. Можно изменить только наименее значимое измерение массива.
+*psaboundНовые*<br/>
+Указатель на новую структуру связанного безопасного массива, содержащую новую связанную массивную структуру. Изменяются только наименее значительное измерение массива.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
-##  <a name="resizeonedim"></a>Колесафеаррай:: Ресизеонедим
+## <a name="colesafearrayresizeonedim"></a><a name="resizeonedim"></a>ColeSafeArray::ResizeoneDim
 
-Изменяет число элементов в одномерном `COleSafeArray` объекте.
+Изменяет количество элементов в `COleSafeArray` одномерном объекте.
 
 ```
 void ResizeOneDim(DWORD dwElements);
@@ -711,46 +711,46 @@ void ResizeOneDim(DWORD dwElements);
 
 ### <a name="parameters"></a>Параметры
 
-*двелементс*<br/>
-Количество элементов одномерного безопасного массива.
+*dwElements*<br/>
+Количество элементов в одномерном безопасном массиве.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
-  См. пример для [колесафеаррай:: креатеонедим](#createonedim).
+  Смотрите пример [для COleSafeArray::CreateOneDim](#createonedim).
 
-##  <a name="unaccessdata"></a>Колесафеаррай:: Унакцессдата
+## <a name="colesafearrayunaccessdata"></a><a name="unaccessdata"></a>ColeSafeArray::UnaccessData
 
-Уменьшает счетчик блокировок массива и делает недействительным указатель, `AccessData`извлеченный.
+Декретирует количество блокировки массива и аннулирует указатель, извлеченный `AccessData`.
 
 ```
 void UnaccessData();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-При возникновении ошибки функция создает исключение [COleException](../../mfc/reference/coleexception-class.md).
+При ошибке функция бросает [COleException.](../../mfc/reference/coleexception-class.md)
 
 ### <a name="example"></a>Пример
 
-  См. пример для [колесафеаррай:: акцессдата](#accessdata).
+  Смотрите пример [COleSafeArray::AccessData](#accessdata).
 
-##  <a name="unlock"></a>Колесафеаррай:: Unlock
+## <a name="colesafearrayunlock"></a><a name="unlock"></a>ColeSafeArray::Разблокировка
 
-Уменьшает счетчик блокировок массива, чтобы его можно было освободить или изменить его размер.
+Устрашает количество блокировки массива, чтобы он мог быть освобожден или уменьшен.
 
 ```
 void Unlock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывается после завершения доступа к данным в массиве. При возникновении ошибки возникает исключение [COleException](../../mfc/reference/coleexception-class.md).
+Эта функция вызывается после завершения доступа к данным в массиве. По ошибке, он бросает [COleException](../../mfc/reference/coleexception-class.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleVariant](../../mfc/reference/colevariant-class.md)<br/>

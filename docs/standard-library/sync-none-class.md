@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 046cbca30b6cdef2dc4e7dbbe2791d52384d9f25
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450317"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376569"
 ---
-# <a name="syncnone-class"></a>Класс sync_none
+# <a name="sync_none-class"></a>Класс sync_none
 
-Описывает [фильтр синхронизации](../standard-library/allocators-header.md), который не предоставляет синхронизацию.
+Описывает [фильтр синхронизации,](../standard-library/allocators-header.md) который не обеспечивает синхронизации.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,12 +36,12 @@ class sync_none
 |---------------|-----------------|
 |`Cache`|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="member-functions"></a>Функции элементов
 
-|Функция Member|Описание|
+|Функция-член|Описание|
 |-|-|
-|[allocate](#allocate)|Выделяет блок памяти.|
-|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
+|[Выделить](#allocate)|Выделяет блок памяти.|
+|[Освобождения](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
 ## <a name="requirements"></a>Требования
@@ -50,7 +50,7 @@ class sync_none
 
 **Пространство имен:** stdext
 
-## <a name="allocate"></a>  sync_none::allocate
+## <a name="sync_noneallocate"></a><a name="allocate"></a>sync_none::
 
 Выделяет блок памяти.
 
@@ -62,13 +62,13 @@ void *allocate(std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*count*|Число элементов в массиве, которые нужно выделить.|
+|*count*|Число выделяемых элементов в массиве.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Функция-член возвращает `cache.allocate(count)`, где `cache` — объект кэша.
 
-## <a name="deallocate"></a>  sync_none::deallocate
+## <a name="sync_nonedeallocate"></a><a name="deallocate"></a>sync_none::dраспределение
 
 Освобождает указанное число объектов из памяти, начиная с заданной позиции.
 
@@ -80,14 +80,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
+|*Ptr*|Указатель на первый объект, который должен быть освобожден из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Эта функция-член вызывает `cache.deallocate(ptr, count)`, где `cache` представляет объект кэша.
 
-## <a name="equals"></a>  sync_none::equals
+## <a name="sync_noneequals"></a><a name="equals"></a>sync_none::равные
 
 Сравнивает два кэша на равенство.
 
@@ -100,14 +100,14 @@ bool equals(const sync<Cache>& Other) const;
 |Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Объект кэша фильтра синхронизации.|
-|*Другое*|Объект кэша для сравнения на равенство.|
+|*Прочее*|Объект кэша для сравнения на равенство.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция члена всегда возвращает **значение true**.
+Функция участника всегда **возвращается верно.**
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

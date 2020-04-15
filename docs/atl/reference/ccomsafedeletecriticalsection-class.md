@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомсафеделетекритикалсектион
+title: CComSafeDeleteCriticalSection класс
 ms.date: 11/04/2016
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: da83bc5d0c2ebb79aee07f30069144368169fc26
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: cb0dc440fc0e79e0023b5fbd6e4ca2345d031d3d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821653"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327369"
 ---
-# <a name="ccomsafedeletecriticalsection-class"></a>Класс Ккомсафеделетекритикалсектион
+# <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection класс
 
-Этот класс предоставляет методы для получения и освобождения владения объектом критической секции.
+Этот класс предоставляет методы получения и освобождения права собственности на объект критического раздела.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,44 +33,44 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомсафеделетекритикалсектион:: Ккомсафеделетекритикалсектион](#ccomsafedeletecriticalsection)|Конструктор.|
-|[Ккомсафеделетекритикалсектион:: ~ Ккомсафеделетекритикалсектион](#dtor)|Деструктор|
+|[CComSafeDeleteCriticalSection::CComSafeDeletecriticalSection](#ccomsafedeletecriticalsection)|Конструктор.|
+|[CComSafeDeleteCriticalSection:: »CComSafeDeletecriticalSection](#dtor)|Деструктор|
 
-### <a name="public-methods"></a>Общедоступные методы
+### <a name="public-methods"></a>Открытые методы
 
-|Name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомсафеделетекритикалсектион:: init](#init)|Создает и инициализирует объект критической секции.|
-|[Ккомсафеделетекритикалсектион:: Lock](#lock)|Получает владение объектом критической секции.|
-|[Ккомсафеделетекритикалсектион:: Term](#term)|Освобождает системные ресурсы, используемые объектом критического раздела.|
+|[CComSafeDeleteCriticalSection::Init](#init)|Создает и инициализирует критический объект раздела.|
+|[CComSafeDeleteCriticalSection::Lock](#lock)|Получает право собственности на объект критического сечения.|
+|[CComSafeDeleteCriticalSection::Срок](#term)|Выпускает системные ресурсы, используемые критическим объектом секции.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
-|[m_bInitialized](#m_binitialized)|Помечает, инициализирован ли внутренний объект `CRITICAL_SECTION`.|
+|[m_bInitialized](#m_binitialized)|Флаги ли `CRITICAL_SECTION` внутренний объект был инициализирован.|
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-`CComSafeDeleteCriticalSection` является производным от класса [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md). Однако `CComSafeDeleteCriticalSection` предоставляет дополнительные механизмы безопасности по сравнению с [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md).
+`CComSafeDeleteCriticalSection`вытекает из класса [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Тем `CComSafeDeleteCriticalSection` не менее, обеспечивает дополнительные механизмы безопасности над [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).
 
-Когда экземпляр `CComSafeDeleteCriticalSection` выходит из области или явно удаляется из памяти, базовый объект критической секции автоматически очищается, если он по-прежнему является допустимым. Кроме того, метод [ккомсафеделетекритикалсектион:: Term](#term) будет закрыт, если базовый объект критического раздела еще не был выделен или уже освобожден из памяти.
+Когда экземпляр `CComSafeDeleteCriticalSection` выходит из области или явно удаляется из памяти, основной объект критического раздела автоматически очищается, если он по-прежнему действителен. Кроме того, [CComSafeDeleteCriticalSection::Термин](#term) метод выйдет изящно, если основной объект критического сечения еще не выделен или уже освобожден из памяти.
 
-Дополнительные сведения о вспомогательных классах критической секции см. в разделе [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md) .
+Дополнительную информацию о критических классах помощников секции можно узнать на [cComCriticalSection.](../../atl/reference/ccomcriticalsection-class.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md)
+[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)
 
 `CComSafeDeleteCriticalSection`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлкоре. h
+**Заголовок:** atlcore.h
 
-##  <a name="ccomsafedeletecriticalsection"></a>Ккомсафеделетекритикалсектион:: Ккомсафеделетекритикалсектион
+## <a name="ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeletecriticalSection
 
 Конструктор.
 
@@ -78,11 +78,11 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 CComSafeDeleteCriticalSection();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Задает для элемента данных [m_bInitialized](#m_binitialized) значение false.
+Устанавливает m_bInitialized член [данных](#m_binitialized) в FALSE.
 
-##  <a name="dtor"></a>Ккомсафеделетекритикалсектион:: ~ Ккомсафеделетекритикалсектион
+## <a name="ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="dtor"></a>CComSafeDeleteCriticalSection:: »CComSafeDeletecriticalSection
 
 Деструктор
 
@@ -90,13 +90,13 @@ CComSafeDeleteCriticalSection();
 ~CComSafeDeleteCriticalSection() throw();
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Освобождает внутренний объект `CRITICAL_SECTION` из памяти, если [m_bInitialized](#m_binitialized) элемент данных имеет значение true.
+Освобождает внутренний `CRITICAL_SECTION` объект из памяти, [m_bInitialized](#m_binitialized) если m_bInitialized данный настроен на ИСТИНу.
 
-##  <a name="init"></a>Ккомсафеделетекритикалсектион:: init
+## <a name="ccomsafedeletecriticalsectioninit"></a><a name="init"></a>CComSafeDeleteCriticalSection::Init
 
-Вызывает реализацию метода [init](/visualstudio/debugger/init) для базового класса и задает для [m_bInitialized](#m_binitialized) значение true в случае успеха.
+Вызывает реализацию базового класса [Init](/visualstudio/debugger/init) и устанавливает [m_bInitialized](#m_binitialized) к TRUE в случае успеха.
 
 ```
 HRESULT Init() throw();
@@ -104,11 +104,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает результат [ккомкритикалсектион:: init](../../atl/reference/ccomcriticalsection-class.md#init).
+Возвращает результат [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init).
 
-##  <a name="lock"></a>Ккомсафеделетекритикалсектион:: Lock
+## <a name="ccomsafedeletecriticalsectionlock"></a><a name="lock"></a>CComSafeDeleteCriticalSection::Lock
 
-Вызывает реализацию [блокировки](ccomcriticalsection-class.md#lock)базового класса.
+Вызывает реализацию [базового](ccomcriticalsection-class.md#lock)класса Lock .
 
 ```
 HRESULT Lock();
@@ -116,29 +116,29 @@ HRESULT Lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает результат [ккомкритикалсектион:: Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
+Возвращает результат [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Этот метод предполагает, что при записи для элемента данных [m_bInitialized](#m_binitialized) ЗАДАНО значение true. Утверждение создается в отладочных сборках, если это условие не выполнено.
+Этот метод предполагает, [что m_bInitialized](#m_binitialized) данных член установлен на TRUE при входе. Утверждение генерируется в сборках Debug, если это условие не выполнено.
 
-Дополнительные сведения о поведении функции см. в разделе [ккомкритикалсектион:: Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
+Для получения дополнительной информации о поведении функции, обратитесь к [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock).
 
-##  <a name="m_binitialized"></a>Ккомсафеделетекритикалсектион:: m_bInitialized
+## <a name="ccomsafedeletecriticalsectionm_binitialized"></a><a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized
 
-Помечает, инициализирован ли внутренний объект `CRITICAL_SECTION`.
+Флаги ли `CRITICAL_SECTION` внутренний объект был инициализирован.
 
 ```
 bool m_bInitialized;
 ```
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Элемент данных `m_bInitialized` используется для контроля допустимости базового `CRITICAL_SECTION` объекта, связанного с классом [ккомсафеделетекритикалсектион](../../atl/reference/ccomsafedeletecriticalsection-class.md) . Базовый объект `CRITICAL_SECTION` не будет пытаться освободить из памяти, если этот флаг не установлен в значение TRUE.
+Член `m_bInitialized` данных используется для отслеживания достоверности базового `CRITICAL_SECTION` объекта, связанного с классом [CComSafeDeleteCriticalSection.](../../atl/reference/ccomsafedeletecriticalsection-class.md) Основной `CRITICAL_SECTION` объект не будет предпринят, если этот флаг не будет установлен на ИСТИНу.
 
-##  <a name="term"></a>Ккомсафеделетекритикалсектион:: Term
+## <a name="ccomsafedeletecriticalsectionterm"></a><a name="term"></a>CComSafeDeleteCriticalSection::Срок
 
-Вызывает реализацию базового класса [ккомкритикалсектион:: Term](../../atl/reference/ccomcriticalsection-class.md#term) , если внутренний объект `CRITICAL_SECTION` является допустимым.
+Вызывает реализацию базового класса [CComCriticalSection::Term,](../../atl/reference/ccomcriticalsection-class.md#term) если внутренний `CRITICAL_SECTION` объект действителен.
 
 ```
 HRESULT Term() throw();
@@ -146,13 +146,13 @@ HRESULT Term() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает результат [ккомкритикалсектион:: Term](../../atl/reference/ccomcriticalsection-class.md#term)или S_OK, если для [m_bInitialized](#m_binitialized) было задано значение false при входе.
+Возвращает результат [CComCriticalSection::Срок](../../atl/reference/ccomcriticalsection-class.md#term), или S_OK, если [m_bInitialized](#m_binitialized) был установлен на FALSE при входе.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-Вызывать этот метод можно, даже если внутренний объект `CRITICAL_SECTION` является недопустимым. Деструктор этого класса вызывает этот метод, если элемент данных [m_bInitialized](#m_binitialized) имеет значение true.
+Этот метод можно назвать безопасным, `CRITICAL_SECTION` даже если внутренний объект недействителен. Деструктор этого класса вызывает этот [метод,](#m_binitialized) если m_bInitialized данный член установлен в TRUE.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

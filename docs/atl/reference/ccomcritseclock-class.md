@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24d141c5b0ec703feadcd7db96da33f9de940dda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327953"
 ---
 # <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
 
-Этот класс предоставляет методы для блокировки и разблокировки объект критической секции.
+Этот класс предоставляет методы блокировки и разблокировки объекта критических секций.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,33 +30,33 @@ template<class TLock> class CComCritSecLock
 #### <a name="parameters"></a>Параметры
 
 *TLock*<br/>
-Объект для блокировки и разблокировать.
+Объект, который будет заблокирован и разблокирован.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|Конструктор.|
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Деструктор|
+|[CComCritSecLock::: »CComCritSecLock](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComCritSecLock::Lock](#lock)|Вызовите этот метод, чтобы заблокировать объект критической секции.|
-|[CComCritSecLock::Unlock](#unlock)|Вызовите этот метод, чтобы разблокировать объект критической секции.|
+|[CComCritSecLock::Блокировка](#lock)|Вызовите этот метод, чтобы заблокировать объект критического сечения.|
+|[CComCritSecLock::Разблокировка](#unlock)|Вызовите этот метод, чтобы разблокировать критический объект раздела.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс используется для блокирования и разблокирования объектов более безопасным способом, чем с [класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) или [класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).
+Используйте этот класс для блокировки и разблокировки объектов более безопасным способом, чем с [CComCriticalSection Class](../../atl/reference/ccomcriticalsection-class.md) или [CComAutoCriticalSection Class.](../../atl/reference/ccomautocriticalsection-class.md)
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlbase.h
 
-##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
 
 Конструктор.
 
@@ -67,16 +67,16 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="parameters"></a>Параметры
 
 *cs*<br/>
-Объект критической секции.
+Объект критического сечения.
 
 *bInitialLock*<br/>
-Состояние начального блокировки: **true** означает, что заблокирована.
+Начальное состояние блокировки: **истинные** средства заблокированы.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует объект критической секции.
+Инициализирует объект критического сечения.
 
-##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock::: »CComCritSecLock
 
 Деструктор
 
@@ -84,13 +84,13 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ~CComCritSecLock() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Разблокирует объект критической секции.
+Разблокирует объект критического сечения.
 
-##  <a name="lock"></a>  CComCritSecLock::Lock
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Блокировка
 
-Вызовите этот метод, чтобы заблокировать объект критической секции.
+Вызовите этот метод, чтобы заблокировать объект критического сечения.
 
 ```
 HRESULT Lock() throw();
@@ -98,25 +98,25 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK, если объект успешно заблокирован или ошибки HRESULT в случае сбоя.
+Возвращает S_OK, если объект был успешно заблокирован, или ошибка HRESULT при сбое.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объект уже заблокирован, в отладочных сборках возникнет ошибка УТВЕРЖДЕНИЯ.
+Если объект уже заблокирован, в сборках отладок возникает ошибка ASSERT.
 
-##  <a name="unlock"></a>  CComCritSecLock::Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Разблокировка
 
-Вызовите этот метод, чтобы разблокировать объект критической секции.
+Вызовите этот метод, чтобы разблокировать критический объект раздела.
 
 ```
 void Unlock() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объект уже разблокирован, в отладочных сборках возникнет ошибка УТВЕРЖДЕНИЯ.
+Если объект уже разблокирован, в сборках отладок возникает ошибка ASSERT.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [Класс CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)

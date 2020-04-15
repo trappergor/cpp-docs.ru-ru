@@ -1,8 +1,9 @@
 ---
 title: _aligned_offset_malloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _aligned_offset_malloc
+- _o__aligned_offset_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1f13afbab75d2926d1c642c1430a3ffe5ecbac8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350588"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
@@ -49,28 +51,30 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>Параметры
 
-*size*<br/>
+*Размер*<br/>
 Размер запрошенного выделения памяти.
 
-*Выравнивание*<br/>
+*выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
-*offset*<br/>
+*Смещение*<br/>
 Смещение в выделение памяти для принудительного выполнения выравнивания.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на блок памяти, который был выделен, или **значение NULL** , если операция завершилась ошибкой.
+Указатель на блок памяти, который был выделен или **NULL,** если операция не удалась.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**_aligned_offset_malloc** полезен в ситуациях, когда для вложенного элемента требуется выравнивание. Например, если для вложенного класса требуется выравнивание.
+**_aligned_offset_malloc** полезен в ситуациях, когда выравнивание необходимо на вложенном элементе; например, если выравнивание необходимо для вложенного класса.
 
-**_aligned_offset_malloc** основан на **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
+**_aligned_offset_malloc** основанна на **malloc**; для получения дополнительной информации, см [Malloc](malloc.md).
 
-**_aligned_offset_malloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** `__declspec(noalias)` отмечени `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что указатель возвращается не псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-Эта **функция устанавливает** **еномем** в случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о параметре " [право_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)" см **. в разделе**"переданные", "_sys_errlist" и "_sys_nerr". Кроме того, **_aligned_offset_malloc** проверяет свои параметры. Если параметр *alignment* не является степенью 2 или *смещение* больше или равно *размеру* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **значение NULL** **и устанавливает для** **еинвал**.
+Эта функция устанавливает **errno** к **ENOMEM,** если распределение памяти не удалось или если запрашиваемый размер был **больше,** чем _HEAP_MAXREQ . Для получения дополнительной информации о **errno**, см [Errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является силой 2 или если *смещение* больше или равно *размеру* и ненулевой, эта функция вызывает недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция возвращает **NULL** и устанавливает **errno** **в EINVAL.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -82,6 +86,6 @@ void * _aligned_offset_malloc(
 
 Дополнительные сведения см. в разделе [_aligned_malloc](aligned-malloc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Выравнивание данных](../../c-runtime-library/data-alignment.md)<br/>

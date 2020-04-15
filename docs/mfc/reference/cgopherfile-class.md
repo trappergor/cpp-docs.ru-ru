@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: 9bb242cb53593862cb51e0c193eb739625127adc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e157a4509fe30b814a1834690a675906ac82afe7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373695"
 ---
 # <a name="cgopherfile-class"></a>Класс CGopherFile
 
 Обеспечивает возможность поиска и чтения файлов на сервере gopher.
 
 > [!NOTE]
->  Классы `CGopherConnection`, `CGopherFile`, `CGopherFileFind`, `CGopherLocator` и их члены являются устаревшими, так как они не работают на платформе Windows XP, но они будут продолжать работать на более ранние платформы.
+> Классы `CGopherConnection` `CGopherFile`, `CGopherFileFind` `CGopherLocator` , и их члены были уволены, потому что они не работают на платформе Windows XP, но они будут продолжать работать на более ранних платформах.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,15 +32,15 @@ class CGopherFile : public CInternetFile
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CGopherFile::CGopherFile](#cgopherfile)|Создает объект `CGopherFile`.|
+|[CGopherFile::CGopherFile](#cgopherfile)|Формирует объект `CGopherFile`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Эта служба gopher разрешает пользователям записывать данные в файл gopher, так как эта служба работает главным образом как интерфейс на основе меню для поиска сведений. `CGopherFile` Функции-члены `Write`, `WriteString`, и `Flush` не реализованы для `CGopherFile`. Вызов этих функций для `CGopherFile` объекта возвращает [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
+Служба сусликов не позволяет пользователям записывать данные в файл суслика, потому что эта служба функционирует главным образом как интерфейс, управляемый меню для поиска информации. Функциями `CGopherFile` `Write` `WriteString`участника, `Flush` и не `CGopherFile`реализованы для . Вызов этих функций `CGopherFile` на объект, возвращает [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).
 
-Дополнительные сведения о том, как `CGopherFile` работает с другими классами MFC Интернет, см. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Чтобы узнать `CGopherFile` больше о том, как работает с другими классами МФЦ Интернет, см. [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,9 +58,9 @@ class CGopherFile : public CInternetFile
 
 **Заголовок:** afxinet.h
 
-##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile
+## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopherFile::CGopherFile
 
-Эта функция-член вызывается для создания `CGopherFile` объекта.
+Эта функция члена называется `CGopherFile` для построения объекта.
 
 ```
 CGopherFile(
@@ -79,33 +79,33 @@ CGopherFile(
 ### <a name="parameters"></a>Параметры
 
 *hFile*<br/>
-Дескриптор файла HINTERNET.
+Ручка к файлу HINTERNET.
 
-*refLocator*<br/>
-Ссылку на [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) объекта.
+*рефЛокатор*<br/>
+Ссылка на объект [CGopherLocator.](../../mfc/reference/cgopherlocator-class.md)
 
 *pConnection*<br/>
-Указатель на [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) объекта.
+Указатель на объект [CGopherConnection.](../../mfc/reference/cgopherconnection-class.md)
 
-*hSession*<br/>
-Дескриптор текущего сеанса Интернет.
+*hСессия*<br/>
+Ручка для текущей сессии Интернета.
 
 *pstrLocator*<br/>
-Указатель на строку, используемую для обнаружения сервера gopher. См. в разделе [сеансы Gopher](cgopherlocator-class.md) Дополнительные сведения о указатели gopher.
+Указатель на строку, используемую для поиска сервера сусликов. Подробнее о [локаторах gopher Sessions](cgopherlocator-class.md) читайте в сообщении.
 
 *dwLocLen*<br/>
-DWORD, содержащее число байтов в *pstrLocator*.
+DWORD, содержащий количество байтов в *pstrLocator*.
 
-*dwContext*<br/>
-Указатель на идентификатор контекста для открываемого файла.
+*Dwcontext*<br/>
+Указатель на идентификатор контекста открываемого файла.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вам потребуется `CGopherFile` для чтения из файла во время сеанса Internet gopher.
+Вам нужен объект для `CGopherFile` чтения из файла во время сессии Суслик Интернет.
 
-Никогда не создаст `CGopherFile` объекта напрямую. Вместо этого необходимо вызвать [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) Открытие файла на сервере gopher.
+Вы никогда `CGopherFile` не создаете объект напрямую. Вместо этого позвоните [cGopherConnection::OpenFile,](../../mfc/reference/cgopherconnection-class.md#openfile) чтобы открыть файл на сервере сусликов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CInternetFile](../../mfc/reference/cinternetfile-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

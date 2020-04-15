@@ -1,5 +1,5 @@
 ---
-title: Класс Иолеинплацеобжектвиндовлессимпл
+title: IoleInPlaceObjectБезИмпл класс
 ms.date: 11/04/2016
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
@@ -20,19 +20,19 @@ helpviewer_keywords:
 - controls [ATL], windowless
 - deactivating ATL
 ms.assetid: a2e0feb4-bc59-4adf-aab2-105457bbdbb4
-ms.openlocfilehash: fdd660daae109ac2a656519131dd9869ceaeaf4e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b0438692161f38445eb7cbed54edcc8a0ba8c0d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326578"
 ---
-# <a name="ioleinplaceobjectwindowlessimpl-class"></a>Класс Иолеинплацеобжектвиндовлессимпл
+# <a name="ioleinplaceobjectwindowlessimpl-class"></a>IoleInPlaceObjectБезИмпл класс
 
-Этот класс реализует `IUnknown` и предоставляет методы, позволяющие безоконному управлению принимать сообщения окон и принимать участие в операциях перетаскивания.
+Этот класс `IUnknown` реализует и предоставляет методы, позволяющие бесконек управлять для приема сообщений окон и участия в операциях перетаскивания.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,28 +44,28 @@ class IOleInPlaceObjectWindowlessImpl
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IOleInPlaceObjectWindowlessImpl`.
+Ваш класс, полученный из `IOleInPlaceObjectWindowlessImpl`.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Иолеинплацеобжектвиндовлессимпл:: Контекстсенситивехелп](#contextsensitivehelp)|Включает контекстную справку. Реализация ATL возвращает значение E_NOTIMPL.|
-|[Иолеинплацеобжектвиндовлессимпл:: Жетдроптаржет](#getdroptarget)|`IDropTarget` Предоставляет интерфейс для активного, безоконного объекта, поддерживающего перетаскивание. Реализация ATL возвращает значение E_NOTIMPL.|
-|[Иолеинплацеобжектвиндовлессимпл::/Window](#getwindow)|Возвращает маркер окна.|
-|[Иолеинплацеобжектвиндовлессимпл:: Инплацедеактивате](#inplacedeactivate)|Деактивирует активный элемент управления на месте.|
-|[Иолеинплацеобжектвиндовлессимпл:: Онвиндовмессаже](#onwindowmessage)|Отправляет сообщение из контейнера в безоконный элемент управления, который находится в активном состоянии.|
-|[Иолеинплацеобжектвиндовлессимпл:: Реактиватеандундо](#reactivateandundo)|Повторно активирует ранее деактивированный элемент управления. Реализация ATL возвращает значение E_NOTIMPL.|
-|[Иолеинплацеобжектвиндовлессимпл:: Сетобжектректс](#setobjectrects)|Указывает, какая часть элемента управления является видимой.|
-|[Иолеинплацеобжектвиндовлессимпл:: Уидеактивате](#uideactivate)|Деактивирует и удаляет пользовательский интерфейс, поддерживающий активацию на месте.|
+|[IoleInPlaceObjectWindowlessImpl::ContextSensitiveHelp](#contextsensitivehelp)|Позволяет помощь, чувствительная к контексту. Реализация ATL возвращает E_NOTIMPL.|
+|[IoleInPlaceObjectWindowlessImpl::GetDropTarget](#getdroptarget)|Поставляет `IDropTarget` интерфейс для активного объекта без окон, который поддерживает перетаскивание и падение. Реализация ATL возвращает E_NOTIMPL.|
+|[IoleInPlaceObjectWindowlessImpl::GetWindow](#getwindow)|Получает дескриптор окна.|
+|[IoleInPlaceObjectWindowlessImpl::InPlaceDeactivate](#inplacedeactivate)|Деактивирует активный элемент управления на месте.|
+|[IoleInPlaceObjectWindowlessImpl::OnWindowMessage](#onwindowmessage)|Отправляет сообщение из контейнера в элемент управления без окон, который находится на месте активного.|
+|[IoleInPlaceObjectWindowlessImpl::ReactivateAndUndo](#reactivateandundo)|Повторно активирует ранее деактивированный элемент управления. Реализация ATL возвращает E_NOTIMPL.|
+|[IoleInPlacePlaceWindowlessImpl::SetObjectRects](#setobjectrects)|Указывает, какая часть элемента управления на месте видна.|
+|[IoleInPlaceObjectWindowlessImpl::UIDeactivate](#uideactivate)|Деактивирует и удаляет пользовательский интерфейс, поддерживающий активацию на месте.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Интерфейс [иолеинплацеобжект](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) управляет повторной активацией и деактивацией элементов управления на месте и определяет, какая часть элемента управления должна быть видима. Интерфейс [иолеинплацеобжектвиндовлесс](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) позволяет безоконному управлению принимать сообщения окон и участвовать в операциях перетаскивания. Класс `IOleInPlaceObjectWindowlessImpl` предоставляет `IOleInPlaceObjectWindowless` `IUnknown` реализацию по умолчанию иреализует,отправляясведениявустройстводампавотладочныхсборках.`IOleInPlaceObject`
+Интерфейс [IOleInPlaceObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceobject) управляет реактивацией и деактивацией элементов управления на месте и определяет, сколько элементов управления должно быть видно. Интерфейс [IOleInPlaceObjectWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplaceobjectwindowless) позволяет беспривывным элементам управления окнам получать сообщения окон и участвовать в операциях перетаскивания. Класс `IOleInPlaceObjectWindowlessImpl` обеспечивает реализацию `IOleInPlaceObject` и `IOleInPlaceObjectWindowless` реализацию `IUnknown` по умолчанию и реализации путем отправки информации на устройство сброса в отладочных сборках.
 
-**Связанные статьи** [Учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
+**Похожие статьи** [ATL Учебник](../../atl/active-template-library-atl-tutorial.md), Создание проекта [ATL](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -75,63 +75,63 @@ class IOleInPlaceObjectWindowlessImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлктл. h
+**Заголовок:** atlctl.h
 
-##  <a name="contextsensitivehelp"></a>  IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+## <a name="ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IoleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
 ```
 HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иолевиндов:: контекстсенситивехелп](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) в Windows SDK.
+Смотрите [IOleWindow:: ContextSensitiveHelp](/windows/win32/api/oleidl/nf-oleidl-iolewindow-contextsensitivehelp) в Windows SDK.
 
-##  <a name="getdroptarget"></a>Иолеинплацеобжектвиндовлессимпл:: Жетдроптаржет
+## <a name="ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IoleInPlaceObjectWindowlessImpl::GetDropTarget
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
 ```
 HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иолеинплацеобжектвиндовлесс:: жетдроптаржет](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) в Windows SDK.
+Смотрите [IOleInPlaceObjectWindowless::GetDropTarget](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-getdroptarget) в Windows SDK.
 
-##  <a name="getwindow"></a>Иолеинплацеобжектвиндовлессимпл::/Window
+## <a name="ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IoleInPlaceObjectWindowlessImpl::GetWindow
 
-Контейнер вызывает эту функцию для получения маркера окна элемента управления.
+Контейнер вызывает эту функцию, чтобы получить ручку окна управления.
 
 ```
 HRESULT GetWindow(HWND* phwnd);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Некоторые контейнеры не будут работать с элементом управления, не имеющим окон, даже если он в настоящий момент находится в окне. В реализации ATL, если элемент `m_bWasOnceWindowless` данных класса элемента управления имеет значение true, функция возвращает E_FAIL. В противном случае, если *ФВНД* не `GetWindow` равен \* null, устанавливает *ФВНД* в элемент `m_hWnd` данных класса элемента управления и возвращает значение S_OK.
+Некоторые контейнеры не будут работать с элементом управления, который был без окон, даже если он в настоящее время окон. В реализации ATL, если член `m_bWasOnceWindowless` данных класса управления является истинным, функция возвращается E_FAIL. В противном случае, если *phwnd* `GetWindow` не является NULL, \* устанавливает `m_hWnd` *phwnd* к члену данных класса управления и возвращает S_OK.
 
-См. раздел [иолевиндов:: onwindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) в Windows SDK.
+Смотрите [IOleWindow::GetWindow](/windows/win32/api/oleidl/nf-oleidl-iolewindow-getwindow) в Windows SDK.
 
-##  <a name="inplacedeactivate"></a>Иолеинплацеобжектвиндовлессимпл:: Инплацедеактивате
+## <a name="ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IoleInPlaceObjectWindowlessImpl::InPlaceDeactivate
 
-Вызывается контейнером для деактивации активного элемента управления на месте.
+Вызывается контейнером для деактивации активного управления на месте.
 
 ```
 HRESULT InPlaceDeactivate(HWND* phwnd);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод выполняет полную или частичную деактивацию в зависимости от состояния элемента управления. При необходимости пользовательский интерфейс элемента управления деактивируется, и окно элемента управления, если таковое имеется, уничтожается. Контейнер уведомляется о том, что элемент управления больше не активен. `IOleInPlaceUIWindow` Интерфейс, используемый контейнером для согласования меню и пространства границ, освобождается.
+Этот метод выполняет полную или частичную деактивацию в зависимости от состояния элемента управления. При необходимости пользовательский интерфейс элемента управления деактивирован, а окно элемента управления, если такового имеется, будет уничтожено. Контейнер уведомляется о том, что элемент управления больше не активен на месте. Интерфейс, `IOleInPlaceUIWindow` используемый контейнером для согласования меню и пограничного пространства, освобождается.
 
-См. раздел [иолеинплацеобжект:: инплацедеактивате](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) в Windows SDK.
+Смотрите [IOleInPlaceObject::InPlaceDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-inplacedeactivate) в Windows SDK.
 
-##  <a name="onwindowmessage"></a>Иолеинплацеобжектвиндовлессимпл:: Онвиндовмессаже
+## <a name="ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IoleInPlaceObjectWindowlessImpl::OnWindowMessage
 
-Отправляет сообщение из контейнера в безоконный элемент управления, который находится в активном состоянии.
+Отправка сообщения из контейнера в управление без окон, которое находится на месте активного.
 
 ```
 HRESULT OnWindowMessage(
@@ -141,37 +141,37 @@ HRESULT OnWindowMessage(
     LRESULT plResultParam);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иолеинплацеобжектвиндовлесс:: онвиндовмессаже](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) в Windows SDK.
+Смотрите [IOleInPlaceObjectWindowless::OnWindowMessage](/windows/win32/api/ocidl/nf-ocidl-ioleinplaceobjectwindowless-onwindowmessage) в Windows SDK.
 
-##  <a name="reactivateandundo"></a>Иолеинплацеобжектвиндовлессимпл:: Реактиватеандундо
+## <a name="ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IoleInPlaceObjectWindowlessImpl::ReactivateAndUndo
 
-Возвращает значение E_NOTIMPL.
+Возвращает E_NOTIMPL.
 
 ```
 HRESULT ReactivateAndUndo();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [иолеинплацеобжект:: реактиватеандундо](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) в Windows SDK.
+Смотрите [IOleInPlaceObject::ReactivateAndUndo](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-reactivateandundo) в Windows SDK.
 
-##  <a name="setobjectrects"></a>Иолеинплацеобжектвиндовлессимпл:: Сетобжектректс
+## <a name="ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IoleInPlacePlaceWindowlessImpl::SetObjectRects
 
-Вызывается контейнером для информирования элемента управления о том, что его размер и (или) расположение изменились.
+Вызывается контейнером, чтобы сообщить диспетчеру, что его размер и/или положение изменилось.
 
 ```
 HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обновляет элемент `m_rcPos` данных элемента управления и отображение элемента управления. Отображается только часть элемента управления, пересекающего область отсечения. Если отображение элемента управления было ранее обрезано, но обрезка была удалена, эту функцию можно вызвать для перерисовки полного представления элемента управления.
+Обновляет элемент данных элемента `m_rcPos` управления и дисплей управления. Отображается только та часть элемента управления, которая пересекает область клипа. Если дисплей элемента управления был ранее обрезан, но отсечение было удалено, эту функцию можно вызвать, чтобы перерисовать полное представление элемента управления.
 
-См. раздел [иолеинплацеобжект:: сетобжектректс](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) в Windows SDK.
+Смотрите [IOleInPlaceObject::SetObjectRects](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-setobjectrects) в Windows SDK.
 
-##  <a name="uideactivate"></a>Иолеинплацеобжектвиндовлессимпл:: Уидеактивате
+## <a name="ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IoleInPlaceObjectWindowlessImpl::UIDeactivate
 
 Деактивирует и удаляет пользовательский интерфейс элемента управления, поддерживающий активацию на месте.
 
@@ -179,13 +179,13 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
 HRESULT UIDeactivate();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Задает для элемента `m_bUIActive` данных класса элемента управления значение false. Реализация этой функции в библиотеке ATL всегда возвращает значение S_OK.
+Устанавливает элемент `m_bUIActive` данных класса управления в FALSE. Реализация этой функции ATL всегда возвращает S_OK.
 
-См. раздел [иолеинплацеобжект:: уидеактивате](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) в Windows SDK.
+Смотрите [IOleInPlaceObject::UIDeactivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceobject-uideactivate) в Windows SDK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComControl](../../atl/reference/ccomcontrol-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

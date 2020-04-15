@@ -1,5 +1,5 @@
 ---
-title: Класс Ипропертинотифисинккп
+title: IPropertyNotifySinkCP класс
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: 9838a48b078cbc59a5ae86669ad9f26792d9816e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495626"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329601"
 ---
-# <a name="ipropertynotifysinkcp-class"></a>Класс Ипропертинотифисинккп
+# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP класс
 
-Этот класс предоставляет интерфейс [ипропертинотифисинк](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) в качестве исходящего интерфейса для подключаемого объекта.
+Этот класс предоставляет интерфейс [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) как исходящий интерфейс на подключаемом объекте.
 
 > [!IMPORTANT]
->  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,27 +34,27 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IPropertyNotifySinkCP`.
+Ваш класс, полученный из `IPropertyNotifySinkCP`.
 
-*КДВ*<br/>
-Класс, управляющий соединениями между точкой подключения и ее приемниками. Значение по умолчанию — [ккомдинамикункаррай](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет устанавливать неограниченное число подключений. Можно также использовать [ккомункаррай](../../atl/reference/ccomunkarray-class.md), который указывает фиксированное число соединений.
+*Cdv*<br/>
+Класс, управляющий соединениями между точкой соединения и ее поглотителями. Значение по умолчанию [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), что позволяет неограниченное количество подключений. Вы также можете использовать [CComUnkArray](../../atl/reference/ccomunkarray-class.md), который определяет фиксированное количество соединений.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`IPropertyNotifySinkCP`наследует все методы через его базовый класс [иконнектионпоинтимпл](../../atl/reference/iconnectionpointimpl-class.md).
+`IPropertyNotifySinkCP`наследует все методы через свой базовый класс, [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md).
 
-Интерфейс [ипропертинотифисинк](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) позволяет объекту-приемнику получать уведомления об изменениях свойств. Класс `IPropertyNotifySinkCP` предоставляет этот интерфейс в качестве исходящего интерфейса для подключаемого объекта. Клиент должен реализовать `IPropertyNotifySink` методы в приемнике.
+Интерфейс [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) позволяет объекту раковины получать уведомления об изменениях свойства. Класс `IPropertyNotifySinkCP` предоставляет этот интерфейс как исходящий интерфейс на подключаемом объекте. Клиент должен реализовать `IPropertyNotifySink` методы на раковине.
 
-Создайте класс, производный `IPropertyNotifySinkCP` от класса, если нужно создать точку подключения, `IPropertyNotifySink` представляющую интерфейс.
+Вывести свой `IPropertyNotifySinkCP` класс из того момента, когда `IPropertyNotifySink` требуется создать точку соединения, представляющую интерфейс.
 
-Дополнительные сведения об использовании точек подключения в ATL см. в статье [точки подключения](../../atl/atl-connection-points.md).
+Для получения дополнительной информации об использовании [Connection Points](../../atl/atl-connection-points.md)точек соединения в ATL, см.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлктл. h
+**Заголовок:** atlctl.h
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)<br/>
-[Класс IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[IConnectionPointContainerImpl класс](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -10,41 +10,41 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: f95e34b9599de628463b9f92ebf8f01036237891
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320737"
 ---
 # <a name="bscmake-reference"></a>Справочник ВSCMAKE
 
 > [!WARNING]
 > Хотя средство BSCMAKE по-прежнему устанавливается вместе с Visual Studio, оно больше не используется в интегрированной среде разработки. Начиная с Visual Studio 2008 информация об исходном коде и символах автоматически сохраняется в SDF-файле SQL Server в папке решения.
 
-Служебная программа Microsoft Browse Information Maintenance (BSCMAKE.EXE) создает файл информации об исходном коде (BSC) из SBR-файлов, созданных во время компиляции. Некоторые сторонние средства используйте BSC-файлы для анализа кода.
+Служебная программа Microsoft Browse Information Maintenance (BSCMAKE.EXE) создает файл информации об исходном коде (BSC) из SBR-файлов, созданных во время компиляции. Некоторые сторонние инструменты используют файлы .bsc для анализа кода.
 
-При построении программы можно автоматически создать файл информации об исходном коде, используя программу BSCMAKE. Необходимо знать, как запускать BSCMAKE, если вы создаете файл информации об в среде разработки Visual Studio. Тем не менее можно прочитать этот раздел для понимания доступных возможностей.
+При построении программы можно автоматически создать файл информации об исходном коде, используя программу BSCMAKE. Вам не нужно знать, как запустить BSCMAKE, если вы создаете файл информации о просмотре в среде разработки Visual Studio. Тем не менее можно прочитать этот раздел для понимания доступных возможностей.
 
 При построении программы вне среды разработки вы по-прежнему можете создать пользовательский BSC-файл, который можно просмотреть в среде. Запустите BSCMAKE для SBR-файлов, созданных во время компиляции.
 
 > [!NOTE]
->  Это средство можно запустить только из командной строки разработчика Visual Studio. В системной командной строке или проводнике это невозможно.
+> Запустить этот инструмент можно только с запроса команды Visual Studio Developer. В системной командной строке или проводнике это невозможно.
 
-Этот раздел содержит следующие подразделы:
+В этом разделе рассматриваются следующие темы:
 
-- [Создание файлов информации об исходном коде: обзор](building-browse-information-files-overview.md)
+- [Информационные файлы просмотра сборки: общие сведения](building-browse-information-files-overview.md)
 
-- [Построение BSC-файла](building-a-dot-bsc-file.md)
+- [Создание файла .bsc](building-a-dot-bsc-file.md)
 
 - [Командная строка BSCMAKE](bscmake-command-line.md)
 
 - [Командный файл BSCMAKE](bscmake-command-file-response-file.md)
 
-- [Параметры BSCMAKE](bscmake-options.md)
+- [Варианты BSCMAKE](bscmake-options.md)
 
 - [Коды выхода BSCMAKE](bscmake-exit-codes.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)
+[Дополнительные инструменты сборки MSVC](c-cpp-build-tools.md)

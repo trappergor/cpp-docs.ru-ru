@@ -1,5 +1,5 @@
 ---
-title: Класс Ккоммултисреадмодел
+title: Класс CComMultiThreadModel
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModel
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 74fb68eead498685ef252968124368863e27be75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7ef803439d2d683633e8f9c00810542dd787541e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327671"
 ---
-# <a name="ccommultithreadmodel-class"></a>Класс Ккоммултисреадмодел
+# <a name="ccommultithreadmodel-class"></a>Класс CComMultiThreadModel
 
-`CComMultiThreadModel`предоставляет потокобезопасные методы для увеличения и уменьшения значения переменной.
+`CComMultiThreadModel`обеспечивает безопасные потоки методы для приращения и декрементирования значения переменной.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,59 +35,59 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Ссылается на класс [ккомаутокритикалсектион](../../atl/reference/ccomautocriticalsection-class.md).|
-|[Ккоммултисреадмодел:: CriticalSection](#criticalsection)|Ссылается на класс [ккомкритикалсектион](../../atl/reference/ccomcriticalsection-class.md).|
-|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Ссылается на класс [ккоммултисреадмоделнокс](../../atl/reference/ccommultithreadmodelnocs-class.md).|
+|[CComMultiThreadModel::АвтокритическоеРазелия](#autocriticalsection)|Ссылки класса [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
+|[CComMultiThreadModel::Критическаясекция](#criticalsection)|Ссылки класса [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
+|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Ссылки класса [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккоммултисреадмодел::D екремент](#decrement)|Статически Уменьшает значение указанной переменной в безопасном для потоков режиме.|
-|[Ккоммултисреадмодел:: Increment](#increment)|Статически Увеличивает значение указанной переменной в безопасном для потоков режиме.|
+|[CComMultiThreadModel::Dэккремент](#decrement)|(Статик) Декреты значения указанной переменной безопасным способом.|
+|[CCommultiThreadModel::Увеличение](#increment)|(Статик) Приращения значения указанной переменной безопасным способом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Как правило, используется `CComMultiThreadModel` одно из двух имен **typedef** : [ккомобжектсреадмодел] (ATL-typedefs. md # ккомобжектсреадмодел или [ккомглобалссреадмодел] (ATL-typedefs. md # ккомглобалссреадмодел. Класс, на который ссылается каждое **Определение типа** , зависит от используемой потоковой модели, как показано в следующей таблице.
+Как правило, `CComMultiThreadModel` вы используете через одно из двух имен **typedef,** либо "CComObjectThreadModel" (atl-typedefs.md'ccomobjectthreadmodel или "CComGlobalsThreadModel" (atl-typedefs.md'ccomglobalsthreadmodel. Класс, на который ссылается каждый **тип,** зависит от используемой модели потоков, как показано в следующей таблице:
 
-|typedef|Единая Организация|Потоковое подразделение|Свободная организация потоков|
+|typedef|Одноразовая резьба|Квартира резьбы|Бесплатное резьбовое|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+СЗ `CComSingleThreadModel`; МЗ`CComMultiThreadModel`
 
-`CComMultiThreadModel`сам определяет три имени **typedef** . `AutoCriticalSection`и `CriticalSection` ссылочные классы, предоставляющие методы для получения и освобождения владения критическим разделом. `ThreadModelNoCS`REFERENCES Class [Ккоммултисреадмоделнокс (ккоммултисреадмоделнокс-class.md).
+`CComMultiThreadModel`сама определяет три имен **typedef.** `AutoCriticalSection`и `CriticalSection` справочные классы, которые предоставляют методы получения и освобождения права собственности на критический раздел. `ThreadModelNoCS`справочные ссылки класса «CComMultiThreadModelNoCS»(ccommultithreadmodelnocs-class.md).
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase. h
+**Заголовок:** atlbase.h
 
-##  <a name="autocriticalsection"></a>Ккоммултисреадмодел:: Аутокритикалсектион
+## <a name="ccommultithreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModel::АвтокритическоеРазелия
 
-При использовании `CComMultiThreadModel`имя `AutoCriticalSection` typedef ссылается на класс [ккомаутокритикалсектион](ccomautocriticalsection-class.md), который предоставляет методы для получения и освобождения владения объектом критической секции.
+При `CComMultiThreadModel`использовании, **typedef** имя `AutoCriticalSection` ссылки класса [CComAutoCriticalSection](ccomautocriticalsection-class.md), который предоставляет методы для получения и освобождения собственности на объект критического раздела.
 
 ```
 typedef CComAutoCriticalSection AutoCriticalSection;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-[Ккомсинглесреадмодел](ccomsinglethreadmodel-class.md) и [ккоммултисреадмоделнокс](ccommultithreadmodelnocs-class.md) также содержат определения для `AutoCriticalSection`. В следующей таблице показана связь между классом потоковой модели и классом критического раздела, `AutoCriticalSection`на который ссылается:
+[CComSingleThreadModel](ccomsinglethreadmodel-class.md) и [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) также `AutoCriticalSection`содержат определения для . В следующей таблице показана взаимосвязь между классом модели `AutoCriticalSection`потоков и критическим классом раздела, на который ссылается:
 
-|Класс, определенный в|Ссылка на класс|
+|Класс, определяемый в|Класс, ссылки|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-Кроме `AutoCriticalSection`того, можно использовать имя **typedef** [CriticalSection](#criticalsection). Не следует указывать `AutoCriticalSection` в глобальных объектах или членах статических классов, если требуется исключить код запуска CRT.
+В дополнение `AutoCriticalSection`к, вы можете использовать **имя typedef** [CriticalSection.](#criticalsection) Не следует `AutoCriticalSection` указывать в глобальных объектах или статических участниках класса, если требуется исключить код запуска CRT.
 
 ### <a name="example"></a>Пример
 
-Следующий код моделируется после [CComObjectRootEx](ccomobjectrootex-class.md)и демонстрирует `AutoCriticalSection` использование в потоковой среде.
+Следующий код смоделирован после [CComObjectRootEx](ccomobjectrootex-class.md)и `AutoCriticalSection` демонстрирует, что используется в среде потоков.
 
 ```cpp
 template<class ThreadModel>
@@ -115,49 +115,49 @@ private:
    LONG m_dwRef;
 ```
 
-В следующих таблицах показаны результаты `InternalAddRef` методов и `Lock` `ThreadModel` , в зависимости от параметра шаблона и модели потоков, используемой приложением:
+Следующие таблицы показывают `InternalAddRef` результаты и `Lock` методы, `ThreadModel` в зависимости от параметра шаблона и модели резьбы, используемой приложением:
 
-### <a name="threadmodel--ccomobjectthreadmodel"></a>Среадмодел = Ккомобжектсреадмодел
+### <a name="threadmodel--ccomobjectthreadmodel"></a>ThreadModel - CComObjectThreadModel
 
-|Метод|Единый или Апартаментный поток|Свободная организация потоков|
+|Метод|Одноместный или квартирный резьба|Бесплатные потоки|
 |------------|-----------------------------------|--------------------|
-|`InternalAddRef`|Приращение не является потокобезопасным.|Приращение является потокобезопасным.|
-|`Lock`|Не выполняет никаких действий; нет критической секции для блокировки.|Критическая секция заблокирована.|
+|`InternalAddRef`|Приращение не является безопасным для потока.|Приращение является безопасным для потоков.|
+|`Lock`|Ничего не делает; нет критического раздела для блокировки.|Критический раздел заблокирован.|
 
-### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel = CComObjectThreadModel::ThreadModelNoCS
+### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel - CComObjectThreadModel::ThreadModelNoCS
 
-|Метод|Единый или Апартаментный поток|Свободная организация потоков|
+|Метод|Одноместный или квартирный резьба|Бесплатные потоки|
 |------------|-----------------------------------|--------------------|
-|`InternalAddRef`|Приращение не является потокобезопасным.|Приращение является потокобезопасным.|
-|`Lock`|Не выполняет никаких действий; нет критической секции для блокировки.|Не выполняет никаких действий; нет критической секции для блокировки.|
+|`InternalAddRef`|Приращение не является безопасным для потока.|Приращение является безопасным для потоков.|
+|`Lock`|Ничего не делает; нет критического раздела для блокировки.|Ничего не делает; нет критического раздела для блокировки.|
 
-##  <a name="criticalsection"></a>Ккоммултисреадмодел:: CriticalSection
+## <a name="ccommultithreadmodelcriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModel::Критическаясекция
 
-При использовании `CComMultiThreadModel`имя `CriticalSection` typedef ссылается на класс [ккомкритикалсектион](ccomcriticalsection-class.md), который предоставляет методы для получения и освобождения владения объектом критической секции.
+При `CComMultiThreadModel`использовании, **typedef** имя `CriticalSection` ссылки класса [CComCriticalSection](ccomcriticalsection-class.md), который предоставляет методы для получения и освобождения собственности на критический объект раздела.
 
 ```
 typedef CComCriticalSection CriticalSection;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-[Ккомсинглесреадмодел](ccomsinglethreadmodel-class.md) и [ккоммултисреадмоделнокс](ccommultithreadmodelnocs-class.md) также содержат определения для `CriticalSection`. В следующей таблице показана связь между классом потоковой модели и классом критического раздела, `CriticalSection`на который ссылается:
+[CComSingleThreadModel](ccomsinglethreadmodel-class.md) и [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) также `CriticalSection`содержат определения для . В следующей таблице показана взаимосвязь между классом модели `CriticalSection`потоков и критическим классом раздела, на который ссылается:
 
-|Класс, определенный в|Ссылка на класс|
+|Класс, определяемый в|Класс, ссылки|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-Кроме `CriticalSection`того, можно использовать имя **typedef** [аутокритикалсектион](#autocriticalsection). Не следует указывать `AutoCriticalSection` в глобальных объектах или членах статических классов, если требуется исключить код запуска CRT.
+В дополнение `CriticalSection`к, вы можете использовать **typedef** имя [AutoCriticalSection](#autocriticalsection). Не следует `AutoCriticalSection` указывать в глобальных объектах или статических участниках класса, если требуется исключить код запуска CRT.
 
 ### <a name="example"></a>Пример
 
-См. раздел [ккоммултисреадмодел:: аутокритикалсектион](#autocriticalsection).
+Смотрите [CComMultiThreadModel::АвтокритическоеСекция](#autocriticalsection).
 
-##  <a name="decrement"></a>Ккоммултисреадмодел::D екремент
+## <a name="ccommultithreadmodeldecrement"></a><a name="decrement"></a>CComMultiThreadModel::Dэккремент
 
-Эта статическая функция вызывает функцию Win32 [интерлоккеддекремент](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), которая уменьшает значение переменной, на которую указывает *p*.
+Эта статическая функция вызывает функцию Win32 [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), которая приспонивает значение переменной, на которую указывает *p.*
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -165,20 +165,20 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
-окне Указатель на переменную, которую необходимо уменьшить.
+*P*<br/>
+(в) Указатель на переменную, которая должна быть уничтожена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если результат декремента равен 0, то `Decrement` возвращает 0. Если результат декремента равен нулю, то возвращаемое значение также является ненулевым, но может не совпадать с результатом декремента.
+Если результат decrement 0, то `Decrement` возвращает 0. Если результат decrement незерн, то значение возврата также ненулевое, но не может быть равно результату decrement.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`InterlockedDecrement`предотвращает одновременное использование этой переменной более чем одним потоком.
+`InterlockedDecrement`предотвращает одновременное использование этой переменной более одного потока.
 
-##  <a name="increment"></a>Ккоммултисреадмодел:: Increment
+## <a name="ccommultithreadmodelincrement"></a><a name="increment"></a>CCommultiThreadModel::Увеличение
 
-Эта статическая функция вызывает функцию Win32 [интерлоккединкремент](/windows/win32/api/winnt/nf-winnt-interlockedincrement), которая увеличивает значение переменной, на которую указывает *p*.
+Эта статическая функция вызывает функцию Win32 [InterlockedIncrement,](/windows/win32/api/winnt/nf-winnt-interlockedincrement)которая приращает значение переменной, на которую указывает *p.*
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
@@ -186,32 +186,32 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
-окне Указатель на переменную, которая должна быть увеличена.
+*P*<br/>
+(в) Указатель на переменную, которая будет приращена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если результатом приращения является 0, то `Increment` возвращает 0. Если результат инкремента равен нулю, то возвращаемое значение также будет ненулевым, но может не совпадать с результатом приращения.
+Если результат приращения 0, `Increment` то возвращает 0. Если результат приращения незеровен, то значение возврата также ненулевое, но не может быть равно результату приращения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`InterlockedIncrement`предотвращает одновременное использование этой переменной более чем одним потоком.
+`InterlockedIncrement`предотвращает одновременное использование этой переменной более одного потока.
 
-##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS
+## <a name="ccommultithreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS
 
-При использовании `CComMultiThreadModel`имя `ThreadModelNoCS` typedef ссылается на класс [ккоммултисреадмоделнокс](ccommultithreadmodelnocs-class.md).
+При `CComMultiThreadModel`использовании , `ThreadModelNoCS` **typedef** имя ссылки класса [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`CComMultiThreadModelNoCS`предоставляет потокобезопасные методы для увеличения и уменьшения переменной; Однако он не предоставляет критическую секцию.
+`CComMultiThreadModelNoCS`обеспечивает безопасные потоки методы для приращения и декрементирования переменной; однако он не предусматривает критический раздел.
 
-[Ккомсинглесреадмодел](ccomsinglethreadmodel-class.md) , `CComMultiThreadModelNoCS` а также содержит определения `ThreadModelNoCS`для. В следующей таблице показана связь между классом потоковой модели и классом, `ThreadModelNoCS`на который ссылается:
+[CComSingleThreadModel,](ccomsinglethreadmodel-class.md) а `CComMultiThreadModelNoCS` также `ThreadModelNoCS`содержат определения для . В следующей таблице показана взаимосвязь между классом `ThreadModelNoCS`модели потоков и классом, на который ссылается:
 
-|Класс, определенный в|Ссылка на класс|
+|Класс, определяемый в|Класс, ссылки|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
@@ -219,11 +219,11 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="example"></a>Пример
 
-См. раздел [ккоммултисреадмодел:: аутокритикалсектион](#autocriticalsection).
+Смотрите [CComMultiThreadModel::АвтокритическоеСекция](#autocriticalsection).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComSingleThreadModel](ccomsinglethreadmodel-class.md)<br/>
 [Класс CComAutoCriticalSection](ccomautocriticalsection-class.md)<br/>
 [Класс CComCriticalSection](ccomcriticalsection-class.md)<br/>
-[Обзор класса](../atl-class-overview.md)
+[Общие сведения о классах](../atl-class-overview.md)

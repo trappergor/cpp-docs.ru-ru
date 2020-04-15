@@ -10,23 +10,23 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291500"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328218"
 ---
 # <a name="lib-reference"></a>Справочник по LIB
 
-Диспетчер библиотек Microsoft (LIB.exe) создает и управляет библиотеку общих объекта файла формат COFF объектных файлов. LIB может также использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.
+Менеджер библиотеки Майкрософт (LIB.exe) создает и управляет библиотекой общих файлов объектов Объективного Файла (COFF). LIB также может использоваться для создания экспортных файлов и библиотек импорта для ссылки на экспортируемые определения.
 
 > [!NOTE]
->  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
+> Запустить этот инструмент можно только с запроса команды Visual Studio. В системной командной строке или проводнике это невозможно.
 
 - [Общие сведения о LIB](overview-of-lib.md)
 
-- [Практическое руководство. Параметры LIB.EXE в среде разработки Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Практическое руководство. Установка параметров LIB.EXE в среде разработки Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
 - [Запуск программы LIB](running-lib.md)
 
@@ -36,6 +36,6 @@ ms.locfileid: "62291500"
 
 - [Работа с библиотеками импорта и файлами экспорта](working-with-import-libraries-and-export-files.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)
+[Дополнительные инструменты сборки MSVC](c-cpp-build-tools.md)

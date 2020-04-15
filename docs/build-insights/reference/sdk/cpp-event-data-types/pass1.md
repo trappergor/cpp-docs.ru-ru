@@ -1,6 +1,6 @@
 ---
-title: Класс Pass1
-description: Справочник C++ по классу SDK для Build Insights Pass1.
+title: Pass1 класс
+description: Ссылка на класс SDK Pass1.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d81a933e21f6976624808be358230305459e4992
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 039c2cc92b8461009c235baa7e49484eb2a4f49f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324420"
 ---
-# <a name="pass1-class"></a>Класс Pass1
+# <a name="pass1-class"></a>Pass1 класс
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `Pass1` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления с событием [PASS1](../event-table.md#pass1) .
+Класс `Pass1` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его, чтобы соответствовать событию [PASS1.](../event-table.md#pass1)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из своего базового класса [линкерпасс](linker-pass.md) класс `Pass1` содержит следующие члены:
+Наряду с унаследованных членов из `Pass1` своего базового класса [LinkerPass,](linker-pass.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
 [Pass1](#pass1)
 
-## <a name="pass1"></a>Pass1
+## <a name="pass1"></a><a name="pass1"></a>Pass1
 
 ```cpp
 Pass1(const RawEvent& event);
@@ -53,7 +53,7 @@ Pass1(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [PASS1](../event-table.md#pass1) .
+*Событие*\
+Событие [PASS1.](../event-table.md#pass1)
 
 ::: moniker-end

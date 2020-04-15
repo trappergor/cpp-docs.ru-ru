@@ -1,10 +1,11 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ceilf
 - ceil
 - ceill
+- _o_ceil
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7567e5758e405235bca13bbae8a18c2d42ccbd3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943190"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333559"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -70,31 +72,33 @@ long double ceill(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **ceil** возвращают значение с плавающей запятой, представляющее наименьшее целое число, которое больше или равно *x*. Ошибка не возвращается.
+Функции **ceil** возвращают значение плавающей точки, которое представляет собой наименьшее значение, превышающее или равное *x.* Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **КНАН**, **С**|none|**_DOMAIN**|
+|- **ЗНАН**, **IND**|Нет|**_DOMAIN**|
 
-**ceil** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**ceil** имеет реализацию, которая использует потоковое SIMD расширения 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ceil** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **ceil** всегда принимает и возвращает значение **типа Double**.
+Из-за того, что СЗ допускает перегрузку, можно вызывать перегрузки **ceil,** которые принимают **поплавок** или **длинные** **двойные** типы. В программе C, **ceil** всегда принимает и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**ceil**, **ceilf**, **цеилл**|\<math.h>|
+|**ceil**, **ceilf**, **ceill**|\<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [floor](floor-floorf-floorl.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

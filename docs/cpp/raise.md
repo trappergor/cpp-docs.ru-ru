@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179176"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317223"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Remarks
 
-Событие из управляемого кода можно вызвать только в пределах класса, где оно определено. Дополнительные сведения см. в описании [события](../extensions/event-cpp-component-extensions.md) .
+Событие из управляемого кода можно вызвать только в пределах класса, где оно определено. Дополнительную информацию можно узнать на [мероприятии.](../extensions/event-cpp-component-extensions.md)
 
-Ключевое слово **__raise** вызывает ошибку при вызове события, не являющегося событием.
+Ключевое слово **__raise** вызывает ошибку, которая должна быть издана, если вы называете не-событие.
 
 > [!NOTE]
->  Класс-шаблон или структура не могут содержать события.
+> Класс-шаблон или структура не могут содержать события.
 
 ## <a name="example"></a>Пример
 
@@ -61,6 +61,6 @@ int main() {
 
 ## <a name="see-also"></a>См. также раздел
 
-[Ключевые слова](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [Обработка событий](../cpp/event-handling.md)<br/>
 [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)

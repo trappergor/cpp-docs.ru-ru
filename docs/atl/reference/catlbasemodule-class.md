@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-ms.openlocfilehash: d382d1fe7d50a2fdeefc9b477625580792de7d6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a55412eff18fd04ac4e41c0f001991c1cf725b9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247156"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321511"
 ---
 # <a name="catlbasemodule-class"></a>Класс CAtlBaseModule
 
-В каждом проекте ATL создается экземпляр этого класса.
+Этот класс мгновенно используется в каждом проекте ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,32 +36,32 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Добавляет экземпляр ресурса в список хранимых маркеров.|
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Возвращает дескриптор экземпляра указанного ресурса.|
-|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Возвращает экземпляр модуля из `CAtlBaseModule` объекта.|
-|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Возвращает экземпляр ресурса из `CAtlBaseModule` объекта.|
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Удаляет экземпляр ресурса из списка хранимых маркеров.|
-|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Задает экземпляр ресурса `CAtlBaseModule` объекта.|
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Добавляет экземпляр ресурса в список сохраненных ручек.|
+|[CAtlBaseModule::GetHinstanceAt](#gethinstanceat)|Возвращает ручку в указанный экземпляр ресурса.|
+|[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Возвращает экземпляр модуля с `CAtlBaseModule` объекта.|
+|[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Возвращает экземпляр ресурса `CAtlBaseModule` из объекта.|
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Удаляет экземпляр ресурса из списка сохраненных ручек.|
+|[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Устанавливает экземпляр ресурса `CAtlBaseModule` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Переменная, которая указывает, если ошибка инициализации модуля.|
+|[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Переменная, указывают, не удалось ли инициализация модуля.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Экземпляр `CAtlBaseModule` именованный _AtlBaseModule присутствует в каждом проекте ATL, содержащий дескриптор экземпляра модуля, дескриптор модуля, содержащего ресурсы (которые по умолчанию, один и тот же) и массив дескрипторов для модулей, предоставляя первичный ресурсы. `CAtlBaseModule` безопасного доступа из нескольких потоков.
+Экземпляр названного `CAtlBaseModule` _AtlBaseModule присутствует в каждом проекте ATL, содержащий ручку к экземпляру модуля, ручку модуля, содержащую ресурсы (которые по умолчанию являются одним и тем же), и массив ручек модулей, предоставляющих первичные ресурсы. `CAtlBaseModule`можно безопасно получить из нескольких потоков.
 
-Этот класс заменяет устаревшее [CComModule](../../atl/reference/ccommodule-class.md) класс, используемый в более ранних версиях ATL.
+Этот класс заменяет устаревший класс [CComModule,](../../atl/reference/ccommodule-class.md) используемый в более ранних версиях ATL.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -71,11 +71,11 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файле atlcore.h
+**Заголовок:** atlcore.h
 
-##  <a name="addresourceinstance"></a>  CAtlBaseModule::AddResourceInstance
+## <a name="catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance
 
-Добавляет экземпляр ресурса в список хранимых маркеров.
+Добавляет экземпляр ресурса в список сохраненных ручек.
 
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -84,13 +84,13 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>Параметры
 
 *hInst*<br/>
-Добавьте экземпляр ресурса.
+Экземпляр ресурса для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если ресурс был успешно добавлен, значение false, в противном случае образом.
+Возвращает верно, если ресурс был успешно добавлен, ложно в противном случае.
 
-##  <a name="catlbasemodule"></a>  CAtlBaseModule::CAtlBaseModule
+## <a name="catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule
 
 Конструктор.
 
@@ -98,13 +98,13 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 CAtlBaseModule() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Создает объект `CAtlBaseModule`.
 
-##  <a name="gethinstanceat"></a>  CAtlBaseModule::GetHInstanceAt
+## <a name="catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHinstanceAt
 
-Возвращает дескриптор экземпляра указанного ресурса.
+Возвращает ручку в указанный экземпляр ресурса.
 
 ```
 HINSTANCE GetHInstanceAt(int i) throw();
@@ -112,16 +112,16 @@ HINSTANCE GetHInstanceAt(int i) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*i*<br/>
-Номер экземпляра ресурса.
+*Я*<br/>
+Число экземпляра ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор экземпляра ресурса, или значение NULL, если существует без соответствующего экземпляра ресурса.
+Возвращает ручку в экземпляр ресурса или NULL, если не существует соответствующего экземпляра ресурса.
 
-##  <a name="getmoduleinstance"></a>  CAtlBaseModule::GetModuleInstance
+## <a name="catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance
 
-Возвращает экземпляр модуля из `CAtlBaseModule` объекта.
+Возвращает экземпляр модуля с `CAtlBaseModule` объекта.
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -131,7 +131,7 @@ HINSTANCE GetModuleInstance() throw();
 
 Возвращает экземпляр модуля.
 
-##  <a name="getresourceinstance"></a>  CAtlBaseModule::GetResourceInstance
+## <a name="catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance
 
 Возвращает экземпляр ресурса.
 
@@ -143,21 +143,21 @@ HINSTANCE GetResourceInstance() throw();
 
 Возвращает экземпляр ресурса.
 
-##  <a name="m_binitfailed"></a>  CAtlBaseModule::m_bInitFailed
+## <a name="catlbasemodulem_binitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed
 
-Переменная, которая указывает, если ошибка инициализации модуля.
+Переменная, указывают, не удалось ли инициализация модуля.
 
 ```
 static bool m_bInitFailed;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Значение true, если модуль инициализирован, false, если ей не удалось инициализировать.
+Правда, если модуль инициализирован, ложный, если он не смог инициализировать.
 
-##  <a name="removeresourceinstance"></a>  CAtlBaseModule::RemoveResourceInstance
+## <a name="catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance
 
-Удаляет экземпляр ресурса из списка хранимых маркеров.
+Удаляет экземпляр ресурса из списка сохраненных ручек.
 
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -166,15 +166,15 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="parameters"></a>Параметры
 
 *hInst*<br/>
-Удаляемый экземпляр ресурса.
+Экземпляр ресурса для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если ресурс успешно удален, и false в противном случае.
+Возвращает верно, если ресурс был успешно удален, ложно в противном случае.
 
-##  <a name="setresourceinstance"></a>  CAtlBaseModule::SetResourceInstance
+## <a name="catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance
 
-Задает экземпляр ресурса `CAtlBaseModule` объекта.
+Устанавливает экземпляр ресурса `CAtlBaseModule` объекта.
 
 ```
 HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
@@ -187,9 +187,9 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает экземпляр обновленный ресурс.
+Возвращает обновленный экземпляр ресурса.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
-[Модульные классы](../../atl/atl-module-classes.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)<br/>
+[Классы модулей](../../atl/atl-module-classes.md)

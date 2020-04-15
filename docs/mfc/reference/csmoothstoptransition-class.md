@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ba550b4a0b9443d0681e17195687fb94c207ace
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323886"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318206"
 ---
 # <a name="csmoothstoptransition-class"></a>Класс CSmoothStopTransition
 
@@ -35,32 +35,32 @@ class CSmoothStopTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Создает переход с плавной остановкой и инициализирует его Максимальная длительность и конечное значение.|
+|[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Строит плавный переход и инициализирует его максимальную продолжительность и окончательное значение.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSmoothStopTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CSmoothStopTransition::Создание](#create)|Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM. (Переопределяет [CBaseПереход::Создание](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
-|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Максимальная длительность перехода.|
+|[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Максимальная продолжительность перехода.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Переход с плавной остановкой замедляется, достигает заданного конечное значение, и достигается с помощью скорость в ноль. Продолжительность перехода определяется начальную скорость, разница между начальное и конечное значения и указанный максимальный период времени. Если ни одно решение, состоящее из одной параболической дуги, этот метод создает кубический переход. Так как автоматически удаляются все переходы, рекомендуется выделить их с помощью оператора new. Инкапсулированный объект IUIAnimationTransition COM созданный CAnimationController::AnimateGroup, пока то возвращается значение NULL. Изменение переменных-членов, после создания COM-объекта не оказывает влияния.
+Переход плавного стопа замедляется по мере приближения к заданному конечному значению и достигает его со скоростью нуля. Продолжительность перехода определяется начальной скоростью, разницей между начальных и конечными значениями и указанной максимальной продолжительностью. Если нет раствора, состоящего из одной параболической дуги, этот метод создает кубический переход. Поскольку все переходы очищаются автоматически, рекомендуется выделять их с помощью нового оператора. Инкапсулированный объект IUIAnimationTransition COM создается CAnimationController::AnimateGroup, до тех пор это NULL. Изменение переменных членов после создания этого объекта COM не имеет эффекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[CBaseПереход](../../mfc/reference/cbasetransition-class.md)
 
 [CSmoothStopTransition](../../mfc/reference/csmoothstoptransition-class.md)
 
@@ -68,9 +68,9 @@ class CSmoothStopTransition : public CBaseTransition;
 
 **Заголовок:** afxanimationcontroller.h
 
-##  <a name="create"></a>  CSmoothStopTransition::Create
+## <a name="csmoothstoptransitioncreate"></a><a name="create"></a>CSmoothStopTransition::Создание
 
-Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта.
+Вызывает библиотеку перехода для создания инкапсулированного объекта переходного COM.
 
 ```
 virtual BOOL Create(
@@ -85,11 +85,11 @@ virtual BOOL Create(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если переход создан успешно; в противном случае — значение FALSE.
+TRUE, если переход создан успешно; в противном случае FALSE.
 
-##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition
+## <a name="csmoothstoptransitioncsmoothstoptransition"></a><a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition
 
-Создает переход с плавной остановкой и инициализирует его Максимальная длительность и конечное значение.
+Строит плавный переход и инициализирует его максимальную продолжительность и окончательное значение.
 
 ```
 CSmoothStopTransition(
@@ -99,13 +99,13 @@ CSmoothStopTransition(
 
 ### <a name="parameters"></a>Параметры
 
-*maximumDuration*<br/>
-Максимальная длительность перехода.
+*максимальнаяпродолжительностная продолжительность*<br/>
+Максимальная продолжительность перехода.
 
 *dblFinalValue*<br/>
 Значение переменной анимации в конце перехода.
 
-##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue
+## <a name="csmoothstoptransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue
 
 Значение переменной анимации в конце перехода.
 
@@ -113,14 +113,14 @@ CSmoothStopTransition(
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration
+## <a name="csmoothstoptransitionm_maximumduration"></a><a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration
 
-Максимальная длительность перехода.
+Максимальная продолжительность перехода.
 
 ```
 UI_ANIMATION_SECONDS m_maximumDuration;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

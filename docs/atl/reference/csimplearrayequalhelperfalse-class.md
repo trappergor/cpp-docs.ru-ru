@@ -1,5 +1,5 @@
 ---
-title: CSimpleArrayEqualHelperFalse Class
+title: CSimpleArrayEqualHelperFalse Класс
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eca3145d64895e34b599fbf83834af142b65973
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277959"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330896"
 ---
-# <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse Class
+# <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse Класс
 
-Этот класс представляет вспомогательный объект для [CSimpleArray](../../atl/reference/csimplearray-class.md) класса.
+Этот класс является помощником для класса [CSimpleArray.](../../atl/reference/csimplearray-class.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,19 +35,19 @@ class CSimpleArrayEqualHelperFalse
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Статический) Возвращает значение false.|
+|[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Статик) Возвращает ложно.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс признаков — это дополнение к `CSimpleArray` класса. ИТ всегда возвращает false, а кроме того, будет вызывать `ATLASSERT` с аргументом значение false, если когда-либо ссылки на него. В ситуациях, где тест на равенство не определен достаточно, этот класс позволяет массив, содержащий элементы для правильной работы для большинства методов, но привести к сбою в виде четко определенных для методов, зависящие от сравнения, такие как [CSimpleArray:: Найти](../../atl/reference/csimplearray-class.md#find).
+Этот класс черт является дополнением к классу. `CSimpleArray` Он всегда возвращает ложные, и, кроме того, будет звонить `ATLASSERT` с аргументом ложного, если он когда-либо упоминается. В ситуациях, когда тест на равенство недостаточно определен, этот класс позволяет массиву, содержащему элементы, работать правильно для большинства методов, но не в четко определенной манере для методов, которые зависят от сравнения, такие как [CSimpleArray::Найти](../../atl/reference/csimplearray-class.md#find).
 
 ## <a name="requirements"></a>Требования
 
 **Заголовок:** atlsimpcoll.h
 
-##  <a name="isequal"></a>  CSimpleArrayEqualHelperFalse::IsEqual
+## <a name="csimplearrayequalhelperfalseisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual
 
 Возвращает значение false.
 
@@ -59,11 +59,11 @@ static bool IsEqual(const T&, const T&);
 
 Возвращает значение false.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод всегда возвращает значение false и будет вызывать `ATLASSERT` с аргументом значение false, если ссылка. Цель `CSimpleArrayEqualHelperFalse::IsEqual` — заставить методы использования сравнений к сбою в виде четко определенных проверок на равенство не определены должным образом.
+Этот метод всегда возвращается `ATLASSERT` ложным, и будет звонить с аргументом ложного, если ссылки. Цель состоит `CSimpleArrayEqualHelperFalse::IsEqual` в том, чтобы заставить методы, использующие сопоставления, потерпеть неудачу в четко определенной форме, когда тесты на равенство не были должным образом определены.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

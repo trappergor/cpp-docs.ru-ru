@@ -1,6 +1,6 @@
 ---
-title: Класс Ирелогжер
-description: Справочник C++ по классу SDK для Build Insights ирелогжер.
+title: Класс IRelogger
+description: Ссылка на класс SDK IRelogger.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 146377b2b44df43ed4b2f749efd9fb614a2a09c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422898"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329145"
 ---
-# <a name="irelogger-class"></a>Класс Ирелогжер
+# <a name="irelogger-class"></a>Класс IRelogger
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `IRelogger` предоставляет интерфейс для перезаписи трассировки трассировки событий Windows (ETW). Он используется с функциями [макединамикрелогжерграуп](../functions/make-dynamic-relogger-group.md) и [макестатикрелогжерграуп](../functions/make-static-analyzer-group.md) . Используйте `IRelogger` в качестве базового класса, чтобы создать собственное средство ведения журнала, которое может входить в группу повторного ведения журнала.
+Класс `IRelogger` предоставляет интерфейс для повторного отслеживания событий для отслеживания Windows (ETW). Он используется с функциями [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) и [MakeStaticReloggerGroup.](../functions/make-static-analyzer-group.md) Используйте `IRelogger` в качестве базового класса для создания собственного перелоггера, который может быть частью группы перелоггера.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -54,36 +54,36 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-Возвращаемое по умолчанию значение для всех функций, которые не переопределяются, — `AnalysisControl::CONTINUE`. Дополнительные сведения см. в разделе [аналисисконтрол](analysis-control-enum-class.md).
+Значение возврата по умолчанию для всех функций, которые не переопределены, находится `AnalysisControl::CONTINUE`под этим. Для получения дополнительной информации [см.](analysis-control-enum-class.md)
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="destructor"></a>Деструктор
 
-[~ Ирелогжер](#irelogger-destructor)
+[Зарирегогер](#irelogger-destructor)
 
 ### <a name="functions"></a>Функции
 
-[Онбегинрелоггинг](#on-begin-relogging)\
-[Онбегинрелоггингпасс](#on-begin-relogging-pass)\
-[Онендрелоггинг](#on-end-relogging)\
-[Онендрелоггингпасс](#on-end-relogging-pass)\
-[Онсимпливент](#on-simple-event)\
-[Онстартактивити](#on-start-activity)\
-[Онстопактивити](#on-stop-activity)\
-[онтрацеинфо](#on-trace-info)
+[OnBeginRelogging](#on-begin-relogging)\
+[OnBeginReloggingPass](#on-begin-relogging-pass)\
+[OnEndRelogging](#on-end-relogging)\
+[OnendReloggingPass](#on-end-relogging-pass)\
+[OnSimpleEvent](#on-simple-event)\
+[OnStartActivity](#on-start-activity)\
+[OnStopActivity](#on-stop-activity)\
+[OnTraceInfo](#on-trace-info)
 
-## <a name="irelogger-destructor"></a>~ Ирелогжер
+## <a name="irelogger"></a><a name="irelogger-destructor"></a>Зарирегогер
 
-Уничтожает класс Ирелогжер.
+Уничтожает класс IRelogger.
 
 ```cpp
 virtual ~IRelogger();
 ```
 
-## <a name="on-begin-relogging"></a>онбегинрелоггинг
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>OnBeginRelogging
 
-Эта функция вызывается до начала прохода по переведению журнала.
+Эта функция вызывается до начала пропуска relogging.
 
 ```cpp
 virtual AnalysisControl OnBeginRelogging();
@@ -91,11 +91,11 @@ virtual AnalysisControl OnBeginRelogging();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-begin-relogging-pass"></a>онбегинрелоггингпасс
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
 
-Эта функция вызывается в начале прохода перезаписи.
+Эта функция называется в начале перезаписи.
 
 ```cpp
 virtual AnalysisControl OnBeginReloggingPass();
@@ -103,11 +103,11 @@ virtual AnalysisControl OnBeginReloggingPass();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-end-relogging"></a>онендрелоггинг
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>OnEndRelogging
 
-Эта функция вызывается после завершения этапа перезаписи в журнал.
+Эта функция вызывается после окончания пропуска для перезаписи.
 
 ```cpp
 virtual AnalysisControl OnEndRelogging();
@@ -115,11 +115,11 @@ virtual AnalysisControl OnEndRelogging();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-end-relogging-pass"></a>онендрелоггингпасс
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>OnendReloggingPass
 
-Эта функция вызывается в конце прохода перезаписи.
+Эта функция называется в конце перезаписи.
 
 ```cpp
 virtual AnalysisControl OnEndReloggingPass();
@@ -127,9 +127,9 @@ virtual AnalysisControl OnEndReloggingPass();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-simple-event"></a>онсимпливент
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>OnSimpleEvent
 
 ```cpp
 virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
@@ -139,14 +139,14 @@ virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для этого простого события. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого простого события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-start-activity"></a>онстартактивити
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>OnStartActivity
 
 ```cpp
 virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
@@ -156,16 +156,16 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для события начала этого действия. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого события начала события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-stop-activity"></a>онстопактивити
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>OnStopActivity
 
-Эта функция вызывается при обработке события завершения действия.
+Эта функция вызывается при обработке события остановки активности.
 
 ```cpp
 virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
@@ -173,28 +173,28 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 
 ### <a name="parameters"></a>Параметры
 
-*евентстакк*\
-Стек событий для этого события завершения действия. Дополнительные сведения о стеках событий см. в разделе [события](../event-table.md).
+*EventStack*\
+Стек события для этого события остановки события. Для получения дополнительной информации [Events](../event-table.md)о стеках событий см.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
-## <a name="on-trace-info"></a>онтрацеинфо
+## <a name="ontraceinfo"></a><a name="on-trace-info"></a>OnTraceInfo
 
 ```cpp
 virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 ```
 
-Эта функция вызывается один раз в начале каждого анализа или прохода перезаписи.
+Эта функция называется один раз в начале каждого анализа или перезаписи прохода.
 
 ### <a name="parameters"></a>Параметры
 
 *traceInfo*\
-Объект [TraceInfo](../cpp-event-data-types/trace-info.md) , содержащий полезные свойства используемой трассировки.
+Объект [TraceInfo,](../cpp-event-data-types/trace-info.md) содержащий полезные свойства о потребляемом следе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[Аналисисконтрол](analysis-control-enum-class.md) код, который описывает, что должно произойти далее.
+Код [AnalysisControl,](analysis-control-enum-class.md) описывающий, что должно произойти дальше.
 
 ::: moniker-end

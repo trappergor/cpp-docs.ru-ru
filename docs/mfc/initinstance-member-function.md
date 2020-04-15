@@ -9,34 +9,34 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: c1f83f794cc40fa7f4d290fa4a147fe9f7e074be
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2cf5b266348e299fe761ba40bd2cfb849f02b9ab
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377197"
 ---
 # <a name="initinstance-member-function"></a>Функция-член InitInstance
 
-Операционная система Windows позволяет запускать несколько копий одного и того же приложения. `WinMain`вызывает [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) при каждом запуске нового экземпляра приложения.
+Операционная система Windows позволяет запускать более одной копии, или "пример", одного и того же приложения. `WinMain`вызывает [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) каждый раз, когда начинается новый экземпляр приложения.
 
-Стандартная `InitInstance` реализация, созданная мастером приложений MFC, выполняет следующие задачи:
+Стандартная `InitInstance` реализация, созданная MFC Application Wizard, выполняет следующие задачи:
 
-- В качестве центрального действия создает шаблоны документов, которые, в свою очередь, создают документы, представления и окна фрейма. Описание этого процесса см. в разделе [Создание шаблона документа](../mfc/document-template-creation.md).
+- В качестве центрального действия создается шаблоны документов, которые, в свою очередь, создают документы, представления и окна кадра. Для описания этого процесса [см.](../mfc/document-template-creation.md)
 
-- Загружает стандартные параметры файла из ini-файла или реестра Windows, включая имена последних использованных файлов.
+- Загружает стандартные параметры файлов из файла .ini или реестра Windows, включая имена самых недавно использованных файлов.
 
 - Регистрирует один или несколько шаблонов документов.
 
-- Для приложения MDI создает главное окно фрейма.
+- Для приложения MDI создается окно основной рамы.
 
-- Обрабатывает командную строку для открытия документа, указанного в командной строке, или для открытия нового пустого документа.
+- Обрабатывает командную строку, чтобы открыть документ, указанный на командной строке, или открыть новый пустой документ.
 
-Можно добавить собственный код инициализации или изменить код, написанный мастером.
+Вы можете добавить свой собственный код инициализации или изменить код, написанный мастером.
 
 > [!NOTE]
->  Приложения MFC должны быть инициализированы как однопотоковое подразделение (STA). При вызове [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) в `InitInstance` переопределении укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
+> Приложения МФЦ должны быть инициализированы как одноразовая квартира (STA). Если вы звоните [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) в переопределении, `InitInstance` укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[CWinApp. Класс приложений](../mfc/cwinapp-the-application-class.md)
+[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)

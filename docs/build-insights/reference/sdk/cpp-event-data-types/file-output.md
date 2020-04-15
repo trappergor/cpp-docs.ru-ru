@@ -1,6 +1,6 @@
 ---
-title: Класс Филеаутпут
-description: Справочник C++ по классу SDK для Build Insights филеаутпут.
+title: Класс FileOutput
+description: Ссылка на класс SDK FileOutput.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1c4053d0378ddb9d5dd061bbc9889c454dc9b52c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334844"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324805"
 ---
-# <a name="fileoutput-class"></a>Класс Филеаутпут
+# <a name="fileoutput-class"></a>Класс FileOutput
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `FileOutput` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)или [OBJ_OUTPUT](../event-table.md#obj-output) события.
+Класс `FileOutput` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его, чтобы соответствовать [EXECUTABLE_IMAGE_OUTPUT,](../event-table.md#executable-image-output) [EXP_OUTPUT,](../event-table.md#exp-output) [IMP_LIB_OUTPUT,](../event-table.md#imp-lib-output) [LIB_OUTPUT,](../event-table.md#lib-output)или [OBJ_OUTPUT](../event-table.md#obj-output) событию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -50,20 +50,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из своего базового класса [симпливент](simple-event.md) класс `FileOutput` содержит следующие члены:
+Наряду с унаследованных членов из `FileOutput` своего базового класса [SimpleEvent,](simple-event.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[филеаутпут](#file-output)
+[ФайлВыход](#file-output)
 
 ### <a name="functions"></a>Функции
 
-[Тип](#type)
-[пути](#path)
+[Path](#path)
+[Тип](#type) пути
 
-## <a name="file-output"></a>филеаутпут
+## <a name="fileoutput"></a><a name="file-output"></a>ФайлВыход
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output), [EXP_OUTPUT](../event-table.md#exp-output), [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output), [LIB_OUTPUT](../event-table.md#lib-output)или [OBJ_OUTPUT](../event-table.md#obj-output) .
+*Событие*\
+[Событие EXECUTABLE_IMAGE_OUTPUT,](../event-table.md#executable-image-output) [EXP_OUTPUT,](../event-table.md#exp-output) [IMP_LIB_OUTPUT,](../event-table.md#imp-lib-output) [LIB_OUTPUT](../event-table.md#lib-output)или [OBJ_OUTPUT.](../event-table.md#obj-output)
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>Путь
 
 ```cpp
 const wchar_t Path() const;
@@ -82,9 +82,9 @@ const wchar_t Path() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Абсолютный путь к выходному файлу.
+Абсолютный путь к файлу вывода.
 
-## <a name="type"></a>Тип
+## <a name="type"></a>Тип <a name="type"></a>
 
 ```cpp
 Type Type() const;
@@ -92,6 +92,6 @@ Type Type() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код, описывающий тип выходного файла.
+Код, описывающий тип вывода файла.
 
 ::: moniker-end

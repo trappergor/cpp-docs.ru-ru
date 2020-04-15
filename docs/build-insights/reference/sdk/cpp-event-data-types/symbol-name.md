@@ -1,6 +1,6 @@
 ---
-title: Класс Симболнаме
-description: Справочник C++ по классу SDK для Build Insights симболнаме.
+title: Класс SymbolName
+description: Ссылка на s' Build Insights SDK SymbolName.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b5e9a9b22db99c099b9f7dc1813fb335358a83e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1306fb43d6c2140a75b36c5f142532916cf26ae4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334550"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324356"
 ---
-# <a name="symbolname-class"></a>Класс Симболнаме
+# <a name="symbolname-class"></a>Класс SymbolName
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `SymbolName` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления [SYMBOL_NAMEного](../event-table.md#symbol-name) события.
+Класс `SymbolName` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [SYMBOL_NAME](../event-table.md#symbol-name) событию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,20 +40,20 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Вместе с наследуемыми членами из своего базового класса [симпливент](simple-event.md) класс `SymbolName` содержит следующие члены:
+Наряду с унаследованных членов из `SymbolName` своего базового класса [SimpleEvent,](simple-event.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[симболнаме](#symbol-name)
+[СимволИ](#symbol-name)
 
 ### <a name="functions"></a>Функции
 
-[Имя](#name)
-[ключа](#key)
+[Имя ключа](#key)
+[Name](#name)
 
-## <a name="key"></a>Раздел
+## <a name="key"></a><a name="key"></a>Ключ
 
 ```cpp
 const unsigned long long& Key() const;
@@ -61,9 +61,9 @@ const unsigned long long& Key() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Числовой идентификатор для типа, представленного этим символом. Этот идентификатор уникален в рамках внешнего прохода компилятора.
+Численный идентификатор для типа, представленного этим символом. Этот идентификатор уникален в компиляторе переднего прохода.
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>Имя
 
 ```cpp
 const char* Name() const;
@@ -71,9 +71,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имя типа, представленного символом в кодировке UTF-8.
+Название типа, представленного символом, закодировано в UTF-8.
 
-## <a name="symbol-name"></a>симболнаме
+## <a name="symbolname"></a><a name="symbol-name"></a>СимволИ
 
 ```cpp
 SymbolName(const RawEvent& event);
@@ -81,7 +81,7 @@ SymbolName(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [SYMBOL_NAME](../event-table.md#symbol-name) .
+*Событие*\
+[Событие SYMBOL_NAME.](../event-table.md#symbol-name)
 
 ::: moniker-end

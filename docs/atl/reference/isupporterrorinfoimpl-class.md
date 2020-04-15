@@ -1,5 +1,5 @@
 ---
-title: Класс ISupportErrorInfoImpl
+title: ISupportErrorInfoImpl класс
 ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: d5e7f087f6646940777ae8b2d2a4ea888fdd3593
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4c60b58ba697f00b146077a2cdecd727fe2cac02
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326370"
 ---
-# <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
+# <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl класс
 
-Этот класс предоставляет реализацию [интерфейса ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) по умолчанию и может использоваться, когда только один интерфейс создает ошибки для объекта.
+Этот класс обеспечивает реализацию [интерфейса ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) по умолчанию и может использоваться, когда только один интерфейс генерирует ошибки на объекте.
 
 > [!IMPORTANT]
-> Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,21 +35,21 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ### <a name="parameters"></a>Параметры
 
 *пиид*<br/>
-Указатель на идентификатор IID интерфейса, который поддерживает [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo).
+Указатель на IID интерфейса, поддерживающего [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo).
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[ISupportErrorInfoImpl:: Интерфацесуппортсерроринфо](#interfacesupportserrorinfo)|Указывает, поддерживает ли интерфейс, `riid` определенный с помощью, интерфейс [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo) .|
+|[ISupportErrorInfoImpl::InterfaceSupportsОшибкаОшибкаИнфо](#interfacesupportserrorinfo)|Указывает, поддерживает ли `riid` интерфейс, идентифицированный по поддерживает интерфейс [IErrorInfo.](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-[Интерфейс ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) гарантирует, что сведения об ошибке могут быть возвращены клиенту. Объекты, использующие `IErrorInfo` , должны `ISupportErrorInfo`реализовывать.
+[Интерфейс ISupportErrorInfo](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo) гарантирует, что информация об ошибках может быть возвращена клиенту. Объекты, `IErrorInfo` которые `ISupportErrorInfo`используют должны реализовать.
 
-Класс `ISupportErrorInfoImpl` предоставляет`ISupportErrorInfo` реализацию по умолчанию и может использоваться, когда только один интерфейс создает ошибки для объекта. Например:
+Класс `ISupportErrorInfoImpl` обеспечивает реализацию `ISupportErrorInfo` по умолчанию и может использоваться, когда только один интерфейс генерирует ошибки на объекте. Пример:
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 
@@ -61,20 +61,20 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl:: Интерфацесуппортсерроринфо
+## <a name="isupporterrorinfoimplinterfacesupportserrorinfo"></a><a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsОшибкаОшибкаИнфо
 
-Указывает, поддерживает ли интерфейс, `riid` определенный с помощью, интерфейс [IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo) .
+Указывает, поддерживает ли `riid` интерфейс, идентифицированный по поддерживает интерфейс [IErrorInfo.](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)
 
 ```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-См. раздел [ISupportErrorInfo:: интерфацесуппортсерроринфо](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) в Windows SDK.
+Смотрите [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) в Windows SDK.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -1,6 +1,6 @@
 ---
-title: Класс Компилерпасс
-description: Справочник C++ по классу SDK для Build Insights компилерпасс.
+title: Класс CompilerPass
+description: Ссылка на класс SDK CompilerPass.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3c2fa1c2c4be8aaf5bec77b383f93a4b033ca8e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 11af981b647d5183f88dad024d90c0ef4f8a28bc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325045"
 ---
-# <a name="compilerpass-class"></a>Класс Компилерпасс
+# <a name="compilerpass-class"></a>Класс CompilerPass
 
 ::: moniker range="<=vs-2015"
 
-Пакет C++ SDK для Build Insights совместим с Visual Studio 2017 и более поздних версий. Чтобы просмотреть документацию по этим версиям, присвойте элементу управления "Выбор версий Visual Studio" для этой статьи значение Visual Studio 2017 или Visual Studio 2019.
+SDK Build Insights совместим с Visual Studio 2017 и выше. Чтобы увидеть документацию для этих версий, установите элемент управления **селектора** визуальной версии для этой статьи на Visual Studio 2017 или Visual Studio 2019. Он находится в верхней части таблицы содержимого на этой странице.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Класс `CompilerPass` используется с функциями [матчевент](../functions/match-event.md), [матчевентинмемберфунктион](../functions/match-event-in-member-function.md), [матчевентстакк](../functions/match-event-stack.md)и [матчевентстаккинмемберфунктион](../functions/match-event-stack-in-member-function.md) . Используйте его для сопоставления [BACK_END_PASS](../event-table.md#back-end-pass) или [FRONT_END_PASS](../event-table.md#front-end-pass) события.
+Класс `CompilerPass` используется с функциями [MatchEvent,](../functions/match-event.md) [MatchEventInMemberFunction,](../functions/match-event-in-member-function.md) [MatchEventStack](../functions/match-event-stack.md)и [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Используйте его для соответствия [BACK_END_PASS](../event-table.md#back-end-pass) или [FRONT_END_PASS](../event-table.md#front-end-pass) событию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,13 +47,13 @@ public:
 };
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-Наряду с наследуемыми членами от базового класса [Activity](activity.md) класс `CompilerPass` содержит следующие члены:
+Наряду с унаследованные члены `CompilerPass` из своего базового класса [деятельности,](activity.md) класс содержит следующие члены:
 
 ### <a name="constructors"></a>Конструкторы
 
-[компилерпасс](#compiler-pass)
+[CompilerPass](#compiler-pass)
 
 ### <a name="enums"></a>Перечисления
 
@@ -61,16 +61,16 @@ public:
 
 |||
 |-|-|
-|FRONT_END|Клиентский этап передачи.|
-|BACK_END|Серверный проход.|
+|FRONT_END|Передний проход.|
+|BACK_END|Обратный проход.|
 
 ### <a name="functions"></a>Функции
 
-[Инпутсаурцепас](#input-source-path)\
-[Аутпутобжектпас](#output-object-path)\
-[Секретный код](#pass-code)\
+[ВхотливыйИсточникПат](#input-source-path)\
+[ВыходОбъектПат](#output-object-path)\
+[Пароль](#pass-code)\
 
-## <a name="compiler-pass"></a>компилерпасс
+## <a name="compilerpass"></a><a name="compiler-pass"></a>CompilerPass
 
 ```cpp
 CompilerPass(const RawEvent& event);
@@ -78,10 +78,10 @@ CompilerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>Параметры
 
-*event*\
-Событие [BACK_END_PASS](../event-table.md#back-end-pass) или [FRONT_END_PASS](../event-table.md#front-end-pass) .
+*Событие*\
+[Событие BACK_END_PASS](../event-table.md#back-end-pass) или [FRONT_END_PASS.](../event-table.md#front-end-pass)
 
-## <a name="input-source-path"></a>инпутсаурцепас
+## <a name="inputsourcepath"></a><a name="input-source-path"></a>ВхотливыйИсточникПат
 
 ```cpp
 const wchar_t* InputSourcePath() const;
@@ -89,9 +89,9 @@ const wchar_t* InputSourcePath() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Абсолютный путь к входному исходному файлу, обрабатываемому этим проходом компилятора.
+Абсолютный путь к исходному файлу ввода, обрабатываемый этим компилятором.
 
-## <a name="output-object-path"></a>аутпутобжектпас
+## <a name="outputobjectpath"></a><a name="output-object-path"></a>ВыходОбъектПат
 
 ```cpp
 const wchar_t* OutputObjectPath() const;
@@ -99,9 +99,9 @@ const wchar_t* OutputObjectPath() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Абсолютный путь к выходному файлу объекта, созданному этим проходом компилятора.
+Абсолютный путь к файлу объекта вывода, производимому этим проходом компилятора.
 
-## <a name="pass-code"></a>Пароль
+## <a name="passcode"></a><a name="pass-code"></a>Пароль
 
 ```cpp
 PassCode PassCode() const;
@@ -109,6 +109,6 @@ PassCode PassCode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Код, указывающий, какой проход компилятора представлен этим объектом Компилерпасс.
+Код, указывающий, какой проход компилятора представлен этим объектом CompilerPass.
 
 ::: moniker-end

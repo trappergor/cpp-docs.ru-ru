@@ -1,6 +1,6 @@
 ---
 title: scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - scalblnl
 - scalbnl
@@ -8,6 +8,12 @@ api_name:
 - scalblnf
 - scalbn
 - scalbln
+- _o_scalbln
+- _o_scalblnf
+- _o_scalblnl
+- _o_scalbn
+- _o_scalbnf
+- _o_scalbnl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +46,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d0c7f6db7ad6970be85203eef76e5ccb152e2200
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948902"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332591"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl
 
@@ -100,28 +107,30 @@ long double scalblnl(
 *x*<br/>
 Значение с плавающей запятой.
 
-*exp*<br/>
+*Exp*<br/>
 Целый показатель степени.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **scalbn** возвращают значение *x* \* **FLT_RADIX**<sup>exp</sup> при успешном выполнении операции. При переполнении (в зависимости от знака *x*) **scalbn** возвращает +/- **HUGE_VAL**; значение перестройки передается в **ERANGE**.
+Функции **scalbn** возвращают значение *x* \* **FLT_RADIX**<sup>exp</sup> в случае успеха. На переполнении (в зависимости от знака *х),* **scalbn** возвращает **HUGE_VALся** **значение errno** устанавливается на **ERANGE.**
 
-Дополнительные сведения о параметрах **возврата и** возможностях, возвращающих ошибки, см. в разделе "_doserrno", " [_sys_errlist" и "_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)".
+Для получения дополнительной информации о **errno** и возможных значениях возврата ошибок [_sys_nerr _sys_errlist _doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)см.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**FLT_RADIX** определен в \<виде float. h > в качестве собственного системы счисления с плавающей запятой; в двоичных системах он имеет значение 2, а **scalbn** эквивалентно [ldexp](ldexp.md).
+**FLT_RADIX** определяется \<в> float.h как родной радиус плавающей точки; на бинарных системах, он имеет значение 2, и **scalbn** эквивалентно [ldexp](ldexp.md).
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **scalbn** и **scalbln** , которые принимают и возвращают типы **float** или **Long** типа **Double** . В программе на языке C **scalbn** всегда принимает **Double** и **int** и возвращает **Double**, а **scalbln** всегда принимает Double и **Long** и **возвращает** значение **типа Double**.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **scalbn** и **scalbln,** которые принимают и возвращают **поплавок** или **длинные** **двойные** типы. В программе C, **scalbn** всегда принимает **двойной** и **int** и возвращает **двойник,** и **scalbln** всегда принимает **двойник** и **длиной** и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Заголовок C|Заголовок C++|
+|Компонент|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**scalbn**, **скалбнф**, **скалбнл**, **scalbln**, **скалблнф**, **скалблнл**|\<math.h>|\<cmath>|
+|**scalbn**, **scalbnf**, **scalbnl,** **scalbln**, **scalblnf**, **scalblnl**|\<math.h>|\<cmath>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -141,13 +150,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Вывод
+### <a name="output"></a>Выходные данные
 
 ```Output
 6.4 times FLT_RADIX to the power of 3 is 51.2
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>

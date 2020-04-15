@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 3c098b558941630e5c989e5a1b5c0fc1e2c8e10a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 701669d1dbc6f3363f76c113dc98e38db04681a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372535"
 ---
 # <a name="auto_handle-class"></a>Класс auto_handle
 
-Автоматическое управление ресурсами, которое можно использовать для внедрения виртуального обработчика в управляемый тип.
+Автоматическое управление ресурсами, которое может быть использовано для встраиваемого виртуальной ручки в управляемый тип.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,45 +36,45 @@ ref class auto_handle;
 ### <a name="parameters"></a>Параметры
 
 *_element_type*<br/>
-Управляемый тип для внедрения.
+Управляемый тип, который будет встроен.
 
-## <a name="members"></a><a name="members"></a>Участниками
+## <a name="members"></a><a name="members"></a>Членов
 
 ### <a name="public-constructors"></a>Открытые конструкторы  
 
-|Имя|Description|  
+|Имя|Описание|  
 |---------|-----------|  
-|[auto_handle::auto_handle](#auto-handle)|Конструктор `auto_handle`.|  
-|[auto_handle::~auto_handle](#tilde-auto-handle)|Деструктор `auto_handle`.|  
+|[auto_handle::auto_handle](#auto-handle)|Конструктор. `auto_handle`|  
+|[auto_handle:::-auto_handle](#tilde-auto-handle)|Деструктор. `auto_handle`|  
 
 ### <a name="public-methods"></a>Открытые методы  
 
-|Имя|Description|  
+|Имя|Описание|  
 |---------|-----------|  
-|[auto_handle::get](#get)|Возвращает содержащийся объект.|  
-|[auto_handle::release](#release)|Освобождает объект от управления `auto_handle`.|
-|[auto_handle::reset](#reset)|Уничтожает текущий принадлежащий объект и при необходимости захватить новый объект.|
-|[auto_handle::swap](#swap)|Меняет местами объекты на другой `auto_handle`.|  
+|[auto_handle::get](#get)|Получает содержащийся объект.|  
+|[auto_handle::release](#release)|Освобождает объект `auto_handle` от управления.|
+|[auto_handle::reset](#reset)|Уничтожить текущий принадлежащий объект и опционально завладеть новым объектом.|
+|[auto_handle::swap](#swap)|Свопы объекты с другой `auto_handle`.|  
 
-### <a name="public-operators"></a>Открытые операторы
+### <a name="public-operators"></a>Публичные операторы
 
-|Имя|Description|  
+|Имя|Описание|  
 |---------|-----------|
-|[auto_handle:: operator —&gt;](#operator-arrow)|Оператор доступа к члену.|
+|[auto_handle::оператор-&gt;](#operator-arrow)|Оператор доступа участника.|
 |[auto_handle::operator=](#operator-assign)|Оператор присвоения.|
-|[auto_handle::operator auto_handle](#operator-auto-handle)|Оператор приведения типа между `auto_handle` и совместимыми типами.|  
-|[auto_handle::operator bool](#operator-bool)|Оператор для использования `auto_handle` в условном выражении.|
-|[auto_handle::operator!](#operator-logical-not)|Оператор для использования `auto_handle` в условном выражении.|  
+|[auto_handle::operator auto_handle](#operator-auto-handle)|Оператор типа отливки между `auto_handle` и совместимыми типами.|  
+|[auto_handle::operator bool](#operator-bool)|Оператор для `auto_handle` использования в условном выражении.|
+|[auto_handle::оператор!](#operator-logical-not)|Оператор для `auto_handle` использования в условном выражении.|  
 
 ## <a name="requirements"></a>Требования
 
-**Файл заголовка** \<мсклр \ auto_handle. h >
+**Файл** \<заголовка msclrauto_handle.h>
 
-Мсклр **пространства имен**
+**Namespace** msclr
 
-## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle:: auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle::auto_handle
 
-Конструктор `auto_handle`.
+Конструктор. `auto_handle`
 
 ```cpp
 auto_handle();
@@ -93,7 +93,7 @@ auto_handle(
 ### <a name="parameters"></a>Параметры
 
 *_ptr*<br/>
-Объект, который необходимо присвоить.
+Объект для собственного.
 
 *_right*<br/>
 Существующий `auto_handle`.
@@ -163,9 +163,9 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:: ~ auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle:::-auto_handle
 
-Деструктор `auto_handle`.
+Деструктор. `auto_handle`
 
 ```cpp
 ~auto_handle();
@@ -173,7 +173,7 @@ done
 
 ### <a name="remarks"></a>Remarks
 
-Деструктор также деструктуре принадлежащего объекта.
+Деструктор также уничтожает принадлежащий объект.
 
 ### <a name="example"></a>Пример
 
@@ -210,9 +210,9 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_handleget"></a><a name="get"></a>auto_handle:: Get
+## <a name="auto_handleget"></a><a name="get"></a>auto_handle::получить
 
-Возвращает содержащийся объект.
+Получает содержащийся объект.
 
 ```cpp
 _element_type ^ get();
@@ -270,9 +270,9 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle:: Release
+## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle::релиз
 
-Освобождает объект от управления `auto_handle`.
+Освобождает объект `auto_handle` от управления.
 
 ```cpp
 _element_type ^ release();
@@ -280,7 +280,7 @@ _element_type ^ release();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Выпущенный объект.
+Освобожденный объект.
 
 ### <a name="example"></a>Пример
 
@@ -333,9 +333,9 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle:: Reset
+## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle::перезагрузка
 
-Уничтожает текущий принадлежащий объект и при необходимости захватить новый объект.
+Уничтожить текущий принадлежащий объект и опционально завладеть новым объектом.
 
 ```cpp
 void reset(
@@ -347,7 +347,7 @@ void reset();
 ### <a name="parameters"></a>Параметры
 
 *_new_ptr*<br/>
-Используемых Новый объект.
+(Необязательно) Новый объект.
 
 ### <a name="example"></a>Пример
 
@@ -399,9 +399,9 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle:: swap
+## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle::swap
 
-Меняет местами объекты на другой `auto_handle`.
+Свопы объекты с другой `auto_handle`.
 
 ```cpp
 void swap(
@@ -412,7 +412,7 @@ void swap(
 ### <a name="parameters"></a>Параметры
 
 *_right*<br/>
-`auto_handle`, с которым производится переключение объектов.
+С `auto_handle` помощью которого можно поменять объекты.
 
 ### <a name="example"></a>Пример
 
@@ -441,9 +441,9 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle:: operator —&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle::оператор-&gt;
 
-Оператор доступа к члену.
+Оператор доступа участника.
 
 ```cpp
 _element_type ^ operator->();
@@ -451,7 +451,7 @@ _element_type ^ operator->();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект, упакованный `auto_handle`.
+Объект, завернутый `auto_handle`в.
 
 ### <a name="example"></a>Пример
 
@@ -490,7 +490,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle:: operator =
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle::оператор
 
 Оператор присвоения.
 
@@ -507,11 +507,11 @@ auto_handle<_element_type> % operator=(
 ### <a name="parameters"></a>Параметры
 
 *_right*<br/>
-`auto_handle`, присваиваемый текущему `auto_handle`.
+Назначено `auto_handle` текущее `auto_handle`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущий `auto_handle`, теперь владелец `_right`.
+Текущий, `auto_handle`в `_right`настоящее время владеющие .
 
 ### <a name="example"></a>Пример
 
@@ -574,9 +574,9 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle:: operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle::оператор auto_handle
 
-Оператор приведения типа между `auto_handle` и совместимыми типами.
+Оператор типа отливки между `auto_handle` и совместимыми типами.
 
 ```cpp
 template<typename _other_type>
@@ -585,7 +585,7 @@ operator auto_handle<_other_type>();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущее `auto_handle` приводится к `auto_handle<_other_type>`.
+Текущий `auto_handle` литые для `auto_handle<_other_type>`.
 
 ### <a name="example"></a>Пример
 
@@ -629,9 +629,9 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle:: operator bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle::оператор бул
 
-Оператор для использования `auto_handle` в условном выражении.
+Оператор для `auto_handle` использования в условном выражении.
 
 ```cpp
 operator bool();
@@ -639,11 +639,11 @@ operator bool();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если упакованный объект является допустимым; в противном случае `false`.
+`true`если завернутый объект действителен; `false` в противном случае.
 
 ### <a name="remarks"></a>Remarks
 
-Этот оператор фактически преобразует в `_detail_class::_safe_bool`, который является более безопасным, чем `bool`, поскольку он не может быть преобразован в целочисленный тип.
+Этот оператор фактически `_detail_class::_safe_bool` преобразует, к `bool` которому безопаснее, чем потому, что он не может быть преобразован в интегральный тип.
 
 ### <a name="example"></a>Пример
 
@@ -674,9 +674,9 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle:: operator!
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle::оператор!
 
-Оператор для использования `auto_handle` в условном выражении.
+Оператор для `auto_handle` использования в условном выражении.
 
 ```cpp
 bool operator!();
@@ -684,7 +684,7 @@ bool operator!();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если упакованный объект является недопустимым; в противном случае `false`.
+`true`если завернутый объект недействителен; `false` в противном случае.
 
 ### <a name="example"></a>Пример
 

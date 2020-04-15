@@ -1,10 +1,11 @@
 ---
 title: strcpy, wcscpy, _mbscpy
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strcpy
 - wcscpy
 - _mbscpy
+- _o_wcscpy
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +43,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 166d44c32a593ad9f32fcd19c56747bfaf4b5d0f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958263"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359192"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Копирует строку. Существуют более безопасные версии этих функций; см. раздел [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** нельзя использовать в приложениях, выполняемых в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -89,28 +91,30 @@ unsigned char *_mbscpy(
 
 ### <a name="parameters"></a>Параметры
 
-*стрдестинатион*<br/>
+*strDestination*<br/>
 Конечная строка.
 
-*стрсаурце*<br/>
+*strSource*<br/>
 Исходная строка, завершающаяся символом NULL.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Каждая из этих функций возвращает строку назначения. Нет зарезервированных возвращаемых значений для указания ошибки.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **strcpy** копирует *стрсаурце*, включая завершающий символ null, в расположение, указанное в *стрдестинатион*. Поведение **strcpy** не определено, если исходная и Целевая строки перекрываются.
+Функция **strcpy** копирует *strSource,* включая прекращение нулевого символа, к месту, указанному *strDestination.* Поведение **strcpy** не определено, если строки источника и назначения перекрываются.
 
 > [!IMPORTANT]
-> Так как **strcpy** не проверяет наличие достаточного места в *стрдестинатион* перед копированием *стрсаурце*, это может привести к переполнению буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+> Поскольку **strcpy** не проверяет достаточное пространство в *strDestination,* прежде чем он копирует *strSource,* это потенциальная причина перерасхода буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-**wcscpy** и **_mbscpy** — это версии **strcpy**, соответственно, расширенных символов и многобайтовых символов. Аргументы и возвращаемое значение **wcscpy** являются строками расширенных символов. **_mbscpy** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcscpy** и **_mbscpy,** соответственно, широкохарактерные и мультибайт-символ версии **strcpy**. Аргументы и значение возврата **wcscpy** являются широкохарактерные строки; _mbscpy **являются** многобайтными строками. В остальном эти три функции ведут себя идентично.
 
-В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -124,7 +128,7 @@ unsigned char *_mbscpy(
 |**wcscpy**|\<string.h> или \<wchar.h>|
 |**_mbscpy**|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -161,9 +165,9 @@ int main( void )
 String = Hello world from strcpy and strcat!
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

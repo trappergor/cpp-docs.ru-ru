@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомкачедтеароффобжект
+title: Класс CComCachedTearOffObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComCachedTearOffObject
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 43f914a52666788fc0bf394d9d14830b28f5adc7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321044"
 ---
-# <a name="ccomcachedtearoffobject-class"></a>Класс Ккомкачедтеароффобжект
+# <a name="ccomcachedtearoffobject-class"></a>Класс CComCachedTearOffObject
 
-Этот класс реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для интерфейса разрыва.
+Этот класс реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для отрыва интерфейса.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,41 +39,41 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>Параметры
 
-*нем*<br/>
-Класс отрыва, производный от `CComTearOffObjectBase` , и интерфейсы, которые должен поддерживать ваш объект отрыва.
+*Содержащиеся*<br/>
+Ваш класс отрыва, полученный из `CComTearOffObjectBase` интерфейсов, которые вы хотите, чтобы ваш объект отрыва в поддержку.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкачедтеароффобжект:: Ккомкачедтеароффобжект](#ccomcachedtearoffobject)|Конструктор.|
-|[Ккомкачедтеароффобжект:: ~ Ккомкачедтеароффобжект](#dtor)|Деструктор|
+|[CComCachedTearoffObject::CcomCachedTearOffObject](#ccomcachedtearoffobject)|Конструктор.|
+|[CComCachedTearOffObject:: »CComCachedTearOffObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкачедтеароффобжект:: AddRef](#addref)|Увеличивает значение счетчика ссылок для `CComCachedTearOffObject` объекта.|
-|[Ккомкачедтеароффобжект:: Финалконструкт](#finalconstruct)|Вызывает метод `m_contained::FinalConstruct` (метода удаления класса).|
-|[Ккомкачедтеароффобжект:: Финалрелеасе](#finalrelease)|Вызывает метод `m_contained::FinalRelease` (метода удаления класса).|
-|[Ккомкачедтеароффобжект:: QueryInterface](#queryinterface)|Возвращает указатель на `IUnknown` `CComCachedTearOffObject` объект или на запрошенный интерфейс в классе отрыва (класс `contained`).|
-|[Ккомкачедтеароффобжект:: Release](#release)|Уменьшает значение счетчика ссылок для `CComCachedTearOffObject` объекта и уничтожает его, если счетчик ссылок равен 0.|
+|[CComCachedTearOffObject:AddRef](#addref)|Приращения отсчета `CComCachedTearOffObject` ссылки на объект.|
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Вызывает `m_contained::FinalConstruct` (метод типа разрыва).|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|Вызывает `m_contained::FinalRelease` (метод типа разрыва).|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|Возвращает указатель на `IUnknown` `CComCachedTearOffObject` объект или в запрашиваемый интерфейс в классе отрыва (класс). `contained`|
+|[CComCachedTearOffObject::Release](#release)|Декретирует значение подсчета `CComCachedTearOffObject` ссылок на объект и уничтожает его, если количество ссылок составляет 0.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомкачедтеароффобжект:: m_contained](#m_contained)|Объект, производный от класса отрыва (класса `contained`). `CComContainedObject`|
+|[CComCachedTearOffObject::m_contained](#m_contained)|Объект, `CComContainedObject` полученный из класса отрыва `contained`(класс).|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComCachedTearOffObject`реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для интерфейса разрыва. Этот класс отличается от `CComTearOffObject` класса в `CComCachedTearOffObject` , который имеет `IUnknown`свой собственный, отделенный от объекта `IUnknown` -владельца (владелец — это объект, для которого создается уничтожение). `CComCachedTearOffObject`сохраняет собственный счетчик ссылок на его `IUnknown` и удаляет себя, когда счетчик ссылок равен нулю. Однако при запросе любого из своих интерфейсов разрыва счетчик ссылок объекта `IUnknown` Owner будет увеличен.
+`CComCachedTearOffObject`реализует [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) для отрыва интерфейса. Этот класс `CComTearOffObject` отличается `CComCachedTearOffObject` тем, `IUnknown`что имеет свой собственный, отдельно от объекта владельца `IUnknown` (владелец является объектом, для которого создается разрыв). `CComCachedTearOffObject`поддерживает свой собственный подсчет `IUnknown` ссылок на его и удаляет себя, как только его количество ссылок равна нулю. Однако, если вы запросите любой из его отрывая интерфейсов, количество ссылок объекта владельца `IUnknown` будет приравнено.
 
-Если экземпляр, реализующий уничтожение, уже создан, а интерфейс разрыва запрашивается снова, то тот же `CComCachedTearOffObject` объект используется повторно. `CComCachedTearOffObject` Напротив, если интерфейс разрыва, реализованный `CComTearOffObject` с помощью, снова запрашивается через объект Owner, будет создан экземпляр другого. `CComTearOffObject`
+Если `CComCachedTearOffObject` объект, реализующий разрыв, уже мгновенно, и интерфейс отрыва запрашивается снова, `CComCachedTearOffObject` тот же объект используется повторно. В отличие от этого, если интерфейс `CComTearOffObject` отрыва, реализованный a, `CComTearOffObject` снова запрашивается через объект владельца, другой будет мгновенно.
 
-Класс `FinalRelease` owner должен реализовывать и вызывать `Release` `IUnknown` в кэше для, что приводит к уменьшению счетчика ссылок. `CComCachedTearOffObject` Это приведет `CComCachedTearOffObject` `FinalRelease` к вызову и удалению разрыва.
+Класс владельца должен `FinalRelease` реализовать `Release` и призвать `IUnknown` `CComCachedTearOffObject`кэшированный для, который будет decrement его ссылка рассчитывать. Это приведет `CComCachedTearOffObject`к `FinalRelease` тому, что "с" будет вызвано и удалено разрыв.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -87,11 +87,11 @@ public CComObjectRootEx<contained
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="addref"></a>Ккомкачедтеароффобжект:: AddRef
+## <a name="ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject:AddRef
 
-Увеличивает значение счетчика `CComCachedTearOffObject` ссылок объекта на 1.
+Приращения эталонного `CComCachedTearOffObject` количества объекта по 1.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -101,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 Значение, которое может быть полезно для диагностики и тестирования.
 
-##  <a name="ccomcachedtearoffobject"></a>Ккомкачедтеароффобжект:: Ккомкачедтеароффобжект
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CComCachedTearoffObject::CcomCachedTearOffObject
 
 Конструктор.
 
@@ -111,14 +111,14 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="parameters"></a>Параметры
 
-*PV*<br/>
-окне Указатель на объект `IUnknown`. `CComCachedTearOffObject`
+*Pv*<br/>
+(в) Указатель на `IUnknown` `CComCachedTearOffObject`.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Инициализирует `CComContainedObject` член [m_contained](#m_contained).
+Инициализирует `CComContainedObject` участника, [m_contained](#m_contained).
 
-##  <a name="dtor"></a>Ккомкачедтеароффобжект:: ~ Ккомкачедтеароффобжект
+## <a name="ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject:: »CComCachedTearOffObject
 
 Деструктор
 
@@ -126,13 +126,13 @@ CComCachedTearOffObject(void* pv);
 ~CComCachedTearOffObject();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Освобождает все выделенные ресурсы и вызывает [финалрелеасе](#finalrelease).
+Освобождает все выделенные ресурсы и вызывает [FinalRelease](#finalrelease).
 
-##  <a name="finalconstruct"></a>Ккомкачедтеароффобжект:: Финалконструкт
+## <a name="ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct
 
-Вызывает `m_contained::FinalConstruct` метод Create `m_contained` `CComContainedObject`, >объект,`contained`используемый для доступа к интерфейсу, реализованному классом отрыва. < 
+`m_contained::FinalConstruct` Вызовы `m_contained`для `CComContainedObject` <  `contained` создания,> объект, используемый для доступа к интерфейсу, реализованному вашим классом отрыва.
 
 ```
 HRESULT FinalConstruct();
@@ -142,17 +142,17 @@ HRESULT FinalConstruct();
 
 Стандартное значение HRESULT.
 
-##  <a name="finalrelease"></a>Ккомкачедтеароффобжект:: Финалрелеасе
+## <a name="ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
 
-Вызовы `m_contained::FinalRelease` для освобождения `m_contained`, `CComContainedObject` объект>`contained`. < 
+Звонки `m_contained::FinalRelease` на `m_contained`бесплатное, `CComContainedObject` <  `contained`> объект.
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>Ккомкачедтеароффобжект:: m_contained
+## <a name="ccomcachedtearoffobjectm_contained"></a><a name="m_contained"></a>CComCachedTearOffObject::m_contained
 
-Объект [ккомконтаинедобжект](../../atl/reference/ccomcontainedobject-class.md) , производный от класса отрыва.
+Объект [CComContainedObject,](../../atl/reference/ccomcontainedobject-class.md) полученный из класса отрыва.
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,14 +160,14 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>Параметры
 
-*нем*<br/>
-окне Класс отрыва, производный от `CComTearOffObjectBase` , и интерфейсы, которые должен поддерживать ваш объект отрыва.
+*Содержащиеся*<br/>
+(в) Ваш класс отрыва, полученный из `CComTearOffObjectBase` интерфейсов, которые вы хотите, чтобы ваш объект отрыва в поддержку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Методы `m_contained` , наследуемые, используются для доступа к интерфейсу разрыва в классе отрыва через кэшированный `QueryInterface`объект разрыва, `FinalConstruct`и `FinalRelease`.
+`m_contained` Методы наследуют используются для доступа к интерфейсу отрыва в вашем отрыв-офф класса `QueryInterface` `FinalConstruct`через `FinalRelease`кэшированный слезоточивый объект, и .
 
-##  <a name="queryinterface"></a>Ккомкачедтеароффобжект:: QueryInterface
+## <a name="ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface
 
 Извлекает указатель на запрошенный интерфейс.
 
@@ -177,23 +177,23 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Параметры
 
-*IID*<br/>
-окне Идентификатор GUID запрашиваемого интерфейса.
+*Iid*<br/>
+(в) GUID запрашиваемого интерфейса.
 
-*ппвобжект*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый по *IID*, или значение null, если интерфейс не найден.
+*ppvObject*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *iid,* или NULL, если интерфейс не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если запрошенный интерфейс имеет `IUnknown`значение, функция возвращает указатель `CComCachedTearOffObject`на себя `IUnknown` и увеличивает счетчик ссылок. В противном случае запрашивает интерфейс в классе отрыва с помощью метода [интерналкуеринтерфаце](ccomobjectrootex-class.md#internalqueryinterface) , унаследованного `CComObjectRootEx`от.
+Если запрашиваемый `IUnknown`интерфейс, возвращает указатель `CComCachedTearOffObject`на `IUnknown` 's собственной и приращения ссылки кол. В противном случае запросы для интерфейса в классе отрыва с `CComObjectRootEx`использованием метода [Внутреннего КвейтиИнтерфейса,](ccomobjectrootex-class.md#internalqueryinterface) унаследованного от .
 
-##  <a name="release"></a>Ккомкачедтеароффобжект:: Release
+## <a name="ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release
 
-Уменьшает значение счетчика ссылок на 1 и, если счетчик ссылок равен 0, удаляет `CComCachedTearOffObject` объект.
+Удаляет значение отсчета ссылки на 1 и, если число `CComCachedTearOffObject` ссылок рассылается на 0, удаляет объект.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,10 +201,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В сборках, не относящихся к отладке, всегда возвращает 0. В отладочных сборках возвращает значение, которое может быть полезно для диагностики или тестирования.
+В неотлибуговых сборках всегда возвращается 0. В сборках отладок возвращается значение, которое может быть полезно для диагностики или тестирования.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComTearOffObject](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

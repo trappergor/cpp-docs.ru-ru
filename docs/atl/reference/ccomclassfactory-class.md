@@ -1,5 +1,5 @@
 ---
-title: Класс Ккомклассфактори
+title: Класс CComClassFactory
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactory
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-ms.openlocfilehash: 892153e47ac4e9dd45d5dfc01b76f1ce29d23938
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 041575339906b83488697f1db5a7f8b08b53070e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497454"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321019"
 ---
-# <a name="ccomclassfactory-class"></a>Класс Ккомклассфактори
+# <a name="ccomclassfactory-class"></a>Класс CComClassFactory
 
-Этот класс реализует интерфейс [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) .
+Этот класс реализует интерфейс [IClassFactory.](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,36 +32,36 @@ class CComClassFactory
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Ккомклассфактори:: CreateInstance](#createinstance)|Создает объект указанного идентификатора CLSID.|
-|[Ккомклассфактори:: Локксервер](#lockserver)|Блокирует фабрику класса в памяти.|
+|[CComClassFactory::СозданиеInstance](#createinstance)|Создает объект указанного CLSID.|
+|[CComClassFactory::LockServer](#lockserver)|Запирает фабрику классов в памяти.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CComClassFactory`реализует интерфейс [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) , который содержит методы для создания объекта определенного идентификатора CLSID, а также блокирует фабрику класса в памяти, чтобы новые объекты могли создаваться быстрее. `IClassFactory`должен быть реализован для каждого класса, регистрируемого в системном реестре и которому назначается идентификатор CLSID.
+`CComClassFactory`реализует интерфейс [IClassFactory,](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) который содержит методы создания объекта конкретного CLSID, а также блокировку фабрики класса в памяти, чтобы позволить создавать новые объекты быстрее. `IClassFactory`должны быть реализованы для каждого класса, который вы регистрируетесь в системном реестре и которому вы назначаете CLSID.
 
-Объекты ATL обычно получают фабрику классов путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет `CComClassFactory` фабрику классов по умолчанию. Чтобы переопределить это значение по умолчанию, укажите `DECLARE_CLASSFACTORY`один из макросов *xxx* в определении класса. Например, макрос [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) использует указанный класс для фабрики класса:
+Объекты ATL обычно приобретают фабрику класса, произвнося из [CComCoClass.](../../atl/reference/ccomcoclass-class.md) Этот класс включает в себя `CComClassFactory` [макро-DECLARE_CLASSFACTORY,](aggregation-and-class-factory-macros.md#declare_classfactory)который объявляется фабрикой класса по умолчанию. Чтобы переопределить этот по умолчанию, укажите один из `DECLARE_CLASSFACTORY`макросов *XXX* в определении класса. Например, [в DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) макросе используется указанный класс для фабрики класса:
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]
 
-Приведенное выше определение класса указывает `CMyClassFactory` , что будет использоваться в качестве фабрики класса по умолчанию для объекта. `CMyClassFactory`должен быть производным `CComClassFactory` от и `CreateInstance`переопределять.
+В приведенном выше определении `CMyClassFactory` класса указывается, что будет использоваться в качестве фабрики класса по умолчанию объекта. `CMyClassFactory`должны вытекать `CComClassFactory` из `CreateInstance`и переопределить .
 
 ATL предоставляет три других макроса, которые объявляют фабрику класса:
 
-- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Использует [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), который управляет созданием с помощью лицензии.
+- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Использует [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), который контролирует создание через лицензию.
 
-- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Использует [ккомклассфакторяутосреад](../../atl/reference/ccomclassfactoryautothread-class.md), который создает объекты в нескольких подразделениях.
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Использует [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), который создает объекты в нескольких квартирах.
 
-- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Использует [ккомклассфакторисинглетон](../../atl/reference/ccomclassfactorysingleton-class.md), который конструирует один объект [ккомобжектглобал](../../atl/reference/ccomobjectglobal-class.md) .
+- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Использует [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), который строит один объект [CComObjectGlobal.](../../atl/reference/ccomobjectglobal-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** атлком. h
+**Заголовок:** atlcom.h
 
-##  <a name="createinstance"></a>Ккомклассфактори:: CreateInstance
+## <a name="ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::СозданиеInstance
 
-Создает объект указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
+Создает объект указанного CLSID и получает указатель интерфейса к этому объекту.
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -69,22 +69,22 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>Параметры
 
-*пункаутер*<br/>
-окне Если объект создается как часть агрегата, *пункаутер* должен быть внешним неизвестным. В противном случае *пункаутер* должен иметь значение null.
+*pUnkOuter*<br/>
+(в) Если объект создается как часть агрегата, то *pUnkOuter* должен быть внешним неизвестным. В противном *случае, pUnkOuter* должен быть NULL.
 
 *riid*<br/>
-окне IID запрашиваемого интерфейса. Если *пункаутер* не равен null, *riid* должен иметь `IID_IUnknown`значение.
+(в) IID запрашиваемого интерфейса. Если *pUnkOuter* не является NULL, `IID_IUnknown` *риид* должен быть .
 
-*ппвобж*<br/>
-заполняет Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс, *ппвобж* имеет значение null.
+*ppvObj*<br/>
+(ваут) Указатель на указатель интерфейса, идентифицированный *riid*. Если объект не поддерживает этот интерфейс, *ppvObj* настроен на NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-##  <a name="lockserver"></a>Ккомклассфактори:: Локксервер
+## <a name="ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer
 
-Увеличивает и уменьшает счетчик блокировок модуля, вызывая `_Module::Lock` и `_Module::Unlock`соответственно.
+Приращения и декреты блокировки `_Module::Lock` модуля отсчитываются по вызову и, `_Module::Unlock`соответственно.
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -92,21 +92,21 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*флокк*<br/>
-окне Если значение равно TRUE, счетчик блокировок увеличивается; в противном случае счетчик блокировок уменьшается.
+*Стадо*<br/>
+(в) Если true, количество блокировки приращено; в противном случае количество блокировки является decremented.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Стандартное значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`_Module`ссылается на глобальный экземпляр [CComModule](../../atl/reference/ccommodule-class.md) или производный от него класс.
+`_Module`относится к глобальному экземпляру [CComModule](../../atl/reference/ccommodule-class.md) или класса, полученного из него.
 
-Вызов `LockServer` позволяет клиенту хранить фабрику класса, чтобы можно было быстро создавать несколько объектов.
+Вызов `LockServer` позволяет клиенту удерживать фабрику класса, чтобы несколько объектов могли быть быстро созданы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[ккомглобалссреадмодел](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Обзор класса](../../atl/atl-class-overview.md)
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
+[Общие сведения о классах](../../atl/atl-class-overview.md)

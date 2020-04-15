@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: aa36fc0ac0eed5ea760224f9e0a3af1c97e18895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb94ba9e3d26b3cd910f23c3d4abb29d3b8b1cd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324094"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318364"
 ---
 # <a name="csimpleexception-class"></a>Класс CSimpleException
 
@@ -31,31 +31,31 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CSimpleException::CSimpleException](#csimpleexception)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSimpleException::GetErrorMessage](#geterrormessage)|Содержит текст об ошибке, что произошло.|
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Предоставляет текст об ошибке, которая произошла.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CSimpleException` является базовым классом для исключений MFC, критическими ресурсами и обрабатывает владения и инициализации сообщения об ошибке. Следующие классы используют `CSimpleException` как базовый класс:
+`CSimpleException`является базовым классом для ресурсо-критических исключений MFC и обрабатывает владение и инициализацию сообщения об ошибке. Следующие классы используются `CSimpleException` в качестве базового класса:
 
 |||
 |-|-|
-|[Класс CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Исключение Out of memory|
-|[Класс CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Запросы для неподдерживаемая операция|
-|[Класс CResourceException](../../mfc/reference/cresourceexception-class.md)|Ресурс Windows, не найден или не создаваемый объект|
-|[Класс CUserException](../../mfc/reference/cuserexception-class.md)|Исключение, которое указывает на ресурс не найден|
-|[Класс CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|Исключение, которое указывает недопустимый аргумент|
+|[Класс CMemoryException](../../mfc/reference/cmemoryexception-class.md)|Исключение из памяти|
+|[Класс CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|Запросы на неподдерживаемую операцию|
+|[Класс CResourceException](../../mfc/reference/cresourceexception-class.md)|Ресурс Windows не найден или не способен к соотвене|
+|[Класс CUserException](../../mfc/reference/cuserexception-class.md)|Исключение, указываво еде, не может быть найдено|
+|[Класс CInvalidargException](../../mfc/reference/cinvalidargexception-class.md)|Исключение, указываво недействительный аргумент|
 
-Так как `CSimpleException` — это абстрактный базовый класс, нельзя объявлять `CSimpleException` объекта напрямую. Вместо этого необходимо объявить производных объектов, например, в предыдущей таблице. Если вы объявляете производного класса, используйте предыдущий классы как модель.
+Поскольку `CSimpleException` это абстрактный базовый класс, вы не можете объявить `CSimpleException` объект напрямую. Вместо этого необходимо декларировать производные объекты, такие как объекты предыдущей таблицы. Если вы объявляете свой собственный класс, используйте предыдущие классы в качестве модели.
 
-Дополнительные сведения см. в разделе [класса CException](../../mfc/reference/cexception-class.md) раздела и [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).
+Для получения дополнительной [CException Class](../../mfc/reference/cexception-class.md) информации см. [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,7 +69,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 **Заголовок:** afx.h
 
-##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException
+## <a name="csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException
 
 Конструктор.
 
@@ -81,15 +81,15 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="parameters"></a>Параметры
 
 *bAutoDelete*<br/>
-Укажите значение TRUE, если память для `CSimpleException` объект выделен в куче. Это приведет к `CSimpleException` объект будет удален при `Delete` функция-член вызывается для удаления исключение. Укажите значение FALSE, если `CSimpleException` объект находится в стеке или — это глобальный объект. В этом случае `CSimpleException` объект не будет удалено, когда `Delete` вызывается функция-член.
+Укажите TRUE, если `CSimpleException` память для объекта была выделена на куче. Это приведет `CSimpleException` к удалению объекта `Delete` при вызове функции участника для удаления исключения. Укажите FALSE, находится ли `CSimpleException` объект в стеке или является глобальным объектом. В этом случае `CSimpleException` объект не будет удален `Delete` при вызове функции участника.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Обычно никогда не потребовалось бы вызвать этот конструктор напрямую. Функция, которая создает исключение следует создать экземпляр `CException`-производного класса и вызвать его конструктор, или его необходимо использовать один из MFC вызвать исключение функции, такие как [AfxThrowFileException](exception-processing.md#afxthrowfileexception), могут породить предопределенного типа.
+Обычно вам никогда не нужно звонить этому конструктору напрямую. Функция, которая бросает исключение, должна создать `CException`экземпляр класса, полученного из-производного, или вызвать его конструктор, или она должна использовать одну из функций метания MFC, такую как [AfxThrowFileException](exception-processing.md#afxthrowfileexception), чтобы бросить предопределенный тип.
 
-##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage
+## <a name="csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage
 
-Вызывайте эту функцию члена, чтобы предоставить текст об ошибке, которая произошла.
+Вызовите эту функцию участника, чтобы предоставить текст об ошибке, которая произошла.
 
 ```
 virtual BOOL GetErrorMessage(
@@ -100,24 +100,24 @@ virtual BOOL GetErrorMessage(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszError*<br/>
-Указатель на буфер, который будет получать сообщение об ошибке.
+*lpszОшибка*<br/>
+Указатель на буфер, который получит сообщение об ошибке.
 
-*nMaxError*<br/>
-Максимальное число символов, из которых может храниться в буфере, включая символ конца строки.
+*nMaxОшибка*<br/>
+Максимальное количество символов, которые может держать буфер, включая терминатор NULL.
 
-*pnHelpContext*<br/>
-Адрес целое число без знака, который будет получать идентификатор контекста справки. Если значение равно NULL, возвращается идентификатор отсутствует.
+*pnHelpКонтекст*<br/>
+Адрес UINT, который получит идентификатор контекста справки. Если NULL, идентификатор не будет возвращен.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если функция выполнена успешно; в противном случае — 0, если текст сообщения ошибки не доступен.
+Nonzero, если функция успешна; в противном случае 0, если текст сообщения об ошибке недоступен.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дополнительные сведения см. в разделе [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
+Для получения дополнительной информации [см. CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>

@@ -1,11 +1,13 @@
 ---
 title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
+- _o__mbspbrk
+- _o__mbspbrk_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ecdf896587096f0370351aac07cbd6be57257305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322172"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -119,39 +122,41 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*Ул*<br/>
 Строка для поиска, завершающаяся символом NULL.
 
-*стрчарсет*<br/>
+*strCharSet*<br/>
 Набор символов, завершающийся символом NULL.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на первое вхождение любого символа из *стрчарсет* в *str*или указатель null, если два строковых аргумента не имеют общих символов.
+Возвращает указатель на первое появление любого символа из *strCharSet* в *str,* или указатель NULL, если две строки аргументы не имеют общих символов.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция возвращает указатель на первое вхождение символа в *str* , который принадлежит набору символов в *стрчарсет.* `strpbrk` Поиск не включает завершающие нуль-символы.
+Функция `strpbrk` возвращает указатель к первому возникновению символа в *str,* который принадлежит к набору символов в *strCharSet.* Поиск не включает завершающие нуль-символы.
 
 Функции`wcspbrk` и `_mbspbrk` are wide-character и multibyte-character versions of `strpbrk`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcspbrk` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbspbrk` представляют собой многобайтовые строки.
 
-`_mbspbrk` проверяет свои параметры. Если *str* или *стрчарсет* имеет значение null, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено `_mbspbrk` , возвращает значение NULL `errno` и задает для еинвал. Функции `strpbrk` и `wcspbrk` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+`_mbspbrk` проверяет свои параметры. Если *str* или *strCharSet* null, вызовуется обработчик параметров недействительных, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено `_mbspbrk` продолжать, возвращает `errno` NULL и устанавливает eINVAL. Функции `strpbrk` и `wcspbrk` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 `_mbspbrk` аналогична `_mbscspn`, за исключением того, что `_mbspbrk` возвращает указатель, а не значение типа [size_t](../../c-runtime-library/standard-types.md).
 
-В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. Макрос _CRT_CONST_CORRECT_OVERLOADS определяется, если доступны и **константные** , и**неконстантные** версии этих функций. Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок, определите символ _CONST_RETURN.
+В C эти функции принимают **конст** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка принимая указатель **const** возвращает указатель **к const**; версия, которая принимает указатель на**не-const** возвращает указатель на**не-конст**. Макро_CRT_CONST_CORRECT_OVERLOADS определяется, имеются как **конст,** так и**не-конст-версии** этих функций. Если вам требуется**не-конст-поведение** для обеих перегрузок СЗ, определите символ _CONST_RETURN.
 
-На выходное значение влияет параметр категории LC_CTYPE языкового стандарта. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Версия с суффиксом **_l** идентична, за исключением того, что использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Значение вывода зависит от настройки LC_CTYPE категории локализуем; для получения дополнительной информации [см.](setlocale-wsetlocale.md) Версии этих функций без **_l** суффикса используют текущий локали для этого поведения, зависящем от локали; версия с **_l** суффикса идентична, за исключением того, что она использует параметр локализации, передаваемый вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|
-|**Н/Д**|**Н/Д**|`_mbspbrk_l`|**Н/Д**|
+|**Недоступно**|**Недоступно**|`_mbspbrk_l`|**Недоступно**|
 
 ## <a name="requirements"></a>Требования
 
@@ -161,7 +166,7 @@ const unsigned char *_mbspbrk_l(
 |`wcspbrk`|\<string.h> или \<wchar.h>|
 |`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -197,10 +202,10 @@ int main( void )
 4: 5 pigs
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>

@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrElementTraits class
 ms.assetid: 777c1b14-6ab7-491f-b9a5-be149e71d4a2
-ms.openlocfilehash: d217441048403b0ff5361f8049b76367174812f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac29116dc9beedf587c42cc0e52f8c9dbaf3d782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318876"
 ---
 # <a name="cautoptrelementtraits-class"></a>Класс CAutoPtrElementTraits
 
-Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекции интеллектуальных указателей.
+Этот класс предоставляет методы, статические функции и полезные при создании коллекций интеллектуальных указателей.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не могут быть использованы в приложениях, выполняемых в Windows Runtime.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,14 +40,14 @@ class CAutoPtrElementTraits
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
-|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
+|[CAutoPtrElementTraits::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объект класса сбора.|
+|[CAutoPtrElementTraits::OUTARGTYPE](#outargtype)|Тип данных для извлечения элементов из объекта класса сбора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс предоставляет методы, статические функции и определения типов для создания объектов класса коллекции, содержащий интеллектуальные указатели. Классы [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) и [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) являются производными от `CAutoPtrElementTraits`. Если для создания коллекции интеллектуальных указателей, который требуется вектор new и delete операторы, использовать [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) вместо этого.
+Этот класс предоставляет методы, статические функции и типы для сособничания созданию объектов класса коллекции, содержащих интеллектуальные указатели. Классы [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) и [CAutoPtrList](../../atl/reference/cautoptrlist-class.md) вытекают из `CAutoPtrElementTraits`. Если создание коллекции интеллектуальных указателей, требующих новых векторных и удаленных операторов, используйте [CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md) вместо этого.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,7 +57,7 @@ class CAutoPtrElementTraits
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultЭлементТхрытс](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CAutoPtrElementTraits`
 
@@ -65,23 +65,23 @@ class CAutoPtrElementTraits
 
 **Заголовок:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoPtrElementTraits::INARGTYPE
+## <a name="cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE
 
-Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+Тип данных для добавления элементов в объект класса сбора.
 
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoPtrElementTraits::OUTARGTYPE
+## <a name="cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE
 
-Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.
+Тип данных для извлечения элементов из объекта класса сбора.
 
 ```
 typedef T *& OUTARGTYPE;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376174"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>Класс CMFCSpinButtonCtrl
 
-`CMFCSpinButtonCtrl` Класс поддерживает наглядный диспетчер, который рисует элемент управления "Счетчик".
+Класс `CMFCSpinButtonCtrl` поддерживает визуальный менеджер, который рисует управление кнопкой вращения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,24 +29,24 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CMFCSpinButtonCtrl::CMFCSpinButtonCtrl`|Конструктор по умолчанию.|
 |`CMFCSpinButtonCtrl::~CMFCSpinButtonCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Перерисовывает текущего управления "Счетчик".|
+|[CMFCSpinButtonCtrl::Ondraw](#ondraw)|Перерисовывает текущее управление кнопкой вращения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Чтобы использовать Диспетчер визуальных для рисования управления "Счетчик" в приложении, замените все вхождения `CSpinButtonCtrl` класса `CMFCSpinButtonCtrl` класса.
+Чтобы использовать визуальный менеджер, чтобы нарисовать управление кнопкой `CSpinButtonCtrl` вращения в `CMFCSpinButtonCtrl` приложении, замените все экземпляры класса классом.
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как создать объект `CMFCSpinButtonCtrl` и использовать его `Create` метод.
+В следующем примере показано, как `CMFCSpinButtonCtrl` создать объект `Create` класса и использовать его метод.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
@@ -66,9 +66,9 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 **Заголовок:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::Ondraw
 
-Перерисовывает текущего управления "Счетчик".
+Перерисовывает текущее управление кнопкой вращения.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -77,13 +77,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Платформа вызывает `CMFCSpinButtonCtrl::OnPaint` метод для обработки [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) сообщение, и что в свою очередь вызывает метод, это `CMFCSpinButtonCtrl::OnDraw` метод. Переопределите этот метод для настройки способа framework рисует управления "Счетчик".
+Платформа вызывает `CMFCSpinButtonCtrl::OnPaint` метод обработки [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) сообщение, и этот `CMFCSpinButtonCtrl::OnDraw` метод, в свою очередь, вызывает этот метод. Переопределить этот метод, чтобы настроить способ управления кнопкой вращения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
