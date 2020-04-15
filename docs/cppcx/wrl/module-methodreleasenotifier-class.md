@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371291"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Класс Module::MethodReleaseNotifier
 
-Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий заданного объекта и ее члена указатель на метод.
+Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик события определяется объектом и его элементом указателя на метод.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,28 +36,28 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Тип объекта, функция-член которого является обработчиком событий.
+Тип объекта, функцией члена которого является обработчик события.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                                                                                                 | Описание
+Имя                                                                                                 | Описание
 ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
-[Module::methodreleasenotifier:: methodreleasenotifier](#methodreleasenotifier-methodreleasenotifier) | Инициализирует новый экземпляр класса `Module::MethodReleaseNotifier`.
+[Модуль:MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | Инициализирует новый экземпляр класса `Module::MethodReleaseNotifier`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                                   | Описание
+Имя                                                                   | Описание
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier:: Invoke](#methodreleasenotifier-invoke) | Вызывает обработчик событий, связанный с текущим `Module::MethodReleaseNotifier` объекта.
+[Модуль:MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Вызывает обработчик событий, `Module::MethodReleaseNotifier` связанный с текущим объектом.
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-name                                                                    | Описание
+Имя                                                                    | Описание
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Содержит указатель на обработчик событий для текущего `Module::MethodReleaseNotifier` объекта.
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Содержит указатель на объект, функция-член которого является обработчиком событий для текущего `Module::MethodReleaseNotifier` объекта.
+[Модуль:MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Удерживает указатель обработчика событий `Module::MethodReleaseNotifier` для текущего объекта.
+[Модуль:MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Удерживает указатель на объект, функция члена которого `Module::MethodReleaseNotifier` является обработчиком событий для текущего объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -71,23 +71,23 @@ name                                                                    | Опи
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier:: Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Модуль:MethodReleaseNotifier::Invoke
 
-Вызывает обработчик событий, связанный с текущим `Module::MethodReleaseNotifier` объекта.
+Вызывает обработчик событий, `Module::MethodReleaseNotifier` связанный с текущим объектом.
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Модуль:MethodReleaseNotifier::method_
 
-Содержит указатель на обработчик событий для текущего `Module::MethodReleaseNotifier` объекта.
+Удерживает указатель обработчика событий `Module::MethodReleaseNotifier` для текущего объекта.
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::methodreleasenotifier:: methodreleasenotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Модуль:MethodReleaseNotifier::MethodReleaseNotifier
 
 Инициализирует новый экземпляр класса `Module::MethodReleaseNotifier`.
 
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Параметры
 
-*object*<br/>
-Объект, функция-член которого является обработчиком событий.
+*Объекта*<br/>
+Объект, функция члена которого является обработчиком событий.
 
-*Метод*<br/>
-Функция-член параметра *объект* то есть обработчик событий.
+*method*<br/>
+Функция участника *объекта* параметра, который является обработчиком событий.
 
-*release*<br/>
-Укажите `true` для включения вызова базового [модуль:: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) метода; в противном случае укажите `false`.
+*Выпуска*<br/>
+Указать, `true` чтобы включить вызов основного [модуля::ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) метод; в противном случае, укажите `false`.
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Модуль:MethodReleaseNotifier::object_
 
-Содержит указатель на объект, функция-член которого является обработчиком событий для текущего `Module::MethodReleaseNotifier` объекта.
+Удерживает указатель на объект, функция члена которого `Module::MethodReleaseNotifier` является обработчиком событий для текущего объекта.
 
 ```cpp
 T* object_;

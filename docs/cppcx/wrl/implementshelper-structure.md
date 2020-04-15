@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: 250a59152e9b41eb48c453caaa696fdc8ca3d3b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e33842f574df5617fb40c5b3f6bb8324d5ba7c1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398229"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371398"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,30 +36,30 @@ friend struct Details::ImplementsHelper;
 ### <a name="parameters"></a>Параметры
 
 *RuntimeClassFlagsT*<br/>
-Поле флагов, который указывает один или несколько [RuntimeClassType](runtimeclasstype-enumeration.md) перечислителей.
+Поле флагов, которое определяет один или несколько регистраторов [RuntimeClassType.](runtimeclasstype-enumeration.md)
 
 *ILst*<br/>
-Список идентификаторов интерфейсов.
+Список идов интерфейса.
 
-*IsDelegateToClass*<br/>
-Укажите **true** Если текущий экземпляр `Implements` является базовым классом для идентификатор первого интерфейса в *ILst*; в противном случае **false**.
+*IsDelegatetoClass*<br/>
+Укажите **истинно,** `Implements` если текущий экземпляр является базовым классом первого идентификатора интерфейса в *ILst;* в противном случае, **ложные**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Помогает реализовать [реализует](implements-structure.md) структуры.
+Помогает реализовать структуру [реализации.](implements-structure.md)
 
-Этот шаблон, проходит через список интерфейсов и добавляет их в качестве базовых классов, а также как сведения, необходимые для включения `QueryInterface`.
+Этот шаблон пересекает список интерфейсов и добавляет их в качестве `QueryInterface`базовых классов, а также как информацию, необходимую для включения.
 
 ## <a name="members"></a>Участники
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-name                                                    | Описание
+Имя                                                    | Описание
 ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------
-[ImplementsHelper::CanCastTo](#cancastto)               | Возвращает указатель на идентификатор указанного интерфейса.
-[ImplementsHelper::CastToUnknown](#casttounknown)       | Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.
-[ImplementsHelper::FillArrayWithIid](#fillarraywithiid) | Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.
-[ImplementsHelper::IidCount](#iidcount)                 | Содержит число идентификаторов реализованного интерфейса в текущем `Implements` объекта.
+[РеализуетХандер::CanCastTo](#cancastto)               | Получает указатель на указанный идентификатор интерфейса.
+[РеализуетХандер::CastToUnknown](#casttounknown)       | Получает указатель на базовый `IUnknown` интерфейс `Implements` для текущей структуры.
+[РеализуетХандер::FillArrayWithIid](#fillarraywithiid) | Вставляет идентификатор интерфейса, указанный текущим параметром шаблона нулевой, в указанный элемент массива.
+[РеализуетХандер::IidCount](#iidcount)                 | Сохраняет количество иных идонов `Implements` интерфейса в текущем объекте.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -69,11 +69,11 @@ name                                                    | Описание
 
 **Заголовок:** implements.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="cancastto"></a>ImplementsHelper::CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a>РеализуетХандер::CanCastTo
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 HRESULT CanCastTo(
@@ -92,23 +92,23 @@ HRESULT CanCastTo(
 *riid*<br/>
 Ссылка на идентификатор интерфейса.
 
-*ppv*<br/>
-Если операция выполнена успешно, указатель на интерфейс, заданный *riid* или *iid*.
+*Ppv*<br/>
+Если эта операция успешна, указатель на интерфейс, указанный *riid* или *iid.*
 
-*IID*<br/>
+*Iid*<br/>
 Ссылка на идентификатор интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Возвращает указатель на идентификатор указанного интерфейса.
+Получает указатель на указанный идентификатор интерфейса.
 
-## <a name="casttounknown"></a>ImplementsHelper::CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>РеализуетХандер::CastToUnknown
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 IUnknown* CastToUnknown();
@@ -118,13 +118,13 @@ IUnknown* CastToUnknown();
 
 Указатель на базовый `IUnknown` интерфейс.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Возвращает указатель на базовый `IUnknown` интерфейса для текущего `Implements` структуры.
+Получает указатель на базовый `IUnknown` интерфейс `Implements` для текущей структуры.
 
-## <a name="fillarraywithiid"></a>ImplementsHelper::FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>РеализуетХандер::FillArrayWithIid
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 void FillArrayWithIid(
@@ -135,23 +135,23 @@ void FillArrayWithIid(
 ### <a name="parameters"></a>Параметры
 
 *Индекс*<br/>
-Отсчитываемый от нуля индекс, указывающий начальный элемент массива для этой операции. По завершении этой операции *индекс* увеличивается на 1.
+Индекс с нулевым уровнем, указывающий элемент стартового массива для этой операции. Когда эта операция завершается, *индекс* приравнизирован на 1.
 
-*идентификаторы IID*<br/>
-Массив типа IID.
+*iids*<br/>
+Массив типовых IID.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вставляет идентификатор интерфейса, заданный текущим параметром шаблона признаками в указанный элемент массива.
+Вставляет идентификатор интерфейса, указанный текущим параметром шаблона нулевой, в указанный элемент массива.
 
-## <a name="iidcount"></a>ImplementsHelper::IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a>РеализуетХандер::IidCount
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 static const unsigned long IidCount;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Содержит число идентификаторов реализованного интерфейса в текущем `Implements` объекта.
+Сохраняет количество иных идонов `Implements` интерфейса в текущем объекте.

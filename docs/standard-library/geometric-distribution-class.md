@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 44b624995ed274212a2699cb457c91dfa4530f03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370642"
 ---
 # <a name="geometric_distribution-class"></a>Класс geometric_distribution
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Инттипе* \
-Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random >](../standard-library/random.md).
+*IntType*\
+Тип результата, по умолчанию **int**. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-*Ргсч* \
-Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*Ргсч*\
+Единый генератор случайных чисел. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое создает значения указанного пользователем целочисленного типа с геометрическим распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа с геометрическим распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Геометрическое распределение](https://go.microsoft.com/fwlink/p/?linkid=400529).
 
@@ -209,7 +209,7 @@ Distribution for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution::geometric_distribution
 
 Формирует распределение.
 
@@ -220,21 +220,21 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*parm* \
+*парм*\
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < p && p < 1.0`
+**Предварительное условие:**`0.0 < p && p < 1.0`
 
 Первый конструктор создает объект, хранимое значение `p` которого содержит значение *p*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  geometric_distribution::param_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::pараматип
 
 Сохраняет параметры распределения.
 
@@ -251,18 +251,18 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*p* \
+*P*\
 Параметр распределения `p`.
 
-*справа* \
+*Правильно*\
 Экземпляр `param_type` для сравнения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < p && p < 1.0`
+**Предварительное условие:**`0.0 < p && p < 1.0`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

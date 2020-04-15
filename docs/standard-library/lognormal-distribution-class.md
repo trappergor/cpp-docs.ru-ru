@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bcf587c5029fdf0b61da45dbd4ee9250f4c3a43b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ae13505da411b9a9cc445560907d053afa4bf81d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351703"
 ---
 # <a name="lognormal_distribution-class"></a>Класс lognormal_distribution
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Реалтипе* \
-Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-Шаблон класса описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Шаблон класса описывает распределение, которое производит значения определенного пользовательского интегрального типа, или **вдвастю дважды,** если не предусмотрено, распределенное в соответствии с обычным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -90,7 +90,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 Подробные сведения о логарифмически нормальном распределении см. в статье Wolfram MathWorld [Логарифмически нормальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400917).
 
@@ -184,7 +184,7 @@ Distribution for 10 samples:
 
 **Пространство имен:** std
 
-## <a name="lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution::lognormal_distribution
 
 Формирует распределение.
 
@@ -195,24 +195,24 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*m* \
+*М*\
 Параметр распределения `m`.
 
-*s* \
+*s*\
 Параметр распределения `s`.
 
-*parm* \
+*парм*\
 Структура `param_type`, используемая для формирования распределения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < s`
+**Предварительное условие:**`0.0 < s`
 
 Первый конструктор создает объект, хранимое значение `m` которого содержит значение *m*, а значение `s` содержит значение *s*.
 
 Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.
 
-## <a name="param_type"></a>  lognormal_distribution::param_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::pараматип
 
 Сохраняет параметры распределения.
 
@@ -230,21 +230,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*m* \
+*М*\
 Параметр распределения `m`.
 
-*s* \
+*s*\
 Параметр распределения `s`.
 
-*справа* \
+*Правильно*\
 Структура `param_type`, используемая для сравнения.
 
-### <a name="remarks"></a>Заметки
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `0.0 < s`
+**Предварительное условие:**`0.0 < s`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

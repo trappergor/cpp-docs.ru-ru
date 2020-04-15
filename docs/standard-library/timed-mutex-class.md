@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6c9840d9b8c00d4b03e6ea329c7707a0edff9512
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459925"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368020"
 ---
-# <a name="timedmutex-class"></a>Класс timed_mutex
+# <a name="timed_mutex-class"></a>Класс timed_mutex
 
-Представляет *тип мьютекса с ограничением по времени*. Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе.
+Представляет *тип mutex, приуроченный.* Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,28 +39,28 @@ class timed_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|Создает объект `timed_mutex`, который не заблокирован.|
-|[Деструктор timed_mutex::~timed_mutex](#dtortimed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `timed_mutex`.|
+|[timed_mutex::timed_mutex деструктор](#dtortimed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `timed_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
 |[try_lock_for](#try_lock_for)|Пытается получить права владельца `mutex` на заданный интервал времени.|
 |[try_lock_until](#try_lock_until)|Пытается получить права владельца `mutex` до заданного времени.|
-|[unlock](#unlock)|Освобождает права владения объектом `mutex`.|
+|[Разблокировать](#unlock)|Освобождает права владения объектом `mutex`.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<> мьютекса
+**Заголовок:** \<mutex>
 
 **Пространство имен:** std
 
-## <a name="lock"></a>  timed_mutex::lock
+## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex::lock
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -68,11 +68,11 @@ class timed_mutex;
 void lock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="timed_mutex"></a>  Конструктор timed_mutex::timed_mutex
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex::timed_mutex конструктор
 
 Создает объект `timed_mutex`, который не заблокирован.
 
@@ -80,7 +80,7 @@ void lock();
 timed_mutex();
 ```
 
-## <a name="dtortimed_mutex_destructor"></a>  Деструктор timed_mutex::~timed_mutex
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex::timed_mutex деструктор
 
 Освобождает все ресурсы, используемые объектом `mutex`.
 
@@ -88,11 +88,11 @@ timed_mutex();
 ~timed_mutex();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если при выполнении деструктора объект заблокирован, поведение не определено.
 
-## <a name="try_lock"></a>  timed_mutex::try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex:::try_lock
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
+**верно,** если метод успешно получает `mutex`право собственности на ; в противном случае, **ложные**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="try_lock_for"></a>  timed_mutex::try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex::try_lock_for
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -124,13 +124,13 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
+**верно,** если метод успешно получает `mutex`право собственности на ; в противном случае, **ложные**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="try_lock_until"></a>  timed_mutex::try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex::try_lock_until
 
 Попытки получить права владельца объекта `mutex` без блокировки.
 
@@ -148,13 +148,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
+**верно,** если метод успешно получает `mutex`право собственности на ; в противном случае, **ложные**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="unlock"></a>  timed_mutex::unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex::разблокировка
 
 Освобождает права владения объектом `mutex`.
 
@@ -162,11 +162,11 @@ bool try_lock_until(const xtime* Abs_time);
 void unlock();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Если вызывающий поток не является владельцем `mutex`, поведение не определено.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Справка по файлам заголовка](../standard-library/cpp-standard-library-header-files.md)\
 [\<mutex>](../standard-library/mutex.md)

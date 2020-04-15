@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371260"
 ---
 # <a name="modulebase-class"></a>Класс ModuleBase
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,22 +32,22 @@ ms.locfileid: "62403221"
 class ModuleBase;
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Представляет базовый класс для [модуль](module-class.md) классы.
+Представляет базовый класс классов [модуля.](module-class.md)
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-name                                         | Описание
+Имя                                         | Описание
 -------------------------------------------- | ---------------------------------------------------------
 [ModuleBase::ModuleBase](#modulebase)        | Инициализирует экземпляр класса `Module`.
-[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | Деинициализирует текущий экземпляр `Module` класса.
+[ModuleBase:::»ModuleBase](#tilde-modulebase) | Деприиратизирует текущий `Module` экземпляр класса.
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                                      | Описание
+Имя                                                      | Описание
 --------------------------------------------------------- | -------------------------------------------------------------------------
 [ModuleBase::DecrementObjectCount](#decrementobjectcount) | При реализации уменьшает число объектов, отслеживаемых модулем.
 [ModuleBase::IncrementObjectCount](#incrementobjectcount) | При реализации увеличивает число объектов, отслеживаемых модулем.
@@ -60,23 +60,23 @@ name                                                      | Описание
 
 **Заголовок:** implements.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>ModuleBase:::»ModuleBase
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 virtual ~ModuleBase();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Деинициализирует текущий экземпляр `ModuleBase` класса.
+Деприиратизирует текущий `ModuleBase` экземпляр класса.
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
@@ -84,15 +84,15 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число, прежде чем операция уменьшения.
+Подсчет перед операцией по декретуму.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При реализации уменьшает число объектов, отслеживаемых модулем.
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
@@ -100,20 +100,20 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Счетчик перед выполнением операции инкремента.
+Подсчет перед операцией приращения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 При реализации увеличивает число объектов, отслеживаемых модулем.
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>ModuleBase::ModuleBase
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 ModuleBase();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Инициализирует экземпляр класса `Module`.

@@ -137,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 36f58d9bacbc0b62614496b6a4b69eb6f4830d2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373108"
 ---
 # <a name="unordered_multimap-class"></a>Класс unordered_multimap
 
-Шаблон класса описывает объект, управляющий последовательностью элементов типа `std::pair<const Key, Ty>`с различной длиной. Последовательность слабо упорядочена хэш-функцией, которая разделяет последовательность в упорядоченный набор подпоследовательностей, называемых блоками. В каждом блоке функция сравнения определяет, упорядочена ли каждая пара элементов соответствующим образом. Каждый элемент содержит два объекта: ключ и значение сортировки. Последовательность представляется в виде, позволяющем выполнять поиск, вставку и удаление произвольного элемента несколькими операциями, которые могут не зависеть от числа элементов в последовательности (постоянное время), по крайней мере, когда все блоки имеют примерно одинаковую длину. В худшем случае, когда все элементы находятся в одном блоке, количество операций пропорционально количеству элементов в последовательности (линейное время). Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.
+Шаблон класса описывает объект, который управляет последовательности элементов типа `std::pair<const Key, Ty>`различной длины. Последовательность слабо упорядочена хэш-функцией, которая разделяет последовательность в упорядоченный набор подпоследовательностей, называемых блоками. В каждом блоке функция сравнения определяет, упорядочена ли каждая пара элементов соответствующим образом. Каждый элемент содержит два объекта: ключ и значение сортировки. Последовательность представляется в виде, позволяющем выполнять поиск, вставку и удаление произвольного элемента несколькими операциями, которые могут не зависеть от числа элементов в последовательности (постоянное время), по крайней мере, когда все блоки имеют примерно одинаковую длину. В худшем случае, когда все элементы находятся в одном блоке, количество операций пропорционально количеству элементов в последовательности (линейное время). Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -161,17 +161,17 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*Key*|Тип ключа.|
+|*Клавиша*|Тип ключа.|
 |*Ty*|Сопоставленный тип.|
 |*Хэш*|Тип объекта хэш-функции.|
-|*Возможен*|Тип объекта функции сравнения на предмет равенства.|
-|*Идентификатор*|Класс распределителя.|
+|*Pred*|Тип объекта функции сравнения на предмет равенства.|
+|*Alloc*|Класс распределителя.|
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-|Определение типа|Description|
+|Определение типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -179,68 +179,68 @@ class unordered_multimap;
 |[const_pointer](#const_pointer)|Тип постоянного указателя на элемент.|
 |[const_reference](#const_reference)|Тип постоянной ссылки на элемент.|
 |[difference_type](#difference_type)|Тип расстояния со знаком между двумя элементами.|
-|[Hasher](#hasher)|Тип хэш-функции.|
-|[iterator](#iterator)|Тип итератора для управляемой последовательности.|
+|[Домработника](#hasher)|Тип хэш-функции.|
+|[Итератор](#iterator)|Тип итератора для управляемой последовательности.|
 |[key_equal](#key_equal)|Тип функции сравнения.|
-|[key_type](#key_type)|Тип ключа упорядочения.|
+|[Key_type](#key_type)|Тип ключа упорядочения.|
 |[local_iterator](#local_iterator)|Тип итератора блока для управляемой последовательности.|
 |[mapped_type](#mapped_type)|Тип сопоставленного значения, связанного с каждым ключом.|
-|[pointer](#pointer)|Тип указателя на элемент.|
-|[reference](#reference)|Тип ссылки на элемент.|
+|[указатель](#pointer)|Тип указателя на элемент.|
+|[Ссылки](#reference)|Тип ссылки на элемент.|
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
-|[value_type](#value_type)|Тип элемента.|
+|[Value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Description|
+|Функция-член|Описание|
 |-|-|
-|[begin](#begin)|Задает начало управляемой последовательности.|
-|[период](#bucket)|Получает номер блока для значения ключа.|
+|[Начать](#begin)|Задает начало управляемой последовательности.|
+|[Ведро](#bucket)|Получает номер блока для значения ключа.|
 |[bucket_count](#bucket_count)|Получает количество блоков.|
 |[bucket_size](#bucket_size)|Получает размер блока.|
 |[cbegin](#cbegin)|Задает начало управляемой последовательности.|
 |[cend](#cend)|Задает конец управляемой последовательности.|
-|[пусто](#clear)|Удаляет все элементы.|
+|[Ясно](#clear)|Удаляет все элементы.|
 |[count](#count)|Определяет количество элементов, соответствующих заданному ключу.|
 |[emplace](#emplace)|Добавляет элемент, созданный на месте.|
 |[emplace_hint](#emplace_hint)|Добавляет элемент, созданный на месте, с подсказкой.|
-|[empty](#empty)|Проверяет отсутствие элементов.|
+|[Пустой](#empty)|Проверяет отсутствие элементов.|
 |[end](#end)|Задает конец управляемой последовательности.|
 |[equal_range](#equal_range)|Находит диапазон, соответствующий указанному ключу.|
 |[erase](#erase)|Удаляет элементы в указанных позициях.|
-|[find](#find)|Определяет элемент, соответствующий указанному ключу.|
+|[Найти](#find)|Определяет элемент, соответствующий указанному ключу.|
 |[get_allocator](#get_allocator)|Возвращает сохраненный объект распределителя.|
 |[hash_function](#hash)|Получает сохраненный объект хэш-функции.|
-|[insert](#insert)|Добавляет элементы.|
-|[key_eq](#key_eq)|Получает сохраненный объект функции сравнения.|
+|[Вставить](#insert)|Добавляет элементы.|
+|[Key_eq](#key_eq)|Получает сохраненный объект функции сравнения.|
 |[load_factor](#load_factor)|Подсчитывает среднее число элементов в блоке.|
 |[max_bucket_count](#max_bucket_count)|Получает максимальное количество блоков.|
 |[max_load_factor](#max_load_factor)|Возвращает или задает максимальное количество элементов в блоке.|
 |[max_size](#max_size)|Возвращает максимальный размер управляемой последовательности.|
-|[rehash](#rehash)|Повторно создает хэш-таблицу.|
-|[size](#size)|Подсчитывает количество элементов.|
-|[swap](#swap)|Меняет местами содержимое двух контейнеров.|
-|[unordered_multimap](#unordered_multimap)|Создает объект контейнера.|
+|[Переделывать](#rehash)|Повторно создает хэш-таблицу.|
+|[Размер](#size)|Подсчитывает количество элементов.|
+|[Своп](#swap)|Меняет местами содержимое двух контейнеров.|
+|[Unordered_multimap](#unordered_multimap)|Создает объект контейнера.|
 
-|Оператор|Description|
+|Оператор|Описание|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|Копирует хэш-таблицу.|
 
 ## <a name="remarks"></a>Remarks
 
-Объект упорядочивает управляемую им последовательность путем вызова двух сохраненных объектов — объекта функции сравнения типа [unordered_multimap::key_equal](#key_equal) и объекта хэш-функции типа [unordered_multimap::hasher](#hasher). Доступ к первому сохраненному объекту можно получить, вызвав функцию-член [unordered_multimap::key_eq](#key_eq)`()`; доступ ко второму сохраненному объекту выполняется путем вызова функции-члена [unordered_multimap::hash_function](#hash)`()`. В частности, для всех значений `X` и `Y` типа `Key` вызов `key_eq()(X, Y)` возвращает значение true, только если два значения аргументов имеют соответствующий порядок; вызов `hash_function()(keyval)` создает распределение значений типа `size_t`. В отличие от [класса unordered_map Class](../standard-library/unordered-map-class.md), объект типа `unordered_multimap` не гарантирует, что `key_eq()(X, Y)` всегда имеет значение false для любого из двух элементов управляемой последовательности. (Ключи не обязательно должны быть уникальными.)
+Объект упорядочивает управляемую им последовательность путем вызова двух сохраненных объектов — объекта функции сравнения типа [unordered_multimap::key_equal](#key_equal) и объекта хэш-функции типа [unordered_multimap::hasher](#hasher). Вы получаете доступ к первому сохраненному объекту, позвонив в функцию участника [unordered_multimap::key_eq;](#key_eq)`()` и вы получаете доступ ко второму сохраненному объекту, позвонив функции участника [unordered_multimap::hash_function](#hash)`()`. В частности, для всех значений `X` и `Y` типа `Key` вызов `key_eq()(X, Y)` возвращает значение true, только если два значения аргументов имеют соответствующий порядок; вызов `hash_function()(keyval)` создает распределение значений типа `size_t`. В отличие от шаблона класса `unordered_multimap` [unordered_map класса,](../standard-library/unordered-map-class.md)объект типа не гарантирует, что `key_eq()(X, Y)` это всегда ложно для любых двух элементов контролируемой последовательности. (Ключи не обязательно должны быть уникальными.)
 
-Объект также хранит максимальный коэффициент нагрузки, который определяет максимальное желаемое среднее количество элементов в блоке. Если вставка элемента приводит к тому, что значение [unordered_multimap::load_factor](#load_factor)`()` превышает максимальный коэффициент нагрузки, контейнер увеличивает количество блоков и перестраивает хэш-таблицу по мере необходимости.
+Объект также хранит максимальный коэффициент нагрузки, который определяет максимальное желаемое среднее количество элементов в блоке. Если вставка элемента приводит к [unordered_multimap:load_factor](#load_factor) `()` превышению максимального коэффициента нагрузки, контейнер увеличивает количество ведер и по мере необходимости восстанавливает хэш-таблицу.
 
 Фактический порядок элементов в управляемой последовательности зависит от хэш-функции, функции сравнения, порядка вставки, максимального коэффициента нагрузки и текущего числа блоков. Обычно невозможно предсказать порядок элементов в управляемой последовательности. Однако всегда можно сохранять уверенность, что любое подмножество элементов, имеющих соответствующий порядок, будет расположено по соседству в управляемой последовательности.
 
-Объект выделяет и освобождает хранилище для управляемой им последовательности с помощью сохраненного объекта распределителя, который имеет тип [unordered_multimap::allocator_type](#allocator_type). Такой объект распределителя должен иметь тот же внешний интерфейс, что и объект типа `allocator`. Обратите внимание, что сохраненный объект распределителя не копируется, когда назначается объект контейнера.
+Объект выделяет и освобождает хранилище для управляемой им последовательности с помощью сохраненного объекта распределителя, который имеет тип [unordered_multimap::allocator_type](#allocator_type). Такой объект разлесть должен иметь тот же внешний `allocator`интерфейс, что и объект типа. Обратите внимание, что сохраненный объект распределителя не копируется, когда назначается объект контейнера.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<unordered_map >
+**Заголовок:** \<unordered_map>
 
 **Пространство имен:** std
 
-## <a name="allocator_type"></a>  unordered_multimap::allocator_type
+## <a name="unordered_multimapallocator_type"></a><a name="allocator_type"></a>unordered_multimap::allocator_type
 
 Тип распределителя для управления хранилищем.
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_multimap::begin
+## <a name="unordered_multimapbegin"></a><a name="begin"></a>unordered_multimap::начало
 
 Задает начало управляемой последовательности или сегмента.
 
@@ -294,13 +294,13 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*нбуккет*|Номер сегмента.|
+|*nbucket*|Номер сегмента.|
 
 ### <a name="remarks"></a>Remarks
 
-Первые две функции-члены возвращают прямой итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности). Последние две функции-члена возвращают прямой итератор, указывающий на первый элемент контейнера *нбуккет* (или сразу за концом пустого контейнера).
+Первые две функции-члены возвращают прямой итератор, указывающий на первый элемент последовательности (или на место сразу за концом пустой последовательности). Последние две функции участника возвращают передний итератор, который указывает на первый элемент ведро *nbucket* (или сразу за концом пустого ведра).
 
 ### <a name="example"></a>Пример
 
@@ -346,7 +346,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="bucket"></a>  unordered_multimap::bucket
+## <a name="unordered_multimapbucket"></a><a name="bucket"></a>unordered_multimap::ведро
 
 Получает номер блока для значения ключа.
 
@@ -356,12 +356,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*кэйвал*\
+*keyval*\
 Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Remarks
 
-Функция – член возвращает номер контейнера, который в настоящее время соответствует значению ключа *кэйвал*.
+Функция участника возвращает номер ведра, в настоящее время соответствующий *ключевому ключу*значения.
 
 ### <a name="example"></a>Пример
 
@@ -402,7 +402,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_multimap::bucket_count
+## <a name="unordered_multimapbucket_count"></a><a name="bucket_count"></a>unordered_multimap::bucket_count
 
 Получает количество блоков.
 
@@ -488,7 +488,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_multimap::bucket_size
+## <a name="unordered_multimapbucket_size"></a><a name="bucket_size"></a>unordered_multimap::bucket_size
 
 Получает размер сегмента.
 
@@ -498,12 +498,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-*нбуккет*\
+*nbucket*\
 Номер сегмента.
 
 ### <a name="remarks"></a>Remarks
 
-Функции элементов возвращают размер сегмента *нбуккет*.
+Функции участника возвращают размер номера ведра *nbucket.*
 
 ### <a name="example"></a>Пример
 
@@ -544,9 +544,9 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_multimap::cbegin
+## <a name="unordered_multimapcbegin"></a><a name="cbegin"></a>unordered_multimap::cbegin
 
-Возвращает **Константный** итератор, который обращается к первому элементу в диапазоне.
+Возвращает **конст-итератор,** который обращается к первому элементу в диапазоне.
 
 ```cpp
 const_iterator cbegin() const;
@@ -554,13 +554,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Константный** итератор прямого доступа, указывающий на первый элемент диапазона, или расположение непосредственно за концом пустого диапазона (для пустого диапазона, `cbegin() == cend()`).
+Конст-форвард-доступ итератор, который указывает на первый элемент диапазона, или расположение только за пределами `cbegin() == cend()`конца пустого диапазона (для пустого диапазона, ). **const**
 
 ### <a name="remarks"></a>Remarks
 
 Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.
 
-Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере рассмотрите возможность `Container` быть изменяемым (не **константным**) контейнером любого типа, поддерживающего `begin()` и `cbegin()`.
+Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере, `Container` рассмотреть в качестве изменяемого (не **конст)** контейнер любого рода, который поддерживает `begin()` и `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -570,9 +570,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_multimap::cend
+## <a name="unordered_multimapcend"></a><a name="cend"></a>unordered_multimap::cend
 
-Возвращает **Константный** итератор, который обращается к расположению сразу за последним элементом в диапазоне.
+Возвращает **конст-итератор,** который обращается к местоположению только за пределами последнего элемента в диапазоне.
 
 ```cpp
 const_iterator cend() const;
@@ -580,13 +580,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Константный** итератор прямого доступа, указывающий на место, находящееся за концом диапазона.
+Конст-форвард-доступ итератор, который указывает только за пределами конца диапазона. **const**
 
 ### <a name="remarks"></a>Remarks
 
 `cend` используется для проверки того, прошел ли итератор конец диапазона.
 
-Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере рассмотрите возможность `Container` быть изменяемым (не **константным**) контейнером любого типа, поддерживающего `end()` и `cend()`.
+Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере, `Container` рассмотреть в качестве изменяемого (не **конст)** контейнер любого рода, который поддерживает `end()` и `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -598,7 +598,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a>  unordered_multimap::clear
+## <a name="unordered_multimapclear"></a><a name="clear"></a>unordered_multimap::ясно
 
 Удаляет все элементы.
 
@@ -608,7 +608,7 @@ void clear();
 
 ### <a name="remarks"></a>Remarks
 
-Функция члена вызывает [unordered_multimap:: erase](#erase)`(` [unordered_multimap:: Begin](#begin)`(),` [unordered_multimap:: end](#end)`())`.
+Функция-член вызывает [unordered_multimap::erase](#erase)`(` [unordered_multimap::begin](#begin)`(),` [unordered_multimap::end](#end)`())`.
 
 ### <a name="example"></a>Пример
 
@@ -665,7 +665,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_multimap::const_iterator
+## <a name="unordered_multimapconst_iterator"></a><a name="const_iterator"></a>unordered_multimap::const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -708,7 +708,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_multimap::const_local_iterator
+## <a name="unordered_multimapconst_local_iterator"></a><a name="const_local_iterator"></a>unordered_multimap::const_local_iterator
 
 Тип постоянного итератора блока для управляемой последовательности.
 
@@ -756,7 +756,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="const_pointer"></a>  unordered_multimap::const_pointer
+## <a name="unordered_multimapconst_pointer"></a><a name="const_pointer"></a>unordered_multimap::const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -802,7 +802,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="const_reference"></a>  unordered_multimap::const_reference
+## <a name="unordered_multimapconst_reference"></a><a name="const_reference"></a>unordered_multimap::const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -848,7 +848,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="count"></a>  unordered_multimap::count
+## <a name="unordered_multimapcount"></a><a name="count"></a>unordered_multimap::count
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -858,12 +858,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*кэйвал*\
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает число элементов в диапазоне, ограниченном [unordered_multimap::equal_range](#equal_range)`(keyval)`.
+Функция участника возвращает количество элементов в диапазоне, делимитированных [unordered_multimap::equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Пример
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_multimap::difference_type
+## <a name="unordered_multimapdifference_type"></a><a name="difference_type"></a>unordered_multimap::difference
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -962,9 +962,9 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_multimap::emplace
+## <a name="unordered_multimapemplace"></a><a name="emplace"></a>unordered_multimap::место
 
-Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются) с подсказкой размещения.
+Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
 ```cpp
 template <class... Args>
@@ -973,27 +973,27 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
+|*Args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор на вставленный элемент.
+Итератор, указывающий на вновь вставленный элемент.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция не делает недействительными ссылки на элементы контейнера, но она может сделать недействительными все итераторы контейнера.
+Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
-Значение [value_type](../standard-library/map-class.md#value_type) элемента — это пара. Таким образом, значение элемента будет упорядоченной парой, в которой первый компонент равен значению ключа, а второй компонент — значению данных элемента.
+[value_type](../standard-library/map-class.md#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.
 
 Если во время вставки возникает исключение, но оно произошло не в хэш-функции контейнера, контейнер не изменяется. Если исключение вызывается в хэш-функции, результат не определен.
 
 Пример кода см. в разделе [multimap::emplace](../standard-library/multimap-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_multimap::emplace_hint
+## <a name="unordered_multimapemplace_hint"></a><a name="emplace_hint"></a>unordered_multimap::emplace_hint
 
-Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются) с подсказкой размещения.
+Вставляет созданный элемент на место (операции копирования или перемещения не выполняются) с указанием о размещении.
 
 ```cpp
 template <class... Args>
@@ -1004,26 +1004,26 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
-|*where*|Подсказка о месте начала поиска правильной точки вставки.|
+|*Args*|Аргументы, передаваемые для создания элемента, который будет вставлен в объект unordered_multimap.|
+|*Где*|Подсказка о месте начала поиска правильной точки вставки.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор на вставленный элемент.
+Итератор, указывающий на вновь вставленный элемент.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция не делает недействительными ссылки на элементы контейнера, но она может сделать недействительными все итераторы контейнера.
+Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.
 
 Если во время вставки возникает исключение, но оно произошло не в хэш-функции контейнера, контейнер не изменяется. Если исключение вызывается в хэш-функции, результат не определен.
 
-Значение [value_type](../standard-library/map-class.md#value_type) элемента — это пара. Таким образом, значение элемента будет упорядоченной парой, в которой первый компонент равен значению ключа, а второй компонент — значению данных элемента.
+[value_type](../standard-library/map-class.md#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.
 
 Пример кода см. в разделе [map::emplace_hint](../standard-library/map-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_multimap::empty
+## <a name="unordered_multimapempty"></a><a name="empty"></a>unordered_multimap::пустой
 
 Проверяет отсутствие элементов.
 
@@ -1090,7 +1090,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_multimap::end
+## <a name="unordered_multimapend"></a><a name="end"></a>unordered_multimap::end
 
 Задает конец управляемой последовательности.
 
@@ -1106,13 +1106,13 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*нбуккет*|Номер сегмента.|
+|*nbucket*|Номер сегмента.|
 
 ### <a name="remarks"></a>Remarks
 
-Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции-члена возвращают прямой итератор, указывающий сразу за концом сегмента *нбуккет*.
+Первые две функции-члены возвращают прямой итератор, указывающий на место сразу за концом последовательности. Последние две функции участника возвращают передний итератор, который указывает только за концом ведро *nbucket.*
 
 ### <a name="example"></a>Пример
 
@@ -1160,7 +1160,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="equal_range"></a>  unordered_multimap::equal_range
+## <a name="unordered_multimapequal_range"></a><a name="equal_range"></a>unordered_multimap::equal_range
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -1174,12 +1174,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>Параметры
 
-*кэйвал*\
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает пару итераторов `X` таким, что `[X.first, X.second)` разделяет только те элементы управляемой последовательности, которые имеют эквивалентное упорядочение с *кэйвал*. Если таких элементов не существует, оба итератора имеют значение `end()`.
+Функция члена возвращает пару `X` итераторов `[X.first, X.second)` таким образом, что разграничает только те элементы контролируемой последовательности, которые имеют эквивалентный заказ с *keyval.* Если таких элементов не существует, оба итератора имеют значение `end()`.
 
 ### <a name="example"></a>Пример
 
@@ -1231,7 +1231,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]
 ```
 
-## <a name="erase"></a>  unordered_multimap::erase
+## <a name="unordered_multimaperase"></a><a name="erase"></a>unordered_multimap::erase
 
 Удаляет элемент или диапазон элементов в объекте unordered_multimap с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1255,15 +1255,15 @@ size_type erase(
 *Первый*\
 Положение первого удаляемого элемента.
 
-*Последние*\
-Положение перед последним удаляемым элементом.
+*Последний*\
+Позиция после последнего элемента для удаления.
 
-*Ключевые*\
+*Ключ*\
 Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Для первых двух функций-членов двунаправленный итератор, указывающий на первый элемент, оставшийся после удаления элементов, или на последний элемент сопоставления, если такого элемента не существует.
+Для первых двух функций-членов это двунаправленный итератор, обозначающий первый элемент, остающийся после любых удаленных элементов, или элемент в конце сопоставления, если таких элементов нет.
 
 Для третьей функции-члена возвращает число элементов, которые были удалены из объекта unordered_multimap.
 
@@ -1271,7 +1271,7 @@ size_type erase(
 
 Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).
 
-## <a name="find"></a>  unordered_multimap::find
+## <a name="unordered_multimapfind"></a><a name="find"></a>unordered_multimap::find
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1281,12 +1281,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*кэйвал*\
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает [unordered_multimap::equal_range](#equal_range)`(keyval).first`.
+Функция участника [возвращается unordered_multimap:::equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Пример
 
@@ -1331,7 +1331,7 @@ find('A') == false
 find('b') == true: [b, 2]
 ```
 
-## <a name="get_allocator"></a>  unordered_multimap::get_allocator
+## <a name="unordered_multimapget_allocator"></a><a name="get_allocator"></a>unordered_multimap::get_allocator
 
 Возвращает сохраненный объект распределителя.
 
@@ -1369,7 +1369,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_multimap::hash_function
+## <a name="unordered_multimaphash_function"></a><a name="hash"></a>unordered_multimap::hash_function
 
 Получает сохраненный объект хэш-функции.
 
@@ -1407,7 +1407,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_multimap::hasher
+## <a name="unordered_multimaphasher"></a><a name="hasher"></a>unordered_multimap::hasher
 
 Тип хэш-функции.
 
@@ -1445,7 +1445,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_multimap::insert
+## <a name="unordered_multimapinsert"></a><a name="insert"></a>unordered_multimap::вставка
 
 Вставляет элемент или диапазон элементов в unordered_multimap.
 
@@ -1485,15 +1485,15 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в unordered_multimap.|
-|*Where*|Место начала поиска правильной точки вставки.|
-|*валти*|Параметр шаблона, указывающий тип аргумента, который unordered_multimap может использовать для создания элемента [value_type](../standard-library/map-class.md#value_type), и идеальное перенаправление *Val* в качестве аргумента.|
-|*Первая*|Позиция первого элемента, который следует скопировать.|
-|*Последняя*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*Интерфейс*|[initializer_list](../standard-library/initializer-list.md), из которого нужно скопировать элементы.|
+|*Где*|Место начала поиска правильной точки вставки.|
+|*ValTy*|Параметры шаблона, который определяет тип аргумента, который unordered_multimap может использовать для построения элемента [value_type,](../standard-library/map-class.md#value_type)и совершенный вперед *Val* в качестве аргумента.|
+|*Первый*|Позиция первого элемента, который следует скопировать.|
+|*Последний*|Позиция непосредственно перед последним элементом, который следует скопировать.|
+|*Inputiterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
+|*IList*|В [initializer_list,](../standard-library/initializer-list.md) из которых можно скопировать элементы.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1509,7 +1509,7 @@ IList);
 
 [value_type](../standard-library/map-class.md#value_type) контейнера — это определение типа, который принадлежит контейнеру. Для сопоставления `map<K, V>::value_type` — это `pair<const K, V>`. Значение элемента — это упорядоченная пара, в которой первый компонент эквивалентен значению ключа, а второй компонент — значению данных элемента.
 
-Функция-член Range (5) вставляет последовательность значений элементов в unordered_multimap, соответствующую каждому элементу, адресованному итератором в диапазоне `[First, Last)`; Следовательно, *Last* не вставляется. Контейнер функции-члена `end()` ссылается на позицию сразу после последнего элемента в контейнере. Например, оператор `m.insert(v.begin(), v.end());` пытается вставить все элементы `v` в `m`.
+Функция члена диапазона (5) вставляет последовательность значений элементов в unordered_multimap, которая соответствует каждому `[First, Last)`элементу, адресованному итератором в диапазоне; таким образом, *Last* не вставляется. Контейнер функции-члена `end()` ссылается на позицию сразу после последнего элемента в контейнере. Например, оператор `m.insert(v.begin(), v.end());` пытается вставить все элементы `v` в `m`.
 
 Функция — член списка инициализаторов (6) использует [initializer_list](../standard-library/initializer-list.md) для копирования элементов в unordered_multimap.
 
@@ -1517,7 +1517,7 @@ IList);
 
 Пример кода см. в разделе [multimap::find](../standard-library/multiset-class.md#insert).
 
-## <a name="iterator"></a>  unordered_multimap::iterator
+## <a name="unordered_multimapiterator"></a><a name="iterator"></a>unordered_multimap::iterator
 
 Тип итератора для управляемой последовательности.
 
@@ -1560,7 +1560,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="key_eq"></a>  unordered_multimap::key_eq
+## <a name="unordered_multimapkey_eq"></a><a name="key_eq"></a>unordered_multimap::key_eq
 
 Получает сохраненный объект функции сравнения.
 
@@ -1600,7 +1600,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_multimap::key_equal
+## <a name="unordered_multimapkey_equal"></a><a name="key_equal"></a>unordered_multimap::key_equal
 
 Тип функции сравнения.
 
@@ -1640,7 +1640,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_multimap::key_type
+## <a name="unordered_multimapkey_type"></a><a name="key_type"></a>unordered_multimap::key_type
 
 Тип ключа упорядочения.
 
@@ -1695,7 +1695,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="load_factor"></a>  unordered_multimap::load_factor
+## <a name="unordered_multimapload_factor"></a><a name="load_factor"></a>unordered_multimap::load_factor
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1705,7 +1705,7 @@ float load_factor() const;
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член возвращает `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`, среднее количество элементов на сегмент.
+Функция участника `(float)`возвращает [unordered_multimap::размер](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()`, среднее количество элементов на ведро.
 
 ### <a name="example"></a>Пример
 
@@ -1763,7 +1763,7 @@ int main()
     }
 ```
 
-## <a name="local_iterator"></a>  unordered_multimap::local_iterator
+## <a name="unordered_multimaplocal_iterator"></a><a name="local_iterator"></a>unordered_multimap::local_iterator
 
 Тип итератора контейнера.
 
@@ -1811,7 +1811,7 @@ int main()
 [a, 1]
 ```
 
-## <a name="mapped_type"></a>  unordered_multimap::mapped_type
+## <a name="unordered_multimapmapped_type"></a><a name="mapped_type"></a>unordered_multimap::mapped_type
 
 Тип сопоставленного значения, связанного с каждым ключом.
 
@@ -1866,7 +1866,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_multimap::max_bucket_count
+## <a name="unordered_multimapmax_bucket_count"></a><a name="max_bucket_count"></a>unordered_multimap::max_bucket_count
 
 Получает максимальное количество блоков.
 
@@ -1952,7 +1952,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_multimap::max_load_factor
+## <a name="unordered_multimapmax_load_factor"></a><a name="max_load_factor"></a>unordered_multimap::max_load_factor
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -1964,12 +1964,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Параметры
 
-*коэффициент*\
+*Фактор*\
 Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Remarks
 
-Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Вторая функция – член заменяет хранимую максимальную степень нагрузки на *Коэффициент*.
+Первая функция-член возвращает сохраненный коэффициент максимальной нагрузки. Функция второго члена заменяет сохраненный максимальный коэффициент нагрузки *фактором.*
 
 ### <a name="example"></a>Пример
 
@@ -2045,7 +2045,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_multimap::max_size
+## <a name="unordered_multimapmax_size"></a><a name="max_size"></a>unordered_multimap::max_size
 
 Возвращает максимальный размер управляемой последовательности.
 
@@ -2080,7 +2080,7 @@ int main()
 max_size() == 536870911
 ```
 
-## <a name="op_eq"></a>  unordered_multimap::operator=
+## <a name="unordered_multimapoperator"></a><a name="op_eq"></a>unordered_multimap:оператор
 
 Копирует хэш-таблицу.
 
@@ -2092,13 +2092,13 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*right*|unordered_multimap копируется в unordered_multimap.|
+|*Правильно*|unordered_multimap копируется в unordered_multimap.|
 
 ### <a name="remarks"></a>Remarks
 
-После удаления существующих элементов в unordered_multimap `operator=` копирует или перемещает содержимое *непосредственно* в unordered_multimap.
+После стирания любых существующих `operator=` элементов в unordered_multimap, либо копирует, либо перемещает содержимое *правого* в unordered_multimap.
 
 ### <a name="example"></a>Пример
 
@@ -2137,7 +2137,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  unordered_multimap::pointer
+## <a name="unordered_multimappointer"></a><a name="pointer"></a>unordered_multimap::pointer
 
 Тип указателя на элемент.
 
@@ -2183,7 +2183,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="reference"></a>  unordered_multimap::reference
+## <a name="unordered_multimapreference"></a><a name="reference"></a>unordered_multimap::ссылка
 
 Тип ссылки на элемент.
 
@@ -2229,7 +2229,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="rehash"></a>  unordered_multimap::rehash
+## <a name="unordered_multimaprehash"></a><a name="rehash"></a>unordered_multimap::rehash
 
 Повторно создает хэш-таблицу.
 
@@ -2239,12 +2239,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Параметры
 
-*нбуккетс*\
+*nbuckets*\
 Требуемое число сегментов.
 
 ### <a name="remarks"></a>Remarks
 
-Функция-член изменяет количество контейнеров, чтобы они были как минимум *нбуккетс* и перестраивает хэш-таблицу по мере необходимости.
+Функция члена изменяет количество ведер, чтобы быть по крайней мере *nbuckets* и восстанавливает хэш-таблицу по мере необходимости.
 
 ### <a name="example"></a>Пример
 
@@ -2307,7 +2307,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_multimap::size
+## <a name="unordered_multimapsize"></a><a name="size"></a>unordered_multimap:размер
 
 Подсчитывает количество элементов.
 
@@ -2374,7 +2374,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_multimap::size_type
+## <a name="unordered_multimapsize_type"></a><a name="size_type"></a>unordered_multimap::size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -2410,7 +2410,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_multimap::swap
+## <a name="unordered_multimapswap"></a><a name="swap"></a>unordered_multimap::swap
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2420,12 +2420,12 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>Параметры
 
-*справа*\
+*Правильно*\
 Контейнер для замены.
 
 ### <a name="remarks"></a>Remarks
 
-Функция – член меняет местами управляемые последовательности между `*this` и *right*. Если используется функция [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`, она делает это в постоянном времени, создает исключение только в результате копирования сохраненного объекта признаков типа `Tr` и не делает недействительными ссылки, указатели или итераторы, которые указывают на элементы в двух управляемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.
+Функция члена меняет контролируемые последовательности между `*this` и *правыми.* Если [unordered_multimap::get_allocator,](#get_allocator)`() == right.get_allocator()`он делает это в постоянное время, он бросает исключение только в `Tr`результате копирования сохраненных признаков объекта типа, и он не делает недействительными ссылки, указатели или итераторы, которые обозначают элементы в двух контролируемых последовательностях. В противном случае она выполняет ряд назначений элементов и вызовов конструктора, пропорционально количеству элементов в двух управляемых последовательностях.
 
 ### <a name="example"></a>Пример
 
@@ -2482,7 +2482,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="unordered_multimap"></a>  unordered_multimap::unordered_multimap
+## <a name="unordered_multimapunordered_multimap"></a><a name="unordered_multimap"></a>unordered_multimap::unordered_multimap
 
 Создает объект контейнера.
 
@@ -2536,29 +2536,29 @@ unordered_multimap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Description|
+|Параметр|Описание|
 |-|-|
-|*InputIterator*|Тип итератора.|
-|*Al*|Объект распределителя для сохранения.|
-|*Соответствовал*|Объект функции сравнения для сохранения.|
+|*Inputiterator*|Тип итератора.|
+|*Аль*|Объект распределителя для сохранения.|
+|*Комп*|Объект функции сравнения для сохранения.|
 |*Хэш*|Объект хэш-функции для сохранения.|
 |*Bucket_count*|Минимальное количество блоков.|
-|*Right*|Контейнер для копирования.|
-|*Интерфейс*|Объект initializer_list, из которого копируются элементы.|
+|*Правильно*|Контейнер для копирования.|
+|*IList*|Объект initializer_list, из которого копируются элементы.|
 
 ### <a name="remarks"></a>Remarks
 
-Первый конструктор задает копию последовательности, управляемой по *правому краю*. Второй конструктор определяет управляемую пустую последовательность. Третий конструктор. задает копию последовательности путем перемещения *вправо*. Четвертый, пятый, шестой, седьмой и восьмой конструкторы используют initializer_list для своих членов. Девятый конструктор добавляет последовательность значений элементов `[First, Last)`.
+Первый конструктор указывает копию последовательности, контролируемой *Right.* Второй конструктор определяет управляемую пустую последовательность. Третий конструктор. определяет копию последовательности, перемещая *вправо*. Четвертый, пятый, шестой, седьмой и восьмой конструкторы используют initializer_list для своих членов. Девятый конструктор добавляет последовательность значений элементов `[First, Last)`.
 
-Все конструкторы также инициализируют ряд сохраненных значений. Для конструктора копии значения получаются *справа*. В противном случае:
+Все конструкторы также инициализируют ряд сохраненных значений. Для конструктора копий значения получены из *правого.* В противном случае:
 
-Минимальное число контейнеров — аргумент, *Bucket_count*, если он есть; в противном случае это значение по умолчанию, описываемое здесь как значение, определенное реализацией `N0`.
+Минимальное количество ведер является аргументом *Bucket_count,* если присутствует; в противном случае это значение по умолчанию, описанное здесь как значение, `N0`определяемое реализацией.
 
-объект хэш-функции — это *хэш*аргумента, если он есть; в противном случае это `Hash()`.
+Объект функции хэша является аргументом *Hash*, если присутствует; в противном случае это `Hash()`.
 
-Объект функции сравнения — это аргумент *comp*, если он есть; в противном случае это `Pred()`.
+Объект функции сравнения является аргументом *Comp,* если присутствует; в противном случае это `Pred()`.
 
-Объект распределителя — это аргумент *Al*, если он есть; в противном случае это `Alloc()`.
+Объект разлесть является *аргументом Al*, если присутствует; в противном `Alloc()`случае, это .
 
 ### <a name="example"></a>Пример
 
@@ -2683,7 +2683,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="value_type"></a>  unordered_multimap::value_type
+## <a name="unordered_multimapvalue_type"></a><a name="value_type"></a>unordered_multimap::value_type
 
 Тип элемента.
 
@@ -2742,5 +2742,5 @@ int main()
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [Контейнеры](../cpp/containers-modern-cpp.md)\
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+[Безопасность резьбы в стандартной библиотеке СЗ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Стандартная библиотечная справка по СЗ](../standard-library/cpp-standard-library-reference.md)

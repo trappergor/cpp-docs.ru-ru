@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 9221daa002f19c3f73e65a49efb8da9c6f96b258
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7d9e1f1b9af3002faa9e2d9b20b7ee76dce35aea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455226"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372089"
 ---
-# <a name="piecewiselineardistribution-class"></a>Класс piecewise_linear_distribution
+# <a name="piecewise_linear_distribution-class"></a>Класс piecewise_linear_distribution
 
 Формирует кусочно-линейное распределение с меняющимися интервалами ширины и линейно меняющейся вероятностью в каждом интервале.
 
@@ -80,10 +80,10 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*реалтипе*\
-Тип результата с плавающей точкой, по умолчанию, равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*RealType*\
+Тип результата плавающей точки, по **умолчанию**удвоиться. Для возможных типов см [ \<>. ](../standard-library/random.md)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Выборочное распределение использует меняющиеся интервалы ширины с линейно меняющейся вероятностью в каждом интервале. Сведения о других выборочных распределениях см. в разделах [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) и [discrete_distribution](../standard-library/discrete-distribution-class.md).
 
@@ -106,7 +106,7 @@ public:
 
 Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
 
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
+Для получения дополнительной информации о классах распределения и их членах [ \<>](../standard-library/random.md)см.
 
 ## <a name="example"></a>Пример
 
@@ -219,7 +219,7 @@ Distribution for 100 samples:
 
 **Пространство имен:** std
 
-## <a name="piecewise_linear_distribution"></a>  piecewise_linear_distribution::piecewise_linear_distribution
+## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::piecewise-linear-дистрибутив
 
 Формирует распределение.
 
@@ -249,34 +249,34 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*фирсти*\
+*firstI*\
 Итератор ввода первого элемента в диапазоне распределения.
 
-*ласти*\
+*lastI*\
 Итератор ввода последнего элемента в диапазоне распределения.
 
 *firstW*\
 Итератор ввода первого элемента в диапазоне весов.
 
-*диапазона*\
+*Интервалы*\
 Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.
 
-*расчета*\
+*Рассчитывать*\
 Количество элементов в диапазоне распределения.
 
 *xmin*\
 Минимальное значение в диапазоне распределения.
 
-*xmax*\
+*Xmax*\
 Максимальное значение в диапазоне распределения. Должно быть больше, чем *xmin*.
 
-*веигхтфунк*\
-Объект, представляющий функцию вероятности распределения. Оба параметра и возвращаемое значение должны быть преобразованы в **Double**.
+*weightfunc*\
+Объект, представляющий функцию вероятности распределения. Параметр и значение возврата должны быть конвертируемыми в **два раза.**
 
-*ParM*\
+*парм*\
 Структура параметров, используемая для формирования распределения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Конструктор по умолчанию задает хранимые параметры таким образом, чтобы существовал один интервал от 0 до 1 с плотностью вероятности 1.
 
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-конструирует объект распределения с интервалами от итераторов по последовательности [ `firstI`, `lastI`) и соответствующей последовательности весов, начиная с *firstW*.
+строит объект распределения с itnervals от итераторов `lastI`над последовательностью , `firstI`) и соответствующая последовательность веса, начиная с *firstW*.
 
 Конструктор списка инициализаторов
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-Создает объект распределения с интервалами между *интервалами* списка инициализаторов и весовыми коэффициентами, созданными из функции *веигхтфунк*.
+строит объект распределения с интервалами от *интервалов* списка инициализаторов и весов, генерируемых из функции *weightfunc.*
 
 Конструктор, определенный как
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-конструирует объект *распределения с* интервалами равномерного распределения по [ `xmin,xmax`], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и возвращать , оба из которых могут быть преобразованы `double`в. **Предварительные условия** `xmin < xmax`
+строит объект распределения с *интервалами* подсчета, `xmin,xmax`распределенными равномерно по пересчету `double`веса, назначая каждый интервал веса в соответствии с функцией *weightfunc,* и *weightfunc* должен принять один параметр и иметь возвратное значение, оба из которых являются кабриолетом. **Предварительное условие:**`xmin < xmax`.
 
 Конструктор, определенный как
 
@@ -322,9 +322,9 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-конструирует объект распределения, используя *ParM* в качестве структуры хранимого параметра.
+строит объект распределения, используя *parm* в качестве сохраненной структуры параметров.
 
-## <a name="param_type"></a>  piecewise_linear_distribution::param_type
+## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::pараматип
 
 Сохраняет все параметры распределения.
 
@@ -350,12 +350,12 @@ struct param_type {
 
 См. параметры конструктора [piecewise_linear_distribution](#piecewise_linear_distribution).
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-**Предусловие:** `xmin < xmax`
+**Предварительное условие:**`xmin < xmax`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[\<random>](../standard-library/random.md)
+[\<случайные>](../standard-library/random.md)

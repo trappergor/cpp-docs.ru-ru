@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 9a4c169944d56b693efa681bf7089636477012ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373548"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory - класс
 
@@ -29,14 +29,14 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*<br/>
+*Базы*<br/>
 Базовый класс.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Базовый класс должен предоставлять конструктор по умолчанию.
+Базовый класс должен предоставить конструктор по умолчанию.
 
-В следующем примере кода демонстрируется использование `SimpleClassFactory` с [ActivatableClassWithFactoryEx](activatableclass-macros.md) макрос.
+Следующий пример кода демонстрирует, `SimpleClassFactory` как использовать с помощью макроса [ActivatableWithFactoryEx.](activatableclass-macros.md)
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -44,7 +44,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Метод SimpleClassFactory::CreateInstance](#createinstance)|Создает экземпляр указанного интерфейса.|
 
@@ -78,7 +78,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 **Пространство имен:** Microsoft::WRL
 
-## <a name="createinstance"></a>Метод SimpleClassFactory::CreateInstance
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory::CreateInstance Метод
 
 Создает экземпляр указанного интерфейса.
 
@@ -95,18 +95,18 @@ STDMETHOD( CreateInstance )(
 *pUnkOuter*<br/>
 Должно быть `nullptr`; в противном случае возвращается значение CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory не поддерживает агрегирование. Если поддерживается агрегирование и создаваемый объект был частью агрегата, *pUnkOuter* должен быть указателем на управляющий `IUnknown` интерфейс агрегатной функции.
+SimpleClassFactory не поддерживает агрегирование. Если агрегация поддерживается и создаваемый объект является частью агрегата, *pUnkOuter* будет указателем на контрольный `IUnknown` интерфейс агрегата.
 
 *riid*<br/>
 Идентификатор интерфейса объекта, который требуется создать.
 
 *ppvObject*<br/>
-После завершения операции, указатель на экземпляр объекта, заданного параметром *riid* параметра.
+Когда эта операция завершается, указатель на экземпляр объекта, указанный параметром *риида.*
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если `__WRL_STRICT__` будет определен, Ошибка утверждения создается, если базовый класс, указанный в параметре шаблона класса не является производным от [RuntimeClass](runtimeclass-class.md), или не настроен со значением ClassicCom или WinRtClassicComMix [ RuntimeClassType](runtimeclasstype-enumeration.md) значение перечисления.
+Если `__WRL_STRICT__` определено, ошибка утверждения испускается, если базовый класс, указанный в параметре шаблона класса, не получен из [RuntimeClass](runtimeclass-class.md)или не настроен со значением перечисления ClassicCom или WinRtClassicComMix [RuntimeClassTypeType.](runtimeclasstype-enumeration.md)

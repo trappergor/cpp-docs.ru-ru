@@ -238,17 +238,17 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367817"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
 Реализует базовую функциональность для окон с вкладками.
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -256,15 +256,15 @@ ms.locfileid: "79426069"
 class CMFCBaseTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCBaseTabCtrl::AddIcon](#addicon)||
+|[CMFCBaseTabCtrl:AddIcon](#addicon)||
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Добавляет новую вкладку в окно с вкладками.|
-|[CMFCBaseTabCtrl::ApplyRestoredTabInfo](#applyrestoredtabinfo)||
+|[CMFCBaseTabCtrl:ApplyRestoredTabInfo](#applyrestoredtabinfo)||
 |[CMFCBaseTabCtrl::AutoDestroyWindow](#autodestroywindow)||
 |[CMFCBaseTabCtrl::CalcRectEdit](#calcrectedit)||
 |[CMFCBaseTabCtrl::CleanUp](#cleanup)||
@@ -273,19 +273,19 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::EnableActivateLastActive](#enableactivatelastactive)||
 |[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)|Включает или выключает автоматическую цветовую маркировку вкладок.|
 |[CMFCBaseTabCtrl::EnableCustomToolTips](#enablecustomtooltips)|Включает или отключает настраиваемые подсказки для вкладок.|
-|[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Включает или отключает прямое редактирование меток вкладок.|
+|[CMFCBaseTabCtrl:EnableInPlaceEdit](#enableinplaceedit)|Включает или отключает прямое редактирование меток вкладок.|
 |[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)|Включает отделяемые вкладки.|
 |[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|Включает или отключает возможность изменения порядка вкладок с помощью мыши.|
-|[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|Прокручивает вкладки, пока не станет видна указанная вкладка. Не действует, если указанная вкладка уже видна.|
+|[CMFCBaseTabCtrl::ОбеспечениеВидимое](#ensurevisible)|Прокручивает вкладки, пока не станет видна указанная вкладка. Не действует, если указанная вкладка уже видна.|
 |[CMFCBaseTabCtrl::EnterDragMode](#enterdragmode)||
-|[CMFCBaseTabCtrl::FindTargetWnd](#findtargetwnd)|Возвращает область, содержащую указанную точку.|
+|[CMFCBaseTabCtrl:FindTargetWnd](#findtargetwnd)|Возвращает область, содержащую указанную точку.|
 |[CMFCBaseTabCtrl::FireChangeActiveTab](#firechangeactivetab)||
 |[CMFCBaseTabCtrl::FireChangingActiveTab](#firechangingactivetab)||
 |[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|Возвращает индекс активной вкладки.|
 |[CMFCBaseTabCtrl::GetActiveTabColor](#getactivetabcolor)|Возвращает цвет фона активной вкладки.|
 |[CMFCBaseTabCtrl::GetActiveTabTextColor](#getactivetabtextcolor)|Возвращает цвет текста активной вкладки.|
-|[CMFCBaseTabCtrl::GetActiveWnd](#getactivewnd)|Возвращает указатель на активную страницу набора вкладок.|
-|[CMFCBaseTabCtrl::GetAutoColors](#getautocolors)|Возвращает ссылку на массив цветов, используемых для автоматической цветовой маркировки.|
+|[CMFCBaseTabCtrl:GetActiveWnd](#getactivewnd)|Возвращает указатель на активную страницу набора вкладок.|
+|[CMFCBaseTabCtrl:GetAutoColors](#getautocolors)|Возвращает ссылку на массив цветов, используемых для автоматической цветовой маркировки.|
 |[CMFCBaseTabCtrl::GetFirstVisibleTab](#getfirstvisibletab)|Возвращает указатель на первую видимую вкладку.|
 |[CMFCBaseTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)||
 |[CMFCBaseTabCtrl::GetHighlightedTab](#gethighlightedtab)|Возвращает индекс выделенной вкладки.|
@@ -296,24 +296,24 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetMaxWindowSize](#getmaxwindowsize)||
 |[CMFCBaseTabCtrl::GetTabArea](#gettabarea)|Возвращает размер и положение области вкладок в окне с вкладками. Положение области вкладок определяется по координатам.|
 |[CMFCBaseTabCtrl::GetTabBkColor](#gettabbkcolor)|Возвращает цвет фона указанной вкладки.|
-|[CMFCBaseTabCtrl::GetTabBorderSize](#gettabbordersize)|Возвращает размер границ вкладки в наборе вкладок.|
+|[CMFCBaseTabCtrl:GetTabBorderSize](#gettabbordersize)|Возвращает размер границ вкладки в наборе вкладок.|
 |[CMFCBaseTabCtrl::GetTabByID](#gettabbyid)|Возвращает индекс вкладки, определяемой по указанному идентификатору.|
 |[CMFCBaseTabCtrl::GetTabCloseButton](#gettabclosebutton)||
 |[CMFCBaseTabCtrl::GetTabFromHwnd](#gettabfromhwnd)|Возвращает индекс вкладки, содержащей указанный объект HWND.|
-|[CMFCBaseTabCtrl::GetTabFromPoint](#gettabfrompoint)|Возвращает вкладку, содержащую указанную точку.|
+|[CMFCBaseTabCtrl:GetTabFromPoint](#gettabfrompoint)|Возвращает вкладку, содержащую указанную точку.|
 |[CMFCBaseTabCtrl::GetTabFullWidth](#gettabfullwidth)||
-|[CMFCBaseTabCtrl::GetTabHicon](#gettabhicon)|Возвращает значок, связанный с указанной вкладкой.|
+|[CMFCBaseTabCtrl:GetTabHicon](#gettabhicon)|Возвращает значок, связанный с указанной вкладкой.|
 |[CMFCBaseTabCtrl::GetTabID](#gettabid)|Возвращает идентификатор вкладки по ее индексу.|
 |[CMFCBaseTabCtrl::GetTabIcon](#gettabicon)|Возвращает идентификатор значка указанной вкладки.|
-|[CMFCBaseTabCtrl::GetTabLabel](#gettablabel)|Возвращает текст указанной вкладки.|
-|[CMFCBaseTabCtrl::GetTabRect](#gettabrect)|Извлекает размер и положение указанной вкладки.|
-|[CMFCBaseTabCtrl::GetTabsHeight](#gettabsheight)||
-|[CMFCBaseTabCtrl::GetTabsRect](#gettabsrect)||
+|[CMFCBaseTabCtrl:GetTabLabel](#gettablabel)|Возвращает текст указанной вкладки.|
+|[CMFCBaseTabCtrl:GetTabRect](#gettabrect)|Извлекает размер и положение указанной вкладки.|
+|[CMFCBaseTabCtrl:GetTabsHeight](#gettabsheight)||
+|[CMFCBaseTabCtrl:GetTabsRect](#gettabsrect)||
 |[CMFCBaseTabCtrl::GetTabTextColor](#gettabtextcolor)|Возвращает цвет текста указанной вкладки.|
-|[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)|Возвращает указатель в область, расположенную на указанной странице вкладки.|
-|[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)|Возвращает прямой указатель на элемент управления, находящийся на указанной странице вкладки, даже если у этого элемента управления имеется оболочка.|
+|[CMFCBaseTabCtrl:GetTabWnd](#gettabwnd)|Возвращает указатель в область, расположенную на указанной странице вкладки.|
+|[CMFCBaseTabCtrl:GetTabWndNoWrapper](#gettabwndnowrapper)|Возвращает прямой указатель на элемент управления, находящийся на указанной странице вкладки, даже если у этого элемента управления имеется оболочка.|
 |[CMFCBaseTabCtrl::GetTabsNum](#gettabsnum)|Возвращает количество вкладок, входящих в набор вкладок.|
-|[CMFCBaseTabCtrl::GetToolTipCtrl](#gettooltipctrl)|Возвращает ссылку на элемент управления ToolTip, связанный с объектом `CMFCBaseTabCtrl` .|
+|[CMFCBaseTabCtrl:GetToolTipCtrl](#gettooltipctrl)|Возвращает ссылку на элемент управления ToolTip, связанный с объектом `CMFCBaseTabCtrl` .|
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|Возвращает количество видимых вкладок.|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|Задает параметр, скрывающий вкладку окна, но только в случае, если в окне с вкладками отображается лишь одна видимая вкладка.|
@@ -324,7 +324,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::IsAutoDestroyWindow](#isautodestroywindow)||
 |[CMFCBaseTabCtrl::IsColored](#iscolored)||
 |[CMFCBaseTabCtrl::IsDialogControl](#isdialogcontrol)||
-|[CMFCBaseTabCtrl::IsDrawNoPrefix](#isdrawnoprefix)||
+|[CMFCBaseTabCtrl::IsdrawnoPrefix](#isdrawnoprefix)||
 |[CMFCBaseTabCtrl::IsFlatFrame](#isflatframe)|Возвращает значение, указывающее, является фрейм области вкладок плоским или трехмерным.|
 |[CMFCBaseTabCtrl::IsFlatTab](#isflattab)||
 |[CMFCBaseTabCtrl::IsHideSingleTab](#ishidesingletab)|Возвращает значение, указывающее, будет ли скрыта метка вкладки, если в окне с вкладками отображается лишь одна вкладка.|
@@ -333,20 +333,20 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::IsLeftRightRounded](#isleftrightrounded)||
 |[CMFCBaseTabCtrl::IsMDITab](#ismditab)||
 |[CMFCBaseTabCtrl::IsOneNoteStyle](#isonenotestyle)|Указывает, отображаются ли вкладки в окне в стиле Microsoft OneNote.|
-|[CMFCBaseTabCtrl::IsPtInTabArea](#isptintabarea)|Проверяет, существует ли в области вкладок указанная точка.|
+|[CMFCBasetabctrl:Isptintabarea](#isptintabarea)|Проверяет, существует ли в области вкладок указанная точка.|
 |[CMFCBaseTabCtrl::IsTabCloseButtonHighlighted](#istabclosebuttonhighlighted)||
-|[CMFCBaseTabCtrl::IsTabCloseButtonPressed](#istabclosebuttonpressed)||
+|[CMFCBaseTabCtrl::IstabcloseButtonpressed](#istabclosebuttonpressed)||
 |[CMFCBaseTabCtrl::IsTabDetachable](#istabdetachable)|Указывает, является ли вкладка отделяемой.|
-|[CMFCBaseTabCtrl::IsTabIconOnly](#istabicononly)|Указывает, отображаются ли для вкладок значки, а не метки.|
-|[CMFCBaseTabCtrl::IsTabSwapEnabled](#istabswapenabled)|Указывает, может ли пользователь менять положение вкладок путем их перетаскивания.|
-|[CMFCBaseTabCtrl::IsTabVisible](#istabvisible)|Указывает, является ли указанная вкладка видимой.|
-|[CMFCBaseTabCtrl::IsVS2005Style](#isvs2005style)||
+|[CMFCBaseTabCtrl::IstabIconOnly](#istabicononly)|Указывает, отображаются ли для вкладок значки, а не метки.|
+|[CMFCBaseTabCtrl::IstabSwap](#istabswapenabled)|Указывает, может ли пользователь менять положение вкладок путем их перетаскивания.|
+|[CMFCBaseTabCtrl::Невидимка](#istabvisible)|Указывает, является ли указанная вкладка видимой.|
+|[CMFCBaseTabCtrl::IsVS2005Стиль](#isvs2005style)||
 |[CMFCBaseTabCtrl::MoveTab](#movetab)||
 |[CMFCBaseTabCtrl::OnChangeTabs](#onchangetabs)|Вызывается платформой при изменении количества вкладок.|
-|[CMFCBaseTabCtrl::OnDragEnter](#ondragenter)||
+|[CMFCBaseTabCtrl:OndragEnter](#ondragenter)||
 |[CMFCBaseTabCtrl::OnDragLeave](#ondragleave)||
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
-|[CMFCBaseTabCtrl::OnDrop](#ondrop)||
+|[CMFCBaseTabCtrl:OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
 |[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|Повторно вычисляет внутренний макет окна с вкладками.|
@@ -362,7 +362,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)|Задает класс-оболочку, который используется для любых объектов, не являющихся производными от [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).|
 |[CMFCBaseTabCtrl::SetDrawNoPrefix](#setdrawnoprefix)|Включает и отключает обработку символов префикса при отрисовке подписей вкладок.|
 |[CMFCBaseTabCtrl::SetImageList](#setimagelist)|Задает список изображений значка.|
-|[CMFCBaseTabCtrl::SetLocation](#setlocation)||
+|[CMFCBaseTabCtrl:SetLocation](#setlocation)||
 |[CMFCBaseTabCtrl::SetTabBkColor](#settabbkcolor)|Задает цвет фона для указанной вкладки.|
 |[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)|Задает размер границ новой вкладки.|
 |[CMFCBaseTabCtrl::SetTabHicon](#settabhicon)|Задает значок вкладки.|
@@ -372,19 +372,19 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::SetTabsHeight](#settabsheight)||
 |[CMFCBaseTabCtrl::SetTabTextColor](#settabtextcolor)|Задает цвет текста для указанной вкладки.|
 |[CMFCBaseTabCtrl::SetTabsOrder](#settabsorder)|Располагает вкладки в указанном порядке.|
-|[CMFCBaseTabCtrl::ShowTab](#showtab)|Отображает или скрывает указанную вкладку.|
+|[CMFCBaseTabCtrl:ShowTab](#showtab)|Отображает или скрывает указанную вкладку.|
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Создает оболочку для объекта, производного от класса [CWnd](../../mfc/reference/cwnd-class.md) и не являющегося производным от `CDockablePane`. Чтобы закрепить объект `CMFCBaseTabCtrl` , каждый внедренный элемент управления должен иметь закрепляющую оболочку или быть производным от `CDockablePane`.<br /><br /> Класс оболочки задается с помощью `SetDockingBayWrapperRTC`.|
+|[CMFCBaseTabCtrl:CreateWrapper](#createwrapper)|Создает оболочку для объекта, производного от класса [CWnd](../../mfc/reference/cwnd-class.md) и не являющегося производным от `CDockablePane`. Чтобы закрепить объект `CMFCBaseTabCtrl` , каждый внедренный элемент управления должен иметь закрепляющую оболочку или быть производным от `CDockablePane`.<br /><br /> Класс оболочки задается с помощью `SetDockingBayWrapperRTC`.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Указывает, выбираются вкладки щелчком левой или правой кнопкой мыши.|
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Указывает, будут ли автоматически уничтожаться области, входящие во вкладки.|
@@ -405,7 +405,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 - По умолчанию в набор вкладок добавляются отделяемые вкладки. Также с помощью метода [CMFCBaseTabCtrl::AddTab](#addtab)можно создавать неотделяемые вкладки. Если в качестве значения параметра `bDetachable` выбрать `FALSE`, соответствующая вкладка будет неотделяемой. Кроме того, вы можете изменить состояние вкладок (отсоединяемые или нет), вызвав метод [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
 
-- Объекты, производные от [класса CWnd](../../mfc/reference/cwnd-class.md) , можно разместить на закрепляемой панели элементов управления или закрепляемой вкладке. Чтобы весь элемент управления был закрепленным, необходимо сделать объект `CWnd` закрепляемым. Для этого MFC использует класс-оболочку. Этот класс-оболочка — [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Любые объекты `CWnd` , добавляемые на закрепляемую панель управления или закрепляемую вкладку, будут помещены в оболочку в объекте `CDockablePaneAdapter` . Автоматическое помещение в оболочку можно отключить, установив для параметра `m_bEnableWrapping` объекта `CMFCBaseTablCtrl` значение `FALSE`. С помощью метода [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)вы также можете изменить класс, используемый приложением в качестве оболочки.
+- Объекты, полученные из [класса CWnd,](../../mfc/reference/cwnd-class.md) могут быть помещены на док-бар управления или заправленную вкладку. Для того, чтобы весь элемент управления `CWnd` был пристыкован, необходимо сделать объект пристыкован к скамью подсудимых. Для этого MFC использует класс-оболочку. Этот класс-оболочка — [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Любые объекты `CWnd` , добавляемые на закрепляемую панель управления или закрепляемую вкладку, будут помещены в оболочку в объекте `CDockablePaneAdapter` . Автоматическое помещение в оболочку можно отключить, установив для параметра `m_bEnableWrapping` объекта `CMFCBaseTablCtrl` значение `FALSE`. С помощью метода [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)вы также можете изменить класс, используемый приложением в качестве оболочки.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -421,7 +421,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 **Заголовок:** afxbasetabctrl.h
 
-##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
+## <a name="cmfcbasetabctrladdicon"></a><a name="addicon"></a>CMFCBaseTabCtrl:AddIcon
 
 Добавляет значок в список значков в защищенном элементе `CMap m_mapAddedIcons`.
 
@@ -441,7 +441,7 @@ void AddIcon(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="addtab"></a>  CMFCBaseTabCtrl::AddTab
+## <a name="cmfcbasetabctrladdtab"></a><a name="addtab"></a>CMFCBaseTabCtrl:AddTab
 
 Добавляет новую вкладку в набор вкладок.
 
@@ -478,9 +478,9 @@ virtual void AddTab(
 
 ### <a name="remarks"></a>Remarks
 
-Если *pTabWnd* указывает на объект, который не является производным от класса [CDockablePane](../../mfc/reference/cdockablepane-class.md), и если параметр *bDetachable* имеет значение TRUE, платформа автоматически создает оболочку для объекта *pTabWnd*. Наличие оболочки делает объект *pTabWnd* отделяемым. По умолчанию оболочка — это экземпляр класса [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Если функциональность, предлагаемая оболочкой по умолчанию, неприемлема, укажите другую оболочку, используя метод [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
+Если *pTabWnd* указывает на объект, который не является производным от класса [CDockablePane](../../mfc/reference/cdockablepane-class.md), и если параметр *bDetachable* имеет значение TRUE, платформа автоматически создает оболочку для объекта *pTabWnd*. Наличие оболочки делает объект *pTabWnd* отделяемым. По умолчанию оболочка — это экземпляр [класса CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Если функциональность, предлагаемая оболочкой по умолчанию, неприемлема, укажите другую оболочку, используя метод [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
-##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
+## <a name="cmfcbasetabctrlapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl:ApplyRestoredTabInfo
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -492,7 +492,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow
+## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
 ```
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
@@ -504,7 +504,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
+## <a name="cmfcbasetabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCBaseTabCtrl::CalcRectEdit
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -516,7 +516,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
+## <a name="cmfcbasetabctrlcleanup"></a><a name="cleanup"></a>CMFCBaseTabCtrl:Очистка
 
 ```
 virtual void CleanUp();
@@ -524,7 +524,7 @@ virtual void CleanUp();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
+## <a name="cmfcbasetabctrlclearimagelist"></a><a name="clearimagelist"></a>CMFCBaseTabCtrl::ClearImageList
 
 ```
 virtual void ClearImageList();
@@ -532,7 +532,7 @@ virtual void ClearImageList();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper
+## <a name="cmfcbasetabctrlcreatewrapper"></a><a name="createwrapper"></a>CMFCBaseTabCtrl:CreateWrapper
 
 Создает оболочку для окна области, которое является производным от [класса CWnd](../../mfc/reference/cwnd-class.md), но не от [класса CDockablePane](../../mfc/reference/cdockablepane-class.md).
 
@@ -566,7 +566,7 @@ virtual CWnd* CreateWrapper(
 
 Если *pWndToWrap* является производным от `CDockablePane`, этот метод не создаст оболочку. Вместо этого он завершится ошибкой и вернет *pWndToWrap*.
 
-##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab
+## <a name="cmfcbasetabctrldetachtab"></a><a name="detachtab"></a>CMFCBaseTabCtrl::DetachTab
 
 Платформа вызывает этот метод, чтобы отделить вкладку от набора вкладок.
 
@@ -596,7 +596,7 @@ virtual BOOL DetachTab(
 
 Если вкладка, заданная *nTabNum*, не является отделяемой, эта функция завершается ошибкой и возвращает значение FALSE.
 
-##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
+## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
 ```
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
@@ -608,7 +608,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor
+## <a name="cmfcbasetabctrlenableautocolor"></a><a name="enableautocolor"></a>CMFCBaseTabCtrl:EnableAutoColor
 
 Контролирует, использует ли платформа автоматические цвета фона при рисовании вкладки.
 
@@ -627,7 +627,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 По умолчанию автоматические цвета определяются цветами, определенными библиотекой. Можно указать пользовательский массив цветов, вызвав метод [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
 
-##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips
+## <a name="cmfcbasetabctrlenablecustomtooltips"></a><a name="enablecustomtooltips"></a>CMFCBaseTabCtrl:EnableCustomToolTips
 
 Включает пользовательские подсказки для набора вкладок.
 
@@ -648,7 +648,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 Если пользовательские подсказки включены, набор вкладок отправляет сообщение AFX_WM_ON_GET_TAB_TOOLTIP в главную область. Если вы хотите поддерживать пользовательские подсказки в приложении, окно основной области должно обрабатывать этот метод и предоставлять текст такой подсказки. Дополнительные сведения о предоставлении текста пользовательской подсказки см. в статье о [структуре CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md).
 
-##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
+## <a name="cmfcbasetabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCBaseTabCtrl:EnableInPlaceEdit
 
 Включает прямое редактирование меток вкладок пользователем.
 
@@ -669,7 +669,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 В классе CMFCBaseTabCtrl (`CMFCBaseTabCtrl Class`) этот метод является чистой виртуальной функцией и не имеет реализации. Если вы наследуете класс от `CMFCBaseTabCtrl`, необходимо реализовать эту функцию.
 
-##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach
+## <a name="cmfcbasetabctrlenabletabdetach"></a><a name="enabletabdetach"></a>CMFCBaseTabCtrl:EnableTabDetach
 
 Включает отделяемые вкладки.
 
@@ -691,7 +691,7 @@ virtual BOOL EnableTabDetach(
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap
+## <a name="cmfcbasetabctrlenabletabswap"></a><a name="enabletabswap"></a>CMFCBaseTabCtrl:EnableTabSwap
 
 Позволяет пользователю изменить порядок вкладок с помощью мыши.
 
@@ -708,7 +708,7 @@ void EnableTabSwap(BOOL bEnable);
 
 Когда смена вкладок включена, пользователь может перетащить вкладку и изменить ее относительное положение в наборе вкладок.
 
-##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible
+## <a name="cmfcbasetabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCBaseTabCtrl::ОбеспечениеВидимое
 
 Прокручивает вкладки, пока не станет видна указанная вкладка.
 
@@ -731,7 +731,7 @@ virtual BOOL EnsureVisible(int iTab);
 
 `CMFCBaseTabCtrl Class` не поддерживает этот метод по умолчанию. Вы должны реализовать эту функцию в пользовательском классе, производном от `CMFCBaseTabCtrl`, если этот пользовательский набор вкладок поддерживает прокрутку. Этот метод поддерживается [классом CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md).
 
-##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
+## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl:EnterDragMode
 
 ```
 void EnterDragMode();
@@ -739,7 +739,7 @@ void EnterDragMode();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd
+## <a name="cmfcbasetabctrlfindtargetwnd"></a><a name="findtargetwnd"></a>CMFCBaseTabCtrl:FindTargetWnd
 
 Определяет область, которая содержит указанную точку.
 
@@ -760,7 +760,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 В классе `CMFCBaseTabCtrl` этот метод является чистой виртуальной функцией: вы должны реализовать его, если класс является производным от `CMFCBaseTabCtrl`.
 
-##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
+## <a name="cmfcbasetabctrlfirechangeactivetab"></a><a name="firechangeactivetab"></a>CMFCBaseTabCtrl::FireChangeActiveTab
 
 ```
 virtual void FireChangeActiveTab(int nNewTab);
@@ -772,7 +772,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
+## <a name="cmfcbasetabctrlfirechangingactivetab"></a><a name="firechangingactivetab"></a>CMFCBaseTabCtrl::FireChangingActiveTab
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -786,7 +786,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab
+## <a name="cmfcbasetabctrlgetactivetab"></a><a name="getactivetab"></a>CMFCBaseTabCtrl::GetActiveTab
 
 Извлекает индекс активной вкладки.
 
@@ -798,7 +798,7 @@ virtual int GetActiveTab() const;
 
 Отсчитываемый от нуля индекс активной вкладки. Значение -1, если активной вкладки нет.
 
-##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor
+## <a name="cmfcbasetabctrlgetactivetabcolor"></a><a name="getactivetabcolor"></a>CMFCBaseTabCtrl::GetActiveTabColor
 
 Получает цвет фона активной вкладки.
 
@@ -814,7 +814,7 @@ virtual COLORREF GetActiveTabColor() const;
 
 По умолчанию цвет фона активной вкладки — COLOR_WINDOW. Цвет фона активной вкладки можно изменить с помощью метода [CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor).
 
-##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor
+## <a name="cmfcbasetabctrlgetactivetabtextcolor"></a><a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl::GetActiveTabTextColor
 
 Извлекает цвет текста для активной вкладки.
 
@@ -830,7 +830,7 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 По умолчанию цветом текста для активных вкладок является COLOR_WINDOWTEXT. Цвет текста можно изменить с помощью метода [CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor).
 
-##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd
+## <a name="cmfcbasetabctrlgetactivewnd"></a><a name="getactivewnd"></a>CMFCBaseTabCtrl:GetActiveWnd
 
 Получает указатель на текущее активное окно вкладки.
 
@@ -842,7 +842,7 @@ virtual CWnd* GetActiveWnd() const;
 
 Указатель на окно.
 
-##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors
+## <a name="cmfcbasetabctrlgetautocolors"></a><a name="getautocolors"></a>CMFCBaseTabCtrl:GetAutoColors
 
 Извлекает массив цветов, используемых для автоматической цветовой маркировки.
 
@@ -858,7 +858,7 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 По умолчанию платформа инициализирует массив цветов в соответствии с определяемыми библиотекой цветами. Можно указать пользовательский массив цветов, вызвав метод [CMFCBaseTabCtrl::SetAutoColors](#setautocolors).
 
-##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab
+## <a name="cmfcbasetabctrlgetfirstvisibletab"></a><a name="getfirstvisibletab"></a>CMFCBaseTabCtrl::GetFirstVisibleTab
 
 Возвращает указатель на первую видимую вкладку.
 
@@ -888,7 +888,7 @@ virtual CWnd* GetFirstVisibleTab(
 
 Если значение *iStartFrom* больше или равно числу вкладок в наборе вкладок, `GetFirstVisibleTab` автоматически завершается сбоем.
 
-##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
+## <a name="cmfcbasetabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl::GetFirstVisibleTabNum
 
 ```
 virtual int GetFirstVisibleTabNum() const;
@@ -898,7 +898,7 @@ virtual int GetFirstVisibleTabNum() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab
+## <a name="cmfcbasetabctrlgethighlightedtab"></a><a name="gethighlightedtab"></a>CMFCBaseTabCtrl::GetHighlightedTab
 
 Извлекает индекс выделенной вкладки.
 
@@ -910,7 +910,7 @@ int GetHighlightedTab() const;
 
 Отсчитываемый от нуля индекс выделенной вкладки.
 
-##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
+## <a name="cmfcbasetabctrlgetimagelist"></a><a name="getimagelist"></a>CMFCBaseTabCtrl::GetImageList
 
 ```
 virtual const CImageList* GetImageList() const;
@@ -920,7 +920,7 @@ virtual const CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize
+## <a name="cmfcbasetabctrlgetimagesize"></a><a name="getimagesize"></a>CMFCBaseTabCtrl::GetImageSize
 
 ```
 virtual CSize GetImageSize() const;
@@ -930,7 +930,7 @@ virtual CSize GetImageSize() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getlastvisibletab"></a>  CMFCBaseTabCtrl::GetLastVisibleTab
+## <a name="cmfcbasetabctrlgetlastvisibletab"></a><a name="getlastvisibletab"></a>CMFCBaseTabCtrl::GetLastVisibleTab
 
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
@@ -944,7 +944,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation
+## <a name="cmfcbasetabctrlgetlocation"></a><a name="getlocation"></a>CMFCBaseTabCtrl:GetLocation
 
 Извлекает расположение части области вкладки набора вкладок.
 
@@ -960,7 +960,7 @@ Location GetLocation() const;
 
 Возможные значения расположения области вкладки: LOCATION_BOTTOM и LOCATION_TOP.
 
-##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
+## <a name="cmfcbasetabctrlgetmaxwindowsize"></a><a name="getmaxwindowsize"></a>CMFCBaseTabCtrl::GetMaxWindowSize
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -970,7 +970,7 @@ virtual CSize GetMaxWindowSize() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea
+## <a name="cmfcbasetabctrlgettabarea"></a><a name="gettabarea"></a>CMFCBaseTabCtrl:GetTabArea
 
 Извлекает размер и положение области вкладки набора вкладок.
 
@@ -994,7 +994,7 @@ virtual void GetTabArea(
 
 В классе CMFCBaseTabCtrl (`CMFCBaseTabCtrl Class`) этот метод является чистой виртуальной функцией и не имеет реализации. Если вы наследуете класс от `CMFCBaseTabCtrl`, необходимо реализовать эту функцию.
 
-##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor
+## <a name="cmfcbasetabctrlgettabbkcolor"></a><a name="gettabbkcolor"></a>CMFCBaseTabCtrl::GetTabBkColor
 
 Извлекает цвет фона указанной вкладки.
 
@@ -1011,7 +1011,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 
 Значение [COLORREF](/windows/win32/gdi/colorref), которое указывает цвет фона заданной вкладки. Значение -1, если *iTab* выходит за пределы диапазона.
 
-##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize
+## <a name="cmfcbasetabctrlgettabbordersize"></a><a name="gettabbordersize"></a>CMFCBaseTabCtrl:GetTabBorderSize
 
 Извлекает размер границ вкладки в наборе вкладок.
 
@@ -1027,7 +1027,7 @@ virtual int GetTabBorderSize() const;
 
 Размер по умолчанию границы вкладки равен трем пикселям. Вы можете изменить этот размер границы с помощью метода [CMFCBaseTabCtrl:: SetTabBorderSize](#settabbordersize).
 
-##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID
+## <a name="cmfcbasetabctrlgettabbyid"></a><a name="gettabbyid"></a>CMFCBaseTabCtrl:GettabbyID
 
 Извлекает индекс вкладки на основе ее идентификатора.
 
@@ -1037,7 +1037,7 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>Параметры
 
-*идентификатор*<br/>
+*id*<br/>
 [in] Идентификатор вкладки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1048,7 +1048,7 @@ virtual int GetTabByID(int id) const;
 
 Идентификаторы вкладок назначаются автоматически, когда вкладки добавляются в набор вкладок.
 
-##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
+## <a name="cmfcbasetabctrlgettabclosebutton"></a><a name="gettabclosebutton"></a>CMFCBaseTabCtrl:GetTabCloseButton
 
 ```
 CRect GetTabCloseButton() const;
@@ -1058,7 +1058,7 @@ CRect GetTabCloseButton() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd
+## <a name="cmfcbasetabctrlgettabfromhwnd"></a><a name="gettabfromhwnd"></a>CMFCBaseTabCtrl:GetTabFromHwnd
 
 Извлекает индекс вкладки, содержащей указанный объект HWND.
 
@@ -1068,14 +1068,14 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>Параметры
 
-*hwnd*<br/>
+*Hwnd*<br/>
 [in] Дескриптор окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Отсчитываемый от нуля индекс вкладки в случае успешного выполнения. Значение -1, если ни одна вкладка не содержит *hwnd*.
 
-##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint
+## <a name="cmfcbasetabctrlgettabfrompoint"></a><a name="gettabfrompoint"></a>CMFCBaseTabCtrl:GetTabFromPoint
 
 Извлекает вкладку, содержащую указанную точку.
 
@@ -1092,7 +1092,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 Индекс вкладки, которая содержит *pt*. Значение -1, если нет вкладки, содержащей *pt*.
 
-##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
+## <a name="cmfcbasetabctrlgettabfullwidth"></a><a name="gettabfullwidth"></a>CMFCBaseTabCtrl:GetTabFullWidth
 
 ```
 virtual int GetTabFullWidth(int iTab) const;
@@ -1106,7 +1106,7 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon
+## <a name="cmfcbasetabctrlgettabhicon"></a><a name="gettabhicon"></a>CMFCBaseTabCtrl:GetTabHicon
 
 Возвращает дескриптор HICON, связанный с указанной вкладкой.
 
@@ -1123,7 +1123,7 @@ virtual HICON GetTabHicon(int iTab) const;
 
 В случае успешного выполнения — HICON, связанный с меткой вкладки. NULL, если HICON отсутствует или если метод завершается ошибкой.
 
-##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon
+## <a name="cmfcbasetabctrlgettabicon"></a><a name="gettabicon"></a>CMFCBaseTabCtrl:GetTabIcon
 
 Извлекает значок, связанный с указанной вкладкой.
 
@@ -1144,7 +1144,7 @@ virtual UINT GetTabIcon(int iTab) const;
 
 Объект [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) сохраняет значки во внутреннем объекте [CImageList](../../mfc/reference/cimagelist-class.md).
 
-##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID
+## <a name="cmfcbasetabctrlgettabid"></a><a name="gettabid"></a>CMFCBaseTabCtrl:GetTabID
 
 Извлекает идентификатор вкладки, заданный ее индексом.
 
@@ -1161,7 +1161,7 @@ int GetTabID(int iTab) const;
 
 Идентификатор вкладки или значение -1, если *iTab* выходит за пределы диапазона.
 
-##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel
+## <a name="cmfcbasetabctrlgettablabel"></a><a name="gettablabel"></a>CMFCBaseTabCtrl:GetTabLabel
 
 Извлекает текст метки вкладки.
 
@@ -1189,7 +1189,7 @@ virtual BOOL GetTabLabel(
 
 Метка для вкладки настраивается при создании вкладки с помощью метода [CMFCBaseTabCtrl::AddTab](#addtab). Можно также изменить созданную метку с помощью метода [CMFCBaseTabCtrl::SetTabLabel](#settablabel).
 
-##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect
+## <a name="cmfcbasetabctrlgettabrect"></a><a name="gettabrect"></a>CMFCBaseTabCtrl:GetTabRect
 
 Извлекает размер и положение указанной вкладки.
 
@@ -1211,7 +1211,7 @@ virtual BOOL GetTabRect(
 
 Значение TRUE в случае успешного выполнения. Значение FALSE, если индекс вкладки является недопустимым.
 
-##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
+## <a name="cmfcbasetabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCBaseTabCtrl:GetTabsHeight
 
 ```
 virtual int GetTabsHeight() const;
@@ -1221,7 +1221,7 @@ virtual int GetTabsHeight() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum
+## <a name="cmfcbasetabctrlgettabsnum"></a><a name="gettabsnum"></a>CMFCBaseTabCtrl:GetTabsNum
 
 Извлекает число вкладок в наборе вкладок.
 
@@ -1233,7 +1233,7 @@ virtual int GetTabsNum() const;
 
 Число вкладок в наборе вкладок.
 
-##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
+## <a name="cmfcbasetabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCBaseTabCtrl:GetTabsRect
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -1245,7 +1245,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor
+## <a name="cmfcbasetabctrlgettabtextcolor"></a><a name="gettabtextcolor"></a>CMFCBaseTabCtrl::GetTabTextColor
 
 Извлекает цвет текста для указанной вкладки.
 
@@ -1262,7 +1262,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 
 Параметр [COLORREF](/windows/win32/gdi/colorref), который указывает цвет текста указанной вкладки. Значение -1, если *iTab* выходит за пределы диапазона.
 
-##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd
+## <a name="cmfcbasetabctrlgettabwnd"></a><a name="gettabwnd"></a>CMFCBaseTabCtrl:GetTabWnd
 
 Возвращает указатель на область, расположенную на указанной вкладке.
 
@@ -1285,7 +1285,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 Если у объекта на вкладке есть оболочка, этот метод вернет ее. Дополнительные сведения об оболочках см. в разделе о [CMFCBaseTabCtrl::CreateWrapper](#createwrapper). Если вы хотите получить доступ к указателю на прямой объект без оболочки, используйте метод [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper).
 
-##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
+## <a name="cmfcbasetabctrlgettabwndnowrapper"></a><a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl:GetTabWndNoWrapper
 
 Возвращает указатель на элемент управления, находящийся на вкладке, даже если у этого элемента управления есть оболочка.
 
@@ -1308,7 +1308,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 
 Используйте метод [CMFCBaseTabCtrl::GetTabWnd](#gettabwnd), если вы не хотите игнорировать класс-оболочку.
 
-##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl
+## <a name="cmfcbasetabctrlgettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCBaseTabCtrl:GetToolTipCtrl
 
 Получает ссылку на элемент управления "Подсказка".
 
@@ -1320,7 +1320,7 @@ CToolTipCtrl& GetToolTipCtrl() const;
 
 Ссылка на элемент управления "Подсказка".
 
-##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum
+## <a name="cmfcbasetabctrlgetvisibletabsnum"></a><a name="getvisibletabsnum"></a>CMFCBaseTabCtrl::GetVisibleTabsNum
 
 Получает количество видимых вкладок.
 
@@ -1332,7 +1332,7 @@ virtual int GetVisibleTabsNum() const;
 
 Количество видимых вкладок.
 
-##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
+## <a name="cmfcbasetabctrlhasimage"></a><a name="hasimage"></a>CMFCBaseTabCtrl:HasImage
 
 ```
 virtual BOOL HasImage(int iTab) const;
@@ -1346,7 +1346,7 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab
+## <a name="cmfcbasetabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCBaseTabCtrl::HideSingleTab
 
 Задает параметр, чтобы скрыть вкладки из набора вкладок, если есть одна видимая вкладка.
 
@@ -1363,7 +1363,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 Если приложение настроено на скрытие отдельных вкладок, платформа автоматически отображает вкладки, когда вторая вкладка добавляется в набор вкладок.
 
-##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
+## <a name="cmfcbasetabctrlinserttab"></a><a name="inserttab"></a>CMFCBaseTabCtrl::InsertTab
 
 Вставляет вкладку в набор вкладок.
 
@@ -1405,9 +1405,9 @@ virtual void InsertTab(
 
 ### <a name="remarks"></a>Remarks
 
-Если объект, указанный в *пневвнд* , не является производным от [класса CDockablePane](../../mfc/reference/cdockablepane-class.md) и если параметр *бдетачабле* имеет значение true, платформа создает специальную оболочку для новой вкладки. По умолчанию оболочкой является экземпляр [класса кдоккаблепанеадаптер](../../mfc/reference/cdockablepaneadapter-class.md). Используйте метод [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc), чтобы создать другой класс-оболочку. Любой пользовательский класс-оболочка должен быть производным от `CDockablePaneAdapter`.
+Если объект, указанный *pNewWnd,* не является производным от [класса CDockablePane](../../mfc/reference/cdockablepane-class.md) и если *параметр bDetachable* является правдой, фреймворк создает специальную обертку для новой вкладки. По умолчанию обертка является экземпляром [класса CDockablePaneAdapter.](../../mfc/reference/cdockablepaneadapter-class.md) Используйте метод [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc), чтобы создать другой класс-оболочку. Любой пользовательский класс-оболочка должен быть производным от `CDockablePaneAdapter`.
 
-##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
+## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::Недействительно
 
 ```
 void InvalidateTab(int iTab);
@@ -1419,7 +1419,7 @@ void InvalidateTab(int iTab);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
+## <a name="cmfcbasetabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl::IsActiveTabCloseButton
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1429,7 +1429,7 @@ virtual BOOL IsActiveTabCloseButton() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor
+## <a name="cmfcbasetabctrlisautocolor"></a><a name="isautocolor"></a>CMFCBaseTabCtrl::IsAutoColor
 
 Определяет, находится ли набор вкладок в режиме автоматической цветовой маркировки.
 
@@ -1445,7 +1445,7 @@ BOOL IsAutoColor() const;
 
 Вы можете включить или отключить режим автоматической цветовой маркировки с помощью метода [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor).
 
-##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
+## <a name="cmfcbasetabctrlisautodestroywindow"></a><a name="isautodestroywindow"></a>CMFCBaseTabCtrl::IsAutoDestroyWindow
 
 ```
 BOOL IsAutoDestroyWindow() const;
@@ -1455,7 +1455,7 @@ BOOL IsAutoDestroyWindow() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored
+## <a name="cmfcbasetabctrliscolored"></a><a name="iscolored"></a>CMFCBaseTabCtrl:: Цветной
 
 ```
 virtual BOOL IsColored() const;
@@ -1465,7 +1465,7 @@ virtual BOOL IsColored() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
+## <a name="cmfcbasetabctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCBaseTabCtrl::IsDialogControl
 
 ```
 BOOL IsDialogControl() const;
@@ -1475,7 +1475,7 @@ BOOL IsDialogControl() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
+## <a name="cmfcbasetabctrlisdrawnoprefix"></a><a name="isdrawnoprefix"></a>CMFCBaseTabCtrl::IsdrawnoPrefix
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1485,7 +1485,7 @@ BOOL IsDrawNoPrefix() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame
+## <a name="cmfcbasetabctrlisflatframe"></a><a name="isflatframe"></a>CMFCBaseTabCtrl::IsFlatFrame
 
 Указывает, как отображаются рамки набора вкладок: в стиле плоского представления или в трехмерном стиле.
 
@@ -1503,7 +1503,7 @@ virtual BOOL IsFlatFrame() const;
 
 Наборы вкладок, которые используют стиль Outlook, не могут быть отображены с плоскими рамками. Это касается класса [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) и любых производных от него классов.
 
-##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
+## <a name="cmfcbasetabctrlisflattab"></a><a name="isflattab"></a>CMFCBaseTabCtrl::IsFlatTab
 
 ```
 virtual BOOL IsFlatTab() const;
@@ -1513,7 +1513,7 @@ virtual BOOL IsFlatTab() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab
+## <a name="cmfcbasetabctrlishidesingletab"></a><a name="ishidesingletab"></a>CMFCBaseTabCtrl::IsHideSingleTab
 
 Определяет, скрывает ли набор вкладок метку вкладки, если присутствует только одна вкладка.
 
@@ -1529,7 +1529,7 @@ virtual BOOL IsHideSingleTab() const;
 
 Используйте метод [CMFCBaseTabCtrl::HideSingleTab](#hidesingletab), чтобы включить скрытие метки вкладки, когда есть только одна вкладка.
 
-##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
+## <a name="cmfcbasetabctrlisiconadded"></a><a name="isiconadded"></a>CMFCBaseTabCtrl::IsIconAdded
 
 ```
 BOOL IsIconAdded(
@@ -1547,7 +1547,7 @@ BOOL IsIconAdded(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit
+## <a name="cmfcbasetabctrlisinplaceedit"></a><a name="isinplaceedit"></a>CMFCBaseTabCtrl::IsInPlaceEdit
 
 Указывает, настроен ли набор вкладок так, чтобы пользователь мог динамически изменять метки вкладок.
 
@@ -1563,7 +1563,7 @@ virtual BOOL IsInPlaceEdit() const;
 
 Встроенную активацию можно включить или отключить, вызвав метод [CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit).
 
-##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
+## <a name="cmfcbasetabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCBaseTabCtrl::IsLeftRightRounded
 
 ```
 virtual BOOL IsLeftRightRounded() const;
@@ -1573,7 +1573,7 @@ virtual BOOL IsLeftRightRounded() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
+## <a name="cmfcbasetabctrlismditab"></a><a name="ismditab"></a>CMFCBaseTabCtrl::IsMDITab
 
 ```
 BOOL IsMDITab() const;
@@ -1583,7 +1583,7 @@ BOOL IsMDITab() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle
+## <a name="cmfcbasetabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCBaseTabCtrl::IsoneNoteStyle
 
 Определяет, отображаются ли вкладки в стиле Microsoft OneNote.
 
@@ -1601,7 +1601,7 @@ virtual BOOL IsOneNoteStyle() const;
 
 По умолчанию стиль Microsoft OneNote не поддерживается в пользовательском классе, производном от `CMFCBaseTabCtrl Class`. Тем не менее он поддерживается в классе `CMFCTabCtrl`.
 
-##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea
+## <a name="cmfcbasetabctrlisptintabarea"></a><a name="isptintabarea"></a>CMFCBasetabctrl:Isptintabarea
 
 Определяет, находится ли точка внутри области вкладок.
 
@@ -1611,7 +1611,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
+*Точки*<br/>
 [in] Точка для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1622,7 +1622,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 В классе CMFCBaseTabCtrl (`CMFCBaseTabCtrl Class`) этот метод является чистой виртуальной функцией и не имеет реализации. Если вы наследуете класс от `CMFCBaseTabCtrl`, необходимо реализовать эту функцию.
 
-##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
+## <a name="cmfcbasetabctrlistabclosebuttonhighlighted"></a><a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl::IsTabCloseButton
 
 ```
 BOOL IsTabCloseButtonHighlighted() const;
@@ -1632,7 +1632,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
+## <a name="cmfcbasetabctrlistabclosebuttonpressed"></a><a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl::IstabcloseButtonpressed
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1642,7 +1642,7 @@ BOOL IsTabCloseButtonPressed() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable
+## <a name="cmfcbasetabctrlistabdetachable"></a><a name="istabdetachable"></a>CMFCBaseTabCtrl::IsTabDetachable
 
 Указывает, является ли вкладка отделяемой.
 
@@ -1663,7 +1663,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 
 Чтобы сделать вкладку отделяемой, используйте метод [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach).
 
-##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly
+## <a name="cmfcbasetabctrlistabicononly"></a><a name="istabicononly"></a>CMFCBaseTabCtrl::IstabIconOnly
 
 Определяет, содержит ли метка вкладки только значки (без текста).
 
@@ -1684,7 +1684,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 
 Чтобы настроить для вкладок в приложении отображение только значков, вызовите метод [CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly).
 
-##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled
+## <a name="cmfcbasetabctrlistabswapenabled"></a><a name="istabswapenabled"></a>CMFCBaseTabCtrl::IstabSwap
 
 Определяет, позволяет ли набор вкладок изменять положения вкладок с помощью мыши.
 
@@ -1700,7 +1700,7 @@ BOOL IsTabSwapEnabled() const;
 
 По умолчанию пользователи не могут изменять порядок вкладок в наборе вкладок. Используйте метод [CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap), чтобы включить эту функцию.
 
-##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible
+## <a name="cmfcbasetabctrlistabvisible"></a><a name="istabvisible"></a>CMFCBaseTabCtrl::Невидимка
 
 Указывает, является ли указанная вкладка видимой.
 
@@ -1717,7 +1717,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 
 Ненулевое значение, если указанная вкладка видима. В противном случае — 0.
 
-##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
+## <a name="cmfcbasetabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCBaseTabCtrl::IsVS2005Стиль
 
 ```
 virtual BOOL IsVS2005Style() const;
@@ -1727,7 +1727,7 @@ virtual BOOL IsVS2005Style() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick
+## <a name="cmfcbasetabctrlm_bactivatetabonrightclick"></a><a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl::m_bActivateTabOnRightClick
 
 `m_bActivateTabOnRightClick` определяет, находятся ли вкладки в фокусе, когда пользователь щелкает метку вкладки, используя правую кнопку мыши.
 
@@ -1739,7 +1739,7 @@ BOOL m_bActivateTabOnRightClick;
 
 Значение по умолчанию этого элемента данных — FALSE.
 
-##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow
+## <a name="cmfcbasetabctrlm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl::m_bAutoDestroyWindow
 
 `m_bAutoDestroyWindow` определяет, уничтожает ли платформа (в автоматическом режиме) объекты на вкладках при удалении вкладок.
 
@@ -1751,7 +1751,7 @@ BOOL m_bAutoDestroyWindow;
 
 Значение по умолчанию — FALSE.
 
-##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
+## <a name="cmfcbasetabctrlmovetab"></a><a name="movetab"></a>CMFCBaseTabCtrl::MoveTab
 
 ```
 virtual void MoveTab(
@@ -1767,7 +1767,7 @@ virtual void MoveTab(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs
+## <a name="cmfcbasetabctrlonchangetabs"></a><a name="onchangetabs"></a>CMFCBaseTabCtrl::OnChangeTabs
 
 Платформа вызывает этот метод, когда количество вкладок в наборе вкладок изменяется.
 
@@ -1779,7 +1779,7 @@ virtual void OnChangeTabs();
 
 По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод, чтобы он выполнял пользовательский код, когда число вкладок в наборе вкладок изменяется.
 
-##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
+## <a name="cmfcbasetabctrlondrop"></a><a name="ondrop"></a>CMFCBaseTabCtrl:OnDrop
 
 ```
 virtual BOOL OnDrop(
@@ -1800,7 +1800,7 @@ virtual BOOL OnDrop(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
+## <a name="cmfcbasetabctrlondragover"></a><a name="ondragover"></a>CMFCBaseTabCtrl::Ondragover
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1821,7 +1821,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
+## <a name="cmfcbasetabctrlondragleave"></a><a name="ondragleave"></a>CMFCBaseTabCtrl::OndragLeave
 
 ```
 virtual void OnDragLeave();
@@ -1829,7 +1829,7 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
+## <a name="cmfcbasetabctrlondragenter"></a><a name="ondragenter"></a>CMFCBaseTabCtrl:OndragEnter
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1850,7 +1850,7 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
+## <a name="cmfcbasetabctrlonrenametab"></a><a name="onrenametab"></a>CMFCBasetabCtrl::OnRenameTab
 
 ```
 virtual BOOL OnRenameTab(int, CString&);
@@ -1866,7 +1866,7 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
+## <a name="cmfcbasetabctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCBaseTabCtrl::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1880,7 +1880,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout
+## <a name="cmfcbasetabctrlrecalclayout"></a><a name="recalclayout"></a>CMFCBaseTabCtrl:RecalcLayout
 
 Повторно вычисляет внутренний макет набора вкладок.
 
@@ -1892,7 +1892,7 @@ virtual void RecalcLayout() = 0;
 
 В классе CMFCBaseTabCtrl (`CMFCBaseTabCtrl Class`) этот метод является чистой виртуальной функцией. Если вы наследуете класс от `CMFCBaseTabCtrl`, необходимо реализовать эту функцию.
 
-##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs
+## <a name="cmfcbasetabctrlremovealltabs"></a><a name="removealltabs"></a>CMFCBaseTabCtrl::RemoveAllTabs
 
 Удаляет все вкладки из набора вкладок.
 
@@ -1904,7 +1904,7 @@ virtual void RemoveAllTabs();
 
 Если [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) имеет значение TRUE, платформа удаляет все объекты [CWnd](../../mfc/reference/cwnd-class.md), прикрепленные к удаленным вкладкам.
 
-##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab
+## <a name="cmfcbasetabctrlremovetab"></a><a name="removetab"></a>CMFCBaseTabCtrl::RemoveTab
 
 Удаляет вкладку из набора вкладок.
 
@@ -1930,7 +1930,7 @@ virtual BOOL RemoveTab(
 
 Если [CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow) имеет значение TRUE, метод `RemoveTab` уничтожает объект [CWnd](../../mfc/reference/cwnd-class.md), связанный с указанной вкладкой.
 
-##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
+## <a name="cmfcbasetabctrlrenametab"></a><a name="renametab"></a>CMFCBaseTabCtrl::ПереименованиеTab
 
 ```
 virtual BOOL RenameTab();
@@ -1940,7 +1940,7 @@ virtual BOOL RenameTab();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList
+## <a name="cmfcbasetabctrlresetimagelist"></a><a name="resetimagelist"></a>CMFCBaseTabCtrl:ResetImagelist
 
 Сбрасывает список изображений для экземпляра [класса CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
@@ -1948,7 +1948,7 @@ virtual BOOL RenameTab();
 void ResetImageList();
 ```
 
-##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
+## <a name="cmfcbasetabctrlserialize"></a><a name="serialize"></a>CMFCBaseTabCtrl::Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1960,7 +1960,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setactivetab"></a>  CMFCBaseTabCtrl::SetActiveTab
+## <a name="cmfcbasetabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCBaseTabCtrl::SetActiveTab
 
 Активирует заданную вкладку.
 
@@ -1981,7 +1981,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 
 В классе CMFCBaseTabCtrl (`CMFCBaseTabCtrl Class`) этот метод является чистой виртуальной функцией. Если вы наследуете класс от `CMFCBaseTabCtrl`, необходимо реализовать эту функцию.
 
-##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor
+## <a name="cmfcbasetabctrlsetactivetabcolor"></a><a name="setactivetabcolor"></a>CMFCBaseTabCtrl::SetActiveTabColor
 
 Устанавливает цвет фона для активной вкладки.
 
@@ -1991,14 +1991,14 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*clr*<br/>
+*Clr*<br/>
 [in] Задает новый цвет фона.
 
 ### <a name="remarks"></a>Remarks
 
 Платформа получает цвет фона по умолчанию для активных вкладок из метода [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor).
 
-##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor
+## <a name="cmfcbasetabctrlsetactivetabtextcolor"></a><a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl::SetActiveTabTextColor
 
 Задает цвет текста для активных вкладок.
 
@@ -2008,14 +2008,14 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*clr*<br/>
+*Clr*<br/>
 [in] Параметр [COLORREF](/windows/win32/gdi/colorref), который указывает новый цвет текста.
 
 ### <a name="remarks"></a>Remarks
 
 По умолчанию платформа получает цвет текста из метода [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor). Этот цвет по умолчанию переопределяется с помощью метода `SetActiveTabTextColor`.
 
-##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors
+## <a name="cmfcbasetabctrlsetautocolors"></a><a name="setautocolors"></a>CMFCBaseTabCtrl:SetAutoColors
 
 Устанавливает цвета набора вкладок, используемые платформой в режиме автоматической цветовой маркировки.
 
@@ -2034,7 +2034,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 
 Чтобы включить режим автоматической цветовой маркировки, используйте метод [CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor).
 
-##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC
+## <a name="cmfcbasetabctrlsetdockingbarwrapperrtc"></a><a name="setdockingbarwrapperrtc"></a>CMFCBaseTabCtrl::SetDockingBarWrapperRTC
 
 Задает класс-оболочку, который используется для любых объектов, не являющихся производными от [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
 
@@ -2051,7 +2051,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 
 Вкладки в набор вкладок можно добавить с помощью методов [CMFCBaseTabCtrl::AddTab](#addtab) и [CMFCBaseTabCtrl::InsertTab](#inserttab). При добавлении вкладки каждый элемент управления на этой вкладке должен быть закрепляемым. Все объекты, которые не являются производными от `CDockablePane`, должны быть заключены в оболочку. Методы `AddTab` и `InsertTab` создают оболочку для этих объектов. Класс-оболочка по умолчанию — [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md). Метод `SetDockingBarWrapperRTC` позволяет изменить класс, который используется как класс-оболочка. Предоставляемый класс-оболочка должен быть производным от `CDockablePaneAdapter`.
 
-##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix
+## <a name="cmfcbasetabctrlsetdrawnoprefix"></a><a name="setdrawnoprefix"></a>CMFCBaseTabCtrl::SetDrawNoPrefix
 
 Включает и отключает обработку символов префикса в метках вкладок.
 
@@ -2073,7 +2073,7 @@ void SetDrawNoPrefix(
 
 Символом префикса является назначенный символ, которому предшествует амперсанд (&).
 
-##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList
+## <a name="cmfcbasetabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCBaseTabCtrl:SetImageList
 
 Задает список изображений значка для набора вкладок.
 
@@ -2091,7 +2091,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Идентификатор ресурса растрового изображения. `SetImageList` загружает список изображений из данного ресурса.
 
-*cx*<br/>
+*Cx*<br/>
 [in] Ширина каждого изображения в пикселях.
 
 *clrTransp*<br/>
@@ -2106,13 +2106,13 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 ### <a name="remarks"></a>Remarks
 
-Изображения из списка изображений значков отображаются рядом с метками вкладки. Чтобы отобразить значок, необходимо указать его индекс при вызове [CMFCBaseTabCtrl:: аддтаб](#addtab).
+Изображения из списка изображений значка отображаются рядом с метками для вкладки. Чтобы отобразить значок, необходимо указать его индекс при вызове [CMFCBaseTabCtrl::AddTab](#addtab).
 
 Метод `SetImageList` завершится ошибкой, если набор вкладок был создан со стилем плоского представления. Он также завершится ошибкой, если платформе не удастся загрузить изображение, обозначенное идентификатором *uiID*.
 
 Этот метод повторно вычисляет высоту вкладки в соответствии с размерами изображений и текста.
 
-##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
+## <a name="cmfcbasetabctrlsetlocation"></a><a name="setlocation"></a>CMFCBaseTabCtrl:SetLocation
 
 ```
 virtual void SetLocation(Location location);
@@ -2120,11 +2120,11 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *location*<br/>
+(в) *местоположение*<br/>
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor
+## <a name="cmfcbasetabctrlsettabbkcolor"></a><a name="settabbkcolor"></a>CMFCBaseTabCtrl::SetTabBkColor
 
 Задает цвет фона для указанной вкладки.
 
@@ -2139,14 +2139,14 @@ virtual BOOL SetTabBkColor(
 *iTab*<br/>
 [in] Отсчитываемый от нуля индекс вкладки.
 
-*color*<br/>
+*Цвет*<br/>
 [in] Задаваемый цвет.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
-##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize
+## <a name="cmfcbasetabctrlsettabbordersize"></a><a name="settabbordersize"></a>CMFCBaseTabCtrl::SetTabBorderSize
 
 Задает новый размер границы для набора вкладок.
 
@@ -2164,7 +2164,7 @@ virtual void SetTabBorderSize(
 *bRepaint*<br/>
 [in] Логический параметр, который указывает, следует ли платформе перерисовать элемент управления.
 
-##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon
+## <a name="cmfcbasetabctrlsettabhicon"></a><a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon
 
 Задает значок для метки вкладки.
 
@@ -2177,7 +2177,7 @@ virtual BOOL SetTabHicon(
 ### <a name="parameters"></a>Параметры
 
 *iTab*<br/>
-окне Отсчитываемый от нуля индекс вкладки. Этот метод изменяет значок для этой вкладки.
+(в) Индекс вкладки с нулевым уровнем. Этот метод изменяет значок для этой вкладки.
 
 *hIcon*<br/>
 [in] Дескриптор значка.
@@ -2186,7 +2186,7 @@ virtual BOOL SetTabHicon(
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon
+## <a name="cmfcbasetabctrlsettabicon"></a><a name="settabicon"></a>CMFCBaseTabCtrl::SetTabIcon
 
 Задает значок для вкладки.
 
@@ -2208,7 +2208,7 @@ virtual BOOL SetTabIcon(
 
 Значение TRUE, если успешно; в противном случае — FALSE.
 
-##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly
+## <a name="cmfcbasetabctrlsettabicononly"></a><a name="settabicononly"></a>CMFCBaseTabCtrl::SetTabIconТолько
 
 Включает отображение только значка (без текстовой подписи) на конкретной вкладке.
 
@@ -2238,7 +2238,7 @@ virtual BOOL SetTabIconOnly(
 
 По умолчанию набор вкладок отображает значок и текстовую подпись для каждой вкладки.
 
-##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel
+## <a name="cmfcbasetabctrlsettablabel"></a><a name="settablabel"></a>CMFCBaseTabCtrl::SetTabLabel
 
 Задает текст для метки вкладки.
 
@@ -2260,7 +2260,7 @@ virtual BOOL SetTabLabel(
 
 Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
-##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
+## <a name="cmfcbasetabctrlsettabsheight"></a><a name="settabsheight"></a>CMFCBaseTabCtrl:SetTabsHeight
 
 ```
 virtual void SetTabsHeight();
@@ -2268,7 +2268,7 @@ virtual void SetTabsHeight();
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder
+## <a name="cmfcbasetabctrlsettabsorder"></a><a name="settabsorder"></a>CMFCBaseTabCtrl:SetTabsOrder
 
 Располагает вкладки в указанном порядке.
 
@@ -2289,7 +2289,7 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 
 Размер массива *arOrder* должен быть равен количеству вкладок в наборе вкладок.
 
-##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor
+## <a name="cmfcbasetabctrlsettabtextcolor"></a><a name="settabtextcolor"></a>CMFCBaseTabCtrl::SetTabTextColor
 
 Задает цвет текста для указанной вкладки.
 
@@ -2304,14 +2304,14 @@ virtual BOOL SetTabTextColor(
 *iTab*<br/>
 [in] Отсчитываемый от нуля индекс вкладки.
 
-*color*<br/>
+*Цвет*<br/>
 [in] Параметр [COLORREF](/windows/win32/gdi/colorref), который указывает новый цвет текста.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
-##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab
+## <a name="cmfcbasetabctrlshowtab"></a><a name="showtab"></a>CMFCBaseTabCtrl:ShowTab
 
 Отображает или скрывает указанную вкладку.
 
@@ -2345,7 +2345,7 @@ virtual BOOL ShowTab(
 
 Параметр *bActivate* применяется, только если параметр *bShow* имеет значение TRUE. Если параметр *bActivate* имеет значение TRUE и если метод `ShowTab` выполнен успешно, `ShowTab` отправит сообщение AFX_WM_CHANGE_ACTIVE_TAB родительскому объекту окна вкладки.
 
-##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
+## <a name="cmfcbasetabctrlstartrenametab"></a><a name="startrenametab"></a>CMFCBasetabCtrl::StartRenametab
 
 ```
 virtual BOOL StartRenameTab(int iTab);
@@ -2359,7 +2359,7 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
+## <a name="cmfcbasetabctrlswaptabs"></a><a name="swaptabs"></a>CMFCBaseTabCtrl:SwapTabs
 
 ```
 virtual void SwapTabs(

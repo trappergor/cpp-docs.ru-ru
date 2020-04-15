@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ff6ea37208aef19431bf7aefe612dccd589c638b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374542"
 ---
 # <a name="ltregexgt-functions"></a>Функции &lt;regex&gt;
 
@@ -27,9 +27,9 @@ ms.locfileid: "79425199"
 |[regex_match](#regex_match)|Проверяет, совпадает ли регулярное выражение со всей целевой строкой.|
 |[regex_replace](#regex_replace)|Заменяет соответствующие регулярные выражения.|
 |[regex_search](#regex_search)|Поиск соответствия регулярному выражению.|
-|[swap](#swap)|Меняет местами два `basic_regex` или `match_results` объекты.|
+|[Своп](#swap)|Свопы `basic_regex` `match_results` два или объекты.|
 
-## <a name="regex_match"></a>regex_match
+## <a name="regex_match"></a><a name="regex_match"></a>regex_match
 
 Проверяет, совпадает ли регулярное выражение со всей целевой строкой.
 
@@ -84,51 +84,51 @@ bool regex_match(
 
 ### <a name="parameters"></a>Параметры
 
-\ с *двунаправленным письмом*
-Тип итератора для подстрок соответствия. В общих случаях это один из `string::const_iterator`, `wstring::const_iterator`, `const char*` или `const wchar_t*`.
+*BidIt*\
+Тип итератора для подстрок соответствия. Для распространенных случаев `wstring::const_iterator` `const char*` это `const wchar_t*`один из `string::const_iterator`, или .
 
-\ *выделения*
+*Alloc*\
 Класс распределителя результатов соответствия.
 
 *Elem*\
-Тип элементов для обеспечения соответствия. В общих случаях это `string`, `wstring`, `char*` или `wchar_t*`.
+Тип элементов для обеспечения соответствия. Для обычных `string`случаев `char*` `wchar_t*`это, `wstring`или .
 
-*Ркстраитс*\
+*RXtraits*\
 Класс характеристик для элементов.
 
-*Alloc2*\
+*Аллок2*\
 Класс распределителя регулярного выражения.
 
-*Иотраитс*\
+*Иотраиты*\
 Класс характеристик строки.
 
-*Иоаллок*\
+*IOalloc*\
 Класс распределителя строк.
 
-*flags*\
+*Флаги*\
 Флаги для соответствий.
 
-*первый*\
+*Первый*\
 Начало последовательности для сопоставления.
 
-*последние*\
+*Последний*\
 Конец последовательности для сопоставления.
 
-*совпадение*\
-Результаты сопоставления. Соответствует типу Elem: [smatch](../standard-library/regex-typedefs.md#smatch) для `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) для `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) для `char*` или [wcmatch](../standard-library/regex-typedefs.md#wcmatch) для `wchar_t*`.
+*Матч*\
+Результаты сопоставления. Соответствует типу Elem: [матч](../standard-library/regex-typedefs.md#smatch) за `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) для `wstring`, `wchar_t*` [cmatch](../standard-library/regex-typedefs.md#cmatch) для `char*` или [wcmatch](../standard-library/regex-typedefs.md#wcmatch) для .
 
-\ *ptr*
-Указатель на начало последовательности для сопоставления. Если `char*`*ptr* , используйте `cmatch` и `regex`. Если *ptr* `wchar_t*`, используйте `wcmatch` и `wregex`.
+*Ptr*\
+Указатель на начало последовательности для сопоставления. Если *ptr,* `char*`то `cmatch` `regex`используйте и . Если *ptr* `wchar_t*` затем `wcmatch` `wregex`использовать и .
 
-*повторное*\
-Регулярное выражение для сопоставления. Введите `regex` для `string` и `char*`или `wregex` для `wstring` и `wchar_t*`.
+*Повторно*\
+Регулярное выражение для сопоставления. Тип `regex` `string` для `char*`и, `wstring` `wchar_t*`или `wregex` для и .
 
-\ *str*
-Сопоставляемая строка. Соответствует типу *elem*.
+*Ул*\
+Сопоставляемая строка. Соответствует типу *Elem*.
 
 ### <a name="remarks"></a>Remarks
 
-Каждая функция шаблона возвращает значение true только в том случае, если вся *строка* последовательности операндов в точности соответствует аргументу *Re*регулярного выражения. Используйте [regex_search](../standard-library/regex-functions.md#regex_search) , чтобы сопоставить подстроку в целевой последовательности и `regex_iterator` для поиска нескольких совпадений. Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.
+Каждая функция шаблона возвращается верно только в том случае, если вся последовательность работы *точно* соответствует обычному аргументу выражения *re.* Используйте [regex_search,](../standard-library/regex-functions.md#regex_search) чтобы сопоставить подстроку в целевой последовательности и `regex_iterator` найти несколько совпадений. Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.
 
 Функции, принимающие объект `match_results`, указывают в своих членах, выполнено ли сопоставление успешно и, в этом случае, какие группы захвата в регулярном выражении были определены.
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>regex_replace
+## <a name="regex_replace"></a><a name="regex_replace"></a>regex_replace
 
 Заменяет соответствующие регулярные выражения.
 
@@ -223,42 +223,42 @@ basic_string<Elem> regex_replace(
 *OutIt*\
 Тип итератора для замен.
 
-\ с *двунаправленным письмом*
+*BidIt*\
 Тип итератора для подстрок соответствия.
 
-*Ркстраитс*\
+*RXtraits*\
 Класс характеристик для элементов.
 
-\ *выделения*
+*Alloc*\
 Класс распределителя регулярного выражения.
 
 *Elem*\
 Тип элементов для обеспечения соответствия.
 
-*flags*\
+*Флаги*\
 Флаги для соответствий.
 
-*первый*\
+*Первый*\
 Начало последовательности для сопоставления.
 
-*fmt*\
+*Fmt*\
 Формат для замен.
 
-*последние*\
+*Последний*\
 Конец последовательности для сопоставления.
 
-*out*\
+*из*\
 Итератор вывода.
 
-*повторное*\
+*Повторно*\
 Регулярное выражение для сопоставления.
 
-\ *str*
+*Ул*\
 Сопоставляемая строка.
 
 ### <a name="remarks"></a>Remarks
 
-Первая функция конструирует [regex_iterator объект класса](../standard-library/regex-iterator-class.md) `iter(first, last, re, flags)` и использует его для разбиения входного диапазона `[first, last)` в последовательность подстрок `T0 M0 T1 M1...TN-1 MN-1 TN`, где `Mn` — это n-й элемент, обнаруженный итератором. Если совпадения не найдены, `T0` — это весь входной диапазон, а `N` равно нулю. Если `(flags & format_first_only) != 0`, используется только первое соответствие, `T1` — это весь входной текст, который следует за соответствием, а `N` равно 1. Для каждого `i` в диапазоне `[0, N)`, если `(flags & format_no_copy) == 0` копирует текст из `Ti` диапазона *в итератор.* Затем он вызывает `m.format(out, fmt, flags)`, где `m` — объект `match_results`, возвращаемый объектом итератора `iter` для `Mi`подпоследовательности. Наконец, если `(flags & format_no_copy) == 0` копирует текст из диапазона `TN` *в итератор.* Функция *возвращает.*
+Первая функция строит [regex_iterator Class](../standard-library/regex-iterator-class.md) объект `iter(first, last, re, flags)` regex_iterator класса и использует его `[first, last)` для разделения его `T0 M0 T1 M1...TN-1 MN-1 TN`вхоложства на ряд последовательность, где `Mn` находится n-й матч, обнаруженный итератором. Если совпадения не найдены, `T0` — это весь входной диапазон, а `N` равно нулю. Если `(flags & format_first_only) != 0`, используется только первое соответствие, `T1` — это весь входной текст, который следует за соответствием, а `N` равно 1. Для `i` каждого в `[0, N)`ряде, если `(flags & format_no_copy) == 0` оно скопирует текст в ряде `Ti` к итератору *вне.* Затем он `m.format(out, fmt, flags)`вызывает, `m` `match_results` где объект возвращается объектом `iter` итератора для последовательность. `Mi` Наконец, `(flags & format_no_copy) == 0` если он копирует `TN` текст в диапазоне к итератору *из*. Функция *возвращается*.
 
 Вторая функция создает локальную переменную `result` типа `basic_string<charT>` и вызывает `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`. Он возвращает `result`.
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>regex_search
+## <a name="regex_search"></a><a name="regex_search"></a>regex_search
 
 Поиск соответствия регулярному выражению.
 
@@ -353,51 +353,51 @@ bool regex_search(
 
 ### <a name="parameters"></a>Параметры
 
-\ с *двунаправленным письмом*
+*BidIt*\
 Тип итератора для подстрок соответствия.
 
-\ *выделения*
+*Alloc*\
 Класс распределителя результатов соответствия.
 
 *Elem*\
 Тип элементов для обеспечения соответствия.
 
-*Ркстраитс*\
+*RXtraits*\
 Класс характеристик для элементов.
 
-*Alloc2*\
+*Аллок2*\
 Класс распределителя регулярного выражения.
 
-*Иотраитс*\
+*Иотраиты*\
 Класс характеристик строки.
 
-*Иоаллок*\
+*IOalloc*\
 Класс распределителя строк.
 
-*flags*\
+*Флаги*\
 Флаги для соответствий.
 
-*первый*\
+*Первый*\
 Начало последовательности для сопоставления.
 
-*последние*\
+*Последний*\
 Конец последовательности для сопоставления.
 
-*совпадение*\
+*Матч*\
 Результаты сопоставления.
 
-\ *ptr*
+*Ptr*\
 Указатель на начало последовательности для сопоставления.
 
-*повторное*\
+*Повторно*\
 Регулярное выражение для сопоставления.
 
-\ *str*
+*Ул*\
 Сопоставляемая строка.
 
 ### <a name="remarks"></a>Remarks
 
-Каждая функция-шаблон возвращает значение true, только если поиск *его аргумента* регулярного выражения в последовательности операндов завершается с ошибкой. Функции, принимающие объект `match_results`, указывают в своих членах успешность выполнения поиска и, в этом случае, какие группы захвата в были распознаны в регулярном выражении.
+Каждая функция шаблона возвращается верно только в том случае, если поиск его регулярного аргумента выражения *повторно* в своей последовательности работы удается. Функции, принимающие объект `match_results`, указывают в своих членах успешность выполнения поиска и, в этом случае, какие группы захвата в были распознаны в регулярном выражении.
 
 ### <a name="example"></a>Пример
 
@@ -455,9 +455,9 @@ search(string, "abc") == true
   matched: "abc"
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Своп
 
-Меняет местами два `basic_regex` или `match_results` объекты.
+Свопы `basic_regex` `match_results` два или объекты.
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -476,7 +476,7 @@ void swap(
 *Elem*\
 Тип элементов для обеспечения соответствия.
 
-*Ркстраитс*\
+*RXtraits*\
 Класс характеристик для элементов.
 
 ### <a name="remarks"></a>Remarks
@@ -522,9 +522,9 @@ string == aaa
 
 [\<regex>](../standard-library/regex.md)\
 [класс regex_constants](../standard-library/regex-constants-class.md)\
-[класс regex_error](../standard-library/regex-error-class.md)\
+[regex_error класс](../standard-library/regex-error-class.md)\
 [класс regex_iterator](../standard-library/regex-iterator-class.md)\
-[операторы\<regex >](../standard-library/regex-operators.md)\
+[\<операторы regex>](../standard-library/regex-operators.md)\
 [класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
 [класс regex_traits](../standard-library/regex-traits-class.md)\
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

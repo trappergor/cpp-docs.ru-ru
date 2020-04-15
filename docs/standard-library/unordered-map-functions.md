@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373142"
 ---
 # <a name="ltunordered_mapgt-functions"></a>Функции &lt;unordered_map&gt;
 
@@ -21,7 +21,7 @@ ms.locfileid: "79427731"
 |-|-|
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a>своп (unordered_map)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -34,30 +34,30 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключевые*\
+*Ключ*\
 Тип ключа.
 
 *Ty*\
 Сопоставленный тип.
 
-*Хэш-* \
+*Хэш*\
 Тип объекта хэш-функции.
 
-*Пред*\
+*Pred*\
 Тип объекта функции сравнения на предмет равенства.
 
-\ *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left*\
+*Левой*\
 Первый контейнер для замены.
 
-*справа*\
+*Правильно*\
 Второй контейнер для замены.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция шаблона выполняет `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
+Функция шаблона `left.`выполняет [unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Пример
 
@@ -114,7 +114,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>своп (unordered_multimap)
 
 Меняет местами содержимое двух контейнеров.
 
@@ -127,30 +127,30 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключевые*\
+*Ключ*\
 Тип ключа.
 
 *Ty*\
 Сопоставленный тип.
 
-*Хэш-* \
+*Хэш*\
 Тип объекта хэш-функции.
 
-*Пред*\
+*Pred*\
 Тип объекта функции сравнения на предмет равенства.
 
-\ *выделения*
+*Alloc*\
 Класс распределителя.
 
-*left*\
+*Левой*\
 Первый контейнер для замены.
 
-*справа*\
+*Правильно*\
 Второй контейнер для замены.
 
 ### <a name="remarks"></a>Remarks
 
-Эта функция шаблона выполняет `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
+Функция шаблона `left.`выполняет [unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Пример
 

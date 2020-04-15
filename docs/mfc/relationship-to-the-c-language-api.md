@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-ms.openlocfilehash: c52b11a7395e3972f8bf9d83501fbafb61e6f4a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1fbd4d332f5ade1cb9415448b138ac5bc838307d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372830"
 ---
 # <a name="relationship-to-the-c-language-api"></a>Отношение к API языка C
 
-Единственной характеристикой, устанавливающей библиотеку Microsoft Foundation Class (MFC), помимо других библиотек классов для Windows, является очень близкое сопоставление с API Windows, написанным на языке C. Кроме того, можно свободно смешивать вызовы библиотеки классов с прямыми вызовами Windows API. Однако такой прямой доступ не подразумевает, что классы являются полной заменой для этого API. Разработчики по-прежнему должны иногда выполнять прямые вызовы некоторых функций Windows, например [сеткурсор](/windows/win32/api/winuser/nf-winuser-setcursor) и [жетсистемметрикс](/windows/win32/api/winuser/nf-winuser-getsystemmetrics). Функция Windows упаковывается функцией-членом класса только в том случае, если это неясное преимущество.
+Единственной характеристикой, которая отличает библиотеку Microsoft Foundation Class (MFC) от других библиотек классов для Windows, является очень близкое отображение к API Windows, написанному на языке C. Кроме того, обычно можно свободно смешивать вызовы в библиотеку классов с прямыми вызовами на API Windows. Однако этот прямой доступ не означает, что классы являются полной заменой этого API. Разработчики должны иногда совершать прямые вызовы на некоторые функции Windows, такие как [SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor) и [GetSystemMetrics,](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)например. Функция Windows обернута функцией члена класса только тогда, когда есть явное преимущество для этого.
 
-Поскольку иногда требуется выполнять вызовы функций машинного кода Windows, у вас должен быть доступ к документации по API Windows на языке C. Эта документация входит в состав Microsoft Visual C++.
+Поскольку иногда требуется сделать нативные вызовы функций Windows, вы должны иметь доступ к документации C-language Windows API. Эта документация включена в комплект microsoft Visual C.
 
 > [!NOTE]
->  Общие сведения о работе платформы библиотеки MFC см. в разделе [Использование классов для написания приложений для Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).
+> Для обзора того, как работает платформа Библиотеки MFC, можно [ознакомиться с помощью классов для записи приложений для Windows.](../mfc/using-the-classes-to-write-applications-for-windows.md)
 
 ## <a name="see-also"></a>См. также раздел
 
-[Общие принципы разработки классов](../mfc/general-class-design-philosophy.md)
+[Философия дизайна общего класса](../mfc/general-class-design-philosophy.md)

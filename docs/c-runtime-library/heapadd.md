@@ -24,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351319"
 ---
 # <a name="_heapadd"></a>_heapadd
 
 Добавляет память в кучу.
 
 > [!IMPORTANT]
->  Эта функция устарела. Начиная с Visual Studio 2015 она недоступна в CRT.
+> Эта функция является устаревшей. Начиная с Visual Studio 2015 она недоступна в CRT.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -52,7 +52,7 @@ int _heapadd(
 *memblock*<br/>
 Указатель на память кучи.
 
-*size*<br/>
+*Размер*<br/>
 Размер добавляемой памяти в байтах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -61,7 +61,7 @@ int _heapadd(
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Начиная с Visual C++ версии 4.0 базовая структура кучи перемещена в библиотеки среды выполнения C для обеспечения поддержки новых функций отладки. В результате `_heapadd` больше не поддерживается на какой-либо платформе, основанной на Win32 API.
 
@@ -71,12 +71,12 @@ int _heapadd(
 |-------------|---------------------|---------------------|
 |`_heapadd`|\<malloc.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md) во введении.
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../c-runtime-library/compatibility.md) во введении.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Выделение памяти](../c-runtime-library/memory-allocation.md)<br/>
-[free](../c-runtime-library/reference/free.md)<br/>
+[Распределение памяти](../c-runtime-library/memory-allocation.md)<br/>
+[Бесплатный](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

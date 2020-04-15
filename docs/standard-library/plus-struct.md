@@ -1,5 +1,5 @@
 ---
-title: plus - структура
+title: Структура plus
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::plus
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240510"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372066"
 ---
-# <a name="plus-struct"></a>plus - структура
+# <a name="plus-struct"></a>Структура plus
 
 Стандартный объект функции, который выполняет над своими аргументами операцию сложения (бинарное `operator+`).
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -42,11 +42,11 @@ struct plus<void>
 *Тип*, *T*, *U*\
 Тип, поддерживающий бинарный `operator+`, который принимает операнды указанного или выводимого типа.
 
-*Слева*\
-Левый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
+*Левой*\
+Левый операнд в операции сложения. Неспециализированный шаблон принимает аргумент ссылки lvalue *типа*типа. Специализированный шаблон делает идеальный пересылки lvalue и rvalue справочные аргументы выведенного типа *T*.
 
 *Правильно*\
-Правый операнд в операции сложения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
+Правый операнд в операции сложения. Неспециализированный шаблон принимает аргумент ссылки lvalue *типа*типа. Специализированный шаблон делает идеальный пересылки lvalue и rvalue справочные аргументы выведенного типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 

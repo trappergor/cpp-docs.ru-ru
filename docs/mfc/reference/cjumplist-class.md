@@ -36,16 +36,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98d6bec3d33c9060ebb741111dff793f64cc7cb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392574"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372333"
 ---
 # <a name="cjumplist-class"></a>Класс CJumpList
 
-Объект `CJumpList` список ярлыков, отображаемый при щелчке правой кнопкой мыши значок в панели задач.
+A `CJumpList` — это список ярлыков, выявленный при нажатии кнопки «правой кнопки» на значок в панели задач.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -57,27 +57,27 @@ class CJumpList;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CJumpList::CJumpList](#cjumplist)|Создает объект `CJumpList`.|
-|[CJumpList:: ~ CJumpList](#_dtorcjumplist)|Уничтожает объект `CJumpList`.|
+|[CJumpList::CJumpList](#cjumplist)|Формирует объект `CJumpList`.|
+|[CJumpList:::](#_dtorcjumplist)|Уничтожает объект `CJumpList` .|
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CJumpList::AbortList](#abortlist)|Прерывает транзакцию список стандартных без фиксации.|
-|[CJumpList::AddDestination](#adddestination)|Перегружен. Добавляет в список назначения.|
-|[CJumpList::AddKnownCategory](#addknowncategory)|Добавляет категорию известные в список.|
-|[CJumpList::AddTask](#addtask)|Перегружен. Добавляет элементы в каноническую категорию задач.|
-|[CJumpList::AddTasks](#addtasks)|Добавляет элементы в каноническую категорию задач.|
-|[CJumpList::AddTaskSeparator](#addtaskseparator)|Добавляет разделитель между задачами.|
-|[CJumpList::ClearAll](#clearall)|Удаляет все задачи и назначения, которые были добавлены к текущему экземпляру `CJumpList` данный момент.|
-|[CJumpList::ClearAllDestinations](#clearalldestinations)|Удаляет все назначения, которые были добавлены к текущему экземпляру `CJumpList` данный момент.|
-|[CJumpList::CommitList](#commitlist)|Завершает транзакцию список стандартных и фиксирует сообщаемые списка связанных хранилище (реестр, в данном случае).|
-|[CJumpList::GetDestinationList](#getdestinationlist)|Извлекает указатель интерфейса на целевой список.|
-|[CJumpList::GetMaxSlots](#getmaxslots)|Возвращает максимальное число элементов, включая заголовки категорий, которые могут отображать в целевом меню вызывающего приложения.|
-|[CJumpList::GetRemovedItems](#getremoveditems)|Возвращает массив элементов, представляющих удалены назначения.|
-|[CJumpList::InitializeList](#initializelist)|Начинает транзакцию построение списка.|
-|[CJumpList::SetAppID](#setappid)|Задает идентификатор модели пользователя приложения для списка, который будет использоваться для построения.|
+|[CJumpList::AbortList](#abortlist)|Прерывает транзакцию по созданию списка без фиксации.|
+|[CJumpList::AddDestination](#adddestination)|Перегружен. Добавляет пункт назначения в список.|
+|[CJumpList::AddKnownКатегория](#addknowncategory)|Приложения известной категории к списку.|
+|[CJumpList::AddTask](#addtask)|Перегружен. Добавляет элементы в категорию канонических задач.|
+|[CJumpList::AddTasks](#addtasks)|Добавляет элементы в категорию канонических задач.|
+|[CJumpList::AddTaskSeparator](#addtaskseparator)|Добавляет сепаратор между задачами.|
+|[CJumpList::ClearAll](#clearall)|Удаляет все задачи и назначения, которые были добавлены в текущий `CJumpList` экземпляр до сих пор.|
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|Удаляет все направления, которые были добавлены `CJumpList` в текущий экземпляр до сих пор.|
+|[CJumpList::CommitList](#commitlist)|Завершает транзакцию создания списка и фиксирует отчетный список в связанный магазин (реестр в данном случае).|
+|[CJumpList::GetDestinationList](#getdestinationlist)|Извлекает указатель интерфейса в список назначения.|
+|[CJumplist:GetmaxSlots](#getmaxslots)|Извлекает максимальное количество элементов, включая заголовки категорий, которые могут отображаться в меню назначения вызывающей заявки.|
+|[CJumpList::GetRemovedItems](#getremoveditems)|Возвращает массив элементов, представляющих удаленные направления.|
+|[CJumpList::InitializeList](#initializelist)|Начинается транзакция по созданию списка.|
+|[CJumpList:: SetAppID](#setappid)|Устанавливает идентификатор модели пользователя приложения для списка, который будет построен.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -87,29 +87,29 @@ class CJumpList;
 
 **Заголовок:** afxadv.h
 
-##  <a name="_dtorcjumplist"></a>  CJumpList:: ~ CJumpList
+## <a name="cjumplistcjumplist"></a><a name="_dtorcjumplist"></a>CJumpList:::
 
-Уничтожает объект `CJumpList`.
+Уничтожает объект `CJumpList` .
 
 ```
 ~CJumpList();
 ```
 
-##  <a name="abortlist"></a>  CJumpList::AbortList
+## <a name="cjumplistabortlist"></a><a name="abortlist"></a>CJumpList::AbortList
 
-Прерывает транзакцию список стандартных без фиксации.
+Прерывает транзакцию по созданию списка без фиксации.
 
 ```
 void AbortList();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызов этого метода имеет тот же эффект, что уничтожение `CJumpList` без вызова `CommitList`.
+Вызов этого метода имеет `CJumpList` тот `CommitList`же эффект, что и уничтожение без вызова.
 
-##  <a name="adddestination"></a>  CJumpList::AddDestination
+## <a name="cjumplistadddestination"></a><a name="adddestination"></a>CJumpList::AddDestination
 
-Добавляет в список назначения.
+Добавляет пункт назначения в список.
 
 ```
 BOOL AddDestination(
@@ -127,30 +127,30 @@ BOOL AddDestination(
 
 ### <a name="parameters"></a>Параметры
 
-*lpcszCategoryName*<br/>
-Задает имя категории. Если указанная категория не существует, он будет создан.
+*lpcszКатегорияName*<br/>
+Упогоняет название категории. Если указанная категория не существует, она будет создана.
 
 *strDestinationPath*<br/>
-Указывает путь к файлу назначения.
+Определяет файл пути к месту назначения.
 
 *strCategoryName*<br/>
-Задает имя категории. Если указанная категория не существует, он будет создан.
+Упогоняет название категории. Если указанная категория не существует, она будет создана.
 
 *pShellItem*<br/>
-Указывает элемент оболочки, представляющий добавляемый назначения.
+Осведряй элемент Shell, представляющий место назначения.
 
 *pShellLink*<br/>
-Указывает ссылку оболочки, представляющий добавляемый назначения.
+Опознавательный улика Shell, представляющая место назначения, на исполнивого.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Экземпляр `CJumpList` внутренне накапливает добавлена назначения и затем фиксирует их в `CommitList`.
+Экземпляр `CJumpList` внутренне аккумулирует добавленные назначения и `CommitList`после этого фиксирует их внутри .
 
-##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory
+## <a name="cjumplistaddknowncategory"></a><a name="addknowncategory"></a>CJumpList::AddKnownКатегория
 
-Добавляет категорию известные в список.
+Приложения известной категории к списку.
 
 ```
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
@@ -158,18 +158,18 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 
 ### <a name="parameters"></a>Параметры
 
-*category*<br/>
-Указывает тип известные категории. Может быть KDC_RECENT или KDC_KNOWN.
+*Категории*<br/>
+Определяет известный тип категории. Может быть либо KDC_RECENT, либо KDC_KNOWN.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Известные категории приведены категории частые и последние, мы автоматически вычисляет для каждого приложения, использующего `SHAddToRecentDocs` (или косвенно используется как оболочка назову его от имени приложения, в некоторых сценариях).
+Известные категории — это категории частых и недавних, которые мы автоматически вычислим для каждого приложения, которое использует `SHAddToRecentDocs` (или косвенно использует его в качестве оболочки, которая будет называться от имени приложения в некоторых сценариях).
 
-##  <a name="addtask"></a>  CJumpList::AddTask
+## <a name="cjumplistaddtask"></a><a name="addtask"></a>CJumpList::AddTask
 
-Добавляет элементы в каноническую категорию задач.
+Добавляет элементы в категорию канонических задач.
 
 ```
 BOOL AddTask(
@@ -185,32 +185,32 @@ BOOL AddTask(IShellLink* pShellLink);
 ### <a name="parameters"></a>Параметры
 
 *strTargetExecutablePath*<br/>
-Указывает целевой объект пути.
+Определяет путь целевой задачи.
 
 *strCommandLineArgs*<br/>
-Задает аргументы командной строки для исполняемого файла, указанного *strTargetExecutablePath*.
+Определяет аргументы командной строки исполняемых, указанные *strTargetExecutablePath.*
 
 *strTitle*<br/>
-Имя задачи, которое будет отображаться в списке.
+Имя задачи, которое будет отображаться в списке назначения.
 
 *strIconLocation*<br/>
-Расположение значка, который будет отображаться в целевом списке, а также название.
+Расположение значка, которое будет отображаться в списке назначения вместе с заголовком.
 
 *iIconIndex*<br/>
-Индекс значка.
+Индекс иконок.
 
 *pShellLink*<br/>
-Ссылка оболочки, которая представляет задачу, которую нужно добавить.
+Shell Link, представляющая задачу, которую необходимо добавить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Экземпляр `CJumpList` накапливает указанной задачи и добавляет их в список назначения во время `CommitList`. Элементы задач будет отображаться в категории в нижней части меню назначения приложения. Эта категория имеет приоритет над всех других категорий, по мере заполнения в пользовательском Интерфейсе.
+Экземпляр `CJumpList` накапливает указанные задачи и добавляет `CommitList`их в список назначения во время . Элементы задач будут отображаться в категории в нижней части меню назначения приложения. Эта категория имеет приоритет над всеми другими категориями, когда она заполняется в uI.
 
-##  <a name="addtasks"></a>  CJumpList::AddTasks
+## <a name="cjumplistaddtasks"></a><a name="addtasks"></a>CJumpList::AddTasks
 
-Добавляет элементы в каноническую категорию задач.
+Добавляет элементы в категорию канонических задач.
 
 ```
 BOOL AddTasks(IObjectArray* pObjectCollection);
@@ -219,17 +219,17 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ### <a name="parameters"></a>Параметры
 
 *pObjectCollection*<br/>
-Коллекция задач, которые необходимо добавить.
+Набор задач, которые необходимо добавить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Экземпляр CJumpList накапливает указанной задачи и добавляет их в список назначения во время `CommitList`. Элементы задач будет отображаться в категории в нижней части меню назначения приложения. Эта категория имеет приоритет над всех других категорий, по мере заполнения в пользовательском Интерфейсе.
+Экземпляр CJumpList аккумулирует определенные задачи и `CommitList`добавляет их в список назначения во время. Элементы задач будут отображаться в категории в нижней части меню назначения приложения. Эта категория имеет приоритет над всеми другими категориями, когда она заполняется в uI.
 
-##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator
+## <a name="cjumplistaddtaskseparator"></a><a name="addtaskseparator"></a>CJumpList::AddTaskSeparator
 
-Добавляет разделитель между задачами.
+Добавляет сепаратор между задачами.
 
 ```
 BOOL AddTaskSeparator();
@@ -237,11 +237,11 @@ BOOL AddTaskSeparator();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если успешно; значение 0, если это не так.
+Nonzero, если он успешно, 0, если это не так.
 
-##  <a name="cjumplist"></a>  CJumpList::CJumpList
+## <a name="cjumplistcjumplist"></a><a name="cjumplist"></a>CJumpList::CJumpList
 
-Создает объект `CJumpList`.
+Формирует объект `CJumpList`.
 
 ```
 CJumpList(BOOL bAutoCommit = TRUE);
@@ -250,35 +250,35 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bAutoCommit*<br/>
-Если этот параметр имеет значение FALSE списка автоматически не фиксируются в деструкторе.
+Если этот параметр FALSE, список не зачисляется автоматически в деструктор.
 
-##  <a name="clearall"></a>  CJumpList::ClearAll
+## <a name="cjumplistclearall"></a><a name="clearall"></a>CJumpList::ClearAll
 
-Удаляет все задачи и назначения, которые были добавлены к текущему экземпляру `CJumpList` данный момент.
+Удаляет все задачи и назначения, которые были добавлены в текущий `CJumpList` экземпляр до сих пор.
 
 ```
 void ClearAll();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод очищает и высвобождает все данные и внутренних интерфейсов.
+Этот метод очищает и выпускает все данные и внутренние интерфейсы.
 
-##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations
+## <a name="cjumplistclearalldestinations"></a><a name="clearalldestinations"></a>CJumpList::ClearAllDestinations
 
-Удаляет все назначения моменту были добавлены на текущий экземпляр CJumpList.
+Удаляет все направления, которые были добавлены в текущий экземпляр CJumpList до сих пор.
 
 ```
 void ClearAllDestinations();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывается в том случае, если необходимо удалить все назначения, которые были добавлены до сих в текущем сеансе построения списка назначения и снова добавьте другие назначения. Если внутренний `ICustomDestinationList` был инициализирован, он остается активным.
+Позвоните в эту функцию, если вам нужно удалить все направления, которые были добавлены до сих пор в текущей сессии здания списка назначения и добавить другие направления снова. Если внутреннее `ICustomDestinationList` было инициализировано, оно осталось живым.
 
-##  <a name="commitlist"></a>  CJumpList::CommitList
+## <a name="cjumplistcommitlist"></a><a name="commitlist"></a>CJumpList::CommitList
 
-Завершает транзакцию список стандартных и фиксирует сообщаемые списка связанных хранилище (реестр, в данном случае).
+Завершает транзакцию по созданию списка и фиксирует отчетный список в связанный магазин (реестр в данном случае).
 
 ```
 BOOL CommitList();
@@ -286,13 +286,13 @@ BOOL CommitList();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Фиксация является атомарной. Если фиксация завершается сбоем, будет возвращена ошибка.  Когда `CommitList` вызывается текущий список удаленных элементов будут очищены. Вызов этого метода сбрасывает объект, таким образом, чтобы он не имеет активной транзакции построения списка. Чтобы обновить список, `BeginList` должен вызываться снова.
+Коммит атомный. Ошибка будет возвращена при сходе коммина.  При `CommitList` вызове текущий список удаленных элементов будет очищен. Вызов этого метода сбрасывает объект таким образом, чтобы у него не было активной транзакции по созданию списка. Чтобы обновить список, `BeginList` необходимо вызвать еще раз.
 
-##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList
+## <a name="cjumplistgetdestinationlist"></a><a name="getdestinationlist"></a>CJumpList::GetDestinationList
 
-Извлекает указатель интерфейса на целевой список.
+Извлекает указатель интерфейса в список назначения.
 
 ```
 ICustomDestinationList* GetDestinationList();
@@ -300,13 +300,13 @@ ICustomDestinationList* GetDestinationList();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если список переходов не был инициализирован, или зафиксирована или прервана, возвращаемое значение будет иметь значение NULL.
+Если список прыжков не был инициализирован или был зафиксирован или прерван, возвращенное значение будет NULL.
 
-##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots
+## <a name="cjumplistgetmaxslots"></a><a name="getmaxslots"></a>CJumplist:GetmaxSlots
 
-Возвращает максимальное число элементов, включая заголовки категорий, которые могут отображать в целевом меню вызывающего приложения.
+Извлекает максимальное количество элементов, включая заголовки категорий, которые могут отображаться в меню назначения вызывающей заявки.
 
 ```
 UINT GetMaxSlots() const;
@@ -314,13 +314,13 @@ UINT GetMaxSlots() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Приложения может сообщать только несколько элементов и объединять до достижения этого значения заголовков категорий. Если вызовы `AppendCategory`, `AppendKnownCategory`, или `AddUserTasks` превышает это число, они будут возвращать ошибки.
+Приложения могут сообщать только о нескольких элементах и заголовках категорий, объединенных до этого значения. Если `AppendCategory`звонки, `AppendKnownCategory`или `AddUserTasks` превысить этот номер, они будут возвращать сбой.
 
-##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems
+## <a name="cjumplistgetremoveditems"></a><a name="getremoveditems"></a>CJumpList::GetRemovedItems
 
-Возвращает массив элементов, представляющих удалены назначения.
+Возвращает массив элементов, представляющих удаленные направления.
 
 ```
 IObjectArray* GetRemovedItems();
@@ -328,13 +328,13 @@ IObjectArray* GetRemovedItems();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Удалено назначений извлекаются во время инициализации из списка переходов. При создании нового списка назначения, приложения должны сначала обработать список удаленных назначения, очистка свои данные отслеживания для любого элемента, возвращенный перечислителем удален список. Если приложение пытается поместить элемент, который был удален в транзакцию, которая текущий вызов `BeginList` к работе, вызов метода, который повторно добавить этот элемент не удастся, убедитесь, что приложения соблюдение списке удален.
+Удаленные направления извлекаются во время инициализации списка прыжков. При формировании нового списка назначения приложения должны сначала обработать список удаленных пунктов назначения, очистив данные отслеживания для любого элемента, возвращенного удаленным регистратором списка. Если приложение пытается предоставить элемент, который только что был удален `BeginList` в транзакции, к которой начал текущий вызов, вызов метода, который повторно добавил этот элемент, не удастся, чтобы убедиться, что приложения уважают удаленный список.
 
-##  <a name="initializelist"></a>  CJumpList::InitializeList
+## <a name="cjumplistinitializelist"></a><a name="initializelist"></a>CJumpList::InitializeList
 
-Начинает транзакцию построение списка.
+Начинается транзакция по созданию списка.
 
 ```
 BOOL InitializeList();
@@ -342,13 +342,13 @@ BOOL InitializeList();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Не нужно явно вызывать этот метод, если вы хотите получить указатель на `ICustomDestinationList` с помощью `GetDestinationList`, количество доступных слотов с помощью `GetMaxSlots`, или список удаленных элементов с помощью `GetRemovedItems`.
+Вам не нужно звонить по этому методу явно, если вы `ICustomDestinationList` `GetDestinationList`не хотите получить указатель `GetMaxSlots`на использование, количество `GetRemovedItems`доступных слотов с использованием, или список удаленных элементов с использованием.
 
-##  <a name="setappid"></a>  CJumpList::SetAppID
+## <a name="cjumplistsetappid"></a><a name="setappid"></a>CJumpList:: SetAppID
 
-Задает идентификатор модели пользователя приложения для списка, который будет использоваться для построения.
+Устанавливает идентификатор модели пользователя приложения для списка, который будет построен.
 
 ```
 void SetAppID(LPCTSTR strAppID);
@@ -357,8 +357,8 @@ void SetAppID(LPCTSTR strAppID);
 ### <a name="parameters"></a>Параметры
 
 *strAppID*<br/>
-Строка, задающая идентификатор модели пользователя приложения.
+Строка, опозиваемый идентификатором модели пользователя приложения.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

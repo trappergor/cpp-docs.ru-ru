@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790ce0f32c2325fa0ea92ca0bda64ddaa4c86c45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375695"
 ---
 # <a name="cdcrendertarget-class"></a>Класс CDCRenderTarget
 
-Оболочка для ID2D1DCRenderTarget.
+Обертка для ID2D1DCRenderTarget.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,29 +41,29 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Создает объект CDCRenderTarget.|
+|[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Строит объект CDCRenderTarget.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDCRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
-|[CDCRenderTarget::BindDC](#binddc)|Связывает целевой объект отрисовки на контекст устройства, к которому она выдает команд рисования|
-|[CDCRenderTarget::Create](#create)|Создает CDCRenderTarget.|
-|[CDCRenderTarget::Detach](#detach)|Отсоединяет интерфейс целевой объект отрисовки из объекта|
-|[CDCRenderTarget::GetDCRenderTarget](#getdcrendertarget)|Возвращает интерфейс ID2D1DCRenderTarget|
+|[CDCRenderTarget::Прикрепите](#attach)|Прикрепляет существующий целевой интерфейс рендера к объекту|
+|[CDCRenderTarget::BindDC](#binddc)|Связывает цель рендера с контекстом устройства, к которому он выдает команды рисования|
+|[CDCRenderTarget::Создание](#create)|Создает CDCRenderTarget.|
+|[CDCRenderTarget::Detach](#detach)|Отеки визуализировать целевой интерфейс от объекта|
+|[CDCRenderTarget:GetDCRenderTarget](#getdcrendertarget)|Возвращает интерфейс ID2D1DCRenderTarget|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Возвращает интерфейс ID2D1DCRenderTarget|
+|[CDCRenderTarget:оператор ID2D1DCRenderTarget](#operator_id2d1dcrendertarget_star)|Возвращает интерфейс ID2D1DCRenderTarget|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Указатель на объект ID2D1DCRenderTarget.|
 
@@ -79,9 +79,9 @@ class CDCRenderTarget : public CRenderTarget;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="attach"></a>  CDCRenderTarget::Attach
+## <a name="cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Прикрепите
 
-Присоединение существующих отрисовки целевой интерфейс к объекту
+Прикрепляет существующий целевой интерфейс рендера к объекту
 
 ```
 void Attach(ID2D1DCRenderTarget* pTarget);
@@ -90,11 +90,11 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ### <a name="parameters"></a>Параметры
 
 *pTarget*<br/>
-Существующий интерфейс целевой объект отрисовки. Не может иметь значение NULL
+Существующий целевой интерфейс рендеринга. Не может быть NULL
 
-##  <a name="binddc"></a>  CDCRenderTarget::BindDC
+## <a name="cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC
 
-Связывает целевой объект отрисовки на контекст устройства, к которому она выдает команд рисования
+Связывает цель рендера с контекстом устройства, к которому он выдает команды рисования
 
 ```
 BOOL BindDC(
@@ -104,25 +104,25 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>Параметры
 
-*dc*<br/>
-Контекст устройства, в которую целевой объект отрисовки выдает команд рисования
+*Dc*<br/>
+Контекст устройства, к которому отрисовывается целевые проблемы с командами рисования
 
 *rect*<br/>
-Размеры дескриптор контекста устройства (HDC), к которому привязан целевой объект отрисовки
+Размеры ручки к контексту устройства (HDC), к которому привязана цель рендеринга
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE.
 
-##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget
+## <a name="cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget
 
-Создает объект CDCRenderTarget.
+Строит объект CDCRenderTarget.
 
 ```
 CDCRenderTarget();
 ```
 
-##  <a name="create"></a>  CDCRenderTarget::Create
+## <a name="cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Создание
 
 Создает CDCRenderTarget.
 
@@ -132,16 +132,16 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>Параметры
 
-*PROPS*<br/>
-Режим отрисовки, формат пикселей, параметры удаленного взаимодействия, сведения о DPI и минимальную поддержку DirectX, необходимые для подготовки к просмотру оборудования.
+*Реквизит*<br/>
+Режим рендеринга, формат пикселей, параметры ремотирования, информация о DPI и минимальная поддержка DirectX, необходимая для отображенной аппаратного обеспечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если метод завершается успешно, возвращается значение TRUE. В противном случае возвращается значение FALSE.
+Если метод удается, он возвращает TRUE. В противном случае, он возвращает FALSE.
 
-##  <a name="detach"></a>  CDCRenderTarget::Detach
+## <a name="cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach
 
-Отсоединяет интерфейс целевой объект отрисовки из объекта
+Отеки визуализировать целевой интерфейс от объекта
 
 ```
 ID2D1DCRenderTarget* Detach();
@@ -149,9 +149,9 @@ ID2D1DCRenderTarget* Detach();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на отсоединенной отображения интерфейса целевой объект.
+Указатель на отдельный интерфейс рендеринга.
 
-##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget
+## <a name="cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget:GetDCRenderTarget
 
 Возвращает интерфейс ID2D1DCRenderTarget
 
@@ -161,9 +161,9 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1DCRenderTarget или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1DCRenderTarget или NULL, если объект еще не инициализирован.
 
-##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget
+## <a name="cdcrendertargetm_pdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget
 
 Указатель на объект ID2D1DCRenderTarget.
 
@@ -171,7 +171,7 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *
+## <a name="cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget:оператор ID2D1DCRenderTarget
 
 Возвращает интерфейс ID2D1DCRenderTarget
 
@@ -181,8 +181,8 @@ operator ID2D1DCRenderTarget*();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на интерфейс ID2D1DCRenderTarget или значение NULL, если объект еще не инициализирован.
+Указатель на интерфейс ID2D1DCRenderTarget или NULL, если объект еще не инициализирован.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../mfc/reference/mfc-classes.md)

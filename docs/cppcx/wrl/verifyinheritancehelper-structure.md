@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: c37a0eb74fd65b3d349d5b8b7c792fbaf7d1ac9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398086"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374233"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,23 +32,23 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="parameters"></a>Параметры
 
-*I*<br/>
+*Я*<br/>
 Тип.
 
-*Base*<br/>
+*Базы*<br/>
 Другой тип.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Проверяет, является ли один интерфейс является производным от другого интерфейса.
+Тестирует, является ли один интерфейс производным от другого интерфейса.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-name                                       | Описание
+Имя                                       | Описание
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[VerifyInheritanceHelper::Verify](#verify) | Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.
+[VerifyInheritanceHelper::Verify](#verify) | Тестирует два интерфейса, указанные текущими параметрами шаблона, и определяет, является ли один интерфейс производным от другого.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -58,18 +58,18 @@ name                                       | Описание
 
 **Заголовок:** implements.h
 
-**Пространство имен:** Microsoft::WRL::Details
+**Пространство имен:** Microsoft:WRL::Details
 
-## <a name="verify"></a>VerifyInheritanceHelper::Verify
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>VerifyInheritanceHelper::Verify
 
-Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из кода.
 
 ```cpp
 static void Verify();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Проверяет два интерфейса, указанные параметрами шаблона и определяет, является ли один интерфейс производным от другого.
+Тестирует два интерфейса, указанные текущими параметрами шаблона, и определяет, является ли один интерфейс производным от другого.
 
 Если это условие не выполняется, выдается ошибка.

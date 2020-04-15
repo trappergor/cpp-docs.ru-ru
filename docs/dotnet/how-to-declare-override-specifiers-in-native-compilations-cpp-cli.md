@@ -1,28 +1,28 @@
 ---
-title: Практическое руководство. Объявление спецификаторов переопределения (C++выполняет)
+title: 'Как: Объявить переопределить specifiers (КЗ / CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f3f6855f257d0af250b9bbdd2c0360b308ce775
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374448"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++выполняет)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++/CLI)
 
-[Запечатанный](../extensions/sealed-cpp-component-extensions.md), [абстрактный](../extensions/abstract-cpp-component-extensions.md), и [переопределить](../extensions/override-cpp-component-extensions.md) доступны в компиляциях, не использующих **/ZW** или [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
+[запечатанные,](../extensions/sealed-cpp-component-extensions.md) [абстрактные,](../extensions/abstract-cpp-component-extensions.md)и [переопределение](../extensions/override-cpp-component-extensions.md) доступны в компиляциях, которые не используют **/ ЗВ** или [/clr](../build/reference/clr-common-language-runtime-compilation.md).
 
 > [!NOTE]
->  ISO C ++ 11 Standard язык имеет [переопределить](../cpp/override-specifier.md) идентификатор и [окончательный](../cpp/final-specifier.md) идентификатор и оба поддерживаются в Visual Studio используйте `final` вместо `sealed` в коде, который предназначен для скомпилировать как только машинный код.
+> Стандартный язык ISO C-11 имеет идентификатор [переопределения](../cpp/override-specifier.md) и [окончательный](../cpp/final-specifier.md) идентификатор, и оба поддерживаются в Visual Studio Use, `final` а не `sealed` в коде, который должен быть скомпилирован как родной только.
 
 ## <a name="example"></a>Пример
 
 ### <a name="description"></a>Описание
 
-В следующем примере показано, что `sealed` является допустимым в компиляции в машинный код.
+Ниже приводится `sealed` следующий пример, который действителен в родных компиляциях.
 
 ### <a name="code"></a>Код
 
@@ -51,7 +51,7 @@ public:
 
 ### <a name="description"></a>Описание
 
-В следующем примере показано, что `override` является допустимым в компиляции в машинный код.
+Следующий пример `override` показывает, что это действительно в родной компиляции.
 
 ### <a name="code"></a>Код
 
@@ -73,7 +73,7 @@ public:
 
 ### <a name="description"></a>Описание
 
-В этом примере показано, что `abstract` является допустимым в компиляции в машинный код.
+Этот пример `abstract` показывает, что это действительно в родных компиляциях.
 
 ### <a name="code"></a>Код
 
@@ -86,6 +86,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Спецификаторы переопределения](../extensions/override-specifiers-cpp-component-extensions.md)

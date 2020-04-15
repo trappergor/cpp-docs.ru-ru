@@ -46,20 +46,20 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 6be7d29a4b43ac10980601708f5bcc666a48dd58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5b44a1b4e96d92d9ddd150a5b5f68cf83863f8db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511382"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372854"
 ---
 # <a name="reflected-window-message-ids"></a>Отраженные идентификаторы сообщений окон
 
-Для быстрого создания элемента управления ActiveX или другого специализированного элемента управления необходимо создать подкласс окна. Дополнительные сведения см. в [разделе элементы управления ActiveX в MFC. Подклассировать элемент управления](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)Windows.
+Быстрый способ создания управления ActiveX или другого специализированного управления — это подкласс окна. Для получения дополнительной [MFC ActiveX Controls: Subclassing a Windows Control](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)информации см.
 
-Чтобы контейнер элемента управления не получал сообщения окна, отправленные подклассом Windows Control, [COleControl](../mfc/reference/colecontrol-class.md) создает окно "Reflector" для перехвата определенных оконных сообщений и их отправки обратно в элемент управления. Затем элемент управления в его процедуре Window может обработать эти отраженные сообщения, выполнив действия, соответствующие элементу управления ActiveX.
+Чтобы предотвратить получение контейнера управления оконными сообщениями, отправленными подклассным управлением Windows, [COleControl](../mfc/reference/colecontrol-class.md) создает окно "отражателя" для перехвата определенных оконных сообщений и отправки их обратно в управление. Элемент управления в процедуре окна может обрабатывать эти отраженные сообщения, принимая меры, подходящие для управления ActiveX.
 
-В следующей таблице показаны перехваченные сообщения и соответствующие сообщения, которые отправляет окно Reflector.
+В следующей таблице показаны перехваченные сообщения и соответствующие сообщения, отправляемые окном отражателя.
 
 |Сообщение, отправленное элементом управления|Сообщение, отраженное в элементе управления|
 |---------------------------------|--------------------------------------|
@@ -82,9 +82,9 @@ ms.locfileid: "69511382"
 |[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
->  Если элемент управления работает в системе Win32, существует несколько типов сообщений WM_CTLCOLOR\* , которые он может получить. Дополнительные сведения см. в разделе WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
+> Если элемент управления выполняется в системе Win32,\* существует несколько типов WM_CTLCOLOR сообщений, которые он может получить. Для получения дополнительной информации, смотрите WM_CTLCOLORBTN, WM_CTLCOLORDLG, WM_CTLCOLOREDIT, WM_CTLCOLORLISTBOX, WM_CTLCOLORMSGBOX, WM_CTLCOLORSCROLLBAR, WM_CTLCOLORSTATIC.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Элементы управления ActiveX MFC. Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[Элементы ActiveX в MFC. Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
 [TN062. Отражение сообщений для элементов управления окнами](../mfc/tn062-message-reflection-for-windows-controls.md)

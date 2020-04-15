@@ -1,5 +1,5 @@
 ---
-title: Класс COleResizeBar
+title: Класс ColeReReresizebar
 ms.date: 11/04/2016
 f1_keywords:
 - COleResizeBar
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beb0c37b6ac23310b7d5c8506fbdaf677dd74d8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224414"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376151"
 ---
-# <a name="coleresizebar-class"></a>Класс COleResizeBar
+# <a name="coleresizebar-class"></a>Класс ColeReReresizebar
 
 Тип панели элементов управления, который поддерживает изменение размера элементов OLE "на месте".
 
@@ -31,23 +31,23 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[COleResizeBar::COleResizeBar](#coleresizebar)|Создает объект `COleResizeBar`.|
+|[ColeReResizebar::ColeReresizebar](#coleresizebar)|Формирует объект `COleResizeBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[COleResizeBar::Create](#create)|Создает и инициализирует дочернее окно Windows и связывает его к `COleResizeBar` объекта.|
+|[ColeReResizebar::Создание](#create)|Создает и инициализирует окно ребенка `COleResizeBar` Windows и связывает его с объектом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`COleResizeBar` объекты отображаются как [CRectTracker](../../mfc/reference/crecttracker-class.md) со штриховой границей и внешних маркеры изменения размера.
+`COleResizeBar`объекты отображаются как [CRectTracker](../../mfc/reference/crecttracker-class.md) с вылупившихся границы и внешних рефигурных ручек.
 
-`COleResizeBar` Эти объекты объединены обычно внедренных объектов окна фрейма, производных от [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) класса.
+`COleResizeBar`объекты обычно являются встроенными членами объектов окна кадра, полученных из класса [COleIPFrameWnd.](../../mfc/reference/coleipframewnd-class.md)
 
-Дополнительные сведения см. в статье [активации](../../mfc/activation-cpp.md).
+Для получения дополнительной информации, [см.](../../mfc/activation-cpp.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,7 +57,7 @@ class COleResizeBar : public CControlBar
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[Ccontrolbar](../../mfc/reference/ccontrolbar-class.md)
 
 `COleResizeBar`
 
@@ -65,21 +65,21 @@ class COleResizeBar : public CControlBar
 
 **Заголовок:** afxole.h
 
-##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar
+## <a name="coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>ColeReResizebar::ColeReresizebar
 
-Создает объект `COleResizeBar`.
+Формирует объект `COleResizeBar`.
 
 ```
 COleResizeBar();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите `Create` для создания объекта панели для изменения размера.
+Вызов `Create` для создания объекта панели повторного размера.
 
-##  <a name="create"></a>  COleResizeBar::Create
+## <a name="coleresizebarcreate"></a><a name="create"></a>ColeReResizebar::Создание
 
-Создает дочернее окно и связывает его с `COleResizeBar` объекта.
+Создает детское окно и связывает `COleResizeBar` его с объектом.
 
 ```
 virtual BOOL Create(
@@ -91,21 +91,21 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *pParentWnd*<br/>
-Указатель на родительское окно полосы изменения размера.
+Указатель на родительское окно панели повторного размера.
 
 *dwStyle*<br/>
-Указывает [стиль окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) атрибуты.
+Определяет атрибуты [стиля окна.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *nID*<br/>
-Идентификатор панели изменения размера дочернего окна.
+Идентификатор окна ребенка в баре resize.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если был создан на изменения размера панели; в противном случае 0.
+Nonzero, если был создан бар повторного размера; в противном случае 0.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Пример MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
-[Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
+[MFC Образец SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Класс COleServerDoc](../../mfc/reference/coleserverdoc-class.md)
+[Класс ColeServerDoc](../../mfc/reference/coleserverdoc-class.md)

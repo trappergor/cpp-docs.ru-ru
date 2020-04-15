@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 519a376bdecc488a94eab65973e33d960ca50c8d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503025"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376967"
 ---
 # <a name="cpagerctrl-class"></a>Класс CPagerCtrl
 
@@ -69,42 +69,42 @@ class CPagerCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CPagerCtrl:: CPagerCtrl](#cpagerctrl)|Создает объект `CPagerCtrl`.|
+|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Формирует объект `CPagerCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CPagerCtrl:: Create](#create)|Создает элемент управления страничный навигатор с указанными стилями и прикрепляет `CPagerCtrl` его к текущему объекту.|
-|[CPagerCtrl:: Креатикс](#createex)|Создает элемент управления страничного навигатора с указанными расширенными стилями и прикрепляет его к текущему `CPagerCtrl` объекту.|
-|[CPagerCtrl:: Форвардмаусе](#forwardmouse)|Включает или отключает перенаправление сообщений [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) в окно, содержащееся в текущем элементе управления страничного навигатора.|
-|[CPagerCtrl:: Жетбкколор](#getbkcolor)|Возвращает цвет фона текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: награница](#getborder)|Возвращает размер границы текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Жетбуттонсизе](#getbuttonsize)|Получает размер кнопки текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Жетбуттонстате](#getbuttonstate)|Получает состояние указанной кнопки в текущем элементе управления страничного навигатора.|
-|[CPagerCtrl:: Жетдроптаржет](#getdroptarget)|Извлекает интерфейс [интерфейс IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) для текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Жетскроллпос](#getscrollpos)|Возвращает расположение прокрутки текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Исбуттондепрессед](#isbuttondepressed)|Указывает, находится ли указанная кнопка текущего элемента управления страничного `pressed` навигатора в состоянии.|
-|[CPagerCtrl:: Исбуттонграйед](#isbuttongrayed)|Указывает, находится ли указанная кнопка текущего элемента управления страничного `grayed` навигатора в состоянии.|
-|[CPagerCtrl:: Исбуттонхот](#isbuttonhot)|Указывает, находится ли указанная кнопка текущего элемента управления страничного `hot` навигатора в состоянии.|
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Указывает, находится ли указанная кнопка текущего элемента управления страничного `invisible` навигатора в состоянии.|
-|[CPagerCtrl:: Исбуттоннормал](#isbuttonnormal)|Указывает, находится ли указанная кнопка текущего элемента управления страничного `normal` навигатора в состоянии.|
-|[CPagerCtrl:: Рекалксизе](#recalcsize)|Заставляет текущий элемент управления страничного навигатора повторно вычислить размер автономного окна.|
-|[CPagerCtrl:: Сетбкколор](#setbkcolor)|Задает цвет фона для текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Сетбордер](#setborder)|Задает размер границы для текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Сетбуттонсизе](#setbuttonsize)|Задает размер кнопки для текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Сетчилд](#setchild)|Задает автономное окно для текущего элемента управления страничного навигатора.|
-|[CPagerCtrl:: Сетскроллпос](#setscrollpos)|Задает расположение прокрутки для текущего элемента управления страничного навигатора.|
+|[CPagerCtrl::Создание](#create)|Создает управление пейджером с указанными стилями `CPagerCtrl` и прикрепляет его к текущему объекту.|
+|[CPagerCtrl::CreateEx](#createex)|Создает управление пейджером с указанными расширенными `CPagerCtrl` стилями и прикрепляет его к текущему объекту.|
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Позволяет или отстраняет пересылку [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) сообщений в окно, содержащееся в текущем элементе управления пейджера.|
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Извлекает фоновый цвет текущего элемента управления пейджера.|
+|[CPagerCtrl::GetBorder](#getborder)|Извлекает размер границы текущего элемента управления пейджера.|
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Извлекает размер кнопки текущего элемента управления пейджером.|
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Извлекает состояние указанной кнопки в текущем управлении пейджером.|
+|[CPagerCtrl:GetDropTarget](#getdroptarget)|Извлекает интерфейс [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) для текущего управления пейджером.|
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Извлекает положение прокрутки текущего элемента управления пейджера.|
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Указывает, находится ли указанная кнопка `pressed` текущего управления пейджером в состоянии.|
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Указывает, находится ли указанная кнопка `grayed` текущего управления пейджером в состоянии.|
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Указывает, находится ли указанная кнопка `hot` текущего управления пейджером в состоянии.|
+|[CPagerCtrl::IsButtonНевидимый](#isbuttoninvisible)|Указывает, находится ли указанная кнопка `invisible` текущего управления пейджером в состоянии.|
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Указывает, находится ли указанная кнопка `normal` текущего управления пейджером в состоянии.|
+|[CPagerCtrl::RecalcSize](#recalcsize)|Вызывает перерасчет текущего элемента управления пейджером с размером содержащегося окна.|
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Устанавливает фоновый цвет текущего элемента управления пейджером.|
+|[CPagerCtrl::SetBorder](#setborder)|Устанавливает размер границы текущего элемента управления пейджером.|
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Устанавливает размер кнопки текущего управления пейджером.|
+|[CPagerCtrl:SetChild](#setchild)|Устанавливает содержащееся окно для текущего элемента управления пейджером.|
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Устанавливает положение прокрутки текущего элемента управления пейджером.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Элемент управления страничного навигатора — это окно, которое содержит другое окно, которое является линейным и большим, чем содержащее его окно, и позволяет прокручивать содержимое окна на представление. В элементе управления страничного навигатора отображаются две кнопки прокрутки, которые автоматически исчезают, когда вложенное окно прокручивается до самого дальнего экстента, и в противном случае снова появляется. Можно создать элемент управления страничный навигатор, который прокручивается горизонтально или вертикально.
+Управление пейджером — это окно, которое содержит другое окно, которое является линейным и больше, чем содержащее окно, и позволяет прокручивать содержащееся окно в поле зрения. Управление пейджером отображает две кнопки прокрутки, которые автоматически исчезают, когда содержащееся окно прокручивается в дальней степени, и вновь появляется в противном случае. Можно создать элемент управления пейджера, который прокручивается горизонтально или вертикально.
 
-Например, если приложение имеет недостаточную для отображения элементов панель инструментов, ее можно назначить элементу управления страничного навигатора, и пользователи смогут прокручивать панель инструментов влево или вправо для доступа ко всем элементам. В Microsoft Internet Explorer версии 4,0 (коммктрл. dll версии 4,71) представлен элемент управления страничного навигатора.
+Например, если в приложении есть панель инструментов, которая недостаточно широка, чтобы показать все его элементы, можно назначить панель инструментов элементу управления пейджером, и пользователи смогут прокрутить панель инструментов влево или вправо, чтобы получить доступ ко всем элементам. Microsoft Internet Explorer Version 4.0 (commctrl.dll версия 4.71) вводит управление пейджером.
 
-Класс является производным от класса [CWnd.](../../mfc/reference/cwnd-class.md) `CPagerCtrl` Дополнительные сведения и иллюстрация элемента управления страничного навигатора см. в разделе [элементы управления страничного](/windows/win32/Controls/pager-controls)навигатора.
+Класс `CPagerCtrl` происходит от класса [CWnd.](../../mfc/reference/cwnd-class.md) Для получения дополнительной информации и иллюстрации [Pager Controls](/windows/win32/Controls/pager-controls)управления пейджером см.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -120,21 +120,21 @@ class CPagerCtrl : public CWnd
 
 **Заголовок:** afxcmn.h
 
-##  <a name="cpagerctrl"></a>CPagerCtrl:: CPagerCtrl
+## <a name="cpagerctrlcpagerctrl"></a><a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl
 
-Создает объект `CPagerCtrl`.
+Формирует объект `CPagerCtrl`.
 
 ```
 CPagerCtrl();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте метод [CPagerCtrl:: Create](#create) или [CPagerCtrl:: креатикс](#createex) , чтобы создать элемент управления страничного навигатора и присоединить `CPagerCtrl` его к объекту.
+Используйте [CPagerCtrl::Создать](#create) или [CPagerCtrl::CreateEx](#createex) метод для создания управления `CPagerCtrl` пейджером и прикрепить его к объекту.
 
-##  <a name="create"></a>CPagerCtrl:: Create
+## <a name="cpagerctrlcreate"></a><a name="create"></a>CPagerCtrl::Создание
 
-Создает элемент управления страничный навигатор с указанными стилями и прикрепляет `CPagerCtrl` его к текущему объекту.
+Создает управление пейджером с указанными стилями `CPagerCtrl` и прикрепляет его к текущему объекту.
 
 ```
 virtual BOOL Create(
@@ -148,28 +148,28 @@ virtual BOOL Create(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*двстиле*|окне Побитовое сочетание (или) [стилей окон](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стилей элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles) , применяемых к элементу управления.|
-|*rect*|окне Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , которая содержит расположение и размер элемента управления в координатах клиента.|
-|*ппарентвнд*|окне Указатель на объект [CWnd](../../mfc/reference/cwnd-class.md) , который является родительским окном элемента управления. Этот параметр не может иметь значение NULL.|
-|*nID*|окне Идентификатор элемента управления.|
+|*dwStyle*|(в) Битовая комбинация (ИЛИ) [стилей окон](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стилей управления пейджером,](/windows/win32/Controls/pager-control-styles) которые должны быть применены к управлению.|
+|*rect*|(в) Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) содержащую положение и размер элемента управления в координатах клиента.|
+|*pParentWnd*|(в) Указатель на объект [CWnd,](../../mfc/reference/cwnd-class.md) который является родительским окном элемента управления. Значение этого параметра не может быть равно NULL.|
+|*nID*|(в) Идентификатор элемента управления.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
+ПРАВДА, если этот метод является успешным; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Чтобы создать элемент управления страничного навигатора, `CPagerCtrl` объявите переменную, а затем вызовите метод [CPagerCtrl:: Create](#create) или [CPagerCtrl:: креатикс](#createex) для этой переменной.
+Чтобы создать элемент управления пейджером, объявить переменную, `CPagerCtrl` а затем позвоните в [CPagerCtrl:::Create](#create) или [CPagerCtrl::CreateEx](#createex) метод на этой переменной.
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается элемент управления страничного навигатора, а затем используется метод [CPagerCtrl:: сетчилд](#setchild) , чтобы связать очень длинный элемент управления "Кнопка" с элементом управления страничного навигатора. Затем в примере используется метод [CPagerCtrl:: сетбуттонсизе](#setbuttonsize) для задания высоты элемента управления страничного навигатора равным 20 точкам, а метод [CPagerCtrl:: сетбордер](#setborder) задает толщину границы 1 пиксель.
+Следующий пример создает управление пейджером, а затем использует [cPagerCtrl::SetChild](#setchild) метод связать очень длинный элемент управления кнопками с управлением пейджера. В примере используется метод [CPagerCtrl::SetButtonSize](#setbuttonsize) для установки высоты управления пейджером до 20 пикселей, а [метод CPagerCtrl: SetBorder](#setborder) установил толщину границы до 1 пикселя.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="createex"></a>CPagerCtrl:: Креатикс
+## <a name="cpagerctrlcreateex"></a><a name="createex"></a>CPagerCtrl::CreateEx
 
-Создает элемент управления страничного навигатора с указанными расширенными стилями и прикрепляет его к текущему `CPagerCtrl` объекту.
+Создает управление пейджером с указанными расширенными `CPagerCtrl` стилями и прикрепляет его к текущему объекту.
 
 ```
 virtual BOOL CreateEx(
@@ -184,23 +184,23 @@ virtual BOOL CreateEx(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*двексстиле*|окне Побитовое сочетание расширенных стилей, применяемых к элементу управления. Дополнительные сведения см. в описании параметра *двексстиле* функции [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) .|
-|*двстиле*|окне Побитовое сочетание (или) [стилей окон](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стилей элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles) , применяемых к элементу управления.|
-|*rect*|окне Ссылка на структуру [Rect](/previous-versions/dd162897\(v=vs.85\)) , которая содержит расположение и размер элемента управления в координатах клиента.|
-|*ппарентвнд*|окне Указатель на объект [CWnd](../../mfc/reference/cwnd-class.md) , который является родительским окном элемента управления. Этот параметр не может иметь значение NULL.|
-|*nID*|окне Идентификатор элемента управления.|
+|*dwExStyle*|(в) Битовая комбинация расширенных стилей, которые должны быть применены к управлению. Для получения дополнительной *dwExStyle* информации см. [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
+|*dwStyle*|(в) Битовая комбинация (ИЛИ) [стилей окон](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стилей управления пейджером,](/windows/win32/Controls/pager-control-styles) которые должны быть применены к управлению.|
+|*rect*|(в) Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) содержащую положение и размер элемента управления в координатах клиента.|
+|*pParentWnd*|(в) Указатель на объект [CWnd,](../../mfc/reference/cwnd-class.md) который является родительским окном элемента управления. Значение этого параметра не может быть равно NULL.|
+|*nID*|(в) Идентификатор элемента управления.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если этот метод успешно выполнен; в противном случае — значение FALSE.
+ПРАВДА, если этот метод является успешным; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Чтобы создать элемент управления страничного навигатора, `CPagerCtrl` объявите переменную, а затем вызовите метод [CPagerCtrl:: Create](#create) или [CPagerCtrl:: креатикс](#createex) для этой переменной.
+Чтобы создать элемент управления пейджером, объявить переменную, `CPagerCtrl` а затем позвоните в [CPagerCtrl:::Create](#create) или [CPagerCtrl::CreateEx](#createex) метод на этой переменной.
 
-##  <a name="forwardmouse"></a>CPagerCtrl:: Форвардмаусе
+## <a name="cpagerctrlforwardmouse"></a><a name="forwardmouse"></a>CPagerCtrl::ForwardMouse
 
-Включает или отключает перенаправление сообщений [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) в окно, содержащееся в текущем элементе управления страничного навигатора.
+Позволяет или отстраняет пересылку [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) сообщений в окно, содержащееся в текущем элементе управления пейджера.
 
 ```
 void ForwardMouse(BOOL bForward);
@@ -210,15 +210,15 @@ void ForwardMouse(BOOL bForward);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*бфорвард*|окне Значение TRUE, чтобы переслать сообщения мыши, или FALSE, чтобы не пересылать сообщения мыши.|
+|*bForward*|(в) TRUE для переадресов сообщений мыши, или FALSE, чтобы не пересылать сообщения мыши.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse) , описанное в Windows SDK.
+Этот метод отправляет [PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse) сообщение, которое описано в SDK Windows.
 
-##  <a name="getborder"></a>CPagerCtrl:: награница
+## <a name="cpagerctrlgetborder"></a><a name="getborder"></a>CPagerCtrl::GetBorder
 
-Возвращает размер границы текущего элемента управления страничного навигатора.
+Извлекает размер границы текущего элемента управления пейджера.
 
 ```
 int GetBorder() const;
@@ -228,19 +228,19 @@ int GetBorder() const;
 
 Текущий размер границы, измеряемый в пикселях.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBORDER](/windows/win32/Controls/pgm-getborder) , описанное в Windows SDK.
+Этот метод отправляет [PGM_GETBORDER](/windows/win32/Controls/pgm-getborder) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере метод [CPagerCtrl:: «border](#getborder) » используется для получения толщины границы элемента управления страничного навигатора.
+В следующем примере используется метод [CPagerCtrl::GetBorder](#getborder) для получения толщины границы управления пейджером.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]
 
-##  <a name="getbkcolor"></a>CPagerCtrl:: Жетбкколор
+## <a name="cpagerctrlgetbkcolor"></a><a name="getbkcolor"></a>CPagerCtrl::GetBkColor
 
-Возвращает цвет фона текущего элемента управления страничного навигатора.
+Извлекает фоновый цвет текущего элемента управления пейджера.
 
 ```
 COLORREF GetBkColor() const;
@@ -248,21 +248,21 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [COLORREF](/windows/win32/gdi/colorref) , содержащее текущий цвет фона элемента управления страничного навигатора.
+Значение [COLORREF,](/windows/win32/gdi/colorref) содержащее текущий фоновый цвет элемента управления пейджером.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor) , описанное в Windows SDK.
+Этот метод отправляет [PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере метод [CPagerCtrl:: сетбкколор](#setbkcolor) используется для установки красного цвета фона элемента управления страничного навигатора, а метод [CPagerCtrl:: жетбкколор](#getbkcolor) — для подтверждения внесенного изменения.
+В следующем примере используется метод [CPagerCtrl::SetBkColor](#setbkcolor) для установки фонового цвета управления пейджера на красный цвет, и метод [CPagerCtrl::GetBkColor,](#getbkcolor) чтобы подтвердить, что изменение было сделано.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="getbuttonsize"></a>CPagerCtrl:: Жетбуттонсизе
+## <a name="cpagerctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize
 
-Получает размер кнопки текущего элемента управления страничного навигатора.
+Извлекает размер кнопки текущего элемента управления пейджером.
 
 ```
 int GetButtonSize() const;
@@ -270,17 +270,17 @@ int GetButtonSize() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер текущей кнопки, измеряемый в пикселях.
+Текущий размер кнопки, измеряемый в пикселях.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSIZE](/windows/win32/Controls/pgm-getbuttonsize) , описанное в Windows SDK.
+Этот метод отправляет [PGM_GETBUTTONSIZE](/windows/win32/Controls/pgm-getbuttonsize) сообщение, которое описано в SDK Windows.
 
-Если элемент управления страничного навигатора имеет стиль PGS_HORZ, размер кнопки определяет ширину кнопок страничного навигатора, а если элемент управления страничного навигатора имеет стиль PGS_VERT, размер кнопки определяет высоту кнопок страничного навигатора. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).
+Если управление пейджером имеет PGS_HORZ стиль, размер кнопки определяет ширину кнопок пейджера, а если управление пейджером имеет PGS_VERT стиль, размер кнопки определяет высоту кнопок пейджера. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.
 
-##  <a name="getbuttonstate"></a>CPagerCtrl:: Жетбуттонстате
+## <a name="cpagerctrlgetbuttonstate"></a><a name="getbuttonstate"></a>CPagerCtrl::GetButtonState
 
-Получает состояние указанной кнопки прокрутки в текущем элементе управления страничного навигатора.
+Извлекает состояние указанной кнопки прокрутки в текущем элементе управления пейджером.
 
 ```
 DWORD GetButtonState(int iButton) const;
@@ -290,19 +290,19 @@ DWORD GetButtonState(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Состояние кнопки, заданной параметром *ибуттон* . Состояние имеет значение PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, PGF_DEPRESSED или PGF_HOT. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Состояние кнопки, указанной параметром *iButton.* Государство либо PGF_INVISIBLE, PGF_NORMAL, PGF_GRAYED, либо PGF_DEPRESSED, либо PGF_HOT. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK.
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows.
 
-##  <a name="getdroptarget"></a>CPagerCtrl:: Жетдроптаржет
+## <a name="cpagerctrlgetdroptarget"></a><a name="getdroptarget"></a>CPagerCtrl:GetDropTarget
 
-Извлекает интерфейс [интерфейс IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) для текущего элемента управления страничного навигатора.
+Извлекает интерфейс [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) для текущего управления пейджером.
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -310,17 +310,17 @@ IDropTarget* GetDropTarget() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `IDropTarget` интерфейс для текущего элемента управления страничного навигатора.
+Указатель на `IDropTarget` интерфейс для текущего управления пейджером.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`IDropTarget`— один из интерфейсов, которые реализуются для поддержки операций перетаскивания в приложении.
+`IDropTarget`является одним из интерфейсов, которые вы реализуете для поддержки операций перетаскивания в приложении.
 
-Этот метод отправляет сообщение [PGM_GETDROPTARGET](/windows/win32/Controls/pgm-getdroptarget) , описанное в Windows SDK. Вызывающий этот метод отвечает за вызов `Release` члена интерфейса [интерфейс IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) , когда интерфейс больше не нужен.
+Этот метод отправляет [PGM_GETDROPTARGET](/windows/win32/Controls/pgm-getdroptarget) сообщение, которое описано в SDK Windows. Звонящее в этом методе `Release` отвечает за вызов участника интерфейса [IDropTarget,](/windows/win32/api/oleidl/nn-oleidl-idroptarget) когда интерфейс больше не нужен.
 
-##  <a name="getscrollpos"></a>CPagerCtrl:: Жетскроллпос
+## <a name="cpagerctrlgetscrollpos"></a><a name="getscrollpos"></a>CPagerCtrl::GetScrollPos
 
-Возвращает расположение прокрутки текущего элемента управления страничного навигатора.
+Извлекает положение прокрутки текущего элемента управления пейджера.
 
 ```
 int GetScrollPos() const;
@@ -328,21 +328,21 @@ int GetScrollPos() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текущая положенная прокрутка, измеряемая в пикселях.
+Текущее положение прокрутки, измеренное в пикселях.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETPOS](/windows/win32/Controls/pgm-getpos) , описанное в Windows SDK.
+Этот метод отправляет [PGM_GETPOS](/windows/win32/Controls/pgm-getpos) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере метод [CPagerCtrl:: жетскроллпос](#getscrollpos) используется для получения текущей позицией прокрутки элемента управления страничного навигатора. Если элемент управления страничного навигатора еще не прокручивается до нуля, то в самой левой позиции в примере используется метод [CPagerCtrl:: сетскроллпос](#setscrollpos) , чтобы установить нулевое значение позиции прокрутки.
+В следующем примере используется метод [CPagerCtrl::GetScrollPos](#getscrollpos) для получения текущего положения прокрутки элемента управления пейджером. Если элемент управления пейджера еще не прокрутен до нуля, то в левом положении используется метод [CPagerCtrl::SetScrollPos](#setscrollpos) для установки позиции прокрутки до нуля.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]
 
-##  <a name="isbuttondepressed"></a>CPagerCtrl:: Исбуттондепрессед
+## <a name="cpagerctrlisbuttondepressed"></a><a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed
 
-Указывает, находится ли заданная кнопка прокрутки текущего элемента управления страничного навигатора в состоянии нажатия.
+Указывает, находится ли указанная кнопка прокрутки текущего элемента управления пейджером в нажатом состоянии.
 
 ```
 BOOL IsButtonDepressed(int iButton) const;
@@ -352,19 +352,19 @@ BOOL IsButtonDepressed(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная кнопка находится в состоянии нажатия; в противном случае — значение FALSE.
+TRUE, если указанная кнопка находится в нажатом состоянии; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK. Затем проверяется, является ли возвращаемое состояние PGF_DEPRESSED. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows. Затем он проверяет, является ли состояние, которое возвращается, PGF_DEPRESSED. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
-##  <a name="isbuttongrayed"></a>CPagerCtrl:: Исбуттонграйед
+## <a name="cpagerctrlisbuttongrayed"></a><a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed
 
-Указывает, находится ли заданная кнопка прокрутки текущего элемента управления страничного навигатора в неактивном состоянии.
+Указывает, находится ли указанная кнопка прокрутки текущего элемента управления пейджером в сером состоянии.
 
 ```
 BOOL IsButtonGrayed(int iButton) const;
@@ -374,19 +374,19 @@ BOOL IsButtonGrayed(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная кнопка находится в неактивном состоянии; в противном случае — значение FALSE.
+TRUE, если указанная кнопка находится в сером состоянии; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK. Затем проверяется, является ли возвращаемое состояние PGF_GRAYED. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows. Затем он проверяет, является ли состояние, которое возвращается, PGF_GRAYED. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
-##  <a name="isbuttonhot"></a>CPagerCtrl:: Исбуттонхот
+## <a name="cpagerctrlisbuttonhot"></a><a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot
 
-Указывает, находится ли заданная кнопка прокрутки текущего элемента управления страничного навигатора в активном состоянии.
+Указывает, находится ли указанная кнопка прокрутки текущего элемента управления пейджером в горячем состоянии.
 
 ```
 BOOL IsButtonHot(int iButton) const;
@@ -396,19 +396,19 @@ BOOL IsButtonHot(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная кнопка находится в активном состоянии; в противном случае — значение FALSE.
+TRUE, если указанная кнопка находится в горячем состоянии; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK. Затем проверяется, является ли возвращаемое состояние PGF_HOT. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows. Затем он проверяет, является ли состояние, которое возвращается, PGF_HOT. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
-##  <a name="isbuttoninvisible"></a>CPagerCtrl:: Исбуттонинвисибле
+## <a name="cpagerctrlisbuttoninvisible"></a><a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonНевидимый
 
-Указывает, находится ли указанная кнопка прокрутки текущего элемента управления страничного навигатора в невидимом состоянии.
+Указывает, находится ли указанная кнопка прокрутки текущего элемента управления пейджером в невидимом состоянии.
 
 ```
 BOOL IsButtonInvisible(int iButton) const;
@@ -418,27 +418,27 @@ BOOL IsButtonInvisible(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная кнопка находится в невидимом состоянии; в противном случае — значение FALSE.
+TRUE, если указанная кнопка находится в невидимом состоянии; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Windows делает кнопку прокрутки в определенном направлении невидимой, когда вложенное окно прокручивается до самого крайнего экстента, так как нажатие кнопки больше не может привести к представлению большего количества вложенного окна.
+Windows делает кнопку прокрутки в определенном направлении невидимой, когда содержащееся окно прокручивается в дальней степени, потому что нажатие кнопки дальше не может привести в поле зрения больше содержащегося окна.
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK. Затем проверяется, является ли возвращаемое состояние PGF_INVISIBLE. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows. Затем он проверяет, является ли состояние, которое возвращается, PGF_INVISIBLE. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
 ### <a name="example"></a>Пример
 
-В следующем примере используется метод [CPagerCtrl:: исбуттонинвисибле](#isbuttoninvisible) , чтобы определить, видимы ли кнопки прокрутки влево и вправо.
+В следующем примере используется метод [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) для определения того, видны ли кнопки управления пейджером левой и правой прокрутки.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]
 
-##  <a name="isbuttonnormal"></a>CPagerCtrl:: Исбуттоннормал
+## <a name="cpagerctrlisbuttonnormal"></a><a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal
 
-Указывает, находится ли заданная кнопка прокрутки текущего элемента управления страничного навигатора в нормальном состоянии.
+Указывает, находится ли указанная кнопка прокрутки текущего элемента управления пейджером в нормальном состоянии.
 
 ```
 BOOL IsButtonNormal(int iButton) const;
@@ -448,43 +448,43 @@ BOOL IsButtonNormal(int iButton) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттон*|окне Указывает кнопку, для которой извлекается состояние. Если стиль элемента управления страничного навигатора имеет значение PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль элемента управления страничного навигатора имеет значение PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).|
+|*iButton*|(в) Указывает кнопку, для которой находится состояние. Если стиль управления пейджером PGS_HORZ, укажите PGB_TOPORLEFT для левой кнопки и PGB_BOTTOMORRIGHT для правой кнопки. Если стиль управления пейджером PGS_VERT, укажите PGB_TOPORLEFT для верхней кнопки и PGB_BOTTOMORRIGHT для нижней кнопки. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанная кнопка находится в нормальном состоянии; в противном случае — значение FALSE.
+TRUE, если указанная кнопка находится в нормальном состоянии; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) , описанное в Windows SDK. Затем проверяется, является ли возвращаемое состояние PGF_NORMAL. Дополнительные сведения см. в разделе возвращаемое значение сообщения [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) .
+Этот метод отправляет [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщение, которое описано в SDK Windows. Затем он проверяет, является ли состояние, которое возвращается, PGF_NORMAL. Для получения дополнительной информации смотрите раздел «Значение [возврата» PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) сообщения.
 
-##  <a name="recalcsize"></a>CPagerCtrl:: Рекалксизе
+## <a name="cpagerctrlrecalcsize"></a><a name="recalcsize"></a>CPagerCtrl::RecalcSize
 
-Заставляет текущий элемент управления страничного навигатора повторно вычислить размер автономного окна.
+Вызывает перерасчет текущего элемента управления пейджером с размером содержащегося окна.
 
 ```
 void RecalcSize();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize) , описанное в Windows SDK. Следовательно, элемент управления страничного навигатора отправляет уведомление [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) для получения прокручиваемых измерений в автономном окне.
+Этот метод отправляет [PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize) сообщение, которое описано в SDK Windows. Следовательно, управление пейджером отправляет [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) уведомление для получения прокрутки размеров содержащегося окна.
 
 ### <a name="example"></a>Пример
 
-В следующем примере метод [CPagerCtrl:: рекалксизе](#recalcsize) используется для запроса текущего элемента управления страничного навигатора для повторного вычисления его размера.
+В следующем примере используется метод [CPagerCtrl::RecalcSize](#recalcsize) для запроса текущего элемента управления пейджера для пересчета его размера.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]
 
 ### <a name="example"></a>Пример
 
-В следующем примере [отражение сообщения](../../mfc/tn062-message-reflection-for-windows-controls.md) используется для того, чтобы разрешить элементу управления страничного навигатора повторно вычислить свой собственный размер, а не требовать от родительского диалогового окна элемента управления выполнять вычисление. Пример является производным `MyPagerCtrl` от [класса CPagerCtrl](../../mfc/reference/cpagerctrl-class.md), а затем использует схему сообщений для связи уведомления [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) с `OnCalcsize` обработчиком уведомлений. В этом примере обработчик уведомлений устанавливает для ширины и высоты элемента управления страничного навигатора фиксированные значения.
+В следующем примере используется [отражение сообщений,](../../mfc/tn062-message-reflection-for-windows-controls.md) чтобы позволить управлению пейджера пересчитать свой собственный размер вместо того, чтобы требовать родительского диалога элемента управления для выполнения вычисления. Пример выводит `MyPagerCtrl` класс из [класса CPagerCtrl,](../../mfc/reference/cpagerctrl-class.md)затем использует карту сообщений, `OnCalcsize` чтобы связать уведомление [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) с обработчиком уведомлений. В этом примере обработчик уведомлений устанавливает ширину и высоту управления пейджером на фиксированные значения.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]
 
-##  <a name="setbkcolor"></a>CPagerCtrl:: Сетбкколор
+## <a name="cpagerctrlsetbkcolor"></a><a name="setbkcolor"></a>CPagerCtrl::SetBkColor
 
-Задает цвет фона для текущего элемента управления страничного навигатора.
+Устанавливает фоновый цвет текущего элемента управления пейджером.
 
 ```
 COLORREF SetBkColor(COLORREF clrBk);
@@ -494,25 +494,25 @@ COLORREF SetBkColor(COLORREF clrBk);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*клрбк*|окне Значение [COLORREF](/windows/win32/gdi/colorref) , содержащее новый цвет фона элемента управления страничного навигатора.|
+|*clrBk*|(в) Значение [COLORREF,](/windows/win32/gdi/colorref) содержащее новый фоновый цвет управления пейджером.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение [COLORREF](/windows/win32/gdi/colorref) , содержащее предыдущий цвет фона элемента управления страничного навигатора.
+Значение [COLORREF,](/windows/win32/gdi/colorref) содержащее предыдущий фоновый цвет управления пейджером.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_SETBKCOLOR](/windows/win32/Controls/pgm-setbkcolor) , описанное в Windows SDK.
+Этот метод отправляет [PGM_SETBKCOLOR](/windows/win32/Controls/pgm-setbkcolor) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере метод [CPagerCtrl:: сетбкколор](#setbkcolor) используется для установки красного цвета фона элемента управления страничного навигатора, а метод [CPagerCtrl:: жетбкколор](#getbkcolor) — для подтверждения внесенного изменения.
+В следующем примере используется метод [CPagerCtrl::SetBkColor](#setbkcolor) для установки фонового цвета управления пейджера на красный цвет, и метод [CPagerCtrl::GetBkColor,](#getbkcolor) чтобы подтвердить, что изменение было сделано.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="setborder"></a>CPagerCtrl:: Сетбордер
+## <a name="cpagerctrlsetborder"></a><a name="setborder"></a>CPagerCtrl::SetBorder
 
-Задает размер границы для текущего элемента управления страничного навигатора.
+Устанавливает размер границы текущего элемента управления пейджером.
 
 ```
 int SetBorder(int iBorder);
@@ -522,25 +522,25 @@ int SetBorder(int iBorder);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибордер*|окне Новый размер границы, измеряемый в пикселях. Если параметр *ибордер* имеет отрицательное значение, то размер границы устанавливается равным нулю.|
+|*iBorder*|(в) Новый размер границы, измеряемый в пикселях. Если параметр *iBorder* отрицательный, размер границы устанавливается до нуля.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер предыдущей границы, измеряемый в пикселях.
+Предыдущий размер границы, измеряемый в пикселях.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_SETBORDER](/windows/win32/Controls/pgm-setborder) , описанное в Windows SDK.
+Этот метод отправляет [PGM_SETBORDER](/windows/win32/Controls/pgm-setborder) сообщение, которое описано в SDK Windows.
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается элемент управления страничного навигатора, а затем используется метод [CPagerCtrl:: сетчилд](#setchild) , чтобы связать очень длинный элемент управления "Кнопка" с элементом управления страничного навигатора. Затем в примере используется метод [CPagerCtrl:: сетбуттонсизе](#setbuttonsize) для задания высоты элемента управления страничного навигатора равным 20 точкам, а метод [CPagerCtrl:: сетбордер](#setborder) задает толщину границы 1 пиксель.
+Следующий пример создает управление пейджером, а затем использует [cPagerCtrl::SetChild](#setchild) метод связать очень длинный элемент управления кнопками с управлением пейджера. В примере используется метод [CPagerCtrl::SetButtonSize](#setbuttonsize) для установки высоты управления пейджером до 20 пикселей, а [метод CPagerCtrl: SetBorder](#setborder) установил толщину границы до 1 пикселя.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setbuttonsize"></a>CPagerCtrl:: Сетбуттонсизе
+## <a name="cpagerctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize
 
-Задает размер кнопки для текущего элемента управления страничного навигатора.
+Устанавливает размер кнопки текущего управления пейджером.
 
 ```
 int SetButtonSize(int iButtonSize);
@@ -550,27 +550,27 @@ int SetButtonSize(int iButtonSize);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ибуттонсизе*|окне Новый размер кнопки, измеряемый в пикселях.|
+|*iButtonSize*|(в) Новый размер кнопки, измеряемый в пикселях.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Размер предыдущей кнопки, измеряемый в пикселях.
+Предыдущий размер кнопки, измеряемый в пикселях.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_SETBUTTONSIZE](/windows/win32/Controls/pgm-setpos) , описанное в Windows SDK.
+Этот метод отправляет [PGM_SETBUTTONSIZE](/windows/win32/Controls/pgm-setpos) сообщение, которое описано в SDK Windows.
 
-Если элемент управления страничного навигатора имеет стиль PGS_HORZ, размер кнопки определяет ширину кнопок страничного навигатора, а если элемент управления страничного навигатора имеет стиль PGS_VERT, размер кнопки определяет высоту кнопок страничного навигатора. Размер кнопки по умолчанию составляет три четверти ширины полосы прокрутки, а минимальный размер кнопки — 12 пикселей. Дополнительные сведения см. в разделе [стили элементов управления страничного навигатора](/windows/win32/Controls/pager-control-styles).
+Если управление пейджером имеет PGS_HORZ стиль, размер кнопки определяет ширину кнопок пейджера, а если управление пейджером имеет PGS_VERT стиль, размер кнопки определяет высоту кнопок пейджера. Размер кнопки по умолчанию составляет три четверти ширины панели прокрутки, а минимальный размер кнопки — 12 пикселей. Для получения дополнительной [Pager Control Styles](/windows/win32/Controls/pager-control-styles)информации см.
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается элемент управления страничного навигатора, а затем используется метод [CPagerCtrl:: сетчилд](#setchild) , чтобы связать очень длинный элемент управления "Кнопка" с элементом управления страничного навигатора. Затем в примере используется метод [CPagerCtrl:: сетбуттонсизе](#setbuttonsize) для задания высоты элемента управления страничного навигатора равным 20 точкам, а метод [CPagerCtrl:: сетбордер](#setborder) задает толщину границы 1 пиксель.
+Следующий пример создает управление пейджером, а затем использует [cPagerCtrl::SetChild](#setchild) метод связать очень длинный элемент управления кнопками с управлением пейджера. В примере используется метод [CPagerCtrl::SetButtonSize](#setbuttonsize) для установки высоты управления пейджером до 20 пикселей, а [метод CPagerCtrl: SetBorder](#setborder) установил толщину границы до 1 пикселя.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setchild"></a>CPagerCtrl:: Сетчилд
+## <a name="cpagerctrlsetchild"></a><a name="setchild"></a>CPagerCtrl:SetChild
 
-Задает автономное окно для текущего элемента управления страничного навигатора.
+Устанавливает содержащееся окно для текущего элемента управления пейджером.
 
 ```
 void SetChild(HWND hwndChild);
@@ -580,23 +580,23 @@ void SetChild(HWND hwndChild);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*хвндчилд*|окне Обработчик для содержащегося в нем окна.|
+|*hwndChild*|(в) Ручка к окну, чтобы содержаться.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_SETCHILD](/windows/win32/Controls/pgm-setchild) , описанное в Windows SDK.
+Этот метод отправляет [PGM_SETCHILD](/windows/win32/Controls/pgm-setchild) сообщение, которое описано в SDK Windows.
 
-Этот метод не изменяет родительский объект автономного окна. Он назначает только обработчику окна страничного навигатора для прокрутки. В большинстве случаев вложенное окно будет дочерним окном элемента управления страничного навигатора.
+Этот метод не изменяет родительский, содержащийся в окне; он только назначает ручку окна к управлению pager для прокрутки. В большинстве случаев содержащееся окно будет детским окном управления пейджером.
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается элемент управления страничного навигатора, а затем используется метод [CPagerCtrl:: сетчилд](#setchild) , чтобы связать очень длинный элемент управления "Кнопка" с элементом управления страничного навигатора. Затем в примере используется метод [CPagerCtrl:: сетбуттонсизе](#setbuttonsize) для задания высоты элемента управления страничного навигатора равным 20 точкам, а метод [CPagerCtrl:: сетбордер](#setborder) задает толщину границы 1 пиксель.
+Следующий пример создает управление пейджером, а затем использует [cPagerCtrl::SetChild](#setchild) метод связать очень длинный элемент управления кнопками с управлением пейджера. В примере используется метод [CPagerCtrl::SetButtonSize](#setbuttonsize) для установки высоты управления пейджером до 20 пикселей, а [метод CPagerCtrl: SetBorder](#setborder) установил толщину границы до 1 пикселя.
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setscrollpos"></a>CPagerCtrl:: Сетскроллпос
+## <a name="cpagerctrlsetscrollpos"></a><a name="setscrollpos"></a>CPagerCtrl::SetScrollPos
 
-Задает расположение прокрутки для текущего элемента управления страничного навигатора.
+Устанавливает положение прокрутки текущего элемента управления пейджером.
 
 ```
 void SetScrollPos(int iPos);
@@ -606,14 +606,14 @@ void SetScrollPos(int iPos);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*ипос*|окне Новая точка прокрутки, измеряемая в пикселях.|
+|*Ipos*|(в) Новое положение прокрутки, измеренное в пикселях.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод отправляет сообщение [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) , описанное в Windows SDK.
+Этот метод отправляет [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) сообщение, которое описано в SDK Windows.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Элементы управления страничного навигатора](/windows/win32/Controls/pager-controls)
+[Контроль Пейджера](/windows/win32/Controls/pager-controls)
