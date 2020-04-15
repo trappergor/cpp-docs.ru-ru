@@ -9,34 +9,34 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a1718e1f347be46b2f228479d3dbd30027b3160
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6367b2a4b85b2c586c5a4420a8be1f80d334b2e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077446"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363964"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Создание проекта библиотеки DLL MFC
 
-Библиотека DLL MFC — это двоичный файл, который выступает в качестве общей библиотеки функций, которые могут одновременно использоваться несколькими приложениями. Самый простой способ создать проект библиотеки DLL MFC — использовать мастер DLL MFC.
+MFC DLL — это двоичный файл, который действует как общая библиотека функций, которые могут использоваться одновременно несколькими приложениями. Самый простой способ создать проект MFC DLL – использовать MFC DLL Wizard.
 
 > [!NOTE]
->  Внешний вид функций в интегрированной среде разработки может зависеть от текущих параметров или выпуска и может отличаться от описанных в справке. Чтобы изменить параметры, выберите **Импорт и экспорт параметров** в меню **Сервис** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Появление функций в IDE может зависеть от ваших активных настроек или изданий и может отличаться от тех, которые описаны в Справке. Чтобы изменить параметры, выберите **Импорт и экспорт параметров** в меню **Сервис** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Создание проекта библиотеки DLL MFC с помощью мастера библиотек DLL MFC
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Для создания проекта MFC DLL с использованием MFC DLL Wizard
 
-1. Следуйте инструкциям в разделе справки по [созданию приложения MFC](creating-an-mfc-application.md) , но в списке доступных шаблонов выберите **Библиотека динамической компоновки MFC** или библиотека **DLL MFC** .
+1. Следуйте инструкциям в теме справки [Создание приложения MFC,](creating-an-mfc-application.md) но выберите **MFC Dynamic Link Library** или **MFC DLL** из списка доступных шаблонов.
 
-1. Определите параметры приложения на странице [Параметры приложения](../../mfc/reference/application-settings-mfc-dll-wizard.md) [мастера библиотек DLL MFC](../../mfc/reference/mfc-dll-wizard.md).
+1. Определите настройки приложения, используя страницу [настроек приложения](../../mfc/reference/application-settings-mfc-dll-wizard.md) [MFC DLL Wizard.](../../mfc/reference/mfc-dll-wizard.md)
 
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.
 
-1. Нажмите кнопку **Готово** , чтобы закрыть мастер и открыть новый проект в **Обозреватель решений**.
+1. Нажмите **Закончить,** чтобы закрыть мастера и открыть свой новый проект в **Solution Explorer**.
 
 После создания проекта можно просмотреть его файлы при помощи **обозревателя решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Типы проектов C++ в Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

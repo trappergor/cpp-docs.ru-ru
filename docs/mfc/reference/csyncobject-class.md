@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324874"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365970"
 ---
 # <a name="csyncobject-class"></a>Класс CSyncObject
 
@@ -35,34 +35,34 @@ class CSyncObject : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSyncObject::CSyncObject](#csyncobject)|Создает объект `CSyncObject`.|
+|[CSyncObject::CSyncObject](#csyncobject)|Формирует объект `CSyncObject`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSyncObject::Lock](#lock)|Прирост доступ к объекту синхронизации.|
-|[CSyncObject::Unlock](#unlock)|Прирост доступ к объекту синхронизации.|
+|[CSyncObject::Lock](#lock)|Получает доступ к объекту синхронизации.|
+|[CSyncObject::Разблокировка](#unlock)|Получает доступ к объекту синхронизации.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSyncObject::operator ДЕСКРИПТОР](#operator_handle)|Предоставляет доступ к объекту синхронизации.|
+|[CSyncObject::оператор HANDLE](#operator_handle)|Обеспечивает доступ к объекту синхронизации.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSyncObject::m_hObject](#m_hobject)|Дескриптор к базовому объекту синхронизации.|
+|[CSyncObject::m_hObject](#m_hobject)|Ручка к базовому объекту синхронизации.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Библиотеки Microsoft Foundation Class предоставляет несколько классов, производных от `CSyncObject`. Это [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), и [CSemaphore](../../mfc/reference/csemaphore-class.md).
+Библиотека класса Фонда Майкрософт предоставляет `CSyncObject`несколько классов, полученных из . Это [CEvent](../../mfc/reference/cevent-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [CCriticalSection](../../mfc/reference/ccriticalsection-class.md), и [CSemaphore](../../mfc/reference/csemaphore-class.md).
 
-Сведения о том, как использовать объекты синхронизации, см. в статье [Многопоточность: Практическое использование классов синхронизации](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Информацию об использовании объектов синхронизации можно узнать в статье [«Многопоточность: как использовать классы синхронизации».](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -74,9 +74,9 @@ class CSyncObject : public CObject
 
 **Заголовок:** afxmt.h
 
-##  <a name="csyncobject"></a>  CSyncObject::CSyncObject
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject
 
-Создает объект синхронизации, с указанным именем.
+Строит объект синхронизации с поставляемым именем.
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
@@ -86,11 +86,11 @@ virtual ~CSyncObject();
 ### <a name="parameters"></a>Параметры
 
 *pstrName*<br/>
-Имя объекта. Если значение равно NULL, *pstrName* будет иметь значение null.
+Имя объекта. Если NULL, *pstrName* будет нулевым.
 
-##  <a name="lock"></a>  CSyncObject::Lock
+## <a name="csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock
 
-Вызывайте эту функцию для получения доступа к ресурсу, управляемой объектом синхронизации.
+Вызовите эту функцию, чтобы получить доступ к ресурсу, контролируемому объектом синхронизации.
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -99,27 +99,27 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="parameters"></a>Параметры
 
 *dwTimeout*<br/>
-Указывает количество времени в миллисекундах для ожидания объекта синхронизации доступен (сигнал). Если БЕСКОНЕЧНЫЙ, `Lock` будет ждать объект переводится в сигнальное состояние перед возвратом.
+Определяет количество времени в миллисекундах для ожидания объекта синхронизации (сигнализируется). Если INFINITE, будет ждать, `Lock` пока объект сигнализируется перед возвращением.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если функция выполнена успешно; в противном случае 0.
+Nonzero, если функция была успешной; в противном случае 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если объект синхронизации, получает сигнал, `Lock` вернет успешно, и поток теперь является владельцем объекта. Если объект синхронизации является несигнальным (недоступна), `Lock` ожидает объекта синхронизации в сигнальное вплоть до указанного числа миллисекунд в *dwTimeOut* параметра. Если объект синхронизации не был отправлен сигнал в определенное время, `Lock` возвращает сбой.
+Если объект синхронизации сигнализируется, вернется успешно, `Lock` и теперь поток владеет объектом. Если объект синхронизации не сигнализирован (недоступен), `Lock` будет ждать, пока объект синхронизации станет сигналом до количества миллисекунд, указанного в параметре *dwTimeOut.* Если объект синхронизации не стал сигналом в указанное `Lock` время, возвращается сбой.
 
-##  <a name="m_hobject"></a>  CSyncObject::m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject
 
-Дескриптор к базовому объекту синхронизации.
+Ручка к базовому объекту синхронизации.
 
 ```
 HANDLE m_hObject;
 ```
 
-##  <a name="operator_handle"></a>  CSyncObject::operator ДЕСКРИПТОР
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::оператор HANDLE
 
-Этот оператор используется, чтобы получить дескриптор `CSyncObject` объекта.
+Используйте этот оператор, чтобы `CSyncObject` получить ручку объекта.
 
 ```
 operator HANDLE() const;
@@ -127,15 +127,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения дескриптор объекта синхронизации; в противном случае — значение NULL.
+В случае успеха ручка объекта синхронизации; в противном случае, NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Дескриптор можно использовать для прямого вызова API-интерфейсов Windows.
+Ручку можно использовать для прямого вызова AA Windows.
 
-##  <a name="unlock"></a>  CSyncObject::Unlock
+## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Разблокировка
 
-Объявление `Unlock` без параметров является чистой виртуальной функции и должны быть переопределены для всех классов, производных от `CSyncObject`.
+Декларация `Unlock` без параметров является чистой виртуальной функцией и должна быть `CSyncObject`перекрыта всеми классами, вытекающими из .
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -146,20 +146,20 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ### <a name="parameters"></a>Параметры
 
 *lCount*<br/>
-Не используется в реализации по умолчанию.
+Не используется по умолчанию реализации.
 
 *lpPrevCount*<br/>
-Не используется в реализации по умолчанию.
+Не используется по умолчанию реализации.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация по умолчанию всегда возвращает значение TRUE.
+Реализация по умолчанию всегда возвращает TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Реализация по умолчанию объявления с двумя параметрами всегда возвращает значение TRUE. Эта функция вызывается для предоставления доступа к объект синхронизации, принадлежащий вызывающий поток. Второе объявление предоставляется для синхронизации объектов, таких как семафоры, которые позволяют более одного доступ к контролируемому ресурсу.
+Реализация декларации по умолчанию с двумя параметрами всегда возвращает TRUE. Эта функция призвана освободить доступ к объекту синхронизации, принадлежащему потоку вызовов. Вторая декларация предусмотрена для объектов синхронизации, таких как семафоры, которые позволяют более чем одному доступу к контролируемому ресурсу.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

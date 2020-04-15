@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424083"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364972"
 ---
 # <a name="ltallocatorsgt-macros"></a>Макросы &lt;распределителей&gt;
 
@@ -28,9 +28,9 @@ ms.locfileid: "79424083"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-Возвращает шаблон класса распределителя.
+Дает шаблон класса разлесть.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ ms.locfileid: "79424083"
 
 ### <a name="remarks"></a>Remarks
 
-Макрос создает определение шаблона `template <class Type> class name {.....}` и специализацию `template <> class name<void> {.....}`, которые вместе определяют шаблон класса распределителя, использующий фильтр синхронизации `sync` и кэш типа `cache`.
+Макродает `template <class Type> class name {.....}` определение шаблона и `template <> class name<void> {.....}` специализацию, которые вместе определяют шаблон класса разлктора, который использует фильтр `sync` синхронизации и кэш типа. `cache`
 
 Для компиляторов, которые могут компилировать повторную привязку, итоговое определение шаблона выглядит следующим образом:
 
@@ -68,7 +68,7 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>  CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
 Создает `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
@@ -78,7 +78,7 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_freelist"></a>  CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
 Создает `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
@@ -88,7 +88,7 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
 Создает `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
@@ -98,7 +98,7 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-## <a name="sync_default"></a>  SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
 Создает фильтр синхронизации.
 
@@ -112,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>См. также раздел
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<>-подлатыватели](../standard-library/allocators-header.md)

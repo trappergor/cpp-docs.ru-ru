@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 82193a9b592cded96f3726cbabd6cf646eaa27c8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140067"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368149"
 ---
 # <a name="itopologyexecutionresource-structure"></a>Структура ITopologyExecutionResource
 
@@ -26,18 +26,18 @@ ms.locfileid: "77140067"
 struct ITopologyExecutionResource;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[ITopologyExecutionResource:: GetId](#getid)|Возвращает уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.|
-|[ITopologyExecutionResource:: GetNext](#getnext)|Возвращает интерфейс для следующего ресурса выполнения в порядке перечисления.|
+|[ITopologyExecutionРесурс::: Газета.](#getid)|Возвращает уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.|
+|[ITopologyExecutionРесурс::: GetNext](#getnext)|Возвращает интерфейс для следующего ресурса выполнения в порядке перечисления.|
 
 ## <a name="remarks"></a>Remarks
 
-Этот интерфейс обычно используется для анализа топологии системы, наблюдаемой диспетчер ресурсов.
+Этот интерфейс обычно используется для ходьбы по топологии системы, наблюдаемой диспетчером ресурсов.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -45,11 +45,11 @@ struct ITopologyExecutionResource;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** concrtrm. h
+**Заголовок:** concrtrm.h
 
-**Пространство имен:** concurrency
+**Название:** параллелизм
 
-## <a name="getid"></a>Метод ITopologyExecutionResource:: GetId
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>ITopologyExecutionРесурс::GetId Метод
 
 Возвращает уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.
 
@@ -61,7 +61,7 @@ virtual unsigned int GetId() const = 0;
 
 Уникальный идентификатор диспетчера ресурсов для данного ресурса выполнения.
 
-## <a name="getnext"></a>Метод ITopologyExecutionResource:: GetNext
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>ITopologyExecutionРесурс::GetNext Метод
 
 Возвращает интерфейс для следующего ресурса выполнения в порядке перечисления.
 

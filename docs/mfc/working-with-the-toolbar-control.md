@@ -7,56 +7,56 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 60cc527493e2a68751c201b998ab171c564d6c1f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 371f1944fae655556bbc9f89d7ffcce7cc326e5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510574"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365247"
 ---
 # <a name="working-with-the-toolbar-control"></a>Работа с элементом управления панели инструментов
 
-В этой статье объясняется, как получить доступ к объекту [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) , который является базовым для [CToolBar](../mfc/reference/ctoolbar-class.md) , чтобы лучше управлять панелями инструментов. Это дополнительная тема.
+В этой статье объясняется, как можно получить доступ к объекту [CToolBarCtrl,](../mfc/reference/ctoolbarctrl-class.md) лежащему в основе [CToolBar,](../mfc/reference/ctoolbar-class.md) для большего контроля над вашими панели инструментов. Это продвинутая тема.
 
 ## <a name="procedures"></a>Процедуры
 
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Доступ к панели инструментов общий элемент управления, лежащий в основе объекта CToolBar
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>Для доступа к панели инструментов общий элемент управления, лежащий в основе объекта CToolBar
 
-1. Вызовите [CToolBar:: жеттулбарктрл](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
+1. Позвоните [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
 
-`GetToolBarCtrl`Возвращает ссылку на объект [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) . Можно использовать ссылку для вызова функций элементов класса элемента управления ToolBar.
+`GetToolBarCtrl`возвращает ссылку на объект [CToolBarCtrl.](../mfc/reference/ctoolbarctrl-class.md) Ссылка может использоваться для вызова функций членов класса управления панелью инструментов.
 
 > [!CAUTION]
->  Хотя вызов `CToolBarCtrl` функций **Get** является надежным, будьте внимательны при вызове функций **набора** . Это дополнительная тема. Обычно не требуется доступ к базовому элементу управления ToolBar.
+> При `CToolBarCtrl` вызове **Функции Get** является безопасным, используйте осторожность, если вы называете **набор** функций. Это продвинутая тема. Обычно вам не нужно получать доступ к базовому элементу управления панели инструментов.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать подробнее
+### <a name="what-do-you-want-to-know-more-about"></a>Что вы хотите узнать больше о
 
 - [Элементы управления (общие элементы управления Windows)](../mfc/controls-mfc.md)
 
-- [Основные принципы работы с панелью инструментов](../mfc/toolbar-fundamentals.md)
+- [Общие сведения о панелях инструментов](../mfc/toolbar-fundamentals.md)
 
-- [Закрепление и плавающие панели инструментов](../mfc/docking-and-floating-toolbars.md)
+- [Закрепленные и плавающие панели инструментов](../mfc/docking-and-floating-toolbars.md)
 
-- [Динамическое изменение размера панели инструментов](../mfc/docking-and-floating-toolbars.md)
+- [Динамическое избавиние панели инструментов](../mfc/docking-and-floating-toolbars.md)
 
-- [Советы по инструментам панели инструментов](../mfc/toolbar-tool-tips.md)
+- [Советы инструмент инструментов панели инструментов](../mfc/toolbar-tool-tips.md)
 
-- [Обновления строки состояния флиби](../mfc/toolbar-tool-tips.md)
+- [Обновления оположении Flyby](../mfc/toolbar-tool-tips.md)
 
-- [Обработка уведомлений с помощью всплывающей подсказки](../mfc/handling-tool-tip-notifications.md)
+- [Обработка уведомлений всплывающих подсказок](../mfc/handling-tool-tip-notifications.md)
 
 - Классы [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
-- [Обработка уведомлений о настройке](../mfc/handling-customization-notifications.md)
+- [Обработка уведомлений о настройках](../mfc/handling-customization-notifications.md)
 
-- [Несколько панелей инструментов](../mfc/toolbar-fundamentals.md)
+- [Несколько батончиков инструментов](../mfc/toolbar-fundamentals.md)
 
 - [Использование старых панелей инструментов](../mfc/using-your-old-toolbars.md)
 
-- [Панели элементов управления](../mfc/control-bars.md)
+- [Панели управления](../mfc/control-bars.md)
 
-Общие сведения об использовании стандартных элементов управления Windows см. в разделе [Общие элементы управления](/windows/win32/Controls/common-controls-intro).
+Для получения общей информации об использовании общих элементов управления Windows [см.](/windows/win32/Controls/common-controls-intro)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Реализация панели инструментов MFC](../mfc/mfc-toolbar-implementation.md)

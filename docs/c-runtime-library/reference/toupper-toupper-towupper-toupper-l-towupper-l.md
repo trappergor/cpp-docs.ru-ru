@@ -1,12 +1,17 @@
 ---
 title: toupper, _toupper, towupper, _toupper_l, _towupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _toupper_l
 - towupper
 - toupper
 - _towupper_l
 - _toupper
+- _o__toupper
+- _o__toupper_l
+- _o__towupper_l
+- _o_toupper
+- _o_towupper
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +51,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-ms.openlocfilehash: e17f139789b2c37292764f2e4508b59cddd2c03e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85c218fdb3f5153e572e434bffbdb64510554d07
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957909"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362322"
 ---
 # <a name="toupper-_toupper-towupper-_toupper_l-_towupper_l"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -80,57 +86,59 @@ int _towupper_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ для преобразования.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм преобразует копию *c*, если это возможно, и возвращает результат.
+Каждая из этих подпрограмм преобразует копию *c,* если это возможно, и возвращает результат.
 
-Если *c* является расширенным символом, для которого **iswlower** не равен нулю и имеется соответствующий широкий символ, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) имеет ненулевое значение, **товуппер** возвращает соответствующий расширенный символ. в противном случае **товуппер** возвращает *c* без изменений.
+Если *c* является широким символом, для которого **swlower** является незеролевым и есть соответствующий широкий характер, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) является ненулевым, **буксир** возвращает соответствующий широкий характер; в противном случае, **буксир возвращается** *c* неизменным.
 
 Возвращаемое значение для указания ошибки не зарезервировано.
 
-Чтобы обеспечить ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и " [Нижний](islower-iswlower-islower-l-iswlower-l.md) " должны возвращать ненулевое **значение.**
+Для того, чтобы **toupper** дать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [более медленно](islower-iswlower-islower-l-iswlower-l.md) должны как вернуться ненулевой.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование регистра **товуппер** зависит от языкового стандарта. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без суффикса **_l** используют текущую национальную настройку. Версии этих функций с суффиксом **_l** принимают языковой стандарт в качестве параметра и используют его вместо текущего установленного языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование случая **towupper** locale-специфически. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без **_l** суффикса используют в настоящее время установленный локали. Версии этих функций с **_l** суффикса принимают локали в качестве параметра и используют его вместо установленного в настоящее время локали. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Чтобы дать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [Upper](isupper-isupper-l-iswupper-iswupper-l.md) должны возвращать ненулевое **значение.**
+Для того, чтобы **toupper** дать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [изупер](isupper-isupper-l-iswupper-iswupper-l.md) должны как вернуться ненулевой.
 
 [Процедуры преобразования данных](../../c-runtime-library/data-conversion.md)
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** и **_towupper_l** не имеют зависимости от языкового стандарта и не предназначены для непосредственного вызова. Они предоставляются для внутреннего использования **_totupper_l**.
+> **_toupper_l** и **_towupper_l** не имеют локальной зависимости и не должны называться напрямую. Они предоставляются для внутреннего использования **_totupper_l.**
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**toupper**|\<ctype.h>|
+|**Toupper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|
 |**towupper**|\<ctype.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в разделе [Функции to](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
 [Функции to](../../c-runtime-library/to-functions.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

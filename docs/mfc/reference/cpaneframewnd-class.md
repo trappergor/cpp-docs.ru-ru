@@ -1,5 +1,5 @@
 ---
-title: Класс Кпанефрамевнд
+title: Класс CPaneFrameWnd
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneFrameWnd
@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: 37ab241219f28336e73ea459a4e32ff413de8964
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 02eee13928979a7d220ce03f9f61c789c6320b6e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364102"
 ---
-# <a name="cpaneframewnd-class"></a>Класс Кпанефрамевнд
+# <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 
-Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 Реализует окно минифрейма, которое содержит одну область. Область заполняет собой клиентскую область окна.
 
@@ -155,93 +155,93 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кпанефрамевнд:: Аддпане](#addpane)|Добавляет панель.|
-|[Кпанефрамевнд:: Аддремовепанефромглобаллист](#addremovepanefromgloballist)|Добавляет панель в глобальный список или удаляет из него.|
-|[Кпанефрамевнд:: Аджустлайаут](#adjustlayout)|Настраивает макет окна области.|
-|[Кпанефрамевнд:: Аджустпанефрамес](#adjustpaneframes)||
-|[Кпанефрамевнд:: Калкбордерсизе](#calcbordersize)|Вычисляет размер границ окна области.|
-|[Кпанефрамевнд:: Калцекспектеддоккедрект](#calcexpecteddockedrect)|Вычисляет ожидаемый прямоугольник закрепленного окна.|
-|[Кпанефрамевнд:: Канбеаттачед](#canbeattached)|Определяет, может ли текущая панель быть закреплена на другой панели или окне фрейма.|
-|[Кпанефрамевнд:: Канбедоккедтопане](#canbedockedtopane)|Определяет, может ли окно области быть закреплено на панели.|
-|[Кпанефрамевнд:: Чеккгриппервисибилити](#checkgrippervisibility)||
-|[Кпанефрамевнд:: Конверттотаббеддокумент](#converttotabbeddocument)|Преобразует панель в документ с вкладками.|
-|[Кпанефрамевнд:: Create](#create)|Создает окно области и прикрепляет его к объекту `CPaneFrameWnd`.|
-|[Кпанефрамевнд:: Креатикс](#createex)|Создает окно области и прикрепляет его к объекту `CPaneFrameWnd`.|
-|[Кпанефрамевнд::D Оккпане](#dockpane)|Закрепляет область.|
-|[Кпанефрамевнд:: Финдфлоатингпанебид](#findfloatingpanebyid)|Находит в глобальном списке плавающих панелей панель с указанным идентификатором элемента управления.|
-|[Кпанефрамевнд:: Фрамефромпоинт](#framefrompoint)|Находит окно области, содержащее предоставленную пользователем точку.|
-|[Кпанефрамевнд:: Жеткаптионхеигхт](#getcaptionheight)|Возвращает высоту заголовка окна области.|
-|[Кпанефрамевнд:: Жеткаптионрект](#getcaptionrect)|Вычисляет ограничивающий прямоугольник заголовка окна области.|
-|[Кпанефрамевнд:: Жеткаптионтекст](#getcaptiontext)|Возвращает текст заголовка.|
-|[Кпанефрамевнд:: Жетдоккингманажер](#getdockingmanager)||
-|[Кпанефрамевнд:: Жетдоккингмоде](#getdockingmode)|Возвращает режим закрепления.|
-|[Кпанефрамевнд:: Жетфирствисиблепане](#getfirstvisiblepane)|Возвращает первую видимую панель, содержащуюся в окне области.|
-|[Кпанефрамевнд:: Жесотпоинт](#gethotpoint)||
-|[Кпанефрамевнд:: "панель"](#getpane)|Возвращает панель, содержащуюся в окне области.|
-|[Кпанефрамевнд:: Жетпанекаунт](#getpanecount)|Возвращает число панелей, содержащихся в окне области.|
-|[Кпанефрамевнд:: Parent](#getparent)||
-|[Кпанефрамевнд:: Жетпинстате](#getpinstate)||
-|[Кпанефрамевнд:: Жетрецентфлоатингрект](#getrecentfloatingrect)||
-|[Кпанефрамевнд:: Жетвисиблепанекаунт](#getvisiblepanecount)|Возвращает число видимых панелей, содержащихся в окне области.|
-|[Кпанефрамевнд:: HitTest](#hittest)|Определяет, какая часть окна области находится в заданной точке.|
-|[Кпанефрамевнд:: записано](#iscaptured)||
-|[Кпанефрамевнд:: Исделайшов](#isdelayshow)||
-|[Кпанефрамевнд:: Исроллдовн](#isrolldown)|Определяет, требуется ли развертывание окна области.|
-|[Кпанефрамевнд:: RollUp](#isrollup)|Определяет, требуется ли свертывание окна области.|
-|[Кпанефрамевнд:: Киллдоккингтимер](#killdockingtimer)|Останавливает таймер закрепления.|
-|[Кпанефрамевнд:: LoadState](#loadstate)|Загружает состояние панели из реестра.|
-|[Кпанефрамевнд:: Онбефоредокк](#onbeforedock)|Определяет возможность закрепления.|
-|[Кпанефрамевнд:: Ондоккторецентпос](#ondocktorecentpos)|Закрепляет окно области в его последней позиции.|
-|[Кпанефрамевнд:: Онкиллроллуптимер](#onkillrolluptimer)|Останавливает таймер свертки.|
-|[Кпанефрамевнд:: Онмовепане](#onmovepane)|Смещает окно области на указанное расстояние.|
-|[Кпанефрамевнд:: Онпанерекалклайаут](#onpanerecalclayout)|Настраивает макет содержащейся панели.|
-|[Кпанефрамевнд:: Онсетроллуптимер](#onsetrolluptimer)|Устанавливает таймер свертки.|
-|[Кпанефрамевнд:: Оншовпане](#onshowpane)|Вызывается платформой при скрытии или отображении панели в окне области.|
-|[Кпанефрамевнд::P Анефромпоинт](#panefrompoint)|Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области.|
-|[Кпанефрамевнд::P в](#pin)||
+|[CPaneFrameWnd::AddPane](#addpane)|Добавляет панель.|
+|[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Добавляет панель в глобальный список или удаляет из него.|
+|[CPaneFrameWnd::AdjustLayout](#adjustlayout)|Настраивает макет окна области.|
+|[CPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)||
+|[CPaneFrameWnd::CalcBorderSize](#calcbordersize)|Вычисляет размер границ окна области.|
+|[CPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|Вычисляет ожидаемый прямоугольник закрепленного окна.|
+|[CPaneFrameWnd::CanBeAttached](#canbeattached)|Определяет, может ли текущая панель быть закреплена на другой панели или окне фрейма.|
+|[CPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|Определяет, может ли окно области быть закреплено на панели.|
+|[CPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)||
+|[CPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|Преобразует панель в документ с вкладками.|
+|[CPaneFrameWnd::Create](#create)|Создает окно области и прикрепляет его к объекту `CPaneFrameWnd`.|
+|[CPaneFrameWnd::CreateEx](#createex)|Создает окно области и прикрепляет его к объекту `CPaneFrameWnd`.|
+|[CPaneFrameWnd::DockPane](#dockpane)|Закрепляет область.|
+|[CPaneFrameWnd::FindFloatingPaneByID](#findfloatingpanebyid)|Находит в глобальном списке плавающих панелей панель с указанным идентификатором элемента управления.|
+|[CPaneFrameWnd::FrameFromPoint](#framefrompoint)|Находит окно области, содержащее предоставленную пользователем точку.|
+|[CPaneFrameWnd::GetCaptionHeight](#getcaptionheight)|Возвращает высоту заголовка окна области.|
+|[CPaneFrameWnd::GetCaptionRect](#getcaptionrect)|Вычисляет ограничивающий прямоугольник заголовка окна области.|
+|[CPaneFrameWnd::GetCaptionText](#getcaptiontext)|Возвращает текст заголовка.|
+|[CPaneFrameWnd::GetDockingManager](#getdockingmanager)||
+|[CPaneFrameWnd::GetDockingMode](#getdockingmode)|Возвращает режим закрепления.|
+|[CPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|Возвращает первую видимую панель, содержащуюся в окне области.|
+|[CPaneFrameWnd::GetHotPoint](#gethotpoint)||
+|[CPaneFrameWnd::GetPane](#getpane)|Возвращает панель, содержащуюся в окне области.|
+|[CPaneFrameWnd::GetPaneCount](#getpanecount)|Возвращает число панелей, содержащихся в окне области.|
+|[CPaneFrameWnd::GetParent](#getparent)||
+|[CPaneFrameWnd::GetPinState](#getpinstate)||
+|[CPaneFrameWnd::GetRecentFloatingRect](#getrecentfloatingrect)||
+|[CPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|Возвращает число видимых панелей, содержащихся в окне области.|
+|[CPaneFrameWnd::HitTest](#hittest)|Определяет, какая часть окна области находится в заданной точке.|
+|[CPaneFrameWnd::IsCaptured](#iscaptured)||
+|[CPaneFrameWnd::IsDelayShow](#isdelayshow)||
+|[CPaneFrameWnd::IsRollDown](#isrolldown)|Определяет, требуется ли развертывание окна области.|
+|[CPaneFrameWnd::IsRollUp](#isrollup)|Определяет, требуется ли свертывание окна области.|
+|[CPaneFrameWnd::KillDockingTimer](#killdockingtimer)|Останавливает таймер закрепления.|
+|[CPaneFrameWnd::LoadState](#loadstate)|Загружает состояние панели из реестра.|
+|[CPaneFrameWnd::OnBeforeDock](#onbeforedock)|Определяет возможность закрепления.|
+|[CPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|Закрепляет окно области в его последней позиции.|
+|[CPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|Останавливает таймер свертки.|
+|[CPaneFrameWnd::OnMovePane](#onmovepane)|Смещает окно области на указанное расстояние.|
+|[CPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|Настраивает макет содержащейся панели.|
+|[CPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|Устанавливает таймер свертки.|
+|[CPaneFrameWnd::OnShowPane](#onshowpane)|Вызывается платформой при скрытии или отображении панели в окне области.|
+|[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области.|
+|[CPaneFrameWnd::Pin](#pin)||
 |`CPaneFrameWnd::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) .|
-|[Кпанефрамевнд:: Редравалл](#redrawall)|Перерисовывает все окна областей.|
-|[Кпанефрамевнд:: Ремовенонвалидпанес](#removenonvalidpanes)|Вызывается платформой для удаления недопустимых панелей.|
-|[Кпанефрамевнд:: Ремовепане](#removepane)|Удаляет панель из окна области.|
-|[Кпанефрамевнд:: Реплацепане](#replacepane)|Заменяет одну панель другой.|
-|[Кпанефрамевнд:: SaveState](#savestate)|Сохраняет состояние панели в реестр.|
+|[CPaneFrameWnd::RedrawAll](#redrawall)|Перерисовывает все окна областей.|
+|[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|Вызывается платформой для удаления недопустимых панелей.|
+|[CPaneFrameWnd::RemovePane](#removepane)|Удаляет панель из окна области.|
+|[CPaneFrameWnd::ReplacePane](#replacepane)|Заменяет одну панель другой.|
+|[CPaneFrameWnd::SaveState](#savestate)|Сохраняет состояние панели в реестр.|
 |`CPaneFrameWnd::Serialize`|Считывает этот объект из архива или записывает в него.|
-|[Кпанефрамевнд:: Сеткаптионбуттонс](#setcaptionbuttons)|Задает кнопки заголовка.|
-|[Кпанефрамевнд:: Сетделайшов](#setdelayshow)||
-|[Кпанефрамевнд:: Сетдоккингманажер](#setdockingmanager)||
-|[Кпанефрамевнд:: Сетдоккингтимер](#setdockingtimer)|Устанавливает таймер закрепления.|
-|[Кпанефрамевнд:: Сетдоккстате](#setdockstate)|Задает состояние закрепления.|
-|[Кпанефрамевнд:: Сесотпоинт](#sethotpoint)||
-|[Кпанефрамевнд:: Сетпредоккстате](#setpredockstate)|Вызывается платформой для задания предварительного состояния закрепления.|
-|[Кпанефрамевнд:: SizeToContent](#sizetocontent)|Делает размер окна области равным размеру содержащейся в нем панели.|
-|[Кпанефрамевнд:: Старттеарофф](#starttearoff)|Делает меню перемещаемым.|
-|[Кпанефрамевнд:: Сторерецентдоккситеинфо](#storerecentdocksiteinfo)||
-|[Кпанефрамевнд:: Сторереценттабрелатединфо](#storerecenttabrelatedinfo)||
+|[CPaneFrameWnd::SetCaptionButtons](#setcaptionbuttons)|Задает кнопки заголовка.|
+|[CPaneFrameWnd::SetDelayShow](#setdelayshow)||
+|[CPaneFrameWnd::SetDockingManager](#setdockingmanager)||
+|[CPaneFrameWnd::SetDockingTimer](#setdockingtimer)|Устанавливает таймер закрепления.|
+|[CPaneFrameWnd::SetDockState](#setdockstate)|Задает состояние закрепления.|
+|[CPaneFrameWnd::SetHotPoint](#sethotpoint)||
+|[CPaneFrameWnd::SetPreDockState](#setpredockstate)|Вызывается платформой для задания предварительного состояния закрепления.|
+|[CPaneFrameWnd::SizeToContent](#sizetocontent)|Делает размер окна области равным размеру содержащейся в нем панели.|
+|[CPaneFrameWnd::StartTearOff](#starttearoff)|Делает меню перемещаемым.|
+|[CPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
+|[CPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)||
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кпанефрамевнд:: Ончеккроллстате](#oncheckrollstate)|Определяет, требуется ли свертывание или развертывание окна области.|
-|[Кпанефрамевнд:: Ондравбордер](#ondrawborder)|Рисует границы окна области.|
+|[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Определяет, требуется ли свертывание или развертывание окна области.|
+|[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Рисует границы окна области.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кпанефрамевнд:: m_bUseSaveBits](#m_busesavebits)|Указывает, следует ли регистрировать класс окна в стиле класса CS_SAVEBITS.|
+|[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Определяется, следует ли регистрировать класс окон в стиле CS_SAVEBITS класса.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Когда панель переходит из закрепленного состояния в плавающее, платформа автоматически создает объект `CPaneFrameWnd`.
 
-Окно области можно перетащить вместе с его видимым содержимым (немедленное закрепление) или с помощью прямоугольника перетаскивания (стандартное закрепление). Режим закрепления панели контейнера окна области определяет поведение окна области при перетаскивании. Дополнительные сведения см. в разделе [CBasePane:: жетдоккингмоде](../../mfc/reference/cbasepane-class.md#getdockingmode).
+Окно области можно перетащить вместе с его видимым содержимым (немедленное закрепление) или с помощью прямоугольника перетаскивания (стандартное закрепление). Режим закрепления панели контейнера окна области определяет поведение окна области при перетаскивании. Для получения дополнительной информации [см. CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).
 
-В заголовке окна области отображаются кнопки, зависящие от стиля включенной панели. Если область может быть закрыта ( [CBasePane:: канбеклосед](../../mfc/reference/cbasepane-class.md#canbeclosed)), в ней отображается кнопка Закрыть. Если панель имеет стиль AFX_CBRS_AUTO_ROLLUP, отображается ПИН-код.
+В заголовке окна области отображаются кнопки, зависящие от стиля включенной панели. Если панель может быть закрыта [(CBasePane::CanBeClosed),](../../mfc/reference/cbasepane-class.md#canbeclosed)он отображает кнопку "Закрыть". Если панель имеет AFX_CBRS_AUTO_ROLLUP стиль, он отображает булавку.
 
-Если вы получаете производный класс из класса `CPaneFrameWnd`, необходимо сообщить платформе способ его создания. Либо создайте класс путем переопределения [CPane:: креатедефаултминифраме](../../mfc/reference/cpane-class.md#createdefaultminiframe), либо задайте `CPane::m_pMiniFrameRTC` элемент таким образом, чтобы он указывал на сведения о классе среды выполнения для вашего класса.
+Если вы получаете производный класс из класса `CPaneFrameWnd`, необходимо сообщить платформе способ его создания. Либо создайте класс, переопределив [CPane::CreateDefaultMiniframe,](../../mfc/reference/cpane-class.md#createdefaultminiframe)либо установите `CPane::m_pMiniFrameRTC` участника так, чтобы он указал на информацию о классе времени выполнения для вашего класса.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -255,9 +255,9 @@ class CPaneFrameWnd : public CWnd
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афкспанефрамевнд. h
+**Заголовок:** afxPaneFrameWnd.h
 
-##  <a name="addpane"></a>Кпанефрамевнд:: Аддпане
+## <a name="cpaneframewndaddpane"></a><a name="addpane"></a>CPaneFrameWnd::AddPane
 
 Добавляет панель.
 
@@ -267,10 +267,10 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-окне Добавляемая панель.
+*pWnd*<br/>
+(в) Панель для добавления.
 
-##  <a name="addremovepanefromgloballist"></a>Кпанефрамевнд:: Аддремовепанефромглобаллист
+## <a name="cpaneframewndaddremovepanefromgloballist"></a><a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList
 
 Добавляет панель в глобальный список или удаляет из него.
 
@@ -282,17 +282,17 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-окне Область для добавления или удаления.
+*pWnd*<br/>
+(в) Панель для добавления или удаления.
 
-*бадд*<br/>
-окне Если значение не равно нулю, добавьте панель. Если значение равно 0, удалите панель.
+*bAdd*<br/>
+(в) Если ненулевой, добавить панель. Если 0, удалите панель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если метод был успешным; в противном случае — 0.
+Nonzero, если метод был успешным; в противном случае 0.
 
-##  <a name="adjustlayout"></a>Кпанефрамевнд:: Аджустлайаут
+## <a name="cpaneframewndadjustlayout"></a><a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout
 
 Настраивает макет окна области.
 
@@ -300,17 +300,17 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 virtual void AdjustLayout();
 ```
 
-##  <a name="adjustpaneframes"></a>Кпанефрамевнд:: Аджустпанефрамес
+## <a name="cpaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames
 
 ```
 virtual void AdjustPaneFrames();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="calcbordersize"></a>Кпанефрамевнд:: Калкбордерсизе
+## <a name="cpaneframewndcalcbordersize"></a><a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize
 
-Вычисляет размер границ для окна плавающего.
+Вычисляет размер границ для окна мини-кадра.
 
 ```
 virtual void CalcBorderSize(CRect& rectBorderSize) const;
@@ -318,14 +318,14 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ректбордерсизе*<br/>
-заполняет Содержит размер (в пикселях) границы окна плавающего.
+*rectBorderSize*<br/>
+(ваут) Содержит размер в пикселях границы окна мини-кадра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для вычисления размера границы окна плавающего. Возвращаемый размер зависит от того, содержит ли окно плавающего панель инструментов или [CDockablePane](../../mfc/reference/cdockablepane-class.md).
+Этот метод вызывается фреймворкой для расчета размера границы окна мини-кадра. Возвращающееся размер зависит от того, содержит ли окно miniframe панель инструментов или [CDockablePane.](../../mfc/reference/cdockablepane-class.md)
 
-##  <a name="calcexpecteddockedrect"></a>Кпанефрамевнд:: Калцекспектеддоккедрект
+## <a name="cpaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect
 
 Вычисляет ожидаемый прямоугольник закрепленного окна.
 
@@ -340,26 +340,26 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>Параметры
 
-*пвндтодокк*<br/>
-окне Указатель на окно для закрепления.
+*pWndTodock*<br/>
+(в) Указатель на окно для стыковки.
 
-*птмаусе*<br/>
-окне Положение мыши.
+*ptMouse*<br/>
+(в) Расположение мыши.
 
-*ректресулт*<br/>
-заполняет Вычисляемый прямоугольник.
+*rectResult*<br/>
+(ваут) Расчетный прямоугольник.
 
-*бдравтаб*<br/>
-заполняет Если значение равно TRUE, нарисуйте вкладку. Если значение равно FALSE, не Нарисуйте вкладку.
+*bDrawTab*<br/>
+(ваут) Если правда, нарисуйте вкладку. Если FALSE, не рисуйте вкладку.
 
-*пптаржетбар*<br/>
-заполняет Указатель на целевую область.
+*ppTargetBar*<br/>
+(ваут) Указатель на целевое стекло.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вычисляет прямоугольник, который будет занимать окно, если пользователь переместил окно в точку, указанную параметром *птмаусе* , и закрепляет ее там.
+Этот метод вычисляет прямоугольник, который занимал бы окно, если пользователь перетащил окно в точку, указанную *ptMouse,* и пристыковал его туда.
 
-##  <a name="canbeattached"></a>Кпанефрамевнд:: Канбеаттачед
+## <a name="cpaneframewndcanbeattached"></a><a name="canbeattached"></a>CPaneFrameWnd::CanBeattached
 
 Определяет, может ли текущая панель быть закреплена на другой панели или окне фрейма.
 
@@ -369,9 +369,9 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область может быть закреплена на другой панели или в окне фрейма; в противном случае — FALSE.
+ПРАВДА, если панель может быть пристыкована к другому сну или окне рамы; в противном случае FALSE.
 
-##  <a name="canbedockedtopane"></a>Кпанефрамевнд:: Канбедоккедтопане
+## <a name="cpaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane
 
 Определяет, может ли окно области быть закреплено на панели.
 
@@ -381,22 +381,22 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккингбар*<br/>
-окне Панель.
+*pDockingBar*<br/>
+(в) Панель.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если мини-кадр можно закрепить на *пдоккингбар*; в противном случае — 0.
+Nonzero, если мини-рамка может быть пристыкована к *pDockingBar;* в противном случае 0.
 
-##  <a name="checkgrippervisibility"></a>Кпанефрамевнд:: Чеккгриппервисибилити
+## <a name="cpaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperВидимость
 
 ```
 virtual void CheckGripperVisibility();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="converttotabbeddocument"></a>Кпанефрамевнд:: Конверттотаббеддокумент
+## <a name="cpaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument
 
 Преобразует панель в документ с вкладками.
 
@@ -404,9 +404,9 @@ virtual void CheckGripperVisibility();
 virtual void ConvertToTabbedDocument();
 ```
 
-##  <a name="create"></a>Кпанефрамевнд:: Create
+## <a name="cpaneframewndcreate"></a><a name="create"></a>CPaneFrameWnd::Создание
 
-Создает окно плавающего и прикрепляет его к объекту [кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md) .
+Создает окно мини-кадра и прикрепляет его к объекту [CPaneFrameWnd.](../../mfc/reference/cpaneframewnd-class.md)
 
 ```
 virtual BOOL Create(
@@ -419,32 +419,32 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзвиндовнаме*<br/>
-окне Задает текст, отображаемый в окне плавающего.
+*lpszWindowName*<br/>
+(в) Определяет текст для отображения на окне мини-кадра.
 
-*двстиле*<br/>
-окне Задает стиль окна. Дополнительные сведения см. в разделе [стили окон](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+(в) Определяет стиль окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *rect*<br/>
-окне Указывает начальный размер и расположение окна плавающего.
+(в) Определяет начальный размер и положение окна мини-кадра.
 
-*ппарентвнд*<br/>
-[вход, выход] Указывает родительский фрейм окна плавающего. Это значение не должно быть равно NULL.
+*pParentWnd*<br/>
+(в, вне) Определяет родительский кадр окна мини-кадра. Это значение не должно быть NULL.
 
 *pContext*<br/>
-[вход, выход] Задает определяемый пользователем контекст.
+(в, вне) Определяет пользовательский контекст.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно было успешно создано; в противном случае — значение FALSE.
+TRUE, если окно было создано успешно; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Плавающего окно создается в два этапа. Во-первых, платформа создает `CPaneFrameWnd` объект. Во вторых, он `Create` вызывает, чтобы создать окно Windows плавающего и присоединить его `CPaneFrameWnd` к объекту.
+Окно мини-кадра создается в два этапа. Во-первых, фреймворк `CPaneFrameWnd` создает объект. Во-вторых, он призывает `Create` создать окно миникадровой системы Windows и прикрепить его к объекту. `CPaneFrameWnd`
 
-##  <a name="createex"></a>Кпанефрамевнд:: Креатикс
+## <a name="cpaneframewndcreateex"></a><a name="createex"></a>CPaneFrameWnd::CreateEx
 
-Создает окно плавающего и прикрепляет его к объекту [кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md) .
+Создает окно мини-кадра и прикрепляет его к объекту [CPaneFrameWnd.](../../mfc/reference/cpaneframewnd-class.md)
 
 ```
 virtual BOOL CreateEx(
@@ -458,33 +458,33 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*двстиликс*<br/>
-окне Задает расширенный стиль окна. Дополнительные сведения см. в разделе [Расширенные стили окон](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) .
+*dwStyleEx*<br/>
+(в) Определяет расширенный стиль окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
-*лпсзвиндовнаме*<br/>
-окне Задает текст, отображаемый в окне плавающего.
+*lpszWindowName*<br/>
+(в) Определяет текст для отображения на окне мини-кадра.
 
-*двстиле*<br/>
-окне Задает стиль окна. Дополнительные сведения см. в разделе [стили окон](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+(в) Определяет стиль окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *rect*<br/>
-окне Указывает начальный размер и расположение окна плавающего.
+(в) Определяет начальный размер и положение окна мини-кадра.
 
-*ппарентвнд*<br/>
-[вход, выход] Указывает родительский фрейм окна плавающего. Это значение не должно быть равно NULL.
+*pParentWnd*<br/>
+(в, вне) Определяет родительский кадр окна мини-кадра. Это значение не должно быть NULL.
 
 *pContext*<br/>
-[вход, выход] Задает определяемый пользователем контекст.
+(в, вне) Определяет пользовательский контекст.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно было успешно создано; в противном случае — значение FALSE.
+TRUE, если окно было создано успешно; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Плавающего окно создается в два этапа. Во-первых, платформа создает `CPaneFrameWnd` объект. Во вторых, он `Create` вызывает, чтобы создать окно Windows плавающего и присоединить его `CPaneFrameWnd` к объекту.
+Окно мини-кадра создается в два этапа. Во-первых, фреймворк `CPaneFrameWnd` создает объект. Во-вторых, он призывает `Create` создать окно миникадровой системы Windows и прикрепить его к объекту. `CPaneFrameWnd`
 
-##  <a name="dockpane"></a>Кпанефрамевнд::D Оккпане
+## <a name="cpaneframewnddockpane"></a><a name="dockpane"></a>CPaneFrameWnd::DockPane
 
 Закрепляет область.
 
@@ -494,14 +494,14 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 
 ### <a name="parameters"></a>Параметры
 
-*бвасдоккед*<br/>
-заполняет Значение TRUE, если панель уже закреплена; в противном случае — FALSE.
+*bWasDocked*<br/>
+(ваут) ПРАВДА, если панель была уже пристыкована; в противном случае FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если операция выполнена успешно, то `CDockablePane` , к которому была закреплена панель; в противном случае — null.
+Если операция была успешной, то, `CDockablePane` что стекло было пристыковано к; в противном случае NULL.
 
-##  <a name="findfloatingpanebyid"></a>Кпанефрамевнд:: Финдфлоатингпанебид
+## <a name="cpaneframewndfindfloatingpanebyid"></a><a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID
 
 Находит в глобальном списке плавающих панелей панель с указанным идентификатором элемента управления.
 
@@ -512,15 +512,15 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-окне Представляет идентификатор элемента управления области для поиска.
+(в) Представляет идентификатор управления панели для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Панель с указанным ИДЕНТИФИКАТОРом элемента управления; в противном случае значение NULL, если ни одна из областей не имеет указанного идентификатора элемента управления.
+Панель с указанным идентификатором управления; в противном случае, NULL, если ни одно стекло не имеет указанного идентификатора управления.
 
-##  <a name="framefrompoint"></a>Кпанефрамевнд:: Фрамефромпоинт
+## <a name="cpaneframewndframefrompoint"></a><a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint
 
-Находит окно мини-кадра, содержащее указанную точку.
+Находит окно мини-рамки, содержащее указанную точку.
 
 ```
 static CPaneFrameWnd* __stdcall FrameFromPoint(
@@ -532,23 +532,23 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*pt*<br/>
-окне Точка в экранных координатах.
+*пт*<br/>
+(в) Точка, в координатах экрана.
 
-*нсенситивити*<br/>
-окне Увеличьте область поиска в окне мини-фрейма по этому размеру. Окно мини-кадра удовлетворяет критериям поиска, если заданная точка попадает в увеличенную область.
+*nЧувствительность*<br/>
+(в) Увеличьте область поиска окна мини-рамки на этот размер. Окно мини-рамки удовлетворяет критериям поиска, если заданная точка попадает в увеличенную область.
 
-*пфраметоексклуде*<br/>
-окне Задает окно мини-кадра, исключаемое из поиска.
+*pFrameToExclude*<br/>
+(в) Определяет окно мини-рамки, чтобы исключить из поиска.
 
-*бфлоатмултионли*<br/>
-окне Если значение — TRUE, ищите только окна с мини-рамками, имеющие стиль CBRS_FLOAT_MULTI. Если значение равно FALSE, поиск осуществляется во всех окнах мини-кадров.
+*bFloatMultiТолько*<br/>
+(в) Если правда, только поиск мини-рамки окна, которые имеют CBRS_FLOAT_MULTI стиль. Если FALSE, поиск всех мини-рамки окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на окно мини-кадра, содержащее *PT*; в противном случае — NULL.
+Указатель на окно мини-рамки, содержащее *pt;* в противном случае NULL.
 
-##  <a name="getcaptionheight"></a>Кпанефрамевнд:: Жеткаптионхеигхт
+## <a name="cpaneframewndgetcaptionheight"></a><a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight
 
 Возвращает высоту заголовка окна области.
 
@@ -558,13 +558,13 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Высота окна мини-кадра (в пикселях).
+Высота, в пикселях, окна мини-кадра.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы определить высоту окна мини-кадра. По умолчанию для высоты задано значение SM_CYSMCAPTION. Дополнительные сведения см. в разделе [функция жетсистемметрикс](/windows/win32/api/winuser/nf-winuser-getsystemmetrics).
+Вызовите этот метод, чтобы определить высоту окна мини-рамки. По умолчанию высота установлена на SM_CYSMCAPTION. Для получения дополнительной [GetSystemMetrics Function](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)информации см.
 
-##  <a name="getcaptionrect"></a>Кпанефрамевнд:: Жеткаптионрект
+## <a name="cpaneframewndgetcaptionrect"></a><a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect
 
 Вычисляет ограничивающий прямоугольник заголовка окна области.
 
@@ -574,14 +574,14 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ректкаптион*<br/>
-заполняет Содержит размер и расположение заголовка окна мини-кадра в экранных координатах.
+*rectCaption*<br/>
+(ваут) Содержит размер и положение подписи окна мини-рамки в координатах экрана.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для вычисления ограничивающего прямоугольника заголовка окна мини-кадра.
+Этот метод вызывается фреймворцом для расчета связующего прямоугольника подписи окна мини-рамки.
 
-##  <a name="getcaptiontext"></a>Кпанефрамевнд:: Жеткаптионтекст
+## <a name="cpaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText
 
 Возвращает текст заголовка.
 
@@ -591,13 +591,13 @@ virtual CString GetCaptionText();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текст заголовка окна мини-кадра.
+Заголовок текста окна мини-рамки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой при отображении текста заголовка.
+Этот метод вызывается фректовом при отображении текста подписи.
 
-##  <a name="getdockingmanager"></a>Кпанефрамевнд:: Жетдоккингманажер
+## <a name="cpaneframewndgetdockingmanager"></a><a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager
 
 ```
 CDockingManager* GetDockingManager() const;
@@ -605,9 +605,9 @@ CDockingManager* GetDockingManager() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getdockingmode"></a>Кпанефрамевнд:: Жетдоккингмоде
+## <a name="cpaneframewndgetdockingmode"></a><a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode
 
 Возвращает режим закрепления.
 
@@ -617,7 +617,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Режим закрепления. Одно из следующих значений:
+Режим стыковки. Одно из следующих значений:
 
 - DT_STANDARD
 
@@ -625,7 +625,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 - DT_SMART
 
-##  <a name="getfirstvisiblepane"></a>Кпанефрамевнд:: Жетфирствисиблепане
+## <a name="cpaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane
 
 Возвращает первую видимую панель, содержащуюся в окне области.
 
@@ -635,9 +635,9 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая панель в окне мини-кадра или значение NULL, если окно в палитре не содержит областей.
+Первое стекло в окне мини-кадра, или NULL, если окно мини-рамки не содержит стекол.
 
-##  <a name="gethotpoint"></a>Кпанефрамевнд:: Жесотпоинт
+## <a name="cpaneframewndgethotpoint"></a><a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint
 
 ```
 CPoint GetHotPoint() const;
@@ -645,9 +645,9 @@ CPoint GetHotPoint() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpane"></a>Кпанефрамевнд:: "панель"
+## <a name="cpaneframewndgetpane"></a><a name="getpane"></a>CPaneFrameWnd::GetPane
 
 Возвращает панель, содержащуюся в окне области.
 
@@ -657,11 +657,11 @@ virtual CWnd* GetPane() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Панель, которая содержится в мини-кадре, или значение NULL, если окно в палитре не содержит областей.
+Панель, содержащаяся в мини-кадре, или NULL, если окно мини-рамки не содержит стекол.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpanecount"></a>Кпанефрамевнд:: Жетпанекаунт
+## <a name="cpaneframewndgetpanecount"></a><a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount
 
 Возвращает число панелей, содержащихся в окне области.
 
@@ -671,11 +671,11 @@ virtual int GetPaneCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число панелей в окне с рамкой. Это значение может быть равно нулю.
+Количество стекол в окне мини-кадра. Это значение может быть равно 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getparent"></a>Кпанефрамевнд:: Parent
+## <a name="cpaneframewndgetparent"></a><a name="getparent"></a>CPaneFrameWnd::GetParent
 
 ```
 CWnd* GetParent();
@@ -683,9 +683,9 @@ CWnd* GetParent();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getpinstate"></a>Кпанефрамевнд:: Жетпинстате
+## <a name="cpaneframewndgetpinstate"></a><a name="getpinstate"></a>CPaneFrameWnd::GetPinState
 
 ```
 BOOL GetPinState() const;
@@ -693,9 +693,9 @@ BOOL GetPinState() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getrecentfloatingrect"></a>Кпанефрамевнд:: Жетрецентфлоатингрект
+## <a name="cpaneframewndgetrecentfloatingrect"></a><a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -703,9 +703,9 @@ CRect GetRecentFloatingRect() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getvisiblepanecount"></a>Кпанефрамевнд:: Жетвисиблепанекаунт
+## <a name="cpaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount
 
 Возвращает число видимых панелей, содержащихся в окне области.
 
@@ -715,11 +715,11 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число видимых панелей.
+Количество видимых стекол.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="hittest"></a>Кпанефрамевнд:: HitTest
+## <a name="cpaneframewndhittest"></a><a name="hittest"></a>CPaneFrameWnd::HitTest
 
 Определяет, какая часть окна области находится в заданной точке.
 
@@ -731,11 +731,11 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
+*Точки*<br/>
 [in] Точка для проверки.
 
-*бдетекткаптион*<br/>
-окне Если значение — TRUE, проверьте точку на соответствие заголовку. Если значение равно FALSE, заголовок не учитывается.
+*bDetectCaption*<br/>
+(в) Если true, проверьте точку против подписи. Если FALSE, игнорируйте подпись.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -743,19 +743,19 @@ virtual LRESULT HitTest(
 
 |Значение|Значение|
 |-----------|-------------|
-|ХТНОВХЕРЕ|Точка находится за пределами окна мини-кадра.|
-|ХТКЛИЕНТ|Точка находится в клиентской области.|
-|ХТКАПТИОН|Точка находится в заголовке.|
-|ХТТОП|Точка находится вверху.|
-|ХТТОПЛЕФТ|Точка находится в верхнем левом углу.|
-|ХТТОПРИГХТ|Точка находится в правом верхнем углу.|
-|ХТЛЕФТ|Точка находится слева.|
-|ХТРИГХТ|Точка находится справа.|
-|ХТБОТТОМ|Точка находится внизу.|
-|ХТБОТТОМЛЕФТ|Точка находится в левом нижнем углу.|
-|ХТБОТТОМРИГХТ|Точка находится в правом нижнем углу.|
+|HTNOWHERE|Точка находится за окном мини-рамки.|
+|HTclient|Дело в клиентской области.|
+|HTcaption caption|Точка на заголовок.|
+|HTTOP|Точка находится на вершине.|
+|HTTOPLEFT|Точка находится в левом верхнем верхнем.|
+|HTTOPRIGHT|Точка находится в правом верхнем.|
+|HTLEFT|Точка слева.|
+|HTRIGHT|Точка справа.|
+|HTBOTTOM|Точка внизу.|
+|HTBOTTOMLEFT|Точка находится в левом нижнем углу.|
+|HTBOTTOMRIGHT|Точка находится в правом нижнем углу.|
 
-##  <a name="iscaptured"></a>Кпанефрамевнд:: записано
+## <a name="cpaneframewndiscaptured"></a><a name="iscaptured"></a>CPaneFrameWnd::Захваченный
 
 ```
 BOOL IsCaptured() const;
@@ -763,9 +763,9 @@ BOOL IsCaptured() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isdelayshow"></a>Кпанефрамевнд:: Исделайшов
+## <a name="cpaneframewndisdelayshow"></a><a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow
 
 ```
 BOOL IsDelayShow() const;
@@ -773,9 +773,9 @@ BOOL IsDelayShow() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isrolldown"></a>Кпанефрамевнд:: Исроллдовн
+## <a name="cpaneframewndisrolldown"></a><a name="isrolldown"></a>CPaneFrameWnd::IsRollDown
 
 Определяет, требуется ли развертывание окна области.
 
@@ -785,15 +785,15 @@ virtual BOOL IsRollDown() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если необходимо выполнить выгрузку окна мини-кадра; в противном случае — значение FALSE.
+ПРАВДА, если окно мини-рамки должно быть свернуто; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для определения того, следует ли выполнить выгрузку окна мини-кадра. Функция ROLLUP/роллдовн включена для окна мини-кадра, если содержит по крайней мере одну панель с флагом AFX_CBRS_AUTO_ROLLUP. Этот флаг задается при создании панели. Дополнительные сведения см. в разделе [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).
+Этот метод вызывается фректовом, чтобы определить, следует ли свернуть окно мини-рамки. Функция свертывания/свертывания включена для окна мини-кадра, если оно содержит по крайней мере одно стекло, которое имеет AFX_CBRS_AUTO_ROLLUP флаг. Этот флаг устанавливается при создании панели. Для получения дополнительной информации [см. CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-По умолчанию платформа проверяет, находится ли указатель мыши внутри прямоугольника, ограничивающего окно мини-кадра, чтобы определить, должен ли быть выполнен накат окна. Это поведение можно переопределить в производном классе.
+По умолчанию фреймворк проверяет, находится ли указатель мыши внутри прямоугольника окна мини-рамки, чтобы определить, нужно ли скатывать окно вниз. Это поведение можно переопределить в производном классе.
 
-##  <a name="isrollup"></a>Кпанефрамевнд:: RollUp
+## <a name="cpaneframewndisrollup"></a><a name="isrollup"></a>CPaneFrameWnd::IsRollUp
 
 Определяет, требуется ли свертывание окна области.
 
@@ -803,15 +803,15 @@ virtual BOOL IsRollUp() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если должно быть сведено окно мини-кадра; в противном случае — значение FALSE.
+ПРАВДА, если окно мини-рамки должно быть свернуто; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, чтобы определить, следует ли выполнять сведение для окна мини-кадра. Функция ROLLUP/роллдовн включена для окна мини-кадра, если содержит по крайней мере одну панель с флагом AFX_CBRS_AUTO_ROLLUP. Этот флаг задается при создании панели. Дополнительные сведения см. в разделе [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).
+Этот метод вызывается фректовом, чтобы определить, следует ли свернуть окно мини-рамки. Функция свертывания/свертывания включена для окна мини-кадра, если оно содержит по крайней мере одно стекло, которое имеет AFX_CBRS_AUTO_ROLLUP флаг. Этот флаг устанавливается при создании панели. Для получения дополнительной информации [см. CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-По умолчанию платформа проверяет, находится ли указатель мыши внутри прямоугольника, ограничивающего окно мини-кадра, чтобы определить, нужно ли выполнять сведение. Это поведение можно переопределить в производном классе.
+По умолчанию фреймворк проверяет, находится ли указатель мыши внутри прямоугольника окна мини-рамки, чтобы определить, нужно ли свернуть окно. Это поведение можно переопределить в производном классе.
 
-##  <a name="killdockingtimer"></a>Кпанефрамевнд:: Киллдоккингтимер
+## <a name="cpaneframewndkilldockingtimer"></a><a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer
 
 Останавливает таймер закрепления.
 
@@ -819,7 +819,7 @@ virtual BOOL IsRollUp() const;
 void KillDockingTimer();
 ```
 
-##  <a name="loadstate"></a>Кпанефрамевнд:: LoadState
+## <a name="cpaneframewndloadstate"></a><a name="loadstate"></a>CPaneFrameWnd::LoadState
 
 Загружает состояние панели из реестра.
 
@@ -831,29 +831,29 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Идентификатор панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние панели было успешно загружено; в противном случае — FALSE.
+TRUE, если состояние панели было загружено успешно; в противном случае FALSE.
 
-##  <a name="m_busesavebits"></a>Кпанефрамевнд:: m_bUseSaveBits
+## <a name="cpaneframewndm_busesavebits"></a><a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits
 
-Указывает, следует ли регистрировать класс окна, имеющий стиль класса CS_SAVEBITS.
+Определяется, следует ли регистрировать класс окон, который имеет стиль CS_SAVEBITS класса.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Присвойте этому статическому элементу значение TRUE, чтобы зарегистрировать класс окна мини-кадра, имеющий стиль CS_SAVEBITS. Это может снизить мерцание при перетаскивании окна мини-кадра.
+Установите этот статический член к TRUE, чтобы зарегистрировать класс окна мини-рамки, который имеет CS_SAVEBITS стиль. Это может помочь уменьшить мерцание, когда пользователь перетаскивает окно мини-рамки.
 
-##  <a name="onbeforedock"></a>Кпанефрамевнд:: Онбефоредокк
+## <a name="cpaneframewndonbeforedock"></a><a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock
 
 Определяет возможность закрепления.
 
@@ -863,9 +863,9 @@ virtual BOOL OnBeforeDock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если закрепление возможно; в противном случае — значение FALSE.
+TRUE, если стыковка возможна; в противном случае, FALSE.
 
-##  <a name="oncheckrollstate"></a>Кпанефрамевнд:: Ончеккроллстате
+## <a name="cpaneframewndoncheckrollstate"></a><a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState
 
 Определяет, требуется ли свертывание или развертывание окна области.
 
@@ -873,13 +873,13 @@ virtual BOOL OnBeforeDock();
 virtual void OnCheckRollState();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, чтобы определить, следует ли выполнить сведение или свертывание окна мини-кадра.
+Этот метод вызывается фректовом, чтобы определить, следует ли свернуть окно мини-рамки вверх или вниз.
 
-По умолчанию платформа вызывает [кпанефрамевнд:: ROLLUP](#isrollup) и [Кпанефрамевнд:: исроллдовн](#isrolldown) и просто растягивает или восстанавливает окно мини-кадра. Этот метод можно переопределить в производном классе, чтобы использовать другой визуальный элемент.
+По умолчанию фреймворк вызывает [CPaneFrameWnd::IsRollUp](#isrollup) и [CPaneFrameWnd:::IsRollDown](#isrolldown) и просто растягивает или восстанавливает окно мини-рамки. Вы можете переопределить этот метод в производном классе, чтобы использовать другой визуальный эффект.
 
-##  <a name="ondocktorecentpos"></a>Кпанефрамевнд:: Ондоккторецентпос
+## <a name="cpaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CPaneFrameWnd::OndockToRecentPos
 
 Закрепляет окно области в его последней позиции.
 
@@ -887,7 +887,7 @@ virtual void OnCheckRollState();
 virtual void OnDockToRecentPos();
 ```
 
-##  <a name="ondrawborder"></a>Кпанефрамевнд:: Ондравбордер
+## <a name="cpaneframewndondrawborder"></a><a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder
 
 Рисует границы окна области.
 
@@ -898,13 +898,13 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-окне Контекст устройства, используемый для рисования границы.
+(в) Контекст устройства, используемый для рисования границы.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для отрисовки границ окна мини-кадра.
+Этот метод называется фреймворком для рисования границ окна мини-рамки.
 
-##  <a name="onkillrolluptimer"></a>Кпанефрамевнд:: Онкиллроллуптимер
+## <a name="cpaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer
 
 Останавливает таймер свертки.
 
@@ -912,7 +912,7 @@ virtual void OnDrawBorder(CDC* pDC);
 virtual void OnKillRollUpTimer();
 ```
 
-##  <a name="onmovepane"></a>Кпанефрамевнд:: Онмовепане
+## <a name="cpaneframewndonmovepane"></a><a name="onmovepane"></a>CPaneFrameWnd::OnMovePane
 
 Смещает окно области на указанное расстояние.
 
@@ -924,27 +924,27 @@ virtual void OnMovePane(
 
 ### <a name="parameters"></a>Параметры
 
-*пбар*<br/>
-окне Указатель на область (игнорируется).
+*pBar*<br/>
+(в) Указатель на панель (игнорирован).
 
-*птоффсет*<br/>
-окне Смещение, на которое необходимо переместить панель.
+*ptOffset*<br/>
+(в) Смещение, с помощью которого для перемещения панели.
 
-##  <a name="onpanerecalclayout"></a>Кпанефрамевнд:: Онпанерекалклайаут
+## <a name="cpaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout
 
-Настраивает макет области внутри окна в палитре.
+Регулирует расположение панели внутри окна мини-рамки.
 
 ```
 virtual void OnPaneRecalcLayout();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Платформа вызывает этот метод, когда необходимо настроить макет панели внутри окна мини-кадра.
+Рамка вызывает этот метод, когда он должен настроить макет панели внутри окна мини-рамки.
 
-По умолчанию область располагается для покрытия всей клиентской области окна мини-кадра.
+По умолчанию панель расположена для покрытия всей клиентской области окна мини-кадра.
 
-##  <a name="onsetrolluptimer"></a>Кпанефрамевнд:: Онсетроллуптимер
+## <a name="cpaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer
 
 Устанавливает таймер свертки.
 
@@ -952,7 +952,7 @@ virtual void OnPaneRecalcLayout();
 virtual void OnSetRollUpTimer();
 ```
 
-##  <a name="onshowpane"></a>Кпанефрамевнд:: Оншовпане
+## <a name="cpaneframewndonshowpane"></a><a name="onshowpane"></a>CPaneFrameWnd::OnShowPane
 
 Вызывается платформой при скрытии или отображении панели в окне области.
 
@@ -964,17 +964,17 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>Параметры
 
-*пбар*<br/>
-окне Отображаемая или Скрытая панель.
+*pBar*<br/>
+(в) Панель, которая отображается или скрыта.
 
 *bShow*<br/>
-окне Значение TRUE, если панель отображается. Значение FALSE, если панель скрыта.
+(в) ПРАВДА, если панель отображается; FALSE, если панель скрыта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывается структурой, когда панель в окне мини-кадра отображается или скрывается. Реализация по умолчанию не выполняет никаких действий.
+Вызывается фреймворком, когда панель в окне мини-рамки отображается или скрыта. Реализация по умолчанию не выполняет никаких действий.
 
-##  <a name="pin"></a>Кпанефрамевнд::P в
+## <a name="cpaneframewndpin"></a><a name="pin"></a>CPaneFrameWnd::Pin
 
 ```
 void Pin(BOOL bPin = TRUE);
@@ -982,11 +982,11 @@ void Pin(BOOL bPin = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-окне *бпин*<br/>
+(в) *bПин*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="panefrompoint"></a>Кпанефрамевнд::P Анефромпоинт
+## <a name="cpaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint
 
 Возвращает панель, если она содержит предоставленную пользователем точку в пределах окна области.
 
@@ -999,24 +999,24 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-окне Точка, которую пользователь щелкнул, в экранных координатах.
+*Точки*<br/>
+(в) Точка, которую пользователь нажал, в координатах экрана.
 
-*нсенситивити*<br/>
-окне Этот параметр не используется.
+*nЧувствительность*<br/>
+(в) Этот параметр не используется.
 
-*бчекквисибилити*<br/>
-окне Значение TRUE, чтобы указать, что должны возвращаться только видимые панели; в противном случае — значение FALSE.
+*bCheckВидимость*<br/>
+(в) TRUE указать, что только видимые стекла должны быть возвращены; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Панель, которую щелкнул пользователь, или значение NULL, если в этом расположении нет области.
+Панель, которую пользователь нажал, или NULL, если в этом месте нет панели.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Вызовите этот метод, чтобы получить панель, содержащую заданную точку.
 
-##  <a name="redrawall"></a>Кпанефрамевнд:: Редравалл
+## <a name="cpaneframewndredrawall"></a><a name="redrawall"></a>CPaneFrameWnd::RedrawAll
 
 Перерисовывает все окна областей.
 
@@ -1024,11 +1024,11 @@ virtual CBasePane* PaneFromPoint(
 static void RedrawAll();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод обновляет все окна с мини-рамками, вызывая [CWnd:: редраввиндов](../../mfc/reference/cwnd-class.md#redrawwindow) для каждого окна.
+Этот метод обновляет все окна мини-рамки, вызывая [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) для каждого окна.
 
-##  <a name="removenonvalidpanes"></a>Кпанефрамевнд:: Ремовенонвалидпанес
+## <a name="cpaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes
 
 Вызывается платформой для удаления недопустимых панелей.
 
@@ -1036,7 +1036,7 @@ static void RedrawAll();
 virtual void RemoveNonValidPanes();
 ```
 
-##  <a name="removepane"></a>Кпанефрамевнд:: Ремовепане
+## <a name="cpaneframewndremovepane"></a><a name="removepane"></a>CPaneFrameWnd::RemovePane
 
 Удаляет панель из окна области.
 
@@ -1049,20 +1049,20 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>Параметры
 
-*Приводится*<br/>
-окне Указатель на область, которую необходимо удалить.
+*pWnd*<br/>
+(в) Указатель на панель для удаления.
 
-*бдестрой*<br/>
-окне Указывает, что происходит с окном мини-кадра. Если *бдестрой* имеет значение true, этот метод сразу же уничтожает окно. Если значение равно FALSE, то этот метод уничтожает окно мини-кадра после некоторой задержки.
+*bDestroy*<br/>
+(в) Определяет, что происходит с окном мини-рамки. Если *bDestroy* является правдой, этот метод разрушает окно мини-рамки немедленно. Если это FALSE, этот метод разрушает окно мини-рамки после определенной задержки.
 
-*бноделайеддестрой*<br/>
-окне Если значение равно TRUE, отложенное уничтожение отключено. Если задано значение FALSE, отложенное уничтожение включено.
+*bNoDelayedDestroy*<br/>
+(в) Если правда, задержки уничтожения отключен. Если FALSE, задержка уничтожения включена.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Платформа может удалять окна мини-кадров сразу или после определенной задержки. Если требуется отложить уничтожение окон мини-кадров, передайте значение FALSE в параметре *бноделайеддестрой* . Отложенное уничтожение происходит, когда платформа обрабатывает сообщение AFX_WM_CHECKEMPTYMINIFRAME.
+Рамки могут уничтожить окна мини-рамки сразу или после определенной задержки. Если вы хотите отсрочить разрушение окон мини-рам, пройдите FALSE в параметре *bNoDelayedDestroy.* Задержка разрушения происходит, когда фреймворк обрабатывает AFX_WM_CHECKEMPTYMINIFRAME сообщение.
 
-##  <a name="replacepane"></a>Кпанефрамевнд:: Реплацепане
+## <a name="cpaneframewndreplacepane"></a><a name="replacepane"></a>CPaneFrameWnd::ReplacePane
 
 Заменяет одну панель другой.
 
@@ -1074,13 +1074,13 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>Параметры
 
-*пбарорг*<br/>
-окне Указатель на исходную панель.
+*pBarOrg*<br/>
+(в) Указатель на исходное стекло.
 
-*пбарреплацевис*<br/>
-окне Указатель на область, которая заменяет исходную панель.
+*pBarReplaceWith*<br/>
+(в) Указатель на панель, которая заменяет исходное стекло.
 
-##  <a name="savestate"></a>Кпанефрамевнд:: SaveState
+## <a name="cpaneframewndsavestate"></a><a name="savestate"></a>CPaneFrameWnd::SaveState
 
 Сохраняет состояние панели в реестр.
 
@@ -1092,17 +1092,17 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Идентификатор панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние панели сохранено успешно. в противном случае — FALSE.
+TRUE, если состояние панели было сохранено успешно; в противном случае FALSE.
 
-##  <a name="setcaptionbuttons"></a>Кпанефрамевнд:: Сеткаптионбуттонс
+## <a name="cpaneframewndsetcaptionbuttons"></a><a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons
 
 Задает кнопки заголовка.
 
@@ -1112,8 +1112,8 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ### <a name="parameters"></a>Параметры
 
-*двбуттонс*<br/>
-окне Сочетание побитового или следующих значений:
+*dwButtons*<br/>
+(в) Bitwise-OR сочетание следующих значений:
 
 - AFX_CAPTION_BTN_CLOSE
 
@@ -1123,7 +1123,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 - AFX_CAPTION_BTN_CUSTOMIZE
 
-##  <a name="setdelayshow"></a>Кпанефрамевнд:: Сетделайшов
+## <a name="cpaneframewndsetdelayshow"></a><a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow
 
 ```
 void SetDelayShow(BOOL bDelayShow);
@@ -1131,11 +1131,11 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>Параметры
 
-окне *бделайшов*<br/>
+(в) *bDelayShow*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setdockingmanager"></a>Кпанефрамевнд:: Сетдоккингманажер
+## <a name="cpaneframewndsetdockingmanager"></a><a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1143,11 +1143,11 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>Параметры
 
-окне *пманажер*<br/>
+(в) *pManager*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setdockingtimer"></a>Кпанефрамевнд:: Сетдоккингтимер
+## <a name="cpaneframewndsetdockingtimer"></a><a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer
 
 Устанавливает таймер закрепления.
 
@@ -1157,10 +1157,10 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>Параметры
 
-*нтимеаут*<br/>
-окне Значение времени ожидания в миллисекундах.
+*nTimeOut*<br/>
+(в) Значение тайм-аута в миллисекундах.
 
-##  <a name="setdockstate"></a>Кпанефрамевнд:: Сетдоккстате
+## <a name="cpaneframewndsetdockstate"></a><a name="setdockstate"></a>CPaneFrameWnd::SetDockState
 
 Задает состояние закрепления.
 
@@ -1170,10 +1170,10 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккманажер*<br/>
-окне Указатель на диспетчер закрепления.
+*pDockManager*<br/>
+(в) Указатель на менеджера по стыковке.
 
-##  <a name="sethotpoint"></a>Кпанефрамевнд:: Сесотпоинт
+## <a name="cpaneframewndsethotpoint"></a><a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint
 
 ```
 void SetHotPoint(CPoint& ptNew);
@@ -1181,11 +1181,11 @@ void SetHotPoint(CPoint& ptNew);
 
 ### <a name="parameters"></a>Параметры
 
-окне *ptNew*<br/>
+(в) *ptNew*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setpredockstate"></a>Кпанефрамевнд:: Сетпредоккстате
+## <a name="cpaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState
 
 Вызывается платформой для задания предварительного состояния закрепления.
 
@@ -1198,8 +1198,8 @@ virtual BOOL SetPreDockState(
 
 ### <a name="parameters"></a>Параметры
 
-*предоккстате*<br/>
-окне Возможные значения:
+*preDockState*<br/>
+(в) Возможные значения:
 
 - PDS_NOTHING,
 
@@ -1207,29 +1207,29 @@ virtual BOOL SetPreDockState(
 
 - PDS_DOCK_TO_TAB
 
-*пбартодокк*<br/>
-окне Указатель на область для закрепления.
+*пбартодок*<br/>
+(в) Указатель на стекол для стыковки.
 
 *dockMethod*<br/>
-окне Метод закрепления. (Этот параметр игнорируется.)
+(в) Метод стыковки. (Этот параметр игнорируется.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если окно мини-кадра не закреплено; Значение FALSE, если оно закреплено.
+ПРАВДА, если окно мини-рамки отстыковано; FALSE, если он пристыкован.
 
-##  <a name="sizetocontent"></a>Кпанефрамевнд:: SizeToContent
+## <a name="cpaneframewndsizetocontent"></a><a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent
 
-Корректирует размер окна мини-кадра таким образом, чтобы оно было эквивалентно автономной панели.
+Регулирует размер окна мини-рамки таким образом, чтобы оно было эквивалентно содержащемуся стекле.
 
 ```
 virtual void SizeToContent();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы настроить размер окна в палитре до размера автономной области.
+Вызовите этот метод, чтобы настроить размер окна мини-рамки до размера содержащегося стекла.
 
-##  <a name="starttearoff"></a>Кпанефрамевнд:: Старттеарофф
+## <a name="cpaneframewndstarttearoff"></a><a name="starttearoff"></a>CPaneFrameWnd::StartTearOff
 
 Делает меню перемещаемым.
 
@@ -1239,14 +1239,14 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 
 ### <a name="parameters"></a>Параметры
 
-*пмену*<br/>
-окне Указатель на меню.
+*pMenu*<br/>
+(в) Указатель на меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+ПРАВДА, если метод был успешным; в противном случае, FALSE.
 
-##  <a name="storerecentdocksiteinfo"></a>Кпанефрамевнд:: Сторерецентдоккситеинфо
+## <a name="cpaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo
 
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -1254,11 +1254,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>Параметры
 
-окне *пбар*<br/>
+(в) *pBar*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="storerecenttabrelatedinfo"></a>Кпанефрамевнд:: Сторереценттабрелатединфо
+## <a name="cpaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1268,12 +1268,12 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>Параметры
 
-окне *пдоккингбар*<br/>
-окне *птаббедбар*<br/>
+(в) *pDockingBar*<br/>
+(в) *pTabbedBar*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

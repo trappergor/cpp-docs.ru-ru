@@ -1,12 +1,17 @@
 ---
 title: tolower, _tolower, towlower, _tolower_l, _towlower_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _tolower_l
 - towlower
 - tolower
 - _tolower
 - _towlower_l
+- _o__tolower
+- _o__tolower_l
+- _o__towlower_l
+- _o_tolower
+- _o_towlower
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,6 +26,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +52,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: 5d182fca50befac3393012572e68e65a8c81fa72
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 560fde4ae2167256acd54856fced15bc6ccecae6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957457"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362365"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower, _tolower, towlower, _tolower_l, _towlower_l
 
@@ -81,50 +87,52 @@ int _towlower_l(
 
 ### <a name="parameters"></a>Параметры
 
-*c*<br/>
+*C*<br/>
 Символ для преобразования.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Языковой стандарт для перевода в определенном языковом стандарте.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм преобразует копию *c* в нижний регистр, если преобразование возможно, и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
+Каждая из этих процедур преобразует копию *c* в более низкий случай, если преобразование возможно, и возвращает результат. Возвращаемое значение для указания ошибки не зарезервировано.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Каждая из этих подпрограмм преобразует указанную прописную букву в строчную, если это возможно и уместно. Преобразование регистра **товловер** зависит от языкового стандарта. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без суффикса **_l** используют текущую национальную настройку. Версии этих функций с суффиксом **_l** принимают языковой стандарт в качестве параметра и используют его вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Каждая из этих подпрограмм преобразует указанную прописную букву в строчную, если это возможно и уместно. Преобразование корпуса **буксировоза** является специфическим для конкретного уровня. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без **_l** суффикса используют в настоящее время установленный локали. Версии этих функций, которые имеют **_l** суффикс принять локали в качестве параметра и использовать его вместо установленного в настоящее время локали. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Чтобы **_tolower** выдать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [Upper](isupper-isupper-l-iswupper-iswupper-l.md) должны возвращать ненулевое значение.
+Для того, чтобы **_tolower** дать ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [изуппер](isupper-isupper-l-iswupper-iswupper-l.md) должен как вернуться ненулевой.
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**токуэр**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l** и **_towlower_l** не имеют зависимости от языкового стандарта и не предназначены для непосредственного вызова. Они предоставляются для внутреннего использования **_totlower_l**.
+> **_tolower_l** и **_towlower_l** не имеют локальной зависимости и не должны называться напрямую. Они предоставляются для внутреннего использования **_totlower_l.**
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**tolower**|\<ctype.h>|
+|**токуэр**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
 |**towlower**|\<ctype.h> или \<wchar.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример в разделе [Функции to](../../c-runtime-library/to-functions.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Подпрограммы is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
+[Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>
 [Функции to](../../c-runtime-library/to-functions.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

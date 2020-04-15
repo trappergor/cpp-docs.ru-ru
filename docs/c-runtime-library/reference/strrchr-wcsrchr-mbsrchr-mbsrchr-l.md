@@ -1,11 +1,13 @@
 ---
 title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
+- _o__mbsrchr
+- _o__mbsrchr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0aaa670cb6aa5af9e6f8a28234ba5c442d2f633
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365047"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -117,37 +120,39 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*Ул*<br/>
 Строка для поиска, завершающаяся символом NULL.
 
-*c*<br/>
+*C*<br/>
 Символ, который требуется найти.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на последнее вхождение *c* в *str*или значение null, если *c* не найден.
+Возвращает указатель к последнему возникновению *c* в *str,* или NULL, если *c* не найден.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция находит последнее вхождение *c* (преобразованное в **char**) в str. `strrchr` Поиск включает завершающие нуль-символы.
+Функция `strrchr` находит последнее появление *c* (преобразовано в **char)** в *str*. Поиск включает завершающие нуль-символы.
 
 Функции`wcsrchr` и `_mbsrchr` are wide-character и multibyte-character versions of `strrchr`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsrchr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsrchr` представляют собой многобайтовые строки.
 
-В C эти функции принимают указатель **const** для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** , возвращает указатель на **константу**; версия, принимающая указатель на non-**const** , возвращает указатель на**неконстантный**. Макрос _CRT_CONST_CORRECT_OVERLOADS определяется, если доступны и **константные** , и**неконстантные** версии этих функций. Если требуется поведение, не являющееся**константой** , для C++ обеих перегрузок, определите символ _CONST_RETURN.
+В C эти функции принимают **конст** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка принимая указатель **const** возвращает указатель **к const**; версия, которая принимает указатель на**не-const** возвращает указатель на**не-конст**. Макро_CRT_CONST_CORRECT_OVERLOADS определяется, имеются как **конст,** так и**не-конст-версии** этих функций. Если вам требуется**не-конст-поведение** для обеих перегрузок СЗ, определите символ _CONST_RETURN.
 
-`_mbsrchr` проверяет свои параметры. Если *str* имеет значение null, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено `errno` , для задается `_mbsrchr` значение еинвал и возвращает 0. Функции `strrchr` и `wcsrchr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+`_mbsrchr` проверяет свои параметры. Если *str* null, вызовуется обработчик параметров недействительных, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено `errno` продолжать, устанавливается на `_mbsrchr` EINVAL и возвращает 0. Функции `strrchr` и `wcsrchr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
-На выходное значение влияет параметр категории LC_CTYPE языкового стандарта. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Значение вывода зависит от настройки LC_CTYPE категории локализуем; для получения дополнительной информации [см.](setlocale-wsetlocale.md) Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|
-|**Н/Д**|**Н/Д**|`_mbsrchr_l`|**Н/Д**|
+|**Недоступно**|**Недоступно**|`_mbsrchr_l`|**Недоступно**|
 
 ## <a name="requirements"></a>Требования
 
@@ -157,16 +162,16 @@ const unsigned char *_mbsrchr_l(
 |`wcsrchr`|\<string.h> или \<wchar.h>|
 |`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 Пример использования `strrchr` см. в разделе [strchr](strchr-wcschr-mbschr-mbschr-l.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>

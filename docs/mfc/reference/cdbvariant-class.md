@@ -1,5 +1,5 @@
 ---
-title: CDBVariant-класс
+title: Класс CDBVariant
 ms.date: 11/04/2016
 f1_keywords:
 - CDBVariant
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c13c1a965014af271ce2911505742d9a50eedd7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376450"
 ---
-# <a name="cdbvariant-class"></a>CDBVariant-класс
+# <a name="cdbvariant-class"></a>Класс CDBVariant
 
 Представляет вариантный тип данных для классов MFC ODBC.
 
@@ -55,45 +55,45 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|
+|[CDBVariant::CDBVariant](#cdbvariant)|Формирует объект `CDBVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|
+|[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объект.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в настоящее время сохраненное значение. Введите `DWORD`.|
+|[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных сохраненного значения. Введите `DWORD`.|
 
-### <a name="public-union-members"></a>Открытые члены объединения
+### <a name="public-union-members"></a>Члены Общественного союза
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|
-|[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **unsigned char**.|
-|[CDBVariant::m_dblVal](#m_dblval)|Содержит значение типа **двойные**.|
-|[CDBVariant::m_fltVal](#m_fltval)|Содержит значение типа **float**.|
-|[CDBVariant::m_iVal](#m_ival)|Содержит значение типа **короткие**.|
-|[CDBVariant::m_lVal](#m_lval)|Содержит значение типа **long**.|
-|[CDBVariant::m_pbinary](#m_pbinary)|Содержит указатель на объект типа `CLongBinary`.|
-|[CDBVariant::m_pdate](#m_pdate)|Содержит указатель на объект типа **TIMESTAMP_STRUCT**.|
-|[CDBVariant::m_pstring](#m_pstring)|Содержит указатель на объект типа `CString`.|
-|[CDBVariant::m_pstringA](#m_pstringa)|Содержит указатель на ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.|
-|[CDBVariant::m_pstringW](#m_pstringw)|Сохраняет указатель в двухбайтовое [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.|
+|[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **неподписанный символ**.|
+|[CDBVariant::m_dblVal](#m_dblval)|Содержит значение **типа двойной**.|
+|[CDBVariant::m_fltVal](#m_fltval)|Содержит значение типа **поплавка.**|
+|[CDBVariant::m_iVal](#m_ival)|Содержит значение **краткого**типа .|
+|[CDBVariant::m_lVal](#m_lval)|Содержит значение **длиннего**типа.|
+|[CDBVariant::m_pbinary](#m_pbinary)|Содержит указатель на объект `CLongBinary`типа.|
+|[CDBVariant::m_pdate](#m_pdate)|Содержит указатель на объект типа **TIMESTAMP_STRUCT.**|
+|[CDBVariant::m_pstring](#m_pstring)|Содержит указатель на объект `CString`типа.|
+|[CDBVariant::m_pstringA](#m_pstringa)|Хранит указатель на объект ASCII [CString.](../../atl-mfc-shared/reference/cstringt-class.md)|
+|[CDBVariant::m_pstringW](#m_pstringw)|Хранит указатель на широкий объект [CString.](../../atl-mfc-shared/reference/cstringt-class.md)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-`CDBVariant` не имеет базового класса.
+`CDBVariant`не имеет базового класса.
 
-`CDBVariant` аналогичен [COleVariant](../../mfc/reference/colevariant-class.md), однако `CDBVariant` не использует OLE. `CDBVariant` предоставляет возможность хранения значения, не беспокоясь о тип данных значения. `CDBVariant` отслеживает текущее значение, которое хранится в объединении тип данных.
+`CDBVariant`похож на [COleVariant](../../mfc/reference/colevariant-class.md); однако, `CDBVariant` не использует OLE. `CDBVariant`позволяет хранить значение, не беспокоясь о типе данных значения. `CDBVariant`отслеживает тип данных текущего значения, который хранится в союзе.
 
-Класс [CRecordset](../../mfc/reference/crecordset-class.md) использует `CDBVariant` объектов в три функции-члены: `GetFieldValue`, `GetBookmark`, и `SetBookmark`. Например `GetFieldValue` позволяет динамически получать данные в столбце. Так как тип данных столбца не может быть известен во время выполнения, `GetFieldValue` использует `CDBVariant` объект для сохранения данных столбца.
+Класс [CRecordset](../../mfc/reference/crecordset-class.md) `CDBVariant` использует объекты в `GetFieldValue` `GetBookmark`трех `SetBookmark`функциях члена: , и . Например, `GetFieldValue` позволяет динамически получать данные в столбце. Поскольку тип данных столбца может быть `GetFieldValue` неизвестен `CDBVariant` во время выполнения, используется объект для хранения данных столбца.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -103,67 +103,67 @@ class CDBVariant
 
 **Заголовок:** afxdb.h
 
-##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant
+## <a name="cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDBVariant::CDBVariant
 
-Создает значение NULL `CDBVariant` объекта.
+Создает объект `CDBVariant` NULL.
 
 ```
 CDBVariant();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Наборы [m_dwType](#m_dwtype) DBVT_NULL члена данных.
+Устанавливает m_dwType [данных](#m_dwtype) для DBVT_NULL.
 
-##  <a name="clear"></a>  CDBVariant::Clear
+## <a name="cdbvariantclear"></a><a name="clear"></a>CDBVariant::Clear
 
-Вызовите эту функцию-член для очистки `CDBVariant` объекта.
+Вызовите эту функцию участника, чтобы очистить `CDBVariant` объект.
 
 ```
 void Clear();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Если значение [m_dwType](#m_dwtype) данные-член является DBVT_DATE, DBVT_STRING или DBVT_BINARY, `Clear` освобождает память, связанную с элементом объединения указатель. `Clear` Задает `m_dwType` для DBVT_NULL.
+Если значение члена данных [m_dwType](#m_dwtype) является DBVT_DATE, `Clear` DBVT_STRING или DBVT_BINARY, освобождает память, связанную с членом указателя соединения. `Clear`устанавливает `m_dwType` DBVT_NULL.
 
-`CDBVariant` Вызовы деструктора `Clear`.
+Деструктор `CDBVariant` вызывает `Clear`.
 
-##  <a name="m_boolval"></a>  CDBVariant::m_boolVal
+## <a name="cdbvariantm_boolval"></a><a name="m_boolval"></a>CDBVariant::m_boolVal
 
-Сохраняет значение типа BOOL.
+Хранит значение типа BOOL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_boolVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_boolVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_BOOL, затем `m_boolVal` будет содержать допустимое значение; в противном случае доступ к `m_boolVal` создаст ненадежные результаты.
+Член `m_boolVal` данных принадлежит профсоюзу. Перед доступом, `m_boolVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_BOOL, то `m_boolVal` будет содержать допустимое значение; в противном `m_boolVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_chval"></a>  CDBVariant::m_chVal
+## <a name="cdbvariantm_chval"></a><a name="m_chval"></a>CDBVariant::m_chVal
 
-Сохраняет значение типа **unsigned char**.
+Хранит значение типа **неподписанный символ**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_chVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_chVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_UCHAR, затем `m_chVal` содержит допустимое значение; в противном случае доступ к `m_chVal` создаст ненадежные результаты.
+Член `m_chVal` данных принадлежит профсоюзу. Перед доступом, `m_chVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_UCHAR, то `m_chVal` содержит допустимое значение; в противном `m_chVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_dblval"></a>  CDBVariant::m_dblVal
+## <a name="cdbvariantm_dblval"></a><a name="m_dblval"></a>CDBVariant::m_dblVal
 
-Сохраняет значение типа **двойные**.
+Хранит значение типа **двойной**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_dblVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_dblVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_DOUBLE, затем `m_dblVal` содержит допустимое значение; в противном случае доступ к `m_dblVal` создаст ненадежные результаты.
+Член `m_dblVal` данных принадлежит профсоюзу. Перед доступом, `m_dblVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_DOUBLE, то `m_dblVal` содержит допустимое значение; в противном `m_dblVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_dwtype"></a>  CDBVariant::m_dwType
+## <a name="cdbvariantm_dwtype"></a><a name="m_dwtype"></a>CDBVariant::m_dwType
 
-Этот элемент данных содержит тип данных для значения, хранящегося в `CDBVariant` члену объекта объединения данных.
+Этот член данных содержит тип данных для `CDBVariant` значения, которое в настоящее время хранится в члене союзных данных объекта.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Прежде чем обращаться к это объединение, необходимо проверить значение `m_dwType` чтобы определить, какой элемент объединения данных для доступа к. В следующей таблице перечислены возможные значения для `m_dwType` и соответствующий элемент объединения данных.
+Прежде чем получить доступ к этому `m_dwType` союзу, вы должны проверить значение, чтобы определить, какой член данных союза для доступа. В следующей таблице перечислены `m_dwType` возможные значения для и соответствующего члена данных союза.
 
-|m_dwType|Элемент объединения данных|
+|m_dwType|Член союза|
 |---------------|-----------------------|
-|DBVT_NULL|Не член объединения является допустимым для доступа.|
+|DBVT_NULL|Ни один член профсоюза не действителен для доступа.|
 |DBVT_BOOL|[m_boolVal](#m_boolval)|
 |DBVT_UCHAR|[m_chVal](#m_chval)|
 |DBVT_SHORT|[m_iVal](#m_ival)|
@@ -176,73 +176,73 @@ void Clear();
 |DBVT_ASTRING|[m_pstringA](#m_pstringa)|
 |DBVT_WSTRING|[m_pstringW](#m_pstringw)|
 
-##  <a name="m_fltval"></a>  CDBVariant::m_fltVal
+## <a name="cdbvariantm_fltval"></a><a name="m_fltval"></a>CDBVariant::m_fltVal
 
-Сохраняет значение типа **float**.
+Хранит значение типа **поплавка.**
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_fltVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_fltVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_SINGLE, затем `m_fltVal` содержит допустимое значение; в противном случае доступ к `m_fltVal` создаст ненадежные результаты.
+Член `m_fltVal` данных принадлежит профсоюзу. Перед доступом, `m_fltVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_SINGLE, то `m_fltVal` содержит допустимое значение; в противном `m_fltVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_ival"></a>  CDBVariant::m_iVal
+## <a name="cdbvariantm_ival"></a><a name="m_ival"></a>CDBVariant::m_iVal
 
-Сохраняет значение типа **короткие**.
+Хранит значение **краткого**типа.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_iVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_iVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_SHORT, затем `m_iVal` содержит допустимое значение; в противном случае доступ к `m_iVal` создаст ненадежные результаты.
+Член `m_iVal` данных принадлежит профсоюзу. Перед доступом, `m_iVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_SHORT, то `m_iVal` содержит допустимое значение; в противном `m_iVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_lval"></a>  CDBVariant::m_lVal
+## <a name="cdbvariantm_lval"></a><a name="m_lval"></a>CDBVariant::m_lVal
 
-Сохраняет значение типа **long**.
+Хранит значение типа **долго**.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_lVal` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_lVal`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_LONG, затем `m_lVal` содержит допустимое значение; в противном случае доступ к `m_lVal` создаст ненадежные результаты.
+Член `m_lVal` данных принадлежит профсоюзу. Перед доступом, `m_lVal`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_LONG, то `m_lVal` содержит допустимое значение; в противном `m_lVal` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary
+## <a name="cdbvariantm_pbinary"></a><a name="m_pbinary"></a>CDBVariant::m_pbinary
 
-Содержит указатель на объект типа [CLongBinary](../../mfc/reference/clongbinary-class.md).
+Хранит указатель на объект типа [CLongBinary.](../../mfc/reference/clongbinary-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_pbinary` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pbinary`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_BINARY, затем `m_pbinary` содержит допустимый указатель; в противном случае доступ к `m_pbinary` создаст ненадежные результаты.
+Член `m_pbinary` данных принадлежит профсоюзу. Перед доступом, `m_pbinary`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_BINARY, то `m_pbinary` содержит действительный указатель; в противном `m_pbinary` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_pdate"></a>  CDBVariant::m_pdate
+## <a name="cdbvariantm_pdate"></a><a name="m_pdate"></a>CDBVariant::m_pdate
 
-Содержит указатель на объект типа TIMESTAMP_STRUCT.
+Хранит указатель объекта типа TIMESTAMP_STRUCT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_pdate` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pdate`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_DATE, затем `m_pdate` содержит допустимый указатель; в противном случае доступ к `m_pdate` создаст ненадежные результаты.
+Член `m_pdate` данных принадлежит профсоюзу. Перед доступом, `m_pdate`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_DATE, то `m_pdate` содержит действительный указатель; в противном `m_pdate` случае доступ к ним приведет к ненадежным результатам.
 
-Дополнительные сведения о типе данных TIMESTAMP_STRUCT см. в разделе [типы данных C](/sql/odbc/reference/appendixes/c-data-types) в приложении D *Справочник по программированию ODBC* в пакете Windows SDK.
+Для получения дополнительной информации о TIMESTAMP_STRUCT [C Data Types](/sql/odbc/reference/appendixes/c-data-types) типе данных, см. *ODBC Programmer's Reference*
 
-##  <a name="m_pstring"></a>  CDBVariant::m_pstring
+## <a name="cdbvariantm_pstring"></a><a name="m_pstring"></a>CDBVariant::m_pstring
 
-Содержит указатель на объект типа [CString](../../atl-mfc-shared/reference/cstringt-class.md).
+Хранит указатель на объект типа [CString.](../../atl-mfc-shared/reference/cstringt-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_pstring` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pstring`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_STRING, затем `m_pstring` содержит допустимый указатель; в противном случае доступ к `m_pstring` создаст ненадежные результаты.
+Член `m_pstring` данных принадлежит профсоюзу. Перед доступом, `m_pstring`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_STRING, то `m_pstring` содержит действительный указатель; в противном `m_pstring` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA
+## <a name="cdbvariantm_pstringa"></a><a name="m_pstringa"></a>CDBVariant::m_pstringA
 
-Содержит указатель на ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.
+Хранит указатель на объект ASCII [CString.](../../atl-mfc-shared/reference/cstringt-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_pstringA` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pstringA`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_ASTRING, затем `m_pstringA` содержит допустимый указатель; в противном случае доступ к `m_pstringA` создаст ненадежные результаты.
+Член `m_pstringA` данных принадлежит профсоюзу. Перед доступом, `m_pstringA`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен на DBVT_ASTRING, то `m_pstringA` содержит действительный указатель; в противном `m_pstringA` случае доступ к ним приведет к ненадежным результатам.
 
-##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW
+## <a name="cdbvariantm_pstringw"></a><a name="m_pstringw"></a>CDBVariant::m_pstringW
 
-Сохраняет указатель в двухбайтовое [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта.
+Хранит указатель на широкий объект [CString.](../../atl-mfc-shared/reference/cstringt-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-`m_pstringW` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pstringW`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_WSTRING, затем `m_pstringW` содержит допустимый указатель; в противном случае доступ к `m_pstringW` создаст ненадежные результаты.
+Член `m_pstringW` данных принадлежит профсоюзу. Перед доступом, `m_pstringW`сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` установлен DBVT_WSTRING, `m_pstringW` то содержит действительный указатель; в противном `m_pstringW` случае доступ к ним приведет к ненадежным результатам.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CRecordset](../../mfc/reference/crecordset-class.md)

@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +37,16 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362634"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
-Вычисляет тангенс.
+Вычисляет касательную.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -66,24 +68,26 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **Tan** возвращают тангенс *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
+Функции **загара** возвращают касательную *x.* Если *x* больше или равна 263, или меньше, чем или равна -263, происходит потеря значимости в результате.
 
-|Входные данные|Исключение SEH|**Matherr** Об|
+|Входные данные|Исключение SEH|**Маттерр** Исключение|
 |-----------|-------------------|-------------------------|
-|± КНАН, С|none|_DOMAIN|
-|± INF|**Недопустимый**|_DOMAIN|
+|- ЗНАН,IND|Нет|_DOMAIN|
+|- INF|**Недопустимый**|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Tan** , которые принимают и возвращают **значения типа** **float** или **Long** . В программе на языке **Tan** всегда принимает и возвращает **Double**.
+Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **загара,** которые принимают и возвращают **плавающие** или **длинные** **двойные** значения. В программе C, **загар** всегда принимает и возвращает **двойной**.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**Tan**, **TANF**, **танл**|\<math.h>|\<cmath> или \<math.h>|
+|**загар,** **танф,** **танл**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

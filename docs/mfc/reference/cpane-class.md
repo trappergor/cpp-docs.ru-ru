@@ -133,16 +133,16 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 9d6a408b6ed7e7ab6f3dd138a4222b262978fd6c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426471"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364165"
 ---
 # <a name="cpane-class"></a>CPane Class
 
-Класс `CPane` является расширением [класса CControlBar](../../mfc/reference/ccontrolbar-class.md). При обновлении существующего проекта MFC замените все вхождения `CControlBar` на `CPane`.
+Класс `CPane` является повышением [класса CControlBar.](../../mfc/reference/ccontrolbar-class.md) Если вы модернизируете существующий проект MFC, замените все случаи `CControlBar` с `CPane`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -150,103 +150,103 @@ ms.locfileid: "79426471"
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
 |`CPane::~CPane`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CPane:: Аджустсизеиммедиате](#adjustsizeimmediate)|Немедленное повторное вычисление макета панели.|
-|[CPane:: Аллоцелементс](#allocelements)|Выделяет хранилище для внутреннего использования.|
-|[CPane:: Алловшовонпанемену](#allowshowonpanemenu)|Указывает, указана ли панель в списке созданных средой выполнения панелей для приложения.|
-|[CPane:: Калкаваилаблесизе](#calcavailablesize)|Вычисляет разность по размеру между указанным прямоугольником и текущим прямоугольником окна.|
-|[CPane:: КалЦинсидерект](#calcinsiderect)|Вычисляет внутренний прямоугольник области, принимая во внимание границы и границу.|
-|[CPane:: Калкрецентдоккедрект](#calcrecentdockedrect)|Вычисляет недавно закрепленный прямоугольник.|
-|[CPane:: Калксизе](#calcsize)|Вычисляет размер панели.|
-|[CPane:: Канбедоккед](#canbedocked)|Определяет, можно ли закрепить панель на указанной базовой панели.|
-|[CPane:: Канбетаббеддокумент](#canbetabbeddocument)|Определяет, можно ли преобразовать область в документ с вкладками.|
-|[CPane:: Конверттотаббеддокумент](#converttotabbeddocument)|Преобразует закрепляемую область в документ с вкладками.|
-|[CPane:: Копистате](#copystate)|Копирует состояние панели. (Переопределяет [CBasePane:: копистате](../../mfc/reference/cbasepane-class.md#copystate).)|
-|[CPane:: Create](#create)|Создает панель элементов управления и прикрепляет ее к объекту `CPane`.|
-|[CPane:: Креатедефаултминифраме](#createdefaultminiframe)|Создает окно мини-кадра для плавающей панели.|
-|[CPane:: Креатикс](#createex)|Создает панель элементов управления и прикрепляет ее к объекту `CPane`.|
+|[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Немедленно пересчитывает расположение панели.|
+|[CPane:AllocElements](#allocelements)|Выделяет хранилище для внутреннего использования.|
+|[CPane::AllowShowOnPaneMenu](#allowshowonpanemenu)|Уточняется, указана ли панель в списке сгенерированных времен выполнения стекол для приложения.|
+|[CPane::CalcAvailableSize](#calcavailablesize)|Вычисляет разницу в размерах между указанным прямоугольником и текущим прямоугольником окна.|
+|[CPane::CalcInsideRect](#calcinsiderect)|Высчитывает внутренний прямоугольник стекла, принимая во внимание границы и захваты.|
+|[CPane::CalcRecentDockedRect](#calcrecentdockedrect)|Высчитывает недавно состыкованный прямоугольник.|
+|[CPane::CalcSize](#calcsize)|Вычисляет размер панели.|
+|[CPane::CanBeDocked](#canbedocked)|Определяет, можно ли пристыковать панель к указанному базовому стеку.|
+|[CPane:CanBeTabbedДокумент](#canbetabbeddocument)|Определяет, можно ли преобразовать панель в документ с вкладками.|
+|[CPane::ConvertToTabbedДокумент](#converttotabbeddocument)|Преобразует док-панель в документ с вкладками.|
+|[CPane::CopyState](#copystate)|Копирует состояние панели. (Переопределяет [CBasePane::CopyState](../../mfc/reference/cbasepane-class.md#copystate).)|
+|[CPane::Создание](#create)|Создает панель управления и прикрепляет ее к объекту. `CPane`|
+|[CPane::CreateDefaultMiniframe](#createdefaultminiframe)|Создает окно мини-рамки для плавающей панели.|
+|[CPane::CreateEx](#createex)|Создает панель управления и прикрепляет ее к объекту. `CPane`|
 |`CPane::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|[CPane::D Оккбимаусе](#dockbymouse)|Закрепляет панель с помощью метода закрепления мыши.|
-|[CPane::D Оккпане](#dockpane)|Закрепляет плавающую панель в базовую область.|
-|[CPane::D Оккпанестандард](#dockpanestandard)|Закрепляет панель, используя закрепление структуры (стандартная).|
-|[CPane::D Окктофрамевиндов](#docktoframewindow)|Закрепляет закрепляемую область для рамки. (Переопределяет `CBasePane::DockToFrameWindow`.)|
-|[CPane::D Оесалловсиблингбарс](#doesallowsiblingbars)|Указывает, можно ли закрепить другую панель в той же строке, где закреплена Текущая панель.|
-|[CPane:: Флоатпане](#floatpane)|Перемещает панель в перемещаемую область.|
-|[CPane:: Жетаваилабликспандсизе](#getavailableexpandsize)|Возвращает объем (в пикселях), который может быть расширен областью.|
-|[CPane:: Жетаваилаблестретчсизе](#getavailablestretchsize)|Возвращает объем (в пикселях), который может сжиматься на панели.|
-|[CPane:: награницы](#getborders)|Возвращает ширину границ панели.|
-|[CPane:: Жетклиенсотспот](#getclienthotspot)|Возвращает *активную точку* для панели.|
-|[CPane:: Жетдоккситеров](#getdocksiterow)|Возвращает строку закрепления, в которой закреплена панель.|
-|[CPane:: Жетексклусиверовмоде](#getexclusiverowmode)|Определяет, находится ли панель в режиме монопольной строки.|
-|[CPane:: @ HotSpot](#gethotspot)|Возвращает активную точку, которая хранится в базовом объекте `CMFCDragFrameImpl`.|
-|[CPane:: Жетминсизе](#getminsize)|Возвращает минимально допустимый размер панели.|
-|[CPane:: Жетпаненаме](#getpanename)|Извлекает заголовок панели.|
+|[CPane::DockByMouse](#dockbymouse)|Доки панели с помощью мыши метод стыковки.|
+|[CPane::DockPane](#dockpane)|Доки плавающей панели к базовой панели.|
+|[CPane::DockPaneStandard](#dockpanestandard)|Доки панели с помощью контура (стандартный) стыковки.|
+|[CPane::DockToFrameWindow](#docktoframewindow)|Доки док-панель к раме. (Переопределяет `CBasePane::DockToFrameWindow`.)|
+|[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|Указывает, можно ли стыковку другого стекла в том же ряду, где текущее стекло пристыковано.|
+|[CPane::FloatPane](#floatpane)|Плавает панель.|
+|[CPane:GetAvailableExpandSize](#getavailableexpandsize)|Возвращает сумму в пикселях, которую может расширить панель.|
+|[CPane:GetAvailableStretchSize](#getavailablestretchsize)|Возвращает сумму в пикселях, которую стекло может сжать.|
+|[CPane:GetBorders](#getborders)|Возвращает ширину границ панели.|
+|[CPane:GetClientHotSpot](#getclienthotspot)|Возвращает *горячую точку* для стекол.|
+|[CPane::GetDockSiteRow](#getdocksiterow)|Возвращает строку дока, в которой пристыковано стекло.|
+|[CPane::GetExclusiveRowMode](#getexclusiverowmode)|Определяет, находится ли панель в эксклюзивном режиме строки.|
+|[CPane:GetHotSpot](#gethotspot)|Возвращает горячую точку, хранящуюся в базовом `CMFCDragFrameImpl` объекте.|
+|[CPane:GetMinSize](#getminsize)|Получает минимальный допустимый размер для панели.|
+|[CPane:GetPaneName](#getpanename)|Получает название для панели.|
 |`CPane::GetResizeStep`|Для внутреннего использования.|
-|`CPane::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
-|[CPane:: Жетвиртуалрект](#getvirtualrect)|Извлекает *виртуальный прямоугольник* панели.|
-|[CPane:: Исчанжестате](#ischangestate)|При перемещении панели этот метод анализирует положение панели относительно других панелей, закрепляет строки и окна мини-кадров и возвращает соответствующее значение AFX_CS_STATUS.|
-|[CPane:: Исдрагмоде](#isdragmode)|Указывает, выполняется ли перетаскивание панели.|
-|[CPane:: Исинфлоатингмултипанефрамевнд](#isinfloatingmultipaneframewnd)|Указывает, находится ли панель в окне фрейма с несколькими панелями. (Переопределяет `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
-|[CPane:: Ислефтоф](#isleftof)|Определяет, является ли панель левой (или более поздней) указанным прямоугольником.|
-|[CPane:: Исресизабле](#isresizable)|Определяет, можно ли изменить размер панели. (Переопределяет [CBasePane:: исресизабле](../../mfc/reference/cbasepane-class.md#isresizable).)|
-|[CPane:: с вкладками](#istabbed)|Определяет, вставлена ли панель в элемент управления вкладки окна с вкладками. (Переопределяет [CBasePane:: с вкладками](../../mfc/reference/cbasepane-class.md#istabbed).)|
-|[CPane:: LoadState](#loadstate)|Загружает состояние панели из реестра. (Переопределяет [CBasePane:: LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
-|[CPane:: Мовебялигнмент](#movebyalignment)|Перемещает панель и виртуальный прямоугольник на заданный объем.|
-|[CPane:: Мовепане](#movepane)|Перемещает панель в указанный прямоугольник.|
-|[CPane:: Онафтерчанжепарент](#onafterchangeparent)|Вызывается структурой при изменении родителя панели.|
-|[CPane:: Онбефоречанжепарент](#onbeforechangeparent)|Вызывается структурой при изменении родительского элемента области.|
-|[CPane:: Онпрессклосебуттон](#onpressclosebutton)|Вызывается платформой, когда пользователь нажимает кнопку "Закрыть" в заголовке панели.|
+|`CPane::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
+|[CPane:GetVirtualRect](#getvirtualrect)|Извлекает *виртуальный прямоугольник* панели.|
+|[CPane::IsChangeState](#ischangestate)|При перемещении панели этот метод анализирует положение панели по сравнению с другими стеклами, строками доков и окнами мини-кадров и возвращает соответствующее AFX_CS_STATUS значение.|
+|[CPane::IsDragMode](#isdragmode)|Уточняется, тащится ли панель.|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Определяет, находится ли панель в многопанельном окне рамы. (Переопределяет `CBasePane::IsInFloatingMultiPaneFrameWnd`.)|
+|[CPane::IsLeftOf](#isleftof)|Определяет, остается ли панель (или выше) указанного прямоугольника.|
+|[CPane::Изменяемые](#isresizable)|Определяет, можно ли переопрошать панель. (Переопределяет [CBasePane:: Изисуемый](../../mfc/reference/cbasepane-class.md#isresizable).)|
+|[CPane::IsTabbed](#istabbed)|Определяет, было ли вставлено стекло в элементару окна вкладки. (Оверлет [CBasePane:: IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed).)|
+|[CPane::НагрузкаГосударство](#loadstate)|Загружает состояние панели из реестра. (Переопределяет [CBasePane::LoadState](../../mfc/reference/cbasepane-class.md#loadstate).)|
+|[CPane::MoveByAlignment](#movebyalignment)|Перемещает панель и виртуальный прямоугольник на указанное количество.|
+|[CPane:MovePane](#movepane)|Перемещает панель в указанный прямоугольник.|
+|[CPane::OnAfterChangeParent](#onafterchangeparent)|Вызывается по фреймворку при изменении родительского панели.|
+|[CPane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается по структуре, когда родитель панели собирается измениться.|
+|[CPane::OnPressCloseButton](#onpressclosebutton)|Вызывается по фреймворку, когда пользователь выбирает кнопку "Закрыть" на заголовке для панели.|
 |`CPane::OnProcessDblClk`|Для внутреннего использования.|
-|[CPane:: Оншовконтролбармену](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|
-|[CPane:: Оншовконтролбармену](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|
+|[CPane::OnShowControlBarMenu](#onshowcontrolbarmenu)|Вызывается платформой непосредственно перед отображением меню особой панели.|
 |`CPane::PrepareToDock`|Для внутреннего использования.|
-|[CPane:: RecalcLayout](#recalclayout)|Повторно вычисляет сведения о макете для панели. (Переопределяет [CBasePane:: RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
-|[CPane:: SaveState](#savestate)|Сохраняет состояние панели в реестре. (Переопределяет [CBasePane:: SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
-|[CPane:: Сетактивеинграуп](#setactiveingroup)|Помечает панель как активную.|
-|[CPane:: Сетбордерс](#setborders)|Задает значения границ панели.|
-|[CPane:: Сетклиенсотспот](#setclienthotspot)|Задает активную точку для панели.|
-|[CPane:: Сетдоккстате](#setdockstate)|Восстанавливает сведения о состоянии закрепления для панели.|
-|[CPane:: Сетексклусиверовмоде](#setexclusiverowmode)|Включает или отключает режим монопольной строки.|
-|[CPane:: Сетминифрамертк](#setminiframertc)|Задает сведения о классе среды выполнения для окна мини-кадра по умолчанию.|
-|[CPane:: Сетминсизе](#setminsize)|Задает минимальный допустимый размер панели.|
-|[CPane:: Сетвиртуалрект](#setvirtualrect)|Задает *виртуальный прямоугольник* панели.|
-|[CPane:: Стретчпанедефервндпос](#stretchpanedeferwndpos)|Растягивает область по вертикали или горизонтали на основе стиля закрепления.|
-|[CPane:: Тогглеаутохиде](#toggleautohide)|Переключает режим автоматического скрытия.|
-|[CPane:: Ундоккпане](#undockpane)|Удаляет панель с сайта закрепления, ползунка по умолчанию или окно мини-кадра, в котором она в данный момент закреплена. (Переопределяет [CBasePane:: ундоккпане](../../mfc/reference/cbasepane-class.md#undockpane).)|
-|[CPane:: Упдатевиртуалрект](#updatevirtualrect)|Обновляет виртуальный прямоугольник.|
+|[CPane:RecalcLayout](#recalclayout)|Пересчитывает информацию о макете для панели. (Оверлет [CBasePane::RecalcLayout](../../mfc/reference/cbasepane-class.md#recalclayout).)|
+|[CPane::SaveState](#savestate)|Сохраняет состояние панели в реестр. (Переопределяет [CBasePane::SaveState](../../mfc/reference/cbasepane-class.md#savestate).)|
+|[CPane::SetActiveInGroup](#setactiveingroup)|Флаги панели как активные.|
+|[CPane::SetBorders](#setborders)|Устанавливает значения границы панели.|
+|[CPane::SetClientHotSpot](#setclienthotspot)|Устанавливает горячую точку для панели.|
+|[CPane::SetDockState](#setdockstate)|Восстанавливает информацию о состоянии стыковки для панели.|
+|[CPane::SetExclusiveRowMode](#setexclusiverowmode)|Позволяет или отключает эксклюзивный режим строки.|
+|[CPane:SetMiniFrameRTC](#setminiframertc)|Устанавливает информацию о классе времени выполнения для окна мини-кадра по умолчанию.|
+|[CPane:SetMinSize](#setminsize)|Устанавливает минимальный допустимый размер для панели.|
+|[CPane::SetVirtualRect](#setvirtualrect)|Устанавливает *виртуальный прямоугольник* панели.|
+|[CPane::StretchPaneDeferWndPos](#stretchpanedeferwndpos)|Растягивает панель вертикально или горизонтально на основе стиля стыковки.|
+|[CPane::ToggleAutoHide](#toggleautohide)|Переключает режим автоматической скрытности.|
+|[CPane::UndockPane](#undockpane)|Удаляет панель с места док-станции, ползунок по умолчанию или окна мини-рамки, где она в настоящее время пристыкована. (Оверлет [CBasePane::UndockPane](../../mfc/reference/cbasepane-class.md#undockpane).)|
+|[CPane::UpdateVirtualRect](#updatevirtualrect)|Обновляет виртуальный прямоугольник.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CPane:: Онафтердокк](#onafterdock)|Вызывается структурой при закрепленной области.|
-|[CPane:: Онафтерфлоат](#onafterfloat)|Вызывается структурой при перемещении панели.|
-|[CPane:: Онбефоредокк](#onbeforedock)|Вызывается структурой, когда область собирается закрепляться.|
-|[CPane:: Онбефорефлоат](#onbeforefloat)|Вызывается структурой, когда область будет плавающей.|
+|[CPane::OnAfterDock](#onafterdock)|Вызывается по рамкам, когда панель была пристыкована.|
+|[CPane::OnAfterFloat](#onafterfloat)|Вызывается по рамкам, когда панель была плавала.|
+|[CPane::OnBeforeDock](#onbeforedock)|Вызывается по рамкам, когда панель вот-вот будет пристыкована.|
+|[CPane::OnBeforeFloat](#onbeforefloat)|Вызывается по рамкам, когда панель вот-вот будет плавать.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Description|
+|Имя|Описание|
 |----------|-----------------|
-|[CPane:: m_bHandleMinSize](#m_bhandleminsize)|Включает последовательную обработку минимального размера для панелей.|
-|[CPane:: m_recentDockInfo](#m_recentdockinfo)|Содержит последние сведения о закреплении.|
+|[CPane::m_bHandleMinSize](#m_bhandleminsize)|Обеспечивает последовательную обработку минимального размера для стекол.|
+|[CPane::m_recentDockInfo](#m_recentdockinfo)|Содержит последние стыковки информации.|
 
 ## <a name="remarks"></a>Remarks
 
-Как правило, объекты `CPane` не создаются напрямую. Если требуется панель с функциями закрепления, создайте объект, производный от [CDockablePane](../../mfc/reference/cdockablepane-class.md). Если требуются функциональные возможности панели инструментов, создайте объект, производный от [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md).
+Как `CPane` правило, объекты не мгновенно напрямую. Если требуется панель сстыковки, извлекайте объект из [CDockablePane.](../../mfc/reference/cdockablepane-class.md) Если вам требуется функциональность панели инструментов, выберите объект из [CMFCToolBar.](../../mfc/reference/cmfctoolbar-class.md)
 
-Если класс является производным от `CPane`, его можно закрепить в [CDockSite](../../mfc/reference/cdocksite-class.md) и перемещать в [кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md).
+Когда вы получаете `CPane`класс от, он может быть пристыкован в [CDockSite](../../mfc/reference/cdocksite-class.md) и он может быть плавал в [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -262,11 +262,11 @@ class CPane : public CBasePane
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** афкспане. h
+**Заголовок:** afxPane.h
 
-##  <a name="adjustsizeimmediate"></a>CPane:: Аджустсизеиммедиате
+## <a name="cpaneadjustsizeimmediate"></a><a name="adjustsizeimmediate"></a>CPane::AdjustSizeImmediate
 
-Немедленное повторное вычисление макета панели.
+Немедленно пересчитывает расположение панели.
 
 ```
 virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
@@ -275,13 +275,13 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bRecalcLayout*<br/>
-окне Значение TRUE для автоматического повторного вычисления макета панели; в противном случае — значение FALSE.
+(в) TRUE для автоматического пересчета макета панели; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод следует вызывать при динамическом изменении макета панели. Например, может потребоваться вызвать этот метод при скрытии или отображении кнопок панели инструментов.
+Вызовите этот метод, когда вы динамически измените макет панели. Например, вы можете вызвать этот метод, когда вы прячете или показываете кнопки панели инструментов.
 
-##  <a name="allocelements"></a>CPane:: Аллоцелементс
+## <a name="cpaneallocelements"></a><a name="allocelements"></a>CPane:AllocElements
 
 Выделяет хранилище для внутреннего использования.
 
@@ -293,19 +293,19 @@ BOOL AllocElements(
 
 ### <a name="parameters"></a>Параметры
 
-*нелементс*<br/>
-окне Число элементов, для которых выделяется хранилище.
+*nЭлементы*<br/>
+(в) Количество элементов, для которых выделено хранилище.
 
-*кбелемент*<br/>
-окне Размер элемента в байтах.
+*cbElement*<br/>
+(в) Размер, в байтах, элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение FALSE, если выделение памяти завершается ошибкой; в противном случае — значение TRUE.
+FALSE, если выделение памяти не удается; в противном случае, ПРАВДА.
 
-##  <a name="allowshowonpanemenu"></a>CPane:: Алловшовонпанемену
+## <a name="cpaneallowshowonpanemenu"></a><a name="allowshowonpanemenu"></a>CPane::AllowShowOnPaneMenu
 
-Указывает, указана ли панель в списке созданных средой выполнения панелей для приложения.
+Уточняется, указана ли панель в списке сгенерированных времен выполнения стекол для приложения.
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -313,15 +313,15 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель отображается в списке; в противном случае — значение FALSE. Базовая реализация всегда возвращает значение TRUE.
+TRUE, если панель отображается в списке; в противном случае, FALSE. Базовая реализация всегда возвращает TRUE.
 
 ### <a name="remarks"></a>Remarks
 
-Приложение, созданное помощью мастера, содержит пункт меню, в котором перечислены панели, которые он содержит. Этот метод определяет, отображается ли панель в списке.
+Приложение, генерируемое AppWizard, содержит опцию меню, в которой перечислены содержащиеся в нем панели. Этот метод определяет, отображается ли панель в списке.
 
-##  <a name="calcavailablesize"></a>CPane:: Калкаваилаблесизе
+## <a name="cpanecalcavailablesize"></a><a name="calcavailablesize"></a>CPane::CalcAvailableSize
 
-Вычисляет разность по размеру между указанным прямоугольником и текущим прямоугольником окна.
+Вычисляет разницу в размерах между указанным прямоугольником и текущим прямоугольником окна.
 
 ```
 virtual CSize CalcAvailableSize(CRect rectRequired);
@@ -329,16 +329,16 @@ virtual CSize CalcAvailableSize(CRect rectRequired);
 
 ### <a name="parameters"></a>Параметры
 
-*ректрекуиред*<br/>
-окне Требуемый прямоугольник.
+*rectRequired*<br/>
+(в) Необходимый прямоугольник.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Разница в ширине и высоте между *ректрекуиред* и текущим прямоугольником окна.
+Разница в ширине и высоте между *прямой* и текущей прямоугольник окна.
 
-##  <a name="calcinsiderect"></a>CPane:: КалЦинсидерект
+## <a name="cpanecalcinsiderect"></a><a name="calcinsiderect"></a>CPane::CalcInsideRect
 
-Вычисляет внутренний прямоугольник панели, включая границы и захват.
+Высчитывает внутренний прямоугольник панели, включая границы и захваты.
 
 ```
 void CalcInsideRect(
@@ -349,18 +349,18 @@ void CalcInsideRect(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-заполняет Содержит размер и смещение клиентской области панели.
+(ваут) Содержит размер и смещение клиентской области панели.
 
-*бхорз*<br/>
-окне Значение TRUE, если панель ориентирована горизонтально; в противном случае — значение FALSE.
+*bHorz*<br/>
+(в) ПРАВДА, если панель ориентирована горизонтально; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда требуется повторно вычислить макет для панели. Параметр *Rect* заполняется размером и смещением клиентской области панели. Сюда входят его границы и захват.
+Этот метод вызывается фректовом, когда он должен пересчитать макет для панели. Параметр *прямой кишки* заполняется размером и смещением клиентской области панели. Это включает в себя его границы и захваты.
 
-##  <a name="calcrecentdockedrect"></a>CPane:: Калкрецентдоккедрект
+## <a name="cpanecalcrecentdockedrect"></a><a name="calcrecentdockedrect"></a>CPane::CalcRecentDockedRect
 
-Вычисляет недавно закрепленный прямоугольник.
+Высчитывает недавно состыкованный прямоугольник.
 
 ```
 void CalcRecentDockedRect();
@@ -368,9 +368,9 @@ void CalcRecentDockedRect();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод обновляет [CPane:: m_recentDockInfo](#m_recentdockinfo).
+Этот метод обновляет [CPane::m_recentDockInfo](#m_recentdockinfo).
 
-##  <a name="calcsize"></a>CPane:: Калксизе
+## <a name="cpanecalcsize"></a><a name="calcsize"></a>CPane::CalcSize
 
 Вычисляет размер панели.
 
@@ -380,20 +380,20 @@ virtual CSize CalcSize(BOOL bVertDock);
 
 ### <a name="parameters"></a>Параметры
 
-*бвертдокк*<br/>
-окне Значение TRUE, если область закреплена по вертикали, и FALSE в противном случае.
+*bVertDock*<br/>
+(в) ПРАВДА, если панель в настоящее время состыкован вертикально, FALSE в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Реализация по умолчанию этого метода возвращает размер (0, 0).
+Реализация этого метода по умолчанию возвращает размер (0, 0).
 
 ### <a name="remarks"></a>Remarks
 
-Производные классы должны переопределять этот метод.
+Выведенные классы должны переопределить этот метод.
 
-##  <a name="canbedocked"></a>CPane:: Канбедоккед
+## <a name="cpanecanbedocked"></a><a name="canbedocked"></a>CPane::CanBeDocked
 
-Определяет, можно ли закрепить панель на указанной базовой панели.
+Определяет, можно ли пристыковать на указанном базовом стене.
 
 ```
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
@@ -401,22 +401,22 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккбар*<br/>
-окне Задает область, в которой будет закреплена эта панель.
+*pDockBar*<br/>
+(в) Определяет панель, где это стекло должно быть пристыковано.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если эту область можно закрепить на заданной закрепляемой панели; в противном случае — значение FALSE.
+ПРАВДА, если это срава можно состыковать на указанном стыковочном стыковке; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод обычно вызывается платформой, чтобы определить, можно ли закрепить область в заданной закрепляемой области. Чтобы определить, можно ли закрепить панель, метод вычисляет текущее выравнивание закрепления на панели.
+Этот метод обычно вызывается фреймворком, чтобы определить, можно ли пристыковать панель к указанному стыковочному стыковке. Чтобы определить, можно ли стыковку панели, метод оценивает выравнивание стыковки панели.
 
-Вы включаете прикрепление к различным сторонам окна фрейма путем вызова [CBasePane:: енабледоккинг](../../mfc/reference/cbasepane-class.md#enabledocking).
+Вы позволяете стыковку с различными сторонами окна рамы, позвонив [cBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="canbetabbeddocument"></a>CPane:: Канбетаббеддокумент
+## <a name="cpanecanbetabbeddocument"></a><a name="canbetabbeddocument"></a>CPane:CanBeTabbedДокумент
 
-Определяет, можно ли преобразовать область в документ с вкладками.
+Определяет, можно ли преобразовать панель в документ с вкладками.
 
 ```
 virtual BOOL CanBeTabbedDocument() const;
@@ -424,15 +424,15 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область можно преобразовать в документ с вкладками; в противном случае — значение FALSE.
+TRUE, если панель может быть преобразована в вкладку документа; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Переопределите этот метод в производном классе и возвратите значение FALSE, если необходимо запретить преобразование панели в документ с вкладками. Документ с вкладками не будет отображаться в меню «Расположение окна».
+Переопределить этот метод в производном классе и вернуть FALSE, если вы хотите предотвратить преобразование панели в документ вкладки. Документ вкладок не будет указан в меню позиции окна.
 
-##  <a name="converttotabbeddocument"></a>CPane:: Конверттотаббеддокумент
+## <a name="cpaneconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPane::ConvertToTabbedДокумент
 
-Преобразует закрепляемую область в документ с вкладками.
+Преобразует док-панель в документ с вкладками.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -440,14 +440,14 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*бактиветабонли*<br/>
-окне Не используется в `CPane::ConvertToTabbedDocument`.
+*bActiveTabТолько*<br/>
+(в) Не используется `CPane::ConvertToTabbedDocument`в .
 
 ### <a name="remarks"></a>Remarks
 
-Только закрепляемые области можно преобразовать в документы с вкладками. Дополнительные сведения см. в разделе [CDockablePane:: конверттотаббеддокумент](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
+Только док-панели могут быть преобразованы в вкладки документов. Для получения информации [см. CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).
 
-##  <a name="copystate"></a>CPane:: Копистате
+## <a name="cpanecopystate"></a><a name="copystate"></a>CPane::CopyState
 
 Копирует состояние панели.
 
@@ -457,16 +457,16 @@ virtual void CopyState(CPane* pOrgBar);
 
 ### <a name="parameters"></a>Параметры
 
-*поргбар*<br/>
-окне Указатель на область.
+*pOrgBar*<br/>
+(в) Указатель на панель.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод копирует состояние *поргбар* в текущую область.
+Этот метод копирует состояние *pOrgBar* к текущей панели.
 
-##  <a name="create"></a>CPane:: Create
+## <a name="cpanecreate"></a><a name="create"></a>CPane::Создание
 
-Создает панель элементов управления и прикрепляет ее к объекту [CPane](../../mfc/reference/cpane-class.md) .
+Создает панель управления и прикрепляет ее к объекту [CPane.](../../mfc/reference/cpane-class.md)
 
 ```
 virtual BOOL Create(
@@ -481,40 +481,40 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзкласснаме*<br/>
-окне Указывает имя класса Windows.
+*lpszClassName*<br/>
+(в) Упогоняет название класса Windows.
 
-*двстиле*<br/>
-окне Задает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окон](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+(в) Определяет атрибуты стиля окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *rect*<br/>
-окне Задает начальный размер и расположение окна *ппарентвнд* в клиентских координатах.
+(в) В координатах клиента указывается начальный размер и положение окна *pParentWnd.*
 
-*ппарентвнд*<br/>
-[вход, выход] Указывает родительское окно этой панели.
+*pParentWnd*<br/>
+(в, вне) Определяет родительское окно этого стекла.
 
 *nID*<br/>
-окне Указывает идентификатор панели.
+(в) Упоняет идентификатор панели.
 
-*двконтролбарстиле*<br/>
-окне Задает стиль панели. Дополнительные сведения см. в разделе [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).
+*dwControlBarStyle*<br/>
+(в) Определяет стиль для панели. Для получения дополнительной информации [см. CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[вход, выход] Указывает контекст создания панели.
+(в, вне) Определяет контекст создания панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель успешно создана; в противном случае — значение FALSE.
+ПРАВДА, если панель была создана успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод создает панель Windows и прикрепляет ее к объекту `CPane`.
+Этот метод создает панель Windows и прикрепляет его к объекту. `CPane`
 
-Если вы не инициализирулись явным образом [CPane:: m_recentDockInfo](#m_recentdockinfo) перед вызовом `Create`, параметр *Rect* будет использоваться в качестве прямоугольника при плавающей или закреплении панели.
+Если вы явно не инициализировали [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом, `Create` *прямой* параметр будет использоваться в качестве прямоугольника при плавании или стыковке панели.
 
-##  <a name="createdefaultminiframe"></a>CPane:: Креатедефаултминифраме
+## <a name="cpanecreatedefaultminiframe"></a><a name="createdefaultminiframe"></a>CPane::CreateDefaultMiniframe
 
-Создает окно мини-кадра для плавающей панели.
+Создает окно мини-рамки для плавающей панели.
 
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -522,22 +522,22 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 
 ### <a name="parameters"></a>Параметры
 
-*ректинитиал*<br/>
-окне Задает начальный размер и расположение (в экранных координатах) создаваемого окна мини-кадра.
+*ректПервоначальный*<br/>
+(в) Определяет первоначальный размер и положение в координатах экрана для создания окна мини-рамки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Созданное окно в свернутом фрейме.
+Недавно созданное окно мини-кадра.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для создания окна мини-кадра при перемещении панели. Окно мини-кадра может иметь тип [кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md) или [кмултипанефрамевнд](../../mfc/reference/cmultipaneframewnd-class.md). Если панель имеет стиль AFX_CBRS_FLOAT_MULTI, создается окно с несколькими мини-кадрами.
+Этот метод вызывается фректовом для создания окна мини-кадра при плавании панели. Окно мини-кадра может быть типа [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) или типа [CMultiPaneFrameWnd.](../../mfc/reference/cmultipaneframewnd-class.md) Несколько мини-кадрового окна создается, если панель имеет AFX_CBRS_FLOAT_MULTI стиль.
 
-Сведения о классе среды выполнения для окна мини-кадра хранятся в элементе `CPane::m_pMiniFrameRTC`. Можно использовать производный класс для установки этого элемента, если вы решили создать настраиваемые окна мини-фрейма.
+Информация о классе времени выполнения для окна `CPane::m_pMiniFrameRTC` мини-кадра хранится в участнике. Вы можете использовать производный класс, чтобы установить этот член, если вы решите создать индивидуальные окна мини-рамки.
 
-##  <a name="createex"></a>CPane:: Креатикс
+## <a name="cpanecreateex"></a><a name="createex"></a>CPane::CreateEx
 
-Создает панель элементов управления и прикрепляет ее к объекту [CPane](../../mfc/reference/cpane-class.md) .
+Создает панель управления и прикрепляет ее к объекту [CPane.](../../mfc/reference/cpane-class.md)
 
 ```
 virtual BOOL CreateEx(
@@ -553,43 +553,43 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-*двстиликс*<br/>
-окне Задает атрибуты расширенного стиля окна. Дополнительные сведения см. в разделе [Расширенные стили окон](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).
+*dwStyleEx*<br/>
+(в) Определяет расширенные атрибуты стиля окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
-*лпсзкласснаме*<br/>
-окне Указывает имя класса Windows.
+*lpszClassName*<br/>
+(в) Упогоняет название класса Windows.
 
-*двстиле*<br/>
-окне Задает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окон](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle*<br/>
+(в) Определяет атрибуты стиля окна. Для получения дополнительной информации [см.](../../mfc/reference/styles-used-by-mfc.md#window-styles)
 
 *rect*<br/>
-окне Задает начальный размер и расположение окна *ппарентвнд* в клиентских координатах.
+(в) В координатах клиента указывается начальный размер и положение окна *pParentWnd.*
 
-*ппарентвнд*<br/>
-[вход, выход] Указывает родительское окно этой панели.
+*pParentWnd*<br/>
+(в, вне) Определяет родительское окно этого стекла.
 
 *nID*<br/>
-окне Указывает идентификатор панели.
+(в) Упоняет идентификатор панели.
 
-*двконтролбарстиле*<br/>
-окне Задает стиль панели. Дополнительные сведения см. в разделе [CBasePane:: креатикс](../../mfc/reference/cbasepane-class.md#createex).
+*dwControlBarStyle*<br/>
+(в) Определяет стиль для панели. Для получения дополнительной информации [см. CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
 *pContext*<br/>
-[вход, выход] Указывает контекст создания для панели.
+(в, вне) Определяет контекст создания панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель успешно создана; в противном случае — значение FALSE.
+ПРАВДА, если панель была создана успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод создает панель Windows и прикрепляет ее к объекту `CPane`.
+Этот метод создает панель Windows и прикрепляет его к объекту. `CPane`
 
-Если вы не инициализирулись явным образом [CPane:: m_recentDockInfo](#m_recentdockinfo) перед вызовом `CreateEx`, параметр *Rect* будет использоваться в качестве прямоугольника при плавающей или закреплении панели.
+Если вы явно не инициализировали [CPane::m_recentDockInfo](#m_recentdockinfo) перед вызовом, `CreateEx` *прямой* параметр будет использоваться в качестве прямоугольника при плавании или стыковке панели.
 
-##  <a name="dockbymouse"></a>CPane::D Оккбимаусе
+## <a name="cpanedockbymouse"></a><a name="dockbymouse"></a>CPane::DockByMouse
 
-Закрепляет панель с помощью мыши.
+Доки панели с помощью мыши.
 
 ```
 virtual BOOL DockByMouse(CBasePane* pDockBar);
@@ -597,16 +597,16 @@ virtual BOOL DockByMouse(CBasePane* pDockBar);
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккбар*<br/>
-окне Указывает базовую панель, в которую закрепляется эта панель.
+*pDockBar*<br/>
+(в) Определяет базовое стекло, к которому можно стыковки этого стекла.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель закреплена успешно. в противном случае — значение FALSE.
+ПРАВДА, если панель была пристыкована успешно; в противном случае, FALSE.
 
-##  <a name="dockpane"></a>CPane::D Оккпане
+## <a name="cpanedockpane"></a><a name="dockpane"></a>CPane::DockPane
 
-Закрепляет плавающую панель в базовую область.
+Доки плавающей панели к базовой панели.
 
 ```
 virtual BOOL DockPane(
@@ -617,35 +617,35 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккбар*<br/>
-[вход, выход] Указывает базовую область, в которую закрепляется эта панель.
+*pDockBar*<br/>
+(в, вне) Определяет базовое стекло для стыковки этого стека.
 
-*лпрект*<br/>
-окне Задает прямоугольник на базовой панели, в которой должна быть закреплена эта область.
+*lpRect*<br/>
+(в) Определяет прямоугольник на базовом стене, где это стекло должно быть пристыковано.
 
 *dockMethod*<br/>
-окне Указывает используемый метод закрепления. Доступны следующие параметры.
+(в) Определяет метод стыковки для использования. Доступные варианты:
 
-|Параметр|Description|
+|Параметр|Описание|
 |------------|-----------------|
-|DM_UNKNOWN|Платформа использует этот параметр, если метод закрепления неизвестен. На панели не хранится последняя Плавающая отстановка. Этот параметр также можно использовать для программной стыковки области, когда нет необходимости хранить Последнее плавающее положение.|
+|DM_UNKNOWN|Фрейм использует эту опцию, когда метод стыковки неизвестен. Панель не хранит свое последнее плавающее положение. Вы также можете использовать эту опцию для программной стыковки панели, когда вам не придется хранить последние плавающие позиции.|
 |DM_MOUSE|Для внутреннего использования.|
-|DM_DBL_CLICK|Этот параметр используется при двойном щелчке на захвате. Область располагается в последней позиции закрепления. Если область отсоединяется двойным щелчком, область перемещается в последнюю плавающую точку.|
-|DM_SHOW|Этот параметр можно использовать для программной закрепления панели. В области сохраняется последняя Плавающая отстановка.|
-|DM_RECT|Панель закрепляется в регионе, указанном параметром *лпрект*.|
-|DM_STANDARD|При использовании этого параметра платформа рисует область в виде фрейма структуры во время перемещения.|
+|DM_DBL_CLICK|Эта опция используется при двойном нажатии на захват. Панель перемещается в своей последней позиции стыковки. Если панель отстыкована двойным нажатием, панель перемещается в его последнем плавающем положении.|
+|DM_SHOW|Эта опция может быть использована для программной стыковки панели. Панель хранит свое последнее плавающее положение.|
+|DM_RECT|Панель пристыкована в регионе, указанном *lpRect.*|
+|DM_STANDARD|При использовании этой опции фреймворк рисует панель в качестве контура во время его перемещения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель закреплена успешно. в противном случае — значение FALSE.
+ПРАВДА, если панель была пристыкована успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод закрепляет область на базовой панели, заданной параметром *пдоккбар* . Сначала необходимо включить закрепление, вызвав [CBasePane:: енабледоккинг](../../mfc/reference/cbasepane-class.md#enabledocking).
+Этот метод пристыковывает панель к базовому стеку, указанному параметром *pDockBar.* Сначала необходимо включить стыковку, позвонив по [телефону CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).
 
-##  <a name="dockpanestandard"></a>CPane::D Оккпанестандард
+## <a name="cpanedockpanestandard"></a><a name="dockpanestandard"></a>CPane::DockPaneStandard
 
-Закрепляет панель, используя закрепление структуры (стандартная).
+Доки панели с помощью контура (стандартный) стыковки.
 
 ```
 virtual CPane* DockPaneStandard(BOOL& bWasDocked);
@@ -653,8 +653,8 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="parameters"></a>Параметры
 
-*бвасдоккед*<br/>
-окне Значение TRUE, если панель была успешно закреплена; в противном случае — значение FALSE.
+*bWasDocked*<br/>
+(в) ПРАВДА, если панель была успешно пристыкована; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -662,11 +662,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод используется только для панелей, которые являются производными от [класса CDockablePane](../../mfc/reference/cdockablepane-class.md). Дополнительные сведения см. в разделе [CDockablePane::D оккпанестандард](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
+Этот метод используется только для стекол, которые являются производными от [класса CDockablePane.](../../mfc/reference/cdockablepane-class.md) Для получения дополнительной информации см. [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard).
 
-##  <a name="docktoframewindow"></a>CPane::D Окктофрамевиндов
+## <a name="cpanedocktoframewindow"></a><a name="docktoframewindow"></a>CPane::DockToFrameWindow
 
-Закрепляет закрепляемую область для рамки.
+Доки док-панель к раме.
 
 ```
 virtual BOOL DockToFrameWindow(
@@ -680,33 +680,33 @@ virtual BOOL DockToFrameWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*двалигнмент*<br/>
-окне Сторона родительского фрейма, в которую необходимо закрепить панель.
+*dwAlignment*<br/>
+(в) Сторона родительского кадра, к которым вы хотите пристыковать панель.
 
-*лпрект*<br/>
-окне Указанный размер.
+*lpRect*<br/>
+(в) Указанный размер.
 
-*двдоккфлагс*<br/>
-окне Игнорируют.
+*dwDockFlags*<br/>
+(в) Игнорировать.
 
-*прелативебар*<br/>
-окне Игнорируют.
+*pRelativeBar*<br/>
+(в) Игнорировать.
 
-*нрелативеиндекс*<br/>
-окне Игнорируют.
+*nRelativeIndex*<br/>
+(в) Игнорировать.
 
-*баутередже*<br/>
-окне Если значение равно TRUE и существуют другие закрепляемые области на стороне, зафиксированные *двалигнмент*, панель закрепляется за пределами других панелей, ближе к краю родительского фрейма. Если значение равно FALSE, панель закрепляется ближе к центру клиентской области.
+*bOuterEdge*<br/>
+(в) Если TRUE и Есть другие док-панели на стороне, которые указаны *dwAlignment*, панель состыкован за пределами других стекол, ближе к краю родительского кадра. Если FALSE, панель пристыкована ближе к центру клиентской области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение FALSE, если не удается создать разделитель панели ( [класс кпанедивидер](../../mfc/reference/cpanedivider-class.md)); в противном случае — значение TRUE.
+FALSE, если стекло делитель [(CPaneDivider класса](../../mfc/reference/cpanedivider-class.md)) не может быть создан; в противном случае, ПРАВДА.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="doesallowsiblingbars"></a>CPane::D Оесалловсиблингбарс
+## <a name="cpanedoesallowsiblingbars"></a><a name="doesallowsiblingbars"></a>CPane::DoesAllowSiblingBars
 
-Указывает, можно ли закрепить другую панель в той же строке, где закреплена Текущая панель.
+Указывает, можно ли стыковку другого стекла в том же ряду, где текущее стекло пристыковано.
 
 ```
 virtual BOOL DoesAllowSiblingBars() const;
@@ -714,17 +714,17 @@ virtual BOOL DoesAllowSiblingBars() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель можно закрепить на другой панели в той же строке, что и сама. в противном случае — значение FALSE.
+ПРАВДА, если это стекло может пристыковаться к другой панели на том же ряду, как и себя; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вы можете включить или отключить это поведение, вызвав [CPane:: сетексклусиверовмоде](#setexclusiverowmode).
+Вы можете включить или отключить это поведение, позвонив [в CPane::SetExclusiveRowMode](#setexclusiverowmode).
 
-По умолчанию панели инструментов отключаются в режиме монопольной строки, а в строке меню включен режим монопольной строки.
+По умолчанию панели инструментов имеют эксклюзивный режим строки отключен, а панель меню имеет эксклюзивный режим строки включен.
 
-##  <a name="floatpane"></a>CPane:: Флоатпане
+## <a name="cpanefloatpane"></a><a name="floatpane"></a>CPane::FloatPane
 
-Перемещает панель в перемещаемую область.
+Плавает панель.
 
 ```
 virtual BOOL FloatPane(
@@ -735,26 +735,26 @@ virtual BOOL FloatPane(
 
 ### <a name="parameters"></a>Параметры
 
-*ректфлоат*<br/>
-окне Указывает расположение области при ее перемещении в экранных координатах.
+*rectFloat*<br/>
+(в) Определяет местоположение в координатах экрана, чтобы расположить панель, когда оно плавается.
 
 *dockMethod*<br/>
-окне Задает метод закрепления, используемый при перемещении панели. Список возможных значений см. в разделе [CPane::D оккпане](#dockpane).
+(в) Определяет метод стыковки для использования при плавании панели. Список возможных значений можно узнать на примере [CPane::DockPane.](#dockpane)
 
 *bShow*<br/>
-окне Значение TRUE для отображения области при перемещении в плавающую; в противном случае — значение FALSE.
+(в) TRUE, чтобы показать панель, когда плавал; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель была перемещена в плавающую область, или если панель не может быть плавающей, так как [CBasePane:: канфлоат](../../mfc/reference/cbasepane-class.md#canfloat) возвращает значение false; в противном случае — значение FALSE.
+ПРАВДА, если панель плавалуспешно или если панель не может быть плавал, потому что [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat) возвращает false; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы переместить панель в позиции, заданной параметром *ректфлоат* . Этот метод автоматически создает для панели родительское окно с мини-рамкой.
+Вызовите этот метод, чтобы плавать панели в положении, которое указывается параметром *rectFloat.* Этот метод автоматически создает родительское окно мини-рамки для панели.
 
-##  <a name="getavailableexpandsize"></a>CPane:: Жетаваилабликспандсизе
+## <a name="cpanegetavailableexpandsize"></a><a name="getavailableexpandsize"></a>CPane:GetAvailableExpandSize
 
-Возвращает объем (в пикселях), который может быть расширен областью.
+Возвращает сумму в пикселях, которую может расширить панель.
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -762,13 +762,13 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если панель закреплена по горизонтали, возвращаемое значение является доступной шириной; в противном случае возвращаемое значение является доступной высотой.
+Если панель пристыкована горизонтально, значение возврата представляет собой доступную ширину; в противном случае значение возврата — это доступная высота.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getavailablestretchsize"></a>CPane:: Жетаваилаблестретчсизе
+## <a name="cpanegetavailablestretchsize"></a><a name="getavailablestretchsize"></a>CPane:GetAvailableStretchSize
 
-Возвращает объем (в пикселях), который может сжиматься на панели.
+Возвращает сумму в пикселях, которую стекло может сжать.
 
 ```
 virtual int GetAvailableStretchSize() const;
@@ -776,13 +776,13 @@ virtual int GetAvailableStretchSize() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объем (в пикселях), на который может сжиматься область. Если панель закреплена по горизонтали, это значение является доступной шириной. в противном случае это доступная высота.
+Сумма в пикселях, которую может уменьшить панель. Если панель пристыкована горизонтально, то эта сумма является доступной шириной; в противном случае, это доступная высота.
 
 ### <a name="remarks"></a>Remarks
 
-Доступный размер растяжения вычисляется путем вычитания минимально допустимого размера панели ( [CPane:: жетминсизе](#getminsize)) из текущего размера ( [CWnd:: жетвиндоврект](../../mfc/reference/cwnd-class.md#getwindowrect)).
+Доступный размер растяжения рассчитывается путем вычитания минимального допустимого размера для панели [(CPane::GetMinSize](#getminsize)) от текущего размера [(CWnd::GetWindowRect).](../../mfc/reference/cwnd-class.md#getwindowrect)
 
-##  <a name="getborders"></a>CPane:: награницы
+## <a name="cpanegetborders"></a><a name="getborders"></a>CPane:GetBorders
 
 Возвращает ширину границ панели.
 
@@ -792,15 +792,15 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [крект](../../atl-mfc-shared/reference/crect-class.md) , который содержит текущую ширину (в пикселях) каждой стороны области. Например, значение элемента `left` объекта `CRect` равно ширине левой границы.
+Объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) содержащий текущую ширину в пикселях, каждой стороны панели. Например, значением `left` члена `CRect` объекта является ширина левой границы.
 
 ### <a name="remarks"></a>Remarks
 
-Чтобы задать размер границ, вызовите [CPane:: сетбордерс](#setborders).
+Чтобы установить размер границ, позвоните [cPane::SetBorders](#setborders).
 
-##  <a name="getclienthotspot"></a>CPane:: Жетклиенсотспот
+## <a name="cpanegetclienthotspot"></a><a name="getclienthotspot"></a>CPane:GetClientHotSpot
 
-Возвращает *активную точку* для панели.
+Возвращает *горячую точку* для стекол.
 
 ```
 CPoint GetClientHotSpot() const;
@@ -810,11 +810,11 @@ CPoint GetClientHotSpot() const;
 
 ### <a name="remarks"></a>Remarks
 
-*Гиперобъект* — это точка на панели, которую пользователь выбирает и удерживает для перемещения панели. Активная область используется для плавной анимации при перемещении панели из закрепленной должности.
+*Горячая точка* является точкой на панели, что пользователь выбирает и держит для перемещения панели. Горячая точка используется для плавной анимации, когда панель перемещается из пристыкованного положения.
 
-##  <a name="getdocksiterow"></a>CPane:: Жетдоккситеров
+## <a name="cpanegetdocksiterow"></a><a name="getdocksiterow"></a>CPane::GetDockSiteRow
 
-Возвращает строку закрепления ( [класс CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)), в которой закреплена панель.
+Возвращает строку док-станции [(класс CDockingPanesRow),](../../mfc/reference/cdockingpanesrow-class.md)в котором стекло пристыковано.
 
 ```
 CDockingPanesRow* GetDockSiteRow() const;
@@ -822,11 +822,11 @@ CDockingPanesRow* GetDockSiteRow() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`CDockingPanesRow`*, указывающий на строку закрепления, в которой закреплена панель, или значение NULL, если панель не закреплена.
+А, `CDockingPanesRow`который указывает на строку дока, в которой пристыковано стекло, или NULL, если панель не пристыкована.
 
-##  <a name="getexclusiverowmode"></a>CPane:: Жетексклусиверовмоде
+## <a name="cpanegetexclusiverowmode"></a><a name="getexclusiverowmode"></a>CPane::GetExclusiveRowMode
 
-Определяет, находится ли панель в режиме монопольной строки.
+Определяет, находится ли панель в эксклюзивном режиме строки.
 
 ```
 virtual BOOL GetExclusiveRowMode() const;
@@ -834,15 +834,15 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель находится в режиме монопольной строки; в противном случае — значение FALSE.
+TRUE, если панель находится в эксклюзивном режиме строки; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Дополнительные сведения о режиме монопольной строки см. в разделе [CPane:: сетексклусиверовмоде](#setexclusiverowmode).
+Для получения дополнительной информации об эксклюзивном режиме строки см. [CPane::SetExclusiveRowMode](#setexclusiverowmode).
 
-##  <a name="gethotspot"></a>CPane:: @ HotSpot
+## <a name="cpanegethotspot"></a><a name="gethotspot"></a>CPane:GetHotSpot
 
-Возвращает активную точку, которая хранится в базовом объекте `CMFCDragFrameImpl`.
+Возвращает горячую точку, хранящуюся в базовом `CMFCDragFrameImpl` объекте.
 
 ```
 CPoint GetHotSpot() const;
@@ -852,11 +852,11 @@ CPoint GetHotSpot() const;
 
 ### <a name="remarks"></a>Remarks
 
-Класс `CPane` содержит объект `CMFCDragFrameImpl`, `m_dragFrameImpl`, который отвечает за рисование прямоугольника, который появляется, когда пользователь перемещает панель в стандартном режиме закрепления. Активная область используется для рисования прямоугольника относительно текущей положения указателя мыши по мере того, как пользователь перемещает панель.
+Класс `CPane` содержит `CMFCDragFrameImpl` объект, `m_dragFrameImpl`который отвечает за рисование прямоугольника, который появляется, когда пользователь перемещает панель в стандартном режиме стыковки. Горячая точка используется для рисования прямоугольника относительно текущего положения мыши, когда пользователь перемещает панель.
 
-##  <a name="getminsize"></a>CPane:: Жетминсизе
+## <a name="cpanegetminsize"></a><a name="getminsize"></a>CPane:GetMinSize
 
-Возвращает минимально допустимый размер панели.
+Получает минимальный допустимый размер для панели.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -864,14 +864,14 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Параметры
 
-*size*<br/>
-заполняет Объект `CSize`, который заполняется минимальным допустимым размером.
+*Размер*<br/>
+(ваут) Объект, `CSize` наполненный минимально допустимым размером.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getpanename"></a>CPane:: Жетпаненаме
+## <a name="cpanegetpanename"></a><a name="getpanename"></a>CPane:GetPaneName
 
-Извлекает заголовок панели.
+Получает название для панели.
 
 ```
 virtual void GetPaneName(CString& strName) const;
@@ -880,13 +880,13 @@ virtual void GetPaneName(CString& strName) const;
 ### <a name="parameters"></a>Параметры
 
 *strName*<br/>
-заполняет Объект `CString`, который заполняется именем заголовка.
+(ваут) Объект, `CString` заполненный именем заголовка.
 
 ### <a name="remarks"></a>Remarks
 
-Заголовок панели отображается в области заголовка, когда область закреплена или плавающая. Если панель является частью группы с вкладками, заголовок отображается в области вкладки. Если панель находится в режиме автоматического скрытия, заголовок отображается на `CMFCAutoHideButton`.
+Заголовок панели отображается в области заголовка, когда панель пристыкована или плавает. Если панель является частью группы вкладок, заголовок отображается в области вкладок. Если панель находится в режиме автоматической скрытности, `CMFCAutoHideButton`заголовок отображается на .
 
-##  <a name="getvirtualrect"></a>CPane:: Жетвиртуалрект
+## <a name="cpanegetvirtualrect"></a><a name="getvirtualrect"></a>CPane:GetVirtualRect
 
 Извлекает *виртуальный прямоугольник* панели.
 
@@ -896,18 +896,18 @@ void GetVirtualRect(CRect& rectVirtual) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ректвиртуал*<br/>
-заполняет Объект `CRect`, который заполняется виртуальным прямоугольником.
+*rectVirtual*<br/>
+(ваут) Объект, `CRect` наполненный виртуальным прямоугольником.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении панели платформа сохраняет исходное расположение панели в виртуальном прямоугольнике. Платформа может использовать виртуальный прямоугольник для восстановления исходного расположения панели.
+При перемещении панели рамки хранят исходное положение панели в виртуальном прямоугольнике. Рамки могут использовать виртуальный прямоугольник для восстановления исходного положения панели.
 
-Не вызывайте методы, связанные с виртуальными прямоугольниками, если вы не перемещаете панели программным способом.
+Не вызывайте методы, связанные с виртуальными прямоугольниками, если вы не перемещаете панели программно.
 
-##  <a name="ischangestate"></a>CPane:: Исчанжестате
+## <a name="cpaneischangestate"></a><a name="ischangestate"></a>CPane::IsChangeState
 
-При перемещении панели этот метод анализирует свое положение относительно других панелей, закрепляет строки и окна мини-кадров и возвращает соответствующее значение AFX_CS_STATUS.
+При перемещении панели этот метод анализирует свое положение по сравнению с другими стеклами, строками доков и окнами мини-кадров и возвращает соответствующее AFX_CS_STATUS значение.
 
 ```
 virtual AFX_CS_STATUS IsChangeState(
@@ -917,26 +917,26 @@ virtual AFX_CS_STATUS IsChangeState(
 
 ### <a name="parameters"></a>Параметры
 
-*ноффсет*<br/>
-окне Указывает чувствительность к закреплениям. Например, панель, перемещаемая в пределах *ноффсет* пикселей из строки закрепления, будет закреплена.
+*nOffset*<br/>
+(в) Определяет чувствительность стыковки. Например, панель, которая перемещается в пределах *пикселей nOffset* из строки док-станции, будет пристыкована.
 
-*пптаржетбар*<br/>
-окне Когда метод возвращает, *пптаржетбар* содержит указатель на объект, к которому должна быть закреплена текущая область, или значение null, если закрепление не должно выполняться.
+*ppTargetBar*<br/>
+(в) При возврате метода *ppTargetBar* содержит либо указатель на объект, с которым должно быть пристыковано текущее стекло, либо NULL, если не должно произойти стыковка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Одно из следующих значений AFX_CS_STATUS:
+Одно из следующих AFX_CS_STATUS значений:
 
-|Значение|Description|
+|Значение|Описание|
 |-----------|-----------------|
-|CS_NOTHING|Эта панель не находится на сайте DOCKER. Платформа не закрепляет панель.|
-|CS_DOCK_IMMEDIATELY|Панель находится на сайте DOCKER, а стиль DT_IMMEDIATE включен. Платформа закрепляет эту панель немедленно.|
-|CS_DELAY_DOCK|Панель находится на сайте закрепления, который является либо другой закрепляемой областью, либо границей главного фрейма. Платформа закрепляет область, когда пользователь отпускает перемещение.|
-|CS_DELAY_DOCK_TO_TAB|Панель находится на сайте закрепления, в результате чего панель закрепляется в окне с вкладками. Это происходит, когда панель находится либо над заголовком другой панели закрепления, либо над областью вкладок в области вкладок. Платформа закрепляет область, когда пользователь отпускает перемещение.|
+|CS_NOTHING|Панель не находится рядом с док-станцией. Фрейм не стыковки панели.|
+|CS_DOCK_IMMEDIATELY|Панель находится над док-станцией, и DT_IMMEDIATE стиль включен. Рамки немедленно пристыковываются к панели.|
+|CS_DELAY_DOCK|Панель находится над док-сайт, который является либо другой стыковки стекла или края основной рамы. Рамочная система пристыковивает панель, когда пользователь выпускает ход.|
+|CS_DELAY_DOCK_TO_TAB|Панель находится над док-сайт, который вызывает панель, чтобы быть пристыкован в вкладке окна. Это происходит, когда панель либо над подписью другого стыковки панели или над вкладкой области вкладки панели. Рамочная система пристыковивает панель, когда пользователь выпускает ход.|
 
-##  <a name="isdragmode"></a>CPane:: Исдрагмоде
+## <a name="cpaneisdragmode"></a><a name="isdragmode"></a>CPane::IsDragMode
 
-Указывает, выполняется ли перемещение панели.
+Определяет, перемещается ли панель.
 
 ```
 virtual BOOL IsDragMode() const;
@@ -944,13 +944,13 @@ virtual BOOL IsDragMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель перемещается; в противном случае — значение FALSE.
+ПРАВДА, если панель перемещается; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="isinfloatingmultipaneframewnd"></a>CPane:: Исинфлоатингмултипанефрамевнд
+## <a name="cpaneisinfloatingmultipaneframewnd"></a><a name="isinfloatingmultipaneframewnd"></a>CPane::IsInFloatingMultiPaneFrameWnd
 
-Указывает, находится ли панель в окне фрейма с несколькими панелями ( [класс кмултипанефрамевнд](../../mfc/reference/cmultipaneframewnd-class.md)).
+Определяет, находится ли панель в многопанельном окне [кадра (класс CMultiPaneFrameWnd).](../../mfc/reference/cmultipaneframewnd-class.md)
 
 ```
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
@@ -958,15 +958,15 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель находится в окне рамки с несколькими панелями; в противном случае — значение FALSE.
+ПРАВДА, если панель находится в многопанельном окне кадра; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Только закрепляемые области могут перемещаться в окне фрейма с несколькими панелями. Таким образом, `CPane::IsInFloatingMultiPaneFrameWnd` всегда возвращает значение FALSE.
+Только док-панели могут плавать в многопанельном окне рамы. Таким `CPane::IsInFloatingMultiPaneFrameWnd` образом, всегда возвращает FALSE.
 
-##  <a name="isleftof"></a>CPane:: Ислефтоф
+## <a name="cpaneisleftof"></a><a name="isleftof"></a>CPane::IsLeftOf
 
-Определяет, является ли панель левой (или более поздней) указанным прямоугольником.
+Определяет, остается ли панель (или выше) указанного прямоугольника.
 
 ```
 bool IsLeftOf(
@@ -977,20 +977,20 @@ bool IsLeftOf(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-окне Объект `CRect`, используемый для сравнения.
+(в) Объект, `CRect` который используется для сравнения.
 
-*бвиндоврект*<br/>
-окне Если значение равно TRUE, предполагается, что *Rect* содержит экранные координаты; Если значение равно FALSE, предполагается, что *Rect* содержит клиентские координаты.
+*bWindowRect*<br/>
+(в) Если TRUE, *рект* предполагается содержать координаты экрана; если FALSE, *рект* предполагается содержать координаты клиента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-Если панель закреплена по горизонтали, этот метод проверяет, находится ли его расположение слева от *Rect*. В противном случае этот метод проверяет, находится ли расположение выше *Rect*.
+Если панель пристыкована горизонтально, этот метод проверяет, не осталось ли его местоположение *от рект.* В противном случае, этот метод проверяет, находится ли местоположение выше *rect.*
 
-##  <a name="isresizable"></a>CPane:: Исресизабле
+## <a name="cpaneisresizable"></a><a name="isresizable"></a>CPane::Изменяемые
 
-Указывает, доступен ли размер панели.
+Определяет, является ли панель изрешечие.
 
 ```
 virtual BOOL IsResizable() const;
@@ -998,19 +998,19 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если размер области может изменяться; в противном случае — значение FALSE.
+ПРАВДА, если панель изменяемые; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Базовый размер объектов `CPane` не допускает изменения размера.
+Базовые `CPane` объекты не изменяемы.
 
-Диспетчер закрепления использует флаг изменения размера для определения макета панели. Неизменяемые панели всегда расположены на внешних краях родительского фрейма.
+Менеджер стыковки использует изменяемый флаг для определения макета панели. Неизрешимые стекла всегда расположены на внешних краях родительской рамы.
 
-Неизменяемые панели не могут находиться в контейнерах закрепления.
+Неизрешимые стекла не могут встыковочных контейнерах.
 
-##  <a name="istabbed"></a>CPane:: с вкладками
+## <a name="cpaneistabbed"></a><a name="istabbed"></a>CPane::IsTabbed
 
-Определяет, вставлена ли панель в элемент управления вкладки окна с вкладками.
+Определяет, было ли вставлено стекло в управление вкладкой окна вкладки.
 
 ```
 virtual BOOL IsTabbed() const;
@@ -1018,13 +1018,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если панель имеет вкладки; в противном случае — значение FALSE.
+ПРАВДА, если панель вкладке; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Состояние с вкладками обрабатывается отдельно от состояний "плавающий", "закреплено" и "автоматически скрыто".
+Состояние вкладок обрабатывается отдельно от плавающих, пристыкованных и автоматически скрытых состояний.
 
-##  <a name="loadstate"></a>CPane:: LoadState
+## <a name="cpaneloadstate"></a><a name="loadstate"></a>CPane::НагрузкаГосударство
 
 Загружает состояние панели из реестра.
 
@@ -1037,28 +1037,28 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
-*ниндекс*<br/>
-окне Индекс профиля.
+*Nindex*<br/>
+(в) Индекс профиля.
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Pane ID.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние панели было успешно загружено; в противном случае — значение FALSE.
+TRUE, если состояние панели было загружено успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Платформа вызывает этот метод для загрузки состояния панели из реестра. Переопределите его в производном классе, чтобы загрузить дополнительные сведения, сохраненные с помощью [CPane:: SaveState](#savestate).
+Платформа вызывает этот метод для загрузки состояния панели из реестра. Переопределить его в производном классе для загрузки дополнительной информации, которая сохраняется [CPane::SaveState](#savestate).
 
-При переопределении этого метода также вызывается базовый метод и возвращается значение FALSE, если базовый метод возвращает значение FALSE.
+При переопределение этого метода, также позвоните в базовый метод и верните FALSE, если базовый метод возвращает FALSE.
 
-##  <a name="m_bhandleminsize"></a>CPane:: m_bHandleMinSize
+## <a name="cpanem_bhandleminsize"></a><a name="m_bhandleminsize"></a>CPane::m_bHandleMinSize
 
-Включает последовательную обработку минимальных размеров панели.
+Обеспечивает последовательную обработку минимальных размеров панели.
 
 ```
 AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
@@ -1066,13 +1066,13 @@ AFX_IMPORT_DATA static BOOL m_bHandleMinSize;
 
 ### <a name="remarks"></a>Remarks
 
-Если одна или несколько панелей закрепления в приложении переопределяют `GetMinSize`или если приложение вызывает `SetMinSize`, может потребоваться установить для этого статического элемента значение TRUE, чтобы платформа могла постоянно выполнять обработку размеров панелей.
+Если одно или несколько стыковочных стекол в приложении переопределяются, `GetMinSize`или если ваше приложение вызывает, `SetMinSize`вы можете установить этот статический член к TRUE, чтобы позволить инфраструктуре последовательно обрабатывать размер стекол.
 
-Если это значение равно TRUE, то все области, размер которых должен быть меньше их минимального размера, обрезаются, а не растягиваются. Так как платформа использует области окна для изменения размера панели, не меняйте размер области окна для закрепляемых панелей, если это значение равно TRUE.
+Если это значение установлено на истину, все стекла, размер которых должен быть уменьшен ниже их минимального размера обрезаются, а не растягивается. Поскольку в фрейм-регионах используются оконные области для целей размеров панели, не изменяйте размер области окна для стыковочных стекол, если это значение настроено на TRUE.
 
-##  <a name="m_recentdockinfo"></a>CPane:: m_recentDockInfo
+## <a name="cpanem_recentdockinfo"></a><a name="m_recentdockinfo"></a>CPane::m_recentDockInfo
 
-Содержит последние сведения о закреплении.
+Содержит последние стыковки информации.
 
 ```
 CRecentDockSiteInfo m_recentDockInfo;
@@ -1080,11 +1080,11 @@ CRecentDockSiteInfo m_recentDockInfo;
 
 ### <a name="remarks"></a>Remarks
 
-Платформа сохраняет последние сведения о состоянии закрепления для панели в этом элементе.
+Рамки хранят последнюю информацию о состоянии стыковки для панели в этом члене.
 
-##  <a name="movebyalignment"></a>CPane:: Мовебялигнмент
+## <a name="cpanemovebyalignment"></a><a name="movebyalignment"></a>CPane::MoveByAlignment
 
-Перемещает панель и виртуальный прямоугольник на заданный объем.
+Перемещает панель и виртуальный прямоугольник на указанное количество.
 
 ```
 BOOL MoveByAlignment(
@@ -1094,29 +1094,29 @@ BOOL MoveByAlignment(
 
 ### <a name="parameters"></a>Параметры
 
-*двалигнмент*<br/>
-окне Задает выравнивание панели.
+*dwAlignment*<br/>
+(в) Определяет выравнивание стекла.
 
-*ноффсет*<br/>
-окне Величина (в пикселях) перемещения области и виртуального прямоугольника.
+*nOffset*<br/>
+(в) Количество, в пикселях, с помощью которых можно перемещать стекло и виртуальный прямоугольник.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Remarks
 
-*двалигнмент* может иметь любое из следующих значений:
+*dwAlignment* может быть любым из следующих значений:
 
-|Значение|Description|
+|Значение|Описание|
 |-----------|-----------------|
-|CBRS_ALIGN_TOP|Позволяет закреплять панель в верхней части клиентской области окна фрейма.|
-|CBRS_ALIGN_BOTTOM|Позволяет закреплять панель в нижней части клиентской области окна фрейма.|
-|CBRS_ALIGN_LEFT|Включает Прикрепление панели к левой стороне клиентской области окна фрейма.|
-|CBRS_ALIGN_RIGHT|Включает Прикрепление панели к правой стороне клиентской области окна фрейма.|
-|CBRS_ALIGN_ANY|Позволяет закреплять панель на любой стороне клиентской области окна фрейма.|
+|CBRS_ALIGN_TOP|Позволяет пристыковать стыковку панели к верхней части клиентской области окна рамы.|
+|CBRS_ALIGN_BOTTOM|Позволяет пристыковать спереди панели к нижней части клиентской области окна рамы.|
+|CBRS_ALIGN_LEFT|Позволяет пристыковать спереди панели с левой стороны клиентской области окна рамы.|
+|CBRS_ALIGN_RIGHT|Позволяет пристыковать спереди панели с правой стороны клиентской области окна рамы.|
+|CBRS_ALIGN_ANY|Позволяет пристыковать стыковку панели к любой стороне клиентской области окна рамы.|
 
-Если *двалигнмент* содержит флаг CBRS_ALIGN_LEFT или CBRS_ALIGN_RIGHT, панель и виртуальный прямоугольник перемещаются горизонтально; в противном случае, если *двалигнмент* содержит флаг CBRS_ALIGN_TOP или CBRS_ALIGN_BOTTOM, панель и виртуальный прямоугольник перемещаются вертикально.
+Если *dwAlignment* содержит CBRS_ALIGN_LEFT или CBRS_ALIGN_RIGHT флаг, панель и виртуальный прямоугольник перемещаются горизонтально; в противном случае, если *dwAlignment* содержит CBRS_ALIGN_TOP или CBRS_ALIGN_BOTTOM флаг, панель и виртуальный прямоугольник перемещаются вертикально.
 
-##  <a name="movepane"></a>CPane:: Мовепане
+## <a name="cpanemovepane"></a><a name="movepane"></a>CPane:MovePane
 
 Перемещает панель в указанный прямоугольник.
 
@@ -1129,26 +1129,26 @@ virtual CSize MovePane(
 
 ### <a name="parameters"></a>Параметры
 
-*ректнев*<br/>
-окне Задает новый прямоугольник для панели.
+*rectNew*<br/>
+(в) Определяет новый прямоугольник для панели.
 
-*бфорцемове*<br/>
-окне Если значение — TRUE, этот метод игнорирует минимально разрешенный размер панели ( [CPane:: жетминсизе](#getminsize)); в противном случае панель корректируется, если это необходимо, чтобы убедиться в том, что он не меньше минимально допустимого размера.
+*bForceMove*<br/>
+(в) Если true, этот метод игнорирует минимальный допустимый размер панели [(CPane::GetMinSize);](#getminsize) в противном случае панель корректируется, если это необходимо, чтобы убедиться, что это по крайней мере минимальный допустимый размер.
 
-*хдвп*<br/>
+*hdwp*<br/>
 [in] Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CSize`, который содержит различия в ширине и высоте между новым и старым прямоугольниками (старый прямоугольник — *ректнев*).
+Объект, `CSize` содержащий различия в ширине и высоте между новыми и старыми прямоугольниками (старый прямоугольник - *rectNew).*
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод используется только для закрепляемых областей.
+Этот метод используется только для док-станций.
 
-##  <a name="onafterchangeparent"></a>CPane:: Онафтерчанжепарент
+## <a name="cpaneonafterchangeparent"></a><a name="onafterchangeparent"></a>CPane::OnAfterChangeParent
 
-Вызывается структурой при изменении родителя панели.
+Вызывается по фреймворку при изменении родительского панели.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -1156,16 +1156,16 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Параметры
 
-*пвндолдпарент*<br/>
-[вход, выход] Предыдущее родительское окно панели.
+*pWndOldParent*<br/>
+(в, вне) Предыдущее родительское окно панели.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда изменился родительский элемент панели из-за операции закрепления или плавающего объекта.
+Этот метод вызывается фрекингом, когда родительский панель изменяется из-за стыковки или плавающей операции.
 
-##  <a name="onafterdock"></a>CPane:: Онафтердокк
+## <a name="cpaneonafterdock"></a><a name="onafterdock"></a>CPane::OnAfterDock
 
-Вызывается структурой при закрепленной области.
+Вызывается по рамкам, когда панель была пристыкована.
 
 ```
 virtual void OnAfterDock(
@@ -1176,18 +1176,18 @@ virtual void OnAfterDock(
 
 ### <a name="parameters"></a>Параметры
 
-*пбар*<br/>
-окне Этот параметр не используется.
+*pBar*<br/>
+(в) Этот параметр не используется.
 
-*лпрект*<br/>
-окне Этот параметр не используется.
+*lpRect*<br/>
+(в) Этот параметр не используется.
 
 *dockMethod*<br/>
-окне Этот параметр не используется.
+(в) Этот параметр не используется.
 
-##  <a name="onafterfloat"></a>CPane:: Онафтерфлоат
+## <a name="cpaneonafterfloat"></a><a name="onafterfloat"></a>CPane::OnAfterFloat
 
-Вызывается структурой после того, как панель перемещается в плавающую область.
+Вызывается рамкой после панели поплавков.
 
 ```
 virtual void OnAfterFloat();
@@ -1195,11 +1195,11 @@ virtual void OnAfterFloat();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод можно переопределить в производном классе, если требуется выполнить обработку после перемещения панели.
+Вы можете переопределить этот метод в производном классе, если вы хотите выполнить любую обработку после поплавков панели.
 
-##  <a name="onbeforechangeparent"></a>CPane:: Онбефоречанжепарент
+## <a name="cpaneonbeforechangeparent"></a><a name="onbeforechangeparent"></a>CPane::OnBeforeChangeParent
 
-Вызывается структурой при изменении родительского элемента области.
+Вызывается по структуре, когда родитель панели собирается измениться.
 
 ```
 virtual void OnBeforeChangeParent(
@@ -1209,21 +1209,21 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Параметры
 
-*пвндневпарент*<br/>
-[вход, выход] Указывает новое родительское окно.
+*pWndNewParent*<br/>
+(в, вне) Определяет новое родительское окно.
 
-*бделай*<br/>
-окне Значение TRUE, чтобы задержать настройку макета глобальной закрепления; в противном случае — значение FALSE.
+*bDelay*<br/>
+(в) TRUE для задержки глобальной корректировки макета стыковки; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда родительский элемент области собирается измениться, так как область закреплена или плавающая.
+Этот метод вызывается фреймворком, когда родитель панели собирается измениться, потому что панель пристыкована или плавает.
 
-По умолчанию на панели закрепления область отменяется путем вызова `CDockSite::RemovePane`.
+По умолчанию панель не зарегистрирована с стыковочным стыковком при вызове. `CDockSite::RemovePane`
 
-##  <a name="onbeforedock"></a>CPane:: Онбефоредокк
+## <a name="cpaneonbeforedock"></a><a name="onbeforedock"></a>CPane::OnBeforeDock
 
-Вызывается структурой, когда область собирается закрепляться.
+Вызывается по рамкам, когда панель вот-вот стыковки.
 
 ```
 virtual BOOL OnBeforeDock(
@@ -1234,26 +1234,26 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Параметры
 
-*ппдоккбар*<br/>
-[вход, выход] Задает область, к которой закрепляется эта панель.
+*ppDockBar*<br/>
+(в, вне) Определяет панель, к которым стыковка стыковка.
 
-*лпрект*<br/>
-окне Задает закрепляемый прямоугольник.
+*lpRect*<br/>
+(в) Определяет прямоугольник стыковки.
 
 *dockMethod*<br/>
-окне Задает метод закрепления.
+(в) Определяет метод стыковки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область можно закрепить. Если функция возвращает значение FALSE, операция закрепления будет прервана.
+ПРАВДА, если панель может быть пристыкован. Если функция возвращает FALSE, операция стыковки будет прервана.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда область собирается закрепляться. Этот метод можно переопределить в производном классе, если требуется выполнить обработку перед закреплением области.
+Этот метод вызывается фреймворком, когда панель вот-вот будет пристыкована. Вы можете переопределить этот метод в производном классе, если вы хотите выполнить любую обработку до того, как панель наконец пристыковается.
 
-##  <a name="onbeforefloat"></a>CPane:: Онбефорефлоат
+## <a name="cpaneonbeforefloat"></a><a name="onbeforefloat"></a>CPane::OnBeforeFloat
 
-Вызывается структурой, когда область перемещается в float.
+Вызывается по фреймворку, когда панель вот-вот поплывет.
 
 ```
 virtual BOOL OnBeforeFloat(
@@ -1263,23 +1263,23 @@ virtual BOOL OnBeforeFloat(
 
 ### <a name="parameters"></a>Параметры
 
-*ректфлоат*<br/>
-окне Задает расположение и размер панели, если она находится в плавающем состоянии.
+*rectFloat*<br/>
+(в) Определяет положение и размер панели, когда оно находится в плавающем состоянии.
 
 *dockMethod*<br/>
-окне Задает метод закрепления панели.
+(в) Определяет метод стыковки панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если область может быть плавающей; в противном случае — значение FALSE.
+ПРАВДА, если панель может быть плавал; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда область перемещается в float. Этот метод можно переопределить в производном классе, если требуется выполнить обработку до того, как панель в конечном итоге будет плавающей.
+Этот метод вызывается фреймворком, когда панель вот-вот поплывет. Вы можете переопределить этот метод в производном классе, если вы хотите выполнить любую обработку до того, как панель наконец поплавки.
 
-##  <a name="onpressclosebutton"></a>CPane:: Онпрессклосебуттон
+## <a name="cpaneonpressclosebutton"></a><a name="onpressclosebutton"></a>CPane::OnPressCloseButton
 
-Вызывается структурой при нажатии пользователем кнопки "Закрыть" в заголовке панели.
+Вызывается по фрейму, когда пользователь нажимает кнопку закрытия на заголовок для панели.
 
 ```
 virtual void OnPressCloseButton();
@@ -1287,9 +1287,9 @@ virtual void OnPressCloseButton();
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой, когда пользователь нажимает кнопку **Закрыть** в заголовке панели. Чтобы получать уведомления о событии **закрытия** , можно переопределить этот метод в производном классе.
+Этот метод вызывается фреймворком, когда пользователь нажимает кнопку **«Закрыть»** на заголовке панели. Для получения уведомлений о событии **Close** можно переопределить этот метод в производном классе.
 
-##  <a name="onshowcontrolbarmenu"></a>CPane:: Оншовконтролбармену
+## <a name="cpaneonshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CPane::OnShowControlBarMenu
 
 Вызывается платформой непосредственно перед отображением меню особой панели.
 
@@ -1299,20 +1299,20 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-окне Указывает расположение меню.
+*Точки*<br/>
+(в) Определяет расположение меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если меню можно отобразить; в противном случае — значение FALSE.
+ПРАВДА, если меню может быть отображено; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Меню содержит несколько элементов, которые позволяют указать поведение панели, а именно: **плавающий**, **закрепление**, **Автоскрытие**и **Скрытие**. Это меню можно включить для всех панелей, вызвав [кдоккингманажер:: енабледоккситемену](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Меню содержит несколько элементов, которые позволяют указать поведение панели, а именно: **Плавающие**, **Стыковка**, **AutoHide**, и **скрыть**. Вы можете включить это меню для всех стекол, позвонив [cDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
-##  <a name="recalclayout"></a>CPane:: RecalcLayout
+## <a name="cpanerecalclayout"></a><a name="recalclayout"></a>CPane:RecalcLayout
 
-Повторно вычисляет сведения о макете для панели.
+Пересчитывает информацию о макете для панели.
 
 ```
 virtual void RecalcLayout();
@@ -1320,13 +1320,13 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Remarks
 
-Если панель закреплена, этот метод обновляет виртуальный прямоугольник для панели, устанавливая его размер равным текущему размеру панели.
+Если панель пристыкована, этот метод обновляет виртуальный прямоугольник для панели, установив его размер до текущего размера панели.
 
-Если панель является плавающей, этот метод уведомляет родительский мини-кадр, чтобы настроить размер панели до размера мини-рамки. Платформа гарантирует, что мини-кадр имеет по крайней мере минимальный размер, допустимый для панели ( [CPane:: жетминсизе](#getminsize)), и при необходимости изменяет размер мини-рамки.
+Если панель плавает, этот метод уведомляет родительский мини-кадр, чтобы настроить размер панели до размера мини-рамки. Рамки гарантирует, что мини-кадр, по крайней мере, минимальный допустимый размер для панели [(CPane::GetMinSize](#getminsize)) и изменяет размер мини-рамки, если это необходимо.
 
-##  <a name="savestate"></a>CPane:: SaveState
+## <a name="cpanesavestate"></a><a name="savestate"></a>CPane::SaveState
 
-Сохраняет состояние панели в реестре.
+Сохраняет состояние панели в реестр.
 
 ```
 virtual BOOL SaveState(
@@ -1337,28 +1337,28 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>Параметры
 
-*лпсзпрофиленаме*<br/>
-окне Имя профиля.
+*lpszProfileName*<br/>
+(в) Имя профиля.
 
-*ниндекс*<br/>
-окне Индекс профиля.
+*Nindex*<br/>
+(в) Индекс профиля.
 
 *uiID*<br/>
-окне Идентификатор области.
+(в) Pane ID.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если состояние успешно сохранено; в противном случае — значение FALSE.
+ПРАВДА, если государство было сохранено успешно; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Платформа вызывает этот метод при сохранении состояния панели в реестре. Переопределите `SaveState` в производном классе для хранения дополнительных сведений.
+Платформа вызывает этот метод, когда он сохраняет состояние панели в реестре. Переопределение `SaveState` в производной классе для хранения дополнительной информации.
 
-При переопределении этого метода также вызывается базовый метод и возвращается значение FALSE, если базовый метод возвращает значение FALSE.
+При переопределение этого метода, также позвоните в базовый метод и верните FALSE, если базовый метод возвращает FALSE.
 
-##  <a name="setactiveingroup"></a>CPane:: Сетактивеинграуп
+## <a name="cpanesetactiveingroup"></a><a name="setactiveingroup"></a>CPane::SetActiveInGroup
 
-Помечает панель как активную.
+Флаги панели как активные.
 
 ```
 virtual void SetActiveInGroup(BOOL bActive);
@@ -1366,20 +1366,20 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="parameters"></a>Параметры
 
-*бактиве*<br/>
-окне Логическое значение, указывающее, помечена ли панель как активная.
+*bАктивный*<br/>
+(в) BOOL, который определяет, является ли панель помечена как активная.
 
 ### <a name="remarks"></a>Remarks
 
-При отображении закрепляемой области или нажатии кнопки автоматического скрытия соответствующая панель автоматически скрытия помечается как активная.
+При отображаемом стыковке или выбрана кнопка автоматического скрытия, соответствующее автоматическое стекло помечается как активное.
 
-Внешний вид кнопки автоматического скрытия, связанной с панелью, зависит от двух факторов. Если панель активна и `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` имеет значение TRUE, платформа отображает кнопку автоматического скрытия в виде значка и метки. Для неактивной области платформа отображает только значок автоматического скрытия.
+Появление кнопки автоматической скрытности, которая связана с стеклом, основано на двух факторах. Если панель активна, а `static BOOL CMFCAutoHideButton::m_bOverlappingTabs` это правда, фреймворк отображает кнопку автоматического сокрытия в виде значка и метки. Для неактивного стекла фреймворк отображает только значок автоматической скрытия.
 
-Если `CMFCAutoHideButton::m_bOverlappingTabs` имеет значение FALSE или панель не расположена в группе, платформа отображает связанную кнопку автоматического скрытия в виде значка и метки.
+Если `CMFCAutoHideButton::m_bOverlappingTabs` это FALSE, или если панель не находится в группе, фреймворк отображает связанную кнопку автоматического сокрытия в виде значка и метки.
 
-##  <a name="setborders"></a>CPane:: Сетбордерс
+## <a name="cpanesetborders"></a><a name="setborders"></a>CPane::SetBorders
 
-Задает значения границ панели.
+Устанавливает значения границы панели.
 
 ```
 void SetBorders(
@@ -1393,28 +1393,28 @@ void SetBorders(LPCRECT lpRect);
 
 ### <a name="parameters"></a>Параметры
 
-*ккслефт*<br/>
-окне Задает ширину (в пикселях) левой границы панели.
+*cxLeft*<br/>
+(в) Определяет ширину, в пикселях, левой границы панели.
 
-*цитоп*<br/>
-окне Задает ширину (в пикселях) верхней границы панели.
+*cyTop*<br/>
+(в) Определяет ширину в пикселях верхней границы панели.
 
-*кксригхт*<br/>
-окне Задает ширину (в пикселях) правой границы панели.
+*cxRight*<br/>
+(в) Определяет ширину в пикселях правой границы стекла.
 
-*циботтом*<br/>
-окне Задает ширину (в пикселях) нижней границы панели.
+*cyBottom*<br/>
+(в) Определяет ширину в пикселях нижнюю границу панели.
 
-*лпрект*<br/>
-окне Объект [крект](../../atl-mfc-shared/reference/crect-class.md) , который содержит ширину (в пикселях) каждой границы панели.
+*lpRect*<br/>
+(в) Объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) содержащий ширину в пикселях, каждой границы панели.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите эту функцию, чтобы задать размеры границ панели.
+Вызовите эту функцию, чтобы установить размеры границ панели.
 
-##  <a name="setclienthotspot"></a>CPane:: Сетклиенсотспот
+## <a name="cpanesetclienthotspot"></a><a name="setclienthotspot"></a>CPane::SetClientHotSpot
 
-Задает *активную точку* для панели.
+Устанавливает *горячую точку* для панели.
 
 ```
 void SetClientHotSpot(const CPoint& ptNew);
@@ -1423,15 +1423,15 @@ void SetClientHotSpot(const CPoint& ptNew);
 ### <a name="parameters"></a>Параметры
 
 *ptNew*<br/>
-окне Объект `CPoint`, указывающий новую активную точку.
+(в) Объект, `CPoint` опознававав новую горячую точку.
 
 ### <a name="remarks"></a>Remarks
 
-*Гиперобъект* — это точка на панели, которую пользователь выбирает и удерживает для перемещения панели. Активная область используется для плавной анимации при перетаскивании панели из закрепленной точки.
+*Горячая точка* является точкой на панели, что пользователь выбирает и держит для перемещения панели. Горячая точка используется для плавной анимации, когда панель перетаскивается из пристыкованного положения.
 
-##  <a name="setdockstate"></a>CPane:: Сетдоккстате
+## <a name="cpanesetdockstate"></a><a name="setdockstate"></a>CPane::SetDockState
 
-Восстанавливает сведения о состоянии закрепления для панели.
+Восстанавливает информацию о состоянии стыковки для панели.
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -1439,18 +1439,18 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>Параметры
 
-*пдоккманажер*<br/>
-окне Указатель на диспетчер закрепления для главного окна фрейма.
+*pDockManager*<br/>
+(в) Указатель на менеджер стыковки для окна основной рамы.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой для восстановления последних сведений о состоянии закрепления для панели. В области хранятся последние сведения о состоянии закрепления в [CPane:: m_recentDockInfo](#m_recentdockinfo). Дополнительные сведения см. в описании [класса крецентдоккситеинфо](../../mfc/reference/crecentdocksiteinfo-class.md).
+Этот метод вызывается инфраструктурой для восстановления информации о состоянии последних стыковок для панели. Панель хранит последние стыковки информации о состоянии в [CPane::m_recentDockInfo](#m_recentdockinfo). Для получения дополнительной информации, [см.](../../mfc/reference/crecentdocksiteinfo-class.md)
 
-Этот метод также можно вызвать для задания состояния закрепления при загрузке сведений о панели из внешнего источника.
+Можно также вызвать этот метод для установки состояния стыковки при загрузке информации о панели из внешнего источника.
 
-##  <a name="setexclusiverowmode"></a>CPane:: Сетексклусиверовмоде
+## <a name="cpanesetexclusiverowmode"></a><a name="setexclusiverowmode"></a>CPane::SetExclusiveRowMode
 
-Включает или отключает режим монопольной строки.
+Позволяет или отключает эксклюзивный режим строки.
 
 ```
 virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
@@ -1458,18 +1458,18 @@ virtual void SetExclusiveRowMode(BOOL bExclusive = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*бексклусиве*<br/>
-окне Значение TRUE, чтобы включить режим монопольной строки; в противном случае — значение FALSE.
+*bЭксклюзив*<br/>
+(в) TRUE для включения эксклюзивного режима строки; в противном случае, FALSE.
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы включить или отключить режим монопольной строки. Если панель находится в режиме монопольной строки, она не может совместно использовать одну и ту же строку с другими панелями инструментов.
+Вызовите этот метод, чтобы включить или отключить эксклюзивный режим строки. Когда панель находится в эксклюзивном режиме строки, она не может поделиться одной строкой с любыми другими панели инструментов.
 
-По умолчанию для всех панелей инструментов отключен режим монопольной строки, а в строке меню включен режим монопольной строки.
+По умолчанию все панели инструментов имеют эксклюзивный режим строки отключен, а панель меню имеет эксклюзивный режим строки включен.
 
-##  <a name="setminsize"></a>CPane:: Сетминсизе
+## <a name="cpanesetminsize"></a><a name="setminsize"></a>CPane:SetMinSize
 
-Задает минимальный допустимый размер панели.
+Устанавливает минимальный допустимый размер для панели.
 
 ```
 void SetMinSize(const CSize& size);
@@ -1477,14 +1477,14 @@ void SetMinSize(const CSize& size);
 
 ### <a name="parameters"></a>Параметры
 
-*size*<br/>
-окне Объект `CSize`, который содержит минимальный допустимый размер панели.
+*Размер*<br/>
+(в) Объект, `CSize` содержащий минимальный допустимый размер для панели.
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setvirtualrect"></a>CPane:: Сетвиртуалрект
+## <a name="cpanesetvirtualrect"></a><a name="setvirtualrect"></a>CPane::SetVirtualRect
 
-Задает *виртуальный прямоугольник* панели.
+Устанавливает *виртуальный прямоугольник* панели.
 
 ```
 void SetVirtualRect(
@@ -1495,20 +1495,20 @@ void SetVirtualRect(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-окне Объект `CRect`, указывающий виртуальный прямоугольник, который необходимо задать.
+(в) Объект, `CRect` опознававательный виртуальный прямоугольник.
 
-*бмаптопарент*<br/>
-окне Укажите значение TRUE, если *Rect* содержит точки относительно родительского окна.
+*bMapToParent*<br/>
+(в) Укажите TRUE, если *rect* содержит точки по отношению к родительскому окну.
 
 ### <a name="remarks"></a>Remarks
 
-*Виртуальный прямоугольник* сохраняет исходное расположение панели при его перемещении. Платформа может использовать виртуальный прямоугольник для восстановления исходной позицией.
+*Виртуальный прямоугольник* сохраняет исходное положение панели при перемещении. Для восстановления исходного положения в фреймворке можно использовать виртуальный прямоугольник.
 
-Не вызывайте методы, связанные с виртуальными прямоугольниками, если вы не перемещаете панели программным способом.
+Не вызывайте методы, связанные с виртуальными прямоугольниками, если вы не перемещаете панели программно.
 
-##  <a name="setminiframertc"></a>CPane:: Сетминифрамертк
+## <a name="cpanesetminiframertc"></a><a name="setminiframertc"></a>CPane:SetMiniFrameRTC
 
-Задает сведения о классе среды выполнения для окна мини-кадра по умолчанию.
+Устанавливает информацию о классе времени выполнения для окна мини-кадра по умолчанию.
 
 ```
 void SetMiniFrameRTC(CRuntimeClass* pClass);
@@ -1516,16 +1516,16 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Параметры
 
-*пкласс*<br/>
-[вход, выход] Указывает сведения о классе среды выполнения для окна мини-кадра.
+*pClass*<br/>
+(в, вне) Определяет информацию о классе времени выполнения для окна мини-кадра.
 
 ### <a name="remarks"></a>Remarks
 
-При перемещении панели она помещается в окно [кпанефрамевнд](../../mfc/reference/cpaneframewnd-class.md) (мини-рамка). Можно предоставить пользовательский класс, производный от `CPaneFrameWnd`, который будет использоваться при вызове [CPane:: креатедефаултминифраме](#createdefaultminiframe) .
+Когда панель плавается, она ставится на [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md) (мини-рамки) окно. Вы можете предоставить класс, полученный из пользовательского типа, `CPaneFrameWnd`который будет использоваться при вызове [CPane::CreateDefaultMiniframe.](#createdefaultminiframe)
 
-##  <a name="stretchpanedeferwndpos"></a>CPane:: Стретчпанедефервндпос
+## <a name="cpanestretchpanedeferwndpos"></a><a name="stretchpanedeferwndpos"></a>CPane::StretchPaneDeferWndPos
 
-Растягивает область по вертикали или горизонтали на основе стиля закрепления.
+Растягивает панель вертикально или горизонтально на основе стиля стыковки.
 
 ```
 virtual int StretchPaneDeferWndPos(
@@ -1535,23 +1535,23 @@ virtual int StretchPaneDeferWndPos(
 
 ### <a name="parameters"></a>Параметры
 
-*нстретчсизе*<br/>
-окне Величина растяжения области (в пикселях). Используйте отрицательное значение для сжатия панели.
+*nStretchSize*<br/>
+(в) Сумма, в пикселях, чтобы растянуть панель. Используйте отрицательное значение для сокращения панели.
 
-*хдвп*<br/>
+*hdwp*<br/>
 [in] Не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Фактическая величина растянутой панели в пикселях.
+Фактическая сумма, в пикселях, что панель была растянута.
 
 ### <a name="remarks"></a>Remarks
 
-При необходимости этот метод изменяет *нстретчсизе* , чтобы убедиться, что размер области не превышает ограничений по размеру. Эти ограничения получаются путем вызова [CPane:: жетаваилаблестретчсизе](#getavailablestretchsize) и [CPane:: жетаваилабликспандсизе](#getavailableexpandsize).
+При необходимости этот метод изменяет *nStretchSize,* чтобы убедиться, что панель не превышает предельных размеров. Эти ограничения получены по телефону [CPane::GetAvailableStretchSize](#getavailablestretchsize) и [CPane::GetAvailableExpandSize](#getavailableexpandsize).
 
-##  <a name="toggleautohide"></a>CPane:: Тогглеаутохиде
+## <a name="cpanetoggleautohide"></a><a name="toggleautohide"></a>CPane::ToggleAutoHide
 
-Переключает режим автоматического скрытия.
+Переключает режим автоматической скрытности.
 
 ```
 virtual void ToggleAutoHide();
@@ -1559,11 +1559,11 @@ virtual void ToggleAutoHide();
 
 ### <a name="remarks"></a>Remarks
 
-Вызовите этот метод, чтобы включить режим автоматического скрытия. Область должна быть закреплена в главном окне фрейма, чтобы переключиться в режим автоматического скрытия.
+Вызовите этот метод, чтобы переключить режим автоматического укрытия. Для переключения в режим автоматической скрытности панель должна быть пристыкована к окну основной рамы.
 
-##  <a name="undockpane"></a>CPane:: Ундоккпане
+## <a name="cpaneundockpane"></a><a name="undockpane"></a>CPane::UndockPane
 
-Удаляет панель с сайта закрепления, ползунка по умолчанию или окно мини-кадра, в котором она в данный момент закреплена.
+Удаляет панель с места док-станции, ползунок по умолчанию или окна мини-рамки, где она в настоящее время пристыкована.
 
 ```
 virtual void UndockPane(BOOL bDelay = FALSE);
@@ -1571,14 +1571,14 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 
 ### <a name="parameters"></a>Параметры
 
-*бделай*<br/>
-окне Если значение равно FALSE, платформа вызывает [CBasePane:: аджустдоккинглайаут](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) для настройки макета закрепления.
+*bDelay*<br/>
+(в) Если FALSE, фреймворк вызывает [CBasePane::AdjustDockingLayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout) для настройки макета стыковки.
 
 ### <a name="remarks"></a>Remarks
 
-Используйте этот метод для программной открепления панели.
+Используйте этот метод, чтобы программно отстыковать панель.
 
-##  <a name="updatevirtualrect"></a>CPane:: Упдатевиртуалрект
+## <a name="cpaneupdatevirtualrect"></a><a name="updatevirtualrect"></a>CPane::UpdateVirtualRect
 
 Обновляет виртуальный прямоугольник.
 
@@ -1590,19 +1590,19 @@ void UpdateVirtualRect(CSize sizeNew);
 
 ### <a name="parameters"></a>Параметры
 
-*птоффсет*<br/>
-окне Объект `CPoint`, указывающий смещение для сдвига панели.
+*ptOffset*<br/>
+(в) Объект, `CPoint` который определяет смещение, с помощью которого смещается панель.
 
-*сизенев*<br/>
-окне Объект `CSize`, указывающий новый размер панели.
+*размерНовый*<br/>
+(в) Объект, `CSize` опознававательный новый размер панели.
 
 ### <a name="remarks"></a>Remarks
 
-Первая перегрузка задает виртуальный прямоугольник, используя текущую точку и размер панели.
+Первая перегрузка устанавливает виртуальный прямоугольник, используя текущее положение и размер панели.
 
-Вторая перегрузка сдвигает виртуальный прямоугольник на величину, заданную параметром *птоффсет*.
+Вторая перегрузка сдвигает виртуальный прямоугольник на сумму, указанную *ptOffset.*
 
-Третья перегрузка задает виртуальный прямоугольник, используя текущую точку панели и размер, заданный параметром *сизенев*.
+Третья перегрузка устанавливает виртуальный прямоугольник, используя текущее положение панели и размер, который определяется *размеромNew*.
 
 ## <a name="see-also"></a>См. также раздел
 

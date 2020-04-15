@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425661"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363037"
 ---
 # <a name="ltistreamgt-operators"></a>Операторы &lt;istream&gt;
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Оператор&gt;&gt;
 
 Извлекает символы и строки из потока.
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-\ *CH*
+*Ch*\
 Символ.
 
-*Istr*\
+*Истр*\
 Поток.
 
-\ *str*
+*Ул*\
 Строка.
 
-*val*\
+*Валь*\
 Тип.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-Извлекает до `N - 1` элементов и сохраняет их в массиве, начиная с *str*. Если `Istr.`ная [Ширина](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет `Istr.width`; в противном случае это размер самого крупного массива `Elem`, который может быть объявлен. Функция всегда сохраняет значение `Elem()` после извлеченных элементов, которые он хранит. Извлечение останавливается на раннем конце файла, на символ со значением `Elem(0)` (который не извлекается) или на любом элементе (который не извлекается), который будет отклонен [WS](../standard-library/istream-functions.md#ws). Если функция не извлекает элементы, она вызывает `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае он вызывает `Istr.width(0)` и возвращает значение *ISTR*.
+извлекает до `N - 1` элементов и хранит их в массиве, начиная с *str.* Если `Istr.` [ширина](../standard-library/ios-base-class.md#width) больше нуля, `Istr.width` *N* ; в противном случае, это размер `Elem` самого большого массива, который может быть объявлен. Функция всегда хранит `Elem()` значение после любых извлеченных элементов, которые она хранит. Извлечение останавливается рано в конце `Elem(0)` файла, на символе со значением (который не извлечен), или на любом элементе (который не извлечен), который будет отброшен [ws.](../standard-library/istream-functions.md#ws) Если функция не извлекает элементов, она вызывает `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`. В любом случае, `Istr.width(0)` он вызывает и возвращает *Istr*.
 
-**Примечание по безопасности** Строка, завершающаяся нулем, извлекаемая из входного потока, не должна превышать размер строки *целевого буфера.* Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Примечание безопасности** Нулевая строка, извлеченная из входного потока, не должна превышать размер *строки*буфера назначения. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
 Шаблон функции:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-Извлекает элемент, если это возможно, и сохраняет его в *CH*. В противном случае он вызывает `is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. В любом случае возвращается *ISTR*.
+извлекает элемент, если это возможно, и хранит его в *Ch*. В противном `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`случае, он вызывает . В любом случае, он возвращает *Istr*.
 
 Шаблон функции:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Возвращает `Istr >> val` (и преобразует ссылку rvalue в `Istr` в качестве значения lvalue в процессе).
+возвращает `Istr >> val` (и преобразует ссылку `Istr` на rvalue к lvalue в процессе).
 
 ### <a name="example"></a>Пример
 

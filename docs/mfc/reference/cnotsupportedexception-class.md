@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
-ms.openlocfilehash: c3af508cd39e277ca4ae0a9aad5e639f66edc53b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b859b939baef018e69b245e597eea90e608253ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407930"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363197"
 ---
 # <a name="cnotsupportedexception-class"></a>Класс CNotSupportedException
 
@@ -29,15 +29,15 @@ class CNotSupportedException : public CSimpleException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Создает объект `CNotSupportedException`.|
+|[CNotSupportedИсключение::CNotSupportedИсключение](#cnotsupportedexception)|Формирует объект `CNotSupportedException`.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Без дальнейшего уточнения невозможна и не требуется.
+Никакая дальнейшая квалификация не требуется или невозможна.
 
-Дополнительные сведения об использовании `CNotSupportedException`, см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).
+Для получения дополнительной `CNotSupportedException`информации [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md)об использовании см.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -53,19 +53,19 @@ class CNotSupportedException : public CSimpleException
 
 **Заголовок:** afx.h
 
-##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException
+## <a name="cnotsupportedexceptioncnotsupportedexception"></a><a name="cnotsupportedexception"></a>CNotSupportedИсключение::CNotSupportedИсключение
 
-Создает объект `CNotSupportedException`.
+Формирует объект `CNotSupportedException`.
 
 ```
 CNotSupportedException();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Не используйте этот конструктор напрямую, но вместо этого вызовите глобальную функцию [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Дополнительные сведения об обработке исключений см. в статье [обработка исключений в MFC](../exception-handling-in-mfc.md).
+Не используйте этот конструктор напрямую, а скорее позвоните в глобальную функцию [AfxThrowNotSupported.](exception-processing.md#afxthrownotsupportedexception) для получения дополнительной информации об [Exception Handling in MFC](../exception-handling-in-mfc.md)обработке исключений см.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CException](cexception-class.md)<br/>
 [Диаграмма иерархии](../hierarchy-chart.md)

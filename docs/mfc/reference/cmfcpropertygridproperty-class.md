@@ -166,18 +166,18 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310461"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361818"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
 
-Объект `CMFCPropertyGridProperty` представляет элемент списка в элементе управления списком свойств.
+Объект `CMFCPropertyGridProperty` представляет элемент списка в элементе списка в управлении списком свойств.
 
-   Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
+   Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -189,115 +189,115 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Создает объект `CMFCPropertyGridProperty`.|
+|[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Формирует объект `CMFCPropertyGridProperty`.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridProperty::AddOption](#addoption)|Добавляет новый элемент списка в элементе управления списком свойств.|
-|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Добавляет дочерний элемент свойства.|
-|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|Вызывается элементом управления списка свойств родительского определить свойство, чтобы изменить размер ограничивающего прямоугольника кнопку "встроенные".|
-|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Извлекает границы текстового поля и необязательный счетчик-элемент управления, которые используются для задания значения свойства.|
-|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Делает свойство редактируемой или только для чтения.|
-|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Вызывается платформой для создания элемента управления редактирования для свойства.|
-|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Вызывается платформой для создания редактируемой управления "Счетчик".|
-|[CMFCPropertyGridProperty::Enable](#enable)|Включает или отключает свойство.|
-|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|Включает или отключает управления "Счетчик", который используется для изменения значения свойства.|
-|[CMFCPropertyGridProperty::Expand](#expand)|Разворачивает или сворачивает свойство, содержащее подсвойства.|
-|[CMFCPropertyGridProperty::FormatProperty](#formatproperty)|Форматирует текстовое представление значения свойства.|
-|[CMFCPropertyGridProperty::GetData](#getdata)|Извлекает значение DWORD, который связан со свойством.|
-|[CMFCPropertyGridProperty::GetDescription](#getdescription)|Возвращает описание свойства.|
-|[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|Возвращает число развернутые вложенные элементы.|
-|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|Возвращает отсчитываемый от нуля индекс свойства уровня иерархии.|
-|[CMFCPropertyGridProperty::GetName](#getname)|Получает имя свойства.|
-|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Вызвано структурой для отображения имени свойства в подсказке.|
-|[CMFCPropertyGridProperty::GetOption](#getoption)|Извлекает текст параметра, указанного с помощью индекса.|
-|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Получает число параметров, которые принадлежат к свойству.|
-|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Возвращает начальное значение текущего свойства.|
-|[CMFCPropertyGridProperty::GetParent](#getparent)|Извлекает указатель на родительское свойство.|
-|[CMFCPropertyGridProperty::GetRect](#getrect)|Получает прямоугольник, ограничивающий свойства.|
-|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Получает вложенные свойства, идентифицируемого по отсчитываемый от нуля индекс.|
-|[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|Получает число вложенных элементов.|
-|`CMFCPropertyGridProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
+|[CMFCPropertyGridProperty::AddOption](#addoption)|Добавляет новый элемент списка в элемент списка свойств.|
+|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Добавляет элемент ребенка в свойство.|
+|[CMFCPropertyGridНедвижимость::НастройкаButtonRect](#adjustbuttonrect)|Вызывается управлением родительского списка свойств, чтобы сообщить свойству изменить размер прямоугольника встроенной кнопки.|
+|[CMFCPropertyGridНедвижимость::AdjustInPlaceEditRect](#adjustinplaceeditrect)|Извлекает границы текстового поля и дополнительное управление кнопкой спина, которые используются для установки значения свойства.|
+|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|Делает свойство либо редисируемым, либо только для чтения.|
+|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|Вызывается инфраструктурой для создания элементируемого управления для свойств.|
+|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|Вызывается фреймворком для создания элементаруемого управления кнопками спина.|
+|[CMFCPropertyGridProperty::Включить](#enable)|Позволяет или отсвагает свойство.|
+|[CMFCPropertyGridProperty:EnableSpinControl](#enablespincontrol)|Позволяет или отменяет управление кнопкой вращения, используемое для изменения значения свойства.|
+|[CMFCPropertyGridProperty::Расширить](#expand)|Расширяет или разрушает свойство, содержащее суб-свойства.|
+|[CMFCPropertyGridProperty::ФорматНедвижимость](#formatproperty)|Форматирует текстовое представление значения свойства.|
+|[CMFCPropertyGridProperty::GetData](#getdata)|Получает значение DWORD, связанное с свойством.|
+|[CMFCPropertyGridProperty::GetDescription](#getdescription)|Извлекает описание свойства.|
+|[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|Извлекает количество расширенных подпунктов.|
+|[CMFCPropertyGridНедвижимость:GetHierarchyLevel](#gethierarchylevel)|Извлекает нулевой индекс уровня иерархии свойства.|
+|[CMFCPropertyGridProperty::GetName](#getname)|Получает название объекта.|
+|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|Вызывается фреймворком для отображения имени свойства в наборе инструментов.|
+|[CMFCPropertyGridProperty::GetOption](#getoption)|Извлекает текст опции, указанной индексом.|
+|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|Извлекает количество параметров, принадлежащих к свойству.|
+|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|Извлекает исходное значение текущего свойства.|
+|[CMFCPropertyGridProperty::: GetParent](#getparent)|Извлекает указатель на родительское свойство.|
+|[CMFCPropertyGridНедвижимость::GetRect](#getrect)|Извлекает прямоугольник свойства.|
+|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|Извлекает субсобственность, идентифицированную индексом на нулевой основе.|
+|[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|Извлекает количество подпунктов.|
+|`CMFCPropertyGridProperty::GetThisClass`|Используется фректором для получения указателя на объект [CRuntimeClass,](../../mfc/reference/cruntimeclass-structure.md) связанный с этим типом класса.|
 |[CMFCPropertyGridProperty::GetValue](#getvalue)|Извлекает значение свойства.|
-|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Вызывается платформой для извлечения текстовое представление значения свойства, которое отображается во всплывающей подсказке.|
-|[CMFCPropertyGridProperty::HitTest](#hittest)|Указывает объект свойства, соответствующий элемент списка свойств, который соответствует точке.|
-|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|Указывает, доступен ли свойство для изменения.|
-|[CMFCPropertyGridProperty::IsEnabled](#isenabled)|Указывает, включено ли свойство.|
-|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|Указывает, является ли свойство развернут или свернут.|
-|[CMFCPropertyGridProperty::IsGroup](#isgroup)|Указывает, представляет ли текущее свойство группы.|
-|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|Указывает, доступен ли изменения текущего свойства.|
-|[CMFCPropertyGridProperty::IsModified](#ismodified)|Указывает, был ли изменен текущего свойства.|
-|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|Указывает, развернуто ли родительские для текущего свойства.|
-|[CMFCPropertyGridProperty::IsSelected](#isselected)|Указывает, выбран ли текущее свойство.|
-|[CMFCPropertyGridProperty::IsVisible](#isvisible)|Указывает, видима ли текущее свойство.|
+|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|Вызывается инфраструктурой для получения текстового представления значения свойства, которое затем отображается в наборе инструментов.|
+|[CMFCPropertyGridProperty::HitTest](#hittest)|Указывает на объект свойства, который соответствует пункту списка свойств, который соответствует точке.|
+|[CMFCPropertyGridProperty::: Ведомости](#isallowedit)|Указывает, является ли свойство отсеиваемым.|
+|[CMFCPropertyGridProperty::: Источник: Lenta.08.2017 Источник: Информационное сооражец](#isenabled)|Указывается, включено или отключено свойство.|
+|[CMFCPropertyGridProperty::Расширенный](#isexpanded)|Указывает, расширяется или разрушается свойство.|
+|[CMFCPropertyGridProperty::Группа](#isgroup)|Указывает, представляет ли текущее свойство группу.|
+|[CMFCPropertyGridProperty::МестоРедактирование](#isinplaceediting)|Указывает, является ли текущее свойство отослаиваемым.|
+|[CMFCPropertyGridProperty:: Изменено](#ismodified)|Указывает, изменяется ли текущее свойство.|
+|[CMFCPropertyGridProperty::IsParentРасширенный](#isparentexpanded)|Указывается, расширяются ли родители текущего свойства.|
+|[CMFCPropertygridProperty::IsSelected](#isselected)|Указывает, выбрано ли текущее свойство.|
+|[CMFCPropertyGridProperty::Видимо](#isvisible)|Указывает, отображается ли текущее свойство.|
 |[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве.|
-|[CMFCPropertyGridProperty::OnClickName](#onclickname)|Вызывается родительским элементом управления списка свойств, когда пользователь щелкает поле имени свойства.|
-|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Вызывается родительским элементом управления списка свойств, когда пользователь щелкает поле значения свойства.|
-|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Вызывается платформой при закрытии поле со списком, содержащийся в свойстве.|
-|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Вызывается платформой, когда пользователь дважды щелкает свойство.|
-|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|Вызывается платформой для отрисовки кнопки, который содержится в свойстве.|
-|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|Вызвано структурой для отображения описания свойства.|
-|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|Вызывается платформой для отрисовки элемента развертывания поле рядом с свойством, которое содержит вложенные свойства.|
-|[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|Вызвано структурой для отображения имени свойства.|
-|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|Вызывается платформой для отображения значения свойства.|
-|[CMFCPropertyGridProperty::OnEdit](#onedit)|Вызывается платформой непосредственно перед изменением значения свойства пользователем.|
-|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Вызывается платформой при завершении пользователем изменение значения свойства.|
+|[CMFCPropertyGridProperty::OnClickName](#onclickname)|Вызывается управлением родительского списка свойств, когда пользователь нажимает на поле имени свойства.|
+|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|Вызывается управлением родительского списка свойств, когда пользователь нажимает на поле значения свойства.|
+|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|Вызывается по системе, когда комбо-бокс, содержащийся в свойстве, закрыт.|
+|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|Вызывается по системе, когда пользователь дважды щелкает свойство.|
+|[CMFCPropertyGridProperty::OndrawButton](#ondrawbutton)|Вызывается по системе, чтобы нарисовать кнопку, которая содержится в свойстве.|
+|[CMFCPropertyGridProperty::OndrawОписание](#ondrawdescription)|Вызывается по системе для отображения описания свойств.|
+|[CMFCPropertyGridProperty::OndrawExpandBox](#ondrawexpandbox)|Вызывается фреймворком, чтобы нарисовать элемент управления окном расширения вблизи свойства, содержащего суб-свойства.|
+|[CMFCPropertyGridProperty::OndrawName](#ondrawname)|Вызывается фреймворком для отображения имени свойства.|
+|[CMFCPropertyGridProperty::OndrawValue](#ondrawvalue)|Вызывается платформой для отображения значения свойства.|
+|[CMFCPropertyGridProperty::: Газета.](#onedit)|Вызывается платформой непосредственно перед изменением значения свойства пользователем.|
+|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|Вызывается инфраструктурой, когда пользователь закончил изменять значение свойства.|
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||
 |[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||
-|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Вызывается платформой по щелчку правой кнопкой мыши в области имя свойства.|
-|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|Вызывается платформой по щелчку правой кнопкой мыши в области значений свойства.|
-|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Вызывается платформой, когда пользователь выбирает элемент в поле со списком для редактирования.|
-|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Вызывается платформой при перемещении указателя мыши на элемент свойства.|
-|[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||
+|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|Вызывается по системе, когда пользователь нажимает правую кнопку мыши в области имени свойства.|
+|[CMFCPropertyGridProperty::OnrClickValue](#onrclickvalue)|Вызывается по системе, когда пользователь нажимает правую кнопку мыши в области значения свойства.|
+|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|Вызывается по системе, когда пользователь выбирает элемент из отсрабраваемой комбо-коробки.|
+|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|Вызывается по фрейму, когда указатель мыши перемещается к элементу свойства.|
+|[CMFCPropertyGridProperty::Выбор](#onsetselection)||
 |[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|Вызывается платформой при присвоении изменяемому свойству нового значения.|
-|[CMFCPropertyGridProperty::PushChar](#pushchar)|Вызывается из элемента управления списка свойств, если свойство, и пользователь вводит символ новой.|
+|[CMFCPropertyGridProperty::PushChar](#pushchar)|Вызывается из управления списком свойств, когда свойство выбрано и пользователь вводит новый символ.|
 |[CMFCPropertyGridProperty::Redraw](#redraw)|Перерисовывает свойство.|
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|Удаляет все параметры (элементы) из свойства.|
-|[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|Удаляет указанный вложенный элемент.|
-|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|Восстанавливает исходное значение измененного свойства.|
-|[CMFCPropertyGridProperty::SetData](#setdata)|Связывает значение типа DWORD со свойством.|
-|[CMFCPropertyGridProperty::SetDescription](#setdescription)|Задает текст, описывающий текущее свойство.|
-|[CMFCPropertyGridProperty::SetName](#setname)|Задает имя свойства.|
+|[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|Удаляет указанный субпункт.|
+|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|Восстанавливает исходное значение отредактированного свойства.|
+|[CMFCPropertyGridProperty::SetData](#setdata)|Ассоциирует значение DWORD с свойством.|
+|[CMFCPropertyGridProperty::SetОписание](#setdescription)|Определяет текст, описывающий текущее свойство.|
+|[CMFCPropertyGridProperty::SetName](#setname)|Устанавливается название объекта.|
 |[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству изначальное значение.|
-|[CMFCPropertyGridProperty::SetValue](#setvalue)|Задает значение свойства сетки свойств.|
+|[CMFCPropertyGridProperty::SetValue](#setvalue)|Устанавливает значение свойства сетки свойства.|
 |[CMFCPropertyGridProperty::Show](#show)|Показывает или скрывает свойство.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Вызывается платформой для добавления поля со списком к свойству.|
-|[CMFCPropertyGridProperty::HasButton](#hasbutton)|Указывает, содержит ли свойство кнопки.|
-|[CMFCPropertyGridProperty::Init](#init)|Вызывается платформой для инициализации объекта свойства.|
-|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|Указывает, является ли указанное свойство вложенным элементом текущего свойства.|
-|[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|Указывает, изменилось ли значение текущего свойства.|
-|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|Вызывается платформой, когда он должен извлекать кисти для заливки цвет фона элемента свойства.|
-|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|Вызвано структурой при уничтожении свойство или по окончании редактирования.|
-|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Вызывается платформой, когда свойство теряет фокус ввода.|
+|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Вызывается рамки, чтобы добавить комбо-бокс в свойство.|
+|[CMFCPropertyGridProperty::HasButton](#hasbutton)|Указывает, содержит ли свойство кнопку.|
+|[CMFCPropertyGridProperty::: Инит](#init)|Вызывается инфраструктурой для инициализации объекта свойства.|
+|[CMFCPropertyGridProperty:::IsSubItem](#issubitem)|Указывает, является ли указанное свойство подпунктом текущего свойства.|
+|[CMFCPropertyGridProperty::IsvalueChanged](#isvaluechanged)|Указывает, изменилось ли значение текущего свойства.|
+|[CMFCPropertyGridProperty::OnctlColor](#onctlcolor)|Вызывается рамки, когда он должен получить кисть, чтобы заполнить фоновый цвет свойства.|
+|[CMFCPropertyGridProperty::OndestroyWindow](#ondestroywindow)|Вызывается по фреймворку, когда свойство уничтожено или когда редактирование закончено.|
+|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|Вызывается по структуре, когда свойство теряет входинуую фокус.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Строка формата для значения типа double.|
-|[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Строка формата для значения типа float.|
-|[CMFCPropertyGridProperty::m_strFormatLong](#m_strformatlong)|Формата для значения типа long.|
-|[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Строка формата для значения типа short.|
+|[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Строка формата для значения поплавка типа.|
+|[CMFCPropertyGridProperty::m_strFormatLong](#m_strformatlong)|Строка формата для значения типа длиной.|
+|[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|Строка формата для значения краткости типа.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Используйте `CMFCPropertyGridProperty` объект для представления свойства, которые затем добавить в элементе управления списком свойств. Дополнительные сведения см. в разделе [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
+Используйте `CMFCPropertyGridProperty` объект для представления свойства, которое затем добавляется в элемент управления списком свойств. Для получения дополнительной информации [см.](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
-Объект свойства может представлять типы данных, например строк, дат и логическими или целое число. Он может содержать свойства дочерних элементов, или он может содержать элемент управления, например поле со списком или элемент управления button.
+Объект свойства может представлять такие типы данных, как строки, даты и значения Boolean или integer. Он может содержать свойства ребенка, или он может содержать элемент управления, такие как комбо-бокс или кнопка управления.
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCPropertyGridProperty` объекта. В примере также демонстрируются способы использования различных методов `CMFCPropertyGridProperty` класс добавить вариант, добавить вложенный элемент, включить свойство, и отобразить свойство. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
+В следующем примере показано, `CMFCPropertyGridProperty` как построить объект. В примере также показано, как использовать `CMFCPropertyGridProperty` различные методы в классе для добавления опции, добавления подэлемента, включения свойства и отобрагивания свойства. Этот пример является частью [образца новых элементов управления.](../../overview/visual-cpp-samples.md)
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -311,9 +311,9 @@ class CMFCPropertyGridProperty : public CObject
 
 **Заголовок:** afxpropertygridctrl.h
 
-##  <a name="addoption"></a>  CMFCPropertyGridProperty::AddOption
+## <a name="cmfcpropertygridpropertyaddoption"></a><a name="addoption"></a>CMFCPropertyGridProperty::AddOption
 
-Добавляет новый элемент списка в элементе управления списком свойств.
+Добавляет новый элемент списка в элемент списка свойств.
 
 ```
 BOOL AddOption(
@@ -324,20 +324,20 @@ BOOL AddOption(
 ### <a name="parameters"></a>Параметры
 
 *lpszOption*<br/>
-[in] (Параметр), чтобы добавить элемент списка.
+(в) Элемент списка (опция) для добавления.
 
 *bInsertUnique*<br/>
-[in] Значение TRUE, чтобы добавить в список элемент только в том случае, если он еще не существует; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+(в) TRUE, чтобы добавить элемент списка только в том случае, если он еще не существует; в противном случае, FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, это означает, что добавляется элемент списка. В противном случае — значение FALSE, что означает, что элемент списка не добавлен, так как *bInsertUnique* параметр имеет значение TRUE, а также в список элементов, указанный параметром *lpszOption* параметр уже существует.
+TRUE, что означает, что элемент списка добавлен. В противном случае, FALSE, что означает, что элемент списка не добавляется, потому что параметр *bInsertUnique* является правдой, и элемент списка, указанный параментом *lpszOption,* уже существует.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="addsubitem"></a>  CMFCPropertyGridProperty::AddSubItem
+## <a name="cmfcpropertygridpropertyaddsubitem"></a><a name="addsubitem"></a>CMFCPropertyGridProperty::AddSubItem
 
-Добавляет дочерний элемент свойства.
+Добавляет элемент ребенка в свойство.
 
 ```
 BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
@@ -346,37 +346,37 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ### <a name="parameters"></a>Параметры
 
 *pProp*<br/>
-[in] Указатель на свойство для добавления.
+(в) Указатель на свойство для добавления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанное свойство успешно добавлены в качестве дочернее свойство. Значение FALSE, если свойство не добавляется, так как он уже встречается в родительское свойство.
+TRUE, если указанное свойство успешно добавлено в качестве детского свойства. FALSE, если свойство не добавлено, поскольку оно уже находится в родительском свойстве.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте этот метод для создания иерархического списка родительских и дочерних свойств. После запуска дочерней свойство будет добавлено, родительское свойство автоматически отображает поле элемента развертывания, который указывает знак плюс (+). Когда пользователь щелкает знак «плюс», родительское свойство разворачивается и отображает свойства любого дочернего элемента.
+Используйте этот метод для создания иерархического списка родительских и родительских свойств. После добавления свойства ребенка родительское свойство автоматически отображает элемент управления окна расширения, обозначенного знаком plus (кв). Когда пользователь нажимает знак плюс, родительское свойство расширяется и отображает любые элементы свойств ребенка.
 
-##  <a name="adjustbuttonrect"></a>  CMFCPropertyGridProperty::AdjustButtonRect
+## <a name="cmfcpropertygridpropertyadjustbuttonrect"></a><a name="adjustbuttonrect"></a>CMFCPropertyGridНедвижимость::НастройкаButtonRect
 
-Вызывается элементом управления списка свойств родительского определить свойство, чтобы изменить размер ограничивающего прямоугольника кнопку "встроенные".
+Вызывается управлением родительского списка свойств, чтобы сообщить свойству изменить размер прямоугольника встроенной кнопки.
 
 ```
 virtual void AdjustButtonRect();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод:
 
-- Корректирует ширину кнопки, равным Высота кнопки, а также 3 пикселя.
+- Регулирует ширину кнопки, равную высоте кнопки плюс 3 пикселя.
 
-- Перемещает прямоугольник кнопки по правому краю свойства
+- Перемещает прямоугольник кнопки на правый край свойства
 
-- Сдвигает кнопку 1 пиксель под верхним краем элемента свойства.
+- Сдвиг кнопки 1 пиксель ниже верхнего края свойства.
 
-##  <a name="adjustinplaceeditrect"></a>  CMFCPropertyGridProperty::AdjustInPlaceEditRect
+## <a name="cmfcpropertygridpropertyadjustinplaceeditrect"></a><a name="adjustinplaceeditrect"></a>CMFCPropertyGridНедвижимость::AdjustInPlaceEditRect
 
-Извлекает границы текстового поля и необязательный счетчик-элемент управления, которые используются для задания значения свойства.
+Извлекает границы текстового поля и дополнительное управление кнопкой спина, которые используются для установки значения свойства.
 
 ```
 virtual void AdjustInPlaceEditRect(
@@ -387,18 +387,18 @@ virtual void AdjustInPlaceEditRect(
 ### <a name="parameters"></a>Параметры
 
 *rectEdit*<br/>
-[out] При возвращении данного метода прямоугольник, который указывает границы текстового поля для значения свойства.
+(ваут) При возврате этого метода прямоугольник определяет границы текстового поля для значения свойства.
 
 *rectSpin*<br/>
-[out] При возвращении данного метода прямоугольник, который указывает границы элемента управления "Счетчик" для значения свойства. Или, если свойство не поддерживает кнопка "Счетчик", пустой прямоугольник.
+(ваут) При возврате этого метода прямоугольник определяет границы управления кнопкой вращения для значения свойства. Или, если свойство не поддерживает кнопку спина, пустой прямоугольник.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Область значения свойства состоит из текстового поля и, возможно, *переключатель*, например управления "Счетчик". Этот метод вычисляет размеры кнопки текст и выборе параметра и возвращает эти значения в указанных параметров.
+Область значения свойства состоит из текстового ящика и, возможно, *кнопки опции,* такой как управление кнопкой спина. Этот метод вычисляет размеры текстового поля и кнопки опции, а затем возвращает эти значения в указанные параметры.
 
-##  <a name="allowedit"></a>  CMFCPropertyGridProperty::AllowEdit
+## <a name="cmfcpropertygridpropertyallowedit"></a><a name="allowedit"></a>CMFCPropertyGridProperty::AllowEdit
 
-Делает свойство редактируемой или только для чтения.
+Делает свойство либо редисируемым, либо только для чтения.
 
 ```
 void AllowEdit(BOOL bAllow=TRUE);
@@ -407,13 +407,13 @@ void AllowEdit(BOOL bAllow=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bAllow*<br/>
-[in] Значение TRUE, чтобы сделать свойство доступным для редактирования; Значение FALSE, чтобы сделать свойство доступным только для чтения. Значение по умолчанию — TRUE.
+(в) TRUE, чтобы сделать свойство отстеченным; FALSE, чтобы сделать свойство читать только. Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="cmfcpropertygridproperty"></a>  CMFCPropertyGridProperty::CMFCPropertyGridProperty
+## <a name="cmfcpropertygridpropertycmfcpropertygridproperty"></a><a name="cmfcpropertygridproperty"></a>CMFCPropertyGridProperty::CMFCPropertyGridProperty
 
-Создает объект `CMFCPropertyGridProperty`.
+Формирует объект `CMFCPropertyGridProperty`.
 
 ```
 CMFCPropertyGridProperty(
@@ -434,37 +434,37 @@ CMFCPropertyGridProperty(
 ### <a name="parameters"></a>Параметры
 
 *strGroupName*<br/>
-[in] Имя группы. Объект *группы* — это коллекция связанных свойств в сетке свойств. Если элемент управления отображается иерархически, *имя группы* отображается как заголовок категории в строке над группой.
+(в) Название группы. *Группа* представляет собой набор связанных свойств в управлении сеткой свойств. Если элемент управления отображается иерархически, *имя группы* отображается как название категории в строке над группой.
 
 *dwData*<br/>
-[in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.
+(в) Данные, связанные с приложениями, такие как целый ряд или указатель на другие данные, связанные с свойством. Значение по умолчанию — 0.
 
 *strName*<br/>
 [in] Имя свойства.
 
 *varValue*<br/>
-[in] Значение свойства.
+(в) Стоимость недвижимости.
 
 *lpszDescr*<br/>
-[in] Описание свойства. Значение по умолчанию имеет значение NULL.
+(в) Описание свойства. Значение по умолчанию — NULL.
 
-*lpszEditMask*<br/>
-[in] Маска редактирования, если свойство является элемент управления masked edit. Значение по умолчанию имеет значение NULL.
+*lpszEditМаск*<br/>
+(в) Маска для отодвилость, если свойство является элементом управления отсылкой. Значение по умолчанию — NULL.
 
 *lpszEditTemplate*<br/>
-[in] Изменить шаблон, если свойство является элемент управления masked edit. Значение по умолчанию имеет значение NULL.
+(в) Шаблон отодвилость, если свойство является элементом управления отсыпской. Значение по умолчанию — NULL.
 
 *lpszValidChars*<br/>
-[in] Список допустимых символов, если свойство является элемент управления masked edit. Значение по умолчанию имеет значение NULL.
+(в) Список действительных символов, если свойство является элементом управления редактирования в маске. Значение по умолчанию — NULL.
 
 *bIsValueList*<br/>
-[in] Значение TRUE, если свойство представляет список значений; Значение FALSE, если свойство представляет одиночное значение. Значение по умолчанию — FALSE.
+(в) TRUE, если свойство представляет собой список значений; FALSE, если свойство представляет собой одно значение. Значение по умолчанию — FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="createcombo"></a>  CMFCPropertyGridProperty::CreateCombo
+## <a name="cmfcpropertygridpropertycreatecombo"></a><a name="createcombo"></a>CMFCPropertyGridProperty::CreateCombo
 
-Вызывается платформой для добавления поля со списком к свойству.
+Вызывается рамки, чтобы добавить комбо-бокс в свойство.
 
 ```
 virtual CComboBox* CreateCombo(
@@ -475,20 +475,20 @@ virtual CComboBox* CreateCombo(
 ### <a name="parameters"></a>Параметры
 
 *pWndParent*<br/>
-[in] Указатель на родительское окно, в поле со списком.
+(в) Указатель на родительское окно комбо-коробки.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник в поле со списком.
+(в) Ограничивающий прямоугольник комбо-коробки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новый [CComboBox](../../mfc/reference/ccombobox-class.md) объекта.
+Указатель на новый объект [CComboBox.](../../mfc/reference/ccombobox-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="createinplaceedit"></a>  CMFCPropertyGridProperty::CreateInPlaceEdit
+## <a name="cmfcpropertygridpropertycreateinplaceedit"></a><a name="createinplaceedit"></a>CMFCPropertyGridProperty::CreateInPlaceEdit
 
-Вызывается платформой для создания элемента управления редактирования для свойства.
+Вызывается инфраструктурой для создания элементируемого управления для свойств.
 
 ```
 virtual CWnd* CreateInPlaceEdit(
@@ -499,24 +499,24 @@ virtual CWnd* CreateInPlaceEdit(
 ### <a name="parameters"></a>Параметры
 
 *rectEdit*<br/>
-[in] Ограничивающий прямоугольник элемента управления редактирования.
+(в) Ограничивающий прямоугольник регитируемого управления.
 
-*bDefaultFormat*<br/>
-[in] Значение TRUE, чтобы использовать формат свойства по умолчанию для задания текста элемента управления редактирования; в противном случае — значение FALSE.
+*bDefaultФормат*<br/>
+(в) TRUE использовать формат свойств по умолчанию для установки текста редитаторного элемента управления; в противном случае, FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на редактируемый элемент управления, если этот метод выполнен успешно; в противном случае — значение NULL.
+Указатель на элемент управления, если этот метод удается; в противном случае, NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод использует значения *varValue*, *lpszEditMask*, *lpszEditTemplate*, и *lpszValidChars* параметров указанный в [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) конструктора класса. По умолчанию этот метод поддерживает *varValue* типы variant. Сюда входят VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 и VT_BOOL.
+Этот метод использует значения *varValue,* *lpszEditMask,* *lpszEditTemplate*и *lpszValidChars* параметры, указанные в конструкторе класса [CMFCPropertyGrid.](../../mfc/reference/cmfcpropertygridproperty-class.md) По умолчанию этот метод поддерживает типы вариантов *varValue.* Это VT_BSTR, VT_R4, VT_R8, VT_UI1, VT_I2, VT_INT, VT_UINT, VT_I4, VT_UI2, VT_UI4 и VT_BOOL.
 
-Этот метод создает [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) элемента управления, если один или несколько из *lpszEditMask*, *lpszEditTemplate*, или *lpszValidChars* указаны параметры; в противном случае он создает [CEdit](../../mfc/reference/cedit-class.md) элемента управления.
+Этот метод создает контроль [CMFCMaskedEdit,](../../mfc/reference/cmfcmaskededit-class.md) если указан один или несколько параметров *lpszEditMask,* *lpszEditTemplate*или *lpszValidChars;* в противном случае он создает контроль [CEdit.](../../mfc/reference/cedit-class.md)
 
-##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl
+## <a name="cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a>CMFCPropertyGridProperty::CreateSpinControl
 
-Вызывается платформой для создания редактируемой управления "Счетчик".
+Вызывается фреймворком для создания элементаруемого управления кнопками спина.
 
 ```
 virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
@@ -525,19 +525,19 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ### <a name="parameters"></a>Параметры
 
 *rectSpin*<br/>
-[in] Прямоугольник, который определяет, где создается редактируемой регулятор.
+(в) Прямоугольник, определяющий, где создается редифицируемый элемент управления кнопками вращения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на новый [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md) объект, который приведен как указатель на [CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md) объекта.
+Указатель на новый объект [CMFCSpinButtonCtrl,](../../mfc/reference/cmfcspinbuttonctrl-class.md) который отбрасывается в качестве указателя на объект [CSpinButtonCtrl.](../../mfc/reference/cspinbuttonctrl-class.md)
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) метод для отображения на правом краю свойство редактируемой управления "Счетчик".
+Позвоните в [CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol) метод для отображения отсылки управления кнопкой вращения на правом краю свойства.
 
-##  <a name="enable"></a>  CMFCPropertyGridProperty::Enable
+## <a name="cmfcpropertygridpropertyenable"></a><a name="enable"></a>CMFCPropertyGridProperty::Включить
 
-Включает или отключает свойство.
+Позволяет или отсвагает свойство.
 
 ```
 void Enable(BOOL bEnable=TRUE);
@@ -546,13 +546,13 @@ void Enable(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить свойство; Значение FALSE, чтобы запретить свойство. Отключенные свойства не отвечают на мышь или клавиатуру. Значение по умолчанию — TRUE.
+(в) TRUE для включения собственности; FALSE, чтобы отключить свойство. Свойства отключенных не реагируют на ввод мыши или клавиатуры. Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="enablespincontrol"></a>  CMFCPropertyGridProperty::EnableSpinControl
+## <a name="cmfcpropertygridpropertyenablespincontrol"></a><a name="enablespincontrol"></a>CMFCPropertyGridProperty:EnableSpinControl
 
-Включает или отключает управления "Счетчик", который используется для изменения значения свойства.
+Позволяет или отменяет управление кнопкой вращения, используемое для изменения значения свойства.
 
 ```
 void EnableSpinControl(
@@ -564,23 +564,23 @@ void EnableSpinControl(
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE для включения управления "Счетчик"; Значение FALSE, чтобы отключить управления "Счетчик". Значение по умолчанию — TRUE.
+(в) TRUE для включения управления кнопкой спина; FALSE отключить управление кнопкой спина. Значение по умолчанию — TRUE.
 
-*Nмин.*<br/>
-[in] Минимальное значение элемента управления "Счетчик". Значение по умолчанию — 0.
+*nMin*<br/>
+(в) Минимальное значение управления кнопкой вращения. Значение по умолчанию — 0.
 
-*Nмакс.*<br/>
-[in] Максимальное значение элемента управления "Счетчик". Значение по умолчанию — 0.
+*nMax*<br/>
+(в) Максимальное значение управления кнопкой вращения. Значение по умолчанию — 0.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Платформа автоматически создает управления "Счетчик", если свойство является редактированием.
+Платформа автоматически создает управление кнопкой вращения при редактировании свойства.
 
-Тип свойства, заданного свойством *varValue* параметр [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, не должен иметь поддерживаемый тип данных variant. В противном случае этот метод утверждает, что в режиме отладки. Поддерживаемые типы: VT_INT, VT_UINT, VT_I2, VT_I4, VT_UI2 и VT_UI4.
+Тип свойства, который указан параметром *varValue* [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, должен быть поддерживаемым типом варианта. В противном случае этот метод утверждается в режиме отладки. Поддерживаемые типы включают VT_INT, VT_UINT, VT_I2, VT_I4, VT_UI2 и VT_UI4.
 
-##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand
+## <a name="cmfcpropertygridpropertyexpand"></a><a name="expand"></a>CMFCPropertyGridProperty::Расширить
 
-Разворачивает или сворачивает свойство, содержащее подсвойства.
+Расширяет или разрушает свойство, содержащее суб-свойства.
 
 ```
 void Expand(BOOL bExpand=TRUE);
@@ -588,12 +588,12 @@ void Expand(BOOL bExpand=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bExpand*<br/>
-[in] Значение TRUE, чтобы развернуть свойство; Значение FALSE, чтобы свернуть свойства. Значение по умолчанию — TRUE.
+*bРасширить*<br/>
+(в) TRUE для расширения собственности; FALSE к краху собственности. Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="formatproperty"></a>  CMFCPropertyGridProperty::FormatProperty
+## <a name="cmfcpropertygridpropertyformatproperty"></a><a name="formatproperty"></a>CMFCPropertyGridProperty::ФорматНедвижимость
 
 Форматирует текстовое представление значения свойства.
 
@@ -603,15 +603,15 @@ virtual CString FormatProperty();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Текстовое представление значения свойства.
+Текстовое представление стоимости свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод вызывается платформой перед отображением значения свойства.
+Этот метод вызывается фреймворком до отображения значения свойства.
 
-##  <a name="getdata"></a>  CMFCPropertyGridProperty::GetData
+## <a name="cmfcpropertygridpropertygetdata"></a><a name="getdata"></a>CMFCPropertyGridProperty::GetData
 
-Извлекает значение DWORD, который связан со свойством.
+Получает значение DWORD, связанное с свойством.
 
 ```
 DWORD_PTR GetData() const;
@@ -619,15 +619,15 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение типа DWORD.
+Значение DWORD.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Возвращение данных — это значение конкретного приложения, такие как число или указатель на другие данные. Укажите значение данных, при создании свойства или при вызове [CMFCPropertyGridProperty::SetData](#setdata) метод.
+Возвращается данные — это конкретное значение приложения, например число или указатель на другие данные. Укажите значение данных при построении свойства или при вызове [CMFCPropertyGridProperty::SetData](#setdata) метод.
 
-##  <a name="getdescription"></a>  CMFCPropertyGridProperty::GetDescription
+## <a name="cmfcpropertygridpropertygetdescription"></a><a name="getdescription"></a>CMFCPropertyGridProperty::GetDescription
 
-Возвращает описание свойства.
+Извлекает описание свойства.
 
 ```
 const CString& GetDescription() const;
@@ -637,13 +637,13 @@ const CString& GetDescription() const;
 
 Текстовая строка, содержащая описание свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Элемента управления списка свойств также использует этот метод для отображения описания свойства.
+Контроль списка свойств также использует этот метод для отображения описания свойства.
 
-##  <a name="getexpandedsubitems"></a>  CMFCPropertyGridProperty::GetExpandedSubItems
+## <a name="cmfcpropertygridpropertygetexpandedsubitems"></a><a name="getexpandedsubitems"></a>CMFCPropertyGridProperty::GetExpandedSubItems
 
-Возвращает число развернутые вложенные элементы.
+Извлекает количество расширенных подпунктов.
 
 ```
 int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
@@ -653,17 +653,17 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*bIncludeHidden*|[in] Значение TRUE для включения скрытых вложенных элементов в счетчик; в противном случае — значение FALSE. Значение по умолчанию — TRUE.|
+|*bIncludeHidden*|(в) TRUE включить скрытые подэлементы в граф; в противном случае, FALSE. Значение по умолчанию — TRUE.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число развернутые вложенные элементы.
+Количество расширенных подпунктов.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="gethierarchylevel"></a>  CMFCPropertyGridProperty::GetHierarchyLevel
+## <a name="cmfcpropertygridpropertygethierarchylevel"></a><a name="gethierarchylevel"></a>CMFCPropertyGridНедвижимость:GetHierarchyLevel
 
-Возвращает отсчитываемый от нуля индекс свойства уровня иерархии.
+Извлекает нулевой индекс уровня иерархии свойства.
 
 ```
 int GetHierarchyLevel() const;
@@ -671,13 +671,13 @@ int GetHierarchyLevel() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Свойства иерархическом уровне.
+Иерархический уровень свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getname"></a>  CMFCPropertyGridProperty::GetName
+## <a name="cmfcpropertygridpropertygetname"></a><a name="getname"></a>CMFCPropertyGridProperty::GetName
 
-Получает имя свойства.
+Получает название объекта.
 
 ```
 LPCTSTR GetName() const;
@@ -685,13 +685,13 @@ LPCTSTR GetName() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строку, содержащую имя свойства.
+Указатель на строку, содержащую название свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getnametooltip"></a>  CMFCPropertyGridProperty::GetNameTooltip
+## <a name="cmfcpropertygridpropertygetnametooltip"></a><a name="getnametooltip"></a>CMFCPropertyGridProperty::GetNameTooltip
 
-Вызвано структурой для отображения имени свойства в подсказке.
+Вызывается фреймворком для отображения имени свойства в наборе инструментов.
 
 ```
 virtual CString GetNameTooltip();
@@ -699,13 +699,13 @@ virtual CString GetNameTooltip();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Строка, содержащая имя свойства. По умолчанию возвращаемое значение является пустой строкой.
+Строка, содержащая имя свойства. По умолчанию значение возврата является пустой строкой.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getoption"></a>  CMFCPropertyGridProperty::GetOption
+## <a name="cmfcpropertygridpropertygetoption"></a><a name="getoption"></a>CMFCPropertyGridProperty::GetOption
 
-Извлекает текст параметра, указанного с помощью индекса.
+Извлекает текст опции, указанной индексом.
 
 ```
 LPCTSTR GetOption(int nIndex) const;
@@ -713,18 +713,18 @@ LPCTSTR GetOption(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-Отсчитываемый от нуля индекс элемента списка свойств (параметр), чтобы получить.
+*Nindex*<br/>
+Нулевой индекс элемента списка свойств (опция) для извлечения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строку, содержащую текст параметра.
+Указатель на строку, содержащую текст опции.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getoptioncount"></a>  CMFCPropertyGridProperty::GetOptionCount
+## <a name="cmfcpropertygridpropertygetoptioncount"></a><a name="getoptioncount"></a>CMFCPropertyGridProperty::GetOptionCount
 
-Получает число параметров, которые принадлежат к свойству.
+Извлекает количество параметров, принадлежащих к свойству.
 
 ```
 int GetOptionCount() const;
@@ -732,15 +732,15 @@ int GetOptionCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Число элементов списка свойств (параметры), которые содержатся в элементе управления свойства.
+Количество элементов списка свойств (вариантов), которые содержатся в управлении свойствами.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызовите [CMFCPropertyGridProperty::AddOption](#addoption) метод для добавления элементов в список свойств. Вызовите [CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) метод для удаления всех элементов.
+Позвоните в [CMFCPropertyGridProperty::AddOption](#addoption) метод добавления элементов в список свойств. Позвоните [в CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions) метод для удаления всех элементов.
 
-##  <a name="getoriginalvalue"></a>  CMFCPropertyGridProperty::GetOriginalValue
+## <a name="cmfcpropertygridpropertygetoriginalvalue"></a><a name="getoriginalvalue"></a>CMFCPropertyGridProperty::GetOriginalValue
 
-Возвращает начальное значение текущего свойства.
+Извлекает исходное значение текущего свойства.
 
 ```
 const COleVariant& GetOriginalValue() const;
@@ -750,13 +750,13 @@ const COleVariant& GetOriginalValue() const;
 
 Исходное значение текущего свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод позволяет отменить операцию редактирования, меняющего значение текущего свойства.
+Используйте этот метод, чтобы отменить эффект операции по изменению, изменяющую значение текущего свойства.
 
-Исходное значение текущего свойства задается [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, изменяемом [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) метод и сбросить, [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) метод.
+Исходное значение текущего свойства устанавливается [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) конструктор, изменен [CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue) метод, и сбросить по методу [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) метод.
 
-##  <a name="getparent"></a>  CMFCPropertyGridProperty::GetParent
+## <a name="cmfcpropertygridpropertygetparent"></a><a name="getparent"></a>CMFCPropertyGridProperty::: GetParent
 
 Извлекает указатель на родительское свойство.
 
@@ -766,13 +766,13 @@ CMFCPropertyGridProperty* GetParent() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на родительский объект свойства или значение NULL для свойства верхнего уровня.
+Указатель на объект родительского свойства или NULL для свойства верхнего уровня.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getrect"></a>  CMFCPropertyGridProperty::GetRect
+## <a name="cmfcpropertygridpropertygetrect"></a><a name="getrect"></a>CMFCPropertyGridНедвижимость::GetRect
 
-Получает прямоугольник, ограничивающий свойства.
+Извлекает прямоугольник свойства.
 
 ```
 CRect GetRect() const;
@@ -780,13 +780,13 @@ CRect GetRect() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий ограничивающего прямоугольника.
+Объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) описывающий прямоугольник.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getsubitem"></a>  CMFCPropertyGridProperty::GetSubItem
+## <a name="cmfcpropertygridpropertygetsubitem"></a><a name="getsubitem"></a>CMFCPropertyGridProperty::GetSubItem
 
-Получает вложенные свойства, идентифицируемого по отсчитываемый от нуля индекс.
+Извлекает субсобственность, идентифицированную индексом на нулевой основе.
 
 ```
 CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
@@ -794,22 +794,22 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nIndex*<br/>
-[in] Отсчитываемый от нуля индекс извлекаемого свойства. Этот параметр является недопустимым, если оно меньше нуля или больше или равно количеству подсвойства.
+*Nindex*<br/>
+(в) Нулевой индекс свойства для извлечения. Этот параметр является недействительным, если он меньше нуля или больше или равен количеству подproperties.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект свойства, является дочерним элементом этого свойства.
+Указатель на объект свойства, который является элементом ребенка этого свойства.
 
 -или-
 
-В режиме розничной торговли, значение NULL, если *nIndex* является недопустимым. В режиме отладки этот метод утверждения.
+В режиме розничной торговли NULL, если параметр *nIndex* недействителен. В режиме отладки этот метод утверждает.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getsubitemscount"></a>  CMFCPropertyGridProperty::GetSubItemsCount
+## <a name="cmfcpropertygridpropertygetsubitemscount"></a><a name="getsubitemscount"></a>CMFCPropertyGridProperty::GetSubItemsCount
 
-Получает число вложенных элементов.
+Извлекает количество подпунктов.
 
 ```
 int GetSubItemsCount() const;
@@ -817,11 +817,11 @@ int GetSubItemsCount() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество дочерних элементов.
+Количество детских товаров.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getvalue"></a>  CMFCPropertyGridProperty::GetValue
+## <a name="cmfcpropertygridpropertygetvalue"></a><a name="getvalue"></a>CMFCPropertyGridProperty::GetValue
 
 Извлекает значение свойства.
 
@@ -831,13 +831,13 @@ virtual const _variant_t& GetValue() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Переменная типа variant, содержащий значение свойства.
+Вариант, содержащий значение свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="getvaluetooltip"></a>  CMFCPropertyGridProperty::GetValueTooltip
+## <a name="cmfcpropertygridpropertygetvaluetooltip"></a><a name="getvaluetooltip"></a>CMFCPropertyGridProperty::GetValueTooltip
 
-Вызывается платформой для извлечения текстовое представление значения свойства, которое отображается во всплывающей подсказке.
+Вызывается инфраструктурой для получения текстового представления значения свойства, которое затем отображается в наборе инструментов.
 
 ```
 virtual CString GetValueTooltip();
@@ -845,13 +845,13 @@ virtual CString GetValueTooltip();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `CString` объект, содержащий текстовое представление значения свойства. По умолчанию это значение является пустой строкой.
+Объект, `CString` содержащий текстовое представление значения свойства. По умолчанию это значение является пустой строкой.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="hasbutton"></a>  CMFCPropertyGridProperty::HasButton
+## <a name="cmfcpropertygridpropertyhasbutton"></a><a name="hasbutton"></a>CMFCPropertyGridProperty::HasButton
 
-Указывает, содержит ли свойство кнопки.
+Указывает, содержит ли свойство кнопку.
 
 ```
 virtual BOOL HasButton() const;
@@ -859,13 +859,13 @@ virtual BOOL HasButton() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство содержит кнопку (или список свойств); в противном случае — значение FALSE.
+TRUE, если свойство содержит кнопку (или список свойств); в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="hittest"></a>  CMFCPropertyGridProperty::HitTest
+## <a name="cmfcpropertygridpropertyhittest"></a><a name="hittest"></a>CMFCPropertyGridProperty::HitTest
 
-Указывает объект свойства, соответствующий элемент списка свойств, который соответствует точке.
+Указывает на объект свойства, который соответствует пункту списка свойств, который соответствует точке.
 
 ```
 CMFCPropertyGridProperty* HitTest(
@@ -880,47 +880,47 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-[in] Точка для проверки, в координатах клиентской области окна. Этот параметр обычно является текущем положении указателя мыши.
+*Точки*<br/>
+(в) Точка для тестирования, в клиентских координатах. Этот параметр обычно является текущим расположением указателя мыши.
 
-*pt*<br/>
-[in] Точка для проверки, в координатах клиентской области окна.
+*пт*<br/>
+(в) Точка для тестирования, в клиентских координатах.
 
 *pnArea*<br/>
-[out] При возвращении данного метода, указывающую область, которая содержит заданную точку. Дополнительные сведения см. в разделе "Замечания". Значение по умолчанию имеет значение NULL.
+(ваут) При возвращении этого метода указывается область, содержащая указанную точку. Дополнительные сведения см. в подразделе "Примечания". Значение по умолчанию — NULL.
 
-*bPropsOnly*<br/>
-[in] Значение TRUE, чтобы протестировать любой области в свойство элемента управления; Значение FALSE, чтобы проверить только в области описания. Значение по умолчанию — FALSE.
+*bPropsТолько*<br/>
+(в) TRUE для проверки любой области в управлении имуществом; FALSE для проверки только области описания. Значение по умолчанию — FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект свойства или значение NULL.
+Указатель на объект свойства или NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод проверяет свойство вложенные элементы, если указанная точка не найден в любой из элементов свойства.
+По умолчанию этот метод проверяет подэлементы свойств, если указанная точка не найдена ни в одном из элементов свойств.
 
-В следующей таблице перечислены значения, которые могут быть возвращены в *pnArea* параметра.
+В следующей таблице перечислены значения, которые могут быть возвращены параметру *pnArea.*
 
 |Область|Описание|
 |----------|-----------------|
-|`ClickArea::ClickExpandBox`|Поле элемента развертывания, обозначенного знак плюса (+).|
+|`ClickArea::ClickExpandBox`|Расширяйте управление окном, которое обозначено знаком плюс (кв).|
 |`ClickArea::ClickName`|Имя свойства.|
 |`ClickArea::ClickValue`|Значение свойства.|
 
-##  <a name="init"></a>  CMFCPropertyGridProperty::Init
+## <a name="cmfcpropertygridpropertyinit"></a><a name="init"></a>CMFCPropertyGridProperty::: Инит
 
-Вызывается платформой для инициализации объекта свойства.
+Вызывается инфраструктурой для инициализации объекта свойства.
 
 ```
 void Init();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isallowedit"></a>  CMFCPropertyGridProperty::IsAllowEdit
+## <a name="cmfcpropertygridpropertyisallowedit"></a><a name="isallowedit"></a>CMFCPropertyGridProperty::: Ведомости
 
-Указывает, доступен ли свойство для изменения.
+Указывает, является ли свойство отсеиваемым.
 
 ```
 BOOL IsAllowEdit() const;
@@ -928,13 +928,13 @@ BOOL IsAllowEdit() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство доступно для редактирования; в противном случае — значение FALSE.
+TRUE, если свойство является editable; в противном случае FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isenabled"></a>  CMFCPropertyGridProperty::IsEnabled
+## <a name="cmfcpropertygridpropertyisenabled"></a><a name="isenabled"></a>CMFCPropertyGridProperty::: Источник: Lenta.08.2017 Источник: Информационное сооражец
 
-Указывает, включено ли свойство.
+Указывается, включено или отключено свойство.
 
 ```
 BOOL IsEnabled() const;
@@ -942,15 +942,15 @@ BOOL IsEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство включено; Значение FALSE, если свойство отключено.
+TRUE, если свойство включено; FALSE, если имущество отключено.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Указывает, включено ли свойство.
+Сообщает, включено или отключено свойство.
 
-##  <a name="isexpanded"></a>  CMFCPropertyGridProperty::IsExpanded
+## <a name="cmfcpropertygridpropertyisexpanded"></a><a name="isexpanded"></a>CMFCPropertyGridProperty::Расширенный
 
-Указывает, является ли свойство развернут или свернут.
+Указывает, расширяется или разрушается свойство.
 
 ```
 BOOL IsExpanded() const;
@@ -958,13 +958,13 @@ BOOL IsExpanded() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство развернут; Значение FALSE, если свойство свернута.
+TRUE, если свойство расширено; FALSE, если имущество рухнуло.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isgroup"></a>  CMFCPropertyGridProperty::IsGroup
+## <a name="cmfcpropertygridpropertyisgroup"></a><a name="isgroup"></a>CMFCPropertyGridProperty::Группа
 
-Указывает, представляет ли текущее свойство группы.
+Указывает, представляет ли текущее свойство группу.
 
 ```
 BOOL IsGroup() const;
@@ -972,15 +972,15 @@ BOOL IsGroup() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущий объект свойства представляет группу; Значение FALSE, если свойство представляет значение.
+TRUE, если текущий объект свойства представляет группу; FALSE, если свойство представляет собой значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Объект *группы* — это коллекция связанных свойств в сетке свойств. Если элемент управления отображается иерархически, *имя группы* отображается как заголовок категории в строке над группой.
+*Группа* представляет собой набор связанных свойств в управлении сеткой свойств. Если элемент управления отображается иерархически, *имя группы* отображается как название категории в строке над группой.
 
-##  <a name="isinplaceediting"></a>  CMFCPropertyGridProperty::IsInPlaceEditing
+## <a name="cmfcpropertygridpropertyisinplaceediting"></a><a name="isinplaceediting"></a>CMFCPropertyGridProperty::МестоРедактирование
 
-Указывает, доступен ли изменения текущего свойства.
+Указывает, является ли текущее свойство отослаиваемым.
 
 ```
 BOOL IsInPlaceEditing() const;
@@ -988,13 +988,13 @@ BOOL IsInPlaceEditing() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее свойство можно изменять; в противном случае — значение FALSE.
+TRUE, если текущее свойство является отсылку; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ismodified"></a>  CMFCPropertyGridProperty::IsModified
+## <a name="cmfcpropertygridpropertyismodified"></a><a name="ismodified"></a>CMFCPropertyGridProperty:: Изменено
 
-Указывает, был ли изменен текущего свойства.
+Указывает, изменяется ли текущее свойство.
 
 ```
 BOOL IsModified() const;
@@ -1002,13 +1002,13 @@ BOOL IsModified() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство изменяется; в противном случае — значение FALSE.
+TRUE, если свойство изменено; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isparentexpanded"></a>  CMFCPropertyGridProperty::IsParentExpanded
+## <a name="cmfcpropertygridpropertyisparentexpanded"></a><a name="isparentexpanded"></a>CMFCPropertyGridProperty::IsParentРасширенный
 
-Указывает, развернуто ли родительские для текущего свойства.
+Указывается, расширяются ли родители текущего свойства.
 
 ```
 BOOL IsParentExpanded() const;
@@ -1016,13 +1016,13 @@ BOOL IsParentExpanded() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если развертываются все родительские объекты для текущего свойства; Значение FALSE, если свойства родительского объекта будут свернуты.
+TRUE, если все родители текущего имущества расширены; FALSE, если родительские свойства рухнули.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isselected"></a>  CMFCPropertyGridProperty::IsSelected
+## <a name="cmfcpropertygridpropertyisselected"></a><a name="isselected"></a>CMFCPropertygridProperty::IsSelected
 
-Указывает, выбран ли текущее свойство.
+Указывает, выбрано ли текущее свойство.
 
 ```
 virtual BOOL IsSelected() const;
@@ -1030,13 +1030,13 @@ virtual BOOL IsSelected() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если свойство current установлен; в противном случае — значение FALSE.
+TRUE, если выбрано текущее свойство; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="issubitem"></a>  CMFCPropertyGridProperty::IsSubItem
+## <a name="cmfcpropertygridpropertyissubitem"></a><a name="issubitem"></a>CMFCPropertyGridProperty:::IsSubItem
 
-Указывает, является ли указанное свойство вложенным элементом текущего свойства.
+Указывает, является ли указанное свойство подпунктом текущего свойства.
 
 ```
 BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
@@ -1045,13 +1045,13 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ### <a name="parameters"></a>Параметры
 
 *pProp*<br/>
-[in] Указатель на свойство.
+(в) Указатель на свойство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанное свойство является вложенным элементом текущего свойства. в противном случае — значение FALSE.
+TRUE, если указанное свойство является подпунктом текущего свойства; в противном случае, FALSE.
 
-##  <a name="isvaluechanged"></a>  CMFCPropertyGridProperty::IsValueChanged
+## <a name="cmfcpropertygridpropertyisvaluechanged"></a><a name="isvaluechanged"></a>CMFCPropertyGridProperty::IsvalueChanged
 
 Указывает, изменилось ли значение текущего свойства.
 
@@ -1061,13 +1061,13 @@ virtual BOOL IsValueChanged() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если значение текущего свойства было изменено; в противном случае — значение FALSE.
+TRUE, если значение текущего свойства изменилось; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="isvisible"></a>  CMFCPropertyGridProperty::IsVisible
+## <a name="cmfcpropertygridpropertyisvisible"></a><a name="isvisible"></a>CMFCPropertyGridProperty::Видимо
 
-Указывает, видима ли текущее свойство.
+Указывает, отображается ли текущее свойство.
 
 ```
 BOOL IsVisible() const;
@@ -1075,51 +1075,51 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее свойство является видимым. в противном случае; ЗНАЧЕНИЕ FALSE.
+TRUE, если текущее свойство видно; в противном случае; Ложных.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_strformatdouble"></a>  CMFCPropertyGridProperty::m_strFormatDouble
+## <a name="cmfcpropertygridpropertym_strformatdouble"></a><a name="m_strformatdouble"></a>CMFCPropertyGridProperty:::m_strFormatDouble
 
-Содержит строку формата для значения типа double.
+Удерживает строку формата для значения типа double.
 
 ```
 static CString m_strFormatDouble;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_strformatfloat"></a>  CMFCPropertyGridProperty::m_strFormatFloat
+## <a name="cmfcpropertygridpropertym_strformatfloat"></a><a name="m_strformatfloat"></a>CMFCPropertyGridProperty::: m_strFormatFloat
 
-Содержит строку формата для значения типа float.
+Удерживает строку формата для значения поплавка типа.
 
 ```
 static CString m_strFormatFloat;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_strformatlong"></a>  CMFCPropertyGridProperty::m_strFormatLong
+## <a name="cmfcpropertygridpropertym_strformatlong"></a><a name="m_strformatlong"></a>CMFCPropertyGridProperty::m_strFormatLong
 
-Содержит строку формата для значения типа long.
+Удерживает строку формата для значения типа длиной.
 
 ```
 static CString m_strFormatLong;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="m_strformatshort"></a>  CMFCPropertyGridProperty::m_strFormatShort
+## <a name="cmfcpropertygridpropertym_strformatshort"></a><a name="m_strformatshort"></a>CMFCPropertyGridProperty::m_strFormatShort
 
-Содержит строку формата для значения типа short.
+Удерживает строку формата для краткости значения типа.
 
 ```
 static CString m_strFormatShort;
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onclickbutton"></a>  CMFCPropertyGridProperty::OnClickButton
+## <a name="cmfcpropertygridpropertyonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridProperty::OnClickButton
 
 Вызывается платформой, когда пользователь нажимает кнопку, содержащуюся в свойстве.
 
@@ -1129,16 +1129,16 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-[in] Точка, в координатах клиентской области окна.
+*Точки*<br/>
+(в) Точка, в координатах клиента.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onclickname"></a>  CMFCPropertyGridProperty::OnClickName
+## <a name="cmfcpropertygridpropertyonclickname"></a><a name="onclickname"></a>CMFCPropertyGridProperty::OnClickName
 
-Вызывается родительским элементом управления списка свойств, когда пользователь щелкает поле имени свойства.
+Вызывается управлением родительского списка свойств, когда пользователь нажимает на поле имени свойства.
 
 ```
 virtual void OnClickName(CPoint C);
@@ -1148,15 +1148,15 @@ virtual void OnClickName(CPoint C);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
+|*C*|(в) Точка, в координатах клиента.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onclickvalue"></a>  CMFCPropertyGridProperty::OnClickValue
+## <a name="cmfcpropertygridpropertyonclickvalue"></a><a name="onclickvalue"></a>CMFCPropertyGridProperty::OnClickValue
 
-Вызывается родительским элементом управления списка свойств, когда пользователь щелкает поле значения свойства.
+Вызывается управлением родительского списка свойств, когда пользователь нажимает на поле значения свойства.
 
 ```
 virtual BOOL OnClickValue(
@@ -1167,32 +1167,32 @@ virtual BOOL OnClickValue(
 ### <a name="parameters"></a>Параметры
 
 *uiMsg*<br/>
-[in] Сообщения мыши.
+(в) Сообщение мыши.
 
-*point*<br/>
-[in] Точка, в координатах клиентской области окна.
+*Точки*<br/>
+(в) Точка, в координатах клиента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанный мыши сообщение обрабатывается с помощью данного метода; в противном случае — значение FALSE.
+TRUE, если указанное сообщение мыши обрабатывается этим методом; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод возвращает значение FALSE, если текущее свойство не является редактируемым. В противном случае изменения или управления "Счетчик", который связан с этим свойством обрабатывает сообщение мыши, и этот метод возвращает значение TRUE.
+По умолчанию этот метод возвращает FALSE, если текущее свойство не отослаино. В противном случае элемент управления отсечения или вращения, связанный с этим свойством, обрабатывает указанное сообщение мыши, а затем этот метод возвращает TRUE.
 
-##  <a name="onclosecombo"></a>  CMFCPropertyGridProperty::OnCloseCombo
+## <a name="cmfcpropertygridpropertyonclosecombo"></a><a name="onclosecombo"></a>CMFCPropertyGridProperty::OnCloseCombo
 
-Вызывается платформой при закрытии поле со списком, содержащийся в свойстве.
+Вызывается по системе, когда комбо-бокс, содержащийся в свойстве, закрыт.
 
 ```
 virtual void OnCloseCombo();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onctlcolor"></a>  CMFCPropertyGridProperty::OnCtlColor
+## <a name="cmfcpropertygridpropertyonctlcolor"></a><a name="onctlcolor"></a>CMFCPropertyGridProperty::OnctlColor
 
-Вызывается платформой, когда он должен извлекать кисти для заливки цвет фона элемента свойства.
+Вызывается рамки, когда он должен получить кисть, чтобы заполнить фоновый цвет свойства.
 
 ```
 virtual HBRUSH OnCtlColor(
@@ -1203,20 +1203,20 @@ virtual HBRUSH OnCtlColor(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *nCtlColor*<br/>
-[in] (Этот параметр не используется.)
+(в) (Этот параметр не используется.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Дескриптор кисти, если этот метод выполнен успешно; в противном случае — значение NULL.
+Ручка кисти, если этот метод является успешным; в противном случае, NULL.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondblclk"></a>  CMFCPropertyGridProperty::OnDblClk
+## <a name="cmfcpropertygridpropertyondblclk"></a><a name="ondblclk"></a>CMFCPropertyGridProperty::OnDblClk
 
-Вызывается платформой, когда пользователь дважды щелкает свойство.
+Вызывается по системе, когда пользователь дважды щелкает свойство.
 
 ```
 virtual BOOL OnDblClk(CPoint point);
@@ -1224,30 +1224,30 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*point*<br/>
-[in] Точка, в координатах клиентской области окна.
+*Точки*<br/>
+(в) Точка, в координатах клиента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+ПРАВДА, если этот метод является успешным; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод выбирает следующий элемент свойства в элементе управления списком свойств.
+По умолчанию этот метод выбирает следующий элемент свойства в управлении списком свойств.
 
-##  <a name="ondestroywindow"></a>  CMFCPropertyGridProperty::OnDestroyWindow
+## <a name="cmfcpropertygridpropertyondestroywindow"></a><a name="ondestroywindow"></a>CMFCPropertyGridProperty::OndestroyWindow
 
-Вызвано структурой при уничтожении свойство или по окончании редактирования.
+Вызывается по фреймворку, когда свойство уничтожено или когда редактирование закончено.
 
 ```
 virtual void OnDestroyWindow();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawbutton"></a>  CMFCPropertyGridProperty::OnDrawButton
+## <a name="cmfcpropertygridpropertyondrawbutton"></a><a name="ondrawbutton"></a>CMFCPropertyGridProperty::OndrawButton
 
-Вызывается платформой для отрисовки кнопки, который содержится в свойстве.
+Вызывается по системе, чтобы нарисовать кнопку, которая содержится в свойстве.
 
 ```
 virtual void OnDrawButton(
@@ -1258,16 +1258,16 @@ virtual void OnDrawButton(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rectButton*<br/>
-[in] Ограничивающий прямоугольник, который указывает, где для отображения кнопки.
+(в) Ограничивающий прямоугольник, который определяет, где нарисовать кнопку.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawdescription"></a>  CMFCPropertyGridProperty::OnDrawDescription
+## <a name="cmfcpropertygridpropertyondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridProperty::OndrawОписание
 
-Вызывается платформой для отрисовки в описании свойства.
+Вызывается по системе, чтобы нарисовать описание свойства.
 
 ```
 virtual void OnDrawDescription(
@@ -1278,18 +1278,18 @@ virtual void OnDrawDescription(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник, который указывает, где для рисования в описании свойства.
+(в) Ограничивающий прямоугольник, который определяет, где нарисовать описание свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод рисует свойство имени и описания в шрифта родительского элемента управления списка свойств. Описание свойства выводится обычного стиля, а имя свойства рисуется в полужирный стиль.
+По умолчанию этот метод рисует имя и описание свойств в шрифте, используемом элементом управления родительского списка свойств. Описание отеля составлено в обычном стиле, а название отеля оформлено в смелом стиле.
 
-##  <a name="ondrawexpandbox"></a>  CMFCPropertyGridProperty::OnDrawExpandBox
+## <a name="cmfcpropertygridpropertyondrawexpandbox"></a><a name="ondrawexpandbox"></a>CMFCPropertyGridProperty::OndrawExpandBox
 
-Вызывается платформой для отрисовки элемента развертывания поле рядом с свойством, которое содержит вложенные свойства.
+Вызывается фреймворком, чтобы нарисовать элемент управления окном расширения вблизи свойства, содержащего суб-свойства.
 
 ```
 virtual void OnDrawExpandBox(
@@ -1300,18 +1300,18 @@ virtual void OnDrawExpandBox(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rectExpand*<br/>
-[in] Ограничивающий прямоугольник, который указывает, где поле элемента управления expand.
+(в) Ограничивающий прямоугольник, который определяет, где нарисовать управление окном расширения.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Щелкните поле элемента развертывания, чтобы развернуть или свернуть список подчиненных свойств. Элемент управления «развернуть» обозначается квадратом, содержащий знак «плюс» (+) или минус (-). Значок «плюс» указывает, что свойство можно развернуть, чтобы вывести список подчиненных свойств. Знак «минус» указывает, что список можно свернуть, чтобы показать только свойство.
+Нажмите на управление окном расширения, чтобы расширить или свернуть список суб-свойств. Управление окном расширения обозначено квадратом, который содержит знак плюс (кв) или минус (-) Знак плюс указывает, что свойство может быть расширено, чтобы показать список суб-свойств. Знак минус указывает на то, что список может быть свернут, чтобы показать только свойство.
 
-##  <a name="ondrawname"></a>  CMFCPropertyGridProperty::OnDrawName
+## <a name="cmfcpropertygridpropertyondrawname"></a><a name="ondrawname"></a>CMFCPropertyGridProperty::OndrawName
 
-Вызвано структурой для отображения имени свойства.
+Вызывается фреймворком для отображения имени свойства.
 
 ```
 virtual void OnDrawName(
@@ -1322,14 +1322,14 @@ virtual void OnDrawName(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник, который указывает, где для рисования имя свойства.
+(в) Ограничивающий прямоугольник, который определяет, где нарисовать имя свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="ondrawvalue"></a>  CMFCPropertyGridProperty::OnDrawValue
+## <a name="cmfcpropertygridpropertyondrawvalue"></a><a name="ondrawvalue"></a>CMFCPropertyGridProperty::OndrawValue
 
 Вызывается платформой для отображения значения свойства.
 
@@ -1342,14 +1342,14 @@ virtual void OnDrawValue(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства.
+(в) Указатель на контекст устройства.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник, который указывает, куда извлекается значение свойства.
+(в) Ограничивающий прямоугольник, который определяет, где рисовать значение свойства.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="onedit"></a>  CMFCPropertyGridProperty::OnEdit
+## <a name="cmfcpropertygridpropertyonedit"></a><a name="onedit"></a>CMFCPropertyGridProperty::: Газета.
 
 Вызывается платформой непосредственно перед изменением значения свойства пользователем.
 
@@ -1360,19 +1360,19 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ### <a name="parameters"></a>Параметры
 
 *lptClick*<br/>
-[in] (Этот параметр не используется.) Указатель на точку, в координатах клиентской области окна.
+(в) (Этот параметр не используется.) Указатель на точку, в координатах клиента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если операция редактирования запускается успешно; в противном случае — значение FALSE.
+TRUE, если операция по отдействию начинается успешно; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Эта функция вызывается платформой, когда пользователь собирается изменять значение свойства. По умолчанию этот метод запускает соответствующий редактор для поле со списком или элемент управления "Счетчик".
+Эта функция вызывается инфраструктурой, когда пользователь собирается изменить значение свойства. По умолчанию этот метод запускает соответствующий редактор для управления комбо-коробкой или управления спином.
 
-##  <a name="onendedit"></a>  CMFCPropertyGridProperty::OnEndEdit
+## <a name="cmfcpropertygridpropertyonendedit"></a><a name="onendedit"></a>CMFCPropertyGridProperty::OnEndEdit
 
-Вызывается платформой при завершении пользователем изменение значения свойства.
+Вызывается инфраструктурой, когда пользователь закончил изменять значение свойства.
 
 ```
 virtual BOOL OnEndEdit();
@@ -1380,15 +1380,15 @@ virtual BOOL OnEndEdit();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Этот метод всегда возвращает значение TRUE.
+Этот метод всегда возвращает TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод удаляет текущий элемент управления редактирования и возвращает значение TRUE.
+По умолчанию этот метод уничтожает текущий элемент управления редактированием, а затем возвращает TRUE.
 
-##  <a name="onkillfocus"></a>  CMFCPropertyGridProperty::OnKillFocus
+## <a name="cmfcpropertygridpropertyonkillfocus"></a><a name="onkillfocus"></a>CMFCPropertyGridProperty::OnKillFocus
 
-Вызывается платформой, когда свойство теряет фокус ввода.
+Вызывается по структуре, когда свойство теряет входинуую фокус.
 
 ```
 virtual BOOL OnKillFocus(CWnd*);
@@ -1398,17 +1398,17 @@ virtual BOOL OnKillFocus(CWnd*);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*CWnd*|[in] (Не используется). Указатель на окно.|
+|*CWnd*|(в) (Не используется.) Указатель на окно.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Этот метод всегда возвращает значение TRUE.
+Этот метод всегда возвращает TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод не выполняет никаких действий и возвращает значение TRUE. Если переопределить этот метод возвращает значение TRUE, если framework можно завершить операцию изменения, когда свойство теряет фокус ввода.
+По умолчанию, этот метод ничего не делает, а затем возвращает TRUE. Если вы переопределяете этот метод, верните TRUE, если фреймворк может закончить операцию по правке, когда свойство потеряет фокус ввода.
 
-##  <a name="onkillselection"></a>  CMFCPropertyGridProperty::OnKillSelection
+## <a name="cmfcpropertygridpropertyonkillselection"></a><a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection
 
 ```
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
@@ -1416,13 +1416,13 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CMFCPropertyGridProperty&#42;*<br/>
+(в) *CMFCPropertyGridProperty&#42;*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onpossizechanged"></a>  CMFCPropertyGridProperty::OnPosSizeChanged
+## <a name="cmfcpropertygridpropertyonpossizechanged"></a><a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged
 
 ```
 virtual void OnPosSizeChanged(CRect);
@@ -1430,15 +1430,15 @@ virtual void OnPosSizeChanged(CRect);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CRect*<br/>
+(в) *CRect*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onrclickname"></a>  CMFCPropertyGridProperty::OnRClickName
+## <a name="cmfcpropertygridpropertyonrclickname"></a><a name="onrclickname"></a>CMFCPropertyGridProperty::OnRClickName
 
-Вызывается платформой по щелчку правой кнопкой мыши в области имя свойства.
+Вызывается по системе, когда пользователь нажимает правую кнопку мыши в области имени свойства.
 
 ```
 virtual void OnRClickName(CPoint C);
@@ -1448,15 +1448,15 @@ virtual void OnRClickName(CPoint C);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
+|*C*|(в) Точка, в координатах клиента.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onrclickvalue"></a>  CMFCPropertyGridProperty::OnRClickValue
+## <a name="cmfcpropertygridpropertyonrclickvalue"></a><a name="onrclickvalue"></a>CMFCPropertyGridProperty::OnrClickValue
 
-Вызывается платформой по щелчку правой кнопкой мыши в области значений свойства.
+Вызывается по системе, когда пользователь нажимает правую кнопку мыши в области значения свойства.
 
 ```
 virtual void OnRClickValue(
@@ -1468,28 +1468,28 @@ virtual void OnRClickValue(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
-|*B*|[in] Логическое значение.|
+|*C*|(в) Точка, в координатах клиента.|
+|*B*|(в) Булеан.|
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-По умолчанию этот метод не выполняет никаких действий и *B* параметр не имеет никаких предварительно определенных целей.
+По умолчанию этот метод ничего не делает, и параметр *B* не имеет предопределенной цели.
 
-##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo
+## <a name="cmfcpropertygridpropertyonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridProperty::OnSelectCombo
 
-Вызывается платформой, когда пользователь выбирает элемент в поле со списком для редактирования.
+Вызывается по системе, когда пользователь выбирает элемент из отсрабраваемой комбо-коробки.
 
 ```
 virtual void OnSelectCombo();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод использует текст выбранного элемента для обновления значения свойства.
 
-##  <a name="onsetcursor"></a>  CMFCPropertyGridProperty::OnSetCursor
+## <a name="cmfcpropertygridpropertyonsetcursor"></a><a name="onsetcursor"></a>CMFCPropertyGridProperty::OnSetCursor
 
-Вызывается платформой при перемещении указателя мыши на элемент свойства.
+Вызывается по фрейму, когда указатель мыши перемещается к элементу свойства.
 
 ```
 virtual BOOL OnSetCursor() const;
@@ -1497,13 +1497,13 @@ virtual BOOL OnSetCursor() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если текущее свойство типа variant или список значений и успешно, этот метод загружает курсор мыши вставки точки (i-образный); в противном случае — значение FALSE.
+TRUE, если текущее свойство является типом варианта или списком значений, и этот метод успешно загружает курсор мыши точки вставки (I-beam); в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод поддерживает следующие типы variant. VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
+Этот метод поддерживает следующие типы вариантов: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
 
-##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
+## <a name="cmfcpropertygridpropertyonsetselection"></a><a name="onsetselection"></a>CMFCPropertyGridProperty::Выбор
 
 ```
 virtual void OnSetSelection CMFCPropertyGridProperty*);
@@ -1511,13 +1511,13 @@ virtual void OnSetSelection CMFCPropertyGridProperty*);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CMFCPropertyGridProperty&#42;*<br/>
+(в) *CMFCPropertyGridProperty&#42;*<br/>
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 По умолчанию этот метод не выполняет никаких действий.
 
-##  <a name="onupdatevalue"></a>  CMFCPropertyGridProperty::OnUpdateValue
+## <a name="cmfcpropertygridpropertyonupdatevalue"></a><a name="onupdatevalue"></a>CMFCPropertyGridProperty::OnUpdateValue
 
 Вызывается платформой при присвоении изменяемому свойству нового значения.
 
@@ -1527,13 +1527,13 @@ virtual BOOL OnUpdateValue();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+ПРАВДА, если этот метод является успешным; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="pushchar"></a>  CMFCPropertyGridProperty::PushChar
+## <a name="cmfcpropertygridpropertypushchar"></a><a name="pushchar"></a>CMFCPropertyGridProperty::PushChar
 
-Вызывается из элемента управления списка свойств, если свойство, и пользователь вводит символ новой.
+Вызывается из управления списком свойств, когда свойство выбрано и пользователь вводит новый символ.
 
 ```
 virtual BOOL PushChar(UINT nChar);
@@ -1541,18 +1541,18 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*nChar*<br/>
-[in] Символ.
+*Nchar*<br/>
+(в) Персонаж.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если операция изменения продолжением; в противном случае — значение FALSE.
+TRUE, если операция по отдействию продолжается; в противном случае, FALSE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Этот метод поддерживает свойство, которое является список значений или один из следующих типов variant. VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
+Этот метод поддерживает свойство, которое является либо списком значений, либо одним из следующих типов вариантов: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
 
-##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
+## <a name="cmfcpropertygridpropertyredraw"></a><a name="redraw"></a>CMFCPropertyGridProperty::Redraw
 
 Перерисовывает свойство.
 
@@ -1560,9 +1560,9 @@ virtual BOOL PushChar(UINT nChar);
 void Redraw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="removealloptions"></a>  CMFCPropertyGridProperty::RemoveAllOptions
+## <a name="cmfcpropertygridpropertyremovealloptions"></a><a name="removealloptions"></a>CMFCPropertyGridProperty::RemoveAllOptions
 
 Удаляет все параметры (элементы) из свойства.
 
@@ -1570,13 +1570,13 @@ void Redraw();
 void RemoveAllOptions();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Параметры также называются элементы списка в элементе управления списком свойств.
+Параметры также известны как элементы списка управления списком свойств.
 
-##  <a name="removesubitem"></a>  CMFCPropertyGridProperty::RemoveSubItem
+## <a name="cmfcpropertygridpropertyremovesubitem"></a><a name="removesubitem"></a>CMFCPropertyGridProperty::RemoveSubItem
 
-Удаляет указанный вложенный элемент.
+Удаляет указанный субпункт.
 
 ```
 BOOL RemoveSubItem(
@@ -1587,30 +1587,30 @@ BOOL RemoveSubItem(
 ### <a name="parameters"></a>Параметры
 
 *pProp*<br/>
-[in] Указатель на элемент вложенного свойства.
+(в) Указатель на подэлемент свойства.
 
-*bDelete*<br/>
-[in] ИСТИНА – чтобы удалять объект свойства, которое определяется *pProp* параметра; в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+*bУдалить*<br/>
+(в) TRUE удалить объект свойства, указанный параметром *pProp;* в противном случае, FALSE. Значение по умолчанию — TRUE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Укажите значение FALSE для *bDelete* параметр, если планируется переместить указанный вложенный элемент; то есть удалить вложенный элемент и добавить его в другом месте.
+Укажите FALSE для параметра *bDelete,* если вы намереваетесь переместить указанный субпункт; то есть, удалить подпункт, а затем добавить его в другом месте.
 
-##  <a name="resetoriginalvalue"></a>  CMFCPropertyGridProperty::ResetOriginalValue
+## <a name="cmfcpropertygridpropertyresetoriginalvalue"></a><a name="resetoriginalvalue"></a>CMFCPropertyGridProperty::ResetOriginalValue
 
-Восстанавливает исходное значение измененного свойства.
+Восстанавливает исходное значение отредактированного свойства.
 
 ```
 virtual void ResetOriginalValue();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setdata"></a>  CMFCPropertyGridProperty::SetData
+## <a name="cmfcpropertygridpropertysetdata"></a><a name="setdata"></a>CMFCPropertyGridProperty::SetData
 
-Связывает значение типа DWORD со свойством.
+Ассоциирует значение DWORD с свойством.
 
 ```
 void SetData(DWORD_PTR dwData);
@@ -1619,15 +1619,15 @@ void SetData(DWORD_PTR dwData);
 ### <a name="parameters"></a>Параметры
 
 *dwData*<br/>
-[in] Значение 32-разрядных конкретного приложения, например целое число или указатель на другие данные.
+(в) 32-битное значение для приложения, такое как целый ряд или указатель на другие данные.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте [CMFCPropertyGridProperty::GetData](#getdata) метод для извлечения значение DWORD. Используйте [CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) метод необходимо найти элемент списка свойств, который связан с заданным значением DWORD.
+Используйте метод [CMFCPropertyGridProperty::GetData](#getdata) для получения значения DWORD. Используйте метод [CMFCPropertyGridCtrl::FindItemByData,](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata) чтобы найти элемент списка свойств, связанный с указанным значением DWORD.
 
-##  <a name="setdescription"></a>  CMFCPropertyGridProperty::SetDescription
+## <a name="cmfcpropertygridpropertysetdescription"></a><a name="setdescription"></a>CMFCPropertyGridProperty::SetОписание
 
-Задает текст, описывающий текущее свойство.
+Определяет текст, описывающий текущее свойство.
 
 ```
 void SetDescription(const CString& strDescr);
@@ -1636,13 +1636,13 @@ void SetDescription(const CString& strDescr);
 ### <a name="parameters"></a>Параметры
 
 *strDescr*<br/>
-[in] Текст, описывающий текущее свойство.
+(в) Текст, описывающий текущее свойство.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setname"></a>  CMFCPropertyGridProperty::SetName
+## <a name="cmfcpropertygridpropertysetname"></a><a name="setname"></a>CMFCPropertyGridProperty::SetName
 
-Задает имя свойства.
+Устанавливается название объекта.
 
 ```
 void SetName(
@@ -1656,11 +1656,11 @@ void SetName(
 [in] Имя свойства.
 
 *bRedraw*<br/>
-[in] Значение TRUE, чтобы немедленно перерисовать свойство в противном случае — значение FALSE. Значение по умолчанию — TRUE.
+(в) TRUE перерисовать свойство немедленно; в противном случае, FALSE. Значение по умолчанию — TRUE.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="setoriginalvalue"></a>  CMFCPropertyGridProperty::SetOriginalValue
+## <a name="cmfcpropertygridpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridProperty::SetOriginalValue
 
 Задает изменяемому свойству изначальное значение.
 
@@ -1671,15 +1671,15 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ### <a name="parameters"></a>Параметры
 
 *varValue*<br/>
-[in] Значение.
+(в) Значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Используйте [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) метод, чтобы восстановить исходное значение измененного свойства.
+Используйте метод [CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue) для сброса исходного значения отредактированного свойства.
 
-##  <a name="setvalue"></a>  CMFCPropertyGridProperty::SetValue
+## <a name="cmfcpropertygridpropertysetvalue"></a><a name="setvalue"></a>CMFCPropertyGridProperty::SetValue
 
-Задает значение свойства сетки свойств.
+Устанавливает значение свойства сетки свойства.
 
 ```
 virtual void SetValue(const _variant_t& varValue);
@@ -1688,11 +1688,11 @@ virtual void SetValue(const _variant_t& varValue);
 ### <a name="parameters"></a>Параметры
 
 *varValue*<br/>
-[in] Ссылка на значение.
+(в) Ссылка на значение.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-##  <a name="show"></a>  CMFCPropertyGridProperty::Show
+## <a name="cmfcpropertygridpropertyshow"></a><a name="show"></a>CMFCPropertyGridProperty::Show
 
 Показывает или скрывает свойство.
 
@@ -1705,12 +1705,12 @@ void Show(
 ### <a name="parameters"></a>Параметры
 
 *bShow*<br/>
-[in] Значение TRUE, чтобы отобразить текущее свойство и его вложенных элементов; Значение FALSE, чтобы скрыть текущее свойство и его вложенные элементы. Значение по умолчанию — TRUE.
+(в) TRUE для отображения текущего свойства и его субпунктов; FALSE, чтобы скрыть текущее свойство и его суб-элементов. Значение по умолчанию — TRUE.
 
 *bAdjustLayout*<br/>
-[in] Значение TRUE, чтобы повторно вычислить рисовать метки и значения свойства и затем рисование свойства; Значение FALSE, используемый для отрисовки свойства существующих вычислений. Значение по умолчанию — TRUE.
+(в) TRUE пересчитать, как нарисовать этикетку и стоимость имущества, а затем нарисовать свойство; FALSE использовать существующие расчеты для рисования свойства. Значение по умолчанию — TRUE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>

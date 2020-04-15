@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363924"
 ---
 # <a name="csplitterwndex-class"></a>Класс CSplitterWndEx
 
@@ -29,22 +29,22 @@ class CSplitterWndEx : public CSplitterWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |`CSplitterWndEx::CSplitterWndEx`|Конструктор по умолчанию.|
 |`CSplitterWndEx::~CSplitterWndEx`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Вызывается платформой для отрисовки окна разделителя. (Переопределяет [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Вызывается по фреймворку, чтобы нарисовать окно сплиттера. (Переопределяет [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Переопределить `OnDrawSplitter` метод для настройки внешнего вида графические компоненты окна-разделителя.
+Переопределить `OnDrawSplitter` метод настройки внешнего вида графических компонентов окна сплиттера.
 
-`CSplitterWndEx` Класс используется вместе с [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), и [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) методов, используемых реализуется наглядный диспетчер. Чтобы вызвать диспетчер визуального для рисования в приложении окна разделителя, замените объявления `CSplitterWnd` класса `CSplitterWndEx` класса. Для приложений окна фрейма класс окна разделителя объявляется в CMainFrame-класс, который находится в mainfrm.h. Например, см. в разделе `OutlookDemo` образца в каталог образцов.
+Класс `CSplitterWndEx` используется вместе с методами [OnDrawSplitterBorder,](cmfcvisualmanager-class.md#ondrawsplitterborder) [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)и [OnFillSplitterBackground,](cmfcvisualmanager-class.md#onfillsplitterbackground) которые реализуются визуальным менеджером. Чтобы заставить визуального менеджера нарисовать окно сплиттера `CSplitterWnd` в `CSplitterWndEx` приложении, замените декларации класса классом. Для приложений окна кадра класс окна сплиттера объявляется в классе CMainFrame, который находится в mainfrm.h. Например, смотрите `OutlookDemo` образец в каталоге «Образцы».
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -60,9 +60,9 @@ class CSplitterWndEx : public CSplitterWnd
 
 **Заголовок:** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter
 
-Вызывается платформой для отрисовки окна разделителя.
+Вызывается по фреймворку, чтобы нарисовать окно сплиттера.
 
 ```
 virtual void OnDrawSplitter(
@@ -75,17 +75,17 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства. Если этот параметр имеет значение NULL, платформа перерисовывает активного окна.
+(в) Указатель на контекст устройства. Если этот параметр NULL, фреймворк перерисовывает активное окно.
 
 *nType*<br/>
-[in] Один из `CSplitterWnd::ESplitType` значений перечисления, задающее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection` и `splitBorder`.
+(в) Одно из `CSplitterWnd::ESplitType` значений перечисления, которое определяет элемент окна сплиттера для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection` и `splitBorder`.
 
 *rect*<br/>
-[in] Ограничивающий прямоугольник, который указывает размеры и расположение, чтобы нарисовать элемент window указанного разделителя.
+(в) Ограничивающий прямоугольник, который определяет размеры и местоположение для рисования указанного элемента окна сплиттера.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Диаграмма иерархии](../hierarchy-chart.md)<br/>
 [Классы](mfc-classes.md)<br/>

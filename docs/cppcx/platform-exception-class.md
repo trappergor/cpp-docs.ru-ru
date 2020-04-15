@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368738"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363772"
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 
-Представляет ошибки, происходящие во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.
+Представляет ошибки, которые происходят во время выполнения приложения. Пользовательские классы исключений не могут быть производными от класса `Platform::Exception`. Если требуется пользовательское исключение, можно использовать класс `Platform::COMException` и указать относящееся к приложению значение HRESULT.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,26 +35,26 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="constructors"></a>Конструкторы
 
-|Член|Описание|
+|Участник|Описание|
 |------------|-----------------|
-|[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|
+|[Исключение::Исключение](#ctor)|Инициализирует новый экземпляр класса `Exception`.|
 
 ### <a name="methods"></a>Методы
 
 Класс `Exception` наследует методы `Equals()`, `Finalize()`,`GetHashCode()`,`GetType()`,`MemberwiseClose()`и `ToString()` из [Platform::Object Class](../cppcx/platform-object-class.md). Класс `Exception` содержит также следующий метод.
 
-|Член|Описание|
+|Участник|Описание|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|Создает исключение, представляющее указанное значение HRESULT.|
+|[Исключение::СозданиеИсключение](#createexception)|Создает исключение, представляющее указанное значение HRESULT.|
 
 ### <a name="properties"></a>Свойства
 
 Класс Exception также содержит следующие свойства.
 
-|Член|Описание|
+|Участник|Описание|
 |------------|-----------------|
-|[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|
-|[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|
+|[Исключение::Результат](#hresult)|Значение HRESULT, соответствующее исключению.|
+|[Исключение::Сообщение](#message)|Сообщение, описывающее исключение. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|
 
 ### <a name="requirements"></a>Требования
 
@@ -66,7 +66,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 **Метаданные:** platform.winmd
 
-## <a name="createexception"></a> Метод Exception::CreateException
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>Исключение::СоздатьМетод Исключения
 
 Создает Platform::Exception^ из указанного значения HRESULT.
 
@@ -79,23 +79,23 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>Параметры
 
-*hr*<br/>
-Значение HRESULT, которое, как правило, получается из вызова метода COM. Если значение равно 0, что эквивалентно S_OK, этот метод вызывает исключение [Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) поскольку методы COM, которые завершились успешно, не должны вызывать исключения.
+*Hr*<br/>
+Значение HRESULT, которое, как правило, получается из вызова метода COM. Если значение 0, что равно S_OK, этот метод бросает [Платформу::InvalidArgumentException,](../cppcx/platform-invalidargumentexception-class.md) потому что успешные методы COM не должны бросать исключения.
 
-*message*<br/>
+*Сообщение*<br/>
 Строка с описанием ошибки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Исключение, представляющее HRESULT ошибки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Используйте этот метод для создания исключения из значения HRESULT, возвращаемого, например, из вызова интерфейса COM. Можно использовать перегруженный метод, принимающий параметр String^, чтобы предоставить пользовательское сообщение.
 
-Настоятельно рекомендуется использовать CreateException для создания строго типизированного исключения вместо создания [Platform::COMException](../cppcx/platform-comexception-class.md) который просто содержит значение HRESULT.
+Настоятельно рекомендуется использовать CreateException для создания сильно набранного исключения, а не для создания [платформы::COMException,](../cppcx/platform-comexception-class.md) которая просто содержит HRESULT.
 
-## <a name="ctor"></a>  Конструктор Exception::Exception
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>Исключение::Исключение конструктор
 
 Инициализирует новый экземпляр класса Exception.
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>Параметры
 
-*hresult*<br/>
+*Hresult*<br/>
 HRESULT ошибки, представляемый этим исключением.
 
-*message*<br/>
+*Сообщение*<br/>
 Задаваемое пользователем сообщение (например, текст рекомендаций), связанное с исключением. В общем случае следует выбирать вторую перегрузку, чтобы предоставить максимально подробное описание того, как и почему произошла конкретная ошибка.
 
-## <a name="hresult"></a>  Свойство Exception::HRESULT
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>Исключение::HResult Недвижимость
 
 Значение HRESULT, соответствующее исключению.
 
@@ -129,11 +129,11 @@ public:
 
 Значение HRESULT.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
 Большинство исключений создаются как ошибки модели COM, которые возвращаются в виде значений HRESULT. C++/CX преобразует эти значения в объекты Platform::Exception^, и это свойство сохраняет значение исходного кода ошибки.
 
-## <a name="message"></a> Свойство Exception::Message
+## <a name="exceptionmessage-property"></a><a name="message"></a>Исключение::Свойство сообщений
 
 Сообщение с описанием ошибки.
 
@@ -147,10 +147,10 @@ public:property String^ Message;
 
 В исключениях, создаваемых в среде выполнения Windows, это предоставляемое системой описание ошибки.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-В Windows 8 это свойство доступно только для чтения, так как исключения в этой версии среды выполнения Windows передаются через интерфейс ABI только в качестве значения HRESULT. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Дополнительные сведения см. в разделе [исключения (C++/CX)](../cppcx/exceptions-c-cx.md).
+В Windows 8 это свойство читается только потому, что исключения в этой версии Windows Runtime перевозятся через ABI только в качестве HRESULTS. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Для получения дополнительной [информации см.](../cppcx/exceptions-c-cx.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)
