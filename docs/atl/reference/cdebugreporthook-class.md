@@ -1,5 +1,5 @@
 ---
-title: Класс Кдебугрепорсук
+title: Класс CDebugReportHook
 ms.date: 11/04/2016
 f1_keywords:
 - CDebugReportHook
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 7187448b2ba2c9d3ab0399aa3e75ce8d757bfec1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496777"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327114"
 ---
-# <a name="cdebugreporthook-class"></a>Класс Кдебугрепорсук
+# <a name="cdebugreporthook-class"></a>Класс CDebugReportHook
 
-Этот класс используется для отправки отладочных отчетов в именованный канал.
+Используйте этот класс для отправки отчетов об отладке в именованные трубы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,36 +34,36 @@ class CDebugReportHook
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кдебугрепорсук:: Кдебугрепорсук](#cdebugreporthook)|Вызывает [сетпипенаме](#setpipename), [setTimeout](#settimeout)и [сесук](#sethook).|
-|[Кдебугрепорсук:: ~ Кдебугрепорсук](#dtor)|Вызывает [кдебугрепорсук:: ремовехук](#removehook).|
+|[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Вызовы [SetPipeName,](#setpipename) [SetTimeout](#settimeout)и [SetHook](#sethook).|
+|[CDebugReportHook:::CDebugReportHook](#dtor)|Вызовы [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[Кдебугрепорсук:: Кдебугрепорсукпрок](#cdebugreporthookproc)|Статически Пользовательская функция отчетов, привязанная к процессу отладочной отчетности времени выполнения C.|
-|[Кдебугрепорсук:: Ремовехук](#removehook)|Вызовите этот метод, чтобы отключить отправку отчетов отладки в именованный канал и восстановить предыдущий обработчик отчета.|
-|[Кдебугрепорсук:: Сесук](#sethook)|Вызовите этот метод, чтобы начать отправку отладочных отчетов в именованный канал.|
-|[Кдебугрепорсук:: Сетпипенаме](#setpipename)|Вызовите этот метод, чтобы задать компьютер и имя канала, в который будут отправляться отладочные отчеты.|
-|[Кдебугрепорсук:: SetTimeout](#settimeout)|Вызовите этот метод, чтобы задать время в миллисекундах, в течение которого этот класс будет ожидать, пока именованный канал станет доступным.|
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Статик) Пользовательская функция отчетности, подключенная к процессу отладки времени выполнения C.|
+|[CDebugReportHook::RemoveHook](#removehook)|Вызов иметод, чтобы остановить отправку отчетов об отладке в названную трубу и восстановить предыдущий крюк отчета.|
+|[CDebugReportHook::SetHook](#sethook)|Вызовите этот метод, чтобы начать отправку отчетов об отладке в названную трубу.|
+|[CDebugReportHook::SetPipeName](#setpipename)|Вызовите этот метод, чтобы установить машину и название трубы, на которую будут отправлены отчеты об отладке.|
+|[CDebugReportHook::SetTimeout](#settimeout)|Вызовите этот метод, чтобы установить время в миллисекундах, что этот класс будет ждать, пока названная труба станет доступной.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Создайте экземпляр этого класса в отладочных сборках служб или приложений для отправки отладочных отчетов в именованный канал. Отладочные отчеты создаются путем вызова [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) или использования оболочки для этой функции, например макросов [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) и [атлассерт](debugging-and-error-reporting-macros.md#atlassert) .
+Создайте экземпляр этого класса в отладочных сборках ваших служб или приложений для отправки отчетов об отладке в названную трубу. Отчеты об ошибке генерируются путем вызова [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) или использования обертки для этой функции, такой как макросы [ATLTRACE](debugging-and-error-reporting-macros.md#atltrace) и [ATLASSERT.](debugging-and-error-reporting-macros.md#atlassert)
 
-Использование этого класса позволяет интерактивно отлаживать компоненты, работающие на неинтерактивных [оконных станциях](/windows/win32/winstation/window-stations).
+Использование этого класса позволяет интерактивно отладить компоненты, работающие в неинтерактивных [оконных станциях.](/windows/win32/winstation/window-stations)
 
-Обратите внимание, что отчеты об отладке отправляются с использованием базового контекста безопасности потока. Олицетворение временно отключено, поэтому отчеты об отладке можно просматривать в ситуациях, когда происходит олицетворение пользователей с низким уровнем привилегий, например в веб-приложениях.
+Обратите внимание, что отчеты об отладке отправляются с использованием базового контекста безопасности потока. Олицетворение временно отключено, так что отладка отчетов могут быть просмотрены в ситуациях, когда олицетворение пользователей с низкими привилегиями происходит, например, в веб-приложениях.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** файлов atlutil. h
+**Заголовок:** atlutil.h
 
-##  <a name="cdebugreporthook"></a>Кдебугрепорсук:: Кдебугрепорсук
+## <a name="cdebugreporthookcdebugreporthook"></a><a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook
 
-Вызывает [сетпипенаме](#setpipename), [setTimeout](#settimeout)и [сесук](#sethook).
+Вызовы [SetPipeName,](#setpipename) [SetTimeout](#settimeout)и [SetHook](#sethook).
 
 ```
 CDebugReportHook(
@@ -74,26 +74,26 @@ CDebugReportHook(
 
 ### <a name="parameters"></a>Параметры
 
-*сзмачиненаме*<br/>
-Имя компьютера, на который должны отправляться выходные данные отладки. По умолчанию используется локальный компьютер.
+*szMachineName*<br/>
+Название машины, на которую должен быть отправлен выход отладки. По умолчанию к локальной машине.
 
-*сзпипенаме*<br/>
-Имя именованного канала, в который должны отправляться выходные данные отладки.
+*szPipeName*<br/>
+Название указанной трубы, на которую должен быть отправлен выход отладки.
 
-*двтимеаут*<br/>
-Время в миллисекундах, в течение которого этот класс будет ожидать, пока именованный канал станет доступным.
+*dwTimeout*<br/>
+Время в миллисекундах, что этот класс будет ждать названной трубы, чтобы стать доступным.
 
-##  <a name="dtor"></a>Кдебугрепорсук:: ~ Кдебугрепорсук
+## <a name="cdebugreporthookcdebugreporthook"></a><a name="dtor"></a>CDebugReportHook:::CDebugReportHook
 
-Вызывает [кдебугрепорсук:: ремовехук](#removehook).
+Вызовы [CDebugReportHook::RemoveHook](#removehook).
 
 ```
 ~CDebugReportHook() throw();
 ```
 
-##  <a name="cdebugreporthookproc"></a>Кдебугрепорсук:: Кдебугрепорсукпрок
+## <a name="cdebugreporthookcdebugreporthookproc"></a><a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc
 
-Пользовательская функция отчетов, привязанная к процессу отладочной отчетности времени выполнения C.
+Пользовательская функция отчетности, подключенная к процессу отладки времени выполнения C.
 
 ```
 static int __cdecl CDebugReportHookProc(
@@ -104,52 +104,52 @@ static int __cdecl CDebugReportHookProc(
 
 ### <a name="parameters"></a>Параметры
 
-*reportType*<br/>
+*отчетType*<br/>
 Тип отчета (_CRT_WARN, _CRT_ERROR или _CRT_ASSERT).
 
-*message*<br/>
+*Сообщение*<br/>
 Строка сообщения.
 
-*returnValue*<br/>
-Значение, которое должно возвращаться функцией [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).
+*возвратСтоимость*<br/>
+Значение, которое должно быть возвращено [_CrtDbgReport.](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение FALSE, если обработчик полностью обрабатывает рассматриваемое сообщение, чтобы дальнейшие отчеты не требовались. Возвращает значение true `_CrtDbgReport` , если должно сообщать сообщение обычным способом.
+Возвращает FALSE, если крючок обрабатывает сообщение, о котором идет речь, так что никаких дополнительных отчетов не требуется. Возвращает TRUE, если `_CrtDbgReport` следует сообщить сообщение в обычном порядке.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Функция отчетов пытается открыть именованный канал и взаимодействовать с процессом на другом конце. Если канал занят, функция отчетов будет ждать, пока канал не освободится или не истечет время ожидания. Время ожидания может быть задано конструктором или вызовом [кдебугрепорсук:: setTimeout](#settimeout).
+Функция отчетности пытается открыть названную трубу и связаться с процессом на другом конце. Если труба занята, функция отчетности будет ждать, пока труба не станет свободной или истекло тайм-аут. Тайм-аут может быть установлен конструктором или вызовом [на CDebugReportHook::SetTimeout](#settimeout).
 
-Код в этой функции выполняется в базовом контексте безопасности вызывающего потока, т. е. олицетворение отключено на время выполнения этой функции.
+Код в этой функции выполняется в базовом контексте безопасности потока вызова, т.е. олицетворение отключено на время действия этой функции.
 
-##  <a name="removehook"></a>Кдебугрепорсук:: Ремовехук
+## <a name="cdebugreporthookremovehook"></a><a name="removehook"></a>CDebugReportHook::RemoveHook
 
-Вызовите этот метод, чтобы отключить отправку отчетов отладки в именованный канал и восстановить предыдущий обработчик отчета.
+Вызов иметод, чтобы остановить отправку отчетов об отладке в названную трубу и восстановить предыдущий крюк отчета.
 
 ```
 void RemoveHook() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывает [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) для восстановления предыдущего обработчика отчета.
+Вызовы [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) для восстановления предыдущего крючка отчета.
 
-##  <a name="sethook"></a>Кдебугрепорсук:: Сесук
+## <a name="cdebugreporthooksethook"></a><a name="sethook"></a>CDebugReportHook::SetHook
 
-Вызовите этот метод, чтобы начать отправку отладочных отчетов в именованный канал.
+Вызовите этот метод, чтобы начать отправку отчетов об отладке в названную трубу.
 
 ```
 void SetHook() throw();
 ```
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Remarks
 
-Вызывает [_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) , чтобы отчеты об отладке направлялись через [кдебугрепорсукпрок](#cdebugreporthookproc) в именованный канал. Этот класс отслеживает предыдущий обработчик отчета, чтобы его можно было восстановить при вызове [ремовехук](#removehook) .
+Вызовы [_CrtSetReportHook2,](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md) чтобы отладить отчеты направляется через [CDebugReportHookProc](#cdebugreporthookproc) к названной трубе. Этот класс отслеживает предыдущий крюк отчета, чтобы он мог быть восстановлен при вызове [RemoveHook.](#removehook)
 
-##  <a name="setpipename"></a>Кдебугрепорсук:: Сетпипенаме
+## <a name="cdebugreporthooksetpipename"></a><a name="setpipename"></a>CDebugReportHook::SetPipeName
 
-Вызовите этот метод, чтобы задать компьютер и имя канала, в который будут отправляться отладочные отчеты.
+Вызовите этот метод, чтобы установить машину и название трубы, на которую будут отправлены отчеты об отладке.
 
 ```
 BOOL SetPipeName(
@@ -159,19 +159,19 @@ BOOL SetPipeName(
 
 ### <a name="parameters"></a>Параметры
 
-*сзмачиненаме*<br/>
-Имя компьютера, на который должны отправляться выходные данные отладки.
+*szMachineName*<br/>
+Название машины, на которую должен быть отправлен выход отладки.
 
-*сзпипенаме*<br/>
-Имя именованного канала, в который должны отправляться выходные данные отладки.
+*szPipeName*<br/>
+Название указанной трубы, на которую должен быть отправлен выход отладки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает TRUE при успешном выполнении, FALSE в случае сбоя.
+Возвращает TRUE на успех, FALSE на неудачу.
 
-##  <a name="settimeout"></a>Кдебугрепорсук:: SetTimeout
+## <a name="cdebugreporthooksettimeout"></a><a name="settimeout"></a>CDebugReportHook::SetTimeout
 
-Вызовите этот метод, чтобы задать время в миллисекундах, в течение которого этот класс будет ожидать, пока именованный канал станет доступным.
+Вызовите этот метод, чтобы установить время в миллисекундах, что этот класс будет ждать, пока названная труба станет доступной.
 
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -179,9 +179,9 @@ void SetTimeout(DWORD dwTimeout);
 
 ### <a name="parameters"></a>Параметры
 
-*двтимеаут*<br/>
-Время в миллисекундах, в течение которого этот класс будет ожидать, пока именованный канал станет доступным.
+*dwTimeout*<br/>
+Время в миллисекундах, что этот класс будет ждать названной трубы, чтобы стать доступным.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Классы](../../atl/reference/atl-classes.md)

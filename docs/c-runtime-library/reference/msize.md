@@ -1,8 +1,9 @@
 ---
 title: _msize
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _msize
+- _o__msize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951436"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338665"
 ---
 # <a name="_msize"></a>_msize
 
@@ -53,15 +55,17 @@ size_t _msize(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_msize** возвращает размер (в байтах) в виде целого числа без знака.
+**_msize** возвращает размер (байт) в качестве неподписанного целых.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_msize** возвращает размер (в байтах) блока памяти, выделенного вызовом **calloc**, **malloc**или **realloc**.
+Функция **_msize** возвращает размер, в байтах, блока памяти, выделенного вызовом **calloc,** **malloc**, или **realloc.**
 
-Если приложение связано с отладочной версией библиотек времени выполнения C, **_msize** разрешается в [_msize_dbg](msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+Когда приложение связано с отладкой версии библиотек исправления C, **_msize** решает [_msize_dbg.](msize-dbg.md) Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *мемблокк* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, **функция устанавливает значение** по **еинвал** и возвращает-1.
+Эта функция проверяет свои параметры. Если *memblock* является нулевой указатель, **_msize** вызывает недействительным обработчик параметров, как описано в [параметрвалиции](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция устанавливает **errno** к **EINVAL** и возвращает -1.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -69,7 +73,7 @@ size_t _msize(
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Библиотеки
 
@@ -79,9 +83,9 @@ size_t _msize(
 
 См. пример использования функции [realloc](realloc.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
 [_expand](expand.md)<br/>
 [malloc](malloc.md)<br/>

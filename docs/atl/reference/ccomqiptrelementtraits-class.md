@@ -1,5 +1,5 @@
 ---
-title: Класс CComQIPtrElementTraits
+title: Класс CCom-IPtrElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtrElementTraits
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
-ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f2669c157310be02f746672b22f6c0ed005075
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246173"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327412"
 ---
-# <a name="ccomqiptrelementtraits-class"></a>Класс CComQIPtrElementTraits
+# <a name="ccomqiptrelementtraits-class"></a>Класс CCom-IPtrElementTraits
 
-Этот класс предоставляет методы, статические функции и определения типов полезно при создании коллекции указателей интерфейса СОМ.
+Этот класс предоставляет методы, статические функции и полезные при создании коллекций указателей интерфейса COM.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,25 +29,25 @@ class CComQIPtrElementTraits :
 
 #### <a name="parameters"></a>Параметры
 
-*I*<br/>
-COM-интерфейс, указав тип указателя для сохранения.
+*Я*<br/>
+Интерфейс COM с указанием типа указателя для хранения.
 
-*piid*<br/>
-Указатель на идентификатор IID *я*.
+*пиид*<br/>
+Указатель на IID *I*.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
+|[CCom-IPtrElementTraits::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объект класса сбора.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Этот класс является производным методы и предоставляет полезные typedef, при создании класса коллекции [CComQIPtr](../../atl/reference/ccomqiptr-class.md) указатель интерфейса COM-объектов. Этот класс используется как [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) и [CInterfaceList](../../atl/reference/cinterfacelist-class.md) классы.
+Этот класс получает методы и обеспечивает полезную типографпри равен при создании класса коллекции объектов указатель интерфейса [CCom-IPtr](../../atl/reference/ccomqiptr-class.md) COM. Этот класс используется как [классами CInterfaceArray,](../../atl/reference/cinterfacearray-class.md) так и [CInterfaceList.](../../atl/reference/cinterfacelist-class.md)
 
-Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).
+Для получения дополнительной информации, [см.](../../atl/atl-collection-classes.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -57,7 +57,7 @@ COM-интерфейс, указав тип указателя для сохра
 
 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultЭлементТхрытс](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CComQIPtrElementTraits`
 
@@ -65,15 +65,15 @@ COM-интерфейс, указав тип указателя для сохра
 
 **Заголовок:** atlcoll.h
 
-##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE
+## <a name="ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CCom-IPtrElementTraits::INARGTYPE
 
-Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.
+Тип данных для добавления элементов в объект класса сбора.
 
 ```
 typedef I* INARGTYPE;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Класс CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Общие сведения о классах](../../atl/atl-class-overview.md)

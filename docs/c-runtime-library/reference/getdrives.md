@@ -1,8 +1,9 @@
 ---
 title: _getdrives
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getdrives
+- _o__getdrives
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 0733cc00523bb3a7bb019453cc94183a5c2b87e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82d9aaac99e901d4fbf2fd41dbe84aad77ec8a9e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344296"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -49,7 +51,11 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если функция завершается успешно, возвращенное значение является битовой маской, которая представляет доступные в данный момент диски. Бит в позиции 0 (наименее значимый бит) представляет диск A, в позиции 1 — диск B, в позиции 2 — диск C и т. д. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите **GetLastError**.
+Если функция завершается успешно, возвращенное значение является битовой маской, которая представляет доступные в данный момент диски. Бит в позиции 0 (наименее значимый бит) представляет диск A, в позиции 1 — диск B, в позиции 2 — диск C и т. д. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенную информацию об ошибке, позвоните **getLastError**.
+
+## <a name="remarks"></a>Remarks
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -57,7 +63,7 @@ unsigned long _getdrives( void );
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -105,6 +111,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление каталогами](../../c-runtime-library/directory-control.md)<br/>

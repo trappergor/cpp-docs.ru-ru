@@ -1,8 +1,9 @@
 ---
 title: _free_locale
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _free_locale
+- _o__free_locale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 31a8e3191c5e370acb00aaf12e21f0c712c51dd1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956747"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346043"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -50,24 +52,26 @@ void _free_locale(
 
 ### <a name="parameters"></a>Параметры
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Объект языкового стандарта, который необходимо освободить.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_free_locale** используется для высвобождения объекта языкового стандарта, полученного из вызова **_get_current_locale** или **_create_locale**.
+Функция **_free_locale** используется для освобождения объекта, полученного от вызова **в _get_current_locale** или **_create_locale.**
 
-Предыдущее имя этой функции, **__free_locale** (с двумя символами подчеркивания в начале), не рекомендуется к использованию.
+Предыдущее название этой функции, **__free_locale** (с двумя ведущими подчеркивателями) было униточено.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|**Ассемблер**|Обязательный заголовок|
+|**Обычной**|Обязательный заголовок|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_get_current_locale](get-current-locale.md)<br/>
 [_create_locale, _wcreate_locale](create-locale-wcreate-locale.md)<br/>

@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954811"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344061"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -48,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_heapchk** возвращает одну из следующих целочисленных констант манифеста, определенных в malloc. h.
+**_heapchk** возвращает одну из следующих констант, определенных в Malloc.h.
 
 |Возвращаемое значение|Условие|
 |-|-|
@@ -58,11 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Куча не инициализирована. |
 | **_HEAPOK** | Вероятно, куча согласована. |
 
-Кроме того, при возникновении ошибки **_heapchk** **устанавливает значение** «от» до **еносис**.
+Кроме того, если ошибка происходит, **_heapchk** устанавливает **errno** к **ENOSYS**.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_heapchk** помогает отладить проблемы, связанные с кучей, с помощью проверки на наличие минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** **и устанавливает значение** переводится в **еносис**.
+Функция **_heapchk** помогает отладить проблемы, связанные с кучей, проверяя на минимальную согласованность кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция **возвращается _HEAPOK** и устанавливает **errno** **в ENOSYS.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -70,7 +74,7 @@ int _heapchk( void );
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -115,9 +119,9 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapmin](heapmin.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

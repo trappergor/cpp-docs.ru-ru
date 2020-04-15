@@ -1,6 +1,6 @@
 ---
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbslen
 - _mbslen_l
@@ -8,6 +8,10 @@ api_name:
 - wcslen
 - _mbstrlen_l
 - strlen
+- _o__mbslen
+- _o__mbslen_l
+- _o__mbstrlen
+- _o__mbstrlen_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -52,19 +57,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 5b1d3f7483ec96cbcda7c72178613d81747c8060
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0aa7c4f666936bae9602d6b2ab95a2731d9c0413
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947580"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355249"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
 Получает длину строки, используя текущий или указанный языковой стандарт. Существуют более безопасные версии этих функций; см. раздел [strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l](strnlen-strnlen-s.md)
 
 > [!IMPORTANT]
-> **_mbslen**, **_mbslen_l**, **_mbstrlen**и **_mbstrlen_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbslen,** **_mbslen_l,** **_mbstrlen**и **_mbstrlen_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -93,23 +98,25 @@ size_t _mbstrlen_l(
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*Ул*<br/>
 Строка, завершающаяся символом NULL.
 
-*locale*<br/>
+*Языкового стандарта*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает количество символов в *str*, исключая значение терминала null. Возвращаемое значение не зарезервировано для указания ошибки, за исключением **_mbstrlen** и **_mbstrlen_l**, `((size_t)(-1))` которые возвращают, если строка содержит недопустимый многобайтовый символ.
+Каждая из этих функций возвращает количество символов в *str,* за исключением терминала null. Значение возврата не зарезервировано для указания ошибки, за `((size_t)(-1))` исключением **_mbstrlen** и **_mbstrlen_l,** которые возвращаются, если строка содержит недействительный мультибайтовый символ.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-**strlen** интерпретирует строку как строку однобайтовых символов, поэтому ее возвращаемое значение всегда равно количеству байтов, даже если строка содержит многобайтовые символы. **wcslen** — это версия **strlen**для расширенных символов; Аргумент **wcslen** является строкой расширенных символов, а число символов — в расширенных (двухбайтовых) символах. в противном случае **wcslen** и **strlen** ведут себя одинаково.
+**strlen** интерпретирует строку как однобайную строку символов, поэтому ее значение возврата всегда равно числу байтов, даже если строка содержит мультибайтные символы. **wcslen** является широкохарактерным вариантом **strlen**; аргумент **wcslen** является широкохарактерным, а количество символов — широким (двухбайным) символами. **wcslen** и **strlen** ведут себя одинаково иначе.
 
 **Примечание о безопасности.** Эти функции предполагают потенциальную угрозу, связанную с проблемой переполнения буфера. Проблемы переполнения буфера — это распространенный метод атак на системы, который приводит к несанкционированному повышению уровня прав. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+
+### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -117,7 +124,7 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen** и **_mbslen_l** возвращают количество многобайтовых символов в строке многобайтовых символов, но не проверяют допустимость многобайтовых символов. **_mbstrlen** и **_mbstrlen_l** проверяют допустимость многобайтовых символов и распознают последовательности многобайтовых символов. Если строка, передаваемая в **_mbstrlen** или **_mbstrlen_l** , содержит недопустимый многобайтовый символ для кодовой страницы, функция возвращает **значение-1 и устанавливает для** функции возврата в **еилсек**.
+**_mbslen** и **_mbslen_l** вернуть количество мультибайтовых символов в строке мультибайт-символа, но они не проверяются на достоверность мультибайт-символа. **_mbstrlen** и **_mbstrlen_l** тест на достоверность мультибайт-символа и распознавать последовательности мультибайт-символов. Если строка, передаваемый **_mbstrlen** или **_mbstrlen_l** содержит недействительный мультибайтовый символ для страницы кода, функция возвращает -1 и устанавливает **errno** в **EILSE.**
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
@@ -130,7 +137,7 @@ size_t _mbstrlen_l(
 |**_mbslen**, **_mbslen_l**|\<mbstring.h>|
 |**_mbstrlen**, **_mbstrlen_l**|\<stdlib.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
@@ -195,15 +202,15 @@ Length of 'ABCァD' : 5
 Bytes in 'ABCァD' : 6
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
-[Операции со строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[Языковой стандарт](../../c-runtime-library/locale.md)<br/>
+[Локаль](../../c-runtime-library/locale.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[Функции strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

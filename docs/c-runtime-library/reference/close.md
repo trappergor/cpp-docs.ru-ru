@@ -1,8 +1,9 @@
 ---
 title: _close
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _close
+- _o__close
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942936"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348645"
 ---
 # <a name="_close"></a>_close
 
@@ -47,20 +49,22 @@ int _close(
 
 ### <a name="parameters"></a>Параметры
 
-*fd*<br/>
+*Fd*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_close** возвращает 0, если файл был успешно закрыт. Возвращаемое значение, равное-1, указывает на ошибку.
+**_close** возвращает 0, если файл был успешно закрыт. Значение возврата -1 указывает на ошибку.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-Функция **_close** закрывает файл, связанный с *демоном*.
+Функция **_close** закрывает файл, связанный с *fd.*
 
-Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Поэтому нет необходимости вызывать функцию **CloseHandle** , если файл был первоначально открыт с помощью функции Win32 **CreateFile** и преобразован в дескриптор файла с помощью **_open_osfhandle**.
+Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, нет необходимости звонить **CloseHandle,** если файл был первоначально открыт с помощью функции Win32 **CreateFile** и преобразован в дескриптор файлов с помощью **_open_osfhandle.**
 
-Эта функция проверяет свои параметры. Если *демон демона* является неверным дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение-1 **, а для** возврата — **значение EBADF**.
+Эта функция проверяет свои параметры. Если *fd* является плохим дескриптором файлов, вызывается обработчик параметров недействительных, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, функции возвращается -1 и **errno** устанавливается **на EBADF**.
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -68,13 +72,13 @@ int _close(
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [_open](open-wopen.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>

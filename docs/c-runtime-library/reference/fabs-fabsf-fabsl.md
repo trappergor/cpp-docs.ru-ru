@@ -1,10 +1,11 @@
 ---
 title: fabs, fabsf, fabsl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fabsf
 - fabs
 - fabsl
+- _o_fabs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941485"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347550"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -73,29 +75,31 @@ long double fabsl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **Fabs** возвращают абсолютное значение аргумента *x*. Ошибка не возвращается.
+**Fabs функции** вернуть абсолютное значение *аргумента x*. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± КНАН, С|none|_DOMAIN|
+|- ЗНАН,IND|Нет|_DOMAIN|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-C++допускает перегрузку, поэтому можно вызывать перегрузки **Fabs** , если включается \<заголовок cmath >. В программе на языке C **Fabs** всегда принимает и возвращает значение **типа Double**.
+СЗ позволяет перегружать, так что вы можете вызвать \<перегрузки **fabs,** если вы включаете cmath> заголовок. В программе C, **fabs** всегда принимает и возвращает **двойник.**
+
+По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Функция|Обязательный заголовок C|Обязательный заголовок C++|
+|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|-----------------------|---------------------------|
-|**Fabs**, **fabsf**, **фабсл**|\<math.h>|\<cmath> или \<math.h>|
+|**фабс**, **fabsf**, **fabsl**|\<math.h>|\<cmath> или \<math.h>|
 
-Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
 См. пример для [abc](abs-labs-llabs-abs64.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
