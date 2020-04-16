@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Инициализация CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: Глобальное состояние в CRT
+                  href: c-runtime-library/global-state.md
             - name: "Подпрограммы универсальной среды выполнения\_C по категориям"
               expanded: false
               items:
@@ -9380,14 +9382,14 @@
                       href: standard-library/stack.md
                     - name: Операторы <stack>
                       href: standard-library/stack-operators.md
-                    - name: Класс stack
+                    - name: stack - класс
                       href: standard-library/stack-class.md
                 - name: <stdexcept>
                   expanded: false
                   items:
                     - name: <stdexcept>
                       href: standard-library/stdexcept.md
-                    - name: domain_error - класс
+                    - name: Класс domain_error
                       href: standard-library/domain-error-class.md
                     - name: Класс invalid_argument
                       href: standard-library/invalid-argument-class.md
@@ -10417,9 +10419,9 @@
                           href: parallel/concrt/reference/concurrency-namespace-enums.md
                         - name: Класс affinity_partitioner
                           href: parallel/concrt/reference/affinity-partitioner-class.md
-                        - name: Класс agent
+                        - name: agent - класс
                           href: parallel/concrt/reference/agent-class.md
-                        - name: auto_partitioner - класс
+                        - name: Класс auto_partitioner
                           href: parallel/concrt/reference/auto-partitioner-class.md
                         - name: Класс bad_target
                           href: parallel/concrt/reference/bad-target-class.md
