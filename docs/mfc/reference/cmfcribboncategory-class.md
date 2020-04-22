@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375265"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749544"
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonКатегория
 
@@ -260,7 +260,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 Добавляет указанный элемент ленты к массиву элементов ленты, которые отображаются в поле диалога настройки.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
 
 Извлекает все элементы ленты в категории ленты.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ void GetElements(
 
 Извлекает все элементы ленты, связанные с указанным идентификатором команды.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 
 Извлекает иные данные команды для элементов ленты, которые содержатся в категории ленты.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ int GetTextTopLine() const;
 
 Извлекает все видимые элементы, которые относятся к категории ленты.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Определяет порядок, в котором рухнут ленточные панели ленточной категории.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 
 Устанавливает данные, определяемые пользователем, чтобы быть связанными с категорией ленты.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Присваивает ключевой элемент категории ленты.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ void SetKeys(LPCTSTR lpszKeys);
 
 Присваивает имя и ключ к категории ленты.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ void SetName(LPCTSTR lpszName);
 
 Устанавливает цвет категории ленты.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e4ea8eef51431c100f5d3119d7f75e9673e276e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318932"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748736"
 ---
 # <a name="catllist-class"></a>Класс CAtlList
 
@@ -153,7 +153,7 @@ POSITION AddHead(INARGTYPE element);
 
 Вызовите этот метод, чтобы добавить существующий список в главу списка.
 
-```
+```cpp
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -200,7 +200,7 @@ POSITION AddTail(INARGTYPE element);
 
 Вызовите этот метод, чтобы добавить существующий список в хвост этого списка.
 
-```
+```cpp
 void AddTailList(const CAtlList<E, ETraits>* plNew);
 ```
 
@@ -221,7 +221,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 
 Вызов этого метода, чтобы подтвердить список является действительным.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -599,7 +599,7 @@ bool IsEmpty() const throw();
 
 Вызовите этот метод, чтобы переместить указанный элемент в главу списка.
 
-```
+```cpp
 void MoveToHead(POSITION pos) throw();
 ```
 
@@ -620,7 +620,7 @@ void MoveToHead(POSITION pos) throw();
 
 Вызовите этот метод, чтобы переместить указанный элемент в хвост списка.
 
-```
+```cpp
 void MoveToTail(POSITION pos) throw();
 ```
 
@@ -641,7 +641,7 @@ void MoveToTail(POSITION pos) throw();
 
 Вызовите этот метод, чтобы удалить все элементы из списка.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -657,7 +657,7 @@ void RemoveAll() throw();
 
 Вызовите этот метод, чтобы удалить один элемент из списка.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -700,7 +700,7 @@ E RemoveHead();
 
 Вызовите этот метод, чтобы удалить элемент во главе списка, не возвращая значение.
 
-```
+```cpp
 void RemoveHeadNoReturn() throw();
 ```
 
@@ -736,7 +736,7 @@ E RemoveTail();
 
 Вызовите этот метод, чтобы удалить элемент в хвосте списка, не возвращая значение.
 
-```
+```cpp
 void RemoveTailNoReturn() throw();
 ```
 
@@ -752,7 +752,7 @@ void RemoveTailNoReturn() throw();
 
 Вызовите этот метод, чтобы установить значение элемента в заданной позиции в списке.
 
-```
+```cpp
 void SetAt(POSITION pos, INARGTYPE element);
 ```
 
@@ -776,7 +776,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 
 Вызовите этот метод для замены элементов в списке.
 
-```
+```cpp
 void SwapElements(POSITION pos1, POSITION pos2) throw();
 ```
 

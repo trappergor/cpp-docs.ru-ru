@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 80f687da75d0160a6955caa7469ac9cc55c2c257
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190646"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749709"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Блок, относящийся только к системам Microsoft**
+**Microsoft Специфический**
 
-Копирует `BSTR` в `BSTR`, заключенный в`bstr_t` **_** .
+Копии `BSTR` в `BSTR` обернутые **на q**`bstr_t`.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void Assign(
    BSTR s
 );
@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>Remarks
 
-**Assign** выполняет двоичную копию, что означает копирование всей длины `BSTR`, независимо от содержимого.
+**Назначать** делает двоичную копию, что `BSTR` означает, что вся длина копируется, независимо от содержания.
 
 ## <a name="example"></a>Пример
 
@@ -109,8 +109,8 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**END Microsoft Специфический**
 
 ## <a name="see-also"></a>См. также раздел
 
-[_bstr_t Class](../cpp/bstr-t-class.md)
+[_bstr_t класс](../cpp/bstr-t-class.md)

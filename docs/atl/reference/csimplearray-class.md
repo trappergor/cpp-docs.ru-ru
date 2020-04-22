@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: e45c9b3fd778aacd3a3e2d5d3696661afa0c6fb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330909"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746475"
 ---
 # <a name="csimplearray-class"></a>Класс CSimpleArray
 
@@ -97,7 +97,7 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*t*<br/>
 Элемент для добавления в массив.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -148,7 +148,7 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*t*<br/>
 Элемент для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -241,7 +241,7 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*t*<br/>
 Элемент для удаления из массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -256,7 +256,7 @@ BOOL Remove(const T& t);
 
 Удаляет все элементы из массива.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -300,7 +300,7 @@ BOOL SetAtIndex(
 *Nindex*<br/>
 Индекс элемента для изменения.
 
-*T*<br/>
+*t*<br/>
 Значение, присваиваемое указанному элементу.
 
 ### <a name="return-value"></a>Возвращаемое значение

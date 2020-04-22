@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368342"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747209"
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Прикрепляет существующий целевой интерфейс рендера к объекту
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 
 Инициирует рисование на этой цели рендеринга.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 Очищает область чертежа к указанному цвету.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ BOOL CreateCompatibleRenderTarget(
 *желаемыйФормат*<br/>
 Необходимый формат пикселя и альфа-режим новой цели рендеринга, или NULL. Если формат пикселя установлен на DXGI_FORMAT_UNKNOWN или если этот параметр недействителен, новая цель рендера использует тот же формат пикселя, что и исходная цель рендеринга. Если альфа-режим находится D2D1_ALPHA_MODE_UNKNOWN или этот параметр null, альфа-режим новой цели внебрачно-юмерии по умолчанию D2D1_ALPHA_MODE_PREMULTIPLIED. Для получения информации о поддерживаемых форматах пикселей см.
 
-*Параметры*<br/>
+*options*<br/>
 Значение, означавшее, должна ли новая цель рендеринга быть совместимой с GDI.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -362,7 +362,7 @@ ID2D1RenderTarget* Detach ();
 
 Рисует отформатированный текст, описанный указанным объектом IDWriteTextLayout.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ void DrawBitmap(
 
 Рисует контур указанного эллипса с помощью заданного стиля инсульта.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ void DrawEllipse(
 
 Рисует контур указанной геометрии с помощью заданного стиля штриха.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ void DrawGeometry(
 
 Рисует указанные глифы.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ void DrawGlyphRun(
 
 Рисует линию между указанными точками с помощью заданного стиля инсульта.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ void DrawLine(
 
 Рисует контур прямоугольника, который имеет указанные размеры и стиль хода.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ void DrawRectangle(
 
 Рисует контур указанного закругленный прямоугольник с использованием указанного стиля инсульта.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ void DrawRoundedRectangle(
 
 Рисует указанный текст с помощью информации о формате, предоставленной объектом IDWriteTextFormat.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ void DrawText(
 *textFormat*<br/>
 Объект, описывающий форматирование деталей текста для рисования, таких как шрифт, размер шрифта и направление потока.
 
-*Параметры*<br/>
+*options*<br/>
 Значение, указывавое, следует ли прикрепить текст к границам пикселей и следует ли прикрепить текст к прямоугольнику макета. Значение по умолчанию является D2D1_DRAW_TEXT_OPTIONS_NONE, что указывает на то, что текст должен быть прикреплен к границам пикселей и не должен быть обрезан в прямоугольник макета.
 
 *измерительноережим*<br/>
@@ -586,7 +586,7 @@ void DrawText(
 
 Рисует отформатированный текст, описанный указанным объектом IDWriteTextLayout.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ void DrawTextLayout(
 *pBrushForground*<br/>
 Кисть, используемая для рисования любого текста в textLayout, который уже не имеет кисти, связанной с ним в качестве эффекта чертежа (определено методом IDWriteTextLayout::SetDrawingEffect).
 
-*Параметры*<br/>
+*options*<br/>
 Значение, указывавое, следует ли прикрепить текст к границам пикселей и следует ли прикрепить текст к прямоугольнику макета. Значение по умолчанию является D2D1_DRAW_TEXT_OPTIONS_NONE, что указывает на то, что текст должен быть прикреплен к границам пикселей и не должен быть обрезан в прямоугольник макета.
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::EndDraw
@@ -624,7 +624,7 @@ HRESULT EndDraw();
 
 Красит интерьер указанного эллипса.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ void FillEllipse(
 
 Красит интерьер указанной геометрии.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ void FillGeometry(
 
 Красит интерьер указанной сетки.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ void FillMesh(
 
 Применяет маску непрозрачности, описанную указанной биткартой, к кисти и использует эту кисть для рисования области цели рендеринга.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ void FillOpacityMask(
 
 Красит интерьер указанного прямоугольника.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ void FillRectangle(
 
 Красит интерьер указанного закругленный прямоугольник.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ void FillRoundedRectangle(
 
 Выполняет все ожидающие команды рисования.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ CD2DSizeF GetSize() const;
 
 Получает метку для последующих операций рисования.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 Извлекает параметры текущего текста цели рендеринга.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 
 Получает текущее преобразование цели рендера.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ operator ID2D1RenderTarget*();
 
 Удаляет последний клип, выровненный по оси, из цели рендеринга. После вызова этого метода клип больше не применяется к последующим операциям рисования.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Прекращает перенаправление операций рисования на слой, указанный последним вызовом PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Удаляет последний клип, выровненный по оси, из цели рендеринга. После вызова этого метода клип больше не применяется к последующим операциям рисования.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -1005,7 +1005,7 @@ void PushAxisAlignedClip(
 
 Добавляет указанный слой к цели рендеринга, чтобы он получал все последующие операции рисования до тех пор, пока PopLayer не будет вызван.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ void PushLayer(
 
 Устанавливает состояние рисования цели рендера на состояние указанного ID2D1DrawingStateBlock.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 
 Сохраняет текущее состояние чертежа в указанном ID2D1DrawingStateBlock.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 
 Устанавливает режим антиализазания цели рендера. Режим антиализажания применяется ко всем последующим операциям рисования, за исключением операций рисования текста и глифа.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 
 Устанавливает точки на дюйм (DPI) цели рендеринга.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 
 Определяет метку для последующих операций рисования.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ void SetTags(
 
 Определяет режим антиалиазирования для использования для последующих операций рисования текста и глифа.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 
 Определяет параметры визуализации текста, которые будут применяться ко всем последующим операциям рисования текста и глифа.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 
 Применяет указанное преобразование к цели рендера, заменяя существующую трансформацию. Все последующие операции рисования происходят в преобразованном пространстве.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

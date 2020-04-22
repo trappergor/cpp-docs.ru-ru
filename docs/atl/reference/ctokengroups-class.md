@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 1e9d21c59eb5efabf036fbc938a40de2c4b7a0b7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330553"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746383"
 ---
 # <a name="ctokengroups-class"></a>Класс cTokengroups
 
@@ -81,7 +81,7 @@ class CTokenGroups
 
 Добавляет `CSid` или `TOKEN_GROUPS` существующую `CTokenGroups` структуру к объекту.
 
-```
+```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
 void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 ```
@@ -153,7 +153,7 @@ bool Delete(const CSid& rSid) throw();
 
 Удаляет все `CSid` объекты и связанные `CTokenGroups` с ними атрибуты из объекта.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -197,7 +197,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 Извлекает `CSid` объекты и (по желанию) `CTokenGroups` атрибуты, принадлежащие объекту.
 
-```
+```cpp
 void GetSidsAndAttributes(
     CSid::CSidArray* pSids,
     CAtlArray<DWORD>* pAttributes = NULL) const throw(...);

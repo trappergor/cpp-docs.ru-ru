@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 85168af654d3d63e06559486b464938b7fd90ad3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 607af2adaa3ef28a768812f3c811eb2ed3169ad9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321572"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748790"
 ---
 # <a name="catlarray-class"></a>Класс CAtlArray
 
@@ -57,7 +57,7 @@ class CAtlArray
 
 |||
 |-|-|
-|[Добавить](#add)|Вызовите этот метод, чтобы добавить элемент в объект массива.|
+|[Добавление](#add)|Вызовите этот метод, чтобы добавить элемент в объект массива.|
 |[Добавить](#append)|Вызовите этот метод, чтобы добавить содержимое одного массива в конец другого.|
 |[Assertvalid](#assertvalid)|Вызовите этот метод, чтобы подтвердить, что объект массива действителен.|
 |[Catlarray](#catlarray)|Конструктор.|
@@ -69,7 +69,7 @@ class CAtlArray
 |[GetData](#getdata)|Вызовите этот метод, чтобы вернуть указатель к первому элементу массива.|
 |[ВставитьАрхайт](#insertarrayat)|Вызовите этот метод, чтобы вставить один массив в другой.|
 |[Вставка](#insertat)|Вызовите этот метод, чтобы вставить новый элемент (или несколько копий элемента) в объект массива.|
-|[IsEmpty](#isempty)|Вызовите этот метод, чтобы проверить, пустен ли массив.|
+|[Isempty](#isempty)|Вызовите этот метод, чтобы проверить, пустен ли массив.|
 |[Removeall](#removeall)|Вызов иметод, чтобы удалить все элементы из объекта массива.|
 |[RemoveAt](#removeat)|Вызовите этот метод, чтобы удалить один или несколько элементов из массива.|
 |[Setat](#setat)|Вызовите этот метод, чтобы установить значение элемента в объекте массива.|
@@ -162,7 +162,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 Вызовите этот метод, чтобы подтвердить, что объект массива действителен.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -206,7 +206,7 @@ CAtlArray() throw();
 
 Вызовите этот метод, чтобы скопировать элементы одного массива в другой.
 
-```
+```cpp
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
@@ -234,7 +234,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 Вызовите этот метод, чтобы удалить любые пустые элементы из массива.
 
-```
+```cpp
 void FreeExtra() throw();
 ```
 
@@ -319,7 +319,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 
 Вызовите этот метод, чтобы вставить один массив в другой.
 
-```
+```cpp
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
@@ -348,7 +348,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 Вызовите этот метод, чтобы вставить новый элемент (или несколько копий элемента) в объект массива.
 
-```
+```cpp
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
@@ -429,7 +429,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 
 Вызов иметод, чтобы удалить все элементы из объекта массива.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -447,7 +447,7 @@ void RemoveAll() throw();
 
 Вызовите этот метод, чтобы удалить один или несколько элементов из массива.
 
-```
+```cpp
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
@@ -473,7 +473,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 Вызовите этот метод, чтобы установить значение элемента в объекте массива.
 
-```
+```cpp
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
@@ -527,7 +527,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 Вызовите этот метод, чтобы установить значение элемента в объекте массива, расширяя массив по мере необходимости.
 
-```
+```cpp
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 

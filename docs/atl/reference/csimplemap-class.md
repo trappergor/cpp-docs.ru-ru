@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eed41c2250728d257b6d303e79c3afd36a543dbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330805"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747640"
 ---
 # <a name="csimplemap-class"></a>Класс CSimpleMap
 
@@ -114,7 +114,7 @@ BOOL Add(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ.
 
 *Валь*<br/>
@@ -178,7 +178,7 @@ int FindKey(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, который нужно найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -266,7 +266,7 @@ TVal Lookup(const TKey& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -283,7 +283,7 @@ BOOL Remove(const TKey& key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -294,7 +294,7 @@ BOOL Remove(const TKey& key);
 
 Удаляет все ключи и значения.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -346,7 +346,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ.
 
 *Валь*<br/>
@@ -372,7 +372,7 @@ BOOL SetAtIndex(
 *Nindex*<br/>
 Индекс, ссылаясь на значение сопряжения ключа и значения, должен измениться.
 
-*Ключ*<br/>
+*key*<br/>
 Новый ключ.
 
 *Валь*<br/>

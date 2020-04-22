@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330542"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747359"
 ---
 # <a name="ctokenprivileges-class"></a>Класс CTokenPrivileges
 
@@ -166,7 +166,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 
 Удаляет все привилегии `CTokenPrivileges` из объекта маркера доступа.
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ void DeleteAll() throw();
 
 Извлекает имена отображений `CTokenPrivileges` для привилегий, содержащихся в объекте маркера доступа.
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ UINT GetLength() const throw();
 
 Извлекает локальные уникальные идентификаторы (LUID) и атрибут флаги с `CTokenPrivileges` объекта.
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ void GetLuidsAndAttributes(
 
 Извлекает имя и атрибут `CTokenPrivileges` флаги из объекта.
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: 9dc93a47d36af92fe370e3f56f504682d49bd1dd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150627"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749193"
 ---
 # <a name="conditional-expression-operator"></a>Оператор Conditional-Expression
 
@@ -19,9 +19,9 @@ ms.locfileid: "56150627"
 
 ## <a name="syntax"></a>Синтаксис
 
-*conditional-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *expression*  **:**  *conditional-expression*
+*условное выражение*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*логическо-ИЛИ-выражение*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR expression*  **?**  *выражение*  **:**  *условное выражение*
 
 Выражение *logical-OR-expression* может иметь целочисленный тип, тип с плавающей запятой или тип указателя. Оно вычисляется с точки зрения эквивалентности значению 0. Точка последовательности следует за выражением *logical-OR-expression*. Вычисление операндов продолжается следующим образом.
 
@@ -55,7 +55,7 @@ j = ( i < 0 ) ? ( -i ) : ( i );
 
 В этом примере абсолютное значение `i` присваивается `j`. Если значение `i` меньше 0, значение `-i` присваивается `j`. Если значение `i` больше или равно 0, значение `i` присваивается `j`.
 
-```
+```cpp
 void f1( void );
 void f2( void );
 int x;
@@ -68,6 +68,6 @@ int y;
 
 В этом примере объявляется две функции `f1` и `f2` и две переменные `x` и `y`. Далее в программе, если две переменные имеют одинаковое значение, вызывается функция `f1`. В противном случае вызывается функция `f2`.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Условный оператор: ? :](../cpp/conditional-operator-q.md)

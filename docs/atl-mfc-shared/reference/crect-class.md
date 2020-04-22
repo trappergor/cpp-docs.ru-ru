@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: c59ed587e2c8e51f5c08a026a7ee0b9d0af25168
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b99eca7fe3a9c84f8b79ef3d694e27b6dd74dcd9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317705"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747066"
 ---
 # <a name="crect-class"></a>Класс CRect
 
@@ -242,7 +242,7 @@ void CMyDlg::OnPaint()
 
 Копирует `lpSrcRect` прямоугольник `CRect`в .
 
-```
+```cpp
 void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
@@ -291,10 +291,10 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *L*<br/>
 Определяет левую позицию `CRect`.
 
-*T*<br/>
+*t*<br/>
 Определяет верхнюю часть `CRect`.
 
-*R*<br/>
+*r*<br/>
 Определяет правильное `CRect`положение.
 
 *B*<br/>
@@ -309,7 +309,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *Точки*<br/>
 Определяет точку происхождения прямоугольника, которая будет построена. Соответствует верхнему левому углу.
 
-*Размер*<br/>
+*size*<br/>
 Определяет смещение из верхнего левого угла в нижний правый угол прямоугольника, который будет построен.
 
 *topLeft*<br/>
@@ -366,7 +366,7 @@ ASSERT(rect5 == rect4);
 
 `DeflateRect`сдувается, `CRect` двигая его стороны к его центру.
 
-```
+```cpp
 void DeflateRect(int x, int y) throw();
 void DeflateRect(SIZE size) throw();
 void DeflateRect(LPCRECT lpRect) throw();
@@ -381,7 +381,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *Y*<br/>
 Определяет количество единиц для дефлации верхней и `CRect`нижней части.
 
-*Размер*<br/>
+*size*<br/>
 [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или [CSize,](csize-class.md) который определяет количество единиц `CRect`для дефлации. Значение `cx` определяет количество единиц для сдува левой и правой сторон, а `cy` значение определяет количество единиц для сдува верхней и нижней частей.
 
 *lpRect*<br/>
@@ -390,10 +390,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 *L*<br/>
 Определяет количество единиц для сдува левой `CRect`стороны .
 
-*T*<br/>
+*t*<br/>
 Определяет количество единиц для сдува в `CRect`верхней части .
 
-*R*<br/>
+*r*<br/>
 Определяет количество единиц для дефлации правой `CRect`стороны.
 
 *B*<br/>
@@ -492,7 +492,7 @@ ASSERT(nHt == 40);
 
 `InflateRect`раздувается, `CRect` перемещая его стороны от его центра.
 
-```
+```cpp
 void InflateRect(int x, int y) throw();
 void InflateRect(SIZE size) throw();
 void InflateRect(LPCRECT lpRect) throw();
@@ -507,7 +507,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *Y*<br/>
 Определяет количество единиц для раздувания верхней и `CRect`нижней части.
 
-*Размер*<br/>
+*size*<br/>
 [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или [CSize,](csize-class.md) который определяет количество единиц `CRect`для раздувания. Значение `cx` определяет количество единиц для раздувания левой и правой `cy` сторон, а значение определяет количество единиц для раздувания верхней и нижней частей.
 
 *lpRect*<br/>
@@ -516,10 +516,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *L*<br/>
 Определяет количество единиц для раздувания левой `CRect`стороны.
 
-*T*<br/>
+*t*<br/>
 Определяет количество единиц для раздувания верхней `CRect`части .
 
-*R*<br/>
+*r*<br/>
 Определяет количество единиц для раздувания правой `CRect`стороны.
 
 *B*<br/>
@@ -647,7 +647,7 @@ ASSERT(!rectNotNull.IsRectNull());
 
 Вызовите эту функцию, чтобы переместить прямоугольник в абсолютную x-координату, указанную *x.*
 
-```
+```cpp
 void MoveToX(int x) throw();
 ```
 
@@ -670,7 +670,7 @@ ASSERT(rect == CRect(10, 0, 110, 100));
 
 Вызовите эту функцию, чтобы переместить прямоугольник в абсолютные x- и y-координаты, указанные.
 
-```
+```cpp
 void MoveToXY(int x, int y) throw();
 void MoveToXY(POINT point) throw();
 ```
@@ -699,7 +699,7 @@ ASSERT(rect == CRect(10, 10, 110, 110));
 
 Вызовите эту функцию, чтобы переместить прямоугольник в абсолютную y-координату, указанную *y.*
 
-```
+```cpp
 void MoveToY(int y) throw();
 ```
 
@@ -721,7 +721,7 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 
 Нормализует `CRect` так, что и высота и ширина являются положительными.
 
-```
+```cpp
 void NormalizeRect() throw();
 ```
 
@@ -746,7 +746,7 @@ ASSERT(rect1 == rect2);
 
 Перемещается `CRect` по указанным смещениям.
 
-```
+```cpp
 void OffsetRect(int x, int y) throw();
 void OffsetRect(POINT point) throw();
 void OffsetRect(SIZE size) throw();
@@ -763,7 +763,7 @@ void OffsetRect(SIZE size) throw();
 *Точки*<br/>
 Содержит структуру [POINT](/windows/win32/api/windef/ns-windef-point) или объект [CPoint,](cpoint-class.md) определяющий оба измерения, по которым необходимо двигаться.
 
-*Размер*<br/>
+*size*<br/>
 Содержит структуру [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize,](csize-class.md) определяющий оба измерения, по которым необходимо двигаться.
 
 ### <a name="remarks"></a>Remarks
@@ -810,7 +810,7 @@ operator LPRECT() throw();
 
 Присваивает *srcRect* . `CRect`
 
-```
+```cpp
 void operator=(const RECT& srcRect) throw();
 ```
 
@@ -913,7 +913,7 @@ ASSERT(rect3 != test);
 
 Первые две перегрузки перемещаются `CRect` по указанным смещениям.
 
-```
+```cpp
 void operator+=(POINT point) throw();
 void operator+=(SIZE size) throw();
 void operator+=(LPCRECT lpRect) throw();
@@ -924,7 +924,7 @@ void operator+=(LPCRECT lpRect) throw();
 *Точки*<br/>
 Структура [POINT](/windows/win32/api/windef/ns-windef-point) или объект [CPoint,](cpoint-class.md) который определяет количество единиц для перемещения прямоугольника.
 
-*Размер*<br/>
+*size*<br/>
 Структура [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize,](csize-class.md) который определяет количество единиц для перемещения прямоугольника.
 
 *lpRect*<br/>
@@ -951,7 +951,7 @@ ASSERT(rect1 == rect2);
 
 Первые две перегрузки перемещаются `CRect` по указанным смещениям.
 
-```
+```cpp
 void operator-=(POINT point) throw();
 void operator-=(SIZE size) throw();
 void operator-=(LPCRECT lpRect) throw();
@@ -962,7 +962,7 @@ void operator-=(LPCRECT lpRect) throw();
 *Точки*<br/>
 Структура [POINT](/windows/win32/api/windef/ns-windef-point) или объект [CPoint,](cpoint-class.md) который определяет количество единиц для перемещения прямоугольника.
 
-*Размер*<br/>
+*size*<br/>
 Структура [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize,](csize-class.md) который определяет количество единиц для перемещения прямоугольника.
 
 *lpRect*<br/>
@@ -989,7 +989,7 @@ ASSERT(rect1 == rectResult);
 
 Наборы, `CRect` равные `CRect` `rect`пересечению и .
 
-```
+```cpp
 void operator&=(const RECT& rect) throw();
 ```
 
@@ -1013,7 +1013,7 @@ void operator&=(const RECT& rect) throw();
 
 Наборы, `CRect` равные `CRect` `rect`союзу и .
 
-```
+```cpp
 void operator|=(const RECT& rect) throw();
 ```
 
@@ -1055,7 +1055,7 @@ CRect operator+(SIZE size) const throw();
 *Точки*<br/>
 Структура [POINT](/windows/win32/api/windef/ns-windef-point) или объект [CPoint,](cpoint-class.md) который определяет количество единиц для перемещения значения возврата.
 
-*Размер*<br/>
+*size*<br/>
 Структура [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize,](csize-class.md) который определяет количество единиц для перемещения значения возврата.
 
 *lpRect*<br/>
@@ -1098,7 +1098,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 *Точки*<br/>
 Структура или `CPoint` объект [POINT,](/windows/win32/api/windef/ns-windef-point) опознавающие количество единиц для перемещения значения возврата.
 
-*Размер*<br/>
+*size*<br/>
 Структура или `CSize` объект [СИЗЕ](/windows/win32/api/windef/ns-windef-size) определяет количество единиц для перемещения значения возврата.
 
 *lpRect*<br/>
@@ -1255,7 +1255,7 @@ ASSERT(rect.PtInRect(pt));
 
 Устанавливает размеры `CRect` указанных координат.
 
-```
+```cpp
 void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
@@ -1285,7 +1285,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 Делает `CRect` нулевой прямоугольник, установив все координаты к нулю.
 
-```
+```cpp
 void SetRectEmpty() throw();
 ```
 

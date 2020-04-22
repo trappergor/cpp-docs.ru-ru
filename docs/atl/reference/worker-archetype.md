@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329348"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747342"
 ---
 # <a name="worker-archetype"></a>Рабочий архетип
 
@@ -22,7 +22,7 @@ ms.locfileid: "81329348"
 |Метод|Описание|
 |------------|-----------------|
 |[Initialize](#initialize)|Вызывается для инициализации объекта работника до того, как любые запросы будут переданы в [выполнение.](#execute)|
-|[Выполнить](#execute)|Вызывается для обработки рабочего элемента.|
+|[Execute](#execute)|Вызывается для обработки рабочего элемента.|
 |[Завершить](#terminate)|Вызывается для отсоединения объекта работы после того, как все запросы были переданы для [выполнения.](#execute)|
 
 |Typedef|Описание|
@@ -58,7 +58,7 @@ ms.locfileid: "81329348"
 
 Вызывается для обработки рабочего элемента.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Параметры
 
-*Запрос*<br/>
+*request*<br/>
 Рабочий элемент, который будет обработан. Элемент работы имеет тот `RequestType`же тип, что и .
 
 *pvWorkerParam*<br/>
@@ -109,7 +109,7 @@ typedef MyRequestType RequestType;
 
 Вызывается для отunимитивизации объекта `WorkerArchetype::Execute`работника после того, как все запросы были переданы).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369133"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750315"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Класс CD2DRadialGradientBrush
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 Прикрепляет существующий интерфейс ресурса к объекту
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ operator ID2D1RadialGradientBrush*();
 
 Определяет центр эллипса градиента в пространстве координат кисти
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ void SetCenter(CD2DPointF point);
 
 Определяет смещение градиентного происхождения относительно центра градиента эллипса
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 
 Определяет x-радиус эллипса градиента в пространстве координат кисти
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ X-радиус градиентного эллипса. Это значение 
 
 Определяет y-радиус градиентного эллипса в пространстве координат кисти
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 

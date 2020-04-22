@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 9ae63946dfa6244e97c376f9eccd9bab93586990
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f7a2ee2f9d633c1ed743621eec5b2f7cc04c0e0b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319037"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748831"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
@@ -144,7 +144,7 @@ class CAccessToken
 
 Вызовите этот метод, чтобы взять на себя ответственность за данную ручку маркера доступа.
 
-```
+```cpp
 void Attach(HANDLE hToken) throw();
 ```
 

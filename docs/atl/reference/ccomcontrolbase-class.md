@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320777"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748111"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 
@@ -606,7 +606,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 *Dispid*<br/>
 Идентификация свойства контейнера, подхваченного.
 
-*Var*<br/>
+*var*<br/>
 Переменная для получения свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -794,7 +794,7 @@ BOOL GetDirty();
 
 Извлекает значения x и y числителя и знаменателя фактора масштабирования для управления, активированного для редактирования на месте.
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 Устанавливает член `m_bRequiresSave` данных к значению в *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 

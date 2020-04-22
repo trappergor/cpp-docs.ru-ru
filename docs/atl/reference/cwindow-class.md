@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 15460c1c7bb34edde04c2e740c19e488b6dfa83b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4d241107b36b92a53c8647e18f03432294ef0a86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330319"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746015"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -394,7 +394,7 @@ UINT ArrangeIconicWindows() throw();
 
 Прикрепляет окно, идентифицированное *hWndNew* к объекту. `CWindow`
 
-```
+```cpp
 void Attach(HWND hWndNew) throw();
 ```
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 Смотрите [ClientToScreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) в SDK Windows.
 
-Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowcreate"></a><a name="create"></a>CWindow::Создание
 
@@ -771,7 +771,7 @@ BOOL DlgDirSelectComboBox(
 
 Регистрирует, принимает ли окно перетаскиваемые файлы.
 
-```
+```cpp
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
@@ -823,7 +823,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 Отмечает завершение рисования.
 
-```
+```cpp
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
@@ -1504,7 +1504,7 @@ WORD GetWindowWord(int nIndex) const throw();
 
 Устанавливает фокус клавиатуры на элемент управления в диалоговом поле.
 
-```
+```cpp
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
@@ -1577,7 +1577,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 
 Недействительная область клиента в указанном регионе.
 
-```
+```cpp
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 Смотрите [MapWindowPoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) в SDK Windows.
 
-Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowmessagebox"></a><a name="messagebox"></a>Окно::MessageBox
 
@@ -1923,13 +1923,13 @@ BOOL MoveWindow(
 
 Для объекта окна верхнего уровня параметры x и y относительно верхнего левого угла экрана. Для объекта окна ребенка они относительно верхнего левого угла клиентской зоны родительского окна.
 
-Вторая версия этого метода использует структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) для определения нового положения, ширины и высоты окна.
+Вторая версия этого метода использует структуру [RECT](/windows/win32/api/windef/ns-windef-rect) для определения нового положения, ширины и высоты окна.
 
 ## <a name="cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>Окно::NextDlgCtrl
 
 Устанавливает фокус клавиатуры на следующий элемент управления в диалоговом поле.
 
-```
+```cpp
 void NextDlgCtrl() const throw();
 ```
 
@@ -1990,7 +1990,7 @@ BOOL PostMessage(
 
 Устанавливает фокус клавиатуры на предыдущем элементе управления в диалоговом поле.
 
-```
+```cpp
 void PrevDlgCtrl() const throw();
 ```
 
@@ -2002,7 +2002,7 @@ void PrevDlgCtrl() const throw();
 
 Отправляет [WM_PRINT](/windows/win32/gdi/wm-print) сообщение в окно с просьбой о том, чтобы оно было получено в контексте указанного устройства.
 
-```
+```cpp
 void Print(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2030,7 +2030,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
 
 Отправляет [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient) сообщение в окно с просьбой привлечь клиентскую область в указанном контексте устройства.
 
-```
+```cpp
 void PrintClient(HDC hDC, DWORD dwFlags) const throw();
 ```
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 Смотрите [ScreenToClient](/windows/win32/api/winuser/nf-winuser-screentoclient) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Вторая версия этого метода позволяет преобразовывать координаты структуры [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ## <a name="cwindowscrollwindow"></a><a name="scrollwindow"></a>Окно::Прокрутка
 
@@ -2216,7 +2216,7 @@ static LRESULT SendMessage(
 
 Отправляет указанное сообщение всем непосредственным `CWindow` детям объекта.
 
-```
+```cpp
 void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
@@ -2226,7 +2226,7 @@ void SendMessageToDescendants(
 
 ### <a name="parameters"></a>Параметры
 
-*Сообщение*<br/>
+*message*<br/>
 (в) Сообщение, чтобы быть отправлено.
 
 *wParam*<br/>
@@ -2363,7 +2363,7 @@ HWND SetFocus() throw();
 
 Изменяет текущий шрифт окна, отправляя [WM_SETFONT](/windows/win32/winmsg/wm-setfont) сообщение в окно.
 
-```
+```cpp
 void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2451,7 +2451,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 Устанавливает или очищает флаг перерисовки, отправив [WM_SETREDRAW](/windows/win32/gdi/wm-setredraw) сообщение в окно.
 
-```
+```cpp
 void SetRedraw(BOOL bRedraw = TRUE) throw();
 ```
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 Смотрите [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) в SDK Windows.
 
-Вторая версия этого метода использует структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) для настройки нового положения, ширины и высоты окна.
+Вторая версия этого метода использует структуру [RECT](/windows/win32/api/windef/ns-windef-rect) для настройки нового положения, ширины и высоты окна.
 
 ## <a name="cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn
 

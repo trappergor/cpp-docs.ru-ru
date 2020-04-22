@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748589"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 
@@ -147,7 +147,7 @@ CAtlServiceModuleT() throw();
 
 Режим обработчика для службы.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ BOOL IsInstalled() throw();
 
 Записывает журнал событий.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ TCHAR [256] m_szServiceName;
 
 Переопределить этот метод для продолжения службы.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 Переопределить этот метод, чтобы допросить службу.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 Переопределить этот метод, чтобы приостановить службу.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 Переопределить этот метод, чтобы отключить службу.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 Переопределить этот метод, чтобы остановить службу.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 Переопределить этот метод для обработки неизвестных запросов в службу.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 Этот метод вызывается менеджером управления службой.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 Этот метод обновляет статус службы.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 

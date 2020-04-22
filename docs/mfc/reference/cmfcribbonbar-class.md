@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361442"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749749"
 ---
 # <a name="cmfcribbonbar-class"></a>Класс CMFCRibbonBar
 
@@ -581,7 +581,7 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 
 Добавляет указанный элемент ленты в строку вкладок ленточного бара.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ TRUE, если окно было создано; в противном случ�
 
 Закрывает все элементы управления keytip на ленте бар.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Включает или отключает функцию keytip для ленты бар.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 Позволяет или отсвагает функцию **предварительного просмотра печати.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 Включает или отстраняет инструменты и дополнительные описания инструментов на ленте бар.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 Регулирует расположение всех элементов в ленте бар и родительское окно и перерисовывает все окно.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 Извлекает массив указателей для всех элементов ленты, которые имеют определенный идентификатор команды.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ DWORD GetHideFlags() const;
 
 Получает иные иные данные для указанной коллекции элементов ленты на ленте бар.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ CMFCRibbonBaseElement* GetQATDroppedDown();
 
 Извлекает список идовинов команд для элементов ленты на панели инструментов быстрого доступа.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ TRUE, если хотя бы одна категория контекста бы
 
 Скрывает все кончики ключей на ленте бар.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ TRUE, если событие нажатия клавиши было обраб�
 
 Удаляет набор инструментов из поля зрения.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ virtual void RecalcLayout();
 
 Удаляет все категории лент из ленты бар.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ void RemoveAllCategories();
 
 Удаляет все элементы ленты из области вкладки.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ TRUE, если указанная категория была установле
 
 Связывает системные кнопки на ленте панели, которые принадлежат к многодокументному интерфейсу (MDI) окну ребенка к указанному окну ребенка MDI.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Помещает на панель ленты кнопку приложения.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ TRUE, если набор ключей хотя бы одного элемент
 
 Устанавливает уровень навигации клавиатуры, когда пользователь нажимает на клавиши, содержащиеся на ленте.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ void SetKeyboardNavigationLevel(
 
 Настраивает ленточку, когда размер окна многодокументного интерфейса (MDI) ввода или покидает состояние максимизации.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ void SetMaximizeMode(
 
 Добавляет один или несколько элементов ленты на панель быстрого доступа.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,13 +1890,13 @@ void SetQuickAccessCommands(
 
 Устанавливает панель инструментов быстрого доступа в состояние по умолчанию.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 (в) Состояние панели инструментов быстрого доступа по умолчанию.
 
 ### <a name="remarks"></a>Remarks
@@ -1913,7 +1913,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 Позиции быстрого доступа панели инструментов выше или ниже ленты бар.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Устанавливает регулярные и большие размеры tooltip фиксированной ширины для ленты бар.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ void SetTooltipFixedWidth(
 
 Отображает или скрывает указанную категорию ленты.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Показывает или скрывает категории контекста с указанным идентификатором.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Показывает ключевые наконечники для каждого элемента ленты на ленте бар.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Переключает ленту между сведенными и максимизированными состояниями.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 
 Позволяет или отстраняет Windows 7 смотреть (маленькая прямоугольная кнопка приложения) для ленты.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

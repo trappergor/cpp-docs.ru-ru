@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330727"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746427"
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 
@@ -131,7 +131,7 @@ AddMenuItems(
 
 - CCM_INSERTIONALLOWED_VIEW элементы могут быть вставлены в меню представления панели инструментов или в подменю представления меню контекста панели результатов.
 
-*тип*<br/>
+*type*<br/>
 (в) Определяет тип объекта. Может иметь одно из следующих значений:
 
 - CCT_SCOPE объект данных для контекста панели области.
@@ -155,7 +155,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 *lCommandID*<br/>
 (в) Определяет идентификатор команды элемента меню.
 
-*тип*<br/>
+*type*<br/>
 (в) Определяет тип объекта. Может иметь одно из следующих значений:
 
 - CCT_SCOPE объект данных для контекста панели области.
@@ -189,7 +189,7 @@ CreatePropertyPages(
 *Панк*<br/>
 (в) Указатель на `IExtendPropertySheet` интерфейс объекта, содержащего контекстную информацию о узлах.
 
-*тип*<br/>
+*type*<br/>
 (в) Определяет тип объекта. Может иметь одно из следующих значений:
 
 - CCT_SCOPE объект данных для контекста панели области.
@@ -359,7 +359,7 @@ STDMETHOD(Notify)(
 *pКомпонент*<br/>
 (ваут) Указатель на объект, который `IComponent`реализует. Этот параметр является NULL, если уведомление `IComponent::Notify`не пересылается из.
 
-*тип*<br/>
+*type*<br/>
 (в) Определяет тип объекта. Может иметь одно из следующих значений:
 
 - CCT_SCOPE объект данных для контекста панели области.
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Вызовите эту функцию, чтобы изменить флаги вставки меню, указанные *pInsertionAllowed,* для объекта оснастки.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ void SetMenuInsertionFlags(
 
 Вызовите эту функцию, чтобы изменить любые стили кнопки панели инструментов, объекта оснастки, прежде чем панель инструментов будет создана.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -423,7 +423,7 @@ void SetToolbarButtonInfo(
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*идентификатор*<br/>
 (в) Идентификатор кнопки панели инструментов, который будет установлен.
 
 *fsState*<br/>
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Вызовите эту функцию, чтобы изменить элемент меню, прежде чем он будет вставлен в контекстное меню объекта привязки.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -467,13 +467,13 @@ void UpdateMenuState(
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*идентификатор*<br/>
 (в) Идентификатор элемента меню, который будет установлен.
 
 *pBuf*<br/>
 (в) Указатель на строку для элемента меню, который будет обновляться.
 
-*Флаги*<br/>
+*flags*<br/>
 (в) Определяет новые государственные флаги. Это может быть сочетание следующих флагов:
 
 - MF_POPUP указывает, что это подменю в контексте меню. Элементы меню, точки вставки и дальнейшие подменю могут `lCommandID` быть `IInsertionPointID`добавлены в этот подменю, используя его в качестве .
@@ -514,7 +514,7 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*идентификатор*<br/>
 Уфиксирует идентификатор кнопки кнопки для обновления.
 
 *fsState*<br/>

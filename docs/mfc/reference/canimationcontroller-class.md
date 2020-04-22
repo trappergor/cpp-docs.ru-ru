@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369757"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750175"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Вызывается по системе очистки группы, когда анимация была запланирована.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -716,7 +716,7 @@ virtual void OnAnimationIntegerValueChanged(
 *pObject*<br/>
 Указатель на объект анимации, содержащий переменную анимации, значение которой изменилось.
 
-*переменная*<br/>
+*Переменной*<br/>
 Указатель на переменную анимации.
 
 *newValue*<br/>
@@ -813,7 +813,7 @@ virtual void OnAnimationValueChanged(
 *pObject*<br/>
 Указатель на объект анимации, содержащий переменную анимации, значение которой изменилось.
 
-*переменная*<br/>
+*Переменной*<br/>
 Указатель на переменную анимации.
 
 *newValue*<br/>
@@ -1010,7 +1010,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 Удаляет все группы анимации из контроллера анимации.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ void RemoveAllAnimationGroups();
 
 Удаляет группу анимации с указанным идентификатором из контроллера анимации.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 Удалите объект анимации из контроллера анимации.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ void RemoveAnimationObject(
 
 Удаляет переходы из объектов анимации, принадлежащих к указанной группе.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1104,7 +1104,7 @@ BOOL ScheduleGroup(
 
 Устанавливает связь между контроллером анимации и окном.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

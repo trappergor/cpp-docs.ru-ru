@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: e8db86f6214f95cd9bb08d3b5f6c6c1a38ca475c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e2d7dca81221f4fac2a5189ecb0effbdceddc2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327606"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747901"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 
@@ -155,7 +155,7 @@ HRESULT FinalConstruct();
 
 Вы можете переопределить этот метод в своем производном классе для выполнения любой очистки, необходимой для вашего объекта.
 
-```
+```cpp
 void FinalRelease();
 ```
 
@@ -235,7 +235,7 @@ ULONG InternalRelease();
 
 Если модель потока многопонительна, этот метод вызывает функцию In32 API [EnterCriticalSection,](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection)которая ждет, пока поток может взять на себя ответственность за критический объект раздела, полученный через частного члена данных.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -359,7 +359,7 @@ ULONG OuterRelease();
 
 Если модель потока многопонительна, этот метод вызывает функцию API Win32 [LeaveCriticalSection,](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection)которая выпускает право собственности на объект критического раздела, полученный через частного члена данных.
 
-```
+```cpp
 void Unlock();
 ```
 

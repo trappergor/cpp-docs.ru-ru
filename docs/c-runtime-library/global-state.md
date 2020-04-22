@@ -3,12 +3,12 @@ title: Глобальное состояние в CRT
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 487418da104b2edbc45b5d3a664e4385394ada31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b32e8d4f23d2361a52a9b81150ef7c5c7422761
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377602"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745367"
 ---
 # <a name="global-state-in-the-crt"></a>Глобальное состояние в CRT
 
@@ -20,8 +20,8 @@ ms.locfileid: "81377602"
 
 В UCRT функции, взаимодействующие с глобальным государством, имеют `_o_`функцию «двойника», прикреплую к . Пример:
 
-    `setlocale()` affects global state specific to the app.
-    `_o_setlocale()` affects global state shared by all OS components, but not apps.
+- `setlocale()`влияет на глобальное состояние, специфичное для приложения.
+- `_o_setlocale()`влияет на глобальное состояние, совместно ехаемые всеми компонентами ОС, но не приложениями.
 
 Единственное различие между этими "двойными" функциями заключается в том, что, когда они читают/пишут `_o_`глобальное состояние CRT, ос-специфические версии (т.е. версии, которые начинаются с) используют копию ОС глобального государства вместо копии приложения глобального государства.
 

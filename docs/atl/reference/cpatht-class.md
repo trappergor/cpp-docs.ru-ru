@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331476"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746598"
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 
@@ -166,7 +166,7 @@ class CPathT
 
 Вызовите этот метод, чтобы добавить обратный срез в конце строки, чтобы создать правильный синтаксис для пути. Если путь уже имеет задний backslash, не backslash не будет добавлено.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ BOOL Append(PCXSTR pszMore);
 
 Вызовите этот метод, чтобы создать корневой путь из заданного номера диска.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ void BuildRoot(int iDrive);
 
 Вызовите этот метод, чтобы преобразовать путь в каноническую форму.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ void Canonicalize();
 
 Вызовите этот метод, чтобы совпь строки, представляющие имя каталога и строку, представляющую имя пути файла в один путь.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -349,7 +349,7 @@ CPathT() throw();
 *pszPath*<br/>
 Указатель на строку пути.
 
-*Путь*<br/>
+*путь*<br/>
 Строка пути.
 
 ## <a name="cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Вызовите этот метод, чтобы приложить путь в кавычки, если он содержит какие-либо пробелы.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ BOOL RelativePathTo(
 
 Вызовите этот метод, чтобы удалить все аргументы командной строки из пути.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ void RemoveArgs();
 
 Вызовите этот метод, чтобы удалить задний срез с пути.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ void RemoveBackslash();
 
 Вызовите этот метод, чтобы удалить все ведущие и задние пространства с пути.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ void RemoveBlanks();
 
 Вызовите этот метод, чтобы удалить расширение файла из пути, если он есть.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ int SkipRoot() const;
 
 Вызовите этот метод, чтобы удалить часть пути полностью квалифицированного пути и имя файла.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ BOOL StripToRoot();
 
 Вызовите этот метод, чтобы удалить кавычки из начала и конца пути.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

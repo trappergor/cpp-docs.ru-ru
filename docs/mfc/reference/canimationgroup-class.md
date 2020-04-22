@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369748"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750153"
 ---
 # <a name="canimationgroup-class"></a>Класс CAnimationGroup
 
@@ -135,7 +135,7 @@ class CAnimationGroup;
 
 Помощник, который добавляет ключевые кадры в раскадровку.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 
 Помощник, который добавляет переходы к раскадровке.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ TRUE, если метод удается; в противном случае FAL
 
 Применяет переходы к объектам анимации.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 Удаляет и по желанию уничтожает все ключевые кадры, принадлежащие группе анимации.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ void RemoveKeyframes();
 
 Удаляет переходы из объектов анимации, принадлежащих к группе анимации.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -374,7 +374,7 @@ TRUE, если метод удается; FALSE, если метод не уда
 
 Направляет все объекты анимации, принадлежащие группе, автоматически уничтожают переходы.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 

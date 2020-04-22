@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327114"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747723"
 ---
 # <a name="cdebugreporthook-class"></a>Класс CDebugReportHook
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *отчетType*<br/>
 Тип отчета (_CRT_WARN, _CRT_ERROR или _CRT_ASSERT).
 
-*Сообщение*<br/>
+*message*<br/>
 Строка сообщения.
 
 *возвратСтоимость*<br/>
@@ -127,7 +127,7 @@ static int __cdecl CDebugReportHookProc(
 
 Вызов иметод, чтобы остановить отправку отчетов об отладке в названную трубу и восстановить предыдущий крюк отчета.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ void RemoveHook() throw();
 
 Вызовите этот метод, чтобы начать отправку отчетов об отладке в названную трубу.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ BOOL SetPipeName(
 
 Вызовите этот метод, чтобы установить время в миллисекундах, что этот класс будет ждать, пока названная труба станет доступной.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

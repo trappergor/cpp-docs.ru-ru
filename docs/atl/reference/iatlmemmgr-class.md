@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746012"
 ---
 # <a name="iatlmemmgr-class"></a>Класс IAtlMemgr
 
@@ -60,7 +60,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 Вызовите этот метод, чтобы выделить блок памяти.
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ void* Allocate(size_t nBytes) throw();
 
 Вызовите этот метод, чтобы освободить блок памяти.
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ size_t GetSize(void* p) throw();
 
 Вызовите этот метод для перераспределения памяти, выделенной данным диспетчером памяти.
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 

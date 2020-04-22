@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: cb8e3d6b71db6ab60b3b246bd8c5bf4f2c9aaa34
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2fa6eb26c2e2cd569d74c02d8303768b1aeb4f1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321256"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748269"
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 
@@ -93,7 +93,7 @@ class CAutoPtr
 
 Вызовите этот метод, чтобы взять на себя ответственность за существующий указатель.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -179,7 +179,7 @@ T* Detach() throw();
 
 Вызовите этот метод, чтобы `CAutoPtr`удалить объект, на который указывает .
 
-```
+```cpp
 void Free() throw();
 ```
 

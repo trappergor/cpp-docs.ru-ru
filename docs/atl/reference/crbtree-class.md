@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331247"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746576"
 ---
 # <a name="crbtree-class"></a>Класс CRBTree
 
@@ -159,7 +159,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Значение ключа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -185,7 +185,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *pos*<br/>
 Позиция.
 
-*Ключ*<br/>
+*key*<br/>
 Переменная, которая получает ключ.
 
 *value*<br/>
@@ -276,7 +276,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 Вызовите этот метод, чтобы получить ключ и значение элемента, хранящегося на карте, и переключите положение на следующий элемент.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -288,7 +288,7 @@ void GetNextAssoc(
 *pos*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом таким методам, как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*Ключ*<br/>
+*key*<br/>
 Параметры шаблона, определяющие тип ключа дерева.
 
 *value*<br/>
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Вызовите этот метод, `CRBTree` чтобы удалить все элементы из объекта.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ void RemoveAll() throw();
 
 Вызовите этот метод, чтобы удалить `CRBTree` элемент в заданном положении объекта.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ void RemoveAt(POSITION pos) throw();
 
 Вызовите этот метод, чтобы изменить значение, хранящееся в заданном положении `CRBTree` объекта.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 

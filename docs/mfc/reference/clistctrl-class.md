@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 19939ce7dacc1b826e0a2f067c43fc65db328a54
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b505912c69ffbb86ad3dae98f99531c477db693
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370155"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749137"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -584,7 +584,7 @@ BOOL Arrange(UINT nCode);
 
 Отменяет операцию редактирования текста элемента.
 
-```
+```cpp
 void CancelEditLabel();
 ```
 
@@ -618,7 +618,7 @@ virtual BOOL Create(
 Определяет стиль управления списком. Примените к элементу управления любую комбинацию стилей управления списком. Для полного списка этих стилей можно ознакомиться со [стилями окнов](/windows/win32/Controls/list-view-window-styles) в SDK Windows. Установите расширенные стили, характерные для элемента управления с помощью [SetExtendedStyle.](#setextendedstyle)
 
 *rect*<br/>
-Определяет размер и положение элемента управления списка. Это может быть `CRect` либо объект, либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение элемента управления списка. Это может быть `CRect` либо объект, либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Уфикуйте родительское окно элемента управления `CDialog`списка, обычно . Она не должна быть NULL.
@@ -666,7 +666,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления списком. Примените к элементу управления любую комбинацию стилей управления списком. Полный список этих стилей можно узнать в [sDK](/windows/win32/Controls/list-view-window-styles) Windows.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -700,7 +700,7 @@ CImageList* CreateDragImage(
 Индекс элемента, список изображений перетаскивания которого должен быть создан.
 
 *lpPoint*<br/>
-Адрес структуры [POINT,](/previous-versions/dd162805\(v=vs.85\)) которая получает начальное расположение верхнего левого угла изображения, с учетом координат.
+Адрес структуры [POINT,](/windows/win32/api/windef/ns-windef-point) которая получает начальное расположение верхнего левого угла изображения, с учетом координат.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1413,7 +1413,7 @@ public:
 
 Извлекает метрики группы.
 
-```
+```cpp
 void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ```
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |Параметр|Описание|
 |---------------|-----------------|
 |*iGroupId*|(в) Определяет группу.|
-|*lpRect*|(в, вне) Указатель на структуру [RECT.](/previous-versions/dd162897\(v=vs.85\)) Если этот метод успешен, структура получает прямоугольные координаты группы, указанные *iGroupId.*|
+|*lpRect*|(в, вне) Указатель на структуру [RECT.](/windows/win32/api/windef/ns-windef-rect) Если этот метод успешен, структура получает прямоугольные координаты группы, указанные *iGroupId.*|
 |*iCoords*|(в) Определяет координаты прямоугольника для извлечения. Используйте одно из этих значений:<br /><br /> - LVGGR_GROUP - (По умолчанию) Координаты всей расширенной группы.<br />- LVGGR_HEADER - Координаты только заголовка (рухнувшей группы).<br />- LVGGR_SUBSETLINK - Координаты только подмножество ссылки (подмножество разметки).|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>Remarks
 
-Звонящее отвечает за выделение структуры [RECT,](/previous-versions/dd162897\(v=vs.85\)) на которую указывает параметр *pRect.*
+Звонящее отвечает за выделение структуры [RECT,](/windows/win32/api/windef/ns-windef-rect) на которую указывает параметр *pRect.*
 
 Этот метод отправляет [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect) сообщение, которое описано в SDK Windows.
 
@@ -1791,7 +1791,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|(в) Указатель на структуру [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) для родительского элемента подпункта.<br /><br /> Звонящее отвечает за распределение и настройку членов структуры [LVITEMINDEX.](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) Значение этого параметра не может быть равно NULL.|
 |*iColumn*|(в) Нулевой индекс столбца в элементе управления.|
 |*rectType*|(в) Часть подпункта просмотра списка, для которого извлекается прямоугольник, ограничивающий. Укажите одно из следующих значений.<br /><br /> LVIR_BOUNDS - Возвращает прямоугольник всего подпункта, включая значок и этикетку.<br /><br /> LVIR_ICON - Возвращает ограничивающий прямоугольник значка или небольшой значок подпункта.<br /><br /> LVIR_LABEL - Возвращает ограничивающий прямоугольник текста подпункта.|
-|*pRect*|(ваут) Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает информацию о связующего прямоугольнике подпункта.<br /><br /> Звонящее отвечает за выделение структуры [RECT.](/previous-versions/dd162897\(v=vs.85\)) Значение этого параметра не может быть равно NULL.|
+|*pRect*|(ваут) Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает информацию о связующего прямоугольнике подпункта.<br /><br /> Звонящее отвечает за выделение структуры [RECT.](/windows/win32/api/windef/ns-windef-rect) Значение этого параметра не может быть равно NULL.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1845,7 +1845,7 @@ BOOL GetItemPosition(
 Индекс элемента, положение которого должно быть извлечено.
 
 *lpPoint*<br/>
-Адрес структуры [POINT,](/previous-versions/dd162805\(v=vs.85\)) которая получает положение верхнего левого угла элемента, с учетом координат.
+Адрес структуры [POINT,](/windows/win32/api/windef/ns-windef-point) которая получает положение верхнего левого угла элемента, с учетом координат.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1884,7 +1884,7 @@ BOOL GetItemRect(
 Индекс элемента, положение которого должно быть извлечено.
 
 *lpRect*<br/>
-Адрес структуры [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает связующий прямоугольник.
+Адрес структуры [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает связующий прямоугольник.
 
 *nКод*<br/>
 Часть элемента представления списка, для которого можно получить прямоугольник. Это может быть одно из следующих значений:
@@ -2221,7 +2221,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>Параметры
 
 *lpPoint*<br/>
-Адрес структуры [POINT,](/previous-versions/dd162805\(v=vs.85\)) которая получает происхождение представления.
+Адрес структуры [POINT,](/windows/win32/api/windef/ns-windef-point) которая получает происхождение представления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2532,7 +2532,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Адрес структуры [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Адрес структуры [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2546,7 +2546,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 
 Извлекает текущие рабочие области управления представлениями списка.
 
-```
+```cpp
 void GetWorkAreas(
     int nWorkAreas,
     LPRECT pRect) const;
@@ -2835,7 +2835,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>Параметры
 
 *pPoint*<br/>
-Указатель на структуру [POINT,](/previous-versions/dd162805\(v=vs.85\)) содержащую координаты теста хита, относительно области клиента управления список.
+Указатель на структуру [POINT,](/windows/win32/api/windef/ns-windef-point) содержащую координаты теста хита, относительно области клиента управления список.
 
 *plvim*<br/>
 Указатель на структуру [LVINSERTMARK,](/windows/win32/api/commctrl/ns-commctrl-lvinsertmark) которая определяет точку вставки, наиболее близкую к координатам, определяемым параметром точки.
@@ -2898,7 +2898,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*id*|(в) Уникальный идентификатор элемента.|
+|*идентификатор*|(в) Уникальный идентификатор элемента.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3008,7 +3008,7 @@ LRESULT MoveGroup(
 
 Перемещает указанный элемент в указанную группу.
 
-```
+```cpp
 void MoveItemToGroup(
     int idItemFrom,
     int idGroupTo);
@@ -3059,7 +3059,7 @@ BOOL RedrawItems(
 
 Удаляет все группы из элемента управления представления мисена.
 
-```
+```cpp
 void RemoveAllGroups();
 ```
 
@@ -3098,7 +3098,7 @@ BOOL Scroll(CSize size);
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Объект, `CSize` определяющий количество горизонтальной и вертикальной прокрутки в пикселях. Элемент `y` *размера* делится на высоту, в пикселях, линии управления представления списка, и элемент управления прокручивается результирующее числом строк.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3387,7 +3387,7 @@ int SetGroupInfo(
 
 Устанавливает групповые метрики управления представлениями списка.
 
-```
+```cpp
 void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ```
 
@@ -3497,7 +3497,7 @@ CSize SetIconSpacing(CSize size);
 *Cy*<br/>
 Расстояние (в пикселях) между иконками на оси y.
 
-*Размер*<br/>
+*size*<br/>
 Объект, `CSize` определяющий расстояние (в пикселях) между иконками на x- и y-axes.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3693,7 +3693,7 @@ BOOL SetItem(
 
 Подготовьте элемент управления представления множества для добавления большого количества элементов.
 
-```
+```cpp
 void SetItemCount(int nItems);
 ```
 
@@ -3855,7 +3855,7 @@ BOOL SetItemPosition(
 Индекс элемента, положение которого должно быть установлено.
 
 *пт*<br/>
-Структура [POINT,](/previous-versions/dd162805\(v=vs.85\)) определяющая новое положение, с учетом координат, верхнего левого угла элемента.
+Структура [POINT,](/windows/win32/api/windef/ns-windef-point) определяющая новое положение, с учетом координат, верхнего левого угла элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4156,7 +4156,7 @@ DWORD SetView(int iView);
 
 Устанавливает область, где значки могут отображаться в элементе управления представления мисена.
 
-```
+```cpp
 void SetWorkAreas(
     int nWorkAreas,
     LPRECT lpRect);

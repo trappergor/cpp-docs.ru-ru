@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321442"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748664"
 ---
 # <a name="catlmap-class"></a>Класс CAtlMap
 
@@ -159,7 +159,7 @@ class CAtlMap
 
 Вызовите этот метод, `CAtlMap` чтобы вызвать ASSERT, если объект недействителен.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ class CPair : public __POSITION
 
 Вызовите этот метод, чтобы отключить автоматическую перепев из `CAtlMap` объекта.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ void DisableAutoRehash() throw();
 
 Вызовите этот метод, чтобы включить `CAtlMap` автоматическую перепев объекта.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ void EnableAutoRehash() throw();
 
 Вызовите этот метод, чтобы вернуть элемент в указанном положении на карте.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -291,7 +291,7 @@ CPair* GetAt(POSITION& pos) throw();
 *pos*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом в [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*Ключ*<br/>
+*key*<br/>
 Параметры шаблона, определяющие тип ключа карты.
 
 *value*<br/>
@@ -376,7 +376,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 Получает следующий элемент для итерации.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -388,7 +388,7 @@ void GetNextAssoc(
 *pos*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом в [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*Ключ*<br/>
+*key*<br/>
 Параметры шаблона, определяющие тип ключа карты.
 
 *value*<br/>
@@ -558,7 +558,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Определяет ключ, который определяет элемент, который следует изыскнуть.
 
 *value*<br/>
@@ -582,7 +582,7 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ элемента для добавления или замены.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -597,7 +597,7 @@ V& operator[](kinargtype key) throw();
 
 Вызовите этот метод, `CAtlMap` чтобы переразить объект.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ void Rehash(UINT nBins = 0);
 
 Вызовите этот метод, `CAtlMap` чтобы удалить все элементы из объекта.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ void RemoveAll() throw();
 
 Вызовите этот метод, чтобы удалить `CAtlMap` элемент в заданном положении объекта.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -649,7 +649,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, соответствующий паре элементов, который вы хотите удалить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -672,7 +672,7 @@ POSITION SetAt(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключевое значение для `CAtlMap` добавления к объекту.
 
 *value*<br/>
@@ -690,7 +690,7 @@ POSITION SetAt(
 
 Вызовите этот метод, чтобы `CAtlMap` установить оптимальную нагрузку объекта.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ void SetOptimalLoad(
 
 Вызовите этот метод, чтобы изменить значение, хранящееся в заданном положении `CAtlMap` объекта.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);

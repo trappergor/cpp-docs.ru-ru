@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330297"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745996"
 ---
 # <a name="cwindowimpl-class"></a>Класс CWindowImpl
 
@@ -147,7 +147,7 @@ HWND Create(
 (в) Ручка к окну родителя или владельца.
 
 *rect*<br/>
-(в) Структура [RECT,](/previous-versions/dd162897\(v=vs.85\)) определяющая положение окна. Может `RECT` быть передан указателем или ссылкой.
+(в) Структура [RECT,](/windows/win32/api/windef/ns-windef-rect) определяющая положение окна. Может `RECT` быть передан указателем или ссылкой.
 
 *szWindowName*<br/>
 (в) Определяет название окна. Значение по умолчанию — NULL.

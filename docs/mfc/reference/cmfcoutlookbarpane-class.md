@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97c7edde26bdf13e899d823dcf88d143068d86a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369645"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749611"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Класс CMFCOutlookBarPane
 
@@ -232,7 +232,7 @@ virtual BOOL CanBeAttached() const;
 
 Освобождает ресурсы, используемые изображениями на панели бара Outlook.
 
-```
+```cpp
 void ClearAll();
 ```
 
@@ -311,7 +311,7 @@ virtual BOOL EnableContextMenuItems(
 
 Уточняется, являются ли стрелка прокрутки на панели Outlook списком кнопок по странице за страницей или кнопкой за кнопкой.
 
-```
+```cpp
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 ```
 
@@ -395,7 +395,7 @@ BOOL RemoveButton(UINT iIdCommand);
 
 Устанавливает цвет фона бара Outlook.
 
-```
+```cpp
 void SetBackColor(COLORREF color);
 ```
 
@@ -412,7 +412,7 @@ void SetBackColor(COLORREF color);
 
 Устанавливает фоновое изображение.
 
-```
+```cpp
 void SetBackImage(UINT uiImageID);
 ```
 
@@ -429,7 +429,7 @@ void SetBackImage(UINT uiImageID);
 
 Сброс панели Outlook панели с исходным набором кнопок.
 
-```
+```cpp
 void SetDefaultState();
 ```
 
@@ -441,7 +441,7 @@ void SetDefaultState();
 
 Устанавливает количество пикселей обивки, используемой вокруг кнопок в панели панели Outlook.
 
-```
+```cpp
 void SetExtraSpace()
 ```
 
@@ -449,7 +449,7 @@ void SetExtraSpace()
 
 Устанавливает цвета обычного и выделенного текста в панели бара Outlook.
 
-```
+```cpp
 void SetTextColor(
     COLORREF clrRegText,
     COLORREF clrSelText=0);
@@ -467,7 +467,7 @@ void SetTextColor(
 
 Устанавливает прозрачный цвет панели панели Outlook.
 
-```
+```cpp
 void SetTransparentColor(COLORREF color);
 ```
 

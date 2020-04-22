@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: cde9c73a195303e57758cb4f27184b5136bdaf14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327215"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747746"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT класс
 
@@ -214,7 +214,7 @@ HWND Create(
 (в) Ручка к окну родителя или владельца.
 
 *rect*<br/>
-(в) Структура [RECT,](/previous-versions/dd162897\(v=vs.85\)) определяющая положение окна. Может `RECT` быть передан указателем или ссылкой.
+(в) Структура [RECT,](/windows/win32/api/windef/ns-windef-rect) определяющая положение окна. Может `RECT` быть передан указателем или ссылкой.
 
 *szWindowName*<br/>
 (в) Определяет название окна. Значение по умолчанию — NULL.
@@ -390,7 +390,7 @@ TRUE, если окно успешно подклассифицировано; �
 
 Изменения, какие карты сообщений будут использоваться для обработки сообщений, содержащихся в окне.
 
-```
+```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
 ```
 

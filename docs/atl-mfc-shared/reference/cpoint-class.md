@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: a806cfa18119df9beef3e070a65bc238a12580a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317724"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747082"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -139,7 +139,7 @@ ASSERT(ptFromDouble == ptMFCHere);
 
 Добавляет значения для `x` `y` членов `CPoint`.
 
-```
+```cpp
 void Offset(int xOffset, int yOffset) throw();
 void Offset(POINT point) throw();
 void Offset(SIZE size) throw();
@@ -156,7 +156,7 @@ void Offset(SIZE size) throw();
 *Точки*<br/>
 Укажите сумму [(POINT](/windows/win32/api/windef/ns-windef-point) `CPoint`или ), `CPoint`чтобы компенсировать .
 
-*Размер*<br/>
+*size*<br/>
 Упомягает сумму [(СИЗЕ](/windows/win32/api/windef/ns-windef-size) `CPoint`или [CSize](../../atl-mfc-shared/reference/csize-class.md)), чтобы компенсировать .
 
 ### <a name="example"></a>Пример
@@ -209,14 +209,14 @@ Nonzero, если очки не равны; в противном случае 0
 
 Первая перегрузка добавляет `CPoint`размер к .
 
-```
+```cpp
 void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Содержит структуру [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Точки*<br/>
@@ -238,14 +238,14 @@ void operator+=(POINT point) throw();
 
 Первая перегрузка вычитает размер `CPoint`из .
 
-```
+```cpp
 void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Содержит структуру [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Точки*<br/>
@@ -275,7 +275,7 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Содержит структуру [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *Точки*<br/>
@@ -314,7 +314,7 @@ CPoint operator-() const throw();
 *Точки*<br/>
 Структура [POINT](/windows/win32/api/windef/ns-windef-point) или объект [CPoint.](../../atl-mfc-shared/reference/cpoint-class.md)
 
-*Размер*<br/>
+*size*<br/>
 Структура [СИЗЕ](/windows/win32/api/windef/ns-windef-size) или объект [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 *lpRect*<br/>

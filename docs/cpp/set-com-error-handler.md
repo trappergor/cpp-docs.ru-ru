@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 226dce24de68edd66ca68c43e41ce0cb5b8a1b48
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: debad733f351c710ada342e29fa95a4d1ff03b7d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857298"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749806"
 ---
 # <a name="_set_com_error_handler"></a>_set_com_error_handler
 
-Заменяет функцию по умолчанию, используемую для обработки ошибок COM. **_set_com_error_handler** зависит от корпорации Майкрософт.
+Заменяет функцию по умолчанию, используемую для обработки ошибок COM. **_set_com_error_handler** специфичен для корпорации Майкрософт.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void __stdcall _set_com_error_handler(
    void (__stdcall *pHandler)(
       HRESULT hr,
@@ -28,18 +28,18 @@ void __stdcall _set_com_error_handler(
 
 #### <a name="parameters"></a>Параметры
 
-*фандлер*<br/>
+*pHandler*<br/>
 Указатель на функцию замены.
 
-*кадров*<br/>
-Сведения HRESULT.
+*Hr*<br/>
+Информация HRESULT.
 
-*перринфо*<br/>
+*perrinfo*<br/>
 Объект `IErrorInfo`.
 
-## <a name="remarks"></a>Заметки
+## <a name="remarks"></a>Remarks
 
-По умолчанию [_com_raise_error](../cpp/com-raise-error.md) обрабатывает все ошибки COM. Это поведение можно изменить с помощью **_set_com_error_handler** для вызова собственной функции обработки ошибок.
+По умолчанию [_com_raise_error](../cpp/com-raise-error.md) обрабатывает все ошибки COM. Вы можете изменить это поведение, используя **_set_com_error_handler** для вызова собственной функции обработки ошибок.
 
 Функция замены должна иметь сигнатуру, эквивалентную сигнатуре `_com_raise_error`.
 
@@ -86,10 +86,10 @@ Exception raised: Unable to establish the connection!
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<comdef. h >
+**Заголовок:** \<comdef.h>
 
-**Библиотека:** Если указан параметр компилятора **/Zc: wchar_t** (по умолчанию), используйте комсуппв. lib или комсуппвд. lib. Если указан параметр **/Zc: wchar_t-** Compiler, используйте комсупп. lib. Дополнительные сведения, в том числе о том, как задать этот параметр в интегрированной среде разработки, см. в разделе [/Zc: wchar_t (wchar_t является собственным типом)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib:** Если указан абии компилятора **/sc:wchar_t** (по умолчанию), используйте comsuppw.lib или comsuppwd.lib. Если указан аномалку **/c:wchar_t-** компилятор, используйте comsupp.lib. Для получения дополнительной информации, в том числе о том, как установить эту опцию в IDE, [см.: wchar_t (wchar_t является родным типом)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

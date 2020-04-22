@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 9a3c92a0a8c3d40e4cc3d289cc0221ff7cdb2e11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbb34d4db41ef11cd01a6a8a7f20cafa0e737268
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370093"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749076"
 ---
 # <a name="cmap-class"></a>Класс CMap
 
@@ -211,7 +211,7 @@ UINT GetHashTableSize() const;
 
 Извлекает элемент карты `rNextPosition`на, `rNextPosition` затем обновляется для обозначения следующего элемента на карте.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     KEY& rKey,
@@ -289,7 +289,7 @@ POSITION GetStartPosition() const;
 
 Инициализирует хэш-таблицу.
 
-```
+```cpp
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```
 
@@ -338,7 +338,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 *ARG_KEY*<br/>
 Параметры шаблона, определяющие тип *значения ключа.*
 
-*Ключ*<br/>
+*key*<br/>
 Определяет ключ, который определяет элемент, который следует изыскнуть.
 
 *Значение*<br/>
@@ -375,7 +375,7 @@ VALUE& operator[](arg_key key);
 *ARG_KEY*<br/>
 Параметры шаблона, определяющие тип значения ключа.
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для получения значения с карты.
 
 ### <a name="remarks"></a>Remarks
@@ -447,7 +447,7 @@ CPair* PLookup(ARG_KEY key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ для элемента, который будет искать.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -466,7 +466,7 @@ CPair* PLookup(ARG_KEY key);
 
 Удаляет все значения с этой карты, позвонив в функцию `DestructElements`глобального помощника.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -491,7 +491,7 @@ BOOL RemoveKey(ARG_KEY key);
 *ARG_KEY*<br/>
 Параметры шаблона, определяющие тип ключа.
 
-*Ключ*<br/>
+*key*<br/>
 Ключ для удаления элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -510,7 +510,7 @@ Nonzero, если запись была найдена и успешно уда�
 
 Основное средство для вставки элемента в карту.
 
-```
+```cpp
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```
 
@@ -519,7 +519,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 *ARG_KEY*<br/>
 Параметры шаблона, определяющие тип *ключевого* параметра.
 
-*Ключ*<br/>
+*key*<br/>
 Определяет ключ нового элемента.
 
 *ARG_VALUE*<br/>

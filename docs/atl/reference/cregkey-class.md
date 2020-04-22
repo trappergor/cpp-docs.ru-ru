@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331039"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746519"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -137,7 +137,7 @@ class CRegKey
 
 Вызовите этот метод, чтобы `CRegKey` прикрепить HKEY к объекту, установив ручку [m_hKey](#m_hkey) члена *hKey.*
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -221,7 +221,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ссылка на объект `CRegKey`.
 
 *hKey*<br/>
@@ -488,7 +488,7 @@ CRegKey& operator= (CRegKey& key) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ к копированию.
 
 ### <a name="return-value"></a>Возвращаемое значение
