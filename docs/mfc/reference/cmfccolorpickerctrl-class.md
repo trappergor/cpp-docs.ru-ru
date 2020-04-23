@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752538"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс CMFCColorPickerCtrl
 
@@ -184,7 +184,7 @@ COLORREF GetColor() const;
 
 Извлекает значения оттенка, яркости и насыщенности цвета, который выбирает пользователь.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ double GetSaturation() const;
 
 Устанавливает текущий цвет к цвету, определенному указанными компонентами цвета RGB или указанной ячейкой шестиугольника.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -292,7 +292,7 @@ BOOL SelectCellHexagon(
 
 Устанавливает текущий цвет в указанное значение цвета RGB.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Устанавливает текущий цвет к указанному цвету HLS.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Изменяет оттенок выбранного в настоящее время цвета.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Изменяет яркость выбранного в настоящее время цвета.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 Устанавливает ширину панели яркости в управлении сборщиком цветов.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ж*<br/>
+*w*<br/>
 (в) Ширина панели яркости измеряется в пикселях.
 
 ### <a name="remarks"></a>Remarks
@@ -382,7 +382,7 @@ void SetLuminanceBarWidth(int w);
 
 Устанавливает начальный выбранный цвет.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ void SetOriginalColor(COLORREF ref);
 
 Устанавливает текущую цветовую палитру.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ void SetPalette(CPalette* pPalette);
 
 Изменяет насыщенность выбранного в настоящее время цвета.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Устанавливает тип управления сборщиком цветов для отображения.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

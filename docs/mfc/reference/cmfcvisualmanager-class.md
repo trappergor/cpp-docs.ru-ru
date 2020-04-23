@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320003"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752846"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *pButton*<br/>
 (в) Указатель на кнопку панели инструментов.
 
-*Государства*<br/>
+*state*<br/>
 (в) Состояние кнопки панели инструментов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1822,7 +1822,7 @@ virtual BOOL OnDrawBrowseButton(
 *Полред*<br/>
 (в) Указатель на элемент управления правкой. Визуальный менеджер рисует кнопку просмотра для этого управления правком для элементов его элементов.
 
-*Государства*<br/>
+*state*<br/>
 (в) Перечисленное значение, опоглавиваваещее состояние кнопки.
 
 *clrText*<br/>
@@ -1859,7 +1859,7 @@ virtual void OnDrawButtonBorder(
 *rect*<br/>
 (в) Прямоугольник, обогнивающие границы кнопки панели инструментов.
 
-*Государства*<br/>
+*state*<br/>
 (в) Перечисленный тип данных, опоглавяя текущее состояние кнопки панели инструментов.
 
 ### <a name="remarks"></a>Remarks
@@ -4358,7 +4358,7 @@ virtual void OnFillButtonInterior(
 *rect*<br/>
 (в) Прямоугольник, обогнивающие границы кнопки панели инструментов.
 
-*Государства*<br/>
+*state*<br/>
 (в) Состояние кнопки панели инструментов.
 
 ### <a name="remarks"></a>Remarks
@@ -5011,7 +5011,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 Позволяет или отключает тисненый режим для отключенных изображений панели инструментов.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 
 Позволяет или отсващает эффект освещения для неактивных изображений в меню или панели инструментов.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ void SetFadeInactiveImage(BOOL bFade = TRUE);
 
 Устанавливает флаг, указывающий, выглядят ли кнопки меню плоскими. В противном случае они кажутся трехмерными.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 
 Устанавливает ширину и высоту тени меню.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ void SetMenuShadowDepth(int nDepth);
 
 Устанавливает флаг, указывающий на то, отображает ли [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) тени для выделенных изображений.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

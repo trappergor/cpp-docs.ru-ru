@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374984"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753855"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
 
@@ -194,7 +194,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
 
-```
+```cpp
 void AddDockSite();
 ```
 
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFrameWndEx::DockPane
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -302,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -471,7 +471,7 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 Определяет ряд иных удостоверений управления, которые фреймворк присваивает определенным пользователям.
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -877,7 +877,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -900,13 +900,13 @@ void RemovePaneFromDockManager(
 
 Применяет указанное состояние стыковки к стеклам, принадлежащим окну рамы.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 (в) Определяет состояние стыковки.
 
 ### <a name="remarks"></a>Remarks
@@ -917,7 +917,7 @@ void SetDockState(const CDockState& state);
 
 Изменяет объект панели инструментов путем поиска фиктивных элементов и замены их указанными элементами, определяемыми пользователем.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -939,7 +939,7 @@ void SetupToolbarMenu(
 
 ## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFrameWndEx:ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,

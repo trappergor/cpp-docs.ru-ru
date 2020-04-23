@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321904"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754613"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Закрывает текущий контроль времени и времени сборщика.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Определяет сочетание стилей контроля времени даты. Для получения дополнительной информации о стилях сборщика дат [и времени](/windows/win32/Controls/date-and-time-picker-control-styles) смотрите в SDK Windows для получения дополнительной информации о стилях сборщика дат и времени.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая является положением и размером контроля насборщика даты и времени.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая является положением и размером контроля насборщика даты и времени.
 
 *pParentWnd*<br/>
 Указатель на объект [CWnd,](../../mfc/reference/cwnd-class.md) который является родительским окном управления сборщиком даты и времени. Она не должна быть NULL.
@@ -474,7 +474,7 @@ COLORREF SetMonthCalColor(
 
 Устанавливает шрифт, который будет использовать элемент управления детского месяца управления датой и временем.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);
