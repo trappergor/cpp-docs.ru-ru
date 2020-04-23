@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374915"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753830"
 ---
 # <a name="colemessagefilter-class"></a>Класс COleMessageFilter
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 Включает и отключает занятого диалогового окна, которое отображается при истечении срока действия задержки с ожиданием сообщения (см. [SetRetryReply)](#setretryreply)во время вызова OLE.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 
 Включает и отключает диалоговое окно "не отвечая", которое отображается, если сообщение клавиатуры или мыши находится на рассмотрении во время вызова OLE и вызов приурочен.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ BOOL Register();
 
 Отменяет предыдущую регистрацию, выполненную по вызову [в регистрацию.](#register)
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ void Revoke();
 
 Эта функция устанавливает "занятый ответ" приложения.
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
 
 Определяет, как долго вызываемый приложение ждет ответа от вызываемого приложения, прежде чем предпринимать дальнейшие действия.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 
 Определяет действие вызывающей приложения, когда оно получает многоразовый ответ от вызываемого приложения.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

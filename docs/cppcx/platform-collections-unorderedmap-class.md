@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: c6f702850f5bf84b8b1bc857c9d0a744728d0cbd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80b46cb95f2fdb83922ca22e8aa06a89aca4bfde
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354420"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031502"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -52,7 +52,7 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-**UnorderedMap** в основном является оберткой для [std::unordered_map,](../standard-library/unordered-map-class.md) которая поддерживает хранение типов Runtime Windows. Это конкретная реализация [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) и [IObservableMap,](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) которые передаются через общедоступные интерфейсы Windows Runtime. При попытке использования типа `Platform::Collections::UnorderedMap` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+**UnorderedMap** в основном является оберткой для [std::unordered_map,](../standard-library/unordered-map-class.md) которая поддерживает хранение типов Runtime Windows. Это конкретная реализация [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) которые передаются через общедоступные интерфейсы Windows Runtime. При попытке использования типа `Platform::Collections::UnorderedMap` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2).
 
 Для получения дополнительной информации [см.](../cppcx/collections-c-cx.md)
 
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap::Первый метод
 
-Возвращает итератор, который определяет первую [Windows::::: Коллекции::\<IKeyValuePair K,>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элемент на неупорядоченной карте.
+Возвращает итератор, который определяет первую [Windows::::: Коллекции::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элемент на неупорядоченной карте.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -126,7 +126,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a>Неупорядоченная карта::GetView Метод
 
-Возвращает только для чтения представление текущего UnorderedMap; то есть, [Платформа::Коллекции::UnorderedMapView Класс,](../cppcx/platform-collections-unorderedmapview-class.md) который реализует "Windows::Фундамент::Коллекции::IMapView::IMapView::IMapView/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс.
+Возвращает только для чтения представление текущего UnorderedMap; то есть, [платформа::Коллекции::UnorderedMapView Класс,](../cppcx/platform-collections-unorderedmapview-class.md) который реализует [Windows::Foundation::Collections::IMapView::IMapView](/uwp/api/windows.foundation.collections.imapview-2) интерфейс.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -152,7 +152,7 @@ bool HasKey(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента UnorderedMap. Тип *ключа* typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -174,7 +174,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
 
 *value*<br/>
@@ -198,7 +198,7 @@ V Lookup(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента в объекте UnorderedMap. Тип *ключа* typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
-[КартаChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) которая содержит информацию об объекте, который поднял событие, и вид изменений, которые произошли. Смотрите также [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+[КартаChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) которая содержит информацию об объекте, который поднял событие, и вид изменений, которые произошли. Смотрите также [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
@@ -236,12 +236,12 @@ virtual void Remove(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a>Неупорядоченнаякарта::Метод размера
 
-Возвращает номер [Windows:::Источник::: Культура::\<IKeyValuePair K,>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов в unorderedMap.
+Возвращает номер [Windows:::Источник::: Культура::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элементов в unorderedMap.
 
 ### <a name="syntax"></a>Синтаксис
 

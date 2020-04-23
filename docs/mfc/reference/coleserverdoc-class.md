@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376131"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753787"
 ---
 # <a name="coleserverdoc-class"></a>Класс ColeServerDoc
 
@@ -192,7 +192,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 Активирует связанный документ DocObject.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ COleServerItem* GetEmbeddedItem();
 
 Вызов `GetItemClipRect` функции участника, чтобы получить отсечения прямоугольник координаты элемента, который редактируется на месте.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 
 Вызов `GetItemPosition` функции участника, чтобы получить координаты элемента, редактируемого на месте.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Nonzero, `COleServerDoc` если объект активен на месте; �
 
 Позвоните в эту функцию, чтобы уведомить все связанные элементы, связанные с документом, что документ изменился.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ void NotifyChanged();
 
 Позвоните в эту функцию, чтобы уведомить контейнер (ы), что документ был закрыт.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ void NotifyClosed();
 
 Вызовите эту функцию после того, как пользователь переименует серверный документ.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 
 Вызовите эту функцию после того, как пользователь сохраняет серверный документ.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ virtual BOOL OnUpdateDocument();
 
 Вызовите эту функцию участника, чтобы приложение контейнера изменило положение элемента.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 
 Вызовите эту функцию, чтобы сообщить контейнерное приложение, чтобы сохранить встроенный объект.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 
 Позвоните в эту функцию, чтобы уведомить все связанные элементы, связанные с документом, что документ изменился.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

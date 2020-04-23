@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-ms.openlocfilehash: 063d0b795c7e4f6af901f52563295883ef81de7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc31ccbf2be34aa1df1fa56111d1990701a6329
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377126"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754687"
 ---
 # <a name="cdaotabledef-class"></a>Класс CDaoTableDef
 
@@ -300,7 +300,7 @@ virtual void Create(
 
 Вызовите эту функцию участника, чтобы добавить поле в таблицу.
 
-```
+```cpp
 void CreateField(
     LPCTSTR lpszName,
     short nType,
@@ -373,7 +373,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 
 Вызовите эту функцию, чтобы добавить индекс в таблицу.
 
-```
+```cpp
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```
 
@@ -402,7 +402,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 
 Вызов ифункции этого участника, чтобы удалить поле и сделать его недоступным.
 
-```
+```cpp
 void DeleteField(LPCTSTR lpszName);
 void DeleteField(int nIndex);
 ```
@@ -425,7 +425,7 @@ void DeleteField(int nIndex);
 
 Вызовите эту функцию участника, чтобы удалить индекс в основной таблице.
 
-```
+```cpp
 void DeleteIndex(LPCTSTR lpszName);
 void DeleteIndex(int nIndex);
 ```
@@ -557,7 +557,7 @@ short GetFieldCount();
 
 Вызовите эту функцию участника для получения различного рода информации о поле, определенном в таблице.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -619,7 +619,7 @@ short GetIndexCount();
 
 Вызовите эту функцию участника для получения различного рода информации об индексе, определенном в таблице.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -796,7 +796,7 @@ virtual void Open(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы обновить информацию о подключении к прилагаемой таблице.
 
-```
+```cpp
 void RefreshLink();
 ```
 
@@ -812,7 +812,7 @@ void RefreshLink();
 
 Устанавливает значение, указываводное одну или несколько характеристик `CDaoTableDef` объекта.
 
-```
+```cpp
 void SetAttributes(long lAttributes);
 ```
 
@@ -842,7 +842,7 @@ void SetAttributes(long lAttributes);
 
 Для `CDaoTableDef` объекта, представляющего прилагаемую таблицу, объект строки состоит из одной или двух частей (разоспектитель типа базы данных и путь к базе данных).
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -875,8 +875,8 @@ void SetConnect(LPCTSTR lpszConnect);
 |Excel 97|"Excel 8.0;"|" `drive`\\\ :*имя файла**пути*\ . XLS"|
 |HTML Импорт|"HTML Импорт;"|" `drive`\\\ :*имя файла**пути*\ "|
 |Html Экспорт|"HTML Экспорт;"|" `drive`\\\ :*путь*"|
-|Text|"Текст;"|"драйв:\\"путь"|
-|ODBC|"ODBC; БАЗИС; `database` *Пользователь*UID ; *Пароль*PWD; DSN' *имя источника данных;* LOGINTIMEOUT *секунд;*" (Это не может быть полной строки соединения для всех серверов; это всего лишь пример. Очень важно не иметь пробелов между параметрами.)|Отсутствуют|
+|текст|"Текст;"|"драйв:\\"путь"|
+|ODBC|"ODBC; БАЗИС; `database` *Пользователь*UID ; *Пароль*PWD; DSN' *имя источника данных;* LOGINTIMEOUT *секунд;*" (Это не может быть полной строки соединения для всех серверов; это всего лишь пример. Очень важно не иметь пробелов между параметрами.)|None|
 |Exchange|"Обмен;<br /><br /> ПАПКА MAPILEVEL; *folderpath*<br /><br /> «TABLETYPE» 0 &#124; 1<br /><br /> Профиль *«PROFILE»*;»<br /><br /> Пароль «PWD»; *password*<br /><br /> (DATABASE) `database`;»|*"драйв*\\\ :*имя файла**пути*\\\ . MDB"|
 
 > [!NOTE]
@@ -894,7 +894,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 Вызовите эту функцию участника, чтобы установить имя, определяемое пользователем, для таблицы.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -913,7 +913,7 @@ void SetName(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы указать имя прилагаемой `CDaoTableDef` таблицы или имя базовой таблицы, на которой основан объект, поскольку оно существует в исходном источнике данных.
 
-```
+```cpp
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```
 
@@ -932,7 +932,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 
 Вызовите эту функцию участника, чтобы установить правило проверки для таблицы.
 
-```
+```cpp
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```
 
@@ -957,7 +957,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 
 Вызовите эту функцию участника, чтобы установить `CDaoTableDef` текст исключения правила проверки для объекта с базовой таблицей, поддерживаемой движком базы данных Microsoft Jet.
 
-```
+```cpp
 void SetValidationText(LPCTSTR lpszValidationText);
 ```
 

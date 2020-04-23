@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367780"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754869"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Определяет, следует ли отображать полный текст инструментария в большом окне tooltip или усеченной версии текста в небольшом окне tooltip.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Уточняется, является ли шрифт текста кнопки таким же, как шрифт меню приложения.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 Устанавливает кнопку в режиме автоматического повторения.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 
 Устанавливает изображение для проверенной кнопки.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Устанавливает цвет фона для текста кнопки.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ void SetFaceColor(
 
 Устанавливает изображение для кнопки.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ void SetImage(
 
 Устанавливает изображение курсора.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 Устанавливает курсор на изображение руки.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ void SetMouseCursorHand();
 
 Использует `CMenuImages` объект для установки изображения кнопки.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -921,11 +921,11 @@ void SetStdImage(
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*идентификатор*<br/>
 (в) Один из идентификаторов изображений кнопки, который определяется в перечислении. `CMenuImage::IMAGES_IDS` Значения изображения указывают изображения, такие как стрелки, контакты и кнопки радио.
 
-*Государства*<br/>
-(в) Один из идентификаторов состояния `CMenuImages::IMAGE_STATE` состояния кнопок, который определяется в перечислении. Состояния изображения указывают цвета кнопок, такие как черный, серый, светло-серый, белый и темно-серый. Значение по умолчанию — `CMenuImages::ImageBlack`.
+*state*<br/>
+(в) Один из идентификаторов состояния `CMenuImages::IMAGE_STATE` состояния кнопок, который определяется в перечислении. Состояния изображения указывают цвета кнопок, такие как черный, серый, светло-серый, белый и темно-серый. Значение по умолчанию — `CMenuImages::ImageBlack`.
 
 *idDisabled*<br/>
 (в) Один из идентификаторов изображений кнопки, который определяется в перечислении. `CMenuImage::IMAGES_IDS` Изображение указывает на то, что кнопка отключена. Значение по умолчанию является `CMenuImages::IdArrowDown`первым изображением кнопки ().
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Устанавливает цвет текста кнопки для кнопки, которая не выбрана.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Устанавливает цвет текста кнопки для выбранной кнопки.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Ассоциирует инструмент с кнопкой.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377366"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753404"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsИнтоуктияДиолог класс
 
@@ -120,7 +120,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 Вставляет кнопку панели инструментов в список команд на странице **Команд.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 (в) Определяет идентификатор категории, в который можно вставить кнопку.
 
-*Кнопку*<br/>
+*кнопка*<br/>
 (в) Определяет кнопку для вставки.
 
 *iInsertBefore*<br/>
@@ -187,7 +187,7 @@ TRUE, если меню было добавлено успешно; в прот�
 
 Добавляет элементы в список команд на странице **команд,** чтобы представить все элементы в указанном меню.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ TRUE, если лист свойств настройки создан успе�
 
 Позволяет или отстращает создание новых панелей инструментов с помощью **настраиваемой** диалоговой коробки.
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 Заполняет предоставленный `CComboBox` объект с именем каждой категории команд в поле **настраиваемых** диалогов.
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ void FillCategoriesComboBox(
 
 Заполняет предоставленный `CListBox` объект с именем каждой категории команд в поле **настраиваемых** диалогов.
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ BOOL RenameCategory(
 
 Заменяет кнопку панели инструментов в поле списка команд на странице **Команд.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 (в) Определяет команду кнопки, которая будет заменена.
 
-*Кнопку*<br/>
+*кнопка*<br/>
 (в) **Ссылка** на объект кнопки панели инструментов, который заменяет старую кнопку.
 
 ### <a name="remarks"></a>Remarks

@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377151"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754679"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset класс
 
@@ -626,7 +626,7 @@ virtual void Edit();
 
 Вызовите эту функцию участника, чтобы кэшировать определенное количество записей из набора записей.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ short GetFieldCount();
 
 Позвоните этой функции участника для получения информации о полях в наборе записей.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ short GetIndexCount();
 
 Вызовите эту функцию участника для получения различного рода информации об индексе, определенном в базовой таблице, лежащем в основе набора записей.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ virtual void Move(long lRows);
 
 Вызовите эту функцию участника, чтобы сделать первую запись в записи (если таковая имеется) текущей записи.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ void MoveFirst();
 
 Вызовите эту функцию участника, чтобы сделать последнюю запись (если таковая имеется) в записи текущей записи.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ void MoveLast();
 
 Вызовите эту функцию участника, чтобы сделать следующую запись в записи текущей записи.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ void MoveNext();
 
 Вызовите эту функцию участника, чтобы сделать предыдущую запись в записи текущей записи.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Nonzero, если соответствующие записи найдены, в
 
 Устанавливает относительное рекордное число текущего рекорда объекта записи.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ void SetAbsolutePosition(long lPosition);
 
 Позвоните этой функции участника, чтобы позиционировать запись в записи, содержащей указанную закладку.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ void SetBookmark(COleVariant varBookmark);
 
 Вызовите эту функцию участника, чтобы установить количество записей, которые будут кэшированы.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ void SetCacheSize(long lSize);
 
 Позвоните в эту функцию участника, чтобы указать закладку первой записи в наборе записей, которая будет кэширована.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ void SetCacheStart(COleVariant varBookmark);
 
 Вызовите эту функцию участника, чтобы установить индекс на наборе записей типа таблицы.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 Вызовите эту функцию участника, чтобы отметить полевой член данных, установленный в качестве измененного или неизмененного.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ void SetFieldDirty(
 
 Вызовите эту функцию участника, чтобы отметить полевой член данных, установленный как Null (конкретно не имеющий значения) или как не-Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ void SetFieldValue(
 
 Вызовите эту функцию участника, чтобы установить поле к значению Null.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы установить тип блокировки для набора записей.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *Nindex*<br/>
 Численное положение параметра в коллекции параметров запроса.
 
-*Var*<br/>
+*var*<br/>
 Значение для установки; увидеть замечания.
 
 *lpszName*<br/>
@@ -2458,7 +2458,7 @@ virtual void SetParamValue(
 
 Вызовите эту функцию участника, чтобы установить параметр к значению Null.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы установить значение, изменяя приблизительное местоположение текущей записи в объекте записи на основе процента записей в наборе записей.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

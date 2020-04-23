@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365706"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751597"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Макрос и функции для управления DLL
 
@@ -91,7 +91,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ MFC OLE DLL является расширением MFC DLL; для того, ч
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -193,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 Ссылка на структуру [AFX_EXTENSION_MODULE,](afx-extension-module-structure.md) которая будет содержать состояние модуля DLL расширения MFC после инициализации. Состояние включает в себя копию объектов класса времени выполнения, которые были инициализированы DLL расширения MFC как часть нормальной конструкции статического объекта, выполненной до `DllMain` ввода.
 
 *hModule*<br/>
@@ -244,7 +244,7 @@ MFC расширение DLLs необходимо сделать `DllMain` дв
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,13 +279,13 @@ BOOL CMFCListViewApp::InitInstance()
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 Ссылка на [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) структуру, содержащую состояние модуля DLL расширения MFC.
 
 *Мяч*<br/>

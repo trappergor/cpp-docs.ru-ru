@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375610"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753336"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ virtual void DrawCaption(
 
 Включает или отстраняет автоматический режим для этого стекла и для других стекол в контейнере.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ virtual void OnSlide(BOOL bSlideOut);
 
 Рамочная система вызывает этот метод, когда панель отстыковывается.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ TRUE, если замена успешна; в противном случае, 
 
 При десериализации панели фреймворк вызывает этот метод для восстановления разделителя панели по умолчанию.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 
 Устанавливает кнопку автоматической скрытия и автоматически скрыть панель инструментов для панели.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Устанавливает процент пространства, занимаемого стеклом в контейнере.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ void SetLastPercentInPaneContainer(int n);
 
 Устанавливает восстановленный разделитель панели по умолчанию.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 Устанавливает информацию о классе времени выполнения для окна вкладок, которое создается при стыковке двух стекол.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

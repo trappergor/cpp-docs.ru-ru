@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746598"
+ms.locfileid: "82032138"
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 
@@ -102,8 +102,8 @@ class CPathT
 |[CPathT::Каноникализация](#canonicalize)|Вызовите этот метод, чтобы преобразовать путь в каноническую форму.|
 |[CPathT::Комбинат](#combine)|Вызовите этот метод, чтобы совпь строки, представляющие имя каталога и строку, представляющую имя пути файла в один путь.|
 |[CPathT::CommonPrefix](#commonprefix)|Вызовите этот метод, чтобы определить, разделяет ли указанный путь общую префикс с текущим путем.|
-|[CPathT::CompactPath](#compactpath)|Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в пределах заданной ширины пикселя, заменив компоненты пути эллипсами.|
-|[CPathT::CompactPathEx](#compactpathex)|Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в определенное количество символов, заменив компоненты пути эллипсами.|
+|[CPathT::CompactPath](#compactpath)|Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в пределах заданной ширины пикселя, заменив компоненты пути эллипсисом.|
+|[CPathT::CompactPathEx](#compactpathex)|Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в определенное количество символов, заменив компоненты пути эллипсисом.|
 |[CPathT::FileExists](#fileexists)|Вызовите этот метод, чтобы проверить, существует ли файл на этом имени пути.|
 |[CPathT::FindExtension](#findextension)|Вызовите этот метод, чтобы найти положение расширения файла в пути.|
 |[CPathT:FindFileName](#findfilename)|Вызовите этот метод, чтобы найти положение имени файла в пути.|
@@ -288,7 +288,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в пределах заданной ширины пикселя, заменив компоненты пути эллипсами.
+Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в пределах заданной ширины пикселя, заменив компоненты пути эллипсисом.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в определенное количество символов, заменив компоненты пути эллипсами.
+Вызовите этот метод, чтобы усеченный путь файла, чтобы поместиться в определенное количество символов, заменив компоненты пути эллипсисом.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

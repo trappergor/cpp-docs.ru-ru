@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372233"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753589"
 ---
 # <a name="clistbox-class"></a>Класс CListBox
 
@@ -717,7 +717,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 Извлекает предоставленное приложение 32-битное значение, связанное с указанным пунктом списка-коробки в качестве указателя **(недействительным).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 Удаляет все элементы из ящика списка.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ LB_ERR, если происходит ошибка.
 
 Устанавливает якорь в поле списка с несколькими вариантами выбора, чтобы начать расширенный выбор.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ LB_ERR, если происходит ошибка.
 
 Устанавливает ширину в пикселях всех столбцов в многоколонном поле списка (создано с [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) стилем).
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ LB_ERR, если происходит ошибка.
 
 Устанавливает ширину в пиксели, с помощью которых поле списка может быть прокрутено горизонтально.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ LB_ERR, если происходит ошибка.
 
 Устанавливает позиции tab-stop в поле списка.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

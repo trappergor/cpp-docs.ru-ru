@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-ms.openlocfilehash: 8f49a9faf70673c62167deeaa1bef33e4882378f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94a2fb65a9a3030f9dc683d0eb30f476b9de1cad
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369990"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752612"
 ---
 # <a name="cmemorystate-structure"></a>Структура CMemoryState
 
@@ -79,7 +79,7 @@ struct CMemoryState
 
 Принимает сводку памяти и `CMemoryState` хранит ее в этом объекте.
 
-```
+```cpp
 void Checkpoint();
 ```
 
@@ -137,7 +137,7 @@ Nonzero, если два состояния памяти отличаются; �
 
 Вызывает `Dump` функцию для всех объектов типа, полученных из класса, `CObject` которые были выделены (и все еще выделены) с момента последнего вызова [Checkpoint](#checkpoint) для этого `CMemoryState` объекта.
 
-```
+```cpp
 void DumpAllObjectsSince() const;
 ```
 
@@ -153,7 +153,7 @@ void DumpAllObjectsSince() const;
 
 Печать краткого отчета статистики памяти с `CMemoryState` объекта, заполненного функцией участника [Разницы.](#difference)
 
-```
+```cpp
 void DumpStatistics() const;
 ```
 

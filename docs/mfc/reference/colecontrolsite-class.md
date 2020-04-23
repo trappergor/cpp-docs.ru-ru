@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366155"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753956"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 
@@ -454,7 +454,7 @@ Nonzero, если окно ранее было отключено, в проти
 
 Уточняется, будет ли сайт управления обрабатывать или игнорировать события, выпущенные из-под контроля.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ void FreezeEvents(BOOL bFreeze);
 
 Получает информацию о мнемоники клавиатуры управления и поведении клавиатуры.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -1017,7 +1017,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 
 Устанавливает элемент управления в качестве кнопки по умолчанию.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 

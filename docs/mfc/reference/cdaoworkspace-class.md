@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377114"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754660"
 ---
 # <a name="cdaoworkspace-class"></a>Класс CDaoWorkspace
 
@@ -213,7 +213,7 @@ virtual void Append();
 
 Вызовите эту функцию участника, чтобы инициировать транзакцию.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ virtual void Close();
 
 Вызов этой функции участника для совершения транзакции - сохраните группу декретов и обновлений в одной или нескольких базах данных в рабочем пространстве.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ short GetDatabaseCount();
 
 Вызовите эту функцию участника для получения различного рода информации об открытии базы данных в рабочей области.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ short GetWorkspaceCount();
 
 Вызовите эту функцию участника для получения различного рода информации об рабочем пространстве, открытом в сеансе.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы закончить текущую транзакцию и восстановить все базы данных в рабочем пространстве до их состояния до начала транзакции.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 
 Позвоните в эту функцию участника, чтобы установить значение свойства DAO IsolateODBCTrans для рабочего пространства.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

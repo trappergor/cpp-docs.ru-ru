@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352292"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752710"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 
@@ -121,7 +121,7 @@ class CCmdTarget : public CObject
 
 Вызов эту функцию для отображения курсора в качестве песочных часов, когда вы ожидаете, что команда займет заметный временной интервал для выполнения.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ BOOL DoOleVerb(
 Дескриптор окна документа, содержащего объект.
 
 *lpRect*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) содержащую координаты, в пикселях, которые определяют прямоугольник связывания объекта в *hwndParent*.
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую координаты, в пикселях, которые определяют прямоугольник связывания объекта в *hwndParent*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -183,7 +183,7 @@ BOOL DoOleVerb(
 
 Вызовите эту функцию, чтобы включить автоматизацию OLE для объекта.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ void EnableAutomation();
 
 Позволяет высвобяться событиями над точками соединения.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ void EnableConnections();
 
 Позволяет библиотеку типа объекта.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ void EnableTypeLib();
 
 Вызовите эту функцию `BeginWaitCursor` после того, как вы вызвали функцию участника, чтобы вернуться из курсора песочных часов в предыдущий курсор.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Параметры
 
 *pIID*<br/>
-Указатель на идентификатор интерфейса [(GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Указатель на идентификатор интерфейса («GUID»(/окна/win32/api/guiddef/ns-guiddef-guid.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Идентификатор `LCID`локализации ().
 
-*Guid*<br/>
-[GUID](/previous-versions/cc317743(v%3dmsdn.10)) описания типа.
+*guid*<br/>
+«ГУИД»(/окна/win32/api/guiddef/ns-guid-guid описания типа.
 
 *ppTypeInfo*<br/>
 Указатель на указатель `ITypeInfo` на интерфейс.
@@ -514,7 +514,7 @@ virtual void OnFinalRelease();
 
 Вызовите эту функцию, чтобы восстановить соответствующий курсор песочных часов после изменения системного курсора (например, после того, как окно сообщений открылось, а затем закрылось в середине длительной операции).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

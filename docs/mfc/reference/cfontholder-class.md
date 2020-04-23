@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36fbebc39101c5534bd52d4f79fee5286487a6e0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373817"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754995"
 ---
 # <a name="cfontholder-class"></a>Класс CFontHolder
 
@@ -170,7 +170,7 @@ HFONT GetFontHandle(
 
 Инициализирует объект `CFontHolder`.
 
-```
+```cpp
 void InitializeFont(
     const FONTDESC* pFontDesc = NULL,
     LPDISPATCH pFontDispAmbient = NULL);
@@ -204,7 +204,7 @@ LPFONT m_pFont;
 
 Извлекает информацию о физическом `CFontHolder` шрифте, представленном объектом.
 
-```
+```cpp
 void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -217,7 +217,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 
 Эта функция отключает `CFontHolder` объект `IFont` от интерфейса.
 
-```
+```cpp
 void ReleaseFont();
 ```
 
@@ -255,7 +255,7 @@ CFont* Select(
 
 Выпускает любой существующий `CFontHolder` шрифт и `IFont` соединяет объект с интерфейсом.
 
-```
+```cpp
 void SetFont(LPFONT pNewFont);
 ```
 

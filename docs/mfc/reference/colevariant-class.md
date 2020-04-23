@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374822"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753719"
 ---
 # <a name="colevariant-class"></a>Класс COleVariant
 
@@ -93,7 +93,7 @@ class COleVariant : public tagVARIANT
 
 Вызовите эту функцию, чтобы `COleVariant` прикрепить данный объект [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) к текущему объекту.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ COleVariant(LPCITEMIDLIST pidl);
 
 Преобразует значение типа варианта `COleVariant` в этом объекте.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ VARTYPE для `COleVariant` этого объекта.
 
 Очищает `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ VARIANT Detach();
 
 Извлекает массив байта из существующего массива вариантов
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 Устанавливает строку к определенному типу.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

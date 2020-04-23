@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375686"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753383"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 
@@ -348,7 +348,7 @@ virtual BOOL CreateControlSite(
 
 Обмен данными между переменной участника и значением свойства элемента управления ActiveX на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ void DDX_DHtml_AxControl(
 *szPropName*<br/>
 Имя свойства.
 
-*Var*<br/>
+*var*<br/>
 Член данных, типа VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md), или [CComVariant](../../atl/reference/ccomvariant-class.md), который держит значение, обмениваемое с свойством управления ActiveX.
 
 ### <a name="example"></a>Пример
@@ -387,7 +387,7 @@ void DDX_DHtml_AxControl(
 
 Обменивается данными между переменной участника и флажкой на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ void DDX_DHtml_CheckBox(
 
 Обменивается данными между переменной участника и любым свойством HTML-элемента на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ void DDX_DHtml_ElementText(
 
 Обмен данными между переменной участника и радиокнопкой на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ void DDX_DHtml_Radio(
 
 Получает или устанавливает индекс окна списка на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ void DDX_DHtml_SelectIndex(
 
 Получает или устанавливает отображение текста ввода окна списка (на основе текущего индекса) на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ void DDX_DHtml_SelectString(
 
 Получает или устанавливает значение входа в поле списка (на основе текущего индекса) на странице HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ void DDX_DHtml_SelectValue(
 
 Отсоединяет от объекта нережимную диалоговую коробку `CDHtmlDialog` и уничтожает объект.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ HTML ID управления ActiveX.
 
 Извлекает единый локатор ресурсов (URL), связанный с текущим документом.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 Переходит к ресурсу, идентифицированному по URL, указанному *lpszURL.*
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ STDMETHOD(ResizeBorder)(
 
 Устанавливает свойство элемента управления ActiveX на новое значение.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ HTML ID управления ActiveX.
 
 Устанавливает `innerHTML` свойство элемента HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ void SetElementHtml(
 
 Устанавливает свойство html элемента.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ void SetElementProperty(
 
 Устанавливает `innerText` свойство элемента HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ void SetElementText(
 
 Устанавливает `IDispatch` интерфейс хоста.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 Устанавливает флаги разбивки uI.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

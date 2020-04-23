@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369020"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754739"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase Класс
 
@@ -254,7 +254,7 @@ virtual void Create(
 Выражение строки, которое является именем создаваемого файла базы данных. Это может быть полный путь и имя\\файла, например, "C: MYDB. MDB". Вы должны предоставить имя. Если вы не предоставите расширение файла, . MDB придатим. Если ваша сеть поддерживает единую конвенцию именования (UNC),\\\\\\вы также\\можете\\указать\\сетевой путь, например, «MYSERVER »MYSHARE »MYDIR »MYDB». Только Microsoft Jet (. MDB) файлы базы данных могут быть созданы с помощью этой функции члена. (Двойные задние слэши необходимы в\\строках буквальных, потому что " является c q'побег характер.)
 
 *lpszLocale*<br/>
-Выражение строки, используемое для определения порядка коллажа для создания базы данных. Значение по умолчанию — `dbLangGeneral`. Возможны следующие значения:
+Выражение строки, используемое для определения порядка коллажа для создания базы данных. Значение по умолчанию — `dbLangGeneral`. Возможны следующие значения:
 
 - `dbLangGeneral`Английский, немецкий, французский, португальский, итальянский и современный испанский
 
@@ -315,7 +315,7 @@ virtual void Create(
 
 Вызовите эту функцию участника, чтобы установить связь между одним или несколько юнными полями в основной таблице в базе данных и одним или несколько полями в иностранной таблице (другая таблица в базе данных).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ void CreateRelation(CDaoRelationInfo& relinfo);
 
 Вызовите эту функцию участника, чтобы удалить указанный `CDaoDatabase` запрос - сохраненный запрос - из коллекции queryDefs объекта.
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ void DeleteQueryDef(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы удалить существующее отношение из коллекции отношений объекта базы данных.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ void DeleteRelation(LPCTSTR lpszName);
 
 Вызовите эту функцию участника, чтобы удалить `CDaoDatabase` указанную таблицу и все ее данные из коллекции TableDefs объекта.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ void DeleteTableDef(LPCTSTR lpszName);
 
 Вызов ифункции этого элемента для выполнения запроса действия или выполнения оператора S'L в базе данных.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ short GetQueryDefCount();
 
 Вызовите эту функцию участника для получения различного рода информации о запросе, определенном в базе данных.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ short GetRelationCount();
 
 Позвоните этой функции участника для получения информации об определенном отношении в коллекции отношений базы данных.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ short GetTableDefCount();
 
 Вызовите эту функцию участника для получения различного рода информации о таблице, определенной в базе данных.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ virtual void Open(
 
 Вызов эту функцию участника, чтобы переопределить число секунд по умолчанию, чтобы позволить до последующих операций на подключенной базе данных тайм-аут.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

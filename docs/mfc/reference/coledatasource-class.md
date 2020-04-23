@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: fcf9505a7792aea6807e37f05cd1cb1aaad55830
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8746be43e3f2a31558904323392983b183d4f198
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366122"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753900"
 ---
 # <a name="coledatasource-class"></a>Класс COleDataSource
 
@@ -104,7 +104,7 @@ class COleDataSource : public CCmdTarget
 
 Назовите эту функцию, чтобы указать формат, в котором данные предлагаются во время операций передачи данных.
 
-```
+```cpp
 void CacheData(
     CLIPFORMAT cfFormat,
     LPSTGMEDIUM lpStgMedium,
@@ -140,7 +140,7 @@ void CacheData(
 
 Назовите эту функцию, чтобы указать формат, в котором данные предлагаются во время операций передачи данных.
 
-```
+```cpp
 void CacheGlobalData(
     CLIPFORMAT cfFormat,
     HGLOBAL hGlobal,
@@ -180,7 +180,7 @@ COleDataSource();
 
 Назовите эту функцию, чтобы указать формат, в котором данные предлагаются во время операций передачи данных.
 
-```
+```cpp
 void DelayRenderData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -210,7 +210,7 @@ void DelayRenderData(
 
 Назовите эту функцию, чтобы указать формат, в котором данные предлагаются во время операций передачи данных.
 
-```
+```cpp
 void DelayRenderFileData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -240,7 +240,7 @@ void DelayRenderFileData(
 
 Вызовите эту функцию для поддержки изменения содержимого источника данных.
 
-```
+```cpp
 void DelaySetData(
     CLIPFORMAT cfFormat,
     LPFORMATETC lpFormatEtc = NULL);
@@ -316,7 +316,7 @@ DROPEFFECT DoDragDrop(
 
 Вызовите эту `COleDataSource` функцию, чтобы очистить объект данных.
 
-```
+```cpp
 void Empty();
 ```
 
@@ -482,7 +482,7 @@ virtual BOOL OnSetData(
 
 Помещает данные, `COleDataSource` содержащиеся в объекте, на clipboard после вызова одной из следующих функций: [CacheData,](#cachedata) [CacheGlobalData,](#cacheglobaldata) [DelayRenderData](#delayrenderdata)или [DelayRenderFile.](#delayrenderfiledata)
 
-```
+```cpp
 void SetClipboard();
 ```
 

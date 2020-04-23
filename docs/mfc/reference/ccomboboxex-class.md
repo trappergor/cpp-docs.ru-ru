@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369477"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754822"
 ---
 # <a name="ccomboboxex-class"></a>Класс CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Определяет сочетание стилей комбо-боксов, применяемых к комбо-коробке. Более **подробную** информацию о стилях можно узнать ниже.
 
 *rect*<br/>
-Ссылка на объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая является положением и размером комбо-коробки.
+Ссылка на объект [CRect](../../atl-mfc-shared/reference/crect-class.md) или структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая является положением и размером комбо-коробки.
 
 *pParentWnd*<br/>
 Указатель на объект [CWnd,](../../mfc/reference/cwnd-class.md) который является родительским окном `CDialog`комбо-коробки (обычно a). Она не должна быть NULL.
@@ -210,7 +210,7 @@ virtual BOOL CreateEx(
 Стиль управления комбо-коробкой. Смотрите [Создать](#create) список стилей.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.

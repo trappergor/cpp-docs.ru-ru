@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c22097c3a686857a6a5698033b7395c5d15f2570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b52ed3137a9a515278e018d69751aedaddb0cf1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366081"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753881"
 ---
 # <a name="coledispatchdriver-class"></a>Класс ColeDispatchDriver
 
@@ -103,7 +103,7 @@ class COleDispatchDriver
 
 Функция-член `AttachDispatch` вызывается для того, чтобы присоединить указатель `IDispatch` к объекту `COleDispatchDriver` . Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
-```
+```cpp
 void AttachDispatch(
     LPDISPATCH lpDispatch,
     BOOL bAutoRelease = TRUE);
@@ -217,7 +217,7 @@ LPDISPATCH DetachDispatch();
 
 Получает свойство объекта, указанное *dwDispID.*
 
-```
+```cpp
 void GetProperty(
     DISPID dwDispID,
     VARTYPE vtProp,
@@ -243,7 +243,7 @@ void GetProperty(
 
 Вызывает метод объекта или свойство, указанное *dwDispID,* в контексте, указанном *wFlags*.
 
-```
+```cpp
 void AFX_CDECL InvokeHelper(
     DISPID dwDispID,
     WORD wFlags,
@@ -282,8 +282,8 @@ void AFX_CDECL InvokeHelper(
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**Длинные**|
-|VT_R4|**FLOAT**|
+|VT_I4|**long**|
+|VT_R4|**float**|
 |VT_R8|**double**|
 |VT_CY|**CY**|
 |VT_DATE|**Дата**|
@@ -369,7 +369,7 @@ operator LPDISPATCH();
 
 Выпускает `IDispatch` соединение. Для получения дополнительной [информации см.](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
-```
+```cpp
 void ReleaseDispatch();
 ```
 
@@ -385,7 +385,7 @@ void ReleaseDispatch();
 
 Устанавливает свойство объекта OLE, указанное *dwDispID.*
 
-```
+```cpp
 void AFX_CDECL SetProperty(
     DISPID dwDispID,
     VARTYPE vtProp, ...);

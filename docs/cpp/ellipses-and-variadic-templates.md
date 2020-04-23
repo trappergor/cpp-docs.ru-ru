@@ -1,15 +1,15 @@
 ---
-title: Многоточия и шаблоны с переменными аргументами
+title: Эллипсис и вариадские шаблоны
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 358cdeeaf6f3e8c7f7841bbc796eca6557ccd145
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8326a6b9e75db6adc37a68aa5d5741b004d27d30
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366341"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031528"
 ---
-# <a name="ellipses-and-variadic-templates"></a>Многоточия и шаблоны с переменными аргументами
+# <a name="ellipsis-and-variadic-templates"></a>Эллипсис и вариадские шаблоны
 
 В этой статье показано, как использовать многоточие (`...`) в шаблонах C++ с переменным числом аргументов. Многоточие активно использовалось в C и C++. Они вводят переменные списки аргументов для функций. Одним из наиболее известных примеров является функция `printf()` из библиотеки времени выполнения C .
 

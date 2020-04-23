@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375554"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753257"
 ---
 # <a name="cdockstate-class"></a>Класс CDockState
 
@@ -74,7 +74,7 @@ class CDockState : public CObject
 
 Вызов ими функции для очистки `CDockState` всей стыковочного стыковки информации, хранящейся в объекте.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ DWORD GetVersion();
 
 Вызов эту функцию для получения информации о состоянии из реестра или . Файл INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Позвоните в эту функцию, чтобы сохранить государственную информацию в реестр или . Файл INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 

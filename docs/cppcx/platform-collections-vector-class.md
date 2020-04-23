@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354374"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032126"
 ---
 # <a name="platformcollectionsvector-class"></a>Класс Platform::Collections::Vector
 
-Представляет упорядоченную коллекцию объектов с индивидуальным доступом, осуществляемым при помощи индекса. Реализует [Windows::Foundation::: Коллекции::: IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) поможет с [связыванием данных](/windows/uwp/data-binding/data-binding-in-depth)XAML.
+Представляет упорядоченную коллекцию объектов с индивидуальным доступом, осуществляемым при помощи индекса. Реализует [Windows::Foundation::: Коллекции::: IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) поможет с [связыванием данных](/windows/uwp/data-binding/data-binding-in-depth)XAML.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,9 +61,9 @@ template <typename T, typename E>
 
 1. открытый класс перечисления
 
-Класс **«Вектор»** — это конкретная реализация [Windows:::: Коллекции::::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) интерфейс.
+Класс **«Вектор»** — это конкретная реализация [Windows:::: Коллекции::::IVector](/uwp/api/windows.foundation.collections.ivector-1) интерфейс.
 
-При попытке использования типа **Vector** в значении или параметре общедоступного возврата повышается ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+При попытке использования типа **Vector** в значении или параметре общедоступного возврата повышается ошибка компилятора C3986. Вы можете исправить ошибку, изменив тип параметра или возвращаемого значения на [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Участники
 
@@ -96,7 +96,7 @@ template <typename T, typename E>
 |||
 |-|-|
 |Имя|Описание|
-|Событие [Windows::Фундамент::Коллекция::VectorChangedEventHandler\<T>](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Происходит при изменении объекта Vector.|
+|Событие [Windows::Фундамент::Коллекция::VectorChangedEventHandler\<T>](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Происходит при изменении объекта Vector.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -369,10 +369,10 @@ Vector(std::initializer_list<T> il);
 *Il*<br/>
 [Std::initializer_list](../standard-library/initializer-list-class.md) объектов типа *T,* которые будут использоваться для инициализации Вектор.
 
-*N*<br/>
+*Нет*<br/>
 Количество элементов в коллекции объектов, используемой для инициализации текущего объекта Vector.
 
-*Размер*<br/>
+*size*<br/>
 Количество элементов в объекте Vector.
 
 *value*<br/>

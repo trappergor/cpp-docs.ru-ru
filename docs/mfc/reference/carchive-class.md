@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377067"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753124"
 ---
 # <a name="carchive-class"></a>Класс CArchive
 
@@ -146,7 +146,7 @@ class CArchive
 
 Вызовите эту функцию, чтобы закрыть архив, не бросая исключения.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ CArchive(
 
 Сбрасывает все данные, оставшиеся в буфере, закрывает архив и отключает архив из файла.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ void Close();
 
 Принудя любые данные, оставшиеся в буфере архива, к написанию файла.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ Nonzero, если архив в настоящее время используе
 
 Вызовите эту функцию участника для размещения объектов на карте, которые на самом деле не сериализованы в файл, но которые доступны для субобъектов для ссылки.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 
 Вызовите эту функцию участника, когда вы хотите хранить и загружать информацию о версии базового класса.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 
 Звоните, `SetLoadParams` когда вы собираетесь `CObject`прочитать большое количество полученных объектов из архива.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 
 Вызовите эту функцию участника, чтобы установить схему объекта, хранящуюся в объекте архива, на *nSchema.*
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ void SetObjectSchema(UINT nSchema);
 
 Используйте `SetStoreParams` при хранении большого количества полученных `CObject`объектов в архиве.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 
 Записывает указанное количество байтов в архив.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ void Write(const void* lpBuf, INT nMax);
 
 Используйте `WriteClass` для хранения версии и классовой информации базового класса во время сериализации производного класса.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 Хранит указанное `CObject` в архиве.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ void WriteObject(const CObject* pOb);
 
 Используйте эту функцию члена для записи данных из буфера в файл, связанный с объектом. `CArchive`
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365794"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751653"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 
@@ -124,7 +124,7 @@ pRichEdit->GetSelText(sz);
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ CDumpContext  afxDump;
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 Эта функция проверяет пройденое SCODE, чтобы увидеть, является ли это ошибкой.
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ Nonzero, если нет ошибок памяти; в противном слу
 
 Вызов этой функции в то время как в отладчике сбросить состояние объекта во время отладки.
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ void AfxDump(const CObject* pOb);
 
 Эта глобальная функция может быть использована для создания изображения текущего стека.
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ TRUE, если выделение предназначено для объект
 
 Вызывает указанную функцию итерации `CObject`для всех серийных классов в пространстве памяти приложения.
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ AFXAPI AfxDoForAllClasses(
 
 Выполняет указанную функцию итерации для `CObject` всех объектов, полученных из выделенных с **новым.**
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

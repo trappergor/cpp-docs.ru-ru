@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: fcee569659d732c26e274c8ca189042a16f13557
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e570681c899d58e8659635d55da843c23d1e95ee
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371075"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752882"
 ---
 # <a name="canimatectrl-class"></a>Класс CAnimateCtrl
 
@@ -206,7 +206,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления анимацией. Применяйте любую комбинацию стилей управления окнами и анимацией, описанные в [стилях управления анимацией](/windows/win32/Controls/animation-control-styles) в Windows SDK.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.

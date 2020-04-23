@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: a5ac8fec691a3bf8ba3725aa5be0ac9da5ef34b4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08fd7f1ba11053358391e7f120eb5db80d764c87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361818"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754092"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
 
@@ -400,7 +400,7 @@ virtual void AdjustInPlaceEditRect(
 
 Делает свойство либо редисируемым, либо только для чтения.
 
-```
+```cpp
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
@@ -539,7 +539,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 
 Позволяет или отсвагает свойство.
 
-```
+```cpp
 void Enable(BOOL bEnable=TRUE);
 ```
 
@@ -554,7 +554,7 @@ void Enable(BOOL bEnable=TRUE);
 
 Позволяет или отменяет управление кнопкой вращения, используемое для изменения значения свойства.
 
-```
+```cpp
 void EnableSpinControl(
     BOOL bEnable=TRUE,
     int nMin=0,
@@ -582,7 +582,7 @@ void EnableSpinControl(
 
 Расширяет или разрушает свойство, содержащее суб-свойства.
 
-```
+```cpp
 void Expand(BOOL bExpand=TRUE);
 ```
 
@@ -912,7 +912,7 @@ CMFCPropertyGridProperty* HitTest(
 
 Вызывается инфраструктурой для инициализации объекта свойства.
 
-```
+```cpp
 void Init();
 ```
 
@@ -1556,7 +1556,7 @@ TRUE, если операция по отдействию продолжаетс
 
 Перерисовывает свойство.
 
-```
+```cpp
 void Redraw();
 ```
 
@@ -1566,7 +1566,7 @@ void Redraw();
 
 Удаляет все параметры (элементы) из свойства.
 
-```
+```cpp
 void RemoveAllOptions();
 ```
 
@@ -1612,7 +1612,7 @@ virtual void ResetOriginalValue();
 
 Ассоциирует значение DWORD с свойством.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1629,7 +1629,7 @@ void SetData(DWORD_PTR dwData);
 
 Определяет текст, описывающий текущее свойство.
 
-```
+```cpp
 void SetDescription(const CString& strDescr);
 ```
 
@@ -1644,7 +1644,7 @@ void SetDescription(const CString& strDescr);
 
 Устанавливается название объекта.
 
-```
+```cpp
 void SetName(
     LPCTSTR lpszName,
     BOOL bRedraw=TRUE);
@@ -1696,7 +1696,7 @@ virtual void SetValue(const _variant_t& varValue);
 
 Показывает или скрывает свойство.
 
-```
+```cpp
 void Show(
     BOOL bShow=TRUE,
     BOOL bAdjustLayout=TRUE);

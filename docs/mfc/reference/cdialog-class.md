@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375649"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753365"
 ---
 # <a name="cdialog-class"></a>Класс CDialog
 
@@ -295,7 +295,7 @@ virtual INT_PTR DoModal();
 
 Вызовите эту функцию участника, чтобы завершить модульное поле диалогов.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ DWORD GetDefID() const;
 
 Перемещает фокус к указанному элементу управления в диалоговом поле.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Nonzero, если объект диалога был создан и иници�
 
 Призыв к преобразованию единиц диалогового ящика прямоугольника в экранные единицы.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 Перемещает фокус на следующий элемент управления в диалоговом поле.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ Virtual void OnSetFont(CFont* pFont);
 
 Устанавливает фокус на предыдущем элементе управления в диалоговом поле.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ void PrevDlgCtrl() const;
 
 Изменяет элемент управления кнопкой по умолчанию для диалогового окна.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ void SetDefID(UINT nID);
 
 Устанавливает идентификатор справки, чувствительный к контексту, для диалогового окна.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-ms.openlocfilehash: d30d26ecf0e72ee33affe3df5b88c438ff83bb6b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fa1fe8826543834872de5257a0f5d56b2ad9fc1c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365997"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752670"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>Форматирование CString и отображение окна сообщения
 
@@ -78,7 +78,7 @@ TRUE, если функция успешно извлекла подстроку
 
 Заменяет строку, на которую указывает *lpsz1* для любых экземпляров символов "%1" в ресурсе строки шаблона, идентифицированном *nIDS.*
 
-```
+```cpp
 void  AfxFormatString1(
     CString& rString,
     UINT nIDS,
@@ -114,7 +114,7 @@ void  AfxFormatString1(
 
 Заменяет строку, указанную *lpsz1* для любых экземпляров символов "%1", и строку, указанную *lpsz2* для любых экземпляров символов "%2", в ресурсе строки шаблона, идентифицированного *nIDS.*
 
-```
+```cpp
 void AfxFormatString2(
     CString& rString,
     UINT nIDS,

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373985"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753216"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ int CharFromPos(CPoint pt) const;
 
 Вызовите эту функцию, чтобы удалить (очистить) текущий выбор (если таковые) в элементе управления отсеиваний.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ void Clear();
 
 Вызовите эту функцию, чтобы затмить текущий выбор (если таковой имеется) в элементе управления отсеивании в CF_TEXT формате.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Nonzero, если инициализация является успешной; 
 
 Вызовите эту функцию, чтобы удалить (вырезать) текущий выбор (если таковой имеется) в элементе управления редактированием и скопировать удаленный текст в clipboard в CF_TEXT формате.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ void Cut();
 
 Вызовите эту функцию для сбросить (очистить) отменить флаг управления редактировкой.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ TCHAR GetPasswordChar() const;
 
 Вызовите эту функцию, чтобы получить прямоугольник форматирования управления правки.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,14 +793,14 @@ BOOL HideBalloonTip();
 
 Вызовите эту функцию, чтобы ограничить длину текста, который пользователь может ввести в управление редактирования.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *nChars*<br/>
-Указать длину (в TCHARs) текста, который пользователь может ввести. Если этот параметр 0, длина текста устанавливается в UINT_MAX байтов. Это поведение установлено по умолчанию.
+Указать длину (в TCHARs) текста, который пользователь может ввести. Если этот параметр 0, длина текста устанавливается в UINT_MAX байтов. Это поведение по умолчанию.
 
 ### <a name="remarks"></a>Remarks
 
@@ -910,7 +910,7 @@ int LineLength(int nLine = -1) const;
 
 Вызовите эту функцию, чтобы прокрутить текст многолинейного элемента управления редактированием.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ void LineScroll(
 
 Вызовите эту функцию, чтобы вставить данные из Clipboard в `CEdit` точку вставки.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 Вызовите эту функцию, чтобы заменить текущий выбор в элементару редактирования с текстом, указанным *lpszNewText.*
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ TRUE, если метод успешен; в противном случае FAL
 
 Вызов ими функции для установки ручки на локальную память, которая будет использоваться с помощью многолинейного элемента управления дейтом.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ void SetHandle(HLOCAL hBuffer);
 
 Выделение диапазона текста, отображаемого в текущем элементе управления редактированием.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ void SetHighlight(
 
 Вызовите эту функцию участника, `CEdit` чтобы установить ограничение текста для этого объекта.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ void SetLimitText(UINT nMax);
 
 Вызовите этот метод, чтобы установить левую и правую поля этого элемента управления правки.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ void SetMargins(
 
 Вызовите эту функцию, чтобы установить или очистить измененный флаг для управления редактировкой.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ void SetModify(BOOL bModified = TRUE);
 
 Вызов эту функцию для установки или удаления символа пароля отображается в элемент управления редактированием, когда пользователь вводит текст.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Nonzero, если операция выполняется успешно, или
 
 Вызовите эту функцию, чтобы установить размеры прямоугольника с помощью указанных координат.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ void SetRect(LPCRECT lpRect);
 
 Вызовите эту функцию, чтобы установить прямоугольник форматирования многолиневого элемента управления правкой.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ void SetRectNP(LPCRECT lpRect);
 
 Вызов исчерпнивайте эту функцию, чтобы выбрать диапазон символов в элементауправления редактирования.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ void SetSel(
 
 Вызов ими функции для установки остановок вкладок в многолинейном элементе управления действенной работой.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

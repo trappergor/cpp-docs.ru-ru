@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02b302ec38922128190a6f20ce2f156b52383b55
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367743"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752580"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount Класс
 
@@ -90,7 +90,7 @@ class CMFCCmdUsageCount : public CObject
 
 Приращения по одному счетчику, который связан с данной командой.
 
-```
+```cpp
 void AddCmd(UINT uiCmd);
 ```
 
@@ -179,7 +179,7 @@ Nonzero, если команда часто используется; в про�
 
 Очищает количество использования всех команд.
 
-```
+```cpp
 void Reset();
 ```
 

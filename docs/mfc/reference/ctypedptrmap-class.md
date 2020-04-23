@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373257"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754361"
 ---
 # <a name="ctypedptrmap-class"></a>Класс CTypedPtrMap
 
@@ -82,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 Извлекает элемент карты `rNextPosition`на, `rNextPosition` затем обновляется для обозначения следующего элемента на карте.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -127,7 +127,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Параметры шаблона, определяющие базовый класс класса этой карты.
 
-*Ключ*<br/>
+*key*<br/>
 Ключ элемента, который будет смотреть вверх.
 
 *Значение*<br/>
@@ -160,7 +160,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 *BASE_CLASS*<br/>
 Параметры шаблона, определяющие базовый класс класса этой карты.
 
-*Ключ*<br/>
+*key*<br/>
 Ключ элемента, который будет рассмотрен или создан на карте.
 
 ### <a name="remarks"></a>Remarks
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *Ключ*<br/>
 Параметры шаблона, определяющие тип ключей карты.
 
-*Ключ*<br/>
+*key*<br/>
 Ключ для удаления элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -195,7 +195,7 @@ Nonzero, если запись была найдена и успешно уда�
 
 Эта функция `BASE_CLASS`участника **вызывает ::SetAt**.
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 
@@ -204,7 +204,7 @@ void SetAt(KEY key, VALUE newValue);
 *Ключ*<br/>
 Параметры шаблона, определяющие тип ключей карты.
 
-*Ключ*<br/>
+*key*<br/>
 Определяет ключевую стоимость нового value.
 
 *newValue*<br/>

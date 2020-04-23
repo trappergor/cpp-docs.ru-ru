@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 4749b043271518a40024d1da4f97b593ad882a78
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74f161d68c3c58574d75ab64a1360fc7f571920d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375371"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751933"
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 
@@ -375,7 +375,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu
 
-```
+```cpp
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
@@ -488,7 +488,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 Инициализирует логотип для всплывающих меню.
 
-```
+```cpp
 void EnableMenuLogo(
     int iLogoSize,
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
@@ -527,7 +527,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ## <a name="cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::EnableResize
 
-```
+```cpp
 void EnableResize(CSize sizeMinResize);
 ```
 
@@ -539,7 +539,7 @@ void EnableResize(CSize sizeMinResize);
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupМеню::Включение
 
-```
+```cpp
 void EnableScrolling(BOOL = TRUE);
 ```
 
@@ -551,7 +551,7 @@ void EnableScrolling(BOOL = TRUE);
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize
 
-```
+```cpp
 void EnableVertResize(int nMinResize);
 ```
 
@@ -894,7 +894,7 @@ int InsertItem(
 
 ### <a name="parameters"></a>Параметры
 
-*Кнопку*<br/>
+*кнопка*<br/>
 (в) Ссылка на пункт меню для добавления.
 
 *iInsertAt*<br/>
@@ -1089,7 +1089,7 @@ TRUE, если всплывающее меню видно; в противном
 
 ## <a name="cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::MoveTo
 
-```
+```cpp
 void MoveTo(const CPoint& pt);
 ```
 
@@ -1188,7 +1188,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Очищает все элементы из всплывающем меню.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1250,7 +1250,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>Параметры
 
-*тип*<br/>
+*type*<br/>
 (в) Перечисленный тип данных, который определяет тип анимации.
 
 ### <a name="remarks"></a>Remarks
@@ -1259,7 +1259,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy
 
-```
+```cpp
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -1273,7 +1273,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 Устанавливает команду по умолчанию для всплывающее меню.
 
-```
+```cpp
 void SetDefaultItem(UINT uiCmd);
 ```
 
@@ -1324,7 +1324,7 @@ static void SetForceShadow(BOOL bValue);
 
 Установите максимальную ширину для всплывающих меню.
 
-```
+```cpp
 void SetMaxWidth(int iMaxWidth);
 ```
 
@@ -1339,7 +1339,7 @@ void SetMaxWidth(int iMaxWidth);
 
 ## <a name="cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupМеню::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
@@ -1351,7 +1351,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupМеню::SetParentRibbonЭлемент
 
-```
+```cpp
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -1363,7 +1363,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupМеню::Set'uick
 
-```
+```cpp
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
@@ -1375,7 +1375,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupМеню::Set'uickMode
 
-```
+```cpp
 void SetQuickMode();
 ```
 
@@ -1385,7 +1385,7 @@ void SetQuickMode();
 
 Устанавливает выравнивание меню для всплывающих меню.
 
-```
+```cpp
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
@@ -1419,7 +1419,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 
 Заставляет всплывающее меню отображать все команды.
 
-```
+```cpp
 void ShowAllCommands();
 ```
 
@@ -1429,7 +1429,7 @@ void ShowAllCommands();
 
 ## <a name="cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::TriggerResize
 
-```
+```cpp
 void TriggerResize();
 ```
 
@@ -1456,7 +1456,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 
 Обновляет тень для всплывающее меню.
 
-```
+```cpp
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4ffd1254efd3283a4c5641092aefec8eec0ac22a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 273ea2b548d35722ebf937d2db2b589fef5e69fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373328"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755133"
 ---
 # <a name="canimationrect-class"></a>Класс CAnimationRect
 
@@ -125,7 +125,7 @@ class CAnimationRect : public CAnimationBaseObject;
 
 Добавляет переходы для левых, верхних, правых и нижних координат.
 
-```
+```cpp
 void AddTransition(
     CBaseTransition* pLeftTransition,
     CBaseTransition* pTopTransition,
@@ -405,7 +405,7 @@ operator RECT();
 
 Присваивает прямой к CAnimationRect.
 
-```
+```cpp
 void operator=(const RECT& rect);
 ```
 
@@ -422,7 +422,7 @@ void operator=(const RECT& rect);
 
 Устанавливает значение по умолчанию.
 
-```
+```cpp
 void SetDefaultValue(const CRect& rect);
 ```
 

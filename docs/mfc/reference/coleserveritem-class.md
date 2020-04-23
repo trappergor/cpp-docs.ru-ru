@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376115"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753740"
 ---
 # <a name="coleserveritem-class"></a>Класс ColeServerItem
 
@@ -175,7 +175,7 @@ class COleServerItem : public CDocItem
 
 Вызовите эту функцию для размещения форматов представления `COleDataSource` и преобразования для элемента OLE в указанном объекте.
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ COleServerItem(
 
 Вызовите эту функцию, чтобы скопировать элемент OLE в Clipboard.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ DROPEFFECT DoDragDrop(
 
 Вызовите эту функцию, чтобы заполнить указанный объект [COleDataSource](../../mfc/reference/coledatasource-class.md) со всеми данными, которые будут скопированы на clipboard, если вы называете [CopyToClipboard](#copytoclipboard) (те же данные также будут переданы, если вы называете [DoDragDrop](#dodragdrop)).
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ COleServerDoc* GetDocument() const;
 
 Вызовите эту функцию, чтобы получить CF_EMBEDSOURCE данные для элемента OLE.
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 
 Вызовите эту функцию, чтобы получить CF_OBJECTDESCRIPTOR данные для элемента OLE.
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ CSize m_sizeExtent;
 
 Вызовите эту функцию после изменения связанного элемента.
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -903,7 +903,7 @@ virtual BOOL OnSetExtent(
 
 - DVASPECT_DOCPRINT Элемент представлен так, как если бы он был напечатан с помощью команды Print из меню файла.
 
-*Размер*<br/>
+*size*<br/>
 Структура [CSize](../../atl-mfc-shared/reference/csize-class.md) с указанием нового размера элемента OLE.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -982,7 +982,7 @@ virtual void OnUpdateItems();
 
 Вызовите эту функцию при создании связанного элемента, чтобы установить его имя.
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 

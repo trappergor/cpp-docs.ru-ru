@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373306"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752123"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Определяет стиль управления видом дерева. Применяйте стили окон, описанные в [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)и любое сочетание [стилей управления представлениями деревьев,](/windows/win32/Controls/tree-view-control-window-styles) описанных в SDK Windows.
 
 *rect*<br/>
-Определяет размер и положение управления представления дерева. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение управления представления дерева. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Определяет родительское окно управления представления дерева, `CDialog`обычно . Она не должна быть NULL.
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления видом дерева. Применяйте стили окон, описанные в [CreateWindow,](/windows/win32/api/winuser/nf-winuser-createwindoww)и любое сочетание [стилей управления представлениями деревьев,](/windows/win32/Controls/tree-view-control-window-styles) описанных в SDK Windows.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|(в) Обработка элемента управления видом дерева.|
 |*nЧасть*|(в) Идентификатор для детали. Должно быть установлено, чтобы TVGIPR_BUTTON.|
-|*lpRect*|(ваут) Указатель на структуру [RECT.](/previous-versions/dd162897\(v=vs.85\)) Если этот метод успешен, структура получает прямоугольные координаты детали, указанной *hItem* и *nPart.*|
+|*lpRect*|(ваут) Указатель на структуру [RECT.](/windows/win32/api/windef/ns-windef-rect) Если этот метод успешен, структура получает прямоугольные координаты детали, указанной *hItem* и *nPart.*|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 Ручка элемента управления видом дерева.
 
 *lpRect*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает граничащий прямоугольник. Координаты относительно верхнего левого угла управления видом дерева.
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает граничащий прямоугольник. Координаты относительно верхнего левого угла управления видом дерева.
 
 *bTextТолько*<br/>
 Если этот параметр незероприг, прямоугольник, ограничивающий, включает только текст элемента. В противном случае он включает в себя всю строку, которую элемент занимает в управлении представления дерева.
@@ -1833,7 +1833,7 @@ CImageList* SetImageList(
 
 Вызов ими, чтобы установить ширину отступа для управления представлением дерева и перенарисовать элемент управления, чтобы отразить новую ширину.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 Отображает infotip для указанного элемента в текущем элементе управления видом дерева.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

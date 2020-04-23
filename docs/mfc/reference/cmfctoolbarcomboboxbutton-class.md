@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372191"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754010"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton класс
 
@@ -1116,7 +1116,7 @@ TRUE, если метод обрабатывает событие; в проти
 
 Удаляет все элементы из списка и отославает коробки.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 
 Устанавливает идентификатор ресурса меню ярлыка для кнопки комбо-бокса.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 Устанавливает высоту окна списка, когда он упал.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ virtual void SetStyle(UINT nStyle);
 
 Устанавливает текст в коробке редактирования кнопки комбо-бокс.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365718"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751609"
 ---
 # <a name="exception-processing"></a>Обработка исключений
 
@@ -307,13 +307,13 @@ THROW_LAST()
 
 Бросает исключение из архива.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*cause*<br/>
+*Вызвать*<br/>
 Определяется несколько, которое указывает причину исключения. Список возможных значений можно узнать: [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause).
 
 *lpszArchiveName*<br/>
@@ -327,7 +327,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 Бросает исключение файла.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -336,7 +336,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>Параметры
 
-*cause*<br/>
+*Вызвать*<br/>
 Определяется несколько, которое указывает причину исключения. Список возможных значений можно узнать: [CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause).
 
 *lOsОшибка*<br/>
@@ -359,7 +359,7 @@ void AfxThrowFileException(
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ void AfxThrowInvalidArgException( );
 
 Бросает исключение памяти.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ void AfxThrowMemoryException();
 
 Выбрасывает исключение, которое является результатом запроса на неподдерживаемую функцию.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Выбрасывает исключение ресурса.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ void  AfxThrowResourceException();
 
 Бросает исключение, чтобы остановить операцию конечному пользователю.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ void AfxThrowUserException();
 
 Используйте эту функцию, чтобы выбросить исключение в функции автоматизации OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 Создает объект типа `COleException` и бросает исключение.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 Вызовите эту функцию, чтобы выбросить исключение типа [CDaoException](../../mfc/reference/cdaoexception-class.md) из собственного кода.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ void AFXAPI AfxThrowDaoException(
 
 Вызовите эту функцию, `CDBException` чтобы выбросить исключение типа из вашего собственного кода.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ void AfxThrowDBException(
 
 Функция прекращения по умолчанию, поставляемая MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 

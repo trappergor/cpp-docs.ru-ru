@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373970"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753202"
 ---
 # <a name="ceditview-class"></a>Класс CEditView
 
@@ -259,7 +259,7 @@ CFont* GetPrinterFont() const;
 
 Вызов `GetSelectedText` копирования выбранного текста `CString` в объект, до конца выделения или символ, предшествующий первому символу перевозки-возврату в выборе.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ UINT PrintInsideRect(
 
 Звоните, `SerializeRaw` `CArchive` чтобы объект прочитал или `CEditView` написал текст в объекте в текстовый файл.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ void SerializeRaw(CArchive& ar);
 
 Вызов `SetPrinterFont` для установки шрифта принтера к шрифту, указанному *pFont.*
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ void SetPrinterFont(CFont* pFont);
 
 Вызов эту функцию для установки стопов вкладок, используемых для отображения и печати.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ void SetTabStops(int nTabStops);
 
 Вызов эту функцию участника, чтобы разблокировать буфер.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

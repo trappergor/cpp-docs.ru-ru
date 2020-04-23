@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: db82a3c9019655fae850002d9e664e5de5407aa6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367817"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754897"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -425,7 +425,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 Добавляет значок в список значков в защищенном элементе `CMap m_mapAddedIcons`.
 
-```
+```cpp
 void AddIcon(
     HICON hIcon,
     int iIcon);
@@ -494,7 +494,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>CMFCBaseTabCtrl::AutoDestroyWindow
 
-```
+```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```
 
@@ -598,7 +598,7 @@ virtual BOOL DetachTab(
 
 ## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>CMFCBaseTabCtrl::EnableActivateLastActive
 
-```
+```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```
 
@@ -612,7 +612,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 Контролирует, использует ли платформа автоматические цвета фона при рисовании вкладки.
 
-```
+```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
 ```
 
@@ -695,7 +695,7 @@ virtual BOOL EnableTabDetach(
 
 Позволяет пользователю изменить порядок вкладок с помощью мыши.
 
-```
+```cpp
 void EnableTabSwap(BOOL bEnable);
 ```
 
@@ -733,7 +733,7 @@ virtual BOOL EnsureVisible(int iTab);
 
 ## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>CMFCBaseTabCtrl:EnterDragMode
 
-```
+```cpp
 void EnterDragMode();
 ```
 
@@ -1037,7 +1037,7 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*идентификатор*<br/>
 [in] Идентификатор вкладки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1409,7 +1409,7 @@ virtual void InsertTab(
 
 ## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>CMFCBaseTabCtrl::Недействительно
 
-```
+```cpp
 void InvalidateTab(int iTab);
 ```
 
@@ -1944,7 +1944,7 @@ virtual BOOL RenameTab();
 
 Сбрасывает список изображений для экземпляра [класса CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-```
+```cpp
 void ResetImageList();
 ```
 
@@ -2019,7 +2019,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 Устанавливает цвета набора вкладок, используемые платформой в режиме автоматической цветовой маркировки.
 
-```
+```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```
 
@@ -2038,7 +2038,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 
 Задает класс-оболочку, который используется для любых объектов, не являющихся производными от [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).
 
-```
+```cpp
 void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```
 
@@ -2055,7 +2055,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 
 Включает и отключает обработку символов префикса в метках вкладок.
 
-```
+```cpp
 void SetDrawNoPrefix(
     BOOL bNoPrefix,
     BOOL bRedraw = TRUE);

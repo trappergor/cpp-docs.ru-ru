@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374862"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753771"
 ---
 # <a name="colesafearray-class"></a>Класс ColeSafeArray
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 Извлекает указатель на данные массива.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ void AccessData(void** ppvData);
 
 Выделяет память для безопасного массива.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ void AllocData();
 
 Выделяет память для дескриптора безопасного массива.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ void AllocDescriptor(DWORD dwDims);
 
 Предоставляет объекту контроль над `VARIANT` данными `COleSafeArray` в существующем массиве.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ void Attach(VARIANT& varSrc);
 
 Очищает безопасный массив.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ VARTYPE нового `COleSafeArray` объекта.
 
 Создает копию существующего безопасного массива.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ void Copy(LPSAFEARRAY* ppsa);
 
 Выделяет и инициализирует данные для массива.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ void Create(
 
 Создает новый одномерный `COleSafeArray` объект.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ void CreateOneDim(
 
 Уничтожает существующий дескриптор массива и все данные в массиве.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ void Destroy();
 
 Уничтожает все данные в безопасном массиве.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ void DestroyData();
 
 Уничтожает дескриптор безопасного массива.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ VARIANT Detach();
 
 Копирует содержимое безопасного массива `CByteArray`в .
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ DWORD GetDim();
 
 Извлекает один элемент безопасного массива.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ DWORD GetElemSize();
 
 Возвращает нижнюю границу для `COleSafeArray` любого измерения объекта.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ DWORD GetOneDimSize();
 
 Возвращает верхнюю границу для любого измерения безопасного массива.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ void GetUBound(
 
 Приравливывает количество блокировки массива и размещает указатель на данные массива в дескрипторе массива.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 Возвращает указатель элемента, указанного значениями индекса.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ void PtrOfIndex(
 
 Помещает в массив один элемент.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ void PutElement(
 
 Изменяет наименее значимую (самую правой) границу безопасного массива.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ void Redim(SAFEARRAYBOUND* psaboundNew);
 
 Изменяет количество элементов в `COleSafeArray` одномерном объекте.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ void ResizeOneDim(DWORD dwElements);
 
 Декретирует количество блокировки массива и аннулирует указатель, извлеченный `AccessData`.
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ void UnaccessData();
 
 Устрашает количество блокировки массива, чтобы он мог быть освобожден или уменьшен.
 
-```
+```cpp
 void Unlock();
 ```
 

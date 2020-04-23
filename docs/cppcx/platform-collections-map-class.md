@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354447"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032451"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
-Представляет *сопоставление*, являющееся коллекцией пар "ключ-значение". Реализует [Windows::Foundation::: Коллекции::: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) поможет с [связыванием данных](/windows/uwp/data-binding/data-binding-in-depth)XAML .
+Представляет *сопоставление*, являющееся коллекцией пар "ключ-значение". Реализует [Windows::Foundation::: Коллекции::: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) поможет с [связыванием данных](/windows/uwp/data-binding/data-binding-in-depth)XAML .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -63,7 +63,7 @@ ref class Map sealed;
 
 - открытый класс перечисления
 
-Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация [Windows:::Foundation::Collections:::IMap<Windows:::Collections:::IKeyValuePair\<K, V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) и [IObservableMap,](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) которые передаются через общедоступные интерфейсы Windows Runtime. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Исправить ошибку можно, изменив тип параметра или возврат значения в [Windows::: Культура::: IMap\<K,>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Карта — это, по сути, программа-оболочка для [std::map](../standard-library/map-class.md). Это конкретная реализация [Windows:::Foundation::Collections:::IMap<Windows:::Collections:::IKeyValuePair\<K, V>>](/uwp/api/windows.foundation.collections.imap-2) и [IObservableMap,](/uwp/api/windows.foundation.collections.iobservablemap-2) которые передаются через общедоступные интерфейсы Windows Runtime. При попытке использования типа `Platform::Collections::Map` в открытом возвращаемом значении или параметре возникает ошибка компилятора C3986. Исправить ошибку можно, изменив тип параметра или возврат значения в [Windows::: Культура::: IMap\<K,>](/uwp/api/windows.foundation.collections.imap-2).
 
 Для получения дополнительной информации [см.](../cppcx/collections-c-cx.md)
 
@@ -136,7 +136,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Карта::GetView Метод
 
-Возвращает вид только для чтения текущей Карты; то есть, [Платформа::Коллекции::MapView класса](../cppcx/platform-collections-mapview-class.md), который реализует "Windows::Foundation::Collections::IMapView\<K, V>/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс.
+Возвращает вид только для чтения текущей Карты; то есть, [платформа::Коллекции::MapView класс](../cppcx/platform-collections-mapview-class.md), который реализует [Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) интерфейс.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -160,7 +160,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента Map. Тип *ключа* typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -179,7 +179,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
 
 *value*<br/>
@@ -201,7 +201,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента на карте. Тип *ключа* typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение
 
-[КартаChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler) которая содержит информацию об объекте, который поднял событие, и вид изменений, которые произошли. Смотрите также [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+[КартаChangedEventHandler\<K,V>,](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) которая содержит информацию об объекте, который поднял событие, и вид изменений, которые произошли. Смотрите также [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
@@ -276,12 +276,12 @@ virtual void Remove(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ из пары "ключ-значение". Тип *ключа* typename *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Карта::Метод размера
 
-Возвращает номер [Windows:::Источник::: Культура::\<IKeyValuePair K,>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов на карте.
+Возвращает номер [Windows:::Источник::: Культура::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элементов на карте.
 
 ### <a name="syntax"></a>Синтаксис
 

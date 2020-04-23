@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 0fd104e377300233ef1526f6c453346555dd27d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bb93420b39be5d6fb9a6691cec8300fdccb0e73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373791"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754974"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 
@@ -384,7 +384,7 @@ CWnd* CreateView(
 
 Вызывает пристыкование панели управления к окну рамы.
 
-```
+```cpp
 void DockControlBar(
     CControlBar* pBar,
     UINT nDockBarID = 0,
@@ -420,7 +420,7 @@ void DockControlBar(
 
 Вызов исключите эту функцию, чтобы включить док-панели управления в окне рамы.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -463,7 +463,7 @@ virtual void EndModalState();
 
 Вызовите эту функцию, чтобы не пристыковаться к окну рамы.
 
-```
+```cpp
 void FloatControlBar(
     CControlBar* pBar,
     CPoint point,
@@ -570,13 +570,13 @@ CControlBar* GetControlBar(UINT nID);
 
 Вызов ифункции этого элемента для хранения информации `CDockState` о состоянии в элементе управления окна в объекте.
 
-```
+```cpp
 void GetDockState(CDockState& state) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 Содержит текущее состояние баров управления окном кадра по возвращении.
 
 ### <a name="remarks"></a>Remarks
@@ -675,7 +675,7 @@ CString GetTitle() const;
 
 Вызов `IntitialUpdateFrame` после создания нового `Create`кадра с .
 
-```
+```cpp
 void InitialUpdateFrame(
     CDocument* pDoc,
     BOOL bMakeVisible);
@@ -748,7 +748,7 @@ Nonzero, если таблица ускорителя была успешно з
 
 Вызовите эту функцию для восстановления параметров каждой панели управления, принадлежащей окну кадра.
 
-```
+```cpp
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
@@ -1014,7 +1014,7 @@ static AFX_DATA const CRect rectDefault;
 
 Вызов ими функции для хранения информации о каждой панели управления, принадлежащей окну кадра.
 
-```
+```cpp
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
@@ -1031,7 +1031,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 
 Обозначает указанное представление как активное представление для Rich Preview.
 
-```
+```cpp
 void SetActivePreviewView(CView* pViewNew);
 ```
 
@@ -1046,7 +1046,7 @@ void SetActivePreviewView(CView* pViewNew);
 
 Вызовите эту функцию участника, чтобы установить активное представление.
 
-```
+```cpp
 void SetActiveView(
     CView* pViewNew,
     BOOL bNotify = TRUE);
@@ -1068,13 +1068,13 @@ void SetActiveView(
 
 Вызовите эту функцию участника, `CDockState` чтобы применить информацию состояния, хранящуюся в объекте, к барам управления окна кадра.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 Примените сохраненное состояние к барам управления окна кадра.
 
 ### <a name="remarks"></a>Remarks
@@ -1127,7 +1127,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 Вызовите эту функцию, чтобы поместить строку в панели status-bar, которая имеет идентификатор 0.
 
-```
+```cpp
 void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
@@ -1148,7 +1148,7 @@ void SetMessageText(UINT nID);
 
 Устанавливает текущее положение панели выполнения Windows 7, отображаемый на панели задач.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1163,7 +1163,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 Устанавливает диапазон для панели прогресса Windows 7, отображаемый на панели задач.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1183,7 +1183,7 @@ void SetProgressBarRange(
 
 Устанавливает тип и состояние индикатора прогресса, отображаемого на кнопке панели задач.
 
-```
+```cpp
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
@@ -1229,7 +1229,7 @@ TRUE в случае успеха; FALSE, если версия ОС меньш�
 
 Устанавливает название объекта окна.
 
-```
+```cpp
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
@@ -1242,7 +1242,7 @@ void SetTitle(LPCTSTR lpszTitle);
 
 Вызов исчерпнивите эту функцию участника, чтобы показать или скрыть панель управления.
 
-```
+```cpp
 void ShowControlBar(
     CControlBar* pBar,
     BOOL bShow,
@@ -1264,7 +1264,7 @@ void ShowControlBar(
 
 Вызов исчерпнивите эту функцию участника, чтобы показать все окна, которые являются потомками `CFrameWnd` объекта.
 
-```
+```cpp
 void ShowOwnedWindows(BOOL bShow);
 ```
 

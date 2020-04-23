@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: d0de2e56e1f6b8e68e5989f21ecd89b9646caa1b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076472"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031476"
 ---
 # <a name="integer_sequence-class"></a>Класс integer_sequence
 
@@ -37,17 +37,17 @@ struct integer_sequence
 *T*\
 Тип значений. Это должен быть целочисленный тип: bool, char, char16_t, char32_t, wchar_t или целочисленный тип со знаком или без знака.
 
-*Валс*\
+*Вальс*\
 Пакет параметров, не являющихся типами, представляющий последовательность значений целочисленного типа T.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 |||
 |-|-|
 |`static size_t size() noexcept`|Число элементов в последовательности.|
 |`typedef T value_type`|Тип каждого элемента последовательности. Должен быть целочисленным типом.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 Пакет параметров, который передается непосредственно в функцию, может быть распакован без использования специальных вспомогательных методов библиотеки. Когда пакет параметров входит в тип, передаваемый в функцию, и вам необходимы индексы для доступа к элементам, то самым простым способом распаковать его будет использование `integer_sequence` и связанных с ним псевдонимов типа `make_integer_sequence`, `index_sequence`, `make_index_sequence` и `index_sequence_for`.
 
@@ -57,7 +57,7 @@ struct integer_sequence
 
 В функции `a2t``index_sequence` является псевдонимом `integer_sequence` на основе целочисленного типа `size_t`. `make_index_sequence` — это псевдоним, который во время компиляции создает `index_sequence`, отсчитываемый от нуля, с тем же количеством элементов, как у массива, переданного вызывающим объектом. `a2t` передает `index_sequence` по значению в `a2t_`, где выражение `a[I]...` распаковывает `I`, а затем элементы передаются в `make_tuple`, который использует их как отдельные аргументы. Например, если последовательность содержит три элемента, то `make_tuple` вызывается как make_tuple(a[0], a[1], a[2]). Сами элементы массива, конечно, могут быть любого типа.
 
-Функция Apply принимает значение [std:: Tuple](../standard-library/tuple-class.md)и создает `integer_sequence` с помощью вспомогательного класса `tuple_size`. Обратите внимание, что [std::d ecay_t](../standard-library/decay-class.md) является обязательным, так как [tuple_size](../standard-library/tuple-size-class-tuple.md) не работает со ссылочными типами. Функция `apply_` распаковывает элементы кортежа и пересылает их как отдельные аргументы при вызове функции. В этом примере функция представляет из себя простое лямбда-выражение, которое выводит значения.
+Функция применения принимает [std::tuple](../standard-library/tuple-class.md), и `integer_sequence` производит `tuple_size` с помощью класса помощника. Обратите внимание, что [std::decay't](../standard-library/decay-class.md) необходимо, потому что [tuple_size](../standard-library/tuple-size-class-tuple.md) не работает с типами ссылок. Функция `apply_` распаковывает элементы кортежа и пересылает их как отдельные аргументы при вызове функции. В этом примере функция представляет из себя простое лямбда-выражение, которое выводит значения.
 
 ```cpp
 #include <stddef.h>
@@ -123,6 +123,6 @@ int main()
 
 Пространство имен: std
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
-[Многоточия и шаблоны с переменным числом аргументов](../cpp/ellipses-and-variadic-templates.md)
+[Эллипсис и вариадские шаблоны](../cpp/ellipses-and-variadic-templates.md)

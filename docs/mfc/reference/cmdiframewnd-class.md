@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370059"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754543"
 ---
 # <a name="cmdiframewnd-class"></a>Класс CMDIFrameWnd
 
@@ -242,7 +242,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 
 Активирует другое окно ребенка MDI.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ void MDIActivate(CWnd* pWndActivate);
 
 Упорядочив все детские окна MDI в каскадном формате.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 
 Упорядочив все минимизированные окна ребенка документа.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ void MDIIconArrange();
 
 Максимизирует указанное окно ребенка MDI.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ void MDIMaximize(CWnd* pWnd);
 
 Активирует окно ребенка непосредственно за действующим в настоящее время окном ребенка и помещает в настоящее время активное окно ребенка за всеми другими окнами ребенка.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ void MDINext();
 
 Активирует предыдущее окно ребенка и помещает действующее в настоящее время окно ребенка непосредственно за ним.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ void MDIPrev();
 
 Восстанавливает окно ребенка MDI от максимального или минимизированного размера.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ CMenu* MDISetMenu(
 
 Упорядочив все детские окна в кафельном формате.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

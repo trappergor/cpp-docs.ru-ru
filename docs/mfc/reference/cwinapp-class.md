@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 946de5768829330f84b826a1fc9b2f6278847357
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4bb1ade4182424cbdcbf0d7ba69af88bbb88abe6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366836"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750669"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -377,7 +377,7 @@ class CWinApp : public CWinThread
 
 Вызовите эту функцию участника, чтобы добавить шаблон документа в список доступных шаблонов документов, которые поддерживает приложение.
 
-```
+```cpp
 void AddDocTemplate(CDocTemplate* pTemplate);
 ```
 
@@ -446,7 +446,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 Позвоните этой функции участника, чтобы закрыть все открытые документы перед выходом.
 
-```
+```cpp
 void CloseAllDocuments(BOOL bEndSession);
 ```
 
@@ -618,7 +618,7 @@ BOOL EnableD2DSupport(
 
 Вызовите эту функцию участника `CWinApp`изнутри конструктора вашего класса, чтобы использовать HTMLHelp для помощи приложения.
 
-```
+```cpp
 void EnableHtmlHelp();
 ```
 
@@ -628,7 +628,7 @@ void EnableHtmlHelp();
 
 Вызовите эту функцию, как правило, с переопределения, `InitInstance` чтобы пользователи приложения могли открывать файлы данных, когда они дважды щелкнули файлами из windows File Manager.
 
-```
+```cpp
 void EnableShellOpen();
 ```
 
@@ -1016,7 +1016,7 @@ HKEY GetSectionKey(
 
 Позвоните этой функции участника, чтобы скрыть приложение перед закрытием открытых документов.
 
-```
+```cpp
 void HideApplication();
 ```
 
@@ -1266,7 +1266,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 Вызовите эту функцию участника из функции члена [InitInstance,](#initinstance) чтобы включить и загрузить список самых последних используемых (MRU) файлов и последнее состояние предварительного просмотра.
 
-```
+```cpp
 void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ```
 
@@ -1757,7 +1757,7 @@ virtual CDocument* OpenDocumentFile(
 
 Вызов исчерпайте эту функцию участника, чтобы разобрать командную строку и отправить параметры, по одному, на [CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam).
 
-```
+```cpp
 void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 ```
 
@@ -1811,7 +1811,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*code*<br/>
 Определяет код крючка. Эта функция члена использует код для определения того, как обрабатывать *lpMsg.*
 
 *lpMsg*<br/>
@@ -1920,7 +1920,7 @@ virtual BOOL Register();
 
 Вызовите эту функцию участника, чтобы зарегистрировать все типы документов вашего приложения с помощью менеджера файлов Windows.
 
-```
+```cpp
 void RegisterShellFileTypes(BOOL bCompat = FALSE);
 ```
 
@@ -2108,7 +2108,7 @@ Nonzero, если безопасно прекратить применение; 
 
 Вызовите эту функцию участника, чтобы выбрать определенный принтер и отпустите принтер, который был ранее выбран в поле Print Dialog.
 
-```
+```cpp
 void SelectPrinter(
     HANDLE hDevNames,
     HANDLE hDevMode,
@@ -2134,7 +2134,7 @@ void SelectPrinter(
 
 Устанавливает тип справки приложения.
 
-```
+```cpp
 void SetHelpMode(AFX_HELP_TYPE eHelpType);
 ```
 
@@ -2153,7 +2153,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 
 Вызывает настройки приложения, которые будут храниться в реестре вместо файлов INI.
 
-```
+```cpp
 void SetRegistryKey(LPCTSTR lpszRegistryKey);
 void SetRegistryKey(UINT nIDRegistryKey);
 ```
@@ -2240,7 +2240,7 @@ virtual BOOL Unregister();
 
 Вызовите эту функцию участника, чтобы отменить регистрацию всех типов документов вашего приложения с помощью менеджера файлов Windows.
 
-```
+```cpp
 void UnregisterShellFileTypes();
 ```
 
@@ -2380,7 +2380,7 @@ BOOL WriteProfileString(
 
 Явно устанавливает идентификатор модели пользователя приложения для приложения. Этот метод следует назвать до того, как пользовательский интерфейс будет представлен пользователю (лучшее место - конструктор приложения).
 
-```
+```cpp
 void SetAppID(LPCTSTR lpcszAppID);
 ```
 

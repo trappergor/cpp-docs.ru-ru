@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363670"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752875"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA - структура
 
@@ -170,7 +170,7 @@ TRUE указывает на альфа-смешивание поддержив�
 
 Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -190,7 +190,7 @@ HRESULT D2D1MakeRotateMatrix(
 *angle*<br/>
 Угол поворота по часовой стрелке в градусах.
 
-*центр*<br/>
+*Центр*<br/>
 Точка, о которой вращаться.
 
 *Матрица*<br/>
@@ -288,7 +288,7 @@ TRUE, если тема используется для рисования ук�
 
 Включает или отключает поддержку Microsoft Active Accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Параметры
 
-*info*<br/>
+*Информация*<br/>
 (в, вне) Структура [NONCLIENTMETRICS,](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) содержащая масштабируемые метрики, связанные с областью неклиента неснимированного окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -676,7 +676,7 @@ int  m_nDragFrameThicknessFloat;
 
 Определяет текущее состояние для анимации меню рабочего стола и функций автоматического скрытия панели задач.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ BOOL SetMenuFont(
 
 Повторно инициализирует логические шрифты, используемые платформой.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ void UpdateFonts();
 
 Инициализирует цвета, глубину цвета, кисти, перья и изображения, используемые платформой.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ int GetShellAutohideBars();
 
 Выпускает интерфейсы, полученные с помощью `GetITaskbarList` и `GetITaskbarList3` методы.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

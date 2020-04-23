@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376280"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753958"
 ---
 # <a name="coleclientitem-class"></a>Класс ColeClientItem
 
@@ -310,7 +310,7 @@ class COleClientItem : public CDocItem
 
 Вызовите эту функцию, чтобы выполнить указанный глагол вместо [DoVerb,](#doverb) чтобы вы могли сделать свою собственную обработку, когда исключение брошено.
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ virtual BOOL ActivateAs(
 
 Вызовите эту функцию, чтобы инициализировать [COleDataObject](../../mfc/reference/coledataobject-class.md) для доступа к данным в элементе OLE.
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ Nonzero, если связанный элемент OLE может быть вс
 
 Вызовите эту функцию, чтобы изменить состояние элемента OLE из запущенного состояния в загруженное состояние, то есть, загруженное его обработчиком в памяти, но с сервером не работает.
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 
 Вызовите эту функцию, чтобы скопировать элемент OLE в Clipboard.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ BOOL CreateStaticFromData(
 
 Вызовите эту функцию, чтобы отключить элемент OLE и освободить все связанные ресурсы.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ void Deactivate();
 
 Вызов ими функции, когда пользователь деактивирует элемент, который был активирован на месте.
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ void DeactivateUI();
 
 Вызовите эту функцию, чтобы удалить элемент OLE из контейнерного документа.
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ Nonzero, если успешно; 0, если элемент OLE пуст.
 
 Возвращает идентификатор класса элемента в память, на которую указывает *pClassID.*
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ void GetClassID(CLSID* pClassID) const;
 
 Вызов исправитесь этой функцией, чтобы получить объект, `COleDataSource` содержащий все данные, которые будут размещены на Clipboard, по звонку в функцию участника [CopyToClipboard.](#copytoclipboard)
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ OLE_OBJTYPE GetType() const;
 
 Вызовите эту функцию, чтобы получить видимую для пользователя строку, описывающую тип элемента OLE, например "Документ слова".
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ BOOL Reload();
 
 Запускает приложение, связанное с этим элементом.
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 
 Позвоните в эту функцию, чтобы указать, сколько места доступно для элемента OLE.
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Объект [CSize,](../../atl-mfc-shared/reference/csize-class.md) содержащий информацию о размере.
 
 *nDrawAspect*<br/>
@@ -2040,7 +2040,7 @@ void SetExtent(
 
 Позвоните в эту функцию, чтобы указать название контейнерного приложения и название контейнера для встроенного элемента OLE.
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ Nonzero, если успешно; в противном случае, 0.
 
 Вызовите эту функцию, чтобы установить опцию обновления ссылок для представления указанного связанного элемента.
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 

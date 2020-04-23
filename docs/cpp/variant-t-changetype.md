@@ -9,22 +9,22 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c2283158856a6781ab2e12c51f4e2ad0e4f1d531
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160467"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750732"
 ---
 # <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
-**Блок, относящийся только к системам Microsoft**
+**Microsoft Специфический**
 
-Изменяет тип объекта `_variant_t` на указанный `VARTYPE`.
+Изменяет тип `_variant_t` объекта на `VARTYPE`указанный .
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void ChangeType(
    VARTYPE vartype,
    const _variant_t* pSrc = NULL
@@ -33,18 +33,18 @@ void ChangeType(
 
 #### <a name="parameters"></a>Параметры
 
-*VarType*<br/>
-`VARTYPE` для этого `_variant_t` объекта.
+*вартип*<br/>
+Для `VARTYPE` этого `_variant_t` объекта.
 
-*pSrc*<br/>
-Указатель на объект `_variant_t`, который необходимо преобразовать. Если это значение равно NULL, преобразование выполняется на месте.
+*Psrc*<br/>
+Указатель на объект `_variant_t`, который необходимо преобразовать. Если это значение NULL, конверсия выполняется на месте.
 
 ## <a name="remarks"></a>Remarks
 
-Эта функция-член преобразует объект `_variant_t` в указанное `VARTYPE`. Если *pSrc* имеет значение null, преобразование выполняется на месте, в противном случае объект `_variant_t` копируется из *pSrc* и затем преобразуется.
+Эта функция члена `_variant_t` преобразует объект `VARTYPE`в указанный . Если *pSrc* null, преобразование выполняется `_variant_t` на месте, в противном случае этот объект скопирован из *pSrc,* а затем преобразуется.
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**END Microsoft Специфический**
 
 ## <a name="see-also"></a>См. также раздел
 
-[Класс _variant_t](../cpp/variant-t-class.md)
+[класс _variant_t](../cpp/variant-t-class.md)

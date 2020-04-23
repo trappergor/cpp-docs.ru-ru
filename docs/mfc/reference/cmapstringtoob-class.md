@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370109"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754591"
 ---
 # <a name="cmapstringtoob-class"></a>Класс CMapStringToOb
 
@@ -201,7 +201,7 @@ UINT GetHashTableSize() const;
 
 Извлекает элемент карты на *rNextPosition,* затем обновляет *rNextPosition* для обозначения следующего элемента на карте.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -329,7 +329,7 @@ UINT HashKey(LPCTSTR key) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, стоимость хэша которого должна быть рассчитана.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -353,7 +353,7 @@ UINT HashKey(LPCTSTR key) const;
 
 Инициализирует хэш-таблицу.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -423,7 +423,7 @@ BOOL Lookup(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Определяет клавишу строки, которая определяет элемент, который следует изыскнуть.
 
 *Rvalue*<br/>
@@ -466,7 +466,7 @@ BOOL LookupKey(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Определяет клавишу строки, которая определяет элемент, который следует изыскнуть.
 
 *rKey*<br/>
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 Удаляет все элементы с этой карты `CString` и уничтожает ключевые объекты.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -571,7 +571,7 @@ BOOL RemoveKey(LPCTSTR key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Опознавательный состав строки, используемой для поиска карты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 Основное средство для вставки элемента в карту.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -620,7 +620,7 @@ void SetAt(
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Определяет строку, которая является ключом нового элемента.
 
 *newValue*<br/>

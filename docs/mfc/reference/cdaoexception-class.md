@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: a8a789f4dba06ffe376d8a8e955b026bb23af924
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 935d7870d68554d702e2ad762e83343cb518b2b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368999"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754728"
 ---
 # <a name="cdaoexception-class"></a>Класс CDaoException
 
@@ -138,7 +138,7 @@ short GetErrorCount();
 
 Возвращает информацию об ошибке конкретного объекта ошибки в коллекции Ошибок.
 
-```
+```cpp
 void GetErrorInfo(int nIndex);
 ```
 

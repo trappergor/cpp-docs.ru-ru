@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25a375f8bf5769a4a118318eac272db93062cbf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375297"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752512"
 ---
 # <a name="cmfcribbonbutton-class"></a>Класс CMFCRibbonButton
 
@@ -250,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 Добавляет во всплывающее меню элемент, связанный с кнопкой.
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
@@ -803,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 Удаляет из всплывающего меню все элементы.
 
-```
+```cpp
 void RemoveAllSubItems();
 ```
 
@@ -852,7 +852,7 @@ virtual BOOL SetACCData(
 
 Задает размер свернутой кнопки: крупная или малая.
 
-```
+```cpp
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```
 
@@ -865,7 +865,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 Делает для кнопки ленты доступной команду по умолчанию.
 
-```
+```cpp
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```
 
@@ -894,7 +894,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 Назначает индекс изображению кнопки.
 
-```
+```cpp
 void SetImageIndex(
     int nIndex,
     BOOL bLargeImage);
@@ -912,7 +912,7 @@ void SetImageIndex(
 
 Назначает всплывающее меню кнопке ленты.
 
-```
+```cpp
 void SetMenu(
     HMENU hMenu,
     BOOL bIsDefaultCommand=FALSE,
@@ -958,7 +958,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 Выравнивает всплывающее меню к краю кнопки.
 
-```
+```cpp
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```
 

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368884"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753549"
 ---
 # <a name="cmfcribbonpanel-class"></a>Класс CMFCRibbonPanel
 
@@ -432,7 +432,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 
 Извлекает все элементы ленты, которые содержатся в ленте панели.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Добавляет элементы ленты с указанным идентификатором команды в указанный массив.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 Извлекает иные данные команды для всех элементов ленты в ленте панели.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ TRUE, если элемент был удален и удален (если *bDe
 
 Удаляет все элементы ленты с лентой панели.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ TRUE, если оригинальный элемент ленты был усп�
 
 Позволяет или отстраняет центрирование вертикальных положений элементов ленты в их прямоугольнике дисплея.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Ассоциирует данные, определяемые пользователем, с ленточной панелью.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Позволяет или отражает регулировку ширины элементов ленты в одном столбце.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 
 Устанавливает клавиатуру для кнопки по умолчанию ленточной панели.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 
 Устанавливает фокус на указанный элемент Ленты.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 
 Прокрутите галерею, чтобы сделать указанный элемент ленты видимым.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ BOOL IsWindows7Look() const;
 
 Извлекает массив видимых элементов.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

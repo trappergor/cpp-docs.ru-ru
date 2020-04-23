@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373764"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752928"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 
@@ -316,7 +316,7 @@ class CFrameWndEx : public CFrameWnd
 
 Регулирует расположение элемента клиента OLE и клиентской области кадра.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 Пристыкуется к указанному стекле к окну рамы.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 Показывает или скрывает главное меню в полноэкранном режиме.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Включает полноэкранный режим для окна кадра.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 Позволяет или отражает загрузку состояния стыковки.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 Позволяет или отражает автоматическую обработку меню панели.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 Вызывается фреймворцом при изменении цвета системы.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Отменяет панель и удаляет ее из менеджера стыковки.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,20 +1999,20 @@ void RemovePaneFromDockManager(
 
 Восстанавливает макет стыковки в состояние стыковки, хранящееся в реестре.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Государства*<br/>
+*state*<br/>
 Состояние стыковки. Этот параметр не учитывается.
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame
 
 Устанавливает окно кадра предварительного просмотра печати.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Вставляет команды, определяемые пользователем, в меню панели инструментов.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ void SetupToolbarMenu(
 
 Переключает основную рамку между полноэкранным режимом и обычным режимом.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 Показывает или скрывает указанное стекло.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 Вызывается фреймворк для обновления подписи к оконной раме.
 
-```
+```cpp
 void UpdateCaption();
 ```
 

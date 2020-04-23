@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364012"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751135"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - PBS_SMOOTH отображает постепенное, плавное заполнение контроля панели прогресса. Без этого флага элемент управления будет заполняться блоками.
 
 *rect*<br/>
-Определяет размер и положение панели прогресса. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\)) Поскольку элемент управления должен быть окном ребенка, указанные координаты относительно области клиента *pParentWnd.*
+Определяет размер и положение панели прогресса. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect) Поскольку элемент управления должен быть окном ребенка, указанные координаты относительно области клиента *pParentWnd.*
 
 *pParentWnd*<br/>
 Определяет родительское окно родительского элемента панели `CDialog`хода, обычно . Она не должна быть NULL.
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления панелью прогресса. Примените любую комбинацию оконных стилей, описанных в [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) в Windows SDK.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -263,7 +263,7 @@ int GetPos();
 
 Получает текущие нижние и верхние пределы или диапазон контроля панели прогресса.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -495,7 +495,7 @@ int SetPos(int nPos);
 
 Устанавливает верхние и нижние пределы диапазона управления прогрессом и перерисовывает планку, чтобы отразить новые диапазоны.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368953"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754709"
 ---
 # <a name="cdaoquerydef-class"></a>Класс CДао-КуириДеф
 
@@ -410,7 +410,7 @@ short GetFieldCount();
 
 Вызовите эту функцию участника для получения различного рода информации о поле, определенном в querydef.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ short GetParameterCount();
 
 Позвоните этой функции участника, чтобы получить информацию о параметре, определенном в querydef.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 Вызовите эту функцию участника, чтобы установить строку соединения объекта запроса.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ void SetConnect(LPCTSTR lpszConnect);
 
 Позвоните в эту функцию участника, если вы хотите изменить имя querydef, которое не является временным.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ void SetName(LPCTSTR lpszName);
 
 Вызов ими функции участника, чтобы установить ограничение по времени до того, как запрос к исходу источника данных ODBC отображался.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ virtual void SetParamValue(
 
 Вызовите эту функцию участника как часть процесса настройки сквозного запроса s'L на внешнюю базу данных.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 Вызовите эту функцию участника, чтобы настроить выписку по s,L, которую выполняет запрос.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

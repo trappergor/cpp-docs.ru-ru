@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 7a594fdb2d3a35ce905b7790026f7418b7435f3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57d040a7efd87d384e0aaa6275593bc91f38cc86
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366020"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753046"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Определяет стиль управления панелью состояния. Применяйте любую комбинацию стилей управления стражей статуса, перечисленных в [общих стилях управления](/windows/win32/Controls/common-control-styles) в Windows SDK. Этот параметр должен включать WS_CHILD стиль. Он также должен включать в себя WS_VISIBLE стиль.
 
 *rect*<br/>
-Определяет размер и положение элемента управления стражей состояния. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение элемента управления стражей состояния. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Опознавайте родительское окно родительского `CDialog`элемента управления панели статуса, обычно . Она не должна быть NULL.
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления панелью состояния. Применяйте любую комбинацию стилей управления стражей статуса, перечисленных в [общих стилях управления](/windows/win32/Controls/common-control-styles) в Windows SDK. Этот параметр должен включать WS_CHILD стиль. Он также должен включать в себя WS_VISIBLE стиль.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Нулевой индекс части, связывающий прямоугольник которой должен быть извлечен.
 
 *lpRect*<br/>
-Адрес структуры [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает связующий прямоугольник.
+Адрес структуры [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает связующий прямоугольник.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -530,7 +530,7 @@ BOOL SetIcon(
 
 Устанавливает минимальную высоту области рисования элемента управления статусом.
 
-```
+```cpp
 void SetMinHeight(int nMin);
 ```
 
@@ -632,7 +632,7 @@ BOOL SetText(
 
 Устанавливает текст инструментария для панели в панели статуса.
 
-```
+```cpp
 void SetTipText(
     int nPane,
     LPCTSTR pszTipText);

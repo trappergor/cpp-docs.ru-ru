@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377053"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755068"
 ---
 # <a name="canimationvariable-class"></a>Класс CAnimationVariable
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Добавляет переход.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ void AddTransition(CBaseTransition* pTransition);
 
 Добавляет переходы из внутреннего списка в раскадровку.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 
 Очищает переходы.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ TRUE, если переходы были созданы успешно; в пр�
 
 Включает или отменяет событие IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ TRUE - включить событие, FALSE - отключить событи�
 
 Позволяет или отменяет событие ValueChanged.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Устанавливает значение по умолчанию и выпускает объект IUIAnimationVariable COM.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 Устанавливает связь между переменной анимации и объектом анимации.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

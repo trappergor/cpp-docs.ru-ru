@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365956"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752310"
 ---
 # <a name="ctabctrl-class"></a>Класс CTabCtrl
 
@@ -160,7 +160,7 @@ class CTabCtrl : public CWnd
 
 Вычисляет область отображения элементауправления вкладки с учетом прямоугольника окна или вычисляет прямоугольник окна, который соответствовал бы заданной области дисплея.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Указывает, какую операцию выполнять. Если этот параметр является истинным, *lpRect* определяет прямоугольник дисплея и получает соответствующий прямоугольник окна. Если этот параметр FALSE, *lpRect* определяет прямоугольник окна и получает соответствующий прямоугольник дисплея.
 
 *lpRect*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая определяет данный прямоугольник и получает вычисленный прямоугольник.
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая определяет данный прямоугольник и получает вычисленный прямоугольник.
 
 ### <a name="example"></a>Пример
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Определяет стиль управления вкладками. Примените любую комбинацию [стилей управления вкладками,](/windows/win32/Controls/tab-control-styles)описанную в SDK Windows. Смотрите **Примечания** для списка стилей окон, которые также можно применить к элементу управления.
 
 *rect*<br/>
-Определяет размер и положение управления вкладками. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение управления вкладками. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Определяет родительское окно управления вкладки, `CDialog`обычно . Она не должна быть NULL.
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления вкладками. Примените любую комбинацию [стилей управления вкладками,](/windows/win32/Controls/tab-control-styles)описанную в SDK Windows. Смотрите **Примечания** в [Создании](#create) для списка стилей окна, которые вы также можете применить к элементу управления.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -313,7 +313,7 @@ BOOL DeleteItem(int nItem);
 
 Сбросэлементо элементы в элементы управления вкладками, очистив все, что было нажато.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Индекс на нулевой основе элемента вкладки.
 
 *lpRect*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает связующий прямоугольник вкладки. Эти координаты используют текущий режим отображения порта.
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает связующий прямоугольник вкладки. Эти координаты используют текущий режим отображения порта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -682,7 +682,7 @@ LONG InsertItem(
 
 Удаляет указанное изображение из списка изображений элемента управления вкладками.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ void RemoveImage(int nImage);
 
 Устанавливает фокус на заданную вкладку в элементаре управления вкладкой.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Новая ширина и высота (в пикселях) элементов набора вкладок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -892,20 +892,20 @@ int SetMinTabWidth(int cx);
 
 Устанавливает количество пространства (обивка) вокруг значка каждой вкладки и метки в управлении вкладкой.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Устанавливает количество пространства (обивка) вокруг значка каждой вкладки и метки в управлении вкладкой.
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
 Назначает управление наконечником инструмента для управления вкладкой.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

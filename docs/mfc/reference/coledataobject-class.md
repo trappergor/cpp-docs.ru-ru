@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753907"
 ---
 # <a name="coledataobject-class"></a>Класс COleDataObject
 
@@ -92,7 +92,7 @@ class COleDataObject
 
 Вызовите эту `COleDataObject` функцию, чтобы связать объект с объектом данных OLE.
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ BOOL AttachClipboard();
 
 Вызовите эту функцию, `GetNextFormat` чтобы подготовиться к последующим вызовам для извлечения списка форматов данных из элемента.
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ Nonzero, если другой формат доступен; в противн�
 
 Чтобы проверить наличие данного формата, позвоните [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Для получения дополнительной информации см. [IEnumXXXX::Далее](/previous-versions//ms695273\(v=vs.85\)) в Windows SDK.
+Для получения дополнительной информации см. [IEnumXXXX::Далее](/previous-versions/ms695273\(v=vs.85\)) в Windows SDK.
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>ColeDataObject::IsData Available
 
@@ -328,7 +328,7 @@ Nonzero, если данные доступны в указанном форма
 
 Вызовите эту функцию, чтобы освободить право собственности `COleDataObject` на объект [IDataObject,](/windows/win32/api/objidl/nn-objidl-idataobject) который ранее был связан с объектом.
 
-```
+```cpp
 void Release();
 ```
 

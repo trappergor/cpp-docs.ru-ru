@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: c1f14657350c08679868299ce4878cca2ae10eec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1e9be5d7cb81f2769b98d9baeae786873f5fa73d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373224"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751982"
 ---
 # <a name="cusertoolsmanager-class"></a>Класс CUserToolsManager
 
@@ -460,7 +460,7 @@ Nonzero, если государство было сохранено успеш�
 
 Упомяните расширение по умолчанию, которое файл **Открыть** диалоговое окно [(CFileDialog класса](../../mfc/reference/cfiledialog-class.md)) использует в поле **команды** на вкладке **Инструменты** **настраиваемый** диалоговый ящик.
 
-```
+```cpp
 void SetDefExt(const CString& strDefExt);
 ```
 
@@ -477,7 +477,7 @@ void SetDefExt(const CString& strDefExt);
 
 Упоняет файловый фильтр, который файл **Open** диалоговый ящик [(CFileDialog Class)](../../mfc/reference/cfiledialog-class.md)используется в поле **Командования** на вкладке **Tools** box of **the Customize** dialog.
 
-```
+```cpp
 void SetFilter(const CString& strFilter);
 ```
 

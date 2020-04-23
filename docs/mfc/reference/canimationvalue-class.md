@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-ms.openlocfilehash: 0437f0fc66f64ccb99157330154bf5aa4b5666b3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e020e3e123bb5dc96a623e7a41896d75c611b81e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321980"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755085"
 ---
 # <a name="canimationvalue-class"></a>Класс CAnimationValue
 
@@ -94,7 +94,7 @@ class CAnimationValue : public CAnimationBaseObject;
 
 Добавляет переход, который должен быть применен к значению.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -239,7 +239,7 @@ operator INT32();
 
 Присваивает значение DOUBLE CAnimationValue.
 
-```
+```cpp
 void operator=(DOUBLE dblVal);
 void operator=(INT32 nVal);
 ```
@@ -260,7 +260,7 @@ void operator=(INT32 nVal);
 
 Устанавливает значение по умолчанию.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 

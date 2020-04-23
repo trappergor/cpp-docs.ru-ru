@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376261"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753057"
 ---
 # <a name="cstatusbar-class"></a>Класс CStatusBar
 
@@ -271,7 +271,7 @@ UINT GetItemID(int nIndex) const;
 
 Копирует координаты индикатора, указанного *nIndex,* в структуру, указанную *lpRect.*
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Индекс индикатора, координаты прямоугольника которого должны быть извлечены.
 
 *lpRect*<br/>
-Указывает на структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) или объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) который получит координаты индикатора, указанного *nIndex.*
+Указывает на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) или объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) который получит координаты индикатора, указанного *nIndex.*
 
 ### <a name="remarks"></a>Remarks
 
@@ -293,7 +293,7 @@ void GetItemRect(
 
 Устанавливает *nID,* *nStyle*и *cxWidth* к id, типу и ширине панели индикатора в месте, указанном *nIndex.*
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ BOOL SetIndicators(
 
 Устанавливает указанное панель индикатора в новый идентификатор, стиль и ширину.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ void SetPaneInfo(
 
 Вызовите эту функцию участника, чтобы установить стиль панели status.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);

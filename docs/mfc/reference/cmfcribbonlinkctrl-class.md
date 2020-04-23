@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 5d00c17b2ede654b9bdd214a8649f1237b9d9fdc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c0cbe843aac172464683288d61e2aec2af60b68
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375117"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753560"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>Класс CMFCRibbonLinkCtrl
 
@@ -259,7 +259,7 @@ TRUE, если связанная веб-страница была открыт�
 
 Задает значение гиперссылки.
 
-```
+```cpp
 void SetLink(LPCTSTR lpszLink);
 ```
 

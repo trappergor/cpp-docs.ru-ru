@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367796"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752625"
 ---
 # <a name="cmfccaptionbar-class"></a>Класс CMFCCaptionBar
 
@@ -227,7 +227,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 Включает или отсваивает кнопку на панели подписей.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ virtual void OnDrawText(
 
 Удаляет изображение биткарты из панели заголовков.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Удаляет кнопку из панели заголовков.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ void RemoveButton();
 
 Удаляет значок из панели подписей.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Удаляет текстовую метку из панели заголовков.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Устанавливает изображение биткарты для панели подписей.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ void SetBitmap(
 
 Устанавливает размер границы панели подписи.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Устанавливает кнопку для панели подписей.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ void SetButton(
 
 Определяет, остается ли кнопка нажатой.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 
 Устанавливает набор инструментов для кнопки.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Устанавливает пограничный стиль панели подписей.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Устанавливает значок для панели подписей.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ void SetIcon(
 
 Устанавливает набор инструментов для изображения в панели заголовков.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Устанавливает расстояние между краем элемента панели подписи и краем управления панели подписи.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Устанавливает текстовую метку для панели подписей.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);

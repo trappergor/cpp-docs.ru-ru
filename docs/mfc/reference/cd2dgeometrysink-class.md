@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: cb51c7b11f75debece61105bf20a201b6eab80a9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb5d2b53fa5899ac84608dc4ace6a84a3e5a7575
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369242"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754774"
 ---
 # <a name="cd2dgeometrysink-class"></a>Класс CD2DGeometrySink
 
@@ -115,7 +115,7 @@ virtual ~CD2DGeometrySink();
 
 Добавляет одну дугу к геометрии пути
 
-```
+```cpp
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```
 
@@ -128,7 +128,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 
 Создает кривую Безье третьего порядка между текущей и заданной конечной точками.
 
-```
+```cpp
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```
 
@@ -141,7 +141,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 
 Создает последовательность кубических кривых Безье и добавляет их в раковину геометрии.
 
-```
+```cpp
 void AddBeziers(
     const CArray<D2D1_BEZIER_SEGMENT,
     D2D1_BEZIER_SEGMENT>& beziers);
@@ -156,7 +156,7 @@ void AddBeziers(
 
 Создает сегмент линии между текущей точкой и указанной конечной точкой и добавляет ее в раковину геометрии.
 
-```
+```cpp
 void AddLine(CD2DPointF point);
 ```
 
@@ -169,7 +169,7 @@ void AddLine(CD2DPointF point);
 
 Создает последовательность линий, используя указанные точки и добавляет их в раковину геометрии.
 
-```
+```cpp
 void AddLines(
     const CArray<CD2DPointF,
     CD2DPointF>& points);
@@ -184,7 +184,7 @@ void AddLines(
 
 Создает кривую Безье второго порядка между текущей и заданной конечной точками.
 
-```
+```cpp
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```
 
@@ -197,7 +197,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 
 Добавляет последовательность сегментов квадрата Безье в качестве массива в одном вызове.
 
-```
+```cpp
 void AddQuadraticBeziers(
     const CArray<D2D1_QUADRATIC_BEZIER_SEGMENT,
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
@@ -212,7 +212,7 @@ void AddQuadraticBeziers(
 
 Запускает новую фигуру в указанной точке.
 
-```
+```cpp
 void BeginFigure(
     CD2DPointF startPoint,
     D2D1_FIGURE_BEGIN figureBegin);
@@ -255,7 +255,7 @@ Nonzero, если успешно; в противном случае FALSE.
 
 Завершает текущую цифру; дополнительно, закрывает его.
 
-```
+```cpp
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```
 
@@ -312,7 +312,7 @@ operator ID2D1GeometrySink*();
 
 Определяет метод, используемый для определения того, какие точки находятся внутри геометрии, описанной этой раковиной геометрии, и какие точки находятся снаружи.
 
-```
+```cpp
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```
 
@@ -325,7 +325,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 
 Обрабражает параметры штриха и соединения, которые будут применяться к новым сегментам, добавленным к раковине геометрии.
 
-```
+```cpp
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```
 

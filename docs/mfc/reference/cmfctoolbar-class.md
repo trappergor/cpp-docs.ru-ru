@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: dc1a8b1fc852ff1071b20ced64fc8e0686725a83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a90327bde693b87a53838da35adde21ed48dfbb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375076"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754046"
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 
@@ -652,7 +652,7 @@ virtual void AdjustLayout();
 
 Пересчитывает размер панели инструментов.
 
-```
+```cpp
 void AdjustSize();
 ```
 
@@ -920,7 +920,7 @@ static void CMFCToolBar::CleanUpImages();
 
 Освобождает системные ресурсы, выделенные для заблокированных изображений панели инструментов.
 
-```
+```cpp
 void CleanUpLockedImages();
 ```
 
@@ -1139,7 +1139,7 @@ virtual void DrawSeparator(
 
 Включает или отсваивает кнопку Настройка, которая появляется на панели инструментов.
 
-```
+```cpp
 void EnableCustomizeButton(
     BOOL bEnable,
     int iCustomizeCmd,
@@ -1199,7 +1199,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 
 Позволяет или отсваивает большие значки на кнопках панели инструментов.
 
-```
+```cpp
 void EnableLargeIcons(BOOL bEnable);
 ```
 
@@ -1229,7 +1229,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
 
 Позволяет или отсваивает отражение команды.
 
-```
+```cpp
 void EnableReflections(BOOL bEnable = TRUE);
 ```
 
@@ -1248,7 +1248,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 Позволяет или отсваивает текстовые метки под изображениями кнопки панели инструментов.
 
-```
+```cpp
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```
 
@@ -1343,7 +1343,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 
 Возвращает идентификатор команды, стиль и индекс изображения кнопки в указанном индексе.
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -2169,7 +2169,7 @@ virtual int InsertButton(
 
 ### <a name="parameters"></a>Параметры
 
-*Кнопку*<br/>
+*кнопка*<br/>
 (в) Определяет кнопку для вставки.
 
 *iInsertAt*<br/>
@@ -3063,7 +3063,7 @@ int ReplaceButton(
 *uiCmd*<br/>
 (в) Идентификатор команды кнопки для замены.
 
-*Кнопку*<br/>
+*кнопка*<br/>
 (в) Ссылка на `CMFCToolBarButton` вставку.
 
 *Мяч*<br/>
@@ -3211,7 +3211,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 
 Устанавливает идентификатор команды, стиль и идентификатор изображения кнопки панели инструментов.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -3374,7 +3374,7 @@ TRUE при вызове этого метода изменяет режим н�
 
 Уточняется, затемнены ли недоступные кнопки на панели инструментов или используются недоступные изображения.
 
-```
+```cpp
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```
 
@@ -3391,7 +3391,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 
 Устанавливает высоту панели инструментов.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -3434,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 Определяет, являются ли кнопки панели инструментов горячими.
 
-```
+```cpp
 void SetHotBorder(BOOL bShowHotBorder);
 ```
 
@@ -3468,7 +3468,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ## <a name="cmfctoolbarsetignoresettext"></a><a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText
 
-```
+```cpp
 void SetIgnoreSetText(BOOL bValue);
 ```
 
@@ -3503,7 +3503,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 
 Устанавливает размеры заблокированных кнопок и заблокированных изображений на панели инструментов.
 
-```
+```cpp
 void SetLockedSizes(
     SIZE sizeButton,
     SIZE sizeImage,
@@ -3529,7 +3529,7 @@ void SetLockedSizes(
 
 ## <a name="cmfctoolbarsetmaskmode"></a><a name="setmaskmode"></a>CMFCToolBar::SetMaskMode
 
-```
+```cpp
 void SetMaskMode(BOOL bMasked);
 ```
 
@@ -3588,7 +3588,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 
 Позиции панели инструментов и ее брата на одном ряду.
 
-```
+```cpp
 void SetOneRowWithSibling();
 ```
 
@@ -3602,7 +3602,7 @@ void SetOneRowWithSibling();
 
 ## <a name="cmfctoolbarsetorigbuttons"></a><a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons
 
-```
+```cpp
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
@@ -3616,7 +3616,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
 
 Определяет, может ли пользователь закрыть панель инструментов.
 
-```
+```cpp
 void SetPermament(BOOL bPermament=TRUE);
 ```
 
@@ -3635,7 +3635,7 @@ void SetPermament(BOOL bPermament=TRUE);
 
 Определяет, отправляет ли родительский кадр или владелец команды на панель инструментов.
 
-```
+```cpp
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```
 
@@ -3671,7 +3671,7 @@ static void SetShowTooltips(BOOL bValue);
 
 Определяет брата панели инструментов.
 
-```
+```cpp
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```
 
@@ -3716,7 +3716,7 @@ static void __stdcall SetSizes(
 
 Определяет свойства кнопки на панели инструментов.
 
-```
+```cpp
 void SetToolBarBtnText(
     UINT nBtnIndex,
     LPCTSTR szText=NULL,
@@ -3748,7 +3748,7 @@ void SetToolBarBtnText(
 
 Позиции панели инструментов и ее брата на отдельных строках.
 
-```
+```cpp
 void SetTwoRowsWithSibling();
 ```
 
@@ -3840,7 +3840,7 @@ FALSE, если указанный код ключа либо непечатае
 
 Обновляет состояние указанной кнопки.
 
-```
+```cpp
 void UpdateButton(int nIndex);
 ```
 

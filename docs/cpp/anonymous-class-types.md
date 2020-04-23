@@ -5,12 +5,12 @@ helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 611c1ed9853fc7e6e0788a7276890b14ec84a523
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e227f48588c3c4f59c0d0bd28ab16178de159b58
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032087"
 ---
 # <a name="anonymous-class-types"></a>Типы анонимных классов
 
@@ -53,7 +53,7 @@ int i = ptv.iValue;
 
 - Не могут иметь конструктор или деструктор.
 
-- Не могут быть переданы в качестве аргументов в функции (если проверка типов не отменена с помощью многоточия).
+- Не может быть передан в качестве аргументов для функций (если проверка типа побеждена с помощью эллипсиса).
 
 - Не могут быть возвращены в качестве возвращаемых значений из функций.
 

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366856"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750918"
 ---
 # <a name="cheaderctrl-class"></a>Класс CHeaderCtrl
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Определяет стиль управления заголовком. Для описания стилей управления заголовком [см.](/windows/win32/Controls/header-control-styles)
 
 *rect*<br/>
-Определяет размер и положение элемента управления заголовком. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение элемента управления заголовком. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Определяет родительское окно управления заголовком, обычно `CDialog`. Она не должна быть NULL.
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 Стиль управления заголовком. Для описания стилей управления заголовком [см.](/windows/win32/Controls/header-control-styles) Смотрите [Создать](#create) список дополнительных стилей.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Параметр|Описание|
 |---------------|-----------------|
 |*iItem*|(в) Нулевой индекс элемента заголовка, стиль которого находится HDF_SPLITBUTTON. Для получения дополнительной `fmt` информации [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) см.|
-|*lpRect*|(ваут) Указатель на структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) для получения информации о граничащих прямоугольниках.|
+|*lpRect*|(ваут) Указатель на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) для получения информации о граничащих прямоугольниках.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 Индекс с нулевым уровнем элемента управления заголовком.
 
 *lpRect*<br/>
-Указатель на адрес структуры [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает информацию о граничащих прямоугольниках.
+Указатель на адрес структуры [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает информацию о граничащих прямоугольниках.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*lpRect*|(ваут) Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая получает информацию о граничащих прямоугольниках.|
+|*lpRect*|(ваут) Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая получает информацию о граничащих прямоугольниках.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

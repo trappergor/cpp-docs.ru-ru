@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367366"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753461"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 Отображает указанную вкладку текущего элемента управления вкладкой и устанавливает фокус на этой вкладке.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 Уточняется, является ли фреймворк изменением размера клиентской области всех окон управления вкладками при изменении элемента пользовательского интерфейса управления вкладками.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*Стиль*<br/>
+*style*<br/>
 (в) Стиль управления вкладками. Дополнительные сведения см. в подразделе "Примечания".
 
 *rect*<br/>
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 (в) Идентификатор управления вкладкой.
 
-*Расположение*<br/>
+*расположение*<br/>
 (в) Расположение вкладок. Значение по умолчанию является LOCATION_BOTTOM. Дополнительные сведения см. в подразделе "Примечания".
 
 *bCloseBtn*<br/>
@@ -381,7 +381,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 Отображает или скрывает кнопку «Закрыть» **(X)** на активной вкладке.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Переключается между пользовательским интерфейсом, который использует две кнопки для прокрутки оконных вкладок, и интерфейсом, отображающим всплывающее меню окон с вкладками.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ CScrollBar* GetScrollBar();
 
 Извлекает прямоугольник области вкладки в верхней или нижней части управления вкладки.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Извлекает границу области клиента текущего элемента управления вкладки.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Прячет горизонтальную панель прокрутки, если таковые имеется, в активном окне.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ void HideActiveWindowHorzScrollBar();
 
 Определяет, отображает ли фреймворк неактивные окна управления вкладками.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Позволяет или отводит рисунок области вкладок, если нет видимых вкладок.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Параметры
 
-*Стиль*<br/>
+*style*<br/>
 (в) Одно из значений перечисления, которое определяет внешний вид управления вкладками. Для получения дополнительной информации смотрите таблицу в Замечаниях.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Устанавливает текущую вкладку управления вкладкой в качестве активной вкладки в группе вкладок интерфейса документа.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ TRUE, если указанная вкладка была активна; FALSE,
 
 Позволяет или отдает возможности использования смелого шрифта на активных вкладок.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Определяет, нарисован ли прямоугольник кадра вокруг встроенной панели.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Определяет, следует ли рисовать плоский или 3D-рамку вокруг области вкладки.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 Определяет, как можно переопрошать текущий элемент управления вкладками, а затем повторно отображать элемент управления.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 Уфикует максимальную ширину вкладок в окне вкладок.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 
 Прекращает текущую операцию повторного размера на элементе управления вкладки.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

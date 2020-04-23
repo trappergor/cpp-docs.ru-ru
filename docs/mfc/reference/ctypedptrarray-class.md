@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373283"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752064"
 ---
 # <a name="ctypedptrarray-class"></a>Класс CTypedPtrArray
 
@@ -144,7 +144,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 
 Эта функция `BASE_CLASS`участника **вызывает::Copy**.
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
@@ -215,7 +215,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 
 Эта функция `BASE_CLASS`участника **вызывает ::InsertAt**.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -280,7 +280,7 @@ TYPE operator[ ](int_ptr nindex) const;
 
 Эта функция `BASE_CLASS`участника **вызывает ::SetAt**.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -305,7 +305,7 @@ void SetAt(
 
 Эта функция `BASE_CLASS`участника **вызывает ::SetatGrow**.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);

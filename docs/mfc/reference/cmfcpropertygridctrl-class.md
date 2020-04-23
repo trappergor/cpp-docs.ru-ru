@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361930"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754140"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 
@@ -380,7 +380,7 @@ virtual void AdjustLayout();
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::ВсегдаПоказатьUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ TRUE, если метод успешен; в противном случае, FA
 
 Позволяет или отсваивает область описания, которая отображается под списком свойств в управлении сеткой свойств.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
 
 Включает или отсвадает элемент управления заголовком в верхней части управления сеткой свойств.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ TRUE, если операция по отдействию заканчивает
 
 Прокрутки управления сеткой свойств и расширяет элементы свойств до тех пор, пока указанное свойство не будет видно.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Расширяет или разрушает все узлы управления сеткой свойств.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
 
 Извлекает пользовательские цвета, которые в настоящее время определены для элементов управления сеткой свойств.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1225,7 +1225,7 @@ BOOL IsVSDotNetLook() const;
 
 Определяет, как отображать измененные свойства.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 
 Вызывается по фреймворку при выборе свойства, содержащего элемент управления комбо-коробкой.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Удаляет все объекты свойств из управления сеткой свойств.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Восстанавливает исходные значения всех свойств.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Устанавливает или сбрасывает алфавитный режим.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
 
 Уточняеттекст этикетки Boolean.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Выбирает свойство в управлении сеткой свойств.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ void SetCurSel(
 
 Определяет пользовательские цвета для различных элементов управления сеткой свойств.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ void SetCustomColors(
 
 Упоняет количество строк для отображения в разделе описания текущего управления сеткой свойств.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Определяет, следует ли отображать всю ширину названия категории для группы свойств в текущем управлении сеткой свойств.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ void SetGroupNameFullWidth(
 
 Определяет символ, который используется в качестве делимитера в списке значений свойств.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ void SetListDelimiter(TCHAR c);
 
 Определяет, перерисовывает ли фреймворк столбцов имени и значения текущего управления сеткой свойств, когда пользователь изменяет размер столбцов.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
 
 Устанавливает внешний вид управления сеткой свойств в стиле, который используется в Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

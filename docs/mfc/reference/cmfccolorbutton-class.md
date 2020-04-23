@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 21d05fd8e805467f1a7a77d20c81d5ba0401455e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf24c162d0eda272f73c69c434589ae6ef3332a4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367734"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752562"
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
 
@@ -147,7 +147,7 @@ CMFCColorButton();
 
 Включите или отключите "автоматическую" кнопку управления сборщиком цветов и установите автоматический (по умолчанию) цвет.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -171,7 +171,7 @@ void EnableAutomaticButton(
 
 Включите или отключите кнопку «другая», которая отображается ниже обычных цветовых кнопок.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -335,7 +335,7 @@ virtual void OnShowColorPopup();
 
 Инициализирует защищенный `m_pPalette` участник данных в указанную палитру или палитру системы по умолчанию.
 
-```
+```cpp
 void RebuildPalette(CPalette* pPal);
 ```
 
@@ -349,7 +349,7 @@ void RebuildPalette(CPalette* pPal);
 
 Определяет цвет кнопки.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -386,7 +386,7 @@ static void SetColorName(
 
 Определяет количество столбцов, отображаемых в таблице цветов, которые представлены пользователю в процессе выбора цвета пользователя.
 
-```
+```cpp
 void SetColumnsNumber(int nColumns);
 ```
 
@@ -403,7 +403,7 @@ void SetColumnsNumber(int nColumns);
 
 Определяет набор цветов и название набора. Набор цветов отображается с помощью объекта [класса CMFCColorBar.](../../mfc/reference/cmfccolorbar-class.md)
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -425,7 +425,7 @@ void SetDocumentColors(
 
 Определяет стандартные цвета для отображения на всплывающем цветовом баре.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 

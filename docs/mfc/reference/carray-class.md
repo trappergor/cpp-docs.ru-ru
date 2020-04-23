@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377022"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753976"
 ---
 # <a name="carray-class"></a>Класс CArray
 
@@ -209,7 +209,7 @@ CArray();
 
 Используйте эту функцию члена для копирования элементов одного массива в другой.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 
 Освобождает любую дополнительную память, которая была выделена в то время как массив был выращен.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ INT_PTR GetUpperBound() const;
 
 Первая версия `InsertAt` вставки одного элемента (или нескольких копий элемента) в определенном индексе в массиве.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 
 Удаляет все элементы из этого массива.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ void RemoveAll();
 
 Удаляет один или несколько элементов, начиная с заданного индекса в массиве.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ void RemoveAt(
 
 Устанавливает элемент массива в указанном индексе.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
 Устанавливает элемент массива в указанном индексе.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 
 Устанавливает размер пустого или существующего массива; распределяет память при необходимости.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374018"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753234"
 ---
 # <a name="cdrawingmanager-class"></a>Класс CDrawingManager
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Параметр|Описание|
-|*Размер*|(в) Параметр [CSize,](../../atl-mfc-shared/reference/csize-class.md) указывающий размер битовой карты.|
+|*size*|(в) Параметр [CSize,](../../atl-mfc-shared/reference/csize-class.md) указывающий размер битовой карты.|
 |*pBits*|(ваут) Указатель на указатель данных, который получает расположение битовых значений DIB.|
 |*Растрового изображения*|Ручка к исходной битовой карте|
 |*clrПрозрачный*|Значение RGB, определяющее прозрачный цвет исходной битовой карты.|
@@ -174,7 +174,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 Отображает бит-карты с прозрачными или полупрозрачными пикселями.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ void DrawAlpha(
 
 Рисует эллипс с поставляемой заливкой и пограничными цветами.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ BOOL DrawGradientRing(
 
 Рисует линию.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ void DrawLineA(
 
 Рисует прямоугольник с поставляемой заливкой и пограничными цветами.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ BOOL DrawShadow(
 
 Заполняет прямоугольную область двумя цветовыми градиентами.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ void Fill4ColorsGradient(
 
 Заполняет прямоугольную область с указанным градиентом цвета.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ void FillGradient(
 
 Заполняет прямоугольную область с указанным градиентом цвета.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -737,7 +737,7 @@ static BYTE __stdcall HueToRGB(
 
 Переворачивает прямоугольную область.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -1012,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
 
 Вращает содержание исходного постоянного тока внутри данного прямоугольника на 90 градусов.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

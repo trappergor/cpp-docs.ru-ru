@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 37fcf47b7537e89974a61e6c50c41e164d555678
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4e721740fc100a34ea08dd7ff5f9291eea2d9b36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365073"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752164"
 ---
 # <a name="ctooltipmanager-class"></a>Класс CTooltipManager
 
@@ -97,15 +97,15 @@ Nonzero, если набор инструментов был успешно со
 |------------------|----------------------|-------------------|
 |AFX_TOOLTIP_TYPE_BUTTON|Кнопка.|CMFCButton|
 |AFX_TOOLTIP_TYPE_CAPTIONBAR|Заголовок бар.|CMFCCaptionBar|
-|AFX_TOOLTIP_TYPE_DEFAULT|Любой элемент управления, который не соответствует другой категории.|Отсутствует.|
+|AFX_TOOLTIP_TYPE_DEFAULT|Любой элемент управления, который не соответствует другой категории.|Нет.|
 |AFX_TOOLTIP_TYPE_DOCKBAR|Док-панель.|CDockablePane|
-|AFX_TOOLTIP_TYPE_EDIT|Текстовое поле.|Отсутствует.|
+|AFX_TOOLTIP_TYPE_EDIT|Текстовое поле.|Нет.|
 |AFX_TOOLTIP_TYPE_MINIFRAME|Миникадр.|CPaneFrameWnd|
-|AFX_TOOLTIP_TYPE_PLANNER|Планировщик.|Отсутствует.|
+|AFX_TOOLTIP_TYPE_PLANNER|Планировщик.|Нет.|
 |AFX_TOOLTIP_TYPE_RIBBON|Ленточный бар.|CMFCRibbonBar, CMFCRibbonPanelMenuBar|
 |AFX_TOOLTIP_TYPE_TAB|Контроль вкладок.|CMFCTabCtrl|
 |AFX_TOOLTIP_TYPE_TOOLBAR|Панель инструментов.|CMFCToolBar, CMFCPopupMenuBar|
-|AFX_TOOLTIP_TYPE_TOOLBOX|Набор инструментов.|Отсутствует.|
+|AFX_TOOLTIP_TYPE_TOOLBOX|Набор инструментов.|Нет.|
 
 ## <a name="ctooltipmanagerdeletetooltip"></a><a name="deletetooltip"></a>CTooltipManager::DeleteToolTip
 
@@ -128,7 +128,7 @@ static void DeleteToolTip(CToolTipCtrl*& pToolTip);
 
 Настраивает внешний вид управления набором инструментов для указанных типов управления Windows.
 
-```
+```cpp
 void SetTooltipParams(
     UINT nTypes,
     CRuntimeClass* pRTC=RUNTIME_CLASS(CMFCToolTipCtrl),
@@ -198,7 +198,7 @@ static void SetTooltipText(
 
 Для получения более подробной информации смотрите исходный код, расположенный в папке **VC\\atlmfc\\src\\mfc** установки Visual Studio.
 
-```
+```cpp
 void UpdateTooltips();
 ```
 

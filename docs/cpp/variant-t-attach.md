@@ -9,36 +9,36 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: 3792ed4d0fcd86c4a4e846771c450413fda130b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187769"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750741"
 ---
 # <a name="_variant_tattach"></a>_variant_t::Attach
 
-**Блок, относящийся только к системам Microsoft**
+**Microsoft Специфический**
 
-Присоединяет объект `VARIANT` к объекту **_variant_t** .
+Прикрепляет `VARIANT` объект к **_variant_t** объекту.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
 #### <a name="parameters"></a>Параметры
 
-*варсрк*<br/>
-Объект `VARIANT` для присоединения к этому **_variant_t** объекту.
+*varSrc*<br/>
+Объект, `VARIANT` который должен быть прикреплен к этому **_variant_t** объекту.
 
 ## <a name="remarks"></a>Remarks
 
-Принимает владение `VARIANT`, инкапсулирует его. Эта функция члена освобождает все существующие инкапсулированные `VARIANT`, затем копирует предоставленный `VARIANT`и задает для его `VARTYPE` значение VT_EMPTY, чтобы гарантировать, что его ресурсы могут быть освобождены только деструктором **_variant_t** .
+Принимает право `VARIANT` собственности на инкапсуляции его. Эта функция члена выпускает любые существующие инкапсулированные, `VARIANT`затем копирует поставляемые, `VARIANT`и устанавливает его `VARTYPE` на VT_EMPTY, чтобы убедиться, что его ресурсы могут быть освобождены только **_variant_t** деструктора.
 
-**Завершение блока, относящегося только к системам Майкрософт**
+**END Microsoft Специфический**
 
 ## <a name="see-also"></a>См. также раздел
 
-[Класс _variant_t](../cpp/variant-t-class.md)
+[класс _variant_t](../cpp/variant-t-class.md)

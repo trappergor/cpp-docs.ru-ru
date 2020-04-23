@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370048"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754534"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 
@@ -296,7 +296,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 Пересчитывает макет активного элемента.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ virtual CMDIChildWndEx* CreateNewWindow(
 
 Пристыкуется к указанному стекле к окну рамы.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 Показывает или скрывает главное меню в полноэкранном режиме.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Включает полноэкранный режим для окна кадра.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 
 Позволяет или отражает загрузку состояния стыковки.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Включает или отклоняет функцию mDI tabbed для окна кадра.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ void EnableMDITabbedGroups(
 
 Включает или отклоняет функцию MDI Tabs для окна рамы MDI. При включении окно кадра отображает вкладку для каждого окна mDI ребенка.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTabCloseButton*<br/>
 Определяет, следует ли отображать кнопки закрытия вкладок.
 
-*Стиль*<br/>
+*style*<br/>
 Определяет стиль вкладок. Используйте STYLE_3D_SCROLLED для обычных вкладок или STYLE_3D_ONENOTE для вкладок Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -746,7 +746,7 @@ void EnableMDITabs(
 
 Определяется, следует ли открывать последнюю активную вкладку при закрытии текущей вкладки.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 Позволяет или отключает автоматическое создание и управление всплывающее меню панели, которое отображает список стекол приложений.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ void EnablePaneMenu(
 
 Вставляет элемент меню, идентификатор команды которого вызывает сяденный диалоговый ящик [CMFCWindowsManagerDialog.](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ TRUE, если нагрузка удалась; FALSE, если нагрузка
 
 Перемещение активной вкладки из действующего в настоящее время окна вкладок в следующую или предыдущую группу вкладок.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Создает новую группу вкладок, которая имеет одно окно.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1276,7 +1276,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 Указывается, можно ли преобразовать стыковочные панели управления в детские окна MDI. Если этот флаг является истинным, фреймворк обрабатывает преобразование автоматически, когда пользователь выбирает команду **вкладного документа.** Флаг защищен, и вы должны явно включить `m_bCanCovertControlBarToMDIChild` эту опцию либо `CMDIFrameWndEx`путем установки в `CanConvertControlBarToMDIChild`конструкторе -производного класса, либо переопределения .
 
-Значение по умолчанию — `FALSE`.
+Значение по умолчанию — `FALSE`.
 
 ### <a name="example"></a>Пример
 
@@ -1789,7 +1789,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Отменяет панель и удаляет ее из менеджера стыковки.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ TRUE, если сохранить удалось; FALSE, если сохрани
 
 Устанавливает окно кадра предварительного просмотра печати.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Изменяет объект панели инструментов, заменяя фиктивные элементы на элементы, определяемые пользователем.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Переключает основную рамку из обычного режима в полноэкранный режим.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Показывает или скрывает указанное стекло.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ void ShowPane(
 
 Создает коробку [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) и открывает ее.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 Вызывается фреймворк для обновления подписи к оконной раме.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Устанавливает значок для каждого панели вкладок MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372451"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752686"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 Нулевой индекс изображения, который будет нарисован.
 
 *пт*<br/>
-Структура [POINT,](/previous-versions/dd162805\(v=vs.85\)) содержащая x- и y-координаты, где будет нарисовано изображение.
+Структура [POINT,](/windows/win32/api/windef/ns-windef-point) содержащая x- и y-координаты, где будет нарисовано изображение.
 
 *Sz*<br/>
 Структура [СИЗЕ,](/windows/win32/api/windef/ns-windef-size) указывающая размер нарисованного изображения.
 
 *ptOrigin*<br/>
-Структура [POINT,](/previous-versions/dd162805\(v=vs.85\)) содержащая x- и y-координаты, указывающие верхний левый угол операции рисования по отношению к самому изображению. Пиксели изображения, которые находятся слева от X-координации и выше y-координации, не нарисованы.
+Структура [POINT,](/windows/win32/api/windef/ns-windef-point) содержащая x- и y-координаты, указывающие верхний левый угол операции рисования по отношению к самому изображению. Пиксели изображения, которые находятся слева от X-координации и выше y-координации, не нарисованы.
 
 *fСтиль*<br/>
 Пометить, указав стиль чертежа и, по желанию, изображение наложения. Смотрите раздел Замечания для получения информации о изображении наложения. Реализация MFC по умолчанию, ILD_NORMAL, рисует изображение с помощью фонового цвета для списка изображений. Если цвет фона является CLR_NONE значением, изображение нарисовано прозрачно с помощью маски.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Параметры
 
 *lpPoint*<br/>
-Адрес структуры [POINT,](/previous-versions/dd162805\(v=vs.85\)) которая получает текущее положение сопротивления.
+Адрес структуры [POINT,](/windows/win32/api/windef/ns-windef-point) которая получает текущее положение сопротивления.
 
 *lpPointHotSpot*<br/>
 Адрес `POINT` структуры, которая получает смещение изображения перетаскивания относительно позиции перетаскивания.

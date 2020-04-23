@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373921"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754998"
 ---
 # <a name="cfile-class"></a>Класс CFile
 
@@ -751,7 +751,7 @@ UINT nFrom);
 
 Устанавливает значение указателя файла к началу файла.
 
-```
+```cpp
 void SeekToBegin();
 ```
 
@@ -843,7 +843,7 @@ static void PASCAL SetStatus(
 *lpszFileName*<br/>
 Строка, которая является путь к желаемому файлу. Путь может быть относительным или абсолютным и может содержать имя сети.
 
-*состояние*<br/>
+*status*<br/>
 Буфер, содержащий новую информацию о состоянии. Вызов `GetStatus` функции участника для `CFileStatus` предварительного заполнения структуры текущими значениями, а затем внедвите изменения по мере необходимости. Если значение 0, то элемент соответствующего статуса не обновляется. Ознакомьтесь с функцией участника `CFileStatus` [GetStatus](#getstatus) для описания структуры.
 
 *Ptm*<br/>

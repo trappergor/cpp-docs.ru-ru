@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 203adeac9783da8ea49a8385dad9786865c8a225
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 183b30961e4a7d3079fa0d035a4ddc38bc2eebac
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373211"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752028"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 
@@ -112,7 +112,7 @@ BOOL CopyIconToClipboard();
 
 Рисует значок пользовательского инструмента в центре указанного прямоугольника.
 
-```
+```cpp
 void DrawToolIcon(
     CDC* pDC,
     const CRect& rectImage);
@@ -234,7 +234,7 @@ virtual void Serialize(CArchive& ar);
 
 Устанавливает приложение, которое запускает пользовательский инструмент.
 
-```
+```cpp
 void SetCommand(LPCTSTR lpszCmd);
 ```
 

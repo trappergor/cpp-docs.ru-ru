@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375881"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753418"
 ---
 # <a name="cmfctaskspane-class"></a>Класс CMFCTasksPane
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane:CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ HMENU CreateMenu() const;
 
 Позволяет или отсвагает анимацию, возникает при расширении или сворачивании целевой группы.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 Определяет, может ли пользователь свернуть группы задач.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ void EnableGroupCollapse(BOOL bEnable);
 
 Позволяет выпадать меню на **следующем** и **предыдущих** кнопок навигации.
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 
 Включает или отключает панель навигации.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ void EnableNavigationToolbar(
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Включает кнопки прокрутки вместо панели прокрутки.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
 
 Позволяет или отклоняет упаковку текста на этикетках.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
 
 Позволяет или отклоняет обертку слова для текста в задачах.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ int GetHorzMargin() const;
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ int GetPagesCount() const;
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Удаляет все группы на указанной странице.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ void RemoveAllGroups(int nPageIdx = 0);
 
 Удаляет все страницы из области задач, за исключением страницы по умолчанию (первой страницы).
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Удаляет все задачи из указанной группы.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Удаляет группу.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ void RemoveGroup(int nGroup);
 
 Удаляет указанную страницу из области задач.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Делает заданную страницу в панели задач активной.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ void SetActivePage(int nPageIdx);
 
 Задает заголовок области задач.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ void SetCaption(LPCTSTR lpszName);
 
 Задает высоту заголовка группы.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ void SetGroupCaptionHeight(int n = -1);
 
 Задает смещение заголовка группы по горизонтали.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 Задает смещение заголовка группы по вертикали.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ TRUE, если цвет группового текста был успешно 
 
 Задает смещение группы по вертикали.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ void SetGroupVertOffset(int n = -1);
 
 Устанавливает горизонтальную маржу.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 Задает текст заголовка для страницы области задач.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ TRUE, если имя задачи было успешно установлен�
 
 Устанавливает горизонтальное смещение для задач.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ void SetTasksHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ TRUE, если цвет текста для задачи был успешно �
 
 Устанавливает вертикальную маржу.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

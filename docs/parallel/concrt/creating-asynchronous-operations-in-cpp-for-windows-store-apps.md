@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8e1183464d3ecf9b12fabcc6fb4f1fd99b7b0083
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 635a8c95a3801c6e88feff1cefa3ed27727a8f88
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353408"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032191"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в СЗ для приложений UWP
 
@@ -54,13 +54,13 @@ Windows Runtime — это интерфейс программирования, 
 [Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 Представляет асинхронное действие.
 
-[Окна::Источник::: Газета>\<](/uwp/api/Windows.Foundation.IAsyncActionWithProgress_TProgress_)<br/>
+[Окна::Источник::: Газета>\<](/uwp/api/windows.foundation.iasyncactionwithprogress-1)<br/>
 Представляет асинхронное действие, сообщающее о ходе выполнения.
 
-[Окна::Основа::::>\<](/uwp/api/windows.foundation.iasyncoperation_tresult_)<br/>
+[Окна::Основа::::>\<](/uwp/api/windows.foundation.iasyncoperation-1)<br/>
 Представляет асинхронную операцию, которая возвращает результат.
 
-[Окна::Основа:::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress_tresult_tprogress_)<br/>
+[Окна::Основа:::IAsyncOperationWithProgress\<TResult, TProgress>](/uwp/api/windows.foundation.iasyncoperationwithprogress-2)<br/>
 Возвращает асинхронную операцию, которая возвращает результат и отчитывается о ходе выполнения.
 
 Понятие *действие* означает, что асинхронная задача не создает значение (представьте функцию, которая возвращает `void`). Понятие *операция* означает, что асинхронная задача создает значение. Понятие *ход выполнения* означает, что задача может отправить сообщение о ходе выполнения вызывающему объекту. Языки JavaScript, .NET Framework и Visual C++ предоставляют свои собственные способы создания экземпляров таких интерфейсов для использования с переходом через границы ABI. Для Visual C++ PPL предоставляет функцию [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) . Эта функция создает асинхронное действие или операцию Windows Runtime, представляющую собой выполнение задачи. `create_async` Функция принимает функцию работы (обычно выражение lambda), внутренне создает `task` объект и заворачивает эту задачу в один из четырех асинхронных интерфейсов Windows Runtime.
@@ -79,10 +79,10 @@ Windows Runtime — это интерфейс программирования, 
 
 |Для создания этого интерфейса Windows Runtime|Верните этот тип из `create_async`|Передайте эти типы параметров рабочей функции для использования неявного токена отмены|Передайте эти типы параметров рабочей функции для использования явного токена отмены|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-|`IAsyncAction`|`void` или `task<void>`|(нет)|(`cancellation_token`)|
-|`IAsyncActionWithProgress<TProgress>`|`void` или `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
-|`IAsyncOperation<TResult>`|`T` или `task<T>`|(нет)|(`cancellation_token`)|
-|`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` или `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncAction`|`void` либо `task<void>`|(нет)|(`cancellation_token`)|
+|`IAsyncActionWithProgress<TProgress>`|`void` либо `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
+|`IAsyncOperation<TResult>`|`T` либо `task<T>`|(нет)|(`cancellation_token`)|
+|`IAsyncActionOperationWithProgress<TProgress, TProgress>`|`T` либо `task<T>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
 
 Можно вернуть значение или объект `task` из рабочей функции, которое было передано функции `create_async` . Эти различия обеспечивают различное поведение. Если возвращается значение, рабочая функция оборачивается в `task` , чтобы ее можно выполнить в фоновом потоке. Кроме того базовый объект `task` использует неявный токен отмены. И наоборот, если возвращается объект `task` , рабочая функция выполняется синхронно. Следовательно, если возвращается объект `task` , убедитесь, что все длительные операции в вашей рабочей функции выполняются как задачи, чтобы приложение быстро реагировало на действия пользователя. Кроме того базовый объект `task` не использует неявный токен отмены. Поэтому необходимо определить вашу рабочую функцию, чтобы она принимала объект `cancellation_token` , если необходима поддержка отмены при возврате объекта `task` из `create_async`.
 
@@ -92,7 +92,7 @@ Windows Runtime — это интерфейс программирования, 
 
 ## <a name="example-creating-a-c-windows-runtime-component-and-consuming-it-from-c"></a><a name="example-component"></a>Пример: Создание компонента времени выполнения Windows и потребление его от C\#
 
-Рассмотрим приложение, которое использует XAML и C'для определения uI и компонента Runtime Windows для выполнения вычислительных операций. В этом примере компонент C++ обнаруживает простые числа в заданном диапазоне. Чтобы проиллюстрировать различия между четырьмя асинхронными интерфейсами задач Windows Runtime, начните `Primes`с Visual Studio с создания **пустого решения** и его именования. Затем добавьте в решение проект **Компонент среды выполнения Windows** и назовите его `PrimesLibrary`. Добавьте следующий код в создаваемый файл заголовка C++ (в примере Class1.h переименовывается в Primes.h). Каждый метод `public` определяет один из 4 асинхронных интерфейсов. Методы, возвращающие значение, возвращают [Windows:::: Коллекции:: IVector\<int>](/uwp/api/Windows.Foundation.Collections.IVector_T_) объект. Методы, которые уведомляют о ходе выполнения, генерируют значения `double` , которые показывают, какой процент общей работы завершен.
+Рассмотрим приложение, которое использует XAML и C'для определения uI и компонента Runtime Windows для выполнения вычислительных операций. В этом примере компонент C++ обнаруживает простые числа в заданном диапазоне. Чтобы проиллюстрировать различия между четырьмя асинхронными интерфейсами задач Windows Runtime, начните `Primes`с Visual Studio с создания **пустого решения** и его именования. Затем добавьте в решение проект **Компонент среды выполнения Windows** и назовите его `PrimesLibrary`. Добавьте следующий код в создаваемый файл заголовка C++ (в примере Class1.h переименовывается в Primes.h). Каждый метод `public` определяет один из 4 асинхронных интерфейсов. Методы, возвращающие значение, возвращают [Windows:::: Коллекции:: IVector\<int>](/uwp/api/windows.foundation.collections.ivector-1) объект. Методы, которые уведомляют о ходе выполнения, генерируют значения `double` , которые показывают, какой процент общей работы завершен.
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 

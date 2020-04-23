@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365285"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754219"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit класс
 
@@ -113,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 
 Отражает проверку ввода пользователя.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ void DisableMask();
 
 Уточняется, получает `GetWindowText` ли метод только символы в масках.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 
 Инициализирует управление отработками в масках.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ void EnableMask(
 
 Определяет, позволяет ли элемент управления отвагированию в масках выбрать определенные группы ввода или все входные данные.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ m_wndMaskEdit.SetWindowText(_T("(425) 555-0187")); // Prompt
 
 Уточняется, проверяется ли текст только против символов в масках или против всей маски.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ TRUE, если параметр *chChar* является типом симво�
 
 Определяет строку допустимых символов, которые пользователь может ввести.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 Отображает подсказку в элементе управления отображением в масках.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

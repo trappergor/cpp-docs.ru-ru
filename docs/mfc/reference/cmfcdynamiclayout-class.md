@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367517"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752389"
 ---
 # <a name="cmfcdynamiclayout-class"></a>Класс CMFCDynamicLayout
 
@@ -123,7 +123,7 @@ BOOL AddItem(
 
 Добавляет в список окон, управляемых диспетчером динамического макета, дочернее окно (обычно элемент управления).
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ CSize GetMinSize();
 
 Извлекает прямоугольник для текущей клиентской области окна.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ static MoveSettings MoveVertical(int nRatio);
 
 Задает минимальный размер окна для макета.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Необходимый минимальный размер макета.
 
 ### <a name="remarks"></a>Remarks

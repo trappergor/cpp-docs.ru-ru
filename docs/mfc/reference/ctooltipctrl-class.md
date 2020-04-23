@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365102"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752196"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ class CToolTipCtrl : public CWnd
 
 Вызов ими функции, чтобы активировать или отключить управление наконечником инструмента.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 Идентификатор ресурса строки, содержащий текст для инструмента.
 
 *lpRectTool*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) содержащую координаты связующего прямоугольника инструмента. Координаты относительно верхнего левого угла клиентской области окна, идентифицированной *pWnd.*
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) содержащую координаты связующего прямоугольника инструмента. Координаты относительно верхнего левого угла клиентской области окна, идентифицированной *pWnd.*
 
 *nIDTool*<br/>
 Идентификатор инструмента.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Параметры
 
 *lprc*<br/>
-Указатель на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) которая содержит либо прямоугольник окна наконечника инструмента, либо прямоугольник ототречности от текстового дисплея.
+Указатель на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) которая содержит либо прямоугольник окна наконечника инструмента, либо прямоугольник ототречности от текстового дисплея.
 
 *bLarger*<br/>
 Если true, *lprc* используется для указания прямоугольника отображения текста и получает соответствующий прямоугольник окна. Если FALSE, *lprc* используется для указания прямоугольника окна, и он получает соответствующий прямоугольник отображения текста.
@@ -352,7 +352,7 @@ CToolTipCtrl();
 
 Удаляет инструмент, указанный *pWnd* и *nIDTool,* из коллекции инструментов, поддерживаемых управлением наконечником инструмента.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ int GetDelayTime(DWORD dwDuration) const;
 
 Получает верхний, левый, нижний и правый края, установленные для окна наконечника инструмента.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *lprc*<br/>
-Адрес `RECT` структуры, которая будет получать информацию о марже. Члены структуры [RECT](/previous-versions/dd162897\(v=vs.85\)) не определяют ограничивающий прямоугольник. Для целей этого сообщения члены структуры интерпретируются следующим образом:
+Адрес `RECT` структуры, которая будет получать информацию о марже. Члены структуры [RECT](/windows/win32/api/windef/ns-windef-rect) не определяют ограничивающий прямоугольник. Для целей этого сообщения члены структуры интерпретируются следующим образом:
 
 |Участник|Представление|
 |------------|--------------------|
@@ -486,7 +486,7 @@ int GetMaxTipWidth() const;
 
 Извлекает текст, который элемент управления наконечником инструмента поддерживается для инструмента.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ COLORREF GetTipTextColor() const;
 
 Получает название текущего элемента управления набором инструментов.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Удаляет из представления отображено окно наконечника инструмента.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ void Pop();
 
 Вызывает отображение текущего элемента управления набором инструментов в координатах последнего сообщения мыши.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ void Popup();
 
 Передает сообщение мыши на элемент управления наконечником инструмента для обработки.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ void RelayEvent(LPMSG lpMsg);
 
 Устанавливает время задержки для управления наконечником инструмента.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ void SetDelayTime(
 
 Устанавливает верхний, левый, нижний и правый края для окна наконечника инструмента.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ int SetMaxTipWidth(int iWidth);
 
 Устанавливает цвет фона в окне наконечника инструмента.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ void SetTipBkColor(COLORREF clr);
 
 Устанавливает цвет текста в окне наконечника инструмента.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ BOOL SetTitle(
 
 Устанавливает информацию, которую отзыв инструмента поддерживает для инструмента.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 Устанавливает новый прямоугольник для инструмента.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ void SetToolRect(
 Идентификатор инструмента.
 
 *lpRect*<br/>
-Указатель на структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) с указанием нового связующего прямоугольника.
+Указатель на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) с указанием нового связующего прямоугольника.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 Принуждает текущий инструмент к перерисовке.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Обновляет текст наконечника инструмента для инструментов этого элемента управления.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

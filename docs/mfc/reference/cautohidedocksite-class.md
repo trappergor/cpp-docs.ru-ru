@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352979"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752995"
 ---
 # <a name="cautohidedocksite-class"></a>Класс CAutoHideDockSite
 
@@ -151,7 +151,7 @@ virtual void DockPane(
 
 Извлекает размер док-станции в координатах экрана.
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -182,7 +182,7 @@ static int m_nExtraSpace;
 
 Устанавливает маржу на левой стороне стыковки.
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ void SetOffsetLeft(int nOffset);
 
 Устанавливает маржу на правой стороне стыковки.
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -235,7 +235,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 Вызывает [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) для объектов на сайте док-станции.
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 

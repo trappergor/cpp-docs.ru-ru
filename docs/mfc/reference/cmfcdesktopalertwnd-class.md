@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cf453b6e69f012bedaf0bd91b5eaf11f7caffa12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367638"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752459"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -391,7 +391,7 @@ BOOL ProcessCommand(HWND hwnd);
 
 Устанавливает новую скорость анимации.
 
-```
+```cpp
 void SetAnimationSpeed(UINT nSpeed);
 ```
 
@@ -408,13 +408,13 @@ void SetAnimationSpeed(UINT nSpeed);
 
 Устанавливает тип анимации.
 
-```
+```cpp
 void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*тип*<br/>
+*type*<br/>
 (в) Определяет тип анимации.
 
 ### <a name="remarks"></a>Remarks
@@ -435,7 +435,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 Устанавливает автоматическое закрытие тайм-аута.
 
-```
+```cpp
 void SetAutoCloseTime(int nTime);
 ```
 
@@ -452,7 +452,7 @@ void SetAutoCloseTime(int nTime);
 
 Переключается между подписями малого и обычного размера.
 
-```
+```cpp
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```
 
@@ -469,7 +469,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 
 Устанавливает уровень прозрачности всплывающее окно.
 
-```
+```cpp
 void SetTransparency(BYTE nTransparency);
 ```
 

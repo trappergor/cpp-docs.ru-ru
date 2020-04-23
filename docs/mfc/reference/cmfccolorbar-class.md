@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367773"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752568"
 ---
 # <a name="cmfccolorbar-class"></a>Класс CMFCColorBar
 
@@ -380,7 +380,7 @@ CMFCColorBar(
 
 Вычисляет вертикальные и горизонтальные поля, которые необходимы для хранения кнопок на управлении цветовой панелью, и регулирует расположение этих кнопок.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ static BOOL CreatePalette(
 
 Показывает или скрывает автоматическую кнопку.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ void EnableAutomaticButton(
 
 Позволяет или отскакивает отображение диалогового окна, которое позволяет пользователю выбрать больше цветов.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 Устанавливает выбранный в настоящее время цвет.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ static void SetColorName(
 
 Устанавливает новый идентификатор команды для управления цветовой панелью.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ void SetCommandID(UINT nCommandID);
 
 Устанавливает список цветов, используемых в текущем документе.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Устанавливает горизонтальную маржу, которая представляет собой пространство между левой или правой цветовой ячейкой и границей области клиента.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ void SetHorzMargin(int nHorzMargin);
 
 Устанавливает `m_pWndPropList` защищенный элемент данных в указанный указатель на управление сеткой свойств.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Устанавливает вертикальную маржу, которая представляет собой пространство между верхней или нижней цветовой ячейкой и границей области клиента.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

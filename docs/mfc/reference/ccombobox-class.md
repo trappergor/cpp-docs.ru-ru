@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369512"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754829"
 ---
 # <a name="ccombobox-class"></a>Класс CComboBox
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Удаляет (очищает) текущий выбор, если такового имеется, в управлении комбо-боксом.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -357,7 +357,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 Копирует текущий выбор, если таковые имеются, в правлении комбо-бокса на Clipboard в CF_TEXT формате.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 
 Удаляет (вырезает) текущий выбор, если таковой имеется, в элементе управления редактированием комбо-бокса и копирует удаленный текст на clipboard в CF_TEXT формате.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ int GetCurSel() const;
 
 Вызов `GetDroppedControlRect` функции участника для извлечения координат экрана видимого (выпадающего) ящика списка выпадающих комбо-боксов.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 Получает предоставленное приложение 32-битное значение, связанное с указанным комбо-коробкой в качестве указателя **(недействительным).** <strong>\*</strong>
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 Вставляет данные из Clipboard в управление элементарной обработки комбо-бокса в текущем положении курсора.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ void Paste();
 
 Удаляет все элементы из коробки списка и отодевать управление комбо-коробкой.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ CB_OKAY, если операция выполняется успешно, или
 
 Устанавливает ширину, в пикселях, с помощью которых список-коробка часть комбо-бокс аможет быть прокрутка горизонтально.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ int SetTopIndex(int nIndex);
 
 Показывает или скрывает список поле комбо-бокс, который имеет [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) или [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стиле.
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

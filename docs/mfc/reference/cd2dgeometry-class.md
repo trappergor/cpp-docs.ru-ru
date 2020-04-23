@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 2631005fcedfb8d5db69667e22c375f585b4f044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369251"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754782"
 ---
 # <a name="cd2dgeometry-class"></a>Класс CD2DGeometry
 
@@ -131,7 +131,7 @@ virtual ~CD2DGeometry();
 
 Прикрепляет существующий интерфейс ресурса к объекту
 
-```
+```cpp
 void Attach(ID2D1Geometry* pResource);
 ```
 
@@ -260,7 +260,7 @@ BOOL ComputeLength(
 *мирТрансформен*<br/>
 Преобразование для применения к геометрии перед расчетом ее длины.
 
-*длина*<br/>
+*length*<br/>
 Когда этот метод возвращается, содержит указатель на длину геометрии. Для закрытых геометрий длина включает в себя неявное закрытие сегмента. Для этого параметра необходимо выделить хранилище.
 
 *уплощениетолерантности*<br/>
@@ -285,7 +285,7 @@ BOOL ComputePointAtLength(
 
 ### <a name="parameters"></a>Параметры
 
-*длина*<br/>
+*length*<br/>
 Расстояние вдоль геометрии точки и касательной, чтобы найти. Если это расстояние меньше 0, этот метод вычисляет первую точку в геометрии. Если это расстояние больше, чем длина геометрии, этот метод вычисляет последнюю точку геометрии.
 
 *мирТрансформен*<br/>

@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370067"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754560"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 
@@ -249,7 +249,7 @@ BOOL AddPane(
 
 Добавляет панель вкладок.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ virtual BOOL CanShowOnWindowsList();
 
 Доки панели.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Удаляет панель из менеджера стыковки.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 
 Удаляет ребенка MDI из таблицы задач Windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 Задает свойства для вкладки панели задач Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 
 Вставляет ребенка MDI перед указанным окном на вкладке панели задач Windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 
 Активирует соответствующую вкладку панели задач Windows 7.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 Определяет код области хит-теста. Тест попадания — это тест, определяющий местоположение курсора.
 
-*Сообщение*<br/>
+*message*<br/>
 Упоняет номер сообщения мыши.
 
 ### <a name="remarks"></a>Remarks
@@ -1146,7 +1146,7 @@ CMDITabProxyWnd* GetTabProxyWnd();
 
 Позволяет или отрабатывает автоматический выбор части клиентской области окна для отображения в виде эскиза этого окна в панели задач.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

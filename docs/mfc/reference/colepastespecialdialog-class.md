@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376987"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753825"
 ---
 # <a name="colepastespecialdialog-class"></a>ColePasteSpecialДиалог класса
 
@@ -105,7 +105,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 Вызовите эту функцию, чтобы добавить новые форматы в список форматов, которые ваше приложение может поддерживать в операции Paste Special.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 Строка, описывающая результат, если этот формат выбран в диалоговом поле.
 
-*Флаги*<br/>
+*flags*<br/>
 Различные варианты ссылок и встраивания, доступные для этого формата. Этот флаг представляет собой необоснованную комбинацию одного или нескольких различных значений в перечисленном типе OLEUIPASTEFLAG.
 
 *CF*<br/>
@@ -178,7 +178,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 
 Вызовите эту функцию, чтобы добавить следующие форматы Clipboard в список форматов, которые ваше приложение может поддерживать в операции Paste Special:
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

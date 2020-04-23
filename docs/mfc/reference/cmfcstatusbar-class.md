@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 8f262d0139b6dffe54e16748ffda4938ba43fc08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 024fbad44af2fb11e967141fc8e7ccc0aad0ccbe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753467"
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 
@@ -269,7 +269,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 Позволяет или отскакивает от обработки мыши двойными кликами на панели статуса.
 
-```
+```cpp
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```
 
@@ -286,7 +286,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 Отобразите панель прогресса на указанном стеле.
 
-```
+```cpp
 void EnablePaneProgressBar(
     int nIndex,
     long nTotal=100,
@@ -376,7 +376,7 @@ UINT GetItemID(int nIndex) const;
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>CMFCStatusBar::GetItemRect
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -391,7 +391,7 @@ void GetItemRect(
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -438,7 +438,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>CMFCStatusBar::GetPaneText
 
-```
+```cpp
 void GetPaneText(
     int nIndex,
     CString& s) const;
@@ -493,7 +493,7 @@ CString GetTipText(int nIndex) const;
 
 Недействительная панель статуса панели и перерисовка ее содержимого.
 
-```
+```cpp
 void InvalidatePaneContent(int nIndex);
 ```
 
@@ -546,7 +546,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea
 
-```
+```cpp
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
@@ -577,7 +577,7 @@ BOOL SetIndicators(
 
 Присваивает анимацию указанному стеку.
 
-```
+```cpp
 void SetPaneAnimation(
     int nIndex,
     HIMAGELIST hImageList,
@@ -607,7 +607,7 @@ void SetPaneAnimation(
 
 Устанавливает фоновый цвет панели панели панели status bar.
 
-```
+```cpp
 void SetPaneBackgroundColor(
     int nIndex,
     COLORREF clrBackground=(COLORREF)-1,
@@ -629,7 +629,7 @@ void SetPaneBackgroundColor(
 
 Установите значок панели панели статуса.
 
-```
+```cpp
 void SetPaneIcon(
     int nIndex,
     HICON hIcon,
@@ -667,7 +667,7 @@ void SetPaneIcon(
 
 ## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -688,7 +688,7 @@ void SetPaneInfo(
 
 Установите текущий индикатор хода панели прогресса для указанной панели.
 
-```
+```cpp
 void SetPaneProgress(
     int nIndex,
     long nCurr,
@@ -714,7 +714,7 @@ void SetPaneProgress(
 
 ## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
@@ -750,7 +750,7 @@ virtual BOOL SetPaneText(
 
 Устанавливает цвет текста указанного стекла.
 
-```
+```cpp
 void SetPaneTextColor(
     int nIndex,
     COLORREF clrText=(COLORREF)-1,
@@ -772,7 +772,7 @@ void SetPaneTextColor(
 
 Установите ширину панели панели статуса.
 
-```
+```cpp
 void SetPaneWidth(
     int nIndex,
     int cx);
@@ -790,7 +790,7 @@ void SetPaneWidth(
 
 Установите текст tooltip с панельной панели состояния.
 
-```
+```cpp
 void SetTipText(
     int nIndex,
     LPCTSTR pszTipText);

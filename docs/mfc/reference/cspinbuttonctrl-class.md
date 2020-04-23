@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318128"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753104"
 ---
 # <a name="cspinbuttonctrl-class"></a>Класс CSpinButtonCtrl
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Определяет стиль управления кнопкой вращения. Примените к управлению любую комбинацию стилей управления кнопками спина. Эти стили описаны в [стилях управления Up-Down](/windows/win32/Controls/up-down-control-styles) в Windows SDK.
 
 *rect*<br/>
-Определяет размер и положение управления кнопкой вращения. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT](/previous-versions/dd162897\(v=vs.85\))
+Определяет размер и положение управления кнопкой вращения. Это может быть либо объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) либо структура [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Указатель на родительское окно управления кнопкой `CDialog`спина, как правило, . Она не должна быть NULL.
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления кнопкой вращения. Примените к управлению любую комбинацию стилей управления кнопками спина. Эти стили описаны в [стилях управления Up-Down](/windows/win32/Controls/up-down-control-styles) в Windows SDK.
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -375,7 +375,7 @@ int SetPos32(int nPos);
 
 Устанавливает верхние и нижние пределы (диапазон) для управления кнопкой спина.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366887"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750799"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 Определяет стиль управления горячим ключом. Примените любую комбинацию стилей управления. Для получения дополнительной информации [см.](/windows/win32/Controls/common-control-styles)
 
 *rect*<br/>
-Ссылка на структуру [RECT,](/previous-versions/dd162897\(v=vs.85\)) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
+Ссылка на структуру [RECT,](/windows/win32/api/windef/ns-windef-rect) описывающую размер и положение создаваемого окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родителем элемента управления.
@@ -254,7 +254,7 @@ static CString GetKeyName(
 
 Устанавливает ярлык клавиатуры для горячего управления ключом.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ void SetHotKey(
 
 Вызовите эту функцию, чтобы определить недействительные комбинации и комбинацию модификаторов по умолчанию для горячего элемента управления ключа.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

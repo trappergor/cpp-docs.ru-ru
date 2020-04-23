@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369302"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754289"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Класс CD2DBitmapBrush
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Прикрепляет существующий интерфейс ресурса к объекту
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ CD2DBitmapBrush(
 
 Инициализация объекта
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ operator ID2D1BitmapBrush*();
 
 Определяет источник биткарты, который эта кисть использует для краски
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 
 Определяет, как кисть горизонтально плитки тех областях, которые расширяются мимо его bitmap
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 
 Определяет, как кисть вертикально плитки тех областях, которые расширяются мимо его bitmap
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 
 Определяет режим интерполяции, используемый при масштабировании или повороте кисти
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 95de66a66d9c1a6f3abf992c5a9cd64ee1fe91ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352214"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752336"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [id-идентификатор команды IDM FONTNAME](/previous-versions/aa769880\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_FONTNAME](/previous-versions/aa769880\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize
 
@@ -2100,7 +2100,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Размер шрифта HTML (1-7). Значение 0 устанавливает размер шрифта до 1.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2109,7 +2109,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM FONTSize](/previous-versions/aa769881\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_FONTSIZE команды](/previous-versions/aa769881\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_FORECOLOR команды](/previous-versions/aa769882\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [IDM IE50_PASTE_MODE идентификатор команды](/previous-versions/aa769923\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_IE50_PASTE_MODE команды](/previous-versions/aa769923\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM LIVERESize](/previous-versions/aa769928\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_LIVERESIZE команды](/previous-versions/aa769928\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM MULTIPLESELECTION](/previous-versions/aa769929\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_MULTIPLESELECTION команды](/previous-versions/aa769929\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [IDM OVERRIDE_CURSOR идентификатор команды](/previous-versions/aa769932\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_OVERRIDE_CURSOR команды](/previous-versions/aa769932\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM OVERWRITE](/previous-versions/aa770016\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_OVERWRITE команды](/previous-versions/aa770016\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>ChtmlEditCtrlBase:SetRespectvisInDesign
 
@@ -2260,7 +2260,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [IDM RESPECTVISIBILITY_INDESIGN идентификатор команды](/previous-versions/aa770023\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_RESPECTVISIBILITY_INDESIGN команды](/previous-versions/aa770023\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWALIGNEDSITESITETAGS](/previous-versions/aa769947\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWALIGNEDSITETAGS команды](/previous-versions/aa769947\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWALLTAGS команды](/previous-versions/aa769948\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWAREATAGS команды](/previous-versions/aa769949\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWWBRTAGS команды](/previous-versions/aa769956\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWCOMMENTTAGS команды](/previous-versions/aa769950\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWMISCTAGS команды](/previous-versions/aa769952\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWSCRIPTTAGS команды](/previous-versions/aa769953\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWSTYLETAGS команды](/previous-versions/aa769954\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_SHOWUNKNOWNTAGS команды](/previous-versions/aa769955\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>CHtmlEditCtrlBase:TextArea
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM TEXTAREA](/previous-versions/aa769986\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_TEXTAREA команды](/previous-versions/aa769986\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM TEXTBOX](/previous-versions/aa769980\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_TEXTBOX команды](/previous-versions/aa769980\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_UNBOOKMARK команды](/previous-versions/aa770034\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>CHtmlEditCtrlBase::Подчеркивание
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM UNDERLINE](/previous-versions/aa770035\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_UNDERLINE команды](/previous-versions/aa770035\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM UNLINK](/previous-versions/aa770037\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_UNLINK команды](/previous-versions/aa770037\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод отправляет [идентификатор команды IDM UNORDERLIST](/previous-versions/aa769987\(v=vs.85\)) в управление WebBrowser.
+Этот метод отправляет [идентификатор IDM_UNORDERLIST команды](/previous-versions/aa769987\(v=vs.85\)) в управление WebBrowser.
 
 ## <a name="see-also"></a>См. также раздел
 

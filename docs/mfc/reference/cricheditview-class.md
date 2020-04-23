@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 2d832f3cc07d39ace9e679901c5344a376cea03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b72daac576411b45908d1e91bd86bbd9aeacf738
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318627"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754451"
 ---
 # <a name="cricheditview-class"></a>Класс CrichEditView
 
@@ -218,7 +218,7 @@ class CRichEditView : public CCtrlView
 
 Вызовите эту функцию, чтобы переместить данный диалоговый ящик, чтобы она не заслоняла текущий выбор.
 
-```
+```cpp
 void AdjustDialogPosition(CDialog* pDlg);
 ```
 
@@ -251,7 +251,7 @@ CRichEditView();
 
 Вызовите эту функцию, чтобы вставить элемент OLE в *dataobj* в этот богатый документ/просмотр отсылки от сотре.
 
-```
+```cpp
 void DoPaste(
     COleDataObject& dataobj,
     CLIPFORMAT cf,
@@ -643,7 +643,7 @@ long GetTextLengthEx(
 
 Вызовите эту функцию, чтобы вставить указанный файл (как объект [CRichEditCntrItem)](../../mfc/reference/cricheditcntritem-class.md) в богатое представление отсвагиваемого.
 
-```
+```cpp
 void InsertFileAsObject(LPCTSTR lpszFileName);
 ```
 
@@ -745,7 +745,7 @@ int m_nWordWrap;
 
 Вызовите эту функцию, чтобы переключить эффекты форматирования символов для текущего выбора.
 
-```
+```cpp
 void OnCharEffect(
     DWORD dwMask,
     DWORD dwEffect);
@@ -844,7 +844,7 @@ Nonzero, если успешно; в противном случае, 0;
 
 Вызовите эту функцию, чтобы изменить выравнивание абзаца для выбранных абзацев.
 
-```
+```cpp
 void OnParaAlign(WORD wAlign);
 ```
 
@@ -975,7 +975,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 Платформа вызывает эту функцию для обновления утилиты управления для команд эффекта символов.
 
-```
+```cpp
 void OnUpdateCharEffect(
     CCmdUI* pCmdUI,
     DWORD dwMask,
@@ -1007,7 +1007,7 @@ void OnUpdateCharEffect(
 
 Платформа вызывает эту функцию для обновления утилиты управления командой для команд эффекта абзацев.
 
-```
+```cpp
 void OnUpdateParaAlign(
     CCmdUI* pCmdUI,
     WORD wAlign);
@@ -1153,7 +1153,7 @@ virtual HRESULT QueryAcceptData(
 
 Вызовите эту функцию, чтобы настроить атрибуты `CRichEditView` форматирования символов для нового текста в этом объекте.
 
-```
+```cpp
 void SetCharFormat(CHARFORMAT2 cf);
 ```
 
@@ -1176,7 +1176,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 
 Вызовите эту функцию, чтобы установить поля печати для этого богатого представления отсвагания.
 
-```
+```cpp
 void SetMargins(const CRect& rectMargin);
 ```
 
@@ -1199,7 +1199,7 @@ void SetMargins(const CRect& rectMargin);
 
 Вызовите эту функцию, чтобы установить размер бумаги для печати этого богатого представления отсвагания.
 
-```
+```cpp
 void SetPaperSize(CSize sizePaper);
 ```
 
@@ -1247,7 +1247,7 @@ Nonzero, если успешно; в противном случае, 0.
 
 Вызов ими функции для сбросить внутреннее состояние поиска управления [CRichEditView](../../mfc/reference/cricheditview-class.md) после неудачного вызова [FindText.](#findtext)
 
-```
+```cpp
 void TextNotFound(LPCTSTR lpszFind);
 ```
 

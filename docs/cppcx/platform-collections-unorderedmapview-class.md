@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 8f8bc3490fba28232cdab3ea189dd9cfcc8d0650
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0096982ad5d11b9ea394c9f02ba748a52e4216b
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354396"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82031489"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 
@@ -39,7 +39,7 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>Remarks
 
-UnorderedMapView — это конкретная реализация [Windows::Foundation::Collections::IMapView\<K, V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс, который передается через двоичный интерфейс приложения (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+UnorderedMapView — это конкретная реализация [Windows::Foundation::Collections::IMapView\<K, V>](/uwp/api/windows.foundation.collections.imapview-2) интерфейс, который передается через двоичный интерфейс приложения (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Участники
 
@@ -71,7 +71,7 @@ UnorderedMapView — это конкретная реализация [Windows::
 
 ## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapViewView::Первый метод
 
-Возвращает итератор, который определяет первую [Windows::::: Коллекции::\<IKeyValuePair K,>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элемент на неупорядоченной карте.
+Возвращает итератор, который определяет первую [Windows::::: Коллекции::\<IKeyValuePair K,>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элемент на неупорядоченной карте.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -101,7 +101,7 @@ bool HasKey(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента. Тип `key` typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -120,7 +120,7 @@ V Lookup(K key);
 
 ### <a name="parameters"></a>Параметры
 
-*Ключ*<br/>
+*key*<br/>
 Ключ, используемый для поиска элемента в объекте UnorderedMapView. Тип `key` typename *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView::Метод размера
 
-Возвращает номер [Windows:::Источник:::: Культура::\<IKeyValuePair K,v>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов в UnorderedMapView.
+Возвращает номер [Windows:::Источник:::: Культура::\<IKeyValuePair K,v>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) элементов в UnorderedMapView.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -242,4 +242,4 @@ UnorderedMapView(
 ## <a name="see-also"></a>См. также раздел
 
 [Платформа:Название коллекций](../cppcx/platform-collections-namespace.md)<br/>
-[Windows::Foundation::IMapView](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)
+[Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

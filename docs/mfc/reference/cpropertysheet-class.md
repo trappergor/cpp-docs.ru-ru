@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e8ab91b9a6fe76070d79ea2eee2e5765db2e99e3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363952"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750970"
 ---
 # <a name="cpropertysheet-class"></a>Класс CPropertySheet
 
@@ -165,7 +165,7 @@ class CPropertySheet : public CWnd
 
 Добавляет предоставленную страницу с самой правильной вкладкой в листе свойств.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -194,7 +194,7 @@ void AddPage(CPropertyPage* pPage);
 
 Формирует объект `CPropertySheet`.
 
-```
+```cpp
 void Construct(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
@@ -422,7 +422,7 @@ IDOK или IDCANCEL, если функция была успешной; в пр
 
 Указывается, следует ли укладывать строки вкладок в лист свойств.
 
-```
+```cpp
 void EnableStackedTabs(BOOL bStacked);
 ```
 
@@ -445,7 +445,7 @@ void EnableStackedTabs(BOOL bStacked);
 
 Прекращает действие листа свойств.
 
-```
+```cpp
 void EndDialog(int nEndID);
 ```
 
@@ -600,14 +600,14 @@ CTabCtrl* GetTabControl() const;
 
 Преобразует единицы диалогового ящика прямоугольника в экранные блоки.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на структуру [RECT](/previous-versions/dd162897\(v=vs.85\)) или объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) содержащий координаты диалогового ящика, которые должны быть преобразованы.
+Указывает на структуру [RECT](/windows/win32/api/windef/ns-windef-rect) или объект [CRect,](../../atl-mfc-shared/reference/crect-class.md) содержащий координаты диалогового ящика, которые должны быть преобразованы.
 
 ### <a name="remarks"></a>Remarks
 
@@ -641,7 +641,7 @@ virtual BOOL OnInitDialog();
 
 Имитирует выбор указанной кнопки в листе свойства.
 
-```
+```cpp
 void PressButton(int nButton);
 ```
 
@@ -678,7 +678,7 @@ nButton : Определяет кнопку для нажатия. Этот па
 
 Удаляет страницу из листа свойств и уничтожает связанное окно.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -728,7 +728,7 @@ Nonzero, если лист свойства активирован успешн�
 
 Устанавливает текст в кнопке команды Finish.
 
-```
+```cpp
 void SetFinishText(LPCTSTR lpszText);
 ```
 
@@ -749,7 +749,7 @@ void SetFinishText(LPCTSTR lpszText);
 
 Упоняет подпись листа свойства (текст отображается в заглавной панели окна рамы).
 
-```
+```cpp
 void SetTitle(
     LPCTSTR lpszText,
     UINT nStyle = 0);
@@ -775,7 +775,7 @@ void SetTitle(
 
 Позволяет или отсваивает кнопку «Назад, следующая или финишная кнопка» в листе свойства мастера.
 
-```
+```cpp
 void SetWizardButtons(DWORD dwFlags);
 ```
 
@@ -812,7 +812,7 @@ A `CPropertySheet` имеет три страницы `CColorPage`свойств
 
 Устанавливает страницу свойств как мастер.
 
-```
+```cpp
 void SetWizardMode();
 ```
 

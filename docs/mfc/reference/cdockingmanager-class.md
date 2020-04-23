@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375584"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753323"
 ---
 # <a name="cdockingmanager-class"></a>Класс CDockingManager
 
@@ -318,7 +318,7 @@ BOOL AddDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*info*<br/>
+*Информация*<br/>
 (в) Ссылка на структуру информации, содержащую выравнивание док-панели.
 
 *ppDockBar*<br/>
@@ -332,7 +332,7 @@ BOOL AddDockSite(
 
 Добавляет ручку в панель панели в список скрытых стекалок MDI.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ TRUE, если выравнивание `CRect` объекта было скор
 
 Изображки стыковочную панель в режиме автохайда, так что она занимает всю ширину или высоту клиентской области кадра в окружении док-станций.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL, если панель инструментов автоматическо�
 
 Приносит пристыкованные бары, которые имеют указанное выравнивание к верхней части.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Добавляет названия стыковочных стекол и панели инструментов в меню.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Вычисляет ожидаемый прямоугольник пристыкованного окна.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ virtual AFX_CS_STATUS DeterminePaneAndStatus(
 
 Позволяет или отсваивает загрузку макета стыковки из реестра.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ void DisableRestoreDockState(BOOL bDisable = TRUE);
 
 Пристыкуется к стеку к другому стеку или к окну рамы.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ static void EnableDockSiteMenu(BOOL bEnable = TRUE);
 
 Сообщает библиотеке отобразить специальное контекстное меню, в которое есть список панели инструментов приложений и стыковочные панели, когда пользователь нажимает на правую кнопку мыши и библиотека обрабатывает WM_CONTEXTMENU сообщение.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ CRect GetOuterEdgeBounds() const;
 
 Возвращает список стекол, принадлежащих менеджеру стыковки. Это включает в себя все плавающие стекла.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 Скрывает панель, которая находится в режиме автохидирования.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1070,7 +1070,7 @@ BOOL InsertDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*info*<br/>
+*Информация*<br/>
 (в) Структура, содержащая информацию о выравнивании стыковки.
 
 *dwAlignToInsertAfter*<br/>
@@ -1221,7 +1221,7 @@ TRUE, если состояние менеджера стыковки было �
 
 Запирает данное окно.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Вызывается платформой, когда активное всплывающее меню обрабатывает сообщение WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ TRUE, если метод удается; в противном случае FAL
 
 Вызывается фреймворк, когда он строит меню, которое имеет список стекол.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Выпускает пустые панели контейнеров.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Удаляет указанное скрытое панельное стекло.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ TRUE, если указанный кадр удален; FALSE в противн
 
 Отменяет панель и удаляет ее из списка в диспетчере стыковки.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ TRUE, если панель успешно заменена; FALSE в проти
 
 Курорты кадры в списке мини-кадров.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ BOOL SendMessageToMiniFrames(
 
 Записывает менеджера стыковки в архив.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ void Serialize(CArchive& ar);
 
 Устанавливает размер, ширину и высоту руля и указанного стекла.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Устанавливает режим предварительного просмотра печати баров, отображаемых в предварительном просмотре печати.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ static void SetSmartDockingParams(CSmartDockingInfo& params);
 
 Показывает или скрывает окна мини-кадров.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ virtual BOOL ShowPanes(BOOL bShow);
 
 Запускает смарт-стыковку указанного окна в соответствии с выравниванием менеджера смарт-стыковки.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Прекращает стыковку.
 
-```
+```cpp
 void StopSDocking();
 ```
 

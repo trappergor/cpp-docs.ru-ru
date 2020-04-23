@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367535"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752377"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс CMFCEditBrowseCtrl
 
@@ -133,7 +133,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 Отображает или не отображает кнопку просмотра на текущем элементе управления воспроизведением.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ TRUE для отображения кнопки просмотра; FALSE не �
 
 Отображает кнопку просмотра на текущем элементе управления просмотром и помещает элемент управления в режим *просмотра файлов.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ void EnableFileBrowseButton(
 
 Отображает кнопку просмотра на текущем элементе управления воспроизведением и помещает управление в режим *просмотра папок.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ TRUE, если кнопка выделена; в противном случае
 
 Устанавливает пользовательское изображение на кнопке просмотра управления просмотром.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);
