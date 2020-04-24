@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750614"
+ms.locfileid: "82032438"
 ---
 # <a name="platformcollectionsmapview-class"></a>Класс Platform::Collections::MapView
 
@@ -46,7 +46,7 @@ ref class MapView sealed;
 
 ### <a name="remarks"></a>Remarks
 
-MapView — это конкретная реализация [Windows:::Основа::Коллекции::IMapView \<K, V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) интерфейс, который передается через двоичный интерфейс приложения (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+MapView — это конкретная реализация [Windows:::Основа::Коллекции::IMapView \<K, V>](/uwp/api/windows.foundation.collections.imapview-2) интерфейс, который передается через двоичный интерфейс приложения (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Участники
 
