@@ -3,12 +3,12 @@ title: Улучшение соответствия C++
 ms.date: 03/16/2020
 description: Microsoft C++ в Visual Studio развивается в сторону полного соответствия стандарту языка C++20.
 ms.technology: cpp-language
-ms.openlocfilehash: d76a6dc4c5ad9cbf83befccfdd470ce755d0603c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 2309e79acb4784cd2e79b4f3f6fffb29e8d5dea8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077425"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81353535"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Улучшения соответствия C++ в Visual Studio
 
@@ -164,7 +164,7 @@ int main()
 
 ### <a name="char8_t"></a>char8_t
 
-[P0482r6](https://wg21.link/p0482r6). C ++ 20 добавляет новый тип символа, который используется для представления частей кода UTF-8. Строковые литералы `u8` в C++20 имеют тип `const char8_t[N]`, а не `const char[N]`, как было раньше. Аналогичные изменения предложены для стандарта C в [N2231](https://wg14.link/n2231). Рекомендации по обеспечению обратной совместимости для `char8_t` приведены в [P1423r0](https://wg21.link/p1423r0). Компилятор Microsoft C++ добавляет поддержку `char8_t` в Visual Studio 2019 версии 16.1, если вы укажете параметр компилятора **/Zc:char8_t**. В будущем он будет поддерживаться с [/std:c++latest](../build/reference/std-specify-language-standard-version.md), который можно отменить, чтобы восстановить поведение C ++ 17 с помощью **/Zc:char8_t-** . Компилятор EDG, лежащий в основе IntelliSense, пока не поддерживает эту возможность, поэтому возникают ложные ошибки для IntelliSense, которые не влияют на фактическую компиляцию.
+[P0482r6](https://wg21.link/p0482r6). C ++ 20 добавляет новый тип символа, который используется для представления частей кода UTF-8. Строковые литералы `u8` в C++20 имеют тип `const char8_t[N]`, а не `const char[N]`, как было раньше. Аналогичные изменения предложены для стандарта C в [N2231](https://wg14.link/n2231). Рекомендации по обеспечению обратной совместимости для `char8_t` приведены в [P1423r3](https://wg21.link/p1423r3). Компилятор Microsoft C++ добавляет поддержку `char8_t` в Visual Studio 2019 версии 16.1, если вы укажете параметр компилятора **/Zc:char8_t**. В будущем он будет поддерживаться с [/std:c++latest](../build/reference/std-specify-language-standard-version.md), который можно отменить, чтобы восстановить поведение C ++ 17 с помощью **/Zc:char8_t-** . Компилятор EDG, лежащий в основе IntelliSense, пока не поддерживает эту возможность, поэтому возникают ложные ошибки для IntelliSense, которые не влияют на фактическую компиляцию.
 
 #### <a name="example"></a>Пример
 
@@ -2514,7 +2514,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
    #pragma warning (pop)
    ```
 
-### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a>Компоновка extern constexpr
+### <a name="extern-constexpr-linkage"></a><a name="extern_linkage"></a> Компоновка extern constexpr
 
 В более ранних версиях Visual Studio компилятор всегда обеспечивал переменной **constexpr** внутреннюю компоновку даже в том случае, когда переменная была помечена как **extern**. В Visual Studio 2017 версии 15.5 новый параметр компилятора ( **/Zc:externConstexpr**) обеспечивает корректное поведение, соответствующее стандартам. В конечном счете это поведение будет использоваться по умолчанию.
 
