@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlModuleT
+title: Класс Катлмодулет
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlModuleT
@@ -14,28 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-ms.openlocfilehash: bf64c073249b7426fafb430a708573d9d06d11fd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b07e60265570e66337a2d13007e9ad57c6f369e4
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321412"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167868"
 ---
-# <a name="catlmodulet-class"></a>Класс CAtlModuleT
+# <a name="catlmodulet-class"></a>Класс Катлмодулет
 
 Этот класс реализует модуль ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template <class T>
 class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс происходит `CAtlModuleT`от .
+Класс, производный `CAtlModuleT`от.
 
 ## <a name="members"></a>Участники
 
@@ -43,78 +43,78 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlModuleT::CAtlModuleT](#catlmodulet)|Конструктор.|
+|[Катлмодулет:: Катлмодулет](#catlmodulet)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlModuleT::InitLibId](#initlibid)|Инициализирует член данных, содержащий GUID текущего модуля.|
-|[CAtlModuleT::RegisterAppId](#registerappid)|Добавляет EXE в реестр.|
-|[CAtlModuleT::RegisterServer](#registerserver)|Добавляет услугу в реестр.|
-|[CAtlModuleT::UnregisterAppId](#unregisterappid)|Удаляет EXE из реестра.|
-|[CAtlModuleT::UnregisterServer](#unregisterserver)|Удаляет службу из реестра.|
-|[CAtlModuleT::UpdateRegistryAppId](#updateregistryappid)|Обновление информации EXE в реестре.|
+|[Катлмодулет:: Инитлибид](#initlibid)|Инициализирует элемент данных, содержащий идентификатор GUID текущего модуля.|
+|[Катлмодулет:: Регистераппид](#registerappid)|Добавляет EXE в реестр.|
+|[Катлмодулет:: Регистерсервер](#registerserver)|Добавляет службу в реестр.|
+|[Катлмодулет:: Унрегистераппид](#unregisterappid)|Удаляет исполняемый файл из реестра.|
+|[Катлмодулет:: Унрегистерсервер](#unregisterserver)|Удаляет службу из реестра.|
+|[Катлмодулет:: Упдатерегистряппид](#updateregistryappid)|Обновляет сведения о EXE в реестре.|
 
 ## <a name="remarks"></a>Remarks
 
-`CAtlModuleT`, полученные из [CAtlModule](../../atl/reference/catlmodule-class.md), реализует Исполняемый (EXE) или сервис (EXE) ATL модуль. Исполняемый модуль — это локальный сервер, не отменяемый, в то время как модуль службы — это приложение Windows, которое работает в фоновом режиме при запуске Windows.
+`CAtlModuleT`, производный от [катлмодуле](../../atl/reference/catlmodule-class.md), реализует исполняемый (exe) или сервисный (exe) модуль ATL. Исполняемый модуль — это локальный сервер вне процесса, в то время как модуль службы — это приложение Windows, которое запускается в фоновом режиме при запуске Windows.
 
-`CAtlModuleT`обеспечивает поддержку инициализации, регистрации и нерегистрации модуля.
+`CAtlModuleT`обеспечивает поддержку инициализации, регистрации и отмены регистрации модуля.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[CAtlModule](../../atl/reference/catlmodule-class.md)
+[катлмодуле](../../atl/reference/catlmodule-class.md)
 
 `CAtlModuleT`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT
+## <a name="catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>Катлмодулет:: Катлмодулет
 
 Конструктор.
 
-```
+```cpp
 CAtlModuleT() throw();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Вызовы [CAtlModuleT::InitLibId](#initlibid).
+Вызывает [катлмодулет:: инитлибид](#initlibid).
 
-## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId
+## <a name="catlmoduletinitlibid"></a><a name="initlibid"></a>Катлмодулет:: Инитлибид
 
-Инициализирует член данных, содержащий GUID текущего модуля.
+Инициализирует элемент данных, содержащий идентификатор GUID текущего модуля.
 
-```
+```cpp
 static void InitLibId() throw();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Вызывается [конструктором CAtlModuleT::CAtlModuleT](#catlmodulet).
+Вызывается конструктором [катлмодулет:: катлмодулет](#catlmodulet).
 
-## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId
+## <a name="catlmoduletregisterappid"></a><a name="registerappid"></a>Катлмодулет:: Регистераппид
 
 Добавляет EXE в реестр.
 
-```
+```cpp
 HRESULT RegisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer
+## <a name="catlmoduletregisterserver"></a><a name="registerserver"></a>Катлмодулет:: Регистерсервер
 
-Добавляет услугу в реестр.
+Добавляет службу в реестр.
 
-```
+```cpp
 HRESULT RegisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
@@ -122,33 +122,33 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bRegTypeLib*<br/>
-TRUE, если библиотека типа должна быть зарегистрирована. Значение по умолчанию — FALSE.
+*брегтипелиб*<br/>
+Значение TRUE, если библиотека типов должна быть зарегистрирована. Значение по умолчанию — FALSE.
 
-*pCLSID*<br/>
-Указывает на CLSID зарегистрированного объекта. Если NULL (значение по умолчанию) все объекты на карте объектов будут зарегистрированы.
+*пклсид*<br/>
+Указывает на идентификатор CLSID регистрируемого объекта. При значении NULL (значение по умолчанию) будут зарегистрированы все объекты в сопоставлении объектов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId
+## <a name="catlmoduletunregisterappid"></a><a name="unregisterappid"></a>Катлмодулет:: Унрегистераппид
 
-Удаляет EXE из реестра.
+Удаляет исполняемый файл из реестра.
 
-```
+```cpp
 HRESULT UnregisterAppId() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer
+## <a name="catlmoduletunregisterserver"></a><a name="unregisterserver"></a>Катлмодулет:: Унрегистерсервер
 
 Удаляет службу из реестра.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bUnRegTypeLib,
     const CLSID* pCLSID = NULL) throw();
@@ -156,35 +156,35 @@ HRESULT UnregisterServer(
 
 ### <a name="parameters"></a>Параметры
 
-*bUnRegTypeLib*<br/>
-ПРАВДА, если библиотека типа также должна быть незарегистрированной.
+*бунрегтипелиб*<br/>
+Значение TRUE, если для библиотеки типов также требуется отменить регистрацию.
 
-*pCLSID*<br/>
-Указывает на CLSID объекта, который должен быть незарегистрированным. Если NULL (значение по умолчанию) все объекты на карте объектов будут незарегистрированы.
+*пклсид*<br/>
+Указывает на CLSID объекта, регистрация которого будет отменена. Если NULL (значение по умолчанию), регистрация всех объектов в сопоставлении объектов будет отменена.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId
+## <a name="catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>Катлмодулет:: Упдатерегистряппид
 
-Обновление информации EXE в реестре.
+Обновляет сведения о EXE в реестре.
 
-```
+```cpp
 static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*bРегистрация*<br/>
+*брегистер*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Класс CAtlModule](../../atl/reference/catlmodule-class.md)<br/>
+[Класс Катлмодуле](../../atl/reference/catlmodule-class.md)<br/>
 [Общие сведения о классах](../../atl/atl-class-overview.md)<br/>
 [Классы модулей](../../atl/atl-module-classes.md)

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: f6cf32bab86d741f3b0750c150c7bbc647b27ddc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1c740cf1a1ed344dbceb028bd1f39a87fc09363
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248697"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168596"
 ---
-# <a name="atlfuncinfo-structure"></a>Структура _ATL_FUNC_INFO
+# <a name="_atl_func_info-structure"></a>Структура _ATL_FUNC_INFO
 
-Содержит сведения о типе, используемые для описания метода или свойства на disp-интерфейсом.
+Содержит сведения о типе, используемые для описания метода или свойства в DISP-интерфейсе.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 struct _ATL_FUNC_INFO {
     CALLCONV cc;
     VARTYPE vtReturn;
@@ -34,34 +34,34 @@ struct _ATL_FUNC_INFO {
 ## <a name="members"></a>Участники
 
 `cc`<br/>
-Соглашение о вызовах. При использовании эту структуру с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) класса, этот элемент должен быть CC_STDCALL. `CC_CDECL` только этот параметр поддерживается в Windows CE для `CALLCONV` поле `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается таким образом его поведение не определено.
+Соглашение о вызовах. При использовании этой структуры с классом [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) этот элемент должен быть CC_STDCALL. `CC_CDECL`— единственный вариант, поддерживаемый в Windows CE для `CALLCONV` поля `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается, поэтому его поведение не определено.
 
 `vtReturn`<br/>
-Тип variant функции возвращают значение.
+Тип варианта возвращаемого значения функции.
 
 `nParams`<br/>
 Число параметров функции.
 
 `pVarTypes`<br/>
-Массив variant типы параметров функции.
+Массив вариативных типов параметров функции.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
-На внутреннем уровне ATL использует эту структуру для хранения информации, полученной из библиотеки типов. Может потребоваться управлять эта структура напрямую в том случае, если предоставить сведения о типе для обработчика событий, используемый с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) класс и [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) макрос.
+Внутри библиотека ATL использует эту структуру для хранения информации, полученной из библиотеки типов. Вам может потребоваться манипулировать этой структурой напрямую, если указать сведения о типе для обработчика событий, используемого с классом [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) и [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) макросе.
 
 ## <a name="example"></a>Пример
 
-Получает метод disp-интерфейса, определенных в IDL:
+При наличии метода disp-интерфейса, определенного в IDL:
 
 [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]
 
-необходимо определить `_ATL_FUNC_INFO` структуры:
+необходимо определить `_ATL_FUNC_INFO` структуру:
 
 [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
 
 ## <a name="requirements"></a>Требования
 
-Header: atlcom.h
+Заголовок: atlcom.h
 
 ## <a name="see-also"></a>См. также
 

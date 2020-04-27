@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlException
+title: Класс Катлексцептион
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlException
@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: 6da56e4d6c443520eb6f857624a5923e71a1e580
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318993"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168206"
 ---
-# <a name="catlexception-class"></a>Класс CAtlException
+# <a name="catlexception-class"></a>Класс Катлексцептион
 
 Этот класс определяет исключение ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class CAtlException
 ```
 
@@ -32,65 +32,65 @@ class CAtlException
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlException::CAtlException](#catlexception)|Конструктор.|
+|[Катлексцептион:: Катлексцептион](#catlexception)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlException::оператор HRESULT](#operator_hresult)|Отбрасывает текущий объект в значение HRESULT.|
+|[Катлексцептион:: operator HRESULT](#operator_hresult)|Приводит текущий объект к значению HRESULT.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlException::m_hr](#m_hr)|Переменная типа HRESULT, созданная объектом и используемая для хранения состояния ошибки.|
+|[Катлексцептион:: m_hr](#m_hr)|Переменная типа HRESULT, созданная объектом и используемая для хранения условия ошибки.|
 
 ## <a name="remarks"></a>Remarks
 
-Объект `CAtlException` представляет условие исключения, связанное с операцией ATL. Класс `CAtlException` включает в себя общедоступный элемент данных, который хранит код статуса с указанием причины исключения, и литого оператора, который позволяет рассматривать исключение как если бы это было HRESULT.
+`CAtlException` Объект представляет условие исключения, связанное с операцией ATL. `CAtlException` Класс включает открытый элемент данных, в котором хранится код состояния, указывающий причину исключения, и оператор приведения, позволяющий обрабатывать исключение так, как если бы это был HRESULT.
 
-В общем, вы `AtlThrow` будете звонить, а не создавать `CAtlException` объект напрямую.
+В целом, вместо создания `AtlThrow` `CAtlException` объекта напрямую будет вызываться.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlexcept.h
+**Заголовок:** атлексцепт. h
 
-## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>Катлексцептион:: Катлексцептион
 
 Конструктор.
 
-```
+```cpp
 CAtlException(HRESULT hr) throw();
 CAtlException() throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Hr*<br/>
+*hr*<br/>
 Код ошибки HRESULT.
 
-## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException::оператор HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>Катлексцептион:: operator HRESULT
 
-Отбрасывает текущий объект в значение HRESULT.
+Приводит текущий объект к значению HRESULT.
 
-```
+```cpp
 operator HRESULT() const throw ();
 ```
 
-## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException::m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>Катлексцептион:: m_hr
 
-Член данных HRESULT.
+Элемент данных HRESULT.
 
-```
+```cpp
 HRESULT m_hr;
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Член данных, который хранит условие ошибки. Значение HRESULT устанавливается конструктором, [CAtlException::CAtlException](#catlexception).
+Элемент данных, в котором хранится условие ошибки. Значение HRESULT задается конструктором [катлексцептион:: катлексцептион](#catlexception).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)<br/>
 [Общие сведения о классах](../../atl/atl-class-overview.md)

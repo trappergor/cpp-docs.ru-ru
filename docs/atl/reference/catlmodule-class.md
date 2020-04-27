@@ -1,5 +1,5 @@
 ---
-title: Класс CAtlModule
+title: Класс Катлмодуле
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlModule
@@ -20,20 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: cfc11a95a8d5d9354279f4c71698a6bc35c7aca7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 10658b118c97afe99144c3a4d25e0297aba3727f
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748617"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168019"
 ---
-# <a name="catlmodule-class"></a>Класс CAtlModule
+# <a name="catlmodule-class"></a>Класс Катлмодуле
 
-Этот класс предоставляет методы, используемые несколькими классами модулей ATL.
+Этот класс предоставляет методы, используемые несколькими классами модуля ATL.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
@@ -43,38 +43,38 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlModule::CAtlModule](#catlmodule)|Конструктор.|
-|[CAtlModule:::CAtlModule](#dtor)|Деструктор|
+|[Катлмодуле:: Катлмодуле](#catlmodule)|Конструктор.|
+|[Катлмодуле:: ~ Катлмодуле](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlModule::AddCommonRGSЗамены](#addcommonrgsreplacements)|Переопределить этот метод, чтобы добавить параметры в заменяемую карту замещения компонента реестра ATL (регистратор).|
-|[CAtlModule::AddTermFunc](#addtermfunc)|Добавляет новую функцию, которая будет вызываться при завершении модуля.|
-|[CAtlModule::GetGITPtr](#getgitptr)|Возвращает глобальный указатель интерфейса.|
-|[CAtlModule::GetLockCount](#getlockcount)|Возвращает счет блокировки.|
-|[CAtlModule::Блокировка](#lock)|Приравливывает количество блокировки.|
-|[CAtlModule::Срок](#term)|Выпускает всех участников данных.|
-|[CAtlModule::Разблокировка](#unlock)|Уменьшает на единицу счетчик блокировок.|
-|[CAtlModule::UpdateRegistryFromResourced](#updateregistryfromresourced)|Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отрегистрации объекта.|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|Этот метод вызывается `UpdateRegistryFromResourceD` для выполнения обновления реестра.|
-|[CAtlModule::UpdateRegistryFromResources](#updateregistryfromresources)|Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отрегистрации объекта. Этот метод статически ссылается на компонент реестра ATL.|
+|[Катлмодуле:: Аддкоммонргсреплацементс](#addcommonrgsreplacements)|Переопределите этот метод, чтобы добавить параметры в карту замены компонента реестра ATL (регистратор).|
+|[Катлмодуле:: Аддтермфунк](#addtermfunc)|Добавляет новую функцию, вызываемую при завершении работы модуля.|
+|[Катлмодуле:: Жетгитптр](#getgitptr)|Возвращает указатель на глобальный интерфейс.|
+|[Катлмодуле:: Жетлокккаунт](#getlockcount)|Возвращает счетчик блокировок.|
+|[Катлмодуле:: Lock](#lock)|Увеличивает счетчик блокировок.|
+|[Катлмодуле:: Term](#term)|Освобождает все элементы данных.|
+|[Катлмодуле:: Unlock](#unlock)|Уменьшает на единицу счетчик блокировок.|
+|[Катлмодуле:: Упдатерегистрифромресаурцед](#updateregistryfromresourced)|Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта.|
+|[Катлмодуле:: Упдатерегистрифромресаурцедхелпер](#updateregistryfromresourcedhelper)|Этот метод вызывается методом `UpdateRegistryFromResourceD` для выполнения обновления реестра.|
+|[Катлмодуле:: Упдатерегистрифромресаурцес](#updateregistryfromresources)|Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта. Этот метод статически связывается с компонентом реестра ATL.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
 |Имя|Описание|
 |----------|-----------------|
-|[CAtlModule::m_libid](#m_libid)|Содержит GUID текущего модуля.|
-|[CAtlModule::m_pGIT](#m_pgit)|Указатель на таблицу глобального интерфейса.|
+|[Катлмодуле:: m_libid](#m_libid)|Содержит идентификатор GUID текущего модуля.|
+|[Катлмодуле:: m_pGIT](#m_pgit)|Указатель на глобальную таблицу интерфейса.|
 
 ## <a name="remarks"></a>Remarks
 
-Этот класс используется [классом CAtlDllModuleT,](../../atl/reference/catldllmodulet-class.md) [классом CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)и [классом CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) для обеспечения поддержки DLL-приложений, приложений EXE и служб Windows, соответственно.
+Этот класс используется классом [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md), классом [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)и [классом функция CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) для обеспечения поддержки DLL-приложений, приложений exe и служб Windows соответственно.
 
-Для получения дополнительной информации о модулях в ATL, [см.](../../atl/atl-module-classes.md)
+Дополнительные сведения о модулях в ATL см. в разделе [Классы модулей ATL](../../atl/atl-module-classes.md).
 
-Этот класс заменяет устаревший [класс CComModule,](../../atl/reference/ccommodule-class.md) используемый в более ранних версиях ATL.
+Этот класс заменяет устаревший [класс CComModule](../../atl/reference/ccommodule-class.md) , используемый в более ранних версиях ATL.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -84,143 +84,143 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h
+**Заголовок:** atlbase. h
 
-## <a name="catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSЗамены
+## <a name="catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>Катлмодуле:: Аддкоммонргсреплацементс
 
-Переопределить этот метод, чтобы добавить параметры в заменяемую карту замещения компонента реестра ATL (регистратор).
+Переопределите этот метод, чтобы добавить параметры в карту замены компонента реестра ATL (регистратор).
 
-```
+```cpp
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pRegistrar*<br/>
+*прегистрар*<br/>
 Зарезервировано.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Заменяемые параметры позволяют клиенту Регистратора указывать данные о времени выполнения. Для этого Регистратор поддерживает карту замены, в которую он вводит значения, связанные со сменными параметрами в скрипте. Регистратор делает эти записи во время выполнения.
+Заменяемые параметры позволяют клиенту регистратора указывать данные времени выполнения. Для этого Регистратор сохраняет карту замены, в которую он вводит значения, связанные с заменяемыми параметрами в скрипте. Регистратор делает эти записи во время выполнения.
 
-Более подробная информация приводиткся в [теме «Использование сменных параметров » (Препроцессор регистратора).](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)
+Дополнительные сведения см. в разделе [Использование заменяемых параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) .
 
-## <a name="catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>CAtlModule::AddTermFunc
+## <a name="catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>Катлмодуле:: Аддтермфунк
 
-Добавляет новую функцию, которая будет вызываться при завершении модуля.
+Добавляет новую функцию, вызываемую при завершении работы модуля.
 
-```
+```cpp
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pFunc*<br/>
-Указатель на функцию для добавления.
+Указатель на функцию, которую необходимо добавить.
 
 *dw*<br/>
-Данные, определяемые пользователем, передаются функции.
+Определяемые пользователем данные, передаваемые в функцию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
-## <a name="catlmodulecatlmodule"></a><a name="catlmodule"></a>CAtlModule::CAtlModule
+## <a name="catlmodulecatlmodule"></a><a name="catlmodule"></a>Катлмодуле:: Катлмодуле
 
 Конструктор.
 
-```
+```cpp
 CAtlModule() throw();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Инициализирует членов данных и инициирует критический раздел вокруг потока модуля.
+Инициализирует элементы данных и инициирует критическую секцию вокруг потока модуля.
 
-## <a name="catlmodulecatlmodule"></a><a name="dtor"></a>CAtlModule:::CAtlModule
+## <a name="catlmodulecatlmodule"></a><a name="dtor"></a>Катлмодуле:: ~ Катлмодуле
 
 Деструктор
 
-```
+```cpp
 ~CAtlModule() throw();
 ```
 
 ### <a name="remarks"></a>Remarks
 
-Выпускает всех участников данных.
+Освобождает все элементы данных.
 
-## <a name="catlmodulegetgitptr"></a><a name="getgitptr"></a>CAtlModule::GetGITPtr
+## <a name="catlmodulegetgitptr"></a><a name="getgitptr"></a>Катлмодуле:: Жетгитптр
 
-Извлекает указатель в таблицу глобального интерфейса.
+Получает указатель на глобальную таблицу интерфейса.
 
-```
+```cpp
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*ppGIT*<br/>
-Указатель на переменную, которая получит указатель на глобальную таблицу интерфейсов.
+*ппгит*<br/>
+Указатель на переменную, которая получит указатель на глобальную таблицу интерфейса.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или код ошибки при сбое. E_POINTER возвращается, если *ppGIT* равен NULL.
+Возвращает S_OK при успешном выполнении или код ошибки в случае сбоя. E_POINTER возвращается, если *ппгит* равен null.
 
 ### <a name="remarks"></a>Remarks
 
-Если объект Таблица глобального интерфейса не существует, он создается, и его адрес хранится в переменной [CAtlModule::m_pGIT](#m_pgit).
+Если объект таблицы глобальных интерфейсов не существует, он создается, а его адрес сохраняется в переменной-члене [катлмодуле:: m_pGIT](#m_pgit).
 
-В отладках сборки будет возникать ошибка утверждения, если *ppGIT* равен NULL, или если не удается получить указатель таблицы глобального интерфейса.
+В отладочных сборках возникнет ошибка утверждения, если *ппгит* равен null или если не удается получить указатель на таблицу глобальных интерфейсов.
 
-[См. IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) для получения информации о глобальной таблице интерфейсов.
+Сведения о таблице глобальных интерфейсов см. в разделе [иглобалинтерфацетабле](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) .
 
-## <a name="catlmodulegetlockcount"></a><a name="getlockcount"></a>CAtlModule::GetLockCount
+## <a name="catlmodulegetlockcount"></a><a name="getlockcount"></a>Катлмодуле:: Жетлокккаунт
 
-Возвращает счет блокировки.
+Возвращает счетчик блокировок.
 
-```
+```cpp
 virtual LONG GetLockCount() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает счет блокировки. Это значение может быть полезно для диагностики и отладки.
+Возвращает счетчик блокировок. Это значение может быть полезно для диагностики и отладки.
 
-## <a name="catlmodulelock"></a><a name="lock"></a>CAtlModule::Блокировка
+## <a name="catlmodulelock"></a><a name="lock"></a>Катлмодуле:: Lock
 
-Приравливывает количество блокировки.
+Увеличивает счетчик блокировок.
 
-```
+```cpp
 virtual LONG Lock() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Приравливывает количество блокировки и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.
+Увеличивает счетчик блокировок и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.
 
-## <a name="catlmodulem_libid"></a><a name="m_libid"></a>CAtlModule::m_libid
+## <a name="catlmodulem_libid"></a><a name="m_libid"></a>Катлмодуле:: m_libid
 
-Содержит GUID текущего модуля.
+Содержит идентификатор GUID текущего модуля.
 
-```
+```cpp
 static GUID m_libid;
 ```
 
-## <a name="catlmodulem_pgit"></a><a name="m_pgit"></a>CAtlModule::m_pGIT
+## <a name="catlmodulem_pgit"></a><a name="m_pgit"></a>Катлмодуле:: m_pGIT
 
-Указатель на таблицу глобального интерфейса.
+Указатель на глобальную таблицу интерфейса.
 
-```
+```cpp
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-## <a name="catlmoduleterm"></a><a name="term"></a>CAtlModule::Срок
+## <a name="catlmoduleterm"></a><a name="term"></a>Катлмодуле:: Term
 
-Выпускает всех участников данных.
+Освобождает все элементы данных.
 
 ```cpp
 void Term() throw();
@@ -228,25 +228,25 @@ void Term() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Выпускает всех участников данных. Этот метод называется деструктором.
+Освобождает все элементы данных. Этот метод вызывается деструктором.
 
-## <a name="catlmoduleunlock"></a><a name="unlock"></a>CAtlModule::Разблокировка
+## <a name="catlmoduleunlock"></a><a name="unlock"></a>Катлмодуле:: Unlock
 
 Уменьшает на единицу счетчик блокировок.
 
-```
+```cpp
 virtual LONG Unlock() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Декретирует количество блокировки и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.
+Уменьшает счетчик блокировок и возвращает обновленное значение. Это значение может быть полезно для диагностики и отладки.
 
-## <a name="catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourced
+## <a name="catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>Катлмодуле:: Упдатерегистрифромресаурцед
 
-Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отрегистрации объекта.
+Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта.
 
-```
+```cpp
 HRESULT WINAPI UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
@@ -260,35 +260,35 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*<br/>
+*лпсзрес*<br/>
 Имя ресурса.
 
-*nResID*<br/>
+*нресид*<br/>
 Идентификатор ресурса.
 
-*bРегистрация*<br/>
-TRUE, если объект должен быть зарегистрирован; FALSE в противном случае.
+*брегистер*<br/>
+Значение TRUE, если объект должен быть зарегистрирован; В противном случае — значение FALSE.
 
-*pMapE записи*<br/>
-Указатель на значения замены карты, связанные со сменными параметрами скрипта. ATL автоматически использует %Module%. Для использования дополнительных сменных параметров см. [CAtlModule::AddCommonRGSЗамены](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
+*пмапентриес*<br/>
+Указатель на заменяющую карту, в которой хранятся значения, связанные с заменяемыми параметрами скрипта. ATL автоматически использует% MODULE%. Сведения об использовании дополнительных заменяемых параметров см. в разделе [катлмодуле:: аддкоммонргсреплацементс](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Запускает скрипт, содержащийся в ресурсе, указанном *lpszRes или nResID.* Если *bRegister* является правдой, этот метод регистрирует объект в системном реестре; в противном случае он удаляет объект из реестра.
+Запускает скрипт, содержащийся в ресурсе, указанном параметром *лпсзрес или нресид*. Если *брегистер* имеет значение true, этот метод регистрирует объект в системном реестре; в противном случае объект удаляется из реестра.
 
-Чтобы статически ссылку на компонент реестра ATL (регистратор), [см. CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources).
+Статические ссылки на компонент реестра ATL (регистратор) см. в разделе [катлмодуле:: упдатерегистрифромресаурцес](#updateregistryfromresources).
 
-Этот метод вызывает [CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper) и [IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister).
+Этот метод вызывает [катлмодуле:: упдатерегистрифромресаурцедхелпер](#updateregistryfromresourcedhelper) и [IRegistrar:: ресаурцеунрегистер](iregistrar-class.md#resourceunregister).
 
-## <a name="catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
+## <a name="catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>Катлмодуле:: Упдатерегистрифромресаурцедхелпер
 
-Этот метод вызывается `UpdateRegistryFromResourceD` для выполнения обновления реестра.
+Этот метод вызывается методом `UpdateRegistryFromResourceD` для выполнения обновления реестра.
 
-```
+```cpp
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
@@ -297,28 +297,28 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszRes*<br/>
+*лпсзрес*<br/>
 Имя ресурса.
 
-*bРегистрация*<br/>
-Указывает, должен ли объект быть зарегистрирован.
+*брегистер*<br/>
+Указывает, должен ли быть зарегистрирован объект.
 
-*pMapE записи*<br/>
-Указатель на значения замены карты, связанные со сменными параметрами скрипта. ATL автоматически использует %Module%. Для использования дополнительных сменных параметров см. [CAtlModule::AddCommonRGSЗамены](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
+*пмапентриес*<br/>
+Указатель на заменяющую карту, в которой хранятся значения, связанные с заменяемыми параметрами скрипта. ATL автоматически использует% MODULE%. Сведения об использовании дополнительных заменяемых параметров см. в разделе [катлмодуле:: аддкоммонргсреплацементс](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Этот метод обеспечивает реализацию [CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced).
+Этот метод обеспечивает реализацию [катлмодуле:: упдатерегистрифромресаурцед](#updateregistryfromresourced).
 
-## <a name="catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResources
+## <a name="catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>Катлмодуле:: Упдатерегистрифромресаурцес
 
-Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отрегистрации объекта. Этот метод статически ссылается на компонент реестра ATL.
+Запускает скрипт, содержащийся в указанном ресурсе, для регистрации или отмены регистрации объекта. Этот метод статически связывается с компонентом реестра ATL.
 
-```
+```cpp
 HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
@@ -332,27 +332,27 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="parameters"></a>Параметры
 
-*nResID*<br/>
+*нресид*<br/>
 Идентификатор ресурса.
 
-*lpszRes*<br/>
+*лпсзрес*<br/>
 Имя ресурса.
 
-*bРегистрация*<br/>
-Указывает, должен ли быть зарегистрирован скрипт ресурса.
+*брегистер*<br/>
+Указывает, должен ли быть зарегистрирован скрипт ресурсов.
 
-*pMapE записи*<br/>
-Указатель на значения замены карты, связанные со сменными параметрами скрипта. ATL автоматически использует %Module%. Для использования дополнительных сменных параметров см. [CAtlModule::AddCommonRGSЗамены](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
+*пмапентриес*<br/>
+Указатель на заменяющую карту, в которой хранятся значения, связанные с заменяемыми параметрами скрипта. ATL автоматически использует% MODULE%. Сведения об использовании дополнительных заменяемых параметров см. в разделе [катлмодуле:: аддкоммонргсреплацементс](#addcommonrgsreplacements). В противном случае используйте значение NULL по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает S_OK на успех, или ошибка HRESULT на отказ.
+Возвращает S_OK при успешном выполнении или ошибку HRESULT при сбое.
 
 ### <a name="remarks"></a>Remarks
 
-Как и [CAtlModule::UpdateRegistryFromResourceD,](#updateregistryfromresourced) за исключением `CAtlModule::UpdateRegistryFromResourceS` создает статическую ссылку на компонент реестра ATL (регистратор).
+Аналогично [катлмодуле:: упдатерегистрифромресаурцед](#updateregistryfromresourced) , `CAtlModule::UpdateRegistryFromResourceS` за исключением, создает статическую ссылку на компонент реестра ATL (регистратор).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [Общие сведения о классах](../../atl/atl-class-overview.md)<br/>

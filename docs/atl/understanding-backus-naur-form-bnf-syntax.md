@@ -5,12 +5,12 @@ helpviewer_keywords:
 - BNF notation
 - Backus-Naur form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: 77f0fa6fef8e517e5714d1da6c61d0e310e0718c
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0f07a39863b586d524d060dc3df7117e2c930b3e
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65709184"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168713"
 ---
 # <a name="understanding-backus-naur-form-bnf-syntax"></a>Понимание синтаксиса формы Backus-Naur (BNF)
 
@@ -18,8 +18,8 @@ ms.locfileid: "65709184"
 
 |Соглашение/символ|Значение|
 |------------------------|-------------|
-|::=|Эквивалент|
-|&#124;|OR|
+|::=|Эквивалентный|
+|&#124;|ИЛИ|
 |X+|Один или несколько X.|
 |\[X]|X является необязательным. Необязательные разделители отмечены \[].|
 |Любой **полужирный** текст|Строковый литерал.|
@@ -32,11 +32,11 @@ ms.locfileid: "65709184"
 |**ForceRemove**|Полностью удаляет следующий ключ (если он существует), а затем повторно создает его.|
 |**NoRemove**|Не удаляет следующий ключ во время отмены регистрации.|
 |**Val**|Указывает, что `<Key Name>` является именованным значением.|
-|**Удалить**|Удаляет следующий ключ во время регистрации.|
-|**s**|Указывает, что следующее значение является строкой (REG_SZ).|
-|**d**|Указывает, что следующее значение является DWORD (REG_DWORD).|
-|**m**|Указывает, что следующее значение является мультистрокой (REG_MULTI_SZ).|
-|**b**|Указывает, что следующее значение является двоичным значением (REG_BINARY).|
+|**Удаление**|Удаляет следующий ключ во время регистрации.|
+|**#d0**|Указывает, что следующее значение является строкой (REG_SZ).|
+|**четырехмерного**|Указывает, что следующее значение является DWORD (REG_DWORD).|
+|**Пн**|Указывает, что следующее значение является мультистрокой (REG_MULTI_SZ).|
+|**&**|Указывает, что следующее значение является двоичным значением (REG_BINARY).|
 
 ## <a name="bnf-syntax-examples"></a>Примеры синтаксиса BNF
 
@@ -44,47 +44,37 @@ ms.locfileid: "65709184"
 
 ### <a name="syntax-example-1"></a>Пример синтаксиса 1
 
-```
-<registry expression> ::= <Add Key>
-```
+> \<выражение реестра>:: = \<добавить ключ>
 
 указывает, что `registry expression` эквивалентен `Add Key`.
 
 ### <a name="syntax-example-2"></a>Пример синтаксиса 2
 
-```
-<registry expression> ::= <Add Key> | <Delete Key>
-```
+> \<выражение реестра>:: = \<добавить ключ> | \<Удалить ключ>
 
 указывает, что `registry expression` эквивалентен `Add Key` или `Delete Key`.
 
 ### <a name="syntax-example-3"></a>Пример синтаксиса 3
 
-```
-<Key Name> ::= '<AlphaNumeric>+'
-```
+> \<Имя ключа>:: = "\<буквенно-цифровой>+"
 
-указывает, что `Key Name` эквивалентен одному или нескольким `AlphaNumerics`.
+Указывает, `Key Name` что эквивалентно одному или нескольким `AlphaNumeric` значениям.
 
 ### <a name="syntax-example-4"></a>Пример синтаксиса 4
 
-```
-<Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>
-```
+> \<Добавьте Key>:: = [**ForceRemove** | **Удаление** | **Val**]\<имя ключа>
 
 указывает, что `Add Key` эквивалентен `Key Name` и что строковые литералы, `ForceRemove`, `NoRemove` и `val`, являются необязательными.
 
 ### <a name="syntax-example-5"></a>Пример синтаксиса 5
 
-```
-<AlphaNumeric> ::= any character not NULL, that is, ASCII 0
-```
+> \<Буквенно-цифровые>:: = *любой символ, не равный null, то есть ASCII 0*
 
 указывает, что `AlphaNumeric` является эквивалентом для любого ненулевого символа.
 
 ### <a name="syntax-example-6"></a>Пример синтаксиса 6
 
-```
+```rgs
 val 'testmulti' = m 'String 1\0String 2\0'
 ```
 
@@ -92,7 +82,7 @@ val 'testmulti' = m 'String 1\0String 2\0'
 
 ### <a name="syntax-example-7"></a>Пример синтаксиса 7
 
-```
+```rgs
 val 'testhex' = d '&H55'
 ```
 
@@ -100,4 +90,4 @@ val 'testhex' = d '&H55'
 
 ## <a name="see-also"></a>См. также
 
-[Создание скриптов регистратора](../atl/creating-registrar-scripts.md)
+[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
