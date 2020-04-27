@@ -6,10 +6,10 @@ ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "71685707"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Как сообщить о проблеме с набором инструментов или документацией для Microsoft C++
@@ -310,7 +310,7 @@ CONTEXT:
 
 1. В окне консоли разработчика перейдите обратно в каталог, который содержит проект с данными для воспроизведения.
 
-1. Введите команду **cl** *<аргументы>* **/TP** *<имя_файла>* .i, как это описано выше, чтобы скомпилировать предварительно обработанный файл так, как если бы это был файл исходного кода C++.
+1. Введите команду **cl** *arguments* **/TP** *filename*.i, как это описано выше, чтобы скомпилировать предварительно обработанный файл так, как если бы это был файл исходного кода C++.
 
 1. Убедитесь, что проблема по-прежнему воспроизводится предварительно подготовленным файлом.
 
