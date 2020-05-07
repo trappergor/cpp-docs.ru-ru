@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
 ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
 ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/20/2019
 ms.locfileid: "75299095"
 ---
 # <a name="parsing-c-command-line-arguments"></a>Анализ аргументов командной строки C
 
-**Блок, относящийся только к системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 В коде запуска Microsoft C используются следующие правила при обработке аргументов, вводимых в командной строке операционной системы.
 
@@ -76,7 +76,7 @@ char **envp )      // Array of environment variable strings
 }
 ```
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Комментарии
 
 Ниже приведен один пример данных, выводимых этой программой:
 
@@ -97,6 +97,6 @@ Environment variables:
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Функция main и выполнение программ](../c-language/main-function-and-program-execution.md)
