@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: a63c30368e23feda4b7845f367ad394249a50d4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d76c533c278e7f1808eb631e4c94e681b1ae0b6b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333569"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912105"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt, cbrtf, cbrtl
 
@@ -71,23 +71,23 @@ long double cbrtl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **cbrt** возвращают кубический корень *x*.
+Функции **CBRT** возвращают корневой каталог Куба *x*.
 
-|Входные данные|Исключение SEH|**_matherr** Исключение|
+|Входные данные|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|Вопрос, ЗНАН, IND|Нет|Нет|
+|± ∞, КНАН, ТО ЕСТЬ|нет|нет|
 
 ## <a name="remarks"></a>Remarks
 
-Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **cbrt,** которые принимают **плавающие** или **длинные** **двойные** типы. В программе C, **cbrt** всегда принимает и возвращает **двойник.**
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **CBRT** , которые принимают типы **float** или **Long** типа **Double** . В программе на языке C **CBRT** всегда принимает и возвращает **Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**cbrt**, **cbrtf**, **cbrtl**|\<math.h>|\<cmath>|
+|**CBRT**, **cbrtf**, **кбртл**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350614"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912925"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -50,7 +50,7 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Размер запрошенного выделения памяти.
 
 *выравнивание*<br/>
@@ -58,19 +58,19 @@ void * _aligned_malloc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на блок памяти, который был выделен или NULL, если операция не удалась. Указатель кратно *выравнивание*.
+Указатель на блок памяти, который был выделен, или значение NULL, если операция завершилась ошибкой. Указатель является кратным для *выравнивания*.
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_malloc** основана на [malloc](malloc.md).
+**_aligned_malloc** основан на [malloc](malloc.md).
 
-**_aligned_malloc** помечения `__declspec(noalias)` и, `__declspec(restrict)`что означает, что функция гарантированно не изменять глобальные переменные и что указатель вернулся не псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_malloc** `__declspec(noalias)` помечается `__declspec(restrict)`и, что означает, что функция гарантированно не изменяет глобальные переменные и что возвращаемый указатель не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_malloc** проверяет свои параметры. Если *выравнивание* не является силой 2 или *размер* равен нулю, эта функция вызывает недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция `errno` `EINVAL`возвращает NULL и устанавливается на .
+Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, **_aligned_malloc** проверяет свои параметры. Если значение *alignment* не равно 2 или *size* равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает значение NULL `errno` и `EINVAL`задает для значение.
 
-Используйте [_aligned_free](aligned-free.md) для дераспределения памяти, полученной **как _aligned_malloc,** так и `_aligned_offset_malloc`. Не используйте, `free`который не верой себе выровненную память и может привести к трудной диагностике ошибок.
+Используйте [_aligned_free](aligned-free.md) , чтобы освободить память, полученную **_aligned_malloc** как _aligned_malloc `_aligned_offset_malloc`, так и. Не используйте `free`, что не приводит к правильному освобождению выделенной памяти и может привести к устранению неполадок.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

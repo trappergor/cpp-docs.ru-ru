@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1aa95daeab424c933f10060fb4f87cb317aa188c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362547"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912224"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Вызовы [прерываются](abort.md) или функция, указанная с помощью **set_terminate.**
+Вызывает [Abort](abort.md) или функцию, указанную с помощью **set_terminate**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +46,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>Remarks
 
-Функция **завершения** используется при обработке исключений с СЗ и вызывается в следующих случаях:
+Функция **Terminate** используется при обработке исключений C++ и вызывается в следующих случаях:
 
 - не удается найти подходящий обработчик catch для исключения C++;
 
@@ -54,15 +54,15 @@ void terminate( void );
 
 - стек поврежден после возникновения исключения.
 
-**прекратить** [выполнение](abort.md) вызовов по умолчанию. Вы можете изменить этот дефолт, написав собственную функцию прекращения и вызывая **set_terminate** с именем вашей функции в качестве аргумента. **прекратить** вызовы последней функции, данной в качестве аргумента для **set_terminate.** Дополнительные сведения см. в разделе [Необработанные исключения C++](../../cpp/unhandled-cpp-exceptions.md).
+**terminate** по умолчанию [прерывания вызовов прерывается](abort.md) . Это значение по умолчанию можно изменить, создав собственную функцию завершения и вызвав **set_terminate** с именем функции в качестве аргумента. Функция **Terminate** вызывает последнюю функцию, заданную в качестве аргумента для **set_terminate**. Дополнительные сведения см. в разделе [Необработанные исключения C++](../../cpp/unhandled-cpp-exceptions.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**Прекратить**|\<eh.h>|
+|**заканчива**|\<eh.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
@@ -115,8 +115,8 @@ term_func() was called by terminate().
 ## <a name="see-also"></a>См. также раздел
 
 [Процедуры обработки исключений](../../c-runtime-library/exception-handling-routines.md)<br/>
-[Прервать](abort.md)<br/>
+[рвал](abort.md)<br/>
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Неожиданные](unexpected-crt.md)<br/>
+[известно](unexpected-crt.md)<br/>
