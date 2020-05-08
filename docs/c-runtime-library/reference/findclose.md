@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: ed17963dc7331962c3ac0d522db2843822ec5f79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911799"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -49,20 +49,20 @@ int _findclose(
 
 ### <a name="parameters"></a>Параметры
 
-*Обрабатывать*<br/>
-Ручка поиска возвращается предыдущим вызовом в **_findfirst.**
+*справиться*<br/>
+Маркер поиска, возвращенный предыдущим вызовом метода **_findfirst**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае **успеха, _findclose** возвращает 0. В противном случае, он возвращает -1 и устанавливает **errno** **к ENOENT**, указывая, что больше не совпадающие файлы могут быть найдены.
+В случае успеха **_findclose** возвращает 0. В противном случае возвращается значение-1 **и устанавливается значение** **еноент**, указывающее, что больше не удалось найти соответствующие файлы.
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 

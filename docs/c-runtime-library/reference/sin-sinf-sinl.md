@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355002"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915773"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Вычисляет синусоидирование значения плавающей точки.
+Вычисляет синус значения с плавающей запятой.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,26 +67,26 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **греха** возвращают синус *х.* Если *x* больше или равна 263, или меньше, чем или равна -263, происходит потеря значимости в результате.
+Функции **sin** возвращают синус *x*. Если значение *x* больше или равно 263 или меньше или равно-263, то происходит отрицательное значение в результате.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|- ЗНАН,IND|Отсутствуют|_DOMAIN|
-|(грех, грех, грех)|INVALID|_DOMAIN|
+|± КНАН, С|Отсутствуют|_DOMAIN|
+|± ∞ (SIN, sinf, sinl)|INVALID|_DOMAIN|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку СЗ допускает перегрузку, можно вызывать перегрузки **греха,** которые принимают и возвращают **плавающие** или **длинные** **двойные** значения. В программе C **грех** всегда берет и возвращает **двойной**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sin** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C функция **sin** всегда принимает и возвращает **Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
-|**грех**, **грех**, **грех**|\<math.h>|\<cmath> или \<math.h>|
+|**sin**, **sinf**, **sinl**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

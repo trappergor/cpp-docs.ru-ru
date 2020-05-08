@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 2334d7755a3eaf3fb973783db17ca398e6b7f0b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edba674a0873b1f0a5f37457235c0dc1a8210ded
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340695"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911977"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
-Сравнивает первые **n** байты двух строк мультибайт-символа.
+Сравнивает первые **n** байт двух строк многобайтовых символов.
 
 > [!IMPORTANT]
 > Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -69,38 +69,38 @@ int _mbsnbcmp_l(
 
 ### <a name="parameters"></a>Параметры
 
-*string1*, *string2*<br/>
+*строка1*, *строка2*<br/>
 Строки для сравнения.
 
 *count*<br/>
 Число байтов для сравнения.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Значение возврата указывает на облачную связь между подстроками *строки1* и *строки2.*
+Возвращаемое значение указывает порядковое отношение между подстроками *строка1* и *строка2*.
 
 |Возвращаемое значение|Описание|
 |------------------|-----------------|
-|< 0|*подстрока string1* меньше, чем подстрока *string2.*|
-|0|*подстрока string1* идентична *подстроке 2* строки.|
-|> 0|*подстрока string1* больше, чем подстрока *string2.*|
+|< 0|Строка *строка1* меньше подстроки *строка2* .|
+|0|Строка *строка1* совпадает с подстрокой *строка_замены* .|
+|> 0|Строка *строка1* больше, чем *строка2* подстроки.|
 
-По ошибке проверки параметра, **_mbsnbcmp** и **_mbsnbcmp_l** возврата **_NLSCMPERROR,** которая определяется в \<> строки и \<mbstring.h>.
+При ошибке проверки параметров **_mbsnbcmp** и **_mbsnbcmp_l** возвращают **_NLSCMPERROR**, которые определены в \<> String. h> и \<mbstring. h.
 
 ## <a name="remarks"></a>Remarks
 
-**Функции _mbsnbcmp** сравнить не более *первых* байтов в *строках1* и *строке2* и вернуть значение, указывавое связь между подстроками. **_mbsnbcmp** является дело чувствительных версия **_mbsnbicmp**. В отличие от **_mbsnbcoll,** **_mbsnbcmp** не зависит от порядка сопоставления местности. **_mbsnbcmp** распознает последовательности мультибайт-символов в соответствии с текущей многобайтной [страницей кода.](../../c-runtime-library/code-pages.md)
+Функции **_mbsnbcmp** сравнивают не более первого *числа* байтов в строках *строка1* и *строка2* и возвращают значение, указывающее связь между подстроками. **_mbsnbcmp** — это зависящая от регистра версия **_mbsnbicmp**. В отличие от **_mbsnbcoll**, на **_mbsnbcmp** не влияет порядок сортировки языкового стандарта. **_mbsnbcmp** распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой [кодовой страницей](../../c-runtime-library/code-pages.md).
 
-**_mbsnbcmp** напоминает **_mbsncmp,** за исключением того, что **_mbsncmp** сравнивает строки по персонажам, а не байтами.
+**_mbsnbcmp** напоминает **_mbsncmp**, за исключением того, что **_mbsncmp** сравнивает строки по символам, а не по байтам.
 
-Значение вывода зависит от LC_CTYPE **параметра** категории локализовать, который определяет свинцовые байты и задние байты мультибайтных символов. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функция **_mbsnbcmp** использует текущий локал для этого поведения, зависящем от локального. Функция **_mbsnbcmp_l** идентична, за исключением того, что вместо этого используется параметр *локализации.* Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+На выходное значение влияет параметр категории **LC_CTYPE** языкового стандарта, который указывает старшие байты и конечные байты многобайтовых символов. Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функция **_mbsnbcmp** использует текущий языковой стандарт для этого поведения, зависящего от языкового стандарта. Функция **_mbsnbcmp_l** идентична, за исключением того, что вместо нее используется параметр *locale* . Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Если *строка1* или *строка2* является нулевой указателем, эти функции вызывают обработчик параметров недействительного, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, функции возвращаются **_NLSCMPERROR** и **errno** устанавливается **eINVAL.**
+Если *строка1* или *строка2* являются пустым указателем, эти функции вызывают обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают **_NLSCMPERROR** , а параметру "переполнять **" задано** значение **еинвал**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -155,7 +155,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Compare strings:
@@ -169,12 +169,12 @@ Function: _mbsnicmp _mbsnicmp (first 10 characters only)
 Result:   String 1 is equal to string 2
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

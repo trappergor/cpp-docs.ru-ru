@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346043"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920440"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -52,20 +52,20 @@ void _free_locale(
 
 ### <a name="parameters"></a>Параметры
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Объект языкового стандарта, который необходимо освободить.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_free_locale** используется для освобождения объекта, полученного от вызова **в _get_current_locale** или **_create_locale.**
+Функция **_free_locale** используется для высвобождения объекта языкового стандарта, полученного из вызова метода **_get_current_locale** или **_create_locale**.
 
-Предыдущее название этой функции, **__free_locale** (с двумя ведущими подчеркивателями) было униточено.
+Предыдущее имя этой функции, **__free_locale** (с двумя символами подчеркивания в начале), не рекомендуется к использованию.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|**Обычной**|Обязательный заголовок|
+|**Ассемблер**|Обязательный заголовок|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 

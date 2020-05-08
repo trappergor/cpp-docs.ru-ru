@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 111d5745703d15fccf0b2a941248203cc80d07a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362555"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912246"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -59,22 +59,22 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Параметры
 
-*Обрабатывать*<br/>
+*справиться*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Текущая позиция указателя файла. Для устройств, которые не поддерживают поиск, возвращаемое значение не определено.
 
-Значение возврата -1L указывает на ошибку. Если *ручка* является недействительным дескриптором файла, вызовуется обработчик параметров, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эти функции устанавливают **errno** к **EBADF** и возвращают -1L.
+Возвращаемое значение-1L указывает на ошибку. Если *Handle* является недопустимым дескриптором файла, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции **устанавливают** значение **значение EBADF** и возвращают-1L.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Remarks
 
-**Функция _tell** получает текущее положение указателя файла (если таковое, связанное с аргументом *ручки.* Позиция выражается в виде количества байт от начала файла. Для **_telli64** функции это значение выражается как целый 64-битный ряд.
+Функция **_tell** возвращает текущую позиции указателя файла (при наличии), связанного с аргументом *Handle* . Позиция выражается в виде количества байт от начала файла. Для функции **_telli64** это значение выражается в виде 64-разрядного целого числа.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -124,13 +124,13 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Current file position is: 20
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>
 [ftell, _ftelli64](ftell-ftelli64.md)<br/>

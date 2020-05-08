@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a610b0412b7e10949a810f4e360686292cff9ee3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342164"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916447"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -68,32 +68,32 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха, вернуть естественный logarithm абсолютное значение гамма-функции *х*.
+В случае успеха возвращает натуральный логарифм абсолютного значения гамма-функции *x*.
 
-|Проблемы|Возвращает|
+|Проблема|Возвращает|
 |-----------|------------|
-|*х* - NaN|NaN|
-|*х* 0 евро|+INFINITY|
-|*х*- отрицательный ателье|+INFINITY|
-|(ИНФИНИТИЯ)|+INFINITY|
+|*x* = NaN|NaN|
+|*x* = ± 0|+INFINITY|
+|*x*= отрицательное целое число|+INFINITY|
+|± Бесконечности|+INFINITY|
 |Ошибка полюса|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
-|Ошибка переполнения диапазона|HUGE_VAL, HUGE_VALF или HUGE_VALL|
+|Ошибка переполнения диапазона|± HUGE_VAL, ± HUGE_VALF или ± HUGE_VALL|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **lgamma,** которые принимают и возвращают **поплавок,** и **длинные** **двойные** типы. В программе C, **lgamma** всегда берет и возвращает **двойной**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **лгамма** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **лгамма** всегда принимает и возвращает значение **типа Double**.
 
-Если x является рациональным числом, эта функция возвращает logarithm факториального (x - 1).
+Если x является рациональным числом, эта функция возвращает логарифм факториала (x-1).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**lgamma**, **lgammaf**, **lgammal**|\<math.h>|\<cmath>|
+|**лгамма**, **лгаммаф**, **лгаммал**|\<math.h>|\<cmath>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

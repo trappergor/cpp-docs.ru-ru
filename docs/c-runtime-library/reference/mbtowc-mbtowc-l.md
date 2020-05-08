@@ -20,7 +20,7 @@ api_location:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 99659def42cba4e832c26b1535706ea576931969
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54e50da06fbe009184894edc60b6267e372aefc1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338798"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915415"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc, _mbtowc_l
 
@@ -61,27 +61,27 @@ int _mbtowc_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Wchar*<br/>
-Адрес широкого характера (тип **wchar_t).**
+*WCHAR*<br/>
+Адрес расширенного символа (тип **wchar_t**).
 
-*mbchar*<br/>
+*мбчар*<br/>
 Адрес последовательности байтов (многобайтовый символ).
 
 *count*<br/>
 Число проверяемых байтов.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **mbchar** не **является NULL** и если объект, который *mbchar* указывает на образы действительного мультибайтного символа, **mbtowc** возвращает длину в байтах мультибайтного символа. Если *mbchar* является **NULL** или объектом, на который он указывает, является широкохарактерным нулевым символом (L'0'), функция возвращает 0. Если объект, на который указывает *mbchar,* не образует допустимый мультибайтный символ в пределах символов первого *счета,* он возвращается -1.
+Если **мбчар** не **равно NULL** и объект, который *мбчар* указывает на форму допустимого многобайтового символа, **mbtowc** возвращает длину многобайтового символа в байтах. Если *мбчар* имеет **значение NULL** или объект, на который он указывает, является расширенным символом NULL (L ' \ 0 '), функция возвращает значение 0. Если объект, на который указывает *мбчар* , не формирует допустимый многобайтовый символ в первых символах *Count* , возвращается значение-1.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **mbtowc** преобразует *отсчет* или меньше байтов, на которые указывает *mbchar,* если *mbchar* не **NULL,** к соответствующему широкому символу. **mbtowc** хранит в результате широкий характер на *wchar,* если *wchar* не **ЯВЛЯЕТСЯ NULL**. **mbtowc** не исследует более **MB_CUR_MAX** байтов. **mbtowc** использует текущий локал для локально-зависимого поведения; **_mbtowc_l** идентичен, за исключением того, что он использует локал, передаваемый в вместо. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **mbtowc** преобразует *число* байтов, на которое указывает *мбчар*, если *мбчар* не равно **null**, в соответствующий расширенный символ. **mbtowc** сохраняет полученный расширенный символ в параметре *WCHAR,* если *WCHAR* не равен **null**. **mbtowc** не анализирует больше **MB_CUR_MAX** байтов. **mbtowc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbtowc_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -156,7 +156,7 @@ Attempt to convert a NULL pointer to a wide character:
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>
