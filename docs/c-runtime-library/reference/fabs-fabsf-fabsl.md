@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347550"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920244"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -75,23 +75,23 @@ long double fabsl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Fabs функции** вернуть абсолютное значение *аргумента x*. Ошибка не возвращается.
+Функции **Fabs** возвращают абсолютное значение аргумента *x*. Ошибка не возвращается.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|- ЗНАН,IND|Нет|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-СЗ позволяет перегружать, так что вы можете вызвать \<перегрузки **fabs,** если вы включаете cmath> заголовок. В программе C, **fabs** всегда принимает и возвращает **двойник.**
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **Fabs** , если включается заголовок \<cmath>. В программе на языке C **Fabs** всегда принимает и возвращает значение **типа Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок C|Обязательный заголовок C++|
+|Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|-----------------------|---------------------------|
-|**фабс**, **fabsf**, **fabsl**|\<math.h>|\<cmath> или \<math.h>|
+|**Fabs**, **fabsf**, **фабсл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

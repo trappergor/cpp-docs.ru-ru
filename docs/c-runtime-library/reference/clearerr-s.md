@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350055"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917212"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -49,20 +49,20 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
-Указатель на структуру **FILE**
+*вышестоящий*<br/>
+Указатель на структуру **файла**
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль в случае успеха; **EINVAL,** если *поток* **NULL**.
+Нуль в случае успеха; **Еинвал** , если *Stream* имеет **значение NULL**.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **clearerr_s** сбрасывает индикатор ошибки и индикатор конца файла для *потока.* Индикаторы ошибки не очищаются автоматически; как только индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будет вызвано значение ошибки **clearerr_s,** **clearerr,** [fseek,](fseek-fseeki64.md) **fsetpos**или [rewind.](rewind.md)
+Функция **clearerr_s** сбрасывает индикатор ошибки и индикатор конца файла для *Stream*. Индикаторы ошибок не очищаются автоматически; После того как индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будут вызваны **clearerr_s**, **клеарерр**, [fseek](fseek-fseeki64.md), **fsetpos**или [Rewind](rewind.md) .
 
-Если *поток* **NULL,** вызовуется недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция устанавливает **errno** к **EINVAL** и возвращает **EINVAL**.
+Если *Stream* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -120,14 +120,14 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Write error: Bad file descriptor
 Will input cause an error? n
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>

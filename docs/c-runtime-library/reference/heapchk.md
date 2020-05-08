@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344061"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916215"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_heapchk** возвращает одну из следующих констант, определенных в Malloc.h.
+**_heapchk** возвращает одну из следующих целочисленных констант манифеста, определенных в malloc. h.
 
 |Возвращаемое значение|Условие|
 |-|-|
@@ -60,13 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Куча не инициализирована. |
 | **_HEAPOK** | Вероятно, куча согласована. |
 
-Кроме того, если ошибка происходит, **_heapchk** устанавливает **errno** к **ENOSYS**.
+Кроме того, при возникновении ошибки **_heapchk** **устанавливает значение** **еносис**.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_heapchk** помогает отладить проблемы, связанные с кучей, проверяя на минимальную согласованность кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция **возвращается _HEAPOK** и устанавливает **errno** **в ENOSYS.**
+Функция **_heapchk** помогает отладить проблемы, связанные с кучей, с помощью проверки на наличие минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** **и устанавливает для** **еносис**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -121,7 +121,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>См. также раздел
 
-[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapmin](heapmin.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

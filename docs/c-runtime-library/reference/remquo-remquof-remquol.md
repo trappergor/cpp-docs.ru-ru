@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332838"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917819"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -60,32 +60,32 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Параметры
 
-*число*<br/>
+*число ключей*<br/>
 Числитель.
 
-*Деном*<br/>
+*деном*<br/>
 Знаменатель.
 
-*Кво*<br/>
+*кво*<br/>
 Указатель на целое число для хранения значения, которое имеет знак и приблизительное абсолютное значение частного.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**remquo** возвращает плавающую точку остаток *x* / *y*. Если значение *y* 0.0, **remquo** возвращает тихий NaN. Для получения информации о представлении тихого NaN семьи **printf,** [см. printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **remquo** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **remquo** вычисляет плавающую точку остатка *f* *x* / *y* так, что *x* = *i* \* *y* + *f*, где *я* целый ряд, *f* имеет такой же знак как *x,* и абсолютное значение *f* меньше чем абсолютное значение *y.*
+Функция **remquo** вычисляет *f* *x* / *y* остатка с плавающей запятой таким образом, что *x* = *i* \* *y* + *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-СЗ позволяет перегружать, так что вы можете вызвать перегрузки **remquo,** которые принимают и возвращают **поплавок** или **длинные** **двойные** значения. В программе **C, remquo** всегда принимает 2 **двойных** аргумента и возвращает **двойник**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **remquo** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **remquo** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок (C)|Обязательный заголовок (C++)|
+|Функция|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |--------------|---------------------|-|
-|**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> или \<math.h>|
+|**remquo**, **ремкуоф**, **ремкуол**|\<math.h>|\<cmath> или \<math.h>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 0c19fefcf6a766842ee2e25cbe6bdb61bbf48e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333347"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917020"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -53,7 +53,7 @@ int _chdrive(
 
 ### <a name="parameters"></a>Параметры
 
-*Диске*<br/>
+*диск*<br/>
 Целое число от 1 до 26, указывающее текущий рабочий диск (1 = A, 2 = B и т. д.).
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -62,13 +62,13 @@ int _chdrive(
 
 ## <a name="remarks"></a>Remarks
 
-Если *диск* не находится в диапазоне от 1 до 26, обработчик недействительных параметров вызывается, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, **функция _chdrive** возвращается -1, **errno** устанавливается **на EACCES,** и **_doserrno** установлен на **ERROR_INVALID_DRIVE.**
+Если параметр *Drive* не находится в диапазоне от 1 до 26, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция **_chdrive** возвращает значение-1 **, а** **для свойства** **_doserrno** устанавливается значение **ERROR_INVALID_DRIVE**.
 
-Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Для получения дополнительной [информации см.](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)
+Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Дополнительные сведения см. в разделе [сеткуррентдиректори](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 Функция **_chdrive** изменяет текущий рабочий диск, а функция **_chdir** — текущий рабочий каталог.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

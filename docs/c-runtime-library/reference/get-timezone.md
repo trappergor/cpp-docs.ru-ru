@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-ms.openlocfilehash: 94dfae1aaaddf9c545af4309d3ddc62a0bcb33f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28838825ab7a15f312f5f75a8ad9166926979690
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344902"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918500"
 ---
 # <a name="_get_timezone"></a>_get_timezone
 
@@ -50,20 +50,20 @@ error_t _get_timezone(
 
 ### <a name="parameters"></a>Параметры
 
-*Секунд*<br/>
+*несколько*<br/>
 Разница в секундах между временем в формате UTC и местным временем.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Нулевой, если успешно или **errno** значение, если ошибка происходит.
+Нуль в случае успеха или **значение** пересчета при возникновении ошибки.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_get_timezone** получает разницу в секундах между UTC и местным временем в качестве целых. Значение по умолчанию — 28800 секунд (тихоокеанское время, на 8 часов отстающее от UTC).
+Функция **_get_timezone** извлекает разность в секундах между временем UTC и местным временем в виде целого числа. Значение по умолчанию — 28800 секунд (тихоокеанское время, на 8 часов отстающее от UTC).
 
-Если *секунды* **NULL,** вызовуется обработчик параметров недействительный, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция устанавливает **errno** к **EINVAL** и возвращает **EINVAL**.
+Если значение *секунд* равно **null**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

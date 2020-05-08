@@ -1,6 +1,6 @@
 ---
 title: Устаревшие функции
-description: Перечисляет устаревшие функции, которые были устаревшими и удалены из библиотеки времени выполнения Microsoft C (CRT).
+description: Список устаревших функций, которые устарели и удалены из библиотеки времени выполнения Microsoft C (CRT).
 ms.date: 4/2/2020
 api_name:
 - _beep
@@ -36,7 +36,7 @@ api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -65,16 +65,16 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: 5c3ebd9ff3533439cde2f1b46d100976b18e02c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b8a094294abba46ae78e9d3529ccf3a7b0a31f39
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351001"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919895"
 ---
 # <a name="obsolete-functions"></a>Устаревшие функции
 
-Некоторые функции библиотеки устарели и имеют более новые эквиваленты. Мы рекомендуем вам изменить эти функции на обновленные версии. Другие устаревшие функции были удалены из CRT. В этой статье перечислены функции, устаревшие как устаревшие, и функции, удаленные в конкретной версии Visual Studio.
+Некоторые функции библиотеки устарели и имеют более новые эквиваленты. Мы рекомендуем изменить эти функции на обновленные версии. Другие устаревшие функции были удалены из CRT. В этой статье перечислены устаревшие функции, а также функции, удаленные в определенной версии Visual Studio.
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Не рекомендуемые к использованию как устаревшие в Visual Studio 2015
 
@@ -84,7 +84,7 @@ ms.locfileid: "81351001"
 |`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw), [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)или [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
 |`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
+|`_seterrormode`|[Функцию SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
 |`_beep`|[Beep](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
 |`_sleep`|[Сон](/windows/win32/api/synchapi/nf-synchapi-sleep)|
 |`_getsystime`|[GetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
@@ -99,8 +99,8 @@ ms.locfileid: "81351001"
 |[_get_output_format](../c-runtime-library/get-output-format.md)|Отсутствуют|
 |[_heapadd](../c-runtime-library/heapadd.md)|Отсутствуют|
 |[_heapset](../c-runtime-library/heapset.md)|Отсутствуют|
-|[inp, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Отсутствуют|
-|[outp, outpw, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Отсутствуют|
+|[InP, инпв, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)|Отсутствуют|
+|[ыходной, аутпв, _outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md)|Отсутствуют|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|Отсутствуют|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Удаленные из CRT в более ранних версиях Visual Studio

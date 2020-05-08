@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 6e8f90a7aa74ca3e890307f95b5f293f0be3575f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9a98dfffc784d05a93f65a51a5250c31fe1dd596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343997"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920111"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -51,15 +51,15 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха **_heapmin** возвращает 0; в противном случае функция возвращает -1 и устанавливает **errno** в **ENOSYS.**
+В случае успеха **_heapmin** возвращает 0; в противном случае функция возвращает значение-1 **и устанавливает для** **еносис**.
 
 Дополнительные сведения об этом и других кодах возврата см. в статье [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_heapmin** сводит к минимуму кучи, высвобождая неиспользованную память кучи в операционную систему. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция возвращает -1 и устанавливает **errno** в **ENOSYS.**
+Функция **_heapmin** свертывает кучу, освобождая неиспользуемую память кучи от операционной системы. Если операционная система не поддерживает **_heapmin**(например, Windows 98), функция **возвращает значение-1 и устанавливает для** **еносис**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -71,8 +71,8 @@ int _heapmin( void );
 
 ## <a name="see-also"></a>См. также раздел
 
-[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>
-[Бесплатный](free.md)<br/>
+[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[свободный](free.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

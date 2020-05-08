@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347936"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915060"
 ---
 # <a name="_eof"></a>_eof
 
@@ -52,22 +52,22 @@ int _eof(
 
 ### <a name="parameters"></a>Параметры
 
-*Fd*<br/>
+*демо*<br/>
 Дескриптор файла, ссылающийся на открытый файл.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_eof** возвращает 1, если текущее положение — это конец файла, или 0, если это не так. Значение возврата -1 указывает на ошибку; в этом случае вызывается недействительный обработчик параметров, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, **errno** устанавливается на **EBADF**, который указывает на недействительный дескриптор файла.
+**_eof** возвращает значение 1, если текущая точка — конец файла, или значение 0, если это не так. Возвращаемое значение, равное-1, указывает на ошибку; в этом случае вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **, для** параметра **значение EBADF**устанавливается значение, указывающее на недопустимый дескриптор файла.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_eof** определяет, был ли достигнут конец файла, связанного с *fd.*
+Функция **_eof** определяет, был ли достигнут конец файла, связанного с *демоном* .
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|Необязательный заголовок|
+|Функция|Обязательный заголовок|Необязательный заголовок|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
@@ -119,13 +119,13 @@ int main( void )
 This file contains some text.
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Number of bytes read = 29
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)<br/>
 [Низкоуровневый ввод-вывод](../../c-runtime-library/low-level-i-o.md)<br/>

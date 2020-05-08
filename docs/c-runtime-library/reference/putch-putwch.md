@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338423"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916180"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Символ, который требуется вывести.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение *c* в случае успешного выполнения. Если **_putch** не удается, он возвращает **EOF**; если **_putwch** не удается, он возвращает **WEOF**.
+Возвращает значение *c* в случае успешного выполнения. При сбое **_putch** возвращается **EOF**; Если **_putwch** не выполняется, возвращается значение **WEOF**.
 
 ## <a name="remarks"></a>Remarks
 
-Эти функции записывают символ *c* непосредственно, без буферизации, на консоль. В Windows NT функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.
+Эти функции записывают символ *c* напрямую, без буферизации, в консоль. В Windows NT функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.
 
-Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Для получения дополнительной информации **см. _putch_nolock,** **_putwch_nolock**.
+Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Дополнительные сведения см. в разделе **_putch_nolock**, **_putwch_nolock**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -103,6 +103,6 @@ wint_t _putwch(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Консоль и порт I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

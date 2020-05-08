@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355581"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913914"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -74,25 +74,25 @@ long double sqrtl(
 
 ## <a name="remarks"></a>Remarks
 
-Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **sqrt,** которые принимают **плавающие** или **длинные** **двойные** типы. В программе C, **sqrt** всегда принимает и возвращает **двойник.**
+Так как C++ допускает перегрузку, можно вызывать перегрузки **sqrt** , которые принимают типы **float** или **Long** типа **Double** . В программе C функция **sqrt** всегда принимает и возвращает **Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **sqrt** возвращают квадратный корень *x*. По умолчанию, если *x* является отрицательным, **sqrt** возвращает неопределенный NaN.
+Функции **sqrt** возвращают квадратный корень из *x*. По умолчанию, если *x* является отрицательным, функция **sqrt** возвращает неопределенное значение NaN.
 
-|Входные данные|Исключение SEH|**_matherr** Исключение|
+|Входные данные|Исключение SEH|**_matherr** Об|
 |-----------|-------------------|--------------------------|
-|- ЗНАН,IND|Нет|_DOMAIN|
-|- ∞|Нет|_DOMAIN|
-|x < 0|Нет|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
+|- ∞|нет|_DOMAIN|
+|x < 0|нет|_DOMAIN|
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
-|**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
+|**sqrt**, **скртф**, **sqrt**|\<math.h>|\<cmath>|
 
 Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

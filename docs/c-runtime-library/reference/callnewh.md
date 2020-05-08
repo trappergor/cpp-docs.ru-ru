@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: d93de7f963a370810ed3b30af04d6d602abf6313
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3990d4b15c25cfd6c753c2b1d44c112971ff59af
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918804"
 ---
 # <a name="_callnewh"></a>_callnewh
 
@@ -47,12 +47,12 @@ int _callnewh(
 
 ### <a name="parameters"></a>Параметры
 
-*Размер*<br/>
+*size*<br/>
 Объем памяти, который [оператор new](../../cpp/new-operator-cpp.md) пытается выделить.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-|Значение|Описание|
+|Применение|Описание|
 |-----------|-----------------|
 |0|Ошибка: новый обработчик либо не установлен, либо не активен.|
 |1|Успешное завершение: новый обработчик установлен и активен. Выделение памяти можно повторить.|
@@ -65,7 +65,7 @@ int _callnewh(
 
 *Новый обработчик* вызывается, если [оператору new](../../cpp/new-operator-cpp.md) не удается успешно выделить память. После этого новый обработчик может инициировать соответствующее действие, например освобождение памяти для успешного выполнения последующих распределений.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

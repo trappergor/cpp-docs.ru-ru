@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +46,19 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a53102f991ec7467fd74e1997f8d5b7419b15aa1
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362908"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919983"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
 Увеличивает строковый указатель на один символ.
 
 > [!IMPORTANT]
-> **_mbsinc** и **_mbsinc_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsinc** и **_mbsinc_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -82,28 +82,28 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Текущего*<br/>
+*данном*<br/>
 Указатель символа.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает указатель на символ, который сразу же следует *за течением.*
+Каждая из этих подпрограмм возвращает указатель на символ, который непосредственно следует за *текущим*.
 
 ## <a name="remarks"></a>Remarks
 
-**Функция _mbsinc** возвращает указатель на первый байт мультибайтного символа, который сразу же следует *за течением.* **_mbsinc** распознает последовательности мультибайт-символов в соответствии со [страницой мультибайткода,](../../c-runtime-library/code-pages.md) которая используется в настоящее время; **_mbsinc_l** идентичен, за исключением того, что вместо этого он использует параметр локализации, который передается в. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **_mbsinc** возвращает указатель на первый байт многобайтового символа, который непосредственно следует за *текущим*. **_mbsinc** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) ; **_mbsinc_l** является идентичным за исключением того, что вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Функция общего текста **_tcsinc,** определенная в Tchar.h, карты **для _mbsinc,** если **_MBCS** была определена, или **для _wcsinc,** если **_UNICODE** было определено. В противном случае, **_tcsinc** карты для **_strinc**. **_strinc** и **_wcsinc** являются однобайными и широкохарактерными версиями **_mbsinc.** **_strinc** и **_wcsinc** предоставляются только для этого отображения и не должны использоваться в противном случае. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+Функция Generic-Text **_tcsinc**, определенная в файле Tchar. h, сопоставляется с **_mbsinc** , если определена **_MBCS** , или для **_wcsinc** , если определено **_UNICODE** . В противном случае **_tcsinc** сопоставляется с **_strinc**. **_strinc** и **_wcsinc** — это версии **_mbsinc**для однобайтовых символов и расширенных символов. **_strinc** и **_wcsinc** предоставляются только для этого сопоставления и не должны использоваться в других случаях. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
-Если *ток* **NULL,** вызовуется обработчик параметров недействительного, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция возвращает **EINVAL** и устанавливает **errno** **в EINVAL.**
+Если *Current* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **еинвал** и **устанавливает значение** переводится в **еинвал**.
 
 > [!IMPORTANT]
 > Эти функции могут быть подвержены угрозам переполнения буфера. Переполнение буфера можно использовать для атак на систему, поскольку оно может привести к несанкционированному повышению уровня привилегий. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -118,7 +118,7 @@ unsigned char *_mbsinc_l(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>
