@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909298"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -84,20 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Символ, который требуется поместить обратно.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обе функции возвращают символ *c* в случае успеха. При наличии ошибки **_ungetch** возвращает значение **EOF** и **_ungetwch** возвращает **WEOF.**
+Обе функции возвращают символ *c* в случае успеха. Если возникает ошибка, **_ungetch** возвращает значение **EOF** , а **_ungetwch** возвращает **WEOF**.
 
 ## <a name="remarks"></a>Remarks
 
-Эти функции толкают символ *c* обратно к консоли, в результате чего *c* будет следующий символ читать **_getch** или **_getche** (или **_getwch** или **_getwche).** **_ungetch** и **_ungetwch** не удается, если они называются более одного раза до следующего чтения. Аргумент *c* не может быть **EOF** (или **WEOF).**
+Эти функции отправляют символ *c* обратно в консоль, что приводит к тому, что *c* будет считаться следующим символом **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** завершаются ошибкой, если они вызываются более одного раза перед следующим чтением. Аргумент *c* не может быть **EOF** (или **WEOF**).
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -159,6 +159,6 @@ Whitetoken = White
 
 ## <a name="see-also"></a>См. также раздел
 
-[Консоль и порт I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

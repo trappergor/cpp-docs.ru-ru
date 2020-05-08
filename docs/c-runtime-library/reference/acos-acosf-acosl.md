@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348973"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916890"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -63,31 +63,31 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Значение между -1 и 1, для которого можно вычислить арккозин (обратный косин).
+Значение от-1 до 1, для которого вычисляется арккосинус (обратный косинус).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функция **acos** возвращает арккосин *x* в диапазоне от 0 до "радианов".
+Функция **Acos** Возвращает арккосинус *x* в диапазоне от 0 до π радиан.
 
-По умолчанию, если *x* меньше -1 или больше, чем 1, **acos** возвращает сяротку.
+По умолчанию, если *x* меньше-1 или больше 1, **Acos** возвращает неопределенное значение.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|- ЗНАН,IND|Нет|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-Из-за того, что СЗ позволяет перегружать, можно вызывать перегрузки **акосов,** которые принимают и возвращают **плавающие** и **длинные** **двойные** типы. В программе C, **acos** всегда принимает и возвращает **двойник.**
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **Acos** , которые принимают и возвращают типы **float** и **Long** **Double** . В программе на языке C **Acos** всегда принимает и возвращает значение **типа Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|Необязательные заголовки|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**Acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Пример
 

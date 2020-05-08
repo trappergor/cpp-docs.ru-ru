@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,19 +48,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317024"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911044"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Возвращают указатель на первый символ в заданной строке, который отсутствует в другой заданной строке.
 
 > [!IMPORTANT]
-> **_mbsspnp** и **_mbsspnp_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** и **_mbsspnp_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -86,26 +86,26 @@ unsigned char *_mbsspnp_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Ул*<br/>
+*str*<br/>
 Строка для поиска, завершающаяся символом NULL.
 
-*Charset*<br/>
+*charset*<br/>
 Набор символов, завершающийся символом NULL.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_strspnp,** **_wcsspnp,** и **_mbsspnp** вернуть указатель к первому символу в *str,* который не принадлежит к набору символов в *charset*. Каждая из этих функций **возвращаетNULL,** если *str* полностью состоит из символов из *charset.* Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
+**_strspnp**, **_wcsspnp**и **_mbsspnp** возвращают указатель на первый символ в *str* , который не принадлежит набору символов в *CharSet*. Каждая из этих функций возвращает **значение NULL** , если *str* состоит исключительно из символов из *CharSet*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_mbsspnp** возвращает указатель на мультибайтный символ, который является первым символом в *str,* который не принадлежит к набору символов в *charset.* **_mbsspnp** распознает последовательности мультибайт-символов в соответствии с [многобайтовым кодом страницы,](../../c-runtime-library/code-pages.md) которая используется в настоящее время. Поиск не включает завершающие нуль-символы.
+Функция **_mbsspnp** возвращает указатель на многобайтовый символ, который является первым символом в *str* , не принадлежащим набору символов в *CharSet*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с используемой в данный момент [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) . Поиск не включает завершающие нуль-символы.
 
-Если *str* или *charset* является нулевой указатель, эта функция вызывает недействительным обработчик параметров, как описано в [параметре валидации](../../c-runtime-library/parameter-validation.md). Если выполнение разрешено продолжать, функция возвращает **NULL** и устанавливает **errno** в **EINVAL.**
+Если параметр *str* или *CharSet* является пустым указателем, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **значение NULL** и **устанавливает** для **еинвал**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -113,9 +113,9 @@ unsigned char *_mbsspnp_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** и **_wcsspnp** являются однобайными персонажами и широкохарактерными версиями **_mbsspnp.** **_strspnp** и **_wcsspnp** ведут себя **одинаково,** _mbsspnp в противном случае; они предоставляются только для этого отображения и не должны использоваться по какой-либо другой причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** и **_wcsspnp** — однобайтовые и версии **_mbsspnp**с расширенными символами. поведение **_strspnp** и **_wcsspnp** идентично **_mbsspnp** в противном случае. они предоставляются только для этого сопоставления и не должны использоваться по какой бы то ни было причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** идентичен, за исключением того, что он использует параметр локализации, передаваемый в вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** является идентичным, за исключением того, что в нем используется переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -143,16 +143,16 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 abbage
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>

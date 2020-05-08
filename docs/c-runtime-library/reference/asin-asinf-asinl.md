@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cfee30270b8ed0daa5d600fec65659fbf07162fd
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334128"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909265"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -65,27 +65,27 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функция **осин** возвращает дугсин (обратную функцию синуса) *х* в диапазоне - от 2 до 2 рад.
+Функция **ASIN** Возвращает арксинус (функцию обратного синуса) *x* в диапазоне от-π/2 до π/2 радиан.
 
-По умолчанию, если *x* меньше -1 или больше, чем 1, **asin** возвращает сятворное время.
+По умолчанию, если *x* меньше-1 или больше 1, **ASIN** возвращает неопределенное значение.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|**Недопустимый**|**_DOMAIN**|
-|- **ЗНАН**, **IND**|Нет|**_DOMAIN**|
+|± **КНАН**, **с**|нет|**_DOMAIN**|
 |&#124;x&#124;>1|**Недопустимый**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 
-Поскольку СЗ допускает перегрузку, можно вызывать перегрузки **осин** с **поплавком** и **длинными** **двойными** значениями. В программе C, **asin** всегда берет и возвращает **двойной**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ASIN** с **плавающими** **значениями типа** float и **Long** . В программе на C **ASIN** всегда принимает и возвращает **Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-------------|---------------------|-|
-|**асин**, **asinf**, **asinl**|\<math.h>|\<cmath> или \<math.h>|
+|**ASIN**, **асинф**, **ASIN**|\<math.h>|\<cmath> или \<math.h>|
 
 ## <a name="example"></a>Пример
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333683"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913351"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,18 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>Параметры
 
-*Z*<br/>
+*гармошкой*<br/>
 Комплексное число.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_cabs** возвращает абсолютную ценность своего аргумента в случае успеха. На переполнении, **_cabs** возвращает **HUGE_VAL** и устанавливает **errno** к **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
+При успешном выполнении **_cabs** возвращает абсолютное значение его аргумента. При переполнении **_cabs** возвращает **HUGE_VAL** **и задает для** **ERANGE**. Изменить обработку ошибок можно с помощью функции [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_cabs** вычисляет абсолютное значение сложного числа, которое должно быть структурой типа [_complex.](../../c-runtime-library/standard-types.md) Структура *z* состоит из реального компонента *x* и воображаемого компонента *y.* Призыв к **_cabs** производит значение, эквивалентное выражению. `sqrt( z.x * z.x + z.y * z.y )`
+Функция **_cabs** вычисляет абсолютное значение комплексного числа, которое должно быть структурой типа [_complex](../../c-runtime-library/standard-types.md). Структура *z* состоит из вещественного компонента *x* и мнимого компонента *y*. Вызов **_cabs** возвращает значение, эквивалентное значению выражения `sqrt( z.x * z.x + z.y * z.y )`.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
