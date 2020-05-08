@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6fcb7feeae72ff15d7b1ed0d55c5abbb408135a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346553"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914960"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -77,21 +77,21 @@ long double fmodl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**fmod** возвращает оставшуюся часть *плавающей* / точки x*y.* Если значение *y* 0.0, **fmod** возвращает тихий NaN. Для получения информации о представлении тихого [printf](printf-printf-l-wprintf-wprintf-l.md)NaN семьей **printf,** см.
+**FMOD** возвращает остаток от деления *x* / *y*на значение с плавающей запятой. Если значение *y* равно 0,0, **FMOD** возвращает нетихом NaN. Сведения о представлении нескрытого числа NaN в семействе **printf** см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Remarks
 
-Функция **fmod** вычисляет плавающую точку остатка *f* *x* / *y* так, что *x* = *i* \* *y* + *f*, где *я* целый ряд, *f* имеет такой же знак как *x,* и абсолютное значение *f* меньше чем абсолютное значение *y.*
+Функция **FMOD** вычисляет *f* *x* / *y* остатка с плавающей запятой таким образом, что *x* = *i* \* *y* + *f*, где *i* является целым числом, *f* имеет тот же знак, что и *x*, а абсолютное значение *f* меньше, чем абсолютное значение *y*.
 
-СЗ позволяет перегружать, так что вы можете вызвать перегрузки **fmod,** которые принимают и возвращают **поплавок** и **длинные** **двойные** значения. В программе **C, fmod** всегда принимает два **двойных** аргумента и возвращает **двойной**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **FMOD** , которые принимают и возвращают значения **float** и **Long** **Double** . В программе на языке C **FMOD** всегда принимает два аргумента **Double** и возвращает значение **типа double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
-|**fmod**, **fmodf**, **fmodl**|\<math.h>|
+|**FMOD**, **фмодф**, **фмодл**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

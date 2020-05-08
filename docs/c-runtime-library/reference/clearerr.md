@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: 174c94136cdc8b603416ff1dd239703489925bae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc9ce31c4bdb0f7bedba461dd48b4072bfc50613
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916973"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,18 +49,18 @@ void clearerr(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*вышестоящий*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **clearerr** сбрасывает индикатор ошибки и индикатор конца файла для *потока.* Индикаторы ошибки не очищаются автоматически; как только индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будет вызван **осекретание,** [fseek,](fseek-fseeki64.md) **fsetpos**или [перемотка назад.](rewind.md)
+Функция **клеарерр** сбрасывает индикатор ошибки и индикатор конца файла для *Stream*. Индикаторы ошибок не очищаются автоматически; После того как индикатор ошибки для указанного потока установлен, операции в этом потоке продолжают возвращать значение ошибки до тех пор, пока не будет вызван **клеарерр**, [fseek](fseek-fseeki64.md), **fsetpos**или [Rewind](rewind.md) .
 
-Если *поток* **NULL,** вызовуется недействительный обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция устанавливает **errno** к **EINVAL** и возвращает. Для получения дополнительной информации о **errno** и коды ошибок, см [Errno Констанс](../../c-runtime-library/errno-constants.md).
+Если *Stream* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **еинвал** и возвращает. Дополнительные **сведения о кодах ошибок и код** ошибки см. в разделе " [константы](../../c-runtime-library/errno-constants.md)".
 
 Существует более безопасная версия этой функции, см. раздел [clearerr_s](clearerr-s.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -110,7 +110,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Write error: No error
@@ -118,7 +118,7 @@ Will input cause an error? n
 No read error
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Обработка ошибок](../../c-runtime-library/error-handling-crt.md)<br/>
 [Потоковый ввод-вывод](../../c-runtime-library/stream-i-o.md)<br/>
