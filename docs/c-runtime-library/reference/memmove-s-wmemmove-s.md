@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333156"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914093"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -70,7 +70,7 @@ errno_t wmemmove_s(
 Исходный объект.
 
 *count*<br/>
-Количество байтов **(memmove_s)** или символов **(wmemmove_s)** для копирования.
+Число байтов (**memmove_s**) или символов (**wmemmove_s**) для копирования.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -78,19 +78,19 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>Ситуации, которые могут привести к ошибке
 
-|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержание *dest*|
+|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержимое конечного *объекта*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**Null**|any|any|**EINVAL**|не изменено|
-|any|any|**Null**|**EINVAL**|не изменено|
-|any|< *Рассчитывать*|any|**ERANGE**|не изменено|
+|**ЗАКАНЧИВАЮЩ**|any|any|**еинвал**|не изменено|
+|any|any|**ЗАКАНЧИВАЮЩ**|**еинвал**|не изменено|
+|any|< *расчета*|any|**ERANGE**|не изменено|
 
 ## <a name="remarks"></a>Remarks
 
-Копии *подсчитывают* байты символов от *src* к *dest*. Если некоторые области области источника и назначения перекрываются, **memmove_s** гарантирует, что исходные байты исходного кода в перекрывающейся области будут скопированы перед перезаписани.
+Копирует *число* байтов символов из *src* в *dest*. Если некоторые регионы исходной области и назначения перекрываются, **memmove_s** гарантирует, что исходные байты в перекрывающейся области будут скопированы перед перезаписью.
 
-Если *dest* или если *src* является нулевой указатель, или если строка назначения слишком мала, эти функции вызывают недействительный обработчик параметров, как описано в [параметре валидации.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эти функции возвращают **EINVAL** и устанавливают **errno** **в EINVAL.**
+Если *dest* или если *src* является пустым указателем или если строка назначения слишком мала, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **еинвал** и применяют **значение "** **еинвал**".
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -130,14 +130,14 @@ int main()
 }
 ```
 
-### <a name="output"></a>Выходные данные
+### <a name="output"></a>Вывод
 
 ```Output
 Before: 0123456789
 After: 0012345789
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

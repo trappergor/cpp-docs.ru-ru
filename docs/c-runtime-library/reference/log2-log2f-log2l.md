@@ -20,18 +20,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 29a1a9e2003091944a4587036c62a49d76333080
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341719"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911418"
 ---
 # <a name="log2-log2f-log2l"></a>log2, log2f, log2l
 
@@ -68,15 +68,15 @@ long double log2l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-На успех, возвращает возвращение log2 *x*.
+При успешном выполнении возвращает значение log2 *x*.
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблемы|Возвращает|
+|Проблема|Возвращает|
 |-----------|------------|
 |*x* < 0|NaN|
-|*х* 0 евро|-INFINITY|
-|*x* 1|+0|
+|*x* = ± 0|-INFINITY|
+|*x* = 1|+0|
 |+INFINITY|+INFINITY|
 |NaN|NaN|
 |ошибка домена|NaN|
@@ -86,13 +86,13 @@ long double log2l(
 
 ## <a name="remarks"></a>Remarks
 
-Если x является рядом, эта функция по существу возвращает нулевой индекс наиболее значительных 1 бит *х*.
+Если x является целым числом, эта функция фактически возвращает отсчитываемый от нуля индекс наиболее значимого 1 бита *x*.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Заголовок C|Заголовок C++|
+|Функция|Заголовок C|Заголовок C++|
 |--------------|--------------|------------------|
 |**log2**, **log2f**, **log2l**|\<math.h>|\<cmath>|
 

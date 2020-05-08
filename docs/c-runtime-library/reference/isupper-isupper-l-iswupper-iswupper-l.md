@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 713689649b33873796b7a73bad6a4ac6e8acc998
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 49aab47a72e7065cbd90935a431f59ec74b562ac
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342802"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910403"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper, _isupper_l, iswupper, _iswupper_l
 
@@ -72,30 +72,30 @@ int _iwsupper_l(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Проверяемое целое число.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает сядр и незеро, если *c* является особым представлением верхней буквы. **изупер** возвращает ненулевое значение, если *c* является символом верхнего регистра (A - No). **iswupper** возвращает ненулевое значение, если *c* является широким символом, который соответствует верхней букве, или если *c* является одним из реализации определены набор широких символов, для которых ни один из **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** является ненулевым. Каждая из этих процедур возвращает 0, если *c* не удовлетворяет условию теста.
+Каждая из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление прописной буквы. Функция **Upper** возвращает ненулевое значение, если *c* является символом верхнего регистра (a-Z). **iswupper** возвращает ненулевое значение, если *c* является расширенным символом, соответствующим прописной букве, или если *c* является одним из наборов расширенных символов, определяемых реализацией, для которых ни один из **исвкнтрл**, **исвдигит**, **исвпункт**или **исвспаце** не равен нулю. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций, которые имеют **_l** суффикса, используют место, которое передается в вместо текущего локализации для их поведения, зависящем от локализации. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с суффиксом **_l** используют переданный языковой стандарт вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **изуппера** и **_isupper_l** не определено, если *c* не EOF или в диапазоне от 0 до 0xFF, включительно. При использовании библиотеки CRT отладки и *c* не является одним из этих значений, функции повышают утверждение.
+Поведение функций **Upper** и **_isupper_l** не определено, если *c* не является EOF или находится в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из этих значений, функции создают утверждение.
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**ивуппер**|
+|**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper**|
 |**_istupper_l**|**_isupper_l**|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -103,7 +103,7 @@ int _iwsupper_l(
 |-------------|---------------------|
 |**isupper**|\<ctype.h>|
 |**_isupper_l**|\<ctype.h>|
-|**ивуппер**|\<ctype.h> или \<wchar.h>|
+|**iswupper**|\<ctype.h> или \<wchar.h>|
 |**_iswupper_l**|\<ctype.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
@@ -111,5 +111,5 @@ int _iwsupper_l(
 ## <a name="see-also"></a>См. также раздел
 
 [Классификация символов](../../c-runtime-library/character-classification.md)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Процедуры is, isw](../../c-runtime-library/is-isw-routines.md)<br/>

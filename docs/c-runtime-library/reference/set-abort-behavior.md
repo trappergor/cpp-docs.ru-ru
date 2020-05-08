@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +28,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: fd3a3c2f99d1702cdccf68328c2122b965b2d078
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 06f72597a384cc5c90b2e345e62e13dee96c4dca
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337872"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913129"
 ---
 # <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 Указывает действие, выполняемое при аварийном завершении программы.
 
 > [!NOTE]
-> Не используйте функцию [прерывания](abort.md) для закрытия приложения Microsoft Store, за исключением сценариев тестирования или отладки. Программные или утилиты для использования не допускаются в соответствии с [правилами Microsoft Store.](/legal/windows/agreements/store-policies) Для получения дополнительной [UWP app lifecycle](/windows/uwp/launch-resume/app-lifecycle)информации см.
+> Не используйте функцию [Abort](abort.md) для завершения работы Microsoft Store приложения, за исключением сценариев тестирования или отладки. В соответствии с [политиками Microsoft Store](/legal/windows/agreements/store-policies)не разрешено закрывать приложения Магазина программным способом или с помощью пользовательского интерфейса. Дополнительные сведения см. в статье [жизненный цикл приложения UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -53,11 +53,11 @@ unsigned int _set_abort_behavior(
 
 ### <a name="parameters"></a>Параметры
 
-*Флаги*<br/>
-Новое значение [флагов прерывания.](abort.md)
+*flags*<br/>
+Новое значение флагов [прерывания](abort.md) .
 
 *маска*<br/>
-Маска для [прерывания](abort.md) флаги биты установить.
+Маска для устанавливаемых битов флагов [прерывания](abort.md) .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -65,9 +65,9 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>Remarks
 
-Есть два [флага прерывания:](abort.md) **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT.** **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение, когда программа ненормально прекращена. В сообщении говорится, что приложение вызвало функцию [прерывания.](abort.md) По умолчанию сообщение выводится. **_CALL_REPORTFAULT,** если набор, указывает, что сброс аварии Watson генерируется и сообщается, когда [прерывание](abort.md) вызывается. По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
+Существует два флага [прерывания](abort.md) : **_WRITE_ABORT_MSG** и **_CALL_REPORTFAULT**. **_WRITE_ABORT_MSG** определяет, печатается ли полезное текстовое сообщение при аварийном завершении программы. В сообщении указывается, что приложение вызвало функцию [Abort](abort.md) . По умолчанию сообщение выводится. **_CALL_REPORTFAULT**, если задано, указывает, что создается дамп аварийной работы программы Watson и сообщается при вызове метода [Abort](abort.md) . По умолчанию функция создания отчетов о аварийных дампах включена в неотладочных сборках.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -100,4 +100,4 @@ Suppressing the abort message. If successful, this message will be the only outp
 
 ## <a name="see-also"></a>См. также раздел
 
-[Прервать](abort.md)<br/>
+[рвал](abort.md)<br/>

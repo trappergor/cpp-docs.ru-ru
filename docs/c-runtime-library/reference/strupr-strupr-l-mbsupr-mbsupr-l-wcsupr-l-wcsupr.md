@@ -28,7 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,19 +70,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c30aa9e1a73ba51931caff726837841f76922139
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362898"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912335"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 Преобразует строку в верхний регистр. Есть более безопасные версии этих функций. См. раздел [Функции _strupr_s _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsupr** и **_mbsupr_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr** и **_mbsupr_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -139,10 +139,10 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Ул*<br/>
+*str*<br/>
 Строка для преобразования букв.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -151,15 +151,15 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_strupr** преобразует, на месте, каждая нижняя буква в *str* к uppercase. Преобразование определяется **LC_CTYPE** параметром категории локализовать. Другие символы не изменяются. Для получения дополнительной информации о **LC_CTYPE,** [см. setlocale](setlocale-wsetlocale.md). Версии этих функций без **_l** суффикса используют текущий локали; версии с **_l** суффикс идентичны, за исключением того, что они используют локали, передаваемую вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **_strupr** преобразует, на месте, каждую строчную букву в *str* в верхний регистр. Преобразование определяется параметром категории **LC_CTYPE** языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт. версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**_wcsupr** и **_mbsupr** являются широкохарактерными и многобайтовыми версиями **_strupr.** Аргументивив и значение возврата **_wcsupr** являются широкохарактерными строками; _mbsupr **являются** многобайтными строками. В остальном эти три функции ведут себя идентично.
+**_wcsupr** и **_mbsupr** — это версии **_strupr**для расширенных символов и многобайтовых символов. Аргумент и возвращаемое значение **_wcsupr** являются строками расширенных символов; **_mbsupr** являются строками многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-Если *str* является нулевой указателем, вызовуется обработчик параметров недействительных, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эти функции возвращают исходную строку и устанавливают **errno** **в EINVAL.**
+Если *str* является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают исходную строку и присвойте параметру " **еинвал**" значение " **No** @ @".
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -184,6 +184,6 @@ unsigned char *_mbsupr_l(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Локаль](../../c-runtime-library/locale.md)<br/>
-[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

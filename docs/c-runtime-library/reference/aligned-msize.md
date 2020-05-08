@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 21ae07c90bbf9a729a212a97b7de3e0916f8e2c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e3ff243ba9a135cf660d09fc5b3690f531702aab
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350601"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912904"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -57,7 +57,7 @@ size_t _msize(
 *выравнивание*<br/>
 Значение выравнивания, которое должно быть целой степенью числа 2.
 
-*Смещение*<br/>
+*offset*<br/>
 Смещение в выделение памяти для принудительного выполнения выравнивания.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -66,13 +66,13 @@ size_t _msize(
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_aligned_msize** возвращает размер байтов блока памяти, выделенного вызовом [_aligned_malloc](aligned-malloc.md) или [_aligned_realloc.](aligned-realloc.md) Значения *выравнивания* и *смещения* должны быть такими же, как и значения, передаваемые функции, выделенной блоком.
+Функция **_aligned_msize** возвращает размер блока памяти в байтах, выделенного вызовом метода [_aligned_malloc](aligned-malloc.md) или [_aligned_realloc](aligned-realloc.md). Значения *выравнивания* и *смещения* должны совпадать со значениями, передаваемыми функции, которая выделяет блок.
 
-Когда приложение связано с отладкой версии библиотек исправления C, **_aligned_msize** решает [_aligned_msize_dbg.](aligned-msize-dbg.md) Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+Если приложение связано с отладочной версией библиотек времени выполнения C, **_aligned_msize** разрешается в [_aligned_msize_dbg](aligned-msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *memblock* является нулевой указатель или *выравнивание* не является силой 2, **_msize** вызывает недействительный обработчик параметров, как описано в [параметре валидации.](../../c-runtime-library/parameter-validation.md) Если ошибка обработана, функция устанавливает **errno** к **EINVAL** и возвращает -1.
+Эта функция проверяет свои параметры. Если *мемблокк* является пустым указателем или *Выравнивание* не является степенью числа 2, **_msize** вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, **функция устанавливает значение** по **еинвал** и возвращает-1.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -88,4 +88,4 @@ size_t _msize(
 
 ## <a name="see-also"></a>См. также раздел
 
-[Распределение памяти](../../c-runtime-library/memory-allocation.md)<br/>
+[Выделение памяти](../../c-runtime-library/memory-allocation.md)<br/>

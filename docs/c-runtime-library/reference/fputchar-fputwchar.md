@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 29d23dcaba75ad87b462a1a87c7a2ad9c8c7298b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346167"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912017"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar, _fputwchar
 
@@ -62,20 +62,20 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Символ, который требуется записать.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает записанный символ. Для **_fputchar**значение возврата **EOF** указывает на ошибку. Для **_fputwchar,** возвратное значение **WEOF** указывает на ошибку. Если c является **NULL,** эти функции генерируют недействительное исключение параметра, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, они возвращают **EOF** (или **WEOF)** и установить **errno** в **EINVAL**.
+Каждая из этих функций возвращает записанный символ. Для **_fputchar**возвращаемое значение **EOF** указывает на ошибку. Для **_fputwchar**возвращаемое значение **WEOF** указывает на ошибку. Если c равно **null**, эти функции создают исключение недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** (или **WEOF**) и применяют **параметру «** **еинвал**».
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Remarks
 
-Обе эти функции заражает один символ *c* для **stdout** и продвигает индикатор по мере необходимости. **_fputchar** эквивалентен `fputc( stdout )`. Это также эквивалентно **putchar**, но реализованы только в качестве функции, а не в качестве функции и макроса. В отличие от **fputc** и **putchar,** эти функции не совместимы со стандартом ANSI.
+Обе эти функции записывают один символ *c* в **stdout** и перемещает индикатор соответствующим образом. **_fputchar** эквивалентна `fputc( stdout )`. Она также эквивалентна **putchar**, но реализована только как функция, а не как функция и макрос. В отличие от **fputc** и **putchar**, эти функции несовместимы со стандартом ANSI.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -85,12 +85,12 @@ wint_t _fputwchar(
 
 ## <a name="requirements"></a>Требования
 
-|Компонент|Обязательный заголовок|
+|Функция|Обязательный заголовок|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях Universal Windows Platform (UWP). Стандартные ручьи потока, связанные с консолью –**stdin,** **stdout**и **stderr**— должны быть перенаправлены, прежде чем функции C run-time могут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальная платформа Windows (UWP). Стандартные дескрипторы потока, связанные с консолью (**stdin**, **stdout**и **stderr**), необходимо перенаправить, прежде чем функции времени выполнения C смогут использовать их в приложениях UWP. Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

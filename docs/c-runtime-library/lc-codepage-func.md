@@ -12,7 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea740bc335981ad7e1017ab4026fdc50b8fe8893
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351236"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914128"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -52,7 +52,7 @@ UINT ___lc_codepage_func(void);
 
 Внутренние функции CRT связаны с конкретной реализацией и подлежат изменению в каждом выпуске. Мы не рекомендуем использовать их в коде.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](global-state.md).
 
 ## <a name="requirements"></a>Требования
 

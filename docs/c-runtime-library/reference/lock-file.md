@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342112"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911528"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Блокирует объект **FILE** для обеспечения согласованности потоков, посягающих на объект **FILE** одновременно.
+Блокирует объект **File** для обеспечения согласованности потоков, обращающихся к **файловому** объекту одновременно.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,14 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Параметры
 
-*Файл*<br/>
+*File*<br/>
 Дескриптор файла.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_lock_file** блокирует объект **FILE,** указанный *файлом.* Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны быть сопоставлены в потоке.
+Функция **_lock_file** блокирует объект **File** , указанный в *файле*. Базовый файл не заблокирован **_lock_file**. Используйте [_unlock_file](unlock-file.md) для снятия блокировки с файла. Вызовы **_lock_file** и **_unlock_file** должны быть сопоставлены в потоке.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

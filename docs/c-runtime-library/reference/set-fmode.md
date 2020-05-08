@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: ba8a4b3867eb0a18d4a14cb2f5480bc5800303c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337710"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913043"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -51,20 +51,20 @@ errno_t _set_fmode(
 
 ### <a name="parameters"></a>Параметры
 
-*Режим*<br/>
-Режим перевода файлов желаемый: **_O_TEXT** или **_O_BINARY**.
+*mode*<br/>
+Требуемый режим преобразования файла: **_O_TEXT** или **_O_BINARY**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *режим* не **_O_TEXT,** **_O_BINARY** или **_O_WTEXT,** вызовуется обработчик параметров, как описано в [проверке параметров.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция устанавливает **errno** к **EINVAL** и возвращает **EINVAL**.
+Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *режим* не **_O_TEXT** или **_O_BINARY** или **_O_WTEXT**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
 ## <a name="remarks"></a>Remarks
 
-Функция задает глобальную переменную [_fmode](../../c-runtime-library/fmode.md). Эта переменная определяет режим перевода файлов по умолчанию для операций ввоза/ввоза файла **_open** и **_pipe.**
+Функция задает глобальную переменную [_fmode](../../c-runtime-library/fmode.md). Эта переменная задает режим преобразования файла по умолчанию для операций файлового ввода-вывода **_open** и **_pipe**.
 
-**_O_TEXT** и **_O_BINARY** определены в Fcntl.h. **EINVAL** определен в Errno.h.
+**_O_TEXT** и **_O_BINARY** определены в fcntl. h. **Еинвал** определяется в виде «н. h».
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -142,4 +142,4 @@ A   B   C   D   E   F   G   H   I   J   K   L
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_get_fmode](get-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[Текст и двоичный режим Файл вв/o](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

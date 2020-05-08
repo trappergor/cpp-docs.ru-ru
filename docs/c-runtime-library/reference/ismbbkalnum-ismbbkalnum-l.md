@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343664"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909516"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -59,19 +59,19 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Целое число, которое требуется проверить.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkalnum** возвращает ненулевое значение, если *целый* c является текстовым символом, не являемым ASCII, кроме знаков препинания, или 0, если это не так. **_ismbbkalnum** использует текущий локал для информации о локально-зависимых персонажах. **_ismbbkalnum_l** идентичен **_ismbbkalnum** за исключением того, что он принимает локализы в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** возвращает ненулевое значение, если целое число *c* не является текстовым символом, отличным от знаков препинания, или 0 в противном случае. **_ismbbkalnum** использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. **_ismbbkalnum_l** идентичен **_ismbbkalnum** за исключением того, что в качестве параметра используется языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -85,4 +85,4 @@ int _ismbbkalnum_l(
 ## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>
+[подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

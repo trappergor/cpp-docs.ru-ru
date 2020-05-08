@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 28e52c564bb554df1bd2228691034db5a13a2300
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60b8a974ab27878a379e3a9ad2596a23ed31757f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343724"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909508"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph, _ismbbgraph_l
 
@@ -59,10 +59,10 @@ int _ismbbgraph_l (
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Целое число, которое требуется проверить.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -71,11 +71,11 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-является незерной для *c,* или 0, если это не так. **_ismbbgraph** использует текущий локал для любого поведения, зависящем от локализуемого. **_ismbbgraph_l** идентичен, за исключением того, что он использует локал, передаваемый в вместо. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+параметр имеет ненулевое значение для *языка c*или значение 0, если нет. **_ismbbgraph** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbgraph_l** является идентичным, за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -93,4 +93,4 @@ int _ismbbgraph_l (
 ## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>
+[подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

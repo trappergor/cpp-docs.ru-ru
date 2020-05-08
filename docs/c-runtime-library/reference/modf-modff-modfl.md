@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338686"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914641"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -65,7 +65,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Значение с плавающей запятой.
 
-*Intptr*<br/>
+*Дескриптор*<br/>
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -74,19 +74,19 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-Функции **модфа** разбивают значение плавающей точки *x* на дробные и целые части, каждая из которых имеет тот же знак, что и *x.* Подписанная дробная часть *x* возвращается. Целый ряд хранится в виде значения плавающей точки в *intptr.*
+Функции **modf** разбивают значение *x* с плавающей запятой на дробные и целые части, каждый из которых имеет тот же знак, что и *x*. Возвращается знак дробной части *x* . Целая часть сохраняется как значение с плавающей запятой в *IntPtr*.
 
-**modf** имеет реализацию, которая использует потоковое SIMD расширения 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**modf** имеет реализацию, использующую Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-СЗ позволяет перегружать, так что вы можете вызвать перегрузки **modf,** которые принимают и возвращают **поплавок** или **длинные** **двойные** параметры. В программе C **modf** всегда имеет два двойных значения и возвращает двойное значение.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **modf** , которые принимают и возвращают параметры с **плавающей запятой** или **длинные** **Double** . В программе на языке C **modf** всегда принимает два значения типа Double и возвращает значение типа Double.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
+|**modf**, **modff**, **модфл**|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 

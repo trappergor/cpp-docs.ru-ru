@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362616"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912298"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
-Вычисляет гиперболическую касательную.
+Вычисляет гиперболический тангенс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -66,23 +66,23 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Функции **tanh** возвращают гиперболическую касательную *x.* Ошибка не возвращается.
+Функции **tanh** возвращают гиперболический тангенс *x*. Ошибка не возвращается.
 
-|Входные данные|Исключение SEH|**Маттерр** Исключение|
+|Входные данные|Исключение SEH|**Matherr** Об|
 |-----------|-------------------|-------------------------|
-|- ЗНАН,IND|Нет|_DOMAIN|
+|± КНАН, С|нет|_DOMAIN|
 
 ## <a name="remarks"></a>Remarks
 
-Из-за того, что СЗ допускает перегрузку, можно вызывать перегрузки **танха,** которые принимают и возвращают **плавающие** или **длинные** **двойные** значения. В программе **C, Тан** всегда принимает и возвращает **двойной**.
+Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tanh** , которые принимают и возвращают значения **типа float** или **Long** **double** . В программе на языке C **tanh** всегда принимает и возвращает **Double**.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C)|
 |-------------|---------------------|-|
-|**тан ,** **танхф**, **танхл**|\<math.h>|\<cmath> или \<math.h>|
+|**tanh**, **tanhf**, **танхл**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в статье [Compatibility](../../c-runtime-library/compatibility.md).
 
