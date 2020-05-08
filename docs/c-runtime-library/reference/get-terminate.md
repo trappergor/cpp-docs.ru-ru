@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344925"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920414"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-Возвращает процедуру прекращения, которая будет вызвана **завершением.**
+Возвращает подпрограммы завершения, вызываемую методом **Terminate**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает указатель на функцию, зарегистрированную функцией [set_terminate](set-terminate-crt.md). Если функция не установлена, значение возврата может быть использовано для восстановления поведения по умолчанию; это значение может быть **NULL**.
+Возвращает указатель на функцию, зарегистрированную функцией [set_terminate](set-terminate-crt.md). Если функция не задана, возвращаемое значение может использоваться для восстановления поведения по умолчанию; Это значение может быть **равно NULL**.
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -66,7 +66,7 @@ terminate_function _get_terminate( void );
 ## <a name="see-also"></a>См. также раздел
 
 [Процедуры обработки исключений](../../c-runtime-library/exception-handling-routines.md)<br/>
-[Прервать](abort.md)<br/>
+[рвал](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Прекратить](terminate-crt.md)<br/>
-[Неожиданные](unexpected-crt.md)<br/>
+[заканчива](terminate-crt.md)<br/>
+[известно](unexpected-crt.md)<br/>

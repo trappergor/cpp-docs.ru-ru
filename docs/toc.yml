@@ -4102,9 +4102,9 @@
                   items:
                     - name: Типы выражений
                       href: cpp/types-of-expressions.md
-                    - name: Первичные выражения
+                    - name: Основные выражения
                       href: cpp/primary-expressions.md
-                    - name: Многоточия и шаблоны с переменным числом аргументов
+                    - name: Многоточия и вариадические шаблоны
                       href: cpp/ellipses-and-variadic-templates.md
                     - name: Постфиксные выражения
                       href: cpp/postfix-expressions.md
@@ -4245,7 +4245,7 @@
                   href: cpp/binary-operators.md
                 - name: Назначение
                   href: cpp/assignment.md
-                - name: Вызов функции
+                - name: 'Вызов функции '
                   href: cpp/function-call-cpp.md
                 - name: Индексация ;
                   href: cpp/subscripting.md

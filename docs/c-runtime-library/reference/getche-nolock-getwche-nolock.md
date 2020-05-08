@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: 9a4553f1615e1c53e638900f3a7ab6d66cd4beb8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 901c823d2e6539d7c07e3521c5d372b7816eb9b8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344491"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910762"
 ---
 # <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock, _getwche_nolock
 
@@ -67,9 +67,9 @@ wint_t _getwche_nolock( void );
 
 ## <a name="remarks"></a>Remarks
 
-**_getche_nolock** и **_getwche_nolock** идентичны **_getche** и **_getwche** за исключением того, что они не защищены от помех другими потоками. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+**_getche_nolock** и **_getwche_nolock** идентичны **_getche** и **_getwche** за исключением того, что они не защищены от помех от других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -124,7 +124,7 @@ Type 'Y' when finished typing keys: abcdefyY
 
 ## <a name="see-also"></a>См. также раздел
 
-[Консоль и порт I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Ввод-вывод в консоль и порт](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>
 [_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock](ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)<br/>

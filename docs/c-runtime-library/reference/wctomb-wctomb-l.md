@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a95d61c50af5f49e69df8ae20efccfd3fb8ff5f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367403"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910430"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -62,23 +62,23 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>Параметры
 
-*mbchar*<br/>
+*мбчар*<br/>
 Адрес последовательности многобайтовых символов.
 
-*Wchar*<br/>
+*WCHAR*<br/>
 Расширенный символ.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **wctomb** преобразует широкий символ в мультибайтный символ, он возвращает количество байтов (что никогда не превышает **MB_CUR_MAX)** в широком символе. Если *wchar* является широкохарактерным нулевым персонажем (L'0'), **wctomb** возвращает 1. Если целевой указатель *mbchar* **null,** **wctomb** возвращает 0. Если преобразование невозможно в текущем месте, **wctomb** возвращается -1 и **errno** устанавливается на **EILSE**.
+Если **wctomb** преобразует расширенный символ в многобайтовый символ, он возвращает число байтов (которое никогда не превышает **MB_CUR_MAX**) в расширенном символе. Если *WCHAR* является расширенным символом NULL (L ' \ 0 '), **wctomb** возвращает 1. Если целевой указатель *мбчар* имеет **значение NULL**, **wctomb** возвращает 0. Если преобразование невозможно в текущем языковом стандарте, **wctomb** **возвращает значение-1, а для** возврата — **еилсек**.
 
 ## <a name="remarks"></a>Remarks
 
-Функция **wctomb** преобразует свой аргумент *wchar* в соответствующий мультибайтный символ и хранит результат на *mbchar.* Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий локал для любого поведения, зависящем от локализуемого; **_wctomb_l** идентичен **wctomb,** за исключением того, что он использует локал, передаваемый вместо этого. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Функция **wctomb** Преобразует аргумент *WCHAR* в соответствующий многобайтовый символ и сохраняет результат в *мбчар*. Эту функцию можно вызывать из любой точки в любой программе. **wctomb** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта; **_wctomb_l** идентичен **wctomb** , за исключением того, что он использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** проверяет свои параметры. Если *mbchar* **null,** вызовуется обработчик параметров, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, **errno** устанавливается на **EINVAL** и функция возвращается -1.
+**wctomb** проверяет свои параметры. Если *мбчар* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено **,** параметру **еинвал** присваивается значение, а функция возвращает-1.
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -121,7 +121,7 @@ Convert a wide character:
 ## <a name="see-also"></a>См. также раздел
 
 [Преобразование данных](../../c-runtime-library/data-conversion.md)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

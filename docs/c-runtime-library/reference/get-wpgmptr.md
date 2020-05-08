@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-ms.openlocfilehash: 1e54d3dbdc837c491f5b39d33a9b8197094ac60b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec21e4967d123c988886fa2e6ab996aad83ef206
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344868"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919668"
 ---
 # <a name="_get_wpgmptr"></a>_get_wpgmptr
 
-Получает текущее значение **_wpgmptr** глобальной переменной.
+Возвращает текущее значение **_wpgmptr** глобальной переменной.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -52,17 +52,17 @@ errno_t _get_wpgmptr(
 ### <a name="parameters"></a>Параметры
 
 *pValue*<br/>
-Указатель на строку, которая должна быть заполнена текущим значением **переменной _wpgmptr.**
+Указатель на строку, заполняемую текущим значением переменной **_wpgmptr** .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *pValue* является **NULL,** то недействительный обработчик параметров вызывается, как описано в [проверке параметра.](../../c-runtime-library/parameter-validation.md) Если выполнение разрешено продолжать, эта функция устанавливает **errno** к **EINVAL** и возвращает **EINVAL**.
+Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если параметр *pValue* имеет **значение NULL**, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция **устанавливает** **Еинвал** и возвращает **еинвал**.
 
 ## <a name="remarks"></a>Remarks
 
-Позвоните **только _get_wpgmptr** если ваша программа имеет широкую точку входа, как **wmain()** или **wWinMain ()**. **Глобальная** переменная _wpgmptr содержит полный путь к исполняемому, связанного с процессом, как строку широкого характера. Дополнительные сведения см. в разделе [_pgmptr _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
+Вызывайте **_get_wpgmptr** только в том случае, если программа имеет широкую точку входа, например **wmain ()** или **wWinMain ()**. **_Wpgmptr** глобальная переменная содержит полный путь к исполняемому файлу, связанному с процессом, в виде строки расширенных символов. Дополнительные сведения см. в разделе [_pgmptr _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 

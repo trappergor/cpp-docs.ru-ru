@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 2465852b7bcc0251f218c68df14ff33930ad2378
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 27e42c9f3f570b24df8fa2a26798b3dc3fa326b3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345078"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909892"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -56,7 +56,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>Remarks
 
-Функция **_get_invalid_parameter_handler** получает установленный в настоящее время глобальный недействительный обработчик параметров. Если глобальный обработчик недопустимого параметра не задан, возвращается указатель NULL. Аналогичным образом **_get_thread_local_invalid_parameter_handler** получает текущий обработчик параметров локального потока потока, на который он вызван, или указатель нуля, если не был установлен обработчик. Дополнительные сведения об установке глобального и локального для потока обработчика недопустимого параметра см. в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+Функция **_get_invalid_parameter_handler** получает текущий установленный в данный момент глобальный обработчик недопустимых параметров. Если глобальный обработчик недопустимого параметра не задан, возвращается указатель NULL. Аналогичным образом **_get_thread_local_invalid_parameter_handler** получает текущий локальный обработчик недопустимых параметров потока, для которого он вызывается, или указатель null, если обработчик не был задан. Дополнительные сведения об установке глобального и локального для потока обработчика недопустимого параметра см. в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 Возвращаемый указатель на функцию обработчика недопустимого параметра имеет следующий тип:
 
@@ -72,7 +72,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 Дополнительные сведения об обработчике недопустимого параметра см. в описании прототипа в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -80,7 +80,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 |-------------|---------------------|
 |**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> или \<stdlib.h>|
 
-**Функции _get_invalid_parameter_handler** и **_get_thread_local_invalid_parameter_handler** специфичны для корпорации Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Функции **_get_invalid_parameter_handler** и **_get_thread_local_invalid_parameter_handler** являются специфичными для Microsoft. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также раздел
 

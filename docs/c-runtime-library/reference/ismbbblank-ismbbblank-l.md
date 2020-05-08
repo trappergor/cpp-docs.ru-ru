@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343747"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909533"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -52,19 +52,19 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Параметры
 
-*C*<br/>
+*ц*<br/>
 Целое число, которое требуется проверить.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbblank** возвращает ненулевое значение, если *c* представляет символ пространства (0x20), горизонтальный символ вкладки (0x09) или символ, специфичный для локального использования, который используется для разделения слов в строке текста, для которой является **пространством;** в противном случае, возвращает 0. **_ismbbblank** использует текущий локал для любого поведения, зависящем от локализуемого. **_ismbbblank_l** идентичен, за исключением того, что вместо этого он использует место, которое передается. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** возвращает ненулевое значение, если *c* представляет символ пробела (0x20), символ горизонтальной табуляции (0x09) или символ, зависящий от языкового стандарта, который используется для разделения слов в строке текста, **для которой значение** параметра «IsTrue» равно true. в противном случае возвращает 0. **_ismbbblank** использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. **_ismbbblank_l** является идентичным, за исключением того, что вместо этого используется переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Remarks
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -78,4 +78,4 @@ int _ismbbblank_l(
 ## <a name="see-also"></a>См. также раздел
 
 [Классификация байтов](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb рутины](../../c-runtime-library/ismbb-routines.md)<br/>
+[подпрограммы _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
