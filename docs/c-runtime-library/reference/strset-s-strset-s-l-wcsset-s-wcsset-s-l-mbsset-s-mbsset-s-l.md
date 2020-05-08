@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -66,19 +66,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 599c991e2e9b4cee1515decdaf1050311d844a68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317242"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911142"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Инициализирует символы строки в соответствии с указанным символом. Эти версии функций [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) отличаются повышенной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsset_s** и **_mbsset_s_l** не могут быть использованы в приложениях, выполняемых в Windows Runtime. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** и **_mbsset_s_l** нельзя использовать в приложениях, которые выполняются в среда выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -120,33 +120,33 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Ул*<br/>
+*str*<br/>
 Строка для изменения, завершающаяся символом NULL.
 
 *numberOfElements*<br/>
-Размер буфера *str.*
+Размер буфера *str* .
 
-*C*<br/>
+*ц*<br/>
 Параметр символов.
 
-*Языкового стандарта*<br/>
+*locale*<br/>
 Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Нуль в случае успешного выполнения; в противном случае — код ошибки.
 
-Эти функции проверяют свои аргументы. Если *str* является нулевой указателем, или *аргумент numberOfElements* меньше или равен 0, или блок, пройденный в не является недействительным, то недействительный обработчик параметров вызывается, как описано в [проверке параметра](../../c-runtime-library/parameter-validation.md). Если выполнение разрешено продолжать, эти функции возвращают **EINVAL** и устанавливают **errno** **в EINVAL.**
+Эти функции проверяют свои аргументы. Если *str* является пустым указателем или аргумент *numberOfElements* меньше или равен 0 или переданный блок не завершается нулем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **еинвал** и применяют **значение "** **еинвал**".
 
 ## <a name="remarks"></a>Remarks
 
-**Функция _strset_s** устанавливает все символы *str* to *c* (преобразованы в **char),** за исключением термина null. **_wcsset_s** и **_mbsset_s** являются широкохарактерными и многобайтными версиями **_strset_s.** Типы данных аргументов и возвращаемых значений изменяются соответствующим образом. В остальном эти функции ведут себя одинаково.
+Функция **_strset_s** устанавливает все символы *str* в *c* (преобразованные в **char**), за исключением завершающего нуль-символа. **_wcsset_s** и **_mbsset_s** — это версии **_strset_s**для расширенных символов и многобайтовых символов. Типы данных аргументов и возвращаемых значений изменяются соответствующим образом. В остальном эти функции ведут себя одинаково.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Отладка библиотеки версии этих функций сначала заполнить буфер с 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Версии отладочной библиотеки этих функций сначала заполняют буфер 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-По умолчанию глобальное состояние этой функции приспозировано к приложению. Чтобы изменить это, [см. Глобальное состояние в CRT](../global-state.md).
+По умолчанию глобальное состояние этой функции ограничивается приложением. Чтобы изменить это, см. раздел [глобальное состояние в CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
 
@@ -191,8 +191,8 @@ After:  *******************************
 
 ## <a name="see-also"></a>См. также раздел
 
-[Манипуляция строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Локаль](../../c-runtime-library/locale.md)<br/>
+[Управление строками](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Locale](../../c-runtime-library/locale.md)<br/>
 [Интерпретация последовательностей многобайтовых символов](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
