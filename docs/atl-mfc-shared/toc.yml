@@ -1,0 +1,97 @@
+- name: Общие классы ATL и MFC
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: Основные понятия ATL и MFC
+  expanded: true
+  items:
+    - name: Основные понятия ATL и MFC
+      href: ../atl-mfc-shared/atl-mfc-concepts.md
+    - name: Дата и время
+      expanded: false
+      items:
+        - name: Общие сведения о датах и времени
+          href: ../atl-mfc-shared/date-and-time.md
+        - name: Тип DATE
+          href: ../atl-mfc-shared/date-type.md
+    - name: Строки (ATL-MFC)
+      expanded: false
+      items:
+        - name: Строки (ATL-MFC)
+          href: ../atl-mfc-shared/strings-atl-mfc.md
+        - name: Использование CStringT
+          expanded: false
+          items:
+            - name: Использование CStringT
+              href: ../atl-mfc-shared/using-cstringt.md
+            - name: Управление памятью с помощью CStringT
+              expanded: false
+              items:
+                - name: Управление памятью с помощью CStringT
+                  href: ../atl-mfc-shared/memory-management-with-cstringt.md
+                - name: Реализация пользовательского диспетчера строк (базовый метод)
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-basic-method.md
+                - name: Избежание состязания за кучу
+                  href: ../atl-mfc-shared/avoidance-of-heap-contention.md
+                - name: Реализация пользовательского диспетчера строк (расширенный метод)
+                  href: ../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md
+                - name: CFixedStringT. Пример пользовательского диспетчера строк
+                  href: ../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md
+            - name: Экспорт строковых классов с помощью CStringT
+              href: ../atl-mfc-shared/exporting-string-classes-using-cstringt.md
+        - name: Использование CString
+          expanded: false
+          items:
+            - name: Использование CString
+              href: ../atl-mfc-shared/using-cstring.md
+            - name: Базовые операции CString
+              href: ../atl-mfc-shared/basic-cstring-operations.md
+            - name: Управление строковыми данными
+              href: ../atl-mfc-shared/string-data-management.md
+            - name: Семантика CString
+              href: ../atl-mfc-shared/cstring-semantics.md
+            - name: 'Операции CString, связанные со строками в стиле C'
+              href: ../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md
+            - name: Выделение и освобождение памяти для BSTR
+              href: ../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md
+            - name: Очистка исключений CString
+              href: ../atl-mfc-shared/cstring-exception-cleanup.md
+            - name: Передача аргументов CString
+              href: ../atl-mfc-shared/cstring-argument-passing.md
+            - name: Поддержка Юникода и многобайтовой кодировки
+              href: ../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
+- name: Справочник
+  expanded: false
+  items:
+    - name: Класс CSize
+      href: ../atl-mfc-shared/reference/csize-class.md
+    - name: Класс CTimeSpan
+      href: ../atl-mfc-shared/reference/ctimespan-class.md
+    - name: Класс COleDateTime
+      href: ../atl-mfc-shared/reference/coledatetime-class.md
+    - name: Класс CRect
+      href: ../atl-mfc-shared/reference/crect-class.md
+    - name: Общие классы MFC и ATL
+      href: ../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md
+    - name: Класс CPoint
+      href: ../atl-mfc-shared/reference/cpoint-class.md
+    - name: Класс CStringT
+      href: ../atl-mfc-shared/reference/cstringt-class.md
+    - name: Класс COleDateTimeSpan
+      href: ../atl-mfc-shared/reference/coledatetimespan-class.md
+    - name: Класс IAtlStringMgr
+      href: ../atl-mfc-shared/reference/iatlstringmgr-class.md
+    - name: Класс CFixedStringT
+      href: ../atl-mfc-shared/reference/cfixedstringt-class.md
+    - name: Класс CStrBufT
+      href: ../atl-mfc-shared/reference/cstrbuft-class.md
+    - name: Класс CFileTimeSpan
+      href: ../atl-mfc-shared/reference/cfiletimespan-class.md
+    - name: Класс CImage
+      href: ../atl-mfc-shared/reference/cimage-class.md
+    - name: Класс CStringData
+      href: ../atl-mfc-shared/reference/cstringdata-class.md
+    - name: Класс CFileTime
+      href: ../atl-mfc-shared/reference/cfiletime-class.md
+    - name: Класс CSimpleStringT
+      href: ../atl-mfc-shared/reference/csimplestringt-class.md
+    - name: Класс CTime
+      href: ../atl-mfc-shared/reference/ctime-class.md

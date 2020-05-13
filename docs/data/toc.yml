@@ -1,0 +1,591 @@
+- name: "Доступ к данным в Visual\_C++"
+  href: ../data/data-access-in-cpp.md
+- name: Программирование доступа к данным (MFC-ATL)
+  expanded: false
+  items:
+    - name: Программирование доступа к данным (MFC-ATL)
+      href: ../data/data-access-programming-mfc-atl.md
+    - name: Установка поддержки базы данных (MFC-ATL)
+      href: ../data/installing-database-support-mfc-atl.md
+    - name: "Классы баз данных библиотеки ATL (шаблоны OLE\_DB)"
+      href: ../data/atl-database-classes-ole-db-templates.md
+    - name: Классы баз данных MFC
+      expanded: false
+      items:
+        - name: MFC-классы баз данных
+          href: ../data/mfc-database-classes-odbc-and-dao.md
+        - name: MFC. Использование классов базы данных с документами и представлениями
+          href: ../data/mfc-using-database-classes-with-documents-and-views.md
+        - name: MFC. Использование классов базы данных без документов и представлений
+          href: ../data/mfc-using-database-classes-without-documents-and-views.md
+    - name: Запись (доступ к данным MFC)
+      href: ../data/record-mfc-data-access.md
+    - name: Схема (доступ к данным MFC)
+      href: ../data/schema-mfc-data-access.md
+    - name: Сведения о каталоге (доступ к данным MFC)
+      href: ../data/catalog-information-mfc-data-access.md
+    - name: Транзакции (доступ к данным MFC)
+      href: ../data/transactions-mfc-data-access.md
+    - name: Представления записей (доступ к данным MFC)
+      expanded: false
+      items:
+        - name: Представления записей (доступ к данным MFC)
+          href: ../data/record-views-mfc-data-access.md
+        - name: Функциональные возможности классов представления записей (доступ к данным MFC)
+          href: ../data/features-of-record-view-classes-mfc-data-access.md
+        - name: Обмен данными в представлениях записей (доступ к данным MFC)
+          href: ../data/data-exchange-for-record-views-mfc-data-access.md
+        - name: Роль пользователя в работе с представлением записи (доступ к данным MFC)
+          href: ../data/your-role-in-working-with-a-record-view-mfc-data-access.md
+        - name: Разработка и создание представления записей (доступ к данным MFC)
+          href: ../data/designing-and-creating-a-record-view-mfc-data-access.md
+        - name: Поддержка навигации в представлении записей (доступ к данным MFC)
+          expanded: false
+          items:
+            - name: Поддержка навигации в представлении записей (доступ к данным MFC)
+              href: ../data/supporting-navigation-in-a-record-view-mfc-data-access.md
+            - name: Обработчики команд для прокрутки записей (доступ к данным MFC)
+              href: ../data/command-handlers-for-record-scrolling-mfc-data-access.md
+            - name: Обновление пользовательского интерфейса для представлений записей (доступ к данным MFC)
+              href: ../data/user-interface-updating-for-record-views-mfc-data-access.md
+        - name: Использование представления записей (доступ к данным MFC)
+          expanded: false
+          items:
+            - name: Использование представления записей (доступ к данным MFC)
+              href: ../data/using-a-record-view-mfc-data-access.md
+            - name: 'Код представления записей, создаваемый мастером приложений (доступ к данным MFC)'
+              href: ../data/record-view-code-created-by-application-wizard-mfc-data-access.md
+            - name: 'Изменения, которые можно вносить в код по умолчанию (доступ к данным MFC)'
+              href: ../data/changes-you-might-make-to-the-default-code-mfc-data-access.md
+        - name: Заполнение списка из второго набора записей (доступ к данным MFC)
+          href: ../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md
+- name: Программирование объектов OLE DB
+  expanded: false
+  items:
+    - name: Программирование объектов OLE DB
+      href: ../data/oledb/ole-db-programming.md
+    - name: Общие сведения о программировании OLE DB
+      expanded: false
+      items:
+        - name: Общие сведения о программировании OLE DB
+          href: ../data/oledb/ole-db-programming-overview.md
+        - name: Объекты-получатели и поставщики OLE DB
+          href: ../data/oledb/ole-db-consumers-and-providers.md
+        - name: Объектная модель OLE DB
+          href: ../data/oledb/ole-db-object-model.md
+        - name: "Шаблоны, атрибуты и другие реализации OLE\_DB"
+          href: ../data/oledb/ole-db-templates-attributes-and-other-implementations.md
+        - name: Вопросы проектирования архитектуры OLE DB
+          href: ../data/oledb/ole-db-architectural-design-issues.md
+    - name: Шаблоны объектов-получателей OLE DB (C++)
+      expanded: false
+      items:
+        - name: Шаблоны объектов-получателей OLE DB (C++)
+          href: ../data/oledb/ole-db-consumer-templates-cpp.md
+        - name: Источники данных и сеансы
+          href: ../data/oledb/data-sources-and-sessions.md
+        - name: Методы доступа и наборы строк
+          href: ../data/oledb/accessors-and-rowsets.md
+        - name: Команды и таблицы
+          href: ../data/oledb/commands-and-tables.md
+        - name: Записи пользователя
+          href: ../data/oledb/user-records.md
+        - name: Наборы строк схемы
+          href: ../data/oledb/schema-rowsets.md
+        - name: Создание объекта-получателя OLE DB
+          expanded: false
+          items:
+            - name: Создание объекта-получателя OLE DB
+              href: ../data/oledb/creating-an-ole-db-consumer.md
+            - name: Создание объекта-получателя OLE DB с помощью мастера
+              expanded: false
+              items:
+                - name: Создание объекта-получателя OLE DB с помощью мастера
+                  href: ../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md
+                - name: Создание простого объекта-получателя
+                  href: ../data/oledb/creating-a-simple-consumer.md
+                - name: Реализация простых объектов-получателей
+                  href: ../data/oledb/implementing-a-simple-consumer.md
+                - name: 'Классы, создаваемые мастером объекта-получателя'
+                  href: ../data/oledb/consumer-wizard-generated-classes.md
+                - name: 'Методы, создаваемые мастером объекта-получателя'
+                  href: ../data/oledb/consumer-wizard-generated-methods.md
+            - name: Создание объекта-получателя без помощи мастера
+              href: ../data/oledb/creating-a-consumer-without-using-a-wizard.md
+        - name: "Работа с шаблонами объекта-получателя OLE\_DB"
+          expanded: false
+          items:
+            - name: "Работа с шаблонами объекта-получателя OLE\_DB"
+              href: ../data/oledb/working-with-ole-db-consumer-templates.md
+            - name: Упрощение доступа к данным с помощью атрибутов базы данных
+              href: ../data/oledb/simplifying-data-access-with-database-attributes.md
+            - name: Статус поля элементов данных в мастере создания методов доступа
+              href: ../data/oledb/field-status-data-members-in-wizard-generated-accessors.md
+            - name: Перебор простого набора строк
+              href: ../data/oledb/traversing-a-simple-rowset.md
+            - name: Выполнение параметризированного запроса
+              href: ../data/oledb/issuing-a-parameterized-query.md
+            - name: Выборка данных
+              href: ../data/oledb/fetching-data.md
+            - name: Обновление наборов строк
+              href: ../data/oledb/updating-rowsets.md
+            - name: Использование хранимых процедур
+              expanded: false
+              items:
+                - name: Использование хранимых процедур
+                  href: ../data/oledb/using-stored-procedures.md
+                - name: Определение хранимых процедур
+                  href: ../data/oledb/defining-stored-procedures.md
+                - name: Параметры вывода
+                  href: ../data/oledb/output-parameters.md
+                - name: Использование нескольких результирующих наборов одной хранимой процедуры
+                  href: ../data/oledb/using-multiple-result-sets-from-one-stored-procedure.md
+            - name: Использование методов доступа
+              expanded: false
+              items:
+                - name: Использование методов доступа
+                  href: ../data/oledb/using-accessors.md
+                - name: Выбор подходящего метода доступа
+                  href: ../data/oledb/determining-which-type-of-accessor-to-use.md
+                - name: Использование нескольких методов доступа в наборе строк
+                  href: ../data/oledb/using-multiple-accessors-on-a-rowset.md
+                - name: Использование динамических методов доступа
+                  href: ../data/oledb/using-dynamic-accessors.md
+                - name: Переопределение динамического метода доступа
+                  href: ../data/oledb/overriding-a-dynamic-accessor.md
+                - name: Использование методов ручного доступа
+                  href: ../data/oledb/using-manual-accessors.md
+                - name: Доступ к данным XML
+                  href: ../data/oledb/accessing-xml-data.md
+            - name: Получение метаданных в схеме набора строк
+              href: ../data/oledb/obtaining-metadata-with-schema-rowsets.md
+            - name: Поддержка транзакций в OLE DB
+              href: ../data/oledb/supporting-transactions-in-ole-db.md
+            - name: Использование представлений записей OLE DB
+              href: ../data/oledb/using-ole-db-record-views.md
+            - name: Использование существующего набора записей ADO
+              href: ../data/oledb/using-an-existing-ado-recordset.md
+            - name: Обновление столбца при наличии ссылки в другой таблице на данную строку
+              href: ../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md
+            - name: Использование закладок
+              href: ../data/oledb/using-bookmarks.md
+            - name: Извлечение двоичного объекта (BLOB)
+              href: ../data/oledb/retrieving-a-blob.md
+            - name: Получение уведомлений
+              href: ../data/oledb/receiving-notifications.md
+    - name: Шаблоны поставщика OLE DB (С++)
+      expanded: false
+      items:
+        - name: Шаблоны поставщика OLE DB (С++)
+          href: ../data/oledb/ole-db-provider-templates-cpp.md
+        - name: Архитектура шаблона поставщика OLE DB
+          expanded: false
+          items:
+            - name: Архитектура шаблона поставщика OLE DB
+              href: ../data/oledb/ole-db-provider-template-architecture.md
+            - name: Интерфейсы объекта источника данных
+              href: ../data/oledb/data-source-object-interfaces.md
+            - name: Интерфейсы объекта сеанса
+              href: ../data/oledb/session-object-interfaces.md
+            - name: Интерфейсы объекта набора строк
+              href: ../data/oledb/rowset-object-interfaces.md
+            - name: Интерфейсы объекта команды
+              href: ../data/oledb/command-object-interfaces.md
+            - name: Интерфейсы объекта транзакции
+              href: ../data/oledb/transaction-object-interfaces.md
+            - name: Сопоставления свойств
+              href: ../data/oledb/property-maps.md
+            - name: Запись пользователя
+              href: ../data/oledb/user-record.md
+        - name: Создание поставщика OLE DB
+          expanded: false
+          items:
+            - name: Создание поставщика OLE DB
+              href: ../data/oledb/creating-an-ole-db-provider.md
+            - name: Создание проекта для поставщика
+              href: ../data/oledb/creating-a-project-for-the-provider.md
+            - name: Создание поставщика
+              href: ../data/oledb/creating-the-provider.md
+            - name: Созданные мастером поставщика файлы
+              expanded: false
+              items:
+                - name: Созданные мастером поставщика файлы
+                  href: ../data/oledb/provider-wizard-generated-files.md
+                - name: CCustomSource (CustomDS.H)
+                  href: ../data/oledb/cmyprovidersource-myproviderds-h.md
+                - name: CCustomSession (CustomSess.H)
+                  href: ../data/oledb/cmyprovidersession-myprovidersess-h.md
+                - name: CCustomCommand (CustomRS.H)
+                  href: ../data/oledb/cmyprovidercommand-myproviderrs-h.md
+                - name: CCustomRowset (CustomRS.H)
+                  href: ../data/oledb/cmyproviderrowset-myproviderrs-h.md
+                - name: CCustomWindowsFile
+                  href: ../data/oledb/cmyproviderwindowsfile.md
+            - name: Создание простого поставщика только для чтения
+              expanded: false
+              items:
+                - name: Создание простого поставщика только для чтения
+                  href: ../data/oledb/creating-a-simple-read-only-provider.md
+                - name: 'Реализация простого поставщика, предназначенного только для чтения'
+                  href: ../data/oledb/implementing-the-simple-read-only-provider.md
+                - name: Хранение строк в поставщике OLE DB
+                  href: ../data/oledb/storing-strings-in-the-ole-db-provider.md
+                - name: Считывание строк в поставщик OLE DB
+                  href: ../data/oledb/reading-strings-into-the-ole-db-provider.md
+                - name: Усовершенствование простого поставщика только для чтения
+                  href: ../data/oledb/enhancing-the-simple-read-only-provider.md
+                - name: Изменение наследования RCustomRowset
+                  href: ../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md
+                - name: 'Динамическое определение столбцов, возвращаемых объекту-получателю'
+                  href: ../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md
+                - name: Проверка поставщика в режиме "только для чтения"
+                  href: ../data/oledb/testing-the-read-only-provider.md
+            - name: Создание поставщика с возможностью записи
+              href: ../data/oledb/creating-an-updatable-provider.md
+        - name: Работа с шаблонами поставщика OLE DB
+          expanded: false
+          items:
+            - name: Работа с шаблонами поставщика OLE DB
+              href: ../data/oledb/working-with-ole-db-provider-templates.md
+            - name: Добавление интерфейса в поставщик
+              href: ../data/oledb/adding-an-interface-to-your-provider.md
+            - name: Обращение к свойству в поставщике
+              href: ../data/oledb/referencing-a-property-in-your-provider.md
+            - name: Установка свойств в поставщике
+              href: ../data/oledb/setting-properties-in-your-provider.md
+            - name: Динамическое связывание столбцов в поставщике
+              href: ../data/oledb/dynamically-binding-columns-in-your-provider.md
+            - name: Поддержка свободной потоковой модели в поставщике
+              href: ../data/oledb/supporting-free-threading-in-your-provider.md
+            - name: Тестирование поставщика
+              href: ../data/oledb/testing-your-provider.md
+            - name: Отладка поставщика
+              href: ../data/oledb/debugging-your-provider.md
+            - name: 'Преобразование данных, не поддерживаемых поставщиком'
+              href: ../data/oledb/converting-data-not-supported-by-the-provider.md
+        - name: Дополнительные способы использования поставщика
+          expanded: false
+          items:
+            - name: Дополнительные способы использования поставщика
+              href: ../data/oledb/advanced-provider-techniques.md
+            - name: Поддержка уведомлений
+              href: ../data/oledb/supporting-notifications.md
+            - name: Поддержка наборов строк схемы
+              href: ../data/oledb/supporting-schema-rowsets.md
+            - name: Поддержка закладок поставщиками
+              href: ../data/oledb/provider-support-for-bookmarks.md
+            - name: Проверка на совместимость с OLE DB
+              href: ../data/oledb/passing-ole-db-conformance-tests.md
+            - name: Создание пулов ресурсов и служб OLE DB
+              expanded: false
+              items:
+                - name: Создание пулов ресурсов и служб OLE DB
+                  href: ../data/oledb/ole-db-resource-pooling-and-services.md
+                - name: "Создание пулов ресурсов в приложениях OLE\_DB"
+                  href: ../data/oledb/resource-pooling-in-your-ole-db-application.md
+                - name: Включение и отключение служб OLE DB
+                  expanded: false
+                  items:
+                    - name: Включение и отключение служб OLE DB
+                      href: ../data/oledb/enabling-and-disabling-ole-db-services.md
+                    - name: Включение и отключение служб поставщика
+                      href: ../data/oledb/enabling-and-disabling-services-for-a-provider.md
+                    - name: Переопределение используемых по умолчанию параметров службы поставщика
+                      href: ../data/oledb/overriding-provider-service-defaults.md
+- name: Шаблоны OLE DB
+  expanded: false
+  items:
+    - name: Общие сведения о шаблонах OLE DB
+      href: ../data/oledb/ole-db-templates.md
+    - name: Общие справочные сведения о шаблонах объектов-получателей OLE DB
+      href: ../data/oledb/ole-db-consumer-templates-reference.md
+    - name: Справочные сведения о шаблонах объектов-получателей OLE DB
+      expanded: false
+      items:
+        - name: Класс CAccessor
+          href: ../data/oledb/caccessor-class.md
+        - name: Класс CAccessorBase
+          href: ../data/oledb/caccessorbase-class.md
+        - name: Класс CAccessorRowset
+          href: ../data/oledb/caccessorrowset-class.md
+        - name: Класс CArrayRowset
+          href: ../data/oledb/carrayrowset-class.md
+        - name: Класс CBookmark
+          href: ../data/oledb/cbookmark-class.md
+        - name: Класс CBulkRowset
+          href: ../data/oledb/cbulkrowset-class.md
+        - name: Класс CColumnAccessor
+          href: ../data/oledb/ccolumnaccessor-class.md
+        - name: Класс CCommand
+          href: ../data/oledb/ccommand-class.md
+        - name: Класс CDataConnection
+          href: ../data/oledb/cdataconnection-class.md
+        - name: Класс CDataSource
+          href: ../data/oledb/cdatasource-class.md
+        - name: Класс CDBErrorInfo
+          href: ../data/oledb/cdberrorinfo-class.md
+        - name: Класс CDBPropIDSet
+          href: ../data/oledb/cdbpropidset-class.md
+        - name: Класс CDBPropSet
+          href: ../data/oledb/cdbpropset-class.md
+        - name: Класс CDynamicAccessor
+          href: ../data/oledb/cdynamicaccessor-class.md
+        - name: Класс CDynamicParameterAccessor
+          href: ../data/oledb/cdynamicparameteraccessor-class.md
+        - name: Класс CDynamicStringAccessor
+          href: ../data/oledb/cdynamicstringaccessor-class.md
+        - name: Класс CDynamicStringAccessorA
+          href: ../data/oledb/cdynamicstringaccessora-class.md
+        - name: Класс CDynamicStringAccessorW
+          href: ../data/oledb/cdynamicstringaccessorw-class.md
+        - name: Класс CEnumerator
+          href: ../data/oledb/cenumerator-class.md
+        - name: Класс CEnumeratorAccessor
+          href: ../data/oledb/cenumeratoraccessor-class.md
+        - name: Класс CManualAccessor
+          href: ../data/oledb/cmanualaccessor-class.md
+        - name: Класс CMultipleResults
+          href: ../data/oledb/cmultipleresults-class.md
+        - name: Класс CNoAccessor
+          href: ../data/oledb/cnoaccessor-class.md
+        - name: Класс CNoMultipleResults
+          href: ../data/oledb/cnomultipleresults-class.md
+        - name: Класс CNoRowset
+          href: ../data/oledb/cnorowset-class.md
+        - name: Класс CRestrictions
+          href: ../data/oledb/crestrictions-class.md
+        - name: Класс CRowset
+          href: ../data/oledb/crowset-class.md
+        - name: Класс CSession
+          href: ../data/oledb/csession-class.md
+        - name: Класс CStreamRowset
+          href: ../data/oledb/cstreamrowset-class.md
+        - name: Класс CTable
+          href: ../data/oledb/ctable-class.md
+        - name: Класс CXMLAccessor
+          href: ../data/oledb/cxmlaccessor-class.md
+        - name: Класс IRowsetNotifyImpl
+          href: ../data/oledb/irowsetnotifyimpl-class.md
+        - name: Классы схемы Rowset и Typedef
+          href: ../data/oledb/schema-rowset-classes-and-typedef-classes.md
+        - name: "Макросы и глобальные функции для шаблонов объектов-получателей OLE\_DB"
+          href: ../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md
+    - name: "Общие справочные сведения о шаблонах поставщиков OLE\_DB"
+      href: ../data/oledb/ole-db-provider-templates-reference.md
+    - name: "Справочные сведения о шаблонах поставщиков OLE\_DB"
+      expanded: false
+      items:
+        - name: Класс CRowsetImpl
+          href: ../data/oledb/crowsetimpl-class.md
+        - name: Класс CSimpleRow
+          href: ../data/oledb/csimplerow-class.md
+        - name: Класс CUtlProps
+          href: ../data/oledb/cutlprops-class.md
+        - name: Класс IAccessorImpl
+          href: ../data/oledb/iaccessorimpl-class.md
+        - name: Класс IColumnsInfoImpl
+          href: ../data/oledb/icolumnsinfoimpl-class.md
+        - name: Класс ICommandImpl
+          href: ../data/oledb/icommandimpl-class.md
+        - name: Класс ICommandPropertiesImpl
+          href: ../data/oledb/icommandpropertiesimpl-class.md
+        - name: Класс ICommandTextImpl
+          href: ../data/oledb/icommandtextimpl-class.md
+        - name: Класс IConvertTypeImpl
+          href: ../data/oledb/iconverttypeimpl-class.md
+        - name: Класс IDBCreateCommandImpl
+          href: ../data/oledb/idbcreatecommandimpl-class.md
+        - name: Класс IDBCreateSessionImpl
+          href: ../data/oledb/idbcreatesessionimpl-class.md
+        - name: Класс IDBInitializeImpl
+          href: ../data/oledb/idbinitializeimpl-class.md
+        - name: Класс IDBPropertiesImpl
+          href: ../data/oledb/idbpropertiesimpl-class.md
+        - name: Класс IDBSchemaRowsetImpl
+          href: ../data/oledb/idbschemarowsetimpl-class.md
+        - name: Класс IErrorRecordsImpl
+          href: ../data/oledb/ierrorrecordsimpl-class.md
+        - name: Класс IGetDataSourceImpl
+          href: ../data/oledb/igetdatasourceimpl-class.md
+        - name: Класс IOpenRowsetImpl
+          href: ../data/oledb/iopenrowsetimpl-class.md
+        - name: Класс IRowsetChangeImpl
+          href: ../data/oledb/irowsetchangeimpl-class.md
+        - name: Класс IRowsetCreatorImpl
+          href: ../data/oledb/irowsetcreatorimpl-class.md
+        - name: Класс IRowsetIdentityImpl
+          href: ../data/oledb/irowsetidentityimpl-class.md
+        - name: Класс IRowsetImpl
+          href: ../data/oledb/irowsetimpl-class.md
+        - name: Класс IRowsetInfoImpl
+          href: ../data/oledb/irowsetinfoimpl-class.md
+        - name: Класс IRowsetLocateImpl
+          href: ../data/oledb/irowsetlocateimpl-class.md
+        - name: Класс IRowsetNotifyCP
+          href: ../data/oledb/irowsetnotifycp-class.md
+        - name: Класс IRowsetUpdateImpl
+          href: ../data/oledb/irowsetupdateimpl-class.md
+        - name: Класс ISessionPropertiesImpl
+          href: ../data/oledb/isessionpropertiesimpl-class.md
+        - name: Макросы для шаблонов поставщика OLE DB
+          href: ../data/oledb/macros-for-ole-db-provider-templates.md
+- name: Интерфейс ODBC
+  expanded: false
+  items:
+    - name: Интерфейс ODBC
+      href: ../data/odbc/open-database-connectivity-odbc.md
+    - name: Установка и начало работы с ODBC
+      href: ../data/odbc/installing-and-getting-started-with-odbc.md
+    - name: Разработка и создание приложений баз данных ODBC
+      href: ../data/odbc/design-and-create-an-odbc-database-application.md
+    - name: Использование форм баз данных (представлений записей) с ODBC
+      href: ../data/odbc/use-database-forms-record-views-with-odbc.md
+    - name: Использование ODBC для работы с другими пользователями
+      href: ../data/odbc/use-odbc-to-work-with-other-users.md
+    - name: Работа с подключениями к базе данных ODBC
+      href: ../data/odbc/work-with-odbc-database-connections.md
+    - name: Работа с ODBC и драйверами
+      href: ../data/odbc/work-with-odbc-and-drivers.md
+    - name: Использование библиотеки курсоров ODBC
+      href: ../data/odbc/use-the-odbc-cursor-library.md
+    - name: Использование набора записей MFC ODBC
+      href: ../data/odbc/use-mfc-odbc-recordsets.md
+    - name: Основы ODBC
+      expanded: false
+      items:
+        - name: Основы ODBC
+          href: ../data/odbc/odbc-basics.md
+        - name: ODBC и классы баз данных
+          href: ../data/odbc/odbc-and-the-database-classes.md
+        - name: Требования динамических подмножеств данных к драйверу ODBC
+          href: ../data/odbc/odbc-driver-requirements-for-dynasets.md
+        - name: Распространение компонентов ODBC среди клиентов
+          href: ../data/odbc/redistributing-odbc-components-to-your-customers.md
+        - name: ODBC. Библиотека курсоров ODBC
+          href: ../data/odbc/odbc-the-odbc-cursor-library.md
+        - name: ODBC. Настройка источника данных ODBC
+          href: ../data/odbc/odbc-configuring-an-odbc-data-source.md
+        - name: ODBC. Прямой вызов функций ODBC API
+          href: ../data/odbc/odbc-calling-odbc-api-functions-directly.md
+    - name: ODBC и MFC
+      expanded: false
+      items:
+        - name: ODBC и MFC
+          href: ../data/odbc/odbc-and-mfc.md
+        - name: Подключение к источнику данных
+          href: ../data/odbc/connecting-to-a-data-source.md
+        - name: Выбор и операции с записями
+          href: ../data/odbc/selecting-and-manipulating-records.md
+        - name: Отображение и обработка данных в форме
+          href: ../data/odbc/displaying-and-manipulating-data-in-a-form.md
+        - name: Работа с документами и представлениями
+          href: ../data/odbc/working-with-documents-and-views.md
+        - name: Доступ к ODBC и SQL
+          href: ../data/odbc/access-to-odbc-and-sql.md
+        - name: "Дополнительные сведения о классах ODBC\_MFC"
+          href: ../data/odbc/further-reading-about-the-mfc-odbc-classes.md
+    - name: Потоки и классы ODBC
+      href: ../data/odbc/odbc-classes-and-threads.md
+    - name: Администратор ODBC
+      href: ../data/odbc/odbc-administrator.md
+    - name: Список драйверов ODBC
+      href: ../data/odbc/odbc-driver-list.md
+    - name: Источник данных (ODBC)
+      expanded: false
+      items:
+        - name: Источник данных (ODBC)
+          href: ../data/odbc/data-source-odbc.md
+        - name: Источник данных. Управление соединениями (ODBC)
+          href: ../data/odbc/data-source-managing-connections-odbc.md
+        - name: Источник данных. Определение схемы источника данных (ODBC)
+          href: ../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md
+        - name: Источник данных. Программная настройка источника данных ODBC
+          href: ../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md
+        - name: Источник данных. Создание таблицы в источнике данных ODBC программным путем
+          href: ../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
+    - name: Динамический набор
+      href: ../data/odbc/dynaset.md
+    - name: Снимок
+      href: ../data/odbc/snapshot.md
+    - name: Обмен данными полями записей (RFX)
+      expanded: false
+      items:
+        - name: Обмен данными полями записей (RFX)
+          href: ../data/odbc/record-field-exchange-rfx.md
+        - name: 'Обмен полями записей: использование RFX'
+          href: ../data/odbc/record-field-exchange-using-rfx.md
+        - name: 'Обмен полями записей: работа с кодом мастера'
+          href: ../data/odbc/record-field-exchange-working-with-the-wizard-code.md
+        - name: 'Обмен полями записей: использование функций RFX'
+          href: ../data/odbc/record-field-exchange-using-the-rfx-functions.md
+        - name: 'Обмен полями записей: принцип работы RFX'
+          href: ../data/odbc/record-field-exchange-how-rfx-works.md
+    - name: Набор записей (ODBC)
+      expanded: false
+      items:
+        - name: Набор записей (ODBC)
+          href: ../data/odbc/recordset-odbc.md
+        - name: Набор записей. Архитектура (ODBC)
+          href: ../data/odbc/recordset-architecture-odbc.md
+        - name: Набор записей. Объявление класса для таблицы (ODBC)
+          href: ../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md
+        - name: Набор записей. Создание и закрытие наборов записей (ODBC)
+          href: ../data/odbc/recordset-creating-and-closing-recordsets-odbc.md
+        - name: Набор записей. Прокрутка (ODBC)
+          href: ../data/odbc/recordset-scrolling-odbc.md
+        - name: Набор записей. Закладки и абсолютное позиционирование (ODBC)
+          href: ../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md
+        - name: Набор записей. Фильтрация записей (ODBC)
+          href: ../data/odbc/recordset-filtering-records-odbc.md
+        - name: Набор записей. Сортировка записей (ODBC)
+          href: ../data/odbc/recordset-sorting-records-odbc.md
+        - name: Набор записей. Параметризация набора записей (ODBC)
+          href: ../data/odbc/recordset-parameterizing-a-recordset-odbc.md
+        - name: 'Набор записей. Добавление, обновление и удаление записей (ODBC)'
+          href: ../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md
+        - name: Набор записей. Добавление нескольких записей (ODBC)
+          href: ../data/odbc/recordset-adding-records-in-bulk-odbc.md
+        - name: Набор записей. Блокирование записей (ODBC)
+          href: ../data/odbc/recordset-locking-records-odbc.md
+        - name: Набор записей. Объединение (ODBC)
+          href: ../data/odbc/recordset-performing-a-join-odbc.md
+        - name: Набор записей. Объявление класса для предопределенного запроса (ODBC)
+          href: ../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md
+        - name: Набор записей. Повторный запрос набора записей (ODBC)
+          href: ../data/odbc/recordset-requerying-a-recordset-odbc.md
+        - name: Набор записей. Динамическая привязка столбцов данных (ODBC)
+          href: ../data/odbc/recordset-dynamically-binding-data-columns-odbc.md
+        - name: Набор записей. Пакетное получение строк (ODBC)
+          href: ../data/odbc/recordset-fetching-records-in-bulk-odbc.md
+        - name: Набор записей. Работа с большими элементами данных (ODBC)
+          href: ../data/odbc/recordset-working-with-large-data-items-odbc.md
+        - name: Набор записей. Определение сумм и других статистических результатов (ODBC)
+          href: ../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md
+        - name: Набор записей. Порядок выборки записей в наборе (ODBC)
+          href: ../data/odbc/recordset-how-recordsets-select-records-odbc.md
+        - name: Набор записей. Порядок обновления записей в наборе (ODBC)
+          href: ../data/odbc/recordset-how-recordsets-update-records-odbc.md
+        - name: 'Набор записей. Принципы работы функций AddNew, Edit и Delete (ODBC)'
+          href: ../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md
+        - name: Набор записей. Дополнительные сведения об обновлениях (ODBC)
+          href: ../data/odbc/recordset-more-about-updates-odbc.md
+    - name: SQL в ODBC
+      expanded: false
+      items:
+        - name: SQL в ODBC
+          href: ../data/odbc/sql.md
+        - name: SQL. Настройка инструкции SQL набора записей (ODBC)
+          href: ../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md
+        - name: SQL. Типы данных SQL и C++ (ODBC)
+          href: ../data/odbc/sql-sql-and-cpp-data-types-odbc.md
+        - name: SQL. Выполнение прямых вызовов SQL (ODBC)
+          href: ../data/odbc/sql-making-direct-sql-calls-odbc.md
+    - name: Транзакция (ODBC)
+      expanded: false
+      items:
+        - name: Транзакция (ODBC)
+          href: ../data/odbc/transaction-odbc.md
+        - name: Транзакция. Выполнение транзакции в наборе записей (ODBC)
+          href: ../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md
+        - name: Транзакция. Влияние транзакций на обновления (ODBC)
+          href: ../data/odbc/transaction-how-transactions-affect-updates-odbc.md

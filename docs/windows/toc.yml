@@ -1,0 +1,426 @@
+- name: Общие сведения о программировании на C++ в Windows
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: Классические приложения на C++
+  href: ../windows/desktop-applications-visual-cpp.md
+- name: Пошаговое руководство. Создание стандартной программы на C++
+  href: ../windows/walkthrough-creating-a-standard-cpp-program-cpp.md
+- name: Пошаговое руководство. Создание классических приложений Windows
+  href: ../windows/walkthrough-creating-windows-desktop-applications-cpp.md
+- name: Мастер классических приложений Windows
+  href: ../windows/windows-desktop-wizard.md
+- name: Библиотека шаблонных классов (ATL)
+  href: ../atl/
+- name: Microsoft Foundation Classes (MFC)
+  href: ../mfc/
+- name: ATL и общие классы MFC
+  href: ../atl-mfc-shared/atl-mfc-shared-classes.md
+- name: Текст и строки
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Ресурсы для создания игры с использованием DirectX
+  href: ../windows/resources-for-creating-a-game-using-directx.md
+- name: "Практическое руководство. Использование пакета SDK Windows\_10 в классическом приложении Windows"
+  href: ../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
+- name: Работа с файлами ресурсов
+  expanded: false
+  items:
+    - name: Работа с файлами ресурсов
+      href: ../windows/working-with-resource-files.md
+    - name: Файлы ресурсов
+      expanded: false
+      items:
+        - name: Файлы ресурсов
+          href: ../windows/resource-files-visual-studio.md
+        - name: Практическое руководство. Создание ресурсов
+          href: ../windows/how-to-create-a-resource-script-file.md
+        - name: Практическое руководство. Управление ресурсами
+          href: ../windows/how-to-copy-resources.md
+        - name: Практическое руководство. Включение ресурсов во время компиляции
+          href: ../windows/how-to-include-resources-at-compile-time.md
+    - name: Идентификаторы ресурсов (символы)
+      expanded: false
+      items:
+        - name: Идентификаторы ресурсов (символы)
+          href: ../windows/symbols-resource-identifiers.md
+        - name: Практическое руководство. Создание символов
+          href: ../windows/creating-new-symbols.md
+        - name: Практическое руководство. Управление символами
+          href: ../windows/changing-a-symbol-or-symbol-name-id.md
+        - name: Стандартные идентификаторы символов
+          expanded: false
+          items:
+            - name: Стандартные идентификаторы символов
+              href: ../windows/predefined-symbol-ids.md
+            - name: Предопределенные символы ATL
+              href: ../windows/atl-predefined-symbols.md
+            - name: Предопределенные символы MFC
+              href: ../windows/mfc-predefined-symbols.md
+            - name: Предопределенные символы Win32
+              href: ../windows/win32-predefined-symbols.md
+    - name: Редакторы ресурсов
+      expanded: false
+      items:
+        - name: Редакторы ресурсов
+          href: ../windows/resource-editors.md
+        - name: редактор сочетаний клавиш
+          expanded: false
+          items:
+            - name: Редактор сочетаний клавиш
+              href: ../windows/accelerator-editor.md
+            - name: Сочетания клавиш
+              href: ../windows/predefined-accelerator-keys.md
+        - name: Двоичный редактор
+          href: ../windows/binary-editor.md
+        - name: редактор диалоговых окон
+          expanded: false
+          items:
+            - name: редактор диалоговых окон
+              href: ../windows/dialog-editor.md
+            - name: Практическое руководство. Создание диалогового окна
+              href: ../windows/creating-a-new-dialog-box.md
+            - name: Элементы управления диалогового окна
+              expanded: false
+              items:
+                - name: Элементы управления диалогового окна
+                  href: ../windows/controls-in-dialog-boxes.md
+                - name: 'Практическое руководство. Добавление, изменение или удаление элементов управления'
+                  href: ../windows/adding-editing-or-deleting-controls.md
+                - name: Практическое руководство. Элементы управления макета
+                  href: ../windows/arrangement-of-controls-on-dialog-boxes.md
+                - name: Практическое руководство. Управление доступом и значения
+                  href: ../windows/defining-mnemonics-access-keys.md
+        - name: Редактор изображений для значков
+          expanded: false
+          items:
+            - name: Редактор изображений для значков
+              href: ../windows/image-editor-for-icons.md
+            - name: Практическое руководство. Создание значка или другого изображения
+              href: ../windows/creating-an-icon-or-other-image-image-editor-for-icons.md
+            - name: Практическое руководство. Изменение изображения
+              href: ../windows/selecting-an-area-of-an-image-image-editor-for-icons.md
+            - name: Практическое руководство. Использование инструмента рисования
+              href: ../windows/using-a-drawing-tool-image-editor-for-icons.md
+            - name: Практическое руководство. Работа с цветом
+              href: ../windows/working-with-color-image-editor-for-icons.md
+            - name: Сочетания клавиш
+              href: ../windows/accelerator-keys-image-editor-for-icons.md
+        - name: Редактор меню
+          expanded: false
+          items:
+            - name: редактор меню
+              href: ../windows/menu-editor.md
+            - name: Команды меню
+              href: ../windows/menu-command-properties.md
+        - name: Редактор строк
+          href: ../windows/string-editor.md
+        - name: Редактор панелей инструментов
+          href: ../windows/toolbar-editor.md
+        - name: Редактор сведений о версии
+          href: ../windows/version-information-editor.md
+- name: Развертывание собственных классических приложений
+  expanded: false
+  items:
+    - name: Развертывание собственных классических приложений
+      href: ../windows/deploying-native-desktop-applications-visual-cpp.md
+    - name: Развертывание в Visual C++
+      href: ../windows/deployment-in-visual-cpp.md
+    - name: Концепции развертывания
+      href: ../windows/deployment-concepts.md
+    - name: Основные сведения о зависимостях приложения Visual C++
+      href: ../windows/understanding-the-dependencies-of-a-visual-cpp-application.md
+    - name: Определение библиотек DLL для распространения
+      href: ../windows/determining-which-dlls-to-redistribute.md
+    - name: Выбор метода развертывания
+      href: ../windows/choosing-a-deployment-method.md
+    - name: Развертывание универсальной библиотеки CRT
+      href: ../windows/universal-crt-deployment.md
+    - name: Распространение файлов Visual C++
+      expanded: false
+      items:
+        - name: Распространение файлов Visual C++
+          href: ../windows/redistributing-visual-cpp-files.md
+        - name: Распространение компонентов с использованием модулей слияния
+          href: ../windows/redistributing-components-by-using-merge-modules.md
+        - name: Распространение элементов управления ActiveX в Visual C++
+          href: ../windows/redistributing-visual-cpp-activex-controls.md
+        - name: Распространение библиотеки MFC
+          href: ../windows/redistributing-the-mfc-library.md
+        - name: Распространение приложения ATL
+          href: ../windows/redistributing-an-atl-application.md
+    - name: Примеры развертывания
+      expanded: false
+      items:
+        - name: Примеры развертывания
+          href: ../windows/deployment-examples.md
+        - name: Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md
+        - name: Пошаговое руководство. Развертывание приложения Visual C++ в локальную папку приложения
+          href: ../windows/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md
+        - name: Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++
+          href: ../windows/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md
+        - name: Подготовка тестового компьютера для выполнения исполняемого файла отладки
+          href: ../windows/preparing-a-test-machine-to-run-a-debug-executable.md
+    - name: Распространение клиентских веб-приложений
+      href: ../windows/redistributing-web-client-applications.md
+    - name: Развертывание с помощью технологии ClickOnce для приложений Visual C++
+      href: ../windows/clickonce-deployment-for-visual-cpp-applications.md
+    - name: Выполнение приложения C++ с параметром -clr в более ранней версии среды выполнения
+      href: ../windows/running-a-cpp-clr-application-on-a-previous-runtime-version.md
+- name: Атрибуты C++ для модели COM и .NET
+  href: ../windows/attributes/cpp-attributes-com-net.md
+- name: Атрибутивное программирование. Часто задаваемые вопросы
+  href: ../windows/attributes/attribute-programming-faq.md
+- name: Список атрибутов по группам
+  expanded: false
+  items:
+    - name: Список атрибутов по группам
+      href: ../windows/attributes/attributes-by-group.md
+    - name: Атрибуты COM
+      href: ../windows/attributes/com-attributes.md
+    - name: Атрибуты IDL
+      href: ../windows/attributes/idl-attributes.md
+    - name: Атрибуты пользователя OLE DB
+      href: ../windows/attributes/ole-db-consumer-attributes.md
+    - name: Атрибуты компилятора
+      href: ../windows/attributes/compiler-attributes.md
+- name: Список атрибутов по использованию
+  expanded: false
+  items:
+    - name: Список атрибутов по использованию
+      href: ../windows/attributes/attributes-by-usage.md
+    - name: Атрибуты модуля
+      href: ../windows/attributes/module-attributes.md
+    - name: Атрибуты интерфейса
+      href: ../windows/attributes/interface-attributes.md
+    - name: Атрибуты классов
+      href: ../windows/attributes/class-attributes.md
+    - name: Атрибуты метода
+      href: ../windows/attributes/method-attributes.md
+    - name: Атрибуты параметра
+      href: ../windows/attributes/parameter-attributes.md
+    - name: Атрибуты элемента данных
+      href: ../windows/attributes/data-member-attributes.md
+    - name: 'Атрибуты typedef, enum, union и struct'
+      href: ../windows/attributes/typedef-enum-union-and-struct-attributes.md
+    - name: Атрибуты массивов
+      href: ../windows/attributes/array-attributes.md
+    - name: Изолированные атрибуты
+      href: ../windows/attributes/stand-alone-attributes.md
+    - name: Настраиваемые атрибуты
+      href: ../windows/attributes/custom-attributes-cpp.md
+- name: Алфавитный указатель атрибутов
+  expanded: false
+  items:
+    - name: Алфавитный указатель атрибутов
+      href: ../windows/attributes/attributes-alphabetical-reference.md
+    - name: aggregatable
+      href: ../windows/attributes/aggregatable.md
+    - name: статистические выражения
+      href: ../windows/attributes/aggregates.md
+    - name: appobject
+      href: ../windows/attributes/appobject.md
+    - name: async_uuid
+      href: ../windows/attributes/async-uuid.md
+    - name: Атрибут
+      href: ../windows/attributes/attribute.md
+    - name: bindable
+      href: ../windows/attributes/bindable.md
+    - name: call_as
+      href: ../windows/attributes/call-as.md
+    - name: case
+      href: ../windows/attributes/case-cpp.md
+    - name: кокласс
+      href: ../windows/attributes/coclass.md
+    - name: com_interface_entry
+      href: ../windows/attributes/com-interface-entry-cpp.md
+    - name: элемент управления
+      href: ../windows/attributes/control.md
+    - name: cpp_quote
+      href: ../windows/attributes/cpp-quote.md
+    - name: custom
+      href: ../windows/attributes/custom-cpp.md
+    - name: db_accessor
+      href: ../windows/attributes/db-accessor.md
+    - name: db_column
+      href: ../windows/attributes/db-column.md
+    - name: db_command
+      href: ../windows/attributes/db-command.md
+    - name: db_param
+      href: ../windows/attributes/db-param.md
+    - name: db_source
+      href: ../windows/attributes/db-source.md
+    - name: db_table
+      href: ../windows/attributes/db-table.md
+    - name: default
+      href: ../windows/attributes/default-cpp.md
+    - name: defaultbind
+      href: ../windows/attributes/defaultbind.md
+    - name: defaultcollelem
+      href: ../windows/attributes/defaultcollelem.md
+    - name: defaultvalue
+      href: ../windows/attributes/defaultvalue.md
+    - name: defaultvtable
+      href: ../windows/attributes/defaultvtable.md
+    - name: dispinterface
+      href: ../windows/attributes/dispinterface.md
+    - name: displaybind
+      href: ../windows/attributes/displaybind.md
+    - name: dual
+      href: ../windows/attributes/dual.md
+    - name: emitidl
+      href: ../windows/attributes/emitidl.md
+    - name: entry
+      href: ../windows/attributes/entry.md
+    - name: event_receiver
+      href: ../windows/attributes/event-receiver.md
+    - name: event_source
+      href: ../windows/attributes/event-source.md
+    - name: экспорт
+      href: ../windows/attributes/export.md
+    - name: first_is
+      href: ../windows/attributes/first-is.md
+    - name: helpcontext
+      href: ../windows/attributes/helpcontext.md
+    - name: helpfile
+      href: ../windows/attributes/helpfile.md
+    - name: helpstring
+      href: ../windows/attributes/helpstring.md
+    - name: helpstringcontext
+      href: ../windows/attributes/helpstringcontext.md
+    - name: helpstringdll
+      href: ../windows/attributes/helpstringdll.md
+    - name: hidden
+      href: ../windows/attributes/hidden.md
+    - name: id
+      href: ../windows/attributes/id.md
+    - name: idl_module
+      href: ../windows/attributes/idl-module.md
+    - name: idl_quote
+      href: ../windows/attributes/idl-quote.md
+    - name: iid_is
+      href: ../windows/attributes/iid-is.md
+    - name: immediatebind
+      href: ../windows/attributes/immediatebind.md
+    - name: реализует
+      href: ../windows/attributes/implements-cpp.md
+    - name: implements_category
+      href: ../windows/attributes/implements-category.md
+    - name: импорт
+      href: ../windows/attributes/import.md
+    - name: importidl
+      href: ../windows/attributes/importidl.md
+    - name: importlib
+      href: ../windows/attributes/importlib.md
+    - name: in
+      href: ../windows/attributes/in-cpp.md
+    - name: include
+      href: ../windows/attributes/include-cpp.md
+    - name: includelib
+      href: ../windows/attributes/includelib-cpp.md
+    - name: last_is
+      href: ../windows/attributes/last-is.md
+    - name: lcid
+      href: ../windows/attributes/lcid.md
+    - name: length_is
+      href: ../windows/attributes/length-is.md
+    - name: library_block
+      href: ../windows/attributes/library-block.md
+    - name: licensed
+      href: ../windows/attributes/licensed.md
+    - name: локальные
+      href: ../windows/attributes/local-cpp.md
+    - name: max_is
+      href: ../windows/attributes/max-is.md
+    - name: module
+      href: ../windows/attributes/module-cpp.md
+    - name: ms_union
+      href: ../windows/attributes/ms-union.md
+    - name: no_injected_text
+      href: ../windows/attributes/no-injected-text.md
+    - name: nonbrowsable
+      href: ../windows/attributes/nonbrowsable.md
+    - name: noncreatable
+      href: ../windows/attributes/noncreatable.md
+    - name: nonextensible
+      href: ../windows/attributes/nonextensible.md
+    - name: object
+      href: ../windows/attributes/object-cpp.md
+    - name: odl
+      href: ../windows/attributes/odl.md
+    - name: oleautomation
+      href: ../windows/attributes/oleautomation.md
+    - name: необязательные
+      href: ../windows/attributes/optional-cpp.md
+    - name: out
+      href: ../windows/attributes/out-cpp.md
+    - name: pointer_default
+      href: ../windows/attributes/pointer-default.md
+    - name: pragma
+      href: ../windows/attributes/pragma.md
+    - name: progid
+      href: ../windows/attributes/progid.md
+    - name: propget
+      href: ../windows/attributes/propget.md
+    - name: propput
+      href: ../windows/attributes/propput.md
+    - name: propputref
+      href: ../windows/attributes/propputref.md
+    - name: ptr
+      href: ../windows/attributes/ptr.md
+    - name: public (атрибуты C++)
+      href: ../windows/attributes/public-cpp-attributes.md
+    - name: range
+      href: ../windows/attributes/range-cpp.md
+    - name: rdx
+      href: ../windows/attributes/rdx.md
+    - name: readonly
+      href: ../windows/attributes/readonly-cpp.md
+    - name: ref
+      href: ../windows/attributes/ref-cpp.md
+    - name: registration_script
+      href: ../windows/attributes/registration-script.md
+    - name: requestedit
+      href: ../windows/attributes/requestedit.md
+    - name: requires_category
+      href: ../windows/attributes/requires-category.md
+    - name: restricted
+      href: ../windows/attributes/restricted.md
+    - name: retval
+      href: ../windows/attributes/retval.md
+    - name: satype
+      href: ../windows/attributes/satype.md
+    - name: size_is
+      href: ../windows/attributes/size-is.md
+    - name: источник
+      href: ../windows/attributes/source-cpp.md
+    - name: string
+      href: ../windows/attributes/string-cpp.md
+    - name: support_error_info
+      href: ../windows/attributes/support-error-info.md
+    - name: switch_is
+      href: ../windows/attributes/switch-is.md
+    - name: switch_type
+      href: ../windows/attributes/switch-type.md
+    - name: synchronize
+      href: ../windows/attributes/synchronize.md
+    - name: threading
+      href: ../windows/attributes/threading-cpp.md
+    - name: transmit_as
+      href: ../windows/attributes/transmit-as.md
+    - name: uidefault
+      href: ../windows/attributes/uidefault.md
+    - name: unique
+      href: ../windows/attributes/unique-cpp.md
+    - name: usesgetlasterror
+      href: ../windows/attributes/usesgetlasterror.md
+    - name: uuid (атрибуты C++)
+      href: ../windows/attributes/uuid-cpp-attributes.md
+    - name: v1_enum
+      href: ../windows/attributes/v1-enum.md
+    - name: vararg
+      href: ../windows/attributes/vararg.md
+    - name: version
+      href: ../windows/attributes/version-cpp.md
+    - name: vi_progid
+      href: ../windows/attributes/vi-progid.md
+    - name: wire_marshal
+      href: ../windows/attributes/wire-marshal.md
