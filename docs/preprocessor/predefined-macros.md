@@ -1,4 +1,4 @@
----
+﻿---
 title: Предустановленные макросы
 description: Список и описание предопределенных макросов препроцессора компилятора Microsoft C++.
 ms.custom: update_every_version
