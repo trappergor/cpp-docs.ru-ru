@@ -1,0 +1,73 @@
+- name: Чтение и запись кода C++ в Visual Studio
+  expanded: true
+  items:
+    - name: Чтение и понимание кода C++
+      href: ../ide/read-and-understand-code-cpp.md
+    - name: Изменение и рефакторинг кода C++
+      href: ../ide/writing-and-refactoring-code-cpp.md
+    - name: Навигация по коду C++
+      href: ../ide/navigate-code-cpp.md
+    - name: Настройка параметров написания кода C++
+      href: ../ide/how-to-set-preferences.md
+    - name: Совместная работа с использованием Live Share для C++
+      href: ../ide/live-share-cpp.md
+    - name: Изменение сигнатуры
+      href: ../ide/refactoring/change-signature.md
+    - name: Преобразование в необработанный строковый литерал
+      href: ../ide/refactoring/convert-to-raw-string-literal.md
+    - name: Создание объявления или определения
+      href: ../ide/refactoring/create-declaration-definition.md
+    - name: Извлечение функции
+      href: ../ide/refactoring/extract-function.md
+    - name: Реализация чистых виртуальных функций
+      href: ../ide/refactoring/implement-pure-virtuals.md
+    - name: Перемещение определения функции
+      href: ../ide/refactoring/move-definition-location.md
+    - name: Переименовать
+      href: ../ide/refactoring/rename.md
+- name: Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++
+  expanded: true
+  items:
+    - name: Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++
+      href: ../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
+    - name: Пошаговое руководство. Работа с проектами и решениями (C++)
+      href: ../ide/walkthrough-working-with-projects-and-solutions-cpp.md
+    - name: Пошаговое руководство. Сборка проекта (C++)
+      href: ../ide/walkthrough-building-a-project-cpp.md
+    - name: Пошаговое руководство. Тестирование проекта (C++)
+      href: ../ide/walkthrough-testing-a-project-cpp.md
+    - name: Пошаговое руководство. Отладка проекта (C++)
+      href: ../ide/walkthrough-debugging-a-project-cpp.md
+    - name: Пошаговое руководство. Развертывание программы (C++)
+      href: ../ide/walkthrough-deploying-your-program-cpp.md
+- name: Добавление функциональных возможностей с помощью мастеров кода
+  expanded: true
+  items:
+    - name: Добавление функциональных возможностей с помощью мастеров кода
+      href: ../ide/adding-functionality-with-code-wizards-cpp.md
+    - name: Добавление класса
+      href: ../ide/adding-a-class-visual-cpp.md
+    - name: Добавление класса из элемента управления ActiveX
+      href: ../ide/adding-a-class-from-an-activex-control-visual-cpp.md
+    - name: Добавление универсального класса C++
+      href: ../ide/adding-a-generic-cpp-class.md
+    - name: Добавление функции-члена
+      href: ../ide/adding-a-member-function-visual-cpp.md
+    - name: Добавление переменной-члена
+      href: ../ide/adding-a-member-variable-visual-cpp.md
+    - name: Добавление метода
+      href: ../ide/adding-a-method-visual-cpp.md
+    - name: Добавление свойства
+      href: ../ide/adding-a-property-visual-cpp.md
+    - name: Добавление события
+      href: ../ide/adding-an-event-visual-cpp.md
+    - name: Добавление обработчика событий
+      href: ../ide/adding-an-event-handler-visual-cpp.md
+    - name: Создание интерфейса COM
+      href: ../ide/creating-a-com-interface-visual-cpp.md
+    - name: Реализация точки подключения
+      href: ../ide/implementing-a-connection-point-visual-cpp.md
+    - name: Реализация интерфейса
+      href: ../ide/implementing-an-interface-visual-cpp.md
+    - name: Переопределение виртуальной функции
+      href: ../ide/overriding-a-virtual-function-visual-cpp.md

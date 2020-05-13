@@ -1,0 +1,128 @@
+- name: C++ в Visual Studio
+  expanded: false
+  items:
+    - name: C++ в Visual Studio
+      href: ../overview/visual-cpp-in-visual-studio.md
+    - name: Общие сведения о разработке на C++ в Visual Studio
+      href: ../overview/overview-of-cpp-development.md
+    - name: Новые возможности C++ в Visual Studio
+      href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Улучшения соответствия C++ в Visual Studio
+      href: ../overview/cpp-conformance-improvements.md
+    - name: Соответствие стандартам языка Microsoft Visual C++
+      href: ../overview/visual-cpp-language-conformance.md
+    - name: Поддерживаемые целевые платформы
+      href: ../overview/supported-platforms-visual-cpp.md
+    - name: Инструменты и функции C++ в выпусках Visual Studio
+      href: ../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md
+    - name: Примеры
+      href: ../overview/visual-cpp-samples.md
+    - name: Справка и сообщество
+      href: ../overview/visual-cpp-help-and-community.md
+    - name: Как сообщить о проблеме с набором инструментов Visual C++
+      href: ../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md
+- name: Учебники по Visual Studio C++
+  expanded: false
+  items:
+    - name: Справка по установке средства С++ в Visual Studio
+      href: ../build/vscpp-step-0-installation.md
+    - name: Создание и изменение проекта консольного приложения С++
+      href: ../build/vscpp-step-1-create.md
+    - name: Создание и запуск проекта консольного приложения C++
+      href: ../build/vscpp-step-2-build.md
+    - name: Создание второго приложения C++
+      href: ../get-started/tutorial-console-cpp.md
+    - name: "Создание приложения\_UWP"
+      href: /windows/uwp/cpp-and-winrt-apis/get-started
+    - name: Создание классического приложения Windows
+      href: /windows/desktop/learnwin32/learn-to-program-for-windows
+    - name: Создание игры с поддержкой DirectX
+      href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
+- name: Проекты и системы сборки
+  href: ../build/projects-and-build-systems-cpp.md
+- name: Чтение и запись кода C++ в Visual Studio
+  href: ../ide/read-and-understand-code-cpp.md
+- name: Разработка классических приложений для Windows
+  href: ../windows/overview-of-windows-programming-in-cpp.md
+- name: Разработка на UWP
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Разработка игр
+  href: ../overview/game-development-cpp.md
+- name: Разработка для Linux
+  href: ../linux/
+- name: Разработка кроссплатформенных мобильных приложений
+  href: ../cross-platform/
+- name: Разработка на .NET с использованием C++ и CLI
+  href: ../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
+- name: Облачное и веб-программирование
+  href: ../cloud/cloud-and-web-programming-in-visual-cpp.md
+- name: Перенос и обновление кода C++
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: Рекомендации по безопасности для C++
+  expanded: false
+  items:
+    - name: Рекомендации по безопасности для C++
+      href: ../security/security-best-practices-for-cpp.md
+    - name: Запуск от имени участника группы пользователей
+      href: ../security/running-as-a-member-of-the-users-group.md
+    - name: Влияние контроля учетных записей на приложение
+      href: ../security/how-user-account-control-uac-affects-your-application.md
+    - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
+      href: ../security/developer-guidance-speculative-execution.md
+- name: Справочник
+  expanded: false
+  items:
+    - name: Язык C/C++ и стандартные библиотеки
+      href: ../cpp/c-cpp-language-and-standard-libraries.md
+    - name: Справочники по языкам
+      expanded: false
+      items:
+        - name: Языки
+          href: ../overview/languages-cpp.md
+        - name: "Справочник по языку\_C"
+          href: ../c-language/c-language-reference.md
+        - name: Справочник по языку C++
+          href: ../cpp/cpp-language-reference.md
+        - name: Справочник по препроцессору в C/C++
+          href: ../preprocessor/c-cpp-preprocessor-reference.md
+        - name: Внутренние объекты компилятора и язык ассемблера
+          href: ../intrinsics/compiler-intrinsics-and-assembly-language.md
+        - name: Встроенные объекты компилятора
+          href: ../intrinsics/compiler-intrinsics.md
+        - name: Справочник по ассемблеру ARM
+          href: ../assembler/arm/arm-assembler-reference.md
+        - name: Встроенный ассемблер в MSVC
+          href: ../assembler/inline/inline-assembler.md
+        - name: Справочные материалы по ассемблеру Microsoft Macro Assembler (MASM)
+          href: ../assembler/masm/microsoft-macro-assembler-reference.md
+        - name: Расширения компонентов для .NET и UWP
+          href: ../extensions/component-extensions-for-runtime-platforms.md
+        - name: Атрибуты C++ для модели COM и .NET
+          href: ../windows/attributes/cpp-attributes-com-net.md
+    - name: Справочные материалы по библиотекам
+      expanded: false
+      items:
+        - name: Библиотеки
+          href: ../overview/libraries-cpp.md
+        - name: Справочник по библиотеке времени выполнения C (CRT)
+          href: ../c-runtime-library/
+        - name: Справочник по стандартной библиотеке C++
+          href: ../standard-library/
+        - name: SafeInt - библиотека
+          expanded: false
+          items:
+            - name: SafeInt - библиотека
+              href: ../safeint/safeint-library.md
+            - name: Класс SafeInt
+              href: ../safeint/safeint-class.md
+            - name: Функции SafeInt
+              href: ../safeint/safeint-functions.md
+            - name: Класс SafeIntException
+              href: ../safeint/safeintexception-class.md
+        - name: "MFC\_/ библиотека ATL"
+          href: ../mfc/mfc-and-atl.md
+        - name: Параллельные библиотеки
+          href: ../parallel/
+          items: null
+        - name: Библиотеки доступа к данным
+          href: ../data/
